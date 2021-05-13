@@ -1,5 +1,10 @@
 {
   "descriptions": {
+    "legend": {
+      "type": "ItemLegend",
+      "name": "ItemLegend",
+      "orientation": "Horizontal"
+    },
     "content": {
       "type": "PieChart",
       "name": "chart",
@@ -7,15 +12,10 @@
       "labelMemberPath": "Category",
       "labelsPosition": "OutsideEnd",
       "legendLabelMemberPath": "Category",
-      "radiusFactor": 0.7,
+      "radiusFactor": 0.6,
       "labelExtent": 20,
       "dataSourceRef": "data",
       "legendRef": "ItemLegend"
-    },
-    "legend": {
-      "type": "ItemLegend",
-      "name": "ItemLegend",
-      "orientation": "Horizontal"
     }
   },
   "refs": {
@@ -28,8 +28,7 @@
     ]
   },
   "modules": [
-    "withDescriptions",
-    "charts/PieChartModule",
-    "grids/PropertyEditorModule"
+    "charts/ItemLegendModule",
+    "charts/PieChartModule"
   ]
 }

@@ -1,5 +1,10 @@
 {
   "descriptions": {
+    "legend": {
+      "type": "ItemLegend",
+      "name": "ItemLegend",
+      "orientation": "Horizontal"
+    },
     "content": {
       "type": "DoughnutChart",
       "name": "chart",
@@ -17,11 +22,6 @@
           "legendRef": "ItemLegend"
         }
       ]
-    },
-    "legend": {
-      "type": "ItemLegend",
-      "name": "ItemLegend",
-      "orientation": "Horizontal"
     }
   },
   "refs": {

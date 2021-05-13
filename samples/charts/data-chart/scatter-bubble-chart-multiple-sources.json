@@ -1,0 +1,63 @@
+{
+  "descriptions": {
+    "content": {
+      "type": "DataChart",
+      "name": "chart",
+      "axes": [
+        {
+          "type": "NumericXAxis", 
+          "name": "XAxis"
+        },
+        {
+          "type": "NumericYAxis", 
+          "name": "YAxis"
+        }
+      ],
+      "series": [
+        {
+          "type": "ScatterLineSeries",
+          "xAxisRef": "XAxis",
+          "yAxisRef": "YAxis",
+          "xMemberPath": "Value",
+          "yMemberPath": "Value",
+          "dataSourceRef": "data",
+          "markerType": "Circle", 
+          "showDefaultTooltip": true,
+          "title": "1",
+          "name": "Line_1"
+        }
+      ]
+    }
+  },
+  "refs": {
+    "data": [
+      {
+        "Col": "1_Line",
+        "Row": "0",
+        "Value": 5
+      },
+      {
+        "Col": "1_Line",
+        "Row": "1",
+        "Value": 2
+      },
+      {
+        "Col": "1_Line",
+        "Row": "2",
+        "Value": 5
+      },
+      {
+        "Col": "1_Line",
+        "Row": "3",
+        "Value": 2
+      }
+    ]
+  },
+  "modules": [ 
+    "charts/DataChartCoreModule",
+    "charts/DataChartScatterModule", 
+    "charts/DataChartScatterCoreModule", 
+    "charts/DataChartInteractivityModule", 
+    "charts/DataChartInteractivityModule"
+  ]
+}
