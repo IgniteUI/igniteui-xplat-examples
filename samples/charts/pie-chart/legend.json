@@ -1,0 +1,35 @@
+{
+  "descriptions": {
+    "content": {
+      "type": "PieChart",
+      "name": "chart",
+      "valueMemberPath": "MarketShare",
+      "labelMemberPath": "Category",
+      "labelsPosition": "OutsideEnd",
+      "legendLabelMemberPath": "Category",
+      "radiusFactor": 0.7,
+      "labelExtent": 20,
+      "dataSourceRef": "data",
+      "legendRef": "ItemLegend"
+    },
+    "legend": {
+      "type": "ItemLegend",
+      "name": "ItemLegend",
+      "orientation": "Horizontal"
+    }
+  },
+  "refs": {
+    "data": [
+      { "MarketShare": 37, "Category": "Cooling" },
+      { "MarketShare": 25, "Category": "Residential" },
+      { "MarketShare": 12, "Category": "Heating" },
+      { "MarketShare": 11, "Category": "Lighting" },
+      { "MarketShare": 15, "Category": "Other" }
+    ]
+  },
+  "modules": [
+    "withDescriptions",
+    "charts/PieChartModule",
+    "grids/PropertyEditorModule"
+  ]
+}
