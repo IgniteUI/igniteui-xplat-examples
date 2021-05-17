@@ -1,27 +1,18 @@
 {
-  "strings": {
-    "legendTitle": "Renewable Electricity Generated"
-  },
   "descriptions": {
-    "legend": {
-      "type": "Legend",
-      "name": "Legend",
-      "orientation": "Horizontal"
-    },
     "content": {
-      "dataSourceRef": "data",
-      "legendRef": "Legend",
       "type": "CategoryChart",
       "name": "chart",
-      "chartType": "StepArea",
+      "legendRef": "Legend",
+      "chartType": "StepLine",
+      "dataSourceRef": "data",
+      "includedProperties": ["Year", "Europe"],
+      "chartTitle": "Renewable Electricity Generated",
       "titleAlignment": "Left",
       "titleLeftMargin": 25,
       "titleTopMargin": 10,
       "titleBottomMargin": 10,
-      "isCategoryHighlightingEnabled": true,
-      "isSeriesHighlightingEnabled": true,
       "toolTipType": "Category",
-      "isTransitionInEnabled": true,
       "isHorizontalZoomEnabled": false,
       "isVerticalZoomEnabled": false,
       "xAxisInterval": 1,
@@ -45,7 +36,6 @@
     ]
   },
   "modules": [
-    "charts/LegendModule",
     "charts/CategoryChartCategoryModule",
     "charts/DataChartInteractivityModule"
   ]
