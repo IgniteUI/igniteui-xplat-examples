@@ -1,25 +1,22 @@
 {
-  "strings": {
-    "legendTitle": "Renewable Electricity Generated"
-  },
   "descriptions": {
-    "legend": {
-      "type": "Legend",
-      "name": "Legend",
-      "orientation": "Horizontal"
-    },
     "content": {
       "type": "CategoryChart",
       "name": "chart",
-      "chartType": "Area",
+      "chartType": "Line",
+      "includedProperties": ["Year", "Europe"],
+      "isHorizontalZoomEnabled": false,
+      "isVerticalZoomEnabled": false,
       "dataSourceRef": "data",
-      "legendRef": "Legend",
+      "chartTitle": "Renewable Electricity Generated",
+      "titleAlignment": "Left",
+      "titleLeftMargin": 25,
+      "titleTopMargin": 10,
+      "titleBottomMargin": 10,
       "yAxisTitle": "TWh",
       "yAxisTitleLeftMargin": 10,
       "yAxisTitleRightMargin": 5,
-      "yAxisLabelLeftMargin": 0,
-      "isHorizontalZoomEnabled": false,
-      "isVerticalZoomEnabled": false
+      "yAxisLabelLeftMargin": 0
     }
   },
   "refs": {
@@ -38,8 +35,7 @@
       { "Year": "2019", "Europe": 80, "China": 96,  "USA": 38 }
     ]
   },
-  "modules": [
-    "charts/LegendModule",
-    "charts/CategoryChartCategoryModule"    
+  "modules": [    
+    "charts/CategoryChartCategoryModule"
   ]
 }
