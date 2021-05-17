@@ -12,9 +12,14 @@
       "type": "CategoryChart",
       "name": "chart",
       "chartType": "Line",
+      "isHorizontalZoomEnabled": false,
+      "isVerticalZoomEnabled": false,
       "dataSourceRef": "data",
       "legendRef": "Legend",
-      "yAxisTitle": "TWh"
+      "yAxisTitle": "TWh",
+      "yAxisTitleLeftMargin": 10,
+      "yAxisTitleRightMargin": 5,
+      "yAxisLabelLeftMargin": 0
     }
   },
   "refs": {
@@ -35,7 +40,6 @@
   },
   "modules": [
     "charts/LegendModule",
-    "charts/CategoryChartCategoryModule",
-    "charts/DataChartInteractivityModule"
+    "charts/CategoryChartCategoryModule"    
   ]
 }

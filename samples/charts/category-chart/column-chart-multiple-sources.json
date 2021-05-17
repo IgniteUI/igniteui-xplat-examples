@@ -14,7 +14,13 @@
       "chartType": "Column",
       "dataSourceRef": "data",
       "legendRef": "Legend",
-      "yAxisTitle": "Billions of U.S. Dollars"
+      "xAxisInterval": 1,
+      "yAxisTitle": "Billions of U.S. Dollars",
+      "yAxisTitleLeftMargin": 10,
+      "yAxisTitleRightMargin": 5,
+      "yAxisLabelLeftMargin": 0,
+      "isHorizontalZoomEnabled": false,
+      "isVerticalZoomEnabled": false
     }
   },
   "refs": {
@@ -29,7 +35,6 @@
   },
   "modules": [
     "charts/LegendModule",
-    "charts/CategoryChartCategoryModule",
-    "charts/DataChartInteractivityModule"
+    "charts/CategoryChartCategoryModule"    
   ]
 }
