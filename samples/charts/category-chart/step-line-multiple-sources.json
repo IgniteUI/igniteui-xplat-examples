@@ -11,9 +11,15 @@
     "content": {
       "type": "CategoryChart",
       "name": "chart",
+      "legendRef": "Legend",
       "chartType": "StepLine",
       "dataSourceRef": "data",
-      "legendRef": "Legend",
+      "isCategoryHighlightingEnabled": true,
+      "isSeriesHighlightingEnabled": true,
+      "toolTipType": "Category",
+      "isHorizontalZoomEnabled": false,
+      "isVerticalZoomEnabled": false,
+      "xAxisInterval": 1,
       "yAxisTitle": "TWh"
     }
   },
