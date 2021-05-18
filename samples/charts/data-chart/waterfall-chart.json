@@ -1,0 +1,72 @@
+{
+  "descriptions": {
+    "content": {
+      "type": "DataChart",
+      "name": "chart",
+      "chartTitle": "Facebook's Consolidated Statements of Income for 2018",
+      "titleHorizontalAlignment": "Left",
+      "titleLeftMargin": 25,
+      "titleTopMargin": 10,
+      "titleBottomMargin": 10,
+      "axes": [
+        {
+          "type": "CategoryXAxis",
+          "name": "xAxis",
+          "dataSourceRef": "data",
+          "overlap": 1
+        },
+        {
+          "type": "NumericYAxis",
+          "name": "yAxis",
+          "title": "Millions of Dollars",
+          "titleLeftMargin": 10,
+          "minimumValue": 0,
+          "maximumValue": 60
+        }
+      ],
+      "series": [
+        {
+          "type": "WaterfallSeries",
+          "name": "WaterfallSeries1",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "dataSourceRef": "data",
+          "valueMemberPath": "Value",
+          "showDefaultTooltip": true,
+          "isTransitionInEnabled": true
+        },
+        {
+          "type": "WaterfallSeries",
+          "name": "WaterfallSeries2",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "dataSourceRef": "data",
+          "brush":"#7446B9",
+          "outline":"#7446B9",
+          "valueMemberPath": "NetIncomeValue",
+          "showDefaultTooltip": true,
+          "isTransitionInEnabled": true
+        }
+      ]
+    }
+  },
+  "refs": {
+    "data": [
+      { "Category": "Revenue", "Value": 55, "NetIncomeValue": null },
+      { "Category": "Cost of Revenue", "Value": 45, "NetIncomeValue": null },
+      { "Category": "Research and Development", "Value": 35, "NetIncomeValue": null},
+      { "Category": "Marketing and Sales", "Value": 28, "NetIncomeValue": null },
+      { "Category": "General and Administrative", "Value": 25, "NetIncomeValue": null },
+      { "Category": "Total Costs and Expenses", "Value": 55, "NetIncomeValue": null },
+      { "Category": "Net Income", "Value": null, "NetIncomeValue": 25 }
+    ]
+  },
+  "modules": [
+    "charts/DataChartCoreModule",
+    "charts/DataChartCategoryModule",
+    "charts/DataChartCategoryCoreModule",
+    "charts/DataChartInteractivityModule",
+    "charts/NumberAbbreviatorModule",
+    "charts/CalloutLayerModule"
+  ]
+}
