@@ -1,20 +1,20 @@
 {
-  "strings": {
-    "legendTitle": "Renewable Electricity Generated"
-  },
   "descriptions": {
-    "legend": {
-      "type": "Legend",
-      "name": "Legend",
-      "orientation": "Horizontal"
-    },
     "content": {
       "type": "CategoryChart",
       "name": "chart",
       "chartType": "Spline",
+      "includedProperties": ["Year", "Europe"],      
       "dataSourceRef": "data",
-      "legendRef": "Legend",
+      "chartTitle": "Renewable Electricity Generated",
+      "titleAlignment": "Left",
+      "titleLeftMargin": 25,
+      "titleTopMargin": 10,
+      "titleBottomMargin": 10,
       "yAxisTitle": "TWh",
+      "yAxisTitleLeftMargin": 10,
+      "yAxisTitleRightMargin": 5,
+      "yAxisLabelLeftMargin": 0,
       "toolTipType": "Category",
       "isTransitionInEnabled": true,
       "isHorizontalZoomEnabled": false,
@@ -23,7 +23,7 @@
   },
   "refs": {
     "data": [
-      { "Year": "2009", "Europe": 31, "China": 21,  "USA": 19 },
+      { "Year": "2009", "Europe": 34, "China": 21,  "USA": 19 },
       { "Year": "2010", "Europe": 43, "China": 26,  "USA": 24 },
       { "Year": "2011", "Europe": 66, "China": 29,  "USA": 28 },
       { "Year": "2012", "Europe": 69, "China": 32,  "USA": 26 },
@@ -36,9 +36,7 @@
       { "Year": "2019", "Europe": 80, "China": 96,  "USA": 38 }
     ]
   },
-  "modules": [
-    "charts/LegendModule",
-    "charts/CategoryChartCategoryModule",
-    "charts/DataChartInteractivityModule"
+  "modules": [    
+    "charts/CategoryChartCategoryModule"
   ]
 }

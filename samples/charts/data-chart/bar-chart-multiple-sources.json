@@ -17,7 +17,10 @@
           "type": "CategoryYAxis",
           "name": "yAxis",
           "label": "Franchise",
-          "dataSourceRef": "data"
+          "dataSourceRef": "data",
+          "isInverted": true,
+          "gap": 0.5,
+          "overlap": -0.1
         },
         {
           "type": "NumericXAxis",
@@ -27,24 +30,26 @@
       ],
       "series": [
         {
-          "type": "BarSeries",
-          "name": "BarSeries1",
+          "type": "BarSeries",          
           "xAxisRef": "xAxis",
           "yAxisRef": "yAxis",
-          "title": "Total Revenue",
+          "title": "Total Revenue of Franchise",
           "valueMemberPath": "TotalRevenue",
           "dataSourceRef": "data",
-          "showDefaultTooltip": true
+          "showDefaultTooltip": true,
+          "isTransitionInEnabled": true,
+          "isHighlightingEnabled": true
         },
         {
-          "type": "BarSeries",
-          "name": "BarSeries2",
+          "type": "BarSeries",          
           "xAxisRef": "xAxis",
           "yAxisRef": "yAxis",
-          "title": "Highest Grossing",
+          "title": "Highest Grossing Movie in Series",
           "valueMemberPath": "HighestGrossing",
           "dataSourceRef": "data",
-          "showDefaultTooltip": true
+          "showDefaultTooltip": true,
+          "isTransitionInEnabled": true,
+          "isHighlightingEnabled": true
         }
       ]
     }
@@ -60,9 +65,11 @@
     ]
   },
   "modules": [
-    "charts/LegendModule",
+    "charts/DataChartCoreModule",
+    "charts/DataChartCategoryCoreModule",    
     "charts/DataChartCategoryModule",
-    "charts/DataChartVerticalCategoryModule",
-    "charts/DataChartInteractivityModule"
+    "charts/DataChartInteractivityModule",
+    "charts/DataChartVerticalCategoryModule",    
+    "charts/LegendModule"
   ]
 }

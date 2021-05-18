@@ -11,7 +11,7 @@
     "content": {
       "type": "CategoryChart",
       "name": "chart",
-      "chartType": "Spline",
+      "chartType": "SplineArea",
       "dataSourceRef": "data",
       "legendRef": "Legend",
       "yAxisTitle": "TWh",
