@@ -11,19 +11,20 @@
     "content": {
       "type": "CategoryChart",
       "name": "chart",
-      "chartType": "Spline",
+      "chartType": "Point",
+      "isHorizontalZoomEnabled": false,
+      "isVerticalZoomEnabled": false,
       "dataSourceRef": "data",
       "legendRef": "Legend",
       "yAxisTitle": "TWh",
-      "toolTipType": "Category",
-      "isTransitionInEnabled": true,
-      "isHorizontalZoomEnabled": false,
-      "isVerticalZoomEnabled": false
+      "yAxisTitleLeftMargin": 10,
+      "yAxisTitleRightMargin": 5,
+      "yAxisLabelLeftMargin": 0
     }
   },
   "refs": {
     "data": [
-      { "Year": "2009", "Europe": 31, "China": 21,  "USA": 19 },
+      { "Year": "2009", "Europe": 34, "China": 21,  "USA": 19 },
       { "Year": "2010", "Europe": 43, "China": 26,  "USA": 24 },
       { "Year": "2011", "Europe": 66, "China": 29,  "USA": 28 },
       { "Year": "2012", "Europe": 69, "China": 32,  "USA": 26 },
@@ -38,7 +39,6 @@
   },
   "modules": [
     "charts/LegendModule",
-    "charts/CategoryChartCategoryModule",
-    "charts/DataChartInteractivityModule"
+    "charts/CategoryChartCategoryModule"    
   ]
 }
