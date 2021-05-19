@@ -1,0 +1,82 @@
+{
+  "strings": {
+    "legendTitle": "Ronaldo vs. Messi Player Stats"
+  },
+  "descriptions": {
+    "legend": {
+      "type": "Legend",
+      "name": "Legend",
+      "orientation": "Horizontal"
+    },
+    "content": {
+      "type": "DataChart",
+      "name": "chart",
+      "legendRef": "Legend",
+      "isHorizontalZoomEnabled": false,
+      "isVerticalZoomEnabled": false,
+      "axes": [
+        {
+          "type": "CategoryAngleAxis",
+          "name": "angleAxis",
+          "dataSourceRef": "data",
+          "label": "Attribute"
+        },
+        {
+          "type": "NumericRadiusAxis",
+          "name": "radiusAxis",
+          "innerRadiusExtentScale": 0.1,
+          "interval": 2,
+          "minimumValue": 0,
+          "maximumValue": 10
+        }
+      ],
+      "series": [
+        {
+          "type": "RadialLineSeries",
+          "name": "RadialLineSeries1",
+          "dataSourceRef": "data",
+          "angleAxisRef": "angleAxis",
+          "valueAxisRef": "radiusAxis",
+          "valueMemberPath": "RonaldoValue",
+          "showDefaultTooltip": true,
+          "areaFillOpacity": 0.8,
+          "thickness": 3,
+          "title": "Ronaldo",
+          "markerType": "Circle"
+        },
+        {
+          "type": "RadialLineSeries",
+          "name": "RadialLineSeries2",
+          "dataSourceRef": "data",
+          "angleAxisRef": "angleAxis",
+          "valueAxisRef": "radiusAxis",
+          "valueMemberPath": "MessiValue",
+          "showDefaultTooltip": true,
+          "areaFillOpacity": 0.8,
+          "thickness": 3,
+          "title": "Messi",
+          "markerType": "Circle"
+        }
+      ]
+    }
+  },
+  "refs": {
+    "data": [
+      { "Attribute": "Dribbling",  "RonaldoValue": 8,  "MessiValue": 10 },
+      { "Attribute": "Passing",    "RonaldoValue": 8,  "MessiValue": 10 },
+      { "Attribute": "Finishing",  "RonaldoValue": 10, "MessiValue": 10 },
+      { "Attribute": "Free Kicks", "RonaldoValue": 8,  "MessiValue": 9 },
+      { "Attribute": "Penalties",  "RonaldoValue": 9,  "MessiValue": 7 },
+      { "Attribute": "Physical",   "RonaldoValue": 10, "MessiValue": 7 },
+      { "Attribute": "Team Play",  "RonaldoValue": 7,  "MessiValue": 9 },
+      { "Attribute": "Heading",    "RonaldoValue": 9,  "MessiValue": 6 }
+    ]
+  },
+  "modules": [
+    "charts/DataChartCoreModule",
+    "charts/DataChartPolarModule",
+    "charts/DataChartPolarCoreModule",
+    "charts/DataChartInteractivityModule",
+    "charts/LegendModule"
+  ]
+}
