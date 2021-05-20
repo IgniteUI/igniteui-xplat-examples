@@ -1,0 +1,38 @@
+{
+  "strings": {
+    "legendTitle": "Global Electricity Demand by Energy Use"
+  },
+  "descriptions": {
+    "legend": {
+      "type": "ItemLegend",
+      "name": "legend"
+    },
+    "content": {
+      "type": "PieChart",
+      "name": "chart",
+      "valueMemberPath": "MarketShare",
+      "labelMemberPath": "Category",
+      "labelsPosition": "OutsideEnd",
+      "labelExtent": 30,
+      "brushes": ["#f7d262", "#a8a8b7", "#e051a9", "#f8a15f", "#735656"],
+      "outlines":["#ffffff"],
+      "radiusFactor": 0.7,
+      "startAngle": 0,
+      "dataSourceRef": "data",
+      "legendRef": "legend"
+    }
+  },
+  "refs": {
+    "data": [
+      { "MarketShare": 37, "Category": "Cooling" },
+      { "MarketShare": 25, "Category": "Residential" },
+      { "MarketShare": 12, "Category": "Heating" },
+      { "MarketShare": 11, "Category": "Lighting" },
+      { "MarketShare": 15, "Category": "Other" }
+    ]
+  },
+  "modules": [
+    "charts/PieChartModule",
+    "charts/ItemLegendModule"
+  ]
+}
