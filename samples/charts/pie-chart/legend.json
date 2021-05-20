@@ -1,30 +1,33 @@
 {
+  "strings": {
+    "legendTitle": "Global Electricity Demand by Energy Use"
+  },
   "descriptions": {
     "legend": {
       "type": "ItemLegend",
-      "name": "ItemLegend",
-      "orientation": "Horizontal"
+      "name": "ItemLegend"
     },
     "content": {
       "type": "PieChart",
       "name": "chart",
       "valueMemberPath": "MarketShare",
-      "labelMemberPath": "Category",
+      "labelMemberPath": "Summary",
       "labelsPosition": "OutsideEnd",
-      "legendLabelMemberPath": "Category",
-      "radiusFactor": 0.6,
-      "labelExtent": 20,
+      "legendLabelMemberPath": "Summary",
+      "outlines": [ "#ffffff" ],
+      "radiusFactor": 0.7,
+      "labelExtent": 30,
       "dataSourceRef": "data",
       "legendRef": "ItemLegend"
     }
   },
   "refs": {
     "data": [
-      { "MarketShare": 37, "Category": "Cooling" },
-      { "MarketShare": 25, "Category": "Residential" },
-      { "MarketShare": 12, "Category": "Heating" },
-      { "MarketShare": 11, "Category": "Lighting" },
-      { "MarketShare": 15, "Category": "Other" }
+      { "MarketShare": 37, "Category": "Cooling", "Summary": "Cooling 37%" },
+      { "MarketShare": 25, "Category": "Residential", "Summary": "Residential 25%" },
+      { "MarketShare": 12, "Category": "Heating", "Summary": "Heating 12%" },
+      { "MarketShare": 11, "Category": "Lighting", "Summary": "Lighting 11%" },
+      { "MarketShare": 15, "Category": "Other", "Summary": "Other 15%" }
     ]
   },
   "modules": [
