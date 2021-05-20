@@ -1,0 +1,77 @@
+{
+  "strings": {
+    "legendTitle": "Monthly Temperature Range in LA and NYC for 2020 (in Celsius)"
+  },
+  "descriptions": {
+    "legend": {
+      "type": "Legend",
+      "name": "legend",
+      "orientation": "Horizontal"
+    },
+    "content": {
+      "type": "DataChart",
+      "name": "chart",
+      "isHorizontalZoomEnabled": false,
+      "isVerticalZoomEnabled": false,
+      "legendRef": "legend",
+      "axes": [
+        {
+          "type": "CategoryXAxis",
+          "name": "xAxis",
+          "label": "Month",
+          "interval": 1,
+          "dataSourceRef": "data"
+        },
+        {
+          "type": "NumericYAxis",
+          "name": "yAxis",
+          "title": "Temperature (in Celsius)",
+          "titleLeftMargin": 10
+        }
+      ],
+      "series": [
+        {
+          "type": "RangeColumnSeries",
+          "name": "series1",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "title": "Los Angeles",
+          "lowMemberPath": "LA_LOW",
+          "highMemberPath": "LA_HIGH",
+          "dataSourceRef": "data"
+        },
+        {
+          "type": "RangeColumnSeries",
+          "name": "series2",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "title": "New York City",
+          "lowMemberPath": "NY_LOW",
+          "highMemberPath": "NY_HIGH",
+          "dataSourceRef": "data"
+        }
+      ]
+    }
+  },
+  "refs": {
+    "data": [
+      { "Month": "January", "NY_HIGH": 10.6, "NY_LOW": -6.6, "LA_HIGH": 28.3, "LA_LOW": 7.8 },
+      { "Month": "February", "NY_HIGH": 7.8, "NY_LOW": -9.9, "LA_HIGH": 31.1, "LA_LOW": 5.6 },
+      { "Month": "March", "NY_HIGH": 12.2, "NY_LOW": -3.8, "LA_HIGH": 27.8, "LA_LOW": 8.3 },
+      { "Month": "Aprile", "NY_HIGH": 11.7, "NY_LOW": 2.2, "LA_HIGH": 33.9, "LA_LOW": 10.6 },
+      { "Month": "May", "NY_HIGH": 19.4, "NY_LOW": 1.1, "LA_HIGH": 35.0, "LA_LOW": 13.9 },
+      { "Month": "June", "NY_HIGH": 23.3, "NY_LOW": 10.6, "LA_HIGH": 36.7, "LA_LOW": 16.1 },
+      { "Month": "July", "NY_HIGH": 27.2, "NY_LOW": 19.4, "LA_HIGH": 33.3, "LA_LOW": 15.6 },
+      { "Month": "August", "NY_HIGH": 25.6, "NY_LOW": 16.7, "LA_HIGH": 36.7, "LA_LOW": 15.6 },
+      { "Month": "September", "NY_HIGH": 22.8, "NY_LOW": 8.9, "LA_HIGH": 43.9, "LA_LOW": 16.1 },
+      { "Month": "October", "NY_HIGH": 17.8, "NY_LOW": 0.0, "LA_HIGH": 38.3, "LA_LOW": 11.1 },
+      { "Month": "November", "NY_HIGH": 17.8, "NY_LOW": -1, "LA_HIGH": 32.8, "LA_LOW": 6.7 },
+      { "Month": "December", "NY_HIGH": 8.3, "NY_LOW": -6.6, "LA_HIGH": 28.9, "LA_LOW": 5.6 }
+    ]
+  },
+  "modules": [
+    "charts/DataChartModule",
+    "charts/DataChartCategoryModule",
+    "charts/LegendModule"
+  ]
+}
