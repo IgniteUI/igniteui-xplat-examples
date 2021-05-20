@@ -1,0 +1,32 @@
+{
+  "descriptions": {
+    "content": {
+      "type": "DoughnutChart",
+      "name": "chart",
+      "series": [
+        {  
+          "type": "RingSeries",
+          "name": "series",
+          "labelMemberPath": "Summary",
+          "valueMemberPath": "MarketShare",
+          "legendLabelMemberPath": "Category",
+          "outlines": [ "white" ],
+          "dataSourceRef": "data"
+        }
+      ]
+    }
+  },
+  "refs": {
+    "data": [
+      { "MarketShare": 30, "Category": "Google", "Summary": "Google 30%" },
+      { "MarketShare": 25, "Category": "Apple", "Summary": "Apple 25%" },
+      { "MarketShare": 20, "Category": "Microsoft", "Summary": "Microsoft 20%" },
+      { "MarketShare": 15, "Category": "Samsung", "Summary": "Samsung 15%" },
+      { "MarketShare": 10, "Category": "Other", "Summary": "Other 10%" }
+    ]
+  },
+  "modules": [
+    "charts/LegendModule",
+    "charts/DoughnutChartModule"
+  ]
+}
