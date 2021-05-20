@@ -1,0 +1,60 @@
+{
+  "descriptions": {
+    "content": {
+      "type": "DoughnutChart",
+      "name": "chart",
+      "allowSliceExplosion": false,
+      "allowSliceSelection": false,
+      "series": [
+        {  
+          "type": "RingSeries",
+          "name": "series1",
+          "labelMemberPath": "Label",
+          "valueMemberPath": "Value",
+          "labelsPosition": "Center",
+          "radiusFactor": 0.9,
+          "outlines": [ "white" ],
+          "brushes": [ "#3cbdc9", "#9fb328", "#f96232","#8a58d6" ],
+          "dataSourceRef": "seasons"
+        },
+        {
+          "type": "RingSeries",
+          "name": "series2",
+          "labelMemberPath": "Label",
+          "valueMemberPath": "Value",
+          "labelsPosition": "Center",
+          "radiusFactor": 0.9,
+          "outlines": [ "white" ],
+          "brushes": [ "#3cbdc9", "#3cbdc9", "#3cbdc9", "#9fb328", "#9fb32", "#9fb328", "#f96232", "#f96232", "#f96232", "#8a58d6", "#8a58d6", "#8a58d6" ],
+          "dataSourceRef": "months"
+        }
+      ]
+    }
+  },
+  "refs": {
+    "months": [
+      { "Value": 1, "Label": "December" },
+      { "Value": 1, "Label": "January" },
+      { "Value": 1, "Label": "February" },
+      { "Value": 1, "Label": "March" },
+      { "Value": 1, "Label": "April" },
+      { "Value": 1, "Label": "May" },
+      { "Value": 1, "Label": "June" },
+      { "Value": 1, "Label": "July" },
+      { "Value": 1, "Label": "August" },
+      { "Value": 1, "Label": "September" },
+      { "Value": 1, "Label": "October" },
+      { "Value": 1, "Label": "November" }
+    ],
+    "seasons": [
+      { "Value": 4, "Label": "Winter" },
+      { "Value": 4, "Label": "Spring" },
+      { "Value": 4, "Label": "Summer" },
+      { "Value": 4, "Label": "Fall" }
+    ]
+  },
+  "modules": [
+    "charts/LegendModule",
+    "charts/DoughnutChartModule"
+  ]
+}
