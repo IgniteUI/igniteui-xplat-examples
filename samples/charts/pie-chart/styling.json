@@ -5,7 +5,8 @@
   "descriptions": {
     "legend": {
       "type": "ItemLegend",
-      "name": "legend"
+      "name": "legend",
+      "orientation": "Horizontal"
     },
     "content": {
       "type": "PieChart",

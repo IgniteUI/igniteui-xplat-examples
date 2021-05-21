@@ -5,14 +5,15 @@
   "descriptions": {
     "legend": {
       "type": "ItemLegend",
-      "name": "legend"
+      "name": "legend",
+      "orientation": "Horizontal"
     },
     "content": {
       "type": "DoughnutChart",
       "name": "chart",
       "allowSliceExplosion": true,
       "series": [
-        {  
+        {
           "type": "RingSeries",
           "name": "series",
           "labelMemberPath": "Summary",
