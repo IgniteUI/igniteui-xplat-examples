@@ -32,7 +32,8 @@
       "yAxisTitle": "Labels Location",
       "isHorizontalZoomEnabled": false,
       "isVerticalZoomEnabled": false,
-      "xAxisInterval": 1
+      "xAxisInterval": 1,
+	  "yAxisLabelLocation": "OutsideRight"
     }
   },
   "refs": {
