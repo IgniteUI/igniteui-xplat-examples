@@ -1,6 +1,6 @@
 {  
   "strings": {
-    "legendTitle": "Renewable Electricity Generated"
+    "legendTitle": "Highest Grossing Movie Franchises"
   },
   "descriptions": {
     "legend": {
@@ -14,13 +14,19 @@
       "targetRef": "chart",
       "descriptionType": "CategoryChart",
       "isHorizontal": true,
-      "isWrappingEnabled": false,
+      "isWrappingEnabled": true,
       "properties": [
           {
             "type": "PropertyEditorPropertyDescription",
-            "propertyPath": "YAxisLabelLocation",
-            "label": "Y Axis - Label Location",
-            "primitiveValue": "OutsideRight"
+            "propertyPath": "XAxisTickLength",
+            "label": "X Axis Tick Length",
+            "shouldOverrideDefaultEditor": true,
+            "valueType": "EnumValue",
+            "dropDownNames": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10",
+            "11", "12", "13", "14", "15", "16", "17", "18", "19", "20"],
+            "dropDownValues": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10",
+            "11", "12", "13", "14", "15", "16", "17", "18", "19", "20"],
+            "primitiveValue": 10
           }
        ]
     },
@@ -30,11 +36,17 @@
       "dataSourceRef": "data",
       "legendRef": "Legend",
       "chartType": "Line",
-      "yAxisTitle": "Labels Location",
+
       "isHorizontalZoomEnabled": false,
       "isVerticalZoomEnabled": false,
-      "xAxisInterval": 1,
-	    "yAxisLabelLocation": "OutsideRight"
+      
+      "xAxisTickLength": 10,
+      "xAxisTickStrokeThickness": 1,
+      "xAxisTickStroke": "gray",
+
+      "yAxisTickLength": 0,
+      "yAxisTickStrokeThickness": 0,
+      "yAxisTickStroke": "transparent"
     }
   },
   "refs": {

@@ -1,0 +1,57 @@
+{  
+  "strings": {
+    "legendTitle": "Highest Grossing Movie Franchises"
+  },
+  "descriptions": {
+    "legend": {
+      "type": "Legend",
+      "name": "Legend",
+      "orientation": "Horizontal"
+    },
+    "editor": {
+      "type": "PropertyEditor",
+      "componentRendererRef": "renderer",
+      "targetRef": "chart",
+      "descriptionType": "CategoryChart",
+      "isHorizontal": true,
+      "isWrappingEnabled": true,
+      "properties": [
+          {
+            "type": "PropertyEditorPropertyDescription",
+            "propertyPath": "XAxisOverlap",
+            "label": "X Axis - Overlap",
+            "shouldOverrideDefaultEditor": true,
+            "valueType": "EnumValue",
+            "dropDownNames": ["1.0", "0.9", "0.8", "0.7", "0.6", "0.5", "0.4", "0.3", "0.2", "0.1", "0"],
+            "dropDownValues": ["1.0", "0.9", "0.8", "0.7", "0.6", "0.5", "0.4", "0.3", "0.2", "0.1", "0"],
+            "primitiveValue": 1
+          }
+       ]
+    },
+    "content": {
+      "type": "CategoryChart",
+      "name": "chart",
+      "dataSourceRef": "data",
+      "chartType": "Column",
+
+      "isHorizontalZoomEnabled": false,
+      "isVerticalZoomEnabled": false,
+      "xAxisInterval": 1,
+      "xAxisOverlap": 1
+    }
+  },
+  "refs": {
+    "data": [
+      { "Franchise": "Marvel Universe", "TotalRevenue": 22.55, "HighestGrossing": 2.8 },
+      { "Franchise": "Star Wars", "TotalRevenue": 10.32, "HighestGrossing": 2.07 },
+      { "Franchise": "Harry Potter", "TotalRevenue": 9.19, "HighestGrossing": 1.34 },
+      { "Franchise": "Avengers", "TotalRevenue": 7.76, "HighestGrossing": 2.8 },
+      { "Franchise": "Spider Man", "TotalRevenue": 7.22, "HighestGrossing": 1.28 },
+      { "Franchise": "James Bond", "TotalRevenue": 7.12, "HighestGrossing": 1.11 }
+    ]
+  },
+  "modules": [    
+    "charts/CategoryChartModule",
+    "grids/PropertyEditorModule"
+  ]
+}
