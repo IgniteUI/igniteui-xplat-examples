@@ -1,0 +1,58 @@
+{  
+  "strings": {
+    "legendTitle": "Renewable Electricity Generated"
+  },
+  "descriptions": {
+    "editor": {
+      "type": "PropertyEditor",
+      "componentRendererRef": "renderer",
+      "targetRef": "chart",
+      "descriptionType": "CategoryChart",
+      "isHorizontal": true,
+      "isWrappingEnabled": true,
+      "properties": [
+          {
+            "type": "PropertyEditorPropertyDescription",
+            "propertyPath": "XAxisGap",
+            "label": "X Axis - Gap",
+            "shouldOverrideDefaultEditor": true,
+            "valueType": "EnumValue",
+            "dropDownNames": ["1.0", "0.9", "0.8", "0.7", "0.6", "0.5", "0.4", "0.3", "0.2", "0.1", "0"],
+            "dropDownValues": ["1.0", "0.9", "0.8", "0.7", "0.6", "0.5", "0.4", "0.3", "0.2", "0.1", "0"],
+            "primitiveValue": 0.5
+          }
+       ]
+    },
+    "content": {
+      "type": "CategoryChart",
+      "name": "chart",
+      "dataSourceRef": "data",
+      "chartType": "Column",
+      "yAxisTitle": "Temperature In Celsius",
+      "isHorizontalZoomEnabled": false,
+      "isVerticalZoomEnabled": false,
+      "xAxisInterval": 1,
+      "xAxisGap": 0.5
+    }
+  },
+  "refs": {
+    "data": [
+      { "Month": "January",   "Temperature": 3 },
+      { "Month": "February",  "Temperature": 4 },
+      { "Month": "March",     "Temperature": 9 },
+      { "Month": "April",     "Temperature": 15 },
+      { "Month": "May",       "Temperature": 21 },
+      { "Month": "June",      "Temperature": 26 },
+      { "Month": "July",      "Temperature": 29 },
+      { "Month": "August",    "Temperature": 28 },
+      { "Month": "September", "Temperature": 24 },
+      { "Month": "October",   "Temperature": 18 },
+      { "Month": "November",  "Temperature": 11 },
+      { "Month": "December",  "Temperature": 5 }
+    ]
+  },
+  "modules": [    
+    "charts/CategoryChartModule",
+    "grids/PropertyEditorModule"
+  ]
+}
