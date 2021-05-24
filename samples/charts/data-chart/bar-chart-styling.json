@@ -1,0 +1,82 @@
+{ 
+  "descriptions": {
+    "content": {
+      "type": "DataChart",
+      "name": "Chart",
+      "chartTitle": "Where Online Shoppers Start Their Search",
+      "titleHorizontalAlignment": "Left",
+      "titleLeftMargin": 25,
+      "titleTopMargin": 10,
+      "titleBottomMargin": 10,
+      "isHorizontalZoomEnabled": false,
+      "isVerticalZoomEnabled": false,
+      "axes": [
+        {
+          "type": "CategoryYAxis",
+          "name": "yAxis",
+          "label": "Shop",
+          "dataSourceRef": "data",
+          "isInverted": true,
+          "gap": 0.75
+        },
+        {
+          "type": "NumericXAxis",
+          "name": "xAxis",
+          "interval": 20,
+          "labelFormat": "{0}%"      
+        }
+      ],
+      "series": [
+        {
+          "type": "BarSeries",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",          
+          "valueMemberPath": "Percent",
+          "dataSourceRef": "data",
+          "showDefaultTooltip": true,
+          "isTransitionInEnabled": true,
+          "isHighlightingEnabled": true
+        },
+        {
+          "type": "CalloutLayer",
+          "xMemberPath": "X",
+          "yMemberPath": "Y",
+          "labelMemberPath": "Label",
+          "contentMemberPath": "Label",
+          "calloutTextColor": "black",
+          "calloutBackground": "transparent",
+          "calloutLeaderBrush": "transparent",
+          "dataSourceRef": "callouts"
+        }
+      ]
+    }
+  },
+  "refs": {
+    "data": [
+      { "Shop": "Amazon",                      "Percent": 63 },
+      { "Shop": "Search Engines",              "Percent": 48 },
+      { "Shop": "Retailer Sites",              "Percent": 33 },
+      { "Shop": "Other Marketplaces",          "Percent": 25 },
+      { "Shop": "At the Website of the Brand", "Percent": 21 },
+      { "Shop": "Comparison Sites",            "Percent": 10 },
+      { "Shop": "Social Media",                "Percent": 8  },
+      { "Shop": "Other",                       "Percent": 2  }
+    ],
+    "callouts": [
+      { "X": 63, "Y": 0, "Label": "63%" },
+      { "X": 48, "Y": 1, "Label": "48%" },
+      { "X": 33, "Y": 2, "Label": "33%" },
+      { "X": 25, "Y": 3, "Label": "25%" },
+      { "X": 21, "Y": 4, "Label": "21%" },
+      { "X": 10, "Y": 5, "Label": "10%" },
+      { "X": 8, "Y": 6, "Label": "8%" },
+      { "X": 2, "Y": 7, "Label": "2%" }
+    ]
+  },
+  "modules": [
+    "charts/DataChartCoreModule",
+    "charts/DataChartCategoryModule",
+    "charts/DataChartVerticalCategoryModule",
+    "charts/DataChartAnnotationModule"
+  ]
+}
