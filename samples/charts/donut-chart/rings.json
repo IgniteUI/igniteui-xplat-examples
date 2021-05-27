@@ -1,4 +1,7 @@
 {
+  "strings": {
+    "legendTitle": "Hierarchical Chart"
+  },
   "descriptions": {
     "content": {
       "type": "DoughnutChart",

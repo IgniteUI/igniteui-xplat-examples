@@ -1,4 +1,7 @@
 {
+  "strings": {
+    "legendTitle": "Market Share of Tech Companies"
+  },
   "descriptions": {
     "content": {
       "type": "DoughnutChart",

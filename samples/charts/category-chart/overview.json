@@ -1,4 +1,7 @@
 {
+  "strings": {
+    "legendTitle": "Olympic Medals By Country"
+  },
   "descriptions": {
     "editor": {
       "type": "PropertyEditor",

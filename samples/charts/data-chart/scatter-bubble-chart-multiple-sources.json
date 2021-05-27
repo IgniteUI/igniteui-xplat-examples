@@ -1,4 +1,7 @@
 {
+  "strings": {
+    "legendTitle": "Total Population for Selected Continents"
+  },
   "descriptions": {
     "content": {
       "type": "DataChart",
