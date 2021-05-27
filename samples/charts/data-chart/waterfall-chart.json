@@ -1,17 +1,19 @@
 {
+  "strings": {
+    "legendTitle": "Facebook's Consolidated Statements of Income"
+  },
   "descriptions": {
     "content": {
       "type": "DataChart",
       "name": "chart",
-      "chartTitle": "Facebook's Consolidated Statements of Income for 2018",
-      "titleHorizontalAlignment": "Left",
-      "titleLeftMargin": 25,
-      "titleTopMargin": 10,
-      "titleBottomMargin": 10,
+      "isHorizontalZoomEnabled": false,
+      "isVerticalZoomEnabled": false,
       "axes": [
         {
           "type": "CategoryXAxis",
           "name": "xAxis",
+          "label": "Category",
+          "interval": 1,
           "dataSourceRef": "data",
           "overlap": 1
         },
@@ -29,9 +31,9 @@
           "type": "WaterfallSeries",
           "name": "WaterfallSeries1",
           "xAxisRef": "xAxis",
-          "yAxisRef": "yAxis",
+          "yAxisRef": "yAxis",          
           "dataSourceRef": "data",
-          "valueMemberPath": "Value",
+          "valueMemberPath": "Costs",
           "showDefaultTooltip": true,
           "isTransitionInEnabled": true
         },
@@ -43,7 +45,7 @@
           "dataSourceRef": "data",
           "brush":"#7446B9",
           "outline":"#7446B9",
-          "valueMemberPath": "NetIncomeValue",
+          "valueMemberPath": "NetIncome",
           "showDefaultTooltip": true,
           "isTransitionInEnabled": true
         }
@@ -52,21 +54,17 @@
   },
   "refs": {
     "data": [
-      { "Category": "Revenue", "Value": 55, "NetIncomeValue": null },
-      { "Category": "Cost of Revenue", "Value": 45, "NetIncomeValue": null },
-      { "Category": "Research and Development", "Value": 35, "NetIncomeValue": null},
-      { "Category": "Marketing and Sales", "Value": 28, "NetIncomeValue": null },
-      { "Category": "General and Administrative", "Value": 25, "NetIncomeValue": null },
-      { "Category": "Total Costs and Expenses", "Value": 55, "NetIncomeValue": null },
-      { "Category": "Net Income", "Value": null, "NetIncomeValue": 25 }
+      { "Costs": 55, "NetIncome": 0,  "Category": "Revenue",  },
+      { "Costs": 45, "NetIncome": 0,  "Category": "Expenses", },
+      { "Costs": 35, "NetIncome": 0,  "Category": "Research",  },
+      { "Costs": 28, "NetIncome": 0,  "Category": "Marketing", },
+      { "Costs": 25, "NetIncome": 0,  "Category": "Administration",  },
+      { "Costs": 55, "NetIncome": 0,  "Category": "Total Costs",  },
+      { "Costs": 0,  "NetIncome": 25, "Category": "Net Income",  }
     ]
   },
   "modules": [
-    "charts/DataChartCoreModule",
-    "charts/DataChartCategoryModule",
-    "charts/DataChartCategoryCoreModule",
-    "charts/DataChartInteractivityModule",
-    "charts/NumberAbbreviatorModule",
-    "charts/CalloutLayerModule"
+    "charts/DataChartModule",
+    "charts/DataChartCategoryModule"
   ]
 }
