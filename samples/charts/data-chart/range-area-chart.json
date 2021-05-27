@@ -1,12 +1,11 @@
-{
+{  
+  "strings": {
+    "legendTitle": "Monthly Temperature Range in Los Angeles"
+  }, 
   "descriptions": {
     "content": {
       "type": "DataChart",
       "name": "chart",
-      "chartTitle": "Monthly Temperature Range in Los Angeles for 2020 (in Celsius)",
-      "titleHorizontalAlignment": "Left",
-      "titleLeftMargin": 25,
-      "titleTopMargin": 10,
       "isHorizontalZoomEnabled": false,
       "isVerticalZoomEnabled": false,
       "axes": [

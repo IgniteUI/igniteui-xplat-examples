@@ -1,4 +1,7 @@
-{
+{  
+  "strings": {
+    "legendTitle": "Renewable Electricity Generated"
+  },
   "descriptions": {
     "content": {
       "type": "CategoryChart",
@@ -8,11 +11,6 @@
       "isHorizontalZoomEnabled": false,
       "isVerticalZoomEnabled": false,
       "dataSourceRef": "data",
-      "chartTitle": "Renewable Electricity Generated",
-      "titleAlignment": "Left",
-      "titleLeftMargin": 25,
-      "titleTopMargin": 10,
-      "titleBottomMargin": 10,
       "yAxisTitle": "TWh",
       "yAxisTitleLeftMargin": 10,
       "yAxisTitleRightMargin": 5,

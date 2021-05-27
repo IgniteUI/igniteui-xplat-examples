@@ -54,12 +54,12 @@
   },
   "refs": {
     "data": [
-      { "Costs": 55, "NetIncome": 0,  "Category": "Revenue",  },
-      { "Costs": 45, "NetIncome": 0,  "Category": "Expenses", },
-      { "Costs": 35, "NetIncome": 0,  "Category": "Research",  },
-      { "Costs": 28, "NetIncome": 0,  "Category": "Marketing", },
-      { "Costs": 25, "NetIncome": 0,  "Category": "Administration",  },
-      { "Costs": 55, "NetIncome": 0,  "Category": "Total Costs",  },
+      { "Costs": 55, "NetIncome": null,  "Category": "Revenue",  },
+      { "Costs": 45, "NetIncome": null,  "Category": "Expenses", },
+      { "Costs": 35, "NetIncome": null,  "Category": "Research",  },
+      { "Costs": 28, "NetIncome": null,  "Category": "Marketing", },
+      { "Costs": 25, "NetIncome": null,  "Category": "Administration",  },
+      { "Costs": 55, "NetIncome": null,  "Category": "Total Costs",  },
       { "Costs": 0,  "NetIncome": 25, "Category": "Net Income",  }
     ]
   },

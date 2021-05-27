@@ -1,16 +1,14 @@
-{
+{  
+  "strings": {
+    "legendTitle": "Renewable Electricity Generated"
+  },
   "descriptions": {
     "content": {
       "includedProperties": ["Year", "Europe"],
       "dataSourceRef": "data",
       "type": "CategoryChart",
-      "chartTitle": "Renewable Electricity Generated",
       "name": "chart",
       "chartType": "StepArea",
-      "titleAlignment": "Left",
-      "titleLeftMargin": 25,
-      "titleTopMargin": 10,
-      "titleBottomMargin": 10,
       "toolTipType": "Category",
       "isTransitionInEnabled": true,
       "isHorizontalZoomEnabled": false,

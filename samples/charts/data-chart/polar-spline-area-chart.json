@@ -1,10 +1,11 @@
 {
+  "strings": {
+    "legendTitle": "Wind Speed vs Boat Speed"
+  },
   "descriptions": {
     "content": {
       "type": "DataChart",
       "name": "chart",
-      "subtitle": "Wind Speed vs Boat Speed",
-      "subtitleTopMargin": 10,
       "isHorizontalZoomEnabled": false,
       "isVerticalZoomEnabled": false,
       "axes": [

@@ -1,4 +1,7 @@
-{   
+{  
+  "strings": {
+    "legendTitle": "Average Temperature Range in New York"
+  },  
   "descriptions": {
     "content": {
       "type": "CategoryChart",
@@ -6,11 +9,6 @@
       "chartType": "Column",
       "dataSourceRef": "data",
       "xAxisInterval": 1,
-      "chartTitle": "NYC Average Temperature",
-      "titleAlignment": "Left",
-      "titleLeftMargin": 25,
-      "titleTopMargin": 10,
-      "titleBottomMargin": 10,
       "yAxisTitle": "Temperature in Degrees Celsius",
       "yAxisTitleLeftMargin": 10,
       "yAxisTitleRightMargin": 5,

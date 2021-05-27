@@ -1,12 +1,13 @@
 { 
+  "strings": {
+    "legendTitle": "Olympic Medals By Country"
+  },
   "descriptions": {
     "content": {
       "type": "CategoryChart",
       "name": "chart",
       "dataSourceRef": "data",
       "chartType": "Line",
-
-      "chartTitle": "Olympic Medals By Country",
       "thickness": 3,
 
       "xAxisLabelTextStyle": "9pt Verdana",

@@ -1,4 +1,7 @@
-{
+{  
+  "strings": {
+    "legendTitle": "Renewable Electricity Generated"
+  },
   "descriptions": {
     "editor": {
       "type": "PropertyEditor",
@@ -30,7 +33,6 @@
     "content": {
       "type": "CategoryChart",
       "name": "chart",
-      "chartTitle": "Renewable Electricity Generated",
       "isSeriesHighlightingEnabled": true,
       "chartType": "Line",
       "markerTypes": [ "Circle" ],
