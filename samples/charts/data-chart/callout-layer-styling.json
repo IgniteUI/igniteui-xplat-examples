@@ -70,6 +70,10 @@
     ]
   },
   "modules": [
-
+    "charts/DataChartCoreModule",
+    "charts/DataChartCategoryModule",
+    "charts/DataChartAnnotationModule",
+    "charts/DataChartInteractivityModule",
+    "charts/AnnotationLayerProxyModule"
   ]
 }
