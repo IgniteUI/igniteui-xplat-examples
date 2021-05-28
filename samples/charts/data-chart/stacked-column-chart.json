@@ -28,13 +28,12 @@
       ],
       "series": [
         {
-          "type": "StackedLineSeries",
-          "name": "StackedLineSeries",
+          "type": "StackedColumnSeries",
+          "name": "StackedColumnSeries",
           "dataSourceRef": "data",
           "xAxisRef": "xAxis",
           "yAxisRef": "yAxis",
           "showDefaultTooltip": false,
-          "markerType": "Circle",
           "series": [
             { "type": "StackedFragmentSeries", "valueMemberPath": "Asia" },
             { "type": "StackedFragmentSeries", "valueMemberPath": "Africa" },

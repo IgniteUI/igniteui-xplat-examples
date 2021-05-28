@@ -9,7 +9,7 @@
       "targetRef": "treemap",
       "descriptionType": "Treemap",
       "isHorizontal": true,
-      "isWrappingEnabled": false,
+      "isWrappingEnabled": true,
       "properties": [
         {
           "type": "PropertyEditorPropertyDescription",
