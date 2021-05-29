@@ -70,7 +70,7 @@
     ]
   },
   "modules": [
-    "charts/DataChartModule",
+    "charts/DataChartCoreModule",
     "charts/DataChartCategoryModule",
     "charts/LegendModule"
   ]
