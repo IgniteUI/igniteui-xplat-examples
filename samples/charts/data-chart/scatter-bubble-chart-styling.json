@@ -39,6 +39,9 @@
           "radiusScale": { "type": "SizeScale", "minimumValue": 10, "maximumValue": 50 },
           "dataSourceRef": "dataAfrica",
           "markerType": "Circle", 
+          "markerOutline": "rgb(186,231,114)",
+          "markerBrush": "rgb(186,231,114)",
+          "markerThickness": 2,
           "showDefaultTooltip": true
         }, 
         {
@@ -53,6 +56,9 @@
           "radiusScale": { "type": "SizeScale", "minimumValue": 10, "maximumValue": 50 },
           "dataSourceRef": "dataEurope",
           "markerType": "Circle", 
+          "markerOutline": "rgb(248,174,95)",
+          "markerBrush": "rgb(248,174,95)",
+          "markerThickness": 2,
           "showDefaultTooltip": true
         }  
       ]
