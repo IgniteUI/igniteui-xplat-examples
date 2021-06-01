@@ -36,8 +36,8 @@
           "xAxisRef": "xAxis",
           "yAxisRef": "yAxis",
           "title": "Los Angeles",
-          "lowMemberPath": "LA_LOW",
-          "highMemberPath": "LA_HIGH",
+          "lowMemberPath": "LowLA",
+          "highMemberPath": "HighLA",
           "dataSourceRef": "data"
         },
         {
@@ -46,8 +46,8 @@
           "xAxisRef": "xAxis",
           "yAxisRef": "yAxis",
           "title": "New York City",
-          "lowMemberPath": "NY_LOW",
-          "highMemberPath": "NY_HIGH",
+          "lowMemberPath": "LowNY",
+          "highMemberPath": "HighNY",
           "dataSourceRef": "data"
         }
       ]
@@ -55,18 +55,18 @@
   },
   "refs": {
     "data": [
-      { "Month": "January", "NY_HIGH": 10.6, "NY_LOW": -6.6, "LA_HIGH": 28.3, "LA_LOW": 7.8 },
-      { "Month": "February", "NY_HIGH": 7.8, "NY_LOW": -9.9, "LA_HIGH": 31.1, "LA_LOW": 5.6 },
-      { "Month": "March", "NY_HIGH": 12.2, "NY_LOW": -3.8, "LA_HIGH": 27.8, "LA_LOW": 8.3 },
-      { "Month": "Aprile", "NY_HIGH": 11.7, "NY_LOW": 2.2, "LA_HIGH": 33.9, "LA_LOW": 10.6 },
-      { "Month": "May", "NY_HIGH": 19.4, "NY_LOW": 1.1, "LA_HIGH": 35.0, "LA_LOW": 13.9 },
-      { "Month": "June", "NY_HIGH": 23.3, "NY_LOW": 10.6, "LA_HIGH": 36.7, "LA_LOW": 16.1 },
-      { "Month": "July", "NY_HIGH": 27.2, "NY_LOW": 19.4, "LA_HIGH": 33.3, "LA_LOW": 15.6 },
-      { "Month": "August", "NY_HIGH": 25.6, "NY_LOW": 16.7, "LA_HIGH": 36.7, "LA_LOW": 15.6 },
-      { "Month": "September", "NY_HIGH": 22.8, "NY_LOW": 8.9, "LA_HIGH": 43.9, "LA_LOW": 16.1 },
-      { "Month": "October", "NY_HIGH": 17.8, "NY_LOW": 0.0, "LA_HIGH": 38.3, "LA_LOW": 11.1 },
-      { "Month": "November", "NY_HIGH": 17.8, "NY_LOW": -1, "LA_HIGH": 32.8, "LA_LOW": 6.7 },
-      { "Month": "December", "NY_HIGH": 8.3, "NY_LOW": -6.6, "LA_HIGH": 28.9, "LA_LOW": 5.6 }
+      { "Month": "January", "HighNY": 10.6, "LowNY": -6.6, "HighLA": 28.3, "LowLA": 7.8 },
+      { "Month": "February", "HighNY": 7.8, "LowNY": -9.9, "HighLA": 31.1, "LowLA": 5.6 },
+      { "Month": "March", "HighNY": 12.2, "LowNY": -3.8, "HighLA": 27.8, "LowLA": 8.3 },
+      { "Month": "Aprile", "HighNY": 11.7, "LowNY": 2.2, "HighLA": 33.9, "LowLA": 10.6 },
+      { "Month": "May", "HighNY": 19.4, "LowNY": 1.1, "HighLA": 35.0, "LowLA": 13.9 },
+      { "Month": "June", "HighNY": 23.3, "LowNY": 10.6, "HighLA": 36.7, "LowLA": 16.1 },
+      { "Month": "July", "HighNY": 27.2, "LowNY": 19.4, "HighLA": 33.3, "LowLA": 15.6 },
+      { "Month": "August", "HighNY": 25.6, "LowNY": 16.7, "HighLA": 36.7, "LowLA": 15.6 },
+      { "Month": "September", "HighNY": 22.8, "LowNY": 8.9, "HighLA": 43.9, "LowLA": 16.1 },
+      { "Month": "October", "HighNY": 17.8, "LowNY": 0.0, "HighLA": 38.3, "LowLA": 11.1 },
+      { "Month": "November", "HighNY": 17.8, "LowNY": -1, "HighLA": 32.8, "LowLA": 6.7 },
+      { "Month": "December", "HighNY": 8.3, "LowNY": -6.6, "HighLA": 28.9, "LowLA": 5.6 }
     ]
   },
   "modules": [
