@@ -53,7 +53,9 @@
     ]
   },
   "modules": [    
+    "charts/LegendModule",
     "charts/CategoryChartModule",
-    "grids/PropertyEditorModule"
+    "grids/PropertyEditorModule",
+    "withDescriptions"
   ]
 }

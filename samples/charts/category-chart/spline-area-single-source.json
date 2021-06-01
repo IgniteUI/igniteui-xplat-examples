@@ -35,6 +35,6 @@
     ]
   },
   "modules": [    
-    "charts/CategoryChartCategoryModule"
+    "charts/CategoryChartModule"
   ]
 }

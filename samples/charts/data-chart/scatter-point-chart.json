@@ -163,6 +163,7 @@
     ]
   },
   "modules": [ 
+    "charts/LegendModule",
     "charts/DataChartCoreModule",
     "charts/DataChartScatterModule", 
     "charts/DataChartScatterCoreModule", 

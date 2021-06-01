@@ -75,9 +75,9 @@
     ]
   },
   "modules": [
-    "withDescriptions",
     "charts/DataChartCategoryModule",
     "charts/DataChartInteractivityModule",
-    "grids/PropertyEditorModule"
+    "grids/PropertyEditorModule",
+    "withDescriptions"
   ]
 }

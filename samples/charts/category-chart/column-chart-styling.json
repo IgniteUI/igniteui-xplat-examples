@@ -37,7 +37,8 @@
       { "Location": "EU", "Solar": 11, "Coal": -12, "Hydro": -2, "Wind": 14, "Nuclear": -1 }
     ]
   },
-  "modules": [    
+  "modules": [   
+    "charts/LegendModule", 
     "charts/CategoryChartModule"
   ]
 }

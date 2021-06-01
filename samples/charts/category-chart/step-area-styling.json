@@ -46,7 +46,7 @@
   },
   "modules": [
     "charts/LegendModule",
-    "charts/CategoryChartCategoryModule",
+    "charts/CategoryChartModule",
     "charts/DataChartInteractivityModule"
   ]
 }

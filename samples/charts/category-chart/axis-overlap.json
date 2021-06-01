@@ -50,8 +50,10 @@
       { "Franchise": "James Bond", "TotalRevenue": 7.12, "HighestGrossing": 1.11 }
     ]
   },
-  "modules": [    
+  "modules": [   
+    "charts/LegendModule", 
     "charts/CategoryChartModule",
-    "grids/PropertyEditorModule"
+    "grids/PropertyEditorModule",
+    "withDescriptions"
   ]
 }

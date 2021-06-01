@@ -65,11 +65,11 @@
     ]
   },
   "modules": [
+    "charts/LegendModule",
     "charts/DataChartCoreModule",
     "charts/DataChartCategoryCoreModule",    
     "charts/DataChartCategoryModule",
     "charts/DataChartInteractivityModule",
-    "charts/DataChartVerticalCategoryModule",    
-    "charts/LegendModule"
+    "charts/DataChartVerticalCategoryModule"
   ]
 }

@@ -33,7 +33,7 @@
     ]
   },
   "modules": [
-    "charts/CategoryChartCategoryModule",
+    "charts/CategoryChartModule",
     "charts/DataChartInteractivityModule"
   ]
 }

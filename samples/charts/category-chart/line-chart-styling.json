@@ -44,7 +44,8 @@
       { "Year": "2019", "Europe": 80, "China": 96, "USA": 38 }
     ]
   },
-  "modules": [    
+  "modules": [  
+    "charts/LegendModule",  
     "charts/CategoryChartModule"
   ]
 }

@@ -71,10 +71,10 @@
     ]
   },
   "modules": [
+    "charts/LegendModule",
     "charts/DataChartCoreModule",
     "charts/DataChartPolarModule",
     "charts/DataChartPolarCoreModule",
-    "charts/DataChartInteractivityModule",
-    "charts/LegendModule"
+    "charts/DataChartInteractivityModule"
   ]
 }

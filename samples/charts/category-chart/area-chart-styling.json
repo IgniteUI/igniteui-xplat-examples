@@ -46,6 +46,7 @@
     ]
   },
   "modules": [    
+    "charts/LegendModule",
     "charts/CategoryChartModule"
   ]
 }

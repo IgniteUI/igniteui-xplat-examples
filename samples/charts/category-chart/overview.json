@@ -44,10 +44,10 @@
     ]
   },
   "modules": [
-    "withDescriptions",
-    "grids/PropertyEditorModule",
     "charts/LegendModule",
-    "charts/CategoryChartCategoryModule",
-    "charts/DataChartInteractivityModule"
+    "charts/CategoryChartModule",
+    "charts/DataChartInteractivityModule",
+    "grids/PropertyEditorModule",
+    "withDescriptions"
   ]
 }
