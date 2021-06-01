@@ -3,21 +3,11 @@
     "legendTitle": "Olympic Medals By Country"
   },
   "descriptions": {
-    "editor": {
-      "type": "PropertyEditor",
-      "componentRendererRef": "renderer",
-      "targetRef": "Chart",
-      "descriptionType": "CategoryChart",
-      "isHorizontal": true,
-      "isWrappingEnabled": true,
-      "properties": [
-        {
-          "type": "PropertyEditorPropertyDescription",
-          "propertyPath": "ChartType",
-          "label": "Chart Type"
-        }
-      ]
-    },
+    "legend": {
+      "type": "Legend",
+      "name": "Legend",
+      "orientation": "Horizontal"
+    },   
     "content": {
       "type": "CategoryChart",
       "name": "Chart",
@@ -47,7 +37,7 @@
     "charts/LegendModule",
     "charts/CategoryChartModule",
     "charts/DataChartInteractivityModule",
-    "grids/PropertyEditorModule",
-    "withDescriptions"
+    
+    
   ]
 }
