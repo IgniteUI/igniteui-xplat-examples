@@ -33,12 +33,12 @@
           "showDefaultTooltip": false,
           "markerType": "Circle",
           "series": [
-            { "type": "StackedFragmentSeries", "valueMemberPath": "Asia" },
-            { "type": "StackedFragmentSeries", "valueMemberPath": "Africa" },
-            { "type": "StackedFragmentSeries", "valueMemberPath": "Europe" },
-            { "type": "StackedFragmentSeries", "valueMemberPath": "NorthAmerica" },
-            { "type": "StackedFragmentSeries", "valueMemberPath": "SouthAmerica" },
-            { "type": "StackedFragmentSeries", "valueMemberPath": "Oceania" }
+            { "type": "StackedFragmentSeries", "name": "s1", "valueMemberPath": "Asia" },
+            { "type": "StackedFragmentSeries", "name": "s2", "valueMemberPath": "Africa" },
+            { "type": "StackedFragmentSeries", "name": "s3", "valueMemberPath": "Europe" },
+            { "type": "StackedFragmentSeries", "name": "s4", "valueMemberPath": "NorthAmerica" },
+            { "type": "StackedFragmentSeries", "name": "s5", "valueMemberPath": "SouthAmerica" },
+            { "type": "StackedFragmentSeries", "name": "s6", "valueMemberPath": "Oceania" }
           ]
         }
       ]

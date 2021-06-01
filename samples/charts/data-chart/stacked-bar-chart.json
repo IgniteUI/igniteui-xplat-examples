@@ -34,10 +34,10 @@
           "showDefaultTooltip": true,
           "areaFillOpacity": 1,
           "series": [
-            { "type": "StackedFragmentSeries", "valueMemberPath": "Hydro" },
-            { "type": "StackedFragmentSeries", "valueMemberPath": "Wind" },
-            { "type": "StackedFragmentSeries", "valueMemberPath": "Solar" },
-            { "type": "StackedFragmentSeries", "valueMemberPath": "Other" }
+            { "type": "StackedFragmentSeries", "name": "s1", "valueMemberPath": "Hydro" },
+            { "type": "StackedFragmentSeries", "name": "s2", "valueMemberPath": "Wind" },
+            { "type": "StackedFragmentSeries", "name": "s3", "valueMemberPath": "Solar" },
+            { "type": "StackedFragmentSeries", "name": "s4", "valueMemberPath": "Other" }
           ]
         },
         {

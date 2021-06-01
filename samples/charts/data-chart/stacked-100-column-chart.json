@@ -32,9 +32,9 @@
           "showDefaultTooltip": true,
           "areaFillOpacity": 1,
           "series": [
-            { "type": "StackedFragmentSeries", "valueMemberPath": "Desktop" },
-            { "type": "StackedFragmentSeries", "valueMemberPath": "Mobile" },
-            { "type": "StackedFragmentSeries", "valueMemberPath": "Tablet" }
+            { "type": "StackedFragmentSeries", "name": "s1", "valueMemberPath": "Desktop" },
+            { "type": "StackedFragmentSeries", "name": "s2", "valueMemberPath": "Mobile" },
+            { "type": "StackedFragmentSeries", "name": "s3", "valueMemberPath": "Tablet" }
           ]
         }
       ]
