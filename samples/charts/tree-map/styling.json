@@ -25,7 +25,7 @@
       "strokeThickness": 1,
       "styleMappings": [
         { "type": "TreemapNodeStyleMapping", "name": "styling1", "value": "Africa", "fill": "#735656", "mappingMode": "CustomValue" },
-        { "type": "TreemapNodeStyleMapping", "name": "styling2", "value": "Africa", "fill": "#61ab37", "mappingMode": "CustomValue" },
+        { "type": "TreemapNodeStyleMapping", "name": "styling2", "value": "Europe", "fill": "#61ab37", "mappingMode": "CustomValue" },
         { "type": "TreemapNodeStyleMapping", "name": "styling3", "value": "Asia", "fill": "#8B5BB1", "mappingMode": "CustomValue" },
         { "type": "TreemapNodeStyleMapping", "name": "styling4", "value": "North America", "fill": "#5fbaac", "mappingMode": "CustomValue" },
         { "type": "TreemapNodeStyleMapping", "name": "styling5", "value": "South America", "fill": "#EE5879", "mappingMode": "CustomValue" },

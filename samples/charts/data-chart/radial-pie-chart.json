@@ -73,8 +73,8 @@
   "modules": [
     "charts/LegendModule",
     "charts/DataChartCoreModule",
-    "charts/DataChartPolarModule",
-    "charts/DataChartPolarCoreModule",
+    "charts/DataChartRadialModule",
+    "charts/DataChartRadialCoreModule",
     "charts/DataChartInteractivityModule"
   ]
 }

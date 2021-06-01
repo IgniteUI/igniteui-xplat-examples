@@ -3,9 +3,15 @@
     "legendTitle": "Annual Number of Births by World Region"
   },
   "descriptions": {
+    "legend": {
+      "type": "Legend",
+      "name": "legend",
+      "orientation": "Horizontal"
+    },
     "content": {
       "type": "DataChart",
       "name": "chart",
+      "legendRef": "Legend",
       "isHorizontalZoomEnabled": false,
       "isVerticalZoomEnabled": false,
       "axes": [
@@ -61,6 +67,7 @@
     ]
   },
   "modules": [
+    "charts/LegendModule",
     "charts/DataChartCoreModule",
     "charts/DataChartCategoryModule",
     "charts/DataChartCategoryCoreModule",

@@ -3,6 +3,11 @@
     "legendTitle": "Renewable energy consumption"
   },
   "descriptions": {
+    "legend": {
+      "type": "Legend",
+      "name": "legend",
+      "orientation": "Horizontal"
+    },
     "content": {
       "type": "DataChart",
       "name": "chart",
@@ -71,6 +76,7 @@
     ]
   },
   "modules": [
+    "charts/LegendModule",
     "charts/DataChartCoreModule",
     "charts/DataChartCategoryModule",
     "charts/DataChartCategoryCoreModule",

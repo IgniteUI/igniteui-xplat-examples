@@ -27,6 +27,7 @@
       "series": [
         {
           "type": "BarSeries",
+          "name": "BarSeries1",
           "xAxisRef": "xAxis",
           "yAxisRef": "yAxis",          
           "valueMemberPath": "Percent",
