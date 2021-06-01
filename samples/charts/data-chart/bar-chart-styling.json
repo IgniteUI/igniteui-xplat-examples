@@ -27,6 +27,7 @@
       "series": [
         {
           "type": "BarSeries",
+          "name": "BarSeries1",
           "xAxisRef": "xAxis",
           "yAxisRef": "yAxis",          
           "valueMemberPath": "Percent",
@@ -37,6 +38,7 @@
         },
         {
           "type": "CalloutLayer",
+          "name": "CalloutLayer1",
           "xMemberPath": "X",
           "yMemberPath": "Y",
           "labelMemberPath": "Label",

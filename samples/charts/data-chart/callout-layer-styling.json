@@ -23,6 +23,7 @@
       "series": [
         {
           "type": "LineSeries",
+          "name": "LineSeries1",
           "xAxisRef": "xAxis",
           "yAxisRef": "yAxis",
           "dataSourceRef": "data",
@@ -30,6 +31,7 @@
         },
         {
           "type": "CalloutLayer",
+          "name": "CalloutLayer1",
           "dataSourceRef": "callouts",
           "xMemberPath": "Index",
           "yMemberPath": "Value",

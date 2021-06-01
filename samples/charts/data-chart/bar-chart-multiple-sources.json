@@ -30,7 +30,8 @@
       ],
       "series": [
         {
-          "type": "BarSeries",          
+          "type": "BarSeries",
+          "name": "BarSeries1",           
           "xAxisRef": "xAxis",
           "yAxisRef": "yAxis",
           "title": "Total Revenue of Franchise",
@@ -41,7 +42,8 @@
           "isHighlightingEnabled": true
         },
         {
-          "type": "BarSeries",          
+          "type": "BarSeries",    
+          "name": "BarSeries2",      
           "xAxisRef": "xAxis",
           "yAxisRef": "yAxis",
           "title": "Highest Grossing Movie in Series",
