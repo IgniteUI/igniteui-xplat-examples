@@ -282,8 +282,8 @@
     ]
   },
   "modules": [
-    "charts/TreemapModule",
+    "withDescriptions",
     "grids/PropertyEditorModule",
-    "withDescriptions"
+    "charts/TreemapModule"
   ]
 }

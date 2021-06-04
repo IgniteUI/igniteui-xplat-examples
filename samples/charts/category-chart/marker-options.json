@@ -1,4 +1,4 @@
-{  
+{
   "strings": {
     "legendTitle": "Renewable Electricity Generated"
   },
@@ -55,9 +55,9 @@
     ]
   },
   "modules": [
-    "charts/CategoryChartModule",
-    "charts/DataChartInteractivityModule",
+    "withDescriptions",
     "grids/PropertyEditorModule",
-    "withDescriptions"
+    "charts/CategoryChartModule",
+    "charts/DataChartInteractivityModule"
   ]
 }

@@ -1,4 +1,4 @@
-{  
+{
   "strings": {
     "legendTitle": "Highest Grossing Movie Franchises"
   },
@@ -50,10 +50,10 @@
       { "Franchise": "James Bond", "TotalRevenue": 7.12, "HighestGrossing": 1.11 }
     ]
   },
-  "modules": [   
-    "charts/LegendModule", 
-    "charts/CategoryChartModule",
+  "modules": [
+    "withDescriptions",
     "grids/PropertyEditorModule",
-    "withDescriptions"
+    "charts/LegendModule",
+    "charts/CategoryChartModule"
   ]
 }

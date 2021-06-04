@@ -1,4 +1,4 @@
-{  
+{
   "strings": {
     "legendTitle": "Highest Grossing Movie Franchises"
   },
@@ -66,10 +66,10 @@
       { "Year": "2019", "Europe": 80, "China": 96, "USA": 38 }
     ]
   },
-  "modules": [ 
-    "charts/LegendModule",   
-    "charts/CategoryChartModule",
+  "modules": [
+    "withDescriptions",
     "grids/PropertyEditorModule",
-    "withDescriptions"
+    "charts/LegendModule",
+    "charts/CategoryChartModule",
   ]
 }

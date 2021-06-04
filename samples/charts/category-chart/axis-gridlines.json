@@ -1,4 +1,4 @@
-{  
+{
   "strings": {
     "legendTitle": "Renewable Electricity Generated"
   },
@@ -59,7 +59,7 @@
 
       "xAxisStroke": "#919191",
       "xAxisStrokeThickness": 2,
-      
+
       "xAxisInterval": 1,
       "xAxisMajorStroke":  "#474747",
       "xAxisMajorStrokeThickness": 0.5,
@@ -93,10 +93,10 @@
       { "Year": "2019", "Europe": 80, "China": 96, "USA": 38 }
     ]
   },
-  "modules": [    
-    "charts/LegendModule",
-    "charts/CategoryChartModule",
+  "modules": [
+    "withDescriptions",
     "grids/PropertyEditorModule",
-    "withDescriptions"
+    "charts/LegendModule",
+    "charts/CategoryChartModule"
   ]
 }
