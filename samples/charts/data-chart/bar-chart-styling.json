@@ -76,7 +76,11 @@
   "modules": [
     "charts/DataChartCoreModule",
     "charts/DataChartCategoryModule",
+    "charts/DataChartCategoryCoreModule",
+    "charts/DataChartInteractivityModule",
     "charts/DataChartVerticalCategoryModule",
+    "charts/AnnotationLayerProxyModule",
+    "charts/CalloutLayerModule",
     "charts/DataChartAnnotationModule"
   ]
 }
