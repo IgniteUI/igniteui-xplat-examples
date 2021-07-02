@@ -14,27 +14,26 @@
         {
           "type": "PropertyEditorPropertyDescription",
           "propertyPath": "LayoutType",
+          "primitiveValue": "Squarified",
           "label": "Layout"
         },
         {
           "type": "PropertyEditorPropertyDescription",
           "propertyPath": "LayoutOrientation",
+          "primitiveValue": "Vertical",
           "label": "Orientation"
         },
         {
           "type": "PropertyEditorPropertyDescription",
           "propertyPath": "HeaderDisplayMode",
+          "primitiveValue": "Overlay",
           "label": "Headers"
         },
         {
           "type": "PropertyEditorPropertyDescription",
-          "propertyPath": "LabelHorizontalAlignment",
-          "label": "Label Alignment Horizontal"
-        },
-        {
-          "type": "PropertyEditorPropertyDescription",
           "propertyPath": "LabelVerticalAlignment",
-          "label": "Label Alignment Vertical"
+          "primitiveValue": "Center",
+          "label": "Labels"
         }
       ]
     },
@@ -49,6 +48,7 @@
       "valueMemberPath": "Pop",
       "fillBrushes": ["#299e41", "#4e62cf", "#5e359c"],
       "isFillScaleLogarithmic": true,
+      "headerDisplayMode": "Overlay",
       "parentNodeBottomPadding": 0,
       "parentNodeLeftPadding": 0,
       "parentNodeRightPadding": 0,
