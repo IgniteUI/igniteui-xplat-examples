@@ -30,7 +30,7 @@
           "xMemberPath": "WorkedHours",
           "yMemberPath": "GDP",
           "radiusMemberPath": "Population", 
-          "radiusScale": { "type": "SizeScale", "minimumValue": 10, "maximumValue": 50 },
+          "radiusScaleRef": "sizeScale",
           "dataSourceRef": "dataEurope",
           "markerType": "Circle", 
           "showDefaultTooltip": true
@@ -39,6 +39,7 @@
     }
   },
   "refs": {
+    "sizeScale": { "type": "SizeScale", "minimumValue": 10, "maximumValue": 50 },
     "dataEurope": 
     [
         { "Code": "ALB", "Population": 2891000, "WorkedHours": 41.00, "GDP": 10970, "Name": "Albania" },
