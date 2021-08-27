@@ -1,0 +1,19 @@
+{
+  "descriptions": {
+    "content": {
+      "type": "LinearGauge",
+      "name": "gauge",
+      "minimumValue": 0,
+      "maximumValue": 100,
+      "value": 50,
+      "interval": 10,
+      "labelInterval": 10,
+      "labelExtent": 0.65,
+      "labelsPreTerminal": 0,
+      "labelsPostInitial": 0
+    }
+  },
+  "modules": [
+    "gauges/LinearGaugeModule"
+  ]
+}
