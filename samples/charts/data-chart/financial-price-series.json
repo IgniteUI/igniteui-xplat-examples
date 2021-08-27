@@ -1,0 +1,80 @@
+{
+  "export": false,
+  "descriptions": {
+    "content": {
+      "type": "DataChart",
+      "name": "chart",
+      "isVerticalZoomEnabled": true,
+      "isHorizontalZoomEnabled": true,
+      "axes": [
+        {
+          "type": "CategoryXAxis",
+          "name": "xAxis",
+          "dataSourceRef": "data",
+          "labelLocation": "OutsideBottom",
+          "label": "date",
+          "interval": 1,
+          "labelExtent": 30
+        },
+        {
+          "type": "NumericYAxis",
+          "name": "yAxis",
+          "labelLocation": "OutsideBottom"
+        }
+      ],
+      "series": [
+        {
+          "type": "FinancialPriceSeries",
+          "name": "Series1",
+          "title": "Stock Price",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "dataSourceRef": "data",
+          "openMemberPath": "Open",
+          "highMemberPath": "High",
+          "lowMemberPath": "Low",
+          "closeMemberPath": "Close",
+          "volumeMemberPath": "Volume",
+          "showDefaultTooltip": true
+        }
+      ]
+    }
+  },
+  "refs": {
+    "data": [ 
+      { "date": "2020", "Open": 41.1, "High": 41.6, "Low": 41.1, "Close": 41.4, "Volume": 32610 },
+      { "date": "FEB",  "Open": 41.4, "High": 41.7, "Low": 41.2, "Close": 41.4, "Volume": 28666 },
+      { "date": "MAR",  "Open": 41.3, "High": 41.3, "Low": 40.7, "Close": 41.0, "Volume": 30139 },
+      { "date": "APR",  "Open": 41.3, "High": 41.4, "Low": 39.6, "Close": 39.9, "Volume": 51409 },
+      { "date": "MAY",  "Open": 40.0, "High": 40.3, "Low": 39.7, "Close": 39.8, "Volume": 37559 },
+      { "date": "JUN",  "Open": 39.8, "High": 39.9, "Low": 39.2, "Close": 39.8, "Volume": 35919 },
+      { "date": "JUL",  "Open": 39.9, "High": 40.5, "Low": 39.9, "Close": 40.5, "Volume": 27398 },
+      { "date": "AUG",  "Open": 40.4, "High": 40.7, "Low": 39.1, "Close": 39.4, "Volume": 45960 },
+      { "date": "SEP",  "Open": 39.0, "High": 39.8, "Low": 39.0, "Close": 39.2, "Volume": 34333 },
+      { "date": "OCT",  "Open": 39.1, "High": 39.4, "Low": 38.9, "Close": 39.2, "Volume": 32006 },
+      { "date": "NOV",  "Open": 39.3, "High": 40.0, "Low": 39.0, "Close": 39.8, "Volume": 33978 },
+      { "date": "DEC",  "Open": 40.1, "High": 40.4, "Low": 39.9, "Close": 40.4, "Volume": 30616 },
+      { "date": "2021", "Open": 40.0, "High": 40.2, "Low": 39.5, "Close": 40.0, "Volume": 36689 },
+      { "date": "FEB",  "Open": 40.1, "High": 40.1, "Low": 39.8, "Close": 39.9, "Volume": 22222 },
+      { "date": "MAR",  "Open": 40.0, "High": 40.1, "Low": 39.8, "Close": 40.0, "Volume": 27057 },
+      { "date": "APR",  "Open": 40.0, "High": 40.0, "Low": 39.5, "Close": 39.7, "Volume": 24602 },
+      { "date": "MAY",  "Open": 39.7, "High": 40.0, "Low": 39.3, "Close": 39.9, "Volume": 42381 },
+      { "date": "JUN",  "Open": 40.3, "High": 40.7, "Low": 39.8, "Close": 39.9, "Volume": 56883 },
+      { "date": "JUL",  "Open": 40.1, "High": 41.3, "Low": 40.1, "Close": 40.9, "Volume": 50610 },
+      { "date": "AUG",  "Open": 41.1, "High": 41.2, "Low": 40.4, "Close": 40.5, "Volume": 29637 },
+      { "date": "SEP",  "Open": 39.0, "High": 39.8, "Low": 39.0, "Close": 39.2, "Volume": 34333 },
+      { "date": "OCT",  "Open": 39.1, "High": 39.4, "Low": 38.9, "Close": 39.2, "Volume": 32006 },
+      { "date": "NOV",  "Open": 39.3, "High": 40.0, "Low": 39.0, "Close": 39.8, "Volume": 33978 },
+      { "date": "DEC",  "Open": 40.1, "High": 40.4, "Low": 39.9, "Close": 40.4, "Volume": 30616 }
+    ]
+  },
+  "modules": [
+    "charts/DataChartCoreModule",
+    "charts/DataChartCategoryModule",
+    "charts/DataChartCategoryCoreModule",
+    "charts/DataChartFinancialCoreModule",
+    "charts/DataChartFinancialModule",
+    "charts/DataChartFinancialOverlaysModule",
+    "charts/DataChartInteractivityModule"
+  ]
+}
