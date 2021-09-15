@@ -5,6 +5,7 @@
   "descriptions": {
     "editor": {
       "type": "PropertyEditor",
+      "name": "PropertyEditor",
       "componentRendererRef": "renderer",
       "targetRef": "chart",
       "descriptionType": "CategoryChart",
@@ -14,12 +15,14 @@
         {
           "type": "PropertyEditorPropertyDescription",
           "propertyPath": "ChartType",
+          "name": "ChartTypeEditor",
           "label": "Chart Type",
           "primitiveValue": "Line"
         },
         {
           "type": "PropertyEditorPropertyDescription",
           "propertyPath": "MarkerTypeHandler",
+          "name": "MarkerTypeEditor",
           "label": "Marker Type",
           "shouldOverrideDefaultEditor": true,
           "valueType": "EnumValue",
