@@ -1,0 +1,25 @@
+{
+  "export": false,
+  "descriptions": {
+    "content": {
+      "type": "BulletGraph",
+      "name": "gauge",
+      "height": "80px",
+      "width": "400px",      
+      "minimumValue": 0,
+      "value": 70,
+      "interval": 10,
+      "maximumValue": 100,
+      "targetValue": 90,
+      "isScaleInverted": false,
+      "scaleBackgroundBrush":"dodgerblue",
+      "scaleBackgroundOutline": "darkviolet",
+      "scaleBackgroundThickness": 2,
+      "scaleStartExtent": 0.05,
+      "scaleEndExtent": 0.95
+    }
+  },
+  "modules": [
+    "gauges/BulletGraphModule"
+  ]
+}
