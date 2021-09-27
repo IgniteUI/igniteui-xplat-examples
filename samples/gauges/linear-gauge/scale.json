@@ -1,0 +1,26 @@
+{
+  "export": false,
+  "descriptions": {
+    "content": {
+      "type": "LinearGauge",
+      "name": "gauge",
+      "height": "80px",
+      "width": "400px",
+      "minimumValue": 0,
+      "value": 50,
+      "maximumValue": 100,
+      "interval": 10,
+      "isScaleInverted": false,
+      "scaleBrush": "dodgerblue",
+      "scaleOutline": "darkviolet",
+      "scaleStrokeThickness": 1,
+      "scaleInnerExtent": 0.05,
+      "scaleOuterExtent": 0.65,
+      "scaleStartExtent": 0.05,
+      "scaleEndExtent": 0.95
+    }
+  },
+  "modules": [
+    "gauges/LinearGaugeModule"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "export": false,
+  "descriptions": {
+    "content": {
+      "type": "LinearGauge",
+      "name": "gauge",
+      "height": "80px",
+      "width": "400px",
+      "minimumValue": 0,
+      "value": 50,
+      "maximumValue": 100,
+      "interval": 10,
+      "labelInterval": 10,
+      "labelExtent": 0.025,
+      "labelsPreTerminal": 0,
+      "labelsPostInitial": 0,
+      "fontBrush":"dodgerblue",
+      "font": "11px Verdana"      
+    }
+  },
+  "modules": [
+    "gauges/LinearGaugeModule"
+  ]
+}
