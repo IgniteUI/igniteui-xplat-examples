@@ -11,11 +11,11 @@
       "maximumValue": 100,
       "interval": 10,
       "targetValue": 90,
-      "rangeBrushes": ["#C62828", "#F96232", "#FF9800"],
-      "rangeOutlines": ["#C62828", "#F96232", "#FF9800"],
       "ranges": [
         {
           "type": "LinearGraphRange",
+		  "brush": "#C62828",
+          "outline": "#C62828",
           "startValue": 0, 
           "endValue": 40, 
           "innerStartExtent": 0.075, 
@@ -25,6 +25,8 @@
         },
         {
           "type": "LinearGraphRange", 
+		  "brush": "#F96232",
+          "outline": "#F96232",
           "startValue": 40, 
           "endValue": 70, 
           "innerStartExtent": 0.075, 
@@ -34,6 +36,8 @@
         },
         {
           "type": "LinearGraphRange", 
+		  "brush": "#FF9800",
+          "outline": "#FF9800",
           "startValue": 70, 
           "endValue": 100, 
           "innerStartExtent": 0.075, 

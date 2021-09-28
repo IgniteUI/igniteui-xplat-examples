@@ -10,11 +10,11 @@
       "value": 50,
       "maximumValue": 100,
       "interval": 10,
-      "rangeBrushes": ["#a4bd29", "#F86232"],
-      "rangeOutlines": ["#a4bd29", "#F86232"],
       "ranges": [
-        {
+        {          
           "type": "LinearGraphRange", 
+		  "brush": "#a4bd29",
+          "outline": "#F86232",
           "startValue": 0, 
           "endValue": 50, 
           "innerStartExtent": 0.075, 
@@ -22,8 +22,10 @@
           "outerStartExtent": 0.25, 
           "outerEndExtent": 0.4
         },
-        {
-          "type": "LinearGraphRange", 
+        {          
+          "type": "LinearGraphRange",
+		  "brush": "#a4bd29",
+          "outline": "#F86232",		  
           "startValue": 50, 
           "endValue": 100, 
           "innerStartExtent": 0.075, 
@@ -32,8 +34,7 @@
           "outerEndExtent": 0.4
         },
       ]
-    }
-   
+    }   
   },
   "modules": [
     "gauges/LinearGaugeModule"
