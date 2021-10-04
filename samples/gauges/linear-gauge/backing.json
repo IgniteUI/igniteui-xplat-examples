@@ -1,0 +1,23 @@
+{
+  "export": false,
+  "descriptions": {
+    "content": {
+      "type": "LinearGauge",
+      "name": "gauge",
+      "height": "80px",
+      "width": "400px",
+      "minimumValue": 0,
+      "value": 50,
+      "maximumValue": 100,
+      "interval": 10,
+      "backingBrush": "#bddcfc",
+      "backingOutline": "dodgerblue",
+      "backingStrokeThickness": 4,
+      "backingInnerExtent": 0,
+      "backingOuterExtent": 1
+    }
+  },
+  "modules": [
+    "gauges/LinearGaugeModule"
+  ]
+}
