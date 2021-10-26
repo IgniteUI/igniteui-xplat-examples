@@ -35,6 +35,14 @@
             "dropDownNames": ["-90", "-45", "0", "45", "90"],
             "dropDownValues": ["-90", "-45", "0", "45", "90"],
             "primitiveValue": 0
+          },
+          {
+            "type": "PropertyEditorPropertyDescription",
+            "propertyPath": "xAxisLabelTextColor",
+            "label": "Y Axis Label Color",
+            "valueType": "EnumValue",
+            "dropDownNames": [ "red", "green"],
+            "dropDownValues": [ "red", "green"]
           }
        ]
     },
