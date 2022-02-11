@@ -1,0 +1,53 @@
+{
+  "export": true,
+  "descriptions": {
+    "editor": {
+      "type": "PropertyEditor",
+      "componentRendererRef": "renderer",
+      "targetRef": "chart",
+      "descriptionType": "Sparkline",
+      "isHorizontal": true,
+      "isWrappingEnabled": true,
+      "properties": [
+          {
+            "type": "PropertyEditorPropertyDescription",
+            "propertyPath": "TrendLineType",
+            "label": "Trendline Type",
+            "shouldOverrideDefaultEditor": true,
+            "valueType": "EnumValue",
+            "dropDownNames": ["CubicFit", "CumulativeAverage", "ExponentialAverage", "ExponentialFit", "LinearFit", "LogarithmicFit", "ModifiedAverage", "None", "PowerLawFit", "QuadraticFit", "QuarticFit",  "QuinticFit", "SimpleAverage", "WeightedAverage" ],
+            "dropDownValues": ["CubicFit", "CumulativeAverage", "ExponentialAverage", "ExponentialFit", "LinearFit", "LogarithmicFit", "ModifiedAverage", "None", "PowerLawFit", "QuadraticFit", "QuarticFit",  "QuinticFit", "SimpleAverage", "WeightedAverage" ],
+            "primitiveValue": "CubicFit"
+          }
+       ]
+    },
+    "content": {
+     "type": "Sparkline",
+      "name": "chart",
+      "dataSourceRef": "data",
+      "displayType": "Area",
+      "labelMemberPath": "Label",
+      "valueMemberPath": "Value",
+      "trendLineType": "CubicFit"
+    }
+  },
+  "refs": {
+    "data": [
+            { "Label": 4, "Value": 4 },
+            { "Label": 5, "Value": 5 },
+            { "Label": 2, "Value": 2 },
+            { "Label": 7, "Value": 7 },
+            { "Label": -1, "Value": -1 },
+            { "Label": 3, "Value": 3 },
+            { "Label": -2, "Value": -2 },
+            { "Label": 5, "Value": 5 },
+            { "Label": 2, "Value": 2 },
+            { "Label": 6, "Value": 6 }
+    ]
+  },
+  "modules": [    
+    "withDescriptions",
+    "grids/PropertyEditorModule",
+    "charts/SparklineModule"    
+  ]
+}

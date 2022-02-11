@@ -1,0 +1,75 @@
+{
+  "export": true,
+  "descriptions": {
+    "editor": {
+      "type": "PropertyEditor",
+      "componentRendererRef": "renderer",
+      "targetRef": "chart",
+      "descriptionType": "Sparkline",
+      "isHorizontal": true,
+      "isWrappingEnabled": true,
+      "properties": [
+          {
+            "type": "PropertyEditorPropertyDescription",
+            "propertyPath": "NormalRangeVisibility",
+            "label": "Normal Range Visibility",
+            "shouldOverrideDefaultEditor": true,
+            "valueType": "EnumValue",
+            "dropDownNames": ["Visible", "Collapsed"],
+            "dropDownValues": ["Visible", "Collapsed"],
+            "primitiveValue": "Visible"
+          },
+          {
+            "type": "PropertyEditorPropertyDescription",
+            "propertyPath": "NormalRangeMinimum",
+            "label": "Normal Range Minimum",
+            "shouldOverrideDefaultEditor": true,
+            "valueType": "EnumValue",
+            "dropDownNames": ["-7", "-6", "-5", "-4", "-3", "-2", "-1", "0"],
+            "dropDownValues": ["-7", "-6", "-5", "-4", "-3", "-2", "-1", "0"],
+            "primitiveValue": -5
+          },
+          {
+            "type": "PropertyEditorPropertyDescription",
+            "propertyPath": "NormalRangeMaximum",
+            "label": "Normal Range Maximum",
+            "shouldOverrideDefaultEditor": true,
+            "valueType": "EnumValue",
+            "dropDownNames": ["7", "6", "5", "4", "3", "2", "1", "0"],
+            "dropDownValues": ["7", "6", "5", "4", "3", "2", "1", "0"],
+            "primitiveValue": 5
+          }
+       ]
+    },
+    "content": {
+     "type": "Sparkline",
+      "name": "chart",
+      "dataSourceRef": "data",
+      "displayType": "Area",
+      "labelMemberPath": "Label",
+      "valueMemberPath": "Value",
+      "normalRangeVisibility": "Visible",
+      "normalRangeMinimum": -5,
+      "normalRangeMaximum": 5
+    }
+  },
+  "refs": {
+    "data": [
+            { "Label": 4, "Value": 4 },
+            { "Label": 5, "Value": 5 },
+            { "Label": 2, "Value": 2 },
+            { "Label": 7, "Value": 7 },
+            { "Label": -1, "Value": -6 },
+            { "Label": 3, "Value": 3 },
+            { "Label": -2, "Value": -7 },
+            { "Label": 5, "Value": 5 },
+            { "Label": 2, "Value": 2 },
+            { "Label": 6, "Value": 6 }
+    ]
+  },
+  "modules": [    
+    "withDescriptions",
+    "grids/PropertyEditorModule",
+    "charts/SparklineModule"    
+  ]
+}
