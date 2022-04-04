@@ -11,6 +11,13 @@
       "plotAreaMarginRight": 100,
       "axes": [
         {
+          "type": "CategoryXAxis",
+          "name": "xAxis",
+          "dataSourceRef": "data",
+          "label": "Year",
+          "labelLocation": "OutsideBottom"
+        },
+        {
           "type": "TimeXAxis",
           "name": "xAxis",
           "dataSourceRef": "data",
@@ -40,7 +47,7 @@
           "name": "CalloutLayer1",
           "targetSeriesRef": "LineSeries1",
           "dataSourceRef": "data",
-          "xMemberPath": "Year",
+          "xMemberPath": "",
           "yMemberPath": "Value",
           "labelMemberPath": "Year",
           "isAutoCalloutBehaviorEnabled": false,
@@ -62,13 +69,13 @@
   },
   "refs": {
     "data": [
-      {"Year": "23 June, 2016", "Value": 5, "Details": "UK votes to exit the EU"},
-      {"Year": "29 March, 2017", "Value": 5, "Details": "The UK triggers Article 50"},
-      {"Year": "19 June, 2017", "Value": 5, "Details": "Brexit negotiations begin"},
-      {"Year": "19 March, 2018", "Value": 5, "Details": "The EU and the UK agree on a transition phase"},
-      {"Year": "25 November, 2018", "Value": 5, "Details": "Draft withdrawl deal agreed"},
-      {"Year": "29 October, 2019", "Value": 5, "Details": "EU heads of state and government approve postponing the Brexit date"},
-      {"Year": "31 December, 2020", "Value": 5, "Details": "Transition period ends"}
+      {"Date": "2016, 6, 23", "Year": "23 June, 2016", "Value": 5, "Details": "UK votes to exit the EU"},
+      {"Date": "2017, 3, 29", "Year": "29 March, 2017", "Value": 5, "Details": "The UK triggers Article 50"},
+      {"Date": "2017, 6, 19", "Year": "19 June, 2017", "Value": 5, "Details": "Brexit negotiations begin"},
+      {"Date": "2017, 3, 19", "Year": "19 March, 2018", "Value": 5, "Details": "The EU and the UK agree on a transition phase"},
+      {"Date": "2018, 11, 25", "Year": "25 November, 2018", "Value": 5, "Details": "Draft withdrawl deal agreed"},
+      {"Date": "2019, 10, 29", "Year": "29 October, 2019", "Value": 5, "Details": "EU heads of state and government approve postponing the Brexit date"},
+      {"Date": "2020, 12, 31", "Year": "31 December, 2020", "Value": 5, "Details": "Transition period ends"}
     ]
   },
   "modules": [
