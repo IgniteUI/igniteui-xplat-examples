@@ -1,0 +1,54 @@
+{  
+  "strings": {
+    "legendTitle": "Average Temperature Range in New York"
+  },  
+  "descriptions": {
+    "content": {
+      "type": "DataChart",
+      "name": "chart",
+      "axes": [
+        {
+          "type": "CategoryXAxis",
+          "name": "xAxis",
+          "dataSourceRef": "data",
+          "label": "Month",
+          "minimumGapSize": 25
+        },
+        {
+          "type": "NumericYAxis",
+          "name": "yAxis"
+        }
+      ],
+      "series": [
+        {
+          "type": "ColumnSeries",
+          "name": "columnSeries1",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "dataSourceRef": "data",
+          "valueMemberPath": "Temperature"
+        }
+      ]
+    }
+  },
+  "refs": {
+    "data": [
+        { "Month": "January",   "Temperature": 3 },
+        { "Month": "February",  "Temperature": 4 },
+        { "Month": "March",     "Temperature": 9 },
+        { "Month": "April",     "Temperature": 15 },
+        { "Month": "May",       "Temperature": 21 },
+        { "Month": "June",      "Temperature": 26 },
+        { "Month": "July",      "Temperature": 29 },
+        { "Month": "August",    "Temperature": 28 },
+        { "Month": "September", "Temperature": 24 },
+        { "Month": "October",   "Temperature": 18 },
+        { "Month": "November",  "Temperature": 11 },
+        { "Month": "December",  "Temperature": 5 }
+    ]
+  },
+  "modules": [    
+    "charts/DataChartCategoryModule",
+    "charts/DataChartInteractivityModule"    
+  ]
+}
