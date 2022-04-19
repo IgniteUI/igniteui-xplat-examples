@@ -1,0 +1,84 @@
+{  
+  "descriptions": {
+    "editor" : {
+      "type": "PropertyEditor",
+      "componentRendererRef": "renderer",
+      "targetRef": "chart",
+      "descriptionType": "DataChart",
+      "isHorizontal": true,
+      "isWrappingEnabled": true,
+      "properties": [
+        {
+            "type": "PropertyEditorPropertyDescription",
+            "propertyPath": "shouldConsiderAutoRotationForInitialLabels",
+            "label": "Rotate Labels?",
+            "shouldOverrideDefaultEditor": true            
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "autoMarginAndAngleUpdateMode",
+          "label": "AutoMarginAndAngleUpdateMode:",
+          "shouldOverrideDefaultEditor": true,
+          "valueType": "EnumValue",
+          "dropDownNames": ["None", "SizeChanging", "SizeChangingAndZoom"],
+          "dropDownValues": ["None", "SizeChanging", "SizeChangingAndZoom"],
+          "primitiveValue": "SizeChangingAndZoom"
+        }
+      ]
+    },
+    "content": {
+      "type": "DataChart",
+      "name": "chart",
+      "autoMarginAndAngleUpdateMode": "SizeChangingAndZoom",      
+      "shouldConsiderAutoRotationForInitialLabels": true,
+      "shouldAutoExpandMarginForInitialLabels": true,
+      "axes": [
+        {
+          "type": "CategoryXAxis",
+          "name": "xAxis",
+          "dataSourceRef": "data",          
+          "enhancedIntervalPreferMoreCategoryLabels": true,
+          "useEnhancedIntervalManagement": true,
+          "label": "Month",
+          "labelExtent": 60
+        },
+        {
+          "type": "NumericYAxis",
+          "name": "yAxis"        
+        }
+      ],
+      "series": [
+        {
+          "type": "ColumnSeries",
+          "name": "colSeries1",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "dataSourceRef": "data",
+          "valueMemberPath": "Temperature"
+        }
+      ]  
+    }
+  },
+  "refs": {
+    "data": [
+        { "Month": "January",   "Temperature": 3 },
+        { "Month": "February",  "Temperature": 4 },
+        { "Month": "March",     "Temperature": 9 },
+        { "Month": "April",     "Temperature": 15 },
+        { "Month": "May",       "Temperature": 21 },
+        { "Month": "June",      "Temperature": 26 },
+        { "Month": "July",      "Temperature": 29 },
+        { "Month": "August",    "Temperature": 28 },
+        { "Month": "September", "Temperature": 24 },
+        { "Month": "October",   "Temperature": 18 },
+        { "Month": "November",  "Temperature": 11 },
+        { "Month": "December",  "Temperature": 5 }
+    ]
+  },
+  "modules": [   
+    "withDescriptions",
+    "grids/PropertyEditorModule",
+    "charts/DataChartCategoryModule",
+    "charts/DataChartInteractivityModule"
+  ]
+}
