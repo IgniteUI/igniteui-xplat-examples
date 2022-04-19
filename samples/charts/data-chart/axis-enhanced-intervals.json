@@ -1,6 +1,22 @@
 {
   "export": false,
   "descriptions": {
+    "editor": {
+      "type": "PropertyEditor",
+      "componentRendererRef": "renderer",
+      "targetRef": "xAxis",
+      "descriptionType": "CategoryXAxis",
+      "isHorizontal": true,
+      "isWrappingEnabled": true,
+      "properties": [
+        {
+            "type": "PropertyEditorPropertyDescription",
+            "propertyPath": "enhancedIntervalPreferMoreCategoryLabels",
+            "label": "Use Enhanced Interval Management",
+            "shouldOverrideDefaultEditor": true            
+        }
+      ]
+    },
     "content": {
       "type": "DataChart",
       "name": "chart",
@@ -11,13 +27,11 @@
           "dataSourceRef": "data",
           "enhancedIntervalPreferMoreCategoryLabels": true,
           "useEnhancedIntervalManagement": true,
-          "label": "Year"
+          "label": "Year"          
         },
         {
           "type": "NumericYAxis",
-          "name": "yAxis",
-          "enhancedIntervalPreferMoreCategoryLabels": true,
-          "useEnhancedIntervalManagement": true                  
+          "name": "yAxis"              
         }
       ],      
       "series": [
@@ -66,6 +80,7 @@
   },
   "modules": [
     "withDescriptions",    
+    "grids/PropertyEditorModule",
     "charts/DataChartCategoryModule",
     "charts/DataChartInteractivityModule"
   ]
