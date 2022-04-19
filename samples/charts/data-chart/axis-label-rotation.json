@@ -13,14 +13,25 @@
             "propertyPath": "shouldConsiderAutoRotationForInitialLabels",
             "label": "Rotate Labels?",
             "shouldOverrideDefaultEditor": true            
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "autoMarginAndAngleUpdateMode",
+          "label": "AutoMarginAndAngleUpdateMode:",
+          "shouldOverrideDefaultEditor": true,
+          "valueType": "EnumValue",
+          "dropDownNames": ["None", "SizeChanging", "SizeChangingAndZoom"],
+          "dropDownValues": ["None", "SizeChanging", "SizeChangingAndZoom"],
+          "primitiveValue": "SizeChangingAndZoom"
         }
       ]
     },
     "content": {
       "type": "DataChart",
       "name": "chart",
-      "autoMarginAndAngleUpdateMode": "SizeChangingAndZoom",
+      "autoMarginAndAngleUpdateMode": "SizeChangingAndZoom",      
       "shouldConsiderAutoRotationForInitialLabels": true,
+      "shouldAutoExpandMarginForInitialLabels": true,
       "axes": [
         {
           "type": "CategoryXAxis",
