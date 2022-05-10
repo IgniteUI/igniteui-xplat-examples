@@ -39,7 +39,8 @@
       "isSeriesHighlightingEnabled": true,
       "chartType": "Line",
       "markerTypes": [ "Circle" ],
-      "dataSourceRef": "data"
+      "dataSourceRef": "data",
+      "computedPlotAreaMarginMode": "Series"
     }
   },
   "refs": {
