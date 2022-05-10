@@ -13,7 +13,8 @@
       "yAxisTitleRightMargin": 5,
       "yAxisLabelLeftMargin": 0,
       "isHorizontalZoomEnabled": false,
-      "isVerticalZoomEnabled": false
+      "isVerticalZoomEnabled": false,
+      "computedPlotAreaMarginMode": "Series"
     }
   },
   "refs": {

@@ -26,7 +26,8 @@
       "yAxisTitle": "TWh",
       "yAxisTitleLeftMargin": 10,
       "yAxisLabelLeftMargin": 0,
-      "thickness": 2
+      "thickness": 2,
+      "computedPlotAreaMarginMode": "Series"
     }
   },
   "refs": {

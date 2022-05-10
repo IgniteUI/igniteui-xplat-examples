@@ -18,7 +18,8 @@
       "toolTipType": "Category",
       "isTransitionInEnabled": true,
       "isHorizontalZoomEnabled": false,
-      "isVerticalZoomEnabled": false
+      "isVerticalZoomEnabled": false,
+      "computedPlotAreaMarginMode": "Series"
     }
   },
   "refs": {

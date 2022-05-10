@@ -27,7 +27,8 @@
       "yAxisTitleLeftMargin": 10,
       "yAxisLabelLeftMargin": 0,
       "toolTipType": "Category",
-      "thickness": 2
+      "thickness": 2,
+      "computedPlotAreaMarginMode": "Series"
     }
   },
   "refs": {
