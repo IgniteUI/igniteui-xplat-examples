@@ -20,7 +20,7 @@
       "yAxisTitleLeftMargin": 10,
       "yAxisTitleRightMargin": 5,
       "yAxisLabelLeftMargin": 0,
-      "computedPlotAreaMarginMode": "Auto"      
+      "computedPlotAreaMarginMode": "Series"      
     }
   },
   "refs": {
