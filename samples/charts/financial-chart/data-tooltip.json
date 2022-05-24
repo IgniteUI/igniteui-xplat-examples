@@ -1,0 +1,20 @@
+{
+  "export": false,
+  "descriptions": {
+    "content": {
+      "type": "FinancialChart",
+      "name": "chart",
+      "chartType": "Candle",
+      "isVerticalZoomEnabled": true,
+      "isHorizontalZoomEnabled": true,
+      "dataSourceRef": "MultipleStocks",
+      "dataToolTipIncludedColumns": ["Open","Close","High","Low","Change"],
+      "zoomSliderType": "None"
+    }
+  }, 
+  "modules": [
+    "charts/FinancialChartModule",
+    "charts/DataChartInteractivityModule",
+    "charts/LegendModule"
+  ]
+}

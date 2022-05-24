@@ -1,0 +1,25 @@
+{
+  "export": false,
+  "descriptions": {
+    "legend": {      
+      "type": "DataLegend",
+      "name": "Legend",
+      "targetRef": "chart",
+      "includedColumns": ["Open","Close","High","Low","Change"]
+    },
+    "content": {
+      "type": "FinancialChart",
+      "name": "chart",
+      "chartType": "Candle",
+      "isVerticalZoomEnabled": true,
+      "isHorizontalZoomEnabled": true,
+      "dataSourceRef": "MultipleStocks",
+      "zoomSliderType": "None"
+    }
+  }, 
+  "modules": [
+    "charts/FinancialChartModule",
+    "charts/DataChartInteractivityModule",
+    "charts/LegendModule"
+  ]
+}
