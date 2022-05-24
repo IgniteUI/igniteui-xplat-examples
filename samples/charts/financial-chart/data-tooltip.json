@@ -8,6 +8,7 @@
       "isVerticalZoomEnabled": true,
       "isHorizontalZoomEnabled": true,
       "dataSourceRef": "MultipleStocks",
+      "toolTipType": "Data",
       "dataToolTipIncludedColumns": ["Open","Close","High","Low","Change"],
       "zoomSliderType": "None"
     }
