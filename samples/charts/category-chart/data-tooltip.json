@@ -8,6 +8,7 @@
       "name": "chart",
       "chartType": "Column",
       "dataSourceRef": "data",
+      "toolTipType": "Data",
       "xAxisInterval": 1,
       "yAxisTitle": "Billions of U.S. Dollars",
       "yAxisTitleLeftMargin": 10,
