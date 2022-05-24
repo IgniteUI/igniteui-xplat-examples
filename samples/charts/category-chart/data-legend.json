@@ -6,6 +6,7 @@
     "legend": {
       "type": "DataLegend",
       "name": "Legend",
+      "unitsText": "B" 
       "targetRef": "chart"
     },
     "content": {
