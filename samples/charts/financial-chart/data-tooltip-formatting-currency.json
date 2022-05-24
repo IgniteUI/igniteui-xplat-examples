@@ -5,6 +5,7 @@
       "type": "FinancialChart",
       "name": "chart", 
       "chartType": "Line",     
+      "toolTipType": "Data",
       "dataSourceRef": "MultipleStocks",            
       "dataToolTipIncludedColumns": ["Close","Change"],
       "dataToolTipExcludedColumns": ["High","Low","Open","Volume"],
