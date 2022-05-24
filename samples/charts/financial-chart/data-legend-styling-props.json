@@ -1,0 +1,33 @@
+{
+  "export": false,
+  "descriptions": {
+    "legend": {      
+      "type": "DataLegend",
+      "name": "Legend",
+      "targetRef": "chart",
+      "includedColumns": ["Open","Close","High","Low","Change"],
+      "labelTextColor": "#4A4A4A",
+      "unitsText": "K",
+      "unitsTextColor": "#00AD03",
+      "unitsTextFontWeight": "Bold",
+      "valueFormatMode": "Currency",
+      "valueTextColor": "#00AD03",
+      "valueTextFontWeight": "Bold"
+    },
+    "content": {
+      "type": "FinancialChart",
+      "name": "chart",
+      "isVerticalZoomEnabled": true,
+      "isHorizontalZoomEnabled": true,
+      "dataSourceRef": "StockGoogle",
+      "toolTipType": "None",
+      "yAxisTitle": "Thousands of Dollars ($)",
+      "zoomSliderType": "None"
+    }
+  },  
+  "modules": [
+    "charts/FinancialChartModule",
+    "charts/DataChartInteractivityModule",
+    "charts/LegendModule"
+  ]
+}
