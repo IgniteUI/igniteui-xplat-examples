@@ -12,7 +12,7 @@
       "horizontalViewScrollbarMode": "Persistent",
       "isWindowSyncedToVisibleRange": true,
       "zoomSliderType": "None",
-      "windowRect":{"left": 0, "top": 0, "width": 0.5, "height": 1}
+      "windowRect": {"left": 0, "top": 0, "width": 0.5, "height": 1}
     }
   },
   "modules": [
