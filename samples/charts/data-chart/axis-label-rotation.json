@@ -30,6 +30,8 @@
     "content": {
       "type": "DataChart",
       "name": "chart",
+      "isHorizontalZoomEnabled": true,
+      "isVerticalZoomEnabled": true,
       "autoMarginAndAngleUpdateMode": "SizeChangingAndZoom",      
       "shouldConsiderAutoRotationForInitialLabels": true,
       "shouldAutoExpandMarginForInitialLabels": true,

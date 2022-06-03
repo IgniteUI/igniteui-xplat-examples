@@ -8,11 +8,11 @@
       "name": "chart",
       "chartType": "StepLine",
       "dataSourceRef": "data",
-      "toolTipType": "Category",
       "isHorizontalZoomEnabled": false,
       "isVerticalZoomEnabled": false,
-      "xAxisInterval": 1,
-      "yAxisTitle": "TWh"
+      "yAxisTitle": "TWh",
+      "isCategoryHighlightingEnabled": true,
+      "crosshairsSnapToData": true
     }
   },
   "refs": {

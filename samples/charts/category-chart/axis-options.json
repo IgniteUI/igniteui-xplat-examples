@@ -10,6 +10,8 @@
       "chartType": "Line",
       "thickness": 3,
 
+      "computedPlotAreaMarginMode": "Series",
+
       "xAxisLabelTextStyle": "9pt Verdana",
       "xAxisLabelTopMargin": 5,
       "xAxisLabelTextColor": "gray",

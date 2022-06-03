@@ -26,6 +26,10 @@
       ],
       "series": [
         {
+          "type": "CategoryHighlightLayer",
+          "name": "CategoryHighlightLayer"
+        },
+        {
           "type": "BarSeries",
           "name": "BarSeries1",
           "xAxisRef": "xAxis",
@@ -47,6 +51,9 @@
           "calloutBackground": "transparent",
           "calloutLeaderBrush": "transparent",
           "dataSourceRef": "callouts"
+        }, {
+          "type": "DataToolTipLayer",
+          "name": "Tooltips"
         }
       ]
     }

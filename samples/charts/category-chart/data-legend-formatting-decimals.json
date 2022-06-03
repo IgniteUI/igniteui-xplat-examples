@@ -23,7 +23,9 @@
       "yAxisLabelLeftMargin": 0,
       "isHorizontalZoomEnabled": false,
       "isVerticalZoomEnabled": false,
-      "toolTipType": "None"
+      "toolTipType": "None",
+      "crosshairsDisplayMode": "None",
+      "isCategoryHighlightingEnabled": true
     }
   },
   "refs": {

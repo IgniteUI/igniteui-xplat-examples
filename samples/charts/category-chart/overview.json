@@ -14,7 +14,8 @@
       "chartType": "Line",
       "dataSourceRef": "data",
       "legendRef": "Legend",
-      "yAxisTitle": "TWh"
+      "yAxisTitle": "TWh",
+      "computedPlotAreaMarginMode": "Series"
     }
   },
   "refs": {
@@ -36,8 +37,6 @@
   "modules": [
     "charts/LegendModule",
     "charts/CategoryChartModule",
-    "charts/DataChartInteractivityModule",
-    
-    
+    "charts/DataChartInteractivityModule"
   ]
 }

@@ -35,7 +35,7 @@
           "xMemberPath": "Index",
           "yMemberPath": "Value",
           "labelMemberPath": "Label",
-          "calloutCornerRadius": 100
+          "calloutCornerRadius": 10
         },
         {
           "type": "FinalValueLayer",
@@ -46,6 +46,9 @@
           "isAxisAnnotationEnabled": true,
           "xAxisAnnotationBackgroundCornerRadius": 100,
           "yAxisAnnotationBackgroundCornerRadius": 100
+        }, {
+          "type": "DataToolTipLayer",
+          "name": "Tooltips"
         }
       ]
     }

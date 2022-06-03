@@ -15,8 +15,9 @@
           
           "type": "PropertyEditorPropertyDescription", 
             "propertyPath": "ReplayTransitionIn", 
+            "label": "",
             "valueType": "Button", 
-            "primitiveValue": "caption", 
+            "primitiveValue": "Replay", 
             "buttonClickedRef": "EditorButtonReplayTransitionIn" 
           }
        ]

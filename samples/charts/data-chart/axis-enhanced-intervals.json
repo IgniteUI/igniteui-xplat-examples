@@ -60,6 +60,9 @@
           "yAxisRef": "yAxis",          
           "dataSourceRef": "data",
           "valueMemberPath": "USA"          
+        }, {
+          "type": "DataToolTipLayer",
+          "name": "Tooltips"
         }
       ]      
     }

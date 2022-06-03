@@ -7,6 +7,8 @@
       "axes": [
         {
           "type": "CategoryXAxis",
+          "useEnhancedIntervalManagement": true,
+          "enhancedIntervalPreferMoreCategoryLabels": true,
           "name": "xAxis",
           "dataSourceRef": "data",
           "labelLocation": "OutsideBottom",
@@ -19,8 +21,8 @@
           "labelLocation": "OutsideBottom"        
         }
       ],
-      "plotAreaBackground": "rgba(225,255,255,1)",
       "series": [
+        { "type": "CategoryHighlightLayer" },
         {
           "type": "ColumnSeries",
           "name": "ColumnSeries1",
@@ -55,6 +57,9 @@
           "dataSourceRef": "data",
           "valueMemberPath": "USA",
           "showDefaultTooltip": true
+        }, {
+          "type": "DataToolTipLayer",
+          "name": "Tooltips"
         }
       ],
       "legendRef": null,
@@ -79,6 +84,7 @@
   "modules": [
     "withDescriptions",
     "charts/DataChartCategoryModule",
-    "charts/DataChartInteractivityModule"
+    "charts/DataChartInteractivityModule",
+    "charts/DataChartAnnotationModule"
   ]
 }

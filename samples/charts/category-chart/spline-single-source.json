@@ -12,7 +12,6 @@
       "yAxisTitleLeftMargin": 10,
       "yAxisTitleRightMargin": 5,
       "yAxisLabelLeftMargin": 0,
-      "toolTipType": "Category",
       "isTransitionInEnabled": true,
       "isHorizontalZoomEnabled": false,
       "isVerticalZoomEnabled": false,

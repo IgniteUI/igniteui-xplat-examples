@@ -13,6 +13,8 @@
           "type": "CategoryYAxis",
           "name": "yAxis",
           "label": "Shop",
+          "useEnhancedIntervalManagement": true,
+          "enhancedIntervalPreferMoreCategoryLabels": true,
           "dataSourceRef": "data",
           "isInverted": true,
           "gap": 0.5,
@@ -26,6 +28,10 @@
       ],
       "series": [
         {
+          "type": "CategoryHighlightLayer",
+          "name": "CategoryHighlightLayer"
+        },
+        {
           "type": "BarSeries",
           "name": "BarSeries1",
           "xAxisRef": "xAxis",
@@ -35,6 +41,9 @@
           "showDefaultTooltip": true,
           "isTransitionInEnabled": true,
           "isHighlightingEnabled": true
+        }, {
+          "type": "DataToolTipLayer",
+          "name": "Tooltips"
         }
       ]
     }
@@ -55,6 +64,7 @@
     "charts/DataChartCoreModule",
     "charts/DataChartCategoryCoreModule",    
     "charts/DataChartCategoryModule",
+    "charts/DataChartAnnotationModule",
     "charts/DataChartInteractivityModule",
     "charts/DataChartVerticalCategoryModule"    
   ]
