@@ -16,11 +16,11 @@
       "dataSourceRef": "data",
       "isCategoryHighlightingEnabled": true,
       "isSeriesHighlightingEnabled": true,
-      "toolTipType": "Category",
       "isHorizontalZoomEnabled": false,
       "isVerticalZoomEnabled": false,
       "xAxisInterval": 1,
-      "yAxisTitle": "TWh"
+      "yAxisTitle": "TWh",
+      "crosshairsSnapToData": true
     }
   },
   "refs": {

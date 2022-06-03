@@ -22,12 +22,11 @@
       "yAxisTitle": "TWh",
       "yAxisTitleLeftMargin": 10,
       "yAxisLabelLeftMargin": 0,
-      "toolTipType": "Category",
       "thickness": 2,
-      "plotAreaMarginLeft": 5,
-      "plotAreaMarginRight": 5,
+      "computedPlotAreaMarginMode": "Series",
       "isHorizontalZoomEnabled": false,
-      "isVerticalZoomEnabled": false
+      "isVerticalZoomEnabled": false,
+      "crosshairsSnapToData": true
     }
   },
   "refs": {

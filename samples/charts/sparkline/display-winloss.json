@@ -25,8 +25,6 @@
     ]
   },
   "modules": [    
-    "withDescriptions",
-    "grids/PropertyEditorModule",
     "charts/SparklineModule"    
   ]
 }

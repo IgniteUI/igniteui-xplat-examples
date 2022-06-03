@@ -8,11 +8,11 @@
       "type": "CategoryChart",
       "name": "chart",
       "chartType": "StepArea",
-      "toolTipType": "Category",
       "isTransitionInEnabled": true,
       "isHorizontalZoomEnabled": false,
       "isVerticalZoomEnabled": false,
-      "yAxisTitle": "TWh"
+      "yAxisTitle": "TWh",
+      "crosshairsSnapToData": true
     }
   },
   "refs": {

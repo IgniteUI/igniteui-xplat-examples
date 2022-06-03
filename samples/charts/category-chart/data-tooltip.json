@@ -15,7 +15,11 @@
       "yAxisTitleRightMargin": 5,
       "yAxisLabelLeftMargin": 0,
       "isHorizontalZoomEnabled": false,
-      "isVerticalZoomEnabled": false
+      "isVerticalZoomEnabled": false,
+      "crosshairsDisplayMode": "None",
+      "isCategoryHighlightingEnabled": true,
+      "highlightingMode": "FadeOthersSpecific",
+      "highlightingBehavior": "NearestItemsAndSeries"
     }
   },
   "refs": {

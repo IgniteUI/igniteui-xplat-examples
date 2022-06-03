@@ -2,7 +2,7 @@
   "export": true,
   "descriptions": {
     "editor": {
-      "type": "PropertyEditor",
+      "type": "PropertyEditorPanel",
       "componentRendererRef": "renderer",
       "targetRef": "chart",
       "descriptionType": "Sparkline",
@@ -47,7 +47,7 @@
   },
   "modules": [    
     "withDescriptions",
-    "grids/PropertyEditorModule",
+    "layouts/PropertyEditorPanelModule",
     "charts/SparklineModule"    
   ]
 }

@@ -1,7 +1,7 @@
 {  
   "descriptions": {
     "editor" : {
-      "type": "PropertyEditor",
+      "type": "PropertyEditorPanel",
       "componentRendererRef": "renderer",
       "targetRef": "chart",
       "descriptionType": "DataChart",
@@ -10,9 +10,10 @@
       "properties": [
         {
             "type": "PropertyEditorPropertyDescription",
-            "propertyPath": "shouldConsiderAutoRotationForInitialLabels",
+            "propertyPath": "ShouldConsiderAutoRotationForInitialLabels",
             "label": "Rotate Labels?",
-            "shouldOverrideDefaultEditor": true            
+            "shouldOverrideDefaultEditor": true,
+            "primitiveValue": true            
         },
         {
           "type": "PropertyEditorPropertyDescription",
@@ -29,6 +30,8 @@
     "content": {
       "type": "DataChart",
       "name": "chart",
+      "isHorizontalZoomEnabled": true,
+      "isVerticalZoomEnabled": true,
       "autoMarginAndAngleUpdateMode": "SizeChangingAndZoom",      
       "shouldConsiderAutoRotationForInitialLabels": true,
       "shouldAutoExpandMarginForInitialLabels": true,
@@ -77,7 +80,7 @@
   },
   "modules": [   
     "withDescriptions",
-    "grids/PropertyEditorModule",
+    "layouts/PropertyEditorPanelModule",
     "charts/DataChartCategoryModule",
     "charts/DataChartInteractivityModule"
   ]

@@ -4,7 +4,7 @@
   },
   "descriptions": {
     "editor": {
-      "type": "PropertyEditor",
+      "type": "PropertyEditorPanel",
       "componentRendererRef": "renderer",
       "targetRef": "chart",
       "descriptionType": "DataChart",
@@ -15,8 +15,9 @@
           
           "type": "PropertyEditorPropertyDescription", 
             "propertyPath": "ReplayTransitionIn", 
+            "label": "",
             "valueType": "Button", 
-            "primitiveValue": "caption", 
+            "primitiveValue": "Replay", 
             "buttonClickedRef": "EditorButtonReplayTransitionIn" 
           }
        ]
@@ -83,7 +84,7 @@
   },
   "modules": [
     "withDescriptions",
-    "grids/PropertyEditorModule",
+    "layouts/PropertyEditorPanelModule",
     "charts/DataChartCoreModule",
     "charts/DataChartCategoryModule"
   ]

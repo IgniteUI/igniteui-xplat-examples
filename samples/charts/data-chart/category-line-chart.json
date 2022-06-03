@@ -4,6 +4,7 @@
     "content": {
       "type": "DataChart",
       "name": "chart",
+      "computedPlotAreaMarginMode": "Series",
       "axes": [
         {
           "type": "CategoryXAxis",
@@ -76,7 +77,6 @@
   },
   "modules": [
     "withDescriptions",
-    "grids/PropertyEditorModule",
     "charts/DataChartCategoryModule",
     "charts/DataChartInteractivityModule"
   ]

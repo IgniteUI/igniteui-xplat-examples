@@ -25,8 +25,12 @@
       "yAxisMaximumValue": 30,
       "yAxisInterval": 10,
       "xAxisMajorStroke": "lightgrey",
-      "xAxisGap": 0.5
+      "xAxisGap": 0.5,
 
+      "crosshairsDisplayMode": "None",
+      "isCategoryHighlightingEnabled": true,
+      "highlightingMode": "FadeOthersSpecific",
+      "highlightingBehavior": "NearestItemsAndSeries"
     }
   },
   "refs": {

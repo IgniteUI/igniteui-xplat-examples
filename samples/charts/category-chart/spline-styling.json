@@ -15,7 +15,6 @@
       "dataSourceRef": "data",
       "legendRef": "Legend",
       "yAxisTitle": "TWh",
-      "toolTipType": "Category",
       "isTransitionInEnabled": true,
       "isVerticalZoomEnabled": false,
       "isHorizontalZoomEnabled": false,

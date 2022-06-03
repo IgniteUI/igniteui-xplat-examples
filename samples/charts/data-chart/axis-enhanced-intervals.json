@@ -2,7 +2,7 @@
   "export": false,
   "descriptions": {
     "editor": {
-      "type": "PropertyEditor",
+      "type": "PropertyEditorPanel",
       "componentRendererRef": "renderer",
       "targetRef": "xAxis",
       "descriptionType": "CategoryXAxis",
@@ -11,7 +11,7 @@
       "properties": [
         {
             "type": "PropertyEditorPropertyDescription",
-            "propertyPath": "enhancedIntervalPreferMoreCategoryLabels",
+            "propertyPath": "EnhancedIntervalPreferMoreCategoryLabels",
             "label": "Use Enhanced Interval Management",
             "shouldOverrideDefaultEditor": true            
         }
@@ -20,6 +20,7 @@
     "content": {
       "type": "DataChart",
       "name": "chart",
+      "computedPlotAreaMarginMode": "Series",
       "shouldAutoExpandMarginForInitialLabels": true,
       "axes": [
         {
@@ -59,6 +60,9 @@
           "yAxisRef": "yAxis",          
           "dataSourceRef": "data",
           "valueMemberPath": "USA"          
+        }, {
+          "type": "DataToolTipLayer",
+          "name": "Tooltips"
         }
       ]      
     }
@@ -81,7 +85,7 @@
   },
   "modules": [
     "withDescriptions",    
-    "grids/PropertyEditorModule",
+    "layouts/PropertyEditorPanelModule",
     "charts/DataChartCategoryModule",
     "charts/DataChartInteractivityModule"
   ]

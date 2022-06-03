@@ -9,7 +9,7 @@
       "orientation": "Horizontal"
     },
     "editor": {
-      "type": "PropertyEditor",
+      "type": "PropertyEditorPanel",
       "componentRendererRef": "renderer",
       "targetRef": "chart",
       "descriptionType": "CategoryChart",
@@ -27,6 +27,7 @@
     "content": {
       "type": "CategoryChart",
       "name": "chart",
+      "computedPlotAreaMarginMode": "Series",
       "dataSourceRef": "data",
       "legendRef": "Legend",
       "chartType": "Line",
@@ -54,7 +55,7 @@
   },
   "modules": [
     "withDescriptions",
-    "grids/PropertyEditorModule",
+    "layouts/PropertyEditorPanelModule",
     "charts/LegendModule",
     "charts/CategoryChartModule"
   ]

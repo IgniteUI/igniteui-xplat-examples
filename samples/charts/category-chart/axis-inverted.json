@@ -4,7 +4,7 @@
   },
   "descriptions": {
     "editor": {
-      "type": "PropertyEditor",
+      "type": "PropertyEditorPanel",
       "componentRendererRef": "renderer",
       "targetRef": "chart",
       "descriptionType": "CategoryChart",
@@ -16,14 +16,14 @@
             "propertyPath": "XAxisInverted",
             "label": "X Axis - Inverted",
             "shouldOverrideDefaultEditor": true,
-            "primitiveValue": 1
+            "primitiveValue": true
           },
           {
             "type": "PropertyEditorPropertyDescription",
             "propertyPath": "YAxisInverted",
             "label": "Y Axis - Inverted",
             "shouldOverrideDefaultEditor": true,
-            "primitiveValue": 1
+            "primitiveValue": true
           }
        ]
     },
@@ -31,6 +31,7 @@
       "type": "CategoryChart",
       "name": "chart",
       "chartType": "Line",
+      "computedPlotAreaMarginMode": "Series",
       "isHorizontalZoomEnabled": false,
       "isVerticalZoomEnabled": false,
       "dataSourceRef": "data",
@@ -62,7 +63,7 @@
   },
   "modules": [   
     "withDescriptions",
-    "grids/PropertyEditorModule", 
+    "layouts/PropertyEditorPanelModule", 
     "charts/CategoryChartModule"
   ]
 }

@@ -17,6 +17,8 @@
       "isHorizontalZoomEnabled": false,
       "isVerticalZoomEnabled": false,
 
+      "computedPlotAreaMarginMode": "Series",
+
       "xAxisTitle": "Year",
       "xAxisTitleTextColor": "gray",
       "xAxisTitleTextStyle": "10pt 'Titillium Web'",

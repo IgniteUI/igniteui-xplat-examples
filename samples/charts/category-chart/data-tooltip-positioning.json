@@ -15,7 +15,8 @@
       "yAxisTitle": "Billions of U.S. Dollars",
       "yAxisTitleLeftMargin": 10,
       "yAxisTitleRightMargin": 5,
-      "yAxisLabelLeftMargin": 0      
+      "yAxisLabelLeftMargin": 0,
+      "crosshairsDisplayMode": "None"      
     }
   },
   "refs": {
