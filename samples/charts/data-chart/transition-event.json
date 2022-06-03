@@ -4,7 +4,7 @@
   },
   "descriptions": {
     "editor": {
-      "type": "PropertyEditor",
+      "type": "PropertyEditorPanel",
       "componentRendererRef": "renderer",
       "targetRef": "chart",
       "descriptionType": "DataChart",
@@ -83,7 +83,7 @@
   },
   "modules": [
     "withDescriptions",
-    "grids/PropertyEditorModule",
+    "layouts/PropertyEditorPanelModule",
     "charts/DataChartCoreModule",
     "charts/DataChartCategoryModule"
   ]

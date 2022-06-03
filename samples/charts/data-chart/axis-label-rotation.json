@@ -1,7 +1,7 @@
 {  
   "descriptions": {
     "editor" : {
-      "type": "PropertyEditor",
+      "type": "PropertyEditorPanel",
       "componentRendererRef": "renderer",
       "targetRef": "chart",
       "descriptionType": "DataChart",
@@ -10,9 +10,10 @@
       "properties": [
         {
             "type": "PropertyEditorPropertyDescription",
-            "propertyPath": "shouldConsiderAutoRotationForInitialLabels",
+            "propertyPath": "ShouldConsiderAutoRotationForInitialLabels",
             "label": "Rotate Labels?",
-            "shouldOverrideDefaultEditor": true            
+            "shouldOverrideDefaultEditor": true,
+            "primitiveValue": true            
         },
         {
           "type": "PropertyEditorPropertyDescription",
@@ -77,7 +78,7 @@
   },
   "modules": [   
     "withDescriptions",
-    "grids/PropertyEditorModule",
+    "layouts/PropertyEditorPanelModule",
     "charts/DataChartCategoryModule",
     "charts/DataChartInteractivityModule"
   ]

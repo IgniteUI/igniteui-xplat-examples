@@ -4,7 +4,7 @@
   },
   "descriptions": {
     "editor": {
-      "type": "PropertyEditor",
+      "type": "PropertyEditorPanel",
       "componentRendererRef": "renderer",
       "targetRef": "treemap",
       "descriptionType": "Treemap",
@@ -283,7 +283,7 @@
   },
   "modules": [
     "withDescriptions",
-    "grids/PropertyEditorModule",
+    "layouts/PropertyEditorPanelModule",
     "charts/TreemapModule"
   ]
 }

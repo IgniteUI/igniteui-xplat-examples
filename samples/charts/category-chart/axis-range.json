@@ -9,7 +9,7 @@
       "orientation": "Horizontal"
     },
     "editor": {
-      "type": "PropertyEditor",
+      "type": "PropertyEditorPanel",
       "componentRendererRef": "renderer",
       "targetRef": "chart",
       "descriptionType": "CategoryChart",
@@ -44,7 +44,7 @@
       "dataSourceRef": "data",
       "legendRef": "Legend",
       "chartType": "Line",
-
+      "computedPlotAreaMarginMode": "Series",
       "isHorizontalZoomEnabled": false,
       "isVerticalZoomEnabled": false,
       "yAxisMinimumValue": 0,
@@ -68,8 +68,8 @@
   },
   "modules": [
     "withDescriptions",
-    "grids/PropertyEditorModule",
+    "layouts/PropertyEditorPanelModule",
     "charts/LegendModule",
-    "charts/CategoryChartModule",
+    "charts/CategoryChartModule"
   ]
 }

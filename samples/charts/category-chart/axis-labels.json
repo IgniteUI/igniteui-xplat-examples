@@ -9,7 +9,7 @@
       "orientation": "Horizontal"
     },
     "editor": {
-      "type": "PropertyEditor",
+      "type": "PropertyEditorPanel",
       "componentRendererRef": "renderer",
       "targetRef": "chart",
       "descriptionType": "CategoryChart",
@@ -38,11 +38,13 @@
           },
           {
             "type": "PropertyEditorPropertyDescription",
-            "propertyPath": "xAxisLabelTextColor",
+            "propertyPath": "XAxisLabelTextColor",
             "label": "Y Axis Label Color",
             "valueType": "EnumValue",
+            "shouldOverrideDefaultEditor": true,
             "dropDownNames": [ "red", "green"],
-            "dropDownValues": [ "red", "green"]
+            "dropDownValues": [ "red", "green"],
+            "primitiveValue": "red"
           }
        ]
     },
@@ -51,10 +53,11 @@
       "name": "chart",
       "dataSourceRef": "data",
       "chartType": "Line",
+      "computedPlotAreaMarginMode": "Series",
       "legendRef": "Legend",
       "isHorizontalZoomEnabled": false,
       "isVerticalZoomEnabled": false,
-
+      "topMargin": 20,
       "xAxisLabelAngle": 0,
       "xAxisLabelTextColor": "gray",
       "xAxisLabelTextStyle": "10pt 'Titillium Web'",
@@ -84,7 +87,7 @@
   },
   "modules": [
     "withDescriptions",
-    "grids/PropertyEditorModule",
+    "layouts/PropertyEditorPanelModule",
     "charts/LegendModule",
     "charts/CategoryChartModule"
   ]
