@@ -1,4 +1,4 @@
-{  
+{
   "strings": {
     "legendTitle": "Percentage Change in Energy Generation"
   },
@@ -11,7 +11,7 @@
     "content": {
       "type": "CategoryChart",
       "name": "chart",
-      "dataSourceRef": "data",
+      "dataSourceRef": "EnergyRenewableConsumption",
       "chartType": "Column",
       "legendRef": "Legend",
       "isHorizontalZoomEnabled": false,
@@ -20,7 +20,7 @@
 
       "brushes": ["#9de772", "#8b5bb1", "#6db1ff", "#ee5879", "#f8a15f"],
       "outlines": ["white"],
-      
+
       "yAxisMinimumValue": -20,
       "yAxisMaximumValue": 30,
       "yAxisInterval": 10,
@@ -33,16 +33,8 @@
       "highlightingBehavior": "NearestItemsAndSeries"
     }
   },
-  "refs": {
-    "data": [
-      { "Location": "World", "Solar": 23, "Coal": -1, "Hydro": 1, "Wind": 12, "Nuclear": 3 },
-      { "Location": "China", "Solar": 26, "Coal": 2, "Hydro": 5, "Wind": 10, "Nuclear": 18 },
-      { "Location": "U.S.", "Solar": 15, "Coal": -15, "Hydro": -7, "Wind": 10, "Nuclear": 1 },
-      { "Location": "EU", "Solar": 11, "Coal": -12, "Hydro": -2, "Wind": 14, "Nuclear": -1 }
-    ]
-  },
-  "modules": [   
-    "charts/LegendModule", 
+  "modules": [
+    "charts/LegendModule",
     "charts/CategoryChartModule"
   ]
 }

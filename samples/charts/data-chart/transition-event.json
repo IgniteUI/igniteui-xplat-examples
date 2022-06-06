@@ -11,14 +11,14 @@
       "isHorizontal": true,
       "isWrappingEnabled": false,
       "properties": [
-        { 
-          
-          "type": "PropertyEditorPropertyDescription", 
-            "propertyPath": "ReplayTransitionIn", 
+        {
+
+          "type": "PropertyEditorPropertyDescription",
+            "propertyPath": "ReplayTransitionIn",
             "label": "",
-            "valueType": "Button", 
-            "primitiveValue": "Replay", 
-            "buttonClickedRef": "EditorButtonReplayTransitionIn" 
+            "valueType": "Button",
+            "primitiveValue": "Replay",
+            "buttonClickedRef": "EditorButtonReplayTransitionIn"
           }
        ]
     },
@@ -33,7 +33,7 @@
           "name": "xAxis",
           "label": "Category",
           "interval": 1,
-          "dataSourceRef": "data",
+          "dataSourceRef": "CompanyIncomeData",
           "overlap": 1
         },
         {
@@ -50,8 +50,8 @@
           "type": "WaterfallSeries",
           "name": "WaterfallSeries1",
           "xAxisRef": "xAxis",
-          "yAxisRef": "yAxis",          
-          "dataSourceRef": "data",
+          "yAxisRef": "yAxis",
+          "dataSourceRef": "CompanyIncomeData",
           "valueMemberPath": "Costs",
           "showDefaultTooltip": true,
           "isTransitionInEnabled": true
@@ -61,7 +61,7 @@
           "name": "WaterfallSeries2",
           "xAxisRef": "xAxis",
           "yAxisRef": "yAxis",
-          "dataSourceRef": "data",
+          "dataSourceRef": "CompanyIncomeData",
           "brush":"#7446B9",
           "outline":"#7446B9",
           "valueMemberPath": "NetIncome",
@@ -70,17 +70,6 @@
         }
       ]
     }
-  },
-  "refs": {
-    "data": [
-      { "Costs": 55, "NetIncome": null,  "Category": "Revenue" },
-      { "Costs": 45, "NetIncome": null,  "Category": "Expenses" },
-      { "Costs": 35, "NetIncome": null,  "Category": "Research" },
-      { "Costs": 28, "NetIncome": null,  "Category": "Marketing" },
-      { "Costs": 25, "NetIncome": null,  "Category": "Administration" },
-      { "Costs": 55, "NetIncome": null,  "Category": "Total Costs" },
-      { "Costs": 0,  "NetIncome": 25, "Category": "Net Income" }
-    ]
   },
   "modules": [
     "withDescriptions",

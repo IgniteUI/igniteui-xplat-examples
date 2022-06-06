@@ -1,7 +1,7 @@
-{  
+{
   "strings": {
     "legendTitle": "Monthly Temperature Range in Los Angeles"
-  }, 
+  },
   "descriptions": {
     "content": {
       "type": "DataChart",
@@ -14,7 +14,7 @@
           "name": "xAxis",
           "label": "Month",
           "interval": 1,
-          "dataSourceRef": "data"
+          "dataSourceRef": "TemperatureRangeData"
         },
         {
           "type": "NumericYAxis",
@@ -33,28 +33,22 @@
           "xAxisRef": "xAxis",
           "yAxisRef": "yAxis",
           "title": "Los Angeles",
-          "lowMemberPath": "LowLA",
-          "highMemberPath": "HighLA",
-          "dataSourceRef": "data"
+          "lowMemberPath": "LA_Low",
+          "highMemberPath": "LA_High",
+          "dataSourceRef": "TemperatureRangeData"
+        },
+        {
+          "type": "RangeAreaSeries",
+          "name": "series",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "title": "New York",
+          "lowMemberPath": "NY_Low",
+          "highMemberPath": "NY_High",
+          "dataSourceRef": "TemperatureRangeData"
         }
       ]
     }
-  },
-  "refs": {
-    "data": [
-      { "Month": "January", "HighNY": 10.6, "LowNY": -6.6, "HighLA": 28.3, "LowLA": 7.8 },
-      { "Month": "February", "HighNY": 7.8, "LowNY": -9.9, "HighLA": 31.1, "LowLA": 5.6 },
-      { "Month": "March", "HighNY": 12.2, "LowNY": -3.8, "HighLA": 27.8, "LowLA": 8.3 },
-      { "Month": "Aprile", "HighNY": 11.7, "LowNY": 2.2, "HighLA": 33.9, "LowLA": 10.6 },
-      { "Month": "May", "HighNY": 19.4, "LowNY": 1.1, "HighLA": 35.0, "LowLA": 13.9 },
-      { "Month": "June", "HighNY": 23.3, "LowNY": 10.6, "HighLA": 36.7, "LowLA": 16.1 },
-      { "Month": "July", "HighNY": 27.2, "LowNY": 19.4, "HighLA": 33.3, "LowLA": 15.6 },
-      { "Month": "August", "HighNY": 25.6, "LowNY": 16.7, "HighLA": 36.7, "LowLA": 15.6 },
-      { "Month": "September", "HighNY": 22.8, "LowNY": 8.9, "HighLA": 43.9, "LowLA": 16.1 },
-      { "Month": "October", "HighNY": 17.8, "LowNY": 0.0, "HighLA": 38.3, "LowLA": 11.1 },
-      { "Month": "November", "HighNY": 17.8, "LowNY": -1, "HighLA": 32.8, "LowLA": 6.7 },
-      { "Month": "December", "HighNY": 8.3, "LowNY": -6.6, "HighLA": 28.9, "LowLA": 5.6 }
-    ]
   },
   "modules": [
     "charts/DataChartCoreModule",

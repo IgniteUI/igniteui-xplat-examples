@@ -1,4 +1,4 @@
-{  
+{
   "descriptions": {
     "editor" : {
       "type": "PropertyEditorPanel",
@@ -13,7 +13,7 @@
             "propertyPath": "ShouldConsiderAutoRotationForInitialLabels",
             "label": "Rotate Labels?",
             "shouldOverrideDefaultEditor": true,
-            "primitiveValue": true            
+            "primitiveValue": true
         },
         {
           "type": "PropertyEditorPropertyDescription",
@@ -32,14 +32,14 @@
       "name": "chart",
       "isHorizontalZoomEnabled": true,
       "isVerticalZoomEnabled": true,
-      "autoMarginAndAngleUpdateMode": "SizeChangingAndZoom",      
+      "autoMarginAndAngleUpdateMode": "SizeChangingAndZoom",
       "shouldConsiderAutoRotationForInitialLabels": true,
       "shouldAutoExpandMarginForInitialLabels": true,
       "axes": [
         {
           "type": "CategoryXAxis",
           "name": "xAxis",
-          "dataSourceRef": "data",          
+          "dataSourceRef": "TemperatureAverageData",
           "enhancedIntervalPreferMoreCategoryLabels": true,
           "useEnhancedIntervalManagement": true,
           "label": "Month",
@@ -47,7 +47,7 @@
         },
         {
           "type": "NumericYAxis",
-          "name": "yAxis"        
+          "name": "yAxis"
         }
       ],
       "series": [
@@ -56,29 +56,13 @@
           "name": "colSeries1",
           "xAxisRef": "xAxis",
           "yAxisRef": "yAxis",
-          "dataSourceRef": "data",
+          "dataSourceRef": "TemperatureAverageData",
           "valueMemberPath": "Temperature"
         }
-      ]  
+      ]
     }
   },
-  "refs": {
-    "data": [
-        { "Month": "January",   "Temperature": 3 },
-        { "Month": "February",  "Temperature": 4 },
-        { "Month": "March",     "Temperature": 9 },
-        { "Month": "April",     "Temperature": 15 },
-        { "Month": "May",       "Temperature": 21 },
-        { "Month": "June",      "Temperature": 26 },
-        { "Month": "July",      "Temperature": 29 },
-        { "Month": "August",    "Temperature": 28 },
-        { "Month": "September", "Temperature": 24 },
-        { "Month": "October",   "Temperature": 18 },
-        { "Month": "November",  "Temperature": 11 },
-        { "Month": "December",  "Temperature": 5 }
-    ]
-  },
-  "modules": [   
+  "modules": [
     "withDescriptions",
     "layouts/PropertyEditorPanelModule",
     "charts/DataChartCategoryModule",

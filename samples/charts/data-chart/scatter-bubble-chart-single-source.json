@@ -8,19 +8,19 @@
       "name": "chart",
       "axes": [
         {
-          "type": "NumericXAxis", 
+          "type": "NumericXAxis",
           "name": "xAxis",
           "title": "Hours Worked per Week"
         },
         {
-          "type": "NumericYAxis", 
-          "name": "yAxis", 
+          "type": "NumericYAxis",
+          "name": "yAxis",
           "title": "GDP per Capita",
           "isLogarithmic": false,
           "abbreviateLargeNumbers": true
         }
       ],
-      "series": [     
+      "series": [
         {
           "type": "BubbleSeries",
           "name": "BubbleSeries1",
@@ -29,56 +29,23 @@
           "yAxisRef": "yAxis",
           "xMemberPath": "WorkedHours",
           "yMemberPath": "GDP",
-          "radiusMemberPath": "Population", 
+          "radiusMemberPath": "Population",
           "radiusScaleRef": "sizeScale",
-          "dataSourceRef": "dataEurope",
-          "markerType": "Circle", 
+          "dataSourceRef": "CountryDemographicEurope",
+          "markerType": "Circle",
           "showDefaultTooltip": true
-        }  
+        }
       ]
     }
   },
   "refs": {
-    "sizeScale": { "type": "SizeScale", "minimumValue": 10, "maximumValue": 50 },
-    "dataEurope": 
-    [
-        { "Code": "ALB", "Population": 2891000, "WorkedHours": 41.00, "GDP": 10970, "Name": "Albania" },
-        { "Code": "AUT", "Population": 8679000, "WorkedHours": 30.75, "GDP": 44305, "Name": "Austria" },
-        { "Code": "BLR", "Population": 9439000, "WorkedHours": 43.50, "GDP": 17230, "Name": "Belarus" },
-        { "Code": "BEL", "Population": 11288000, "WorkedHours": 29.70, "GDP": 41708, "Name": "Belgium" },
-        { "Code": "BIH", "Population": 3429000, "WorkedHours": 46.50, "GDP": 10932, "Name": "Bosnia and Herzegovina" },
-        { "Code": "BGR", "Population": 7200000, "WorkedHours": 31.62, "GDP": 17000, "Name": "Bulgaria" },
-        { "Code": "HRV", "Population": 4233000, "WorkedHours": 35.15, "GDP": 20984, "Name": "Croatia" },
-        { "Code": "CYP", "Population": 1161000, "WorkedHours": 34.42, "GDP": 30549, "Name": "Cyprus" },
-        { "Code": "CZE", "Population": 10601000, "WorkedHours": 33.77, "GDP": 30605, "Name": "Czechia" },
-        { "Code": "DNK", "Population": 5689000, "WorkedHours": 27.16, "GDP": 45459, "Name": "Denmark" },
-        { "Code": "EST", "Population": 1315000, "WorkedHours": 35.61, "GDP": 27550, "Name": "Estonia" },
-        { "Code": "FIN", "Population": 5481000, "WorkedHours": 31.48, "GDP": 38942, "Name": "Finland" },
-        { "Code": "FRA", "Population": 64453000, "WorkedHours": 29.03, "GDP": 37766, "Name": "France" },
-        { "Code": "DEU", "Population": 81787000, "WorkedHours": 26.31, "GDP": 43938, "Name": "Germany" },
-        { "Code": "GRC", "Population": 10660000, "WorkedHours": 39.06, "GDP": 24170, "Name": "Greece" },
-        { "Code": "HUN", "Population": 9778000, "WorkedHours": 36.99, "GDP": 25034, "Name": "Hungary" },
-        { "Code": "ISL", "Population": 330000, "WorkedHours": 29.02, "GDP": 43048, "Name": "Iceland" },
-        { "Code": "IRL", "Population": 4652000, "WorkedHours": 33.47, "GDP": 60818, "Name": "Ireland" },
-        { "Code": "ITA", "Population": 60578000, "WorkedHours": 33.04, "GDP": 34302, "Name": "Italy" },
-        { "Code": "LVA", "Population": 1998000, "WorkedHours": 36.57, "GDP": 23019, "Name": "Latvia" },
-        { "Code": "LTU", "Population": 2932000, "WorkedHours": 35.76, "GDP": 27046, "Name": "Lithuania" },
-        { "Code": "LUX", "Population": 567000, "WorkedHours": 29.25, "GDP": 94089, "Name": "Luxembourg" },
-        { "Code": "MLT", "Population": 434000, "WorkedHours": 37.78, "GDP": 34087, "Name": "Malta" },
-        { "Code": "MDA", "Population": 4071000, "WorkedHours": 41.00, "GDP": 4747, "Name": "Moldova" },
-        { "Code": "MNE", "Population": 627000, "WorkedHours": 47.20, "GDP": 15290, "Name": "Montenegro" },
-        { "Code": "NLD", "Population": 16938000, "WorkedHours": 27.38, "GDP": 46494, "Name": "Netherlands" },
-        { "Code": "MKD", "Population": 2079000, "WorkedHours": 36.60, "GDP": 12760, "Name": "North Macedonia" },
-        { "Code": "NOR", "Population": 5200000, "WorkedHours": 27.36, "GDP": 64008, "Name": "Norway" },
-        { "Code": "POL", "Population": 38034000, "WorkedHours": 39.40, "GDP": 25300, "Name": "Poland" },
-        { "Code": "PRT", "Population": 10368000, "WorkedHours": 36.06, "GDP": 26608, "Name": "Portugal" }
-    ]
+    "sizeScale": { "type": "SizeScale", "minimumValue": 10, "maximumValue": 50 }
   },
-  "modules": [ 
+  "modules": [
     "charts/NumberAbbreviatorModule",
     "charts/DataChartCoreModule",
-    "charts/DataChartScatterModule", 
-    "charts/DataChartScatterCoreModule", 
+    "charts/DataChartScatterModule",
+    "charts/DataChartScatterCoreModule",
     "charts/DataChartInteractivityModule"
   ]
 }

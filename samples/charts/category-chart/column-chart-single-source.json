@@ -1,13 +1,13 @@
-{  
+{
   "strings": {
     "legendTitle": "Average Temperature Range in New York"
-  },  
+  },
   "descriptions": {
     "content": {
       "type": "CategoryChart",
       "name": "chart",
       "chartType": "Column",
-      "dataSourceRef": "data",
+      "dataSourceRef": "TemperatureAverageData",
       "yAxisTitle": "Temperature in Degrees Celsius",
       "yAxisTitleLeftMargin": 10,
       "yAxisTitleRightMargin": 5,
@@ -20,23 +20,7 @@
       "crosshairsDisplayMode": "None"
     }
   },
-  "refs": {
-    "data": [
-        { "Month": "Jan",   "Temperature": 3 },
-        { "Month": "Feb",  "Temperature": 4 },
-        { "Month": "Mar",     "Temperature": 9 },
-        { "Month": "Apr",     "Temperature": 15 },
-        { "Month": "May",       "Temperature": 21 },
-        { "Month": "Jun",      "Temperature": 26 },
-        { "Month": "Jul",      "Temperature": 29 },
-        { "Month": "Aug",    "Temperature": 28 },
-        { "Month": "Sept", "Temperature": 24 },
-        { "Month": "Oct",   "Temperature": 18 },
-        { "Month": "Nov",  "Temperature": 11 },
-        { "Month": "Dec",  "Temperature": 5 }
-    ]
-  },
-  "modules": [    
-    "charts/CategoryChartModule"    
+  "modules": [
+    "charts/CategoryChartModule"
   ]
 }

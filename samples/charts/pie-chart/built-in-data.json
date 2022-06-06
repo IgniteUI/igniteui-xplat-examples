@@ -13,7 +13,7 @@
       "name": "chart",
       "labelMemberPath": "Category",
       "labelsPosition": "BestFit",
-      "valueMemberPath": "MarketShare",
+      "valueMemberPath": "Value",
       "radiusFactor": 0.7,
       "dataSourceRef": "CompanyMarketShares",
       "legendRef": "legend"

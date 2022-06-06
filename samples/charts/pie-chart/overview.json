@@ -13,20 +13,11 @@
       "name": "chart",
       "labelMemberPath": "Category",
       "labelsPosition": "BestFit",
-      "valueMemberPath": "MarketShare",
+      "valueMemberPath": "Value",
       "radiusFactor": 0.7,
-      "dataSourceRef": "data",
+      "dataSourceRef": "EnergyGlobalDemand",
       "legendRef": "legend"
     }
-  },
-  "refs": {
-    "data": [
-      { "MarketShare": 37, "Category": "Cooling" },
-      { "MarketShare": 25, "Category": "Residential" },
-      { "MarketShare": 12, "Category": "Heating" },
-      { "MarketShare": 11, "Category": "Lighting" },
-      { "MarketShare": 15, "Category": "Other" }
-    ]
   },
   "modules": [
     "charts/ItemLegendModule",
