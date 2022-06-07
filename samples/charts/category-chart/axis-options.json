@@ -9,9 +9,7 @@
       "dataSourceRef": "OlympicMedalsTopCountries",
       "chartType": "Line",
       "thickness": 3,
-
       "computedPlotAreaMarginMode": "Series",
-
       "xAxisLabelTextStyle": "9pt Verdana",
       "xAxisLabelTopMargin": 5,
       "xAxisLabelTextColor": "gray",
@@ -19,7 +17,6 @@
       "yAxisLabelTextStyle": "9pt Verdana",
       "yAxisLabelRightMargin": 0,
       "yAxisLabelTextColor": "gray",
-
       "xAxisTitle": "Olympic Games",
       "xAxisTitleTextColor": "gray",
       "xAxisTitleTextStyle": "10pt Verdana",
@@ -29,35 +26,28 @@
       "yAxisTitleTextColor": "gray",
       "yAxisTitleAngle": 90,
       "yAxisTitleLeftMargin": 5,
-
       "xAxisTickLength": 10,
       "xAxisTickStrokeThickness": 0.5,
       "xAxisTickStroke": "black",
       "yAxisTickLength": 10,
       "yAxisTickStrokeThickness": 0.5,
       "yAxisTickStroke": "black",
-
       "yAxisMinimumValue": 50,
       "yAxisMaximumValue": 150,
-
       "xAxisInterval": 1,
       "xAxisMajorStroke": "gray",
       "xAxisMajorStrokeThickness": 0.5,
-
       "yAxisInterval": 25,
       "yAxisMajorStroke": "black",
       "yAxisMajorStrokeThickness": 1,
       "yAxisMinorInterval": 5,
       "yAxisMinorStroke": "gray",
       "yAxisMinorStrokeThickness": 0.5,
-
       "xAxisGap": 0.125,
       "xAxisOverlap": 0
     }
   },
   "modules": [
-    "charts/CategoryChartModule",
-    "withDescriptions",
-    "layouts/PropertyEditorPanelModule"
+    "charts/CategoryChartModule"
   ]
 }
