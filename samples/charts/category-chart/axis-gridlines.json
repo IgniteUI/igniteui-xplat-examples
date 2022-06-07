@@ -82,7 +82,7 @@
   },
   "modules": [
     "withDescriptions",
-    "layouts/PropertyEditorPanelModel",
+    "layouts/PropertyEditorPanelModule",
     "charts/LegendModule",
     "charts/CategoryChartModule"
   ]
