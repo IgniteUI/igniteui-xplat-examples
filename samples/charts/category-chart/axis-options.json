@@ -57,6 +57,7 @@
   },
   "modules": [
     "charts/CategoryChartModule",
-    "grids/PropertyEditorModule"
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule"
   ]
 }
