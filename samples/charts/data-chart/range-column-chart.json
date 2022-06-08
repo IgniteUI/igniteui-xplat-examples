@@ -5,7 +5,7 @@
   "descriptions": {
     "legend": {
       "type": "Legend",
-      "name": "legend",
+      "name": "Legend",
       "orientation": "Horizontal"
     },
     "content": {
@@ -13,7 +13,7 @@
       "name": "chart",
       "isHorizontalZoomEnabled": false,
       "isVerticalZoomEnabled": false,
-      "legendRef": "legend",
+      "legendRef": "Legend",
       "axes": [
         {
           "type": "CategoryXAxis",

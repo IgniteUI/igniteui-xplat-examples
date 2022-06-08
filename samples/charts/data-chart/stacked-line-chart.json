@@ -5,7 +5,7 @@
   "descriptions": {
     "legend": {
       "type": "Legend",
-      "name": "legend",
+      "name": "Legend",
       "orientation": "Horizontal"
     },
     "content": {

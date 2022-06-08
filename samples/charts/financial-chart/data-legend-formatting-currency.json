@@ -1,5 +1,4 @@
 {
-  "export": false,
   "descriptions": {
     "legend": {      
       "type": "DataLegend",
@@ -26,6 +25,6 @@
   "modules": [
     "charts/FinancialChartModule",
     "charts/DataChartInteractivityModule",
-    "charts/LegendModule"
+    "charts/DataLegendModule"
   ]
 }

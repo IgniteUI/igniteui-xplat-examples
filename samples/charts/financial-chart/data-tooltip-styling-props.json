@@ -1,5 +1,4 @@
 {
-  "export": false,
   "descriptions": {
     "content": {
       "type": "FinancialChart",
@@ -23,6 +22,6 @@
   "modules": [
     "charts/FinancialChartModule",
     "charts/DataChartInteractivityModule",
-    "charts/LegendModule"
+    "charts/DataLegendModule"
   ]
 }

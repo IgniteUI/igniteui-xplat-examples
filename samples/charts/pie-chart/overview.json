@@ -5,7 +5,7 @@
   "descriptions": {
     "legend": {
       "type": "ItemLegend",
-      "name": "legend",
+      "name": "Legend",
       "orientation": "Horizontal"
     },
     "content": {
@@ -16,7 +16,7 @@
       "valueMemberPath": "Value",
       "radiusFactor": 0.7,
       "dataSourceRef": "EnergyGlobalDemand",
-      "legendRef": "legend"
+      "legendRef": "Legend"
     }
   },
   "modules": [
