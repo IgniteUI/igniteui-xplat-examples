@@ -11,7 +11,7 @@
           "name": "xAxis",
           "dataSourceRef": "Stock2Years",
           "labelLocation": "OutsideBottom",
-          "label": "date",
+          "label": "Month",
           "interval": 1,
           "labelExtent": 30
         },
