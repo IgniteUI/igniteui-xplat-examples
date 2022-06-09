@@ -8,10 +8,12 @@
       "labelTextColor": "#4A4A4A",
       "unitsText": "K",
       "unitsTextColor": "#00AD03",
-      "unitsTextFontWeight": "Bold",
+      "unitsTextFontFamily": "Verdana",
+      "unitsTextFontWeight": "Bold",      
       "valueFormatMode": "Currency",
       "valueTextColor": "#00AD03",
-      "valueTextFontWeight": "Bold"
+      "valueTextFontFamily": "Verdana",
+      "valueTextFontWeight": "Bold"      
     },
     "content": {
       "type": "FinancialChart",

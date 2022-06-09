@@ -34,7 +34,7 @@
       "name": "chart",
       "dataSourceRef": "HighestGrossingMovies",
       "chartType": "Column",
-
+      "crosshairsSnapToData": true,
       "isHorizontalZoomEnabled": false,
       "isVerticalZoomEnabled": false,
       "xAxisInterval": 1,
