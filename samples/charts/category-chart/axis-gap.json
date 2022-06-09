@@ -40,6 +40,7 @@
       "dataSourceRef": "CountryRenewableElectricity",
       "includedProperties": ["Year","Europe","China","USA"],
       "chartType": "Column",
+      "crosshairsSnapToData": true,
       "yAxisTitle": "TWh",
       "isHorizontalZoomEnabled": false,
       "isVerticalZoomEnabled": false,

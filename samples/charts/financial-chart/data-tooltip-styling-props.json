@@ -15,6 +15,7 @@
       "dataToolTipValueFormatMode": "Currency",
       "dataToolTipValueTextColor": "#00AD03",
       "dataToolTipValueTextFontWeight": "Bold",      
+      "dataToolTipHeaderFormatTime": "None",
       "yAxisTitle": "Thousands of Dollars ($)",
       "zoomSliderType": "None"
     }

@@ -4,7 +4,7 @@
       "type": "DataLegend",
       "name": "Legend",
       "targetRef": "chart",
-      "includedColumns": ["Close","Change"],
+      "includedColumns": ["Close","Change","Value"],
       "excludedColumns": ["High","Low","Open","Volume"],
       "labelDisplayMode": "Hidden",
       "valueFormatMode": "Currency",
@@ -13,12 +13,13 @@
     "content": {
       "type": "FinancialChart",
       "name": "chart", 
-      "chartType": "Line",     
+      "chartType": "Candle",     
       "dataSourceRef": "MultipleStocks",
       "dataToolTipValueFormatMode": "Currency",
       "dataToolTipValueFormatCulture": "en-GB",
       "dataToolTipLabelDisplayMode": "Hidden",
-      "dataToolTipIncludedColumns": ["Close","Change"],
+      "dataToolTipIncludedColumns": ["Close","Change","Value"],
+      "dataToolTipHeaderFormatTime": "None",
       "zoomSliderType": "None"
     }
   },     

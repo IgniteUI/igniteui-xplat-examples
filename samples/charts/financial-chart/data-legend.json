@@ -13,6 +13,7 @@
       "isVerticalZoomEnabled": true,
       "isHorizontalZoomEnabled": true,
       "dataSourceRef": "MultipleStocks",
+      "dataToolTipHeaderFormatTime": "None",
       "zoomSliderType": "None"
     }
   }, 
