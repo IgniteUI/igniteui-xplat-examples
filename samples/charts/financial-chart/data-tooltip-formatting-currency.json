@@ -3,7 +3,7 @@
     "content": {
       "type": "FinancialChart",
       "name": "chart", 
-      "chartType": "Line",     
+      "chartType": "Candle",     
       "toolTipType": "Data",
       "dataSourceRef": "MultipleStocks",            
       "dataToolTipIncludedColumns": ["Close","Change","Value"],
