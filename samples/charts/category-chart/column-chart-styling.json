@@ -21,9 +21,6 @@
       "brushes": ["#9de772", "#8b5bb1", "#6db1ff", "#ee5879", "#f8a15f"],
       "outlines": ["white"],
 
-      "yAxisMinimumValue": -20,
-      "yAxisMaximumValue": 30,
-      "yAxisInterval": 10,
       "xAxisMajorStroke": "lightgrey",
       "xAxisGap": 0.5,
 
