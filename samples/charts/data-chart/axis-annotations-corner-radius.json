@@ -26,7 +26,7 @@
           "xAxisRef": "xAxis",
           "yAxisRef": "yAxis",
           "dataSourceRef": "CountryRenewableElectricity",
-          "valueMemberPath": "USA"
+          "valueMemberPath": "America"
         },
         {
           "type": "CalloutLayer",

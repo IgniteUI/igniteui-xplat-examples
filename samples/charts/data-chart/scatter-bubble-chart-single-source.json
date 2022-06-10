@@ -10,7 +10,7 @@
         {
           "type": "NumericXAxis",
           "name": "xAxis",
-          "title": "Hours Worked per Week"
+          "title": "Birth Rate"
         },
         {
           "type": "NumericYAxis",
@@ -27,7 +27,7 @@
           "title": "European Countries",
           "xAxisRef": "xAxis",
           "yAxisRef": "yAxis",
-          "xMemberPath": "WorkedHours",
+          "xMemberPath": "BirthRate",
           "yMemberPath": "GDP",
           "radiusMemberPath": "Population",
           "radiusScaleRef": "sizeScale",

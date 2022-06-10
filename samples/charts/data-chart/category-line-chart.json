@@ -46,12 +46,12 @@
         {
           "type": "LineSeries",
           "name": "LineSeries3",
-          "title": "USA",
+          "title": "America",
           "xAxisRef": "xAxis",
           "yAxisRef": "yAxis",
           "markerType": "Circle",
           "dataSourceRef": "CountryRenewableElectricity",
-          "valueMemberPath": "USA",
+          "valueMemberPath": "America",
           "showDefaultTooltip": true
         }
       ],
