@@ -1,0 +1,50 @@
+{
+  "strings": {
+    "legendTitle": "Highest Grossing Movie Franchises"
+  },
+  "descriptions": {
+    "editor": {
+      "type": "PropertyEditorPanel",
+      "name": "PropertyEditor",
+      "componentRendererRef": "renderer",
+      "targetRef": "chart",
+      "descriptionType": "CategoryChart",
+      "isHorizontal": true,
+      "isWrappingEnabled": true,      
+      "properties": [
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "ToolTipType",
+          "name": "ToolTipTypeEditor",
+          "label": "ToolTip Type:",
+          "primitiveValue": "Data"          
+        }
+      ]
+    },
+    "legend": {
+      "type": "Legend",
+      "name": "Legend"      
+    },
+    "content": {
+      "type": "CategoryChart",
+      "name": "chart",
+      "chartType": "Column",
+      "legendRef": "Legend",
+      "dataSourceRef": "HighestGrossingMovies",
+      "xAxisInterval": 1,
+      "yAxisTitle": "Billions of U.S. Dollars",
+      "yAxisTitleLeftMargin": 10,
+      "yAxisTitleRightMargin": 5,
+      "yAxisLabelLeftMargin": 0,
+      "isHorizontalZoomEnabled": false,
+      "isVerticalZoomEnabled": false,
+      "crosshairsSnapToData": true
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
+    "charts/LegendModule",
+    "charts/CategoryChartModule"
+  ]
+}
