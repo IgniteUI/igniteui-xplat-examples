@@ -5,6 +5,8 @@
   "descriptions": {
     "content": {
       "type": "DataChart",
+      "shouldAutoExpandMarginForInitialLabels": true,
+      "computedPlotAreaMarginMode": "Series",
       "name": "chart",
       "axes": [
         {

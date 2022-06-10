@@ -27,6 +27,7 @@
           "interval": 20,
           "title": "Millions of Births",
           "titleLeftMargin": 10,
+          "titleAngle": -90,
           "labelFormat": "{0} %"
         }
       ],

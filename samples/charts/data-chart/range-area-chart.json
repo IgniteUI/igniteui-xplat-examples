@@ -19,11 +19,9 @@
         {
           "type": "NumericYAxis",
           "name": "yAxis",
-          "minimumValue": 0,
-          "maximumValue": 50,
-          "interval": 10,
           "title": "Temperature (in Celsius)",
-          "titleLeftMargin": 10
+          "titleLeftMargin": 10,
+          "titleAngle": -90
         }
       ],
       "series": [

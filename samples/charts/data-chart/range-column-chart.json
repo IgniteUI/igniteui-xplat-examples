@@ -26,6 +26,7 @@
           "type": "NumericYAxis",
           "name": "yAxis",
           "title": "Temperature (in Celsius)",
+          "titleAngle": 90,
           "titleLeftMargin": 10
         }
       ],

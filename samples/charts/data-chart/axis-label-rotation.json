@@ -39,11 +39,10 @@
         {
           "type": "CategoryXAxis",
           "name": "xAxis",
-          "dataSourceRef": "TemperatureAverageData",
+          "dataSourceRef": "TemperatureAverageDataLongLabels",
           "enhancedIntervalPreferMoreCategoryLabels": true,
           "useEnhancedIntervalManagement": true,
-          "label": "Month",
-          "labelExtent": 60
+          "label": "Month"
         },
         {
           "type": "NumericYAxis",
@@ -56,7 +55,7 @@
           "name": "colSeries1",
           "xAxisRef": "xAxis",
           "yAxisRef": "yAxis",
-          "dataSourceRef": "TemperatureAverageData",
+          "dataSourceRef": "TemperatureAverageDataLongLabels",
           "valueMemberPath": "Temperature"
         }
       ]

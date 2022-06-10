@@ -59,6 +59,9 @@
           "radiusMemberAsLegendLabel": "Population:",
           "xMemberAsLegendLabel": "Death Rate:",
           "yMemberAsLegendLabel": "Birth Rate:"
+        }, {
+          "type": "CrosshairLayer",
+          "name": "CrosshairLayer"
         }
       ]
     }
@@ -69,6 +72,8 @@
     "charts/DataChartCoreModule",
     "charts/DataChartScatterModule",
     "charts/DataChartScatterCoreModule",
-    "charts/DataChartInteractivityModule"
+    "charts/DataChartInteractivityModule",
+    "charts/DataLegendModule",
+    "charts/DataChartAnnotationModule"
   ]
 }

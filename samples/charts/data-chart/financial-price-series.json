@@ -3,6 +3,8 @@
     "content": {
       "type": "DataChart",
       "name": "chart",
+      "shouldAutoExpandMarginForInitialLabels": true,
+      "computedPlotAreaMarginMode": "Series",
       "isVerticalZoomEnabled": true,
       "isHorizontalZoomEnabled": true,
       "axes": [

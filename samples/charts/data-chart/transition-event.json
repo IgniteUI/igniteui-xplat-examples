@@ -41,6 +41,7 @@
           "name": "yAxis",
           "title": "Millions of Dollars",
           "titleLeftMargin": 10,
+          "titleAngle": -90,
           "minimumValue": 0,
           "maximumValue": 60
         }
