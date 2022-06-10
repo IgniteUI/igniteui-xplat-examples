@@ -71,6 +71,7 @@
     "charts/DataChartCategoryCoreModule",
     "charts/DataChartCategoryModule",
     "charts/DataChartInteractivityModule",
-    "charts/DataChartVerticalCategoryModule"
+    "charts/DataChartVerticalCategoryModule",
+    "charts/DataChartAnnotationModule"
   ]
 }

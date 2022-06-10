@@ -67,6 +67,7 @@
     "charts/DataChartCoreModule",
     "charts/DataChartScatterModule",
     "charts/DataChartScatterCoreModule",
-    "charts/DataChartInteractivityModule"
+    "charts/DataChartInteractivityModule",
+    "charts/DataChartAnnotationModule"
   ]
 }

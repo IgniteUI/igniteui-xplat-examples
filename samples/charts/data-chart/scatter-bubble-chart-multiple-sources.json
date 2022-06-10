@@ -36,7 +36,6 @@
           "xMemberPath": "BirthRate",
           "yMemberPath": "GDP",
           "radiusMemberPath": "Population",
-          "radiusScaleRef": "sizeScale1",
           "dataSourceRef": "CountryDemographicAfrican",
           "markerType": "Circle",
           "showDefaultTooltip": true
@@ -50,7 +49,6 @@
           "xMemberPath": "BirthRate",
           "yMemberPath": "GDP",
           "radiusMemberPath": "Population",
-          "radiusScaleRef": "sizeScale2",
           "dataSourceRef": "CountryDemographicEurope",
           "markerType": "Circle",
           "showDefaultTooltip": true
