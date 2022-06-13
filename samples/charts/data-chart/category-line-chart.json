@@ -16,7 +16,7 @@
         {
           "type": "NumericYAxis",
           "name": "yAxis",
-          "labelLocation": "OutsideBottom"
+          "labelLocation": "OutsideLeft"
         }
       ],
       "plotAreaBackground": "rgba(255,255,255,1)",

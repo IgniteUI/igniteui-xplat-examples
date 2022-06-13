@@ -31,7 +31,8 @@
           "yAxisRef": "yAxis",
           "dataSourceRef": "TemperatureAverageData",
           "valueMemberPath": "Temperature"
-        }, {
+        }, 
+        {
           "type": "DataToolTipLayer",
           "name": "Tooltips"
         }

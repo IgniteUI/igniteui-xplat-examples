@@ -55,18 +55,6 @@
           "dataSourceRef": "HealthDataForFrance",
           "markerType": "Circle",
           "showDefaultTooltip": true
-        },
-        {
-          "type": "ScatterLineSeries",
-          "name": "ScatterLineSeries3",
-          "title": "Norway",
-          "xAxisRef": "xAxis",
-          "yAxisRef": "yAxis",
-          "xMemberPath": "LifeExpectancy",
-          "yMemberPath": "HealthExpense",
-          "dataSourceRef": "HealthDataForNorway",
-          "markerType": "Circle",
-          "showDefaultTooltip": true
         }
       ]
     }

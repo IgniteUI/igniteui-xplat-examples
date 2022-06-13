@@ -25,7 +25,6 @@
           "type": "NumericYAxis",
           "name": "yAxis",
           "interval": 20,
-          "titleLeftMargin": 10,
           "labelFormat": "{0} %"
         }
       ],
@@ -43,8 +42,7 @@
             { "type": "StackedFragmentSeries", "name": "s2", "valueMemberPath": "Africa" },
             { "type": "StackedFragmentSeries", "name": "s3", "valueMemberPath": "Europe" },
             { "type": "StackedFragmentSeries", "name": "s4", "valueMemberPath": "NorthAmerica" },
-            { "type": "StackedFragmentSeries", "name": "s5", "valueMemberPath": "SouthAmerica" },
-            { "type": "StackedFragmentSeries", "name": "s6", "valueMemberPath": "Oceania" }
+            { "type": "StackedFragmentSeries", "name": "s5", "valueMemberPath": "SouthAmerica" }
           ]
         }
       ]

@@ -29,7 +29,7 @@
           "maximumValue": 140,
           "interval": 20,
           "title": "Millions of Births",
-          "titleLeftMargin": 10,
+          "titleAngle": -90,
           "labelFormat": "{0} m"
         }
       ],
@@ -47,8 +47,7 @@
             { "type": "StackedFragmentSeries", "name": "s2", "valueMemberPath": "Africa" },
             { "type": "StackedFragmentSeries", "name": "s3", "valueMemberPath": "Europe" },
             { "type": "StackedFragmentSeries", "name": "s4", "valueMemberPath": "NorthAmerica" },
-            { "type": "StackedFragmentSeries", "name": "s5", "valueMemberPath": "SouthAmerica" },
-            { "type": "StackedFragmentSeries", "name": "s6", "valueMemberPath": "Oceania" }
+            { "type": "StackedFragmentSeries", "name": "s5", "valueMemberPath": "SouthAmerica" }
           ]
         }
       ]

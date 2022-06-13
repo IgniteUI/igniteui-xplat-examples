@@ -8,7 +8,7 @@
       "name": "Legend",
       "targetRef": "chart",
       "valueFormatMode": "Decimal",
-      "valueFormatMinFractions": 2,
+      "valueFormatMinFractions": 1,
       "unitsText": "B"
     },
     "content": {

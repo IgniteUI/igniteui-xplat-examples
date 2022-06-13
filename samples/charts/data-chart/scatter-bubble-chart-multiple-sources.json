@@ -16,7 +16,9 @@
         {
           "type": "NumericXAxis",
           "name": "xAxis",
-          "title": "Birth Rate"
+          "isLogarithmic": true,
+          "abbreviateLargeNumbers": true,
+          "title": "Population"
         },
         {
           "type": "NumericYAxis",
@@ -33,10 +35,10 @@
           "title": "African Countries",
           "xAxisRef": "xAxis",
           "yAxisRef": "yAxis",
-          "xMemberPath": "BirthRate",
+          "xMemberPath": "Population",
           "yMemberPath": "GDP",
           "radiusMemberPath": "Population",
-          "dataSourceRef": "CountryDemographicAfrican",
+          "dataSourceRef": "CountryStatsAfrica",
           "markerType": "Circle",
           "showDefaultTooltip": true
         },
@@ -46,19 +48,15 @@
           "title": "European Countries",
           "xAxisRef": "xAxis",
           "yAxisRef": "yAxis",
-          "xMemberPath": "BirthRate",
+          "xMemberPath": "Population",
           "yMemberPath": "GDP",
           "radiusMemberPath": "Population",
-          "dataSourceRef": "CountryDemographicEurope",
+          "dataSourceRef": "CountryStatsEurope",
           "markerType": "Circle",
           "showDefaultTooltip": true
         }
       ]
     }
-  },
-  "refs": {
-    "sizeScale1": { "type": "SizeScale", "minimumValue": 10, "maximumValue": 50 },
-    "sizeScale2": { "type": "SizeScale", "minimumValue": 10, "maximumValue": 50 }
   },
   "modules": [
     "charts/LegendModule",

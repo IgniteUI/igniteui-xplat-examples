@@ -1,6 +1,6 @@
 {
   "strings": {
-    "legendTitle": "GDP per Capita vs Hours Worked per Week"
+    "legendTitle": "GDP per Capita vs Population"
   },
   "descriptions": {
     "content": {
@@ -10,7 +10,9 @@
         {
           "type": "NumericXAxis",
           "name": "xAxis",
-          "title": "Birth Rate"
+          "title": "Population",
+          "isLogarithmic": true,
+          "abbreviateLargeNumbers": true
         },
         {
           "type": "NumericYAxis",
@@ -19,7 +21,7 @@
           "isLogarithmic": false,
           "abbreviateLargeNumbers": true
         }
-      ],
+      ], 
       "series": [
         {
           "type": "BubbleSeries",
@@ -27,19 +29,15 @@
           "title": "European Countries",
           "xAxisRef": "xAxis",
           "yAxisRef": "yAxis",
-          "xMemberPath": "BirthRate",
+          "xMemberPath": "Population",
           "yMemberPath": "GDP",
           "radiusMemberPath": "Population",
-          "radiusScaleRef": "sizeScale",
-          "dataSourceRef": "CountryDemographicEurope",
+          "dataSourceRef": "CountryStatsEurope",
           "markerType": "Circle",
           "showDefaultTooltip": true
         }
       ]
     }
-  },
-  "refs": {
-    "sizeScale": { "type": "SizeScale", "minimumValue": 10, "maximumValue": 50 }
   },
   "modules": [
     "charts/NumberAbbreviatorModule",

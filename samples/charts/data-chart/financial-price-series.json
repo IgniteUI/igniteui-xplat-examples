@@ -20,7 +20,7 @@
         {
           "type": "NumericYAxis",
           "name": "yAxis",
-          "labelLocation": "OutsideBottom"
+          "labelLocation": "OutsideRight"
         }
       ],
       "series": [
@@ -28,6 +28,7 @@
           "type": "FinancialPriceSeries",
           "name": "Series1",
           "title": "Stock Price",
+          "displayType": "Candlestick",
           "xAxisRef": "xAxis",
           "yAxisRef": "yAxis",
           "dataSourceRef": "Stock2Years",
@@ -37,6 +38,10 @@
           "closeMemberPath": "Close",
           "volumeMemberPath": "Volume",
           "showDefaultTooltip": true
+        }, 
+        {
+          "type": "DataToolTipLayer",
+          "name": "Tooltip"
         }
       ]
     }
@@ -48,6 +53,7 @@
     "charts/DataChartFinancialCoreModule",
     "charts/DataChartFinancialModule",
     "charts/DataChartFinancialOverlaysModule",
-    "charts/DataChartInteractivityModule"
+    "charts/DataChartInteractivityModule",
+    "charts/DataChartAnnotationModule"
   ]
 }

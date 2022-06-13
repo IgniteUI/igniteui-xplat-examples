@@ -43,7 +43,8 @@
           "xAxisRef": "xAxis",
           "yAxisRef": "yAxis",
           "dataSourceRef": "CountryRenewableElectricity",
-          "valueMemberPath": "Europe"
+          "valueMemberPath": "Europe",
+          "title": "Europe"
         },
         {
           "type": "LineSeries",
@@ -51,7 +52,8 @@
           "xAxisRef": "xAxis",
           "yAxisRef": "yAxis",
           "dataSourceRef": "CountryRenewableElectricity",
-          "valueMemberPath": "China"
+          "valueMemberPath": "China",
+          "title": "China"
         },
         {
           "type": "LineSeries",
@@ -59,8 +61,10 @@
           "xAxisRef": "xAxis",
           "yAxisRef": "yAxis",
           "dataSourceRef": "CountryRenewableElectricity",
-          "valueMemberPath": "America"
-        }, {
+          "valueMemberPath": "America",
+          "title": "America"
+        }, 
+        {
           "type": "DataToolTipLayer",
           "name": "Tooltips"
         }

@@ -59,7 +59,8 @@
           "radiusMemberAsLegendLabel": "Population:",
           "xMemberAsLegendLabel": "Death Rate:",
           "yMemberAsLegendLabel": "Birth Rate:"
-        }, {
+        }, 
+        {
           "type": "CrosshairLayer",
           "name": "CrosshairLayer"
         }

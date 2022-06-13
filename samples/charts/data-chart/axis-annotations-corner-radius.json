@@ -23,6 +23,7 @@
         {
           "type": "LineSeries",
           "name": "LineSeries1",
+          "title": "Electricity",
           "xAxisRef": "xAxis",
           "yAxisRef": "yAxis",
           "dataSourceRef": "CountryRenewableElectricity",
@@ -35,18 +36,28 @@
           "xMemberPath": "Index",
           "yMemberPath": "Value",
           "labelMemberPath": "Label",
-          "calloutCornerRadius": 10
+          "calloutPaddingLeft": 20,
+          "calloutPaddingRight": 20,
+          "calloutPaddingBottom": 10,
+          "calloutPaddingTop": 10,
+          "calloutCornerRadius": 5
         },
         {
           "type": "FinalValueLayer",
-          "axisAnnotationBackgroundCornerRadius": 100
+          "axisAnnotationBackgroundCornerRadius": 10,
+          "axisAnnotationPaddingBottom": 10,
+          "axisAnnotationPaddingTop": 10,
+          "axisAnnotationPaddingLeft": 10,
+          "axisAnnotationPaddingRight": 10
         },
         {
           "type": "CrosshairLayer",
           "isAxisAnnotationEnabled": true,
-          "xAxisAnnotationBackgroundCornerRadius": 100,
-          "yAxisAnnotationBackgroundCornerRadius": 100
-        }, {
+          "yAxisAnnotationInterpolatedValuePrecision": 0,
+          "xAxisAnnotationBackgroundCornerRadius": 10,
+          "yAxisAnnotationBackgroundCornerRadius": 10
+        }, 
+        {
           "type": "DataToolTipLayer",
           "name": "Tooltips"
         }

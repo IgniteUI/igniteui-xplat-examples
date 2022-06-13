@@ -41,7 +41,8 @@
           "showDefaultTooltip": true,
           "isTransitionInEnabled": true,
           "isHighlightingEnabled": true
-        }, {
+        }, 
+        {
           "type": "DataToolTipLayer",
           "name": "Tooltips"
         }

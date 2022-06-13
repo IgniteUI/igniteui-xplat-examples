@@ -16,7 +16,9 @@
         {
           "type": "NumericXAxis",
           "name": "xAxis",
-          "title": "Birth Rate"
+          "title": "Population",
+          "isLogarithmic": true,
+          "abbreviateLargeNumbers": true
         },
         {
           "type": "NumericYAxis",
@@ -33,14 +35,14 @@
           "title": "African Countries",
           "xAxisRef": "xAxis",
           "yAxisRef": "yAxis",
-          "xMemberPath": "BirthRate",
+          "xMemberPath": "Population",
           "yMemberPath": "GDP",
-          "radiusMemberPath": "Population",
-          "radiusScaleRef": "sizeScale",
-          "dataSourceRef": "CountryDemographicAfrican",
+          "radiusMemberPath": "Population", 
+          "dataSourceRef": "CountryStatsAfrica",
           "markerType": "Circle",
-          "markerOutline": "rgb(186,231,114)",
-          "markerBrush": "rgb(186,231,114)",
+          "markerOutline": "rgb(62, 202, 62)",
+          "markerBrush": "rgb(62, 202, 62)",
+          "markerFillOpacity": 0.5,
           "markerThickness": 2,
           "showDefaultTooltip": true
         },
@@ -50,22 +52,19 @@
           "title": "European Countries",
           "xAxisRef": "xAxis",
           "yAxisRef": "yAxis",
-          "xMemberPath": "BirthRate",
+          "xMemberPath": "Population",
           "yMemberPath": "GDP",
           "radiusMemberPath": "Population",
-          "radiusScaleRef": "sizeScale",
-          "dataSourceRef": "CountryDemographicEurope",
+          "dataSourceRef": "CountryStatsEurope",
           "markerType": "Circle",
-          "markerOutline": "rgb(248,174,95)",
-          "markerBrush": "rgb(248,174,95)",
+          "markerOutline": "rgb(171, 6, 221)",
+          "markerBrush": "rgb(171, 6, 221)",
+          "markerFillOpacity": 0.5,
           "markerThickness": 2,
           "showDefaultTooltip": true
         }
       ]
     }
-  },
-  "refs": {
-    "sizeScale": { "type": "SizeScale", "minimumValue": 10, "maximumValue": 50 },
   },
   "modules": [
     "charts/LegendModule",

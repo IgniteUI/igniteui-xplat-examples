@@ -1,0 +1,23 @@
+{
+  "export": false,
+  "descriptions": {
+    "legend": {      
+      "type": "DataLegend",
+      "name": "Legend",
+      "targetRef": "chart",
+      "includedColumns": ["Open","Close","High","Low","Change"]
+    },
+    "content": {
+      "type": "FinancialChart",
+      "name": "chart",
+      "isVerticalZoomEnabled": true,
+      "isHorizontalZoomEnabled": true,
+      "dataSourceRef": "Stock2Years"
+    }
+  },
+  "modules": [
+    "charts/FinancialChartModule",
+    "charts/DataChartInteractivityModule",
+    "charts/DataLegendModule"
+  ]
+}

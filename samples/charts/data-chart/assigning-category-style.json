@@ -18,7 +18,7 @@
           "type": "NumericYAxis",
           "name": "yAxis",
           "title": "TWh",
-          "labelLocation": "OutsideBottom"
+          "labelLocation": "OutsideLeft"
         }
       ],
       "series": [
@@ -57,7 +57,8 @@
           "dataSourceRef": "CountryRenewableElectricity",
           "valueMemberPath": "America",
           "showDefaultTooltip": true
-        }, {
+        }, 
+        {
           "type": "DataToolTipLayer",
           "name": "Tooltips"
         }
