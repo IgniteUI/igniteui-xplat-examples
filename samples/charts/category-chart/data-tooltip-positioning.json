@@ -1,8 +1,37 @@
 {
   "strings": {
     "legendTitle": "Highest Grossing Movie Franchises"
-  },
+  },  
   "descriptions": {
+    "editor": {
+      "type": "PropertyEditorPanel",
+      "name": "PropertyEditor",
+      "componentRendererRef": "renderer",
+      "targetRef": "chart",
+      "descriptionType": "CategoryChart",
+      "isHorizontal": true,
+      "isWrappingEnabled": true,
+      "properties": [
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "dataToolTipGroupedPositionModeX",
+          "name": "GroupedPositionXEditor",
+          "label": "Grouped X Position:"          
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "dataToolTipGroupedPositionModeY",
+          "name": "GroupedPositionYEditor",
+          "label": "Grouped Y Position:"
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "dataToolTipGroupingMode",
+          "name": "GroupingModeEditor",
+          "label": "Grouping Mode:"
+        }
+      ]
+    },
     "content": {
       "type": "CategoryChart",
       "name": "chart",
@@ -20,6 +49,8 @@
     }
   },
   "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPaneModule",
     "charts/LegendModule",
     "charts/CategoryChartModule"
   ]
