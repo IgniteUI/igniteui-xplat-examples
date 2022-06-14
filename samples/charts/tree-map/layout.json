@@ -14,24 +14,28 @@
         {
           "type": "PropertyEditorPropertyDescription",
           "propertyPath": "LayoutType",
+          "name": "LayoutType",
           "primitiveValue": "Squarified",
           "label": "Layout"
         },
         {
           "type": "PropertyEditorPropertyDescription",
           "propertyPath": "LayoutOrientation",
+          "name": "LayoutOrientation",
           "primitiveValue": "Vertical",
           "label": "Orientation"
         },
         {
           "type": "PropertyEditorPropertyDescription",
           "propertyPath": "HeaderDisplayMode",
+          "name": "HeaderDisplayMode",
           "primitiveValue": "Overlay",
           "label": "Headers"
         },
         {
           "type": "PropertyEditorPropertyDescription",
           "propertyPath": "LabelVerticalAlignment",
+          "name": "LabelVerticalAlignment",
           "primitiveValue": "Center",
           "label": "Labels"
         }

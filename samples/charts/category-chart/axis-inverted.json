@@ -14,6 +14,7 @@
           {
             "type": "PropertyEditorPropertyDescription",
             "propertyPath": "XAxisInverted",
+            "name": "XAxisInverted",
             "label": "X Axis - Inverted",
             "shouldOverrideDefaultEditor": true,
             "primitiveValue": true
@@ -21,6 +22,7 @@
           {
             "type": "PropertyEditorPropertyDescription",
             "propertyPath": "YAxisInverted",
+            "name": "YAxisInverted",
             "label": "Y Axis - Inverted",
             "shouldOverrideDefaultEditor": true,
             "primitiveValue": true

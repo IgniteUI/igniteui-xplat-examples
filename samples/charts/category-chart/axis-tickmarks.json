@@ -19,6 +19,7 @@
           {
             "type": "PropertyEditorPropertyDescription",
             "propertyPath": "XAxisTickLength",
+            "name": "XAxisTickLength",
             "label": "X Axis Tick Length",
             "shouldOverrideDefaultEditor": true,
             "valueType": "Slider",

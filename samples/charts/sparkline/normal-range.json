@@ -12,6 +12,7 @@
           {
             "type": "PropertyEditorPropertyDescription",
             "propertyPath": "NormalRangeVisibility",
+            "name": "NormalRangeVisibility",
             "label": "Normal Range Visibility",
             "shouldOverrideDefaultEditor": true,
             "valueType": "EnumValue",
@@ -22,6 +23,7 @@
           {
             "type": "PropertyEditorPropertyDescription",
             "propertyPath": "NormalRangeMinimum",
+            "name": "NormalRangeMinimum",
             "label": "Normal Range Minimum",
             "shouldOverrideDefaultEditor": true,
             "valueType": "EnumValue",
@@ -32,6 +34,7 @@
           {
             "type": "PropertyEditorPropertyDescription",
             "propertyPath": "NormalRangeMaximum",
+            "name": "NormalRangeMaximum",
             "label": "Normal Range Maximum",
             "shouldOverrideDefaultEditor": true,
             "valueType": "EnumValue",

@@ -19,6 +19,7 @@
           {
             "type": "PropertyEditorPropertyDescription",
             "propertyPath": "YAxisLabelLocation",
+            "name": "YAxisLabelLocation",
             "label": "Y Axis - Label Location",
             "primitiveValue": "OutsideRight"
           }

@@ -12,6 +12,7 @@
           {
             "type": "PropertyEditorPropertyDescription",
             "propertyPath": "TrendLineType",
+            "name": "TrendLineType",
             "label": "Trendline Type",
             "shouldOverrideDefaultEditor": true,
             "valueType": "EnumValue",
