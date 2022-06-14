@@ -27,9 +27,9 @@
             "label": "Normal Range Minimum",
             "shouldOverrideDefaultEditor": true,
             "valueType": "EnumValue",
-            "dropDownNames": ["-7", "-6", "-5", "-4", "-3", "-2", "-1", "0"],
-            "dropDownValues": ["-7", "-6", "-5", "-4", "-3", "-2", "-1", "0"],
-            "primitiveValue": -5
+            "dropDownNames":  ["0", "10", "15", "20", "25", "30"],
+            "dropDownValues": ["0", "10", "15", "20", "25", "30"],
+            "primitiveValue": 25
           },
           {
             "type": "PropertyEditorPropertyDescription",
@@ -38,9 +38,9 @@
             "label": "Normal Range Maximum",
             "shouldOverrideDefaultEditor": true,
             "valueType": "EnumValue",
-            "dropDownNames": ["7", "6", "5", "4", "3", "2", "1", "0"],
-            "dropDownValues": ["7", "6", "5", "4", "3", "2", "1", "0"],
-            "primitiveValue": 5
+            "dropDownNames":  ["0", "10", "15", "20", "25", "30"],
+            "dropDownValues": ["0", "10", "15", "20", "25", "30"],
+            "primitiveValue": 25
           }
        ]
     },
@@ -52,8 +52,8 @@
       "labelMemberPath": "Label",
       "valueMemberPath": "Value",
       "normalRangeVisibility": "Visible",
-      "normalRangeMinimum": -5,
-      "normalRangeMaximum": 5
+      "normalRangeMinimum": 15,
+      "normalRangeMaximum": 25
     }
   },
   "modules": [
