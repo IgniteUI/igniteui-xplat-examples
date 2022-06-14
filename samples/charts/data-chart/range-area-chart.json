@@ -31,8 +31,8 @@
           "xAxisRef": "xAxis",
           "yAxisRef": "yAxis",
           "title": "Los Angeles",
-          "lowMemberPath": "LA_Low",
-          "highMemberPath": "LA_High",
+          "lowMemberPath": "LowLA",
+          "highMemberPath": "HighLA",
           "dataSourceRef": "TemperatureRangeData"
         },
         {
@@ -41,8 +41,8 @@
           "xAxisRef": "xAxis",
           "yAxisRef": "yAxis",
           "title": "New York",
-          "lowMemberPath": "NY_Low",
-          "highMemberPath": "NY_High",
+          "lowMemberPath": "LowNY",
+          "highMemberPath": "HighNY",
           "dataSourceRef": "TemperatureRangeData"
         }
       ]
