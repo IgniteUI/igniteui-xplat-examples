@@ -12,6 +12,7 @@
           {
             "type": "PropertyEditorPropertyDescription",
             "propertyPath": "FirstMarkerVisibility",
+            "name": "FirstMarkerVisibility",
             "label": "First Markers",
             "shouldOverrideDefaultEditor": true,
             "valueType": "EnumValue",
@@ -22,6 +23,7 @@
           {
             "type": "PropertyEditorPropertyDescription",
             "propertyPath": "HighMarkerVisibility",
+            "name": "HighMarkerVisibility",
             "label": "High Markers",
             "valueType": "EnumValue",
             "dropDownNames": ["Visible", "Collapsed"],
@@ -31,6 +33,7 @@
           {
             "type": "PropertyEditorPropertyDescription",
             "propertyPath": "LowMarkerVisibility",
+            "name": "LowMarkerVisibility",
             "label": "Low Markers",
             "valueType": "EnumValue",
             "dropDownNames": ["Visible", "Collapsed"],
@@ -40,6 +43,7 @@
           {
             "type": "PropertyEditorPropertyDescription",
             "propertyPath": "NegativeMarkerVisibility",
+            "name": "NegativeMarkerVisibility",
             "label": "Negative Markers",
             "valueType": "EnumValue",
             "dropDownNames": ["Visible", "Collapsed"],
@@ -49,6 +53,7 @@
           {
             "type": "PropertyEditorPropertyDescription",
             "propertyPath": "LastMarkerVisibility",
+            "name": "LastMarkerVisibility",
             "label": "Last Markers",
             "valueType": "EnumValue",
             "dropDownNames": ["Visible", "Collapsed"],
@@ -58,6 +63,7 @@
           {
             "type": "PropertyEditorPropertyDescription",
             "propertyPath": "MarkerVisibility",
+            "name": "MarkerVisibility",
             "label": "All Markers",
             "valueType": "EnumValue",
             "dropDownNames": ["Visible", "Collapsed"],

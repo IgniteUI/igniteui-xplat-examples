@@ -19,6 +19,7 @@
           {
             "type": "PropertyEditorPropertyDescription",
             "propertyPath": "XAxisOverlap",
+            "name": "XAxisOverlap",
             "label": "X Axis - Overlap",
             "shouldOverrideDefaultEditor": true,
             "valueType": "Slider",

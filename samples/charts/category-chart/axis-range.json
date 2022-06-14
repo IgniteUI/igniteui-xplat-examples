@@ -19,6 +19,7 @@
           {
             "type": "PropertyEditorPropertyDescription",
             "propertyPath": "YAxisMinimumValue",
+            "name": "YAxisMinimumValue",
             "label": "Y Axis Minimum Value",
             "shouldOverrideDefaultEditor": true,
             "valueType": "EnumValue",
@@ -29,6 +30,7 @@
           {
             "type": "PropertyEditorPropertyDescription",
             "propertyPath": "YAxisMaximumValue",
+            "name": "YAxisMaximumValue",
             "label": "Y Axis Maximum Value",
             "shouldOverrideDefaultEditor": true,
             "valueType": "EnumValue",

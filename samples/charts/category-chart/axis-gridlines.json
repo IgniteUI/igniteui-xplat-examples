@@ -19,6 +19,7 @@
           {
             "type": "PropertyEditorPropertyDescription",
             "propertyPath": "YAxisStroke",
+            "name": "YAxisStroke",
             "label": "Y Axis Stroke",
             "shouldOverrideDefaultEditor": true,
             "valueType": "EnumValue",
@@ -29,6 +30,7 @@
           {
             "type": "PropertyEditorPropertyDescription",
             "propertyPath": "YAxisMajorStroke",
+            "name": "YAxisMajorStroke",
             "label": "Y Axis Major Stroke",
             "shouldOverrideDefaultEditor": true,
             "valueType": "EnumValue",
@@ -39,6 +41,7 @@
           {
             "type": "PropertyEditorPropertyDescription",
             "propertyPath": "YAxisMinorStroke",
+            "name": "YAxisMinorStroke",
             "label": "Y Axis Minor Stroke",
             "shouldOverrideDefaultEditor": true,
             "valueType": "EnumValue",

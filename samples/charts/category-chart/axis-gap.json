@@ -14,6 +14,7 @@
           {
             "type": "PropertyEditorPropertyDescription",
             "propertyPath": "XAxisGap",
+            "name": "XAxisGap",
             "label": "X Axis - Gap",
             "shouldOverrideDefaultEditor": true,
             "valueType": "Slider",
@@ -25,6 +26,7 @@
           {
             "type": "PropertyEditorPropertyDescription",
             "propertyPath": "XAxisMaximumGap",
+            "name": "XAxisMaximumGap",
             "label": "Maximum Gap",
             "shouldOverrideDefaultEditor": true,
             "valueType": "EnumValue",
