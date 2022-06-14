@@ -19,6 +19,7 @@
           {
             "type": "PropertyEditorPropertyDescription",
             "propertyPath": "XAxisLabelAngle",
+            "name": "XAxisLabelAngleEditor",
             "label": "X Axis Label Angle",
             "shouldOverrideDefaultEditor": true,
             "valueType": "EnumValue",
@@ -29,6 +30,7 @@
           {
             "type": "PropertyEditorPropertyDescription",
             "propertyPath": "YAxisLabelAngle",
+            "name": "YAxisLabelAngleEditor",
             "label": "Y Axis Label Angle",
             "shouldOverrideDefaultEditor": true,
             "valueType": "EnumValue",
@@ -39,6 +41,7 @@
           {
             "type": "PropertyEditorPropertyDescription",
             "propertyPath": "XAxisLabelTextColor",
+            "name": "XAxisLabelTextColorEditor",
             "label": "Y Axis Label Color",
             "valueType": "EnumValue",
             "shouldOverrideDefaultEditor": true,

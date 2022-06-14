@@ -12,6 +12,7 @@
         {
             "type": "PropertyEditorPropertyDescription",
             "propertyPath": "EnhancedIntervalPreferMoreCategoryLabels",
+            "name": "EnhancedIntervals",
             "label": "Use Enhanced Interval Management",
             "shouldOverrideDefaultEditor": true
         }

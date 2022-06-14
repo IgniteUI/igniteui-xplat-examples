@@ -12,7 +12,7 @@
           {
             "type": "PropertyEditorPropertyDescription",
             "propertyPath": "FirstMarkerVisibility",
-            "name": "FirstMarkerVisibility",
+            "name": "FirstMarkerVisibilityEditor",
             "label": "First Markers",
             "shouldOverrideDefaultEditor": true,
             "valueType": "EnumValue",
@@ -23,7 +23,7 @@
           {
             "type": "PropertyEditorPropertyDescription",
             "propertyPath": "HighMarkerVisibility",
-            "name": "HighMarkerVisibility",
+            "name": "HighMarkerVisibilityEditor",
             "label": "High Markers",
             "valueType": "EnumValue",
             "dropDownNames": ["Visible", "Collapsed"],
@@ -33,7 +33,7 @@
           {
             "type": "PropertyEditorPropertyDescription",
             "propertyPath": "LowMarkerVisibility",
-            "name": "LowMarkerVisibility",
+            "name": "LowMarkerVisibilityEditor",
             "label": "Low Markers",
             "valueType": "EnumValue",
             "dropDownNames": ["Visible", "Collapsed"],
@@ -43,7 +43,7 @@
           {
             "type": "PropertyEditorPropertyDescription",
             "propertyPath": "NegativeMarkerVisibility",
-            "name": "NegativeMarkerVisibility",
+            "name": "NegativeMarkerVisibilityEditor",
             "label": "Negative Markers",
             "valueType": "EnumValue",
             "dropDownNames": ["Visible", "Collapsed"],
@@ -53,7 +53,7 @@
           {
             "type": "PropertyEditorPropertyDescription",
             "propertyPath": "LastMarkerVisibility",
-            "name": "LastMarkerVisibility",
+            "name": "LastMarkerVisibilityEditor",
             "label": "Last Markers",
             "valueType": "EnumValue",
             "dropDownNames": ["Visible", "Collapsed"],
@@ -63,7 +63,7 @@
           {
             "type": "PropertyEditorPropertyDescription",
             "propertyPath": "MarkerVisibility",
-            "name": "MarkerVisibility",
+            "name": "MarkerVisibilityEditor",
             "label": "All Markers",
             "valueType": "EnumValue",
             "dropDownNames": ["Visible", "Collapsed"],

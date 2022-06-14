@@ -22,7 +22,8 @@
         }
       ],
       "series": [
-        { "type": "CategoryHighlightLayer",
+        { 
+          "type": "CategoryHighlightLayer",
           "name": "CategoryHighlightLayer"},
         {
           "type": "ColumnSeries",

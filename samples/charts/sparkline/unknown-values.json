@@ -12,7 +12,7 @@
           {
             "type": "PropertyEditorPropertyDescription",
             "propertyPath": "UnknownValuePlotting",
-            "name": "UnknownValuePlotting",
+            "name": "UnknownValuePlottingEditor",
             "label": "Unknown Value Plotting",
             "shouldOverrideDefaultEditor": true,
             "valueType": "EnumValue",

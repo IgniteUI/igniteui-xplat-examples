@@ -12,8 +12,7 @@
       "isWrappingEnabled": false,
       "properties": [
         {
-
-          "type": "PropertyEditorPropertyDescription",
+            "type": "PropertyEditorPropertyDescription",
             "propertyPath": "ReplayTransitionIn",
             "label": "",
             "valueType": "Button",
