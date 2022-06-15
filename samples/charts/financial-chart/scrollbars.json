@@ -7,9 +7,8 @@
       "isVerticalZoomEnabled": true,
       "isHorizontalZoomEnabled": true,
       "dataSourceRef": "MultipleStocks",
-      "verticalViewScrollbarMode": "Persistent",
+      "verticalViewScrollbarMode": "Fading",
       "horizontalViewScrollbarMode": "Persistent",
-      "isWindowSyncedToVisibleRange": true,
       "zoomSliderType": "None",
       "windowRect": {"left": 0, "top": 0, "width": 0.5, "height": 1}
     }
