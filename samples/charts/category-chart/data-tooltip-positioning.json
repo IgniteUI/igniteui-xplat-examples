@@ -50,7 +50,7 @@
   },
   "modules": [
     "withDescriptions",
-    "layouts/PropertyEditorPaneModule",
+    "layouts/PropertyEditorPanelModule",
     "charts/LegendModule",
     "charts/CategoryChartModule"
   ]
