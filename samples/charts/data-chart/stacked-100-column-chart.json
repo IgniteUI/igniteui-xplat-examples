@@ -47,6 +47,7 @@
     }
   },
   "modules": [
+    "charts/LegendModule",
     "charts/DataChartCoreModule",
     "charts/DataChartCategoryModule",
     "charts/DataChartCategoryCoreModule",
