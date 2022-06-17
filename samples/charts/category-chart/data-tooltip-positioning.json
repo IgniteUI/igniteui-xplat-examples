@@ -14,19 +14,22 @@
       "properties": [
         {
           "type": "PropertyEditorPropertyDescription",
-          "propertyPath": "dataToolTipGroupedPositionModeX",
+          "propertyPath": "DataToolTipGroupedPositionModeX",
+          "primitiveValue": "PinRight",
           "name": "GroupedPositionXEditor",
           "label": "Grouped X Position:"          
         },
         {
           "type": "PropertyEditorPropertyDescription",
-          "propertyPath": "dataToolTipGroupedPositionModeY",
+          "propertyPath": "DataToolTipGroupedPositionModeY",
+          "primitiveValue": "PinTop",
           "name": "GroupedPositionYEditor",
           "label": "Grouped Y Position:"
         },
         {
           "type": "PropertyEditorPropertyDescription",
-          "propertyPath": "dataToolTipGroupingMode",
+          "propertyPath": "DataToolTipGroupingMode",
+          "primitiveValue": "Grouped",
           "name": "GroupingModeEditor",
           "label": "Grouping Mode:"
         }
@@ -40,6 +43,7 @@
       "toolTipType": "Data",
       "dataToolTipGroupedPositionModeX": "PinRight",
       "dataToolTipGroupedPositionModeY": "PinTop",
+      "dataToolTipGroupingMode": "Grouped",
       "xAxisInterval": 1,
       "yAxisTitle": "Billions of U.S. Dollars",
       "yAxisTitleLeftMargin": 10,
