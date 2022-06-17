@@ -43,11 +43,11 @@
           "showDefaultTooltip": true,
           "markerType": "Circle",
           "series": [
-            { "type": "StackedFragmentSeries", "name": "s1", "valueMemberPath": "Asia" },
-            { "type": "StackedFragmentSeries", "name": "s2", "valueMemberPath": "Africa" },
-            { "type": "StackedFragmentSeries", "name": "s3", "valueMemberPath": "Europe" },
-            { "type": "StackedFragmentSeries", "name": "s4", "valueMemberPath": "NorthAmerica" },
-            { "type": "StackedFragmentSeries", "name": "s5", "valueMemberPath": "SouthAmerica" }
+            { "type": "StackedFragmentSeries", "name": "s1", "valueMemberPath": "Asia", "title": "Asia" },
+            { "type": "StackedFragmentSeries", "name": "s2", "valueMemberPath": "Africa", "title": "Africa" },
+            { "type": "StackedFragmentSeries", "name": "s3", "valueMemberPath": "Europe", "title": "Europe" },
+            { "type": "StackedFragmentSeries", "name": "s4", "valueMemberPath": "NorthAmerica", "title": "North America" },
+            { "type": "StackedFragmentSeries", "name": "s5", "valueMemberPath": "SouthAmerica", "title": "South America" }
           ]
         }
       ]

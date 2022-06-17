@@ -38,9 +38,9 @@
           "showDefaultTooltip": true,
           "areaFillOpacity": 1,
           "series": [
-            { "type": "StackedFragmentSeries", "name": "s1", "valueMemberPath": "Desktop" },
-            { "type": "StackedFragmentSeries", "name": "s2", "valueMemberPath": "Mobile" },
-            { "type": "StackedFragmentSeries", "name": "s3", "valueMemberPath": "Tablet" }
+            { "type": "StackedFragmentSeries", "name": "s1", "valueMemberPath": "Desktop", "title": "Desktop"  },
+            { "type": "StackedFragmentSeries", "name": "s2", "valueMemberPath": "Mobile", "title": "Mobile"  },
+            { "type": "StackedFragmentSeries", "name": "s3", "valueMemberPath": "Tablet", "title": "Tablet"  }
           ]
         }
       ]

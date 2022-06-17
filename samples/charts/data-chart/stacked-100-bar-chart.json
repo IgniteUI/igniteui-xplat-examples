@@ -39,10 +39,10 @@
           "showDefaultTooltip": true,
           "areaFillOpacity": 1,
           "series": [
-            { "type": "StackedFragmentSeries", "name": "s1", "valueMemberPath": "Hydro" },
-            { "type": "StackedFragmentSeries", "name": "s2", "valueMemberPath": "Wind" },
-            { "type": "StackedFragmentSeries", "name": "s3", "valueMemberPath": "Solar" },
-            { "type": "StackedFragmentSeries", "name": "s4", "valueMemberPath": "Other" }
+            { "type": "StackedFragmentSeries", "name": "s1", "valueMemberPath": "Hydro", "title": "Hydro" },
+            { "type": "StackedFragmentSeries", "name": "s2", "valueMemberPath": "Wind", "title": "Wind" },
+            { "type": "StackedFragmentSeries", "name": "s3", "valueMemberPath": "Solar", "title": "Solar" },
+            { "type": "StackedFragmentSeries", "name": "s4", "valueMemberPath": "Other", "title": "Other" }
           ]
         }
       ]
