@@ -27,7 +27,7 @@
       "series": [
         {
           "type": "RangeAreaSeries",
-          "name": "series",
+          "name": "RangeAreaSeries1",
           "xAxisRef": "xAxis",
           "yAxisRef": "yAxis",
           "title": "Los Angeles",
@@ -37,7 +37,7 @@
         },
         {
           "type": "RangeAreaSeries",
-          "name": "series",
+          "name": "RangeAreaSeries2",
           "xAxisRef": "xAxis",
           "yAxisRef": "yAxis",
           "title": "New York",
