@@ -1,0 +1,120 @@
+{
+  "strings": {
+    "legendTitle": "Top Roadblocks to Success of the Data & Analytics Team"
+  },
+  "descriptions": {
+    "legend": {
+      "type": "Legend",
+      "name": "Legend",
+      "orientation": "Horizontal"
+    },
+    "content": {
+      "type": "DataChart",
+      "name": "Chart",
+      "legendRef": "Legend",
+      "axes": [
+        {
+          "type": "CategoryYAxis",
+          "name": "yAxis1",
+          "label": "Category",
+          "dataSourceRef": "RoadblocksToSuccess", 
+          "gap": 0.25,
+          "labelExtent": 0
+        },
+        {
+          "type": "CategoryYAxis",
+          "name": "yAxis2",
+          "label": "Category",
+          "dataSourceRef": "RoadblocksToSuccess", 
+          "gap": 1.0,
+          "labelHorizontalAlignment": "Right"
+        },
+        {
+          "type": "NumericXAxis",
+          "name": "xAxis",
+          "minimumValue": 0,
+          "maximumValue": 50,
+          "useEnhancedIntervalManagement": true,
+          "labelFormat": "{0}%",
+          "strokeThickness": 2,
+          "stroke": "gray",
+          "tickLength": 5
+        }
+      ],
+      "series": [
+        {
+          "type": "CategoryHighlightLayer",
+          "name": "CategoryHighlightLayer"
+        },
+        {
+          "type": "BarSeries",
+          "name": "BarSeries1",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis1",
+          "title": "Sum of Top 3 Choices",
+          "valueMemberPath": "TopChoices",
+          "dataSourceRef": "RoadblocksToSuccess",
+          "showDefaultTooltip": true,
+          "isTransitionInEnabled": true,
+          "isHighlightingEnabled": true
+        },
+        {
+          "type": "BarSeries",
+          "name": "BarSeries2",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis2",
+          "title": "Top Choice",
+          "valueMemberPath": "FirstChoice",
+          "dataSourceRef": "RoadblocksToSuccess",
+          "showDefaultTooltip": true,
+          "isTransitionInEnabled": true,
+          "isHighlightingEnabled": true
+        }, 
+        {
+          "type": "CalloutLayer",
+          "name": "CalloutLayer1",
+          "dataSourceRef": "RoadblocksToSuccess",
+          "yMemberPath": "Index",
+          "xMemberPath": "FirstChoice",
+          "labelMemberPath": "FirstChoiceLabel",
+          "calloutLeaderBrush": "transparent",
+          "calloutOutline": "transparent",
+          "calloutBackground": "transparent",
+          "calloutTextColor": "black",
+          "calloutStrokeThickness": 2,
+          "calloutPaddingTop": 0,
+          "calloutPositionPadding": 0
+        }, 
+        {
+          "type": "CalloutLayer",
+          "name": "CalloutLayer2",
+          "dataSourceRef": "RoadblocksToSuccess",
+          "yMemberPath": "Index",
+          "xMemberPath": "TopChoices",
+          "labelMemberPath": "TopChoicesLabel",
+          "calloutLeaderBrush": "transparent",
+          "calloutOutline": "transparent",
+          "calloutBackground": "transparent",
+          "calloutTextColor": "black",
+          "calloutStrokeThickness": 2,
+          "calloutPaddingTop": 0,
+          "calloutPositionPadding": 0
+        }, 
+        {
+          "type": "DataToolTipLayer",
+          "name": "Tooltips"
+        }
+      ]
+    }
+  },
+  "modules": [
+    "charts/LegendModule",
+    "charts/DataChartAnnotationModule",
+    "charts/DataChartCoreModule",
+    "charts/DataChartCategoryCoreModule",
+    "charts/DataChartCategoryModule",
+    "charts/DataChartInteractivityModule",
+    "charts/DataChartVerticalCategoryModule",
+    "charts/DataChartAnnotationModule"
+  ]
+}
