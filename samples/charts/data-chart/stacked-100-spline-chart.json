@@ -25,7 +25,7 @@
           "type": "NumericYAxis",
           "name": "yAxis",
           "interval": 20,
-          "labelFormat": "{0} %"
+          "labelFormat": "{0}%"
         }
       ],
       "series": [

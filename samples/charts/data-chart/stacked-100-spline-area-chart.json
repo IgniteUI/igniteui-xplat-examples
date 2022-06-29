@@ -26,7 +26,7 @@
           "name": "yAxis",
           "interval": 20,
           "titleLeftMargin": 10,
-          "labelFormat": "{0} %"
+          "labelFormat": "{0}%"
         }
       ],
       "series": [
