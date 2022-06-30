@@ -1,0 +1,53 @@
+{
+  "strings": {
+    "legendTitle": "Average Temperature in Sedney"
+  },
+  "descriptions": {
+    "editor": {
+      "type": "PropertyEditorPanel",
+      "name": "PropertyEditor",
+      "componentRendererRef": "renderer",
+      "targetRef": "chart",
+      "descriptionType": "CategoryChart",
+      "isHorizontal": true,
+      "isWrappingEnabled": true,      
+      "properties": [
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "HighlightingMode",
+          "name": "HighlightingModeEditor",
+          "label": "Highlighting Mode:",
+          "primitiveValue": "FadeOthersSpecific"          
+        },        
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "HighlightingBehavior",
+          "name": "HighlightingBehaviorEditor",
+          "label": "Highlighting Behavior:",
+          "primitiveValue": "NearestItemsAndSeries"          
+        }
+      ]
+    },
+    "content": {
+      "type": "CategoryChart",
+      "name": "chart",
+      "chartType": "Column",
+      "computedPlotAreaMarginMode": "Series",
+      "isHorizontalZoomEnabled": false,
+      "isVerticalZoomEnabled": false,
+      "includedProperties": ["Month", "Temperature"],
+      "dataSourceRef": "TemperatureAnnotatedData",
+      "isCategoryHighlightingEnabled": true,
+      "highlightingMode": "FadeOthersSpecific",
+      "highlightingBehavior": "NearestItemsAndSeries",
+      "crosshairsAnnotationYAxisPrecision": 0,
+      "yAxisMaximumValue": 35,
+      "yAxisLabelLocation": "OutsideRight"      
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
+    "charts/CategoryChartModule"
+  ]
+}
