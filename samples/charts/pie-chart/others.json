@@ -20,7 +20,7 @@
       "othersCategoryType": "Number",
       "othersCategoryText": "Others",
       "radiusFactor": 0.7,
-      "legendLabelMemberPath": "Summary",
+      "legendLabelMemberPath": "Category",
       "dataSourceRef": "EnergyGlobalDemand",
       "legendRef": "Legend"
     }

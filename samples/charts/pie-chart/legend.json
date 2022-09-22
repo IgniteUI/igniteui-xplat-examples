@@ -14,7 +14,7 @@
       "valueMemberPath": "Value",
       "labelMemberPath": "Summary",
       "labelsPosition": "OutsideEnd",
-      "legendLabelMemberPath": "Summary",
+      "legendLabelMemberPath": "Category",
       "outlines": [ "#ffffff" ],
       "radiusFactor": 0.7,
       "labelExtent": 30,

@@ -11,8 +11,9 @@
     "content": {
       "type": "PieChart",
       "name": "chart",
+      "legendLabelMemberPath": "Category",
       "valueMemberPath": "Value",
-      "labelMemberPath": "Category",
+      "labelMemberPath": "Summary",
       "labelsPosition": "OutsideEnd",
       "labelExtent": 30,
       "brushes": ["#f7d262", "#a8a8b7", "#e051a9", "#f8a15f", "#735656"],

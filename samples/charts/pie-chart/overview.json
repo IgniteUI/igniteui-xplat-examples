@@ -11,7 +11,8 @@
     "content": {
       "type": "PieChart",
       "name": "chart",
-      "labelMemberPath": "Category",
+      "legendLabelMemberPath": "Category",
+      "labelMemberPath": "Summary",
       "labelsPosition": "BestFit",
       "valueMemberPath": "Value",
       "radiusFactor": 0.7,
