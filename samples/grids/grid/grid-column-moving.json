@@ -1,0 +1,89 @@
+{
+    "export": true,
+    "descriptions": {
+      "content": {
+       "type": "WebGrid",
+       "dataRef": "FinancialDataAll",
+       "autoGenerate": false,
+       "primaryKey": "ProductID",
+       "moving": true,
+        "name": "grid",
+        "columns": [
+          {
+            "type": "WebGridColumn",
+            "field": "Category",
+            "pinned": true,
+            "width": "200px",
+            "headerTemplateRef": "PinHeaderTemplate"
+          },
+          {
+            "type": "WebGridColumn",
+            "field": "Type",
+            "pinned": true,
+            "headerTemplateRef": "PinHeaderTemplate"
+          },
+          {
+            "type": "WebGridColumn",
+            "field": "Price",
+            "dataType": "Currency",
+            "pipeArgs": {
+              "currencyCode": "USD",
+              "type": "WebColumnPipeArgs",
+              "digitsInfo": "1.2-2"
+            },
+            "headerTemplateRef": "PinHeaderTemplate"
+          },
+          {
+            "type": "WebGridColumn",
+            "field": "Buy",
+            "dataType": "Currency",
+            "pipeArgs": {
+              "currencyCode": "USD",
+              "type": "WebColumnPipeArgs",
+              "digitsInfo": "1.2-2"
+            },
+            "headerTemplateRef": "PinHeaderTemplate"
+          },
+          {
+            "type": "WebGridColumn",
+            "field": "Sell",
+            "dataType": "Currency",
+            "pipeArgs": {
+              "currencyCode": "USD",
+              "type": "WebColumnPipeArgs",
+              "digitsInfo": "1.2-2"
+            },
+            "headerTemplateRef": "PinHeaderTemplate"
+          },
+          {
+            "type": "WebGridColumn",
+            "field": "Spread",
+            "headerTemplateRef": "PinHeaderTemplate"
+          },
+          {
+            "type": "WebGridColumn",
+            "field": "Change",
+            "bodyTemplateRef": "CurrencyCellTemplate",
+            "headerTemplateRef": "PinHeaderTemplate"
+          },
+          {
+            "type": "WebGridColumn",
+            "field": "Change(%)",
+            "dataType": "Number",
+            "bodyTemplateRef": "CurrencyCellTemplate",
+            "headerTemplateRef": "PinHeaderTemplate"
+          },
+          {
+            "type": "WebGridColumn",
+            "field": "Change On Year(%)",
+            "dataType": "Number",
+            "bodyTemplateRef": "CurrencyCellTemplate",
+            "headerTemplateRef": "PinHeaderTemplate"
+          }
+          ]
+      }
+    },
+    "modules": [
+      "WebGridModule"
+    ]
+  }
