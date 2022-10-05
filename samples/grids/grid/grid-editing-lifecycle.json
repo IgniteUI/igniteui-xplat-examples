@@ -1,0 +1,46 @@
+{
+    "descriptions": {
+      "content": {
+       "type": "WebGrid",
+       "dataRef": "NwindData",
+       "autoGenerate": false,
+        "name": "grid",
+        "id": "grid",
+        "rowEditable": true,
+        "primaryKey": "ProductID",
+        "renderedRef": "WebGridRendered",
+        "rowEditEnterRef": "WebGridRowEditEnter",
+        "rowEditRef": "WebGridRowEdit",
+        "rowEditDoneRef": "WebGridRowEditDone",
+        "rowEditExitRef": "WebGridRowEditExit",
+        "cellEditEnterRef": "WebGridCellEditEnter",
+        "cellEditRef": "WebGridCellEdit",
+        "cellEditDoneRef": "WebGridCellEditDone",
+        "cellEditExitRef": "WebGridCellEditExit",
+        "columns": [
+          {
+            "type": "WebGridColumn",
+            "field": "ProductName",
+            "header": "Product Name"
+          },
+           {
+            "type": "WebGridColumn",
+            "field": "UnitPrice",
+            "header": "Unit Price"
+          },
+           {
+            "type": "WebGridColumn",
+            "field": "UnitsInStock",
+            "header": "Units In Stock"
+          },
+           {
+            "type": "WebGridColumn",
+            "field": "Ordered"
+          }
+          ]
+      }
+    },
+    "modules": [
+      "WebGridModule"
+    ]
+  }
