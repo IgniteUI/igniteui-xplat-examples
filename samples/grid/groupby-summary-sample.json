@@ -1,0 +1,76 @@
+{  
+  "descriptions": {
+    "editor": {
+      "type": "PropertyEditorPanel",
+      "name": "PropertyEditor",
+      "componentRendererRef": "renderer",
+      "targetRef": "grid",
+      "descriptionType": "WebGrid",
+      "isHorizontal": true,
+      "isWrappingEnabled": true,
+      "properties": [
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "SummaryCalculationMode",
+          "name": "SummaryCalcModeEditor"          
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "SummaryPosition",
+          "name": "SummaryPositionEditor"          
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "ShowSummaryOnCollapse",
+          "name": "ShowOnCollapseEditor",
+          "label": "Show Summary Row when Group Row is Collapsed"
+        }
+      ]
+    },
+    "content": {
+      "type": "WebGrid",
+      "name": "grid",
+      "dataRef": "InvoicesData",
+      "autoGenerate": false,      
+      "columns": [
+        {
+          "type": "WebGridColumn",
+          "field": "ShipCountry",
+          "header": "Ship Country",
+          "width": "200px",
+          "groupable": true
+        },
+        {
+          "type": "WebGridColumn",
+          "field": "ShipCity",
+          "header": "Ship City",
+          "width": "250px",
+          "groupable": true
+        },
+        {
+          "type": "WebGridColumn",
+          "field": "UnitPrice",
+          "header": "Unit Price",
+          "width": "150px",                    
+          "dataType": "Number",
+          "groupable": true,          
+          "hasSummary": true     
+        },
+        {
+          "type": "WebGridColumn",
+          "field": "Quantity",
+          "header": "Quantity",
+          "width": "150px",
+          "dataType": "Number",
+          "groupable": true,
+          "hasSummary": true
+        }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
+    "grids/WebGridModule"  
+  ]
+}
