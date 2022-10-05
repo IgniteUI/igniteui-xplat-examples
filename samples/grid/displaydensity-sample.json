@@ -1,0 +1,180 @@
+{ 
+  "editor": {
+  "type": "PropertyEditorPanel",
+  "name": "PropertyEditor",
+  "componentRendererRef": "renderer",
+  "targetRef": "grid",
+  "descriptionType": "WebGrid",
+  "isHorizontal": true,
+  "isWrappingEnabled": true,
+  "properties": [
+    {
+      "type": "PropertyEditorPropertyDescription",
+      "propertyPath": "DisplayDensity",
+      "name": "DisplayDensityEditor"      
+    }
+  ]
+}, 
+  "descriptions": {
+    "content": {
+      "type": "WebGrid",
+      "name": "grid",      
+      "dataRef": "InvoicesData",
+      "autoGenerate": false,      
+      "allowFiltering": true,      
+      "columns": [
+        {
+          "type": "WebGridColumn",
+          "field": "CustomerName",
+          "header": "Customer Name",
+          "dataType": "String1",
+          "sortable": true,
+          "hasSummary": true
+        },
+        {
+          "type": "WebGridColumn",
+          "field": "Country",
+          "header": "Country",
+          "dataType": "String1",
+          "sortable": true,
+          "hasSummary": true
+        },
+        {
+          "type": "WebGridColumn",
+          "field": "City",
+          "header": "City",
+          "dataType": "String1",
+          "sortable": true,
+          "hasSummary": true
+        },
+        {
+          "type": "WebGridColumn",
+          "field": "Address",
+          "header": "Address",
+          "dataType": "String1",
+          "sortable": true,
+          "hasSummary": true
+        },
+        {
+          "type": "WebGridColumn",
+          "field": "PostalCode",
+          "header": "Postal Code",
+          "dataType": "String1",
+          "sortable": true,
+          "hasSummary": true
+        },
+        {
+          "type": "WebGridColumn",
+          "field": "Salesperson",
+          "header": "Sales Person",
+          "dataType": "String1",
+          "sortable": true,
+          "hasSummary": true
+        },
+        {
+          "type": "WebGridColumn",
+          "field": "ShipperName",
+          "header": "Shipper Name",
+          "dataType": "String1",
+          "sortable": true,
+          "hasSummary": true
+        },
+        {
+          "type": "WebGridColumn",
+          "field": "OrderDate",
+          "header": "Order Date",
+          "dataType": "Date",
+          "sortable": true,
+          "hasSummary": true
+        },
+        {
+          "type": "WebGridColumn",
+          "field": "ProductID",
+          "header": "ID",
+          "dataType": "String1",
+          "sortable": true,
+          "hasSummary": true
+        },
+        {
+          "type": "WebGridColumn",
+          "field": "ProductName",
+          "header": "Name",
+          "dataType": "String1",
+          "sortable": true,
+          "hasSummary": true
+        },
+        {
+          "type": "WebGridColumn",
+          "field": "UnitPrice",
+          "header": "Unit Price",
+          "dataType": "Number",
+          "sortable": true,
+          "hasSummary": true,
+          "filterable": false
+        },
+        {
+          "type": "WebGridColumn",
+          "field": "Quantity",
+          "header": "Quantity",
+          "dataType": "Number",
+          "sortable": true,
+          "hasSummary": true,
+          "filterable": false
+        },
+        {
+          "type": "WebGridColumn",
+          "field": "Discontinued",
+          "header": "Discontinued",
+          "dataType": "Boolean1",
+          "sortable": true,
+          "hasSummary": true          
+        },
+        {
+          "type": "WebGridColumn",
+          "field": "Discontinued",
+          "header": "Discontinued",
+          "dataType": "Boolean1",
+          "sortable": true,
+          "hasSummary": true          
+        },
+        {
+          "type": "WebGridColumn",
+          "field": "ShipName",
+          "header": "Name",
+          "dataType": "String1",
+          "sortable": true,
+          "hasSummary": true          
+        },
+        {
+          "type": "WebGridColumn",
+          "field": "ShipCountry",
+          "header": "Country",
+          "dataType": "String1",
+          "sortable": true,
+          "hasSummary": true          
+        },
+        {
+          "type": "WebGridColumn",
+          "field": "ShipCity",
+          "header": "City",
+          "dataType": "String1",
+          "sortable": true,
+          "hasSummary": true          
+        },
+        {
+          "type": "WebGridColumn",
+          "field": "ShipPostalCode",
+          "header": "Postal Code",
+          "dataType": "String1",
+          "sortable": true,
+          "hasSummary": true          
+        }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
+    "grids/WebGridModule"  
+  ]
+}
