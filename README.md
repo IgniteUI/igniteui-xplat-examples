@@ -1,6 +1,6 @@
 # Ignite UI Cross Platform Examples
 
-This repository contains cross-platform examples of Ignite UI components for Angular, Blazor, React, WebComponents, and WPF controls:
+This repository contains cross-platform examples (defined in .JSON files) of Ignite UI components for Angular, Blazor, React, WebComponents, and WPF platforms:
 
 - [Category Chart](./samples/charts/category-chart)
 - [Data Chart](./samples/charts/data-chart)
@@ -15,7 +15,7 @@ This repository contains cross-platform examples of Ignite UI components for Ang
 
 ## Cross Platform Editor
 
-The Cross Platform Editor is WPF application that loads cross-platform examples and renders them to using Ignite UI components for Angular, Blazor, React, WebComponents, and WPF.
+The Cross Platform Editor is WPF application that loads and renders cross-platform examples using Ignite UI components for Angular, Blazor, React, WebComponents, and WPF platforms.
 
 ## Pie Chart Example
 <img src="./notes/pie-chart.png"  />
@@ -31,5 +31,3 @@ The Cross Platform Editor is WPF application that loads cross-platform examples 
 
 ## Radial Gauge Example
 <img src="./notes/radial-gauge.png"  />
-
-
