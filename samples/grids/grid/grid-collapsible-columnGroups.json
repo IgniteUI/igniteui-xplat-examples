@@ -1,0 +1,129 @@
+{
+    "descriptions": {
+        "content": {
+            "type": "WebGrid",
+            "dataRef": "InvoicesData",
+            "autoGenerate": false,
+            "name": "grid",
+            "id": "grid",
+            "columns": [
+                {
+                    "type": "WebColumnGroup",
+                    "header": "Customer Information",
+                    "collapsible": true,
+                    "children": [
+                        {
+                            "type": "WebGridColumn",
+                            "field": "CustomerName",
+                            "header": "Customer Name",
+                            "visibleWhenCollapsed": true
+                        },
+                        {
+                            "type": "WebGridColumn",
+                            "field": "CustomerID",
+                            "header": "Customer ID",
+                            "visibleWhenCollapsed": false
+                        },
+                        {
+                            "type": "WebGridColumn",
+                            "field": "FirstName",
+                            "header": "First Name",
+                            "visibleWhenCollapsed": false
+                        },
+                        {
+                            "type": "WebGridColumn",
+                            "field": "LastName",
+                            "header": "Last Name",
+                            "visibleWhenCollapsed": false
+                        },
+                        {
+                            "type": "WebColumnGroup",
+                            "header": "Customer Address",
+                            "expanded": false,
+                            "collapsible": true,
+                            "children": [
+                                {
+                                    "type": "WebGridColumn",
+                                    "field": "FullAddress",
+                                    "header": "FullAddress",
+                                    "width": "250px",
+                                    "visibleWhenCollapsed": true
+                                },
+                                {
+                                    "type": "WebGridColumn",
+                                    "field": "Country",
+                                    "visibleWhenCollapsed": false
+                                },
+                                {
+                                    "type": "WebGridColumn",
+                                    "field": "City",
+                                    "visibleWhenCollapsed": false
+                                },
+                                {
+                                    "type": "WebGridColumn",
+                                    "field": "Address",
+                                    "visibleWhenCollapsed": false
+                                },
+                                {
+                                    "type": "WebGridColumn",
+                                    "field": "PostalCode",
+                                    "header": "Postal Code",
+                                    "visibleWhenCollapsed": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "WebGridColumn",
+                    "field": "ShipperName",
+                    "header": "Shipper Name"
+                },
+                {
+                    "type": "WebGridColumn",
+                    "field": "OrderDate",
+                    "header": "Order Date"
+                },
+                {
+                    "type": "WebColumnGroup",
+                    "header": "Product Details",
+                    "collapsible": true,
+                    "expanded": false,
+                    "children": [
+                        {
+                            "type": "WebGridColumn",
+                            "field": "ProductName",
+                            "header": "Name",
+                            "visibleWhenCollapsed": true
+                        },
+                        {
+                            "type": "WebGridColumn",
+                            "field": "UnitPrice",
+                            "header": "Unit Price",
+                            "visibleWhenCollapsed": true
+                        },
+                        {
+                            "type": "WebGridColumn",
+                            "field": "ProductID",
+                            "header": "ID",
+                            "visibleWhenCollapsed": true
+                        },
+                        {
+                            "type": "WebGridColumn",
+                            "field": "Quantity",
+                            "visibleWhenCollapsed": false
+                        },
+                        {
+                            "type": "WebGridColumn",
+                            "field": "Quantity",
+                            "visibleWhenCollapsed": false
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "modules": [
+        "WebGridModule"
+    ]
+}
