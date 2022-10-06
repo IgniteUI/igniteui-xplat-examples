@@ -1,0 +1,36 @@
+{
+  "descriptions": {
+    "content": {
+      "type": "WebGrid",
+      "dataRef":"CustomersData",
+      "batchEditing": true,
+      "primaryKey":"ID",
+      "columns":[
+      {
+        "type":"WebGridColumn",
+        "name": "ContactName",
+        "field": "ContactName",
+        "header": "Contact Name"
+      },
+      {
+        "type":"WebGridColumn",
+        "name": "ContactTitle",
+        "field": "ContactTitle",
+        "header": "Contact Title"
+      },
+      {
+        "type":"WebGridColumn",
+        "name": "Phone",
+        "field": "Phone",
+        "header": "Phone"
+      },
+      {
+        "type":"WebGridColumn",
+        "name": "Country",
+        "field": "Country",
+        "header": "Country"
+      }
+      ]
+    }
+  }
+}
