@@ -1,0 +1,47 @@
+{
+    "descriptions": {
+      "content": {
+       "type": "WebGrid",
+       "dataRef": "CustomersData",
+       "autoGenerate": false,
+        "name": "grid",
+        "id": "grid",
+        "primaryKey": "ID",
+        "rowSelection": "Multiple",
+        "rowSelectionChangingRef": "WebGridRowSelectionConditional",
+        "columns": [
+          {
+            "type": "WebGridColumn",
+            "field": "ContactName",
+            "header": "Contact Name",
+            "width": "20%"
+          },
+           {
+            "type": "WebGridColumn",
+            "field": "Country",
+            "header": "Country",
+            "width": "20%"
+          },
+           {
+            "type": "WebGridColumn",
+            "field": "City",
+            "header": "City",
+            "width": "20%"
+          },
+           {
+            "type": "WebGridColumn",
+            "field": "PostalCode",
+            "width": "20%"
+          },
+           {
+            "type": "WebGridColumn",
+            "field": "CompanyName",
+            "width": "20%"
+          }
+          ]
+      }
+    },
+    "modules": [
+      "WebGridModule"
+    ]
+  }
