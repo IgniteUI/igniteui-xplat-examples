@@ -1,0 +1,52 @@
+{
+  "descriptions": {
+    "content": {
+      "type": "WebGrid",
+      "dataRef": "AthletesData",      
+      "autoGenerate": false,      
+      "toolbar": [
+        {
+          "type": "WebGridToolbar"          
+        }
+      ],
+      "columns": [
+        {
+          "type": "WebGridColumn",
+          "field": "Name",
+          "header": "Athlete",
+          "width": "200px"
+        },
+        {
+          "type": "WebGridColumn",
+          "field": "CountryName",
+          "header": "Country",
+          "width": "200px"
+        },
+        {
+          "type": "WebGridColumn",
+          "field": "BeatsPerMinute",
+          "header": "Beats Per Minute"
+        },
+        {
+          "type": "WebGridColumn",
+          "field": "TopSpeed",
+          "header": "Top Speed"
+        },
+        {
+          "type": "WebGridColumn",
+          "field": "AthleteNumber",
+          "header": "ID"
+        },
+        {
+          "type": "WebGridColumn",
+          "field": "TrackProgress",
+          "header": "Progress"
+        }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",    
+    "grids/WebGridModule"  
+  ]
+}

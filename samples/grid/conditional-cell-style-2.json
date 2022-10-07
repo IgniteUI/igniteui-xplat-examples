@@ -1,0 +1,36 @@
+{
+  "descriptions": {
+    "content": {
+      "type": "WebGrid",
+      "dataRef": "AthletesData",
+      "autoGenerate": false,
+      "primaryKey": "Id",      
+      "columns": [
+        {
+          "type": "WebGridColumn",
+          "field": "Id"          
+        },
+        {
+          "type": "WebGridColumn",
+          "field": "Position"          
+        },
+        {
+          "type": "WebGridColumn",
+          "field": "Name"          
+        },
+        {
+          "type": "WebGridColumn",
+          "field": "AthleteNumber"          
+        },
+        {
+          "type": "WebGridColumn",
+          "field": "CountryName"          
+        }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",    
+    "grids/WebGridModule"  
+  ]
+}
