@@ -1,0 +1,41 @@
+{
+    "descriptions": {
+      "content": {
+       "type": "WebGrid",
+       "dataRef": "EmployeeNestedData",
+       "autoGenerate": false,
+        "name": "grid",
+        "id": "grid",
+        "columns": [
+          {
+            "type": "WebGridColumn",
+            "field": "Name"
+          },
+           {
+            "type": "WebGridColumn",
+            "field": "Title",
+            "width": "20%"
+          },
+          {
+            "type": "WebGridColumn",
+            "field": "Employees",
+            "bodyTemplateRef": "NestedDataCellTemplate",
+            "width": "40%"
+          },
+          {
+            "type": "WebGridColumn",
+            "field": "Age",
+            "width": "10%"
+          }, 
+          {
+            "type": "WebGridColumn",
+            "field": "HireDate",
+            "dataType": "Date"
+          }
+          ]
+      }
+    },
+    "modules": [
+      "WebGridModule"
+    ]
+  }
