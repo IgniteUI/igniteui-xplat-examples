@@ -13,28 +13,28 @@
             "label": "",
             "valueType": "Button",
             "primitiveValue": "Add Row",
-            "buttonClickedRef": "AddRow"
+            "buttonClickedRef": "WebGridAddRow"
           },
           {
             "type": "PropertyEditorPropertyDescription",
             "label": "",
             "valueType": "Button",
             "primitiveValue": "Undo",
-            "buttonClickedRef": "Undo"
+            "buttonClickedRef": "WebGridUndo"
           },
           {
             "type": "PropertyEditorPropertyDescription",
             "label": "",
             "valueType": "Button",
             "primitiveValue": "Redo",
-            "buttonClickedRef": "Redo"
+            "buttonClickedRef": "WebGridRedo"
           },
           {
             "type": "PropertyEditorPropertyDescription",
             "label": "",
             "valueType": "Button",
             "primitiveValue": "Commit",
-            "buttonClickedRef": "Commit"
+            "buttonClickedRef": "WebGridCommit"
           }
        ]
     },
@@ -43,9 +43,14 @@
       "type": "WebGrid",
       "dataRef":"NwindData",
       "batchEditing":true,
-      "primaryKey": "ProductID",
+      "rowEditable":true,
+      "primaryKey": "ProductID",      
       "columns":[
-        {
+      {
+        "type": "WebGridColumn",
+        "bodyTemplateRef": "DeleteCellTemplateModule"
+      },
+      {
         "type":"WebGridColumn",
         "name": "ProductID",
         "field": "ProductID",
@@ -110,6 +115,7 @@
   },
   "modules": [
     "withDescriptions",
-    "layouts/PropertyEditorPanelModule"
+    "layouts/PropertyEditorPanelModule",
+    "grids/WebGridModule"
   ]
 }
