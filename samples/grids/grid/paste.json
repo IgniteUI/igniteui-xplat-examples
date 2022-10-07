@@ -1,0 +1,65 @@
+{
+  "descriptions": {
+    "editor": {
+      "type": "PropertyEditorPanel",
+      "componentRendererRef": "renderer",
+      "targetRef": "grid",
+      "descriptionType": "WebGrid",
+      "isHorizontal": true,
+      "isWrappingEnabled": false,
+      "properties": [
+          {
+            "type": "PropertyEditorPropertyDescription",
+            "label": "",
+            "valueType": "Button",
+            "primitiveValue": "Paste Options",
+            "buttonClickedRef": "WebGridPasteOptions"
+          },
+          {
+            "type": "PropertyEditorPropertyDescription",
+            "label": "",
+            "valueType": "Button",
+            "primitiveValue": "Download Sample - Excel File",
+            "buttonClickedRef": "WebGridExcelDownload"
+          }
+       ]
+    },
+    "content": {
+      "type": "WebGrid",
+      "dataRef":"CustomersData",
+      "batchEditing": true,
+      "primaryKey":"ID",
+      "columns":[
+      {
+        "type":"WebGridColumn",
+        "name": "ContactName",
+        "field": "ContactName",
+        "header": "Contact Name"
+      },
+      {
+        "type":"WebGridColumn",
+        "name": "ContactTitle",
+        "field": "ContactTitle",
+        "header": "Contact Title"
+      },
+      {
+        "type":"WebGridColumn",
+        "name": "Phone",
+        "field": "Phone",
+        "header": "Phone"
+      },
+      {
+        "type":"WebGridColumn",
+        "name": "Country",
+        "field": "Country",
+        "header": "Country"
+      }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
+    "grids/WebGridModule"
+  ]
+}
