@@ -1,0 +1,80 @@
+{
+  "descriptions": {
+    "content": {
+      "type": "WebGrid",
+      "dataRef": "NwindData",
+      "autoGenerate": false,
+      "primaryKey": "ProductID",
+      "displayDensity": "Cosy",
+      "allowFiltering": true,
+      "columns": [
+        {
+          "type": "WebGridColumn",
+          "field": "ProductName",
+          "header": "Product Name",
+          "dataType": "String1",
+          "sortable": true,
+          "hasSummary": true,
+          "editable": true,
+          "resizable": true
+        },
+        {
+          "type": "WebGridColumn",
+          "field": "UnitsInStock",
+          "header": "Units in Stock",
+          "dataType": "Number",
+          "sortable": true,
+          "hasSummary": true,
+          "editable": true,
+          "resizable": true
+        },
+        {
+          "type": "WebGridColumn",
+          "field": "OrderDate",
+          "header": "Order Date",
+          "dataType": "Date",
+          "sortable": true,
+          "hasSummary": true,
+          "editable": true,
+          "resizable": true
+        },
+        {
+          "type": "WebGridColumn",
+          "field": "Discontinued",
+          "header": "Discontinued",
+          "dataType": "Boolean1",
+          "sortable": true,
+          "hasSummary": true,
+          "editable": true
+        },
+        {
+          "type": "WebGridColumn",
+          "field": "ReorderLevel",
+          "header": "Reorder Level",
+          "dataType": "Number",
+          "sortable": true,
+          "hasSummary": true,
+          "editable": true,
+          "filterable": false
+        },
+        {
+          "type": "WebGridColumn",
+          "field": "Locations",
+          "header": "Available At",
+          "editable": true,
+          "filterable": true,
+          "width": "220px"
+        },
+        {
+          "type": "WebGridColumn",
+          "width": "100px",
+          "filterable": false
+        }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",    
+    "grids/WebGridModule"  
+  ]
+}
