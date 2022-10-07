@@ -1,5 +1,29 @@
 {
   "descriptions": {
+    "editor": {
+      "type": "PropertyEditorPanel",
+      "componentRendererRef": "renderer",
+      "targetRef": "grid",
+      "descriptionType": "WebGrid",
+      "isHorizontal": true,
+      "isWrappingEnabled": false,
+      "properties": [
+          {
+            "type": "PropertyEditorPropertyDescription",
+            "label": "",
+            "valueType": "Button",
+            "primitiveValue": "Paste Options",
+            "buttonClickedRef": "WebGridPasteOptions"
+          },
+          {
+            "type": "PropertyEditorPropertyDescription",
+            "label": "",
+            "valueType": "Button",
+            "primitiveValue": "Download Sample - Excel File",
+            "buttonClickedRef": "WebGridExcelDownload"
+          }
+       ]
+    },
     "content": {
       "type": "WebGrid",
       "dataRef":"CustomersData",
