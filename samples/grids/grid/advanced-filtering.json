@@ -1,0 +1,49 @@
+{
+  "descriptions": {
+    "content": {
+      "name": "grid",
+      "type": "WebGrid",
+      "dataRef":"NwindData",
+      "moving":true,
+      "allowAdvancedFiltering":true,
+      "autoGenerate": false,      
+      "columns":[
+      {
+        "type":"WebGridColumn",
+        "name": "ProductName",
+        "field": "ProductName",
+        "header": "Product Name"
+      },
+      {
+        "type":"WebGridColumn",
+        "name": "QuantityPerUnit",
+        "field": "QuantityPerUnit",
+        "header": "Quantity Per Unit"
+      },
+      {
+        "type":"WebGridColumn",
+        "name": "UnitPrice",
+        "field": "UnitPrice",
+        "header": "Unit Price"
+      },
+      {
+        "type":"WebGridColumn",
+        "name": "OrderDate",
+        "field": "OrderDate",
+        "header": "Order Date"
+      },
+      {
+        "type":"WebGridColumn",
+        "name": "Discontinued",
+        "field": "Discontinued",
+        "header": "Discontinued"
+      }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
+    "grids/WebGridModule"
+  ]
+}
