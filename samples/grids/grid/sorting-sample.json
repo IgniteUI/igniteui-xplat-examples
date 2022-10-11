@@ -1,8 +1,35 @@
 {
+    "editor": {
+      "type": "PropertyEditorPanel",
+      "name": "PropertyEditor",
+      "componentRendererRef": "renderer",
+      "targetRef": "grid",
+      "descriptionType": "WebGrid",
+      "isHorizontal": true,
+      "isWrappingEnabled": true,
+      "properties": [
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "SortingOptions",
+          "name": "SortingOptionsEditor"
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "valueType": "Button",
+          "primitiveValue": "Clear Sorting"
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "valueType": "Button",
+          "primitiveValue": "Clear Grouped Columns"          
+        }
+      ]
+  },
   "descriptions": {
     "content": {
       "type": "WebGrid",
-      "dataRef": "ProductSales",      
+      "dataRef": "ProductSales",
+      "name": "grid",      
       "autoGenerate": false,      
       "columns": [
         {
@@ -55,7 +82,8 @@
     }
   },
   "modules": [
-    "withDescriptions",    
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
     "grids/WebGridModule"  
   ]
 }

@@ -5,7 +5,7 @@
       "dataRef": "NwindData",
       "autoGenerate": false,  
       "primaryKey": "ProductID",
-      "cellEditRef": "CellEditGridEditingEvents",         
+      "cellEditRef": "WebGridEditingEventsCellEdit",         
       "columns": [
         {
           "type": "WebGridColumn",          

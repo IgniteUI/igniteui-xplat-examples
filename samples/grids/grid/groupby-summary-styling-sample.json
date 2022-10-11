@@ -26,6 +26,14 @@
       "name": "grid",
       "dataRef": "InvoicesData",
       "autoGenerate": false,      
+      "groupingExpressions": [
+        {
+          "type": "WebGroupingExpression",
+          "dir": "Asc",
+          "fieldName": "ShipCountry",
+          "ignoreCase": false          
+        }
+      ],
       "columns": [
         {
           "type": "WebGridColumn",

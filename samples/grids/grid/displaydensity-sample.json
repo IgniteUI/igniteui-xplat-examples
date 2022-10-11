@@ -1,27 +1,27 @@
-{ 
+{
   "editor": {
-  "type": "PropertyEditorPanel",
-  "name": "PropertyEditor",
-  "componentRendererRef": "renderer",
-  "targetRef": "grid",
-  "descriptionType": "WebGrid",
-  "isHorizontal": true,
-  "isWrappingEnabled": true,
-  "properties": [
-    {
-      "type": "PropertyEditorPropertyDescription",
-      "propertyPath": "DisplayDensity",
-      "name": "DisplayDensityEditor"      
-    }
-  ]
-}, 
+    "type": "PropertyEditorPanel",
+    "name": "PropertyEditor",
+    "componentRendererRef": "renderer",
+    "targetRef": "grid",
+    "descriptionType": "WebGrid",
+    "isHorizontal": true,
+    "isWrappingEnabled": true,
+    "properties": [
+      {
+        "type": "PropertyEditorPropertyDescription",
+        "propertyPath": "DisplayDensity",
+        "name": "DisplayDensityEditor"
+      }
+    ]
+  },
   "descriptions": {
     "content": {
       "type": "WebGrid",
-      "name": "grid",      
+      "name": "grid",
       "dataRef": "InvoicesData",
-      "autoGenerate": false,      
-      "allowFiltering": true,      
+      "autoGenerate": false,
+      "allowFiltering": true,
       "columns": [
         {
           "type": "WebGridColumn",
@@ -127,7 +127,7 @@
           "header": "Discontinued",
           "dataType": "Boolean1",
           "sortable": true,
-          "hasSummary": true          
+          "hasSummary": true
         },
         {
           "type": "WebGridColumn",
@@ -135,7 +135,7 @@
           "header": "Discontinued",
           "dataType": "Boolean1",
           "sortable": true,
-          "hasSummary": true          
+          "hasSummary": true
         },
         {
           "type": "WebGridColumn",
@@ -143,7 +143,7 @@
           "header": "Name",
           "dataType": "String1",
           "sortable": true,
-          "hasSummary": true          
+          "hasSummary": true
         },
         {
           "type": "WebGridColumn",
@@ -151,7 +151,7 @@
           "header": "Country",
           "dataType": "String1",
           "sortable": true,
-          "hasSummary": true          
+          "hasSummary": true
         },
         {
           "type": "WebGridColumn",
@@ -159,7 +159,7 @@
           "header": "City",
           "dataType": "String1",
           "sortable": true,
-          "hasSummary": true          
+          "hasSummary": true
         },
         {
           "type": "WebGridColumn",
@@ -167,7 +167,7 @@
           "header": "Postal Code",
           "dataType": "String1",
           "sortable": true,
-          "hasSummary": true          
+          "hasSummary": true
         }
       ]
     }
@@ -175,6 +175,6 @@
   "modules": [
     "withDescriptions",
     "layouts/PropertyEditorPanelModule",
-    "grids/WebGridModule"  
+    "grids/WebGridModule"
   ]
 }
