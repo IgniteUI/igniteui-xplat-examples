@@ -7,82 +7,82 @@
             "name": "grid",
             "id": "grid",
             "pinning": {
-              "type": "WebPinningConfig",
-              "columns": "End"
+                "type": "WebPinningConfig",
+                "columns": "End"
             },
             "columns": [
-              {
-                "type": "WebGridColumn",
-                "field": "CountryFlag",
-                "header": "Team",
-                "bodyTemplateRef": "ImageCellTemplate"
-              },
-              {
-                "type": "WebGridColumn",
-                "field": "Avatar",
-                "bodyTemplateRef": "AvatarCellTemplate"
-              },
-              {
-                "type": "WebGridColumn",
-                "field": "Name"
-              },
-              {
-                "type": "WebGridColumn",
-                "field": "AthleteNumber",
-                "dataType": "Number"
-              },
-              {
-                "type": "WebGridColumn",
-                "field": "BeatsPerMinute"
-              },
                 {
-                "type": "WebGridColumn",
-                "field": "TopSpeed"
-              },
-               {
-                "type": "WebGridColumn",
-                "field": "RegistrationDate",
-                "dataType": "Date"
-              },
-               {
-                "type": "WebGridColumn",
-                "field": "Birthday",
-                "dataType": "Date"
-              },
-               {
-                "type": "WebGridColumn",
-                "field": "Sponsor"
-              },
-              {
-                "type": "WebGridColumn",
-                "field": "Agent"
-              },
-              {
-                "type": "WebGridColumn",
-                "field": "AgentContact"
-              },
-              {
-                "type": "WebGridColumn",
-                "field": "AgentPhone"
-              },
-              {
-                "type": "WebGridColumn",
-                "field": "FirstPlaces",
-                "header": "Gold",
-                "pinned": true
-              },
-              {
-                "type": "WebGridColumn",
-                "field": "SecondPlaces",
-                "header": "Silver",
-                "pinned": true
-              },
-              {
-                "type": "WebGridColumn",
-                "field": "ThirdPlaces",
-                "header": "Bronze",
-                "pinned": true
-              }
+                    "type": "WebGridColumn",
+                    "field": "CountryFlag",
+                    "header": "Team",
+                    "bodyTemplateRef": "ImageCellTemplate"
+                },
+                {
+                    "type": "WebGridColumn",
+                    "field": "Avatar",
+                    "bodyTemplateRef": "AvatarCellTemplate"
+                },
+                {
+                    "type": "WebGridColumn",
+                    "field": "Name"
+                },
+                {
+                    "type": "WebGridColumn",
+                    "field": "AthleteNumber",
+                    "dataType": "Number"
+                },
+                {
+                    "type": "WebGridColumn",
+                    "field": "BeatsPerMinute"
+                },
+                {
+                    "type": "WebGridColumn",
+                    "field": "TopSpeed"
+                },
+                {
+                    "type": "WebGridColumn",
+                    "field": "RegistrationDate",
+                    "dataType": "Date"
+                },
+                {
+                    "type": "WebGridColumn",
+                    "field": "Birthday",
+                    "dataType": "Date"
+                },
+                {
+                    "type": "WebGridColumn",
+                    "field": "Sponsor"
+                },
+                {
+                    "type": "WebGridColumn",
+                    "field": "Agent"
+                },
+                {
+                    "type": "WebGridColumn",
+                    "field": "AgentContact"
+                },
+                {
+                    "type": "WebGridColumn",
+                    "field": "AgentPhone"
+                },
+                {
+                    "type": "WebGridColumn",
+                    "field": "FirstPlaces",
+                    "header": "Gold",
+                    "pinned": true
+                },
+                {
+                    "type": "WebGridColumn",
+                    "field": "SecondPlaces",
+                    "header": "Silver",
+                    "pinned": true
+                },
+                {
+                    "type": "WebGridColumn",
+                    "field": "ThirdPlaces",
+                    "header": "Bronze",
+                    "pinned": true
+                }
             ]
         }
     },
