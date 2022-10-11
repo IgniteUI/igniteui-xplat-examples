@@ -1,0 +1,61 @@
+{
+  "descriptions": {
+    "content": {
+      "name": "grid",
+      "type": "WebGrid",
+      "dataRef":"NwindData",
+      "autoGenerate":false,
+      "allowFiltering":true,
+      "columns":[
+      {
+        "type":"WebGridColumn",
+        "name": "ProductID",
+        "field": "ProductID",
+        "header": "Product ID",
+        "sortable":true,
+        "filterable":false
+      },
+      {
+        "type":"WebGridColumn",
+        "name": "ProductName",
+        "field": "ProductName",
+        "header": "Product Name",
+        "sortable":true
+      },
+      {
+        "type":"WebGridColumn",
+        "name": "UnitPrice",
+        "field": "UnitPrice",
+        "header": "Unit Price",
+        "sortable":true
+      },
+      {
+        "type":"WebGridColumn",
+        "name": "UnitsInStock",
+        "field": "UnitsInStock",
+        "header": "Units In Stock",
+        "sortable":true
+      },
+      {
+        "type":"WebGridColumn",
+        "name": "QuantityPerUnit",
+        "field": "QuantityPerUnit",
+        "header": "Quantity Per Unit",
+        "sortable":true
+      },
+      {
+        "type":"WebGridColumn",
+        "name": "ReorderLevel",
+        "field": "ReorderLevel",
+        "header": "Reorder Level",
+        "sortable":true
+      }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
+    "grids/WebGridModule"
+  ]
+}

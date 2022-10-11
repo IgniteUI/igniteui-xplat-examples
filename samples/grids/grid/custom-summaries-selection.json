@@ -1,0 +1,53 @@
+{
+  "descriptions": {
+    "content": {
+      "name": "grid",
+      "type": "WebGrid",
+      "dataRef":"NwindData",
+      "autoGenerate":false,
+      "columns":[
+      {
+        "type":"WebGridColumn",
+        "name": "ProductID",
+        "field": "ProductID",
+        "header": "Product ID"
+      },
+      {
+        "type":"WebGridColumn",
+        "name": "ProductName",
+        "field": "ProductName",
+        "header": "Product Name"
+      },
+      {
+        "type":"WebGridColumn",
+        "name": "UnitPrice",
+        "field": "UnitPrice",
+        "header": "Unit Price"
+      },
+      {
+        "type":"WebGridColumn",
+        "name": "UnitsInStock",
+        "field": "UnitsInStock",
+        "header": "Units In Stock"
+      },
+      {
+        "type":"WebGridColumn",
+        "name": "Discontinued",
+        "field": "Discontinued",
+        "header": "Discontinued"
+      },
+      {
+        "type":"WebGridColumn",
+        "name": "OrderDate",
+        "field": "OrderDate",
+        "header": "Order Date"
+      }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
+    "grids/WebGridModule"
+  ]
+}
