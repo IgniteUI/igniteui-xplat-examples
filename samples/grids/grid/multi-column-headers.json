@@ -1,0 +1,112 @@
+{
+    "descriptions": {
+        "content": {
+            "type": "WebGrid",
+            "dataRef": "CustomersData",
+            "autoGenerate": false,
+            "name": "grid",
+            "id": "grid",
+            "columns": [
+                {
+                    "type": "WebGridColumn",
+                    "field": "ID",
+                    "resizable": true
+                },
+                {
+                    "type": "WebColumnGroup",
+                    "header": "General Information",
+                    "children": [
+                        {
+                            "type": "WebGridColumn",
+                            "field": "CompanyName",
+                            "sortable": true,
+                            "resizable": true
+                        },
+                        {
+                            "type": "WebColumnGroup",
+                            "header": "Personal Details",
+                            "children": [
+                                {
+                                    "type": "WebGridColumn",
+                                    "field": "ContactName",
+                                    "sortable": true,
+                                    "resizable": true
+                                },
+                                {
+                                    "type": "WebGridColumn",
+                                    "field": "ContactTitle",
+                                    "sortable": true,
+                                    "resizable": true
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "WebColumnGroup",
+                    "header": "Address Information",
+                    "children": [
+                        {
+                            "type": "WebColumnGroup",
+                            "header": "Location",
+                            "children": [
+                                {
+                                    "type": "WebGridColumn",
+                                    "field": "Country",
+                                    "sortable": true,
+                                    "resizable": true
+                                },
+                                {
+                                    "type": "WebGridColumn",
+                                    "field": "Region",
+                                    "sortable": true,
+                                    "resizable": true
+                                },
+                                {
+                                    "type": "WebGridColumn",
+                                    "field": "City",
+                                    "sortable": true,
+                                    "resizable": true
+                                },
+                                {
+                                    "type": "WebGridColumn",
+                                    "field": "Address",
+                                    "sortable": true,
+                                    "resizable": true
+                                }
+                            ]
+                        },
+                        {
+                            "type": "WebColumnGroup",
+                            "header": "Contact Information",
+                            "children": [
+                                {
+                                    "type": "WebGridColumn",
+                                    "field": "Phone",
+                                    "sortable": true,
+                                    "resizable": true
+                                },
+                                {
+                                    "type": "WebGridColumn",
+                                    "field": "Fax",
+                                    "sortable": true,
+                                    "resizable": true
+                                },
+                                {
+                                    "type": "WebGridColumn",
+                                    "field": "PostalCode",
+                                    "sortable": true,
+                                    "resizable": true
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "modules": [
+        "WebGridModule",
+        "WebColumnGroupModule"
+    ]
+}
