@@ -13,19 +13,27 @@
           "type": "PropertyEditorPropertyDescription",
           "propertyPath": "ClipboardOptions.Enabled",
           "name": "ClipboardEnabledEditor",
-          "label": "Grid Copy Behavior"          
+          "label": "Grid Copy Behavior",
+          "valueType": "Boolean1"
         },
         {
           "type": "PropertyEditorPropertyDescription",
           "propertyPath": "ClipboardOptions.CopyHeaders",
           "name": "ClipboardHeadersEditor",
-          "label": "Copying of Header Labels"
+          "label": "Copying of Header Labels",
+          "valueType": "Boolean1"
         },
         {
           "type": "PropertyEditorPropertyDescription",
           "propertyPath": "ClipboardOptions.CopyFormatters",
           "name": "ClipboardFormattersEditor",
-          "label": "Copying Column Formatters"
+          "label": "Copying Column Formatters",
+          "valueType": "Boolean1"
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",          
+          "valueType": "Button",
+          "primitiveValue": "Clear Selection"          
         }
       ]
     },
@@ -34,7 +42,8 @@
       "name": "grid",      
       "dataRef": "NwindData",
       "autoGenerate": false,
-      "rowEditable": true,      
+      "rowEditable": true,
+      "columnInitRef": "WebGridClipboardOperationsColumnInit",    
       "columns": [
         {
           "type": "WebGridColumn",

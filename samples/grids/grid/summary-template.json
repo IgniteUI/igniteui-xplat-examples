@@ -1,7 +1,28 @@
 {
+  "editor": {
+      "type": "PropertyEditorPanel",
+      "componentRendererRef": "renderer",
+      "targetRef": "grid",
+      "descriptionType": "WebGrid",
+      "isHorizontal": true,
+      "isWrappingEnabled": false,
+      "properties": [
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "HasSummary",
+          "label": "Toggle Summaries"          
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "DisplayDensity",
+          "name": "DisplayDensityEditor"
+        }
+      ]
+  },
   "descriptions": {
     "content": {
       "type": "WebGrid",
+      "name": "grid",
       "dataRef": "NwindData",      
       "autoGenerate": false,      
       "columns": [
@@ -58,7 +79,8 @@
     }
   },
   "modules": [
-    "withDescriptions",    
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
     "grids/WebGridModule"  
   ]
 }
