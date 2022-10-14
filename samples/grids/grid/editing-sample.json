@@ -6,7 +6,13 @@
       "autoGenerate": false,
       "primaryKey": "ProductID",
       "displayDensity": "Cosy",
-      "allowFiltering": true,
+      "allowFiltering": true,      
+      "paginationComponents": [
+        {
+          "type": "WebPaginator",
+          "perPage": 10
+        }
+      ],
       "columns": [
         {
           "type": "WebGridColumn",

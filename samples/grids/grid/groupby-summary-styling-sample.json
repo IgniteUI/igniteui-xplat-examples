@@ -54,9 +54,14 @@
           "field": "UnitPrice",
           "header": "Unit Price",
           "width": "150px",                    
-          "dataType": "Number",
+          "dataType": "Currency",
           "groupable": true,          
-          "hasSummary": true     
+          "hasSummary": true,
+          "pipeArgs": {
+            "type": "WebColumnPipeArgs",
+            "currencyCode": "USD",
+            "digitsInfo": "1.2-2"
+          }
         },
         {
           "type": "WebGridColumn",

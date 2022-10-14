@@ -1,4 +1,5 @@
 {
+  "descriptions": {
     "editor": {
       "type": "PropertyEditorPanel",
       "name": "PropertyEditor",
@@ -11,26 +12,35 @@
         {
           "type": "PropertyEditorPropertyDescription",
           "propertyPath": "SortingOptions",
-          "name": "SortingOptionsEditor"
+          "name": "SortingOptionsEditor"          
         },
         {
           "type": "PropertyEditorPropertyDescription",
           "valueType": "Button",
-          "primitiveValue": "Clear Sorting"
+          "primitiveValue": "Clear Sorting",
+          "buttonClickedRef": "WebGridSortingSampleClearSortButton"
         },
         {
           "type": "PropertyEditorPropertyDescription",
           "valueType": "Button",
-          "primitiveValue": "Clear Grouped Columns"          
+          "primitiveValue": "Clear Grouped Columns",
+          "buttonClickedRef": "WebGridSortingSampleClearGrouping"
         }
       ]
-  },
-  "descriptions": {
+    },
     "content": {
       "type": "WebGrid",
       "dataRef": "ProductSales",
-      "name": "grid",      
-      "autoGenerate": false,      
+      "name": "grid",
+      "autoGenerate": false,
+      "sortingExpressions": [
+        {
+          "type": "WebSortingExpression",
+          "fieldName": "CategoryName",
+          "dir": "Asc",
+          "ignoreCase": true
+        }
+      ],
       "columns": [
         {
           "type": "WebGridColumn",
@@ -59,7 +69,7 @@
           "type": "WebGridColumn",
           "field": "ShipCountry",
           "header": "Ship Country",
-          "dataType":  "String1",
+          "dataType": "String1",
           "groupable": true,
           "sortable": true
         },
@@ -67,9 +77,14 @@
           "type": "WebGridColumn",
           "field": "SaleAmount",
           "header": "Sale Amount",
-          "dataType": "Number",
+          "dataType": "Currency",
           "groupable": true,
-          "sortable": true
+          "sortable": true,
+          "pipeArgs": {
+            "currencyCode": "USD",
+            "type": "WebColumnPipeArgs",
+            "digitsInfo": "1.2-2"
+          }
         },
         {
           "type": "WebGridColumn",
@@ -84,6 +99,6 @@
   "modules": [
     "withDescriptions",
     "layouts/PropertyEditorPanelModule",
-    "grids/WebGridModule"  
+    "grids/WebGridModule"
   ]
 }
