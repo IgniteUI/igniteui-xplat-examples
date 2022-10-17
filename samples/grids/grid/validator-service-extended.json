@@ -1,0 +1,110 @@
+{
+  "descriptions": {
+    "editor": {
+      "type": "PropertyEditorPanel",
+      "componentRendererRef": "renderer",
+      "targetRef": "grid",
+      "descriptionType": "WebGrid",
+      "isHorizontal": true,
+      "isWrappingEnabled": false,
+      "properties": [
+          {
+            "type": "PropertyEditorPropertyDescription",
+            "label": "",
+            "valueType": "Button",
+            "primitiveValue": "Undo",
+            "buttonClickedRef": "WebGridUndo"
+          },
+          {
+            "type": "PropertyEditorPropertyDescription",
+            "label": "",
+            "valueType": "Button",
+            "primitiveValue": "Redo",
+            "buttonClickedRef": "WebGridRedo"
+          },
+          {
+            "type": "PropertyEditorPropertyDescription",
+            "label": "",
+            "valueType": "Button",
+            "primitiveValue": "Commit",
+            "buttonClickedRef": "WebGridCommit"
+          }
+       ]
+    },
+    "content": {
+      "name": "grid",
+      "type": "WebGrid",
+      "dataRef":"NwindData",
+      "batchEditing":true,
+      "rowEditable":true,
+      "primaryKey": "ProductID",      
+      "columns":[
+      {
+        "type":"WebGridColumn",
+        "name": "ProductID",
+        "field": "ProductID",
+        "header": "Product ID"
+      },
+      {
+        "type":"WebGridColumn",
+        "name": "ProductName",
+        "field": "ProductName",
+        "header": "Product Name"
+      },
+      {
+        "type":"WebGridColumn",
+        "name": "UnitPrice",
+        "field": "UnitPrice",
+        "header": "Unit Price"
+      },
+      {
+        "type":"WebGridColumn",
+        "name": "UnitsOnOrder",
+        "field": "UnitsOnOrder",
+        "header": "Units On Order"
+      },
+      {
+        "type":"WebGridColumn",
+        "name": "UnitsInStock",
+        "field": "UnitsInStock",
+        "header": "Units In Stock"
+      },
+      {
+        "type":"WebGridColumn",
+        "name": "QuantityPerUnit",
+        "field": "QuantityPerUnit",
+        "header": "Quantity Per Unit"
+      },
+      {
+        "type":"WebGridColumn",
+        "name": "ReorderLevel",
+        "field": "ReorderLevel",
+        "header": "Reorder Level"
+      },
+      {
+        "type":"WebGridColumn",
+        "name": "SupplierID",
+        "field": "SupplierID",
+        "header": "Supplier ID"
+      },
+      {
+        "type":"WebGridColumn",
+        "name": "CategoryID",
+        "field": "CategoryID",
+        "header": "Category ID"
+      },
+      {
+        "type":"WebGridColumn",
+        "name": "Discontinued",
+        "field": "Discontinued",
+        "header": "Discontinued"
+      }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
+    "grids/WebGridModule"
+  ]
+}
