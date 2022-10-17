@@ -1,5 +1,6 @@
 {
-  "editor": {
+  "descriptions": {
+    "editor": {
       "type": "PropertyEditorPanel",
       "componentRendererRef": "renderer",
       "targetRef": "grid",
@@ -9,7 +10,7 @@
       "properties": [
         {
           "type": "PropertyEditorPropertyDescription",
-          "propertyPath": "HasSummary",
+          "propertyPath": "Columns[3 as WebGridColumn, 5 as WebGridColumn].HasSummary",
           "label": "Toggle Summaries"          
         },
         {
@@ -18,13 +19,12 @@
           "name": "DisplayDensityEditor"
         }
       ]
-  },
-  "descriptions": {
+    },
     "content": {
       "type": "WebGrid",
       "name": "grid",
-      "dataRef": "NwindData",      
-      "autoGenerate": false,      
+      "dataRef": "NwindData",
+      "autoGenerate": false,
       "columns": [
         {
           "type": "WebGridColumn",
@@ -33,7 +33,7 @@
           "width": "10%",
           "groupable": true
         },
-        {        
+        {
           "type": "WebGridColumn",
           "field": "ProductName",
           "header": "Product Name",
@@ -57,7 +57,8 @@
           "width": "21%",
           "dataType": "Number",
           "editable": true,
-          "groupable": true          
+          "groupable": true,
+          "hasSummary": true      
         },
         {
           "type": "WebGridColumn",
@@ -66,14 +67,15 @@
           "editable": true,
           "width": "17%",
           "dataType": "Boolean1",
-          "groupable": true
+          "groupable": true                       
         },
         {
           "type": "WebGridColumn",
           "field": "OrderDate",
           "width": "18%",
           "dataType": "Date",
-          "groupable": true          
+          "groupable": true,
+          "hasSummary": true          
         }
       ]
     }
@@ -81,6 +83,6 @@
   "modules": [
     "withDescriptions",
     "layouts/PropertyEditorPanelModule",
-    "grids/WebGridModule"  
+    "grids/WebGridModule"
   ]
 }

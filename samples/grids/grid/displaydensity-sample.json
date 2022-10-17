@@ -1,21 +1,21 @@
 {
-  "editor": {
-    "type": "PropertyEditorPanel",
-    "name": "PropertyEditor",
-    "componentRendererRef": "renderer",
-    "targetRef": "grid",
-    "descriptionType": "WebGrid",
-    "isHorizontal": true,
-    "isWrappingEnabled": true,
-    "properties": [
-      {
-        "type": "PropertyEditorPropertyDescription",
-        "propertyPath": "DisplayDensity",
-        "name": "DisplayDensityEditor"
-      }
-    ]
-  },
   "descriptions": {
+    "editor": {
+      "type": "PropertyEditorPanel",
+      "name": "PropertyEditor",
+      "componentRendererRef": "renderer",
+      "targetRef": "grid",
+      "descriptionType": "WebGrid",
+      "isHorizontal": true,
+      "isWrappingEnabled": true,
+      "properties": [
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "DisplayDensity",
+          "name": "DisplayDensityEditor"
+        }
+      ]
+    },
     "content": {
       "type": "WebGrid",
       "name": "grid",
@@ -29,7 +29,7 @@
           "header": "Customer Name",
           "dataType": "String1",
           "sortable": true,
-          "hasSummary": true
+          "hasSummary": true          
         },
         {
           "type": "WebGridColumn",

@@ -1,4 +1,4 @@
-{  
+{
   "descriptions": {
     "editor": {
       "type": "PropertyEditorPanel",
@@ -11,39 +11,48 @@
       "properties": [
         {
           "type": "PropertyEditorPropertyDescription",
+          "valueType": "StringValue",
+          "label": "Change Copy Separator",
+          "propertyPath": "ClipboardOptions.Separator"
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
           "propertyPath": "ClipboardOptions.Enabled",
           "name": "ClipboardEnabledEditor",
           "label": "Grid Copy Behavior",
-          "valueType": "Boolean1"
+          "valueType": "Boolean1",
+          "primitiveValue": true
         },
         {
           "type": "PropertyEditorPropertyDescription",
           "propertyPath": "ClipboardOptions.CopyHeaders",
           "name": "ClipboardHeadersEditor",
           "label": "Copying of Header Labels",
-          "valueType": "Boolean1"
+          "valueType": "Boolean1",
+          "primitiveValue": true
         },
         {
           "type": "PropertyEditorPropertyDescription",
           "propertyPath": "ClipboardOptions.CopyFormatters",
           "name": "ClipboardFormattersEditor",
           "label": "Copying Column Formatters",
-          "valueType": "Boolean1"
+          "valueType": "Boolean1",
+          "primitiveValue": true
         },
         {
-          "type": "PropertyEditorPropertyDescription",          
+          "type": "PropertyEditorPropertyDescription",
           "valueType": "Button",
-          "primitiveValue": "Clear Selection"          
+          "primitiveValue": "Clear Selection"
         }
       ]
     },
     "content": {
       "type": "WebGrid",
-      "name": "grid",      
+      "name": "grid",
       "dataRef": "NwindData",
       "autoGenerate": false,
       "rowEditable": true,
-      "columnInitRef": "WebGridClipboardOperationsColumnInit",    
+      "columnInitRef": "WebGridClipboardOperationsColumnInit",
       "columns": [
         {
           "type": "WebGridColumn",
@@ -79,6 +88,6 @@
   "modules": [
     "withDescriptions",
     "layouts/PropertyEditorPanelModule",
-    "grids/WebGridModule"  
+    "grids/WebGridModule"
   ]
 }
