@@ -6,6 +6,7 @@ This repository contains cross-platform examples (defined in .JSON files) of Ign
 - [Data Chart](./samples/charts/data-chart)
 - [Financial Chart](./samples/charts/financial-chart)
 - [Pie Chart](./samples/charts/pie-chart)
+- [Radial Gauge](./samples/gauges/radial-gauge)
 
 <div style="display: flex; flex-flow: row; font-family: 'Titillium Web'">
     <!-- <div style="font-size: 2.5rem; align-self: start; justify-content: start; margin: 0px; margin-left: 0.5rem; margin-right: 0.5rem; ">Examples</div> -->
