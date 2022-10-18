@@ -1,0 +1,74 @@
+{
+  "descriptions": {
+    "editor": {
+      "type": "PropertyEditorPanel",
+      "name": "PropertyEditor",
+      "componentRendererRef": "renderer",
+      "targetRef": "grid",
+      "descriptionType": "WebGrid",
+      "isHorizontal": true,
+      "isWrappingEnabled": true,
+      "properties": [
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "DisplayDensity",
+          "name": "DisplayDensityEditor"          
+        }
+      ]
+    },
+    "content": {
+      "type": "WebGrid",
+      "name": "grid",
+      "dataRef": "NwindData",
+      "moving": true,
+      "autoGenerate": false,
+      "allowFiltering": true,
+      "filterMode": "ExcelStyleFilter",
+	    "toolbar": [
+        {
+          "type": "WebGridToolbar"          
+        }
+      ],
+      "columns": [{
+        "type": "WebGridColumn",
+        "name": "ProductName",
+        "field": "ProductName",
+        "header": "Product Name",
+        "sortable": true
+      },{
+        "type": "WebGridColumn",
+        "name": "QuantityPerUnit",
+        "field": "QuantityPerUnit",
+        "header": "Quantity Per Unit",
+        "sortable": true
+      },{
+        "type": "WebGridColumn",
+        "name": "UnitPrice",
+        "field": "UnitPrice",
+        "header": "Unit Price",
+        "dataType": "Currency",
+        "sortable": true,
+        "bodyTemplateRef": "UnitPriceCellTemplate"
+      },{
+        "type": "WebGridColumn",
+        "name": "OrderDate",
+        "field": "OrderDate",
+        "header": "Order Date",
+        "dataType": "Date",
+        "sortable": true
+      },{
+        "type": "WebGridColumn",
+        "name": "Discontinued",
+        "field": "Discontinued",
+        "header": "Discontinued",
+        "sortable": true,
+        "bodyTemplateRef": "BooleanCellTemplate"
+      }]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
+    "grids/WebGridModule"  
+  ]
+}
