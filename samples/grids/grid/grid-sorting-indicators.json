@@ -46,33 +46,33 @@
         "id": "grid",
         "columns": [
           {
-            "type": "WebGridColumn",
+            "type": "WebColumn",
             "field": "Settlement",
             "sortable": true
           },
           {
-            "type": "WebGridColumn",
+            "type": "WebColumn",
             "field": "Type",
             "sortable": true
           },
           {
-            "type": "WebGridColumn",
+            "type": "WebColumn",
             "field": "Region",
             "sortable": true
           },
           {
-            "type": "WebGridColumn",
+            "type": "WebColumn",
             "field": "Country",
             "sortable": true
           },
           {
-            "type": "WebGridColumn",
+            "type": "WebColumn",
             "field": "Price",
             "dataType": "Currency",
             "sortable": true
           },
           {
-            "type": "WebGridColumn",
+            "type": "WebColumn",
             "field": "Buy",
             "dataType": "Currency",
             "sortable": true

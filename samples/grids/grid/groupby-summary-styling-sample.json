@@ -36,21 +36,21 @@
       ],
       "columns": [
         {
-          "type": "WebGridColumn",
+          "type": "WebColumn",
           "field": "ShipCountry",
           "header": "Ship Country",
           "width": "200px",
           "groupable": true
         },
         {
-          "type": "WebGridColumn",
+          "type": "WebColumn",
           "field": "ShipCity",
           "header": "Ship City",
           "width": "250px",
           "groupable": true
         },
         {
-          "type": "WebGridColumn",
+          "type": "WebColumn",
           "field": "UnitPrice",
           "header": "Unit Price",
           "width": "150px",                    
@@ -64,7 +64,7 @@
           }
         },
         {
-          "type": "WebGridColumn",
+          "type": "WebColumn",
           "field": "Quantity",
           "header": "Quantity",
           "width": "150px",

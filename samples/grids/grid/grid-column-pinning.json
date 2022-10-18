@@ -7,19 +7,19 @@
             "name": "grid",
             "columns": [
                 {
-                    "type": "WebGridColumn",
+                    "type": "WebColumn",
                     "field": "ID",
                     "hidden": true
                 },
                 {
-                    "type": "WebGridColumn",
+                    "type": "WebColumn",
                     "field": "CompanyName",
                     "header": "Company Name",
                     "width": "300px",
                     "headerTemplateRef": "PinHeaderTemplate"
                 },
                 {
-                    "type": "WebGridColumn",
+                    "type": "WebColumn",
                     "field": "ContactName",
                     "header": "Contact Name",
                     "width": "200px",
@@ -27,7 +27,7 @@
                     "headerTemplateRef": "PinHeaderTemplate"
                 },
                 {
-                    "type": "WebGridColumn",
+                    "type": "WebColumn",
                     "field": "ContactTitle",
                     "header": "Contact Title",
                     "width": "200px",
@@ -35,37 +35,37 @@
                     "headerTemplateRef": "PinHeaderTemplate"
                 },
                 {
-                    "type": "WebGridColumn",
+                    "type": "WebColumn",
                     "field": "Address",
                     "width": "300px",
                     "headerTemplateRef": "PinHeaderTemplate"
                 },
                 {
-                    "type": "WebGridColumn",
+                    "type": "WebColumn",
                     "field": "City",
                     "width": "120px",
                     "headerTemplateRef": "PinHeaderTemplate"
                 },
                 {
-                    "type": "WebGridColumn",
+                    "type": "WebColumn",
                     "field": "Region",
                     "width": "120px",
                     "headerTemplateRef": "PinHeaderTemplate"
                 },
                 {
-                    "type": "WebGridColumn",
+                    "type": "WebColumn",
                     "field": "PostalCode",
                     "width": "150px",
                     "headerTemplateRef": "PinHeaderTemplate"
                 },
                 {
-                    "type": "WebGridColumn",
+                    "type": "WebColumn",
                     "field": "Phone",
                     "width": "150px",
                     "headerTemplateRef": "PinHeaderTemplate"
                 },
                 {
-                    "type": "WebGridColumn",
+                    "type": "WebColumn",
                     "field": "Fax",
                     "width": "150px",
                     "headerTemplateRef": "PinHeaderTemplate"

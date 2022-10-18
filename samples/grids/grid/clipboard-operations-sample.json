@@ -55,31 +55,31 @@
       "columnInitRef": "WebGridClipboardOperationsColumnInit",
       "columns": [
         {
-          "type": "WebGridColumn",
+          "type": "WebColumn",
           "field": "ProductID"
         },
         {
-          "type": "WebGridColumn",
+          "type": "WebColumn",
           "field": "ProductName"
         },
         {
-          "type": "WebGridColumn",
+          "type": "WebColumn",
           "field": "SupplierID"
         },
         {
-          "type": "WebGridColumn",
+          "type": "WebColumn",
           "field": "CategoryID"
         },
         {
-          "type": "WebGridColumn",
+          "type": "WebColumn",
           "field": "QuantityPerUnit"
         },
         {
-          "type": "WebGridColumn",
+          "type": "WebColumn",
           "field": "UnitPrice"
         },
         {
-          "type": "WebGridColumn",
+          "type": "WebColumn",
           "field": "UnitsInStock"
         }
       ]

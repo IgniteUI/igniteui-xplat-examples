@@ -15,7 +15,7 @@
       ],
       "columns": [
         {
-          "type": "WebGridColumn",
+          "type": "WebColumn",
           "field": "ProductName",
           "header": "Product Name",
           "dataType": "String1",
@@ -25,7 +25,7 @@
           "resizable": true
         },
         {
-          "type": "WebGridColumn",
+          "type": "WebColumn",
           "field": "UnitsInStock",
           "header": "Units in Stock",
           "dataType": "Number",
@@ -35,7 +35,7 @@
           "resizable": true
         },
         {
-          "type": "WebGridColumn",
+          "type": "WebColumn",
           "field": "OrderDate",
           "header": "Order Date",
           "dataType": "Date",
@@ -45,7 +45,7 @@
           "resizable": true
         },
         {
-          "type": "WebGridColumn",
+          "type": "WebColumn",
           "field": "Discontinued",
           "header": "Discontinued",
           "dataType": "Boolean1",
@@ -54,7 +54,7 @@
           "editable": true
         },
         {
-          "type": "WebGridColumn",
+          "type": "WebColumn",
           "field": "ReorderLevel",
           "header": "Reorder Level",
           "dataType": "Number",
@@ -64,7 +64,7 @@
           "filterable": false
         },
         {
-          "type": "WebGridColumn",
+          "type": "WebColumn",
           "field": "Locations",
           "header": "Available At",
           "editable": true,
@@ -72,7 +72,7 @@
           "width": "220px"
         },
         {
-          "type": "WebGridColumn",
+          "type": "WebColumn",
           "width": "100px",
           "filterable": false
         }

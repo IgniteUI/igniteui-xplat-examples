@@ -8,7 +8,7 @@
       "gridKeydownRef": "WebGridEditingExcelStyle",   
       "columns": [
         {
-          "type": "WebGridColumn",
+          "type": "WebColumn",
           "field": "ProductID",
           "header": "Product ID",
           "editable": true,
@@ -16,21 +16,21 @@
           "hidden": true
         },
         {
-          "type": "WebGridColumn",          
+          "type": "WebColumn",          
           "field": "ProductName",
           "header": "Product Name",
           "dataType": "String1",
           "editable": true
         },
         {
-          "type": "WebGridColumn",          
+          "type": "WebColumn",          
           "field": "UnitPrice",
           "header": "Unit Price",
           "dataType": "Number",
           "editable": true
         },
         {
-          "type": "WebGridColumn",          
+          "type": "WebColumn",          
           "field": "QuantityPerUnit",
           "header": "Quantity Per Unit",
           "groupable": true,
@@ -38,7 +38,7 @@
           "editable": true
         },
         {
-          "type": "WebGridColumn",
+          "type": "WebColumn",
           "field": "ReorderLevel",
           "header": "Reorder Level",
           "dataType": "Number",

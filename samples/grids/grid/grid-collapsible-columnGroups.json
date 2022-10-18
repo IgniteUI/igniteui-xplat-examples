@@ -13,25 +13,25 @@
                     "collapsible": true,
                     "children": [
                         {
-                            "type": "WebGridColumn",
+                            "type": "WebColumn",
                             "field": "CustomerName",
                             "header": "Customer Name",
                             "visibleWhenCollapsed": true
                         },
                         {
-                            "type": "WebGridColumn",
+                            "type": "WebColumn",
                             "field": "CustomerID",
                             "header": "Customer ID",
                             "visibleWhenCollapsed": false
                         },
                         {
-                            "type": "WebGridColumn",
+                            "type": "WebColumn",
                             "field": "FirstName",
                             "header": "First Name",
                             "visibleWhenCollapsed": false
                         },
                         {
-                            "type": "WebGridColumn",
+                            "type": "WebColumn",
                             "field": "LastName",
                             "header": "Last Name",
                             "visibleWhenCollapsed": false
@@ -43,29 +43,29 @@
                             "collapsible": true,
                             "children": [
                                 {
-                                    "type": "WebGridColumn",
+                                    "type": "WebColumn",
                                     "field": "FullAddress",
                                     "header": "FullAddress",
                                     "width": "250px",
                                     "visibleWhenCollapsed": true
                                 },
                                 {
-                                    "type": "WebGridColumn",
+                                    "type": "WebColumn",
                                     "field": "Country",
                                     "visibleWhenCollapsed": false
                                 },
                                 {
-                                    "type": "WebGridColumn",
+                                    "type": "WebColumn",
                                     "field": "City",
                                     "visibleWhenCollapsed": false
                                 },
                                 {
-                                    "type": "WebGridColumn",
+                                    "type": "WebColumn",
                                     "field": "Address",
                                     "visibleWhenCollapsed": false
                                 },
                                 {
-                                    "type": "WebGridColumn",
+                                    "type": "WebColumn",
                                     "field": "PostalCode",
                                     "header": "Postal Code",
                                     "visibleWhenCollapsed": false
@@ -75,12 +75,12 @@
                     ]
                 },
                 {
-                    "type": "WebGridColumn",
+                    "type": "WebColumn",
                     "field": "ShipperName",
                     "header": "Shipper Name"
                 },
                 {
-                    "type": "WebGridColumn",
+                    "type": "WebColumn",
                     "field": "OrderDate",
                     "header": "Order Date"
                 },
@@ -91,30 +91,30 @@
                     "expanded": false,
                     "children": [
                         {
-                            "type": "WebGridColumn",
+                            "type": "WebColumn",
                             "field": "ProductName",
                             "header": "Name",
                             "visibleWhenCollapsed": true
                         },
                         {
-                            "type": "WebGridColumn",
+                            "type": "WebColumn",
                             "field": "UnitPrice",
                             "header": "Unit Price",
                             "visibleWhenCollapsed": true
                         },
                         {
-                            "type": "WebGridColumn",
+                            "type": "WebColumn",
                             "field": "ProductID",
                             "header": "ID",
                             "visibleWhenCollapsed": true
                         },
                         {
-                            "type": "WebGridColumn",
+                            "type": "WebColumn",
                             "field": "Quantity",
                             "visibleWhenCollapsed": false
                         },
                         {
-                            "type": "WebGridColumn",
+                            "type": "WebColumn",
                             "field": "Quantity",
                             "visibleWhenCollapsed": false
                         }

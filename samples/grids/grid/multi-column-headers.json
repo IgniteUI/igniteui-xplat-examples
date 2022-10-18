@@ -8,7 +8,7 @@
             "id": "grid",
             "columns": [
                 {
-                    "type": "WebGridColumn",
+                    "type": "WebColumn",
                     "field": "ID",
                     "resizable": true
                 },
@@ -17,7 +17,7 @@
                     "header": "General Information",
                     "children": [
                         {
-                            "type": "WebGridColumn",
+                            "type": "WebColumn",
                             "field": "CompanyName",
                             "sortable": true,
                             "resizable": true
@@ -27,13 +27,13 @@
                             "header": "Personal Details",
                             "children": [
                                 {
-                                    "type": "WebGridColumn",
+                                    "type": "WebColumn",
                                     "field": "ContactName",
                                     "sortable": true,
                                     "resizable": true
                                 },
                                 {
-                                    "type": "WebGridColumn",
+                                    "type": "WebColumn",
                                     "field": "ContactTitle",
                                     "sortable": true,
                                     "resizable": true
@@ -51,25 +51,25 @@
                             "header": "Location",
                             "children": [
                                 {
-                                    "type": "WebGridColumn",
+                                    "type": "WebColumn",
                                     "field": "Country",
                                     "sortable": true,
                                     "resizable": true
                                 },
                                 {
-                                    "type": "WebGridColumn",
+                                    "type": "WebColumn",
                                     "field": "Region",
                                     "sortable": true,
                                     "resizable": true
                                 },
                                 {
-                                    "type": "WebGridColumn",
+                                    "type": "WebColumn",
                                     "field": "City",
                                     "sortable": true,
                                     "resizable": true
                                 },
                                 {
-                                    "type": "WebGridColumn",
+                                    "type": "WebColumn",
                                     "field": "Address",
                                     "sortable": true,
                                     "resizable": true
@@ -81,19 +81,19 @@
                             "header": "Contact Information",
                             "children": [
                                 {
-                                    "type": "WebGridColumn",
+                                    "type": "WebColumn",
                                     "field": "Phone",
                                     "sortable": true,
                                     "resizable": true
                                 },
                                 {
-                                    "type": "WebGridColumn",
+                                    "type": "WebColumn",
                                     "field": "Fax",
                                     "sortable": true,
                                     "resizable": true
                                 },
                                 {
-                                    "type": "WebGridColumn",
+                                    "type": "WebColumn",
                                     "field": "PostalCode",
                                     "sortable": true,
                                     "resizable": true

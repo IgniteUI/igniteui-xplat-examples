@@ -11,37 +11,37 @@
       "rowEditable": true,  
       "columns":[
       {
-        "type":"WebGridColumn",
+        "type": "WebColumn",
         "name": "ProductID",
         "field": "ProductID",
         "header": "Product ID"
       },
       {
-        "type":"WebGridColumn",
+        "type": "WebColumn",
         "name": "ReorderLevel",
         "field": "ReorderLevel",
         "header": "Reorder Level"
       },
       {
-        "type":"WebGridColumn",
+        "type": "WebColumn",
         "name": "ProductName",
         "field": "ProductName",
         "header": "Product Name"
       },
       {
-        "type":"WebGridColumn",
+        "type": "WebColumn",
         "name": "UnitsInStock",
         "field": "UnitsInStock",
         "header": "Units In Stock"
       },
       {
-        "type":"WebGridColumn",
+        "type": "WebColumn",
         "name": "OrderDate",
         "field": "OrderDate",
         "header": "Order Date"
       },
       {
-        "type":"WebGridColumn",
+        "type": "WebColumn",
         "name": "Discontinued",
         "field": "Discontinued",
         "header": "Discontinued"

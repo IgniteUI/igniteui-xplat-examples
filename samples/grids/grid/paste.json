@@ -31,25 +31,25 @@
       "primaryKey":"ID",
       "columns":[
       {
-        "type":"WebGridColumn",
+        "type": "WebColumn",
         "name": "ContactName",
         "field": "ContactName",
         "header": "Contact Name"
       },
       {
-        "type":"WebGridColumn",
+        "type": "WebColumn",
         "name": "ContactTitle",
         "field": "ContactTitle",
         "header": "Contact Title"
       },
       {
-        "type":"WebGridColumn",
+        "type": "WebColumn",
         "name": "Phone",
         "field": "Phone",
         "header": "Phone"
       },
       {
-        "type":"WebGridColumn",
+        "type": "WebColumn",
         "name": "Country",
         "field": "Country",
         "header": "Country"

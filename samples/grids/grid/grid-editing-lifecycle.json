@@ -19,22 +19,22 @@
         "cellEditExitRef": "WebGridCellEditExit",
         "columns": [
           {
-            "type": "WebGridColumn",
+            "type": "WebColumn",
             "field": "ProductName",
             "header": "Product Name"
           },
            {
-            "type": "WebGridColumn",
+            "type": "WebColumn",
             "field": "UnitPrice",
             "header": "Unit Price"
           },
            {
-            "type": "WebGridColumn",
+            "type": "WebColumn",
             "field": "UnitsInStock",
             "header": "Units In Stock"
           },
            {
-            "type": "WebGridColumn",
+            "type": "WebColumn",
             "field": "Ordered"
           }
           ]

@@ -8,7 +8,7 @@
         "name": "grid",
         "columns": [
            {
-           "type": "WebGridColumn",
+           "type": "WebColumn",
            "field": "ContactName",
            "header": "Contact",
            "editable": true,
@@ -16,7 +16,7 @@
            "inlineEditorTemplateRef": "CompositeContactEditCellTemplate"
           },
           {
-           "type": "WebGridColumn",
+           "type": "WebColumn",
            "field": "Address",
            "editable": true,
            "bodyTemplateRef": "CompositeAddressCellTemplate",

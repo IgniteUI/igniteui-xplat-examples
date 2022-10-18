@@ -9,64 +9,64 @@
       "name": "grid",
       "columns": [
         {
-          "type": "WebGridColumn",
+          "type": "WebColumn",
           "field": "ID",
           "width": "auto",
           "resizable": true
         },
         {
-          "type": "WebGridColumn",
+          "type": "WebColumn",
           "field": "CompanyName",
           "width": "auto",
           "resizable": true
         },
         {
-          "type": "WebGridColumn",
+          "type": "WebColumn",
           "field": "ContactName",
           "header": "Contact Name",
           "width": "auto",
           "resizable": true
         },
         {
-          "type": "WebGridColumn",
+          "type": "WebColumn",
           "field": "ContactTitle",
           "header": "Contact Title",
           "width": "auto",
           "resizable": true
         },
         {
-          "type": "WebGridColumn",
+          "type": "WebColumn",
           "field": "Address",
           "width": "auto",
           "resizable": true
         },
         {
-          "type": "WebGridColumn",
+          "type": "WebColumn",
           "field": "City",
           "width": "auto",
           "resizable": true
         },
         {
-          "type": "WebGridColumn",
+          "type": "WebColumn",
           "field": "Region",
           "width": "auto",
           "resizable": true
         },
         {
-          "type": "WebGridColumn",
+          "type": "WebColumn",
           "field": "PostalCode",
           "header": "Postal Code",
           "width": "auto",
           "resizable": true
         },
         {
-          "type": "WebGridColumn",
+          "type": "WebColumn",
           "field": "Phone",
           "width": "auto",
           "resizable": true
         },
         {
-          "type": "WebGridColumn",
+          "type": "WebColumn",
           "field": "Fax",
           "width": "auto",
           "resizable": true
