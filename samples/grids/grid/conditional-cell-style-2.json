@@ -7,23 +7,23 @@
       "primaryKey": "Id",      
       "columns": [
         {
-          "type": "WebGridColumn",
+          "type": "WebColumn",
           "field": "Id"          
         },
         {
-          "type": "WebGridColumn",
+          "type": "WebColumn",
           "field": "Position"          
         },
         {
-          "type": "WebGridColumn",
+          "type": "WebColumn",
           "field": "Name"          
         },
         {
-          "type": "WebGridColumn",
+          "type": "WebColumn",
           "field": "AthleteNumber"          
         },
         {
-          "type": "WebGridColumn",
+          "type": "WebColumn",
           "field": "CountryName"          
         }
       ]

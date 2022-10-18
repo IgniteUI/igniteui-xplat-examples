@@ -10,20 +10,20 @@
         "name": "grid",
         "columns": [
           {
-            "type": "WebGridColumn",
+            "type": "WebColumn",
             "field": "Category",
             "pinned": true,
             "width": "200px",
             "headerTemplateRef": "PinHeaderTemplate"
           },
           {
-            "type": "WebGridColumn",
+            "type": "WebColumn",
             "field": "Type",
             "pinned": true,
             "headerTemplateRef": "PinHeaderTemplate"
           },
           {
-            "type": "WebGridColumn",
+            "type": "WebColumn",
             "field": "Price",
             "dataType": "Currency",
             "pipeArgs": {
@@ -34,7 +34,7 @@
             "headerTemplateRef": "PinHeaderTemplate"
           },
           {
-            "type": "WebGridColumn",
+            "type": "WebColumn",
             "field": "Buy",
             "dataType": "Currency",
             "pipeArgs": {
@@ -45,7 +45,7 @@
             "headerTemplateRef": "PinHeaderTemplate"
           },
           {
-            "type": "WebGridColumn",
+            "type": "WebColumn",
             "field": "Sell",
             "dataType": "Currency",
             "pipeArgs": {
@@ -56,25 +56,25 @@
             "headerTemplateRef": "PinHeaderTemplate"
           },
           {
-            "type": "WebGridColumn",
+            "type": "WebColumn",
             "field": "Spread",
             "headerTemplateRef": "PinHeaderTemplate"
           },
           {
-            "type": "WebGridColumn",
+            "type": "WebColumn",
             "field": "Change",
             "bodyTemplateRef": "CurrencyCellTemplate",
             "headerTemplateRef": "PinHeaderTemplate"
           },
           {
-            "type": "WebGridColumn",
+            "type": "WebColumn",
             "field": "Change(%)",
             "dataType": "Number",
             "bodyTemplateRef": "CurrencyCellTemplate",
             "headerTemplateRef": "PinHeaderTemplate"
           },
           {
-            "type": "WebGridColumn",
+            "type": "WebColumn",
             "field": "Change On Year(%)",
             "dataType": "Number",
             "bodyTemplateRef": "CurrencyCellTemplate",

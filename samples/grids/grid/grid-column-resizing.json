@@ -8,18 +8,18 @@
       "autoGenerate": false,
       "columnResizedRef": "WebGridColumnResized",
       "columns": [{
-        "type":"WebGridColumn",
+        "type": "WebColumn",
         "name": "ID",
         "field": "ID",
         "header": "ID"
       }, {
-        "type": "WebGridColumn",
+        "type": "WebColumn",
         "name": "CompanyName",
         "field": "CompanyName",
         "header": "Company Name",
         "resizable": true
       }, {
-        "type": "WebGridColumn",
+        "type": "WebColumn",
         "name": "ContactName",
         "field": "ContactName",
         "header": "Contact Name",
@@ -27,42 +27,42 @@
         "maxWidth": "230px",
         "resizable": true
       }, {
-        "type": "WebGridColumn",
+        "type": "WebColumn",
         "name": "ContactTitle",
         "field": "ContactTitle",
         "header": "Contact Title",
         "resizable": true
       }, {
-        "type": "WebGridColumn",
+        "type": "WebColumn",
         "name": "Address",
         "field": "Address",
         "header": "Address",
         "resizable": true
       }, {
-        "type": "WebGridColumn",
+        "type": "WebColumn",
         "name": "City",
         "field": "City",
         "header": "City"
       }, {
-        "type": "WebGridColumn",
+        "type": "WebColumn",
         "name": "Region",
         "field": "Region",
         "header": "Region",
         "resizable": true
       }, {
-        "type": "WebGridColumn",
+        "type": "WebColumn",
         "name": "PostalCode",
         "field": "PostalCode",
         "header": "Postal Code",
         "resizable": true
       }, {
-        "type": "WebGridColumn",
+        "type": "WebColumn",
         "name": "name",
         "field": "Name",
         "header": "Name",
         "resizable": true
       }, {
-        "type": "WebGridColumn",
+        "type": "WebColumn",
         "name": "Phone",
         "field": "Phone",
         "header": "Phone",

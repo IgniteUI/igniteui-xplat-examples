@@ -8,20 +8,20 @@
       "cellEditRef": "WebGridEditingEventsCellEdit",         
       "columns": [
         {
-          "type": "WebGridColumn",          
+          "type": "WebColumn",          
           "field": "ProductName",
           "header": "Product Name",
           "dataType": "String1"
         },
         {
-          "type": "WebGridColumn",          
+          "type": "WebColumn",          
           "field": "UnitPrice",
           "header": "Unit Price",
           "dataType": "Number",
           "editable": true
         },
         {
-          "type": "WebGridColumn",
+          "type": "WebColumn",
           "name": "UnitsInStock",
           "field": "UnitsInStock",
           "header": "Units In Stock",
@@ -29,7 +29,7 @@
           "editable": true   
         },
         {
-          "type": "WebGridColumn",
+          "type": "WebColumn",
           "name": "UnitsOnOrder",
           "field": "UnitsOnOrder",
           "header": "Units on Order",

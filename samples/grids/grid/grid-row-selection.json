@@ -29,15 +29,15 @@
         "name": "grid1",
         "columns": [
           {
-            "type": "WebGridColumn",
+            "type": "WebColumn",
             "field": "Category"
           },
           {
-            "type": "WebGridColumn",
+            "type": "WebColumn",
             "field": "Type"
           },
           {
-            "type": "WebGridColumn",
+            "type": "WebColumn",
             "field": "Price",
             "dataType": "Currency",
             "pipeArgs": {
@@ -47,7 +47,7 @@
             }
           },
           {
-            "type": "WebGridColumn",
+            "type": "WebColumn",
             "field": "Buy",
             "dataType": "Currency",
             "pipeArgs": {
@@ -57,7 +57,7 @@
             }
           },
           {
-            "type": "WebGridColumn",
+            "type": "WebColumn",
             "field": "Sell",
             "dataType": "Currency",
             "pipeArgs": {
@@ -67,18 +67,18 @@
             }
           },
           {
-            "type": "WebGridColumn",
+            "type": "WebColumn",
             "field": "Change",
             "bodyTemplateRef": "CurrencyCellTemplate"
           },
           {
-            "type": "WebGridColumn",
+            "type": "WebColumn",
             "field": "Change(%)",
             "dataType": "Number",
             "bodyTemplateRef": "CurrencyCellTemplate"
           },
           {
-            "type": "WebGridColumn",
+            "type": "WebColumn",
             "field": "Change On Year(%)",
             "dataType": "Number",
             "bodyTemplateRef": "CurrencyCellTemplate"

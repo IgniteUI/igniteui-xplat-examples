@@ -9,60 +9,60 @@
       "primaryKey": "ProductID",      
       "columns":[
       {
-        "type": "WebGridColumn",
+        "type": "WebColumn",
         "bodyTemplateRef": "DeleteCellTemplateModule"
       },
       {
-        "type":"WebGridColumn",
+        "type": "WebColumn",
         "name": "ProductName",
         "field": "ProductName",
         "header": "Product Name"
       },
       {
-        "type":"WebGridColumn",
+        "type": "WebColumn",
         "name": "UnitsInStock",
         "field": "UnitsInStock",
         "header": "Units In Stock"
       },
       {
-        "type":"WebGridColumn",
+        "type": "WebColumn",
         "name": "UnitPrice",
         "field": "UnitPrice",
         "header": "Unit Price"
       },
       {
-        "type":"WebGridColumn",
+        "type": "WebColumn",
         "name": "UnitsOnOrder",
         "field": "UnitsOnOrder",
         "header": "Units On Order"
       },
       
       {
-        "type":"WebGridColumn",
+        "type": "WebColumn",
         "name": "QuantityPerUnit",
         "field": "QuantityPerUnit",
         "header": "Quantity Per Unit"
       },
       {
-        "type":"WebGridColumn",
+        "type": "WebColumn",
         "name": "ReorderLevel",
         "field": "ReorderLevel",
         "header": "Reorder Level"
       },
       {
-        "type":"WebGridColumn",
+        "type": "WebColumn",
         "name": "SupplierID",
         "field": "SupplierID",
         "header": "Supplier ID"
       },
       {
-        "type":"WebGridColumn",
+        "type": "WebColumn",
         "name": "CategoryID",
         "field": "CategoryID",
         "header": "Category ID"
       },
       {
-        "type":"WebGridColumn",
+        "type": "WebColumn",
         "name": "Discontinued",
         "field": "Discontinued",
         "header": "Discontinued"

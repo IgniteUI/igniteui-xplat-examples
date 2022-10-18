@@ -11,30 +11,30 @@
         "rowSelectionChangingRef": "WebGridRowSelectionConditional",
         "columns": [
           {
-            "type": "WebGridColumn",
+            "type": "WebColumn",
             "field": "ContactName",
             "header": "Contact Name",
             "width": "20%"
           },
            {
-            "type": "WebGridColumn",
+            "type": "WebColumn",
             "field": "Country",
             "header": "Country",
             "width": "20%"
           },
            {
-            "type": "WebGridColumn",
+            "type": "WebColumn",
             "field": "City",
             "header": "City",
             "width": "20%"
           },
            {
-            "type": "WebGridColumn",
+            "type": "WebColumn",
             "field": "PostalCode",
             "width": "20%"
           },
            {
-            "type": "WebGridColumn",
+            "type": "WebColumn",
             "field": "CompanyName",
             "width": "20%"
           }

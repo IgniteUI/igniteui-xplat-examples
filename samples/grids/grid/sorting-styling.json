@@ -24,14 +24,14 @@
       "autoGenerate": false,
       "columns": [
         {
-          "type": "WebGridColumn",
+          "type": "WebColumn",
           "field": "OrderID",
           "header": "Order ID",
           "groupable": true,
           "sortable": true
         },
         {
-          "type": "WebGridColumn",
+          "type": "WebColumn",
           "field": "CategoryName",
           "header": "Category Name",
           "dataType": "String1",
@@ -39,7 +39,7 @@
           "sortable": true
         },
         {
-          "type": "WebGridColumn",
+          "type": "WebColumn",
           "field": "CompanyName",
           "header": "Company Name",
           "dataType": "String1",
@@ -47,7 +47,7 @@
           "sortable": true
         },
         {
-          "type": "WebGridColumn",
+          "type": "WebColumn",
           "field": "ShipCountry",
           "header": "Ship Country",
           "dataType": "String1",
@@ -55,7 +55,7 @@
           "sortable": true
         },
         {
-          "type": "WebGridColumn",
+          "type": "WebColumn",
           "field": "SaleAmount",
           "header": "Sale Amount",
           "dataType": "Currency",
@@ -68,7 +68,7 @@
           }
         },
         {
-          "type": "WebGridColumn",
+          "type": "WebColumn",
           "field": "ShippedDate",
           "header": "Shipped Date",
           "dataType": "Date",

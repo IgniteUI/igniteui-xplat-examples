@@ -9,31 +9,31 @@
       "autoGenerate": false,      
       "columns":[
       {
-        "type":"WebGridColumn",
+        "type": "WebColumn",
         "name": "ProductName",
         "field": "ProductName",
         "header": "Product Name"
       },
       {
-        "type":"WebGridColumn",
+        "type": "WebColumn",
         "name": "QuantityPerUnit",
         "field": "QuantityPerUnit",
         "header": "Quantity Per Unit"
       },
       {
-        "type":"WebGridColumn",
+        "type": "WebColumn",
         "name": "UnitPrice",
         "field": "UnitPrice",
         "header": "Unit Price"
       },
       {
-        "type":"WebGridColumn",
+        "type": "WebColumn",
         "name": "OrderDate",
         "field": "OrderDate",
         "header": "Order Date"
       },
       {
-        "type":"WebGridColumn",
+        "type": "WebColumn",
         "name": "Discontinued",
         "field": "Discontinued",
         "header": "Discontinued"

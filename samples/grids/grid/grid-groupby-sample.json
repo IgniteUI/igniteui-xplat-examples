@@ -13,19 +13,19 @@
         "groupRowTemplateRef": "GroupByRowTemplate",
         "columns": [
           {
-            "type": "WebGridColumn",
+            "type": "WebColumn",
             "field": "OrderID",
             "hidden": true
           },
            {
-            "type": "WebGridColumn",
+            "type": "WebColumn",
             "field": "ShipCountry",
             "header": "Ship Country",
             "width": "200px",
             "groupable": true
           },
            {
-            "type": "WebGridColumn",
+            "type": "WebColumn",
             "field": "OrderDate",
             "header": "Order Date",
             "dataType": "Date",
@@ -33,14 +33,14 @@
             "groupable": true
           },
           {
-            "type": "WebGridColumn",
+            "type": "WebColumn",
             "field": "PostalCode",
             "header": "Postal Code",
             "width": "200px",
             "groupable": true
           },
           {
-            "type": "WebGridColumn",
+            "type": "WebColumn",
             "field": "Discontinued",
             "width": "200px",
             "dataType": "Boolean1",
@@ -48,42 +48,42 @@
             "bodyTemplateRef": "BooleanCellTemplate"
           },
           {
-            "type": "WebGridColumn",
+            "type": "WebColumn",
             "field": "ShipName",
             "header": "Ship Name",
             "width": "200px",
             "groupable": true
           },
             {
-            "type": "WebGridColumn",
+            "type": "WebColumn",
             "field": "ShipCity",
             "header": "Ship City",
             "width": "200px",
             "groupable": true
           },
             {
-            "type": "WebGridColumn",
+            "type": "WebColumn",
             "field": "ShipperName",
             "header": "Shipper Name",
             "width": "200px",
             "groupable": true
           },
            {
-            "type": "WebGridColumn",
+            "type": "WebColumn",
             "field": "Salesperson",
             "header": "Sales Person",
             "width": "200px",
             "groupable": true
           },
            {
-            "type": "WebGridColumn",
+            "type": "WebColumn",
             "field": "UnitPrice",
             "header": "Unit Price",
             "width": "200px",
             "groupable": true
           },
           {
-            "type": "WebGridColumn",
+            "type": "WebColumn",
             "field": "Quantity",
             "width": "200px",
             "groupable": true

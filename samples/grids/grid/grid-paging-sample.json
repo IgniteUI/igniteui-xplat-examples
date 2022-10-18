@@ -14,22 +14,22 @@
             ],
             "columns": [
               {
-                "type": "WebGridColumn",
+                "type": "WebColumn",
                 "field": "Id",
                 "header": "Rank",
                 "sortable": true
               },
               {
-                "type": "WebGridColumn",
+                "type": "WebColumn",
                 "field": "Name"
               },
               {
-                "type": "WebGridColumn",
+                "type": "WebColumn",
                 "field": "BeatsPerMinute",
                 "dataType": "Number"
               },
               {
-                "type": "WebGridColumn",
+                "type": "WebColumn",
                 "field": "TopSpeed",
                 "dataType": "Number",
                 "pipeArgs": {
@@ -38,12 +38,12 @@
                   }
               },
               {
-                "type": "WebGridColumn",
+                "type": "WebColumn",
                 "field": "TrackProgress",
                 "bodyTemplateRef": "ProgressCellTemplate"
               },
               {
-                "type": "WebGridColumn",
+                "type": "WebColumn",
                 "field": "CountryFlag",
                 "bodyTemplateRef": "ImageCellTemplate"
               }

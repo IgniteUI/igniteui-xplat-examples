@@ -6,23 +6,23 @@
       "autoGenerate": false,
       "columns": [
         {
-          "type": "WebGridColumn",
+          "type": "WebColumn",
           "field": "ProductID",
           "header": "Product ID"
         },
         {
-          "type": "WebGridColumn",
+          "type": "WebColumn",
           "field": "ReorderLevel",
           "header": "Reorder Level"                    
         },
         {
-          "type": "WebGridColumn",
+          "type": "WebColumn",
           "field": "ProductName",
           "header": "Product Name",
           "dataType": "String1"
         },
         {
-          "type": "WebGridColumn",
+          "type": "WebColumn",
           "field": "UnitsInStock",
           "header": "Units in Stock",
           "dataType": "Number"                    
