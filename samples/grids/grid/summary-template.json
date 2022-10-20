@@ -18,7 +18,7 @@
         "type": "PropertyEditorPropertyDescription",
         "propertyPath": "Columns[3 as WebGridColumn, 5 as WebGridColumn].HasSummary",
         "label": "Toggle Summaries",
-        "valueType": "Boolean1",
+        "valueType": "Boolean",
         "primitiveValue": true
       },
       {
@@ -74,7 +74,7 @@
         "header": "Discontinued",
         "editable": true,
         "width": "17%",
-        "dataType": "Boolean1",
+        "dataType": "Boolean",
         "groupable": true
       },
       {

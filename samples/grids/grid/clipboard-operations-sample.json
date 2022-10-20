@@ -20,7 +20,7 @@
         "propertyPath": "ClipboardOptions.Enabled",
         "name": "ClipboardEnabledEditor",
         "label": "Grid Copy Behavior",
-        "valueType": "Boolean1",
+        "valueType": "Boolean",
         "primitiveValue": true
       },
       {
@@ -28,7 +28,7 @@
         "propertyPath": "ClipboardOptions.CopyHeaders",
         "name": "ClipboardHeadersEditor",
         "label": "Copying of Header Labels",
-        "valueType": "Boolean1",
+        "valueType": "Boolean",
         "primitiveValue": true
       },
       {
@@ -36,7 +36,7 @@
         "propertyPath": "ClipboardOptions.CopyFormatters",
         "name": "ClipboardFormattersEditor",
         "label": "Copying Column Formatters",
-        "valueType": "Boolean1",
+        "valueType": "Boolean",
         "primitiveValue": true
       },
       {

@@ -34,7 +34,7 @@
           "type": "WebColumn",
           "field": "CategoryName",
           "header": "Category Name",
-          "dataType": "String1",
+          "dataType": "String",
           "groupable": true,
           "sortable": true
         },
@@ -42,7 +42,7 @@
           "type": "WebColumn",
           "field": "CompanyName",
           "header": "Company Name",
-          "dataType": "String1",
+          "dataType": "String",
           "groupable": true,
           "sortable": true
         },
@@ -50,7 +50,7 @@
           "type": "WebColumn",
           "field": "ShipCountry",
           "header": "Ship Country",
-          "dataType": "String1",
+          "dataType": "String",
           "groupable": true,
           "sortable": true
         },

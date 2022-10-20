@@ -18,7 +18,7 @@
           "type": "WebColumn",
           "field": "ProductName",
           "header": "Product Name",
-          "dataType": "String1",
+          "dataType": "String",
           "sortable": true,
           "hasSummary": true,
           "editable": true,
@@ -48,7 +48,7 @@
           "type": "WebColumn",
           "field": "Discontinued",
           "header": "Discontinued",
-          "dataType": "Boolean1",
+          "dataType": "Boolean",
           "sortable": true,
           "hasSummary": true,
           "editable": true

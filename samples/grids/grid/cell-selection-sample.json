@@ -43,7 +43,7 @@
         {
           "type": "WebColumn",          
           "field": "Discontinued",
-          "dataType": "Boolean1"
+          "dataType": "Boolean"
         },
         {
           "type": "WebColumn",          
