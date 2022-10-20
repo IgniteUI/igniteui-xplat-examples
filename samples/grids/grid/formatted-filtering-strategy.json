@@ -1,0 +1,59 @@
+{
+    "descriptions": {
+        "content": {
+            "type": "WebGrid",
+            "dataRef": "NwindData",
+            "autoGenerate": false,
+            "name": "grid",
+            "id": "grid",
+            "allowFiltering": true,
+            "filterMode": "ExcelStyleFilter",
+            "columns": [
+                {
+                    "type": "WebColumn",
+                    "field": "ProductName",
+                    "header": "Product Name",
+                    "sortable": true,
+                    "disableHiding": true,
+                    "dataType": "String"
+                },
+                {
+                    "type": "WebColumn",
+                    "field": "QuantityPerUnit",
+                    "header": "Quantity Per Unit",
+                    "sortable": true,
+                    "disableHiding": true,
+                    "dataType": "String"
+                },
+                {
+                    "type": "WebColumn",
+                    "field": "UnitPrice",
+                    "header": "Unit Price Category",
+                    "sortable": true,
+                    "disableHiding": true,
+                    "dataType": "String"
+                },
+                {
+                    "type": "WebColumn",
+                    "field": "OrderDate",
+                    "header": "Order Date",
+                    "sortable": true,
+                    "disableHiding": true,
+                    "dataType": "Date"
+                },
+                {
+                    "type": "WebColumn",
+                    "field": "Discontinued",
+                    "header": "Discontinued",
+                    "sortable": true,
+                    "disableHiding": true,
+                    "dataType": "Boolean",
+                    "bodyTemplateRef": "BooleanCellTemplate"
+                }
+            ]
+        }
+    },
+    "modules": [
+        "WebGridModule"
+    ]
+}
