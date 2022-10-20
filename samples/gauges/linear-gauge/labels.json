@@ -14,8 +14,8 @@
       "labelExtent": 0.025,
       "labelsPreTerminal": 0,
       "labelsPostInitial": 0,
-      "fontBrush":"dodgerblue",
-      "font": "11px Verdana"      
+      "fontBrush": "dodgerblue",
+      "font": "11px Verdana"
     }
   },
   "modules": [
