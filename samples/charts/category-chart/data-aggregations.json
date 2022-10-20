@@ -38,7 +38,7 @@
       "type": "CategoryChart",
       "name": "chart",
       "dataSourceRef": "SalesData",
-      "chartType": "Line",
+      "chartType": "Column",
       "isHorizontalZoomEnabled": false,
       "isVerticalZoomEnabled": false,
       "crosshairsDisplayMode": "None",
