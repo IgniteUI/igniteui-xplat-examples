@@ -1,4 +1,6 @@
 {
+  "todo": [ "fix sortingExpressions setting" ]
+  "export": false,
   "descriptions": {
     "content": {
       "type": "WebGrid",
