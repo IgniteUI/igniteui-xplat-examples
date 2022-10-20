@@ -1,4 +1,6 @@
 {
+  "todo": [ "fix template in CodeGenLib" ],
+  "export": false,
     "descriptions": {
       "content": {
        "type": "WebGrid",
@@ -43,7 +45,7 @@
             "type": "WebColumn",
             "field": "Discontinued",
             "width": "200px",
-            "dataType": "Boolean1",
+            "dataType": "Boolean",
             "groupable": true,
             "bodyTemplateRef": "BooleanCellTemplate"
           },
@@ -92,6 +94,6 @@
       }
     },
     "modules": [
-      "WebGridModule"
+      "grids/WebGridModule"
     ]
   }

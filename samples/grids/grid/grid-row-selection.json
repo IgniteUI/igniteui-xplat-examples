@@ -1,4 +1,6 @@
 {
+  "todo": [ "fix pipeArgs exporting" ],
+  "export": false,
     "descriptions": {
       "editor": {
         "type": "PropertyEditorPanel",
@@ -87,7 +89,7 @@
       }
     },
     "modules": [
-      "WebGridModule",
+      "grids/WebGridModule",
       "PropertyEditorModule",
       "PropertyEditorPanelModule"
     ]

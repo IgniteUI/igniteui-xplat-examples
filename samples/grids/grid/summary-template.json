@@ -1,4 +1,6 @@
 {
+  "todo": [ "fix template in CodeGenLib" ],
+  "export": false,
   "descriptions": {
     "editor": {
       "type": "PropertyEditorPanel",
@@ -74,7 +76,7 @@
         "header": "Discontinued",
         "editable": true,
         "width": "17%",
-        "dataType": "Boolean1",
+        "dataType": "Boolean",
         "groupable": true
       },
       {

@@ -1,4 +1,8 @@
 {
+  "todo": [ 
+	"fix missing WebGridCellEditExit and WebGridCellEditDone ",
+	"fix duplicated WebGridCellEditEnter" ],
+  "export": false,
     "descriptions": {
       "content": {
        "type": "WebGrid",
@@ -41,6 +45,6 @@
       }
     },
     "modules": [
-      "WebGridModule"
+      "grids/WebGridModule"
     ]
   }

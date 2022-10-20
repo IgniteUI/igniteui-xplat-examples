@@ -106,7 +106,7 @@
         }
     },
     "modules": [
-        "WebGridModule",
-        "WebColumnGroupModule"
+        "grids/WebGridModule",
+        "grids/WebColumnGroupModule"
     ]
 }

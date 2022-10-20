@@ -1,4 +1,6 @@
 {
+  "todo": [ "fix template in CodeGenLib" ],
+  "export": false,
   "descriptions": {
     "content": {
       "name": "grid",
@@ -10,7 +12,7 @@
       "columns":[
       {
         "type": "WebColumn",
-        "bodyTemplateRef": "DeleteCellTemplateModule"
+        "bodyTemplateRef": "WebGridDeleteCellTemplate"
       },
       {
         "type": "WebColumn",

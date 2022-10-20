@@ -11,7 +11,7 @@
           "type": "WebColumn",          
           "field": "ProductName",
           "header": "Product Name",
-          "dataType": "String1"
+          "dataType": "String"
         },
         {
           "type": "WebColumn",          

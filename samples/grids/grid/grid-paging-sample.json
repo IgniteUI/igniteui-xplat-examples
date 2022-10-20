@@ -1,4 +1,6 @@
 {
+  "todo": [ "fix pipeArgs exporting" ],
+  "export": false,
     "descriptions": {
         "content": {
             "type": "WebGrid",
@@ -51,6 +53,6 @@
         }
     },
     "modules": [
-        "WebGridModule"
+        "grids/WebGridModule"
     ]
 }

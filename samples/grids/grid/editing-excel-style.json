@@ -19,7 +19,7 @@
           "type": "WebColumn",          
           "field": "ProductName",
           "header": "Product Name",
-          "dataType": "String1",
+          "dataType": "String",
           "editable": true
         },
         {
@@ -34,7 +34,7 @@
           "field": "QuantityPerUnit",
           "header": "Quantity Per Unit",
           "groupable": true,
-          "dataType": "String1",
+          "dataType": "String",
           "editable": true
         },
         {

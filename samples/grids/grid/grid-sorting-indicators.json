@@ -1,4 +1,6 @@
 {
+  "todo": [ " move sortingExpressions to CodeGenLib? " ],
+  "export": false,
     "descriptions": {
       "content": {
         "type": "WebGrid",
@@ -81,6 +83,6 @@
       }
     },
     "modules": [
-      "WebGridModule"
+      "grids/WebGridModule"
     ]
   }

@@ -3,7 +3,7 @@
     "editor": {
       "type": "PropertyEditorPanel",
       "componentRendererRef": "renderer",
-      "targetRef": "grid",
+      "targetRef": "grid1",
       "descriptionType": "WebGrid",
       "isHorizontal": true,
       "isWrappingEnabled": false,
@@ -26,6 +26,7 @@
     },
     "content": {
       "type": "WebGrid",
+      "name": "grid1",
       "dataRef":"CustomersData",
       "batchEditing": true,
       "primaryKey":"ID",

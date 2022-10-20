@@ -1,4 +1,6 @@
 {
+  "todo": [ "fix bodyTemplate in CodeGenLib" ],
+  "export": false,
   "descriptions": {
     "editor": {
       "type": "PropertyEditorPanel",
@@ -48,7 +50,7 @@
       "columns":[
       {
         "type": "WebColumn",
-        "bodyTemplateRef": "DeleteCellTemplateModule"
+        "bodyTemplateRef": "WebGridDeleteCellTemplate"
       },
       {
         "type": "WebColumn",
