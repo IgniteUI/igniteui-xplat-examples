@@ -11,27 +11,27 @@
       "isHorizontal": true,
       "isWrappingEnabled": true,
       "properties": [
-      {
-        "type": "PropertyEditorPropertyDescription",
-        "propertyPath": "InitialGroups",
-        "name": "InitialGroups",
-        "label": "Initial Groups",
-        "valueType": "StringValue"
-      },
-      {
-        "type": "PropertyEditorPropertyDescription",
-        "propertyPath": "InitialSummaries",
-        "name": "InitialSummaries",
-        "label": "Initial Summaries",
-        "valueType": "StringValue"
-      },
-      {
-        "type": "PropertyEditorPropertyDescription",
-        "propertyPath": "GroupSorts",
-        "name": "GroupSorts",
-        "label": "Sort Groups",
-        "valueType": "StringValue"
-      }
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "InitialGroups",
+          "name": "InitialGroups",
+          "label": "Initial Groups",
+          "valueType": "StringValue"
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "InitialSummaries",
+          "name": "InitialSummaries",
+          "label": "Initial Summaries",
+          "valueType": "StringValue"
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "GroupSorts",
+          "name": "GroupSorts",
+          "label": "Sort Groups",
+          "valueType": "StringValue"
+        }
       ]
     },
     "content": {
@@ -48,9 +48,9 @@
     }
   },
   "modules": [
-  "withDescriptions",
-  "layouts/PropertyEditorPanelModule",
-  "charts/LegendModule",
-  "charts/CategoryChartModule"
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
+    "charts/LegendModule",
+    "charts/CategoryChartModule"
   ]
 }
