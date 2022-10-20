@@ -2,76 +2,76 @@
   "export": true,
   "descriptions": {
     "content": {
-     "type": "WebGrid",
-     "dataRef": "CustomersData",
-     "autoGenerate": false,
-     "primaryKey": "ProductID",
+      "type": "WebGrid",
+      "dataRef": "CustomersData",
+      "autoGenerate": false,
+      "primaryKey": "ProductID",
       "name": "grid",
       "columns": [
-        {
-          "type": "WebColumn",
-          "field": "ID",
-          "width": "auto",
-          "resizable": true
-        },
-        {
-          "type": "WebColumn",
-          "field": "CompanyName",
-          "width": "auto",
-          "resizable": true
-        },
-        {
-          "type": "WebColumn",
-          "field": "ContactName",
-          "header": "Contact Name",
-          "width": "auto",
-          "resizable": true
-        },
-        {
-          "type": "WebColumn",
-          "field": "ContactTitle",
-          "header": "Contact Title",
-          "width": "auto",
-          "resizable": true
-        },
-        {
-          "type": "WebColumn",
-          "field": "Address",
-          "width": "auto",
-          "resizable": true
-        },
-        {
-          "type": "WebColumn",
-          "field": "City",
-          "width": "auto",
-          "resizable": true
-        },
-        {
-          "type": "WebColumn",
-          "field": "Region",
-          "width": "auto",
-          "resizable": true
-        },
-        {
-          "type": "WebColumn",
-          "field": "PostalCode",
-          "header": "Postal Code",
-          "width": "auto",
-          "resizable": true
-        },
-        {
-          "type": "WebColumn",
-          "field": "Phone",
-          "width": "auto",
-          "resizable": true
-        },
-        {
-          "type": "WebColumn",
-          "field": "Fax",
-          "width": "auto",
-          "resizable": true
-        }
-        ]
+      {
+        "type": "WebColumn",
+        "field": "ID",
+        "width": "auto",
+        "resizable": true
+      },
+      {
+        "type": "WebColumn",
+        "field": "CompanyName",
+        "width": "auto",
+        "resizable": true
+      },
+      {
+        "type": "WebColumn",
+        "field": "ContactName",
+        "header": "Contact Name",
+        "width": "auto",
+        "resizable": true
+      },
+      {
+        "type": "WebColumn",
+        "field": "ContactTitle",
+        "header": "Contact Title",
+        "width": "auto",
+        "resizable": true
+      },
+      {
+        "type": "WebColumn",
+        "field": "Address",
+        "width": "auto",
+        "resizable": true
+      },
+      {
+        "type": "WebColumn",
+        "field": "City",
+        "width": "auto",
+        "resizable": true
+      },
+      {
+        "type": "WebColumn",
+        "field": "Region",
+        "width": "auto",
+        "resizable": true
+      },
+      {
+        "type": "WebColumn",
+        "field": "PostalCode",
+        "header": "Postal Code",
+        "width": "auto",
+        "resizable": true
+      },
+      {
+        "type": "WebColumn",
+        "field": "Phone",
+        "width": "auto",
+        "resizable": true
+      },
+      {
+        "type": "WebColumn",
+        "field": "Fax",
+        "width": "auto",
+        "resizable": true
+      }
+      ]
     }
   },
   "modules": [

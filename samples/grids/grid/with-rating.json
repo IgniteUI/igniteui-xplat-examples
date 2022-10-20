@@ -5,11 +5,11 @@
     "content": {
       "name": "grid",
       "type": "WebGrid",
-      "dataRef":"NwindData",
+      "dataRef": "NwindData",
       "batchEditing":true,
       "rowEditable":true,
-      "primaryKey": "ProductID",      
-      "columns":[
+      "primaryKey": "ProductID",
+      "columns": [
       {
         "type": "WebColumn",
         "bodyTemplateRef": "WebGridDeleteCellTemplate"
@@ -38,7 +38,7 @@
         "field": "UnitsOnOrder",
         "header": "Units On Order"
       },
-      
+
       {
         "type": "WebColumn",
         "name": "QuantityPerUnit",

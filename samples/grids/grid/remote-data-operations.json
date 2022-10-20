@@ -3,9 +3,9 @@
     "content": {
       "name": "grid",
       "type": "WebGrid",
-      "dataRef":"NwindData",
+      "dataRef": "NwindData",
       "autoGenerate":false,
-      "columns":[
+      "columns": [
       {
         "type": "WebColumn",
         "name": "ProductID",

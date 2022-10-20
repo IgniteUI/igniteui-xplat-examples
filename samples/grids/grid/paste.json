@@ -8,29 +8,29 @@
       "isHorizontal": true,
       "isWrappingEnabled": false,
       "properties": [
-          {
-            "type": "PropertyEditorPropertyDescription",
-            "label": "",
-            "valueType": "Button",
-            "primitiveValue": "Paste Options",
-            "buttonClickedRef": "WebGridPasteOptions"
-          },
-          {
-            "type": "PropertyEditorPropertyDescription",
-            "label": "",
-            "valueType": "Button",
-            "primitiveValue": "Download Sample - Excel File",
-            "buttonClickedRef": "WebGridExcelDownload"
-          }
-       ]
+      {
+        "type": "PropertyEditorPropertyDescription",
+        "label": "",
+        "valueType": "Button",
+        "primitiveValue": "Paste Options",
+        "buttonClickedRef": "WebGridPasteOptions"
+      },
+      {
+        "type": "PropertyEditorPropertyDescription",
+        "label": "",
+        "valueType": "Button",
+        "primitiveValue": "Download Sample - Excel File",
+        "buttonClickedRef": "WebGridExcelDownload"
+      }
+      ]
     },
     "content": {
       "type": "WebGrid",
       "name": "grid1",
-      "dataRef":"CustomersData",
+      "dataRef": "CustomersData",
       "batchEditing": true,
-      "primaryKey":"ID",
-      "columns":[
+      "primaryKey": "ID",
+      "columns": [
       {
         "type": "WebColumn",
         "name": "ContactName",

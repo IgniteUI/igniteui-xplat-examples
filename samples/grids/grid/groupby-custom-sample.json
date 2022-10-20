@@ -3,9 +3,9 @@
     "content": {
       "name": "grid",
       "type": "WebGrid",
-      "dataRef":"InvoicesData",
+      "dataRef": "InvoicesData",
       "autoGenerate":false,
-      "columns":[
+      "columns": [
       {
         "type": "WebColumn",
         "name": "OrderID",

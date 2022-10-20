@@ -1,41 +1,41 @@
 {
-    "descriptions": {
-      "content": {
-       "type": "WebGrid",
-       "dataRef": "EmployeeNestedData",
-       "autoGenerate": false,
-        "name": "grid",
-        "id": "grid",
-        "columns": [
-          {
-            "type": "WebColumn",
-            "field": "Name"
-          },
-           {
-            "type": "WebColumn",
-            "field": "Title",
-            "width": "20%"
-          },
-          {
-            "type": "WebColumn",
-            "field": "Employees",
-            "bodyTemplateRef": "NestedDataCellTemplate",
-            "width": "40%"
-          },
-          {
-            "type": "WebColumn",
-            "field": "Age",
-            "width": "10%"
-          }, 
-          {
-            "type": "WebColumn",
-            "field": "HireDate",
-            "dataType": "Date"
-          }
-          ]
+  "descriptions": {
+    "content": {
+      "type": "WebGrid",
+      "dataRef": "EmployeeNestedData",
+      "autoGenerate": false,
+      "name": "grid",
+      "id": "grid",
+      "columns": [
+      {
+        "type": "WebColumn",
+        "field": "Name"
+      },
+      {
+        "type": "WebColumn",
+        "field": "Title",
+        "width": "20%"
+      },
+      {
+        "type": "WebColumn",
+        "field": "Employees",
+        "bodyTemplateRef": "NestedDataCellTemplate",
+        "width": "40%"
+      },
+      {
+        "type": "WebColumn",
+        "field": "Age",
+        "width": "10%"
+      },
+      {
+        "type": "WebColumn",
+        "field": "HireDate",
+        "dataType": "Date"
       }
-    },
-    "modules": [
-      "grids/WebGridModule"
-    ]
-  }
+      ]
+    }
+  },
+  "modules": [
+    "grids/WebGridModule"
+  ]
+}

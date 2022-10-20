@@ -3,53 +3,53 @@
     "content": {
       "type": "WebGrid",
       "dataRef": "NwindData",
-      "autoGenerate": false,  
-      "primaryKey": "ProductID",   
-      "gridKeydownRef": "WebGridEditingExcelStyle",   
+      "autoGenerate": false,
+      "primaryKey": "ProductID",
+      "gridKeydownRef": "WebGridEditingExcelStyle",
       "columns": [
-        {
-          "type": "WebColumn",
-          "field": "ProductID",
-          "header": "Product ID",
-          "editable": true,
-          "groupable": true,
-          "hidden": true
-        },
-        {
-          "type": "WebColumn",          
-          "field": "ProductName",
-          "header": "Product Name",
-          "dataType": "String",
-          "editable": true
-        },
-        {
-          "type": "WebColumn",          
-          "field": "UnitPrice",
-          "header": "Unit Price",
-          "dataType": "Number",
-          "editable": true
-        },
-        {
-          "type": "WebColumn",          
-          "field": "QuantityPerUnit",
-          "header": "Quantity Per Unit",
-          "groupable": true,
-          "dataType": "String",
-          "editable": true
-        },
-        {
-          "type": "WebColumn",
-          "field": "ReorderLevel",
-          "header": "Reorder Level",
-          "dataType": "Number",
-          "groupable": true,
-          "editable": true
-        }
+      {
+        "type": "WebColumn",
+        "field": "ProductID",
+        "header": "Product ID",
+        "editable": true,
+        "groupable": true,
+        "hidden": true
+      },
+      {
+        "type": "WebColumn",
+        "field": "ProductName",
+        "header": "Product Name",
+        "dataType": "String",
+        "editable": true
+      },
+      {
+        "type": "WebColumn",
+        "field": "UnitPrice",
+        "header": "Unit Price",
+        "dataType": "Number",
+        "editable": true
+      },
+      {
+        "type": "WebColumn",
+        "field": "QuantityPerUnit",
+        "header": "Quantity Per Unit",
+        "groupable": true,
+        "dataType": "String",
+        "editable": true
+      },
+      {
+        "type": "WebColumn",
+        "field": "ReorderLevel",
+        "header": "Reorder Level",
+        "dataType": "Number",
+        "groupable": true,
+        "editable": true
+      }
       ]
     }
   },
   "modules": [
-    "withDescriptions",    
-    "grids/WebGridModule"  
+    "withDescriptions",
+    "grids/WebGridModule"
   ]
 }

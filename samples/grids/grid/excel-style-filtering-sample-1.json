@@ -11,11 +11,11 @@
       "isHorizontal": true,
       "isWrappingEnabled": true,
       "properties": [
-        {
-          "type": "PropertyEditorPropertyDescription",
-          "propertyPath": "DisplayDensity",
-          "name": "DisplayDensityEditor"          
-        }
+      {
+        "type": "PropertyEditorPropertyDescription",
+        "propertyPath": "DisplayDensity",
+        "name": "DisplayDensityEditor"
+      }
       ]
     },
     "content": {
@@ -26,10 +26,10 @@
       "autoGenerate": false,
       "allowFiltering": true,
       "filterMode": "ExcelStyleFilter",
-	    "toolbar": [
-        {
-          "type": "WebGridToolbar"          
-        }
+      "toolbar": [
+      {
+        "type": "WebGridToolbar"
+      }
       ],
       "columns": [{
         "type": "WebColumn",
@@ -37,13 +37,15 @@
         "field": "ProductName",
         "header": "Product Name",
         "sortable": true
-      },{
+      },
+      {
         "type": "WebColumn",
         "name": "QuantityPerUnit",
         "field": "QuantityPerUnit",
         "header": "Quantity Per Unit",
         "sortable": true
-      },{
+      },
+      {
         "type": "WebColumn",
         "name": "UnitPrice",
         "field": "UnitPrice",
@@ -51,26 +53,28 @@
         "dataType": "Currency",
         "sortable": true,
         "bodyTemplateRef": "UnitPriceCellTemplate"
-      },{
+      },
+      {
         "type": "WebColumn",
         "name": "OrderDate",
         "field": "OrderDate",
         "header": "Order Date",
         "dataType": "Date",
         "sortable": true
-      },{
+      },
+      {
         "type": "WebColumn",
         "name": "Discontinued",
         "field": "Discontinued",
         "header": "Discontinued",
         "sortable": true,
         "bodyTemplateRef": "BooleanCellTemplate"
-      }]
-    }
-  },
-  "modules": [
-    "withDescriptions",
-    "layouts/PropertyEditorPanelModule",
-    "grids/WebGridModule"  
-  ]
-}
+        }]
+      }
+    },
+    "modules": [
+      "withDescriptions",
+      "layouts/PropertyEditorPanelModule",
+      "grids/WebGridModule"
+    ]
+  }

@@ -1,31 +1,31 @@
 {
-    "descriptions": {
-      "content": {
-       "type": "WebGrid",
-       "dataRef": "CustomersData",
-       "primaryKey": "ID",
-       "autoGenerate": false,
-        "name": "grid",
-        "columns": [
-           {
-           "type": "WebColumn",
-           "field": "ContactName",
-           "header": "Contact",
-           "editable": true,
-           "bodyTemplateRef": "CompositeContactCellTemplate",
-           "inlineEditorTemplateRef": "CompositeContactEditCellTemplate"
-          },
-          {
-           "type": "WebColumn",
-           "field": "Address",
-           "editable": true,
-           "bodyTemplateRef": "CompositeAddressCellTemplate",
-           "inlineEditorTemplateRef": "CompositeAddressEditCellTemplate"
-          }
-          ]
+  "descriptions": {
+    "content": {
+      "type": "WebGrid",
+      "dataRef": "CustomersData",
+      "primaryKey": "ID",
+      "autoGenerate": false,
+      "name": "grid",
+      "columns": [
+      {
+        "type": "WebColumn",
+        "field": "ContactName",
+        "header": "Contact",
+        "editable": true,
+        "bodyTemplateRef": "CompositeContactCellTemplate",
+        "inlineEditorTemplateRef": "CompositeContactEditCellTemplate"
+      },
+      {
+        "type": "WebColumn",
+        "field": "Address",
+        "editable": true,
+        "bodyTemplateRef": "CompositeAddressCellTemplate",
+        "inlineEditorTemplateRef": "CompositeAddressEditCellTemplate"
       }
-    },
-    "modules": [
-      "grids/WebGridModule"
-    ]
-  }
+      ]
+    }
+  },
+  "modules": [
+    "grids/WebGridModule"
+  ]
+}

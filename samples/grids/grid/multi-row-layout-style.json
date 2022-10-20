@@ -4,11 +4,11 @@
   "descriptions": {
     "content": {
       "type": "WebGrid",
-      "dataRef":"CustomersData",
+      "dataRef": "CustomersData",
       "sortingExpressions": ["sort"],
       "displayDensity": "Cosy",
-      "columns":[
-        {
+      "columns": [
+      {
         "type": "WebColumn",
         "name": "ID",
         "field": "ID",

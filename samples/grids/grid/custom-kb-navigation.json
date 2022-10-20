@@ -3,13 +3,13 @@
     "content": {
       "name": "grid",
       "type": "WebGrid",
-      "dataRef":"NwindData",
+      "dataRef": "NwindData",
       "moving":true,
-      "primaryKey":"ProductID",
-      "autoGenerate": false,  
-      "displayDensity":"Cosy",
-      "rowEditable": true,  
-      "columns":[
+      "primaryKey": "ProductID",
+      "autoGenerate": false,
+      "displayDensity": "Cosy",
+      "rowEditable": true,
+      "columns": [
       {
         "type": "WebColumn",
         "name": "ProductID",

@@ -3,15 +3,15 @@
     "content": {
       "name": "grid",
       "type": "WebGrid",
-      "dataRef":"NwindData",
+      "dataRef": "NwindData",
       "moving":true,
-      "primaryKey":"ProductID",
+      "primaryKey": "ProductID",
       "isLoading":true,
       "allowFiltering":false,
-      "pagingMode":"Remote",
+      "pagingMode": "Remote",
       "rowEditable":true,
-      "autoGenerate": false,      
-      "columns":[
+      "autoGenerate": false,
+      "columns": [
       {
         "type": "WebColumn",
         "name": "ProductName",

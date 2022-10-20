@@ -3,10 +3,10 @@
     "content": {
       "name": "grid",
       "type": "WebGrid",
-      "dataRef":"NwindData",
+      "dataRef": "NwindData",
       "allowFiltering":true,
-      "autoGenerate": false,      
-      "columns":[
+      "autoGenerate": false,
+      "columns": [
       {
         "type": "WebColumn",
         "name": "ProductName",

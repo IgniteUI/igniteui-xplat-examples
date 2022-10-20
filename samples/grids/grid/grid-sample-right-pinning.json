@@ -1,94 +1,94 @@
 {
   "todo": [ "fix template in CodeGenLib" ],
   "export": false,
-    "descriptions": {
-        "content": {
-            "type": "WebGrid",
-            "dataRef": "AthletesDataExtended",
-            "autoGenerate": false,
-            "name": "grid",
-            "id": "grid",
-            "pinning": {
-                "type": "WebPinningConfig",
-                "columns": "End"
-            },
-            "columns": [
-                {
-                    "type": "WebColumn",
-                    "field": "CountryFlag",
-                    "header": "Team",
-                    "bodyTemplateRef": "ImageCellTemplate"
-                },
-                {
-                    "type": "WebColumn",
-                    "field": "Avatar",
-                    "bodyTemplateRef": "AvatarCellTemplate"
-                },
-                {
-                    "type": "WebColumn",
-                    "field": "Name"
-                },
-                {
-                    "type": "WebColumn",
-                    "field": "AthleteNumber",
-                    "dataType": "Number"
-                },
-                {
-                    "type": "WebColumn",
-                    "field": "BeatsPerMinute"
-                },
-                {
-                    "type": "WebColumn",
-                    "field": "TopSpeed"
-                },
-                {
-                    "type": "WebColumn",
-                    "field": "RegistrationDate",
-                    "dataType": "Date"
-                },
-                {
-                    "type": "WebColumn",
-                    "field": "Birthday",
-                    "dataType": "Date"
-                },
-                {
-                    "type": "WebColumn",
-                    "field": "Sponsor"
-                },
-                {
-                    "type": "WebColumn",
-                    "field": "Agent"
-                },
-                {
-                    "type": "WebColumn",
-                    "field": "AgentContact"
-                },
-                {
-                    "type": "WebColumn",
-                    "field": "AgentPhone"
-                },
-                {
-                    "type": "WebColumn",
-                    "field": "FirstPlaces",
-                    "header": "Gold",
-                    "pinned": true
-                },
-                {
-                    "type": "WebColumn",
-                    "field": "SecondPlaces",
-                    "header": "Silver",
-                    "pinned": true
-                },
-                {
-                    "type": "WebColumn",
-                    "field": "ThirdPlaces",
-                    "header": "Bronze",
-                    "pinned": true
-                }
-            ]
-        }
-    },
-    "modules": [
-        "grids/WebGridModule"
-    ]
+  "descriptions": {
+    "content": {
+      "type": "WebGrid",
+      "dataRef": "AthletesDataExtended",
+      "autoGenerate": false,
+      "name": "grid",
+      "id": "grid",
+      "pinning": {
+        "type": "WebPinningConfig",
+        "columns": "End"
+      },
+      "columns": [
+      {
+        "type": "WebColumn",
+        "field": "CountryFlag",
+        "header": "Team",
+        "bodyTemplateRef": "ImageCellTemplate"
+      },
+      {
+        "type": "WebColumn",
+        "field": "Avatar",
+        "bodyTemplateRef": "AvatarCellTemplate"
+      },
+      {
+        "type": "WebColumn",
+        "field": "Name"
+      },
+      {
+        "type": "WebColumn",
+        "field": "AthleteNumber",
+        "dataType": "Number"
+      },
+      {
+        "type": "WebColumn",
+        "field": "BeatsPerMinute"
+      },
+      {
+        "type": "WebColumn",
+        "field": "TopSpeed"
+      },
+      {
+        "type": "WebColumn",
+        "field": "RegistrationDate",
+        "dataType": "Date"
+      },
+      {
+        "type": "WebColumn",
+        "field": "Birthday",
+        "dataType": "Date"
+      },
+      {
+        "type": "WebColumn",
+        "field": "Sponsor"
+      },
+      {
+        "type": "WebColumn",
+        "field": "Agent"
+      },
+      {
+        "type": "WebColumn",
+        "field": "AgentContact"
+      },
+      {
+        "type": "WebColumn",
+        "field": "AgentPhone"
+      },
+      {
+        "type": "WebColumn",
+        "field": "FirstPlaces",
+        "header": "Gold",
+        "pinned": true
+      },
+      {
+        "type": "WebColumn",
+        "field": "SecondPlaces",
+        "header": "Silver",
+        "pinned": true
+      },
+      {
+        "type": "WebColumn",
+        "field": "ThirdPlaces",
+        "header": "Bronze",
+        "pinned": true
+      }
+      ]
+    }
+  },
+  "modules": [
+    "grids/WebGridModule"
+  ]
 }

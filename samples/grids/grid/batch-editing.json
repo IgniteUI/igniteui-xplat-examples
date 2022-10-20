@@ -10,44 +10,44 @@
       "isHorizontal": true,
       "isWrappingEnabled": false,
       "properties": [
-          {
-            "type": "PropertyEditorPropertyDescription",
-            "label": "",
-            "valueType": "Button",
-            "primitiveValue": "Add Row",
-            "buttonClickedRef": "WebGridAddRow"
-          },
-          {
-            "type": "PropertyEditorPropertyDescription",
-            "label": "",
-            "valueType": "Button",
-            "primitiveValue": "Undo",
-            "buttonClickedRef": "WebGridUndo"
-          },
-          {
-            "type": "PropertyEditorPropertyDescription",
-            "label": "",
-            "valueType": "Button",
-            "primitiveValue": "Redo",
-            "buttonClickedRef": "WebGridRedo"
-          },
-          {
-            "type": "PropertyEditorPropertyDescription",
-            "label": "",
-            "valueType": "Button",
-            "primitiveValue": "Commit",
-            "buttonClickedRef": "WebGridCommit"
-          }
-       ]
+      {
+        "type": "PropertyEditorPropertyDescription",
+        "label": "",
+        "valueType": "Button",
+        "primitiveValue": "Add Row",
+        "buttonClickedRef": "WebGridAddRow"
+      },
+      {
+        "type": "PropertyEditorPropertyDescription",
+        "label": "",
+        "valueType": "Button",
+        "primitiveValue": "Undo",
+        "buttonClickedRef": "WebGridUndo"
+      },
+      {
+        "type": "PropertyEditorPropertyDescription",
+        "label": "",
+        "valueType": "Button",
+        "primitiveValue": "Redo",
+        "buttonClickedRef": "WebGridRedo"
+      },
+      {
+        "type": "PropertyEditorPropertyDescription",
+        "label": "",
+        "valueType": "Button",
+        "primitiveValue": "Commit",
+        "buttonClickedRef": "WebGridCommit"
+      }
+      ]
     },
     "content": {
       "name": "grid",
       "type": "WebGrid",
-      "dataRef":"NwindData",
+      "dataRef": "NwindData",
       "batchEditing":true,
       "rowEditable":true,
-      "primaryKey": "ProductID",      
-      "columns":[
+      "primaryKey": "ProductID",
+      "columns": [
       {
         "type": "WebColumn",
         "bodyTemplateRef": "WebGridDeleteCellTemplate"

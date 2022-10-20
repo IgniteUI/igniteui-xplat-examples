@@ -3,12 +3,12 @@
     "content": {
       "name": "grid",
       "type": "WebGrid",
-      "dataRef":"NwindData",
+      "dataRef": "NwindData",
       "batchEditing":true,
       "rowEditable":true,
       "allowFiltering":true,
-      "primaryKey": "ProductID",      
-      "columns":[
+      "primaryKey": "ProductID",
+      "columns": [
       {
         "type": "WebColumn",
         "name": "ProductID",
