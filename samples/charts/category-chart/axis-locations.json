@@ -16,28 +16,28 @@
       "isHorizontal": true,
       "isWrappingEnabled": false,
       "properties": [
-          {
-            "type": "PropertyEditorPropertyDescription",
-            "propertyPath": "YAxisLabelLocation",
-            "name": "YAxisLabelLocation",
-            "label": "Y Axis - Label Location",
-            "primitiveValue": "OutsideRight"
-          }
-       ]
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "YAxisLabelLocation",
+          "name": "YAxisLabelLocation",
+          "label": "Y Axis - Label Location",
+          "primitiveValue": "OutsideRight"
+        }
+      ]
     },
     "content": {
       "type": "CategoryChart",
       "name": "chart",
       "computedPlotAreaMarginMode": "Series",
       "dataSourceRef": "CountryRenewableElectricity",
-      "includedProperties": ["Year","Europe","China","America"],
+      "includedProperties": ["Year", "Europe", "China", "America"],
       "legendRef": "Legend",
       "chartType": "Line",
       "yAxisTitle": "Labels Location",
       "isHorizontalZoomEnabled": false,
       "isVerticalZoomEnabled": false,
       "xAxisInterval": 1,
-	    "yAxisLabelLocation": "OutsideRight"
+      "yAxisLabelLocation": "OutsideRight"
     }
   },
   "modules": [

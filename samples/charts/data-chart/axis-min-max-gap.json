@@ -22,27 +22,27 @@
         }
       ],
       "series": [
-        { 
+        {
           "type": "CategoryHighlightLayer",
           "name": "CategoryHighlightLayer"},
-        {
-          "type": "ColumnSeries",
-          "name": "columnSeries1",
-          "xAxisRef": "xAxis",
-          "yAxisRef": "yAxis",
-          "dataSourceRef": "TemperatureAverageData",
-          "valueMemberPath": "Temperature"
-        }, 
-        {
-          "type": "DataToolTipLayer",
-          "name": "Tooltips"
-        }
-      ]
-    }
-  },
-  "modules": [
-    "charts/DataChartCategoryModule",
-    "charts/DataChartAnnotationModule",
-    "charts/DataChartInteractivityModule"
-  ]
-}
+          {
+            "type": "ColumnSeries",
+            "name": "columnSeries1",
+            "xAxisRef": "xAxis",
+            "yAxisRef": "yAxis",
+            "dataSourceRef": "TemperatureAverageData",
+            "valueMemberPath": "Temperature"
+          },
+          {
+            "type": "DataToolTipLayer",
+            "name": "Tooltips"
+          }
+        ]
+      }
+    },
+    "modules": [
+      "charts/DataChartCategoryModule",
+      "charts/DataChartAnnotationModule",
+      "charts/DataChartInteractivityModule"
+    ]
+  }

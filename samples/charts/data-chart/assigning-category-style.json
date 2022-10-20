@@ -57,7 +57,7 @@
           "dataSourceRef": "CountryRenewableElectricity",
           "valueMemberPath": "America",
           "showDefaultTooltip": true
-        }, 
+        },
         {
           "type": "DataToolTipLayer",
           "name": "Tooltips"

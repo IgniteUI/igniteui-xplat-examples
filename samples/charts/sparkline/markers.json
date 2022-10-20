@@ -9,71 +9,71 @@
       "isHorizontal": true,
       "isWrappingEnabled": true,
       "properties": [
-          {
-            "type": "PropertyEditorPropertyDescription",
-            "propertyPath": "FirstMarkerVisibility",
-            "name": "FirstMarkerVisibilityEditor",
-            "label": "First Markers",
-            "shouldOverrideDefaultEditor": true,
-            "valueType": "EnumValue",
-            "dropDownNames": ["Visible", "Collapsed"],
-            "dropDownValues": ["Visible", "Collapsed"],
-            "primitiveValue": "Visible"
-          },
-          {
-            "type": "PropertyEditorPropertyDescription",
-            "propertyPath": "HighMarkerVisibility",
-            "name": "HighMarkerVisibilityEditor",
-            "label": "High Markers",
-            "valueType": "EnumValue",
-            "dropDownNames": ["Visible", "Collapsed"],
-            "dropDownValues": ["Visible", "Collapsed"],
-            "primitiveValue": "Visible"
-          },
-          {
-            "type": "PropertyEditorPropertyDescription",
-            "propertyPath": "LowMarkerVisibility",
-            "name": "LowMarkerVisibilityEditor",
-            "label": "Low Markers",
-            "valueType": "EnumValue",
-            "dropDownNames": ["Visible", "Collapsed"],
-            "dropDownValues": ["Visible", "Collapsed"],
-            "primitiveValue": "Visible"
-          },
-          {
-            "type": "PropertyEditorPropertyDescription",
-            "propertyPath": "NegativeMarkerVisibility",
-            "name": "NegativeMarkerVisibilityEditor",
-            "label": "Negative Markers",
-            "valueType": "EnumValue",
-            "dropDownNames": ["Visible", "Collapsed"],
-            "dropDownValues": ["Visible", "Collapsed"],
-            "primitiveValue": "Visible"
-          },
-          {
-            "type": "PropertyEditorPropertyDescription",
-            "propertyPath": "LastMarkerVisibility",
-            "name": "LastMarkerVisibilityEditor",
-            "label": "Last Markers",
-            "valueType": "EnumValue",
-            "dropDownNames": ["Visible", "Collapsed"],
-            "dropDownValues": ["Visible", "Collapsed"],
-            "primitiveValue": "Visible"
-          },
-          {
-            "type": "PropertyEditorPropertyDescription",
-            "propertyPath": "MarkerVisibility",
-            "name": "MarkerVisibilityEditor",
-            "label": "All Markers",
-            "valueType": "EnumValue",
-            "dropDownNames": ["Visible", "Collapsed"],
-            "dropDownValues": ["Visible", "Collapsed"],
-            "primitiveValue": "Visible"
-          }
-       ]
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "FirstMarkerVisibility",
+          "name": "FirstMarkerVisibilityEditor",
+          "label": "First Markers",
+          "shouldOverrideDefaultEditor": true,
+          "valueType": "EnumValue",
+          "dropDownNames": ["Visible", "Collapsed"],
+          "dropDownValues": ["Visible", "Collapsed"],
+          "primitiveValue": "Visible"
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "HighMarkerVisibility",
+          "name": "HighMarkerVisibilityEditor",
+          "label": "High Markers",
+          "valueType": "EnumValue",
+          "dropDownNames": ["Visible", "Collapsed"],
+          "dropDownValues": ["Visible", "Collapsed"],
+          "primitiveValue": "Visible"
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "LowMarkerVisibility",
+          "name": "LowMarkerVisibilityEditor",
+          "label": "Low Markers",
+          "valueType": "EnumValue",
+          "dropDownNames": ["Visible", "Collapsed"],
+          "dropDownValues": ["Visible", "Collapsed"],
+          "primitiveValue": "Visible"
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "NegativeMarkerVisibility",
+          "name": "NegativeMarkerVisibilityEditor",
+          "label": "Negative Markers",
+          "valueType": "EnumValue",
+          "dropDownNames": ["Visible", "Collapsed"],
+          "dropDownValues": ["Visible", "Collapsed"],
+          "primitiveValue": "Visible"
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "LastMarkerVisibility",
+          "name": "LastMarkerVisibilityEditor",
+          "label": "Last Markers",
+          "valueType": "EnumValue",
+          "dropDownNames": ["Visible", "Collapsed"],
+          "dropDownValues": ["Visible", "Collapsed"],
+          "primitiveValue": "Visible"
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "MarkerVisibility",
+          "name": "MarkerVisibilityEditor",
+          "label": "All Markers",
+          "valueType": "EnumValue",
+          "dropDownNames": ["Visible", "Collapsed"],
+          "dropDownValues": ["Visible", "Collapsed"],
+          "primitiveValue": "Visible"
+        }
+      ]
     },
     "content": {
-     "type": "Sparkline",
+      "type": "Sparkline",
       "name": "chart",
       "dataSourceRef": "SparklineProfitData",
       "displayType": "Line",

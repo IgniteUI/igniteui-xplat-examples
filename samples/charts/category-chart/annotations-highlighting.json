@@ -10,21 +10,21 @@
       "targetRef": "chart",
       "descriptionType": "CategoryChart",
       "isHorizontal": true,
-      "isWrappingEnabled": true,      
+      "isWrappingEnabled": true,
       "properties": [
         {
           "type": "PropertyEditorPropertyDescription",
           "propertyPath": "HighlightingMode",
           "name": "HighlightingModeEditor",
-          "label": "Highlighting Mode:",
-          "primitiveValue": "FadeOthersSpecific"          
-        },        
+          "label": "Highlighting Mode: ",
+          "primitiveValue": "FadeOthersSpecific"
+        },
         {
           "type": "PropertyEditorPropertyDescription",
           "propertyPath": "HighlightingBehavior",
           "name": "HighlightingBehaviorEditor",
-          "label": "Highlighting Behavior:",
-          "primitiveValue": "NearestItemsAndSeries"          
+          "label": "Highlighting Behavior: ",
+          "primitiveValue": "NearestItemsAndSeries"
         }
       ]
     },
@@ -42,7 +42,7 @@
       "highlightingBehavior": "NearestItemsAndSeries",
       "crosshairsAnnotationYAxisPrecision": 0,
       "yAxisMaximumValue": 35,
-      "yAxisLabelLocation": "OutsideRight"      
+      "yAxisLabelLocation": "OutsideRight"
     }
   },
   "modules": [

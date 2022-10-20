@@ -10,20 +10,20 @@
       "targetRef": "chart",
       "descriptionType": "CategoryChart",
       "isHorizontal": true,
-      "isWrappingEnabled": true,      
+      "isWrappingEnabled": true,
       "properties": [
         {
           "type": "PropertyEditorPropertyDescription",
           "propertyPath": "ToolTipType",
           "name": "ToolTipTypeEditor",
-          "label": "ToolTip Type:",
-          "primitiveValue": "Data"          
+          "label": "ToolTip Type: ",
+          "primitiveValue": "Data"
         }
       ]
     },
     "legend": {
       "type": "Legend",
-      "name": "Legend"      
+      "name": "Legend"
     },
     "content": {
       "type": "CategoryChart",

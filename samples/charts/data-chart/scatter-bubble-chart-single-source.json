@@ -21,7 +21,7 @@
           "isLogarithmic": false,
           "abbreviateLargeNumbers": true
         }
-      ], 
+      ],
       "series": [
         {
           "type": "BubbleSeries",

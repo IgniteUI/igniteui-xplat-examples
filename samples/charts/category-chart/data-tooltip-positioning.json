@@ -1,7 +1,7 @@
 {
   "strings": {
     "legendTitle": "Highest Grossing Movie Franchises"
-  },  
+  },
   "descriptions": {
     "editor": {
       "type": "PropertyEditorPanel",
@@ -17,21 +17,21 @@
           "propertyPath": "DataToolTipGroupedPositionModeX",
           "primitiveValue": "PinRight",
           "name": "GroupedPositionXEditor",
-          "label": "Grouped X Position:"          
+          "label": "Grouped X Position: "
         },
         {
           "type": "PropertyEditorPropertyDescription",
           "propertyPath": "DataToolTipGroupedPositionModeY",
           "primitiveValue": "PinTop",
           "name": "GroupedPositionYEditor",
-          "label": "Grouped Y Position:"
+          "label": "Grouped Y Position: "
         },
         {
           "type": "PropertyEditorPropertyDescription",
           "propertyPath": "DataToolTipGroupingMode",
           "primitiveValue": "Grouped",
           "name": "GroupingModeEditor",
-          "label": "Grouping Mode:"
+          "label": "Grouping Mode: "
         }
       ]
     },
