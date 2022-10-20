@@ -6,6 +6,10 @@
             "autoGenerate": false,
             "name": "grid",
             "id": "grid",
+            "allowFiltering": true,
+            "filterMode": "ExcelStyleFilter",
+            "displayDensity": "Compact",
+            "locale": "EN",
             "columns": [
                 {
                     "type": "WebColumn",
