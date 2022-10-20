@@ -9,46 +9,46 @@
       "name": "grid",
       "id": "grid",
       "paginationComponents": [
-      {
-        "type": "WebPaginator",
-        "perPage": 10
-      }
+        {
+          "type": "WebPaginator",
+          "perPage": 10
+        }
       ],
       "columns": [
-      {
-        "type": "WebColumn",
-        "field": "Id",
-        "header": "Rank",
-        "sortable": true
-      },
-      {
-        "type": "WebColumn",
-        "field": "Name"
-      },
-      {
-        "type": "WebColumn",
-        "field": "BeatsPerMinute",
-        "dataType": "Number"
-      },
-      {
-        "type": "WebColumn",
-        "field": "TopSpeed",
-        "dataType": "Number",
-        "pipeArgs": {
-          "type": "WebColumnPipeArgs",
-          "digitsInfo": "1.1-5"
+        {
+          "type": "WebColumn",
+          "field": "Id",
+          "header": "Rank",
+          "sortable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "Name"
+        },
+        {
+          "type": "WebColumn",
+          "field": "BeatsPerMinute",
+          "dataType": "Number"
+        },
+        {
+          "type": "WebColumn",
+          "field": "TopSpeed",
+          "dataType": "Number",
+          "pipeArgs": {
+            "type": "WebColumnPipeArgs",
+            "digitsInfo": "1.1-5"
+          }
+        },
+        {
+          "type": "WebColumn",
+          "field": "TrackProgress",
+          "bodyTemplateRef": "ProgressCellTemplate"
+        },
+        {
+          "type": "WebColumn",
+          "field": "CountryFlag",
+          "bodyTemplateRef": "ImageCellTemplate"
         }
-      },
-      {
-        "type": "WebColumn",
-        "field": "TrackProgress",
-        "bodyTemplateRef": "ProgressCellTemplate"
-      },
-      {
-        "type": "WebColumn",
-        "field": "CountryFlag",
-        "bodyTemplateRef": "ImageCellTemplate"
-      }
       ]
     }
   },

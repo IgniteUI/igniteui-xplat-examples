@@ -10,34 +10,34 @@
       "rowSelection": "Multiple",
       "rowSelectionChangingRef": "WebGridRowSelectionConditional",
       "columns": [
-      {
-        "type": "WebColumn",
-        "field": "ContactName",
-        "header": "Contact Name",
-        "width": "20%"
-      },
-      {
-        "type": "WebColumn",
-        "field": "Country",
-        "header": "Country",
-        "width": "20%"
-      },
-      {
-        "type": "WebColumn",
-        "field": "City",
-        "header": "City",
-        "width": "20%"
-      },
-      {
-        "type": "WebColumn",
-        "field": "PostalCode",
-        "width": "20%"
-      },
-      {
-        "type": "WebColumn",
-        "field": "CompanyName",
-        "width": "20%"
-      }
+        {
+          "type": "WebColumn",
+          "field": "ContactName",
+          "header": "Contact Name",
+          "width": "20%"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Country",
+          "header": "Country",
+          "width": "20%"
+        },
+        {
+          "type": "WebColumn",
+          "field": "City",
+          "header": "City",
+          "width": "20%"
+        },
+        {
+          "type": "WebColumn",
+          "field": "PostalCode",
+          "width": "20%"
+        },
+        {
+          "type": "WebColumn",
+          "field": "CompanyName",
+          "width": "20%"
+        }
       ]
     }
   },

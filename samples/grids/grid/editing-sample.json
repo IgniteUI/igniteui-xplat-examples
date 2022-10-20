@@ -8,74 +8,74 @@
       "displayDensity": "Cosy",
       "allowFiltering": true,
       "paginationComponents": [
-      {
-        "type": "WebPaginator",
-        "perPage": 10
-      }
+        {
+          "type": "WebPaginator",
+          "perPage": 10
+        }
       ],
       "columns": [
-      {
-        "type": "WebColumn",
-        "field": "ProductName",
-        "header": "Product Name",
-        "dataType": "String",
-        "sortable": true,
-        "hasSummary": true,
-        "editable": true,
-        "resizable": true
-      },
-      {
-        "type": "WebColumn",
-        "field": "UnitsInStock",
-        "header": "Units in Stock",
-        "dataType": "Number",
-        "sortable": true,
-        "hasSummary": true,
-        "editable": true,
-        "resizable": true
-      },
-      {
-        "type": "WebColumn",
-        "field": "OrderDate",
-        "header": "Order Date",
-        "dataType": "Date",
-        "sortable": true,
-        "hasSummary": true,
-        "editable": true,
-        "resizable": true
-      },
-      {
-        "type": "WebColumn",
-        "field": "Discontinued",
-        "header": "Discontinued",
-        "dataType": "Boolean",
-        "sortable": true,
-        "hasSummary": true,
-        "editable": true
-      },
-      {
-        "type": "WebColumn",
-        "field": "ReorderLevel",
-        "header": "Reorder Level",
-        "dataType": "Number",
-        "sortable": true,
-        "hasSummary": true,
-        "editable": true,
-        "filterable": false
-      },
-      {
-        "type": "WebColumn",
-        "field": "Locations",
-        "header": "Available At",
-        "editable": true,
-        "filterable": true,
-        "width": "220px"
-      },
-      {
-        "type": "WebColumn",
-        "width": "100px",
-        "filterable": false
-      }
+        {
+          "type": "WebColumn",
+          "field": "ProductName",
+          "header": "Product Name",
+          "dataType": "String",
+          "sortable": true,
+          "hasSummary": true,
+          "editable": true,
+          "resizable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "UnitsInStock",
+          "header": "Units in Stock",
+          "dataType": "Number",
+          "sortable": true,
+          "hasSummary": true,
+          "editable": true,
+          "resizable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "OrderDate",
+          "header": "Order Date",
+          "dataType": "Date",
+          "sortable": true,
+          "hasSummary": true,
+          "editable": true,
+          "resizable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "Discontinued",
+          "header": "Discontinued",
+          "dataType": "Boolean",
+          "sortable": true,
+          "hasSummary": true,
+          "editable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "ReorderLevel",
+          "header": "Reorder Level",
+          "dataType": "Number",
+          "sortable": true,
+          "hasSummary": true,
+          "editable": true,
+          "filterable": false
+        },
+        {
+          "type": "WebColumn",
+          "field": "Locations",
+          "header": "Available At",
+          "editable": true,
+          "filterable": true,
+          "width": "220px"
+        },
+        {
+          "type": "WebColumn",
+          "width": "100px",
+          "filterable": false
+        }
       ]
     }
   },

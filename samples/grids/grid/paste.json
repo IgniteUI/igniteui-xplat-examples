@@ -8,20 +8,20 @@
       "isHorizontal": true,
       "isWrappingEnabled": false,
       "properties": [
-      {
-        "type": "PropertyEditorPropertyDescription",
-        "label": "",
-        "valueType": "Button",
-        "primitiveValue": "Paste Options",
-        "buttonClickedRef": "WebGridPasteOptions"
-      },
-      {
-        "type": "PropertyEditorPropertyDescription",
-        "label": "",
-        "valueType": "Button",
-        "primitiveValue": "Download Sample - Excel File",
-        "buttonClickedRef": "WebGridExcelDownload"
-      }
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "label": "",
+          "valueType": "Button",
+          "primitiveValue": "Paste Options",
+          "buttonClickedRef": "WebGridPasteOptions"
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "label": "",
+          "valueType": "Button",
+          "primitiveValue": "Download Sample - Excel File",
+          "buttonClickedRef": "WebGridExcelDownload"
+        }
       ]
     },
     "content": {
@@ -31,30 +31,30 @@
       "batchEditing": true,
       "primaryKey": "ID",
       "columns": [
-      {
-        "type": "WebColumn",
-        "name": "ContactName",
-        "field": "ContactName",
-        "header": "Contact Name"
-      },
-      {
-        "type": "WebColumn",
-        "name": "ContactTitle",
-        "field": "ContactTitle",
-        "header": "Contact Title"
-      },
-      {
-        "type": "WebColumn",
-        "name": "Phone",
-        "field": "Phone",
-        "header": "Phone"
-      },
-      {
-        "type": "WebColumn",
-        "name": "Country",
-        "field": "Country",
-        "header": "Country"
-      }
+        {
+          "type": "WebColumn",
+          "name": "ContactName",
+          "field": "ContactName",
+          "header": "Contact Name"
+        },
+        {
+          "type": "WebColumn",
+          "name": "ContactTitle",
+          "field": "ContactTitle",
+          "header": "Contact Title"
+        },
+        {
+          "type": "WebColumn",
+          "name": "Phone",
+          "field": "Phone",
+          "header": "Phone"
+        },
+        {
+          "type": "WebColumn",
+          "name": "Country",
+          "field": "Country",
+          "header": "Country"
+        }
       ]
     }
   },

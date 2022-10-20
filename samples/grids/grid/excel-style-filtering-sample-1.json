@@ -11,11 +11,11 @@
       "isHorizontal": true,
       "isWrappingEnabled": true,
       "properties": [
-      {
-        "type": "PropertyEditorPropertyDescription",
-        "propertyPath": "DisplayDensity",
-        "name": "DisplayDensityEditor"
-      }
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "DisplayDensity",
+          "name": "DisplayDensityEditor"
+        }
       ]
     },
     "content": {
@@ -27,9 +27,9 @@
       "allowFiltering": true,
       "filterMode": "ExcelStyleFilter",
       "toolbar": [
-      {
-        "type": "WebGridToolbar"
-      }
+        {
+          "type": "WebGridToolbar"
+        }
       ],
       "columns": [{
         "type": "WebColumn",

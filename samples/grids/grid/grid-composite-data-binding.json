@@ -7,21 +7,21 @@
       "autoGenerate": false,
       "name": "grid",
       "columns": [
-      {
-        "type": "WebColumn",
-        "field": "ContactName",
-        "header": "Contact",
-        "editable": true,
-        "bodyTemplateRef": "CompositeContactCellTemplate",
-        "inlineEditorTemplateRef": "CompositeContactEditCellTemplate"
-      },
-      {
-        "type": "WebColumn",
-        "field": "Address",
-        "editable": true,
-        "bodyTemplateRef": "CompositeAddressCellTemplate",
-        "inlineEditorTemplateRef": "CompositeAddressEditCellTemplate"
-      }
+        {
+          "type": "WebColumn",
+          "field": "ContactName",
+          "header": "Contact",
+          "editable": true,
+          "bodyTemplateRef": "CompositeContactCellTemplate",
+          "inlineEditorTemplateRef": "CompositeContactEditCellTemplate"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Address",
+          "editable": true,
+          "bodyTemplateRef": "CompositeAddressCellTemplate",
+          "inlineEditorTemplateRef": "CompositeAddressEditCellTemplate"
+        }
       ]
     }
   },

@@ -11,9 +11,9 @@
       "allowFiltering": true,
       "filterMode": "ExcelStyleFilter",
       "toolbar": [
-      {
-        "type": "WebGridToolbar"
-      }
+        {
+          "type": "WebGridToolbar"
+        }
       ],
       "columns": [{
         "type": "WebColumn",

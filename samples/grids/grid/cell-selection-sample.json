@@ -9,11 +9,11 @@
       "isHorizontal": true,
       "isWrappingEnabled": true,
       "properties": [
-      {
-        "type": "PropertyEditorPropertyDescription",
-        "propertyPath": "CellSelection",
-        "name": "CellSelectionEditor"
-      }
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "CellSelection",
+          "name": "CellSelectionEditor"
+        }
       ]
     },
     "content": {
@@ -22,34 +22,34 @@
       "dataRef": "NwindData",
       "autoGenerate": false,
       "columns": [
-      {
-        "type": "WebColumn",
-        "field": "ProductID"
-      },
-      {
-        "type": "WebColumn",
-        "field": "ProductName"
-      },
-      {
-        "type": "WebColumn",
-        "field": "UnitsInStock",
-        "dataType": "Number"
-      },
-      {
-        "type": "WebColumn",
-        "field": "UnitPrice",
-        "dataType": "Number"
-      },
-      {
-        "type": "WebColumn",
-        "field": "Discontinued",
-        "dataType": "Boolean"
-      },
-      {
-        "type": "WebColumn",
-        "field": "OrderDate",
-        "dataType": "Date"
-      }
+        {
+          "type": "WebColumn",
+          "field": "ProductID"
+        },
+        {
+          "type": "WebColumn",
+          "field": "ProductName"
+        },
+        {
+          "type": "WebColumn",
+          "field": "UnitsInStock",
+          "dataType": "Number"
+        },
+        {
+          "type": "WebColumn",
+          "field": "UnitPrice",
+          "dataType": "Number"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Discontinued",
+          "dataType": "Boolean"
+        },
+        {
+          "type": "WebColumn",
+          "field": "OrderDate",
+          "dataType": "Date"
+        }
       ]
     }
   },

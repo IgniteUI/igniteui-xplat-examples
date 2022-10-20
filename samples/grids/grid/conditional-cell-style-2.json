@@ -8,26 +8,26 @@
       "autoGenerate": false,
       "primaryKey": "Id",
       "columns": [
-      {
-        "type": "WebColumn",
-        "field": "Id"
-      },
-      {
-        "type": "WebColumn",
-        "field": "Position"
-      },
-      {
-        "type": "WebColumn",
-        "field": "Name"
-      },
-      {
-        "type": "WebColumn",
-        "field": "AthleteNumber"
-      },
-      {
-        "type": "WebColumn",
-        "field": "CountryName"
-      }
+        {
+          "type": "WebColumn",
+          "field": "Id"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Position"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Name"
+        },
+        {
+          "type": "WebColumn",
+          "field": "AthleteNumber"
+        },
+        {
+          "type": "WebColumn",
+          "field": "CountryName"
+        }
       ]
     }
   },

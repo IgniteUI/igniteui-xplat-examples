@@ -12,9 +12,9 @@
       "filterMode": "ExcelStyleFilter",
       "excelStyleHeaderIconTemplateRef": "FilterAltIconTemplate",
       "toolbar": [
-      {
-        "type": "WebGridToolbar"
-      }
+        {
+          "type": "WebGridToolbar"
+        }
       ],
       "columns": [{
         "type": "WebColumn",

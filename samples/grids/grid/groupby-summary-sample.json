@@ -11,22 +11,22 @@
       "isHorizontal": true,
       "isWrappingEnabled": true,
       "properties": [
-      {
-        "type": "PropertyEditorPropertyDescription",
-        "propertyPath": "SummaryCalculationMode",
-        "name": "SummaryCalcModeEditor"
-      },
-      {
-        "type": "PropertyEditorPropertyDescription",
-        "propertyPath": "SummaryPosition",
-        "name": "SummaryPositionEditor"
-      },
-      {
-        "type": "PropertyEditorPropertyDescription",
-        "propertyPath": "ShowSummaryOnCollapse",
-        "name": "ShowOnCollapseEditor",
-        "label": "Show Summary Row when Group Row is Collapsed"
-      }
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "SummaryCalculationMode",
+          "name": "SummaryCalcModeEditor"
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "SummaryPosition",
+          "name": "SummaryPositionEditor"
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "ShowSummaryOnCollapse",
+          "name": "ShowOnCollapseEditor",
+          "label": "Show Summary Row when Group Row is Collapsed"
+        }
       ]
     },
     "content": {
@@ -35,51 +35,51 @@
       "dataRef": "InvoicesData",
       "autoGenerate": false,
       "groupingExpressions": [
-      {
-        "type": "WebGroupingExpression",
-        "fieldName": "ShipCountry",
-        "ignoreCase": false,
-        "dir": "Asc"
-      }
+        {
+          "type": "WebGroupingExpression",
+          "fieldName": "ShipCountry",
+          "ignoreCase": false,
+          "dir": "Asc"
+        }
       ],
       "columns": [
-      {
-        "type": "WebColumn",
-        "field": "ShipCountry",
-        "header": "Ship Country",
-        "width": "200px",
-        "groupable": true
-      },
-      {
-        "type": "WebColumn",
-        "field": "ShipCity",
-        "header": "Ship City",
-        "width": "250px",
-        "groupable": true
-      },
-      {
-        "type": "WebColumn",
-        "field": "UnitPrice",
-        "header": "Unit Price",
-        "width": "150px",
-        "dataType": "Currency",
-        "groupable": true,
-        "hasSummary": true,
-        "pipeArgs": {
-          "type": "WebColumnPipeArgs",
-          "currencyCode": "USD",
-          "digitsInfo": "1.2-2"
+        {
+          "type": "WebColumn",
+          "field": "ShipCountry",
+          "header": "Ship Country",
+          "width": "200px",
+          "groupable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "ShipCity",
+          "header": "Ship City",
+          "width": "250px",
+          "groupable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "UnitPrice",
+          "header": "Unit Price",
+          "width": "150px",
+          "dataType": "Currency",
+          "groupable": true,
+          "hasSummary": true,
+          "pipeArgs": {
+            "type": "WebColumnPipeArgs",
+            "currencyCode": "USD",
+            "digitsInfo": "1.2-2"
+          }
+        },
+        {
+          "type": "WebColumn",
+          "field": "Quantity",
+          "header": "Quantity",
+          "width": "150px",
+          "dataType": "Number",
+          "groupable": true,
+          "hasSummary": true
         }
-      },
-      {
-        "type": "WebColumn",
-        "field": "Quantity",
-        "header": "Quantity",
-        "width": "150px",
-        "dataType": "Number",
-        "groupable": true,
-        "hasSummary": true
-      }
       ]
     }
   },
