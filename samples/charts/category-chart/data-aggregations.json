@@ -1,0 +1,56 @@
+{
+  "strings": {
+    "legendTitle": "Renewable Electricity Generated"
+  },
+  "descriptions": {
+    "editor": {
+      "type": "PropertyEditorPanel",
+      "componentRendererRef": "renderer",
+      "targetRef": "chart",
+      "descriptionType": "CategoryChart",
+      "isHorizontal": true,
+      "isWrappingEnabled": true,
+      "properties": [
+      {
+        "type": "PropertyEditorPropertyDescription",
+        "propertyPath": "InitialGroups",
+        "name": "InitialGroups",
+        "label": "Initial Groups",
+        "valueType": "StringValue"
+      },
+      {
+        "type": "PropertyEditorPropertyDescription",
+        "propertyPath": "InitialSummaries",
+        "name": "InitialSummaries",
+        "label": "Initial Summaries",
+        "valueType": "StringValue"
+      },
+      {
+        "type": "PropertyEditorPropertyDescription",
+        "propertyPath": "GroupSorts",
+        "name": "GroupSorts",
+        "label": "Sort Groups",
+        "valueType": "StringValue"
+      }
+      ]
+    },
+    "content": {
+      "type": "CategoryChart",
+      "name": "chart",
+      "dataSourceRef": "SalesData",
+      "chartType": "Line",
+      "isHorizontalZoomEnabled": false,
+      "isVerticalZoomEnabled": false,
+      "crosshairsDisplayMode": "None",
+      "initialGroups": "Country",
+      "initialSummaries": "Sum(Sales) as Sales",
+      "groupSorts": "Sales Desc"
+    }
+  },
+  "modules": [
+  "withDescriptions",
+  "layouts/PropertyEditorPanelModule",
+  "charts/LegendModule",
+  "charts/CategoryChartModule"
+  ]
+}
