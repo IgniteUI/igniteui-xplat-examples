@@ -9,7 +9,7 @@
       "dataRef": "NwindData",
       "autoGenerate": true,
       "allowFiltering": true,
-      "columnInitRef": "ColumnInitEvent"
+      "columnInitRef": "WebGridColumnInitEvent"
     }
   },
   "modules": [
