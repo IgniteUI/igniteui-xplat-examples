@@ -57,6 +57,6 @@
     "charts/DataChartInteractivityModule",
     "charts/DataChartStackedModule",
     "charts/StackedFragmentSeriesModule",
-	"charts/CalloutLayerModule"
+    "charts/CalloutLayerModule"
   ]
 }

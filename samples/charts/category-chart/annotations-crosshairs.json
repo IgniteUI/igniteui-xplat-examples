@@ -10,14 +10,14 @@
       "targetRef": "chart",
       "descriptionType": "CategoryChart",
       "isHorizontal": true,
-      "isWrappingEnabled": true,      
+      "isWrappingEnabled": true,
       "properties": [
         {
           "type": "PropertyEditorPropertyDescription",
           "propertyPath": "CrosshairsDisplayMode",
           "name": "CrosshairsDisplayModeEditor",
-          "label": "Crosshairs Display Mode:",
-          "primitiveValue": "Both"          
+          "label": "Crosshairs Display Mode: ",
+          "primitiveValue": "Both"
         },
         {
           "type": "PropertyEditorPropertyDescription",
@@ -43,11 +43,11 @@
       "crosshairsAnnotationXAxisBackground": "black",
       "crosshairsAnnotationYAxisBackground": "dodgerblue",
       "crosshairsLineHorizontalStroke": "dodgerblue",
-      "crosshairsLineVerticalStroke": "black",   
+      "crosshairsLineVerticalStroke": "black",
       "crosshairsLineThickness": 2,
-      "crosshairsSnapToData": true,   
+      "crosshairsSnapToData": true,
       "yAxisMaximumValue": 35,
-      "yAxisLabelLocation": "OutsideRight"      
+      "yAxisLabelLocation": "OutsideRight"
     }
   },
   "modules": [

@@ -17,7 +17,7 @@
           "type": "CategoryYAxis",
           "name": "yAxis1",
           "label": "Category",
-          "dataSourceRef": "RoadblocksToSuccess", 
+          "dataSourceRef": "RoadblocksToSuccess",
           "gap": 0.25,
           "labelExtent": 0
         },
@@ -25,7 +25,7 @@
           "type": "CategoryYAxis",
           "name": "yAxis2",
           "label": "Category",
-          "dataSourceRef": "RoadblocksToSuccess", 
+          "dataSourceRef": "RoadblocksToSuccess",
           "gap": 1.0,
           "labelHorizontalAlignment": "Right"
         },
@@ -69,7 +69,7 @@
           "showDefaultTooltip": true,
           "isTransitionInEnabled": true,
           "isHighlightingEnabled": true
-        }, 
+        },
         {
           "type": "CalloutLayer",
           "name": "CalloutLayer1",
@@ -84,7 +84,7 @@
           "calloutStrokeThickness": 2,
           "calloutPaddingTop": 0,
           "calloutPositionPadding": 0
-        }, 
+        },
         {
           "type": "CalloutLayer",
           "name": "CalloutLayer2",
@@ -99,7 +99,7 @@
           "calloutStrokeThickness": 2,
           "calloutPaddingTop": 0,
           "calloutPositionPadding": 0
-        }, 
+        },
         {
           "type": "DataToolTipLayer",
           "name": "Tooltips"

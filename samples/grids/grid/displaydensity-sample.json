@@ -1,4 +1,5 @@
 {
+  "todo": [ "fix String1 dataType" ],
   "descriptions": {
     "editor": {
       "type": "PropertyEditorPanel",
@@ -27,15 +28,15 @@
           "type": "WebColumn",
           "field": "CustomerName",
           "header": "Customer Name",
-          "dataType": "String1",
+          "dataType": "String",
           "sortable": true,
-          "hasSummary": true          
+          "hasSummary": true
         },
         {
           "type": "WebColumn",
           "field": "Country",
           "header": "Country",
-          "dataType": "String1",
+          "dataType": "String",
           "sortable": true,
           "hasSummary": true
         },
@@ -43,7 +44,7 @@
           "type": "WebColumn",
           "field": "City",
           "header": "City",
-          "dataType": "String1",
+          "dataType": "String",
           "sortable": true,
           "hasSummary": true
         },
@@ -51,7 +52,7 @@
           "type": "WebColumn",
           "field": "Address",
           "header": "Address",
-          "dataType": "String1",
+          "dataType": "String",
           "sortable": true,
           "hasSummary": true
         },
@@ -59,7 +60,7 @@
           "type": "WebColumn",
           "field": "PostalCode",
           "header": "Postal Code",
-          "dataType": "String1",
+          "dataType": "String",
           "sortable": true,
           "hasSummary": true
         },
@@ -67,7 +68,7 @@
           "type": "WebColumn",
           "field": "Salesperson",
           "header": "Sales Person",
-          "dataType": "String1",
+          "dataType": "String",
           "sortable": true,
           "hasSummary": true
         },
@@ -75,7 +76,7 @@
           "type": "WebColumn",
           "field": "ShipperName",
           "header": "Shipper Name",
-          "dataType": "String1",
+          "dataType": "String",
           "sortable": true,
           "hasSummary": true
         },
@@ -91,7 +92,7 @@
           "type": "WebColumn",
           "field": "ProductID",
           "header": "ID",
-          "dataType": "String1",
+          "dataType": "String",
           "sortable": true,
           "hasSummary": true
         },
@@ -99,7 +100,7 @@
           "type": "WebColumn",
           "field": "ProductName",
           "header": "Name",
-          "dataType": "String1",
+          "dataType": "String",
           "sortable": true,
           "hasSummary": true
         },
@@ -125,7 +126,7 @@
           "type": "WebColumn",
           "field": "Discontinued",
           "header": "Discontinued",
-          "dataType": "Boolean1",
+          "dataType": "Boolean",
           "sortable": true,
           "hasSummary": true
         },
@@ -133,7 +134,7 @@
           "type": "WebColumn",
           "field": "Discontinued",
           "header": "Discontinued",
-          "dataType": "Boolean1",
+          "dataType": "Boolean",
           "sortable": true,
           "hasSummary": true
         },
@@ -141,7 +142,7 @@
           "type": "WebColumn",
           "field": "ShipName",
           "header": "Name",
-          "dataType": "String1",
+          "dataType": "String",
           "sortable": true,
           "hasSummary": true
         },
@@ -149,7 +150,7 @@
           "type": "WebColumn",
           "field": "ShipCountry",
           "header": "Country",
-          "dataType": "String1",
+          "dataType": "String",
           "sortable": true,
           "hasSummary": true
         },
@@ -157,7 +158,7 @@
           "type": "WebColumn",
           "field": "ShipCity",
           "header": "City",
-          "dataType": "String1",
+          "dataType": "String",
           "sortable": true,
           "hasSummary": true
         },
@@ -165,7 +166,7 @@
           "type": "WebColumn",
           "field": "ShipPostalCode",
           "header": "Postal Code",
-          "dataType": "String1",
+          "dataType": "String",
           "sortable": true,
           "hasSummary": true
         }

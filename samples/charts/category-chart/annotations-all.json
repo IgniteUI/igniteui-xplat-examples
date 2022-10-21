@@ -10,27 +10,27 @@
       "targetRef": "chart",
       "descriptionType": "CategoryChart",
       "isHorizontal": true,
-      "isWrappingEnabled": true,      
+      "isWrappingEnabled": true,
       "properties": [
         {
           "type": "PropertyEditorPropertyDescription",
           "propertyPath": "CrosshairsDisplayMode",
           "name": "CrosshairsDisplayModeEditor",
-          "label": "Crosshairs:",
-          "primitiveValue": "Both"          
+          "label": "Crosshairs: ",
+          "primitiveValue": "Both"
         },
         {
           "type": "PropertyEditorPropertyDescription",
           "propertyPath": "HighlightingMode",
           "name": "HighlightingModeEditor",
-          "label": "Highlighting:",
-          "primitiveValue": "BrightenSpecific"          
-        }, 
+          "label": "Highlighting: ",
+          "primitiveValue": "BrightenSpecific"
+        },
         {
           "type": "PropertyEditorPropertyDescription",
           "propertyPath": "CalloutsVisible",
           "name": "CalloutsVisibleEditor",
-          "label": "Callouts:",
+          "label": "Callouts: ",
           "shouldOverrideDefaultEditor": true,
           "primitiveValue": true
         },
@@ -38,7 +38,7 @@
           "type": "PropertyEditorPropertyDescription",
           "propertyPath": "FinalValueAnnotationsVisible",
           "name": "FinalValueAnnotationsEditor",
-          "label": "Final Value:",
+          "label": "Final Value: ",
           "shouldOverrideDefaultEditor": true,
           "primitiveValue": true
         }
@@ -70,7 +70,7 @@
       "finalValueAnnotationsTextColor": "white",
       "finalValueAnnotationsPrecision": 0,
       "yAxisMaximumValue": 35,
-      "yAxisLabelLocation": "OutsideRight"      
+      "yAxisLabelLocation": "OutsideRight"
     }
   },
   "modules": [

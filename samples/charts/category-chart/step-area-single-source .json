@@ -5,7 +5,7 @@
   "descriptions": {
     "content": {
       "dataSourceRef": "CountryRenewableElectricity",
-      "includedProperties": ["Year","Europe"],
+      "includedProperties": ["Year", "Europe"],
       "type": "CategoryChart",
       "name": "chart",
       "chartType": "StepArea",

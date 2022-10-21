@@ -4,76 +4,76 @@
   "descriptions": {
     "content": {
       "type": "WebGrid",
-      "dataRef":"CustomersData",
+      "dataRef": "CustomersData",
       "sortingExpressions": ["sort"],
       "displayDensity": "Cosy",
-      "columns":[
+      "columns": [
         {
-        "type": "WebColumn",
-        "name": "ID",
-        "field": "ID",
-        "header": "ID"
-      },
-      {
-        "type": "WebColumn",
-        "name": "CompanyName",
-        "field": "CompanyName",
-        "header": "Company Name"
-      },
-      {
-        "type": "WebColumn",
-        "name": "ContactName",
-        "field": "ContactName",
-        "header": "Contact Name"
-      },
-      {
-        "type": "WebColumn",
-        "name": "ContactTitle",
-        "field": "ContactTitle",
-        "header": "Contact Title"
-      },
-      {
-        "type": "WebColumn",
-        "name": "Country",
-        "field": "Country",
-        "header": "Country"
-      },
-      {
-        "type": "WebColumn",
-        "name": "Region",
-        "field": "Region",
-        "header": "Region"
-      },
-      {
-        "type": "WebColumn",
-        "name": "PostalCode",
-        "field": "PostalCode",
-        "header": "Postal Code"
-      },
-      {
-        "type": "WebColumn",
-        "name": "Phone",
-        "field": "Phone",
-        "header": "Phone"
-      },
-      {
-        "type": "WebColumn",
-        "name": "City",
-        "field": "City",
-        "header": "City"
-      },
-      {
-        "type": "WebColumn",
-        "name": "Address",
-        "field": "Address",
-        "header": "Address"
-      },
-      {
-        "type": "WebColumn",
-        "name": "Fax",
-        "field": "Fax",
-        "header": "Fax"
-      }
+          "type": "WebColumn",
+          "name": "ID",
+          "field": "ID",
+          "header": "ID"
+        },
+        {
+          "type": "WebColumn",
+          "name": "CompanyName",
+          "field": "CompanyName",
+          "header": "Company Name"
+        },
+        {
+          "type": "WebColumn",
+          "name": "ContactName",
+          "field": "ContactName",
+          "header": "Contact Name"
+        },
+        {
+          "type": "WebColumn",
+          "name": "ContactTitle",
+          "field": "ContactTitle",
+          "header": "Contact Title"
+        },
+        {
+          "type": "WebColumn",
+          "name": "Country",
+          "field": "Country",
+          "header": "Country"
+        },
+        {
+          "type": "WebColumn",
+          "name": "Region",
+          "field": "Region",
+          "header": "Region"
+        },
+        {
+          "type": "WebColumn",
+          "name": "PostalCode",
+          "field": "PostalCode",
+          "header": "Postal Code"
+        },
+        {
+          "type": "WebColumn",
+          "name": "Phone",
+          "field": "Phone",
+          "header": "Phone"
+        },
+        {
+          "type": "WebColumn",
+          "name": "City",
+          "field": "City",
+          "header": "City"
+        },
+        {
+          "type": "WebColumn",
+          "name": "Address",
+          "field": "Address",
+          "header": "Address"
+        },
+        {
+          "type": "WebColumn",
+          "name": "Fax",
+          "field": "Fax",
+          "header": "Fax"
+        }
       ]
     }
   },

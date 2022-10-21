@@ -28,7 +28,7 @@
           "minimumValue": 0,
           "maximumValue": 140,
           "interval": 20,
-		  "title": "Millions of Births",
+          "title": "Millions of Births",
           "titleAngle": -90,
           "labelFormat": "{0} m"
         }

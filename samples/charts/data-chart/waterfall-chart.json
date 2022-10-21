@@ -46,8 +46,8 @@
           "xAxisRef": "xAxis",
           "yAxisRef": "yAxis",
           "dataSourceRef": "CompanyIncomeData",
-          "brush":"#7446B9",
-          "outline":"#7446B9",
+          "brush": "#7446B9",
+          "outline": "#7446B9",
           "valueMemberPath": "NetIncome",
           "showDefaultTooltip": true,
           "isTransitionInEnabled": true

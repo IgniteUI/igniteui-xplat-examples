@@ -2,7 +2,7 @@
   "descriptions": {
     "content": {
       "type": "WebGrid",
-      "dataRef": "NwindData",      
+      "dataRef": "NwindData",
       "autoGenerate": false,
       "columns": [
         {
@@ -13,25 +13,25 @@
         {
           "type": "WebColumn",
           "field": "ReorderLevel",
-          "header": "Reorder Level"                    
+          "header": "Reorder Level"
         },
         {
           "type": "WebColumn",
           "field": "ProductName",
           "header": "Product Name",
-          "dataType": "String1"
+          "dataType": "String"
         },
         {
           "type": "WebColumn",
           "field": "UnitsInStock",
           "header": "Units in Stock",
-          "dataType": "Number"                    
+          "dataType": "Number"
         }
       ]
     }
   },
   "modules": [
-    "withDescriptions",    
-    "grids/WebGridModule"  
+    "withDescriptions",
+    "grids/WebGridModule"
   ]
 }

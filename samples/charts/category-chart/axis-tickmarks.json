@@ -16,24 +16,24 @@
       "isHorizontal": true,
       "isWrappingEnabled": true,
       "properties": [
-          {
-            "type": "PropertyEditorPropertyDescription",
-            "propertyPath": "XAxisTickLength",
-            "name": "XAxisTickLength",
-            "label": "X Axis Tick Length",
-            "shouldOverrideDefaultEditor": true,
-            "valueType": "Slider",
-            "min": 0,
-            "max": 20,
-            "primitiveValue": 10
-          }
-       ]
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "XAxisTickLength",
+          "name": "XAxisTickLength",
+          "label": "X Axis Tick Length",
+          "shouldOverrideDefaultEditor": true,
+          "valueType": "Slider",
+          "min": 0,
+          "max": 20,
+          "primitiveValue": 10
+        }
+      ]
     },
     "content": {
       "type": "CategoryChart",
       "name": "chart",
       "dataSourceRef": "CountryRenewableElectricity",
-      "includedProperties": ["Year","Europe","China","America"],
+      "includedProperties": ["Year", "Europe", "China", "America"],
       "legendRef": "Legend",
       "chartType": "Line",
       "computedPlotAreaMarginMode": "Series",

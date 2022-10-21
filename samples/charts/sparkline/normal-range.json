@@ -9,43 +9,43 @@
       "isHorizontal": true,
       "isWrappingEnabled": true,
       "properties": [
-          {
-            "type": "PropertyEditorPropertyDescription",
-            "propertyPath": "NormalRangeVisibility",
-            "name": "NormalRangeVisibilityEditor",
-            "label": "Normal Range Visibility",
-            "shouldOverrideDefaultEditor": true,
-            "valueType": "EnumValue",
-            "dropDownNames": ["Visible", "Collapsed"],
-            "dropDownValues": ["Visible", "Collapsed"],
-            "primitiveValue": "Visible"
-          },
-          {
-            "type": "PropertyEditorPropertyDescription",
-            "propertyPath": "NormalRangeMinimum",
-            "name": "NormalRangeMinimumEditor",
-            "label": "Normal Range Minimum",
-            "shouldOverrideDefaultEditor": true,
-            "valueType": "EnumValue",
-            "dropDownNames":  ["0", "10", "15", "20", "25", "30"],
-            "dropDownValues": ["0", "10", "15", "20", "25", "30"],
-            "primitiveValue": 25
-          },
-          {
-            "type": "PropertyEditorPropertyDescription",
-            "propertyPath": "NormalRangeMaximum",
-            "name": "NormalRangeMaximumEditor",
-            "label": "Normal Range Maximum",
-            "shouldOverrideDefaultEditor": true,
-            "valueType": "EnumValue",
-            "dropDownNames":  ["0", "10", "15", "20", "25", "30"],
-            "dropDownValues": ["0", "10", "15", "20", "25", "30"],
-            "primitiveValue": 25
-          }
-       ]
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "NormalRangeVisibility",
+          "name": "NormalRangeVisibilityEditor",
+          "label": "Normal Range Visibility",
+          "shouldOverrideDefaultEditor": true,
+          "valueType": "EnumValue",
+          "dropDownNames": ["Visible", "Collapsed"],
+          "dropDownValues": ["Visible", "Collapsed"],
+          "primitiveValue": "Visible"
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "NormalRangeMinimum",
+          "name": "NormalRangeMinimumEditor",
+          "label": "Normal Range Minimum",
+          "shouldOverrideDefaultEditor": true,
+          "valueType": "EnumValue",
+          "dropDownNames": ["0", "10", "15", "20", "25", "30"],
+          "dropDownValues": ["0", "10", "15", "20", "25", "30"],
+          "primitiveValue": 25
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "NormalRangeMaximum",
+          "name": "NormalRangeMaximumEditor",
+          "label": "Normal Range Maximum",
+          "shouldOverrideDefaultEditor": true,
+          "valueType": "EnumValue",
+          "dropDownNames": ["0", "10", "15", "20", "25", "30"],
+          "dropDownValues": ["0", "10", "15", "20", "25", "30"],
+          "primitiveValue": 25
+        }
+      ]
     },
     "content": {
-     "type": "Sparkline",
+      "type": "Sparkline",
       "name": "chart",
       "dataSourceRef": "SparklineMixedData",
       "displayType": "Area",

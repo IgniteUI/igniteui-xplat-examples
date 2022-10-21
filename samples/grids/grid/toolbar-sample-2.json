@@ -2,11 +2,11 @@
   "descriptions": {
     "content": {
       "type": "WebGrid",
-      "dataRef": "AthletesData",      
-      "autoGenerate": false,      
+      "dataRef": "AthletesData",
+      "autoGenerate": false,
       "toolbar": [
         {
-          "type": "WebGridToolbar"          
+          "type": "WebGridToolbar"
         }
       ],
       "columns": [
@@ -46,7 +46,7 @@
     }
   },
   "modules": [
-    "withDescriptions",    
-    "grids/WebGridModule"  
+    "withDescriptions",
+    "grids/WebGridModule"
   ]
 }

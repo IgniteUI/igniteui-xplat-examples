@@ -1,56 +1,58 @@
 {
-    "descriptions": {
-        "content": {
-            "type": "WebGrid",
-            "dataRef": "AthletesData",
-            "autoGenerate": false,
-            "name": "grid",
-            "id": "grid",
-            "paginationComponents": [
-              {
-                "type": "WebPaginator",
-                "perPage": 10
-              }
-            ],
-            "columns": [
-              {
-                "type": "WebColumn",
-                "field": "Id",
-                "header": "Rank",
-                "sortable": true
-              },
-              {
-                "type": "WebColumn",
-                "field": "Name"
-              },
-              {
-                "type": "WebColumn",
-                "field": "BeatsPerMinute",
-                "dataType": "Number"
-              },
-              {
-                "type": "WebColumn",
-                "field": "TopSpeed",
-                "dataType": "Number",
-                "pipeArgs": {
-                  "type": "WebColumnPipeArgs",
-                  "digitsInfo": "1.1-5"
-                  }
-              },
-              {
-                "type": "WebColumn",
-                "field": "TrackProgress",
-                "bodyTemplateRef": "ProgressCellTemplate"
-              },
-              {
-                "type": "WebColumn",
-                "field": "CountryFlag",
-                "bodyTemplateRef": "ImageCellTemplate"
-              }
-            ]
+  "todo": [ "fix pipeArgs exporting" ],
+  "export": false,
+  "descriptions": {
+    "content": {
+      "type": "WebGrid",
+      "dataRef": "AthletesData",
+      "autoGenerate": false,
+      "name": "grid",
+      "id": "grid",
+      "paginationComponents": [
+        {
+          "type": "WebPaginator",
+          "perPage": 10
         }
-    },
-    "modules": [
-        "WebGridModule"
-    ]
+      ],
+      "columns": [
+        {
+          "type": "WebColumn",
+          "field": "Id",
+          "header": "Rank",
+          "sortable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "Name"
+        },
+        {
+          "type": "WebColumn",
+          "field": "BeatsPerMinute",
+          "dataType": "Number"
+        },
+        {
+          "type": "WebColumn",
+          "field": "TopSpeed",
+          "dataType": "Number",
+          "pipeArgs": {
+            "type": "WebColumnPipeArgs",
+            "digitsInfo": "1.1-5"
+          }
+        },
+        {
+          "type": "WebColumn",
+          "field": "TrackProgress",
+          "bodyTemplateRef": "ProgressCellTemplate"
+        },
+        {
+          "type": "WebColumn",
+          "field": "CountryFlag",
+          "bodyTemplateRef": "ImageCellTemplate"
+        }
+      ]
+    }
+  },
+  "modules": [
+    "grids/WebGridModule"
+  ]
 }

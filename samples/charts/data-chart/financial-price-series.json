@@ -38,7 +38,7 @@
           "closeMemberPath": "Close",
           "volumeMemberPath": "Volume",
           "showDefaultTooltip": true
-        }, 
+        },
         {
           "type": "DataToolTipLayer",
           "name": "Tooltip"

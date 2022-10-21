@@ -58,7 +58,7 @@
           "yAxisAnnotationInterpolatedValuePrecision": 0,
           "xAxisAnnotationBackgroundCornerRadius": 10,
           "yAxisAnnotationBackgroundCornerRadius": 10
-        }, 
+        },
         {
           "type": "DataToolTipLayer",
           "name": "Tooltips"

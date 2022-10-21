@@ -1,4 +1,4 @@
-{  
+{
   "descriptions": {
     "editor": {
       "type": "PropertyEditorPanel",
@@ -12,7 +12,7 @@
         {
           "type": "PropertyEditorPropertyDescription",
           "propertyPath": "CellSelection",
-          "name": "CellSelectionEditor"          
+          "name": "CellSelectionEditor"
         }
       ]
     },
@@ -20,33 +20,33 @@
       "type": "WebGrid",
       "name": "grid",
       "dataRef": "NwindData",
-      "autoGenerate": false,      
+      "autoGenerate": false,
       "columns": [
         {
-          "type": "WebColumn",          
+          "type": "WebColumn",
           "field": "ProductID"
         },
         {
-          "type": "WebColumn",          
+          "type": "WebColumn",
           "field": "ProductName"
         },
         {
-          "type": "WebColumn",          
+          "type": "WebColumn",
           "field": "UnitsInStock",
           "dataType": "Number"
         },
         {
-          "type": "WebColumn",          
+          "type": "WebColumn",
           "field": "UnitPrice",
           "dataType": "Number"
         },
         {
-          "type": "WebColumn",          
+          "type": "WebColumn",
           "field": "Discontinued",
-          "dataType": "Boolean1"
+          "dataType": "Boolean"
         },
         {
-          "type": "WebColumn",          
+          "type": "WebColumn",
           "field": "OrderDate",
           "dataType": "Date"
         }
@@ -56,6 +56,6 @@
   "modules": [
     "withDescriptions",
     "layouts/PropertyEditorPanelModule",
-    "grids/WebGridModule"  
+    "grids/WebGridModule"
   ]
 }

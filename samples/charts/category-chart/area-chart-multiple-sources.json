@@ -13,7 +13,7 @@
       "name": "chart",
       "chartType": "Area",
       "dataSourceRef": "CountryRenewableElectricity",
-      "includedProperties": ["Year","Europe","China","America"],
+      "includedProperties": ["Year", "Europe", "China", "America"],
       "legendRef": "Legend",
       "yAxisTitle": "TWh",
       "yAxisTitleLeftMargin": 10,

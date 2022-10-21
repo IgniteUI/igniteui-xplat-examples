@@ -10,11 +10,11 @@
       "isWrappingEnabled": true,
       "properties": [
         {
-            "type": "PropertyEditorPropertyDescription",
-            "propertyPath": "EnhancedIntervalPreferMoreCategoryLabels",
-            "name": "EnhancedIntervals",
-            "label": "Use Enhanced Interval Management",
-            "shouldOverrideDefaultEditor": true
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "EnhancedIntervalPreferMoreCategoryLabels",
+          "name": "EnhancedIntervals",
+          "label": "Use Enhanced Interval Management",
+          "shouldOverrideDefaultEditor": true
         }
       ]
     },
@@ -64,7 +64,7 @@
           "dataSourceRef": "CountryRenewableElectricity",
           "valueMemberPath": "America",
           "title": "America"
-        }, 
+        },
         {
           "type": "DataToolTipLayer",
           "name": "Tooltips"

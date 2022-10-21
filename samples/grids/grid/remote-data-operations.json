@@ -3,52 +3,52 @@
     "content": {
       "name": "grid",
       "type": "WebGrid",
-      "dataRef":"NwindData",
+      "dataRef": "NwindData",
       "autoGenerate":false,
-      "columns":[
-      {
-        "type": "WebColumn",
-        "name": "ProductID",
-        "field": "ProductID",
-        "header": "Product ID",
-        "sortable":true,
-        "filterable":false
-      },
-      {
-        "type": "WebColumn",
-        "name": "ProductName",
-        "field": "ProductName",
-        "header": "Product Name",
-        "sortable":true
-      },
-      {
-        "type": "WebColumn",
-        "name": "UnitPrice",
-        "field": "UnitPrice",
-        "header": "Unit Price",
-        "sortable":true
-      },
-      {
-        "type": "WebColumn",
-        "name": "UnitsInStock",
-        "field": "UnitsInStock",
-        "header": "Units In Stock",
-        "sortable":true
-      },
-      {
-        "type": "WebColumn",
-        "name": "QuantityPerUnit",
-        "field": "QuantityPerUnit",
-        "header": "Quantity Per Unit",
-        "sortable":true
-      },
-      {
-        "type": "WebColumn",
-        "name": "ReorderLevel",
-        "field": "ReorderLevel",
-        "header": "Reorder Level",
-        "sortable":true
-      }
+      "columns": [
+        {
+          "type": "WebColumn",
+          "name": "ProductID",
+          "field": "ProductID",
+          "header": "Product ID",
+          "sortable":true,
+          "filterable":false
+        },
+        {
+          "type": "WebColumn",
+          "name": "ProductName",
+          "field": "ProductName",
+          "header": "Product Name",
+          "sortable":true
+        },
+        {
+          "type": "WebColumn",
+          "name": "UnitPrice",
+          "field": "UnitPrice",
+          "header": "Unit Price",
+          "sortable":true
+        },
+        {
+          "type": "WebColumn",
+          "name": "UnitsInStock",
+          "field": "UnitsInStock",
+          "header": "Units In Stock",
+          "sortable":true
+        },
+        {
+          "type": "WebColumn",
+          "name": "QuantityPerUnit",
+          "field": "QuantityPerUnit",
+          "header": "Quantity Per Unit",
+          "sortable":true
+        },
+        {
+          "type": "WebColumn",
+          "name": "ReorderLevel",
+          "field": "ReorderLevel",
+          "header": "Reorder Level",
+          "sortable":true
+        }
       ]
     }
   },

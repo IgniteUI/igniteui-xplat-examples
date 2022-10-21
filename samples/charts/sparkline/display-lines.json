@@ -2,7 +2,7 @@
   "export": true,
   "descriptions": {
     "content": {
-     "type": "Sparkline",
+      "type": "Sparkline",
       "name": "chart",
       "dataSourceRef": "SparklineMixedData",
       "displayType": "Line",

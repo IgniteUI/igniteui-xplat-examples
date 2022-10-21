@@ -3,9 +3,9 @@
     "content": {
       "type": "WebGrid",
       "dataRef": "NwindData",
-      "autoGenerate": false,  
-      "primaryKey": "ProductID",   
-      "gridKeydownRef": "WebGridEditingExcelStyle",   
+      "autoGenerate": false,
+      "primaryKey": "ProductID",
+      "gridKeydownRef": "WebGridEditingExcelStyle",
       "columns": [
         {
           "type": "WebColumn",
@@ -16,25 +16,25 @@
           "hidden": true
         },
         {
-          "type": "WebColumn",          
+          "type": "WebColumn",
           "field": "ProductName",
           "header": "Product Name",
-          "dataType": "String1",
+          "dataType": "String",
           "editable": true
         },
         {
-          "type": "WebColumn",          
+          "type": "WebColumn",
           "field": "UnitPrice",
           "header": "Unit Price",
           "dataType": "Number",
           "editable": true
         },
         {
-          "type": "WebColumn",          
+          "type": "WebColumn",
           "field": "QuantityPerUnit",
           "header": "Quantity Per Unit",
           "groupable": true,
-          "dataType": "String1",
+          "dataType": "String",
           "editable": true
         },
         {
@@ -49,7 +49,7 @@
     }
   },
   "modules": [
-    "withDescriptions",    
-    "grids/WebGridModule"  
+    "withDescriptions",
+    "grids/WebGridModule"
   ]
 }

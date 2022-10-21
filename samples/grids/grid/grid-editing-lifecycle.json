@@ -1,9 +1,13 @@
 {
+  "todo": [
+    "fix missing WebGridCellEditExit and WebGridCellEditDone ",
+    "fix duplicated WebGridCellEditEnter" ],
+    "export": false,
     "descriptions": {
       "content": {
-       "type": "WebGrid",
-       "dataRef": "NwindData",
-       "autoGenerate": false,
+        "type": "WebGrid",
+        "dataRef": "NwindData",
+        "autoGenerate": false,
         "name": "grid",
         "id": "grid",
         "rowEditable": true,
@@ -23,24 +27,24 @@
             "field": "ProductName",
             "header": "Product Name"
           },
-           {
+          {
             "type": "WebColumn",
             "field": "UnitPrice",
             "header": "Unit Price"
           },
-           {
+          {
             "type": "WebColumn",
             "field": "UnitsInStock",
             "header": "Units In Stock"
           },
-           {
+          {
             "type": "WebColumn",
             "field": "Ordered"
           }
-          ]
+        ]
       }
     },
     "modules": [
-      "WebGridModule"
+      "grids/WebGridModule"
     ]
   }

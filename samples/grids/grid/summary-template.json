@@ -1,4 +1,6 @@
 {
+  "todo": [ "fix template in CodeGenLib" ],
+  "export": false,
   "descriptions": {
     "editor": {
       "type": "PropertyEditorPanel",
@@ -8,24 +10,24 @@
       "isHorizontal": true,
       "isWrappingEnabled": false,
       "properties": [
-      {
-        "type": "PropertyEditorPropertyDescription",
-        "propertyPath": "SummaryRowHeight",
-        "label": "Summary Row Height",
-        "valueType": "Number"
-      },
-      {
-        "type": "PropertyEditorPropertyDescription",
-        "propertyPath": "Columns[3 as WebGridColumn, 5 as WebGridColumn].HasSummary",
-        "label": "Toggle Summaries",
-        "valueType": "Boolean1",
-        "primitiveValue": true
-      },
-      {
-        "type": "PropertyEditorPropertyDescription",
-        "propertyPath": "DisplayDensity",
-        "name": "DisplayDensityEditor"
-      }
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "SummaryRowHeight",
+          "label": "Summary Row Height",
+          "valueType": "Number"
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "Columns[3 as WebGridColumn, 5 as WebGridColumn].HasSummary",
+          "label": "Toggle Summaries",
+          "valueType": "Boolean1",
+          "primitiveValue": true
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "DisplayDensity",
+          "name": "DisplayDensityEditor"
+        }
       ]
     },
     "content": {
@@ -34,64 +36,64 @@
       "dataRef": "NwindData",
       "autoGenerate": false,
       "columns": [
-      {
-        "type": "WebColumn",
-        "field": "ProductID",
-        "header": "Product ID",
-        "width": "10%",
-        "groupable": true
-      },
-      {
-        "type": "WebColumn",
-        "field": "ProductName",
-        "header": "Product Name",
-        "width": "17%",
-        "groupable": true
-      },
-      {
-        "type": "WebColumn",
-        "field": "UnitPrice",
-        "header": "Price",
-        "filterable": false,
-        "width": "17%",
-        "editable": true,
-        "dataType": "Number",
-        "groupable": true
-      },
-      {
-        "type": "WebColumn",
-        "field": "UnitsInStock",
-        "header": "Units in Stock",
-        "width": "21%",
-        "dataType": "Number",
-        "editable": true,
-        "groupable": true,
-        "hasSummary": true
-      },
-      {
-        "type": "WebColumn",
-        "field": "Discontinued",
-        "header": "Discontinued",
-        "editable": true,
-        "width": "17%",
-        "dataType": "Boolean1",
-        "groupable": true
-      },
-      {
-        "type": "WebColumn",
-        "field": "OrderDate",
-        "width": "18%",
-        "dataType": "Date",
-        "groupable": true,
-        "hasSummary": true,
-        "summaryTemplateRef": "WebGridOrderDateSummaryTemplate"
-      }
+        {
+          "type": "WebColumn",
+          "field": "ProductID",
+          "header": "Product ID",
+          "width": "10%",
+          "groupable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "ProductName",
+          "header": "Product Name",
+          "width": "17%",
+          "groupable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "UnitPrice",
+          "header": "Price",
+          "filterable": false,
+          "width": "17%",
+          "editable": true,
+          "dataType": "Number",
+          "groupable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "UnitsInStock",
+          "header": "Units in Stock",
+          "width": "21%",
+          "dataType": "Number",
+          "editable": true,
+          "groupable": true,
+          "hasSummary": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "Discontinued",
+          "header": "Discontinued",
+          "editable": true,
+          "width": "17%",
+          "dataType": "Boolean",
+          "groupable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "OrderDate",
+          "width": "18%",
+          "dataType": "Date",
+          "groupable": true,
+          "hasSummary": true,
+          "summaryTemplateRef": "WebGridOrderDateSummaryTemplate"
+        }
       ]
     }
   },
   "modules": [
-  "withDescriptions",
-  "layouts/PropertyEditorPanelModule",
-  "grids/WebGridModule"
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
+    "grids/WebGridModule"
   ]
 }
