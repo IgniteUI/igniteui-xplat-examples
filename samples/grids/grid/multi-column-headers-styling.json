@@ -1,0 +1,114 @@
+{
+  "descriptions": {
+    "todo": [
+      "TODO ability to inject CSS styles"
+    ],
+    "content": {
+      "type": "WebGrid",
+      "name": "grid",
+      "dataRef": "CustomersData",
+      "autoGenerate": false,
+      "moving": true,
+      "displayDensity": "Compact",
+      "columns": [
+        {
+          "type": "WebColumn",
+          "name": "ID",
+          "field": "ID",
+          "header": "ID",
+          "resizable": true,
+          "filterable": false
+        },
+        {
+          "type": "WebColumnGroup",
+          "name": "GeneralInformation",
+          "header": "General Information",
+          "children": [
+            {
+              "type": "WebColumn",
+              "name": "CompanyName",
+              "field": "ContactName"
+            },
+            {
+              "type": "WebColumnGroup",
+              "name": "PersonalDetails",
+              "header": "Personal Details",
+              "children": [
+                {
+                  "type": "WebColumn",
+                  "name": "ContactName",
+                  "field": "ContactName"
+                },
+                {
+                  "type": "WebColumn",
+                  "name": "ContactTitle",
+                  "field": "ContactTitle"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "WebColumnGroup",
+          "name": "AddressInformation",
+          "header": "Address Information",
+          "children": [
+            {
+              "type": "WebColumnGroup",
+              "name": "Location",
+              "header": "Location",
+              "children": [
+                {
+                  "type": "WebColumn",
+                  "name": "Country",
+                  "field": "Country"
+                },
+                {
+                  "type": "WebColumn",
+                  "name": "Region",
+                  "field": "Region"
+                },
+                {
+                  "type": "WebColumn",
+                  "name": "City",
+                  "field": "City"
+                },
+                {
+                  "type": "WebColumn",
+                  "name": "Address",
+                  "field": "Address"
+                },
+                {
+                  "type": "WebColumnGroup",
+                  "name": "Contact Information",
+                  "header": "Contact Information",
+                  "children": [
+                    {
+                      "type": "WebColumn",
+                      "name": "Phone",
+                      "field": "Phone"
+                    },
+                    {
+                      "type": "WebColumn",
+                      "name": "Fax",
+                      "field": "Fax"
+                    },
+                    {
+                      "type": "WebColumn",
+                      "name": "PostalCode",
+                      "field": "PostalCode"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "grids/WebGridModule"
+  ]
+}
