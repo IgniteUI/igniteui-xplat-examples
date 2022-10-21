@@ -1,4 +1,8 @@
 {
+  "todo": [ 
+     "defer until we have grid footer that supports template"
+  ],
+  "export": false,
   "descriptions": {
     "content": {
       "type": "WebGrid",

@@ -1,4 +1,8 @@
 {
+  "todo": [ 
+     "Defer until we have keyboard events"
+  ], 
+  "export": false,
   "descriptions": {
     "content": {
       "name": "grid",

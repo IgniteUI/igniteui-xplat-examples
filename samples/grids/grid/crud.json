@@ -1,4 +1,8 @@
 {
+  "todo": [ 
+     "add action strip",
+     "Port CRUDService to CodeGenLib" 
+  ],
   "descriptions": {
     "content": {
       "name": "grid",

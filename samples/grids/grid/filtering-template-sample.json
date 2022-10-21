@@ -1,4 +1,8 @@
 {
+  "todo": [ 
+     "add template column with event handlers",
+     "add input group when available"
+  ],
   "descriptions": {
     "content": {
       "name": "grid",

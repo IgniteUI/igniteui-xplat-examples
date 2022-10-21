@@ -1,4 +1,8 @@
 {
+  "todo": [ 
+     "add template column with event handlers",
+     "add advanced-filtering-dialog"
+  ],
   "descriptions": {
     "content": {
       "name": "grid",

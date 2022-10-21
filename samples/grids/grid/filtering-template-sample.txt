@@ -1,2 +1,0 @@
-TODO - add template column with event handlers
-TODO - add input group when available

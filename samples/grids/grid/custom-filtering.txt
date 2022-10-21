@@ -1,3 +1,0 @@
-TODO - add input
-TODO - add events to handle filtering
-TODO - add template column

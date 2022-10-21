@@ -1,4 +1,0 @@
-TODO add grid toolbar
-TODO add excel style filtering customizations
-TODO add column formetter to date column
-TODO add PreventDocumentScroll to grid

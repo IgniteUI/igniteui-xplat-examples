@@ -1,4 +1,7 @@
 {
+  "todo": [ 
+     "Port RemoteFilteringService with event handlers"
+  ],
   "descriptions": {
     "content": {
       "name": "grid",

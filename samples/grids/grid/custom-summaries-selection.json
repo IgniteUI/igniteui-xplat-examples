@@ -1,4 +1,8 @@
 {
+  "todo": [ 
+     "Defer until we have grid footer that supports template"
+  ], 
+  "export": false,
   "descriptions": {
     "content": {
       "name": "grid",

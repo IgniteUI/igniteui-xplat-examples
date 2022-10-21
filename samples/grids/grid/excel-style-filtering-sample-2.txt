@@ -1,3 +1,0 @@
-TODO add grid toolbar
-TODO add column formetter to date column
-TODO add PreventDocumentScroll to grid

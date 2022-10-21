@@ -1,2 +1,0 @@
-TODO Ability to Hide itemrs per page dropdown
-TODO Ability to hide Page Buttons (First, Prev, Next, Last)

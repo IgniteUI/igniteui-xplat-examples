@@ -1,5 +1,11 @@
 {
-  "todo": [ "fix bodyTemplate in CodeGenLib" ],
+  "todo": [ 
+     "defer until we support CSS styling",
+     "fix bodyTemplate in CodeGenLib",
+     "add grid toolbar",
+     "add column formetter to date column",
+     "add PreventDocumentScroll to grid"
+  ],
   "export": false,
   "descriptions": {
     "content": {

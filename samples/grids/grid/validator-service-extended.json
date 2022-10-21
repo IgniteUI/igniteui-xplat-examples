@@ -1,4 +1,7 @@
 {
+  "todo": [ 
+     "template fields and event handlers"
+  ],
   "descriptions": {
     "editor": {
       "type": "PropertyEditorPanel",

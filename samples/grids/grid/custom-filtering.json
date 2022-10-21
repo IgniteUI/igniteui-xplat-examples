@@ -1,4 +1,9 @@
 {
+  "todo": [ 
+     "add input",
+     "add template column",
+     "add events to handle filtering" 
+  ],
   "descriptions": {
     "content": {
       "name": "grid",
