@@ -1,0 +1,20 @@
+{
+  "todo": [
+      "TODO ability to inject CSS styles"
+  ],
+  "export": false,
+  "descriptions": {
+    "content": {
+      "type": "WebGrid",
+      "name": "grid",
+      "dataRef": "NwindData",
+      "autoGenerate": true,
+      "allowFiltering": true,
+      "columnInitRef": "WebGridColumnInitEvent"
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "grids/WebGridModule"
+  ]
+}
