@@ -12,14 +12,14 @@
       "isWrappingEnabled": false,
       "properties": [
         {
-            "type": "PropertyEditorPropertyDescription",
-            "propertyPath": "ReplayTransitionIn",
-            "label": "",
-            "valueType": "Button",
-            "primitiveValue": "Replay",
-            "buttonClickedRef": "EditorButtonReplayTransitionIn"
-          }
-       ]
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "ReplayTransitionIn",
+          "label": "",
+          "valueType": "Button",
+          "primitiveValue": "Replay",
+          "buttonClickedRef": "EditorButtonReplayTransitionIn"
+        }
+      ]
     },
     "content": {
       "type": "DataChart",
@@ -62,8 +62,8 @@
           "xAxisRef": "xAxis",
           "yAxisRef": "yAxis",
           "dataSourceRef": "CompanyIncomeData",
-          "brush":"#7446B9",
-          "outline":"#7446B9",
+          "brush": "#7446B9",
+          "outline": "#7446B9",
           "valueMemberPath": "NetIncome",
           "showDefaultTooltip": true,
           "isTransitionInEnabled": true

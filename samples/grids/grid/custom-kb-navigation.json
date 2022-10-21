@@ -3,49 +3,49 @@
     "content": {
       "name": "grid",
       "type": "WebGrid",
-      "dataRef":"NwindData",
+      "dataRef": "NwindData",
       "moving":true,
-      "primaryKey":"ProductID",
-      "autoGenerate": false,  
-      "displayDensity":"Cosy",
-      "rowEditable": true,  
-      "columns":[
-      {
-        "type": "WebColumn",
-        "name": "ProductID",
-        "field": "ProductID",
-        "header": "Product ID"
-      },
-      {
-        "type": "WebColumn",
-        "name": "ReorderLevel",
-        "field": "ReorderLevel",
-        "header": "Reorder Level"
-      },
-      {
-        "type": "WebColumn",
-        "name": "ProductName",
-        "field": "ProductName",
-        "header": "Product Name"
-      },
-      {
-        "type": "WebColumn",
-        "name": "UnitsInStock",
-        "field": "UnitsInStock",
-        "header": "Units In Stock"
-      },
-      {
-        "type": "WebColumn",
-        "name": "OrderDate",
-        "field": "OrderDate",
-        "header": "Order Date"
-      },
-      {
-        "type": "WebColumn",
-        "name": "Discontinued",
-        "field": "Discontinued",
-        "header": "Discontinued"
-      }
+      "primaryKey": "ProductID",
+      "autoGenerate": false,
+      "displayDensity": "Cosy",
+      "rowEditable": true,
+      "columns": [
+        {
+          "type": "WebColumn",
+          "name": "ProductID",
+          "field": "ProductID",
+          "header": "Product ID"
+        },
+        {
+          "type": "WebColumn",
+          "name": "ReorderLevel",
+          "field": "ReorderLevel",
+          "header": "Reorder Level"
+        },
+        {
+          "type": "WebColumn",
+          "name": "ProductName",
+          "field": "ProductName",
+          "header": "Product Name"
+        },
+        {
+          "type": "WebColumn",
+          "name": "UnitsInStock",
+          "field": "UnitsInStock",
+          "header": "Units In Stock"
+        },
+        {
+          "type": "WebColumn",
+          "name": "OrderDate",
+          "field": "OrderDate",
+          "header": "Order Date"
+        },
+        {
+          "type": "WebColumn",
+          "name": "Discontinued",
+          "field": "Discontinued",
+          "header": "Discontinued"
+        }
       ]
     }
   },

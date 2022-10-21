@@ -8,7 +8,7 @@
       "name": "chart",
       "chartType": "SplineArea",
       "dataSourceRef": "CountryRenewableElectricity",
-      "includedProperties": ["Year","Europe"],
+      "includedProperties": ["Year", "Europe"],
       "yAxisTitle": "TWh",
       "yAxisTitleLeftMargin": 10,
       "yAxisTitleRightMargin": 5,

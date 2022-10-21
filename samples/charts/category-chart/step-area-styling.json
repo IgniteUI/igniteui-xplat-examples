@@ -10,7 +10,7 @@
     },
     "content": {
       "dataSourceRef": "CountryRenewableElectricity",
-      "includedProperties": ["Year","Europe","China","America"],
+      "includedProperties": ["Year", "Europe", "China", "America"],
       "legendRef": "Legend",
       "type": "CategoryChart",
       "name": "chart",

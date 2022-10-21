@@ -1,94 +1,96 @@
 {
-    "descriptions": {
-      "editor": {
-        "type": "PropertyEditorPanel",
-        "targetRef": "grid1",
-        "descriptionType": "WebGrid",
-        "isWrappingEnabled": true,
-        "isHorizontal": true,
-        "componentRendererRef": "renderer",
-        "properties": [
-          {
-            "type":"PropertyEditorPropertyDescription",
-            "name": "selectionType",
-             "propertyPath": "RowSelection"
-          },
-          {
-            "type":"PropertyEditorPropertyDescription",
-            "name": "hideRowSelectors",
-             "propertyPath": "HideRowSelectors"
-          }
-        ]
-      },
-      "content": {
-       "type": "WebGrid",
-       "dataRef": "FinancialDataAll",
-       "autoGenerate": false,
-       "moving": true,
-       "id": "grid1",
-        "name": "grid1",
-        "columns": [
-          {
-            "type": "WebColumn",
-            "field": "Category"
-          },
-          {
-            "type": "WebColumn",
-            "field": "Type"
-          },
-          {
-            "type": "WebColumn",
-            "field": "Price",
-            "dataType": "Currency",
-            "pipeArgs": {
-              "currencyCode": "USD",
-              "type": "WebColumnPipeArgs",
-              "digitsInfo": "1.2-2"
-            }
-          },
-          {
-            "type": "WebColumn",
-            "field": "Buy",
-            "dataType": "Currency",
-            "pipeArgs": {
-              "currencyCode": "USD",
-              "type": "WebColumnPipeArgs",
-              "digitsInfo": "1.2-2"
-            }
-          },
-          {
-            "type": "WebColumn",
-            "field": "Sell",
-            "dataType": "Currency",
-            "pipeArgs": {
-              "currencyCode": "USD",
-              "type": "WebColumnPipeArgs",
-              "digitsInfo": "1.2-2"
-            }
-          },
-          {
-            "type": "WebColumn",
-            "field": "Change",
-            "bodyTemplateRef": "CurrencyCellTemplate"
-          },
-          {
-            "type": "WebColumn",
-            "field": "Change(%)",
-            "dataType": "Number",
-            "bodyTemplateRef": "CurrencyCellTemplate"
-          },
-          {
-            "type": "WebColumn",
-            "field": "Change On Year(%)",
-            "dataType": "Number",
-            "bodyTemplateRef": "CurrencyCellTemplate"
-          }
-          ]
-      }
+  "todo": [ "fix pipeArgs exporting" ],
+  "export": false,
+  "descriptions": {
+    "editor": {
+      "type": "PropertyEditorPanel",
+      "targetRef": "grid1",
+      "descriptionType": "WebGrid",
+      "isWrappingEnabled": true,
+      "isHorizontal": true,
+      "componentRendererRef": "renderer",
+      "properties": [
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "name": "selectionType",
+          "propertyPath": "RowSelection"
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "name": "hideRowSelectors",
+          "propertyPath": "HideRowSelectors"
+        }
+      ]
     },
-    "modules": [
-      "WebGridModule",
-      "PropertyEditorModule",
-      "PropertyEditorPanelModule"
-    ]
-  }
+    "content": {
+      "type": "WebGrid",
+      "dataRef": "FinancialDataAll",
+      "autoGenerate": false,
+      "moving": true,
+      "id": "grid1",
+      "name": "grid1",
+      "columns": [
+        {
+          "type": "WebColumn",
+          "field": "Category"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Type"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Price",
+          "dataType": "Currency",
+          "pipeArgs": {
+            "currencyCode": "USD",
+            "type": "WebColumnPipeArgs",
+            "digitsInfo": "1.2-2"
+          }
+        },
+        {
+          "type": "WebColumn",
+          "field": "Buy",
+          "dataType": "Currency",
+          "pipeArgs": {
+            "currencyCode": "USD",
+            "type": "WebColumnPipeArgs",
+            "digitsInfo": "1.2-2"
+          }
+        },
+        {
+          "type": "WebColumn",
+          "field": "Sell",
+          "dataType": "Currency",
+          "pipeArgs": {
+            "currencyCode": "USD",
+            "type": "WebColumnPipeArgs",
+            "digitsInfo": "1.2-2"
+          }
+        },
+        {
+          "type": "WebColumn",
+          "field": "Change",
+          "bodyTemplateRef": "CurrencyCellTemplate"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Change(%)",
+          "dataType": "Number",
+          "bodyTemplateRef": "CurrencyCellTemplate"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Change On Year(%)",
+          "dataType": "Number",
+          "bodyTemplateRef": "CurrencyCellTemplate"
+        }
+      ]
+    }
+  },
+  "modules": [
+    "grids/WebGridModule",
+    "PropertyEditorModule",
+    "PropertyEditorPanelModule"
+  ]
+}

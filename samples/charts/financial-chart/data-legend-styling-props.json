@@ -1,19 +1,19 @@
 {
   "descriptions": {
-    "legend": {      
+    "legend": {
       "type": "DataLegend",
       "name": "Legend",
       "targetRef": "chart",
-      "includedColumns": ["Open","Close","High","Low","Change"],
+      "includedColumns": ["Open", "Close", "High", "Low", "Change"],
       "labelTextColor": "#4A4A4A",
       "unitsText": "K",
       "unitsTextColor": "#00AD03",
       "unitsTextFontFamily": "Verdana",
-      "unitsTextFontWeight": "Bold",      
+      "unitsTextFontWeight": "Bold",
       "valueFormatMode": "Currency",
       "valueTextColor": "#00AD03",
       "valueTextFontFamily": "Verdana",
-      "valueTextFontWeight": "Bold"      
+      "valueTextFontWeight": "Bold"
     },
     "content": {
       "type": "FinancialChart",
@@ -25,7 +25,7 @@
       "yAxisTitle": "Thousands of Dollars ($)",
       "zoomSliderType": "None"
     }
-  },  
+  },
   "modules": [
     "charts/FinancialChartModule",
     "charts/DataChartInteractivityModule",

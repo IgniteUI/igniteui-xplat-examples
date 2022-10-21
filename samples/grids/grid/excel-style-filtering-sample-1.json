@@ -1,4 +1,6 @@
 {
+  "todo": [ "fix bodyTemplate in CodeGenLib" ],
+  "export": false,
   "descriptions": {
     "editor": {
       "type": "PropertyEditorPanel",
@@ -12,7 +14,7 @@
         {
           "type": "PropertyEditorPropertyDescription",
           "propertyPath": "DisplayDensity",
-          "name": "DisplayDensityEditor"          
+          "name": "DisplayDensityEditor"
         }
       ]
     },
@@ -24,9 +26,9 @@
       "autoGenerate": false,
       "allowFiltering": true,
       "filterMode": "ExcelStyleFilter",
-	    "toolbar": [
+      "toolbar": [
         {
-          "type": "WebGridToolbar"          
+          "type": "WebGridToolbar"
         }
       ],
       "columns": [{
@@ -35,13 +37,15 @@
         "field": "ProductName",
         "header": "Product Name",
         "sortable": true
-      },{
+      },
+      {
         "type": "WebColumn",
         "name": "QuantityPerUnit",
         "field": "QuantityPerUnit",
         "header": "Quantity Per Unit",
         "sortable": true
-      },{
+      },
+      {
         "type": "WebColumn",
         "name": "UnitPrice",
         "field": "UnitPrice",
@@ -49,26 +53,28 @@
         "dataType": "Currency",
         "sortable": true,
         "bodyTemplateRef": "UnitPriceCellTemplate"
-      },{
+      },
+      {
         "type": "WebColumn",
         "name": "OrderDate",
         "field": "OrderDate",
         "header": "Order Date",
         "dataType": "Date",
         "sortable": true
-      },{
+      },
+      {
         "type": "WebColumn",
         "name": "Discontinued",
         "field": "Discontinued",
         "header": "Discontinued",
         "sortable": true,
         "bodyTemplateRef": "BooleanCellTemplate"
-      }]
-    }
-  },
-  "modules": [
-    "withDescriptions",
-    "layouts/PropertyEditorPanelModule",
-    "grids/WebGridModule"  
-  ]
-}
+        }]
+      }
+    },
+    "modules": [
+      "withDescriptions",
+      "layouts/PropertyEditorPanelModule",
+      "grids/WebGridModule"
+    ]
+  }

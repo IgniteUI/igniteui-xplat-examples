@@ -2,10 +2,10 @@
   "export": true,
   "descriptions": {
     "content": {
-     "type": "WebGrid",
-     "dataRef": "CustomersData",
-     "autoGenerate": false,
-     "primaryKey": "ProductID",
+      "type": "WebGrid",
+      "dataRef": "CustomersData",
+      "autoGenerate": false,
+      "primaryKey": "ProductID",
       "name": "grid",
       "columns": [
         {
@@ -71,10 +71,10 @@
           "width": "auto",
           "resizable": true
         }
-        ]
+      ]
     }
   },
   "modules": [
-    "WebGridModule"
+    "grids/WebGridModule"
   ]
 }

@@ -9,42 +9,42 @@
       "isHorizontal": true,
       "isWrappingEnabled": true,
       "properties": [
-      {
-        "type": "PropertyEditorPropertyDescription",
-        "valueType": "StringValue",
-        "label": "Change Copy Separator",
-        "propertyPath": "ClipboardOptions.Separator"
-      },
-      {
-        "type": "PropertyEditorPropertyDescription",
-        "propertyPath": "ClipboardOptions.Enabled",
-        "name": "ClipboardEnabledEditor",
-        "label": "Grid Copy Behavior",
-        "valueType": "Boolean1",
-        "primitiveValue": true
-      },
-      {
-        "type": "PropertyEditorPropertyDescription",
-        "propertyPath": "ClipboardOptions.CopyHeaders",
-        "name": "ClipboardHeadersEditor",
-        "label": "Copying of Header Labels",
-        "valueType": "Boolean1",
-        "primitiveValue": true
-      },
-      {
-        "type": "PropertyEditorPropertyDescription",
-        "propertyPath": "ClipboardOptions.CopyFormatters",
-        "name": "ClipboardFormattersEditor",
-        "label": "Copying Column Formatters",
-        "valueType": "Boolean1",
-        "primitiveValue": true
-      },
-      {
-        "type": "PropertyEditorPropertyDescription",
-        "valueType": "Button",
-        "primitiveValue": "Clear Selection",
-        "buttonClickedRef": "WebGridClearSelection"
-      }
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "valueType": "StringValue",
+          "label": "Change Copy Separator",
+          "propertyPath": "ClipboardOptions.Separator"
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "ClipboardOptions.Enabled",
+          "name": "ClipboardEnabledEditor",
+          "label": "Grid Copy Behavior",
+          "valueType": "Boolean1",
+          "primitiveValue": true
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "ClipboardOptions.CopyHeaders",
+          "name": "ClipboardHeadersEditor",
+          "label": "Copying of Header Labels",
+          "valueType": "Boolean1",
+          "primitiveValue": true
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "ClipboardOptions.CopyFormatters",
+          "name": "ClipboardFormattersEditor",
+          "label": "Copying Column Formatters",
+          "valueType": "Boolean1",
+          "primitiveValue": true
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "valueType": "Button",
+          "primitiveValue": "Clear Selection",
+          "buttonClickedRef": "WebGridClearSelection"
+        }
       ]
     },
     "content": {
@@ -55,40 +55,40 @@
       "rowEditable": true,
       "columnInitRef": "WebGridClipboardOperationsColumnInit",
       "columns": [
-      {
-        "type": "WebColumn",
-        "field": "ProductID"
-      },
-      {
-        "type": "WebColumn",
-        "field": "ProductName"
-      },
-      {
-        "type": "WebColumn",
-        "field": "SupplierID"
-      },
-      {
-        "type": "WebColumn",
-        "field": "CategoryID"
-      },
-      {
-        "type": "WebColumn",
-        "field": "QuantityPerUnit"
-      },
-      {
-        "type": "WebColumn",
-        "field": "UnitPrice"
-      },
-      {
-        "type": "WebColumn",
-        "field": "UnitsInStock"
-      }
+        {
+          "type": "WebColumn",
+          "field": "ProductID"
+        },
+        {
+          "type": "WebColumn",
+          "field": "ProductName"
+        },
+        {
+          "type": "WebColumn",
+          "field": "SupplierID"
+        },
+        {
+          "type": "WebColumn",
+          "field": "CategoryID"
+        },
+        {
+          "type": "WebColumn",
+          "field": "QuantityPerUnit"
+        },
+        {
+          "type": "WebColumn",
+          "field": "UnitPrice"
+        },
+        {
+          "type": "WebColumn",
+          "field": "UnitsInStock"
+        }
       ]
     }
   },
   "modules": [
-  "withDescriptions",
-  "layouts/PropertyEditorPanelModule",
-  "grids/WebGridModule"
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
+    "grids/WebGridModule"
   ]
 }

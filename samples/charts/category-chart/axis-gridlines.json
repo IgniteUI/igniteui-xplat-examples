@@ -16,47 +16,47 @@
       "isHorizontal": true,
       "isWrappingEnabled": true,
       "properties": [
-          {
-            "type": "PropertyEditorPropertyDescription",
-            "propertyPath": "YAxisStroke",
-            "name": "YAxisStroke",
-            "label": "Y Axis Stroke",
-            "shouldOverrideDefaultEditor": true,
-            "valueType": "EnumValue",
-            "dropDownNames": ["gray", "darkslategray", "salmon", "cornflowerblue", "darkgreen"],
-            "dropDownValues": ["gray", "darkslategray", "salmon", "cornflowerblue", "darkgreen"],
-            "primitiveValue": "gray"
-          },
-          {
-            "type": "PropertyEditorPropertyDescription",
-            "propertyPath": "YAxisMajorStroke",
-            "name": "YAxisMajorStroke",
-            "label": "Y Axis Major Stroke",
-            "shouldOverrideDefaultEditor": true,
-            "valueType": "EnumValue",
-            "dropDownNames": ["gray", "darkslategray", "salmon", "cornflowerblue", "darkgreen"],
-            "dropDownValues": ["gray", "darkslategray", "salmon", "cornflowerblue", "darkgreen"],
-            "primitiveValue": "darkslategray"
-          },
-          {
-            "type": "PropertyEditorPropertyDescription",
-            "propertyPath": "YAxisMinorStroke",
-            "name": "YAxisMinorStroke",
-            "label": "Y Axis Minor Stroke",
-            "shouldOverrideDefaultEditor": true,
-            "valueType": "EnumValue",
-            "dropDownNames": ["gray", "darkslategray", "salmon", "cornflowerblue", "darkgreen"],
-            "dropDownValues": ["gray", "darkslategray", "salmon", "cornflowerblue", "darkgreen"],
-            "primitiveValue": "gray"
-          }
-       ]
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "YAxisStroke",
+          "name": "YAxisStroke",
+          "label": "Y Axis Stroke",
+          "shouldOverrideDefaultEditor": true,
+          "valueType": "EnumValue",
+          "dropDownNames": ["gray", "darkslategray", "salmon", "cornflowerblue", "darkgreen"],
+          "dropDownValues": ["gray", "darkslategray", "salmon", "cornflowerblue", "darkgreen"],
+          "primitiveValue": "gray"
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "YAxisMajorStroke",
+          "name": "YAxisMajorStroke",
+          "label": "Y Axis Major Stroke",
+          "shouldOverrideDefaultEditor": true,
+          "valueType": "EnumValue",
+          "dropDownNames": ["gray", "darkslategray", "salmon", "cornflowerblue", "darkgreen"],
+          "dropDownValues": ["gray", "darkslategray", "salmon", "cornflowerblue", "darkgreen"],
+          "primitiveValue": "darkslategray"
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "YAxisMinorStroke",
+          "name": "YAxisMinorStroke",
+          "label": "Y Axis Minor Stroke",
+          "shouldOverrideDefaultEditor": true,
+          "valueType": "EnumValue",
+          "dropDownNames": ["gray", "darkslategray", "salmon", "cornflowerblue", "darkgreen"],
+          "dropDownValues": ["gray", "darkslategray", "salmon", "cornflowerblue", "darkgreen"],
+          "primitiveValue": "gray"
+        }
+      ]
     },
     "content": {
       "type": "CategoryChart",
       "name": "chart",
       "computedPlotAreaMarginMode": "Series",
       "dataSourceRef": "CountryRenewableElectricity",
-      "includedProperties": ["Year","Europe","China","America"],
+      "includedProperties": ["Year", "Europe", "China", "America"],
       "chartType": "Line",
       "legendRef": "Legend",
       "isHorizontalZoomEnabled": false,
@@ -66,7 +66,7 @@
       "xAxisStrokeThickness": 2,
 
       "xAxisInterval": 1,
-      "xAxisMajorStroke":  "#474747",
+      "xAxisMajorStroke": "#474747",
       "xAxisMajorStrokeThickness": 0.5,
 
       "yAxisStroke": "gray",

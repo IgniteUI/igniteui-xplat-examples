@@ -1,4 +1,6 @@
-{  
+{
+  "todo": [ "fix pipeArgs exporting" ],
+  "export": false,
   "descriptions": {
     "editor": {
       "type": "PropertyEditorPanel",
@@ -12,12 +14,12 @@
         {
           "type": "PropertyEditorPropertyDescription",
           "propertyPath": "SummaryCalculationMode",
-          "name": "SummaryCalcModeEditor"          
+          "name": "SummaryCalcModeEditor"
         },
         {
           "type": "PropertyEditorPropertyDescription",
           "propertyPath": "SummaryPosition",
-          "name": "SummaryPositionEditor"          
+          "name": "SummaryPositionEditor"
         }
       ]
     },
@@ -25,13 +27,13 @@
       "type": "WebGrid",
       "name": "grid",
       "dataRef": "InvoicesData",
-      "autoGenerate": false,      
+      "autoGenerate": false,
       "groupingExpressions": [
         {
           "type": "WebGroupingExpression",
           "dir": "Asc",
           "fieldName": "ShipCountry",
-          "ignoreCase": false          
+          "ignoreCase": false
         }
       ],
       "columns": [
@@ -53,9 +55,9 @@
           "type": "WebColumn",
           "field": "UnitPrice",
           "header": "Unit Price",
-          "width": "150px",                    
+          "width": "150px",
           "dataType": "Currency",
-          "groupable": true,          
+          "groupable": true,
           "hasSummary": true,
           "pipeArgs": {
             "type": "WebColumnPipeArgs",
@@ -78,6 +80,6 @@
   "modules": [
     "withDescriptions",
     "layouts/PropertyEditorPanelModule",
-    "grids/WebGridModule"  
+    "grids/WebGridModule"
   ]
 }

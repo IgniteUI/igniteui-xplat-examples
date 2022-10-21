@@ -57,7 +57,7 @@
           "calloutBackground": "transparent",
           "calloutLeaderBrush": "transparent",
           "dataSourceRef": "OnlineShoppingSearches"
-        }, 
+        },
         {
           "type": "DataToolTipLayer",
           "name": "Tooltips"

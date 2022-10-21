@@ -30,7 +30,7 @@
           "dataSourceRef": "WorldCapitals2M",
           "xMemberPath": "X",
           "yMemberPath": "Y",
-          "labelMemberPath": "Name", 
+          "labelMemberPath": "Name",
           "calloutCollisionMode": "SimulatedAnnealing",
           "calloutLeaderBrush": "#1E90FF",
           "calloutOutline": "#1E90FF",

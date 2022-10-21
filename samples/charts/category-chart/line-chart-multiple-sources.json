@@ -15,7 +15,7 @@
       "isHorizontalZoomEnabled": false,
       "isVerticalZoomEnabled": false,
       "dataSourceRef": "CountryRenewableElectricity",
-      "includedProperties": ["Year","Europe","China","America"],
+      "includedProperties": ["Year", "Europe", "China", "America"],
       "legendRef": "Legend",
       "yAxisTitle": "TWh",
       "yAxisTitleLeftMargin": 10,

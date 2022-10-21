@@ -3,45 +3,45 @@
     "content": {
       "name": "grid",
       "type": "WebGrid",
-      "dataRef":"NwindData",
+      "dataRef": "NwindData",
       "autoGenerate":false,
-      "columns":[
-      {
-        "type": "WebColumn",
-        "name": "ProductID",
-        "field": "ProductID",
-        "header": "Product ID"
-      },
-      {
-        "type": "WebColumn",
-        "name": "ProductName",
-        "field": "ProductName",
-        "header": "Product Name"
-      },
-      {
-        "type": "WebColumn",
-        "name": "UnitPrice",
-        "field": "UnitPrice",
-        "header": "Unit Price"
-      },
-      {
-        "type": "WebColumn",
-        "name": "UnitsInStock",
-        "field": "UnitsInStock",
-        "header": "Units In Stock"
-      },
-      {
-        "type": "WebColumn",
-        "name": "Discontinued",
-        "field": "Discontinued",
-        "header": "Discontinued"
-      },
-      {
-        "type": "WebColumn",
-        "name": "OrderDate",
-        "field": "OrderDate",
-        "header": "Order Date"
-      }
+      "columns": [
+        {
+          "type": "WebColumn",
+          "name": "ProductID",
+          "field": "ProductID",
+          "header": "Product ID"
+        },
+        {
+          "type": "WebColumn",
+          "name": "ProductName",
+          "field": "ProductName",
+          "header": "Product Name"
+        },
+        {
+          "type": "WebColumn",
+          "name": "UnitPrice",
+          "field": "UnitPrice",
+          "header": "Unit Price"
+        },
+        {
+          "type": "WebColumn",
+          "name": "UnitsInStock",
+          "field": "UnitsInStock",
+          "header": "Units In Stock"
+        },
+        {
+          "type": "WebColumn",
+          "name": "Discontinued",
+          "field": "Discontinued",
+          "header": "Discontinued"
+        },
+        {
+          "type": "WebColumn",
+          "name": "OrderDate",
+          "field": "OrderDate",
+          "header": "Order Date"
+        }
       ]
     }
   },

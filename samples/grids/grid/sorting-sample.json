@@ -1,4 +1,6 @@
 {
+  "todo": [ "fix pipeArgs exporting" ],
+  "export": false,
   "descriptions": {
     "editor": {
       "type": "PropertyEditorPanel",
@@ -12,7 +14,7 @@
         {
           "type": "PropertyEditorPropertyDescription",
           "propertyPath": "SortingOptions",
-          "name": "SortingOptionsEditor"          
+          "name": "SortingOptionsEditor"
         },
         {
           "type": "PropertyEditorPropertyDescription",
@@ -53,7 +55,7 @@
           "type": "WebColumn",
           "field": "CategoryName",
           "header": "Category Name",
-          "dataType": "String1",
+          "dataType": "String",
           "groupable": true,
           "sortable": true
         },
@@ -61,7 +63,7 @@
           "type": "WebColumn",
           "field": "CompanyName",
           "header": "Company Name",
-          "dataType": "String1",
+          "dataType": "String",
           "groupable": true,
           "sortable": true
         },
@@ -69,7 +71,7 @@
           "type": "WebColumn",
           "field": "ShipCountry",
           "header": "Ship Country",
-          "dataType": "String1",
+          "dataType": "String",
           "groupable": true,
           "sortable": true
         },

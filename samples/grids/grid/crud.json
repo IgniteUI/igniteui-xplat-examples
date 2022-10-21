@@ -3,45 +3,45 @@
     "content": {
       "name": "grid",
       "type": "WebGrid",
-      "dataRef":"NwindData",
+      "dataRef": "NwindData",
       "moving":true,
-      "primaryKey":"ProductID",
+      "primaryKey": "ProductID",
       "isLoading":true,
       "allowFiltering":false,
-      "pagingMode":"Remote",
+      "pagingMode": "Remote",
       "rowEditable":true,
-      "autoGenerate": false,      
-      "columns":[
-      {
-        "type": "WebColumn",
-        "name": "ProductName",
-        "field": "ProductName",
-        "header": "Product Name"
-      },
-      {
-        "type": "WebColumn",
-        "name": "QuantityPerUnit",
-        "field": "QuantityPerUnit",
-        "header": "Quantity Per Unit"
-      },
-      {
-        "type": "WebColumn",
-        "name": "UnitPrice",
-        "field": "UnitPrice",
-        "header": "Unit Price"
-      },
-      {
-        "type": "WebColumn",
-        "name": "OrderDate",
-        "field": "OrderDate",
-        "header": "Order Date"
-      },
-      {
-        "type": "WebColumn",
-        "name": "Discontinued",
-        "field": "Discontinued",
-        "header": "Discontinued"
-      }
+      "autoGenerate": false,
+      "columns": [
+        {
+          "type": "WebColumn",
+          "name": "ProductName",
+          "field": "ProductName",
+          "header": "Product Name"
+        },
+        {
+          "type": "WebColumn",
+          "name": "QuantityPerUnit",
+          "field": "QuantityPerUnit",
+          "header": "Quantity Per Unit"
+        },
+        {
+          "type": "WebColumn",
+          "name": "UnitPrice",
+          "field": "UnitPrice",
+          "header": "Unit Price"
+        },
+        {
+          "type": "WebColumn",
+          "name": "OrderDate",
+          "field": "OrderDate",
+          "header": "Order Date"
+        },
+        {
+          "type": "WebColumn",
+          "name": "Discontinued",
+          "field": "Discontinued",
+          "header": "Discontinued"
+        }
       ]
     }
   },
