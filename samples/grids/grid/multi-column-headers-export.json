@@ -1,0 +1,140 @@
+{
+  "descriptions": {
+    "todo": [
+      "TODO add toolbar column pinning",
+      "TODO add toolbar column hiding",
+      "TODO add toolbar excel export button",
+      "TODO add switch to toggle export multi column headers",
+      "TODO Update WebGridExportEventMultiColumnHeaders event to check switch status for export"
+    ],
+    "content": {
+      "type": "WebGrid",
+      "name": "grid",
+      "dataRef": "CustomersData",
+      "autoGenerate": false,
+      "moving": true,
+      "displayDensity": "Compact",
+      "allowFiltering": true,
+      "toolbar": [
+        {
+          "type": "WebGridToolbar"
+        }
+      ],
+      "columns": [
+        {
+          "type": "WebColumn",
+          "name": "ID",
+          "field": "ID",
+          "header": "ID",
+          "resizable": true,
+          "filterable": false
+        },
+        {
+          "type": "WebColumnGroup",
+          "name": "GeneralInformation",
+          "header": "General Information",
+          "collapsible": true,
+          "expanded": true,
+          "children": [
+            {
+              "type": "WebColumn",
+              "name": "CompanyName",
+              "visibleWhenCollapsed": true,
+            },
+            {
+              "type": "WebColumnGroup",
+              "name": "PersonalDetails",
+              "header": "Personal Details",
+              "collapsible": true,
+              "expanded": true,
+              "visibleWhenCollapsed": true,
+              "children": [
+                {
+                  "type": "WebColumn",
+                  "name": "ContactName",
+                  "field": "ContactName"
+                },
+                {
+                  "type": "WebColumn",
+                  "name": "ContactTitle",
+                  "field": "ContactTitle"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "WebColumnGroup",
+          "name": "AddressInformation",
+          "header": "Address Information",
+          "children": [
+            {
+              "type": "WebColumnGroup",
+              "name": "Location",
+              "header": "Location",
+              "collapsible": true,
+              "expanded": false,
+              "visibleWhenCollapsed": true,
+              "children": [
+                {
+                  "type": "WebColumn",
+                  "name": "Country",
+                  "field": "Country",
+                  "visibleWhenCollapsed": true,
+                  "hidden": true
+                },
+                {
+                  "type": "WebColumn",
+                  "name": "Region",
+                  "field": "Region",
+                  "visibleWhenCollapsed": false,
+                  "hidden": true
+                },
+                {
+                  "type": "WebColumn",
+                  "name": "City",
+                  "field": "City",
+                  "visibleWhenCollapsed": false,
+                  "hidden": true
+                },
+                {
+                  "type": "WebColumn",
+                  "name": "Address",
+                  "field": "Address",
+                  "visibleWhenCollapsed": false,
+                  "hidden": true
+                }
+              ]
+            },
+            {
+              "type": "WebColumnGroup",
+              "name": "Contact Information",
+              "header": "Contact Information",
+              "children": [
+                {
+                  "type": "WebColumn",
+                  "name": "Phone",
+                  "field": "Phone"
+                },
+                {
+                  "type": "WebColumn",
+                  "name": "Fax",
+                  "field": "Fax"
+                },
+                {
+                  "type": "WebColumn",
+                  "name": "PostalCode",
+                  "field": "PostalCode"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "grids/WebGridModule"
+  ]
+}
