@@ -1,4 +1,8 @@
 {
+  "todo": [ 
+     "defer until we support CSS styling"
+  ],
+  "export": false,
   "descriptions": {
     "content": {
       "type": "WebGrid",
