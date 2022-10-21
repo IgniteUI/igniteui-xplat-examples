@@ -6,7 +6,7 @@
   "descriptions": {
     "content": {
       "type": "WebGrid",
-      "dataRef": "EmployeeNestedData",
+      "dataRef": "EmployeesNestedData",
       "autoGenerate": false,
       "name": "grid",
       "id": "grid",
