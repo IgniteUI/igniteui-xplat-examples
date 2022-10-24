@@ -1,0 +1,95 @@
+{
+  "todo": [
+    "TODO ability to inject CSS styles"
+  ],
+  "descriptions": {
+    "content": {
+      "type": "WebGrid",
+      "name": "grid",
+      "dataRef": "FinancialDataAll",
+      "autoGenerate": false,
+      "moving": true,
+      "paginationComponents": [
+        {
+          "type": "WebPaginator",
+          "perPage": 10
+        }
+      ],
+      "columns": [
+        {
+          "type": "WebColumn",
+          "name": "Category",
+          "field": "Category",
+          "width": "200px",
+          "pinned": true,
+          "headerTemplateRef": "PinHeaderTemplate"
+        },
+        {
+          "type": "WebColumn",
+          "name": "Type",
+          "field": "Type",
+          "pinned": true,
+          "headerTemplateRef": "PinHeaderTemplate"
+        },
+        {
+          "type": "WebColumn",
+          "name": "Price",
+          "field": "Price",
+          "dataType": "Number",
+          "headerTemplateRef": "PinHeaderTemplate"
+        },
+        {
+          "type": "WebColumn",
+          "name": "Buy",
+          "field": "Buy",
+          "dataType": "Number",
+          "headerTemplateRef": "PinHeaderTemplate"
+        },
+        {
+          "type": "WebColumn",
+          "name": "Sell",
+          "field": "Sell",
+          "dataType": "Number",
+          "headerTemplateRef": "PinHeaderTemplate"
+        },
+        {
+          "type": "WebColumn",
+          "name": "Spread",
+          "field": "Spread",
+          "dataType": "Number",
+          "headerTemplateRef": "PinHeaderTemplate"
+        },
+        {
+          "type": "WebColumn",
+          "name": "Change",
+          "field": "Change",
+          "dataType": "Number",
+          "headerTemplateRef": "PinHeaderTemplate",
+          "bodyTemplateRef": "CurrencyCellTemplate"
+        },
+        {
+          "type": "WebColumn",
+          "name": "Change(%)",
+          "field": "Change(%)",
+          "dataType": "Number",
+          "width": "150px",
+          "headerTemplateRef": "PinHeaderTemplate",
+          "bodyTemplateRef": "ChangePercentTemplate"
+        },
+        {
+          "type": "WebColumn",
+          "name": "Change On Year(%)",
+          "field": "Change On Year(%)",
+          "dataType": "Number",
+          "width": "170px",
+          "headerTemplateRef": "PinHeaderTemplate",
+          "bodyTemplateRef": "CurrencyCellTemplate"
+        }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "grids/WebGridModule"
+  ]
+}

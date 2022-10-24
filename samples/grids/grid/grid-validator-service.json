@@ -1,10 +1,10 @@
 {
-  "descriptions": {
-    "todo": [
+  "todo": [
       "TODO ability to mark columns as required",
       "TODO ability to set min value on column",
       "TODO ability to set date (datelong|longdate) format on pipeArgs"
-    ],
+  ],
+  "descriptions": {
     "editor": {
       "type": "PropertyEditorPanel",
       "name": "PropertyEditor",

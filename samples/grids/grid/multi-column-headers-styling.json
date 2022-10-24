@@ -1,8 +1,8 @@
 {
-  "descriptions": {
-    "todo": [
+  "todo": [
       "defer until we can inject CSS styles"
-    ],
+  ],
+  "descriptions": {
     "export": "false",
     "content": {
       "type": "WebGrid",
