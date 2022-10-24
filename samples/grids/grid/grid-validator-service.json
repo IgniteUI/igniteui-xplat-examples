@@ -40,7 +40,7 @@
           "dataType": "String1",
           "editable": false,
           "width": "80px",
-          "bodyTemplateRef": "AvatarCellTemplate"
+          "bodyTemplateRef": "WebGridAvatarCellTemplate"
         },
         {
           "type": "WebColumn",

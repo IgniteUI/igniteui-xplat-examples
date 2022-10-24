@@ -16,7 +16,7 @@
           "field": "CompanyName",
           "header": "Company Name",
           "width": "300px",
-          "headerTemplateRef": "PinHeaderTemplate"
+          "headerTemplateRef": "WebGridPinHeaderTemplate"
         },
         {
           "type": "WebColumn",
@@ -24,7 +24,7 @@
           "header": "Contact Name",
           "width": "200px",
           "pinned": true,
-          "headerTemplateRef": "PinHeaderTemplate"
+          "headerTemplateRef": "WebGridPinHeaderTemplate"
         },
         {
           "type": "WebColumn",
@@ -32,43 +32,43 @@
           "header": "Contact Title",
           "width": "200px",
           "pinned": true,
-          "headerTemplateRef": "PinHeaderTemplate"
+          "headerTemplateRef": "WebGridPinHeaderTemplate"
         },
         {
           "type": "WebColumn",
           "field": "Address",
           "width": "300px",
-          "headerTemplateRef": "PinHeaderTemplate"
+          "headerTemplateRef": "WebGridPinHeaderTemplate"
         },
         {
           "type": "WebColumn",
           "field": "City",
           "width": "120px",
-          "headerTemplateRef": "PinHeaderTemplate"
+          "headerTemplateRef": "WebGridPinHeaderTemplate"
         },
         {
           "type": "WebColumn",
           "field": "Region",
           "width": "120px",
-          "headerTemplateRef": "PinHeaderTemplate"
+          "headerTemplateRef": "WebGridPinHeaderTemplate"
         },
         {
           "type": "WebColumn",
           "field": "PostalCode",
           "width": "150px",
-          "headerTemplateRef": "PinHeaderTemplate"
+          "headerTemplateRef": "WebGridPinHeaderTemplate"
         },
         {
           "type": "WebColumn",
           "field": "Phone",
           "width": "150px",
-          "headerTemplateRef": "PinHeaderTemplate"
+          "headerTemplateRef": "WebGridPinHeaderTemplate"
         },
         {
           "type": "WebColumn",
           "field": "Fax",
           "width": "150px",
-          "headerTemplateRef": "PinHeaderTemplate"
+          "headerTemplateRef": "WebGridPinHeaderTemplate"
         }
       ]
     }

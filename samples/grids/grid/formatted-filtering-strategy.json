@@ -53,7 +53,7 @@
                     "sortable": true,
                     "disableHiding": true,
                     "dataType": "Boolean",
-                    "bodyTemplateRef": "BooleanCellTemplate"
+                    "bodyTemplateRef": "WebGridBooleanCellTemplate"
                 }
             ]
         }

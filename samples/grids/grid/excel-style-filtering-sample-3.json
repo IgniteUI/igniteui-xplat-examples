@@ -17,7 +17,7 @@
       "autoGenerate": false,
       "allowFiltering": true,
       "filterMode": "ExcelStyleFilter",
-      "excelStyleHeaderIconTemplateRef": "FilterAltIconTemplate",
+      "excelStyleHeaderIconTemplateRef": "WebGridFilterAltIconTemplate",
       "toolbar": [
         {
           "type": "WebGridToolbar"
@@ -41,7 +41,7 @@
         "field": "UnitPrice",
         "header": "Unit Price",
         "dataType": "Currency",
-        "bodyTemplateRef": "UnitPriceCellTemplate"
+        "bodyTemplateRef": "WebGridUnitPriceCellTemplate"
       },
       {
         "type": "WebColumn",
@@ -55,7 +55,7 @@
         "name": "Discontinued",
         "field": "Discontinued",
         "header": "Discontinued",
-        "bodyTemplateRef": "BooleanCellTemplate"
+        "bodyTemplateRef": "WebGridBooleanCellTemplate"
         }]
       }
     },

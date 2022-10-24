@@ -23,50 +23,50 @@
           "field": "Category",
           "width": "200px",
           "pinned": true,
-          "headerTemplateRef": "PinHeaderTemplate"
+          "headerTemplateRef": "WebGridPinHeaderTemplate"
         },
         {
           "type": "WebColumn",
           "name": "Type",
           "field": "Type",
           "pinned": true,
-          "headerTemplateRef": "PinHeaderTemplate"
+          "headerTemplateRef": "WebGridPinHeaderTemplate"
         },
         {
           "type": "WebColumn",
           "name": "Price",
           "field": "Price",
           "dataType": "Number",
-          "headerTemplateRef": "PinHeaderTemplate"
+          "headerTemplateRef": "WebGridPinHeaderTemplate"
         },
         {
           "type": "WebColumn",
           "name": "Buy",
           "field": "Buy",
           "dataType": "Number",
-          "headerTemplateRef": "PinHeaderTemplate"
+          "headerTemplateRef": "WebGridPinHeaderTemplate"
         },
         {
           "type": "WebColumn",
           "name": "Sell",
           "field": "Sell",
           "dataType": "Number",
-          "headerTemplateRef": "PinHeaderTemplate"
+          "headerTemplateRef": "WebGridPinHeaderTemplate"
         },
         {
           "type": "WebColumn",
           "name": "Spread",
           "field": "Spread",
           "dataType": "Number",
-          "headerTemplateRef": "PinHeaderTemplate"
+          "headerTemplateRef": "WebGridPinHeaderTemplate"
         },
         {
           "type": "WebColumn",
           "name": "Change",
           "field": "Change",
           "dataType": "Number",
-          "headerTemplateRef": "PinHeaderTemplate",
-          "bodyTemplateRef": "CurrencyCellTemplate"
+          "headerTemplateRef": "WebGridPinHeaderTemplate",
+          "bodyTemplateRef": "WebGridCurrencyCellTemplate"
         },
         {
           "type": "WebColumn",
@@ -74,8 +74,8 @@
           "field": "Change(%)",
           "dataType": "Number",
           "width": "150px",
-          "headerTemplateRef": "PinHeaderTemplate",
-          "bodyTemplateRef": "ChangePercentTemplate"
+          "headerTemplateRef": "WebGridPinHeaderTemplate",
+          "bodyTemplateRef": "WebGridChangePercentTemplate"
         },
         {
           "type": "WebColumn",
@@ -83,8 +83,8 @@
           "field": "Change On Year(%)",
           "dataType": "Number",
           "width": "170px",
-          "headerTemplateRef": "PinHeaderTemplate",
-          "bodyTemplateRef": "CurrencyCellTemplate"
+          "headerTemplateRef": "WebGridPinHeaderTemplate",
+          "bodyTemplateRef": "WebGridCurrencyCellTemplate"
         }
       ]
     }

@@ -37,7 +37,7 @@
         "sortable": true,
         "disablePinning": true,
         "disableHiding": true,
-        "bodyTemplateRef": "UnitPriceCellTemplate"
+        "bodyTemplateRef": "WebGridUnitPriceCellTemplate"
       },
       {
         "type": "WebColumn",
@@ -53,7 +53,7 @@
         "field": "Discontinued",
         "header": "Discontinued",
         "sortable": true,
-        "bodyTemplateRef": "BooleanCellTemplate"
+        "bodyTemplateRef": "WebGridBooleanCellTemplate"
       }
     ]
   }

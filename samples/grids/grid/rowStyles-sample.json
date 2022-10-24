@@ -1,10 +1,10 @@
 {
     "todo": [
         "Add formatter for Open Price, Price, Change(%), Change on Year(%), Buy, Sell, Spread, Volume, High(D), Low(D), High(Y), Low(Y), Start(Y) columns",
-        "Add working CurrencyCellTemplate with badge and icon"
+        "Add working WebGridCurrencyCellTemplate with badge and icon"
     ],
     "onAfterInit": [
-        "RegisterIconAfterViewInit"
+        "WebGridRegisterIconAfterViewInit"
     ],
     "descriptions": {
         "content": {
@@ -14,7 +14,7 @@
             "name": "grid",
             "id": "grid",
             "allowFiltering": true,
-            "rowStylesRef": "RowStylesHandler",
+            "rowStylesRef": "WebGridRowStylesHandler",
             "columns": [
                 {
                     "type": "WebColumn",
@@ -44,7 +44,7 @@
                     "field": "Change",
                     "width": "120px",
                     "dataType": "Number",
-                    "bodyTemplateRef": "CurrencyCellTemplate"
+                    "bodyTemplateRef": "WebGridCurrencyCellTemplate"
                 },
                 {
                     "type": "WebColumn",
@@ -58,7 +58,7 @@
                     "field": "Change On Year(%)",
                     "width": "150px",
                     "dataType": "Number",
-                    "bodyTemplateRef": "CurrencyCellTemplate"
+                    "bodyTemplateRef": "WebGridCurrencyCellTemplate"
                 },
                 {
                     "type": "WebColumn",

@@ -58,7 +58,7 @@
         "header": "Unit Price",
         "dataType": "Currency",
         "sortable": true,
-        "bodyTemplateRef": "UnitPriceCellTemplate"
+        "bodyTemplateRef": "WebGridUnitPriceCellTemplate"
       },
       {
         "type": "WebColumn",
@@ -74,7 +74,7 @@
         "field": "Discontinued",
         "header": "Discontinued",
         "sortable": true,
-        "bodyTemplateRef": "BooleanCellTemplate"
+        "bodyTemplateRef": "WebGridBooleanCellTemplate"
         }]
       }
     },

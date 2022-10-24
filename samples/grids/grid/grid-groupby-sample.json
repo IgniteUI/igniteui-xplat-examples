@@ -12,7 +12,7 @@
         { "type": "WebGroupingExpression", "fieldName": "ShipCountry", "ignoreCase": false, "dir": "Asc" },
         { "type": "WebGroupingExpression", "fieldName": "ShipCity", "ignoreCase": false, "dir": "Asc"  }
       ],
-      "groupRowTemplateRef": "GroupByRowTemplate",
+      "groupRowTemplateRef": "WebGridGroupByRowTemplate",
       "columns": [
         {
           "type": "WebColumn",
@@ -47,7 +47,7 @@
           "width": "200px",
           "dataType": "Boolean",
           "groupable": true,
-          "bodyTemplateRef": "BooleanCellTemplate"
+          "bodyTemplateRef": "WebGridBooleanCellTemplate"
         },
         {
           "type": "WebColumn",

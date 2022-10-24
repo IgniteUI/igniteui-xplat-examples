@@ -17,12 +17,12 @@
           "type": "WebColumn",
           "field": "CountryFlag",
           "header": "Team",
-          "bodyTemplateRef": "ImageCellTemplate"
+          "bodyTemplateRef": "WebGridImageCellTemplate"
         },
         {
           "type": "WebColumn",
           "field": "Avatar",
-          "bodyTemplateRef": "AvatarCellTemplate"
+          "bodyTemplateRef": "WebGridAvatarCellTemplate"
         },
         {
           "type": "WebColumn",

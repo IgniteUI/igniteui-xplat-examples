@@ -23,7 +23,7 @@
         {
           "type": "WebColumn",
           "field": "Employees",
-          "bodyTemplateRef": "NestedDataCellTemplate",
+          "bodyTemplateRef": "WebGridNestedDataCellTemplate",
           "width": "40%"
         },
         {

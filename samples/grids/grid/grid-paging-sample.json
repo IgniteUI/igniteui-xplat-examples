@@ -42,12 +42,12 @@
         {
           "type": "WebColumn",
           "field": "TrackProgress",
-          "bodyTemplateRef": "ProgressCellTemplate"
+          "bodyTemplateRef": "WebGridProgressCellTemplate"
         },
         {
           "type": "WebColumn",
           "field": "CountryFlag",
-          "bodyTemplateRef": "ImageCellTemplate"
+          "bodyTemplateRef": "WebGridImageCellTemplate"
         }
       ]
     }

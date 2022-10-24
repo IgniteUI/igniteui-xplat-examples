@@ -12,15 +12,15 @@
           "field": "ContactName",
           "header": "Contact",
           "editable": true,
-          "bodyTemplateRef": "CompositeContactCellTemplate",
-          "inlineEditorTemplateRef": "CompositeContactEditCellTemplate"
+          "bodyTemplateRef": "WebGridCompositeContactCellTemplate",
+          "inlineEditorTemplateRef": "WebGridCompositeContactEditCellTemplate"
         },
         {
           "type": "WebColumn",
           "field": "Address",
           "editable": true,
-          "bodyTemplateRef": "CompositeAddressCellTemplate",
-          "inlineEditorTemplateRef": "CompositeAddressEditCellTemplate"
+          "bodyTemplateRef": "WebGridCompositeAddressCellTemplate",
+          "inlineEditorTemplateRef": "WebGridCompositeAddressEditCellTemplate"
         }
       ]
     }

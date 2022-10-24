@@ -71,19 +71,19 @@
         {
           "type": "WebColumn",
           "field": "Change",
-          "bodyTemplateRef": "CurrencyCellTemplate"
+          "bodyTemplateRef": "WebGridCurrencyCellTemplate"
         },
         {
           "type": "WebColumn",
           "field": "Change(%)",
           "dataType": "Number",
-          "bodyTemplateRef": "CurrencyCellTemplate"
+          "bodyTemplateRef": "WebGridCurrencyCellTemplate"
         },
         {
           "type": "WebColumn",
           "field": "Change On Year(%)",
           "dataType": "Number",
-          "bodyTemplateRef": "CurrencyCellTemplate"
+          "bodyTemplateRef": "WebGridCurrencyCellTemplate"
         }
       ]
     }
