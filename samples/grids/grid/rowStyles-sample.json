@@ -1,0 +1,123 @@
+{
+    "todo": [
+        "Add formatter for Open Price, Price, Change(%), Change on Year(%), Buy, Sell, Spread, Volume, High(D), Low(D), High(Y), Low(Y), Start(Y) columns",
+        "Add working CurrencyCellTemplate with badge and icon"
+    ],
+    "onAfterInit": [
+        "RegisterIconAfterViewInit"
+    ],
+    "descriptions": {
+        "content": {
+            "type": "WebGrid",
+            "dataRef": "FinancialDataAll",
+            "autoGenerate": false,
+            "name": "grid",
+            "id": "grid",
+            "allowFiltering": true,
+            "rowStylesRef": "RowStylesHandler",
+            "columns": [
+                {
+                    "type": "WebColumn",
+                    "field": "Category",
+                    "width": "120px"
+                },
+                {
+                    "type": "WebColumn",
+                    "field": "Type",
+                    "filterable": false,
+                    "width": "120px"
+                },
+                {
+                    "type": "WebColumn",
+                    "field": "Open Price",
+                    "width": "120px",
+                    "dataType": "Number"
+                },
+                {
+                    "type": "WebColumn",
+                    "field": "Price",
+                    "width": "120px",
+                    "dataType": "Number"
+                },
+                {
+                    "type": "WebColumn",
+                    "field": "Change",
+                    "width": "120px",
+                    "dataType": "Number",
+                    "bodyTemplateRef": "CurrencyCellTemplate"
+                },
+                {
+                    "type": "WebColumn",
+                    "field": "Change(%)",
+                    "header": "Change(%)",
+                    "width": "120px",
+                    "dataType": "Number"
+                },
+                {
+                    "type": "WebColumn",
+                    "field": "Change On Year(%)",
+                    "width": "150px",
+                    "dataType": "Number",
+                    "bodyTemplateRef": "CurrencyCellTemplate"
+                },
+                {
+                    "type": "WebColumn",
+                    "field": "Buy",
+                    "width": "130px",
+                    "dataType": "Number"
+                },
+                {
+                    "type": "WebColumn",
+                    "field": "Sell",
+                    "width": "130px",
+                    "dataType": "Number"
+                },
+                {
+                    "type": "WebColumn",
+                    "field": "Spread",
+                    "width": "130px",
+                    "dataType": "Number"
+                },
+                {
+                    "type": "WebColumn",
+                    "field": "Volume",
+                    "width": "130px",
+                    "dataType": "Number"
+                },
+                {
+                    "type": "WebColumn",
+                    "field": "High(D)",
+                    "width": "130px",
+                    "dataType": "Number"
+                },
+                {
+                    "type": "WebColumn",
+                    "field": "Low(D)",
+                    "width": "130px",
+                    "dataType": "Number"
+                },
+                {
+                    "type": "WebColumn",
+                    "field": "High(Y)",
+                    "width": "130px",
+                    "dataType": "Number"
+                },
+                {
+                    "type": "WebColumn",
+                    "field": "Low(Y)",
+                    "width": "130px",
+                    "dataType": "Number"
+                },
+                {
+                    "type": "WebColumn",
+                    "field": "Start(Y)",
+                    "width": "130px",
+                    "dataType": "Number"
+                }
+            ]
+        }
+    },
+    "modules": [
+        "grids/WebGridModule"
+    ]
+}
