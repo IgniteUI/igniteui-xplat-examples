@@ -127,8 +127,7 @@
         }
     },
     "modules": [
-        "withDescriptions",
-        "PropertyEditorPanelModule",
-        "WebGridModule"
+        "layouts/PropertyEditorPanelModule",
+        "grids/WebGridModule"
     ]
 }
