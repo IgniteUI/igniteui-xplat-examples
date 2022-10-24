@@ -1,12 +1,12 @@
 {
-  "descriptions": {
-    "todo": [
+  "todo": [
       "TODO add toolbar column pinning",
       "TODO add toolbar column hiding",
       "TODO add toolbar excel export button",
       "TODO add switch to toggle export multi column headers",
       "TODO Update WebGridExportEventMultiColumnHeaders event to check switch status for export"
-    ],
+  ],
+  "descriptions": {
     "content": {
       "type": "WebGrid",
       "name": "grid",
