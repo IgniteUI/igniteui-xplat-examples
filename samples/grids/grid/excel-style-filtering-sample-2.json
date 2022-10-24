@@ -3,8 +3,7 @@
      "defer until we support CSS styling",
      "fix bodyTemplate in CodeGenLib",
      "add grid toolbar",
-     "add column formetter to date column",
-     "add PreventDocumentScroll to grid"
+     "add column formetter to date column"
   ],
   "export": false,
   "descriptions": {
@@ -46,7 +45,10 @@
         "sortable": true,
         "disablePinning": true,
         "disableHiding": true,
-        "bodyTemplateRef": "WebGridUnitPriceCellTemplate"
+        "pipeArgs": {
+          "type": "WebColumnPipeArgs",
+          "digitsInfo": "1.2-2"
+        },
       },
       {
         "type": "WebColumn",
