@@ -1,8 +1,5 @@
 {
-  "todo": [
-    "add toggle summary template to columns",
-    "format unit price column in USD"
-  ],
+  "todo": ["add toggle summary template to columns"],
   "descriptions": {
     "content": {
       "type": "WebGrid",
@@ -30,7 +27,8 @@
           "field": "UnitPrice",
           "header": "Unit Price",
           "hasSummary": true,
-          "dataType": "Number"
+          "dataType": "Number",
+          "bodyTemplateRef": "NumberToUSDCellTemplate"
         },
         {
           "type": "WebColumn",
