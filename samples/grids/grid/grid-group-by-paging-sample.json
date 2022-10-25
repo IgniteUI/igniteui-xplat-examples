@@ -1,0 +1,60 @@
+{
+  "todo": [
+    "add PreventDocumentScroll to grid",
+    "set grouping expression strategy to defaultSortingStrategy",
+    "add formatter to UnitPrice column",
+    "check if paging is working"
+  ],
+  "descriptions": {
+    "content": {
+      "type": "WebGrid",
+      "name": "grid",
+      "id": "grid",
+      "dataRef": "InvoicesData",
+      "rowSelection": "Multiple",
+      "autoGenerate": false,
+      "groupingExpressions": [
+        {
+          "type": "WebGroupingExpression",
+          "dir": "Asc",
+          "fieldName": "ShipCountry",
+          "ignoreCase": false
+        }
+      ],
+      "paginationComponents": [
+        {
+          "type": "WebPaginator",
+          "perPage": 10
+        }
+      ],
+      "groupRowTemplateRef": "GroupByRowTemplate",
+      "columns": [
+        {
+          "type": "WebColumn",
+          "field": "ShipCountry",
+          "header": "Ship Country",
+          "width": "200px",
+          "groupable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "ShipCity",
+          "header": "Ship City",
+          "width": "250px",
+          "groupable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "UnitPrice",
+          "header": "Unit Price",
+          "width": "150px",
+          "dataType": "Number",
+          "groupable": true
+        }
+      ]
+    }
+  },
+  "modules": [
+    "grids/WebGridModule"
+  ]
+}
