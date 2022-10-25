@@ -37,7 +37,10 @@
         "sortable": true,
         "disablePinning": true,
         "disableHiding": true,
-        "bodyTemplateRef": "WebGridUnitPriceCellTemplate"
+        "pipeArgs": {
+          "type": "WebColumnPipeArgs",
+          "digitsInfo": "1.2-2"
+        },
       },
       {
         "type": "WebColumn",
