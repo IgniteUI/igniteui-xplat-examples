@@ -1,19 +1,27 @@
 {
-  "todo": [
-    "add column selection options to the toolbar"
-  ],
   "descriptions": {
+    "editor": {
+      "type": "PropertyEditorPanel",
+      "name": "PropertyEditor",
+      "componentRendererRef": "renderer",
+      "targetRef": "grid",
+      "descriptionType": "WebGrid",
+      "isHorizontal": true,
+      "isWrappingEnabled": true,
+      "properties": [
+        {
+          "name": "columnSelection",
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "ColumnSelection"
+        }
+      ]
+    },
     "content": {
       "type": "WebGrid",
       "name": "grid",
       "id": "grid",
       "dataRef": "CustomersData",
       "columnSelection": "Single",
-      "toolbar": [
-        {
-          "type": "WebGridToolbar"
-        }
-      ],
       "columns": [
         {
           "type": "WebColumn",
