@@ -1,0 +1,58 @@
+{
+  "todo": [
+    "add column selection options to the toolbar"
+  ],
+  "descriptions": {
+    "content": {
+      "type": "WebGrid",
+      "name": "grid",
+      "id": "grid",
+      "dataRef": "CustomersData",
+      "columnSelection": "Single",
+      "toolbar": [
+        {
+          "type": "WebGridToolbar"
+        }
+      ],
+      "columns": [
+        {
+          "type": "WebColumn",
+          "field": "ID"
+        },
+        {
+          "type": "WebColumn",
+          "field": "CompanyName",
+          "header": "Company Name"
+        },
+        {
+          "type": "WebColumn",
+          "field": "ContactTitle",
+          "header": "Contact Title",
+          "selectable": false
+        },
+        {
+          "type": "WebColumn",
+          "field": "City",
+          "selectable": false
+        },
+        {
+          "type": "WebColumn",
+          "field": "Country"
+        },
+        {
+          "type": "WebColumn",
+          "field": "PostalCode",
+          "header": "Postal Code"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Address",
+          "selectable": false
+        }
+      ]
+    }
+  },
+  "modules": [
+    "grids/WebGridModule"
+  ]
+}
