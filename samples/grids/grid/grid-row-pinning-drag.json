@@ -1,0 +1,62 @@
+{
+    "todo": [
+        "add event for row dragging",
+        "add action strip"
+    ],
+    "descriptions": {
+        "content": {
+            "name": "grid",
+            "type": "WebGrid",
+            "dataRef": "CustomersData",
+            "rowDraggable": true,
+            "autoGenerate": false,
+            "pinning": {
+                "type": "WebPinningConfig",
+                "rows": "Top"
+            },
+            "cellSelection": "None",
+            "primaryKey": "ID",
+            "columns": [
+                {
+                    "type": "WebColumn",
+                    "field": "CompanyName",
+                    "header": "Company Name"
+                },
+                {
+                    "type": "WebColumn",
+                    "field": "ContactName",
+                    "header": "Contact Name"
+                },
+                {
+                    "type": "WebColumn",
+                    "field": "ContactTitle",
+                    "header": "Contact Title"
+                },
+                {
+                    "type": "WebColumn",
+                    "field": "Address"
+                },
+                {
+                    "type": "WebColumn",
+                    "field": "City"
+                },
+                {
+                    "type": "WebColumn",
+                    "field": "PostalCode"
+                },
+                {
+                    "type": "WebColumn",
+                    "field": "Phone"
+                },
+                {
+                    "type": "WebColumn",
+                    "field": "Fax"
+                }
+            ]
+        }
+    },
+    "modules": [
+        "layouts/PropertyEditorPanelModule",
+        "grids/WebGridModule"
+    ]
+}
