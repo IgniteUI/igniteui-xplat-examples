@@ -4,6 +4,7 @@
     "TODO ability to add pin rows to pinning settings",
     "TODO ability to add pinning action to action strip"
   ],
+  "export": false,
   "onViewInit": ["WebGridRowPinStyleOnInitEvent"],
   "descriptions": {
     "content": {
