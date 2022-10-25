@@ -1,0 +1,82 @@
+{
+  "todo": [
+    "TODO ability to inject CSS styles",
+    "TODO ability to add pin rows to pinning settings",
+    "TODO ability to add pinning action to action strip"
+  ],
+  "onViewInit": ["WebGridRowPinStyleOnInitEvent"],
+  "descriptions": {
+    "content": {
+      "type": "WebGrid",
+      "name": "grid",
+      "dataRef": "CustomersData",
+      "autoGenerate": false,
+      "primaryKey": "ID",
+      "cellSelection": "None",
+      "pinning": {
+        "type": "WebPinningConfig",
+        "rows": "Top"
+      },
+      "columns": [
+        {
+          "type": "WebColumn",
+          "name": "CompanyName",
+          "field": "CompanyName",
+          "header": "CompanyName",
+          "width": "300px"
+        },
+        {
+          "type": "WebColumn",
+          "name": "ContactName",
+          "field": "ContactName",
+          "header": "ContactName"
+        },
+        {
+          "type": "WebColumn",
+          "name": "ContactTitle",
+          "field": "ContactTitle",
+          "header": "ContactTitle"
+        },
+        {
+          "type": "WebColumn",
+          "name": "Address",
+          "field": "Address",
+          "header": "Address"
+        },
+        {
+          "type": "WebColumn",
+          "name": "City",
+          "field": "City",
+          "header": "City"
+        },
+        {
+          "type": "WebColumn",
+          "name": "PostalCode",
+          "field": "PostalCode",
+          "header": "PostalCode"
+        },
+        {
+          "type": "WebColumn",
+          "name": "Phone",
+          "field": "Phone",
+          "header": "Phone"
+        },
+        {
+          "type": "WebColumn",
+          "name": "Fax",
+          "field": "Fax",
+          "header": "Fax"
+        }
+      ],
+      "actionStrip": {
+        "type": "WebActionStrip",
+        "hidden": true
+      }
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "grids/WebGridModule",
+    "WebActionStripModule"
+  ]
+}
