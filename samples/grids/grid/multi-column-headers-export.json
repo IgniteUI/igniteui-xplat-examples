@@ -1,10 +1,7 @@
 {
   "todo": [
-      "TODO add toolbar column pinning",
-      "TODO add toolbar column hiding",
-      "TODO add toolbar excel export button",
-      "TODO add switch to toggle export multi column headers",
-      "TODO Update WebGridExportEventMultiColumnHeaders event to check switch status for export"
+    "TODO add switch to toggle export multi column headers",
+    "TODO Update WebGridExportEventMultiColumnHeaders event to check switch status for export"
   ],
   "descriptions": {
     "content": {
@@ -15,11 +12,27 @@
       "moving": true,
       "displayDensity": "Compact",
       "allowFiltering": true,
-      "toolbar": [
+	  "toolbar": [
         {
-          "type": "WebGridToolbar"
-        }
-      ],
+          "type": "WebGridToolbar",
+          "tools": [
+          {
+            "type": "WebGridToolbarActions",
+            "actions": [
+            {
+              "type": "WebGridToolbarHiding"
+            },
+            {
+              "type": "WebGridToolbarPinning"
+            },
+            {
+              "type": "WebGridToolbarExporter",
+              "exportCSV": false,
+              "exportExcel": true,
+              "exportStartedRef": "WebGridExportEventMultiColumnHeaders"
+            }]
+          }]
+        }],
       "columns": [
         {
           "type": "WebColumn",

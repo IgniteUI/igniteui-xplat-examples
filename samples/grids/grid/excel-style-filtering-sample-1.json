@@ -1,9 +1,7 @@
 {
-  "todo": [ 
-     "defer until we support CSS styling",
-     "fix bodyTemplate in CodeGenLib",
-     "add grid toolbar",
-     "add column formetter to date column"
+  "todo": [
+    "add CSS styling",
+    "add column formetter to date column"
   ],
   "export": false,
   "descriptions": {
@@ -33,7 +31,16 @@
       "filterMode": "ExcelStyleFilter",
       "toolbar": [
         {
-          "type": "WebGridToolbar"
+          "type": "WebGridToolbar",
+          "tools": [
+          {
+            "type": "WebGridToolbarActions",
+             "actions": [
+              {
+                "type": "WebGridToolbarHiding"
+              }
+             ]
+          }]
         }
       ],
       "columns": [{
@@ -77,12 +84,13 @@
         "header": "Discontinued",
         "sortable": true,
         "bodyTemplateRef": "WebGridBooleanCellTemplate"
-        }]
       }
-    },
-    "modules": [
-      "withDescriptions",
-      "layouts/PropertyEditorPanelModule",
-      "grids/WebGridModule"
     ]
   }
+},
+"modules": [
+  "withDescriptions",
+  "layouts/PropertyEditorPanelModule",
+  "grids/WebGridModule"
+]
+}
