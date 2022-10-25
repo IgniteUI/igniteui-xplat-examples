@@ -1,6 +1,6 @@
 {
     "todo": [
-        "add event for row dragging",
+        "add event handlers for row dragging",
         "add action strip"
     ],
     "descriptions": {
