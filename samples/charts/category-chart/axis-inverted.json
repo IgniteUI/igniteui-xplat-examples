@@ -11,23 +11,23 @@
       "isHorizontal": true,
       "isWrappingEnabled": true,
       "properties": [
-          {
-            "type": "PropertyEditorPropertyDescription",
-            "propertyPath": "XAxisInverted",
-            "name": "XAxisInvertedEditor",
-            "label": "X Axis - Inverted",
-            "shouldOverrideDefaultEditor": true,
-            "primitiveValue": true
-          },
-          {
-            "type": "PropertyEditorPropertyDescription",
-            "propertyPath": "YAxisInverted",
-            "name": "YAxisInvertedEditor",
-            "label": "Y Axis - Inverted",
-            "shouldOverrideDefaultEditor": true,
-            "primitiveValue": true
-          }
-       ]
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "XAxisInverted",
+          "name": "XAxisInvertedEditor",
+          "label": "X Axis - Inverted",
+          "shouldOverrideDefaultEditor": true,
+          "primitiveValue": true
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "YAxisInverted",
+          "name": "YAxisInvertedEditor",
+          "label": "Y Axis - Inverted",
+          "shouldOverrideDefaultEditor": true,
+          "primitiveValue": true
+        }
+      ]
     },
     "content": {
       "type": "CategoryChart",
@@ -37,7 +37,7 @@
       "isHorizontalZoomEnabled": false,
       "isVerticalZoomEnabled": false,
       "dataSourceRef": "CountryRenewableElectricity",
-      "includedProperties": ["Year","Europe"],
+      "includedProperties": ["Year", "Europe"],
       "yAxisTitle": "TWh",
       "yAxisTitleLeftMargin": 10,
       "yAxisTitleRightMargin": 5,

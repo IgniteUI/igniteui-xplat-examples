@@ -1,0 +1,94 @@
+{
+  "todo": [
+    "select city and postal code columns on load"
+  ],
+  "descriptions": {
+    "content": {
+      "type": "WebGrid",
+      "name": "grid",
+      "id": "grid",
+      "dataRef": "CustomersData",
+      "columnSelection": "Multiple",
+      "columns": [
+        {
+          "type": "WebColumnGroup",
+          "header": "General Information",
+          "children": [
+            {
+              "type": "WebColumn",
+              "field": "CompanyName",
+              "header": "Company Name"
+            },
+            {
+              "type": "WebColumnGroup",
+              "header": "Personal Details",
+              "children": [
+                {
+                  "type": "WebColumn",
+                  "field": "ContactName",
+                  "header": "Contact Name",
+                  "hidden": true
+                },
+                {
+                  "type": "WebColumn",
+                  "field": "ContactTitle",
+                  "header": "Contact Title",
+                  "selectable": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "WebColumn",
+          "field": "ID"
+        },
+        {
+          "type": "WebColumnGroup",
+          "header": "Country Information",
+          "children": [
+            {
+              "type": "WebColumnGroup",
+              "header": "Region Information",
+              "children": [
+                {
+                  "type": "WebColumn",
+                  "field": "Country",
+                  "selectable": false
+                },
+                {
+                  "type": "WebColumn",
+                  "field": "City"
+                },
+                {
+                  "type": "WebColumn",
+                  "field": "PostalCode"
+                }
+              ]
+            },
+            {
+              "type": "WebColumnGroup",
+              "header": "City Information",
+              "children": [
+                {
+                  "type": "WebColumn",
+                  "field": "Fax",
+                  "selectable": false
+                },
+                {
+                  "type": "WebColumn",
+                  "field": "Address",
+                  "selectable": false
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "modules": [
+    "grids/WebGridModule",
+    "grids/WebColumnGroupModule"
+  ]
+}

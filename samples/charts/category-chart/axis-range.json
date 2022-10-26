@@ -16,35 +16,35 @@
       "isHorizontal": true,
       "isWrappingEnabled": true,
       "properties": [
-          {
-            "type": "PropertyEditorPropertyDescription",
-            "propertyPath": "YAxisMinimumValue",
-            "name": "YAxisMinimumValue",
-            "label": "Y Axis Minimum Value",
-            "shouldOverrideDefaultEditor": true,
-            "valueType": "EnumValue",
-            "dropDownNames": ["0", "10", "20", "30", "40", "50", "60", "70", "80", "90", "100"],
-            "dropDownValues": ["0", "10", "20", "30", "40", "50", "60", "70", "80", "90", "100"],
-            "primitiveValue": 0
-          },
-          {
-            "type": "PropertyEditorPropertyDescription",
-            "propertyPath": "YAxisMaximumValue",
-            "name": "YAxisMaximumValue",
-            "label": "Y Axis Maximum Value",
-            "shouldOverrideDefaultEditor": true,
-            "valueType": "EnumValue",
-            "dropDownNames": ["100", "110", "120", "130", "140", "150", "160", "170", "180", "190", "200"],
-            "dropDownValues": ["100", "110", "120", "130", "140", "150", "160", "170", "180", "190", "200"],
-            "primitiveValue": 150
-          }
-       ]
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "YAxisMinimumValue",
+          "name": "YAxisMinimumValue",
+          "label": "Y Axis Minimum Value",
+          "shouldOverrideDefaultEditor": true,
+          "valueType": "EnumValue",
+          "dropDownNames": ["0", "10", "20", "30", "40", "50", "60", "70", "80", "90", "100"],
+          "dropDownValues": ["0", "10", "20", "30", "40", "50", "60", "70", "80", "90", "100"],
+          "primitiveValue": 0
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "YAxisMaximumValue",
+          "name": "YAxisMaximumValue",
+          "label": "Y Axis Maximum Value",
+          "shouldOverrideDefaultEditor": true,
+          "valueType": "EnumValue",
+          "dropDownNames": ["100", "110", "120", "130", "140", "150", "160", "170", "180", "190", "200"],
+          "dropDownValues": ["100", "110", "120", "130", "140", "150", "160", "170", "180", "190", "200"],
+          "primitiveValue": 150
+        }
+      ]
     },
     "content": {
       "type": "CategoryChart",
       "name": "chart",
       "dataSourceRef": "CountryRenewableElectricity",
-      "includedProperties": ["Year","Europe","China","America"],
+      "includedProperties": ["Year", "Europe", "China", "America"],
       "legendRef": "Legend",
       "chartType": "Line",
       "computedPlotAreaMarginMode": "Series",

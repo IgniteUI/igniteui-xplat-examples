@@ -1,0 +1,106 @@
+{
+  "todo": [ "fix exporting pipeArgs and sortingExpressions" ],
+  "export": false,
+  "descriptions": {
+    "editor": {
+      "type": "PropertyEditorPanel",
+      "name": "PropertyEditor",
+      "componentRendererRef": "renderer",
+      "targetRef": "grid",
+      "descriptionType": "WebGrid",
+      "isHorizontal": true,
+      "isWrappingEnabled": true,
+      "properties": [
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "SortingOptions",
+          "name": "SortingOptionsEditor"
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "valueType": "Button",
+          "primitiveValue": "Clear Sorting",
+          "buttonClickedRef": "WebGridSortingSampleClearSortButton"
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "valueType": "Button",
+          "primitiveValue": "Clear Grouped Columns",
+          "buttonClickedRef": "WebGridSortingSampleClearGrouping"
+        }
+      ]
+    },
+    "content": {
+      "type": "WebGrid",
+      "dataRef": "ProductSales",
+      "name": "grid",
+      "autoGenerate": false,
+      "sortingExpressions": [
+        {
+          "type": "WebSortingExpression",
+          "fieldName": "CategoryName",
+          "dir": "Asc",
+          "ignoreCase": true
+        }
+      ],
+      "columns": [
+        {
+          "type": "WebColumn",
+          "field": "OrderID",
+          "header": "Order ID",
+          "groupable": true,
+          "sortable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "CategoryName",
+          "header": "Category Name",
+          "dataType": "String",
+          "groupable": true,
+          "sortable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "CompanyName",
+          "header": "Company Name",
+          "dataType": "String",
+          "groupable": true,
+          "sortable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "ShipCountry",
+          "header": "Ship Country",
+          "dataType": "String",
+          "groupable": true,
+          "sortable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "SaleAmount",
+          "header": "Sale Amount",
+          "dataType": "Currency",
+          "groupable": true,
+          "sortable": true,
+          "pipeArgs": {
+            "currencyCode": "USD",
+            "type": "WebColumnPipeArgs",
+            "digitsInfo": "1.2-2"
+          }
+        },
+        {
+          "type": "WebColumn",
+          "field": "ShippedDate",
+          "header": "Shipped Date",
+          "dataType": "Date",
+          "sortable": true
+        }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
+    "grids/WebGridModule"
+  ]
+}

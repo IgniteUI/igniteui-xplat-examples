@@ -1,0 +1,79 @@
+{
+  "descriptions": {
+    "content": {
+      "type": "WebGrid",
+      "dataRef": "CustomersData",
+      "autoGenerate": false,
+      "name": "grid",
+      "columns": [
+        {
+          "type": "WebColumn",
+          "field": "ID",
+          "hidden": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "CompanyName",
+          "header": "Company Name",
+          "width": "300px",
+          "headerTemplateRef": "WebGridPinHeaderTemplate"
+        },
+        {
+          "type": "WebColumn",
+          "field": "ContactName",
+          "header": "Contact Name",
+          "width": "200px",
+          "pinned": true,
+          "headerTemplateRef": "WebGridPinHeaderTemplate"
+        },
+        {
+          "type": "WebColumn",
+          "field": "ContactTitle",
+          "header": "Contact Title",
+          "width": "200px",
+          "pinned": true,
+          "headerTemplateRef": "WebGridPinHeaderTemplate"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Address",
+          "width": "300px",
+          "headerTemplateRef": "WebGridPinHeaderTemplate"
+        },
+        {
+          "type": "WebColumn",
+          "field": "City",
+          "width": "120px",
+          "headerTemplateRef": "WebGridPinHeaderTemplate"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Region",
+          "width": "120px",
+          "headerTemplateRef": "WebGridPinHeaderTemplate"
+        },
+        {
+          "type": "WebColumn",
+          "field": "PostalCode",
+          "width": "150px",
+          "headerTemplateRef": "WebGridPinHeaderTemplate"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Phone",
+          "width": "150px",
+          "headerTemplateRef": "WebGridPinHeaderTemplate"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Fax",
+          "width": "150px",
+          "headerTemplateRef": "WebGridPinHeaderTemplate"
+        }
+      ]
+    }
+  },
+  "modules": [
+    "grids/WebGridModule"
+  ]
+}

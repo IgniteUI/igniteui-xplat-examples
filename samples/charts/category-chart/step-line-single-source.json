@@ -8,7 +8,7 @@
       "name": "chart",
       "chartType": "StepLine",
       "dataSourceRef": "CountryRenewableElectricity",
-      "includedProperties": ["Year","Europe"],
+      "includedProperties": ["Year", "Europe"],
       "isHorizontalZoomEnabled": false,
       "isVerticalZoomEnabled": false,
       "yAxisTitle": "TWh",

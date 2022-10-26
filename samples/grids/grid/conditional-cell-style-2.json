@@ -1,36 +1,38 @@
 {
+  "todo": [ "fix bodyTemplate in CodeGenLib" ],
+  "export": false,
   "descriptions": {
     "content": {
       "type": "WebGrid",
       "dataRef": "AthletesData",
       "autoGenerate": false,
-      "primaryKey": "Id",      
+      "primaryKey": "Id",
       "columns": [
         {
-          "type": "WebGridColumn",
-          "field": "Id"          
+          "type": "WebColumn",
+          "field": "Id"
         },
         {
-          "type": "WebGridColumn",
-          "field": "Position"          
+          "type": "WebColumn",
+          "field": "Position"
         },
         {
-          "type": "WebGridColumn",
-          "field": "Name"          
+          "type": "WebColumn",
+          "field": "Name"
         },
         {
-          "type": "WebGridColumn",
-          "field": "AthleteNumber"          
+          "type": "WebColumn",
+          "field": "AthleteNumber"
         },
         {
-          "type": "WebGridColumn",
-          "field": "CountryName"          
+          "type": "WebColumn",
+          "field": "CountryName"
         }
       ]
     }
   },
   "modules": [
-    "withDescriptions",    
-    "grids/WebGridModule"  
+    "withDescriptions",
+    "grids/WebGridModule"
   ]
 }

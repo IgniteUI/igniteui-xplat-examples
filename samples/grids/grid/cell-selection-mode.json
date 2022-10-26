@@ -1,0 +1,61 @@
+{
+  "descriptions": {
+    "editor": {
+      "type": "PropertyEditorPanel",
+      "name": "PropertyEditor",
+      "componentRendererRef": "renderer",
+      "targetRef": "grid",
+      "descriptionType": "WebGrid",
+      "isHorizontal": true,
+      "isWrappingEnabled": true,
+      "properties": [
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "CellSelection",
+          "name": "CellSelectionEditor"
+        }
+      ]
+    },
+    "content": {
+      "type": "WebGrid",
+      "name": "grid",
+      "dataRef": "NwindData",
+      "autoGenerate": false,
+      "columns": [
+        {
+          "type": "WebColumn",
+          "field": "ProductID"
+        },
+        {
+          "type": "WebColumn",
+          "field": "ProductName"
+        },
+        {
+          "type": "WebColumn",
+          "field": "UnitsInStock",
+          "dataType": "Number"
+        },
+        {
+          "type": "WebColumn",
+          "field": "UnitPrice",
+          "dataType": "Number"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Discontinued",
+          "dataType": "Boolean"
+        },
+        {
+          "type": "WebColumn",
+          "field": "OrderDate",
+          "dataType": "Date"
+        }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
+    "grids/WebGridModule"
+  ]
+}

@@ -1,41 +1,45 @@
 {
+  "todo": [ 
+     "add template column with event handlers",
+     "add advanced-filtering-dialog"
+  ],
   "descriptions": {
     "content": {
       "name": "grid",
       "type": "WebGrid",
-      "dataRef":"NwindData",
+      "dataRef": "NwindData",
       "autoGenerate":false,
-      "columns":[
-      {
-        "type":"WebGridColumn",
-        "name": "ProductName",
-        "field": "ProductName",
-        "header": "Product Name"
-      },
-      {
-        "type":"WebGridColumn",
-        "name": "QuantityPerUnit",
-        "field": "QuantityPerUnit",
-        "header": "Quantity Per Unit"
-      },
-      {
-        "type":"WebGridColumn",
-        "name": "UnitPrice",
-        "field": "UnitPrice",
-        "header": "Unit Price"
-      },
-      {
-        "type":"WebGridColumn",
-        "name": "OrderDate",
-        "field": "OrderDate",
-        "header": "Order Date"
-      },
-      {
-        "type":"WebGridColumn",
-        "name": "Discontinued",
-        "field": "Discontinued",
-        "header": "Discontinued"
-      }
+      "columns": [
+        {
+          "type": "WebColumn",
+          "name": "ProductName",
+          "field": "ProductName",
+          "header": "Product Name"
+        },
+        {
+          "type": "WebColumn",
+          "name": "QuantityPerUnit",
+          "field": "QuantityPerUnit",
+          "header": "Quantity Per Unit"
+        },
+        {
+          "type": "WebColumn",
+          "name": "UnitPrice",
+          "field": "UnitPrice",
+          "header": "Unit Price"
+        },
+        {
+          "type": "WebColumn",
+          "name": "OrderDate",
+          "field": "OrderDate",
+          "header": "Order Date"
+        },
+        {
+          "type": "WebColumn",
+          "name": "Discontinued",
+          "field": "Discontinued",
+          "header": "Discontinued"
+        }
       ]
     }
   },

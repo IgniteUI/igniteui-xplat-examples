@@ -9,18 +9,18 @@
       "isWrappingEnabled": true,
       "properties": [
         {
-            "type": "PropertyEditorPropertyDescription",
-            "propertyPath": "ShouldConsiderAutoRotationForInitialLabels",
-            "name": "ShouldConsiderAutoRotationForInitialLabels",
-            "label": "Rotate Labels?",
-            "shouldOverrideDefaultEditor": true,
-            "primitiveValue": true
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "ShouldConsiderAutoRotationForInitialLabels",
+          "name": "ShouldConsiderAutoRotationForInitialLabels",
+          "label": "Rotate Labels?",
+          "shouldOverrideDefaultEditor": true,
+          "primitiveValue": true
         },
         {
           "type": "PropertyEditorPropertyDescription",
           "propertyPath": "AutoMarginAndAngleUpdateMode",
           "name": "AutoMarginAndAngleUpdateMode",
-          "label": "AutoMarginAndAngleUpdateMode:",
+          "label": "AutoMarginAndAngleUpdateMode: ",
           "shouldOverrideDefaultEditor": true,
           "valueType": "EnumValue",
           "dropDownNames": ["None", "SizeChanging", "SizeChangingAndZoom"],

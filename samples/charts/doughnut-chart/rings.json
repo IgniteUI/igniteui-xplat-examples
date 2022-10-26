@@ -17,7 +17,7 @@
           "labelsPosition": "Center",
           "radiusFactor": 0.9,
           "outlines": [ "white" ],
-          "brushes": [ "#3cbdc9", "#9fb328", "#f96232","#8a58d6" ],
+          "brushes": [ "#3cbdc9", "#9fb328", "#f96232", "#8a58d6" ],
           "dataSourceRef": "CalendarSeasons"
         },
         {

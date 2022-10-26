@@ -3,33 +3,33 @@
     "content": {
       "type": "WebGrid",
       "dataRef": "NwindData",
-      "autoGenerate": false,  
+      "autoGenerate": false,
       "primaryKey": "ProductID",
-      "cellEditRef": "CellEditGridEditingEvents",         
+      "cellEditRef": "WebGridEditingEventsCellEdit",
       "columns": [
         {
-          "type": "WebGridColumn",          
+          "type": "WebColumn",
           "field": "ProductName",
           "header": "Product Name",
-          "dataType": "String1"
+          "dataType": "String"
         },
         {
-          "type": "WebGridColumn",          
+          "type": "WebColumn",
           "field": "UnitPrice",
           "header": "Unit Price",
           "dataType": "Number",
           "editable": true
         },
         {
-          "type": "WebGridColumn",
+          "type": "WebColumn",
           "name": "UnitsInStock",
           "field": "UnitsInStock",
           "header": "Units In Stock",
           "dataType": "Number",
-          "editable": true   
+          "editable": true
         },
         {
-          "type": "WebGridColumn",
+          "type": "WebColumn",
           "name": "UnitsOnOrder",
           "field": "UnitsOnOrder",
           "header": "Units on Order",
@@ -40,7 +40,7 @@
     }
   },
   "modules": [
-    "withDescriptions",    
-    "grids/WebGridModule"  
+    "withDescriptions",
+    "grids/WebGridModule"
   ]
 }

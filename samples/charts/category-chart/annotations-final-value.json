@@ -10,7 +10,7 @@
       "targetRef": "chart",
       "descriptionType": "CategoryChart",
       "isHorizontal": true,
-      "isWrappingEnabled": true,      
+      "isWrappingEnabled": true,
       "properties": [
         {
           "type": "PropertyEditorPropertyDescription",
@@ -37,7 +37,7 @@
       "finalValueAnnotationsPrecision": 0,
       "crosshairsAnnotationYAxisPrecision": 0,
       "yAxisMaximumValue": 35,
-      "yAxisLabelLocation": "OutsideRight"      
+      "yAxisLabelLocation": "OutsideRight"
     }
   },
   "modules": [

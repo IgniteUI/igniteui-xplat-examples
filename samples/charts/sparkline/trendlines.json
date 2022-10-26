@@ -9,21 +9,21 @@
       "isHorizontal": true,
       "isWrappingEnabled": true,
       "properties": [
-          {
-            "type": "PropertyEditorPropertyDescription",
-            "propertyPath": "TrendLineType",
-            "name": "TrendLineTypeEditor",
-            "label": "Trendline Type",
-            "shouldOverrideDefaultEditor": true,
-            "valueType": "EnumValue",
-            "dropDownNames": ["CubicFit", "CumulativeAverage", "ExponentialAverage", "ExponentialFit", "LinearFit", "LogarithmicFit", "ModifiedAverage", "None", "PowerLawFit", "QuadraticFit", "QuarticFit",  "QuinticFit", "SimpleAverage", "WeightedAverage" ],
-            "dropDownValues": ["CubicFit", "CumulativeAverage", "ExponentialAverage", "ExponentialFit", "LinearFit", "LogarithmicFit", "ModifiedAverage", "None", "PowerLawFit", "QuadraticFit", "QuarticFit",  "QuinticFit", "SimpleAverage", "WeightedAverage" ],
-            "primitiveValue": "CubicFit"
-          }
-       ]
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "TrendLineType",
+          "name": "TrendLineTypeEditor",
+          "label": "Trendline Type",
+          "shouldOverrideDefaultEditor": true,
+          "valueType": "EnumValue",
+          "dropDownNames": ["CubicFit", "CumulativeAverage", "ExponentialAverage", "ExponentialFit", "LinearFit", "LogarithmicFit", "ModifiedAverage", "None", "PowerLawFit", "QuadraticFit", "QuarticFit",  "QuinticFit", "SimpleAverage", "WeightedAverage" ],
+          "dropDownValues": ["CubicFit", "CumulativeAverage", "ExponentialAverage", "ExponentialFit", "LinearFit", "LogarithmicFit", "ModifiedAverage", "None", "PowerLawFit", "QuadraticFit", "QuarticFit",  "QuinticFit", "SimpleAverage", "WeightedAverage" ],
+          "primitiveValue": "CubicFit"
+        }
+      ]
     },
     "content": {
-     "type": "Sparkline",
+      "type": "Sparkline",
       "name": "chart",
       "dataSourceRef": "SparklineMixedData",
       "displayType": "Area",

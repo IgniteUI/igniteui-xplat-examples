@@ -1,0 +1,128 @@
+{
+  "todo": [
+    "TODO ability to inject CSS styles"
+  ],
+  "export": false,
+  "descriptions": {
+    "content": {
+      "type": "WebGrid",
+      "name": "grid",
+      "dataRef": "InvoicesData",
+      "autoGenerate": false,
+      "groupingExpressions": [
+        {
+          "type": "WebGroupingExpression",
+          "dir": "Asc",
+          "fieldName": "ShipCountry",
+          "ignoreCase": false
+        },
+        {
+          "type": "WebGroupingExpression",
+          "dir": "Asc",
+          "fieldName": "ShipCity",
+          "ignoreCase": false
+        }
+      ],
+      "columns": [
+        {
+          "type": "WebColumn",
+          "name": "OrderID",
+          "field": "OrderID",
+          "header": "Order ID",
+          "hidden": true
+        },
+        {
+          "type": "WebColumn",
+          "name": "ShipCountry",
+          "field": "ShipCountry",
+          "header": "Ship Country",
+          "width": "200px",
+          "groupable": true
+        },
+        {
+          "type": "WebColumn",
+          "name": "OrderDate",
+          "field": "OrderDate",
+          "header": "Order Date",
+          "width": "200px",
+          "groupable": true
+        },
+        {
+          "type": "WebColumn",
+          "name": "PostalCode",
+          "field": "PostalCode",
+          "header": "Postal Code",
+          "width": "200px",
+          "groupable": true
+        },
+        {
+          "type": "WebColumn",
+          "name": "Discontinued",
+          "field": "Discontinued",
+          "header": "Discontinued",
+          "width": "200px",
+          "groupable": true,
+          "bodyTemplateRef": "WebGridBooleanCellTemplate"
+        },
+        {
+          "type": "WebColumn",
+          "name": "ShipName",
+          "field": "ShipName",
+          "header": "Ship Name",
+          "width": "250px",
+          "groupable": true
+        },
+        {
+          "type": "WebColumn",
+          "name": "ShipCity",
+          "field": "ShipCity",
+          "header": "Ship City",
+          "width": "250px",
+          "groupable": true
+        },
+        {
+          "type": "WebColumn",
+          "name": "ShipperName",
+          "field": "ShipperName",
+          "header": "Shipper Name",
+          "width": "250px",
+          "groupable": true
+        },
+        {
+          "type": "WebColumn",
+          "name": "Salesperson",
+          "field": "Salesperson",
+          "header": "Salesperson",
+          "width": "250px",
+          "groupable": true
+        },
+        {
+          "type": "WebColumn",
+          "name": "UnitPrice",
+          "field": "UnitPrice",
+          "header": "Unit Price",
+          "width": "150px",
+          "dataType": "Currency",
+          "pipeArgs": {
+            "type": "WebColumnPipeArgs",
+            "digitsInfo": "1.2-2"
+          },
+          "groupable": true
+        },
+        {
+          "type": "WebColumn",
+          "name": "Quantity",
+          "field": "Quantity",
+          "header": "Quantity",
+          "width": "150px",
+          "dataType": "Number",
+          "groupable": true
+        }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "grids/WebGridModule"
+  ]
+}

@@ -1,0 +1,71 @@
+{
+    "todo": [
+        "TODO add switch to toggle row pinning position",
+        "TODO add template column with icon for pinning",
+        "TODO add event to handle row pinning"
+    ],
+    "descriptions": {
+        "content": {
+            "name": "grid",
+            "type": "WebGrid",
+            "dataRef": "CustomersData",
+            "primaryKey": "ID",
+            "cellSelection": "None",
+            "columns": [
+                {
+                    "type": "WebColumn",
+                    "width": "70px",
+                    "filterable": false,
+                    "pinned": true
+                },
+                {
+                    "type": "WebColumn",
+                    "field": "ID",
+                    "width": "150px",
+                    "hidden": true
+                },
+                {
+                    "type": "WebColumn",
+                    "field": "CompanyName",
+                    "header": "Company Name",
+                    "width": "350px"
+                },
+                {
+                    "type": "WebColumn",
+                    "field": "ContactName",
+                    "header": "Contact Name"
+                },
+                {
+                    "type": "WebColumn",
+                    "field": "ContactTitle",
+                    "header": "Contact Tiasdsadtle"
+                },
+                {
+                    "type": "WebColumn",
+                    "field": "Address"
+                },
+                {
+                    "type": "WebColumn",
+                    "field": "City"
+                },
+                {
+                    "type": "WebColumn",
+                    "field": "PostalCode",
+                    "header": "Postal Code"
+                },
+                {
+                    "type": "WebColumn",
+                    "field": "Phone"
+                },
+                {
+                    "type": "WebColumn",
+                    "field": "Fax"
+                }
+            ]
+        }
+    },
+    "modules": [
+        "layouts/PropertyEditorPanelModule",
+        "grids/WebGridModule"
+    ]
+}

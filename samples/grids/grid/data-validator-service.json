@@ -1,0 +1,133 @@
+{
+  "todo": [
+      "TODO ability to mark columns as required",
+      "TODO ability to set min value on column",
+      "TODO ability to set date (datelong|longdate) format on pipeArgs"
+  ],
+  "descriptions": {
+    "editor": {
+      "type": "PropertyEditorPanel",
+      "name": "PropertyEditor",
+      "componentRendererRef": "renderer",
+      "targetRef": "grid",
+      "descriptionType": "WebGrid",
+      "isHorizontal": true,
+      "isWrappingEnabled": true,
+      "properties": [
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "RowEditable",
+          "name": "RowEditableEditor",
+          "valueType": "Boolean1",
+          "primitiveValue": true
+        }
+      ]
+    },
+    "content": {
+      "type": "WebGrid",
+      "name": "grid",
+      "dataRef": "EmployeesData",
+      "autoGenerate": false,
+      "batchEditing": true,
+      "rowEditable": true,
+      "primaryKey": "ID",
+      "columns": [
+        {
+          "type": "WebColumn",
+          "name": "Avatar",
+          "field": "Avatar",
+          "header": "Avatar",
+          "dataType": "String1",
+          "editable": false,
+          "width": "80px",
+          "bodyTemplateRef": "WebGridAvatarCellTemplate"
+        },
+        {
+          "type": "WebColumn",
+          "name": "Name",
+          "field": "Name",
+          "header": "Name",
+          "editable": true
+        },
+        {
+          "type": "WebColumn",
+          "name": "Company",
+          "field": "Company",
+          "header": "Company",
+          "editable": true
+        },
+        {
+          "type": "WebColumn",
+          "name": "Email",
+          "field": "Email",
+          "header": "Email",
+          "width": "190px",
+          "editable": true
+        },
+        {
+          "type": "WebColumn",
+          "name": "Fax",
+          "field": "Fax",
+          "header": "Phone",
+          "editable": true
+        },
+        {
+          "type": "WebColumn",
+          "name": "CreatedOn",
+          "field": "CreatedOn",
+          "header": "Date of Registration",
+          "width": "170px",
+          "dataType": "Date",
+          "editable": true
+        },
+        {
+          "type": "WebColumn",
+          "name": "LastActivity",
+          "field": "LastActivity",
+          "header": "Last Active",
+          "width": "170px",
+          "dataType": "Date",
+          "editable": true
+        },
+        {
+          "type": "WebColumn",
+          "name": "EstimatedSales",
+          "field": "EstimatedSales",
+          "header": "Estimated Sales",
+          "dataType": "Number",
+          "editable": true
+        },
+        {
+          "type": "WebColumn",
+          "name": "DealsLost",
+          "field": "DealsLost",
+          "header": "Deals Lost",
+          "dataType": "Number",
+          "editable": true
+        },
+        {
+          "type": "WebColumn",
+          "name": "DealsWon",
+          "field": "DealsWon",
+          "header": "Deals Won",
+          "dataType": "Number",
+          "editable": true
+        },
+        {
+          "type": "WebColumn",
+          "name": "DealsPending",
+          "field": "DealsPending",
+          "header": "Deals Pending",
+          "dataType": "Number",
+          "editable": true
+        }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
+    "grids/WebGridModule"
+  ]
+}
+

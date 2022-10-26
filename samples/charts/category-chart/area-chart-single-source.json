@@ -7,7 +7,7 @@
       "type": "CategoryChart",
       "name": "chart",
       "dataSourceRef": "CountryRenewableElectricity",
-      "includedProperties": ["Year","Europe"],
+      "includedProperties": ["Year", "Europe"],
       "chartType": "Area",
       "yAxisTitle": "TWh",
       "yAxisTitleLeftMargin": 10,

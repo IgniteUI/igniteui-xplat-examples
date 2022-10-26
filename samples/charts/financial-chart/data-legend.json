@@ -1,10 +1,10 @@
 {
   "descriptions": {
-    "legend": {      
+    "legend": {
       "type": "DataLegend",
       "name": "Legend",
       "targetRef": "chart",
-      "includedColumns": ["Open","Close","High","Low","Change"]
+      "includedColumns": ["Open", "Close", "High", "Low", "Change"]
     },
     "content": {
       "type": "FinancialChart",
@@ -16,7 +16,7 @@
       "dataToolTipHeaderFormatTime": "None",
       "zoomSliderType": "None"
     }
-  }, 
+  },
   "modules": [
     "charts/FinancialChartModule",
     "charts/DataChartInteractivityModule",

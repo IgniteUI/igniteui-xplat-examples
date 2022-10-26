@@ -1,0 +1,85 @@
+{
+  "todo": [ "fix exporting pipeArgs and groupingExpressions" ],
+  "export": false,
+  "descriptions": {
+    "editor": {
+      "type": "PropertyEditorPanel",
+      "name": "PropertyEditor",
+      "componentRendererRef": "renderer",
+      "targetRef": "grid",
+      "descriptionType": "WebGrid",
+      "isHorizontal": true,
+      "isWrappingEnabled": true,
+      "properties": [
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "SummaryCalculationMode",
+          "name": "SummaryCalcModeEditor"
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "SummaryPosition",
+          "name": "SummaryPositionEditor"
+        }
+      ]
+    },
+    "content": {
+      "type": "WebGrid",
+      "name": "grid",
+      "dataRef": "InvoicesData",
+      "autoGenerate": false,
+      "groupingExpressions": [
+        {
+          "type": "WebGroupingExpression",
+          "dir": "Asc",
+          "fieldName": "ShipCountry",
+          "ignoreCase": false
+        }
+      ],
+      "columns": [
+        {
+          "type": "WebColumn",
+          "field": "ShipCountry",
+          "header": "Ship Country",
+          "width": "200px",
+          "groupable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "ShipCity",
+          "header": "Ship City",
+          "width": "250px",
+          "groupable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "UnitPrice",
+          "header": "Unit Price",
+          "width": "150px",
+          "dataType": "Currency",
+          "groupable": true,
+          "hasSummary": true,
+          "pipeArgs": {
+            "type": "WebColumnPipeArgs",
+            "currencyCode": "USD",
+            "digitsInfo": "1.2-2"
+          }
+        },
+        {
+          "type": "WebColumn",
+          "field": "Quantity",
+          "header": "Quantity",
+          "width": "150px",
+          "dataType": "Number",
+          "groupable": true,
+          "hasSummary": true
+        }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
+    "grids/WebGridModule"
+  ]
+}

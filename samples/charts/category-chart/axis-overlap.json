@@ -16,19 +16,19 @@
       "isHorizontal": true,
       "isWrappingEnabled": true,
       "properties": [
-          {
-            "type": "PropertyEditorPropertyDescription",
-            "propertyPath": "XAxisOverlap",
-            "name": "XAxisOverlap",
-            "label": "X Axis - Overlap",
-            "shouldOverrideDefaultEditor": true,
-            "valueType": "Slider",
-            "min": 0,
-            "max": 1,
-            "step": 0.1,
-            "primitiveValue": 0
-          }
-       ]
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "XAxisOverlap",
+          "name": "XAxisOverlap",
+          "label": "X Axis - Overlap",
+          "shouldOverrideDefaultEditor": true,
+          "valueType": "Slider",
+          "min": 0,
+          "max": 1,
+          "step": 0.1,
+          "primitiveValue": 0
+        }
+      ]
     },
     "content": {
       "type": "CategoryChart",

@@ -1,0 +1,129 @@
+{
+  "descriptions": {
+    "content": {
+      "type": "WebGrid",
+      "dataRef": "InvoicesData",
+      "autoGenerate": false,
+      "name": "grid",
+      "id": "grid",
+      "columns": [
+        {
+          "type": "WebColumnGroup",
+          "header": "Customer Information",
+          "collapsible": true,
+          "children": [
+            {
+              "type": "WebColumn",
+              "field": "CustomerName",
+              "header": "Customer Name",
+              "visibleWhenCollapsed": true
+            },
+            {
+              "type": "WebColumn",
+              "field": "CustomerID",
+              "header": "Customer ID",
+              "visibleWhenCollapsed": false
+            },
+            {
+              "type": "WebColumn",
+              "field": "FirstName",
+              "header": "First Name",
+              "visibleWhenCollapsed": false
+            },
+            {
+              "type": "WebColumn",
+              "field": "LastName",
+              "header": "Last Name",
+              "visibleWhenCollapsed": false
+            },
+            {
+              "type": "WebColumnGroup",
+              "header": "Customer Address",
+              "expanded": false,
+              "collapsible": true,
+              "children": [
+                {
+                  "type": "WebColumn",
+                  "field": "FullAddress",
+                  "header": "FullAddress",
+                  "width": "250px",
+                  "visibleWhenCollapsed": true
+                },
+                {
+                  "type": "WebColumn",
+                  "field": "Country",
+                  "visibleWhenCollapsed": false
+                },
+                {
+                  "type": "WebColumn",
+                  "field": "City",
+                  "visibleWhenCollapsed": false
+                },
+                {
+                  "type": "WebColumn",
+                  "field": "Address",
+                  "visibleWhenCollapsed": false
+                },
+                {
+                  "type": "WebColumn",
+                  "field": "PostalCode",
+                  "header": "Postal Code",
+                  "visibleWhenCollapsed": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "WebColumn",
+          "field": "ShipperName",
+          "header": "Shipper Name"
+        },
+        {
+          "type": "WebColumn",
+          "field": "OrderDate",
+          "header": "Order Date"
+        },
+        {
+          "type": "WebColumnGroup",
+          "header": "Product Details",
+          "collapsible": true,
+          "expanded": false,
+          "children": [
+            {
+              "type": "WebColumn",
+              "field": "ProductName",
+              "header": "Name",
+              "visibleWhenCollapsed": true
+            },
+            {
+              "type": "WebColumn",
+              "field": "UnitPrice",
+              "header": "Unit Price",
+              "visibleWhenCollapsed": true
+            },
+            {
+              "type": "WebColumn",
+              "field": "ProductID",
+              "header": "ID",
+              "visibleWhenCollapsed": true
+            },
+            {
+              "type": "WebColumn",
+              "field": "Quantity",
+              "visibleWhenCollapsed": false
+            },
+            {
+              "type": "WebColumn",
+              "field": "Quantity",
+              "visibleWhenCollapsed": false
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "modules": [
+    "grids/WebGridModule"
+  ]
+}

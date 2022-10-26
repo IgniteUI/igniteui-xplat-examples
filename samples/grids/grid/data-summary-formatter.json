@@ -1,0 +1,63 @@
+{
+  "todo": ["add toggle summary template to columns"],
+  "descriptions": {
+    "content": {
+      "type": "WebGrid",
+      "dataRef": "NwindData",
+      "autoGenerate": false,
+      "name": "grid",
+      "id": "grid",
+      "displayDensity": "Compact",
+      "columns": [
+        {
+          "type": "WebColumn",
+          "name": "ProductID",
+          "field": "ProductID",
+          "header": "Product ID"
+        },
+        {
+          "type": "WebColumn",
+          "field": "ProductName",
+          "header": "Prod. Name",
+          "hasSummary": true,
+          "dataType": "String"
+        },
+        {
+          "type": "WebColumn",
+          "field": "UnitPrice",
+          "header": "Unit Price",
+          "hasSummary": true,
+          "dataType": "Number",
+          "bodyTemplateRef": "NumberToUSDCellTemplate"
+        },
+        {
+          "type": "WebColumn",
+          "field": "UnitsInStock",
+          "header": "UnitsInStock",
+          "dataType": "Number"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Discontinued",
+          "header": "Discontinued",
+          "hasSummary": true,
+          "dataType": "Boolean"
+        },
+        {
+          "type": "WebColumn",
+          "field": "OrderDate",
+          "header": "Order Date",
+          "hasSummary": true,
+          "dataType": "Date",
+          "pipeArgs": {
+              "type": "WebColumnPipeArgs",
+              "format": "mediumDate"
+          }
+        }
+      ]
+    }
+  },
+  "modules": [
+      "grids/WebGridModule"
+  ]
+}

@@ -37,7 +37,7 @@
           "yAxisRef": "yAxis",
           "xMemberPath": "Population",
           "yMemberPath": "GDP",
-          "radiusMemberPath": "Population", 
+          "radiusMemberPath": "Population",
           "dataSourceRef": "CountryStatsAfrica",
           "markerType": "Circle",
           "markerOutline": "rgb(62, 202, 62)",

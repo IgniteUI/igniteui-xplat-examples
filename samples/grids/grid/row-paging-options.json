@@ -1,0 +1,76 @@
+{
+  "todo": [
+    "TODO Ability to Hide itemrs per page dropdown",
+    "TODO Ability to hide Page Buttons (First, Prev, Next, Last)"
+  ],
+  "descriptions": {
+    "content": {
+      "type": "WebGrid",
+      "dataRef": "AthletesData",
+      "autoGenerate": false,
+      "name": "grid",
+      "id": "grid",
+      "displayDensity": "Cosy",
+      "paginationComponents": [
+        {
+          "type": "WebPaginator",
+          "name": "paginator",
+          "perPage": 15,
+          "displayDensity": "Cosy",
+          "selectOptions": [5, 15, 20, 50],
+          "resourceStrings": {
+            "type": "WebPaginatorResourceStrings",
+            "igx_paginator_label": "Records per page"
+          }
+        }
+      ],
+      "columns": [
+        {
+          "type": "WebColumn",
+          "field": "Id",
+          "header": "Rank",
+          "sortable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "Name"
+        },
+        {
+          "type": "WebColumn",
+          "field": "BeatsPerMinute",
+          "dataType": "Number"
+        },
+        {
+          "type": "WebColumn",
+          "field": "TopSpeed",
+          "dataType": "Number",
+          "pipeArgs": {
+            "type": "WebColumnPipeArgs",
+            "digitsInfo": "1.1-5"
+          }
+        }
+      ]
+    },
+    "editor": {
+      "type": "PropertyEditorPanel",
+      "name": "PropertyEditor",
+      "componentRendererRef": "renderer",
+      "targetRef": "grid",
+      "descriptionType": "WebGrid",
+      "isHorizontal": true,
+      "isWrappingEnabled": true,
+      "properties": [
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "DisplayDensity",
+          "name": "DisplayDensityEditor"
+        }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
+    "grids/WebGridModule"
+  ]
+}
