@@ -1,0 +1,58 @@
+{
+    "descriptions": {
+      "content": {
+        "type": "WebGrid",
+        "name": "grid",
+        "dataRef": "NwindData",
+        "autoGenerate": false,
+        "primaryKey": "ProductID",
+        "columnInitRef": "WebGridCustomSummary",
+        "columns": [
+          {
+            "type": "WebColumn",
+            "name": "ProductID",
+            "field": "ProductID"
+          },
+          {
+            "type": "WebColumn",
+            "name": "ProductName",
+            "field": "ProductName",
+            "header": "ProductName"
+          },
+          {
+            "type": "WebColumn",
+            "name": "UnitPrice",
+            "field": "UnitPrice",
+            "header": "Unit Price"
+          },
+          {
+            "type": "WebColumn",
+            "name": "UnitsInStock",
+            "field": "UnitsInStock",
+            "header": "Units In Stock",
+            "hasSummary": true,
+            "dataType": "Number"
+          },
+          {
+            "type": "WebColumn",
+            "name": "Discontinued",
+            "field": "Discontinued",
+            "header": "Discontinued"
+          },
+          {
+            "type": "WebColumn",
+            "name": "OrderDate",
+            "field": "OrderDate",
+            "header": "OrderDate",
+            "hasSummary": true,
+            "dataType": "Date"
+          }
+        ]
+      }
+    },
+    "modules": [
+      "withDescriptions",
+      "grids/WebGridModule",
+      "WebActionStripModule"
+    ]
+  }
