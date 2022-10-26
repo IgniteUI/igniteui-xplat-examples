@@ -17,7 +17,7 @@
             {
               "type": "WebColumn",
               "name": "Company",
-              "field": "company",
+              "field": "Company",
               "header": "Company",
               "rowStart": 1,
               "colStart": 1,
@@ -26,7 +26,7 @@
             {
               "type": "WebColumn",
               "name": "Country",
-              "field": "country",
+              "field": "Country",
               "header": "Country",
               "rowStart": 2,
               "colStart": 1
@@ -34,7 +34,7 @@
             {
               "type": "WebColumn",
               "name": "City",
-              "field": "city",
+              "field": "City",
               "header": "City",
               "rowStart": 2,
               "colStart": 2
@@ -42,7 +42,7 @@
             {
               "type": "WebColumn",
               "name": "Address",
-              "field": "address",
+              "field": "Address",
               "header": "Address",
               "rowStart": 3,
               "colStart": 1,
@@ -58,7 +58,7 @@
             {
               "type": "WebColumn",
               "name": "LifetimeSales",
-              "field": "sales_lifetimeSales",
+              "field": "LifetimeSales",
               "header": "Lifetime Sales",
               "rowStart": 1,
               "rowEnd": 3,
@@ -68,7 +68,7 @@
             {
               "type": "WebColumn",
               "name": "Quarterly",
-              "field": "sales_quarterlySales",
+              "field": "QuarterlySales",
               "header": "Quarterly",
               "rowStart": 3,
               "colStart": 1
@@ -76,7 +76,7 @@
             {
               "type": "WebColumn",
               "name": "Yearly",
-              "field": "sales_yearlySales",
+              "field": "YearlySales",
               "header": "Yearly",
               "rowStart": 3,
               "colStart": 2
@@ -91,7 +91,7 @@
             {
               "type": "WebColumn",
               "name": "Market Potential",
-              "field": "sales_marketPotential",
+              "field": "MarketPotential",
               "header": "Market Potential",
               "rowStart": 1,
               "rowEnd": 4,
@@ -107,7 +107,7 @@
             {
               "type": "WebColumn",
               "name": "AssetsCash",
-              "field": "assets_cash",
+              "field": "AssetsCash",
               "header": "Assets Cash",
               "rowStart": 1,
               "colStart": 1
@@ -115,7 +115,7 @@
             {
               "type": "WebColumn",
               "name": "AccountsReceivable",
-              "field": "assets_accRec",
+              "field": "AccountsReceivable",
               "header": "Accounts Receivable",
               "rowStart": 1,
               "colStart": 2,
@@ -124,7 +124,7 @@
             {
               "type": "WebColumn",
               "name": "AssetsBooks",
-              "field": "assets_books",
+              "field": "AssetsBooks",
               "header": "Assets Books",
               "rowStart": 2,
               "rowEnd": 4,
