@@ -50,7 +50,7 @@
         "pipeArgs": {
           "type": "WebColumnPipeArgs",
           "digitsInfo": "1.2-2"
-        },
+        }
       },
       {
         "type": "WebColumn",
