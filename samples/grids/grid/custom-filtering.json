@@ -1,22 +1,39 @@
 {
   "todo": [ 
      "add input",
-     "add template column",
-     "add events to handle filtering" 
-  ],
+
+     "logic property missing from WebFilteringOperation" 
+  ],  
+  "export": false,
   "descriptions": {
     "content": {
       "name": "grid",
       "type": "WebGrid",
       "dataRef": "NwindData",
       "allowFiltering":true,
+      "moving": true,
       "autoGenerate": false,
+      "filterMode": "QuickFilter",
+      "excelStyleHeaderIconTemplateRef": "FilterAltIconTemplate",
       "columns": [
         {
           "type": "WebColumn",
           "name": "ProductName",
           "field": "ProductName",
-          "header": "Product Name"
+          "header": "Product Name",
+        // "filters": {
+        //   "name": "Custom Filter",
+        //   "type": "WebFilteringOperand",
+        //   "operations": [
+        //     {
+        //       "iconName": "contains",
+        //       "isUnary": false,
+        //       "type": "WebFilteringOperation",
+        //       "name": "custom contains",
+        //       "logic": ""
+        //     }
+        //   ]
+        // }
         },
         {
           "type": "WebColumn",
@@ -28,19 +45,24 @@
           "type": "WebColumn",
           "name": "UnitPrice",
           "field": "UnitPrice",
-          "header": "Unit Price"
+          "header": "Unit Price",
+        "dataType": "Currency",
+        "bodyTemplateRef": "UnitPriceCellTemplate"
         },
         {
           "type": "WebColumn",
           "name": "OrderDate",
           "field": "OrderDate",
-          "header": "Order Date"
-        },
-        {
-          "type": "WebColumn",
-          "name": "Discontinued",
-          "field": "Discontinued",
-          "header": "Discontinued"
+          "header": "Order Date",
+        "dataType": "Date"
+      },
+      {
+        "type": "WebColumn",
+        "name": "Discontinued",
+        "field": "Discontinued",
+        "header": "Discontinued",
+        "dataType": "Boolean",
+        "bodyTemplateRef": "BooleanCellTemplate"
         }
       ]
     }
