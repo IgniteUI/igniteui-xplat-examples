@@ -1,5 +1,5 @@
 {
-  "todo": [ "implement" ],
+  "todo": [ "Defer until we have context menu in Blazor" ],
   "export": false,
   "descriptions": {
     "content": {

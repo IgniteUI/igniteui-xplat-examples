@@ -1,9 +1,8 @@
 {
-  "todo": [ 
+  "todo": [
      "add input",
-
-     "logic property missing from WebFilteringOperation" 
-  ],  
+     "logic property missing from WebFilteringOperation"
+  ],
   "export": false,
   "descriptions": {
     "content": {
