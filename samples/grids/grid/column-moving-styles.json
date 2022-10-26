@@ -2,7 +2,7 @@
   "todo": [
       "defer until we can inject CSS styles"
   ],
-  "export": "false",
+  "export": false,
   "descriptions": {
     "content": {
       "type": "WebGrid",

@@ -1,7 +1,6 @@
 {
   "todo": [ "fix exporting pipeArgs" ],
   "export": false,
-  "export": true,
   "descriptions": {
     "content": {
       "type": "WebGrid",

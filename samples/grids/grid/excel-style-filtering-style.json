@@ -4,7 +4,6 @@
   ],
   "export": false,
   "descriptions": {
-    "export": "false",
     "content": {
       "type": "WebGrid",
       "name": "grid",
