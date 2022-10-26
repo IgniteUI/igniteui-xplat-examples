@@ -9,6 +9,10 @@
       "columns": [
         {
           "type": "WebColumn",
+          "field": "ID"
+        },
+        {
+          "type": "WebColumn",
           "field": "ContactName",
           "header": "Contact",
           "editable": true,
@@ -21,6 +25,22 @@
           "editable": true,
           "bodyTemplateRef": "WebGridCompositeAddressCellTemplate",
           "inlineEditorTemplateRef": "WebGridCompositeAddressEditCellTemplate"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Country"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Region"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Phone"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Fax"
         }
       ]
     }

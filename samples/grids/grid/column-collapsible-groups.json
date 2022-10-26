@@ -26,13 +26,13 @@
             },
             {
               "type": "WebColumn",
-              "field": "FirstName",
+              "field": "CustomerFirstName",
               "header": "First Name",
               "visibleWhenCollapsed": false
             },
             {
               "type": "WebColumn",
-              "field": "LastName",
+              "field": "CustomerLastName",
               "header": "Last Name",
               "visibleWhenCollapsed": false
             },
@@ -44,14 +44,14 @@
               "children": [
                 {
                   "type": "WebColumn",
-                  "field": "FullAddress",
-                  "header": "FullAddress",
+                  "field": "CustomerAddress",
+                  "header": "Full Address",
                   "width": "250px",
                   "visibleWhenCollapsed": true
                 },
                 {
                   "type": "WebColumn",
-                  "field": "Country",
+                  "field": "Address",
                   "visibleWhenCollapsed": false
                 },
                 {
@@ -61,7 +61,7 @@
                 },
                 {
                   "type": "WebColumn",
-                  "field": "Address",
+                  "field": "Country",
                   "visibleWhenCollapsed": false
                 },
                 {
