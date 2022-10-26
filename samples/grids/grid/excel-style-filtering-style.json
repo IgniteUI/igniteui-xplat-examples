@@ -2,6 +2,7 @@
   "todo": [
 	"defer until we can inject CSS styles"
   ],
+  "export": false,
   "descriptions": {
     "export": "false",
     "content": {
