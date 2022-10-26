@@ -21,7 +21,7 @@
           "field": "ProductName",
           "header": "Product Name",
         // "filters": {
-        //   "name": "Custom Filter",
+        //   "name": "CustomFilter",
         //   "type": "WebFilteringOperand",
         //   "operations": [
         //     {

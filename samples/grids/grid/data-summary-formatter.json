@@ -28,7 +28,7 @@
           "header": "Unit Price",
           "hasSummary": true,
           "dataType": "Number",
-          "bodyTemplateRef": "NumberToUSDCellTemplate"
+          "bodyTemplateRef": "WebGridNumberToUSDCellTemplate"
         },
         {
           "type": "WebColumn",

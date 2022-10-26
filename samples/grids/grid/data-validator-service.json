@@ -1,9 +1,11 @@
 {
   "todo": [
+      "fix template in CodeGenLib",
       "TODO ability to mark columns as required",
       "TODO ability to set min value on column",
       "TODO ability to set date (datelong|longdate) format on pipeArgs"
   ],
+  "export": false,
   "descriptions": {
     "editor": {
       "type": "PropertyEditorPanel",

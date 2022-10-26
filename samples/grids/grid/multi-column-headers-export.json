@@ -1,8 +1,10 @@
 {
   "todo": [
     "TODO add switch to toggle export multi column headers",
-    "TODO Update WebGridExportEventMultiColumnHeaders event to check switch status for export"
+    "TODO Update WebGridExportEventMultiColumnHeaders event to check switch status for export",
+    "MT: fix exporting ExportStarted event handler"
   ],
+  "export": false,
   "descriptions": {
     "content": {
       "type": "WebGrid",
@@ -121,7 +123,7 @@
             },
             {
               "type": "WebColumnGroup",
-              "name": "Contact Information",
+              "name": "ContactInformation",
               "header": "Contact Information",
               "children": [
                 {

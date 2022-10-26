@@ -1,6 +1,7 @@
 {
   "todo": [
-    "TODO ability to inject CSS styles"
+    "TODO ability to inject CSS styles",
+    "MT: fix exporting groupingExpressions"
   ],
   "export": false,
   "descriptions": {

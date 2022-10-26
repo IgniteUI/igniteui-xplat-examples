@@ -1,10 +1,12 @@
 {
   "todo": [
+    "MT: fix exporting groupingExpressions",
     "add PreventDocumentScroll to grid",
     "set grouping expression strategy to defaultSortingStrategy",
     "add formatter to UnitPrice column",
     "check if paging is working"
   ],
+  "export": false,
   "descriptions": {
     "content": {
       "type": "WebGrid",
@@ -27,7 +29,7 @@
           "perPage": 10
         }
       ],
-      "groupRowTemplateRef": "GroupByRowTemplate",
+      "groupRowTemplateRef": "WebGridGroupByRowTemplate",
       "columns": [
         {
           "type": "WebColumn",

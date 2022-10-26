@@ -1,4 +1,8 @@
 {
+  "todo": [
+     "MT: fix exporting @using namespaces"
+  ],
+  "export": false,
   "descriptions": {
     "content": {
       "type": "WebGrid",
@@ -90,7 +94,7 @@
           "children": [
             {
               "type": "WebColumn",
-              "name": "Market Potential",
+              "name": "MarketPotential",
               "field": "MarketPotential",
               "header": "Market Potential",
               "rowStart": 1,

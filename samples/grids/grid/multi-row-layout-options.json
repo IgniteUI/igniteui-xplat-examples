@@ -1,7 +1,9 @@
 {
-    "todo": [
-        "add column layouts"
-    ],
+  "todo": [	
+    "add column layouts",
+    "MT: fix exporting groupingExpressions"
+  ],
+  "export": false,
     "descriptions": {
         "content": {
             "name": "grid",
