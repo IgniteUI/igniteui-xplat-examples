@@ -1,10 +1,10 @@
 {
-  "todo": [ 
-     "defer until we support CSS styling",
+  "todo": [
+     "defer until we support CSS styles",
      "fix bodyTemplate in CodeGenLib",
      "add grid toolbar",
      "add excel style filtering customizations",
-     "add column formetter to date column"
+     "add column formatter to date column"
   ],
   "export": false,
   "descriptions": {
@@ -43,7 +43,7 @@
         "pipeArgs": {
           "type": "WebColumnPipeArgs",
           "digitsInfo": "1.2-2"
-        },
+        }
       },
       {
         "type": "WebColumn",

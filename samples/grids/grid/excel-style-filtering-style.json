@@ -2,8 +2,8 @@
   "todo": [
 	"defer until we can inject CSS styles"
   ],
+  "export": false,
   "descriptions": {
-    "export": "false",
     "content": {
       "type": "WebGrid",
       "name": "grid",
@@ -40,7 +40,7 @@
         "pipeArgs": {
           "type": "WebColumnPipeArgs",
           "digitsInfo": "1.2-2"
-        },
+        }
       },
       {
         "type": "WebColumn",

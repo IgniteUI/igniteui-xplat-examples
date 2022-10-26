@@ -7,10 +7,12 @@
     "content": {
       "type": "WebGrid",
       "name": "grid",
+      "id": "grid",
       "dataRef": "CustomersData",
       "autoGenerate": false,
       "columnWidth": "200px",
       "allowFiltering": true,
+      "columnSelection": "Single",
       "toolbar": [
         {
           "type": "WebGridToolbar",
