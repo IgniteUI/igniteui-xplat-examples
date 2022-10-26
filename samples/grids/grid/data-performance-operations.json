@@ -1,13 +1,18 @@
 {
   "todo": [ 
-     "Port RemoteFilteringService with event handlers"
+     "Port RemoteFilteringService/RemoteServiceVirt with event handlers"
   ],
+  "export": false,
   "descriptions": {
     "content": {
       "name": "grid",
       "type": "WebGrid",
       "dataRef": "NwindData",
       "autoGenerate":false,
+      "batchEditing":true,
+      "rowEditable":true,
+      "allowFiltering":true,
+      "primaryKey": "ProductID",
       "columns": [
         {
           "type": "WebColumn",

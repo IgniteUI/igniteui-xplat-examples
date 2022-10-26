@@ -1,27 +1,60 @@
 {
-  "todo": [ "implement" ],
+  "todo": [ 
+     "Port RemoteService with event handlers"
+  ],
   "export": false,
   "descriptions": {
     "content": {
-      "type": "WebGrid",
       "name": "grid",
-      "id": "grid",
-      "dataRef": "CustomersData",
-      "columnSelection": "Single",
+      "type": "WebGrid",
+      "dataRef": "NwindData",
+      "batchEditing":true,
+      "rowEditable":true,
+      "allowFiltering":true,
+      "primaryKey": "ProductID",
       "columns": [
         {
           "type": "WebColumn",
-          "field": "ID"
+          "name": "ProductID",
+          "field": "ProductID",
+          "header": "Product ID"
         },
         {
           "type": "WebColumn",
-          "field": "CompanyName",
-          "header": "Company Name"
+          "name": "ProductName",
+          "field": "ProductName",
+          "header": "Product Name"
+        },
+        {
+          "type": "WebColumn",
+          "name": "UnitPrice",
+          "field": "UnitPrice",
+          "header": "Unit Price"
+        },
+        {
+          "type": "WebColumn",
+          "name": "UnitsInStock",
+          "field": "UnitsInStock",
+          "header": "Units In Stock"
+        },
+        {
+          "type": "WebColumn",
+          "name": "QuantityPerUnit",
+          "field": "QuantityPerUnit",
+          "header": "Quantity Per Unit"
+        },
+        {
+          "type": "WebColumn",
+          "name": "ReorderLevel",
+          "field": "ReorderLevel",
+          "header": "Reorder Level"
         }
       ]
     }
   },
   "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
     "grids/WebGridModule"
   ]
 }
