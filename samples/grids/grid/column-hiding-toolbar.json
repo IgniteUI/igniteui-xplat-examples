@@ -3,6 +3,7 @@
     "TODO ability to add toolbar title",
     "TODO ability to set hiddenColumnsText"
   ],
+  "export": false,
   "descriptions": {
     "content": {
       "type": "WebGrid",
