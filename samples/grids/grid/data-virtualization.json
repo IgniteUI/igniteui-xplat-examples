@@ -1,0 +1,116 @@
+{
+    "descriptions": {
+      "content": {
+        "type": "WebGrid",
+        "dataRef": "FinancialDataAll",
+        "autoGenerate": false,
+        "name": "grid",
+        "id": "grid",
+        "allowFiltering": true,
+        "columns": [
+          {
+              "type": "WebColumn",
+              "field": "Category",
+              "width": "120px"
+          },
+          {
+              "type": "WebColumn",
+              "field": "Type",
+              "filterable": false,
+              "width": "150px"
+          },
+          {
+              "type": "WebColumn",
+              "field": "Open Price",
+              "width": "120px",
+              "dataType": "Currency"
+          },
+          {
+              "type": "WebColumn",
+              "field": "Price",
+              "width": "120px",
+              "dataType": "Currency"
+          },
+          {
+              "type": "WebColumn",
+              "field": "Change",
+              "width": "120px",
+              "dataType": "Number",
+              "bodyTemplateRef": "WebGridChangeTemplate"
+          },
+          {
+              "type": "WebColumn",
+              "field": "Change(%)",
+              "header": "Change(%)",
+              "width": "120px",
+              "dataType": "Number",
+              "bodyTemplateRef": "WebGridChangePercentTemplate"
+          },
+          {
+              "type": "WebColumn",
+              "field": "Change On Year(%)",
+              "width": "150px",
+              "dataType": "Number",
+              "bodyTemplateRef": "WebGridChangeOnYearPercentTemplate"
+          },
+          {
+              "type": "WebColumn",
+              "field": "Buy",
+              "width": "130px",
+              "dataType": "Currency"
+          },
+          {
+              "type": "WebColumn",
+              "field": "Sell",
+              "width": "130px",
+              "dataType": "Currency"
+          },
+          {
+              "type": "WebColumn",
+              "field": "Spread",
+              "width": "130px",
+              "dataType": "Number"
+          },
+          {
+              "type": "WebColumn",
+              "field": "Volume",
+              "width": "130px",
+              "dataType": "Number"
+          },
+          {
+              "type": "WebColumn",
+              "field": "High(D)",
+              "width": "130px",
+              "dataType": "Currency"
+          },
+          {
+              "type": "WebColumn",
+              "field": "Low(D)",
+              "width": "130px",
+              "dataType": "Currency"
+          },
+          {
+              "type": "WebColumn",
+              "field": "High(Y)",
+              "width": "130px",
+              "dataType": "Currency"
+          },
+          {
+              "type": "WebColumn",
+              "field": "Low(Y)",
+              "width": "130px",
+              "dataType": "Currency"
+          },
+          {
+              "type": "WebColumn",
+              "field": "Start(Y)",
+              "width": "130px",
+              "dataType": "Currency"
+          }
+        ]
+      }
+    },
+    "modules": [
+      "grids/WebGridModule"
+    ]
+  }
