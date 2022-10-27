@@ -2,8 +2,7 @@
   "todo": [
     "fix template in CodeGenLib",
     "TODO ability to mark columns as required",
-    "TODO ability to set min value on column",
-    "TODO ability to set date (datelong|longdate) format on pipeArgs"
+    "TODO ability to set min value on column"
   ],
   "export": false,
   "descriptions": {
@@ -80,7 +79,11 @@
           "header": "Date of Registration",
           "width": "170px",
           "dataType": "Date",
-          "editable": true
+          "editable": true,
+          "pipeArgs": {
+            "type": "WebColumnPipeArgs",
+            "format": "longDate"
+          }
         },
         {
           "type": "WebColumn",
