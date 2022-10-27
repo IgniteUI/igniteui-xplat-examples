@@ -1,11 +1,9 @@
 {
     "todo": [
-	"MT: Fix exporting function for rendering images",
         "A filtering strategy is needed",
         "Add a formatter for UnitPrice column",
         "https://staging.infragistics.com/products/ignite-ui-angular/angular/components/grid/excel-style-filtering#formatted-values-filtering-strategy"
     ],
-    "export": false,
     "descriptions": {
         "content": {
             "type": "WebGrid",

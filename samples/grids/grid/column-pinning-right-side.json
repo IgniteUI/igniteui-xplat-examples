@@ -1,6 +1,4 @@
 {
-  "todo": [ "fix template in CodeGenLib" ],
-  "export": false,
   "descriptions": {
     "content": {
       "type": "WebGrid",
