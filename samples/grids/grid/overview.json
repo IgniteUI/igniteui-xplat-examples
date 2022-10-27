@@ -1,6 +1,6 @@
 {
   "todo": [
-    "add template for the Locations column"
+    ""
   ],
   "descriptions": {
     "content": {
@@ -21,8 +21,10 @@
           "type": "WebColumn",
           "field": "ProductID",
           "header": "Product ID",
-          "dataType": "String",
+          "dataType": "Number",
           "sortable": true,
+          "hasSummary": true,
+          "editable": true,
           "resizable": true
         },
         {
@@ -83,14 +85,6 @@
           "hasSummary": true,
           "editable": true,
           "filterable": true
-        },
-        {
-          "type": "WebColumn",
-          "field": "Locations",
-          "header": "Available At",
-          "editable": true,
-          "filterable": true,
-          "width": "220px"
         }
       ]
     }
