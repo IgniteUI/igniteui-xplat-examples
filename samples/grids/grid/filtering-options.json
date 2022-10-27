@@ -9,7 +9,7 @@
         "autoGenerate": false,
         "allowFiltering": true,
         "filterMode": "QuickFilter",
-        "excelStyleHeaderIconTemplateRef": "FilterAltIconTemplate",
+        "excelStyleHeaderIconTemplateRef": "WebGridFilterAltIconTemplate",
         "columns": [{
           "type": "WebColumn",
           "name": "ProductName",
@@ -28,7 +28,7 @@
           "field": "UnitPrice",
           "header": "Unit Price",
           "dataType": "Currency",
-          "bodyTemplateRef": "UnitPriceCellTemplate"
+          "bodyTemplateRef": "WebGridUnitPriceCellTemplate"
         },
         {
           "type": "WebColumn",
@@ -43,7 +43,7 @@
           "field": "Discontinued",
           "header": "Discontinued",
           "dataType": "Boolean",
-          "bodyTemplateRef": "BooleanCellTemplate"
+          "bodyTemplateRef": "WebGridBooleanCellTemplate"
           }]
         }
       },
