@@ -1,11 +1,9 @@
 {
   "todo": [
-    "TODO ability to inject CSS styles",
-    "TODO ability to add pin rows to pinning settings",
-    "TODO ability to add pinning action to action strip"
+    "TODO ability to inject CSS styles"
   ],
   "export": false,
-  "onViewInit": ["WebGridRowPinStyleOnInitEvent"],
+  "onInit": ["WebGridRowPinStyleOnInitEvent"],
   "descriptions": {
     "content": {
       "type": "WebGrid",
@@ -71,7 +69,12 @@
       ],
       "actionStrip": {
         "type": "WebActionStrip",
-        "hidden": true
+        "hidden": true,
+        "actionButtons": [
+          {
+            "type": "WebGridPinningActions"
+          }
+        ]
       }
     }
   },

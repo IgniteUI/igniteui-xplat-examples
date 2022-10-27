@@ -1,9 +1,9 @@
 {
   "todo": [
-      "fix template in CodeGenLib",
-      "TODO ability to mark columns as required",
-      "TODO ability to set min value on column",
-      "TODO ability to set date (datelong|longdate) format on pipeArgs"
+    "fix template in CodeGenLib",
+    "TODO ability to mark columns as required",
+    "TODO ability to set min value on column",
+    "TODO ability to set date (datelong|longdate) format on pipeArgs"
   ],
   "export": false,
   "descriptions": {
@@ -39,7 +39,7 @@
           "name": "Avatar",
           "field": "Avatar",
           "header": "Avatar",
-          "dataType": "String1",
+          "dataType": "String",
           "editable": false,
           "width": "80px",
           "bodyTemplateRef": "WebGridAvatarCellTemplate"
