@@ -1,0 +1,105 @@
+{
+  "todo": [
+    "add template for the Locations column"
+  ],
+  "exp
+  "descriptions": {
+    "content": {
+      "type": "WebGrid",
+      "dataRef": "NwindData",
+      "autoGenerate": false,
+      "primaryKey": "ProductID",
+      "displayDensity": "Cosy",
+      "allowFiltering": true,
+      "paginationComponents": [
+        {
+          "type": "WebPaginator",
+          "perPage": 10
+        }
+      ],
+      "columns": [
+        {
+          "type": "WebColumn",
+          "name": "ProductID",
+          "field": "ProductID",
+          "header": "Product ID",
+          "dataType": "String",
+          "sortable": true,
+          "resizable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "ProductName",
+          "header": "Product Name",
+          "dataType": "String",
+          "sortable": true,
+          "hasSummary": true,
+          "editable": true,
+          "resizable": true
+        },
+        {
+          "type": "WebColumn",
+          "name": "UnitPrice",
+          "field": "UnitPrice",
+          "header": "Unit Price"
+          "dataType": "Number",
+          "sortable": true,
+          "hasSummary": true,
+          "editable": true,
+          "resizable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "UnitsInStock",
+          "header": "Units in Stock",
+          "dataType": "Number",
+          "sortable": true,
+          "hasSummary": true,
+          "editable": true,
+          "resizable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "OrderDate",
+          "header": "Order Date",
+          "dataType": "Date",
+          "sortable": true,
+          "hasSummary": true,
+          "editable": true,
+          "resizable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "Discontinued",
+          "header": "Discontinued",
+          "dataType": "Boolean",
+          "sortable": true,
+          "hasSummary": true,
+          "editable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "ReorderLevel",
+          "header": "Reorder Level",
+          "dataType": "Number",
+          "sortable": true,
+          "hasSummary": true,
+          "editable": true,
+          "filterable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "Locations",
+          "header": "Available At",
+          "editable": true,
+          "filterable": true,
+          "width": "220px"
+        }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "grids/WebGridModule"
+  ]
+}
