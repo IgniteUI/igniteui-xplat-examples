@@ -1,7 +1,6 @@
 {
   "todo": [
-    "add CSS styling",
-    "add column formetter to date column"
+    "add CSS styling"
   ],
   "export": false,
   "descriptions": {
@@ -17,14 +16,15 @@
         {
           "type": "WebGridToolbar",
           "tools": [
-          {
-            "type": "WebGridToolbarActions",
-             "actions": [
-              {
-                "type": "WebGridToolbarHiding"
-              }
-             ]
-          }]
+            {
+              "type": "WebGridToolbarActions",
+              "actions": [
+                {
+                  "type": "WebGridToolbarHiding"
+                }
+              ]
+            }
+          ]
         }
       ],
       "columns": [{
@@ -63,7 +63,11 @@
         "field": "OrderDate",
         "header": "Order Date",
         "dataType": "Date",
-        "sortable": false
+        "sortable": false,
+        "pipeArgs": {
+          "type": "WebColumnPipeArgs",
+          "format": "MM/dd/YYYY"
+        }
       },
       {
         "type": "WebColumn",
