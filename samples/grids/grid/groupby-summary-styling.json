@@ -1,6 +1,5 @@
 {
   "todo": [
-    "MT: fix exporting pipeArgs",
     "MT: fix exporting groupingExpressions"
   ],
   "export": false,

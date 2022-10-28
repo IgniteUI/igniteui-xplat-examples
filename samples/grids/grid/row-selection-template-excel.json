@@ -2,7 +2,7 @@
     "todo": [
         "TODO ability to select multiple rows by clicking the button",
         "TODO the row number on the left on every line",
-        "MT fix exporting No overload for method 'TypeCheck' takes 5 arguments"
+        "GM: fix exporting No overload for method 'TypeCheck' takes 5 arguments"
     ],
     "export": false,
     "descriptions": {
