@@ -1,8 +1,8 @@
 {
   "todo": [
-      "fix DataType=GridColumnDataType.String1",
-      "TODO ability to mark columns as required",
-      "TODO ability to set min value on column"
+    "fix template in CodeGenLib",
+    "TODO ability to mark columns as required",
+    "TODO ability to set min value on column"
   ],
   "export": false,
   "descriptions": {
@@ -38,7 +38,7 @@
           "name": "Avatar",
           "field": "Avatar",
           "header": "Avatar",
-          "dataType": "String1",
+          "dataType": "String",
           "editable": false,
           "width": "80px",
           "bodyTemplateRef": "WebGridAvatarCellTemplate"
@@ -79,7 +79,11 @@
           "header": "Date of Registration",
           "width": "170px",
           "dataType": "Date",
-          "editable": true
+          "editable": true,
+          "pipeArgs": {
+            "type": "WebColumnPipeArgs",
+            "format": "longDate"
+          }
         },
         {
           "type": "WebColumn",

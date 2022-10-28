@@ -1,11 +1,28 @@
 {
   "todo": [
-    "TODO add switch to toggle export multi column headers",
-    "TODO Update WebGridExportEventMultiColumnHeaders event to check switch status for export",
     "MT: fix exporting ExportStarted event handler"
   ],
   "export": false,
   "descriptions": {
+    "editor": {
+      "type": "PropertyEditorPanel",
+      "name": "PropertyEditor",
+      "componentRendererRef": "renderer",
+      "targetRef": "grid",
+      "descriptionType": "WebGrid",
+      "isHorizontal": true,
+      "isWrappingEnabled": true,
+      "properties": [
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "valueType": "Boolean1",
+          "shouldOverrideDefaultEditor": true,
+          "label": "Export Multi-Column Headers",
+          "primitiveValue": true,
+          "name": "exportHeaders"
+        }
+      ]
+    },
     "content": {
       "type": "WebGrid",
       "name": "grid",
@@ -14,27 +31,30 @@
       "moving": true,
       "displayDensity": "Compact",
       "allowFiltering": true,
-	  "toolbar": [
+      "toolbar": [
         {
           "type": "WebGridToolbar",
           "tools": [
-          {
-            "type": "WebGridToolbarActions",
-            "actions": [
             {
-              "type": "WebGridToolbarHiding"
-            },
-            {
-              "type": "WebGridToolbarPinning"
-            },
-            {
-              "type": "WebGridToolbarExporter",
-              "exportCSV": false,
-              "exportExcel": true,
-              "exportStartedRef": "WebGridExportEventMultiColumnHeaders"
-            }]
-          }]
-        }],
+              "type": "WebGridToolbarActions",
+              "actions": [
+                {
+                  "type": "WebGridToolbarHiding"
+                },
+                {
+                  "type": "WebGridToolbarPinning"
+                },
+                {
+                  "type": "WebGridToolbarExporter",
+                  "exportCSV": false,
+                  "exportExcel": true,
+                  "exportStartedRef": "WebGridExportEventMultiColumnHeaders"
+                }
+              ]
+            }
+          ]
+        }
+      ],
       "columns": [
         {
           "type": "WebColumn",
@@ -54,7 +74,7 @@
             {
               "type": "WebColumn",
               "name": "CompanyName",
-              "visibleWhenCollapsed": true,
+              "visibleWhenCollapsed": true
             },
             {
               "type": "WebColumnGroup",
@@ -150,6 +170,8 @@
   },
   "modules": [
     "withDescriptions",
-    "grids/WebGridModule"
+    "layouts/PropertyEditorPanelModule",
+    "grids/WebGridModule",
+    "grids/WebGridToolbarModule"
   ]
 }
