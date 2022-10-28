@@ -9,10 +9,11 @@
       "isHorizontal": true,
       "isWrappingEnabled": true,
       "properties": [
-        {
-          "name": "columnSelection",
+        {          
           "type": "PropertyEditorPropertyDescription",
-          "propertyPath": "ColumnSelection"
+          "propertyPath": "ColumnSelection",
+          "name": "columnSelectionEditor",
+          "label": "Column Selection"
         }
       ]
     },
@@ -61,6 +62,8 @@
     }
   },
   "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
     "grids/WebGridModule"
   ]
 }

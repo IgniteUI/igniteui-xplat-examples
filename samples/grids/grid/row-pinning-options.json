@@ -17,8 +17,8 @@
         {
           "type": "PropertyEditorPropertyDescription",
           "propertyPath": "Pinning.Rows",
-          "label": "Row Pinning toggle",
-          "valueType": "EnumValue"
+          "name": "rowPinningEditor",
+          "label": "Row Pinning toggle"
         }
       ]
     },
@@ -86,6 +86,7 @@
     }
   },
   "modules": [
+    "withDescriptions",
     "layouts/PropertyEditorPanelModule",
     "grids/WebGridModule"
   ]

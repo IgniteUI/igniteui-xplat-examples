@@ -13,7 +13,7 @@
       "moving": true,
       "autoGenerate": false,
       "filterMode": "QuickFilter",
-      "excelStyleHeaderIconTemplateRef": "FilterAltIconTemplate",
+      "excelStyleHeaderIconTemplateRef": "WebGridFilterAltIconTemplate",
       "columns": [
         {
           "type": "WebColumn",
@@ -45,15 +45,15 @@
           "name": "UnitPrice",
           "field": "UnitPrice",
           "header": "Unit Price",
-        "dataType": "Currency",
-        "bodyTemplateRef": "UnitPriceCellTemplate"
+          "dataType": "Currency",
+          "bodyTemplateRef": "WebGridUnitPriceCellTemplate"
         },
         {
           "type": "WebColumn",
           "name": "OrderDate",
           "field": "OrderDate",
           "header": "Order Date",
-        "dataType": "Date"
+          "dataType": "Date"
       },
       {
         "type": "WebColumn",
@@ -61,7 +61,7 @@
         "field": "Discontinued",
         "header": "Discontinued",
         "dataType": "Boolean",
-        "bodyTemplateRef": "BooleanCellTemplate"
+        "bodyTemplateRef": "WebGridBooleanCellTemplate"
         }
       ]
     }

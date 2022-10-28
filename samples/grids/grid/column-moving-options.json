@@ -1,6 +1,5 @@
 {
-  "todo": [ "fix exporting pipeArgs" ],
-  "export": false,
+  "todo": [ "" ],
   "descriptions": {
     "content": {
       "type": "WebGrid",
@@ -69,14 +68,14 @@
         },
         {
           "type": "WebColumn",
-          "field": "Change(%)",
+          "field": "ChangePercent",
           "dataType": "Number",
           "bodyTemplateRef": "WebGridCurrencyCellTemplate",
           "headerTemplateRef": "WebGridPinHeaderTemplate"
         },
         {
           "type": "WebColumn",
-          "field": "Change On Year(%)",
+          "field": "AnnualChange",
           "dataType": "Number",
           "bodyTemplateRef": "WebGridCurrencyCellTemplate",
           "headerTemplateRef": "WebGridPinHeaderTemplate"
