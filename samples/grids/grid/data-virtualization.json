@@ -1,4 +1,6 @@
 {
+    "todo": [ "MT test exporting" ],
+    "export": false,
     "descriptions": {
       "content": {
         "type": "WebGrid",
@@ -21,7 +23,7 @@
           },
           {
               "type": "WebColumn",
-              "field": "Open Price",
+              "field": "Open",
               "width": "120px",
               "dataType": "Currency"
           },
@@ -40,7 +42,7 @@
           },
           {
               "type": "WebColumn",
-              "field": "Change(%)",
+              "field": "ChangePercent",
               "header": "Change(%)",
               "width": "120px",
               "dataType": "Number",
@@ -48,7 +50,8 @@
           },
           {
               "type": "WebColumn",
-              "field": "Change On Year(%)",
+              "field": "AnnualChange",
+              "header": "Change On Year(%)",
               "width": "150px",
               "dataType": "Number",
               "bodyTemplateRef": "WebGridChangeOnYearPercentTemplate"
@@ -79,31 +82,34 @@
           },
           {
               "type": "WebColumn",
-              "field": "High(D)",
+              "field": "High",
               "width": "130px",
               "dataType": "Currency"
           },
           {
               "type": "WebColumn",
-              "field": "Low(D)",
+              "field": "Low",
               "width": "130px",
               "dataType": "Currency"
           },
           {
               "type": "WebColumn",
-              "field": "High(Y)",
+              "field": "AnnualHigh",
+              "header": "High(Y)",
               "width": "130px",
               "dataType": "Currency"
           },
           {
               "type": "WebColumn",
-              "field": "Low(Y)",
+              "field": "AnnualLow",
+              "header": "Low(Y)",
               "width": "130px",
               "dataType": "Currency"
           },
           {
               "type": "WebColumn",
-              "field": "Start(Y)",
+              "field": "AnnualStart",
+              "header": "Start(Y)",
               "width": "130px",
               "dataType": "Currency"
           }
