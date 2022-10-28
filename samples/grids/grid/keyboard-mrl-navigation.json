@@ -1,8 +1,5 @@
 {
-  "todo": [
-     "MT: fix exporting @using namespaces"
-  ],
-  "export": false,
+  "todo": [ "" ],
   "descriptions": {
     "content": {
       "type": "WebGrid",
