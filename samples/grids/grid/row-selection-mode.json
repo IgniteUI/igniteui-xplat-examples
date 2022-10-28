@@ -1,6 +1,5 @@
 {
-  "todo": [ "fix exporting pipeArgs" ],
-  "export": false,
+  "todo": [ "" ],
   "descriptions": {
     "editor": {
       "type": "PropertyEditorPanel",
@@ -75,13 +74,13 @@
         },
         {
           "type": "WebColumn",
-          "field": "Change(%)",
+          "field": "ChangePercent",
           "dataType": "Number",
           "bodyTemplateRef": "WebGridCurrencyCellTemplate"
         },
         {
           "type": "WebColumn",
-          "field": "Change On Year(%)",
+          "field": "AnnualChange",
           "dataType": "Number",
           "bodyTemplateRef": "WebGridCurrencyCellTemplate"
         }

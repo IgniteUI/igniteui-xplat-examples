@@ -1,6 +1,6 @@
 {
     "todo": [
-        "Add formatter for Open Price, Price, Change(%), Change on Year(%), Buy, Sell, Spread, Volume, High(D), Low(D), High(Y), Low(Y), Start(Y) columns",
+        "Add formatter for Open, Price, ChangePercent, Change on Year(%), Buy, Sell, Spread, Volume, High, Low, AnnualHigh, AnnualLow, AnnualStart columns",
         "Add working WebGridCurrencyCellTemplate with badge and icon"
     ],
     "onAfterInit": [
@@ -30,7 +30,7 @@
                 },
                 {
                     "type": "WebColumn",
-                    "field": "Open Price",
+                    "field": "Open",
                     "width": "120px",
                     "dataType": "Number"
                 },
@@ -49,14 +49,14 @@
                 },
                 {
                     "type": "WebColumn",
-                    "field": "Change(%)",
-                    "header": "Change(%)",
+                    "field": "ChangePercent",
+                    "header": "ChangePercent",
                     "width": "120px",
                     "dataType": "Number"
                 },
                 {
                     "type": "WebColumn",
-                    "field": "Change On Year(%)",
+                    "field": "AnnualChange",
                     "width": "150px",
                     "dataType": "Number",
                     "bodyTemplateRef": "WebGridCurrencyCellTemplate"
@@ -87,31 +87,31 @@
                 },
                 {
                     "type": "WebColumn",
-                    "field": "High(D)",
+                    "field": "High",
                     "width": "130px",
                     "dataType": "Number"
                 },
                 {
                     "type": "WebColumn",
-                    "field": "Low(D)",
+                    "field": "Low",
                     "width": "130px",
                     "dataType": "Number"
                 },
                 {
                     "type": "WebColumn",
-                    "field": "High(Y)",
+                    "field": "AnnualHigh",
                     "width": "130px",
                     "dataType": "Number"
                 },
                 {
                     "type": "WebColumn",
-                    "field": "Low(Y)",
+                    "field": "AnnualLow",
                     "width": "130px",
                     "dataType": "Number"
                 },
                 {
                     "type": "WebColumn",
-                    "field": "Start(Y)",
+                    "field": "AnnualStart",
                     "width": "130px",
                     "dataType": "Number"
                 }

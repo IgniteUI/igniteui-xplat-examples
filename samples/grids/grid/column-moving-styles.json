@@ -70,8 +70,8 @@
         },
         {
           "type": "WebColumn",
-          "name": "Change(%)",
-          "field": "Change(%)",
+          "name": "ChangePercent",
+          "field": "ChangePercent",
           "dataType": "Number",
           "width": "150px",
           "headerTemplateRef": "WebGridPinHeaderTemplate",
@@ -79,8 +79,8 @@
         },
         {
           "type": "WebColumn",
-          "name": "Change On Year(%)",
-          "field": "Change On Year(%)",
+          "name": "AnnualChange",
+          "field": "AnnualChange",
           "dataType": "Number",
           "width": "170px",
           "headerTemplateRef": "WebGridPinHeaderTemplate",
