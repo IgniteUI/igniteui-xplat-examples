@@ -1,6 +1,5 @@
 {
-  "todo": [ "MT: fix exporting WebGridCustomSummary events" ],
-  "export": false,
+  "todo": [ "" ],
   "descriptions": {
     "content": {
       "type": "WebGrid",
@@ -54,7 +53,6 @@
   },
   "modules": [
     "withDescriptions",
-    "grids/WebGridModule",
-    "WebActionStripModule"
+    "grids/WebGridModule"
   ]
 }
