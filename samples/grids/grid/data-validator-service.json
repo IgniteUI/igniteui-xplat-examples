@@ -1,9 +1,8 @@
 {
   "todo": [
-      "fix template in CodeGenLib",
+      "fix DataType=GridColumnDataType.String1",
       "TODO ability to mark columns as required",
-      "TODO ability to set min value on column",
-      "TODO ability to set date (datelong|longdate) format on pipeArgs"
+      "TODO ability to set min value on column"
   ],
   "export": false,
   "descriptions": {
