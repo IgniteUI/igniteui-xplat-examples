@@ -1,27 +1,81 @@
 {
-  "todo": [ "implement" ],
+  "todo": [ "MT test exporting" ],
   "export": false,
   "descriptions": {
     "content": {
       "type": "WebGrid",
       "name": "grid",
       "id": "grid",
-      "dataRef": "CustomersData",
-      "columnSelection": "Single",
+      "dataRef": "NwindData",
+      "autoGenerate": false,
+      "primaryKey": "ProductID",
+      "rowEditable": true,
+      "actionStrip": {
+        "type": "WebActionStrip",
+        "actionButtons": [
+          {
+            "type": "WebGridEditingActions",
+            "addRow": true
+          }
+        ]
+      },
       "columns": [
         {
           "type": "WebColumn",
-          "field": "ID"
+          "name": "ID",
+          "field": "ProductID",
+          "header": "ProductID",
+          "dataType": "Number",
+          "hidden": true
         },
         {
           "type": "WebColumn",
+          "name": "ReorderLevel",
+          "field": "ReorderLevel",
+          "header": "ReorderLevel",
+          "dataType": "Number"
+        },
+        {
+          "type": "WebColumn",
+          "name": "ProductName",
+          "field": "ProductName",
+          "header": "ProductName",
+          "dataType": "String"
+        },
+        {
+          "type": "WebColumn",
+          "name": "UnitsInStock",
+          "field": "UnitsInStock",
+          "header": "UnitsInStock",
+          "dataType": "Number"
+        },
+        {
+          "type": "WebColumn",
+          "name": "CompanyName",
           "field": "CompanyName",
-          "header": "Company Name"
+          "header": "CompanyName",
+          "dataType": "String",
+          "sortable": true
+        },
+        {
+          "type": "WebColumn",
+          "name": "OrderDate",
+          "field": "OrderDate",
+          "header": "OrderDate",
+          "dataType": "Date"
+        },
+        {
+          "type": "WebColumn",
+          "name": "Discontinued",
+          "field": "Discontinued",
+          "header": "Discontinued",
+          "dataType": "Boolean"
         }
       ]
     }
   },
   "modules": [
+    "withDescriptions",
     "grids/WebGridModule"
   ]
 }
