@@ -122,7 +122,7 @@
                     "type": "WebColumn",
                     "field": "Discontinued",
                     "header": "Discontinued",
-                    "width": "120px",
+                    "width": "160px",
                     "sortable": true,
                     "hasSummary": true,
                     "editable": true,
