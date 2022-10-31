@@ -8,7 +8,7 @@
       "name": "grid",
       "type": "WebGrid",
       "dataRef": "NwindData",
-      "autoGenerate":false,
+      "autoGenerate": false,
       "columns": [
         {
           "type": "WebColumn",

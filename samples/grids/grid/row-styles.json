@@ -1,14 +1,12 @@
 {
     "todo": [
-        "MT update data columns in WebGridRowStylesHandler (no spaces)",
-        "MT text exporting",
-        "Add formatter for Open, Price, ChangePercent, Change on Year(%), Buy, Sell, Spread, Volume, High, Low, AnnualHigh, AnnualLow, AnnualStart columns",
+        "Add formatter for Open, Price, ChangePercent, AnnualChange, Buy, Sell, Spread, Volume, High, Low, AnnualHigh, AnnualLow, AnnualStart columns",
         "Add working WebGridCurrencyCellTemplate with badge and icon"
     ],
     "onAfterInit": [
         "WebGridRegisterIconAfterViewInit"
     ],  
-    "export": false,
+    "export": true,
     "descriptions": {
         "content": {
             "type": "WebGrid",

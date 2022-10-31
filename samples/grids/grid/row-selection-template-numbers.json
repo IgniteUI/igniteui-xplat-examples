@@ -1,6 +1,6 @@
 {
-  "todo": [ "MT text exporting rowSelector" ],
-  "export": false,
+  "todo": [ "" ],
+  "export": true,
   "descriptions": {
     "content": {
       "name": "grid",

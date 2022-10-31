@@ -1,8 +1,8 @@
 {
   "todo": [ 
-    "MT test exporting template in CodeGenLib"
+    ""
   ],
-  "export": false,
+  "export": true,
   "descriptions": {
     "editor": {
       "type": "PropertyEditorPanel",
