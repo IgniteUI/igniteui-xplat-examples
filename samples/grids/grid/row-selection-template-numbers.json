@@ -1,27 +1,39 @@
 {
-  "todo": [ "implement" ],
-  "export": false,
   "descriptions": {
     "content": {
-      "type": "WebGrid",
       "name": "grid",
-      "id": "grid",
+      "type": "WebGrid",
       "dataRef": "CustomersData",
-      "columnSelection": "Single",
+      "autoGenerate": true,
+      "rowSelection": "Multiple",
+      "rowSelectorTemplateRef":"WebGridRowSelectorTemplate",
+      "headSelectorTemplateRef": "WebGridHeaderRowSelectorTemplate",
       "columns": [
         {
           "type": "WebColumn",
-          "field": "ID"
+          "field": "ContactName"
         },
         {
           "type": "WebColumn",
-          "field": "CompanyName",
-          "header": "Company Name"
+          "field": "Country"
+        },
+        {
+          "type": "WebColumn",
+          "field": "City"
+        },
+        {
+          "type": "WebColumn",
+          "field": "PostalCode"
+        },
+        {
+          "type": "WebColumn",
+          "field": "CompanyName"
         }
       ]
     }
   },
   "modules": [
+    "withDescriptions",
     "grids/WebGridModule"
   ]
 }
