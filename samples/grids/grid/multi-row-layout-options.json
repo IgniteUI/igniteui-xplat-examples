@@ -1,6 +1,6 @@
 {
     "todo": [
-        "MT: fix exporting groupingExpressions"
+        "MT: fix exporting groupingExpressions and try exporting children of columns"
     ],
     "export": false,
     "descriptions": {
