@@ -1,6 +1,8 @@
 {
-  "todo": [ "fix template in CodeGenLib" ],
-  "export": false,
+  "todo": [ 
+    ""
+  ],
+  "export": true,
   "descriptions": {
     "editor": {
       "type": "PropertyEditorPanel",

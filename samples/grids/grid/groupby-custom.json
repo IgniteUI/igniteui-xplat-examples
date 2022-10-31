@@ -1,14 +1,15 @@
 {
   "todo": [ 
-     "add template column with event handlers",
-     "add grid toolbar when available"
+    "Andrew - add template column with event handlers",
+    "Andrew - add grid toolbar when available"
   ],
+  "export": true,
   "descriptions": {
     "content": {
       "name": "grid",
       "type": "WebGrid",
       "dataRef": "InvoicesData",
-      "autoGenerate":false,
+      "autoGenerate": false,
       "columns": [
         {
           "type": "WebColumn",

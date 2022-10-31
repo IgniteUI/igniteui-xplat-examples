@@ -1,6 +1,6 @@
 {
-  "todo": [ "MT test exporting" ],
-  "export": false,
+  "todo": [ "" ],
+  "export": true,
   "descriptions": {
     "content": {
       "type": "WebGrid",

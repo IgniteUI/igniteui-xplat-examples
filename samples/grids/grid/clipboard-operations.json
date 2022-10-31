@@ -1,4 +1,8 @@
 {
+  "todo": [ 
+     ""
+  ],
+  "export": true,
   "descriptions": {
     "editor": {
       "type": "PropertyEditorPanel",

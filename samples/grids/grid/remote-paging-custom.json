@@ -1,6 +1,6 @@
 {
   "todo": [ 
-     "Defer until we port RemotePagingService to CodeGenLib with event handlers" 
+     "Approved Defer - until we port RemotePagingService to CodeGenLib with event handlers" 
   ], 
   "export": false,
   "descriptions": {
@@ -8,7 +8,7 @@
       "name": "grid",
       "type": "WebGrid",
       "dataRef": "NwindData",
-      "autoGenerate":false,
+      "autoGenerate": false,
       "allowFiltering":true,
       "columns": [
         {
@@ -17,7 +17,7 @@
           "field": "ProductID",
           "header": "Product ID",
           "sortable":true,
-          "filterable":false
+          "filterable": false
         },
         {
           "type": "WebColumn",

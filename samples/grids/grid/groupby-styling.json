@@ -1,6 +1,6 @@
 {
   "todo": [
-    "TODO ability to inject CSS styles",
+    "Approved Defer - until we support injecting CSS styles",
     "MT: fix exporting groupingExpressions"
   ],
   "export": false,

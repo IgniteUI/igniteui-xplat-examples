@@ -1,7 +1,7 @@
 {
   "todo": [
      "add input",
-     "logic property missing from WebFilteringOperation"
+     "RS working on support for WebFilteringOperation then add events in Blazor.js"
   ],
   "export": false,
   "descriptions": {

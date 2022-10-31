@@ -1,5 +1,5 @@
 {
-  "todo": [ "implement" ],
+  "todo": [ "MT port FinancialDataService in Blazor.cs - see Financial Stocks" ],
   "export": false,
   "descriptions": {
     "content": {

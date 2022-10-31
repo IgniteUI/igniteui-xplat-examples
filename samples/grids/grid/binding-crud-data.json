@@ -11,7 +11,7 @@
       "moving":true,
       "primaryKey": "ProductID",
       "isLoading":true,
-      "allowFiltering":false,
+      "allowFiltering": false,
       "pagingMode": "Remote",
       "rowEditable":true,
       "autoGenerate": false,

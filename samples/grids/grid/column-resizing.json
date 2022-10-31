@@ -65,9 +65,9 @@
       },
       {
         "type": "WebColumn",
-        "name": "name",
-        "field": "Name",
-        "header": "Name",
+        "name": "Country",
+        "field": "Country",
+        "header": "Country",
         "resizable": true
       },
       {

@@ -1,6 +1,6 @@
 {
   "todo": [ 
-     "Port RemoteFilteringService/RemoteServiceVirt with event handlers"
+     "Approved Defer - Port RemoteFilteringService/RemoteServiceVirt with event handlers"
   ],
   "export": false,
   "descriptions": {
@@ -8,7 +8,7 @@
       "name": "grid",
       "type": "WebGrid",
       "dataRef": "NwindData",
-      "autoGenerate":false,
+      "autoGenerate": false,
       "batchEditing":true,
       "rowEditable":true,
       "allowFiltering":true,
@@ -20,7 +20,7 @@
           "field": "ProductID",
           "header": "Product ID",
           "sortable":true,
-          "filterable":false
+          "filterable": false
         },
         {
           "type": "WebColumn",

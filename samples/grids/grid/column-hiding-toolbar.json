@@ -1,9 +1,9 @@
 {
   "todo": [
-    "TODO ability to add toolbar title",
+    "MT fix exporting toolbar",
     "TODO ability to set hiddenColumnsText"
   ],
-  "export": false,
+  "export": true,
   "descriptions": {
     "content": {
       "type": "WebGrid",

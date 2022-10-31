@@ -1,6 +1,6 @@
 {
   "todo": [ 
-     "Defer until we have grid footer that supports template"
+     "Approved Defer - until we have grid footer that supports template"
   ], 
   "export": false,
   "descriptions": {
@@ -8,7 +8,7 @@
       "name": "grid",
       "type": "WebGrid",
       "dataRef": "NwindData",
-      "autoGenerate":false,
+      "autoGenerate": false,
       "columns": [
         {
           "type": "WebColumn",
