@@ -1,4 +1,6 @@
 {
+  "todo": [ "MT text exporting rowSelector" ],
+  "export": false,
   "descriptions": {
     "content": {
       "name": "grid",
@@ -6,7 +8,7 @@
       "dataRef": "CustomersData",
       "autoGenerate": true,
       "rowSelection": "Multiple",
-      "rowSelectorTemplateRef":"WebGridRowSelectorTemplate",
+      "rowSelectorTemplateRef": "WebGridRowSelectorTemplate",
       "headSelectorTemplateRef": "WebGridHeaderRowSelectorTemplate",
       "columns": [
         {
