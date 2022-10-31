@@ -1,5 +1,5 @@
 {
-  "todo": [ "fix sortingExpressions setting" ],
+  "todo": [ "GM working on exporting sortingExpressions" ],
   "export": false,
   "descriptions": {
     "content": {

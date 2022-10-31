@@ -1,6 +1,6 @@
 {
   "todo": [
-    "fix template in CodeGenLib",
+    "MT test exporting template in CodeGenLib",
     "TODO ability to mark columns as required",
     "TODO ability to set min value on column"
   ],

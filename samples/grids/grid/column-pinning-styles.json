@@ -1,5 +1,7 @@
 {
-  "todo": [ "implement" ],
+  "todo": [
+     "Approved Defer until we support CSS styles"
+  ],
   "export": false,
   "descriptions": {
     "content": {

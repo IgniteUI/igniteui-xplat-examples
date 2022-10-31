@@ -1,4 +1,6 @@
 {
+  "todo": [ "fix errors in WebGridNestedDataCellTemplate" ],
+  "export": true,
   "descriptions": {
     "content": {
       "type": "WebGrid",

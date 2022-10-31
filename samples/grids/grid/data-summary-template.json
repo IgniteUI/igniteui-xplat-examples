@@ -1,5 +1,7 @@
 {
-  "todo": [ "fix template in CodeGenLib" ],
+  "todo": [ 
+    "MT test exporting template in CodeGenLib"
+  ],
   "export": false,
   "descriptions": {
     "editor": {

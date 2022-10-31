@@ -1,5 +1,5 @@
 {
-  "todo": [ "fix No overload for WebGridDeleteCellTemplate matches delegate RenderFragment" ],
+  "todo": [ "implement WebGridDeleteCellTemplate event" ],
   "export": false,
   "descriptions": {
     "content": {

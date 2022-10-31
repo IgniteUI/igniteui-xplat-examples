@@ -1,6 +1,6 @@
 {
   "todo": [
-    "defer until we support CSS styles",
+    "Approved Defer - until we support injecting CSS styles",
     "add ActiveNodeChange and ConextMenu events"
   ],
   "export": false,

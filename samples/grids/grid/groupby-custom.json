@@ -1,8 +1,10 @@
 {
   "todo": [ 
-     "add template column with event handlers",
-     "add grid toolbar when available"
+    "add template column with event handlers",
+    "add grid toolbar when available",
+    "MT text exporting"
   ],
+  "export": false,
   "descriptions": {
     "content": {
       "name": "grid",

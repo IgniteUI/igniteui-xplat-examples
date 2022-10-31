@@ -1,6 +1,6 @@
 {
   "todo": [
-    "MT: fix exporting ExportStarted event handler"
+    "MT: fix exporting WebGridToolbarExporter event handler"
   ],
   "export": false,
   "descriptions": {

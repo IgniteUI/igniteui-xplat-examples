@@ -1,6 +1,6 @@
 {
   "todo": [ 
-     "Defer until we port RemotePagingService to CodeGenLib with event handlers" 
+     "Approved Defer - until we port RemotePagingService to CodeGenLib with event handlers" 
   ], 
   "export": false,
   "descriptions": {
