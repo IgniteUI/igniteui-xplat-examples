@@ -1,6 +1,5 @@
 {
-    "todo": [ "MT test exporting" ],
-    "export": false,
+    "todo": [ "add cell templates for Change, ChangePercent and AnnualChange fields" ],
     "descriptions": {
       "content": {
         "type": "WebGrid",
@@ -37,24 +36,21 @@
               "type": "WebColumn",
               "field": "Change",
               "width": "120px",
-              "dataType": "Number",
-              "bodyTemplateRef": "WebGridChangeTemplate"
+              "dataType": "Number"
           },
           {
               "type": "WebColumn",
               "field": "ChangePercent",
               "header": "Change(%)",
               "width": "120px",
-              "dataType": "Number",
-              "bodyTemplateRef": "WebGridChangePercentTemplate"
+              "dataType": "Number"
           },
           {
               "type": "WebColumn",
               "field": "AnnualChange",
               "header": "Change On Year(%)",
               "width": "150px",
-              "dataType": "Number",
-              "bodyTemplateRef": "WebGridChangeOnYearPercentTemplate"
+              "dataType": "Number"
           },
           {
               "type": "WebColumn",
