@@ -62,19 +62,6 @@
           "hasSummary": true,
           "editable": true,
           "filterable": false
-        },
-        {
-          "type": "WebColumn",
-          "field": "Locations",
-          "header": "Available At",
-          "editable": true,
-          "filterable": true,
-          "width": "220px"
-        },
-        {
-          "type": "WebColumn",
-          "width": "100px",
-          "filterable": false
         }
       ]
     }
