@@ -1,5 +1,6 @@
 {
-  "todo": ["add toggle summary template to columns"],
+  "todo": ["missing summary formatter prop", "MT test exporting"],
+  "export": false,
   "descriptions": {
     "content": {
       "type": "WebGrid",
@@ -11,48 +12,43 @@
       "columns": [
         {
           "type": "WebColumn",
-          "name": "ProductID",
-          "field": "ProductID",
-          "header": "Product ID"
+          "field": "ProductName",
+          "header": "Product Name",
+          "sortable": true,
+          "dataType": "String"
         },
         {
           "type": "WebColumn",
-          "field": "ProductName",
-          "header": "Prod. Name",
-          "hasSummary": true,
+          "field": "QuantityPerUnit",
+          "header": "Quantity Per Unit",
+          "sortable": true,
           "dataType": "String"
         },
         {
           "type": "WebColumn",
           "field": "UnitPrice",
-          "header": "Unit Price",
-          "hasSummary": true,
-          "dataType": "Number",
-          "bodyTemplateRef": "WebGridNumberToUSDCellTemplate"
-        },
-        {
-          "type": "WebColumn",
-          "field": "UnitsInStock",
-          "header": "UnitsInStock",
-          "dataType": "Number"
-        },
-        {
-          "type": "WebColumn",
-          "field": "Discontinued",
-          "header": "Discontinued",
-          "hasSummary": true,
-          "dataType": "Boolean"
+          "header": "Unit Price Category",
+          "sortable": true,
+          "dataType": "String"
         },
         {
           "type": "WebColumn",
           "field": "OrderDate",
           "header": "Order Date",
+          "sortable": true,
           "hasSummary": true,
           "dataType": "Date",
           "pipeArgs": {
               "type": "WebColumnPipeArgs",
-              "format": "mediumDate"
+              "format": "MMM YYYY"
           }
+        },
+        {
+          "type": "WebColumn",
+          "field": "Discontinued",
+          "header": "Discontinued",
+          "sortable": true,
+          "dataType": "Boolean"
         }
       ]
     }
