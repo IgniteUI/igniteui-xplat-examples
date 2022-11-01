@@ -1,10 +1,9 @@
 {
   "todo": [
     "TODO Ability to Hide itemrs per page dropdown",
-    "TODO Ability to hide Page Buttons (First, Prev, Next, Last)",
-    "GM: fix exporting No overload for method 'TypeCheck' takes 5 arguments in selectOptions"
+    "TODO Ability to hide Page Buttons (First, Prev, Next, Last)"
   ],
-  "export": false,
+  "export": true,
   "descriptions": {
     "content": {
       "type": "WebGrid",

@@ -1,10 +1,9 @@
 {
     "todo": [
         "TODO ability to select multiple rows by clicking the button",
-        "TODO the row number on the left on every line",
-        "GM: fix exporting No overload for method 'TypeCheck' takes 5 arguments in selectOptions"
+        "TODO the row number on the left on every line"
     ],
-    "export": false,
+    "export": true,
     "descriptions": {
         "content": {
             "type": "WebGrid",
