@@ -1,10 +1,6 @@
 {
     "todo": [
-        "Add formatter for Open, Price, ChangePercent, AnnualChange, Buy, Sell, Spread, Volume, High, Low, AnnualHigh, AnnualLow, AnnualStart columns",
         "Add working WebGridCurrencyCellTemplate with badge and icon"
-    ],
-    "onAfterInit": [
-        "WebGridRegisterIconAfterViewInit"
     ],  
     "export": true,
     "descriptions": {
@@ -31,47 +27,47 @@
                 {
                     "type": "WebColumn",
                     "field": "Open",
+                    "header": "Open Price",
                     "width": "120px",
-                    "dataType": "Number"
+                    "dataType": "Currency"
                 },
                 {
                     "type": "WebColumn",
                     "field": "Price",
                     "width": "120px",
-                    "dataType": "Number"
+                    "dataType": "Currency"
                 },
                 {
                     "type": "WebColumn",
                     "field": "Change",
                     "width": "120px",
-                    "dataType": "Number",
-                    "bodyTemplateRef": "WebGridCurrencyCellTemplate"
+                    "dataType": "Number"
                 },
                 {
                     "type": "WebColumn",
                     "field": "ChangePercent",
-                    "header": "ChangePercent",
+                    "header": "Change(%)",
                     "width": "120px",
                     "dataType": "Number"
                 },
                 {
                     "type": "WebColumn",
                     "field": "AnnualChange",
+                    "header": "Change On Year(%)",
                     "width": "150px",
-                    "dataType": "Number",
-                    "bodyTemplateRef": "WebGridCurrencyCellTemplate"
+                    "dataType": "Number"
                 },
                 {
                     "type": "WebColumn",
                     "field": "Buy",
                     "width": "130px",
-                    "dataType": "Number"
+                    "dataType": "Currency"
                 },
                 {
                     "type": "WebColumn",
                     "field": "Sell",
                     "width": "130px",
-                    "dataType": "Number"
+                    "dataType": "Currency"
                 },
                 {
                     "type": "WebColumn",
@@ -88,32 +84,37 @@
                 {
                     "type": "WebColumn",
                     "field": "High",
+                    "header": "High(D)",
                     "width": "130px",
-                    "dataType": "Number"
+                    "dataType": "Currency"
                 },
                 {
                     "type": "WebColumn",
                     "field": "Low",
+                    "header": "Low(D)",
                     "width": "130px",
-                    "dataType": "Number"
+                    "dataType": "Currency"
                 },
                 {
                     "type": "WebColumn",
                     "field": "AnnualHigh",
+                    "header": "High(Y)",
                     "width": "130px",
-                    "dataType": "Number"
+                    "dataType": "Currency"
                 },
                 {
                     "type": "WebColumn",
                     "field": "AnnualLow",
+                    "header": "Low(Y)",
                     "width": "130px",
-                    "dataType": "Number"
+                    "dataType": "Currency"
                 },
                 {
                     "type": "WebColumn",
                     "field": "AnnualStart",
+                    "header": "Start(Y)",
                     "width": "130px",
-                    "dataType": "Number"
+                    "dataType": "Currency"
                 }
             ]
         }
