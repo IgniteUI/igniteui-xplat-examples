@@ -1,27 +1,121 @@
 {
-  "todo": [ "Mike - implement" ],
-  "export": false,
+  "todo": [ "" ],
+  "export": true,
   "descriptions": {
     "content": {
       "type": "WebGrid",
       "name": "grid",
       "id": "grid",
       "dataRef": "CustomersData",
+      "autoGenerate": false,
+      "columnWidth": "200px",
+      "allowFiltering": true,
       "columnSelection": "Single",
+      "toolbar": [
+        {
+          "type": "WebGridToolbar",
+          "title": "Employees",
+          "tools": [
+            {
+              "type": "WebGridToolbarTitle"
+            },
+            {
+              "type": "WebGridToolbarActions",
+              "actions": [
+                {
+                  "type": "WebGridToolbarHiding"
+                }
+              ]
+            }
+          ]
+        }
+      ],
       "columns": [
         {
           "type": "WebColumn",
-          "field": "ID"
+          "name": "ID",
+          "field": "ID",
+          "header": "ID",
+          "dataType": "String",
+          "sortable": true
         },
         {
           "type": "WebColumn",
+          "name": "ContactName",
+          "field": "ContactName",
+          "header": "ContactName",
+          "dataType": "String",
+          "sortable": true
+        },
+        {
+          "type": "WebColumn",
+          "name": "ContactTitle",
+          "field": "ContactTitle",
+          "header": "ContactTitle",
+          "dataType": "String",
+          "sortable": true
+        },
+        {
+          "type": "WebColumn",
+          "name": "City",
+          "field": "City",
+          "header": "City",
+          "dataType": "String",
+          "sortable": true
+        },
+        {
+          "type": "WebColumn",
+          "name": "CompanyName",
           "field": "CompanyName",
-          "header": "Company Name"
+          "header": "CompanyName",
+          "dataType": "String",
+          "sortable": true
+        },
+        {
+          "type": "WebColumn",
+          "name": "Fax",
+          "field": "Fax",
+          "header": "Fax",
+          "dataType": "String",
+          "sortable": true
+        },
+        {
+          "type": "WebColumn",
+          "name": "Address",
+          "field": "Address",
+          "header": "Address",
+          "dataType": "String",
+          "sortable": true
+        },
+        {
+          "type": "WebColumn",
+          "name": "PostalCode",
+          "field": "PostalCode",
+          "header": "PostalCode",
+          "dataType": "String",
+          "sortable": true
+        },
+        {
+          "type": "WebColumn",
+          "name": "Country",
+          "field": "Country",
+          "header": "Country",
+          "dataType": "String",
+          "sortable": true
+        },
+        {
+          "type": "WebColumn",
+          "name": "Phone",
+          "field": "Phone",
+          "header": "Phone",
+          "dataType": "String",
+          "sortable": true
         }
       ]
     }
   },
   "modules": [
+    "withDescriptions",
     "grids/WebGridModule"
   ]
 }
