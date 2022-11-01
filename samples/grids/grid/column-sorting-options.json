@@ -1,5 +1,5 @@
 {
-  "todo": [ "GM working on exporting sortingExpressions" ],
+  "todo": [ "MT fix events WebGridSortingSampleClearSortButton WebGridSortingSampleClearGrouping" ],
   "export": false,
   "descriptions": {
     "editor": {
