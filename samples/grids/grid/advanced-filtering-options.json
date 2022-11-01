@@ -1,6 +1,6 @@
 {
   "todo": [ 
-     "MT fix exporting toolbar"
+     ""
   ],
   "export": true,
   "descriptions": {
@@ -12,7 +12,23 @@
       "moving": true,
       "toolbar": [
         {
-          "type": "WebGridToolbar"
+          "type": "WebGridToolbar",
+          "tools": [
+            {
+              "type": "WebGridToolbarActions",
+              "actions": [
+                {
+                  "type": "WebGridToolbarAdvancedFiltering"
+                },
+                {
+                  "type": "WebGridToolbarHiding"
+                },
+                {
+                  "type": "WebGridToolbarPinning"
+                }
+              ]
+            }
+          ]
         }
       ],
       "allowAdvancedFiltering": true,

@@ -1,8 +1,8 @@
 {
   "todo": [
-    "MT: fix exporting groupingExpressions"
+    ""
   ],
-  "export": false,
+  "export": true,
   "descriptions": {
     "editor": {
       "type": "PropertyEditorPanel",

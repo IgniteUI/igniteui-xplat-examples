@@ -1,6 +1,6 @@
 {
-  "todo": ["missing summary formatter prop", "MT test exporting"],
-  "export": false,
+  "todo": ["missing summary formatter prop"],
+  "export": true,
   "descriptions": {
     "content": {
       "type": "WebGrid",

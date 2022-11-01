@@ -1,12 +1,12 @@
 {
   "todo": [
-    "MT: fix exporting groupingExpressions",
+    "",
     "add PreventDocumentScroll to grid",
     "set grouping expression strategy to defaultSortingStrategy",
     "add formatter to UnitPrice column",
     "check if paging is working"
   ],
-  "export": false,
+  "export": true,
   "descriptions": {
     "content": {
       "type": "WebGrid",

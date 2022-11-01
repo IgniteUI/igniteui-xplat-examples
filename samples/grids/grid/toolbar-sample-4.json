@@ -1,8 +1,7 @@
 {
   "todo": [ 
-     "MT fix exporting toolbar"
+     ""
   ],
-  "export": true,
   "descriptions": {
     "content": {
       "type": "WebGrid",
