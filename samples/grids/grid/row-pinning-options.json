@@ -1,7 +1,8 @@
 {
   "todo": [
     "pin rows 0 and 3 on top",
-    "do actionStrip.hide() on dataPreLoad"
+    "do actionStrip.hide() on dataPreLoad",
+    "MT test exporting actionButtons"
   ],
   "descriptions": {
     "editor": {
