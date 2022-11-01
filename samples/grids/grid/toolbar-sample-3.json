@@ -10,7 +10,17 @@
       "autoGenerate": false,
       "toolbar": [
         {
-          "type": "WebGridToolbar"
+          "type": "WebGridToolbar",
+          "tools": [
+            {
+              "type": "WebGridToolbarActions",
+              "actions": [
+                {
+                  "type": "WebGridToolbarExporter"
+                }
+              ]
+            }
+          ]
         }
       ],
       "columns": [

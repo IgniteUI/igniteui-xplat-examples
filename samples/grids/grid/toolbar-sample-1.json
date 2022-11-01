@@ -10,7 +10,26 @@
       "autoGenerate": false,
       "toolbar": [
         {
-          "type": "WebGridToolbar"
+          "type": "WebGridToolbar",
+          "tools": [
+            {
+              "type": "WebGridToolbarActions",
+              "actions": [
+                {
+                  "type": "WebGridToolbarAdvancedFiltering"
+                },
+                {
+                  "type": "WebGridToolbarHiding"
+                },
+                {
+                  "type": "WebGridToolbarPinning"
+                },
+                {
+                  "type": "WebGridToolbarExporter"
+                }
+              ]
+            }
+          ]
         }
       ],
       "columns": [

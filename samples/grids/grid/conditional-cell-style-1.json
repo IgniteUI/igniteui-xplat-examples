@@ -52,7 +52,7 @@
           "type": "WebColumn",
           "field": "CountryFlag",
           "header": "Country",
-          "bodyTemplateRef": "WebGridCountryFlagTemplate"
+          "bodyTemplateRef": "WebGridImageCellTemplate"
         }
       ]
     }
