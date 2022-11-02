@@ -1,7 +1,8 @@
 {
   "todo": [
-    "add batch editing later"
+    "MT test exporting actionStrip, add batch editing later"
   ],
+  "export": false,
   "descriptions": {
     "content": {
       "name": "grid",
