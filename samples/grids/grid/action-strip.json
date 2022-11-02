@@ -1,23 +1,23 @@
 {
-  "todo": [ 
-     "add action strip" 
+  "todo": [
+    "MT test exporting actionStrip, add batch editing later"
   ],
+  "export": false,
   "descriptions": {
     "content": {
       "name": "grid",
       "type": "WebGrid",
       "dataRef": "NwindData",
-      "batchEditing":true,
-      "rowEditable":true,
-      "allowFiltering":true,
+      "batchEditing": true,
+      "rowEditable": true,
+      "allowFiltering": true,
+      "autoGenerate": false,
+      "pinning": {
+        "type": "WebPinningConfig",
+        "rows": "Top"
+      },
       "primaryKey": "ProductID",
       "columns": [
-        {
-          "type": "WebColumn",
-          "name": "ProductID",
-          "field": "ProductID",
-          "header": "Product ID"
-        },
         {
           "type": "WebColumn",
           "name": "ProductName",
@@ -59,6 +59,20 @@
           "name": "Discontinued",
           "field": "Discontinued",
           "header": "Discontinued"
+        }
+      ]
+    },
+    "actionStrip": {
+      "type": "WebActionStrip",
+      "name": "actionStrip",
+      "actionButtons": [
+        {
+          "type": "WebGridPinningActions"
+        }, 
+        {
+          "type": "WebGridEditingActions",
+          "editRow": true, 
+          "deleteRow": false
         }
       ]
     }
