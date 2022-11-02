@@ -1,6 +1,6 @@
 {
-  "todo": [ "MT test exporting WebGridClearSort" ],
-  "export": false,
+  "todo": [ "" ],
+  "export": true,
   "descriptions": {
     "editor": {
       "type": "PropertyEditorPanel",
