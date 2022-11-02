@@ -1,4 +1,6 @@
 {
+  "todo": [ "MT test exporting WebTreeGrid" ],
+  "export": false,
   "descriptions": {
     "content": {
       "type": "WebTreeGrid",
