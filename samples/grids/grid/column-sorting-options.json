@@ -1,5 +1,5 @@
 {
-  "todo": [ "MT fix events WebGridSortingSampleClearSortButton WebGridSortingSampleClearGrouping" ],
+  "todo": [ "MT test exporting WebGridClearSort" ],
   "export": false,
   "descriptions": {
     "editor": {
@@ -20,13 +20,13 @@
           "type": "PropertyEditorPropertyDescription",
           "valueType": "Button",
           "primitiveValue": "Clear Sorting",
-          "buttonClickedRef": "WebGridSortingSampleClearSortButton"
+          "buttonClickedRef": "WebGridClearSort"
         },
         {
           "type": "PropertyEditorPropertyDescription",
           "valueType": "Button",
           "primitiveValue": "Clear Grouped Columns",
-          "buttonClickedRef": "WebGridSortingSampleClearGrouping"
+          "buttonClickedRef": "WebGridClearGrouping"
         }
       ]
     },

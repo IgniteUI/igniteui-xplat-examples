@@ -1,7 +1,5 @@
 {
-  "todo": [ 
-     "Andrew - add WebGridBeatsPerMinuteTemplate in Blazor.js"
-  ],
+  "todo": [ "MT test exporting bodyTemplateRef" ],
   "export": false,
   "descriptions": {
     "content": {
