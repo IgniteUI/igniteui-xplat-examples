@@ -1,6 +1,6 @@
 {
-  "todo": [ "GM working on exporting sortingExpressions to CodeGenLib? " ],
-  "export": false,
+  "todo": [ "" ],
+  "export": true,
   "descriptions": {
     "content": {
       "type": "WebGrid",

@@ -1,8 +1,8 @@
 {
     "todo": [
-        "GM: fix exporting groupingExpressions and try exporting children of columns"
+        ""
     ],
-    "export": false,
+    "export": true,
     "descriptions": {
         "content": {
             "name": "grid",

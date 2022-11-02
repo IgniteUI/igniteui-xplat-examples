@@ -1,5 +1,5 @@
 {
-  "todo": [ "GM working on exporting sortingExpressions" ],
+  "todo": [ "MT export failed ERROR Object cannot be stored in an array of this type" ],
   "export": false,
   "descriptions": {
     "content": {

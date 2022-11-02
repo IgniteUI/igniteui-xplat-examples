@@ -1,5 +1,5 @@
 {
-  "todo": [ "GM working on exporting sortingExpressions, MT test exporting WebGridClearSort" ],
+  "todo": [ "MT test exporting WebGridClearSort" ],
   "export": false,
   "descriptions": {
     "editor": {
