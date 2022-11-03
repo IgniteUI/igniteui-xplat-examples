@@ -1,5 +1,28 @@
 {
   "descriptions": {
+    "editor": {
+      "type": "PropertyEditorPanel",
+      "name": "PropertyEditor",
+      "componentRendererRef": "renderer",
+      "targetRef": "grid",
+      "descriptionType": "WebGrid",
+      "isHorizontal": true,
+      "isWrappingEnabled": true,
+      "properties": [
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "valueType": "Button",
+          "primitiveValue": "Toggle First Group Pinned",
+          "buttonClickedRef": "WebGridPinFirstGroupToggle"
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "valueType": "Button",
+          "primitiveValue": "Toggle First Group Hidden",
+          "buttonClickedRef": "WebGridHideFirstGroupToggle"
+        }
+      ]
+    },
     "content": {
       "type": "WebGrid",
       "dataRef": "CustomersData",
@@ -107,6 +130,7 @@
   },
   "modules": [
     "grids/WebGridModule",
-    "grids/WebColumnGroupModule"
+    "grids/WebColumnGroupModule",
+    "layouts/PropertyEditorPanelModule"
   ]
 }

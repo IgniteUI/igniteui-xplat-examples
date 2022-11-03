@@ -1,7 +1,4 @@
 {
-  "todo": [ 
-    ""
-  ],
   "export": true,
   "descriptions": {
     "editor": {
@@ -20,10 +17,10 @@
         },
         {
           "type": "PropertyEditorPropertyDescription",
-          "propertyPath": "Columns[3 as WebGridColumn, 5 as WebGridColumn].HasSummary",
           "label": "Toggle Summaries",
           "valueType": "Boolean1",
-          "primitiveValue": true
+          "primitiveValue": true,
+          "changedRef": "WebGridHasSummariesChange"
         },
         {
           "type": "PropertyEditorPropertyDescription",
