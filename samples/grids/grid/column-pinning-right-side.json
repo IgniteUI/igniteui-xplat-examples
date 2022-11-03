@@ -87,6 +87,7 @@
     }
   },
   "modules": [
-    "grids/WebGridModule"
+    "grids/WebGridModule",
+    "AvatarModule"
   ]
 }
