@@ -12,7 +12,10 @@
         {
           "type": "PropertyEditorPropertyDescription",
           "propertyPath": "CellSelection",
-          "name": "CellSelectionEditor"
+          "name": "CellSelectionEditor",
+          "valueType": "EnumValue",
+          "dropDownNames": ["None", "Single", "Multiple"],
+          "dropDownValues": ["NOne", "Single", "Multiple"]
         }
       ]
     },
