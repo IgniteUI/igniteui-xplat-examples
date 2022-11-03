@@ -16,6 +16,20 @@
         "type": "WebPinningConfig",
         "rows": "Top"
       },
+      "actionStrip": {
+        "type": "WebActionStrip",
+        "name": "actionStrip",
+        "actionButtons": [
+          {
+            "type": "WebGridPinningActions"
+          },
+          {
+            "type": "WebGridEditingActions",
+            "editRow": true,
+            "deleteRow": false
+          }
+        ]
+      },
       "primaryKey": "ProductID",
       "columns": [
         {
@@ -60,21 +74,7 @@
           "field": "Discontinued",
           "header": "Discontinued"
         }
-      ],
-      "actionStrip": {
-        "type": "WebActionStrip",
-        "name": "actionStrip",
-        "actionButtons": [
-          {
-            "type": "WebGridPinningActions"
-          }, 
-          {
-            "type": "WebGridEditingActions",
-            "editRow": true, 
-            "deleteRow": false
-          }
-        ]
-      }
+      ]
     }
   },
   "modules": [
