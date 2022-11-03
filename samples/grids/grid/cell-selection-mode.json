@@ -15,7 +15,8 @@
           "name": "CellSelectionEditor",
           "valueType": "EnumValue",
           "dropDownNames": ["None", "Single", "Multiple"],
-          "dropDownValues": ["NOne", "Single", "Multiple"]
+          "dropDownValues": ["None", "Single", "Multiple"],
+          "shouldOverrideDefaultEditor": true
         }
       ]
     },
