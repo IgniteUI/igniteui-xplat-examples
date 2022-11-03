@@ -60,21 +60,21 @@
           "field": "Discontinued",
           "header": "Discontinued"
         }
-      ]
-    },
-    "actionStrip": {
-      "type": "WebActionStrip",
-      "name": "actionStrip",
-      "actionButtons": [
-        {
-          "type": "WebGridPinningActions"
-        }, 
-        {
-          "type": "WebGridEditingActions",
-          "editRow": true, 
-          "deleteRow": false
-        }
-      ]
+      ],
+      "actionStrip": {
+        "type": "WebActionStrip",
+        "name": "actionStrip",
+        "actionButtons": [
+          {
+            "type": "WebGridPinningActions"
+          }, 
+          {
+            "type": "WebGridEditingActions",
+            "editRow": true, 
+            "deleteRow": false
+          }
+        ]
+      }
     }
   },
   "modules": [
