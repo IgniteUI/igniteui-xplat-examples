@@ -71,7 +71,7 @@
   },
   "modules": [
     "withDescriptions",
-    "layouts/PropertyEditorModule",
+    "layouts/PropertyEditorPanelModule",
     "grids/WebTreeGridModule"
   ]
 }
