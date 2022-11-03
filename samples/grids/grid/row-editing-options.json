@@ -8,6 +8,7 @@
       "name": "grid",
       "id": "grid",
       "displayDensity": "Compact",
+      "primaryKey": "ProductID",
       "rowEditable": true,
       "columns": [
         {
