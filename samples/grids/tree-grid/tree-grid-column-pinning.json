@@ -1,0 +1,98 @@
+{
+  "descriptions": {
+    "content": {
+      "type": "WebTreeGrid",
+      "name": "treeGrid",
+      "id": "treeGrid",
+      "dataRef": "EmployeesFlatDetails",
+      "primaryKey": "ID",
+      "foreignKey": "ParentID",
+      "autoGenerate": false,
+      "toolbar": [
+        {
+          "type": "WebGridToolbar",
+          "tools": [
+            {
+              "type": "WebGridToolbarActions",
+              "actions": [
+                {
+                  "type": "WebGridToolbarPinning"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "columns": [
+        {
+          "type": "WebColumn",
+          "field": "Name",
+          "dataType": "String",
+          "width": "250px"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Title",
+          "dataType": "String",
+          "width": "300px",
+          "pinned": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "HireDate",
+          "header": "Hire Date",
+          "dataType": "Date",
+          "width": "200px"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Age",
+          "dataType": "Number",
+          "width": "100px"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Address",
+          "dataType": "String",
+          "width": "200px"
+        },
+        {
+          "type": "WebColumn",
+          "field": "City",
+          "dataType": "String",
+          "width": "200px"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Country",
+          "dataType": "String",
+          "width": "200px"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Fax",
+          "dataType": "String",
+          "width": "200px"
+        },
+        {
+          "type": "WebColumn",
+          "field": "PostalCode",
+          "header": "Postal Code",
+          "dataType": "String",
+          "width": "200px"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Phone",
+          "dataType": "String",
+          "width": "200px"
+        }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorModule",
+    "grids/WebTreeGridModule"
+  ]
+}
