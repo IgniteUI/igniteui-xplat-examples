@@ -52,6 +52,7 @@
     }
   },
   "modules": [
-    "grids/WebGridModule"
+    "grids/WebGridModule",
+    "LinearProgressModule"
   ]
 }
