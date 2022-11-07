@@ -37,12 +37,6 @@
           "sortable": true,
           "editable": true,
           "resizable": true
-        },
-        {
-          "type": "WebColumn",
-          "field": "Performance",
-          "header": "Performance",
-          "filterable": false
         }
       ]
     }
