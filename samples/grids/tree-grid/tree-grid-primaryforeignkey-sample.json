@@ -1,0 +1,47 @@
+{
+  "todo": [ "add Performance column with a template, MT test exporting" ],
+  "descriptions": {
+    "content": {
+      "type": "WebTreeGrid",
+      "name": "treeGrid",
+      "id": "treeGrid",
+      "dataRef": "EmployeesFlatData",
+      "primaryKey": "ID",
+      "foreignKey": "ParentID",
+      "autoGenerate": false,
+      "allowFiltering": true,
+      "moving": true,
+      "rowSelection": "Multiple",
+      "columns": [
+        {
+          "type": "WebColumn",
+          "field": "Name",
+          "dataType": "String",
+          "sortable": true,
+          "editable": true,
+          "resizable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "Title",
+          "header": "Job Title",
+          "dataType": "String",
+          "sortable": true,
+          "editable": true,
+          "resizable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "Age",
+          "dataType": "Number",
+          "sortable": true,
+          "editable": true,
+          "resizable": true
+        }
+      ]
+    }
+  },
+  "modules": [
+    "grids/WebTreeGridModule"
+  ]
+}
