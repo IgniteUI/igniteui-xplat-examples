@@ -1,4 +1,9 @@
-# Ignite UI Cross Platform Examples
+
+<div style="display: flex; flex-flow: row; font-family: 'Titillium Web'">
+    <img style="border-radius: 0.25rem" alt="ignite-ui" src="https://raw.githubusercontent.com/IgniteUI/igniteui-xplat-docs/vnext/doc/en/images/readme/ig-banner.png"/>
+</div>
+
+# Cross Platform Examples for Ignite UI Components
 
 This repository contains cross-platform examples (defined in .JSON files) of Ignite UI components for Angular, Blazor, React, WebComponents, and WPF platforms:
 
