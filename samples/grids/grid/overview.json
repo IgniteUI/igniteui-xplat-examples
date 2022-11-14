@@ -90,7 +90,6 @@
     }
   },
   "modules": [
-    "withDescriptions",
     "grids/WebGridModule"
   ]
 }
