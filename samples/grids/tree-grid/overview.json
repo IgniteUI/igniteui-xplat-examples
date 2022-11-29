@@ -43,7 +43,18 @@
       "columns": [
         {
           "type": "WebColumn",
+          "field": "iD",
+          "header": "ID",
+          "dataType": "Number",
+          "sortable": true,
+          "editable": true,
+          "resizable": true,
+          "hasSummary": true
+        },
+        {
+          "type": "WebColumn",
           "field": "Name",
+          "header": "Name",
           "dataType": "String",
           "sortable": true,
           "editable": true,
@@ -53,6 +64,7 @@
         {
           "type": "WebColumn",
           "field": "HireDate",
+          "header": "Hire Date",
           "dataType": "Date",
           "sortable": true,
           "editable": true,
@@ -61,6 +73,25 @@
         {
           "type": "WebColumn",
           "field": "Age",
+          "header": "Age",
+          "dataType": "Number",
+          "sortable": true,
+          "editable": true,
+          "resizable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "salary",
+          "header": "Salary",
+          "dataType": "Number",
+          "sortable": true,
+          "editable": true,
+          "resizable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "productivity",
+          "header": "Productivity",
           "dataType": "Number",
           "sortable": true,
           "editable": true,
