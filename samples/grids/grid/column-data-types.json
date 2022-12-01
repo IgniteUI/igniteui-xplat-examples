@@ -1,5 +1,6 @@
 {
-    "todo": [ "" ],
+    "todo": [ "missing Web.ts for InvoicesDataExtendedDates" ],
+    "export": false,
     "descriptions": {
         "content": {
             "type": "WebGrid",
