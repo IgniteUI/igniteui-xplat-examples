@@ -1,35 +1,42 @@
 {
-    "descriptions": {
-      "content": {
-        "type": "WebPivotGrid",
-        "dataRef": "PivotSalesData",
-        "name": "grid",
-        "pivotConfiguration": {
-          "type": "WebPivotConfiguration",
-          "columns": [
-             {
-               "type": "WebPivotDimension",
-               "memberName": "Country",
-                "enabled": true
-             }
-          ],
-          "rows": [
-              {
-               "type": "WebPivotDimension",
-               "memberName": "Product",
-                "enabled": true
-             }
-          ],
-          "values": [
+  "descriptions": {
+    "content": {
+      "type": "WebPivotGrid",
+      "dataRef": "PivotSalesData",
+      "name": "grid",
+      "pivotConfiguration": {
+        "type": "WebPivotConfiguration",
+        "columns": [
+           {
+             "type": "WebPivotDimension",
+             "memberName": "Country",
+              "enabled": true
+           }
+        ],
+        "rows": [
             {
-              "type": "WebPivotValue",
-              "member": "Sales"
+             "type": "WebPivotDimension",
+             "memberName": "Product",
+              "enabled": true
+           }
+        ],
+        "values": [
+          {
+            "type": "WebPivotValue",
+            "member": "Sales",
+            "dataType": "Currency",
+            "enabled": true,
+            "aggregate": {
+              "type": "WebPivotAggregator",
+              "aggregatorName": "SUM",
+              "key": "SUM"
             }
-          ]
-        }
-        }
-      },
-      "modules": [
-        "grids/WebPivotGridModule"
-      ]
-    }
+          }
+        ]
+      }
+      }
+    },
+    "modules": [
+      "grids/WebPivotGridModule"
+    ]
+  }
