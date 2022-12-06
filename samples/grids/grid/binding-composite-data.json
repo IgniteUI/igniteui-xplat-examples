@@ -11,10 +11,12 @@
       "columns": [
         {
           "type": "WebColumn",
+          "header": "ID",
           "field": "ID"
         },
         {
           "type": "WebColumn",
+          "header": "ContactName",
           "field": "ContactName",
           "header": "Contact",
           "editable": true,
@@ -23,6 +25,7 @@
         },
         {
           "type": "WebColumn",
+          "header": "Address",
           "field": "Address",
           "editable": true,
           "bodyTemplateRef": "WebGridCompositeAddressCellTemplate",
@@ -30,18 +33,22 @@
         },
         {
           "type": "WebColumn",
+          "header": "Country",
           "field": "Country"
         },
         {
           "type": "WebColumn",
+          "header": "Region",
           "field": "Region"
         },
         {
           "type": "WebColumn",
+          "header": "Phone",
           "field": "Phone"
         },
         {
           "type": "WebColumn",
+          "header": "Fax",
           "field": "Fax"
         }
       ]
