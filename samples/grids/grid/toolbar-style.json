@@ -1,6 +1,7 @@
 {
   "todo": [ "Approved Defer - implement CSS styling"  ],
   "export": false,
+  "skipAlterDataCasing": true,
   "descriptions": {
     "content": {
       "type": "WebGrid",

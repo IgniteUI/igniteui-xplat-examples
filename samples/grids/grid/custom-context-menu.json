@@ -1,6 +1,7 @@
 {
   "todo": [ "Approved Defer - until we have context menu in Blazor" ],
   "export": false,
+  "skipAlterDataCasing": true,
   "descriptions": {
     "content": {
       "type": "WebGrid",

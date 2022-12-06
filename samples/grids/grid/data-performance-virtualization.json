@@ -3,6 +3,7 @@
       "MT port FinancialDataService in Blazor.cs - see Financial Stocks",
       "add cell templates for Change, ChangePercent and AnnualChange fields"
   ],
+  "skipAlterDataCasing": true,
   "descriptions": {
     "content": {
       "type": "WebGrid",

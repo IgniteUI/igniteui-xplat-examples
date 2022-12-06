@@ -1,6 +1,7 @@
 {
   "todo": [ "fix errors in WebGridNestedDataCellTemplate" ],
   "export": true,
+  "skipAlterDataCasing": true,
   "descriptions": {
     "content": {
       "type": "WebGrid",

@@ -4,6 +4,7 @@
   ],
   "export": false,
   "onInit": ["WebGridRowPinStyleOnInitEvent"],
+  "skipAlterDataCasing": true,
   "descriptions": {
     "content": {
       "type": "WebGrid",

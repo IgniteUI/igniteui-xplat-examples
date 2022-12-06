@@ -3,6 +3,7 @@
      "Approved Defer - Port RemoteService with event handlers"
   ],
   "export": false,
+  "skipAlterDataCasing": true,
   "descriptions": {
     "content": {
       "name": "grid",

@@ -1,8 +1,7 @@
 {
-  "todo": [ 
-     ""
-  ],
+  "todo": [ "" ],
   "export": true,
+  "skipAlterDataCasing": true,
   "descriptions": {
     "content": {
       "type": "WebGrid",

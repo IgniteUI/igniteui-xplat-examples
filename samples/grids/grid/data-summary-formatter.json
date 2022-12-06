@@ -1,6 +1,7 @@
 {
   "todo": ["missing summary formatter prop"],
   "export": true,
+  "skipAlterDataCasing": true,
   "descriptions": {
     "content": {
       "type": "WebGrid",

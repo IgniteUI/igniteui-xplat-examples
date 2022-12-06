@@ -1,6 +1,7 @@
 {
   "todo": [ "Approved Defer - batch-editing" ],
   "export": false,
+  "skipAlterDataCasing": true,
   "descriptions": {
     "content": {
       "type": "WebGrid",

@@ -2,6 +2,7 @@
   "todo": [ 
      "template fields and event handlers"
   ],
+  "skipAlterDataCasing": true,
   "descriptions": {
     "editor": {
       "type": "PropertyEditorPanel",

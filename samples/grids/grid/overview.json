@@ -2,6 +2,7 @@
   "todo": [
     ""
   ],
+  "skipAlterDataCasing": true,
   "descriptions": {
     "content": {
       "type": "WebGrid",

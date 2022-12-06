@@ -4,6 +4,7 @@
      "RS working on support for WebFilteringOperation then add events in Blazor.js"
   ],
   "export": false,
+  "skipAlterDataCasing": true,
   "descriptions": {
     "content": {
       "name": "grid",

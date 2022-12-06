@@ -4,6 +4,7 @@
     "TODO ability to set min value on column"
   ],
   "export": true,
+  "skipAlterDataCasing": true,
   "descriptions": {
     "editor": {
       "type": "PropertyEditorPanel",

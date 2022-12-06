@@ -3,6 +3,7 @@
     "TODO ability to set hiddenColumnsText"
   ],
   "export": true,
+  "skipAlterDataCasing": true,
   "descriptions": {
     "content": {
       "type": "WebGrid",

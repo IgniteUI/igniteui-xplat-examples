@@ -1,5 +1,6 @@
 {
   "todo": [ "fix String1 dataType" ],
+  "skipAlterDataCasing": true,
   "descriptions": {
     "editor": {
       "type": "PropertyEditorPanel",

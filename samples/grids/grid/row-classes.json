@@ -4,6 +4,7 @@
     "add ActiveNodeChange and ConextMenu events"
   ],
   "export": false,
+  "skipAlterDataCasing": true,
   "descriptions": {
     "content": {
       "type": "WebGrid",

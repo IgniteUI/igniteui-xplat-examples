@@ -4,6 +4,7 @@
         "TODO the row number on the left on every line"
     ],
     "export": true,
+    "skipAlterDataCasing": true,
     "descriptions": {
         "content": {
             "type": "WebGrid",

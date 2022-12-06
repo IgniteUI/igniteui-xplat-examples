@@ -4,6 +4,7 @@
     "Andrew - add grid toolbar when available"
   ],
   "export": true,
+  "skipAlterDataCasing": true,
   "descriptions": {
     "content": {
       "name": "grid",

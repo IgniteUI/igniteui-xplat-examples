@@ -2,6 +2,7 @@
   "todo": [
     "add batch editing later"
   ],
+  "skipAlterDataCasing": true,
   "export": true,
   "descriptions": {
     "content": {

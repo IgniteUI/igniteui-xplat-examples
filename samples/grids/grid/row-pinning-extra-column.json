@@ -4,6 +4,7 @@
         "TODO add template column with icon for pinning",
         "TODO add event to handle row pinning"
     ],
+  "skipAlterDataCasing": true,
     "descriptions": {
         "content": {
             "name": "grid",

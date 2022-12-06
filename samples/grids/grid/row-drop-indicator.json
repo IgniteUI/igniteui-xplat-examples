@@ -1,6 +1,7 @@
 {
   "todo": [ "Approved Defer - dragging feature" ],
   "export": false,
+  "skipAlterDataCasing": true,
   "descriptions": {
     "content": {
       "type": "WebGrid",

@@ -3,6 +3,7 @@
     "pin rows 0 and 3 on top",
     "do actionStrip.hide() on dataPreLoad"
   ],
+  "skipAlterDataCasing": true,
   "descriptions": {
     "editor": {
       "type": "PropertyEditorPanel",

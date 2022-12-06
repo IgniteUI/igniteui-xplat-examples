@@ -4,6 +4,7 @@
      "Approved Defer - add input group when available"
   ],
   "export": false,
+  "skipAlterDataCasing": true,
   "descriptions": {
     "content": {
       "name": "grid",

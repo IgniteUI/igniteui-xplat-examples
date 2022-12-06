@@ -3,6 +3,7 @@
      "Approved Defer - until we have keyboard events"
   ], 
   "export": false,
+  "skipAlterDataCasing": true,
   "descriptions": {
     "content": {
       "name": "grid",

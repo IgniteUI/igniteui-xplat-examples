@@ -2,6 +2,7 @@
   "todo": [ 
      "Port RemoteService with event handlers"
   ],
+  "skipAlterDataCasing": true,
   "descriptions": {
     "content": {
       "name": "grid",

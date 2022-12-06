@@ -3,6 +3,7 @@
      "Approved Defer - until we port RemotePagingService to CodeGenLib with event handlers" 
   ], 
   "export": false,
+  "skipAlterDataCasing": true,
   "descriptions": {
     "content": {
       "name": "grid",

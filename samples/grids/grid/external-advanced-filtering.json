@@ -3,6 +3,7 @@
      "add template column with event handlers",
      "add advanced-filtering-dialog"
   ],
+  "skipAlterDataCasing": true,
   "descriptions": {
     "content": {
       "name": "grid",

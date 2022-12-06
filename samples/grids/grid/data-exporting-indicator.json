@@ -1,6 +1,7 @@
 {
   "todo": [ "Approved Defer - implement" ],
   "export": false,
+  "skipAlterDataCasing": true,
   "descriptions": {
     "content": {
       "type": "WebGrid",

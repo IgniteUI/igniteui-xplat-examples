@@ -3,6 +3,7 @@
      "Approved Defer - until we have grid footer that supports template"
   ], 
   "export": false,
+  "skipAlterDataCasing": true,
   "descriptions": {
     "content": {
       "name": "grid",

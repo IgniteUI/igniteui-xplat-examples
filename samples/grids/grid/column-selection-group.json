@@ -2,6 +2,7 @@
   "todo": [
     "select city and postal code columns on load"
   ],
+  "skipAlterDataCasing": true,
   "descriptions": {
     "content": {
       "type": "WebGrid",

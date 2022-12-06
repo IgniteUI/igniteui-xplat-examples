@@ -3,6 +3,7 @@
       "defer until we can inject CSS styles"
   ],
   "export": false,
+  "skipAlterDataCasing": true,
   "descriptions": {
     "content": {
       "type": "WebGrid",

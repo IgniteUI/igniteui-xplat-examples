@@ -3,6 +3,7 @@
      "add action strip",
      "Port CRUDService to CodeGenLib" 
   ],
+  "skipAlterDataCasing": true,
   "descriptions": {
     "content": {
       "name": "grid",

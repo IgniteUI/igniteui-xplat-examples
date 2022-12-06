@@ -4,6 +4,7 @@
     "TODO Ability to hide Page Buttons (First, Prev, Next, Last)"
   ],
   "export": true,
+  "skipAlterDataCasing": true,
   "descriptions": {
     "content": {
       "type": "WebGrid",

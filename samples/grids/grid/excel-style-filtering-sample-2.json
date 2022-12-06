@@ -3,6 +3,7 @@
     "Approved Defer - add CSS styling"
   ],
   "export": false,
+  "skipAlterDataCasing": true,
   "descriptions": {
     "content": {
       "type": "WebGrid",

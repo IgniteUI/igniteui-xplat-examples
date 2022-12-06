@@ -7,6 +7,7 @@
     "check if paging is working"
   ],
   "export": true,
+  "skipAlterDataCasing": true,
   "descriptions": {
     "content": {
       "type": "WebGrid",

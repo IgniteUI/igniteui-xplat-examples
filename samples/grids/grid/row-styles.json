@@ -3,6 +3,7 @@
         "Add working WebGridCurrencyCellTemplate with badge and icon"
     ],  
     "export": true,
+    "skipAlterDataCasing": true,
     "descriptions": {
         "content": {
             "type": "WebGrid",

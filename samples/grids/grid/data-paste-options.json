@@ -2,6 +2,7 @@
   "todo": [ 
      "Missing dataProcessed event"
   ],
+  "skipAlterDataCasing": true,
   "descriptions": {
     "editor": {
       "type": "PropertyEditorPanel",
