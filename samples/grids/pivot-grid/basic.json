@@ -1,4 +1,5 @@
 {
+  "skipAlterDataCasing": true,
   "descriptions": {
     "content": {
       "type": "WebPivotGrid",
