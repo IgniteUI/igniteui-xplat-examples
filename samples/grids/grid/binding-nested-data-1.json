@@ -12,27 +12,50 @@
       "columns": [
         {
           "type": "WebColumn",
+          "header": "Name",
           "field": "Name"
         },
         {
           "type": "WebColumn",
           "field": "Title",
+          "header": "Title",
           "width": "20%"
         },
         {
           "type": "WebColumn",
+          "field": "Salary",
+          "header": "Salary",
+          "width": "10%"
+        },
+        {
+          "type": "WebColumn",
+          "field": "City",
+          "header": "City",
+          "width": "15%"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Country",
+          "header": "Country",
+          "width": "15%"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Age",
+          "header": "Age",
+          "width": "10%"
+        },
+        {
+          "type": "WebColumn",
           "field": "Employees",
+          "header": "Employees",
           "bodyTemplateRef": "WebGridNestedDataCellTemplate",
           "width": "40%"
         },
         {
           "type": "WebColumn",
-          "field": "Age",
-          "width": "10%"
-        },
-        {
-          "type": "WebColumn",
           "field": "HireDate",
+          "header": "Hire Date",
           "dataType": "Date"
         }
       ]
