@@ -90,7 +90,6 @@
   },
   "modules": [
     "grids/WebGridModule",
-    "layouts/PropertyEditorPanelModule",
-    "BadgeModule"
+    "layouts/PropertyEditorPanelModule"
   ]
 }
