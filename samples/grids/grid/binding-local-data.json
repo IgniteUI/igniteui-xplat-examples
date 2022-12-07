@@ -1,4 +1,6 @@
 {
+  "todo": "fix issue with LocalData exported with lower case instead of upper case",
+  "export": false,
   "skipAlterDataCasing": true,
   "descriptions": {
     "content": {
