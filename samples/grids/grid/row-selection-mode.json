@@ -89,6 +89,7 @@
     }
   },
   "modules": [
+    "withDescriptions",
     "grids/WebGridModule",
     "layouts/PropertyEditorPanelModule"
   ]
