@@ -1,6 +1,6 @@
 {
   "todo": [ "MT export failed ERROR Object cannot be stored in an array of this type" ],
-  "export": false
+  "export": false,
   "skipAlterDataCasing": true,
   "descriptions": {
     "content": {
