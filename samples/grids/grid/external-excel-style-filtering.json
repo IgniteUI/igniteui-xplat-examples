@@ -1,6 +1,6 @@
 {
   "todo": [ "Approved Defer - implement" ],
-  "export": false
+  "export": false,
   "skipAlterDataCasing": true,
   "descriptions": {
     "content": {

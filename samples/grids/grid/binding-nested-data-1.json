@@ -13,19 +13,27 @@
         {
           "type": "WebColumn",
           "header": "Name",
-          "field": "Name"
+          "field": "Name",
+          "width": "15%"
         },
         {
           "type": "WebColumn",
           "field": "Title",
           "header": "Title",
-          "width": "20%"
+          "width": "15%"
         },
         {
           "type": "WebColumn",
           "field": "Salary",
           "header": "Salary",
           "width": "10%"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Employees",
+          "header": "Employees",
+          "bodyTemplateRef": "WebGridNestedDataCellTemplate",
+          "width": "30%"
         },
         {
           "type": "WebColumn",
@@ -44,13 +52,6 @@
           "field": "Age",
           "header": "Age",
           "width": "10%"
-        },
-        {
-          "type": "WebColumn",
-          "field": "Employees",
-          "header": "Employees",
-          "bodyTemplateRef": "WebGridNestedDataCellTemplate",
-          "width": "40%"
         },
         {
           "type": "WebColumn",

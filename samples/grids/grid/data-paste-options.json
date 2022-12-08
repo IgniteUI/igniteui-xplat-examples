@@ -1,7 +1,8 @@
 {
   "todo": [ 
-     "Missing dataProcessed event"
+     "Missing dataProcessed event and ExcelExporter"
   ],
+  "export": false,
   "skipAlterDataCasing": true,
   "descriptions": {
     "editor": {
