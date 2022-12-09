@@ -13,12 +13,12 @@
           {
             "type": "WebPivotDateDimension",
             "memberName": "Date",
-            "inBaseDimension": {
+            "baseDimension": {
               "type": "WebPivotDimension",
               "memberName": "Date",
               "enabled": true
             },
-            "inOptions": {
+            "options": {
               "type": "WebPivotDateDimensionOptions",
               "years": true,
               "months": false,
