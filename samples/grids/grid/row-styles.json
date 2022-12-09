@@ -2,7 +2,7 @@
     "todo": [
         "Add working WebGridCurrencyCellTemplate with badge and icon"
     ],  
-    "export": true,
+    "export": false,
     "skipAlterDataCasing": true,
     "descriptions": {
         "content": {
