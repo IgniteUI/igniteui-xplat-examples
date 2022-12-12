@@ -46,7 +46,7 @@
                         {
                             "type": "WebColumn",
                             "field": "CompanyName",
-                            "header": "Company Name",
+                            "header": "Company",
                             "rowStart": 1,
                             "colStart": 1,
                             "colEnd": 3,
@@ -56,7 +56,7 @@
                         {
                             "type": "WebColumn",
                             "field": "ContactName",
-                            "header": "Contact Name",
+                            "header": "Name",
                             "rowStart": 2,
                             "colStart": 1,
                             "colEnd": 2,
@@ -65,7 +65,7 @@
                         {
                             "type": "WebColumn",
                             "field": "ContactTitle",
-                            "header": "Contact Title",
+                            "header": "Title",
                             "rowStart": 3,
                             "rowEnd": 3,
                             "colStart": 2,

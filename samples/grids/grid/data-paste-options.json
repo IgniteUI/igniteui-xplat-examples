@@ -40,13 +40,13 @@
           "type": "WebColumn",
           "name": "ContactName",
           "field": "ContactName",
-          "header": "Contact Name"
+          "header": "Name"
         },
         {
           "type": "WebColumn",
           "name": "ContactTitle",
           "field": "ContactTitle",
-          "header": "Contact Title"
+          "header": "Title"
         },
         {
           "type": "WebColumn",

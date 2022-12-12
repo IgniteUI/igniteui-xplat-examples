@@ -43,7 +43,7 @@
         {
           "type": "WebColumn",
           "field": "CompanyName",
-          "header": "Company Name",
+          "header": "Company",
           "dataType": "String",
           "groupable": true,
           "sortable": true

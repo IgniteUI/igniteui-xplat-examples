@@ -19,7 +19,7 @@
         {
           "type": "WebColumn",
           "field": "CompanyName",
-          "header": "Company Name"
+          "header": "Company"
         }
       ]
     }

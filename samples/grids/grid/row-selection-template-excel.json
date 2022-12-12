@@ -30,7 +30,7 @@
                 {
                     "type": "WebColumn",
                     "field": "ContactName",
-                    "header": "ContactName"
+                    "header": "Name"
                 },
                 {
                     "type": "WebColumn",
@@ -45,12 +45,12 @@
                 {
                     "type": "WebColumn",
                     "field": "PostalCode",
-                    "header": "PostalCode"
+                    "header": "Postal Code"
                 },
                 {
                     "type": "WebColumn",
                     "field": "CompanyName",
-                    "header": "CompanyName"
+                    "header": "Company"
                 }
             ]
         },

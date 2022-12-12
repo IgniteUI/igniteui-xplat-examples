@@ -19,7 +19,7 @@
           "type": "WebColumn",
           "name": "ProductName",
           "field": "ProductName",
-          "header": "ProductName"
+          "header": "Product Name"
         },
         {
           "type": "WebColumn",
@@ -45,7 +45,7 @@
           "type": "WebColumn",
           "name": "OrderDate",
           "field": "OrderDate",
-          "header": "OrderDate",
+          "header": "Order Date",
           "hasSummary": true,
           "dataType": "Date"
         }

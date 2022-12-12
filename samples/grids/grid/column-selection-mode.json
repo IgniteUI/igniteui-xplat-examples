@@ -32,12 +32,12 @@
         {
           "type": "WebColumn",
           "field": "CompanyName",
-          "header": "Company Name"
+          "header": "Company"
         },
         {
           "type": "WebColumn",
           "field": "ContactTitle",
-          "header": "Contact Title",
+          "header": "Title",
           "selectable": false
         },
         {

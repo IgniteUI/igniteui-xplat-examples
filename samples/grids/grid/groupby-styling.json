@@ -94,7 +94,7 @@
           "type": "WebColumn",
           "name": "Salesperson",
           "field": "Salesperson",
-          "header": "Salesperson",
+          "header": "Sales Person",
           "width": "250px",
           "groupable": true
         },

@@ -21,7 +21,7 @@
           "type": "WebColumn",
           "name": "MarketShare",
           "field": "MarketShare",
-          "header": "MarketShare",
+          "header": "Market Share",
           "resizable": true
         },
         {

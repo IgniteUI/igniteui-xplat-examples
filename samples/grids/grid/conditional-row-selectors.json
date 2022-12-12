@@ -14,7 +14,7 @@
         {
           "type": "WebColumn",
           "field": "ContactName",
-          "header": "Contact Name",
+          "header": "Name",
           "width": "20%"
         },
         {

@@ -15,14 +15,14 @@
         {
           "type": "WebColumn",
           "field": "CompanyName",
-          "header": "Company Name",
+          "header": "Company",
           "width": "300px",
           "headerTemplateRef": "WebGridPinHeaderTemplate"
         },
         {
           "type": "WebColumn",
           "field": "ContactName",
-          "header": "Contact Name",
+          "header": "Name",
           "width": "200px",
           "pinned": true,
           "headerTemplateRef": "WebGridPinHeaderTemplate"
@@ -30,7 +30,7 @@
         {
           "type": "WebColumn",
           "field": "ContactTitle",
-          "header": "Contact Title",
+          "header": "Title",
           "width": "200px",
           "pinned": true,
           "headerTemplateRef": "WebGridPinHeaderTemplate"

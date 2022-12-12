@@ -25,7 +25,7 @@
           "type": "WebColumn",
           "name": "ID",
           "field": "ProductID",
-          "header": "ProductID",
+          "header": "Product ID",
           "dataType": "Number",
           "hidden": true
         },
@@ -33,36 +33,36 @@
           "type": "WebColumn",
           "name": "ReorderLevel",
           "field": "ReorderLevel",
-          "header": "ReorderLevel",
+          "header": "Reorder Level",
           "dataType": "Number"
         },
         {
           "type": "WebColumn",
           "name": "ProductName",
           "field": "ProductName",
-          "header": "ProductName",
+          "header": "Product Name",
           "dataType": "String"
         },
         {
           "type": "WebColumn",
           "name": "UnitsInStock",
           "field": "UnitsInStock",
-          "header": "UnitsInStock",
+          "header": "Units In Stock",
           "dataType": "Number"
         },
         {
           "type": "WebColumn",
-          "name": "CompanyName",
-          "field": "CompanyName",
-          "header": "CompanyName",
-          "dataType": "String",
+          "name": "UnitPrice",
+          "field": "UnitPrice",
+          "header": "Unit Price",
+          "dataType": "Number"
           "sortable": true
         },
         {
           "type": "WebColumn",
           "name": "OrderDate",
           "field": "OrderDate",
-          "header": "OrderDate",
+          "header": "Order Date",
           "dataType": "Date"
         },
         {

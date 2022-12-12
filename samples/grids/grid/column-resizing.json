@@ -18,14 +18,14 @@
         "type": "WebColumn",
         "name": "CompanyName",
         "field": "CompanyName",
-        "header": "Company Name",
+        "header": "Company",
         "resizable": true
       },
       {
         "type": "WebColumn",
         "name": "ContactName",
         "field": "ContactName",
-        "header": "Contact Name",
+        "header": "Name",
         "minWidth": "60px",
         "maxWidth": "230px",
         "resizable": true
@@ -34,7 +34,7 @@
         "type": "WebColumn",
         "name": "ContactTitle",
         "field": "ContactTitle",
-        "header": "Contact Title",
+        "header": "Title",
         "resizable": true
       },
       {

@@ -22,20 +22,20 @@
           "type": "WebColumn",
           "name": "CompanyName",
           "field": "CompanyName",
-          "header": "CompanyName",
+          "header": "Company",
           "width": "300px"
         },
         {
           "type": "WebColumn",
           "name": "ContactName",
           "field": "ContactName",
-          "header": "ContactName"
+          "header": "Name"
         },
         {
           "type": "WebColumn",
           "name": "ContactTitle",
           "field": "ContactTitle",
-          "header": "ContactTitle"
+          "header": "Title"
         },
         {
           "type": "WebColumn",
@@ -53,7 +53,7 @@
           "type": "WebColumn",
           "name": "PostalCode",
           "field": "PostalCode",
-          "header": "PostalCode"
+          "header": "Postal Code"
         },
         {
           "type": "WebColumn",

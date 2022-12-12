@@ -16,7 +16,7 @@
         },
         {
           "type": "WebColumn",
-          "header": "ContactName",
+          "header": "Name",
           "field": "ContactName",
           "header": "Contact",
           "editable": true,

@@ -18,7 +18,7 @@
             {
               "type": "WebColumn",
               "field": "CompanyName",
-              "header": "Company Name"
+              "header": "Company"
             },
             {
               "type": "WebColumnGroup",
@@ -27,13 +27,13 @@
                 {
                   "type": "WebColumn",
                   "field": "ContactName",
-                  "header": "Contact Name",
+                  "header": "Name",
                   "hidden": true
                 },
                 {
                   "type": "WebColumn",
                   "field": "ContactTitle",
-                  "header": "Contact Title",
+                  "header": "Title",
                   "selectable": false
                 }
               ]

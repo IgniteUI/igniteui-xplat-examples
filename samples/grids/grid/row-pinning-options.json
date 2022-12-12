@@ -37,18 +37,18 @@
         {
           "type": "WebColumn",
           "field": "CompanyName",
-          "header": "Company Name",
+          "header": "Company",
           "width": "300px"
         },
         {
           "type": "WebColumn",
           "field": "ContactName",
-          "header": "Contact Name"
+          "header": "Name"
         },
         {
           "type": "WebColumn",
           "field": "ContactTitle",
-          "header": "Contact Title"
+          "header": "Title"
         },
         {
           "type": "WebColumn",

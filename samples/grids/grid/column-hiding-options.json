@@ -44,7 +44,7 @@
           "type": "WebColumn",
           "name": "ContactName",
           "field": "ContactName",
-          "header": "ContactName",
+          "header": "Name",
           "dataType": "String",
           "sortable": true
         },
@@ -52,7 +52,7 @@
           "type": "WebColumn",
           "name": "ContactTitle",
           "field": "ContactTitle",
-          "header": "ContactTitle",
+          "header": "Title",
           "dataType": "String",
           "sortable": true
         },
@@ -68,7 +68,7 @@
           "type": "WebColumn",
           "name": "CompanyName",
           "field": "CompanyName",
-          "header": "CompanyName",
+          "header": "Company",
           "dataType": "String",
           "sortable": true
         },
@@ -92,7 +92,7 @@
           "type": "WebColumn",
           "name": "PostalCode",
           "field": "PostalCode",
-          "header": "PostalCode",
+          "header": "Postal Code",
           "dataType": "String",
           "sortable": true
         },

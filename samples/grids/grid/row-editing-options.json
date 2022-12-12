@@ -21,7 +21,7 @@
         {
           "type": "WebColumn",
           "field": "ReorderLevel",
-          "header": "ReorderLevel",
+          "header": "Reorder Level",
           "dataType": "Number"
         },
         {
@@ -33,7 +33,7 @@
         {
           "type": "WebColumn",
           "field": "UnitsInStock",
-          "header": "UnitsInStock",
+          "header": "Units In Stock",
           "dataType": "Number"
         },
          {

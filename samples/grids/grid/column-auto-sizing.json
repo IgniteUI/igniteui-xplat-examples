@@ -23,14 +23,14 @@
         {
           "type": "WebColumn",
           "field": "ContactName",
-          "header": "Contact Name",
+          "header": "Name",
           "width": "auto",
           "resizable": true
         },
         {
           "type": "WebColumn",
           "field": "ContactTitle",
-          "header": "Contact Title",
+          "header": "Title",
           "width": "auto",
           "resizable": true
         },
