@@ -55,7 +55,7 @@
           "name": "UnitPrice",
           "field": "UnitPrice",
           "header": "Unit Price",
-          "dataType": "Number"
+          "dataType": "Number",
           "sortable": true
         },
         {

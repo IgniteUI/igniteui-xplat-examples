@@ -38,7 +38,6 @@
           {
             "type": "WebPivotDimension",
             "memberName": "SellerCity",
-            "width": "400px",
             "enabled": true
           }
         ],
