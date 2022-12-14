@@ -16,12 +16,13 @@
         },
         {
           "type": "WebColumn",
-          "header": "Name",
           "field": "ContactName",
           "header": "Contact",
           "editable": true,
           "bodyTemplateRef": "WebGridCompositeContactCellTemplate",
-          "inlineEditorTemplateRef": "WebGridCompositeContactEditCellTemplate"
+          "inlineEditorTemplateRef": "WebGridCompositeContactEditCellTemplate",
+          "width": "250px",
+          "resizable": false
         },
         {
           "type": "WebColumn",
@@ -29,7 +30,9 @@
           "field": "Address",
           "editable": true,
           "bodyTemplateRef": "WebGridCompositeAddressCellTemplate",
-          "inlineEditorTemplateRef": "WebGridCompositeAddressEditCellTemplate"
+          "inlineEditorTemplateRef": "WebGridCompositeAddressEditCellTemplate",
+          "width": "250px",
+          "resizable": false
         },
         {
           "type": "WebColumn",
