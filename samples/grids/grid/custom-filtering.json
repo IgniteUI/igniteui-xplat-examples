@@ -1,7 +1,7 @@
 {
   "todo": [
-     "add input",
-     "RS working on support for WebFilteringOperation then add events in Blazor.js"
+    "add input",
+    "RS working on support for WebFilteringOperation then add events in Blazor.js"
   ],
   "export": false,
   "skipAlterDataCasing": true,
@@ -10,30 +10,16 @@
       "name": "grid",
       "type": "WebGrid",
       "dataRef": "NwindData",
-      "allowFiltering":true,
+      "allowFiltering": true,
       "moving": true,
       "autoGenerate": false,
       "filterMode": "QuickFilter",
-      "excelStyleHeaderIconTemplateRef": "WebGridFilterAltIconTemplate",
       "columns": [
         {
           "type": "WebColumn",
           "name": "ProductName",
           "field": "ProductName",
-          "header": "Product Name",
-        // "filters": {
-        //   "name": "CustomFilter",
-        //   "type": "WebFilteringOperand",
-        //   "operations": [
-        //     {
-        //       "iconName": "contains",
-        //       "isUnary": false,
-        //       "type": "WebFilteringOperation",
-        //       "name": "custom contains",
-        //       "logic": ""
-        //     }
-        //   ]
-        // }
+          "header": "Product Name"
         },
         {
           "type": "WebColumn",
@@ -47,7 +33,11 @@
           "field": "UnitPrice",
           "header": "Unit Price",
           "dataType": "Currency",
-          "bodyTemplateRef": "WebGridUnitPriceCellTemplate"
+          "pipeArgs": {
+            "currencyCode": "USD",
+            "type": "WebColumnPipeArgs",
+            "digitsInfo": "1.2-2"
+          }
         },
         {
           "type": "WebColumn",
@@ -55,14 +45,14 @@
           "field": "OrderDate",
           "header": "Order Date",
           "dataType": "Date"
-      },
-      {
-        "type": "WebColumn",
-        "name": "Discontinued",
-        "field": "Discontinued",
-        "header": "Discontinued",
-        "dataType": "Boolean",
-        "bodyTemplateRef": "WebGridBooleanCellTemplate"
+        },
+        {
+          "type": "WebColumn",
+          "name": "Discontinued",
+          "field": "Discontinued",
+          "header": "Discontinued",
+          "dataType": "Boolean",
+          "bodyTemplateRef": "WebGridBooleanCellTemplate"
         }
       ]
     }
