@@ -1,6 +1,6 @@
 {
-  "todo": [ 
-     "Missing dataProcessed event and ExcelExporter"
+  "todo": [
+    "Missing dataProcessed event and ExcelExporter"
   ],
   "export": false,
   "skipAlterDataCasing": true,
@@ -33,7 +33,6 @@
       "type": "WebGrid",
       "name": "grid1",
       "dataRef": "CustomersData",
-      "batchEditing": true,
       "primaryKey": "ID",
       "columns": [
         {

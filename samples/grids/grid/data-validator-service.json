@@ -29,7 +29,6 @@
       "name": "grid",
       "dataRef": "EmployeesData",
       "autoGenerate": false,
-      "batchEditing": true,
       "rowEditable": true,
       "primaryKey": "ID",
       "columns": [
