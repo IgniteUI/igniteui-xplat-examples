@@ -44,7 +44,6 @@
       "name": "grid",
       "type": "WebGrid",
       "dataRef": "NwindData",
-      "batchEditing":true,
       "rowEditable":true,
       "primaryKey": "ProductID",
       "columns": [
