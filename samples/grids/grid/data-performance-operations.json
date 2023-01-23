@@ -10,7 +10,6 @@
       "type": "WebGrid",
       "dataRef": "NwindData",
       "autoGenerate": false,
-      "batchEditing":true,
       "rowEditable":true,
       "allowFiltering":true,
       "primaryKey": "ProductID",
