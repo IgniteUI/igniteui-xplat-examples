@@ -38,7 +38,7 @@
           "angleAxisRef": "angleAxis",
           "valueAxisRef": "radiusAxis",
           "valueMemberPath": "Ronaldo",
-          "showDefaultTooltip": true,
+          "showDefaultTooltip": false,
           "areaFillOpacity": 0.8,
           "thickness": 3,
           "title": "Ronaldo",
@@ -51,11 +51,15 @@
           "angleAxisRef": "angleAxis",
           "valueAxisRef": "radiusAxis",
           "valueMemberPath": "Messi",
-          "showDefaultTooltip": true,
+          "showDefaultTooltip": false,
           "areaFillOpacity": 0.8,
           "thickness": 3,
           "title": "Messi",
           "markerType": "Circle"
+        },
+        {
+          "type": "DataToolTipLayer",
+          "name": "DataToolTipLayer"
         }
       ]
     }

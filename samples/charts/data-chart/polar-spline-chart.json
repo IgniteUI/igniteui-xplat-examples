@@ -36,7 +36,7 @@
           "radiusAxisRef": "radiusAxis",
           "angleMemberPath": "Direction",
           "radiusMemberPath": "WindSpeed",
-          "showDefaultTooltip": true,
+          "showDefaultTooltip": false,
           "thickness": 1,
           "title": "Wind Speed",
           "markerType": "Circle"
@@ -49,10 +49,14 @@
           "radiusAxisRef": "radiusAxis",
           "angleMemberPath": "Direction",
           "radiusMemberPath": "BoatSpeed",
-          "showDefaultTooltip": true,
+          "showDefaultTooltip": false,
           "thickness": 1,
           "title": "Boat Speed",
           "markerType": "Circle"
+        },
+        {
+          "type": "DataToolTipLayer",
+          "name": "DataToolTipLayer"
         }
       ]
     }
