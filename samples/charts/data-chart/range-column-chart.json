@@ -39,6 +39,7 @@
           "title": "Los Angeles",
           "lowMemberPath": "LowLA",
           "highMemberPath": "HighLA",
+          "showDefaultTooltip":false,
           "dataSourceRef": "TemperatureRangeData"
         },
         {
@@ -49,7 +50,12 @@
           "title": "New York City",
           "lowMemberPath": "LowNY",
           "highMemberPath": "HighNY",
+          "showDefaultTooltip":false,
           "dataSourceRef": "TemperatureRangeData"
+        },
+        {
+          "type": "DataToolTipLayer",
+          "name": "DataToolTipLayer"
         }
       ]
     }
