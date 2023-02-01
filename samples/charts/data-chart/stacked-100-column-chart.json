@@ -42,6 +42,10 @@
             { "type": "StackedFragmentSeries", "name": "s2", "valueMemberPath": "Mobile", "title": "Mobile"  },
             { "type": "StackedFragmentSeries", "name": "s3", "valueMemberPath": "Tablet", "title": "Tablet"  }
           ]
+        },
+        {
+          "type": "DataToolTipLayer",
+          "name": "DataToolTipLayer"
         }
       ]
     }

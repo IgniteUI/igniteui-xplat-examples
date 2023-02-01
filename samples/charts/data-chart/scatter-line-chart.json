@@ -55,6 +55,10 @@
           "dataSourceRef": "HealthDataForFrance",
           "markerType": "Circle",
           "showDefaultTooltip": true
+        },
+        {
+          "type": "DataToolTipLayer",
+          "name": "DataToolTipLayer"
         }
       ]
     }
