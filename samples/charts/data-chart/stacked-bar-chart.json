@@ -45,6 +45,10 @@
             { "type": "StackedFragmentSeries", "name": "s3", "valueMemberPath": "Solar", "title": "Solar" },
             { "type": "StackedFragmentSeries", "name": "s4", "valueMemberPath": "Other", "title": "Other" }
           ]
+        },
+        {
+          "type": "DataToolTipLayer",
+          "name": "DataToolTipLayer"
         }
       ]
     }
