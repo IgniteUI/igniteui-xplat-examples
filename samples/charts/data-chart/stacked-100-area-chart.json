@@ -46,6 +46,10 @@
             { "type": "StackedFragmentSeries", "name": "s4", "valueMemberPath": "NorthAmerica", "title": "North America" },
             { "type": "StackedFragmentSeries", "name": "s5", "valueMemberPath": "SouthAmerica", "title": "South America" }
           ]
+        },
+        {
+          "type": "DataToolTipLayer",
+          "name": "DataToolTipLayer"
         }
       ]
     }
