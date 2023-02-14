@@ -1,0 +1,159 @@
+{
+  "todo": [ "" ],
+  "export": true,
+  "skipAlterDataCasing": true,
+  "descriptions": {
+    "content": {
+      "type": "WebTreeGrid",
+      "name": "treeGrid",
+      "id": "treeGrid",
+      "dataRef": "EmployeesFlatDetails",
+      "autoGenerate": false,
+      "primaryKey": "ID",
+      "foreignKey": "ParentID",
+      "moving": true,
+      "displayDensity": "Compact",
+      "rowSelection": "None",
+      "columns": [
+        {
+          "type": "WebColumnGroup",
+          "header": "General Information",
+          "collapsible": true,
+          "expanded": false,
+          "pinned": false,
+          "children": [
+            {
+              "type": "WebColumn",
+              "field": "Name",
+              "header": "Full Name",
+              "dataType": "String",
+              "sortable": true,
+              "resizable": true,
+              "width": "200",
+              "visibleWhenCollapsed": false
+            },
+            {
+              "type": "WebColumn",
+              "field": "LastName",
+              "header": "Last Name",
+              "dataType": "String",
+              "sortable": true,
+              "resizable": true,
+              "width": "200",
+              "visibleWhenCollapsed": true
+            },
+            {
+              "type": "WebColumn",
+              "field": "Title",
+              "width": "250",
+              "dataType": "String",
+              "sortable": true,
+              "resizable": true
+            },
+            {
+              "type": "WebColumn",
+              "field": "ID",
+              "dataType": "Number",
+              "resizable": true,
+              "filterable": false,
+              "visibleWhenCollapsed": false
+            },
+            {
+              "type": "WebColumn",
+              "field": "HireDate",
+              "dataType": "Date",
+              "sortable": true,
+              "resizable": true,
+              "visibleWhenCollapsed": false
+            },
+            {
+              "type": "WebColumn",
+              "field": "Age",
+              "dataType": "Number",
+              "sortable": true,
+              "resizable": true,
+              "visibleWhenCollapsed": false
+            }
+          ]
+        },
+        {
+          "type": "WebColumnGroup",
+          "header": "Address Information",
+          "children": [
+            {
+              "type": "WebColumnGroup",
+              "header": "Location",
+              "collapsible": true,
+              "children": [
+                {
+                  "type": "WebColumn",
+                  "field": "FullAddress",
+                  "width": "300",
+                  "dataType": "String",
+                  "sortable": true,
+                  "resizable": true,
+                  "visibleWhenCollapsed": true
+                },
+                {
+                  "type": "WebColumn",
+                  "field": "Country",
+                  "dataType": "String",
+                  "sortable": true,
+                  "resizable": true,
+                  "visibleWhenCollapsed": false
+                },
+                {
+                  "type": "WebColumn",
+                  "field": "City",
+                  "dataType": "String",
+                  "sortable": true,
+                  "resizable": true,
+                  "visibleWhenCollapsed": false
+                },
+                {
+                  "type": "WebColumn",
+                  "field": "Address",
+                  "dataType": "String",
+                  "sortable": true,
+                  "resizable": true,
+                  "visibleWhenCollapsed": false
+                }
+              ]
+            },
+            {
+              "type": "WebColumnGroup",
+              "header": "Contact Information",
+              "children": [
+                {
+                  "type": "WebColumn",
+                  "field": "Phone",
+                  "dataType": "String",
+                  "sortable": true,
+                  "resizable": true
+                },
+                {
+                  "type": "WebColumn",
+                  "field": "Fax",
+                  "dataType": "String",
+                  "sortable": true,
+                  "resizable": true
+                },
+                {
+                  "type": "WebColumn",
+                  "field": "PostalCode",
+                  "dataType": "String",
+                  "sortable": true,
+                  "resizable": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "grids/WebTreeGridModule"
+  ]
+}

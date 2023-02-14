@@ -7,7 +7,7 @@
       "type": "WebTreeGrid",
       "name": "treeGrid",
       "id": "treeGrid",
-      "dataRef": "EmployeesFlatData",
+      "dataRef": "EmployeesFlatDetails",
       "autoGenerate": false,
       "primaryKey": "ID",
       "foreignKey": "ParentID",
@@ -37,20 +37,14 @@
         },
         {
           "type": "WebColumn",
+          "field": "ID",
+          "dataType": "Number",
+          "sortable": true
+        },
+        {
+          "type": "WebColumn",
           "field": "Title",
           "dataType": "String",
-          "sortable": true
-        },
-        {
-          "type": "WebColumn",
-          "field": "Phone",
-          "dataType": "String",
-          "sortable": true
-        },
-        {
-          "type": "WebColumn",
-          "field": "Age",
-          "dataType": "Number",
           "sortable": true
         },
         {
@@ -61,8 +55,44 @@
         },
         {
           "type": "WebColumn",
-          "field": "OnPTO",
-          "dataType": "Boolean",
+          "field": "Age",
+          "dataType": "Number",
+          "sortable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "Address",
+          "dataType": "String",
+          "sortable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "City",
+          "dataType": "String",
+          "sortable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "Country",
+          "dataType": "String",
+          "sortable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "Fax",
+          "dataType": "String",
+          "sortable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "PostalCode",
+          "dataType": "String",
+          "sortable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "Phone",
+          "dataType": "String",
           "sortable": true
         }
       ]

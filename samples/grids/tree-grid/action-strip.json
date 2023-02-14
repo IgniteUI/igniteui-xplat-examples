@@ -1,87 +1,102 @@
 {
-  "todo": [ "" ],
-  "export": true,
-  "skipAlterDataCasing": true,
+  "todo": [],
   "descriptions": {
     "content": {
       "type": "WebTreeGrid",
       "name": "treeGrid",
       "id": "treeGrid",
       "dataRef": "EmployeesFlatDetails",
-      "autoGenerate": false,
       "primaryKey": "ID",
       "foreignKey": "ParentID",
+      "autoGenerate": false,
+      "rowEditable": true,
+      "batchEditing": true,
+      "allowFiltering": true,
+      "actionStrip": {
+        "type": "WebActionStrip",
+        "name": "actionStrip",
+        "actionButtons": [
+          {
+            "type": "WebGridEditingActions"
+          }
+        ]
+      },
       "columns": [
         {
           "type": "WebColumn",
           "field": "Name",
           "dataType": "String",
-          "resizable": true,
-          "minWidth": "60",
-          "maxWidth": "250",
-          "width": "220"
+          "sortable": true,
+          "disableHiding": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "ID",
+          "dataType": "Number",
+          "sortable": true
         },
         {
           "type": "WebColumn",
           "field": "Title",
           "dataType": "String",
-          "resizable": true
+          "sortable": true,
+          "disableHiding": true
         },
         {
           "type": "WebColumn",
           "field": "HireDate",
-          "header": "Hire Date",
           "dataType": "Date",
-          "resizable": true
+          "sortable": true,
+          "hidden": true
         },
         {
           "type": "WebColumn",
           "field": "Age",
           "dataType": "Number",
-          "resizable": true
+          "sortable": true,
+          "hidden": true
         },
         {
           "type": "WebColumn",
           "field": "Address",
           "dataType": "String",
-          "resizable": true
+          "sortable": true
         },
         {
           "type": "WebColumn",
           "field": "City",
           "dataType": "String",
-          "resizable": true
+          "sortable": true
         },
         {
           "type": "WebColumn",
           "field": "Country",
           "dataType": "String",
-          "resizable": true
+          "sortable": true
         },
         {
           "type": "WebColumn",
           "field": "Fax",
           "dataType": "String",
-          "resizable": true
+          "sortable": true
         },
         {
           "type": "WebColumn",
           "field": "PostalCode",
           "header": "Postal Code",
           "dataType": "String",
-          "resizable": true
+          "sortable": true
         },
         {
           "type": "WebColumn",
           "field": "Phone",
           "dataType": "String",
-          "resizable": true
+          "sortable": true
         }
       ]
     }
   },
   "modules": [
-    "withDescriptions",
     "grids/WebTreeGridModule"
   ]
 }
