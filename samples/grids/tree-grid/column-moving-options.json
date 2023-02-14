@@ -7,7 +7,7 @@
       "type": "WebTreeGrid",
       "name": "treeGrid",
       "id": "treeGrid",
-      "dataRef": "EmployeesFlatData",
+      "dataRef": "EmployeesFlatDetails",
       "autoGenerate": false,
       "primaryKey": "ID",
       "foreignKey": "ParentID",
@@ -35,13 +35,7 @@
         },
         {
           "type": "WebColumn",
-          "field": "Phone",
-          "dataType": "String",
-          "headerTemplateRef": "WebGridPinHeaderTemplate"
-        },
-        {
-          "type": "WebColumn",
-          "field": "Age",
+          "field": "ID",
           "dataType": "Number",
           "headerTemplateRef": "WebGridPinHeaderTemplate"
         },
@@ -53,8 +47,44 @@
         },
         {
           "type": "WebColumn",
-          "field": "OnPTO",
-          "dataType": "Boolean",
+          "field": "Age",
+          "dataType": "Number",
+          "headerTemplateRef": "WebGridPinHeaderTemplate"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Address",
+          "dataType": "String",
+          "headerTemplateRef": "WebGridPinHeaderTemplate"
+        },
+        {
+          "type": "WebColumn",
+          "field": "City",
+          "dataType": "String",
+          "headerTemplateRef": "WebGridPinHeaderTemplate"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Country",
+          "dataType": "String",
+          "headerTemplateRef": "WebGridPinHeaderTemplate"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Fax",
+          "dataType": "String",
+          "headerTemplateRef": "WebGridPinHeaderTemplate"
+        },
+        {
+          "type": "WebColumn",
+          "field": "PostalCode",
+          "dataType": "String",
+          "headerTemplateRef": "WebGridPinHeaderTemplate"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Phone",
+          "dataType": "String",
           "headerTemplateRef": "WebGridPinHeaderTemplate"
         }
       ]

@@ -11,71 +11,84 @@
       "autoGenerate": false,
       "primaryKey": "ID",
       "foreignKey": "ParentID",
+      "toolbar": [
+        {
+          "type": "WebGridToolbar",
+          "tools": [
+            {
+              "type": "WebGridToolbarActions",
+              "actions": [
+                {
+                  "type": "WebGridToolbarPinning"
+                }
+              ]
+            }
+          ]
+        }
+      ],
       "columns": [
         {
           "type": "WebColumn",
           "field": "Name",
           "dataType": "String",
-          "resizable": true,
-          "minWidth": "60",
-          "maxWidth": "250",
-          "width": "220"
+          "width": "250"
         },
         {
           "type": "WebColumn",
           "field": "Title",
           "dataType": "String",
-          "resizable": true
+          "width": "300",
+          "pinned": true
         },
         {
           "type": "WebColumn",
           "field": "HireDate",
           "header": "Hire Date",
           "dataType": "Date",
-          "resizable": true
+          "width": "200"
         },
         {
           "type": "WebColumn",
           "field": "Age",
           "dataType": "Number",
-          "resizable": true
+          "width": "100"
         },
         {
           "type": "WebColumn",
           "field": "Address",
           "dataType": "String",
-          "resizable": true
+          "width": "200"
         },
         {
           "type": "WebColumn",
           "field": "City",
           "dataType": "String",
-          "resizable": true
+          "width": "200"
         },
         {
           "type": "WebColumn",
           "field": "Country",
           "dataType": "String",
-          "resizable": true
+          "width": "200"
         },
         {
           "type": "WebColumn",
           "field": "Fax",
           "dataType": "String",
-          "resizable": true
+          "width": "200"
         },
         {
           "type": "WebColumn",
           "field": "PostalCode",
           "header": "Postal Code",
           "dataType": "String",
-          "resizable": true
+          "width": "200"
         },
         {
           "type": "WebColumn",
           "field": "Phone",
           "dataType": "String",
-          "resizable": true
+          "width": "200"
         }
       ]
     }
