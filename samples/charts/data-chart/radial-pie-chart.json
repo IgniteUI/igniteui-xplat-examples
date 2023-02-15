@@ -63,10 +63,11 @@
     }
   },
   "modules": [
-    "charts/LegendModule",
-    "charts/DataChartCoreModule",
-    "charts/DataChartRadialModule",
-    "charts/DataChartRadialCoreModule",
-    "charts/DataChartInteractivityModule"
+	"charts/LegendModule",
+	"charts/DataChartCoreModule",
+	"charts/DataChartRadialModule",
+	"charts/DataChartRadialCoreModule",
+	"charts/DataChartInteractivityModule",
+	"charts/DataChartAnnotationModule",
   ]
 }
