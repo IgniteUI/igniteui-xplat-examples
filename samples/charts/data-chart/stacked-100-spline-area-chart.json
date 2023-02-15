@@ -59,6 +59,7 @@
     "charts/DataChartCategoryModule",
     "charts/DataChartCategoryCoreModule",
     "charts/DataChartInteractivityModule",
+    "charts/DataChartAnnotationModule",
     "charts/DataChartStackedModule",
     "charts/StackedFragmentSeriesModule"
   ]

@@ -55,7 +55,9 @@
     }
   },
   "modules": [
-    "charts/DataChartCoreModule",
-    "charts/DataChartCategoryModule"
+	"charts/DataChartCoreModule",
+	"charts/DataChartCategoryModule",
+	"charts/DataChartInteractivityModule",
+	"charts/DataChartAnnotationModule"
   ]
 }
