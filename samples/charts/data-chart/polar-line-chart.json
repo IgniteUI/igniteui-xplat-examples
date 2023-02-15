@@ -72,6 +72,7 @@
     "charts/DataChartCoreModule",
     "charts/DataChartPolarModule",
     "charts/DataChartPolarCoreModule",
-    "charts/DataChartInteractivityModule"
+    "charts/DataChartInteractivityModule",
+    "charts/DataChartAnnotationModule"
   ]
 }
