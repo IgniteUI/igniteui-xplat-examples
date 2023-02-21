@@ -76,7 +76,6 @@
     }
   },
   "modules": [
-    "withDescriptions",
     "grids/WebGridModule"
   ]
 }
