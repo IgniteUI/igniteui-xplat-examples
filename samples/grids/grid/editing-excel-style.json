@@ -50,7 +50,6 @@
     }
   },
   "modules": [
-    "withDescriptions",
     "grids/WebGridModule"
   ]
 }
