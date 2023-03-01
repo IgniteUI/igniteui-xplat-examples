@@ -91,7 +91,6 @@
     }
   },
   "modules": [
-    "withDescriptions",
     "grids/WebTreeGridModule"
   ]
 }

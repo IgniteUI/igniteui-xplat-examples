@@ -153,7 +153,6 @@
     }
   },
   "modules": [
-    "withDescriptions",
     "grids/WebTreeGridModule"
   ]
 }
