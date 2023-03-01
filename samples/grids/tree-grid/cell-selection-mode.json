@@ -15,6 +15,7 @@
           "propertyPath": "CellSelection",
           "name": "CellSelectionEditor",
           "valueType": "EnumValue",
+          "shouldOverrideDefaultEditor": true,
           "dropDownNames": ["None", "Single", "Multiple"],
           "dropDownValues": ["None", "Single", "Multiple"]
         }
