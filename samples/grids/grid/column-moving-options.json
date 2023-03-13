@@ -85,6 +85,7 @@
     }
   },
   "modules": [
+    "BadgeModule",
     "grids/WebGridModule"
   ]
 }
