@@ -1,13 +1,19 @@
 {
   "strings": {
-    "legendTitle": "Monthly Temperature Range in Los Angeles"
+    "legendTitle": "Monthly Temperature Range in LA and NYC"
   },
   "descriptions": {
+    "legend": {
+      "type": "Legend",
+      "name": "Legend",
+      "orientation": "Horizontal"
+    },
     "content": {
       "type": "DataChart",
       "name": "chart",
       "isHorizontalZoomEnabled": false,
       "isVerticalZoomEnabled": false,
+      "legendRef": "Legend",
       "axes": [
         {
           "type": "CategoryXAxis",
@@ -20,8 +26,8 @@
           "type": "NumericYAxis",
           "name": "yAxis",
           "title": "Temperature (in Celsius)",
-          "titleLeftMargin": 10,
-          "titleAngle": -90
+          "titleAngle": 90,
+          "titleLeftMargin": 10
         }
       ],
       "series": [
@@ -58,6 +64,7 @@
 	"charts/DataChartCoreModule",
 	"charts/DataChartCategoryModule",
 	"charts/DataChartInteractivityModule",
-	"charts/DataChartAnnotationModule"
+	"charts/DataChartAnnotationModule",
+	"charts/LegendModule"
   ]
 }
