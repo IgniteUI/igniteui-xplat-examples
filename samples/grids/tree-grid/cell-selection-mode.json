@@ -1,5 +1,6 @@
 {
   "todo": [],
+  "skipAlterDataCasing": true,
   "descriptions": {
     "editor": {
       "type": "PropertyEditorPanel",
@@ -62,6 +63,8 @@
     }
   },
   "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
     "grids/WebTreeGridModule"
   ]
 }
