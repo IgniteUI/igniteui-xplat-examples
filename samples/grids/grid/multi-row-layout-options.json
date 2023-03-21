@@ -3,7 +3,7 @@
         ""
     ],
     "export": true,
-  "skipAlterDataCasing": true,
+    "skipAlterDataCasing": true,
     "descriptions": {
         "content": {
             "name": "grid",

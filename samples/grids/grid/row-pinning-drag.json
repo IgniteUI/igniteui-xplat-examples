@@ -3,7 +3,7 @@
         "add event handlers for row dragging",
         "add action strip"
     ],
-  "skipAlterDataCasing": true,
+    "skipAlterDataCasing": true,
     "descriptions": {
         "content": {
             "name": "grid",
