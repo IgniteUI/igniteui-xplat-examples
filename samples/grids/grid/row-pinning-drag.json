@@ -1,64 +1,64 @@
 {
-    "todo": [
-        "add event handlers for row dragging",
-        "add action strip"
-    ],
+  "todo": [
+    "add event handlers for row dragging",
+    "add action strip"
+  ],
   "skipAlterDataCasing": true,
-    "descriptions": {
-        "content": {
-            "name": "grid",
-            "type": "WebGrid",
-            "dataRef": "CustomersData",
-            "rowDraggable": true,
-            "autoGenerate": false,
-            "pinning": {
-                "type": "WebPinningConfig",
-                "rows": "Top"
-            },
-            "cellSelection": "None",
-            "primaryKey": "ID",
-            "columns": [
-                {
-                    "type": "WebColumn",
-                    "field": "CompanyName",
-                    "header": "Company"
-                },
-                {
-                    "type": "WebColumn",
-                    "field": "ContactName",
-                    "header": "Name"
-                },
-                {
-                    "type": "WebColumn",
-                    "field": "ContactTitle",
-                    "header": "Title"
-                },
-                {
-                    "type": "WebColumn",
-                    "field": "Address"
-                },
-                {
-                    "type": "WebColumn",
-                    "field": "City"
-                },
-                {
-                    "type": "WebColumn",
-                    "field": "PostalCode"
-                },
-                {
-                    "type": "WebColumn",
-                    "field": "Phone"
-                },
-                {
-                    "type": "WebColumn",
-                    "field": "Fax"
-                }
-            ]
+  "descriptions": {
+    "content": {
+      "name": "grid",
+      "type": "WebGrid",
+      "dataRef": "CustomersData",
+      "rowDraggable": true,
+      "autoGenerate": false,
+      "pinning": {
+        "type": "WebPinningConfig",
+        "rows": "Top"
+      },
+      "cellSelection": "None",
+      "primaryKey": "ID",
+      "columns": [
+        {
+          "type": "WebColumn",
+          "field": "CompanyName",
+          "header": "Company"
+        },
+        {
+          "type": "WebColumn",
+          "field": "ContactName",
+          "header": "Name"
+        },
+        {
+          "type": "WebColumn",
+          "field": "ContactTitle",
+          "header": "Title"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Address"
+        },
+        {
+          "type": "WebColumn",
+          "field": "City"
+        },
+        {
+          "type": "WebColumn",
+          "field": "PostalCode"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Phone"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Fax"
         }
-    },
-    "modules": [
-        "withDescriptions",
-        "layouts/PropertyEditorPanelModule",
-        "grids/WebGridModule"
-    ]
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
+    "grids/WebGridModule"
+  ]
 }
