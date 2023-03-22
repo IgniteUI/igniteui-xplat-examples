@@ -11,7 +11,7 @@
       "id": "grid",
       "rowEditable": true,
       "primaryKey": "ProductID",
-      "renderedRef": "WebGridRendered",
+      "renderedRef": "WebTreeGridRendered",
       "rowEditEnterRef": "WebGridRowEditEnter",
       "rowEditRef": "WebGridRowEdit",
       "rowEditDoneRef": "WebGridRowEditDone",
