@@ -11,6 +11,7 @@
       "primaryKey": "ProductID",
       "displayDensity": "Cosy",
       "allowFiltering": true,
+      "filterMode": "ExcelStyleFilter",
       "paginationComponents": [
         {
           "type": "WebPaginator",

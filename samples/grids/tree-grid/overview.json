@@ -13,6 +13,7 @@
       "rowSelection": "Multiple",
       "moving": true,
       "allowFiltering": true,
+      "filterMode": "ExcelStyleFilter",
       "paging": true,
       "toolbar": [
         {
