@@ -9,7 +9,7 @@
       "moving": true,
       "autoGenerate": false,
       "allowFiltering": true,
-      "filterMode": "QuickFilter",
+      "filterMode": "ExcelStyleFilter",
       "columns": [{
         "type": "WebColumn",
         "name": "ProductName",
@@ -42,12 +42,13 @@
         "field": "Discontinued",
         "header": "Discontinued",
         "dataType": "Boolean"
-        }]
       }
-    },
-  "modules": [
-      "withDescriptions",
-      "layouts/PropertyEditorPanelModule",
-      "grids/WebGridModule"
     ]
   }
+},
+"modules": [
+  "withDescriptions",
+  "layouts/PropertyEditorPanelModule",
+  "grids/WebGridModule"
+]
+}
