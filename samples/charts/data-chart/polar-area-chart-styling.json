@@ -71,11 +71,11 @@
     }
   },
   "modules": [
-	"charts/DataChartCoreModule",
-	"charts/DataChartPolarModule",
-	"charts/DataChartPolarCoreModule",
-	"charts/DataChartInteractivityModule",
-	"charts/DataChartAnnotationModule",
-	"charts/LegendModule"
+    "charts/DataChartCoreModule",
+    "charts/DataChartPolarModule",
+    "charts/DataChartPolarCoreModule",
+    "charts/DataChartInteractivityModule",
+    "charts/DataChartAnnotationModule",
+    "charts/LegendModule"
   ]
 }

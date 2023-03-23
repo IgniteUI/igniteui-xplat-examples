@@ -71,12 +71,12 @@
     }
   },
   "modules": [
-	"charts/LegendModule",
-	"charts/NumberAbbreviatorModule",
-	"charts/DataChartCoreModule",
-	"charts/DataChartScatterModule",
-	"charts/DataChartScatterCoreModule",
-	"charts/DataChartInteractivityModule",
-	"charts/DataChartAnnotationModule"
+    "charts/LegendModule",
+    "charts/NumberAbbreviatorModule",
+    "charts/DataChartCoreModule",
+    "charts/DataChartScatterModule",
+    "charts/DataChartScatterCoreModule",
+    "charts/DataChartInteractivityModule",
+    "charts/DataChartAnnotationModule"
   ]
 }
