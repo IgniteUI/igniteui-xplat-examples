@@ -88,7 +88,7 @@
     }
   },
   "modules": [
-    "inputs/WebAvatarModule",
+    "webinputs/WebAvatarModule",
     "grids/WebGridModule"
   ]
 }

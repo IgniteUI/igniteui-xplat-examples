@@ -89,7 +89,7 @@
     }
   },
   "modules": [
-    "inputs/WebBadgeModule",
+    "webinputs/WebBadgeModule",
     "withDescriptions",
     "grids/WebGridModule",
     "layouts/PropertyEditorPanelModule"
