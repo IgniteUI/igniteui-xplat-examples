@@ -3,39 +3,48 @@
   "descriptions": {
     "content": {
       "type": "WebTreeGrid",
-      "dataRef": "NwindData",
+      "name": "treeGrid",
+      "id": "treeGrid",
+      "dataRef": "EmployeesFlatDetails",
+      "primaryKey": "ID",
+      "foreignKey": "ParentID",
       "autoGenerate": false,
-      "primaryKey": "ProductID",
-      "cellEditRef": "WebGridEditingEventsCellEdit",
+      "cellEditRef": "WebTreeGridEditingEventsCellEdit",
       "columns": [
         {
           "type": "WebColumn",
-          "field": "ProductName",
-          "header": "Product Name",
-          "dataType": "String"
+          "field": "ID",
+          "dataType": "Number",
+          "sortable": true
         },
         {
           "type": "WebColumn",
-          "field": "UnitPrice",
-          "header": "Unit Price",
-          "dataType": "Number",
-          "editable": true
+          "field": "Name",
+          "dataType": "String",
+          "sortable": true,
+          "editable": true,
+          "disableHiding": true
         },
         {
           "type": "WebColumn",
-          "name": "UnitsInStock",
-          "field": "UnitsInStock",
-          "header": "Units In Stock",
-          "dataType": "Number",
-          "editable": true
+          "field": "Title",
+          "dataType": "String",
+          "sortable": true,
+          "editable": true,
+          "disableHiding": true
         },
         {
           "type": "WebColumn",
-          "name": "UnitsOnOrder",
-          "field": "UnitsOnOrder",
-          "header": "Units on Order",
-          "dataType": "Number",
-          "editable": true
+          "field": "HireDate",
+          "dataType": "Date",
+          "sortable": true,
+          "hidden": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "Address",
+          "dataType": "String",
+          "sortable": true
         }
       ]
     }

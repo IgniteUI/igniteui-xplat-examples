@@ -9,7 +9,7 @@
       "type": "PropertyEditorPanel",
       "name": "PropertyEditor",
       "componentRendererRef": "renderer",
-      "targetRef": "grid",
+      "targetRef": "treeGrid",
       "descriptionType": "WebTreeGrid",
       "isHorizontal": true,
       "isWrappingEnabled": true,
@@ -54,40 +54,84 @@
     },
     "content": {
       "type": "WebTreeGrid",
-      "name": "grid",
-      "dataRef": "NwindData",
+      "name": "treeGrid",
+      "id": "treeGrid",
+      "dataRef": "EmployeesFlatDetails",
+      "primaryKey": "ID",
+      "foreignKey": "ParentID",
       "autoGenerate": false,
-      "rowEditable": true,
       "columnInitRef": "WebGridClipboardOperationsColumnInit",
-      "primaryKey": "SupplierID",
       "columns": [
         {
           "type": "WebColumn",
-          "field": "ProductID"
+          "field": "ID",
+          "dataType": "Number",
+          "sortable": true
         },
         {
           "type": "WebColumn",
-          "field": "ProductName"
+          "field": "Name",
+          "dataType": "String",
+          "sortable": true,
+          "disableHiding": true
         },
         {
           "type": "WebColumn",
-          "field": "SupplierID"
+          "field": "Title",
+          "dataType": "String",
+          "sortable": true,
+          "disableHiding": true
         },
         {
           "type": "WebColumn",
-          "field": "CategoryID"
+          "field": "HireDate",
+          "dataType": "Date",
+          "sortable": true,
+          "hidden": true
         },
         {
           "type": "WebColumn",
-          "field": "QuantityPerUnit"
+          "field": "Age",
+          "dataType": "Number",
+          "sortable": true,
+          "hidden": true
         },
         {
           "type": "WebColumn",
-          "field": "UnitPrice"
+          "field": "Address",
+          "dataType": "String",
+          "sortable": true
         },
         {
           "type": "WebColumn",
-          "field": "UnitsInStock"
+          "field": "City",
+          "dataType": "String",
+          "sortable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "Country",
+          "dataType": "String",
+          "sortable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "Fax",
+          "dataType": "String",
+          "sortable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "PostalCode",
+          "header": "Postal Code",
+          "dataType": "String",
+          "sortable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "Phone",
+          "dataType": "String",
+          "sortable": true
         }
       ]
     }
