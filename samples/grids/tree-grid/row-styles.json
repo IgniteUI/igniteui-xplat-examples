@@ -1,0 +1,55 @@
+{
+  "todo": [ "Need row styles ref" ],
+  "export": true,
+  "skipAlterDataCasing": true,
+  "descriptions": {
+    "content": {
+      "type": "WebTreeGrid",
+      "name": "treeGrid",
+      "id": "treeGrid",
+      "dataRef": "EmployeesFlatDetails",
+      "autoGenerate": false,
+      "primaryKey": "ID",
+      "foreignKey": "ParentID",
+      "moving": true,
+      "columns": [
+        {
+          "type": "WebColumn",
+          "field": "Name",
+          "dataType": "String",
+          "sortable": true,
+          "filterable": true,
+          "editable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "Age",
+          "dataType": "Number",
+          "resizable": false,
+          "filterable": false,
+          "editable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "Title",
+          "dataType": "String",
+          "resizable": true,
+          "filterable": true,
+          "editable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "HireDate",
+          "dataType": "Date",
+          "resizable": true,
+          "filterable": true,
+          "editable": true
+        }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "grids/WebTreeGridModule"
+  ]
+}
