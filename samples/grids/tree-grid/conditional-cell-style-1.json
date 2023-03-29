@@ -1,0 +1,52 @@
+{
+  "todo": [ "Add cell classes for product name and unit price" ],
+  "export": true,
+  "skipAlterDataCasing": true,
+  "descriptions": {
+    "content": {
+      "type": "WebTreeGrid",
+      "name": "treeGrid",
+      "id": "treeGrid",
+      "dataRef": "FoodsData",
+      "primaryKey": "ID",
+      "foreignKey": "ParentID",
+      "columns": [
+        {
+          "type": "WebColumn",
+          "field": "ID",
+          "header": "Product ID",
+          "dataType": "String"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Name",
+          "header": "Product Name",
+          "dataType": "String"
+        },
+        {
+          "type": "WebColumn",
+          "field": "UnitPrice",
+          "header": "Unit Price",
+          "dataType": "Number"
+        },
+        {
+          "type": "WebColumn",
+          "field": "AddedDate",
+          "header": "Added Date",
+          "dataType": "Date"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Discontinued",
+          "header": "Discontinued",
+          "dataType": "Boolean"
+        }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
+    "grids/WebTreeGridModule"
+  ]
+}
