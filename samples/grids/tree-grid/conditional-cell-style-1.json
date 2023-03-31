@@ -21,13 +21,15 @@
           "type": "WebColumn",
           "field": "Name",
           "header": "Product Name",
-          "dataType": "String"
+          "dataType": "String",
+          "bodyTemplateRef": "WebTreeGridProductNameTemplate"
         },
         {
           "type": "WebColumn",
           "field": "UnitPrice",
           "header": "Unit Price",
-          "dataType": "Number"
+          "dataType": "Number",
+          "bodyTemplateRef": "WebTreeGridUnitPriceTemplate"
         },
         {
           "type": "WebColumn",

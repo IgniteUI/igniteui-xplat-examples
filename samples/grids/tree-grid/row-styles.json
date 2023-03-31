@@ -12,6 +12,7 @@
       "primaryKey": "ID",
       "foreignKey": "ParentID",
       "moving": true,
+      "rowStylesRef": "WebTreeGridRowStylesHandler",
       "columns": [
         {
           "type": "WebColumn",
