@@ -17,10 +17,34 @@ stages:
   pool:
     name: BuildAgentOnPrem
   jobs:
-  - job: RepoFilesToPipelineArtifact
+  - job: BuildApp
     steps:
-      - task: PublishPipelineArtifact@1
-        displayName: 'Publish pipeline artifact'
-        inputs:
-          targetPath: '$(Build.SourcesDirectory)'
-          artifact: 'CodeGenerationLibrary'
+    - checkout: self
+    - task: UseDotNet@2
+      displayName: 'Use .NET 6'
+      inputs:
+        packageType: 'sdk'
+        version: '6.x'
+
+    - task: DotnetGlobalToolInstaller@0
+      inputs:
+        name: 'Powershell'
+        versionSpec: '6.*'
+        checkLatest: true
+
+    - task: PowerShell@2
+      displayName: 'Fetch latest WPF.DEV NuGet packages and register a local dir NuGet repo for them'
+      inputs:
+        targetType: 'inline'
+        script: |
+          foreach ($jsonFile in Get-ChildItem "$(Build.SourcesDirectory)\igniteui-xplat-examples\samples" -Filter "*.json" -Recurse)
+              {
+                  
+                  $exportFlag = $(jq .export $jsonFile.FullName -e)
+                  if ($exportFlag -eq $null -Or $exportFlag -eq "false") {
+                      Write-Host "Removing " + $jsonFile.FullName + " - export flag false or missing"
+                      #Remove-Item $jsonFile.FullName
+                  }
+              }
+        pwsh: true
+
