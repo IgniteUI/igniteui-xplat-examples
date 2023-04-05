@@ -47,7 +47,7 @@ stages:
       inputs:
         targetType: 'inline'
         script: |
-          foreach ($jsonFile in Get-ChildItem "$(Build.SourcesDirectory)\igniteui-xplat-examples\samples" -Filter "*.json" -Recurse)
+          foreach ($jsonFile in Get-ChildItem "igniteui-xplat-examples\samples" -Filter "*.json" -Recurse)
               {
                 Write-Output "Parsing $($jsonFile.FullName)"
                 $exportFlag = $(jq .export $jsonFile.FullName -e)
@@ -61,6 +61,7 @@ stages:
         ignoreLASTEXITCODE: true
         pwsh: true
 
+
     - task: DownloadPipelineArtifact@2
       inputs:
         buildType: 'specific'
@@ -72,3 +73,36 @@ stages:
         artifactName: 'CodeGenerationLibrary'
         targetPath: '$(Pipeline.Workspace)'
 
+    - task: DownloadPipelineArtifact@2
+      inputs:
+        buildType: 'specific'
+        project: 'NetAdvantage'
+        definition: '260' # igeditor-templates
+        buildVersionToDownload: 'latestFromBranch'
+        branchName: 'refs/heads/master'
+        artifactName: 'igEditorTemplates'
+        targetPath: '$(Pipeline.Workspace)\igEditorTemplates'
+
+    - task: DownloadPipelineArtifact@2
+      inputs:
+        buildType: 'specific'
+        project: 'edba4b16-462e-42a0-9fa0-254d6d8a0f41'
+        definition: '261'
+        buildVersionToDownload: 'latestFromBranch'
+        branchName: 'refs/heads/2022.2'
+        artifactName: 'CodeExporterApp'
+        targetPath: '$(Pipeline.Workspace)'
+
+    - task: PowerShell@2
+      inputs:
+        targetType: 'inline'
+        script: |
+          $(Build.SourcesDirectory)\CodeExporterApp\CodeExporter.App.exe `
+          -platform=angular `
+          -template=$(Pipeline.Workspace)\igEditorTemplates\Angular\main-template `
+          -library=C:\Work\TFS\NetAdvantage\DEV\XPlatform\2022.2\Source\CodeGenerationLibrary `
+          -output=C:\Work\git\igniteui-angular-examples_6\samples\ `
+          -source=C:\Work\git\igniteui-xplat-examples\samples\grids\,C:\Work\git\igniteui-xplat-examples\samples\charts\
+        failOnStderr: true
+        showWarnings: true
+        pwsh: true
