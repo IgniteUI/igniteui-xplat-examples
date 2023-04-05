@@ -1,0 +1,26 @@
+trigger:
+  branches:
+    include:
+    - vnext
+    - master
+    - '2022.2'
+
+pr:
+  branches:
+    exclude:
+    - '*'  # must quote since "*" is a YAML reserved character; we want a string
+
+name: $(BuildDefinitionName)_$(Year:yyyy).$(Month).$(DayOfMonth)$(Rev:.r)
+
+stages:
+- stage: Build
+  pool:
+    name: BuildAgentOnPrem
+  jobs:
+  - job: RepoFilesToPipelineArtifact
+    steps:
+      - task: PublishPipelineArtifact@1
+        displayName: 'Publish pipeline artifact'
+        inputs:
+          targetPath: '$(Build.SourcesDirectory)'
+          artifact: 'CodeGenerationLibrary'
