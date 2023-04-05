@@ -39,12 +39,13 @@ stages:
         script: |
           foreach ($jsonFile in Get-ChildItem "$(Build.SourcesDirectory)\igniteui-xplat-examples\samples" -Filter "*.json" -Recurse)
               {
-                  
-                  $exportFlag = $(jq .export $jsonFile.FullName -e)
-                  if ($exportFlag -eq $null -Or $exportFlag -eq "false") {
-                      Write-Host "Removing " + $jsonFile.FullName + " - export flag false or missing"
-                      #Remove-Item $jsonFile.FullName
-                  }
+                Write-Output "Parsing $($jsonFile.FullName)"
+                $exportFlag = $(jq .export $jsonFile.FullName -e)
+                if ($exportFlag -eq $null -Or $exportFlag -eq "false") {
+                    
+                    Remove-Item $jsonFile.FullName
+                    Write-Output "Removed $($jsonFile.FullName) - export flag is false or missing"
+                }
               }
         pwsh: true
 
