@@ -49,3 +49,14 @@ stages:
               }
         pwsh: true
 
+    - task: DownloadPipelineArtifact@2
+      inputs:
+        buildType: 'specific'
+        #project: 'edba4b16-462e-42a0-9fa0-254d6d8a0f41'
+        project: 'NetAdvantage'
+        definition: '259' # code-generation-library
+        buildVersionToDownload: 'latestFromBranch'
+        branchName: 'refs/heads/2022.2'
+        artifactName: 'CodeGenerationLibrary'
+        targetPath: '$(Pipeline.Workspace)'
+
