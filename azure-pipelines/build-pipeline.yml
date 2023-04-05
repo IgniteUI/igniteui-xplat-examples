@@ -18,7 +18,7 @@ resources:
       endpoint: IgniteUI
       type: github
       name: IgniteUI/igniteui-angular-examples
-      ref: '$(Build.SourceBranch)'
+      ref: 'vnext'
 
 stages:
 - stage: Build
@@ -28,6 +28,7 @@ stages:
   - job: BuildApp
     steps:
     - checkout: self
+
     - checkout: IgniteUIAngularExamples
     - task: UseDotNet@2
       displayName: 'Use .NET 6'
