@@ -12,15 +12,61 @@ pr:
 
 name: $(BuildDefinitionName)_$(Year:yyyy).$(Month).$(DayOfMonth)$(Rev:.r)
 
+resources:
+  repositories:
+    - repository: IgniteUIAngularExamples
+      endpoint: IgniteUI
+      type: github
+      name: IgniteUI/igniteui-angular-examples
+      ref: 'vnext'
+
 stages:
 - stage: Build
   pool:
     name: BuildAgentOnPrem
   jobs:
-  - job: RepoFilesToPipelineArtifact
+  - job: BuildApp
     steps:
-      - task: PublishPipelineArtifact@1
-        displayName: 'Publish pipeline artifact'
-        inputs:
-          targetPath: '$(Build.SourcesDirectory)'
-          artifact: 'CodeGenerationLibrary'
+    - checkout: self
+
+    - checkout: IgniteUIAngularExamples
+    - task: UseDotNet@2
+      displayName: 'Use .NET 6'
+      inputs:
+        packageType: 'sdk'
+        version: '6.x'
+
+    - task: DotnetGlobalToolInstaller@0
+      inputs:
+        name: 'Powershell'
+        versionSpec: '6.*'
+        checkLatest: true
+
+    - task: PowerShell@2
+      displayName: "Remove json files where 'export' flag is false or missing"
+      inputs:
+        targetType: 'inline'
+        script: |
+          foreach ($jsonFile in Get-ChildItem "$(Build.SourcesDirectory)\igniteui-xplat-examples\samples" -Filter "*.json" -Recurse)
+              {
+                Write-Output "Parsing $($jsonFile.FullName)"
+                $exportFlag = $(jq .export $jsonFile.FullName -e)
+                if ($exportFlag -eq $null -Or $exportFlag -eq "false") {
+                    
+                    Remove-Item $jsonFile.FullName
+                    Write-Output "Removed $($jsonFile.FullName) - export flag is false or missing"
+                }
+              }
+        pwsh: true
+
+    - task: DownloadPipelineArtifact@2
+      inputs:
+        buildType: 'specific'
+        #project: 'edba4b16-462e-42a0-9fa0-254d6d8a0f41'
+        project: 'NetAdvantage'
+        definition: '259' # code-generation-library
+        buildVersionToDownload: 'latestFromBranch'
+        branchName: 'refs/heads/2022.2'
+        artifactName: 'CodeGenerationLibrary'
+        targetPath: '$(Pipeline.Workspace)'
+
