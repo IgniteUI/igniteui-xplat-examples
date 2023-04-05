@@ -12,6 +12,14 @@ pr:
 
 name: $(BuildDefinitionName)_$(Year:yyyy).$(Month).$(DayOfMonth)$(Rev:.r)
 
+resources:
+  repositories:
+    - repository: IgniteUIAngularExamples
+      endpoint: IgniteUI
+      type: github
+      name: IgniteUI/igniteui-angular-examples
+      ref: '$(Build.SourceBranch)'
+
 stages:
 - stage: Build
   pool:
@@ -20,6 +28,7 @@ stages:
   - job: BuildApp
     steps:
     - checkout: self
+    - checkout: IgniteUIAngularExamples
     - task: UseDotNet@2
       displayName: 'Use .NET 6'
       inputs:
@@ -33,7 +42,7 @@ stages:
         checkLatest: true
 
     - task: PowerShell@2
-      displayName: 'Fetch latest WPF.DEV NuGet packages and register a local dir NuGet repo for them'
+      displayName: "Remove json files where 'export' flag is false or missing"
       inputs:
         targetType: 'inline'
         script: |
