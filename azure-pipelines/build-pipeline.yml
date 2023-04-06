@@ -95,7 +95,7 @@ stages:
     - download: current
       displayName: 'Get XPlat Example JSONs'
       artifact: XplatExamples
-      target: '$(Build.SourcesDirectory)/samples'
+      target: '$(Build.SourcesDirectory)\samples'
 
     - task: UseDotNet@2
       displayName: 'Use .NET 6'
