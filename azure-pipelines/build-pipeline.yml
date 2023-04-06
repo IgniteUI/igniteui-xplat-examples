@@ -19,21 +19,34 @@ resources:
       type: github
       name: IgniteUI/igniteui-angular-examples
       ref: 'vnext'
+
     - repository: IgniteUIBlazorExamples
       endpoint: IgniteUI
       type: github
       name: IgniteUI/igniteui-blazor-examples
       ref: 'vnext'
+
     - repository: IgniteUIReactExamples
       endpoint: IgniteUI
       type: github
       name: IgniteUI/igniteui-react-examples
       ref: 'vnext'
+
     - repository: IgniteUIWebComponentsExamples
       endpoint: IgniteUI
       type: github
       name: IgniteUI/igniteui-wc-examples
       ref: 'vnext'
+
+    - repository: IgEditorTemplates
+      type: git
+      name: igeditor-templates
+      ref: 'master'
+
+    - repository: CodeGenerationLibrary
+      type: git
+      name: code-generation-library
+      ref: '2022.2'
 
 stages:
 - stage: Build
@@ -76,26 +89,29 @@ stages:
 #        pwsh: true
 
 
-    - task: DownloadPipelineArtifact@2
-      inputs:
-        buildType: 'specific'
-        #project: 'edba4b16-462e-42a0-9fa0-254d6d8a0f41'
-        project: 'NetAdvantage'
-        definition: '259' # code-generation-library
-        buildVersionToDownload: 'latestFromBranch'
-        branchName: 'refs/heads/2022.2'
-        artifactName: 'CodeGenerationLibrary'
-        targetPath: '$(Build.SourcesDirectory)\CodeGenerationLibrary'
+#    - task: DownloadPipelineArtifact@2
+#      inputs:
+#        buildType: 'specific'
+#        #project: 'edba4b16-462e-42a0-9fa0-254d6d8a0f41'
+#        project: 'NetAdvantage'
+#        definition: '259' # code-generation-library
+#        buildVersionToDownload: 'latestFromBranch'
+#        branchName: 'refs/heads/2022.2'
+#        artifactName: 'CodeGenerationLibrary'
+#        targetPath: '$(Build.SourcesDirectory)\CodeGenerationLibrary'
+#
+#    - task: DownloadPipelineArtifact@2
+#      inputs:
+#        buildType: 'specific'
+#        project: 'NetAdvantage'
+#        definition: '260' # igeditor-templates
+#        buildVersionToDownload: 'latestFromBranch'
+#        branchName: 'refs/heads/master'
+#        artifactName: 'igEditorTemplates'
+#        targetPath: '$(Build.SourcesDirectory)\igEditorTemplates'
+    - checkout: IgEditorTemplates
 
-    - task: DownloadPipelineArtifact@2
-      inputs:
-        buildType: 'specific'
-        project: 'NetAdvantage'
-        definition: '260' # igeditor-templates
-        buildVersionToDownload: 'latestFromBranch'
-        branchName: 'refs/heads/master'
-        artifactName: 'igEditorTemplates'
-        targetPath: '$(Build.SourcesDirectory)\igEditorTemplates'
+    - checkout: CodeGenerationLibrary
 
     - task: DownloadPipelineArtifact@2
       inputs:
@@ -115,8 +131,8 @@ stages:
         script: |
           $(Build.SourcesDirectory)\CodeExporterApp\CodeExporter.App.exe `
           -platform=angular `
-          -template=$(Build.SourcesDirectory)\igEditorTemplates\Angular\main-template `
-          -library=$(Build.SourcesDirectory)\CodeGenerationLibrary `
+          -template=$(Build.SourcesDirectory)\igeditor-templates\Angular\main-template `
+          -library=$(Build.SourcesDirectory)\code-generation-library `
           -output=$(Build.SourcesDirectory)\igniteui-angular-examples\samples\ `
           -source=$(Build.SourcesDirectory)\igniteui-xplat-examples\samples\grids\,$(Build.SourcesDirectory)\igniteui-xplat-examples\samples\charts\
         failOnStderr: true
@@ -131,8 +147,8 @@ stages:
         script: |
           $(Build.SourcesDirectory)\CodeExporterApp\CodeExporter.App.exe `
           -platform=blazor `
-          -template=$(Build.SourcesDirectory)\igEditorTemplates\Blazor\main-template `
-          -library=$(Build.SourcesDirectory)\CodeGenerationLibrary `
+          -template=$(Build.SourcesDirectory)\igeditor-templates\Blazor\main-template `
+          -library=$(Build.SourcesDirectory)\code-generation-library `
           -output=$(Build.SourcesDirectory)\igniteui-blazor-examples\samples\ `
           -source=$(Build.SourcesDirectory)\igniteui-xplat-examples\samples\grids\,$(Build.SourcesDirectory)\igniteui-xplat-examples\samples\charts\
         failOnStderr: true
@@ -147,8 +163,8 @@ stages:
         script: |
           $(Build.SourcesDirectory)\CodeExporterApp\CodeExporter.App.exe `
           -platform=react `
-          -template=$(Build.SourcesDirectory)\igEditorTemplates\React\main-template `
-          -library=$(Build.SourcesDirectory)\CodeGenerationLibrary `
+          -template=$(Build.SourcesDirectory)\igeditor-templates\React\main-template `
+          -library=$(Build.SourcesDirectory)\code-generation-library `
           -output=$(Build.SourcesDirectory)\igniteui-react-examples\samples\ `
           -source=$(Build.SourcesDirectory)\igniteui-xplat-examples\samples\grids\,$(Build.SourcesDirectory)\igniteui-xplat-examples\samples\charts\
         failOnStderr: true
@@ -163,8 +179,8 @@ stages:
         script: |
           $(Build.SourcesDirectory)\CodeExporterApp\CodeExporter.App.exe `
           -platform=WebComponents `
-          -template=$(Build.SourcesDirectory)\igEditorTemplates\WebComponents\main-template `
-          -library=$(Build.SourcesDirectory)\CodeGenerationLibrary `
+          -template=$(Build.SourcesDirectory)\igeditor-templates\WebComponents\main-template `
+          -library=$(Build.SourcesDirectory)\code-generation-library `
           -output=$(Build.SourcesDirectory)\igniteui-wc-examples\samples\ `
           -source=$(Build.SourcesDirectory)\igniteui-xplat-examples\samples\grids\,$(Build.SourcesDirectory)\igniteui-xplat-examples\samples\charts\
         failOnStderr: true
