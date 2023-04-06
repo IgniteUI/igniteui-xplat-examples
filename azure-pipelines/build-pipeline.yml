@@ -99,10 +99,10 @@ stages:
         script: |
           $(Build.SourcesDirectory)\CodeExporterApp\CodeExporter.App.exe `
           -platform=angular `
-          -template=$(Pipeline.Workspace)\igEditorTemplates\Angular\main-template `
-          -library=C:\Work\TFS\NetAdvantage\DEV\XPlatform\2022.2\Source\CodeGenerationLibrary `
-          -output=C:\Work\git\igniteui-angular-examples_6\samples\ `
-          -source=C:\Work\git\igniteui-xplat-examples\samples\grids\,C:\Work\git\igniteui-xplat-examples\samples\charts\
+          -template=$(Build.SourcesDirectory)\igEditorTemplates\Angular\main-template `
+          -library=$(Build.SourcesDirectory)\CodeGenerationLibrary `
+          -output=$(Build.SourcesDirectory)\igniteui-angular-examples\samples\ `
+          -source=$(Build.SourcesDirectory)\igniteui-xplat-examples\samples\grids\,$(Build.SourcesDirectory)\igniteui-xplat-examples\samples\charts\
         failOnStderr: true
         showWarnings: true
         pwsh: true
