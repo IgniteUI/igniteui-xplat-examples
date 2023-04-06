@@ -49,13 +49,52 @@ resources:
       ref: '2022.2'
 
 stages:
+- stage: Prepare
+  jobs: 
+  - job: PrepareJsons
+    steps:
+    - checkout: self
+
+    - task: UseDotNet@2
+      displayName: 'Use .NET 6'
+      inputs:
+        packageType: 'sdk'
+        version: '6.x'
+
+    - task: PowerShell@2
+      displayName: "Remove json files where 'export' flag is false or missing"
+      inputs:
+        targetType: 'inline'
+        script: |
+          foreach ($jsonFile in Get-ChildItem "igniteui-xplat-examples\samples" -Filter "*.json" -Recurse)
+              {
+                Write-Output "Parsing $($jsonFile.FullName)"
+                $exportFlag = $(jq .export $jsonFile.FullName -e)
+                if ($exportFlag -eq $null -Or $exportFlag -eq "false") {
+                    
+                    Remove-Item $jsonFile.FullName
+                    Write-Output "Removed $($jsonFile.FullName) - export flag is false or missing"
+                }
+              }
+        showWarnings: true
+        ignoreLASTEXITCODE: true
+        pwsh: true
+
+    - publish: '$(Build.SourcesDirectory)'
+      displayName: 'Publish XPlat Example JSONs'
+      artifact: XplatExamples
+
 - stage: Build
+  dependsOn: Prepare
   pool:
     name: BuildAgentOnPrem
   jobs:
   - job: BuildApp
     steps:
-    - checkout: self
+    - download: current
+      displayName: 'Get XPlat Example JSONs'
+      artifact: XplatExamples
+      target: '$(Build.SourcesDirectory)/samples'
 
     - task: UseDotNet@2
       displayName: 'Use .NET 6'
@@ -70,24 +109,7 @@ stages:
 #        versionSpec: '6.*'
 #        checkLatest: true
 
-#    - task: PowerShell@2
-#      displayName: "Remove json files where 'export' flag is false or missing"
-#      inputs:
-#        targetType: 'inline'
-#        script: |
-#          foreach ($jsonFile in Get-ChildItem "igniteui-xplat-examples\samples" -Filter "*.json" -Recurse)
-#              {
-#                Write-Output "Parsing $($jsonFile.FullName)"
-#                $exportFlag = $(jq .export $jsonFile.FullName -e)
-#                if ($exportFlag -eq $null -Or $exportFlag -eq "false") {
-#                    
-#                    Remove-Item $jsonFile.FullName
-#                    Write-Output "Removed $($jsonFile.FullName) - export flag is false or missing"
-#                }
-#              }
-#        showWarnings: true
-#        ignoreLASTEXITCODE: true
-#        pwsh: true
+
 
 
 #    - task: DownloadPipelineArtifact@2
