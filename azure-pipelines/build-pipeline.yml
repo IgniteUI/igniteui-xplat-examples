@@ -63,11 +63,12 @@ stages:
         packageType: 'sdk'
         version: '6.x'
 
-    - task: DotnetGlobalToolInstaller@0
-      inputs:
-        name: 'Powershell'
+#    - task: DotnetGlobalToolInstaller@0
+#      displayName: 'Install Powershell Core'
+#      inputs:
+#        name: 'Powershell'
 #        versionSpec: '6.*'
-        checkLatest: true
+#        checkLatest: true
 
 #    - task: PowerShell@2
 #      displayName: "Remove json files where 'export' flag is false or missing"
