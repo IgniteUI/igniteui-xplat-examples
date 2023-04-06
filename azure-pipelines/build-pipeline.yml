@@ -69,7 +69,7 @@ stages:
       inputs:
         targetType: 'inline'
         script: |
-          foreach ($jsonFile in Get-ChildItem "igniteui-xplat-examples\samples" -Filter "*.json" -Recurse)
+          foreach ($jsonFile in Get-ChildItem "samples" -Filter "*.json" -Recurse)
               {
                 Write-Output "Parsing $($jsonFile.FullName)"
                 $exportFlag = $(jq .export $jsonFile.FullName -e)
