@@ -48,6 +48,9 @@ resources:
       name: code-generation-library
       ref: '2022.2'
 
+pool:
+  name: BuildAgentOnPrem
+
 stages:
 - stage: Prepare
   jobs: 
@@ -86,8 +89,6 @@ stages:
 
 - stage: Build
   dependsOn: Prepare
-  pool:
-    name: BuildAgentOnPrem
   jobs:
   - job: BuildApp
     steps:
