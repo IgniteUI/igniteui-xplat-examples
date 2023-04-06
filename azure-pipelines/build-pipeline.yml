@@ -20,6 +20,31 @@ resources:
       name: IgniteUI/igniteui-angular-examples
       ref: 'vnext'
 
+resources:
+  repositories:
+    - repository: IgniteUIBlazorExamples
+      endpoint: IgniteUI
+      type: github
+      name: IgniteUI/igniteui-blazor-examples
+      ref: 'vnext'
+
+
+resources:
+  repositories:
+    - repository: IgniteUIReactExamples
+      endpoint: IgniteUI
+      type: github
+      name: IgniteUI/igniteui-react-examples
+      ref: 'vnext'
+
+resources:
+  repositories:
+    - repository: IgniteUIWebComponentsExamples
+      endpoint: IgniteUI
+      type: github
+      name: IgniteUI/igniteui-wc-examples
+      ref: 'vnext'
+
 stages:
 - stage: Build
   pool:
@@ -29,7 +54,6 @@ stages:
     steps:
     - checkout: self
 
-    - checkout: IgniteUIAngularExamples
     - task: UseDotNet@2
       displayName: 'Use .NET 6'
       inputs:
@@ -93,6 +117,7 @@ stages:
         artifactName: 'CodeExporterApp'
         targetPath: '$(Build.SourcesDirectory)\CodeExporterApp'
 
+    - checkout: IgniteUIAngularExamples
     - task: PowerShell@2
       inputs:
         targetType: 'inline'
@@ -102,6 +127,51 @@ stages:
           -template=$(Build.SourcesDirectory)\igEditorTemplates\Angular\main-template `
           -library=$(Build.SourcesDirectory)\CodeGenerationLibrary `
           -output=$(Build.SourcesDirectory)\igniteui-angular-examples\samples\ `
+          -source=$(Build.SourcesDirectory)\igniteui-xplat-examples\samples\grids\,$(Build.SourcesDirectory)\igniteui-xplat-examples\samples\charts\
+        failOnStderr: true
+        showWarnings: true
+        pwsh: true
+
+    - checkout: IgniteUIBlazorExamples
+    - task: PowerShell@2
+      inputs:
+        targetType: 'inline'
+        script: |
+          $(Build.SourcesDirectory)\CodeExporterApp\CodeExporter.App.exe `
+          -platform=blazor `
+          -template=$(Build.SourcesDirectory)\igEditorTemplates\Blazor\main-template `
+          -library=$(Build.SourcesDirectory)\CodeGenerationLibrary `
+          -output=$(Build.SourcesDirectory)\igniteui-blazor-examples\samples\ `
+          -source=$(Build.SourcesDirectory)\igniteui-xplat-examples\samples\grids\,$(Build.SourcesDirectory)\igniteui-xplat-examples\samples\charts\
+        failOnStderr: true
+        showWarnings: true
+        pwsh: true
+
+    - checkout: IgniteUIReactExamples
+    - task: PowerShell@2
+      inputs:
+        targetType: 'inline'
+        script: |
+          $(Build.SourcesDirectory)\CodeExporterApp\CodeExporter.App.exe `
+          -platform=react `
+          -template=$(Build.SourcesDirectory)\igEditorTemplates\React\main-template `
+          -library=$(Build.SourcesDirectory)\CodeGenerationLibrary `
+          -output=$(Build.SourcesDirectory)\igniteui-react-examples\samples\ `
+          -source=$(Build.SourcesDirectory)\igniteui-xplat-examples\samples\grids\,$(Build.SourcesDirectory)\igniteui-xplat-examples\samples\charts\
+        failOnStderr: true
+        showWarnings: true
+        pwsh: true
+
+    - checkout: IgniteUIWebComponentsExamples
+    - task: PowerShell@2
+      inputs:
+        targetType: 'inline'
+        script: |
+          $(Build.SourcesDirectory)\CodeExporterApp\CodeExporter.App.exe `
+          -platform=WebComponents `
+          -template=$(Build.SourcesDirectory)\igEditorTemplates\WebComponents\main-template `
+          -library=$(Build.SourcesDirectory)\CodeGenerationLibrary `
+          -output=$(Build.SourcesDirectory)\igniteui-wc-examples\samples\ `
           -source=$(Build.SourcesDirectory)\igniteui-xplat-examples\samples\grids\,$(Build.SourcesDirectory)\igniteui-xplat-examples\samples\charts\
         failOnStderr: true
         showWarnings: true
