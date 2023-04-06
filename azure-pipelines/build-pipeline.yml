@@ -109,6 +109,7 @@ stages:
 
     - checkout: IgniteUIAngularExamples
     - task: PowerShell@2
+      displayName: 'Convert Angular'
       inputs:
         targetType: 'inline'
         script: |
@@ -124,6 +125,7 @@ stages:
 
     - checkout: IgniteUIBlazorExamples
     - task: PowerShell@2
+      displayName: 'Convert Blazor'
       inputs:
         targetType: 'inline'
         script: |
@@ -139,6 +141,7 @@ stages:
 
     - checkout: IgniteUIReactExamples
     - task: PowerShell@2
+      displayName: 'Convert React'
       inputs:
         targetType: 'inline'
         script: |
@@ -154,6 +157,7 @@ stages:
 
     - checkout: IgniteUIWebComponentsExamples
     - task: PowerShell@2
+      displayName: 'Convert WebComponents'
       inputs:
         targetType: 'inline'
         script: |
