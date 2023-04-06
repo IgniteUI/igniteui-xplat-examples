@@ -56,24 +56,24 @@ stages:
         versionSpec: '6.*'
         checkLatest: true
 
-    - task: PowerShell@2
-      displayName: "Remove json files where 'export' flag is false or missing"
-      inputs:
-        targetType: 'inline'
-        script: |
-          foreach ($jsonFile in Get-ChildItem "igniteui-xplat-examples\samples" -Filter "*.json" -Recurse)
-              {
-                Write-Output "Parsing $($jsonFile.FullName)"
-                $exportFlag = $(jq .export $jsonFile.FullName -e)
-                if ($exportFlag -eq $null -Or $exportFlag -eq "false") {
-                    
-                    Remove-Item $jsonFile.FullName
-                    Write-Output "Removed $($jsonFile.FullName) - export flag is false or missing"
-                }
-              }
-        showWarnings: true
-        ignoreLASTEXITCODE: true
-        pwsh: true
+#    - task: PowerShell@2
+#      displayName: "Remove json files where 'export' flag is false or missing"
+#      inputs:
+#        targetType: 'inline'
+#        script: |
+#          foreach ($jsonFile in Get-ChildItem "igniteui-xplat-examples\samples" -Filter "*.json" -Recurse)
+#              {
+#                Write-Output "Parsing $($jsonFile.FullName)"
+#                $exportFlag = $(jq .export $jsonFile.FullName -e)
+#                if ($exportFlag -eq $null -Or $exportFlag -eq "false") {
+#                    
+#                    Remove-Item $jsonFile.FullName
+#                    Write-Output "Removed $($jsonFile.FullName) - export flag is false or missing"
+#                }
+#              }
+#        showWarnings: true
+#        ignoreLASTEXITCODE: true
+#        pwsh: true
 
 
     - task: DownloadPipelineArtifact@2
