@@ -97,7 +97,7 @@ stages:
       inputs:
         targetType: 'inline'
         script: |
-          $(Build.SourcesDirectory)\CodeExporterApp\CodeExporter.App  .exe `
+          $(Build.SourcesDirectory)\CodeExporterApp\CodeExporter.App.exe `
           -platform=angular `
           -template=$(Build.SourcesDirectory)\igEditorTemplates\Angular\main-template `
           -library=$(Build.SourcesDirectory)\CodeGenerationLibrary `
