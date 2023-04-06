@@ -91,7 +91,7 @@ stages:
         buildVersionToDownload: 'latestFromBranch'
         branchName: 'refs/heads/2022.2'
         artifactName: 'CodeExporterApp'
-        targetPath: '$(Pipeline.Workspace)\CodeExporterApp'
+        targetPath: '$(Build.SourcesDirectory)\CodeExporterApp'
 
     - task: PowerShell@2
       inputs:
