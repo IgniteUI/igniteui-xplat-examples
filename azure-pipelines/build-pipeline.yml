@@ -19,26 +19,16 @@ resources:
       type: github
       name: IgniteUI/igniteui-angular-examples
       ref: 'vnext'
-
-resources:
-  repositories:
     - repository: IgniteUIBlazorExamples
       endpoint: IgniteUI
       type: github
       name: IgniteUI/igniteui-blazor-examples
       ref: 'vnext'
-
-
-resources:
-  repositories:
     - repository: IgniteUIReactExamples
       endpoint: IgniteUI
       type: github
       name: IgniteUI/igniteui-react-examples
       ref: 'vnext'
-
-resources:
-  repositories:
     - repository: IgniteUIWebComponentsExamples
       endpoint: IgniteUI
       type: github
