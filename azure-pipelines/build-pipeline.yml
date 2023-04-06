@@ -71,7 +71,7 @@ stages:
         buildVersionToDownload: 'latestFromBranch'
         branchName: 'refs/heads/2022.2'
         artifactName: 'CodeGenerationLibrary'
-        targetPath: '$(Pipeline.Workspace)'
+        targetPath: '$(Build.SourcesDirectory)\CodeGenerationLibrary'
 
     - task: DownloadPipelineArtifact@2
       inputs:
@@ -81,7 +81,7 @@ stages:
         buildVersionToDownload: 'latestFromBranch'
         branchName: 'refs/heads/master'
         artifactName: 'igEditorTemplates'
-        targetPath: '$(Pipeline.Workspace)\igEditorTemplates'
+        targetPath: '$(Build.SourcesDirectory)\igEditorTemplates'
 
     - task: DownloadPipelineArtifact@2
       inputs:
@@ -97,7 +97,7 @@ stages:
       inputs:
         targetType: 'inline'
         script: |
-          $(Build.SourcesDirectory)\CodeExporterApp\CodeExporter.App.exe `
+          $(Build.SourcesDirectory)\CodeExporterApp\CodeExporter.App  .exe `
           -platform=angular `
           -template=$(Build.SourcesDirectory)\igEditorTemplates\Angular\main-template `
           -library=$(Build.SourcesDirectory)\CodeGenerationLibrary `
