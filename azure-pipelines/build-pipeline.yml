@@ -72,16 +72,15 @@ stages:
           Write-Output "Chocolatey install jq - tool to traverse JSON files"
           Invoke-Expression -Command "choco install jq -y"
 
-          foreach ($jsonFile in Get-ChildItem "samples" -Filter "*.json" -Recurse)
-              {
-                Write-Output "Parsing $($jsonFile.FullName)"
-                $exportFlag = $(jq .export $jsonFile.FullName -e)
-                if ($exportFlag -eq $null -Or $exportFlag -eq "false") {
-                    
-                    Remove-Item $jsonFile.FullName
-                    Write-Output "Removed $($jsonFile.FullName) - export flag is false or missing"
-                }
-              }
+          Invoke-Expression -Command 'foreach ($jsonFile in Get-ChildItem "samples" -Filter "*.json" -Recurse)' +
+              '{ ' +
+                'Write-Output "Parsing $($jsonFile.FullName)" ' +
+                '$exportFlag = $(jq .export $jsonFile.FullName -e) ' +
+                'if ($exportFlag -eq $null -Or $exportFlag -eq "false") {' +
+                    'Remove-Item $jsonFile.FullName ' +
+                    'Write-Output "Removed $($jsonFile.FullName) - export flag is false or missing"' +
+                '}' +
+              '}' -ErrorAction:Stop
         showWarnings: true
         ignoreLASTEXITCODE: true
         pwsh: true
