@@ -91,7 +91,8 @@ stages:
 #  dependsOn: Prepare
   jobs:
   - job: BuildAngular
-    dependsOn:
+    workspace:
+      clean: all
     steps:
     - checkout: self
       enabled: false
@@ -139,6 +140,8 @@ stages:
         pwsh: true
 
   - job: BuildBlazor
+    workspace:
+      clean: all
     steps:
     - checkout: self
       enabled: false
@@ -186,6 +189,8 @@ stages:
         pwsh: true
 
   - job: BuildReact
+    workspace:
+      clean: all
     steps:
     - checkout: self
       enabled: false
@@ -232,6 +237,8 @@ stages:
         pwsh: true
 
   - job: BuildWebComponents
+    workspace:
+      clean: all
     steps:
     - checkout: self
       enabled: false
