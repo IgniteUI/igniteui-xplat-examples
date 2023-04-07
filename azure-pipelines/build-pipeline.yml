@@ -69,6 +69,9 @@ stages:
       inputs:
         targetType: 'inline'
         script: |
+          Write-Output "Chocolatey install jq - tool to traverse JSON files"
+          Invoke-Expression -Command "choco install jq -y"
+
           foreach ($jsonFile in Get-ChildItem "samples" -Filter "*.json" -Recurse)
               {
                 Write-Output "Parsing $($jsonFile.FullName)"
