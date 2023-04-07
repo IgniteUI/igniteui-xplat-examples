@@ -92,6 +92,9 @@ stages:
   jobs:
   - job: BuildApp
     steps:
+    - checkout: self
+      enabled: false
+
     - download: current
       displayName: 'Get XPlat Example JSONs'
       artifact: XplatExamples
