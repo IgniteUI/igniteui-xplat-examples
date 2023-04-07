@@ -88,7 +88,7 @@ stages:
       artifact: XplatExamples
 
 - stage: Convert
-  dependsOn: Prepare
+#  dependsOn: Prepare
   jobs:
   - job: BuildAngular
     dependsOn:
