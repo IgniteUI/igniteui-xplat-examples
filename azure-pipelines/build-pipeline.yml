@@ -85,7 +85,7 @@ stages:
 
     - publish: '$(Build.SourcesDirectory)'
       displayName: 'Publish XPlat Example JSONs'
-      artifact: XplatExamples
+      artifact: xplatеxamples
 
 - stage: Convert
 #  dependsOn: Prepare
