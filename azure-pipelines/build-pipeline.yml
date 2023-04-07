@@ -97,7 +97,7 @@ stages:
 
     - download: current
       displayName: 'Get XPlat Example JSONs'
-      artifact: XplatExamples
+      artifact: xplatеxamples
       #target:
 
     - task: UseDotNet@2
