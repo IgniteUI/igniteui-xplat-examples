@@ -158,7 +158,7 @@ stages:
           -template=$(Build.SourcesDirectory)\igeditor-templates\Angular\main-template `
           -library=$(Build.SourcesDirectory)\code-generation-library `
           -output=$(Build.SourcesDirectory)\igniteui-angular-examples\samples\ `
-          -source=$(Build.SourcesDirectory)\igniteui-xplat-examples\samples\grids\,$(Build.SourcesDirectory)\igniteui-xplat-examples\samples\charts\
+          -source=$(Pipeline.Workspace)\XplatSamples\samples\grids\,$(Pipeline.Workspace)\XplatSamples\samples\charts\
         failOnStderr: true
         showWarnings: true
         pwsh: true
