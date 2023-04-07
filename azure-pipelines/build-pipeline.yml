@@ -90,7 +90,7 @@ stages:
 - stage: Build
   dependsOn: Prepare
   jobs:
-  - job: BuildApp
+  - job: BuildAngular
     steps:
     - checkout: self
       enabled: false
@@ -106,36 +106,6 @@ stages:
         packageType: 'sdk'
         version: '6.x'
 
-#    - task: DotnetGlobalToolInstaller@0
-#      displayName: 'Install Powershell Core'
-#      inputs:
-#        name: 'Powershell'
-#        versionSpec: '6.*'
-#        checkLatest: true
-
-
-
-
-#    - task: DownloadPipelineArtifact@2
-#      inputs:
-#        buildType: 'specific'
-#        #project: 'edba4b16-462e-42a0-9fa0-254d6d8a0f41'
-#        project: 'NetAdvantage'
-#        definition: '259' # code-generation-library
-#        buildVersionToDownload: 'latestFromBranch'
-#        branchName: 'refs/heads/2022.2'
-#        artifactName: 'CodeGenerationLibrary'
-#        targetPath: '$(Build.SourcesDirectory)\CodeGenerationLibrary'
-#
-#    - task: DownloadPipelineArtifact@2
-#      inputs:
-#        buildType: 'specific'
-#        project: 'NetAdvantage'
-#        definition: '260' # igeditor-templates
-#        buildVersionToDownload: 'latestFromBranch'
-#        branchName: 'refs/heads/master'
-#        artifactName: 'igEditorTemplates'
-#        targetPath: '$(Build.SourcesDirectory)\igEditorTemplates'
     - checkout: IgEditorTemplates
 
     - checkout: CodeGenerationLibrary
@@ -161,11 +131,40 @@ stages:
           -template=$(Build.SourcesDirectory)\igeditor-templates\Angular\main-template `
           -library=$(Build.SourcesDirectory)\code-generation-library `
           -output=$(Build.SourcesDirectory)\igniteui-angular-examples\samples\ `
-          -source=$(Pipeline.Workspace)\XplatExamples\samples\grids\,$(Pipeline.Workspace)\XplatExamples\samples\charts\
+          -source=$(Pipeline.Workspace)\XplatFxamples\samples\grids\,$(Pipeline.Workspace)\XplatExamples\samples\charts\
         failOnStderr: true
         showWarnings: true
         pwsh: true
 
+  - job: BuildBlazor
+    steps:
+    - checkout: self
+      enabled: false
+
+    - download: current
+      displayName: 'Get XPlat Example JSONs'
+      artifact: XplatExamples
+      #target:
+
+    - task: UseDotNet@2
+      displayName: 'Use .NET 6'
+      inputs:
+        packageType: 'sdk'
+        version: '6.x'
+
+    - checkout: IgEditorTemplates
+
+    - checkout: CodeGenerationLibrary
+
+    - task: DownloadPipelineArtifact@2
+      inputs:
+        buildType: 'specific'
+        project: 'edba4b16-462e-42a0-9fa0-254d6d8a0f41'
+        definition: '261'
+        buildVersionToDownload: 'latestFromBranch'
+        branchName: 'refs/heads/2022.2'
+        artifactName: 'CodeExporterApp'
+        targetPath: '$(Build.SourcesDirectory)\CodeExporterApp'
     - checkout: IgniteUIBlazorExamples
     - task: PowerShell@2
       displayName: 'Convert Blazor'
@@ -182,6 +181,35 @@ stages:
         showWarnings: true
         pwsh: true
 
+  - job: BuildReact
+    steps:
+    - checkout: self
+      enabled: false
+
+    - download: current
+      displayName: 'Get XPlat Example JSONs'
+      artifact: XplatExamples
+      #target:
+
+    - task: UseDotNet@2
+      displayName: 'Use .NET 6'
+      inputs:
+        packageType: 'sdk'
+        version: '6.x'
+
+    - checkout: IgEditorTemplates
+
+    - checkout: CodeGenerationLibrary
+
+    - task: DownloadPipelineArtifact@2
+      inputs:
+        buildType: 'specific'
+        project: 'edba4b16-462e-42a0-9fa0-254d6d8a0f41'
+        definition: '261'
+        buildVersionToDownload: 'latestFromBranch'
+        branchName: 'refs/heads/2022.2'
+        artifactName: 'CodeExporterApp'
+        targetPath: '$(Build.SourcesDirectory)\CodeExporterApp'
     - checkout: IgniteUIReactExamples
     - task: PowerShell@2
       displayName: 'Convert React'
@@ -198,6 +226,25 @@ stages:
         showWarnings: true
         pwsh: true
 
+  - job: BuildWebComponents
+    steps:
+    - checkout: self
+      enabled: false
+
+    - download: current
+      displayName: 'Get XPlat Example JSONs'
+      artifact: XplatExamples
+      #target:
+
+    - task: UseDotNet@2
+      displayName: 'Use .NET 6.X'
+      inputs:
+        packageType: 'sdk'
+        version: '6.x'
+
+    - checkout: IgEditorTemplates
+
+    - checkout: CodeGenerationLibrary
     - checkout: IgniteUIWebComponentsExamples
     - task: PowerShell@2
       displayName: 'Convert WebComponents'
