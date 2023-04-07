@@ -91,6 +91,7 @@ stages:
   dependsOn: Prepare
   jobs:
   - job: BuildAngular
+    dependsOn:
     steps:
     - checkout: self
       enabled: false
@@ -179,7 +180,7 @@ stages:
           -template=$(Build.SourcesDirectory)\igeditor-templates\Blazor\main-template `
           -library=$(Build.SourcesDirectory)\code-generation-library `
           -output=$(Build.SourcesDirectory)\igniteui-blazor-examples\samples\ `
-          -source=$(Pipeline.Workspace)\xplatеxamples\samples\grids\$(Pipeline.Workspace)\xplatеxamples\igniteui-xplat-examples\samples\charts\
+          -source=$(Pipeline.Workspace)\xplatеxamples\samples\grids\,$(Pipeline.Workspace)\xplatеxamples\igniteui-xplat-examples\samples\charts\
         failOnStderr: true
         showWarnings: true
         pwsh: true
@@ -225,7 +226,7 @@ stages:
           -template=$(Build.SourcesDirectory)\igeditor-templates\React\main-template `
           -library=$(Build.SourcesDirectory)\code-generation-library `
           -output=$(Build.SourcesDirectory)\igniteui-react-examples\samples\ `
-          -source=$(Pipeline.Workspace)\xplatеxamples\samples\grids\$(Pipeline.Workspace)\xplatеxamples\samples\charts\
+          -source=$(Pipeline.Workspace)\xplatеxamples\samples\grids\,$(Pipeline.Workspace)\xplatеxamples\samples\charts\
         failOnStderr: true
         showWarnings: true
         pwsh: true
