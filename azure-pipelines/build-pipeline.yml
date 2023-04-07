@@ -183,7 +183,7 @@ stages:
           -template=$(Build.SourcesDirectory)\igeditor-templates\Blazor\main-template `
           -library=$(Build.SourcesDirectory)\code-generation-library `
           -output=$(Build.SourcesDirectory)\igniteui-blazor-examples\samples\ `
-          -source=$(Pipeline.Workspace)\xplatеxamples\samples\grids\,$(Pipeline.Workspace)\xplatеxamples\igniteui-xplat-examples\samples\charts\
+          -source=$(Pipeline.Workspace)\xplatеxamples\samples\grids\,$(Pipeline.Workspace)\xplatеxamples\samples\charts\
         failOnStderr: true
         showWarnings: true
         pwsh: true
