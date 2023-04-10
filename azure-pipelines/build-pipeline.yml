@@ -180,9 +180,9 @@ stages:
         repoType: 'GitHub'
         githubEndpoint: 'IgniteUI'
         githubRepository: 'IgniteUI/igniteui-angular-examples'
-        sourceBranch: 'ESShared/XPlaform_${{ parameters.language }}_$(Build.BuildNumber)'
+        sourceBranch: 'ESShared/XPlaform_examples_$(Build.BuildNumber)'
         targetBranch: '$(Build.SourceBranch)'
-        title: 'Changes from $(Build.DefinitionName) for ${{ parameters.language }}'
+        title: 'Changes from $(Build.DefinitionName)'
 
 # TODO: Condition for the PR = condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest')
 
