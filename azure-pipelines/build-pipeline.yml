@@ -131,6 +131,10 @@ stages:
         targetPath: '$(Build.SourcesDirectory)\CodeExporterApp'
 
     - checkout: IgniteUIAngularExamples
+      persistCredentials: true
+      lfs: true
+      clean: true
+
     - task: PowerShell@2
       displayName: 'Convert Angular'
       inputs:
@@ -156,7 +160,7 @@ stages:
           $temp=$files -split ' '
           $count=$temp.Length
           echo "Total changed $count files"
-        
+          
           For ($i=0; $i -lt $temp.Length; $i++)
           {
             $name=$temp[$i]
@@ -179,7 +183,7 @@ stages:
           }
           ## create a temp folder to hold the changed files
           New-Item -ItemType directory -Path $(system.defaultworkingdirectory)\temp
-
+          
           foreach($file in $temp){
             if(Test-Path -path $file){
             Copy-Item -Path $file -Destination $(system.defaultworkingdirectory)\temp
@@ -187,10 +191,13 @@ stages:
           }
           ## zip the temp folder which only have the changed files
           Compress-Archive -Path $(system.defaultworkingdirectory)\temp\* -DestinationPath $(Build.ArtifactStagingDirectory)\changedfiles.zip
-        errorActionPreference: 'stop'
         failOnStderr: true
         showWarnings: true
         pwsh: true
+        workingDirectory: '$(Build.SourcesDirectory)\igniteui-angular-examples'
+
+
+# TODO: Condition for the PR = condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest')
 
   - job: BuildBlazor
     workspace:
