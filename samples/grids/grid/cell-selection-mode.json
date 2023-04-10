@@ -28,20 +28,24 @@
       "columns": [
         {
           "type": "WebColumn",
-          "field": "ProductID"
+          "field": "ProductID",
+          "header": "Product ID"
         },
         {
           "type": "WebColumn",
-          "field": "ProductName"
+          "field": "ProductName",
+          "header": "Product Name"
         },
         {
           "type": "WebColumn",
           "field": "UnitsInStock",
+          "header": "Units In Stock",
           "dataType": "Number"
         },
         {
           "type": "WebColumn",
           "field": "UnitPrice",
+          "header": "Units Price",
           "dataType": "Number"
         },
         {
@@ -52,6 +56,7 @@
         {
           "type": "WebColumn",
           "field": "OrderDate",
+          "header": "Order Date",
           "dataType": "Date"
         }
       ]
