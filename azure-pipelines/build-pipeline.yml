@@ -200,29 +200,78 @@ stages:
 
 # TODO: Condition for the PR = condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest')
 
-  - job: BuildBlazor
-    workspace:
-      clean: all
-    steps:
-    - checkout: self
+#  - job: BuildBlazor
+#    workspace:
+#      clean: all
+#    steps:
+#    - checkout: self
+#      enabled: false
+#
+#    - download: current
+#      displayName: 'Get XPlat Example JSONs'
+#      artifact: xplatеxamples
+#      #target:
+#
+#    - task: UseDotNet@2
+#      displayName: 'Use .NET 6'
+#      inputs:
+#        packageType: 'sdk'
+#        version: '6.x'
+#
+#    - checkout: IgEditorTemplates
+#
+#    - checkout: CodeGenerationLibrary
+#
+#    - task: DownloadPipelineArtifact@2
+#      displayName: 'Get CodeExporterApp'
+#      inputs:
+#        buildType: 'specific'
+#        project: 'edba4b16-462e-42a0-9fa0-254d6d8a0f41'
+#        definition: '261'
+#        buildVersionToDownload: 'latestFromBranch'
+#        branchName: 'refs/heads/2022.2'
+#        artifactName: 'CodeExporterApp'
+#        targetPath: '$(Build.SourcesDirectory)\CodeExporterApp'
+#
+#    - checkout: IgniteUIBlazorExamples
+#    - task: PowerShell@2
+#      displayName: 'Convert Blazor'
+#      inputs:
+#        targetType: 'inline'
+#        script: |
+#          $(Build.SourcesDirectory)\CodeExporterApp\CodeExporter.App.exe `
+#          -platform=blazor `
+#          -template=$(Build.SourcesDirectory)\igeditor-templates\Blazor\main-template `
+#          -library=$(Build.SourcesDirectory)\code-generation-library `
+#          -output=$(Build.SourcesDirectory)\igniteui-blazor-examples\samples\ `
+#          -source=$(Pipeline.Workspace)\xplatеxamples\samples\grids\,$(Pipeline.Workspace)\xplatеxamples\samples\charts\
+#        failOnStderr: true
+#        showWarnings: true
+#        pwsh: true
+#
+#  - job: BuildReact
+#    workspace:
+#      clean: all
+#    steps:
+#    - checkout: self
       enabled: false
-
-    - download: current
-      displayName: 'Get XPlat Example JSONs'
-      artifact: xplatеxamples
-      #target:
-
-    - task: UseDotNet@2
+#
+#    - download: current
+#      displayName: 'Get XPlat Example JSONs'
+#      artifact: xplatеxamples
+#      #target:
+#
+#    - task: UseDotNet@2
       displayName: 'Use .NET 6'
       inputs:
         packageType: 'sdk'
         version: '6.x'
-
-    - checkout: IgEditorTemplates
-
-    - checkout: CodeGenerationLibrary
-
-    - task: DownloadPipelineArtifact@2
+#
+#    - checkout: IgEditorTemplates
+#
+#    - checkout: CodeGenerationLibrary
+#
+#    - task: DownloadPipelineArtifact@2
       displayName: 'Get CodeExporterApp'
       inputs:
         buildType: 'specific'
@@ -232,57 +281,8 @@ stages:
         branchName: 'refs/heads/2022.2'
         artifactName: 'CodeExporterApp'
         targetPath: '$(Build.SourcesDirectory)\CodeExporterApp'
-
-    - checkout: IgniteUIBlazorExamples
-    - task: PowerShell@2
-      displayName: 'Convert Blazor'
-      inputs:
-        targetType: 'inline'
-        script: |
-          $(Build.SourcesDirectory)\CodeExporterApp\CodeExporter.App.exe `
-          -platform=blazor `
-          -template=$(Build.SourcesDirectory)\igeditor-templates\Blazor\main-template `
-          -library=$(Build.SourcesDirectory)\code-generation-library `
-          -output=$(Build.SourcesDirectory)\igniteui-blazor-examples\samples\ `
-          -source=$(Pipeline.Workspace)\xplatеxamples\samples\grids\,$(Pipeline.Workspace)\xplatеxamples\samples\charts\
-        failOnStderr: true
-        showWarnings: true
-        pwsh: true
-
-  - job: BuildReact
-    workspace:
-      clean: all
-    steps:
-    - checkout: self
-      enabled: false
-
-    - download: current
-      displayName: 'Get XPlat Example JSONs'
-      artifact: xplatеxamples
-      #target:
-
-    - task: UseDotNet@2
-      displayName: 'Use .NET 6'
-      inputs:
-        packageType: 'sdk'
-        version: '6.x'
-
-    - checkout: IgEditorTemplates
-
-    - checkout: CodeGenerationLibrary
-
-    - task: DownloadPipelineArtifact@2
-      displayName: 'Get CodeExporterApp'
-      inputs:
-        buildType: 'specific'
-        project: 'edba4b16-462e-42a0-9fa0-254d6d8a0f41'
-        definition: '261'
-        buildVersionToDownload: 'latestFromBranch'
-        branchName: 'refs/heads/2022.2'
-        artifactName: 'CodeExporterApp'
-        targetPath: '$(Build.SourcesDirectory)\CodeExporterApp'
-    - checkout: IgniteUIReactExamples
-    - task: PowerShell@2
+#    - checkout: IgniteUIReactExamples
+#    - task: PowerShell@2
       displayName: 'Convert React'
       inputs:
         targetType: 'inline'
@@ -296,28 +296,28 @@ stages:
         failOnStderr: true
         showWarnings: true
         pwsh: true
-
-  - job: BuildWebComponents
-    workspace:
+#
+#  - job: BuildWebComponents
+#    workspace:
       clean: all
-    steps:
-    - checkout: self
+#    steps:
+#    - checkout: self
       enabled: false
-
-    - download: current
-      displayName: 'Get XPlat Example JSONs'
-      artifact: xplatеxamples
-      #target:
-
-    - task: UseDotNet@2
+#
+#    - download: current
+#      displayName: 'Get XPlat Example JSONs'
+#      artifact: xplatеxamples
+#      #target:
+#
+#    - task: UseDotNet@2
       displayName: 'Use .NET 6.X'
       inputs:
         packageType: 'sdk'
         version: '6.x'
-
-    - checkout: IgEditorTemplates
-
-    - task: DownloadPipelineArtifact@2
+#
+#    - checkout: IgEditorTemplates
+#
+#    - task: DownloadPipelineArtifact@2
       displayName: 'Get CodeExporterApp'
       inputs:
         buildType: 'specific'
@@ -327,10 +327,10 @@ stages:
         branchName: 'refs/heads/2022.2'
         artifactName: 'CodeExporterApp'
         targetPath: '$(Build.SourcesDirectory)\CodeExporterApp'
-
-    - checkout: CodeGenerationLibrary
-    - checkout: IgniteUIWebComponentsExamples
-    - task: PowerShell@2
+#
+#    - checkout: CodeGenerationLibrary
+#    - checkout: IgniteUIWebComponentsExamples
+#    - task: PowerShell@2
       displayName: 'Convert WebComponents'
       inputs:
         targetType: 'inline'
