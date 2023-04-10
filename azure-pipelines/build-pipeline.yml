@@ -262,47 +262,47 @@ stages:
 #      #target:
 #
 #    - task: UseDotNet@2
-      displayName: 'Use .NET 6'
-      inputs:
-        packageType: 'sdk'
-        version: '6.x'
+#      displayName: 'Use .NET 6'
+#      inputs:
+#        packageType: 'sdk'
+#        version: '6.x'
 #
 #    - checkout: IgEditorTemplates
 #
 #    - checkout: CodeGenerationLibrary
 #
 #    - task: DownloadPipelineArtifact@2
-      displayName: 'Get CodeExporterApp'
-      inputs:
-        buildType: 'specific'
-        project: 'edba4b16-462e-42a0-9fa0-254d6d8a0f41'
-        definition: '261'
-        buildVersionToDownload: 'latestFromBranch'
-        branchName: 'refs/heads/2022.2'
-        artifactName: 'CodeExporterApp'
-        targetPath: '$(Build.SourcesDirectory)\CodeExporterApp'
+#      displayName: 'Get CodeExporterApp'
+#      inputs:
+#        buildType: 'specific'
+#        project: 'edba4b16-462e-42a0-9fa0-254d6d8a0f41'
+#        definition: '261'
+#        buildVersionToDownload: 'latestFromBranch'
+#        branchName: 'refs/heads/2022.2'
+#        artifactName: 'CodeExporterApp'
+#        targetPath: '$(Build.SourcesDirectory)\CodeExporterApp'
 #    - checkout: IgniteUIReactExamples
 #    - task: PowerShell@2
-      displayName: 'Convert React'
-      inputs:
-        targetType: 'inline'
-        script: |
-          $(Build.SourcesDirectory)\CodeExporterApp\CodeExporter.App.exe `
-          -platform=react `
-          -template=$(Build.SourcesDirectory)\igeditor-templates\React\main-template `
-          -library=$(Build.SourcesDirectory)\code-generation-library `
-          -output=$(Build.SourcesDirectory)\igniteui-react-examples\samples\ `
-          -source=$(Pipeline.Workspace)\xplatеxamples\samples\grids\,$(Pipeline.Workspace)\xplatеxamples\samples\charts\
-        failOnStderr: true
-        showWarnings: true
-        pwsh: true
+#      displayName: 'Convert React'
+#      inputs:
+#        targetType: 'inline'
+#        script: |
+#          $(Build.SourcesDirectory)\CodeExporterApp\CodeExporter.App.exe `
+#          -platform=react `
+#          -template=$(Build.SourcesDirectory)\igeditor-templates\React\main-template `
+#          -library=$(Build.SourcesDirectory)\code-generation-library `
+#          -output=$(Build.SourcesDirectory)\igniteui-react-examples\samples\ `
+#          -source=$(Pipeline.Workspace)\xplatеxamples\samples\grids\,$(Pipeline.Workspace)\xplatеxamples\samples\charts\
+#        failOnStderr: true
+#        showWarnings: true
+#        pwsh: true
 #
 #  - job: BuildWebComponents
 #    workspace:
       clean: all
 #    steps:
 #    - checkout: self
-      enabled: false
+#      enabled: false
 #
 #    - download: current
 #      displayName: 'Get XPlat Example JSONs'
@@ -310,37 +310,37 @@ stages:
 #      #target:
 #
 #    - task: UseDotNet@2
-      displayName: 'Use .NET 6.X'
-      inputs:
-        packageType: 'sdk'
-        version: '6.x'
+#      displayName: 'Use .NET 6.X'
+#      inputs:
+#        packageType: 'sdk'
+#        version: '6.x'
 #
 #    - checkout: IgEditorTemplates
 #
 #    - task: DownloadPipelineArtifact@2
-      displayName: 'Get CodeExporterApp'
-      inputs:
-        buildType: 'specific'
-        project: 'edba4b16-462e-42a0-9fa0-254d6d8a0f41'
-        definition: '261'
-        buildVersionToDownload: 'latestFromBranch'
-        branchName: 'refs/heads/2022.2'
-        artifactName: 'CodeExporterApp'
-        targetPath: '$(Build.SourcesDirectory)\CodeExporterApp'
+#      displayName: 'Get CodeExporterApp'
+#      inputs:
+#        buildType: 'specific'
+#        project: 'edba4b16-462e-42a0-9fa0-254d6d8a0f41'
+#        definition: '261'
+#        buildVersionToDownload: 'latestFromBranch'
+#        branchName: 'refs/heads/2022.2'
+#        artifactName: 'CodeExporterApp'
+#        targetPath: '$(Build.SourcesDirectory)\CodeExporterApp'
 #
 #    - checkout: CodeGenerationLibrary
 #    - checkout: IgniteUIWebComponentsExamples
 #    - task: PowerShell@2
-      displayName: 'Convert WebComponents'
-      inputs:
-        targetType: 'inline'
-        script: |
-          $(Build.SourcesDirectory)\CodeExporterApp\CodeExporter.App.exe `
-          -platform=WebComponents `
-          -template=$(Build.SourcesDirectory)\igeditor-templates\WebComponents\main-template `
-          -library=$(Build.SourcesDirectory)\code-generation-library `
-          -output=$(Build.SourcesDirectory)\igniteui-wc-examples\samples\ `
-          -source=$(Pipeline.Workspace)\xplatеxamples\samples\grids\,$(Pipeline.Workspace)\xplatеxamples\samples\charts\
-        failOnStderr: true
-        showWarnings: true
-        pwsh: true
+#      displayName: 'Convert WebComponents'
+#      inputs:
+#        targetType: 'inline'
+#        script: |
+#          $(Build.SourcesDirectory)\CodeExporterApp\CodeExporter.App.exe `
+#          -platform=WebComponents `
+#          -template=$(Build.SourcesDirectory)\igeditor-templates\WebComponents\main-template `
+#          -library=$(Build.SourcesDirectory)\code-generation-library `
+#          -output=$(Build.SourcesDirectory)\igniteui-wc-examples\samples\ `
+#          -source=$(Pipeline.Workspace)\xplatеxamples\samples\grids\,$(Pipeline.Workspace)\xplatеxamples\samples\charts\
+#        failOnStderr: true
+#        showWarnings: true
+#        pwsh: true
