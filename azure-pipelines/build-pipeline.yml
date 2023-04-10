@@ -2,7 +2,6 @@ trigger:
   branches:
     include:
     - vnext
-    - master
   paths:
     include:
       - 'samples/**/*.json'
@@ -156,8 +155,9 @@ stages:
       inputs:
         targetType: 'inline'
         script: |
+          # The goal here is to identify the samples based on the subpaths of the changed files
           $(git diff HEAD --name-only) | `
-          ForEach-Object { (Get-Item "$(Join-Path $pwd $_)\..\..").FullName  } | `
+          ForEach-Object { [System.IO.Path]::GetFullPath("$(Join-Path $pwd $_)\..\..") } | `
           Get-Unique | `
           Copy-Item -Recurse -Force -Destination $(Build.ArtifactStagingDirectory)
         failOnStderr: true
@@ -171,6 +171,18 @@ stages:
         targetPath: '$(Build.ArtifactStagingDirectory)'
         artifact: 'angularChangedSamples'
         publishLocation: 'pipeline'
+
+    - task: CreatePullRequest@1
+      displayName: 'Create PR to IgniteUI/igniteui-angular-examples $(Build.SourceBranch)'
+      #condition: ne(variables['Build.Reason'], 'PullRequest')
+      condition: ne(variables['Build.Reason'], 'Manual')
+      inputs:
+        repoType: 'GitHub'
+        githubEndpoint: 'IgniteUI'
+        githubRepository: 'IgniteUI/igniteui-angular-examples'
+        sourceBranch: 'ESShared/XPlaform_${{ parameters.language }}_$(Build.BuildNumber)'
+        targetBranch: '$(Build.SourceBranch)'
+        title: 'Changes from $(Build.DefinitionName) for ${{ parameters.language }}'
 
 # TODO: Condition for the PR = condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest')
 
