@@ -85,7 +85,7 @@ stages:
                     'Remove-Item $jsonFile.FullName; ' +
                     'Write-Output "Removed $($jsonFile.FullName) - export flag is false or missing"' +
                 '}' +
-              '}
+              '}'
         showWarnings: true
         ignoreLASTEXITCODE: true
         pwsh: true
