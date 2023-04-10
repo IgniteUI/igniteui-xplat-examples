@@ -5,7 +5,7 @@ trigger:
     - master
   paths:
     include:
-      - 'samples'
+      - 'samples/**/*.json'
 
 pr:
   branches:
@@ -13,6 +13,9 @@ pr:
     - 'vnext'  # must quote since "*" is a YAML reserved character; we want a string
 
 name: $(BuildDefinitionName)_$(Year:yyyy).$(Month).$(DayOfMonth)$(Rev:.r)
+variables:
+  - name: 'pathsToParse'
+    value: '$(Pipeline.Workspace)\xplatеxamples\samples\grids,$(Pipeline.Workspace)\xplatеxamples\samples\charts'
 
 resources:
   repositories:
@@ -138,10 +141,53 @@ stages:
           -template=$(Build.SourcesDirectory)\igeditor-templates\Angular\main-template `
           -library=$(Build.SourcesDirectory)\code-generation-library `
           -output=$(Build.SourcesDirectory)\igniteui-angular-examples\samples\ `
-          -source=$(Pipeline.Workspace)\xplatеxamples\samples\grids\,$(Pipeline.Workspace)\xplatеxamples\samples\charts\
+          -source=$(pathsToParse)\bahur
+        errorActionPreference: 'stop'
         failOnStderr: true
         showWarnings: true
         pwsh: true
+
+    - task: PowerShell@2
+      displayName: 'Get changed files'
+      inputs:
+        targetType: 'inline'
+        script: |
+          ## get the changed files
+          $files=$(git diff-tree --no-commit-id --name-only -r $(Build.SourceVersion))
+          $temp=$files -split ' '
+          $count=$temp.Length
+          echo "Total changed $count files"
+        
+          For ($i=0; $i -lt $temp.Length; $i++)
+          {
+            $name=$temp[$i]
+            echo "this is $name file"
+            if ($name -like 'f1/*')  #if f1 is a subfolder under a folder use "- like '*/f1/*'"
+            { 
+              ##achive folder f1 if it is changed.
+              ##Compress-Archive -Path $(system.defaultworkingdirectory)/f1 -DestinationPath $(Build.ArtifactStagingDirectory)/f1.zip
+              
+              ##set the flag variable f1Flag to true
+              Write-Host "##vso[task.setvariable variable=f2Flag]true"
+            }
+            if ($name -like 'f2/*')
+            {
+              ##achive folder f2 if it is changed.
+              ##Compress-Archive -Path $(system.defaultworkingdirectory)/f2 -DestinationPath $(Build.ArtifactStagingDirectory)/f2.zip
+              ##set the flag variable f2Flag to true
+              Write-Host "##vso[task.setvariable variable=f2Flag]True"
+            }
+          }
+          ## create a temp folder to hold the changed files
+          New-Item -ItemType directory -Path $(system.defaultworkingdirectory)\temp
+
+          foreach($file in $temp){
+            if(Test-Path -path $file){
+            Copy-Item -Path $file -Destination $(system.defaultworkingdirectory)\temp
+            }
+          }
+          ## zip the temp folder which only have the changed files
+          Compress-Archive -Path $(system.defaultworkingdirectory)\temp\* -DestinationPath $(Build.ArtifactStagingDirectory)\changedfiles.zip
 
   - job: BuildBlazor
     workspace:
