@@ -15,7 +15,8 @@ pr:
 name: $(BuildDefinitionName)_$(Year:yyyy).$(Month).$(DayOfMonth)$(Rev:.r)
 variables:
   - name: 'pathsToParse'
-    value: '$(Pipeline.Workspace)\xplatеxamples\samples\grids,$(Pipeline.Workspace)\xplatеxamples\samples\charts'
+    #value: '$(Pipeline.Workspace)\xplatеxamples\samples\grids,$(Pipeline.Workspace)\xplatеxamples\samples\charts'
+    value: '$(Pipeline.Workspace)\xplatеxamples\samples\charts\sparkline'
 
 resources:
   repositories:
