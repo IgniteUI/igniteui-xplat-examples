@@ -254,7 +254,7 @@ stages:
 #      clean: all
 #    steps:
 #    - checkout: self
-      enabled: false
+#      enabled: false
 #
 #    - download: current
 #      displayName: 'Get XPlat Example JSONs'
@@ -299,7 +299,7 @@ stages:
 #
 #  - job: BuildWebComponents
 #    workspace:
-      clean: all
+#      clean: all
 #    steps:
 #    - checkout: self
 #      enabled: false
