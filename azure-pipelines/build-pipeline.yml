@@ -141,7 +141,7 @@ stages:
           -template=$(Build.SourcesDirectory)\igeditor-templates\Angular\main-template `
           -library=$(Build.SourcesDirectory)\code-generation-library `
           -output=$(Build.SourcesDirectory)\igniteui-angular-examples\samples\ `
-          -source=$(Pipeline.Workspace)\xplatеxamples\samples\grids\aaaa,$(Pipeline.Workspace)\xplatеxamples\samples\charts\aaaa
+          -source=$(pathsToParse)
         failOnStderr: true
         showWarnings: true
         pwsh: true
@@ -167,14 +167,14 @@ stages:
               ##Compress-Archive -Path $(system.defaultworkingdirectory)/f1 -DestinationPath $(Build.ArtifactStagingDirectory)/f1.zip
               
               ##set the flag variable f1Flag to true
-              Write-Host "##vso[task.setvariable variable=f2Flag]true"
+              Write-Output "##vso[task.setvariable variable=f2Flag]true"
             }
             if ($name -like 'f2/*')
             {
               ##achive folder f2 if it is changed.
               ##Compress-Archive -Path $(system.defaultworkingdirectory)/f2 -DestinationPath $(Build.ArtifactStagingDirectory)/f2.zip
               ##set the flag variable f2Flag to true
-              Write-Host "##vso[task.setvariable variable=f2Flag]True"
+              Write-Output "##vso[task.setvariable variable=f2Flag]True"
             }
           }
           ## create a temp folder to hold the changed files
