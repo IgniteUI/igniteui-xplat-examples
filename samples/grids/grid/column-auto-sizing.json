@@ -17,6 +17,7 @@
         {
           "type": "WebColumn",
           "field": "CompanyName",
+          "header": "Company Name",
           "width": "auto",
           "resizable": true
         },

@@ -40,11 +40,13 @@
         {
           "type": "WebColumn",
           "field": "BeatsPerMinute",
+          "header": "Beats Per Minute",
           "dataType": "Number"
         },
         {
           "type": "WebColumn",
           "field": "TopSpeed",
+          "header": "Top Speed",
           "dataType": "Number",
           "pipeArgs": {
             "type": "WebColumnPipeArgs",

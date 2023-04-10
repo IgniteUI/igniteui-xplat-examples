@@ -10,6 +10,7 @@
         {
           "type": "WebColumn",
           "field": "ID",
+          "header": "ID",
           "hidden": true
         },
         {
@@ -38,36 +39,42 @@
         {
           "type": "WebColumn",
           "field": "Address",
+          "header": "Address",
           "width": "300px",
           "headerTemplateRef": "WebGridPinHeaderTemplate"
         },
         {
           "type": "WebColumn",
           "field": "City",
+          "header": "City",
           "width": "120px",
           "headerTemplateRef": "WebGridPinHeaderTemplate"
         },
         {
           "type": "WebColumn",
           "field": "Region",
+          "header": "Region",
           "width": "120px",
           "headerTemplateRef": "WebGridPinHeaderTemplate"
         },
         {
           "type": "WebColumn",
           "field": "PostalCode",
+          "header": "Postal Code",
           "width": "150px",
           "headerTemplateRef": "WebGridPinHeaderTemplate"
         },
         {
           "type": "WebColumn",
           "field": "Phone",
+          "header": "Phone",
           "width": "150px",
           "headerTemplateRef": "WebGridPinHeaderTemplate"
         },
         {
           "type": "WebColumn",
           "field": "Fax",
+          "header": "Fax",
           "width": "150px",
           "headerTemplateRef": "WebGridPinHeaderTemplate"
         }

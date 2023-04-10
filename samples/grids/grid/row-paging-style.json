@@ -37,6 +37,7 @@
         {
           "type": "WebColumn",
           "field": "PostalCode",
+          "header": "Postal Code",
           "header": "Postal Code"
         },
         {

@@ -30,19 +30,23 @@
         {
           "type": "WebColumn",
           "field": "AthleteNumber",
+          "header": "Athlete Number",
           "dataType": "Number"
         },
         {
           "type": "WebColumn",
-          "field": "BeatsPerMinute"
+          "field": "BeatsPerMinute",
+          "header": "Beats Per Minute"
         },
         {
           "type": "WebColumn",
-          "field": "TopSpeed"
+          "field": "TopSpeed",
+          "header": "Top Speed"
         },
         {
           "type": "WebColumn",
           "field": "RegistrationDate",
+          "header": "Registration Date",
           "dataType": "Date"
         },
         {
@@ -60,11 +64,13 @@
         },
         {
           "type": "WebColumn",
-          "field": "AgentContact"
+          "field": "AgentContact",
+          "header": "Agent Contact"
         },
         {
           "type": "WebColumn",
-          "field": "AgentPhone"
+          "field": "AgentPhone",
+          "header": "Agent Phone"
         },
         {
           "type": "WebColumn",
