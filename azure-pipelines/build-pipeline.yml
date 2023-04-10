@@ -152,51 +152,25 @@ stages:
         pwsh: true
 
     - task: PowerShell@2
-      displayName: 'Get changed files'
+      displayName: 'Prepare changed samples'
       inputs:
         targetType: 'inline'
         script: |
-          ## get the changed files
-          $files=$(git diff-tree --diff-filter=d --no-commit-id --name-only -r $(Build.SourceVersion))
-          $temp=$files -split ' '
-          $count=$temp.Length
-          echo "Total changed $count files"
-          
-          For ($i=0; $i -lt $temp.Length; $i++)
-          {
-            $name=$temp[$i]
-            echo "this is $name file"
-            if ($name -like 'f1/*')  #if f1 is a subfolder under a folder use "- like '*/f1/*'"
-            { 
-              ##achive folder f1 if it is changed.
-              ##Compress-Archive -Path $(system.defaultworkingdirectory)/f1 -DestinationPath $(Build.ArtifactStagingDirectory)/f1.zip
-              
-              ##set the flag variable f1Flag to true
-              Write-Output "##vso[task.setvariable variable=f2Flag]true"
-            }
-            if ($name -like 'f2/*')
-            {
-              ##achive folder f2 if it is changed.
-              ##Compress-Archive -Path $(system.defaultworkingdirectory)/f2 -DestinationPath $(Build.ArtifactStagingDirectory)/f2.zip
-              ##set the flag variable f2Flag to true
-              Write-Output "##vso[task.setvariable variable=f2Flag]True"
-            }
-          }
-          ## create a temp folder to hold the changed files
-          New-Item -ItemType directory -Path $(system.defaultworkingdirectory)\temp
-          
-          foreach($file in $temp){
-            if(Test-Path -path $file){
-            Copy-Item -Path $file -Destination $(system.defaultworkingdirectory)\temp
-            }
-          }
-          ## zip the temp folder which only have the changed files
-          Compress-Archive -Path $(system.defaultworkingdirectory)\temp\* -DestinationPath $(Build.ArtifactStagingDirectory)\changedfiles.zip
+          $(git diff HEAD --name-only) | `
+          ForEach-Object { (Get-Item "$(Join-Path $pwd $_)\..\..").FullName  } | `
+          Get-Unique | `
+          Copy-Item -Recurse -Force -Destination $(Build.ArtifactStagingDirectory)
         failOnStderr: true
         showWarnings: true
         pwsh: true
         workingDirectory: '$(Build.SourcesDirectory)\igniteui-angular-examples'
 
+    - task: PublishPipelineArtifact@1
+      displayName: 'Publish changed samples - angular'
+      inputs:
+        targetPath: '$(Build.ArtifactStagingDirectory)'
+        artifact: 'angularChangedSamples'
+        publishLocation: 'pipeline'
 
 # TODO: Condition for the PR = condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest')
 
