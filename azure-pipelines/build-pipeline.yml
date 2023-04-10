@@ -77,17 +77,16 @@ stages:
           Write-Output "Chocolatey install jq - tool to traverse JSON files"
           Invoke-Expression -Command "choco install jq -y"
 
-          $command =  'foreach ($jsonFile in Get-ChildItem "samples" -Filter "*.json" -Recurse)' +
-              '{ ' +
-                'Write-Output "Parsing $($jsonFile.FullName)"; ' +
-                '$exportFlag = $(jq .export $jsonFile.FullName -e); ' +
-                'if ($exportFlag -eq $null -Or $exportFlag -eq "false") {' +
-                    'Remove-Item $jsonFile.FullName; ' +
-                    'Write-Output "Removed $($jsonFile.FullName) - export flag is false or missing"' +
-                '}' +
-              '}'
-
-          Invoke-Expression -ErrorAction Stop -Command $command
+          foreach ($jsonFile in Get-ChildItem "samples" -Filter "*.json" -Recurse)
+              {
+                Write-Output "Parsing $($jsonFile.FullName)"
+                $exportFlag = $(jq .export $jsonFile.FullName -e)
+                if ($exportFlag -eq $null -Or $exportFlag -eq "false") {
+                    
+                    Remove-Item $jsonFile.FullName
+                    Write-Output "Removed $($jsonFile.FullName) - export flag is false or missing"
+                }
+              }
         showWarnings: true
         ignoreLASTEXITCODE: true
         pwsh: true
@@ -97,7 +96,6 @@ stages:
       artifact: xplatеxamples
 
 - stage: Convert
-#  dependsOn: Prepare
   jobs:
   - job: BuildAngular
     workspace:
@@ -138,14 +136,12 @@ stages:
       inputs:
         targetType: 'inline'
         script: |
-         $command = ' $(Build.SourcesDirectory)\CodeExporterApp\CodeExporter.App.exe ' +
-          '-platform=angular ' +
-          '-template=$(Build.SourcesDirectory)\igeditor-templates\Angular\main-template ' +
-          '-library=$(Build.SourcesDirectory)\code-generation-library ' +
-          '-output=$(Build.SourcesDirectory)\igniteui-angular-examples\samples\ ' +
-          '-source=$(pathsToParse)\bahur '
-         Invoke-Expression -ErrorAction Stop -Command $command
-        errorActionPreference: 'stop'
+          $(Build.SourcesDirectory)\CodeExporterApp\CodeExporter.App.exe `
+          -platform=angular `
+          -template=$(Build.SourcesDirectory)\igeditor-templates\Angular\main-template `
+          -library=$(Build.SourcesDirectory)\code-generation-library `
+          -output=$(Build.SourcesDirectory)\igniteui-angular-examples\samples\ `
+          -source=$(Pipeline.Workspace)\xplatеxamples\samples\grids\aaaa,$(Pipeline.Workspace)\xplatеxamples\samples\charts\aaaa
         failOnStderr: true
         showWarnings: true
         pwsh: true
