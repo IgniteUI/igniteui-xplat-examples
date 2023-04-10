@@ -79,10 +79,10 @@ stages:
 
           Invoke-Expression -Command 'foreach ($jsonFile in Get-ChildItem "samples" -Filter "*.json" -Recurse)' +
               '{ ' +
-                'Write-Output "Parsing $($jsonFile.FullName)" ' +
-                '$exportFlag = $(jq .export $jsonFile.FullName -e) ' +
+                'Write-Output "Parsing $($jsonFile.FullName)"; ' +
+                '$exportFlag = $(jq .export $jsonFile.FullName -e); ' +
                 'if ($exportFlag -eq $null -Or $exportFlag -eq "false") {' +
-                    'Remove-Item $jsonFile.FullName ' +
+                    'Remove-Item $jsonFile.FullName; ' +
                     'Write-Output "Removed $($jsonFile.FullName) - export flag is false or missing"' +
                 '}' +
               '}' -ErrorAction:Stop
@@ -153,7 +153,7 @@ stages:
         targetType: 'inline'
         script: |
           ## get the changed files
-          $files=$(git diff-tree --no-commit-id --name-only -r $(Build.SourceVersion))
+          $files=$(git diff-tree --diff-filter=d --no-commit-id --name-only -r $(Build.SourceVersion))
           $temp=$files -split ' '
           $count=$temp.Length
           echo "Total changed $count files"
