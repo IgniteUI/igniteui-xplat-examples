@@ -188,6 +188,10 @@ stages:
           }
           ## zip the temp folder which only have the changed files
           Compress-Archive -Path $(system.defaultworkingdirectory)\temp\* -DestinationPath $(Build.ArtifactStagingDirectory)\changedfiles.zip
+        errorActionPreference: 'stop'
+        failOnStderr: true
+        showWarnings: true
+        pwsh: true
 
   - job: BuildBlazor
     workspace:
