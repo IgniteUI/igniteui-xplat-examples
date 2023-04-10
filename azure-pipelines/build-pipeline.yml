@@ -3,12 +3,14 @@ trigger:
     include:
     - vnext
     - master
-    - '2022.2'
+  paths:
+    include:
+      - 'samples'
 
 pr:
   branches:
-    exclude:
-    - '*'  # must quote since "*" is a YAML reserved character; we want a string
+    include:
+    - 'vnext'  # must quote since "*" is a YAML reserved character; we want a string
 
 name: $(BuildDefinitionName)_$(Year:yyyy).$(Month).$(DayOfMonth)$(Rev:.r)
 
