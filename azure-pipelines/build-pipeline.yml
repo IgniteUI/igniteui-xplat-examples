@@ -136,12 +136,12 @@ stages:
       inputs:
         targetType: 'inline'
         script: |
-          $(Build.SourcesDirectory)\CodeExporterApp\CodeExporter.App.exe `
-          -platform=angular `
-          -template=$(Build.SourcesDirectory)\igeditor-templates\Angular\main-template `
-          -library=$(Build.SourcesDirectory)\code-generation-library `
-          -output=$(Build.SourcesDirectory)\igniteui-angular-examples\samples\ `
-          -source=$(pathsToParse)\bahur
+         Invoke-Expression -Command ' $(Build.SourcesDirectory)\CodeExporterApp\CodeExporter.App.exe ' +
+          '-platform=angular ' +
+          '-template=$(Build.SourcesDirectory)\igeditor-templates\Angular\main-template ' +
+          '-library=$(Build.SourcesDirectory)\code-generation-library ' +
+          '-output=$(Build.SourcesDirectory)\igniteui-angular-examples\samples\ ' +
+          '-source=$(pathsToParse)\bahur '  -ErrorAction:Stop
         errorActionPreference: 'stop'
         failOnStderr: true
         showWarnings: true
