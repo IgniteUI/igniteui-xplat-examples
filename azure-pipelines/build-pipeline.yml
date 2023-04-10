@@ -77,7 +77,7 @@ stages:
           Write-Output "Chocolatey install jq - tool to traverse JSON files"
           Invoke-Expression -Command "choco install jq -y"
 
-          Invoke-Expression -Command 'foreach ($jsonFile in Get-ChildItem "samples" -Filter "*.json" -Recurse)' +
+          Invoke-Expression -ErrorAction Stop -Command 'foreach ($jsonFile in Get-ChildItem "samples" -Filter "*.json" -Recurse)' +
               '{ ' +
                 'Write-Output "Parsing $($jsonFile.FullName)"; ' +
                 '$exportFlag = $(jq .export $jsonFile.FullName -e); ' +
@@ -85,7 +85,7 @@ stages:
                     'Remove-Item $jsonFile.FullName; ' +
                     'Write-Output "Removed $($jsonFile.FullName) - export flag is false or missing"' +
                 '}' +
-              '}' -ErrorAction:Stop
+              '}
         showWarnings: true
         ignoreLASTEXITCODE: true
         pwsh: true
@@ -136,12 +136,12 @@ stages:
       inputs:
         targetType: 'inline'
         script: |
-         Invoke-Expression -Command ' $(Build.SourcesDirectory)\CodeExporterApp\CodeExporter.App.exe ' +
+         Invoke-Expression -ErrorAction Stop -Command ' $(Build.SourcesDirectory)\CodeExporterApp\CodeExporter.App.exe ' +
           '-platform=angular ' +
           '-template=$(Build.SourcesDirectory)\igeditor-templates\Angular\main-template ' +
           '-library=$(Build.SourcesDirectory)\code-generation-library ' +
           '-output=$(Build.SourcesDirectory)\igniteui-angular-examples\samples\ ' +
-          '-source=$(pathsToParse)\bahur '  -ErrorAction:Stop
+          '-source=$(pathsToParse)\bahur '
         errorActionPreference: 'stop'
         failOnStderr: true
         showWarnings: true
