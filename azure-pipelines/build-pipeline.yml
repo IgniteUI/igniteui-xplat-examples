@@ -193,9 +193,9 @@ stages:
         targetBranch: '$(Build.SourceBranch)'
         title: 'Changes from $(Build.DefinitionName)'
 
-      - template: templates/convert-to-platform-job.yml
-        parameters:
-          platform: 'Blazor'
+    - template: templates/convert-to-platform-job.yml
+      parameters:
+        platform: 'Blazor'
 # TODO: Condition for the PR = condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest')
 
 #  - job: BuildBlazor
