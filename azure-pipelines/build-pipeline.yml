@@ -124,7 +124,7 @@ stages:
 
   - template: templates/convert-to-platform-job.yml
     parameters:
-      platform: 'react'
+      platform: 'React'
       destinationGitRepo: 'igniteui-react-examples'
       pathsToParse: $(pathsToParse)
       codeExporterAppBranch: $(codeExporterAppBranch)
