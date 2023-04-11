@@ -106,96 +106,27 @@ stages:
 
 - stage: Convert
   jobs:
-  - job: BuildAngular
-    workspace:
-      clean: all
-    steps:
-    - checkout: self
-      enabled: false
-
-    - download: current
-      displayName: 'Get XPlat Example JSONs'
-      artifact: xplatеxamples
-      #target:
-
-    - task: UseDotNet@2
-      displayName: 'Use .NET 6'
-      inputs:
-        packageType: 'sdk'
-        version: '6.x'
-
-    - checkout: IgEditorTemplates
-
-    - checkout: CodeGenerationLibrary
-
-    - task: DownloadPipelineArtifact@2
-      displayName: 'Get CodeExporterApp'
-      inputs:
-        buildType: 'specific'
-        project: 'edba4b16-462e-42a0-9fa0-254d6d8a0f41'
-        definition: '261'
-        buildVersionToDownload: 'latestFromBranch'
-        branchName: 'refs/heads/2022.2'
-        artifactName: 'CodeExporterApp'
-        targetPath: '$(Build.SourcesDirectory)\CodeExporterApp'
-
-    - checkout: IgniteUIAngularExamples
-      persistCredentials: true
-      lfs: true
-      clean: true
-
-    - task: PowerShell@2
-      displayName: 'Convert Angular'
-      inputs:
-        targetType: 'inline'
-        script: |
-          $(Build.SourcesDirectory)\CodeExporterApp\CodeExporter.App.exe `
-          -platform=angular `
-          -template=$(Build.SourcesDirectory)\igeditor-templates\Angular\main-template `
-          -library=$(Build.SourcesDirectory)\code-generation-library `
-          -output=$(Build.SourcesDirectory)\igniteui-angular-examples\samples\ `
-          -source=$(pathsToParse)
-        failOnStderr: true
-        showWarnings: true
-        pwsh: true
-
-    - task: PowerShell@2
-      displayName: 'Prepare changed samples'
-      inputs:
-        targetType: 'inline'
-        script: |
-          # The goal here is to identify the samples based on the subpaths of the changed files
-          $(git diff HEAD --name-only) | `
-          ForEach-Object { [System.IO.Path]::GetFullPath("$(Join-Path $pwd $_)\..\..") } | `
-          Get-Unique | `
-          Copy-Item -Recurse -Force -Destination $(Build.ArtifactStagingDirectory)
-        failOnStderr: true
-        showWarnings: true
-        pwsh: true
-        workingDirectory: '$(Build.SourcesDirectory)\igniteui-angular-examples'
-
-    - task: PublishPipelineArtifact@1
-      displayName: 'Publish changed samples - angular'
-      inputs:
-        targetPath: '$(Build.ArtifactStagingDirectory)'
-        artifact: 'angularChangedSamples'
-        publishLocation: 'pipeline'
-
-    - task: CreatePullRequest@1
-      displayName: 'Create PR to IgniteUI/igniteui-angular-examples $(Build.SourceBranch)'
-      #condition: ne(variables['Build.Reason'], 'PullRequest')
-      condition: ne(variables['Build.Reason'], 'Manual')
-      inputs:
-        repoType: 'GitHub'
-        githubEndpoint: 'IgniteUI'
-        githubRepository: 'IgniteUI/igniteui-angular-examples'
-        sourceBranch: 'ESShared/XPlaform_examples_$(Build.BuildNumber)'
-        targetBranch: '$(Build.SourceBranch)'
-        title: 'Changes from $(Build.DefinitionName)'
+  - template: templates/convert-to-platform-job.yml
+    parameters:
+      platform: 'angular'
+      pathsToParse: $(pathsToParse)
+      codeExporterAppBranch: '2022.2'
 
   - template: templates/convert-to-platform-job.yml
     parameters:
       platform: 'blazor'
+      pathsToParse: $(pathsToParse)
+      codeExporterAppBranch: '2022.2'
+
+  - template: templates/convert-to-platform-job.yml
+    parameters:
+      platform: 'react'
+      pathsToParse: $(pathsToParse)
+      codeExporterAppBranch: '2022.2'
+
+  - template: templates/convert-to-platform-job.yml
+    parameters:
+      platform: 'webcomponents'
       pathsToParse: $(pathsToParse)
       codeExporterAppBranch: '2022.2'
 # TODO: Condition for the PR = condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest')
