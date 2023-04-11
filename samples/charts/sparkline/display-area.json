@@ -1,5 +1,6 @@
 {
   "export": true,
+  "fakeProperty": true,
   "descriptions": {
     "content": {
       "type": "Sparkline",
