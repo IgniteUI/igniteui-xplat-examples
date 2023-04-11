@@ -4,7 +4,7 @@ parameters:
   - name: codeExporterAppBranch
 
 jobs:
-- job: ConvertPlatform
+- job: Convert${{ parameters.platform }}
   displayName: ${{ parameters.platform }}
   workspace:
     clean: all
