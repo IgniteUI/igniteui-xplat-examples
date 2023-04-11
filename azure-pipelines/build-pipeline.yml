@@ -195,7 +195,7 @@ stages:
 
   - template: templates/convert-to-platform-job.yml
     parameters:
-      platform: 'Blazor'
+      platform: 'blazor'
 # TODO: Condition for the PR = condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest')
 
 #  - job: BuildBlazor
