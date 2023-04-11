@@ -5,11 +5,16 @@ trigger:
   paths:
     include:
       - 'samples/**/*.json'
+    exclude:
+      - 'master'
 
 pr:
   branches:
     include:
     - 'vnext'  # must quote since "*" is a YAML reserved character; we want a string
+    - 'azure-pipeline-use-code-exporter-app'
+    exclude:
+      - 'master'
 
 name: $(BuildDefinitionName)_$(Year:yyyy).$(Month).$(DayOfMonth)$(Rev:.r)
 variables:
@@ -62,12 +67,32 @@ stages:
   - job: PrepareJsons
     steps:
     - checkout: self
+      persistCredentials: true
+      lfs: true
+      clean: true
 
     - task: UseDotNet@2
       displayName: 'Use .NET 6'
       inputs:
         packageType: 'sdk'
         version: '6.x'
+
+    - task: PowerShell@2
+      displayName: 'If PR - use only changed files'
+      condition: eq(variables['Build.Reason'], 'PullRequest')
+      inputs:
+        targetType: 'inline'
+        script: |
+          # The goal here is to identify the samples based on the subpaths of the changed files
+          $(git diff HEAD --name-only) | `
+          ForEach-Object { [System.IO.Path]::GetFullPath("$(Join-Path $pwd $_)\..\..") } | `
+          Get-Unique | `
+          Copy-Item -Recurse -Force -Destination $(Build.ArtifactStagingDirectory)
+        failOnStderr: true
+        showWarnings: true
+        pwsh: true
+        workingDirectory: '$(Build.SourcesDirectory)\samples'
+        
 
     - task: PowerShell@2
       displayName: "Remove json files where 'export' flag is false or missing"
@@ -90,6 +115,7 @@ stages:
         showWarnings: true
         ignoreLASTEXITCODE: true
         pwsh: true
+        workingDirectory: '$(Build.ArtifactStagingDirectory)'
 
     - publish: '$(Build.SourcesDirectory)'
       displayName: 'Publish XPlat Example JSONs'
