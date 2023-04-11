@@ -86,7 +86,7 @@ jobs:
   - task: CreatePullRequest@1
     displayName: 'Create PR to IgniteUI/${{ parameters.destinationGitRepo }} $(Build.SourceBranch)'
     #condition: ne(variables['Build.Reason'], 'PullRequest')
-    condition: ne(variables['Build.Reason'], 'Manual')
+    condition: or(eq(variables['Build.Reason'], 'IndividualCI '), or(variables['Build.Reason'], 'BatchedCI'))
     inputs:
       repoType: 'GitHub'
       githubEndpoint: 'IgniteUI'
