@@ -1,0 +1,92 @@
+parameters:
+  - name: platform
+
+jobs:
+- job: Build${{ parameters.platform }}
+  workspace:
+    clean: all
+  steps:
+    # We need to explicitly disable self checkout - we want the JSON files from the previous stage.
+    # Also, unless explicitly disabled, it will occur SOMETIMES for no apparent reason
+  - checkout: self
+    enabled: false
+
+  - download: current
+    displayName: 'Get XPlat Example JSONs'
+    artifact: xplatеxamples
+    #target:
+
+  - task: UseDotNet@2
+    displayName: 'Use .NET 6'
+    inputs:
+      packageType: 'sdk'
+      version: '6.x'
+
+  - checkout: IgEditorTemplates
+
+  - checkout: CodeGenerationLibrary
+
+  - task: DownloadPipelineArtifact@2
+    displayName: 'Get CodeExporterApp'
+    inputs:
+      buildType: 'specific'
+      project: 'NetAdvantage'
+      definition: '261' # code-exporter-app pipeline
+      buildVersionToDownload: 'latestFromBranch'
+      branchName: 'refs/heads/2022.2'
+      artifactName: 'CodeExporterApp'
+      targetPath: '$(Build.SourcesDirectory)\CodeExporterApp'
+
+  - checkout: IgniteUI${{ parameters.platform }}Examples
+    persistCredentials: true
+    lfs: true
+    clean: true
+
+  - task: PowerShell@2
+    displayName: 'Convert ${{ parameters.platform }}'
+    inputs:
+      targetType: 'inline'
+      script: |
+        $(Build.SourcesDirectory)\CodeExporterApp\CodeExporter.App.exe `
+        -platform=${{ lower(parameters.platform) }} `
+        -template=$(Build.SourcesDirectory)\igeditor-templates\${{ platform }}\main-template `
+        -library=$(Build.SourcesDirectory)\code-generation-library `
+        -output=$(Build.SourcesDirectory)\igniteui-${{ lower(parameters.platform) }}-examples\samples\ `
+        -source=$(pathsToParse)
+      failOnStderr: true
+      showWarnings: true
+      pwsh: true
+
+  - task: PowerShell@2
+    displayName: 'Prepare changed samples'
+    inputs:
+      targetType: 'inline'
+      script: |
+        # The goal here is to identify the samples based on the subpaths of the changed files
+        $(git diff HEAD --name-only) | `
+        ForEach-Object { [System.IO.Path]::GetFullPath("$(Join-Path $pwd $_)\..\..") } | `
+        Get-Unique | `
+        Copy-Item -Recurse -Force -Destination $(Build.ArtifactStagingDirectory)
+      failOnStderr: true
+      showWarnings: true
+      pwsh: true
+      workingDirectory: '$(Build.SourcesDirectory)\igniteui-${{ lower(parameters.platform) }}-examples'
+
+  - task: PublishPipelineArtifact@1
+    displayName: 'Publish changed samples - ${{ parameters.platform }}'
+    inputs:
+      targetPath: '$(Build.ArtifactStagingDirectory)'
+      artifact: '${{ lower(parameters.platform) }}ChangedSamples'
+      publishLocation: 'pipeline'
+
+  - task: CreatePullRequest@1
+    displayName: 'Create PR to IgniteUI/igniteui-${{ lower(parameters.platform) }}-examples $(Build.SourceBranch)'
+    #condition: ne(variables['Build.Reason'], 'PullRequest')
+    condition: ne(variables['Build.Reason'], 'Manual')
+    inputs:
+      repoType: 'GitHub'
+      githubEndpoint: 'IgniteUI'
+      githubRepository: 'IgniteUI/igniteui-${{ lower(parameters.platform) }}-examples'
+      sourceBranch: 'ESShared/XPlaform_examples_$(Build.BuildNumber)'
+      targetBranch: '$(Build.SourceBranch)'
+      title: 'Changes from $(Build.DefinitionName)'
