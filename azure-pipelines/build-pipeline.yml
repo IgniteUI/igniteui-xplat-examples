@@ -74,7 +74,7 @@ stages:
     - task: UseDotNet@2
       displayName: 'Use .NET 6'
       inputs:
-        packageType: 's''dk'
+        packageType: 'sdk'
         version: '6.x'
 
     - task: PowerShell@2
