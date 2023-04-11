@@ -1,5 +1,7 @@
 parameters:
   - name: platform
+  - name: pathsToParse
+  - name: codeExporterAppBranch
 
 jobs:
 - job: ConvertPlatform
@@ -34,7 +36,7 @@ jobs:
       project: 'NetAdvantage'
       definition: '261' # code-exporter-app pipeline
       buildVersionToDownload: 'latestFromBranch'
-      branchName: 'refs/heads/2022.2'
+      branchName: 'refs/heads/${{ parameters.codeExporterAppBranch }}'
       artifactName: 'CodeExporterApp'
       targetPath: '$(Build.SourcesDirectory)\CodeExporterApp'
 
@@ -53,7 +55,7 @@ jobs:
         -template=$(Build.SourcesDirectory)\igeditor-templates\${{ parameters.platform }}\main-template `
         -library=$(Build.SourcesDirectory)\code-generation-library `
         -output=$(Build.SourcesDirectory)\igniteui-${{ parameters.platform }}-examples\samples\ `
-        -source=$(pathsToParse)
+        -source=${{ parameters.pathsToParse }}
       failOnStderr: true
       showWarnings: true
       pwsh: true

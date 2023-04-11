@@ -74,7 +74,7 @@ stages:
     - task: UseDotNet@2
       displayName: 'Use .NET 6'
       inputs:
-        packageType: 'sdk'
+        packageType: 's''dk'
         version: '6.x'
 
     - task: PowerShell@2
@@ -196,6 +196,8 @@ stages:
   - template: templates/convert-to-platform-job.yml
     parameters:
       platform: 'blazor'
+      pathsToParse: $(pathsToParse)
+      codeExporterAppBranch: '2022.2'
 # TODO: Condition for the PR = condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest')
 
 #  - job: BuildBlazor
