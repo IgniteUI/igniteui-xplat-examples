@@ -2,7 +2,8 @@ parameters:
   - name: platform
 
 jobs:
-- job: Build${{ parameters.platform }}
+- job: ConvertPlatform
+  displayName: ${{ parameters.platform }}
   workspace:
     clean: all
   steps:
@@ -48,10 +49,10 @@ jobs:
       targetType: 'inline'
       script: |
         $(Build.SourcesDirectory)\CodeExporterApp\CodeExporter.App.exe `
-        -platform=${{ lower(parameters.platform) }} `
+        -platform=${{ parameters.platform }} `
         -template=$(Build.SourcesDirectory)\igeditor-templates\${{ platform }}\main-template `
         -library=$(Build.SourcesDirectory)\code-generation-library `
-        -output=$(Build.SourcesDirectory)\igniteui-${{ lower(parameters.platform) }}-examples\samples\ `
+        -output=$(Build.SourcesDirectory)\igniteui-${{ parameters.platform }}-examples\samples\ `
         -source=$(pathsToParse)
       failOnStderr: true
       showWarnings: true
@@ -70,17 +71,17 @@ jobs:
       failOnStderr: true
       showWarnings: true
       pwsh: true
-      workingDirectory: '$(Build.SourcesDirectory)\igniteui-${{ lower(parameters.platform) }}-examples'
+      workingDirectory: '$(Build.SourcesDirectory)\igniteui-${{ parameters.platform }}-examples'
 
   - task: PublishPipelineArtifact@1
     displayName: 'Publish changed samples - ${{ parameters.platform }}'
     inputs:
       targetPath: '$(Build.ArtifactStagingDirectory)'
-      artifact: '${{ lower(parameters.platform) }}ChangedSamples'
+      artifact: '${{ parameters.platform }}ChangedSamples'
       publishLocation: 'pipeline'
 
   - task: CreatePullRequest@1
-    displayName: 'Create PR to IgniteUI/igniteui-${{ lower(parameters.platform) }}-examples $(Build.SourceBranch)'
+    displayName: 'Create PR to IgniteUI/igniteui-${{ parameters.platform }}-examples $(Build.SourceBranch)'
     #condition: ne(variables['Build.Reason'], 'PullRequest')
     condition: ne(variables['Build.Reason'], 'Manual')
     inputs:
