@@ -2,10 +2,11 @@ parameters:
   - name: platform
   - name: pathsToParse
   - name: codeExporterAppBranch
+  - name: destinationGitRepo
 
 jobs:
 - job: Convert${{ parameters.platform }}
-  displayName: ${{ parameters.platform }}
+  displayName: 'Convert ${{ parameters.platform }}'
   workspace:
     clean: all
   steps:
@@ -54,7 +55,7 @@ jobs:
         -platform=${{ parameters.platform }} `
         -template=$(Build.SourcesDirectory)\igeditor-templates\${{ parameters.platform }}\main-template `
         -library=$(Build.SourcesDirectory)\code-generation-library `
-        -output=$(Build.SourcesDirectory)\igniteui-${{ parameters.platform }}-examples\samples\ `
+        -output=$(Build.SourcesDirectory)\${{ parameters.destinationGitRepo }}\samples\ `
         -source=${{ parameters.pathsToParse }}
       failOnStderr: true
       showWarnings: true
@@ -73,7 +74,7 @@ jobs:
       failOnStderr: true
       showWarnings: true
       pwsh: true
-      workingDirectory: '$(Build.SourcesDirectory)\igniteui-${{ parameters.platform }}-examples'
+      workingDirectory: '$(Build.SourcesDirectory)\${{ parameters.destinationGitRepo }}'
 
   - task: PublishPipelineArtifact@1
     displayName: 'Publish changed samples - ${{ parameters.platform }}'
@@ -83,7 +84,7 @@ jobs:
       publishLocation: 'pipeline'
 
   - task: CreatePullRequest@1
-    displayName: 'Create PR to IgniteUI/igniteui-${{ parameters.platform }}-examples $(Build.SourceBranch)'
+    displayName: 'Create PR to IgniteUI/${{ parameters.destinationGitRepo }} $(Build.SourceBranch)'
     #condition: ne(variables['Build.Reason'], 'PullRequest')
     condition: ne(variables['Build.Reason'], 'Manual')
     inputs:
