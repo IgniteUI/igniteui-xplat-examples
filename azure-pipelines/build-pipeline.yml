@@ -8,6 +8,12 @@ trigger:
     exclude:
       - 'master'
 
+parameters:
+  - name: pathsToParse
+    displayname: 'paths under \samples that contain jsons'
+    type: string
+    default: 'charts\sparkline'
+
 pr:
   branches:
     include:
@@ -18,9 +24,9 @@ pr:
 
 name: $(BuildDefinitionName)_$(Year:yyyy).$(Month).$(DayOfMonth)$(Rev:.r)
 variables:
-  - name: 'pathsToParse'
+#  - name: 'pathsToParse'
     #value: '$(Pipeline.Workspace)\xplatеxamples\samples\grids,$(Pipeline.Workspace)\xplatеxamples\samples\charts'
-    value: '$(Pipeline.Workspace)\xplatеxamples\samples\charts\sparkline'
+#    value: '$(Pipeline.Workspace)\xplatеxamples\samples\charts\sparkline'
   - name: codeExporterAppBranch
     value: '2022.2'
 
