@@ -79,6 +79,23 @@ stages:
       lfs: true
       clean: true
 
+    - checkout: IgniteUIAngularExamples
+      persistCredentials: true
+      lfs: true
+      clean: true
+
+    - task: CreatePullRequest@1
+      displayName: 'Create PR to IgniteUI/igniteui-angular-examples $(Build.SourceBranch)'
+      #condition: ne(variables['Build.Reason'], 'PullRequest')
+      condition: or(eq(variables['Build.Reason'], 'IndividualCI '), or(variables['Build.Reason'], 'BatchedCI'))
+      inputs:
+        repoType: 'GitHub'
+        githubEndpoint: 'IgniteUI'
+        githubRepository: 'IgniteUI/igniteui-angular-examples'
+        sourceBranch: 'ESShared/XPlaform_examples_$(Build.BuildNumber)'
+        targetBranch: '$(Build.SourceBranch)'
+        title: 'Changes from $(Build.DefinitionName)'
+
     - task: UseDotNet@2
       displayName: 'Use .NET 6'
       inputs:
