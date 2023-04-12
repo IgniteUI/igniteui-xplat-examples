@@ -91,7 +91,7 @@ jobs:
     inputs:
       repoType: 'GitHub'
       githubEndpoint: 'IgniteUI'
-      githubRepository: 'IgniteUI/igniteui-${{ lower(parameters.platform) }}-examples'
+      githubRepository: 'IgniteUI/${{ parameters.destinationGitRepo }}'
       sourceBranch: 'ESShared/XPlaform_examples_$(Build.BuildNumber)'
       targetBranch: '$(Build.SourceBranch)'
       title: 'Changes from $(Build.DefinitionName)'
