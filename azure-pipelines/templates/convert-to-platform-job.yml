@@ -56,7 +56,7 @@ jobs:
         -template=$(Build.SourcesDirectory)\igeditor-templates\${{ parameters.platform }}\main-template `
         -library=$(Build.SourcesDirectory)\code-generation-library `
         -output=$(Build.SourcesDirectory)\${{ parameters.destinationGitRepo }}\samples\ `
-        -source=${{ parameters.pathsToParse }}
+        -source=$(Pipeline.Workspace)\xplatеxamples\samples\{{ parameters.pathsToParse }}
       failOnStderr: true
       showWarnings: true
       pwsh: true
