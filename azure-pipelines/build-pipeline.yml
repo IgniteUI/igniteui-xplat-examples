@@ -118,26 +118,26 @@ stages:
     parameters:
       platform: 'Angular'
       destinationGitRepo: 'igniteui-angular-examples'
-      pathsToParse: $(pathsToParse)
+      pathsToParse: ${{ parameters.pathsToParse }}
       codeExporterAppBranch: $(codeExporterAppBranch)
 
   - template: templates/convert-to-platform-job.yml
     parameters:
       platform: 'Blazor'
       destinationGitRepo: 'igniteui-blazor-examples'
-      pathsToParse: $(pathsToParse)
+      pathsToParse: ${{ parameters.pathsToParse }}
       codeExporterAppBranch: $(codeExporterAppBranch)
 
   - template: templates/convert-to-platform-job.yml
     parameters:
       platform: 'React'
       destinationGitRepo: 'igniteui-react-examples'
-      pathsToParse: $(pathsToParse)
+      pathsToParse: ${{ parameters.pathsToParse }}
       codeExporterAppBranch: $(codeExporterAppBranch)
 
   - template: templates/convert-to-platform-job.yml
     parameters:
       platform: 'WebComponents'
       destinationGitRepo: 'igniteui-wc-examples'
-      pathsToParse: $(pathsToParse)
+      pathsToParse: ${{ parameters.pathsToParse }}
       codeExporterAppBranch: $(codeExporterAppBranch)
