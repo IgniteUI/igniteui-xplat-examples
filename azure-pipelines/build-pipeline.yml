@@ -10,9 +10,9 @@ trigger:
 
 parameters:
   - name: pathsToParse
-    displayName: 'paths under \samples that contain jsons'
+    displayName: 'Full paths that contain jsons - coma delimited'
     type: string
-    default: 'charts\sparkline'
+    default: '$(Pipeline.Workspace)\xplatеxamples\samples\charts\sparkline'
 
 pr:
   branches:
