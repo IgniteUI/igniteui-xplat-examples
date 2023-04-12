@@ -32,34 +32,45 @@ variables:
 
 resources:
   repositories:
+    - repository: IgniteUIDocFX
+      endpoint: IgniteUI
+      type: github
+      name: IgniteUI/igniteui-docfx
+      ref: '$(Build.SourceBranch)'
+
     - repository: IgniteUIAngularExamples
       endpoint: IgniteUI
       type: github
       name: IgniteUI/igniteui-angular-examples
-      ref: 'vnext'
+      ref: '$(Build.SourceBranch)'
 
     - repository: IgniteUIBlazorExamples
       endpoint: IgniteUI
       type: github
       name: IgniteUI/igniteui-blazor-examples
-      ref: 'vnext'
+      ref: '$(Build.SourceBranch)'
 
     - repository: IgniteUIReactExamples
       endpoint: IgniteUI
       type: github
       name: IgniteUI/igniteui-react-examples
-      ref: 'vnext'
+      ref: '$(Build.SourceBranch)'
 
     - repository: IgniteUIWebComponentsExamples
       endpoint: IgniteUI
       type: github
       name: IgniteUI/igniteui-wc-examples
-      ref: 'vnext'
+      ref: '$(Build.SourceBranch)'
 
     - repository: IgEditorTemplates
       type: git
       name: igeditor-templates
       ref: 'master'
+
+    - repository: CodeGenerationLibrary
+      type: git
+      name: code-generation-library
+      ref: '2022.2'
 
     - repository: CodeGenerationLibrary
       type: git
@@ -79,33 +90,33 @@ stages:
       lfs: true
       clean: true
 
-    - checkout: IgniteUIAngularExamples
-      persistCredentials: true
-      lfs: true
-      clean: true
-
-    - task: PowerShell@2
-      displayName: "Remove json files where 'export' flag is false or missing"
-      inputs:
-        targetType: 'inline'
-        script: |
-          write-output 'Explicit dummy change' > dummy-file.txt
-        showWarnings: true
-        ignoreLASTEXITCODE: true
-        pwsh: true
-        workingDirectory: '$(Build.SourcesDirectory)\igniteui-angular-examples'
-
-    - task: CreatePullRequest@1
-      displayName: 'Create PR to IgniteUI/igniteui-angular-examples $(Build.SourceBranch)'
-      #condition: ne(variables['Build.Reason'], 'PullRequest')
-      condition: or(eq(variables['Build.Reason'], 'IndividualCI '), or(variables['Build.Reason'], 'BatchedCI'))
-      inputs:
-        repoType: 'GitHub'
-        githubEndpoint: 'IgniteUI'
-        githubRepository: 'IgniteUI/igniteui-angular-examples'
-        sourceBranch: 'ESShared/XPlaform_examples_$(Build.BuildNumber)'
-        targetBranch: '$(Build.SourceBranch)'
-        title: 'Changes from $(Build.DefinitionName)'
+#    - checkout: IgniteUIDocFX
+#      persistCredentials: true
+#      lfs: true
+#      clean: true
+#
+#    - task: PowerShell@2
+#      displayName: "Explicit dummy change to destination repo"
+#      inputs:
+#        targetType: 'inline'
+#        script: |
+#          write-output 'Explicit dummy change' > dummy-file.txt
+#        showWarnings: true
+#        ignoreLASTEXITCODE: true
+#        pwsh: true
+#        workingDirectory: '$(Build.SourcesDirectory)\igniteui-docfx'
+#
+#    - task: CreatePullRequest@1
+#      displayName: 'Create PR to IgniteUI/igniteui-docfx $(Build.SourceBranch)'
+#      #condition: ne(variables['Build.Reason'], 'PullRequest')
+#      condition: or(eq(variables['Build.Reason'], 'IndividualCI '), or(variables['Build.Reason'], 'BatchedCI'))
+#      inputs:
+#        repoType: 'GitHub'
+#        githubEndpoint: 'IgniteUI'
+#        githubRepository: 'IgniteUI/igniteui-docfx'
+#        sourceBranch: 'ESShared/XPlaform_examples_$(Build.BuildNumber)'
+#        targetBranch: '$(Build.SourceBranch)'
+#        title: 'Changes from $(Build.DefinitionName)'
 
     - task: UseDotNet@2
       displayName: 'Use .NET 6'
