@@ -10,7 +10,7 @@ trigger:
 
 parameters:
   - name: pathsToParse
-    displayname: 'paths under \samples that contain jsons'
+    displayName: 'paths under \samples that contain jsons'
     type: string
     default: 'charts\sparkline'
 
