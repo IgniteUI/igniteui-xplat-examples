@@ -129,7 +129,7 @@ stages:
       displayName: 'Create PR to IgniteUI/igniteui-docfx $(Build.SourceBranch)'
       #condition: ne(variables['Build.Reason'], 'PullRequest')
       #condition: or(eq(variables['Build.Reason'], 'IndividualCI '), or(variables['Build.Reason'], 'BatchedCI'))
-      condition: and(in(variables['Build.Reason'], 'IndividualCI', 'BatchedCI', 'Manual'), eq(variables['isDestinationRepoChanged'], true)
+      condition: and(in(variables['Build.Reason'], 'IndividualCI', 'BatchedCI', 'Manual'), eq(variables['isDestinationRepoChanged'], true))
       inputs:
         repoType: 'GitHub'
         githubEndpoint: 'IgniteUI'
