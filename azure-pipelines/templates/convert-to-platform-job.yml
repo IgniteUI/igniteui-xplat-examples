@@ -123,4 +123,4 @@ jobs:
       githubRepository: 'IgniteUI/${{ parameters.destinationGitRepo }}'
       sourceBranch: 'ESShared/XPlaform_examples_$(Build.BuildNumber)'
       targetBranch: '$(Build.SourceBranch)'
-      title: 'Changes from $(Build.DefinitionName)'
+      title: 'Changes from $(Build.DefinitionName) $(Build.SourceBranchName) $(Build.BuildNumber)'
