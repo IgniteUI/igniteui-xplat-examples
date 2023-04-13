@@ -89,9 +89,13 @@ jobs:
     inputs:
       targetType: 'inline'
       script: |
-        git fetch origin
-        git checkout -b ESShared/XPlaform_examples_$(Build.BuildNumber)
+        Write-Output 'git fetch origin --quiet'
+        git fetch origin --quiet
+        Write-Output 'git checkout -b ESShared/XPlaform_examples_$(Build.BuildNumber) --quiet'
+        git checkout -b ESShared/XPlaform_examples_$(Build.BuildNumber) --quiet
+        Write-Output 'git add -A .'
         git add -A .
+        Write-Output 'git commit --dry-run'
         git commit --dry-run
 
         if ($? -eq $True) {
