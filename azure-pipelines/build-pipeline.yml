@@ -108,6 +108,8 @@ stages:
         workingDirectory: '$(Build.SourcesDirectory)\igniteui-docfx'
 
     - powershell: |
+        git fetch origin
+        git checkout -b ESShared/XPlaform_${{ parameters.language }}_$(Build.BuildNumber)
         git add -A .
         git commit --dry-run
 
