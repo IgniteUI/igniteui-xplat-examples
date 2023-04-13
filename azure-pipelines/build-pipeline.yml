@@ -32,12 +32,6 @@ variables:
 
 resources:
   repositories:
-#    - repository: IgniteUIDocFX
-#      endpoint: ESShared
-#      type: github
-#      name: IgniteUI/igniteui-docfx
-#      ref: '$(Build.SourceBranch)'
-
     - repository: IgniteUIAngularExamples
       endpoint: IgniteUI
       type: github
@@ -89,56 +83,6 @@ stages:
       persistCredentials: true
       lfs: true
       clean: true
-
-#    - checkout: IgniteUIDocFX
-#      persistCredentials: true
-#      lfs: true
-#      clean: true
-
-#    - task: PowerShell@2
-#      displayName: "Explicit dummy change to destination repo"
-#      inputs:
-#        targetType: 'inline'
-#        script: |
-#          Write-Output $pwd
-#          write-output 'Explicit dummy change' > dummy-file.txt
-#        showWarnings: true
-#        ignoreLASTEXITCODE: true
-#        pwsh: true
-#        workingDirectory: '$(Build.SourcesDirectory)\igniteui-docfx'
-#
-#    - powershell: |
-#        git fetch origin
-#        git checkout -b ESShared/XPlaform_examples_$(Build.BuildNumber)
-#        git add -A .
-#        git commit --dry-run
-#
-#        if ($? -eq $True) {
-#          git commit -m "Adding changes from build $(Build.BuildNumber)"
-#
-#          git push -u origin ESShared/XPlaform_examples_$(Build.BuildNumber)
-#          Write-Host "##vso[task.setvariable variable=isDestinationRepoChanged;]true"
-#        }
-#        else {
-#          Write-Host "##vso[task.setvariable variable=isDestinationRepoChanged;]false"
-#          return 0
-#        }
-#      displayName: 'If there are changes, commit & make PR'
-#      workingDirectory: '$(Build.SourcesDirectory)\igniteui-docfx'
-#
-#
-#    - task: CreatePullRequest@1
-#      displayName: 'Create PR to IgniteUI/igniteui-docfx $(Build.SourceBranch)'
-#      #condition: ne(variables['Build.Reason'], 'PullRequest')
-#      #condition: or(eq(variables['Build.Reason'], 'IndividualCI '), or(variables['Build.Reason'], 'BatchedCI'))
-#      condition: and(in(variables['Build.Reason'], 'IndividualCI', 'BatchedCI', 'Manual'), eq(variables['isDestinationRepoChanged'], true))
-#      inputs:
-#        repoType: 'GitHub'
-#        githubEndpoint: 'IgniteUI'
-#        githubRepository: 'IgniteUI/igniteui-docfx'
-#        sourceBranch: 'ESShared/XPlaform_examples_$(Build.BuildNumber)'
-#        targetBranch: '$(Build.SourceBranch)'
-#        title: 'Changes from $(Build.DefinitionName)'
 
     - task: UseDotNet@2
       displayName: 'Use .NET 6'
