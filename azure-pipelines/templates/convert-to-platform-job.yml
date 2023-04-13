@@ -107,7 +107,7 @@ jobs:
       failOnStderr: true
       showWarnings: true
       pwsh: true
-      workingDirectory: '$(Pipeline.SourcesDirectory)\${{ parameters.destinationGitRepo }}'
+      workingDirectory: '${{ parameters.destinationGitRepo }}'
 
   - task: CreatePullRequest@1
     displayName: 'Create PR to IgniteUI/${{ parameters.destinationGitRepo }} $(Build.SourceBranch)'
