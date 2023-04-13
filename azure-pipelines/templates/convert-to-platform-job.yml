@@ -109,7 +109,7 @@ jobs:
           return 0
         }
       failOnStderr: true
-      showWarnings: true
+      #showWarnings: true
       pwsh: true
       workingDirectory: '${{ parameters.destinationGitRepo }}'
 
