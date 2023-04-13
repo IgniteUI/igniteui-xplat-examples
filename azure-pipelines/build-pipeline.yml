@@ -90,10 +90,10 @@ stages:
       lfs: true
       clean: true
 
-    - checkout: IgniteUIDocFX
-      persistCredentials: true
-      lfs: true
-      clean: true
+#    - checkout: IgniteUIDocFX
+#      persistCredentials: true
+#      lfs: true
+#      clean: true
 
 #    - task: PowerShell@2
 #      displayName: "Explicit dummy change to destination repo"
