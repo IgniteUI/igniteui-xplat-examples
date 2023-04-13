@@ -100,6 +100,7 @@ stages:
       inputs:
         targetType: 'inline'
         script: |
+          Write-Output $pwd
           write-output 'Explicit dummy change' > dummy-file.txt
         showWarnings: true
         ignoreLASTEXITCODE: true
