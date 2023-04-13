@@ -84,10 +84,33 @@ jobs:
       artifact: '${{ parameters.platform }}ChangedSamples'
       publishLocation: 'pipeline'
 
+  - task: PowerShell@2
+    displayName: 'Prepare for PR: Identify if there are changed samples in destination git repo'
+    inputs:
+    targetType: 'inline'
+    script: |
+      git fetch origin
+      git checkout -b ESShared/XPlaform_examples_$(Build.BuildNumber)
+      git add -A .
+      git commit --dry-run
+
+      if ($? -eq $True) {
+        git commit -m "Adding changes from build $(Build.BuildNumber)"
+
+        git push -u origin ESShared/XPlaform_examples_$(Build.BuildNumber)
+        Write-Host "##vso[task.setvariable variable=isDestinationRepoChanged;]true"
+      }
+      else {
+        Write-Host "##vso[task.setvariable variable=isDestinationRepoChanged;]false"
+        return 0
+      }
+    pwsh: true
+    workingDirectory: '$(Pipeline.SourcesDirectory)\${{ parameters.destinationGitRepo }}'
+
   - task: CreatePullRequest@1
     displayName: 'Create PR to IgniteUI/${{ parameters.destinationGitRepo }} $(Build.SourceBranch)'
     #condition: ne(variables['Build.Reason'], 'PullRequest')
-    condition: or(eq(variables['Build.Reason'], 'IndividualCI '), or(variables['Build.Reason'], 'BatchedCI'))
+    condition: and(in(variables['Build.Reason'], 'IndividualCI', 'BatchedCI', 'Manual'), eq(variables['isDestinationRepoChanged'], true))
     inputs:
       repoType: 'GitHub'
       githubEndpoint: 'IgniteUI'
