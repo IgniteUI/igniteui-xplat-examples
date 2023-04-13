@@ -109,7 +109,7 @@ stages:
 
     - powershell: |
         git fetch origin
-        git checkout -b ESShared/XPlaform_${{ parameters.language }}_$(Build.BuildNumber)
+        git checkout -b ESShared/XPlaform_examples_$(Build.BuildNumber)
         git add -A .
         git commit --dry-run
 
