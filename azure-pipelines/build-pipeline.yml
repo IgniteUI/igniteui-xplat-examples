@@ -108,7 +108,7 @@ stages:
         workingDirectory: '$(Build.SourcesDirectory)\igniteui-docfx'
 
     - powershell: |
-        git add -A
+        git add -A .
         git commit --dry-run
 
         if ($? -eq $True) {
