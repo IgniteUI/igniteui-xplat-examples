@@ -4,6 +4,7 @@
   ],
   "skipAlterDataCasing": true,
   "export": true,
+  "fakeProperty": true,
   "descriptions": {
     "content": {
       "name": "grid",
