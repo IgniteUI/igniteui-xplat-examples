@@ -111,9 +111,9 @@ stages:
         showWarnings: true
         ignoreLASTEXITCODE: true
         pwsh: true
-        workingDirectory: '$(Build.ArtifactStagingDirectory)'
+        workingDirectory: '$(Build.SourcesDirectory)'
 
-    - publish: '$(Build.ArtifactStagingDirectory)'
+    - publish: '$(Build.SourcesDirectory)\samples'
       displayName: 'Publish XPlat Example JSONs'
       artifact: xplatеxamples
 
