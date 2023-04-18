@@ -12,7 +12,7 @@ parameters:
   - name: pathsToParse
     displayName: 'Full paths that contain jsons - coma delimited'
     type: string
-    default: '$(Pipeline.Workspace)\xplatеxamples\samples\charts\sparkline'
+    default: '$(Pipeline.Workspace)\xplatеxamples\charts\sparkline'
 
 pr:
   branches:

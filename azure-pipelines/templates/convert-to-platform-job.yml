@@ -60,7 +60,6 @@ jobs:
       failOnStderr: true
       showWarnings: true
       pwsh: true
-      workingDirectory: '$(Pipeline.Workspace)\xplatеxamples\samples'
 
   - task: PowerShell@2
     displayName: 'Prepare changed samples'
