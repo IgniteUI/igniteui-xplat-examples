@@ -76,12 +76,14 @@
         {
           "type": "WebColumn",
           "field": "ChangePercent",
+          "header": "Change Percent",
           "dataType": "Number",
           "bodyTemplateRef": "WebGridCurrencyCellTemplate"
         },
         {
           "type": "WebColumn",
           "field": "AnnualChange",
+          "header": "Annual Change",
           "dataType": "Number",
           "bodyTemplateRef": "WebGridCurrencyCellTemplate"
         }
