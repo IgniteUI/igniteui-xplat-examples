@@ -113,7 +113,7 @@ stages:
         pwsh: true
         workingDirectory: '$(Build.ArtifactStagingDirectory)'
 
-    - publish: '$(Build.SourcesDirectory)'
+    - publish: '$(Build.ArtifactStagingDirectory)'
       displayName: 'Publish XPlat Example JSONs'
       artifact: xplatеxamples
 
