@@ -32,11 +32,12 @@ variables:
 
 resources:
   repositories:
-    - repository: IgniteUIAngularExamples
-      endpoint: IgniteUI
-      type: github
-      name: IgniteUI/igniteui-angular-examples
-      ref: '$(Build.SourceBranch)'
+# [MTrela 18/04/2023] Exclude exporting this repo to IgniteUIAngularExamples because our Angular template is not complete  
+#    - repository: IgniteUIAngularExamples
+#      endpoint: IgniteUI
+#      type: github
+#      name: IgniteUI/igniteui-angular-examples
+#      ref: '$(Build.SourceBranch)'
 
     - repository: IgniteUIBlazorExamples
       endpoint: IgniteUI
