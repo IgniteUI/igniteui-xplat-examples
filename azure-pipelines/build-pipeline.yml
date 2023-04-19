@@ -12,7 +12,7 @@ parameters:
   - name: pathsToParse
     displayName: 'Full paths that contain jsons - coma delimited'
     type: string
-    default: '$(Pipeline.Workspace)\xplatеxamples\charts\sparkline'
+    default: '$(Pipeline.Workspace)\igniteui-xplat-examples\samples\charts\sparkline'
 
 pr:
   branches:
@@ -24,9 +24,6 @@ pr:
 
 name: $(BuildDefinitionName)_$(Year:yyyy).$(Month).$(DayOfMonth)$(Rev:.r)
 variables:
-#  - name: 'pathsToParse'
-    #value: '$(Pipeline.Workspace)\xplatеxamples\samples\grids,$(Pipeline.Workspace)\xplatеxamples\samples\charts'
-#    value: '$(Pipeline.Workspace)\xplatеxamples\samples\charts\sparkline'
   - name: codeExporterAppBranch
     value: '2022.2'
 
@@ -44,18 +41,21 @@ resources:
       type: github
       name: IgniteUI/igniteui-blazor-examples
       ref: '$(Build.SourceBranch)'
+      #ref: 'vnext'
 
     - repository: IgniteUIReactExamples
       endpoint: IgniteUI
       type: github
       name: IgniteUI/igniteui-react-examples
       ref: '$(Build.SourceBranch)'
+      #ref: 'vnext'
 
     - repository: IgniteUIWebComponentsExamples
       endpoint: IgniteUI
       type: github
       name: IgniteUI/igniteui-wc-examples
       ref: '$(Build.SourceBranch)'
+      #ref: 'vnext'
 
     - repository: IgEditorTemplates
       type: git
@@ -75,51 +75,7 @@ resources:
 pool:
   name: BuildAgentOnPrem
 
-stages:
-- stage: Prepare
-  jobs: 
-  - job: PrepareJsons
-    steps:
-    - checkout: self
-      persistCredentials: true
-      lfs: true
-      clean: true
-
-    - task: UseDotNet@2
-      displayName: 'Use .NET 6'
-      inputs:
-        packageType: 'sdk'
-        version: '6.x'
-
-    - task: PowerShell@2
-      displayName: "Remove json files where 'export' flag is false or missing"
-      inputs:
-        targetType: 'inline'
-        script: |
-          Write-Output "Chocolatey install jq - tool to traverse JSON files"
-          Invoke-Expression -Command "choco install jq -y"
-
-          foreach ($jsonFile in Get-ChildItem "samples" -Filter "*.json" -Recurse)
-              {
-                Write-Output "Parsing $($jsonFile.FullName)"
-                $exportFlag = $(jq .export $jsonFile.FullName -e)
-                if ($exportFlag -eq $null -Or $exportFlag -eq "false") {
-                    
-                    Remove-Item $jsonFile.FullName
-                    Write-Output "Removed $($jsonFile.FullName) - export flag is false or missing"
-                }
-              }
-        showWarnings: true
-        ignoreLASTEXITCODE: true
-        pwsh: true
-        workingDirectory: '$(Build.SourcesDirectory)'
-
-    - publish: '$(Build.SourcesDirectory)\samples'
-      displayName: 'Publish XPlat Example JSONs'
-      artifact: xplatеxamples
-
-- stage: Convert
-  jobs:
+jobs:
 # [MTrela 18/04/2023] Exclude exporting this repo to IgniteUIAngularExamples because our Angular template is not complete    
 #  - template: templates/convert-to-platform-job.yml
 #    parameters:
@@ -128,23 +84,26 @@ stages:
 #      pathsToParse: ${{ parameters.pathsToParse }}
 #      codeExporterAppBranch: $(codeExporterAppBranch)
 
-  - template: templates/convert-to-platform-job.yml
-    parameters:
-      platform: 'Blazor'
-      destinationGitRepo: 'igniteui-blazor-examples'
-      pathsToParse: ${{ parameters.pathsToParse }}
-      codeExporterAppBranch: $(codeExporterAppBranch)
+- template: templates/convert-to-platform-job.yml
+  parameters:
+    platform: 'Blazor'
+    destinationGitRepo: 'igniteui-blazor-examples'
+    pathsToParse: ${{ parameters.pathsToParse }}
+    codeExporterAppBranch: $(codeExporterAppBranch)
+    createPR: true
 
-  - template: templates/convert-to-platform-job.yml
-    parameters:
-      platform: 'React'
-      destinationGitRepo: 'igniteui-react-examples'
-      pathsToParse: ${{ parameters.pathsToParse }}
-      codeExporterAppBranch: $(codeExporterAppBranch)
+- template: templates/convert-to-platform-job.yml
+  parameters:
+    platform: 'React'
+    destinationGitRepo: 'igniteui-react-examples'
+    pathsToParse: ${{ parameters.pathsToParse }}
+    codeExporterAppBranch: $(codeExporterAppBranch)
+    createPR: true
 
-  - template: templates/convert-to-platform-job.yml
-    parameters:
-      platform: 'WebComponents'
-      destinationGitRepo: 'igniteui-wc-examples'
-      pathsToParse: ${{ parameters.pathsToParse }}
-      codeExporterAppBranch: $(codeExporterAppBranch)
+- template: templates/convert-to-platform-job.yml
+  parameters:
+    platform: 'WebComponents'
+    destinationGitRepo: 'igniteui-wc-examples'
+    pathsToParse: ${{ parameters.pathsToParse }}
+    codeExporterAppBranch: $(codeExporterAppBranch)
+    createPR: true

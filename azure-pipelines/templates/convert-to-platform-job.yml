@@ -3,6 +3,7 @@ parameters:
   - name: pathsToParse
   - name: codeExporterAppBranch
   - name: destinationGitRepo
+  - name: createPR
 
 jobs:
 - job: Convert${{ parameters.platform }}
@@ -10,10 +11,8 @@ jobs:
   workspace:
     clean: all
   steps:
-    # We need to explicitly disable self checkout - we want the JSON files from the previous stage.
-    # Also, unless explicitly disabled, it will occur SOMETIMES for no apparent reason
   - checkout: self
-    enabled: false
+    enabled: true
 
   - download: current
     displayName: 'Get XPlat Example JSONs'
@@ -85,6 +84,7 @@ jobs:
 
   - task: PowerShell@2
     displayName: 'Prepare for PR: Identify if there are changed samples in destination git repo'
+    condition: eq(parameters.createPR, true)
     inputs:
       targetType: 'inline'
       script: |
@@ -103,7 +103,7 @@ jobs:
           git push -u origin ESShared/XPlaform_examples_$(Build.BuildNumber)
           Write-Host "##vso[task.setvariable variable=isDestinationRepoChanged;]true"
         }
-        else {
+        else {pstsm
           Write-Host "##vso[task.setvariable variable=isDestinationRepoChanged;]false"
           return 0
         }
@@ -115,7 +115,7 @@ jobs:
   - task: CreatePullRequest@1
     displayName: 'Create PR to IgniteUI/${{ parameters.destinationGitRepo }} $(Build.SourceBranch)'
     #condition: ne(variables['Build.Reason'], 'PullRequest')
-    condition: and(in(variables['Build.Reason'], 'IndividualCI', 'BatchedCI', 'Manual'), eq(variables['isDestinationRepoChanged'], true))
+    condition: and(in(variables['Build.Reason'], 'IndividualCI', 'BatchedCI', 'Manual'), eq(variables['isDestinationRepoChanged'], true), eq(parameters.createPR, true))
     inputs:
       repoType: 'GitHub'
       githubEndpoint: 'IgniteUI'
