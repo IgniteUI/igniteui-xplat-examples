@@ -14,11 +14,6 @@ jobs:
   - checkout: self
     enabled: true
 
-  - download: current
-    displayName: 'Get XPlat Example JSONs'
-    artifact: xplatеxamples
-    #target:
-
   - task: UseDotNet@2
     displayName: 'Use .NET 6'
     inputs:
