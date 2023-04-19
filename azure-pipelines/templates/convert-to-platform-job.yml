@@ -108,7 +108,7 @@ jobs:
         workingDirectory: '${{ parameters.destinationGitRepo }}'
 
     - task: CreatePullRequest@1
-      displayName: 'Create PR to IgniteUI/${{ parameters.destinationGitRepo }} $(Build.SourceBranch)'
+      displayName: 'Create PR to IgniteUI/${{ parameters.destinationGitRepo }} vnext'
       #condition: ne(variables['Build.Reason'], 'PullRequest')
       condition: and(in(variables['Build.Reason'], 'IndividualCI', 'BatchedCI', 'Manual'), eq(variables['isDestinationRepoChanged'], true))
       inputs:
@@ -116,5 +116,5 @@ jobs:
         githubEndpoint: 'IgniteUI'
         githubRepository: 'IgniteUI/${{ parameters.destinationGitRepo }}'
         sourceBranch: 'ESShared/XPlaform_examples_$(Build.BuildNumber)'
-        targetBranch: '$(Build.SourceBranch)'
+        targetBranch: 'vnext'
         title: 'Changes from $(Build.DefinitionName) $(Build.SourceBranchName) $(Build.BuildNumber)'
