@@ -12,7 +12,7 @@ parameters:
   - name: pathsToParse
     displayName: 'Full paths that contain jsons - coma delimited'
     type: string
-    default: '$(Pipeline.Workspace)\igniteui-xplat-examples\samples\charts\sparkline'
+    default: '$(Build.SourcesDirectory)\igniteui-xplat-examples\samples\charts\sparkline'
 
 pr:
   branches:
