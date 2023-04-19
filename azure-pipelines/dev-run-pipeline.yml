@@ -6,6 +6,7 @@ trigger:
     include:
       - 'samples/**/*.json'
     exclude:
+      - vnext
       - 'master'
 
 parameters:
@@ -14,8 +15,7 @@ parameters:
     type: string
     default: '$(Build.SourcesDirectory)\igniteui-xplat-examples\samples\charts\sparkline'
 
-# This pipeline is meant to run on changes pushed to the vnext branch only.
-# If it runs on PRs, it will create PRs to the destination repos' vnext branches - we don't want that.
+# This pipeline is meant to validate changes in developers' feature branches. It's not meant to be a part of PR validation.
 pr: none
 
 name: $(BuildDefinitionName)_$(Year:yyyy).$(Month).$(DayOfMonth)$(Rev:.r)
@@ -36,22 +36,19 @@ resources:
       endpoint: IgniteUI
       type: github
       name: IgniteUI/igniteui-blazor-examples
-      ref: '$(Build.SourceBranch)'
-      #ref: 'vnext'
+      ref: 'vnext'
 
     - repository: IgniteUIReactExamples
       endpoint: IgniteUI
       type: github
       name: IgniteUI/igniteui-react-examples
-      ref: '$(Build.SourceBranch)'
-      #ref: 'vnext'
+      ref: 'vnext'
 
     - repository: IgniteUIWebComponentsExamples
       endpoint: IgniteUI
       type: github
       name: IgniteUI/igniteui-wc-examples
-      ref: '$(Build.SourceBranch)'
-      #ref: 'vnext'
+      #ref: vnext
 
     - repository: IgEditorTemplates
       type: git
@@ -74,7 +71,7 @@ jobs:
 #      destinationGitRepo: 'igniteui-angular-examples'
 #      pathsToParse: ${{ parameters.pathsToParse }}
 #      codeExporterAppBranch: $(codeExporterAppBranch)
-#      createPR: true
+#      createPR: false
 
 - template: templates/convert-to-platform-job.yml
   parameters:
@@ -82,7 +79,7 @@ jobs:
     destinationGitRepo: 'igniteui-blazor-examples'
     pathsToParse: ${{ parameters.pathsToParse }}
     codeExporterAppBranch: $(codeExporterAppBranch)
-    createPR: true
+    createPR: false
 
 - template: templates/convert-to-platform-job.yml
   parameters:
@@ -90,7 +87,7 @@ jobs:
     destinationGitRepo: 'igniteui-react-examples'
     pathsToParse: ${{ parameters.pathsToParse }}
     codeExporterAppBranch: $(codeExporterAppBranch)
-    createPR: true
+    createPR: false
 
 - template: templates/convert-to-platform-job.yml
   parameters:
@@ -98,4 +95,4 @@ jobs:
     destinationGitRepo: 'igniteui-wc-examples'
     pathsToParse: ${{ parameters.pathsToParse }}
     codeExporterAppBranch: $(codeExporterAppBranch)
-    createPR: true
+    createPR: false
