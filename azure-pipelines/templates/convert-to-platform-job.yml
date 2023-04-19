@@ -82,44 +82,44 @@ jobs:
       artifact: '${{ parameters.platform }}ChangedSamples'
       publishLocation: 'pipeline'
 
-  - task: PowerShell@2
-    displayName: 'Prepare for PR: Identify if there are changed samples in destination git repo'
-    condition: eq(parameters.createPR, true)
-    inputs:
-      targetType: 'inline'
-      script: |
-        Write-Output 'git fetch origin --quiet'
-        git fetch origin --quiet
-        Write-Output 'git checkout -b ESShared/XPlaform_examples_$(Build.BuildNumber) --quiet'
-        git checkout -b ESShared/XPlaform_examples_$(Build.BuildNumber) --quiet
-        Write-Output 'git add -A .'
-        git add -A .
-        Write-Output 'git commit --dry-run'
-        git commit --dry-run
+  - ${{ if eq(parameters.createPR, true) }}:
+    - task: PowerShell@2
+      displayName: 'Prepare for PR: Identify if there are changed samples in destination git repo'
+      inputs:
+        targetType: 'inline'
+        script: |
+          Write-Output 'git fetch origin --quiet'
+          git fetch origin --quiet
+          Write-Output 'git checkout -b ESShared/XPlaform_examples_$(Build.BuildNumber) --quiet'
+          git checkout -b ESShared/XPlaform_examples_$(Build.BuildNumber) --quiet
+          Write-Output 'git add -A .'
+          git add -A .
+          Write-Output 'git commit --dry-run'
+          git commit --dry-run
 
-        if ($? -eq $True) {
-          git commit -m "Adding changes from build $(Build.BuildNumber)"
+          if ($? -eq $True) {
+            git commit -m "Adding changes from build $(Build.BuildNumber)"
 
-          git push -u origin ESShared/XPlaform_examples_$(Build.BuildNumber)
-          Write-Host "##vso[task.setvariable variable=isDestinationRepoChanged;]true"
-        }
-        else {pstsm
-          Write-Host "##vso[task.setvariable variable=isDestinationRepoChanged;]false"
-          return 0
-        }
-      #failOnStderr: true
-      #showWarnings: true
-      pwsh: true
-      workingDirectory: '${{ parameters.destinationGitRepo }}'
+            git push -u origin ESShared/XPlaform_examples_$(Build.BuildNumber)
+            Write-Host "##vso[task.setvariable variable=isDestinationRepoChanged;]true"
+          }
+          else {pstsm
+            Write-Host "##vso[task.setvariable variable=isDestinationRepoChanged;]false"
+            return 0
+          }
+        #failOnStderr: true
+        #showWarnings: true
+        pwsh: true
+        workingDirectory: '${{ parameters.destinationGitRepo }}'
 
-  - task: CreatePullRequest@1
-    displayName: 'Create PR to IgniteUI/${{ parameters.destinationGitRepo }} $(Build.SourceBranch)'
-    #condition: ne(variables['Build.Reason'], 'PullRequest')
-    condition: and(in(variables['Build.Reason'], 'IndividualCI', 'BatchedCI', 'Manual'), eq(variables['isDestinationRepoChanged'], true), eq(parameters.createPR, true))
-    inputs:
-      repoType: 'GitHub'
-      githubEndpoint: 'IgniteUI'
-      githubRepository: 'IgniteUI/${{ parameters.destinationGitRepo }}'
-      sourceBranch: 'ESShared/XPlaform_examples_$(Build.BuildNumber)'
-      targetBranch: '$(Build.SourceBranch)'
-      title: 'Changes from $(Build.DefinitionName) $(Build.SourceBranchName) $(Build.BuildNumber)'
+    - task: CreatePullRequest@1
+      displayName: 'Create PR to IgniteUI/${{ parameters.destinationGitRepo }} $(Build.SourceBranch)'
+      #condition: ne(variables['Build.Reason'], 'PullRequest')
+      condition: and(in(variables['Build.Reason'], 'IndividualCI', 'BatchedCI', 'Manual'), eq(variables['isDestinationRepoChanged'], true))
+      inputs:
+        repoType: 'GitHub'
+        githubEndpoint: 'IgniteUI'
+        githubRepository: 'IgniteUI/${{ parameters.destinationGitRepo }}'
+        sourceBranch: 'ESShared/XPlaform_examples_$(Build.BuildNumber)'
+        targetBranch: '$(Build.SourceBranch)'
+        title: 'Changes from $(Build.DefinitionName) $(Build.SourceBranchName) $(Build.BuildNumber)'
