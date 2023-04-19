@@ -12,7 +12,7 @@ parameters:
   - name: pathsToParse
     displayName: 'Full paths that contain jsons - coma delimited'
     type: string
-    default: '$(Build.SourcesDirectory)\igniteui-xplat-examples\samples\charts\sparkline'
+    default: '$(Build.SourcesDirectory)\igniteui-xplat-examples\samples'
 
 # This pipeline is meant to run on changes pushed to the vnext branch only.
 # If it runs on PRs, it will create PRs to the destination repos' vnext branches - we don't want that.
@@ -30,28 +30,25 @@ resources:
 #      endpoint: IgniteUI
 #      type: github
 #      name: IgniteUI/igniteui-angular-examples
-#      ref: '$(Build.SourceBranch)'
+#      ref: 'vnext'
 
     - repository: IgniteUIBlazorExamples
       endpoint: IgniteUI
       type: github
       name: IgniteUI/igniteui-blazor-examples
-      ref: '$(Build.SourceBranch)'
-      #ref: 'vnext'
+      ref: 'vnext'
 
     - repository: IgniteUIReactExamples
       endpoint: IgniteUI
       type: github
       name: IgniteUI/igniteui-react-examples
-      ref: '$(Build.SourceBranch)'
-      #ref: 'vnext'
+      ref: 'vnext'
 
     - repository: IgniteUIWebComponentsExamples
       endpoint: IgniteUI
       type: github
       name: IgniteUI/igniteui-wc-examples
-      ref: '$(Build.SourceBranch)'
-      #ref: 'vnext'
+      ref: 'vnext'
 
     - repository: IgEditorTemplates
       type: git
