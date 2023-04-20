@@ -3,7 +3,7 @@
     "Andrew - add template column with event handlers",
     "Andrew - add grid toolbar when available"
   ],
-  "export": true,
+  "export": false,
   "skipAlterDataCasing": true,
   "descriptions": {
     "content": {
