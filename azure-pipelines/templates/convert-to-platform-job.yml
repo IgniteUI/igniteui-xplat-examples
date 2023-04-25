@@ -117,5 +117,5 @@ jobs:
         githubRepository: 'IgniteUI/${{ parameters.destinationGitRepo }}'
         sourceBranch: 'ESShared/XPlaform_examples_$(Build.BuildNumber)'
         targetBranch: 'vnext'
-        title: 'Changes from igniteui-xplat-examples $(Year:yyyy).$(Month).$(DayOfMonth)$(Rev:.r)'
+        title: 'Changes from $(Build.BuildNumber)'
         description: 'Changes from $(Build.BuildNumber) - branch ($(Build.SourceBranchName))'
