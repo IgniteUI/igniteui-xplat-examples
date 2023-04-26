@@ -119,3 +119,4 @@ jobs:
         targetBranch: 'vnext'
         title: 'Changes from $(Build.BuildNumber)'
         description: 'Changes from $(Build.BuildNumber) - branch ($(Build.SourceBranchName))'
+        tags: 'area: auto-generated-xplat'
