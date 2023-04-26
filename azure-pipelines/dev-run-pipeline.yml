@@ -48,7 +48,7 @@ resources:
       endpoint: IgniteUI
       type: github
       name: IgniteUI/igniteui-wc-examples
-      #ref: vnext
+      ref: vnext
 
     - repository: IgEditorTemplates
       type: git
