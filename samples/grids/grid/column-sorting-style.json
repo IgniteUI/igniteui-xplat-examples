@@ -1,5 +1,6 @@
 {
   "todo": [ "" ],
+  "export": false,
   "skipAlterDataCasing": true,
   "descriptions": {
     "editor": {
