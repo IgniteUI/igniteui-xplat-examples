@@ -1,8 +1,7 @@
 {
-  "todo": [ 
-     "Approved Defer - until we support CSS"
+  "todo": [
   ],
-  "export": false,
+  "export": true,
   "skipAlterDataCasing": true,
   "descriptions": {
     "content": {
@@ -13,23 +12,29 @@
       "columns": [
         {
           "type": "WebColumn",
-          "field": "Id"
+          "field": "Id",
+          "cellStylesRef": "WebGridCellStylesHandler"
         },
         {
           "type": "WebColumn",
-          "field": "Position"
+          "field": "Position",
+          "cellStylesRef": "WebGridCellStylesHandler"
+          
         },
         {
           "type": "WebColumn",
-          "field": "Name"
+          "field": "Name",
+          "cellStylesRef": "WebGridCellStylesHandler"
         },
         {
           "type": "WebColumn",
-          "field": "AthleteNumber"
+          "field": "AthleteNumber",
+          "cellStylesRef": "WebGridCellStylesHandler"
         },
         {
           "type": "WebColumn",
-          "field": "CountryName"
+          "field": "CountryName",
+          "cellStylesRef": "WebGridCellStylesHandler"
         }
       ]
     }
