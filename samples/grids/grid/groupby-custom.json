@@ -1,7 +1,6 @@
 {
   "todo": [ 
-    "Andrew - add template column with event handlers",
-    "Andrew - add grid toolbar when available"
+    "This sample needs custom UI with handlers and custom code that cannot be done via the Editor ATM, hence skipping it."
   ],
   "export": false,
   "skipAlterDataCasing": true,

@@ -1,6 +1,6 @@
 {
   "todo": [
-    ""
+    "The property editor bindings to complex properties don't seem to work, hence skipping this sample."
   ],
   "export": false,
   "skipAlterDataCasing": true,
