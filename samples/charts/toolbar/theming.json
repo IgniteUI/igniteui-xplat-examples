@@ -1,0 +1,33 @@
+{
+  "export": false,
+  "note": "P2 show theming of Toolbar and targeted chart",
+  "strings": {
+    "legendTitle": "Toolbar Theming and Styling"
+  },
+  "descriptions": {
+    "aboveContent": {
+      "type": "Toolbar",
+      "name": "Toolbar",
+      "targetRef": "chart"
+    },
+    "legend": {
+      "type": "Legend",
+      "name": "Legend"
+    },
+    "content": {
+      "type": "DataChart",
+      "name": "chart"
+    }
+  },
+  "modules": [
+    "layout/ToolbarModule",
+    "charts/DataChartToolbarModule",
+    "charts/LegendModule",
+    "charts/DataLegendModule",
+    "charts/NumberAbbreviatorModule",
+    "charts/DataChartCoreModule",
+    "charts/DataChartInteractivityModule",
+    "charts/DataLegendModule",
+    "charts/DataChartAnnotationModule"
+  ]
+}

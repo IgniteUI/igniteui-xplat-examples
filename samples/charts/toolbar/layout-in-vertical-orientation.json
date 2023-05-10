@@ -1,0 +1,33 @@
+{
+  "export": false,
+  "note": "P2 show all built-in chart actions in vertical orientation",
+  "strings": {
+    "legendTitle": "Toolbar with vertical orientation"
+  },
+  "descriptions": {
+    "aboveContent": {
+      "type": "Toolbar",
+      "name": "Toolbar",
+      "targetRef": "chart"
+    },
+    "legend": {
+      "type": "Legend",
+      "name": "Legend"
+    },
+    "content": {
+      "type": "DataChart",
+      "name": "chart"
+    }
+  },
+  "modules": [
+    "layout/ToolbarModule",
+    "charts/DataChartToolbarModule",
+    "charts/LegendModule",
+    "charts/DataLegendModule",
+    "charts/NumberAbbreviatorModule",
+    "charts/DataChartCoreModule",
+    "charts/DataChartInteractivityModule",
+    "charts/DataLegendModule",
+    "charts/DataChartAnnotationModule"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "export": false,
+  "note": "P1 layout and filter out actions, e.g. hide analyze menu and move reset action to zoom menu",
+  "strings": {
+    "legendTitle": "Toolbar with filtered actions and moved actions"
+  },
+  "descriptions": {
+    "aboveContent": {
+      "type": "Toolbar",
+      "name": "Toolbar",
+      "targetRef": "chart"
+    },
+    "legend": {
+      "type": "Legend",
+      "name": "Legend"
+    },
+    "content": {
+      "type": "DataChart",
+      "name": "chart"
+    }
+  },
+  "modules": [
+    "layout/ToolbarModule",
+    "charts/DataChartToolbarModule",
+    "charts/LegendModule",
+    "charts/DataLegendModule",
+    "charts/NumberAbbreviatorModule",
+    "charts/DataChartCoreModule",
+    "charts/DataChartInteractivityModule",
+    "charts/DataLegendModule",
+    "charts/DataChartAnnotationModule"
+  ]
+}
