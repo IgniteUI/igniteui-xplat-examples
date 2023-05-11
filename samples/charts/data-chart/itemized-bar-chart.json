@@ -1,0 +1,105 @@
+{
+  "strings": {
+    "legendTitle": "Market Capitalization of Technology Companies"
+  },
+  "descriptions": {
+    "legend": {
+      "type": "Legend",
+      "name": "Legend",
+      "orientation": "Horizontal"
+    },
+    "content": {
+      "type": "DataChart",
+      "name": "chart",
+      "chartTitle": "Market Capitalization of Technology Companies",
+      "legendRef": "Legend",
+      "isHorizontalZoomEnabled": false,
+      "isVerticalZoomEnabled": false,
+      "axes": [
+        {
+          "type": "CategoryYAxis",
+          "name": "yAxis",
+          "dataSourceRef": "LocalData",
+          "label": "Category",
+          "isInverted": true,
+          "gap": 0.75, "overlap": 1
+        },
+        {
+          "type": "NumericXAxis",
+          "name": "xAxis",
+          "minimumValue": 0, "maximumValue": 220
+        }
+      ],
+      "series": [
+        {
+          "type": "BarSeries",
+          "name": "BarSeries1",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "valueMemberPath": "V1", "title": "Apple",
+          "dataSourceRef": "LocalData",
+          "showDefaultTooltip": true
+        },
+        {
+          "type": "BarSeries",
+          "name": "BarSeries2",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "valueMemberPath": "V2", "title": "Microsoft",
+          "dataSourceRef": "LocalData",
+          "showDefaultTooltip": true
+        },
+        {
+          "type": "BarSeries",
+          "name": "BarSeries3",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "valueMemberPath": "V3", "title": "Google",
+          "dataSourceRef": "LocalData",
+          "showDefaultTooltip": true
+        },
+        {
+          "type": "BarSeries",
+          "name": "BarSeries4",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "valueMemberPath": "V4", "title": "NVidia",
+          "dataSourceRef": "LocalData",
+          "showDefaultTooltip": true
+        },
+        {
+          "type": "BarSeries",
+          "name": "BarSeries5",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "valueMemberPath": "V5", "title": "Tesla",
+          "dataSourceRef": "LocalData",
+          "showDefaultTooltip": true
+        },
+        {
+          "type": "DataToolTipLayer",
+          "name": "DataToolTipLayer"
+        }
+      ]
+    }
+  },
+  "refs": {
+    "LocalData": [
+      { "V1": 180, "V2": null,  "V3": null, "V4": null, "V5": null, "Category": "Apple"  },
+      { "V1": null, "V2": 160,  "V3": null, "V4": null, "V5": null, "Category": "Microsoft"   },
+      { "V1": null, "V2": null, "V3": 90,   "V4": null, "V5": null, "Category": "Google"   },
+      { "V1": null, "V2": null, "V3": null, "V4": 50,   "V5": null, "Category": "NVidia"   },
+      { "V1": null, "V2": null, "V3": null, "V4": null, "V5": 120,  "Category": "Tesla"   }
+    ]
+  },
+  "modules": [
+    "charts/LegendModule",
+    "charts/DataChartCoreModule",
+    "charts/DataChartCategoryModule",
+    "charts/DataChartCategoryCoreModule",
+    "charts/DataChartInteractivityModule",
+    "charts/DataChartAnnotationModule",
+    "charts/StackedFragmentSeriesModule",
+    "charts/CalloutLayerModule"
+  ]
+}
