@@ -64,7 +64,7 @@
   "modules": [
     "withDescriptions",
     "layouts/PropertyEditorPanelModule",
-    "layout/ToolbarModule",
+    "layouts/ToolbarModule",
     "charts/DataChartToolbarModule",
     "charts/LegendModule",
     "charts/DataLegendModule",

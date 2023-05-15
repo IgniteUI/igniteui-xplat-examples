@@ -16,7 +16,7 @@
   },
   "modules": [
     "charts/TreemapModule",
-    "layout/ToolbarModule",
+    "layouts/ToolbarModule",
     "charts/DataChartToolbarModule"
   ]
 }
