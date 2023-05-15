@@ -5,21 +5,65 @@
     "legendTitle": "Toolbar Theming and Styling"
   },
   "descriptions": {
+    "editor": {
+      "type": "PropertyEditorPanel",
+      "componentRendererRef": "renderer",
+      "targetRef": "Toolbar",
+      "descriptionType": "Toolbar",
+      "isHorizontal": true,
+      "isWrappingEnabled": true,
+      "properties": [
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "BaseTheme",
+          "name": "BaseTheme",
+          "label": "Theme",
+          "shouldOverrideDefaultEditor": true,
+          "valueType": "EnumValue",
+          "primitiveValue": "SlingshotDark"
+        }
+      ]
+    },
     "aboveContent": {
       "type": "Toolbar",
       "name": "Toolbar",
-      "targetRef": "chart"
-    },
-    "legend": {
-      "type": "Legend",
-      "name": "Legend"
+      "targetRef": "chart",
+      "orientation": "Horizontal",
+      "baseTheme": "SlingshotDark"
     },
     "content": {
       "type": "DataChart",
-      "name": "chart"
+      "isHorizontalZoomEnabled": true,
+      "name": "chart",
+      "axes": [
+        {
+          "type": "CategoryXAxis",
+          "name": "xAxis",
+          "dataSourceRef": "CountryRenewableElectricity",
+          "label": "Year"
+        },
+        {
+          "type": "NumericYAxis",
+          "name": "yAxis",
+          "title": "TWh"
+        }
+      ],
+      "series": [
+        {
+          "type": "LineSeries",
+          "name": "LineSeries1",
+          "title": "Electricity",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "dataSourceRef": "CountryRenewableElectricity",
+          "valueMemberPath": "America"
+        }
+      ]
     }
   },
   "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
     "layout/ToolbarModule",
     "charts/DataChartToolbarModule",
     "charts/LegendModule",
@@ -28,6 +72,6 @@
     "charts/DataChartCoreModule",
     "charts/DataChartInteractivityModule",
     "charts/DataLegendModule",
-    "charts/DataChartAnnotationModule"
+    "charts/DataChartAnnotationModule",
   ]
 }
