@@ -66,12 +66,10 @@
     "layouts/PropertyEditorPanelModule",
     "layouts/ToolbarModule",
     "charts/DataChartToolbarModule",
-    "charts/LegendModule",
-    "charts/DataLegendModule",
     "charts/NumberAbbreviatorModule",
+    "charts/DataChartCategoryeModule",
     "charts/DataChartCoreModule",
     "charts/DataChartInteractivityModule",
-    "charts/DataLegendModule",
-    "charts/DataChartAnnotationModule",
+    "charts/DataChartAnnotationModule"
   ]
 }

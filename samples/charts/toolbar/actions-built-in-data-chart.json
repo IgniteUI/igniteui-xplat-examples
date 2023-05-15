@@ -50,7 +50,7 @@
           "yAxisRef": "yAxis",
           "dataSourceRef": "CountryRenewableElectricity",
           "valueMemberPath": "China"
-        },
+        }
       ]
     }
   },

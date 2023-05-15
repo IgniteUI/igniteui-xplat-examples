@@ -43,9 +43,8 @@
   },
   "modules": [
     "withDescriptions",
-    "layouts/PropertyEditorPanelModule",
     "layout/ToolbarModule",
     "charts/DataChartToolbarModule",
-    "charts/DataChartCoreModule",
+    "charts/DataChartCoreModule"
   ]
 }
