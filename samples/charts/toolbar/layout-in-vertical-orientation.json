@@ -1,9 +1,6 @@
 {
   "export": false,
-  "note": "P2 show theming of Toolbar and targeted chart",
-  "strings": {
-    "legendTitle": "Toolbar Theming and Styling"
-  },
+  "note": "P2, wait until popups expand sideways when in vertical orientation",
   "descriptions": {
     "aboveContent": {
       "type": "Toolbar",

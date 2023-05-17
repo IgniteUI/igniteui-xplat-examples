@@ -1,9 +1,6 @@
 {
   "export": false,
   "note": "P2 show theming of Toolbar and targeted chart",
-  "strings": {
-    "legendTitle": "Toolbar Theming and Styling"
-  },
   "descriptions": {
     "editor": {
       "type": "PropertyEditorPanel",

@@ -26,7 +26,10 @@
         {
           "type": "ToolActionLabel",
           "title": "Reset",
-          "afterId": "ZoomOut"
+          "afterId": "ZoomOut",
+          "iconName": "MyCustomIcon",
+          "iconCollectionName": "MyCustomCollection",
+          "onCommandRef": "MyCustomAction"
         }
       ]
     },
