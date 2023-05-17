@@ -1,33 +1,47 @@
 {
   "export": false,
-  "note": "P2 show all built-in chart actions in vertical orientation",
-  "strings": {
-    "legendTitle": "Toolbar with vertical orientation"
-  },
+  "note": "P2, wait until popups expand sideways when in vertical orientation",
   "descriptions": {
     "aboveContent": {
       "type": "Toolbar",
       "name": "Toolbar",
-      "targetRef": "chart"
-    },
-    "legend": {
-      "type": "Legend",
-      "name": "Legend"
+      "targetRef": "chart",
+      "orientation": "Vertical"
     },
     "content": {
       "type": "DataChart",
-      "name": "chart"
+      "isHorizontalZoomEnabled": true,
+      "name": "chart",
+      "axes": [
+        {
+          "type": "CategoryXAxis",
+          "name": "xAxis",
+          "dataSourceRef": "CountryRenewableElectricity",
+          "label": "Year"
+        },
+        {
+          "type": "NumericYAxis",
+          "name": "yAxis",
+          "title": "TWh"
+        }
+      ],
+      "series": [
+        {
+          "type": "LineSeries",
+          "name": "LineSeries1",
+          "title": "Electricity",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "dataSourceRef": "CountryRenewableElectricity",
+          "valueMemberPath": "America"
+        }
+      ]
     }
   },
   "modules": [
+    "withDescriptions",
     "layout/ToolbarModule",
     "charts/DataChartToolbarModule",
-    "charts/LegendModule",
-    "charts/DataLegendModule",
-    "charts/NumberAbbreviatorModule",
-    "charts/DataChartCoreModule",
-    "charts/DataChartInteractivityModule",
-    "charts/DataLegendModule",
-    "charts/DataChartAnnotationModule"
+    "charts/DataChartCoreModule"
   ]
 }
