@@ -1,9 +1,5 @@
 {
   "export": false,
-  "note": "P1 layout and filter out actions, e.g. hide analyze menu and move reset action to zoom menu",
-  "strings": {
-    "legendTitle": "Toolbar with filtered actions and moved actions"
-  },
   "descriptions": {
     "aboveContent": {
       "type": "Toolbar",

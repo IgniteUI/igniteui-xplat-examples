@@ -1,6 +1,6 @@
 {
   "export": false,
-  "note": "P2 show theming of Toolbar and targeted chart",
+  "note": "P2, not all themes are working, show theming of Toolbar and targeted chart",
   "descriptions": {
     "editor": {
       "type": "PropertyEditorPanel",
