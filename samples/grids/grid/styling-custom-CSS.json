@@ -1,0 +1,50 @@
+{
+  "note": "example of applying custom CSS properties to Grid Cell Selection",
+  "export": false,
+  "skipAlterDataCasing": true,
+  "onInit": [ "WebGridCellSelectionStyleWithCustomCSS" ],
+  "descriptions": {
+    "content": {
+      "type": "WebGrid",
+      "dataRef": "LocalData",
+      "id": "grid",
+      "name": "grid",
+      "autoGenerate": false,
+      "columns": [
+        {
+          "type": "WebColumn",
+          "name": "Category",
+          "field": "Category",
+          "header": "Category",
+          "resizable": true
+        },
+        {
+          "type": "WebColumn",
+          "name": "MarketShare",
+          "field": "MarketShare",
+          "header": "Market Share",
+          "resizable": true
+        },
+        {
+          "type": "WebColumn",
+          "name": "Summary",
+          "field": "Summary",
+          "header": "Summary",
+          "resizable": true
+        }
+      ]
+    }
+  },
+  "refs": {
+    "LocalData": [
+      { "MarketShare": 37, "Category": "Cooling", "Summary": "Cooling 37%" },
+      { "MarketShare": 25, "Category": "Residential", "Summary": "Residential 25%" },
+      { "MarketShare": 12, "Category": "Heating", "Summary": "Heating 12%" },
+      { "MarketShare": 11, "Category": "Lighting", "Summary": "Lighting 11%" },
+      { "MarketShare": 15, "Category": "Other", "Summary": "Other 15%" }
+    ]
+  },
+  "modules": [
+    "grids/WebGridModule"
+  ]
+}
