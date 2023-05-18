@@ -1,0 +1,47 @@
+{
+  "export": false,
+  "note": "P2, wait until popups expand sideways when in vertical orientation",
+  "descriptions": {
+    "aboveContent": {
+      "type": "Toolbar",
+      "name": "Toolbar",
+      "targetRef": "chart",
+      "orientation": "Vertical"
+    },
+    "content": {
+      "type": "DataChart",
+      "isHorizontalZoomEnabled": true,
+      "name": "chart",
+      "axes": [
+        {
+          "type": "CategoryXAxis",
+          "name": "xAxis",
+          "dataSourceRef": "CountryRenewableElectricity",
+          "label": "Year"
+        },
+        {
+          "type": "NumericYAxis",
+          "name": "yAxis",
+          "title": "TWh"
+        }
+      ],
+      "series": [
+        {
+          "type": "LineSeries",
+          "name": "LineSeries1",
+          "title": "Electricity",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "dataSourceRef": "CountryRenewableElectricity",
+          "valueMemberPath": "America"
+        }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "layout/ToolbarModule",
+    "charts/DataChartToolbarModule",
+    "charts/DataChartCoreModule"
+  ]
+}

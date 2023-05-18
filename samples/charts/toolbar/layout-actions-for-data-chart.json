@@ -1,0 +1,89 @@
+{
+  "export": false,
+  "descriptions": {
+    "aboveContent": {
+      "type": "Toolbar",
+      "name": "Toolbar",
+      "targetRef": "chart",
+      "orientation": "Horizontal",
+      "actions": [
+        {
+          "type": "ToolActionLabel",
+          "title": "hide analyze menu",
+          "overlayId": "AnalyzeMenu",
+          "visibility": "Collapsed"
+        },
+        {
+          "type": "ToolActionLabel",
+          "title": "Reset",
+          "overlayId": "ZoomReset",
+          "visibility": "Collapsed"
+        },
+        {
+          "type": "ToolActionLabel",
+          "title": "Reset",
+          "afterId": "ZoomOut",
+          "iconName": "MyCustomIcon",
+          "iconCollectionName": "MyCustomCollection",
+          "onCommandRef": "MyCustomAction"
+        }
+      ]
+    },
+    "content": {
+      "type": "DataChart",
+      "isHorizontalZoomEnabled": true,
+      "name": "chart",
+      "axes": [
+        {
+          "type": "CategoryXAxis",
+          "name": "xAxis",
+          "dataSourceRef": "CountryRenewableElectricity",
+          "label": "Year"
+        },
+        {
+          "type": "NumericYAxis",
+          "name": "yAxis",
+          "title": "TWh"
+        }
+      ],
+      "series": [
+        {
+          "type": "LineSeries",
+          "name": "LineSeries1",
+          "title": "Electricity",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "dataSourceRef": "CountryRenewableElectricity",
+          "valueMemberPath": "America"
+        },
+        {
+          "type": "LineSeries",
+          "name": "LineSeries2",
+          "title": "Electricity",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "dataSourceRef": "CountryRenewableElectricity",
+          "valueMemberPath": "Europe"
+        },
+        {
+          "type": "LineSeries",
+          "name": "LineSeries3",
+          "title": "Electricity",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "dataSourceRef": "CountryRenewableElectricity",
+          "valueMemberPath": "China"
+        }
+      ]
+    }
+  },
+  "modules": [
+    "layouts/ToolbarModule",
+    "charts/DataChartToolbarModule",
+    "charts/NumberAbbreviatorModule",
+    "charts/DataChartCategoryModule",
+    "charts/DataChartCoreModule",
+    "charts/DataChartInteractivityModule",
+    "charts/DataChartAnnotationModule"
+  ]
+}
