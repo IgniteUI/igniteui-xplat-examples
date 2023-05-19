@@ -9,6 +9,8 @@
       "dataRef": "LocalData",
       "id": "grid",
       "name": "grid",
+      "cellSelection": "Multiple",
+      "columnSelection": "Multiple",
       "autoGenerate": false,
       "columns": [
         {
@@ -16,21 +18,21 @@
           "name": "Category",
           "field": "Category",
           "header": "Category",
-          "resizable": true
+          "selectable": true
         },
         {
           "type": "WebColumn",
           "name": "MarketShare",
           "field": "MarketShare",
           "header": "Market Share",
-          "resizable": true
+          "selectable": true
         },
         {
           "type": "WebColumn",
           "name": "Summary",
           "field": "Summary",
           "header": "Summary",
-          "resizable": true
+          "selectable": false
         }
       ]
     }
