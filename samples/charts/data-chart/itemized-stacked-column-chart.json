@@ -17,23 +17,23 @@
       "isVerticalZoomEnabled": false,
       "axes": [
         {
-          "type": "CategoryYAxis",
-          "name": "yAxis",
+          "type": "CategoryXAxis",
+          "name": "xAxis",
           "dataSourceRef": "CompanyMarketCapItemized",
           "label": "Category",
           "isInverted": true,
           "gap": 0.75
         },
         {
-          "type": "NumericXAxis",
-          "name": "xAxis",
+          "type": "NumericYAxis",
+          "name": "yAxis",
           "minimumValue": 0, "maximumValue": 220
         }
       ],
       "series": [
         {
-          "type": "StackedBarSeries",
-          "name": "StackedBarSeries",
+          "type": "StackedColumnSeries",
+          "name": "StackedColumnSeries",
           "dataSourceRef": "CompanyMarketCapItemized",
           "xAxisRef": "xAxis",
           "yAxisRef": "yAxis",
