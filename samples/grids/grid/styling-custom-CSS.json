@@ -1,6 +1,6 @@
 {
   "note": "example of applying custom CSS properties to Grid Cell Selection",
-  "export": false,
+  "export": true,
   "skipAlterDataCasing": true,
   "onInit": [ "WebGridCellSelectionStyleWithCustomCSS" ],
   "descriptions": {
