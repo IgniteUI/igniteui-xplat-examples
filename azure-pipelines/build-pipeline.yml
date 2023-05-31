@@ -58,7 +58,7 @@ resources:
     - repository: CodeGenerationLibrary
       type: git
       name: code-generation-library
-      ref: 'master'
+      ref: '2023.1'
 
 pool:
   name: BuildAgentOnPrem
