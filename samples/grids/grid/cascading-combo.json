@@ -1,0 +1,42 @@
+{
+  "skipAlterDataCasing": true,
+  "descriptions": {
+    "content": {
+      "type": "WebGrid",
+      "dataRef": "WorldCitiesAbove500K",
+      "autoGenerate": false,
+      "primaryKey": "ID",
+      "renderedRef": "WebGridWithComboRendered",
+      "columns": [
+        {
+          "type": "WebColumn",
+          "field": "ID",
+          "header": "ID",
+          "dataType": "Number"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Country",
+          "header": "Country",
+          "bodyTemplateRef": "WebGridCountryDropDownTemplate"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Region",
+          "header": "Region",
+          "bodyTemplateRef": "WebGridRegionDropDownTemplate"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Name",
+          "header": "Name",
+          "bodyTemplateRef": "WebGridCityDropDownTemplate"
+        }
+      ]
+    }
+  },
+  "modules": [
+    "grids/WebGridModule",
+    "webinputs/WebComboModule"
+  ]
+}
