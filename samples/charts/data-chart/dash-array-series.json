@@ -1,10 +1,18 @@
 {
-  "export": false,
+  "strings": {
+    "legendTitle": "Renewable Electricity Generated"
+  },
   "descriptions": {
+    "legend": {
+      "type": "Legend",
+      "name": "Legend",
+      "orientation": "Horizontal"
+    },
     "content": {
       "type": "DataChart",
       "name": "chart",
       "computedPlotAreaMarginMode": "Series",
+      "legendRef": "Legend",
       "axes": [
         {
           "type": "CategoryXAxis",
@@ -58,6 +66,7 @@
     }
   },
   "modules": [
+    "charts/LegendModule",
     "charts/DataChartCategoryModule",
     "charts/DataChartInteractivityModule"
   ]
