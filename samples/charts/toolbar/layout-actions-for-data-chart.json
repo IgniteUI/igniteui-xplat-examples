@@ -14,7 +14,7 @@
         },
         {
           "type": "ToolActionLabel",
-          "title": "Reset",
+          "title": "Hide Reset",
           "overlayId": "ZoomReset",
           "visibility": "Collapsed"
         },
@@ -22,9 +22,9 @@
           "type": "ToolActionLabel",
           "title": "Reset",
           "afterId": "ZoomOut",
-          "iconName": "MyCustomIcon",
-          "iconCollectionName": "MyCustomCollection",
-          "onCommandRef": "MyCustomAction"
+          "iconName": "Reset",
+          "iconCollectionName": "ChartToolbarIcons",
+          "visibility": "Visible"
         }
       ]
     },
@@ -79,10 +79,10 @@
   "modules": [
     "layouts/ToolbarModule",
     "charts/DataChartToolbarModule",
-    "charts/NumberAbbreviatorModule",
-    "charts/DataChartCategoryModule",
     "charts/DataChartCoreModule",
+    "charts/DataChartCategoryModule",
+    "charts/DataChartAnnotationModule",
     "charts/DataChartInteractivityModule",
-    "charts/DataChartAnnotationModule"
-  ]
-}
+    "charts/AnnotationLayerProxyModule",
+    "charts/DataChartCategoryTrendLineModule"  ]
+  }

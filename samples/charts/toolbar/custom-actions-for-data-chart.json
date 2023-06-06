@@ -1,6 +1,6 @@
 {
   "export": false,
-  "note": "P1 add custom actions for Data Chart, e.g. change data source (GOOG, AMZM, APPL stocks) and aggregate data items",
+  "note": "P2 add custom actions for Data Chart, e.g. change data source (GOOG, AMZM, APPL stocks) and aggregate data items",
   "strings": {
     "legendTitle": "Toolbar with custom actions for Data Chart"
   },
@@ -22,12 +22,11 @@
   "modules": [
     "layouts/ToolbarModule",
     "charts/DataChartToolbarModule",
-    "charts/LegendModule",
-    "charts/DataLegendModule",
-    "charts/NumberAbbreviatorModule",
     "charts/DataChartCoreModule",
+    "charts/DataChartCategoryModule",
+    "charts/DataChartAnnotationModule",
     "charts/DataChartInteractivityModule",
-    "charts/DataLegendModule",
-    "charts/DataChartAnnotationModule"
+    "charts/AnnotationLayerProxyModule",
+    "charts/DataChartCategoryTrendLineModule"
   ]
 }
