@@ -1,8 +1,8 @@
 {
   "todo": [
-    "Defer - until we can inject CSS styles"
+    ""
   ],
-  "export": false,
+  "export": true,
   "skipAlterDataCasing": true,
   "descriptions": {
     "editor": {
