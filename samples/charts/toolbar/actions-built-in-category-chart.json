@@ -2,16 +2,16 @@
   "strings": {
     "legendTitle": "Renewable Electricity Generated"
   },
-  "aboveContent": {
-    "type": "Toolbar",
-    "name": "Toolbar",
-    "targetRef": "chart",
-    "orientation": "Horizontal"
-  },
   "descriptions": {
     "legend": {
       "type": "Legend",
       "name": "Legend",
+      "orientation": "Horizontal"
+    },
+    "aboveContent": {
+      "type": "Toolbar",
+      "name": "Toolbar",
+      "targetRef": "chart",
       "orientation": "Horizontal"
     },
     "content": {
