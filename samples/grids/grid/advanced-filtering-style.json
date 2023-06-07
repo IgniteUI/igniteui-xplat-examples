@@ -2,6 +2,7 @@
   "todo": [""],
   "export": true,
   "skipAlterDataCasing": true,
+  "onInit": ["WebGridRowEditingStyle"],
   "descriptions": {
     "content": {
       "type": "WebGrid",
@@ -26,7 +27,6 @@
         }
       ],
       "allowAdvancedFiltering": true,
-      "onInit": ["WebGridRowEditingStyle"],
       "columns": [
         {
           "type": "WebColumn",
