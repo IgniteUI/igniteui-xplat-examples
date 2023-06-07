@@ -8,13 +8,6 @@
       "actions": [
         {
           "type": "ToolActionLabel",
-          "title": "hide analyze menu",
-          "overlayId": "AnalyzeMenu",
-          "visibility": "Collapsed"
-        },
-        {
-          "type": "ToolActionLabel",
-          "title": "Reset",
           "overlayId": "ZoomReset",
           "visibility": "Collapsed"
         },
@@ -22,9 +15,14 @@
           "type": "ToolActionLabel",
           "title": "Reset",
           "afterId": "ZoomOut",
-          "iconName": "MyCustomIcon",
-          "iconCollectionName": "MyCustomCollection",
-          "onCommandRef": "MyCustomAction"
+          "iconName": "reset",
+          "iconCollectionName": "ChartToolbarIcons",
+          "commandId": "ZoomReset"
+        },
+        {
+          "type": "ToolActionIconMenu",
+          "overlayId": "AnalyzeMenu",
+          "visibility": "Collapsed"
         }
       ]
     },
@@ -78,11 +76,8 @@
   },
   "modules": [
     "layouts/ToolbarModule",
+    "layouts/ToolActionIconMenuModule",
     "charts/DataChartToolbarModule",
-    "charts/NumberAbbreviatorModule",
-    "charts/DataChartCategoryModule",
-    "charts/DataChartCoreModule",
-    "charts/DataChartInteractivityModule",
-    "charts/DataChartAnnotationModule"
+    "charts/DataChartCategoryModule"
   ]
 }
