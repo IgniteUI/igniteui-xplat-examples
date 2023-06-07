@@ -1,6 +1,7 @@
 {
   "todo": [ "" ],
   "skipAlterDataCasing": true,
+  "onInit": ["WebGridColumnMovingStyle"],
   "descriptions": {
     "content": {
       "type": "WebGrid",
@@ -10,7 +11,6 @@
       "moving": true,
       "name": "grid",
       "id": "grid",
-      "onInit": ["WebGridColumnMovingStyle"],
       "columns": [
         {
           "type": "WebColumn",
