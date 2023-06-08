@@ -5,6 +5,25 @@
   "export": true,
   "skipAlterDataCasing": true,
   "descriptions": {
+    "editor": {
+      "type": "PropertyEditorPanel",
+      "name": "PropertyEditor",
+      "componentRendererRef": "renderer",
+      "targetRef": "grid",
+      "descriptionType": "WebGrid",
+      "isHorizontal": true,
+      "isWrappingEnabled": true,
+      "properties": [
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "valueType": "Boolean1",
+          "shouldOverrideDefaultEditor": true,
+          "label": "Export Multi-Column Headers",
+          "primitiveValue": true,
+          "name": "exportHeaders"
+        }
+      ]
+    },
     "content": {
       "type": "WebGrid",
       "name": "grid",
