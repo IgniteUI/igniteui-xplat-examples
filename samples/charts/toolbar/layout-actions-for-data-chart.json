@@ -8,13 +8,6 @@
       "actions": [
         {
           "type": "ToolActionLabel",
-          "title": "hide analyze menu",
-          "overlayId": "AnalyzeMenu",
-          "visibility": "Collapsed"
-        },
-        {
-          "type": "ToolActionLabel",
-          "title": "Hide Reset",
           "overlayId": "ZoomReset",
           "visibility": "Collapsed"
         },
@@ -22,9 +15,14 @@
           "type": "ToolActionLabel",
           "title": "Reset",
           "afterId": "ZoomOut",
-          "iconName": "Reset",
+          "iconName": "reset",
           "iconCollectionName": "ChartToolbarIcons",
-          "visibility": "Visible"
+          "commandId": "ZoomReset"
+        },
+        {
+          "type": "ToolActionIconMenu",
+          "overlayId": "AnalyzeMenu",
+          "visibility": "Collapsed"
         }
       ]
     },
@@ -84,5 +82,6 @@
     "charts/DataChartAnnotationModule",
     "charts/DataChartInteractivityModule",
     "charts/AnnotationLayerProxyModule",
-    "charts/DataChartCategoryTrendLineModule"  ]
-  }
+    "charts/DataChartCategoryTrendLineModule"
+  ]
+}
