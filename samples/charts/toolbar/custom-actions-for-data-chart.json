@@ -17,8 +17,8 @@
           "title": "Toggle Legend",
           "iconName": "CustomLegendIcon",
           "iconCollectionName": "CustomLegendCollection",
-          "commandId": "CustomToolLegendAction",
-          "onCommandRef": "CustomToolAction"
+          "commandId": "ToolbarCustomLegendAction",
+          "onCommandRef": "ToolbarCustomAction"
         },
         {
           "type": "ToolActionLabel",
@@ -26,7 +26,7 @@
           "iconName": "CustomIcon",
           "iconCollectionName": "CustomCollection",
           "commandId": "CustomLinkToolAction",
-          "onCommandRef": "CustomToolAction"
+          "onCommandRef": "ToolbarCustomAction"
         }
       ]
     },
