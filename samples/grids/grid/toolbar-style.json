@@ -1,28 +1,75 @@
 {
-  "todo": [ "Approved Defer - implement CSS styling"  ],
-  "export": false,
+  "export": true,
   "skipAlterDataCasing": true,
+  "onInit": [ "WebGridToolbarStyleWithCustomCSS" ],
   "descriptions": {
     "content": {
       "type": "WebGrid",
-      "name": "grid",
+      "dataRef": "AthletesData",
+      "autoGenerate": false,
       "id": "grid",
-      "dataRef": "CustomersData",
-      "columnSelection": "Single",
+      "toolbar": [
+        {
+          "type": "WebGridToolbar",
+          "tools": [
+            {
+              "type": "WebGridToolbarActions",
+              "actions": [
+                {
+                  "type": "WebGridToolbarAdvancedFiltering"
+                },
+                {
+                  "type": "WebGridToolbarHiding"
+                },
+                {
+                  "type": "WebGridToolbarPinning"
+                },
+                {
+                  "type": "WebGridToolbarExporter"
+                }
+              ]
+            }
+          ]
+        }
+      ],
       "columns": [
         {
           "type": "WebColumn",
-          "field": "ID"
+          "field": "Name",
+          "header": "Athlete",
+          "width": "200px"
         },
         {
           "type": "WebColumn",
-          "field": "CompanyName",
-          "header": "Company"
+          "field": "CountryName",
+          "header": "Country",
+          "width": "200px"
+        },
+        {
+          "type": "WebColumn",
+          "field": "BeatsPerMinute",
+          "header": "Beats Per Minute"
+        },
+        {
+          "type": "WebColumn",
+          "field": "TopSpeed",
+          "header": "Top Speed"
+        },
+        {
+          "type": "WebColumn",
+          "field": "AthleteNumber",
+          "header": "ID"
+        },
+        {
+          "type": "WebColumn",
+          "field": "TrackProgress",
+          "header": "Progress"
         }
       ]
     }
   },
   "modules": [
+    "withDescriptions",
     "grids/WebGridModule"
   ]
 }
