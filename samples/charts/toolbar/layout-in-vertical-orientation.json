@@ -38,9 +38,13 @@
     }
   },
   "modules": [
-    "withDescriptions",
-    "layout/ToolbarModule",
+    "layouts/ToolbarModule",
     "charts/DataChartToolbarModule",
-    "charts/DataChartCoreModule"
+    "charts/DataChartCoreModule",
+    "charts/DataChartCategoryModule",
+    "charts/DataChartAnnotationModule",
+    "charts/DataChartInteractivityModule",
+    "charts/AnnotationLayerProxyModule",
+    "charts/DataChartCategoryTrendLineModule"
   ]
 }

@@ -76,8 +76,12 @@
   },
   "modules": [
     "layouts/ToolbarModule",
-    "layouts/ToolActionIconMenuModule",
     "charts/DataChartToolbarModule",
-    "charts/DataChartCategoryModule"
+    "charts/DataChartCoreModule",
+    "charts/DataChartCategoryModule",
+    "charts/DataChartAnnotationModule",
+    "charts/DataChartInteractivityModule",
+    "charts/AnnotationLayerProxyModule",
+    "charts/DataChartCategoryTrendLineModule"
   ]
 }

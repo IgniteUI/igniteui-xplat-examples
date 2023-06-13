@@ -60,10 +60,10 @@
     "layouts/PropertyEditorPanelModule",
     "layouts/ToolbarModule",
     "charts/DataChartToolbarModule",
-    "charts/NumberAbbreviatorModule",
-    "charts/DataChartCategoryModule",
     "charts/DataChartCoreModule",
+    "charts/DataChartCategoryModule",
+    "charts/DataChartAnnotationModule",
     "charts/DataChartInteractivityModule",
-    "charts/DataChartAnnotationModule"
-  ]
-}
+    "charts/AnnotationLayerProxyModule",
+    "charts/DataChartCategoryTrendLineModule"  ]
+  }

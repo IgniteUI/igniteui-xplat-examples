@@ -87,6 +87,8 @@
     "charts/NumberAbbreviatorModule",
     "charts/DataChartCategoryModule",
     "charts/DataChartCoreModule",
+    "charts/DataChartCategoryModule",
+    "charts/DataChartAnnotationModule",
     "charts/DataChartInteractivityModule",
     "charts/DataChartAnnotationModule"
   ]

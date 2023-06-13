@@ -61,6 +61,7 @@
     "charts/DataChartCategoryModule",
     "charts/DataChartAnnotationModule",
     "charts/DataChartInteractivityModule",
-    "charts/AnnotationLayerProxyModule"
+    "charts/AnnotationLayerProxyModule",
+    "charts/DataChartCategoryTrendLineModule"
   ]
 }
