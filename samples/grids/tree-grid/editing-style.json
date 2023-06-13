@@ -1,6 +1,7 @@
 {
   "todo": [ "" ],
   "export": true,
+  "onInit": ["WebTreeGridCellEditingStyleTemplate"],
   "descriptions": {
     "content": {
       "type": "WebTreeGrid",
@@ -8,19 +9,29 @@
       "id": "treeGrid",
       "dataRef": "EmployeesNestedTreeData",
       "primaryKey": "ID",
-      "cellEditRef": "WebTreeGridCellEdit",
       "autoGenerate": false,
+      "displayDensity": "Comfortable",
+      "allowFiltering": true,
+      "paging": true,
       "foreignKey": "ParentID",
+      "paginationComponents": [
+        {
+          "type": "WebPaginator",
+          "perPage": 10
+        }
+      ],
       "columns": [
         {
           "type": "WebColumn",
           "field": "Name",
-          "dataType": "String"
+          "dataType": "String",
+          "editable": true
         },
         {
           "type": "WebColumn",
           "field": "Title",
-          "dataType": "String"
+          "dataType": "String",
+          "editable": true
         },
         {
           "type": "WebColumn",
@@ -33,12 +44,21 @@
           "field": "HireDate",
           "dataType": "Date",
           "editable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "OnPTO",
+          "dataType": "Boolean",
+          "editable": true,
+          "width": "130px",
+          "bodyTemplateRef": "WebTreeGridIconCellTemplate"
         }
       ]
     }
   },
   "modules": [
     "withDescriptions",
+    "grids/WebPaginatorModule",
     "grids/WebTreeGridModule"
   ]
 }
