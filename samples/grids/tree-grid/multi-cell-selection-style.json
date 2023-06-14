@@ -1,0 +1,57 @@
+{
+  "todo": [ "" ],
+  "export": true,
+  "onInit": ["WebTreeGridCellSelectionStyleTemplate"],
+  "descriptions": {
+    "content": {
+      "type": "WebTreeGrid",
+      "name": "treeGrid",
+      "id": "treeGrid",
+      "dataRef": "OrdersTreeData",
+      "primaryKey": "ID",
+      "foreignKey": "ParentID",
+      "autoGenerate": false,
+      "columns": [
+        {
+          "type": "WebColumn",
+          "field": "ID",
+          "header": "Order ID",
+          "dataType": "Number"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Name",
+          "dataType": "String",
+          "header": "Order Product"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Units",
+          "dataType": "Number"
+        },
+        {
+          "type": "WebColumn",
+          "field": "UnitPrice",
+          "header": "Unit Price",
+          "dataType": "Currency"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Price",
+          "header": "Price",
+          "dataType": "Currency"
+        },
+        {
+          "type": "WebColumn",
+          "field": "OrderDate",
+          "header": "Order Date",
+          "dataType": "Date"
+        }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "grids/WebTreeGridModule"
+  ]
+}
