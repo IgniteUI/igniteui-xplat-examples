@@ -1,0 +1,70 @@
+{
+  "todo": [""],
+  "export": true,
+  "skipAlterDataCasing": true,
+  "descriptions": {
+    "content": {
+      "type": "WebTreeGrid",
+      "name": "treeGrid",
+      "id": "treeGrid",
+      "dataRef": "EmployeesNestedData",
+      "autoGenerate": false,
+      "toolbar": [
+        {
+          "type": "WebGridToolbar",
+          "tools": [
+            {
+              "type": "WebGridToolbarActions",
+              "actions": [
+                {
+                  "type": "WebGridToolbarExporter",
+                  "exportCSV": false,
+                  "exportExcel": true
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "columns": [
+        {
+          "type": "WebColumn",
+          "field": "ID",
+          "header": "ID",
+          "dataType": "Number"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Name",
+          "header": "Name",
+          "dataType": "String"
+        },
+        {
+          "type": "WebColumn",
+          "field": "HireDate",
+          "header": "Hire Date",
+          "dataType": "Date"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Age",
+          "header": "Age",
+          "dataType": "Number"
+        },
+        {
+          "type": "WebColumn",
+          "field": "salary",
+          "header": "Salary",
+          "dataType": "Number"
+        },
+        {
+          "type": "WebColumn",
+          "field": "productivity",
+          "header": "Productivity",
+          "dataType": "Number"
+        }
+      ]
+    }
+  },
+  "modules": ["grids/WebGridModule", "grids/WebGridToolbarModule"]
+}
