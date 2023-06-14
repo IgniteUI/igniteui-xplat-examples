@@ -8,6 +8,7 @@
       "name": "treeGrid",
       "id": "treeGrid",
       "dataRef": "EmployeesNestedData",
+      "childDataKey": "Employees",
       "autoGenerate": false,
       "toolbar": [
         {
