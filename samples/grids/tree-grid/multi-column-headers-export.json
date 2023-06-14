@@ -9,6 +9,7 @@
       "id": "treeGrid",
       "dataRef": "EmployeesFlatDetails",
       "foreignKey": "ParentID",
+      "primaryKey": "ID",
       "autoGenerate": false,
       "toolbar": [
         {
@@ -57,7 +58,7 @@
             {
               "type": "WebColumn",
               "field": "HireDate",
-              "name": "HireDate",
+              "header": "HireDate",
               "dataType": "Date",
               "resizable": true,
               "sortable": true
@@ -68,14 +69,14 @@
               "children": [
                 {
                   "type": "WebColumn",
-                  "name": "Title",
+                  "header": "Title",
                   "field": "Title",
                   "resizable": true,
                   "sortable": true
                 },
                 {
                   "type": "WebColumn",
-                  "name": "Age",
+                  "header": "Age",
                   "field": "Age",
                   "dataType": "Number",
                   "resizable": true,
