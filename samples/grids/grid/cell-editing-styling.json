@@ -1,5 +1,6 @@
 {
   "skipAlterDataCasing": true,
+  "onInit": ["WebGridCellEditingStyleTemplate"],
   "descriptions": {
     "content": {
       "type": "WebGrid",
@@ -8,7 +9,6 @@
       "primaryKey": "ProductID",
       "displayDensity": "Cosy",
       "allowFiltering": true,
-      "onInit": ["WebGridCellEditingStyleTemplate"],
       "paginationComponents": [
         {
           "type": "WebPaginator",
