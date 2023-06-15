@@ -3,6 +3,7 @@
   "descriptions": {
     "content": {
       "type": "WebGrid",
+      "id": "grid",
       "dataRef": "WebGridCellEditSampleRoleplay",
       "autoGenerate": false,
       "primaryKey": "name",
