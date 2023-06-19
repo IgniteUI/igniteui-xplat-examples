@@ -34,8 +34,8 @@
             },
             {
               "type": "WebColumn",
-              "field": "LastName",
-              "header": "Last Name",
+              "field": "Name",
+              "header": "Name",
               "dataType": "String",
               "sortable": true,
               "resizable": true,
