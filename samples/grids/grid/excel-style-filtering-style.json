@@ -4,7 +4,7 @@
   ],
   "export": false,
   "skipAlterDataCasing": true,
-  "onInit": ["ExcelStyleFilteringStyleTemplate"],
+  "onInit": ["WebGridExcelStyleFilteringTemplate"],
   "descriptions": {
     "content": {
       "type": "WebGrid",
