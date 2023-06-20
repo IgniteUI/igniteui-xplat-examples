@@ -7,6 +7,7 @@
       "type": "WebGrid",
       "dataRef": "AthletesData",
       "autoGenerate": false,
+      "name": "grid",
       "id": "grid",
       "toolbar": [
         {
