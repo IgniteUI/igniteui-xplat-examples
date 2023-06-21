@@ -28,8 +28,8 @@
         },
         {
           "type": "WebColumn",
-          "field": "Name",
-          "header": "Name",
+          "field": "City",
+          "header": "City",
           "bodyTemplateRef": "WebGridCityDropDownTemplate"
         }
       ]
