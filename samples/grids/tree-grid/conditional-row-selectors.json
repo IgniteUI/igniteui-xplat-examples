@@ -14,7 +14,7 @@
       "rowSelection": "Multiple",
       "rowSelectionChangingRef": "WebGridRowSelectionConditional",
       "columns": [
-		{
+	{
           "type": "WebColumn",
           "field": "Name",
           "dataType": "String"
