@@ -10,7 +10,7 @@
       "name": "treeGrid",
       "id": "treeGrid",
       "primaryKey": "ID",
-	    "foreignKey": "ParentID",	
+      "foreignKey": "ParentID",	
       "displayDensity": "Cosy",
       "rowSelectorTemplateRef": "WebGridRowSelectorExcelTemplate",
       "headSelectorTemplateRef": "WebGridHeaderRowSelectorExcelTemplate",
