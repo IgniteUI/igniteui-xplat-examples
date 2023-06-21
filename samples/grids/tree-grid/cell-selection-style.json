@@ -1,12 +1,13 @@
 {
   "todo": [ "" ],
   "export": true,
-  "onInit": ["WebTreeGridCellSelectionStyleTemplate"],
+  "skipAlterDataCasing": true,
+  "onInit": ["WebGridCellSelectionStyleWithCustomCSS"],
   "descriptions": {
     "content": {
       "type": "WebTreeGrid",
-      "name": "treeGrid",
-      "id": "treeGrid",
+      "name": "grid",
+      "id": "grid",
       "dataRef": "OrdersTreeData",
       "primaryKey": "ID",
       "foreignKey": "ParentID",
