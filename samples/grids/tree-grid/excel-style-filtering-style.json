@@ -1,0 +1,57 @@
+{
+  "todo": [],
+  "skipAlterDataCasing": true,
+  "onInit": ["WebGridExcelStyleFilteringTemplate"],
+  "descriptions": {
+    "content": {
+      "type": "WebTreeGrid",
+      "name": "grid",
+      "id": "grid",
+      "dataRef": "FoodsData",
+      "primaryKey": "ID",
+      "foreignKey": "ParentID",
+      "moving": true,
+      "autoGenerate": false,
+      "allowFiltering": true,
+      "filterMode": "ExcelStyleFilter",
+      "columns": [
+        {
+          "type": "WebColumn",
+          "field": "ID",
+          "header": "ID",
+          "sortable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "Name",
+          "header": "Product Name",
+          "sortable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "UnitPrice",
+          "header": "Unit Price",
+          "sortable": true,
+          "dataType": "Currency"
+        },
+        {
+          "type": "WebColumn",
+          "field": "AddedDate",
+          "header": "Added Date",
+          "sortable": true,
+          "dataType": "Date"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Discontinued",
+          "dataType": "Boolean",
+          "bodyTemplateRef": "WebGridBooleanCellTemplate"
+        }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "grids/WebGridModule"
+  ]
+}
