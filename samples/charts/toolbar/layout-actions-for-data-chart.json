@@ -20,7 +20,7 @@
           "commandId": "ZoomReset"
         },
         {
-          "type": "ToolActionIconMenu",
+          "type": "ToolActionLabel",
           "overlayId": "AnalyzeMenu",
           "visibility": "Collapsed"
         }
