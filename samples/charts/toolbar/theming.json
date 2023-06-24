@@ -14,7 +14,7 @@
           "label": "Theme",
           "shouldOverrideDefaultEditor": true,
           "valueType": "EnumValue",
-          "primitiveValue": "SlingshotDark"
+          "primitiveValue": "Default"
         }
       ]
     },
@@ -23,10 +23,12 @@
       "name": "Toolbar",
       "targetRef": "chart",
       "orientation": "Horizontal",
-      "baseTheme": "SlingshotDark"
+      "baseTheme": "Default"
     },
     "content": {
       "type": "DataChart",
+      "computedPlotAreaMarginMode": "Series",
+      "isVerticalZoomEnabled": true,
       "isHorizontalZoomEnabled": true,
       "name": "chart",
       "axes": [

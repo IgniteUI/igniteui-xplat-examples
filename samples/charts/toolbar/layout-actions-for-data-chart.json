@@ -1,11 +1,18 @@
 {
   "descriptions": {
-    "aboveContent": {
+    "aboveContentLeft": {
       "type": "Toolbar",
       "name": "Toolbar",
       "targetRef": "chart",
       "orientation": "Horizontal",
+      "onCommandRef": "ToolbarToggleTooltip",
       "actions": [
+        {
+          "type": "ToolActionCheckbox",
+          "title": "Enable Tooltips",
+          "beforeId": "ZoomReset",
+          "commandId": "EnableTooltips"
+        },
         {
           "type": "ToolActionLabel",
           "overlayId": "ZoomReset",
@@ -28,7 +35,9 @@
     },
     "content": {
       "type": "DataChart",
+      "computedPlotAreaMarginMode": "Series",
       "isHorizontalZoomEnabled": true,
+      "isVerticalZoomEnabled": true,
       "name": "chart",
       "axes": [
         {
@@ -81,7 +90,6 @@
     "charts/DataChartCategoryModule",
     "charts/DataChartAnnotationModule",
     "charts/DataChartInteractivityModule",
-    "charts/AnnotationLayerProxyModule",
     "charts/DataChartCategoryTrendLineModule"
   ]
 }
