@@ -1,6 +1,6 @@
 {
   "descriptions": {
-    "aboveContent": {
+    "aboveContentLeft": {
       "type": "Toolbar",
       "name": "Toolbar",
       "targetRef": "chart",
@@ -9,6 +9,8 @@
     "content": {
       "type": "DataChart",
       "isHorizontalZoomEnabled": true,
+      "isVerticalZoomEnabled": true,
+      "computedPlotAreaMarginMode": "Series",
       "name": "chart",
       "axes": [
         {
@@ -50,6 +52,9 @@
           "yAxisRef": "yAxis",
           "dataSourceRef": "CountryRenewableElectricity",
           "valueMemberPath": "China"
+        },
+        {
+          "type": "DataToolTipLayer"
         }
       ]
     }
