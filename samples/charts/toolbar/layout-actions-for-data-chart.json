@@ -8,17 +8,20 @@
       "onCommandRef": "ToolbarToggleTooltip",
       "actions": [
         {
+          "name": "EnableTooltipsLabel",
           "type": "ToolActionCheckbox",
           "title": "Enable Tooltips",
           "beforeId": "ZoomReset",
           "commandId": "EnableTooltips"
         },
         {
+          "name": "ZoomResetHidden",
           "type": "ToolActionLabel",
           "overlayId": "ZoomReset",
           "visibility": "Collapsed"
         },
         {
+          "name": "ZoomResetLabel",
           "type": "ToolActionLabel",
           "title": "Reset",
           "afterId": "ZoomOut",
@@ -27,6 +30,7 @@
           "commandId": "ZoomReset"
         },
         {
+          "name": "AnalyzeMenu",
           "type": "ToolActionIconMenu",
           "overlayId": "AnalyzeMenu",
           "visibility": "Collapsed"
