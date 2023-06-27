@@ -120,7 +120,7 @@
     },
     "modules": [
       "grids/WebGridModule",
-      "BadgeModule"
+      "webinputs/WebBadgeModule"
     ]
   }
   
