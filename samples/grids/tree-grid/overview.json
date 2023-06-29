@@ -14,7 +14,11 @@
       "moving": true,
       "allowFiltering": true,
       "filterMode": "ExcelStyleFilter",
-      "paging": true,
+      "paginationComponents": [
+        {
+          "type": "WebPaginator"
+        }
+      ],
       "toolbar": [
         {
           "type": "WebGridToolbar",
@@ -45,16 +49,6 @@
       "columns": [
         {
           "type": "WebColumn",
-          "field": "iD",
-          "header": "ID",
-          "dataType": "Number",
-          "sortable": true,
-          "editable": true,
-          "resizable": true,
-          "hasSummary": true
-        },
-        {
-          "type": "WebColumn",
           "field": "Name",
           "header": "Name",
           "dataType": "String",
@@ -80,24 +74,6 @@
           "sortable": true,
           "editable": true,
           "resizable": true
-        },
-        {
-          "type": "WebColumn",
-          "field": "salary",
-          "header": "Salary",
-          "dataType": "Number",
-          "sortable": true,
-          "editable": true,
-          "resizable": true
-        },
-        {
-          "type": "WebColumn",
-          "field": "productivity",
-          "header": "Productivity",
-          "dataType": "Number",
-          "sortable": true,
-          "editable": true,
-          "resizable": true
         }
       ]
     }
@@ -105,6 +81,7 @@
   "modules": [
     "withDescriptions",
     "layouts/PropertyEditorPanelModule",
-    "grids/WebTreeGridModule"
+    "grids/WebTreeGridModule",
+    "WebPaginatorModule"
   ]
 }
