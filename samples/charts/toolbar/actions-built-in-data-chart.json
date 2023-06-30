@@ -54,7 +54,8 @@
           "valueMemberPath": "China"
         },
         {
-          "type": "DataToolTipLayer"
+          "type": "DataToolTipLayer",
+          "name": "tooltipLayer"
         }
       ]
     }
