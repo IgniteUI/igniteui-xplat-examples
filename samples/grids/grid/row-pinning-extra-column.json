@@ -9,7 +9,7 @@
         "content": {
             "name": "grid",
             "type": "WebGrid",
-            "dataRef": "CustomersData",
+            "dataRef": "CustomersDataLocal",
             "primaryKey": "ID",
             "cellSelection": "None",
             "columns": [
