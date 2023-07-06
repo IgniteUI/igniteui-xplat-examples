@@ -5,12 +5,13 @@
   "descriptions": {
     "content": {
       "type": "WebTreeGrid",
-      "dataRef": "NwindData",
+      "dataRef": "EmployeesFlatData",
       "autoGenerate": false,
       "name": "grid",
       "id": "grid",
       "rowEditable": true,
-      "primaryKey": "ProductID",
+      "primaryKey": "ID",
+      "foreignKey": "ParentID",
       "renderedRef": "WebTreeGridRendered",
       "rowEditEnterRef": "WebGridRowEditEnter",
       "rowEditRef": "WebGridRowEdit",
@@ -23,22 +24,22 @@
       "columns": [
         {
           "type": "WebColumn",
-          "field": "ProductName",
-          "header": "Product Name"
+          "field": "Name",
+          "dataType": "String",
+          "editable": true
         },
         {
           "type": "WebColumn",
-          "field": "UnitPrice",
-          "header": "Unit Price"
+          "field": "Title",
+          "header": "Job Title",
+          "dataType": "String",
+          "editable": true
         },
         {
           "type": "WebColumn",
-          "field": "UnitsInStock",
-          "header": "Units In Stock"
-        },
-        {
-          "type": "WebColumn",
-          "field": "Ordered"
+          "field": "Age",
+          "dataType": "Number",
+          "editable": true
         }
       ]
     }
