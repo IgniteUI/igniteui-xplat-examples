@@ -6,7 +6,6 @@
       "name": "chart",
       "plotAreaMarginLeft": 100,
       "plotAreaMarginRight": 100,
-      "chartTitle": "Brexit Timeline",
       "axes": [
         {
           "type": "CategoryXAxis",
