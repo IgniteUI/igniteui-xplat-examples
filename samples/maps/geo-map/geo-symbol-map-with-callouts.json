@@ -1,0 +1,50 @@
+{
+  "export": false,
+  "descriptions": {
+    "legend": {
+      "type": "Legend",
+      "name": "Legend",
+      "orientation": "Horizontal"
+    },
+    "content": {
+      "type": "GeographicMap",
+      "name": "GeoMap",
+      "zoomable": true,
+      "legendRef": "Legend",
+      "series": [
+        {
+          "type": "GeographicSymbolSeries",
+          "name": "GeographicSymbolSeries1",
+          "title": "World Capitals Above 2 Million People",
+          "latitudeMemberPath": "Y",
+          "longitudeMemberPath": "X",
+          "dataSourceRef": "WorldCapitals2M",
+          "markerType": "Circle",
+          "markerBrush": "#1E90FF",
+          "markerOutline": "#1E90FF",
+          "showDefaultTooltip": true
+        },
+        {
+          "type": "CalloutLayer",
+          "name": "CalloutLayer1",
+          "dataSourceRef": "WorldCapitals2M",
+          "xMemberPath": "X",
+          "yMemberPath": "Y",
+          "labelMemberPath": "Name",
+          "calloutCollisionMode": "SimulatedAnnealing",
+          "calloutLeaderBrush": "#1E90FF",
+          "calloutOutline": "#1E90FF",
+          "calloutBackground": "white",
+          "calloutTextColor": "black",
+          "calloutStrokeThickness": 2
+        }
+      ]
+    }
+  },
+  "modules": [
+    "maps/GeographicMapModule",
+    "charts/LegendModule",
+    "charts/DataChartAnnotationModule",
+    "charts/DataChartInteractivityModule"
+  ]
+}

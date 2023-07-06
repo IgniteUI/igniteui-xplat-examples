@@ -1,0 +1,76 @@
+{
+  "strings": {
+    "legendTitle": "Renewable Electricity Generated"
+  },
+  "descriptions": {
+    "content": {
+      "type": "DataChart",
+      "name": "chart",
+      "axes": [
+        {
+          "type": "CategoryXAxis",
+          "name": "xAxis",
+          "dataSourceRef": "CountryRenewableElectricity",
+          "label": "Year"
+        },
+        {
+          "type": "NumericYAxis",
+          "name": "yAxis",
+          "title": "TWh"
+        }
+      ],
+      "series": [
+        {
+          "type": "LineSeries",
+          "name": "LineSeries1",
+          "title": "Electricity",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "dataSourceRef": "CountryRenewableElectricity",
+          "valueMemberPath": "America"
+        },
+        {
+          "type": "CalloutLayer",
+          "name": "CalloutLayer1",
+          "dataSourceRef": "CountryRenewableCallouts",
+          "xMemberPath": "Index",
+          "yMemberPath": "Value",
+          "labelMemberPath": "Label",
+          "calloutPaddingLeft": 20,
+          "calloutPaddingRight": 20,
+          "calloutPaddingBottom": 10,
+          "calloutPaddingTop": 10,
+          "calloutCornerRadius": 5
+        },
+        {
+          "type": "FinalValueLayer",
+          "name": "FinalValueLayer",
+          "axisAnnotationBackgroundCornerRadius": 10,
+          "axisAnnotationPaddingBottom": 10,
+          "axisAnnotationPaddingTop": 10,
+          "axisAnnotationPaddingLeft": 10,
+          "axisAnnotationPaddingRight": 10
+        },
+        {
+          "type": "CrosshairLayer",
+          "name": "CrosshairLayer",
+          "isAxisAnnotationEnabled": true,
+          "yAxisAnnotationInterpolatedValuePrecision": 0,
+          "xAxisAnnotationBackgroundCornerRadius": 10,
+          "yAxisAnnotationBackgroundCornerRadius": 10
+        },
+        {
+          "type": "DataToolTipLayer",
+          "name": "Tooltips"
+        }
+      ]
+    }
+  },
+  "modules": [
+    "charts/DataChartCoreModule",
+    "charts/DataChartCategoryModule",
+    "charts/DataChartAnnotationModule",
+    "charts/DataChartInteractivityModule",
+    "charts/AnnotationLayerProxyModule"
+  ]
+}

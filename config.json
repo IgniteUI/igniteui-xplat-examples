@@ -1,0 +1,41 @@
+{
+  "note": "this file defines global config used by CodeExporter app when exporting xplat samples",
+  "platforms": [
+    {
+      "name": "All",
+      "exclusions": [
+        { "reason": "TODO fix exporting for BubbleSeries.RadiusScale", "path": "bubble-chart" },
+        { "reason": "TODO test exporting and sample template", "path": "maps\\" },
+        { "reason": "TODO test exporting and sample template", "path": "gauges\\" }
+      ]
+    },
+    {
+      "name": "React",
+      "exclusions": [
+        { "reason": "component isn't in React product", "path": "grids\\hierarchical-grid\\" },
+        { "reason": "component isn't in React product", "path": "grids\\pivot-grid\\" },
+        { "reason": "component isn't in React product", "path": "grids\\tree-grid\\" },
+        { "reason": "component isn't in React product", "path": "grids\\grid\\" }
+      ]
+    },
+    {
+      "name": "Angular",
+      "exclusions": [
+        { "reason": "samples are in LOB angular repo", "path": "grids\\hierarchical-grid\\" },
+        { "reason": "samples are in LOB angular repo", "path": "grids\\pivot-grid\\" },
+        { "reason": "samples are in LOB angular repo", "path": "grids\\tree-grid\\" },
+        { "reason": "samples are in LOB angular repo", "path": "grids\\grid\\" }
+      ]
+    },
+    {
+      "name": "Blazor",
+      "exclusions": [
+      ]
+    },
+    {
+      "name": "WebComponents",
+      "exclusions": [
+      ]
+    }
+  ]
+}

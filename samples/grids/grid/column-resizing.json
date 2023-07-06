@@ -1,0 +1,86 @@
+{
+  "skipAlterDataCasing": true,
+  "descriptions": {
+    "content": {
+      "type": "WebGrid",
+      "dataRef": "CustomersData",
+      "id": "grid",
+      "name": "grid",
+      "autoGenerate": false,
+      "columnResizedRef": "WebGridColumnResized",
+      "columns": [{
+        "type": "WebColumn",
+        "name": "ID",
+        "field": "ID",
+        "header": "ID"
+      },
+      {
+        "type": "WebColumn",
+        "name": "CompanyName",
+        "field": "CompanyName",
+        "header": "Company",
+        "resizable": true
+      },
+      {
+        "type": "WebColumn",
+        "name": "ContactName",
+        "field": "ContactName",
+        "header": "Name",
+        "minWidth": "60px",
+        "maxWidth": "230px",
+        "resizable": true
+      },
+      {
+        "type": "WebColumn",
+        "name": "ContactTitle",
+        "field": "ContactTitle",
+        "header": "Title",
+        "resizable": true
+      },
+      {
+        "type": "WebColumn",
+        "name": "Address",
+        "field": "Address",
+        "header": "Address",
+        "resizable": true
+      },
+      {
+        "type": "WebColumn",
+        "name": "City",
+        "field": "City",
+        "header": "City"
+      },
+      {
+        "type": "WebColumn",
+        "name": "Region",
+        "field": "Region",
+        "header": "Region",
+        "resizable": true
+      },
+      {
+        "type": "WebColumn",
+        "name": "PostalCode",
+        "field": "PostalCode",
+        "header": "Postal Code",
+        "resizable": true
+      },
+      {
+        "type": "WebColumn",
+        "name": "Country",
+        "field": "Country",
+        "header": "Country",
+        "resizable": true
+      },
+      {
+        "type": "WebColumn",
+        "name": "Phone",
+        "field": "Phone",
+        "header": "Phone",
+        "resizable": true
+        }]
+      }
+    },
+    "modules": [
+      "grids/WebGridModule"
+    ]
+  }

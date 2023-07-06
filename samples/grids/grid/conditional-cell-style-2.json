@@ -1,0 +1,46 @@
+{
+  "todo": [
+  ],
+  "export": true,
+  "skipAlterDataCasing": true,
+  "descriptions": {
+    "content": {
+      "type": "WebGrid",
+      "dataRef": "AthletesData",
+      "autoGenerate": false,
+      "primaryKey": "Id",
+      "columns": [
+        {
+          "type": "WebColumn",
+          "field": "Id",
+          "cellStylesRef": "WebGridCellStylesHandler"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Position",
+          "cellStylesRef": "WebGridCellStylesHandler"
+          
+        },
+        {
+          "type": "WebColumn",
+          "field": "Name",
+          "cellStylesRef": "WebGridCellStylesHandler"
+        },
+        {
+          "type": "WebColumn",
+          "field": "AthleteNumber",
+          "cellStylesRef": "WebGridCellStylesHandler"
+        },
+        {
+          "type": "WebColumn",
+          "field": "CountryName",
+          "cellStylesRef": "WebGridCellStylesHandler"
+        }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "grids/WebGridModule"
+  ]
+}

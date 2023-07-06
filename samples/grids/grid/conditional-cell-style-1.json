@@ -1,0 +1,63 @@
+{
+  "todo": [ "Conditional Cell Classes sample - Can set the cellClassesRef property but cannot set css class. Deferred until until we support injecting CSS classes." ],
+  "export": false,
+  "skipAlterDataCasing": true,
+  "descriptions": {
+    "content": {
+      "type": "WebGrid",
+      "name": "grid",
+      "dataRef": "AthletesData",
+      "autoGenerate": false,
+      "columns": [
+        {
+          "type": "WebColumn",
+          "field": "Id",
+          "header": "Rank",
+          "sortable": true,
+          "editable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "Name",
+          "header": "Athlete",
+          "sortable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "BeatsPerMinute",
+          "header": "Beats per Minute",
+          "dataType": "Number",
+          "editable": true,
+          "sortable": true,
+          "bodyTemplateRef": "WebGridBeatsPerMinuteTemplate"
+        },
+        {
+          "type": "WebColumn",
+          "field": "TopSpeed",
+          "header": "Top Speed",
+          "dataType": "Number",
+          "editable": true,
+          "sortable": true,
+          "bodyTemplateRef": "WebGridTopSpeedTemplate"
+        },
+        {
+          "type": "WebColumn",
+          "field": "TrackProgress",
+          "header": "Track Progress",
+          "editable": true,
+          "sortable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "CountryFlag",
+          "header": "Country",
+          "bodyTemplateRef": "WebGridImageCellTemplate"
+        }
+      ]
+    }
+  },
+  "modules": [
+    "layouts/PropertyEditorPanelModule",
+    "grids/WebGridModule"
+  ]
+}

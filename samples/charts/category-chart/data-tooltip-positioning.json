@@ -1,0 +1,61 @@
+{
+  "strings": {
+    "legendTitle": "Highest Grossing Movie Franchises"
+  },
+  "descriptions": {
+    "editor": {
+      "type": "PropertyEditorPanel",
+      "name": "PropertyEditor",
+      "componentRendererRef": "renderer",
+      "targetRef": "chart",
+      "descriptionType": "CategoryChart",
+      "isHorizontal": true,
+      "isWrappingEnabled": true,
+      "properties": [
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "DataToolTipGroupedPositionModeX",
+          "primitiveValue": "PinRight",
+          "name": "GroupedPositionXEditor",
+          "label": "Grouped X Position: "
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "DataToolTipGroupedPositionModeY",
+          "primitiveValue": "PinTop",
+          "name": "GroupedPositionYEditor",
+          "label": "Grouped Y Position: "
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "DataToolTipGroupingMode",
+          "primitiveValue": "Grouped",
+          "name": "GroupingModeEditor",
+          "label": "Grouping Mode: "
+        }
+      ]
+    },
+    "content": {
+      "type": "CategoryChart",
+      "name": "chart",
+      "chartType": "Column",
+      "dataSourceRef": "HighestGrossingMovies",
+      "toolTipType": "Data",
+      "dataToolTipGroupedPositionModeX": "PinRight",
+      "dataToolTipGroupedPositionModeY": "PinTop",
+      "dataToolTipGroupingMode": "Grouped",
+      "xAxisInterval": 1,
+      "yAxisTitle": "Billions of U.S. Dollars",
+      "yAxisTitleLeftMargin": 10,
+      "yAxisTitleRightMargin": 5,
+      "yAxisLabelLeftMargin": 0,
+      "crosshairsDisplayMode": "None"
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
+    "charts/LegendModule",
+    "charts/CategoryChartModule"
+  ]
+}

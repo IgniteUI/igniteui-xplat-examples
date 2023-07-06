@@ -1,0 +1,21 @@
+{
+  "descriptions": {
+    "content": {
+      "type": "FinancialChart",
+      "name": "chart",
+      "isToolbarVisible": false,
+      "isVerticalZoomEnabled": true,
+      "isHorizontalZoomEnabled": true,
+      "dataSourceRef": "MultipleStocks",
+      "verticalViewScrollbarMode": "Fading",
+      "horizontalViewScrollbarMode": "Persistent",
+      "zoomSliderType": "None",
+      "windowRect": {"left": 0, "top": 0, "width": 0.5, "height": 1}
+    }
+  },
+  "modules": [
+    "charts/FinancialChartModule",
+    "charts/DataChartInteractivityModule",
+    "charts/LegendModule"
+  ]
+}

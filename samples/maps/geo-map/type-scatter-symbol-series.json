@@ -11,22 +11,13 @@
           "title": "Geo Locations",
           "latitudeMemberPath": "Y",
           "longitudeMemberPath": "X",
-          "dataSourceRef": "DataLocations",
-          "markerType": "Circle", 
+          "dataSourceRef": "GeoSymbols",
+          "markerType": "Circle",
           "showDefaultTooltip": true
         }
       ]
     }
-  }, 
-  "refs": {
-    "DataLocations": 
-    [
-        { "X":  60, "Y":  30, "Label": "1" },
-        { "X": -60, "Y":  30, "Label": "2" },
-        { "X": -60, "Y": -30, "Label": "3" },
-        { "X":  60, "Y": -30, "Label": "4" }
-      ]
-  },  
+  },
   "modules": [
     "charts/DataChartInteractivityModule",
     "maps/GeographicMapModule"

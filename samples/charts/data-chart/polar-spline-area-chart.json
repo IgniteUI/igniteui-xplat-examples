@@ -31,12 +31,12 @@
         {
           "type": "PolarSplineAreaSeries",
           "name": "PolarSplineAreaSeries1",
-          "dataSourceRef": "data",
+          "dataSourceRef": "BoatSailingData",
           "angleAxisRef": "angleAxis",
           "radiusAxisRef": "radiusAxis",
           "angleMemberPath": "Direction",
           "radiusMemberPath": "WindSpeed",
-          "showDefaultTooltip": true,
+          "showDefaultTooltip": false,
           "areaFillOpacity": 0.8,
           "thickness": 1,
           "title": "Wind Speed",
@@ -45,37 +45,29 @@
         {
           "type": "PolarSplineAreaSeries",
           "name": "PolarSplineAreaSeries2",
-          "dataSourceRef": "data",
+          "dataSourceRef": "BoatSailingData",
           "angleAxisRef": "angleAxis",
           "radiusAxisRef": "radiusAxis",
           "angleMemberPath": "Direction",
           "radiusMemberPath": "BoatSpeed",
-          "showDefaultTooltip": true,
+          "showDefaultTooltip": false,
           "areaFillOpacity": 0.8,
           "thickness": 1,
           "title": "Boat Speed",
           "markerType": "Circle"
+        },
+        {
+          "type": "DataToolTipLayer",
+          "name": "DataToolTipLayer"
         }
       ]
     }
-  },
-  "refs": {
-    "data": [
-      { "Direction": 0,   "BoatSpeed": 70,  "WindSpeed": 90 },
-      { "Direction": 45,  "BoatSpeed": 35,  "WindSpeed": 65 },
-      { "Direction": 90,  "BoatSpeed": 25,  "WindSpeed": 45 },
-      { "Direction": 135, "BoatSpeed": 15,  "WindSpeed": 25 },
-      { "Direction": 180, "BoatSpeed": 0,   "WindSpeed": 0  },
-      { "Direction": 225, "BoatSpeed": 15,  "WindSpeed": 25 },
-      { "Direction": 270, "BoatSpeed": 25,  "WindSpeed": 45 },
-      { "Direction": 315, "BoatSpeed": 35,  "WindSpeed": 65 },
-      { "Direction": 360, "BoatSpeed": 70,  "WindSpeed": 90 }
-    ]
   },
   "modules": [
     "charts/DataChartCoreModule",
     "charts/DataChartPolarModule",
     "charts/DataChartPolarCoreModule",
-    "charts/DataChartInteractivityModule"
+    "charts/DataChartInteractivityModule",
+    "charts/DataChartAnnotationModule"
   ]
 }

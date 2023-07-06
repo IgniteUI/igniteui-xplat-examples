@@ -1,0 +1,81 @@
+{
+  "skipAlterDataCasing": true,
+  "descriptions": {
+    "content": {
+      "type": "WebGrid",
+      "dataRef": "CustomersData",
+      "autoGenerate": false,
+      "primaryKey": "ProductID",
+      "name": "grid",
+      "columns": [
+        {
+          "type": "WebColumn",
+          "field": "ID",
+          "width": "auto",
+          "resizable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "CompanyName",
+          "header": "Company Name",
+          "width": "auto",
+          "resizable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "ContactName",
+          "header": "Name",
+          "width": "auto",
+          "resizable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "ContactTitle",
+          "header": "Title",
+          "width": "auto",
+          "resizable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "Address",
+          "width": "auto",
+          "resizable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "City",
+          "width": "auto",
+          "resizable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "Region",
+          "width": "auto",
+          "resizable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "PostalCode",
+          "header": "Postal Code",
+          "width": "auto",
+          "resizable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "Phone",
+          "width": "auto",
+          "resizable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "Fax",
+          "width": "auto",
+          "resizable": true
+        }
+      ]
+    }
+  },
+  "modules": [
+    "grids/WebGridModule"
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "skipAlterDataCasing": true,
+  "descriptions": {
+    "content": {
+      "type": "WebPivotGrid",
+      "dataRef": "PivotDataFlat",
+      "name": "grid",
+      "rowSelection": "Single",
+      "superCompactMode": true,
+      "pivotConfiguration": {
+        "type": "WebPivotConfiguration",
+        "columns": [
+          {
+            "type": "WebPivotDateDimension",
+            "memberName": "Date",
+            "baseDimension": {
+              "type": "WebPivotDimension",
+              "memberName": "Date",
+              "enabled": true
+            },
+            "options": {
+              "type": "WebPivotDateDimensionOptions",
+              "years": true,
+              "months": false,
+              "quarters": true,
+              "fullDate": false
+            },
+            "enabled": true
+          }
+        ],
+        "rows": [
+          {
+            "type": "WebPivotDimension",
+            "memberName": "ProductName",
+            "sortDirection": "Asc",
+            "enabled": true
+          },
+          {
+            "type": "WebPivotDimension",
+            "memberName": "SellerCity",
+            "enabled": true
+          }
+        ],
+        "filters": [
+          {
+            "type": "WebPivotDimension",
+            "memberName": "SellerName",
+            "enabled": true
+          }
+        ],
+        "values": [
+          {
+            "type": "WebPivotValue",
+            "member": "AmountofSale",
+            "displayName": "Amount of Sale",
+            "dataType": "Currency",
+            "enabled": true,
+            "aggregate": {
+              "type": "WebPivotAggregator",
+              "key": "SUM",
+              "label": "Sum of Sale",
+              "aggregatorRef": "PivotDataFlatAggregateSumSale"
+            },
+            "aggregateList": [
+              {
+                "type": "WebPivotAggregator",
+                "key": "SUM",
+                "label": "Sum of Sale",
+                "aggregatorRef": "PivotDataFlatAggregateSumSale"
+              },
+              {
+                "type": "WebPivotAggregator",
+                "key": "MIN",
+                "label": "Minimum of Sale",
+                "aggregatorRef": "PivotDataFlatAggregateMinSale"
+              },
+              {
+                "type": "WebPivotAggregator",
+                "key": "MAX",
+                "label": "Maximum of Sale",
+                "aggregatorRef": "PivotDataFlatAggregateMaxSale"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "modules": [
+    "grids/WebPivotGridModule"
+  ]
+}

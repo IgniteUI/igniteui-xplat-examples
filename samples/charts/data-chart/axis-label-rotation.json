@@ -1,0 +1,72 @@
+{
+  "descriptions": {
+    "editor" : {
+      "type": "PropertyEditorPanel",
+      "componentRendererRef": "renderer",
+      "targetRef": "chart",
+      "descriptionType": "DataChart",
+      "isHorizontal": true,
+      "isWrappingEnabled": true,
+      "properties": [
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "ShouldConsiderAutoRotationForInitialLabels",
+          "name": "ShouldConsiderAutoRotationForInitialLabels",
+          "label": "Rotate Labels?",
+          "shouldOverrideDefaultEditor": true,
+          "primitiveValue": true
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "AutoMarginAndAngleUpdateMode",
+          "name": "AutoMarginAndAngleUpdateMode",
+          "label": "AutoMarginAndAngleUpdateMode: ",
+          "shouldOverrideDefaultEditor": true,
+          "valueType": "EnumValue",
+          "dropDownNames": ["None", "SizeChanging", "SizeChangingAndZoom"],
+          "dropDownValues": ["None", "SizeChanging", "SizeChangingAndZoom"],
+          "primitiveValue": "SizeChangingAndZoom"
+        }
+      ]
+    },
+    "content": {
+      "type": "DataChart",
+      "name": "chart",
+      "isHorizontalZoomEnabled": true,
+      "isVerticalZoomEnabled": true,
+      "autoMarginAndAngleUpdateMode": "SizeChangingAndZoom",
+      "shouldConsiderAutoRotationForInitialLabels": true,
+      "shouldAutoExpandMarginForInitialLabels": true,
+      "axes": [
+        {
+          "type": "CategoryXAxis",
+          "name": "xAxis",
+          "dataSourceRef": "TemperatureAverageDataLongLabels",
+          "enhancedIntervalPreferMoreCategoryLabels": true,
+          "useEnhancedIntervalManagement": true,
+          "label": "Month"
+        },
+        {
+          "type": "NumericYAxis",
+          "name": "yAxis"
+        }
+      ],
+      "series": [
+        {
+          "type": "ColumnSeries",
+          "name": "colSeries1",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "dataSourceRef": "TemperatureAverageDataLongLabels",
+          "valueMemberPath": "Temperature"
+        }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
+    "charts/DataChartCategoryModule",
+    "charts/DataChartInteractivityModule"
+  ]
+}

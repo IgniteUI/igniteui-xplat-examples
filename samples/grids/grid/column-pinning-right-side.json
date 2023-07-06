@@ -1,0 +1,118 @@
+{
+  "skipAlterDataCasing": true,
+  "descriptions": {
+    "content": {
+      "type": "WebGrid",
+      "dataRef": "AthletesDataExtended",
+      "autoGenerate": false,
+      "name": "grid",
+      "id": "grid",
+      "pinning": {
+        "type": "WebPinningConfig",
+        "columns": "End"
+      },
+      "toolbar": [
+        {
+          "type": "WebGridToolbar",
+          "tools": [
+            {
+              "type": "WebGridToolbarTitle"
+            },
+            {
+              "type": "WebGridToolbarActions",
+              "actions": [
+                {
+                  "type": "WebGridToolbarPinning"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "columns": [
+        {
+          "type": "WebColumn",
+          "field": "CountryFlag",
+          "header": "Team",
+          "bodyTemplateRef": "WebGridImageCellTemplate"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Avatar",
+          "bodyTemplateRef": "WebGridAvatarCellTemplate"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Name"
+        },
+        {
+          "type": "WebColumn",
+          "field": "AthleteNumber",
+          "header": "Athlete Number",
+          "dataType": "Number"
+        },
+        {
+          "type": "WebColumn",
+          "field": "BeatsPerMinute",
+          "header": "Beats Per Minute"
+        },
+        {
+          "type": "WebColumn",
+          "field": "TopSpeed",
+          "header": "Top Speed"
+        },
+        {
+          "type": "WebColumn",
+          "field": "RegistrationDate",
+          "header": "Registration Date",
+          "dataType": "Date"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Birthday",
+          "dataType": "Date"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Sponsor"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Agent"
+        },
+        {
+          "type": "WebColumn",
+          "field": "AgentContact",
+          "header": "Agent Contact"
+        },
+        {
+          "type": "WebColumn",
+          "field": "AgentPhone",
+          "header": "Agent Phone"
+        },
+        {
+          "type": "WebColumn",
+          "field": "FirstPlaces",
+          "header": "Gold",
+          "pinned": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "SecondPlaces",
+          "header": "Silver",
+          "pinned": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "ThirdPlaces",
+          "header": "Bronze",
+          "pinned": true
+        }
+      ]
+    }
+  },
+  "modules": [
+    "webinputs/WebAvatarModule",
+    "grids/WebGridModule"
+  ]
+}

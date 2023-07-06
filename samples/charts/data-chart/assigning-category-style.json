@@ -1,0 +1,76 @@
+{
+  "export": false,
+  "descriptions": {
+    "content": {
+      "type": "DataChart",
+      "name": "chart",
+      "axes": [
+        {
+          "type": "CategoryXAxis",
+          "useEnhancedIntervalManagement": true,
+          "enhancedIntervalPreferMoreCategoryLabels": true,
+          "name": "xAxis",
+          "dataSourceRef": "CountryRenewableElectricity",
+          "labelLocation": "OutsideBottom",
+          "label": "Year"
+        },
+        {
+          "type": "NumericYAxis",
+          "name": "yAxis",
+          "title": "TWh",
+          "labelLocation": "OutsideLeft"
+        }
+      ],
+      "series": [
+        { "type": "CategoryHighlightLayer" },
+        {
+          "type": "ColumnSeries",
+          "name": "ColumnSeries1",
+          "title": "Europe",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "markerType": "Circle",
+          "dataSourceRef": "CountryRenewableElectricity",
+          "valueMemberPath": "Europe",
+          "showDefaultTooltip": true,
+          "isCustomCategoryStyleAllowed": true,
+          "assigningCategoryStyleRef": "CategoryStyleTurnLowValuesRed"
+        },
+        {
+          "type": "ColumnSeries",
+          "name": "ColumnSeries2",
+          "title": "China",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "markerType": "Circle",
+          "dataSourceRef": "CountryRenewableElectricity",
+          "valueMemberPath": "China",
+          "showDefaultTooltip": true
+        },
+        {
+          "type": "ColumnSeries",
+          "name": "ColumnSeries3",
+          "title": "America",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "markerType": "Circle",
+          "dataSourceRef": "CountryRenewableElectricity",
+          "valueMemberPath": "America",
+          "showDefaultTooltip": true
+        },
+        {
+          "type": "DataToolTipLayer",
+          "name": "Tooltips"
+        }
+      ],
+      "legendRef": null,
+      "background": "rgba(0, 0, 0, 0)"
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "charts/DataChartCategoryModule",
+    "charts/DataChartInteractivityModule",
+    "charts/DataChartAnnotationModule"
+  ]
+}

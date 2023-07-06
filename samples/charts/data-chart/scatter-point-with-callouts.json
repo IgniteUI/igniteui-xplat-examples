@@ -1,0 +1,73 @@
+{
+  "export": false,
+  "descriptions": {
+    "legend": {
+      "type": "Legend",
+      "name": "Legend",
+      "orientation": "Horizontal"
+    },
+    "content": {
+      "type": "DataChart",
+      "name": "chart",
+      "isHorizontalZoomEnabled": true,
+      "isVerticalZoomEnabled": true,
+      "legendRef": "Legend",
+      "axes": [
+        {
+          "type": "NumericXAxis",
+          "name": "xAxis",
+          "title": "Longitude",
+          "minimumValue": -180,
+          "maximumValue": 180,
+          "interval": 60
+        },
+        {
+          "type": "NumericYAxis",
+          "name": "yAxis",
+          "title": "Latitude",
+          "minimumValue": -80,
+          "maximumValue": 80,
+          "interval": 40
+        }
+      ],
+      "series": [
+        {
+          "type": "ScatterSeries",
+          "name": "ScatterSeries1",
+          "title": "World Capitals Above 2 Million People",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "xMemberPath": "X",
+          "yMemberPath": "Y",
+          "dataSourceRef": "WorldCapitals2M",
+          "markerType": "Circle",
+          "markerBrush": "#1E90FF",
+          "markerOutline": "#1E90FF",
+          "showDefaultTooltip": true
+        },
+        {
+          "type": "CalloutLayer",
+          "name": "CalloutLayer1",
+          "dataSourceRef": "WorldCapitals2M",
+          "xMemberPath": "X",
+          "yMemberPath": "Y",
+          "labelMemberPath": "Name",
+          "calloutCollisionMode": "SimulatedAnnealing",
+          "calloutLeaderBrush": "#1E90FF",
+          "calloutOutline": "#1E90FF",
+          "calloutBackground": "white",
+          "calloutTextColor": "black",
+          "calloutStrokeThickness": 2
+        }
+      ]
+    }
+  },
+  "modules": [
+    "charts/LegendModule",
+    "charts/DataChartAnnotationModule",
+    "charts/DataChartCoreModule",
+    "charts/DataChartScatterModule",
+    "charts/DataChartScatterCoreModule",
+    "charts/DataChartInteractivityModule"
+  ]
+}

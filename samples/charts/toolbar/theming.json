@@ -1,0 +1,71 @@
+{
+  "descriptions": {
+    "editor": {
+      "type": "PropertyEditorPanel",
+      "componentRendererRef": "renderer",
+      "targetRef": "Toolbar",
+      "descriptionType": "Toolbar",
+      "isHorizontal": true,
+      "isWrappingEnabled": true,
+      "properties": [
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "BaseTheme",
+          "label": "Theme",
+          "shouldOverrideDefaultEditor": true,
+          "valueType": "EnumValue",
+          "primitiveValue": "Default"
+        }
+      ]
+    },
+    "aboveContent": {
+      "type": "Toolbar",
+      "name": "Toolbar",
+      "targetRef": "chart",
+      "orientation": "Horizontal",
+      "baseTheme": "Default"
+    },
+    "content": {
+      "type": "DataChart",
+      "computedPlotAreaMarginMode": "Series",
+      "isVerticalZoomEnabled": true,
+      "isHorizontalZoomEnabled": true,
+      "name": "chart",
+      "axes": [
+        {
+          "type": "CategoryXAxis",
+          "name": "xAxis",
+          "dataSourceRef": "CountryRenewableElectricity",
+          "label": "Year"
+        },
+        {
+          "type": "NumericYAxis",
+          "name": "yAxis",
+          "title": "TWh"
+        }
+      ],
+      "series": [
+        {
+          "type": "LineSeries",
+          "name": "LineSeries1",
+          "title": "Electricity",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "dataSourceRef": "CountryRenewableElectricity",
+          "valueMemberPath": "America"
+        }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
+    "layouts/ToolbarModule",
+    "charts/DataChartToolbarModule",
+    "charts/DataChartCoreModule",
+    "charts/DataChartCategoryModule",
+    "charts/DataChartAnnotationModule",
+    "charts/DataChartInteractivityModule",
+    "charts/AnnotationLayerProxyModule",
+    "charts/DataChartCategoryTrendLineModule"  ]
+  }

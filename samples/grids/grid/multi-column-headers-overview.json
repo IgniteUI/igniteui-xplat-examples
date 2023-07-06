@@ -1,0 +1,138 @@
+{
+  "skipAlterDataCasing": true,
+  "descriptions": {
+    "editor": {
+      "type": "PropertyEditorPanel",
+      "name": "PropertyEditor",
+      "componentRendererRef": "renderer",
+      "targetRef": "grid",
+      "descriptionType": "WebGrid",
+      "isHorizontal": true,
+      "isWrappingEnabled": true,
+      "properties": [
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "valueType": "Button",
+          "primitiveValue": "Toggle First Group Pinned",
+          "buttonClickedRef": "WebGridPinFirstGroupToggle"
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "valueType": "Button",
+          "primitiveValue": "Toggle First Group Hidden",
+          "buttonClickedRef": "WebGridHideFirstGroupToggle"
+        }
+      ]
+    },
+    "content": {
+      "type": "WebGrid",
+      "dataRef": "CustomersData",
+      "autoGenerate": false,
+      "name": "grid",
+      "id": "grid",
+      "columns": [
+        {
+          "type": "WebColumn",
+          "field": "ID",
+          "resizable": true
+        },
+        {
+          "type": "WebColumnGroup",
+          "header": "General Information",
+          "children": [
+            {
+              "type": "WebColumn",
+              "field": "CompanyName",
+              "sortable": true,
+              "resizable": true
+            },
+            {
+              "type": "WebColumnGroup",
+              "header": "Personal Details",
+              "children": [
+                {
+                  "type": "WebColumn",
+                  "field": "ContactName",
+                  "sortable": true,
+                  "resizable": true
+                },
+                {
+                  "type": "WebColumn",
+                  "field": "ContactTitle",
+                  "sortable": true,
+                  "resizable": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "WebColumnGroup",
+          "header": "Address Information",
+          "children": [
+            {
+              "type": "WebColumnGroup",
+              "header": "Location",
+              "children": [
+                {
+                  "type": "WebColumn",
+                  "field": "Country",
+                  "sortable": true,
+                  "resizable": true
+                },
+                {
+                  "type": "WebColumn",
+                  "field": "Region",
+                  "sortable": true,
+                  "resizable": true
+                },
+                {
+                  "type": "WebColumn",
+                  "field": "City",
+                  "sortable": true,
+                  "resizable": true
+                },
+                {
+                  "type": "WebColumn",
+                  "field": "Address",
+                  "sortable": true,
+                  "resizable": true
+                }
+              ]
+            },
+            {
+              "type": "WebColumnGroup",
+              "header": "Contact Information",
+              "children": [
+                {
+                  "type": "WebColumn",
+                  "field": "Phone",
+                  "sortable": true,
+                  "resizable": true
+                },
+                {
+                  "type": "WebColumn",
+                  "field": "Fax",
+                  "sortable": true,
+                  "resizable": true
+                },
+                {
+                  "type": "WebColumn",
+                  "field": "PostalCode",
+                  "sortable": true,
+                  "resizable": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "modules": [
+        "withDescriptions",
+    "grids/WebGridModule",
+    "grids/WebColumnGroupModule",
+    "layouts/PropertyEditorPanelModule"
+  ]
+}

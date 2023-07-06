@@ -1,0 +1,56 @@
+{
+  "export": true,
+  "skipAlterDataCasing": true,
+  "descriptions": {
+    "content": {
+      "type": "WebGrid",
+      "dataRef": "NwindData",
+      "autoGenerate": false,
+      "name": "grid",
+      "id": "grid",
+      "displayDensity": "Compact",
+      "columns": [
+        {
+          "type": "WebColumn",
+          "field": "ProductName",
+          "header": "Product Name",
+          "sortable": true,
+          "dataType": "String"
+        },
+        {
+          "type": "WebColumn",
+          "field": "QuantityPerUnit",
+          "header": "Quantity Per Unit",
+          "sortable": true,
+          "dataType": "String"
+        },
+        {
+          "type": "WebColumn",
+          "field": "UnitPrice",
+          "header": "Unit Price Category",
+          "sortable": true,
+          "dataType": "String"
+        },
+        {
+          "type": "WebColumn",
+          "field": "OrderDate",
+          "header": "Order Date",
+          "sortable": true,
+          "hasSummary": true,
+          "dataType": "Date",
+          "summaryFormatterRef": "WebGridSummaryFormatter"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Discontinued",
+          "header": "Discontinued",
+          "sortable": true,
+          "dataType": "Boolean"
+        }
+      ]
+    }
+  },
+  "modules": [
+      "grids/WebGridModule"
+  ]
+}

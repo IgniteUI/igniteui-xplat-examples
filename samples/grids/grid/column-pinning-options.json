@@ -1,0 +1,87 @@
+{
+  "skipAlterDataCasing": true,
+  "descriptions": {
+    "content": {
+      "type": "WebGrid",
+      "dataRef": "CustomersData",
+      "autoGenerate": false,
+      "name": "grid",
+      "columns": [
+        {
+          "type": "WebColumn",
+          "field": "ID",
+          "header": "ID",
+          "hidden": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "CompanyName",
+          "header": "Company",
+          "width": "300px",
+          "headerTemplateRef": "WebGridPinHeaderTemplate"
+        },
+        {
+          "type": "WebColumn",
+          "field": "ContactName",
+          "header": "Name",
+          "width": "200px",
+          "pinned": true,
+          "headerTemplateRef": "WebGridPinHeaderTemplate"
+        },
+        {
+          "type": "WebColumn",
+          "field": "ContactTitle",
+          "header": "Title",
+          "width": "200px",
+          "pinned": true,
+          "headerTemplateRef": "WebGridPinHeaderTemplate"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Address",
+          "header": "Address",
+          "width": "300px",
+          "headerTemplateRef": "WebGridPinHeaderTemplate"
+        },
+        {
+          "type": "WebColumn",
+          "field": "City",
+          "header": "City",
+          "width": "120px",
+          "headerTemplateRef": "WebGridPinHeaderTemplate"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Region",
+          "header": "Region",
+          "width": "120px",
+          "headerTemplateRef": "WebGridPinHeaderTemplate"
+        },
+        {
+          "type": "WebColumn",
+          "field": "PostalCode",
+          "header": "Postal Code",
+          "width": "150px",
+          "headerTemplateRef": "WebGridPinHeaderTemplate"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Phone",
+          "header": "Phone",
+          "width": "150px",
+          "headerTemplateRef": "WebGridPinHeaderTemplate"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Fax",
+          "header": "Fax",
+          "width": "150px",
+          "headerTemplateRef": "WebGridPinHeaderTemplate"
+        }
+      ]
+    }
+  },
+  "modules": [
+    "grids/WebGridModule"
+  ]
+}

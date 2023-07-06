@@ -5,7 +5,7 @@
   "descriptions": {
     "legend": {
       "type": "Legend",
-      "name": "legend",
+      "name": "Legend",
       "orientation": "Horizontal"
     },
     "content": {
@@ -18,7 +18,7 @@
         {
           "type": "CategoryXAxis",
           "name": "xAxis",
-          "dataSourceRef": "data",
+          "dataSourceRef": "OnlineTrafficByDevice",
           "label": "Category",
           "gap": 0.75
         },
@@ -32,36 +32,31 @@
         {
           "type": "Stacked100ColumnSeries",
           "name": "Stacked100ColumnSeries",
-          "dataSourceRef": "data",
+          "dataSourceRef": "OnlineTrafficByDevice",
           "xAxisRef": "xAxis",
           "yAxisRef": "yAxis",
           "showDefaultTooltip": true,
           "areaFillOpacity": 1,
           "series": [
-            { "type": "StackedFragmentSeries", "name": "s1", "valueMemberPath": "Desktop" },
-            { "type": "StackedFragmentSeries", "name": "s2", "valueMemberPath": "Mobile" },
-            { "type": "StackedFragmentSeries", "name": "s3", "valueMemberPath": "Tablet" }
+            { "type": "StackedFragmentSeries", "name": "s1", "valueMemberPath": "Desktop", "title": "Desktop"  },
+            { "type": "StackedFragmentSeries", "name": "s2", "valueMemberPath": "Mobile", "title": "Mobile"  },
+            { "type": "StackedFragmentSeries", "name": "s3", "valueMemberPath": "Tablet", "title": "Tablet"  }
           ]
+        },
+        {
+          "type": "DataToolTipLayer",
+          "name": "DataToolTipLayer"
         }
       ]
     }
   },
-  "refs": {
-    "data": [
-      { "Category": "Apparel", "Desktop": 27, "Mobile": 66, "Tablet": 7},
-      { "Category": "Beauty", "Desktop": 29, "Mobile": 66, "Tablet": 5 },
-      { "Category": "Travel", "Desktop": 41, "Mobile": 51, "Tablet": 8 },
-      { "Category": "Grocery", "Desktop": 37, "Mobile": 57, "Tablet": 6 },
-      { "Category": "Energy", "Desktop": 58, "Mobile": 39, "Tablet": 3 },
-      { "Category": "Home Supply", "Desktop": 35, "Mobile": 56, "Tablet": 8 },
-      { "Category": "Financial", "Desktop": 58, "Mobile": 39, "Tablet": 3 }
-    ]
-  },
   "modules": [
+    "charts/LegendModule",
     "charts/DataChartCoreModule",
     "charts/DataChartCategoryModule",
     "charts/DataChartCategoryCoreModule",
     "charts/DataChartInteractivityModule",
+    "charts/DataChartAnnotationModule",
     "charts/DataChartStackedModule",
     "charts/StackedFragmentSeriesModule"
   ]

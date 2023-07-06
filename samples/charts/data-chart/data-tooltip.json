@@ -1,0 +1,74 @@
+{
+  "strings": {
+    "legendTitle": "Total Population of Selected Countries"
+  },
+  "descriptions": {
+    "content": {
+      "type": "DataChart",
+      "name": "chart",
+      "axes": [
+        {
+          "type": "NumericXAxis",
+          "name": "xAxis",
+          "title": "Death Rate",
+          "interval": 1,
+          "minimumValue": 4,
+          "maximumValue": 16
+        },
+        {
+          "type": "NumericYAxis",
+          "name": "yAxis",
+          "title": "Birth Rate",
+          "interval": 10,
+          "minimumValue": 0,
+          "maximumValue": 60
+        }
+      ],
+      "series": [
+        {
+          "type": "BubbleSeries",
+          "name": "BubbleSeries1",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "dataSourceRef": "CountryDemographicAfrican",
+          "xMemberPath": "DeathRate",
+          "yMemberPath": "BirthRate",
+          "radiusMemberPath": "Population",
+          "radiusScale": { "type": "SizeScale", "name": "SizeScale1", "minimumValue": 10, "maximumValue": 100},
+          "title": "Africa",
+          "radiusMemberAsLegendLabel": "Population: ",
+          "xMemberAsLegendLabel": "Death Rate: ",
+          "yMemberAsLegendLabel": "Birth Rate: "
+        },
+        {
+          "type": "BubbleSeries",
+          "name": "BubbleSeries2",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "dataSourceRef": "CountryDemographicEurope",
+          "xMemberPath": "DeathRate",
+          "yMemberPath": "BirthRate",
+          "radiusMemberPath": "Population",
+          "radiusScale": { "type": "SizeScale", "name": "SizeScale2", "minimumValue": 10, "maximumValue": 100},
+          "title": "Europe",
+          "radiusMemberAsLegendLabel": "Population: ",
+          "xMemberAsLegendLabel": "Death Rate: ",
+          "yMemberAsLegendLabel": "Birth Rate: "
+        },
+        {
+          "type": "DataToolTipLayer",
+          "name": "DataToolTipLayer"
+        }
+      ]
+    }
+  },
+  "modules": [
+    "charts/LegendModule",
+    "charts/NumberAbbreviatorModule",
+    "charts/DataChartCoreModule",
+    "charts/DataChartScatterModule",
+    "charts/DataChartScatterCoreModule",
+    "charts/DataChartInteractivityModule",
+    "charts/DataChartAnnotationModule"
+  ]
+}

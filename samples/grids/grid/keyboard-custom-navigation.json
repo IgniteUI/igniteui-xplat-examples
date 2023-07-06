@@ -1,0 +1,64 @@
+{
+  "todo": [
+  ], 
+  "export": true,
+  "skipAlterDataCasing": true,
+  "descriptions": {
+    "content": {
+      "name": "grid",
+      "type": "WebGrid",
+      "dataRef": "NwindData",
+      "moving":true,
+      "primaryKey": "ProductID",
+      "autoGenerate": false,
+      "displayDensity": "Cosy",
+      "rowEditable": true,
+      "gridKeydownRef": "WebGridCustomKBNav",
+      "columns": [
+        {
+          "type": "WebColumn",
+          "name": "ProductID",
+          "field": "ProductID",
+          "header": "Product ID"
+        },
+        {
+          "type": "WebColumn",
+          "name": "ReorderLevel",
+          "field": "ReorderLevel",
+          "header": "Reorder Level",
+          "dataType": "Number"
+        },
+        {
+          "type": "WebColumn",
+          "name": "ProductName",
+          "field": "ProductName",
+          "header": "Product Name"
+        },
+        {
+          "type": "WebColumn",
+          "name": "UnitsInStock",
+          "field": "UnitsInStock",
+          "header": "Units In Stock",
+          "dataType": "Number"
+        },
+        {
+          "type": "WebColumn",
+          "name": "OrderDate",
+          "field": "OrderDate",
+          "header": "Order Date"
+        },
+        {
+          "type": "WebColumn",
+          "name": "Discontinued",
+          "field": "Discontinued",
+          "header": "Discontinued"
+        }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
+    "grids/WebGridModule"
+  ]
+}

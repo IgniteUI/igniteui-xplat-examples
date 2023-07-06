@@ -14,126 +14,56 @@
       "legendRef": "Legend",
       "axes": [
         {
-          "type": "NumericXAxis", 
+          "type": "NumericXAxis",
           "name": "xAxis",
-          "title": "Hours Worked per Week"
+          "isLogarithmic": true,
+          "abbreviateLargeNumbers": true,
+          "title": "Population"
         },
         {
-          "type": "NumericYAxis", 
-          "name": "yAxis", 
+          "type": "NumericYAxis",
+          "name": "yAxis",
           "title": "GDP per Capita",
           "isLogarithmic": true,
           "abbreviateLargeNumbers": true
         }
       ],
-      "series": [     
+      "series": [
         {
           "type": "BubbleSeries",
           "name": "BubbleSeries1",
           "title": "African Countries",
           "xAxisRef": "xAxis",
           "yAxisRef": "yAxis",
-          "xMemberPath": "WorkedHours",
+          "xMemberPath": "Population",
           "yMemberPath": "GDP",
-          "radiusMemberPath": "Population", 
-          "radiusScaleRef": "sizeScale1",
-          "dataSourceRef": "dataAfrica",
-          "markerType": "Circle", 
+          "radiusMemberPath": "Population",
+          "dataSourceRef": "CountryStatsAfrica",
+          "markerType": "Circle",
           "showDefaultTooltip": true
-        }, 
+        },
         {
           "type": "BubbleSeries",
           "name": "BubbleSeries2",
           "title": "European Countries",
           "xAxisRef": "xAxis",
           "yAxisRef": "yAxis",
-          "xMemberPath": "WorkedHours",
+          "xMemberPath": "Population",
           "yMemberPath": "GDP",
-          "radiusMemberPath": "Population", 
-          "radiusScaleRef": "sizeScale2",
-          "dataSourceRef": "dataEurope",
-          "markerType": "Circle", 
+          "radiusMemberPath": "Population",
+          "dataSourceRef": "CountryStatsEurope",
+          "markerType": "Circle",
           "showDefaultTooltip": true
-        }  
+        }
       ]
     }
   },
-  "refs": {
-    "sizeScale1": { "type": "SizeScale", "minimumValue": 10, "maximumValue": 50 },
-    "sizeScale2": { "type": "SizeScale", "minimumValue": 10, "maximumValue": 50 },
-    "dataEurope": 
-    [
-        { "Code": "ALB", "Population": 2891000, "WorkedHours": 41.00, "GDP": 10970, "Name": "Albania" },
-        { "Code": "AUT", "Population": 8679000, "WorkedHours": 30.75, "GDP": 44305, "Name": "Austria" },
-        { "Code": "BLR", "Population": 9439000, "WorkedHours": 43.50, "GDP": 17230, "Name": "Belarus" },
-        { "Code": "BEL", "Population": 11288000, "WorkedHours": 29.70, "GDP": 41708, "Name": "Belgium" },
-        { "Code": "BIH", "Population": 3429000, "WorkedHours": 46.50, "GDP": 10932, "Name": "Bosnia and Herzegovina" },
-        { "Code": "BGR", "Population": 7200000, "WorkedHours": 31.62, "GDP": 17000, "Name": "Bulgaria" },
-        { "Code": "HRV", "Population": 4233000, "WorkedHours": 35.15, "GDP": 20984, "Name": "Croatia" },
-        { "Code": "CYP", "Population": 1161000, "WorkedHours": 34.42, "GDP": 30549, "Name": "Cyprus" },
-        { "Code": "CZE", "Population": 10601000, "WorkedHours": 33.77, "GDP": 30605, "Name": "Czechia" },
-        { "Code": "DNK", "Population": 5689000, "WorkedHours": 27.16, "GDP": 45459, "Name": "Denmark" },
-        { "Code": "EST", "Population": 1315000, "WorkedHours": 35.61, "GDP": 27550, "Name": "Estonia" },
-        { "Code": "FIN", "Population": 5481000, "WorkedHours": 31.48, "GDP": 38942, "Name": "Finland" },
-        { "Code": "FRA", "Population": 64453000, "WorkedHours": 29.03, "GDP": 37766, "Name": "France" },
-        { "Code": "DEU", "Population": 81787000, "WorkedHours": 26.31, "GDP": 43938, "Name": "Germany" },
-        { "Code": "GRC", "Population": 10660000, "WorkedHours": 39.06, "GDP": 24170, "Name": "Greece" },
-        { "Code": "HUN", "Population": 9778000, "WorkedHours": 36.99, "GDP": 25034, "Name": "Hungary" },
-        { "Code": "ISL", "Population": 330000, "WorkedHours": 29.02, "GDP": 43048, "Name": "Iceland" },
-        { "Code": "IRL", "Population": 4652000, "WorkedHours": 33.47, "GDP": 60818, "Name": "Ireland" },
-        { "Code": "ITA", "Population": 60578000, "WorkedHours": 33.04, "GDP": 34302, "Name": "Italy" },
-        { "Code": "LVA", "Population": 1998000, "WorkedHours": 36.57, "GDP": 23019, "Name": "Latvia" },
-        { "Code": "LTU", "Population": 2932000, "WorkedHours": 35.76, "GDP": 27046, "Name": "Lithuania" },
-        { "Code": "LUX", "Population": 567000, "WorkedHours": 29.25, "GDP": 94089, "Name": "Luxembourg" },
-        { "Code": "MLT", "Population": 434000, "WorkedHours": 37.78, "GDP": 34087, "Name": "Malta" },
-        { "Code": "MDA", "Population": 4071000, "WorkedHours": 41.00, "GDP": 4747, "Name": "Moldova" },
-        { "Code": "MNE", "Population": 627000, "WorkedHours": 47.20, "GDP": 15290, "Name": "Montenegro" },
-        { "Code": "NLD", "Population": 16938000, "WorkedHours": 27.38, "GDP": 46494, "Name": "Netherlands" },
-        { "Code": "MKD", "Population": 2079000, "WorkedHours": 36.60, "GDP": 12760, "Name": "North Macedonia" },
-        { "Code": "NOR", "Population": 5200000, "WorkedHours": 27.36, "GDP": 64008, "Name": "Norway" },
-        { "Code": "POL", "Population": 38034000, "WorkedHours": 39.40, "GDP": 25300, "Name": "Poland" },
-        { "Code": "PRT", "Population": 10368000, "WorkedHours": 36.06, "GDP": 26608, "Name": "Portugal" }
-    ],
-    "dataAfrica": 
-    [
-        { "Code": "DZA", "Population": 39728000, "WorkedHours": 47.50, "GDP": 13725, "Name": "Algeria" },
-        { "Code": "AGO", "Population": 27884000, "WorkedHours": 39.80, "GDP": 6228, "Name": "Angola" },
-        { "Code": "BEN", "Population": 10576000, "WorkedHours": 43.70, "GDP": 1987, "Name": "Benin" },
-        { "Code": "BWA", "Population": 2121000, "WorkedHours": 41.20, "GDP": 15357, "Name": "Botswana" },
-        { "Code": "BFA", "Population": 18111000, "WorkedHours": 39.30, "GDP": 1596, "Name": "Burkina Faso" },
-        { "Code": "BDI", "Population": 10160000, "WorkedHours": 36.40, "GDP": 748, "Name": "Burundi" },
-        { "Code": "CMR", "Population": 23298000, "WorkedHours": 42.00, "GDP": 3289, "Name": "Cameroon" },
-        { "Code": "CPV", "Population": 525000, "WorkedHours": 45.00, "GDP": 5915, "Name": "Cape Verde" },
-        { "Code": "CAF", "Population": 4493000, "WorkedHours": 38.00, "GDP": 622, "Name": "CAR" },
-        { "Code": "TCD", "Population": 14111000, "WorkedHours": 40.40, "GDP": 2067, "Name": "Chad" },
-        { "Code": "COM", "Population": 777000, "WorkedHours": 40.10, "GDP": 1413, "Name": "Comoros" },
-        { "Code": "COG", "Population": 4856000, "WorkedHours": 38.10, "GDP": 5543, "Name": "Congo" },
-        { "Code": "CIV", "Population": 23226000, "WorkedHours": 39.70, "GDP": 3242, "Name": "Ivory Coast" },
-        { "Code": "COD", "Population": 76245000, "WorkedHours": 44.00, "GDP": 812, "Name": "DRC" },
-        { "Code": "EGY", "Population": 92443000, "WorkedHours": 39.70, "GDP": 10096, "Name": "Egypt" },
-        { "Code": "GNQ", "Population": 1169000, "WorkedHours": 38.80, "GDP": 27554, "Name": "Equatorial Guinea" },
-        { "Code": "SWZ", "Population": 1104000, "WorkedHours": 45.70, "GDP": 7759, "Name": "Eswatini" },
-        { "Code": "ETH", "Population": 101000000, "WorkedHours": 40.10, "GDP": 1533, "Name": "Ethiopia" },
-        { "Code": "GAB", "Population": 1948000, "WorkedHours": 40.50, "GDP": 16837, "Name": "Gabon" },
-        { "Code": "GMB", "Population": 2086000, "WorkedHours": 40.30, "GDP": 1568, "Name": "Gambia" },
-        { "Code": "GHA", "Population": 27849000, "WorkedHours": 47.60, "GDP": 3927, "Name": "Ghana" },
-        { "Code": "GIN", "Population": 11432000, "WorkedHours": 43.40, "GDP": 1758, "Name": "Guinea" },
-        { "Code": "GNB", "Population": 1737000, "WorkedHours": 35.10, "GDP": 1446, "Name": "Guinea-Bissau" },
-        { "Code": "KEN", "Population": 47878000, "WorkedHours": 43.90, "GDP": 2836, "Name": "Kenya" },
-        { "Code": "LSO", "Population": 2059000, "WorkedHours": 47.60, "GDP": 2708, "Name": "Lesotho" },
-        { "Code": "LBR", "Population": 4472000, "WorkedHours": 40.30, "GDP": 785, "Name": "Liberia" },
-        { "Code": "LBY", "Population": 6418000, "WorkedHours": 42.50, "GDP": 14847, "Name": "Libya" },
-        { "Code": "MDG", "Population": 24234000, "WorkedHours": 40.80, "GDP": 1377, "Name": "Madagascar" },
-        { "Code": "MWI", "Population": 16745000, "WorkedHours": 44.50, "GDP": 1089, "Name": "Malawi" },
-        { "Code": "MLI", "Population": 17439000, "WorkedHours": 40.60, "GDP": 1919, "Name": "Mali" }
-    ]
-  },
-  "modules": [ 
-    "charts/LegendModule", 
+  "modules": [
+    "charts/LegendModule",
     "charts/NumberAbbreviatorModule",
     "charts/DataChartCoreModule",
-    "charts/DataChartScatterModule", 
-    "charts/DataChartScatterCoreModule", 
+    "charts/DataChartScatterModule",
+    "charts/DataChartScatterCoreModule",
     "charts/DataChartInteractivityModule"
   ]
 }

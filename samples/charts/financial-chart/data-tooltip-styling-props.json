@@ -1,0 +1,28 @@
+{
+  "descriptions": {
+    "content": {
+      "type": "FinancialChart",
+      "name": "chart",
+      "isVerticalZoomEnabled": true,
+      "isHorizontalZoomEnabled": true,
+      "dataSourceRef": "StockGoogle",
+      "toolTipType": "Data",
+      "dataToolTipIncludedColumns": ["Open", "Close", "High", "Low", "Change"],
+      "dataToolTipLabelTextColor": "#4A4A4A",
+      "dataToolTipUnitsText": "K",
+      "dataToolTipUnitsTextColor": "#00AD03",
+      "dataToolTipUnitsTextFontWeight": "Bold",
+      "dataToolTipValueFormatMode": "Currency",
+      "dataToolTipValueTextColor": "#00AD03",
+      "dataToolTipValueTextFontWeight": "Bold",
+      "dataToolTipHeaderFormatTime": "None",
+      "yAxisTitle": "Thousands of Dollars ($)",
+      "zoomSliderType": "None"
+    }
+  },
+  "modules": [
+    "charts/FinancialChartModule",
+    "charts/DataChartInteractivityModule",
+    "charts/DataLegendModule"
+  ]
+}

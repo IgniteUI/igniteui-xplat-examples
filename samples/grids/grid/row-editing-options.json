@@ -1,0 +1,61 @@
+{
+  "todo": [ "" ],
+  "skipAlterDataCasing": true,
+  "descriptions": {
+    "content": {
+      "type": "WebGrid",
+      "dataRef": "NwindData",
+      "autoGenerate": false,
+      "name": "grid",
+      "id": "grid",
+      "displayDensity": "Compact",
+      "primaryKey": "ProductID",
+      "rowEditable": true,
+      "columns": [
+        {
+          "type": "WebColumn",
+          "field": "ProductID",
+          "header": "Product ID",
+          "dataType": "Number"
+        },
+        {
+          "type": "WebColumn",
+          "field": "ReorderLevel",
+          "header": "Reorder Level",
+          "dataType": "Number"
+        },
+        {
+          "type": "WebColumn",
+          "field": "ProductName",
+          "header": "Prod. Name",
+          "dataType": "String"
+        },
+        {
+          "type": "WebColumn",
+          "field": "UnitsInStock",
+          "header": "Units In Stock",
+          "dataType": "Number"
+        },
+         {
+          "type": "WebColumn",
+          "field": "OrderDate",
+          "header": "Order Date",
+          "dataType": "Date",
+          "pipeArgs": {
+              "type": "WebColumnPipeArgs",
+              "format": "mediumDate"
+          }
+        },
+        {
+          "type": "WebColumn",
+          "field": "Discontinued",
+          "header": "Discontinued",
+          "dataType": "Boolean"
+        }
+      ]
+    }
+  },
+  "modules": [
+      "grids/WebGridModule"
+  ]
+}

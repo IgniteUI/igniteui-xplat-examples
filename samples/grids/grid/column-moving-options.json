@@ -1,0 +1,102 @@
+{
+  "todo": [ "" ],
+  "skipAlterDataCasing": true,
+  "descriptions": {
+    "content": {
+      "type": "WebGrid",
+      "dataRef": "FinancialDataAll",
+      "autoGenerate": false,
+      "primaryKey": "ProductID",
+      "moving": true,
+      "name": "grid",
+      "columns": [
+        {
+          "type": "WebColumn",
+          "header": "Category",
+          "field": "Category",
+          "pinned": true,
+          "width": "200px",
+          "headerTemplateRef": "WebGridPinHeaderTemplate"
+        },
+        {
+          "type": "WebColumn",
+          "header": "Type",
+          "field": "Type",
+          "pinned": true,
+          "headerTemplateRef": "WebGridPinHeaderTemplate"
+        },
+        {
+          "type": "WebColumn",
+          "header": "Price",
+          "field": "Price",
+          "dataType": "Currency",
+          "pipeArgs": {
+            "currencyCode": "USD",
+            "type": "WebColumnPipeArgs",
+            "digitsInfo": "1.2-2"
+          },
+          "headerTemplateRef": "WebGridPinHeaderTemplate"
+        },
+        {
+          "type": "WebColumn",
+          "header": "Buy",
+          "field": "Buy",
+          "dataType": "Currency",
+          "pipeArgs": {
+            "currencyCode": "USD",
+            "type": "WebColumnPipeArgs",
+            "digitsInfo": "1.2-2"
+          },
+          "headerTemplateRef": "WebGridPinHeaderTemplate"
+        },
+        {
+          "type": "WebColumn",
+          "header": "Sell",
+          "field": "Sell",
+          "dataType": "Currency",
+          "pipeArgs": {
+            "currencyCode": "USD",
+            "type": "WebColumnPipeArgs",
+            "digitsInfo": "1.2-2"
+          },
+          "headerTemplateRef": "WebGridPinHeaderTemplate"
+        },
+        {
+          "type": "WebColumn",
+          "header": "Spread",
+          "field": "Spread",
+          "headerTemplateRef": "WebGridPinHeaderTemplate"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Change",
+          "header": "Change",
+          "bodyTemplateRef": "WebGridCurrencyCellTemplate",
+          "headerTemplateRef": "WebGridPinHeaderTemplate"
+        },
+        {
+          "type": "WebColumn",
+          "field": "ChangePercent",
+          "header": "Change Percent",
+          "dataType": "Number",
+          "width": "150px",
+          "bodyTemplateRef": "WebGridCurrencyCellTemplate",
+          "headerTemplateRef": "WebGridPinHeaderTemplate"
+        },
+        {
+          "type": "WebColumn",
+          "field": "AnnualChange",
+          "header": "Annual Change",
+          "dataType": "Number",
+          "width": "150px",
+          "bodyTemplateRef": "WebGridCurrencyCellTemplate",
+          "headerTemplateRef": "WebGridPinHeaderTemplate"
+        }
+      ]
+    }
+  },
+  "modules": [
+    "webinputs/WebBadgeModule",
+    "grids/WebGridModule"
+  ]
+}

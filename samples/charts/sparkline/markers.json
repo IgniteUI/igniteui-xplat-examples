@@ -2,74 +2,80 @@
   "export": true,
   "descriptions": {
     "editor": {
-      "type": "PropertyEditor",
+      "type": "PropertyEditorPanel",
       "componentRendererRef": "renderer",
       "targetRef": "chart",
       "descriptionType": "Sparkline",
       "isHorizontal": true,
       "isWrappingEnabled": true,
       "properties": [
-          {
-            "type": "PropertyEditorPropertyDescription",
-            "propertyPath": "FirstMarkerVisibility",
-            "label": "First Markers",
-            "shouldOverrideDefaultEditor": true,
-            "valueType": "EnumValue",
-            "dropDownNames": ["Visible", "Collapsed"],
-            "dropDownValues": ["Visible", "Collapsed"],
-            "primitiveValue": "Visible"
-          },
-          {
-            "type": "PropertyEditorPropertyDescription",
-            "propertyPath": "HighMarkerVisibility",
-            "label": "High Markers",
-            "valueType": "EnumValue",
-            "dropDownNames": ["Visible", "Collapsed"],
-            "dropDownValues": ["Visible", "Collapsed"],
-            "primitiveValue": "Visible"
-          },
-          {
-            "type": "PropertyEditorPropertyDescription",
-            "propertyPath": "LowMarkerVisibility",
-            "label": "Low Markers",
-            "valueType": "EnumValue",
-            "dropDownNames": ["Visible", "Collapsed"],
-            "dropDownValues": ["Visible", "Collapsed"],
-            "primitiveValue": "Visible"
-          },
-          {
-            "type": "PropertyEditorPropertyDescription",
-            "propertyPath": "NegativeMarkerVisibility",
-            "label": "Negative Markers",
-            "valueType": "EnumValue",
-            "dropDownNames": ["Visible", "Collapsed"],
-            "dropDownValues": ["Visible", "Collapsed"],
-            "primitiveValue": "Visible"
-          },
-          {
-            "type": "PropertyEditorPropertyDescription",
-            "propertyPath": "LastMarkerVisibility",
-            "label": "Last Markers",
-            "valueType": "EnumValue",
-            "dropDownNames": ["Visible", "Collapsed"],
-            "dropDownValues": ["Visible", "Collapsed"],
-            "primitiveValue": "Visible"
-          },
-          {
-            "type": "PropertyEditorPropertyDescription",
-            "propertyPath": "MarkerVisibility",
-            "label": "All Markers",
-            "valueType": "EnumValue",
-            "dropDownNames": ["Visible", "Collapsed"],
-            "dropDownValues": ["Visible", "Collapsed"],
-            "primitiveValue": "Visible"
-          }
-       ]
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "FirstMarkerVisibility",
+          "name": "FirstMarkerVisibilityEditor",
+          "label": "First Markers",
+          "shouldOverrideDefaultEditor": true,
+          "valueType": "EnumValue",
+          "dropDownNames": ["Visible", "Collapsed"],
+          "dropDownValues": ["Visible", "Collapsed"],
+          "primitiveValue": "Visible"
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "HighMarkerVisibility",
+          "name": "HighMarkerVisibilityEditor",
+          "label": "High Markers",
+          "valueType": "EnumValue",
+          "dropDownNames": ["Visible", "Collapsed"],
+          "dropDownValues": ["Visible", "Collapsed"],
+          "primitiveValue": "Visible"
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "LowMarkerVisibility",
+          "name": "LowMarkerVisibilityEditor",
+          "label": "Low Markers",
+          "valueType": "EnumValue",
+          "dropDownNames": ["Visible", "Collapsed"],
+          "dropDownValues": ["Visible", "Collapsed"],
+          "primitiveValue": "Visible"
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "NegativeMarkerVisibility",
+          "name": "NegativeMarkerVisibilityEditor",
+          "label": "Negative Markers",
+          "valueType": "EnumValue",
+          "dropDownNames": ["Visible", "Collapsed"],
+          "dropDownValues": ["Visible", "Collapsed"],
+          "primitiveValue": "Visible"
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "LastMarkerVisibility",
+          "name": "LastMarkerVisibilityEditor",
+          "label": "Last Markers",
+          "valueType": "EnumValue",
+          "dropDownNames": ["Visible", "Collapsed"],
+          "dropDownValues": ["Visible", "Collapsed"],
+          "primitiveValue": "Visible"
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "MarkerVisibility",
+          "name": "MarkerVisibilityEditor",
+          "label": "All Markers",
+          "valueType": "EnumValue",
+          "dropDownNames": ["Visible", "Collapsed"],
+          "dropDownValues": ["Visible", "Collapsed"],
+          "primitiveValue": "Visible"
+        }
+      ]
     },
     "content": {
-     "type": "Sparkline",
+      "type": "Sparkline",
       "name": "chart",
-      "dataSourceRef": "data",
+      "dataSourceRef": "SparklineProfitData",
       "displayType": "Line",
       "labelMemberPath": "Label",
       "valueMemberPath": "Value",
@@ -85,27 +91,13 @@
       "lowMarkerSize": 10,
       "highMarkerSize": 10,
       "negativeMarkerSize": 10,
-      "minimum": -3, 
-      "maximum": 8
+      "minimum": 0,
+      "maximum": 60
     }
   },
-  "refs": {
-    "data": [
-            { "Label": 4, "Value": 4 },
-            { "Label": 5, "Value": 5 },
-            { "Label": 2, "Value": 2 },
-            { "Label": 7, "Value": 7 },
-            { "Label": -1, "Value": -1 },
-            { "Label": 3, "Value": 3 },
-            { "Label": -2, "Value": -2 },
-            { "Label": 5, "Value": 5 },
-            { "Label": 2, "Value": 2 },
-            { "Label": 6, "Value": 6 }
-    ]
-  },
-  "modules": [    
+  "modules": [
     "withDescriptions",
-    "grids/PropertyEditorModule",
-    "charts/SparklineModule"    
+    "layouts/PropertyEditorPanelModule",
+    "charts/SparklineModule"
   ]
 }

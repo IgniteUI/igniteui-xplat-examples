@@ -1,0 +1,82 @@
+{
+  "todo": [ 
+    "This sample needs custom UI with handlers and custom code that cannot be done via the Editor ATM, hence skipping it."
+  ],
+  "export": false,
+  "skipAlterDataCasing": true,
+  "descriptions": {
+    "content": {
+      "name": "grid",
+      "type": "WebGrid",
+      "dataRef": "InvoicesData",
+      "autoGenerate": false,
+      "columns": [
+        {
+          "type": "WebColumn",
+          "name": "OrderID",
+          "field": "OrderID",
+          "header": "Order ID"
+        },
+        {
+          "type": "WebColumn",
+          "name": "ShipCountry",
+          "field": "ShipCountry",
+          "header": "Ship Country"
+        },
+        {
+          "type": "WebColumn",
+          "name": "OrderDate",
+          "field": "OrderDate",
+          "header": "Order Date"
+        },
+        {
+          "type": "WebColumn",
+          "name": "PostalCode",
+          "field": "PostalCode",
+          "header": "Postal Code"
+        },
+        {
+          "type": "WebColumn",
+          "name": "Discontinued",
+          "field": "Discontinued",
+          "header": "Discontinued"
+        },
+        {
+          "type": "WebColumn",
+          "name": "ShipName",
+          "field": "ShipName",
+          "header": "Ship Name"
+        },
+        {
+          "type": "WebColumn",
+          "name": "ShipperName",
+          "field": "ShipperName",
+          "header": "Shipper Name"
+        },
+        {
+          "type": "WebColumn",
+          "name": "SalesPerson",
+          "field": "SalesPerson",
+          "header": "Sales Person"
+        },
+        {
+          "type": "WebColumn",
+          "name": "UnitPrice",
+          "field": "UnitPrice",
+          "header": "Unit Price"
+        },
+        {
+          "type": "WebColumn",
+          "name": "Quantity",
+          "field": "Quantity",
+          "header": "Quantity"
+        }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
+    "grids/WebGridModule"
+  ]
+}

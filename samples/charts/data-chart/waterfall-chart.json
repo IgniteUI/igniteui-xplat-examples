@@ -14,13 +14,14 @@
           "name": "xAxis",
           "label": "Category",
           "interval": 1,
-          "dataSourceRef": "data",
+          "dataSourceRef": "CompanyIncomeData",
           "overlap": 1
         },
         {
           "type": "NumericYAxis",
           "name": "yAxis",
           "title": "Millions of Dollars",
+          "titleAngle": 90,
           "titleLeftMargin": 10,
           "minimumValue": 0,
           "maximumValue": 60
@@ -30,9 +31,10 @@
         {
           "type": "WaterfallSeries",
           "name": "WaterfallSeries1",
+          "title": "Value",
           "xAxisRef": "xAxis",
-          "yAxisRef": "yAxis",          
-          "dataSourceRef": "data",
+          "yAxisRef": "yAxis",
+          "dataSourceRef": "CompanyIncomeData",
           "valueMemberPath": "Costs",
           "showDefaultTooltip": true,
           "isTransitionInEnabled": true
@@ -40,28 +42,18 @@
         {
           "type": "WaterfallSeries",
           "name": "WaterfallSeries2",
+          "title": "Value",
           "xAxisRef": "xAxis",
           "yAxisRef": "yAxis",
-          "dataSourceRef": "data",
-          "brush":"#7446B9",
-          "outline":"#7446B9",
+          "dataSourceRef": "CompanyIncomeData",
+          "brush": "#7446B9",
+          "outline": "#7446B9",
           "valueMemberPath": "NetIncome",
           "showDefaultTooltip": true,
           "isTransitionInEnabled": true
         }
       ]
     }
-  },
-  "refs": {
-    "data": [
-      { "Costs": 55, "NetIncome": null,  "Category": "Revenue" },
-      { "Costs": 45, "NetIncome": null,  "Category": "Expenses" },
-      { "Costs": 35, "NetIncome": null,  "Category": "Research" },
-      { "Costs": 28, "NetIncome": null,  "Category": "Marketing" },
-      { "Costs": 25, "NetIncome": null,  "Category": "Administration" },
-      { "Costs": 55, "NetIncome": null,  "Category": "Total Costs" },
-      { "Costs": 0,  "NetIncome": 25, "Category": "Net Income" }
-    ]
   },
   "modules": [
     "charts/DataChartCoreModule",

@@ -1,0 +1,28 @@
+{
+  "todo": [ "Approved Defer - implement CSS styling" ],
+  "export": false,
+  "skipAlterDataCasing": true,
+  "descriptions": {
+    "content": {
+      "type": "WebGrid",
+      "name": "grid",
+      "id": "grid",
+      "dataRef": "CustomersData",
+      "columnSelection": "Single",
+      "columns": [
+        {
+          "type": "WebColumn",
+          "field": "ID"
+        },
+        {
+          "type": "WebColumn",
+          "field": "CompanyName",
+          "header": "Company"
+        }
+      ]
+    }
+  },
+  "modules": [
+    "grids/WebGridModule"
+  ]
+}

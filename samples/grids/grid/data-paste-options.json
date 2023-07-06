@@ -1,0 +1,70 @@
+{
+  "todo": [
+    "Missing dataProcessed event and ExcelExporter"
+  ],
+  "export": false,
+  "skipAlterDataCasing": true,
+  "descriptions": {
+    "editor": {
+      "type": "PropertyEditorPanel",
+      "componentRendererRef": "renderer",
+      "targetRef": "grid1",
+      "descriptionType": "WebGrid",
+      "isHorizontal": true,
+      "isWrappingEnabled": false,
+      "properties": [
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "label": "",
+          "valueType": "Button",
+          "primitiveValue": "Paste Options",
+          "buttonClickedRef": "WebGridPasteOptions"
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "label": "",
+          "valueType": "Button",
+          "primitiveValue": "Download Sample - Excel File",
+          "buttonClickedRef": "WebGridExcelDownload"
+        }
+      ]
+    },
+    "content": {
+      "type": "WebGrid",
+      "name": "grid1",
+      "dataRef": "CustomersData",
+      "primaryKey": "ID",
+      "columns": [
+        {
+          "type": "WebColumn",
+          "name": "ContactName",
+          "field": "ContactName",
+          "header": "Name"
+        },
+        {
+          "type": "WebColumn",
+          "name": "ContactTitle",
+          "field": "ContactTitle",
+          "header": "Title"
+        },
+        {
+          "type": "WebColumn",
+          "name": "Phone",
+          "field": "Phone",
+          "header": "Phone"
+        },
+        {
+          "type": "WebColumn",
+          "name": "Country",
+          "field": "Country",
+          "header": "Country"
+        }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
+    "grids/WebGridModule"
+  ]
+}

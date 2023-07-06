@@ -1,0 +1,70 @@
+{
+  "skipAlterDataCasing": true,
+  "descriptions": {
+    "editor": {
+      "type": "PropertyEditorPanel",
+      "name": "PropertyEditor",
+      "componentRendererRef": "renderer",
+      "targetRef": "grid",
+      "descriptionType": "WebGrid",
+      "isHorizontal": true,
+      "isWrappingEnabled": true,
+      "properties": [
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "CellSelection",
+          "name": "CellSelectionEditor",
+          "valueType": "EnumValue",
+          "dropDownNames": ["None", "Single", "Multiple"],
+          "dropDownValues": ["NOne", "Single", "Multiple"]
+        }
+      ]
+    },
+    "content": {
+      "type": "WebGrid",
+      "name": "grid",
+      "dataRef": "NwindData",
+      "autoGenerate": false,
+      "columns": [
+        {
+          "type": "WebColumn",
+          "field": "ProductID",
+          "header": "Product ID"
+        },
+        {
+          "type": "WebColumn",
+          "field": "ProductName",
+          "header": "Product Name"
+        },
+        {
+          "type": "WebColumn",
+          "field": "UnitsInStock",
+          "header": "Units In Stock",
+          "dataType": "Number"
+        },
+        {
+          "type": "WebColumn",
+          "field": "UnitPrice",
+          "header": "Units Price",
+          "dataType": "Number"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Discontinued",
+          "dataType": "Boolean"
+        },
+        {
+          "type": "WebColumn",
+          "field": "OrderDate",
+          "header": "Order Date",
+          "dataType": "Date"
+        }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
+    "grids/WebGridModule"
+  ]
+}

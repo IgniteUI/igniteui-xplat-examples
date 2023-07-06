@@ -4,7 +4,7 @@
     "content": {
       "type": "Sparkline",
       "name": "chart",
-      "dataSourceRef": "data",
+      "dataSourceRef": "SparklineProfitData",
       "displayType": "Line",
       "labelMemberPath": "Year",
       "valueMemberPath": "Profits",
@@ -24,23 +24,7 @@
       "negativeMarkerVisibility": "Visible"
     }
   },
-  "refs": {
-    "data": [
-      { "Year": "2009", "Profits": 0 },
-      { "Year": "2010", "Profits": -40 },
-      { "Year": "2011", "Profits": 20 },
-      { "Year": "2012", "Profits": -40 },
-      { "Year": "2013", "Profits": 20 },
-      { "Year": "2014", "Profits": -40 },
-      { "Year": "2015", "Profits": 80 },
-      { "Year": "2016", "Profits": -40 },
-      { "Year": "2017", "Profits": 20 },
-      { "Year": "2018", "Profits": -80 },
-      { "Year": "2018", "Profits": 20 },
-      { "Year": "2019", "Profits": -20 }
-    ]
-  },
-  "modules": [    
-    "charts/SparklineModule"    
+  "modules": [
+    "charts/SparklineModule"
   ]
 }

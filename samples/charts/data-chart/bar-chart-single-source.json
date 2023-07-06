@@ -1,7 +1,7 @@
-{  
+{
   "strings": {
     "legendTitle": "Where Online Shoppers Start Their Search"
-  }, 
+  },
   "descriptions": {
     "content": {
       "type": "DataChart",
@@ -13,7 +13,9 @@
           "type": "CategoryYAxis",
           "name": "yAxis",
           "label": "Shop",
-          "dataSourceRef": "data",
+          "useEnhancedIntervalManagement": true,
+          "enhancedIntervalPreferMoreCategoryLabels": true,
+          "dataSourceRef": "OnlineShoppingSearches",
           "isInverted": true,
           "gap": 0.5,
           "overlap": -0.1
@@ -21,41 +23,38 @@
         {
           "type": "NumericXAxis",
           "name": "xAxis",
-          "labelFormat": "{0}%"          
+          "labelFormat": "{0}%"
         }
       ],
       "series": [
         {
+          "type": "CategoryHighlightLayer",
+          "name": "CategoryHighlightLayer"
+        },
+        {
           "type": "BarSeries",
           "name": "BarSeries1",
           "xAxisRef": "xAxis",
-          "yAxisRef": "yAxis",          
+          "yAxisRef": "yAxis",
           "valueMemberPath": "Percent",
-          "dataSourceRef": "data",
+          "dataSourceRef": "OnlineShoppingSearches",
           "showDefaultTooltip": true,
           "isTransitionInEnabled": true,
           "isHighlightingEnabled": true
+        },
+        {
+          "type": "DataToolTipLayer",
+          "name": "Tooltips"
         }
       ]
     }
   },
-  "refs": {
-    "data": [
-      { "Shop": "Amazon",                      "Percent": 63 },
-      { "Shop": "Search Engines",              "Percent": 48 },
-      { "Shop": "Retailer Sites",              "Percent": 33 },
-      { "Shop": "Other Marketplaces",          "Percent": 25 },
-      { "Shop": "At the Website of the Brand", "Percent": 21 },
-      { "Shop": "Comparison Sites",            "Percent": 10 },
-      { "Shop": "Social Media",                "Percent": 8  },
-      { "Shop": "Other",                       "Percent": 2  }
-    ]
-  },
   "modules": [
     "charts/DataChartCoreModule",
-    "charts/DataChartCategoryCoreModule",    
+    "charts/DataChartCategoryCoreModule",
     "charts/DataChartCategoryModule",
+    "charts/DataChartAnnotationModule",
     "charts/DataChartInteractivityModule",
-    "charts/DataChartVerticalCategoryModule"    
+    "charts/DataChartVerticalCategoryModule"
   ]
 }

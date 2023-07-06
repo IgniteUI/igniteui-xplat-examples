@@ -1,4 +1,4 @@
-{ 
+{
   "strings": {
     "legendTitle": "Highest Grossing Movie Franchises"
   },
@@ -17,7 +17,9 @@
           "type": "CategoryYAxis",
           "name": "yAxis",
           "label": "Franchise",
-          "dataSourceRef": "data",
+          "useEnhancedIntervalManagement": true,
+          "enhancedIntervalPreferMoreCategoryLabels": true,
+          "dataSourceRef": "HighestGrossingMovies",
           "isInverted": true,
           "gap": 0.5,
           "overlap": -0.1
@@ -30,48 +32,47 @@
       ],
       "series": [
         {
+          "type": "CategoryHighlightLayer",
+          "name": "CategoryHighlightLayer"
+        },
+        {
           "type": "BarSeries",
-          "name": "BarSeries1",           
+          "name": "BarSeries1",
           "xAxisRef": "xAxis",
           "yAxisRef": "yAxis",
           "title": "Total Revenue of Franchise",
           "valueMemberPath": "TotalRevenue",
-          "dataSourceRef": "data",
+          "dataSourceRef": "HighestGrossingMovies",
           "showDefaultTooltip": true,
           "isTransitionInEnabled": true,
           "isHighlightingEnabled": true
         },
         {
-          "type": "BarSeries",    
-          "name": "BarSeries2",      
+          "type": "BarSeries",
+          "name": "BarSeries2",
           "xAxisRef": "xAxis",
           "yAxisRef": "yAxis",
           "title": "Highest Grossing Movie in Series",
           "valueMemberPath": "HighestGrossing",
-          "dataSourceRef": "data",
+          "dataSourceRef": "HighestGrossingMovies",
           "showDefaultTooltip": true,
           "isTransitionInEnabled": true,
           "isHighlightingEnabled": true
+        },
+        {
+          "type": "DataToolTipLayer",
+          "name": "Tooltips"
         }
       ]
     }
   },
-  "refs": {
-    "data": [
-      { "Franchise": "Marvel Universe", "TotalRevenue": 22.55, "HighestGrossing": 2.8 },
-      { "Franchise": "Star Wars",       "TotalRevenue": 10.32, "HighestGrossing": 2.07 },
-      { "Franchise": "Harry Potter",    "TotalRevenue": 9.19,  "HighestGrossing": 1.34 },
-      { "Franchise": "Avengers",        "TotalRevenue": 7.76,  "HighestGrossing": 2.8 },
-      { "Franchise": "Spider Man",      "TotalRevenue": 7.22,  "HighestGrossing": 1.28 },
-      { "Franchise": "James Bond",      "TotalRevenue": 7.12,  "HighestGrossing": 1.11 }
-    ]
-  },
   "modules": [
     "charts/LegendModule",
     "charts/DataChartCoreModule",
-    "charts/DataChartCategoryCoreModule",    
+    "charts/DataChartCategoryCoreModule",
     "charts/DataChartCategoryModule",
     "charts/DataChartInteractivityModule",
-    "charts/DataChartVerticalCategoryModule"
+    "charts/DataChartVerticalCategoryModule",
+    "charts/DataChartAnnotationModule"
   ]
 }

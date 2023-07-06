@@ -1,0 +1,70 @@
+{
+  "todo": [],
+  "skipAlterDataCasing": true,
+  "descriptions": {
+    "editor": {
+      "type": "PropertyEditorPanel",
+      "name": "PropertyEditor",
+      "componentRendererRef": "renderer",
+      "targetRef": "treeGrid",
+      "descriptionType": "WebTreeGrid",
+      "isHorizontal": true,
+      "isWrappingEnabled": true,
+      "properties": [
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "CellSelection",
+          "name": "CellSelectionEditor",
+          "valueType": "EnumValue",
+          "dropDownNames": ["None", "Single", "Multiple"],
+          "dropDownValues": ["None", "Single", "Multiple"]
+        }
+      ]
+    },
+    "content": {
+      "type": "WebTreeGrid",
+      "name": "treeGrid",
+      "id": "treeGrid",
+      "dataRef": "EmployeesFlatData",
+      "primaryKey": "ID",
+      "foreignKey": "ParentID",
+      "autoGenerate": false,
+      "columns": [
+        {
+          "type": "WebColumn",
+          "field": "ID"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Name"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Age",
+          "dataType": "Number"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Title"
+        },
+        {
+          "type": "WebColumn",
+          "field": "HireDate",
+          "header": "Hire Date",
+          "dataType": "Date"
+        },
+        {
+          "type": "WebColumn",
+          "field": "OnPTO",
+          "header": "On PTO",
+          "dataType": "Boolean"
+        }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
+    "grids/WebTreeGridModule"
+  ]
+}

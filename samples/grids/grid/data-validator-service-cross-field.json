@@ -1,0 +1,82 @@
+{
+  "todo": [ 
+     "Port RemoteService with event handlers"
+  ],
+  "skipAlterDataCasing": true,
+  "descriptions": {
+    "content": {
+      "name": "grid",
+      "type": "WebGrid",
+      "dataRef": "NwindData",
+      "rowEditable":true,
+      "primaryKey": "ProductID",
+      "columns": [
+        {
+          "type": "WebColumn",
+          "name": "ProductID",
+          "field": "ProductID",
+          "header": "Product ID"
+        },
+        {
+          "type": "WebColumn",
+          "name": "ProductName",
+          "field": "ProductName",
+          "header": "Product Name"
+        },
+        {
+          "type": "WebColumn",
+          "name": "UnitPrice",
+          "field": "UnitPrice",
+          "header": "Unit Price"
+        },
+        {
+          "type": "WebColumn",
+          "name": "UnitsOnOrder",
+          "field": "UnitsOnOrder",
+          "header": "Units On Order"
+        },
+        {
+          "type": "WebColumn",
+          "name": "UnitsInStock",
+          "field": "UnitsInStock",
+          "header": "Units In Stock"
+        },
+        {
+          "type": "WebColumn",
+          "name": "QuantityPerUnit",
+          "field": "QuantityPerUnit",
+          "header": "Quantity Per Unit"
+        },
+        {
+          "type": "WebColumn",
+          "name": "ReorderLevel",
+          "field": "ReorderLevel",
+          "header": "Reorder Level"
+        },
+        {
+          "type": "WebColumn",
+          "name": "SupplierID",
+          "field": "SupplierID",
+          "header": "Supplier ID"
+        },
+        {
+          "type": "WebColumn",
+          "name": "CategoryID",
+          "field": "CategoryID",
+          "header": "Category ID"
+        },
+        {
+          "type": "WebColumn",
+          "name": "Discontinued",
+          "field": "Discontinued",
+          "header": "Discontinued"
+        }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
+    "grids/WebGridModule"
+  ]
+}

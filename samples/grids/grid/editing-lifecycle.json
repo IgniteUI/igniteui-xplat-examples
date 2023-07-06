@@ -1,0 +1,49 @@
+{
+  "todo": [ "" ],
+  "export": true,
+  "skipAlterDataCasing": true,
+  "descriptions": {
+    "content": {
+      "type": "WebGrid",
+      "dataRef": "NwindData",
+      "autoGenerate": false,
+      "name": "grid",
+      "id": "grid",
+      "rowEditable": true,
+      "primaryKey": "ProductID",
+      "renderedRef": "WebGridRendered",
+      "rowEditEnterRef": "WebGridRowEditEnter",
+      "rowEditRef": "WebGridRowEdit",
+      "rowEditDoneRef": "WebGridRowEditDone",
+      "rowEditExitRef": "WebGridRowEditExit",
+      "cellEditEnterRef": "WebGridCellEditEnter",
+      "cellEditRef": "WebGridCellEdit",
+      "cellEditDoneRef": "WebGridCellEditDone",
+      "cellEditExitRef": "WebGridCellEditExit",
+      "columns": [
+        {
+          "type": "WebColumn",
+          "field": "ProductName",
+          "header": "Product Name"
+        },
+        {
+          "type": "WebColumn",
+          "field": "UnitPrice",
+          "header": "Unit Price"
+        },
+        {
+          "type": "WebColumn",
+          "field": "UnitsInStock",
+          "header": "Units In Stock"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Ordered"
+        }
+      ]
+    }
+  },
+  "modules": [
+    "grids/WebGridModule"
+  ]
+}

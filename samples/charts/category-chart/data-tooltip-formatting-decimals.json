@@ -1,0 +1,30 @@
+{
+  "strings": {
+    "legendTitle": "Highest Grossing Movie Franchises"
+  },
+  "descriptions": {
+    "content": {
+      "type": "CategoryChart",
+      "name": "chart",
+      "chartType": "Column",
+      "dataSourceRef": "HighestGrossingMovies",
+      "toolTipType": "Data",
+      "dataToolTipUnitsText": "B",
+      "dataToolTipValueFormatMode": "Decimal",
+      "dataToolTipValueFormatMinFractions": 2,
+      "xAxisInterval": 1,
+      "yAxisTitle": "Billions of U.S. Dollars",
+      "yAxisTitleLeftMargin": 10,
+      "yAxisTitleRightMargin": 5,
+      "yAxisLabelLeftMargin": 0,
+      "isCategoryHighlightingEnabled": true,
+      "crosshairsDisplayMode": "None",
+      "highlightingMode": "FadeOthersSpecific",
+      "highlightingBehavior": "NearestItemsAndSeries"
+    }
+  },
+  "modules": [
+    "charts/LegendModule",
+    "charts/CategoryChartModule"
+  ]
+}

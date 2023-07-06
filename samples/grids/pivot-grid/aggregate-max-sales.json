@@ -1,0 +1,42 @@
+{
+  "skipAlterDataCasing": true,
+  "descriptions": {
+    "content": {
+      "type": "WebPivotGrid",
+      "dataRef": "PivotSalesData",
+      "name": "grid",
+      "pivotConfiguration": {
+        "type": "WebPivotConfiguration",
+        "columns": [
+          {
+            "type": "WebPivotDimension",
+            "memberName": "Country",
+            "enabled": true
+          }
+        ],
+        "rows": [
+          {
+            "type": "WebPivotDimension",
+            "memberName": "Product",
+            "enabled": true
+          }
+        ],
+        "values": [
+          {
+            "type": "WebPivotValue",
+            "member": "Sales",
+            "enabled": true,
+            "aggregate": {
+              "key": "MAX",
+              "type": "WebPivotAggregator",
+              "aggregatorRef": "PivotSalesDataAggregateMaxSales"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "modules": [
+    "grids/WebPivotGridModule"
+  ]
+}

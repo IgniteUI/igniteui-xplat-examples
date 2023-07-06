@@ -1,0 +1,47 @@
+{
+  "skipAlterDataCasing": true,
+  "descriptions": {
+    "content": {
+      "type": "WebGrid",
+      "dataRef": "NwindData",
+      "autoGenerate": false,
+      "primaryKey": "ProductID",
+      "cellEditRef": "WebGridEditingEventsCellEdit",
+      "columns": [
+        {
+          "type": "WebColumn",
+          "field": "ProductName",
+          "header": "Product Name",
+          "dataType": "String"
+        },
+        {
+          "type": "WebColumn",
+          "field": "UnitPrice",
+          "header": "Unit Price",
+          "dataType": "Number",
+          "editable": true
+        },
+        {
+          "type": "WebColumn",
+          "name": "UnitsInStock",
+          "field": "UnitsInStock",
+          "header": "Units In Stock",
+          "dataType": "Number",
+          "editable": true
+        },
+        {
+          "type": "WebColumn",
+          "name": "UnitsOnOrder",
+          "field": "UnitsOnOrder",
+          "header": "Units on Order",
+          "dataType": "Number",
+          "editable": true
+        }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "grids/WebGridModule"
+  ]
+}

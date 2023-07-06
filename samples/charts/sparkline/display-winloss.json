@@ -2,31 +2,15 @@
   "export": true,
   "descriptions": {
     "content": {
-     "type": "Sparkline",
+      "type": "Sparkline",
       "name": "chart",
-      "dataSourceRef": "data",
+      "dataSourceRef": "SparklineMixedData",
       "displayType": "WinLoss",
       "labelMemberPath": "Label",
       "valueMemberPath": "Value"
     }
   },
-  "refs": {
-    "data": [
-            { "Label": 4, "Value": 4 },
-            { "Label": 5, "Value": 5 },
-            { "Label": 2, "Value": 2 },
-            { "Label": 7, "Value": 7 },
-            { "Label": -1, "Value": -1 },
-            { "Label": 3, "Value": 3 },
-            { "Label": -2, "Value": -2 },
-            { "Label": 5, "Value": 5 },
-            { "Label": 2, "Value": 2 },
-            { "Label": 6, "Value": 6 }
-    ]
-  },
-  "modules": [    
-    "withDescriptions",
-    "grids/PropertyEditorModule",
-    "charts/SparklineModule"    
+  "modules": [
+    "charts/SparklineModule"
   ]
 }

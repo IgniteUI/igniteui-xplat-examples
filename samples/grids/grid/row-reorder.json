@@ -1,0 +1,62 @@
+{
+  "skipAlterDataCasing": true,
+  "descriptions": {
+    "content": {
+      "name": "grid",
+      "type": "WebGrid",
+      "dataRef": "CustomersData",
+      "rowDraggable": true,
+      "primaryKey": "ID",
+      "rowDragEndRef": "WebGridReorderRowHandler",
+      "columns": [
+        {
+          "type": "WebColumn",
+          "field": "ID",
+          "header": "ID"
+        },
+        {
+          "type": "WebColumn",
+          "field": "CompanyName",
+          "header": "Company"
+        },
+        {
+          "type": "WebColumn",
+          "field": "ContactName",
+          "header": "Name",
+          "minWidth": "60px",
+          "maxWidth": "230px"
+        },
+        {
+          "type": "WebColumn",
+          "field": "ContactTitle",
+          "header": "Title"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Address"
+        },
+        {
+          "type": "WebColumn",
+          "field": "City"
+        },
+        {
+          "type": "WebColumn",
+          "field": "PostalCode"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Phone"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Fax"
+        }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
+    "grids/WebGridModule"
+  ]
+}

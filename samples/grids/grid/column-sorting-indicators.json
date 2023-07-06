@@ -1,0 +1,89 @@
+{
+  "todo": [ "" ],
+  "export": true,
+  "skipAlterDataCasing": true,
+  "descriptions": {
+    "content": {
+      "type": "WebGrid",
+      "dataRef": "FinancialDataAll",
+      "autoGenerate": false,
+      "name": "grid",
+      "sortingExpressions": [
+        {
+          "type": "WebSortingExpression",
+          "dir": "Asc",
+          "fieldName": "Settlement",
+          "ignoreCase": true
+        },
+        {
+          "type": "WebSortingExpression",
+          "dir": "Desc",
+          "fieldName": "Type",
+          "ignoreCase": true
+        },
+        {
+          "type": "WebSortingExpression",
+          "dir": "Asc",
+          "fieldName": "Region",
+          "ignoreCase": true
+        },
+        {
+          "type": "WebSortingExpression",
+          "dir": "Asc",
+          "fieldName": "Country",
+          "ignoreCase": true
+        },
+        {
+          "type": "WebSortingExpression",
+          "dir": "Asc",
+          "fieldName": "Price",
+          "ignoreCase": true
+        },
+        {
+          "type": "WebSortingExpression",
+          "dir": "Asc",
+          "fieldName": "Buy",
+          "ignoreCase": true
+        }
+      ],
+      "id": "grid",
+      "columns": [
+        {
+          "type": "WebColumn",
+          "field": "Settlement",
+          "sortable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "Type",
+          "sortable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "Region",
+          "sortable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "Country",
+          "sortable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "Price",
+          "dataType": "Currency",
+          "sortable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "Buy",
+          "dataType": "Currency",
+          "sortable": true
+        }
+      ]
+    }
+  },
+  "modules": [
+    "grids/WebGridModule"
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "todo": [ 
+     "Approved Defer - until we port RemotePagingService to CodeGenLib with event handlers" 
+  ], 
+  "export": false,
+  "skipAlterDataCasing": true,
+  "descriptions": {
+    "content": {
+      "name": "grid",
+      "type": "WebGrid",
+      "dataRef": "NwindData",
+      "autoGenerate": false,
+      "allowFiltering":true,
+      "columns": [
+        {
+          "type": "WebColumn",
+          "name": "ProductID",
+          "field": "ProductID",
+          "header": "Product ID",
+          "sortable":true,
+          "filterable": false
+        },
+        {
+          "type": "WebColumn",
+          "name": "ProductName",
+          "field": "ProductName",
+          "header": "Product Name",
+          "sortable":true
+        },
+        {
+          "type": "WebColumn",
+          "name": "UnitPrice",
+          "field": "UnitPrice",
+          "header": "Unit Price",
+          "sortable":true
+        },
+        {
+          "type": "WebColumn",
+          "name": "UnitsInStock",
+          "field": "UnitsInStock",
+          "header": "Units In Stock",
+          "sortable":true
+        },
+        {
+          "type": "WebColumn",
+          "name": "QuantityPerUnit",
+          "field": "QuantityPerUnit",
+          "header": "Quantity Per Unit",
+          "sortable":true
+        },
+        {
+          "type": "WebColumn",
+          "name": "ReorderLevel",
+          "field": "ReorderLevel",
+          "header": "Reorder Level",
+          "sortable":true
+        }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
+    "grids/WebGridModule"
+  ]
+}

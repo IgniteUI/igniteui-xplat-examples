@@ -1,0 +1,98 @@
+trigger:
+  branches:
+    include:
+    - vnext
+  paths:
+    include:
+      - 'samples/**/*.json'
+    exclude:
+      - vnext
+      - 'master'
+
+parameters:
+  - name: pathsToParse
+    displayName: 'Full paths that contain jsons - coma delimited'
+    type: string
+    default: '$(Build.SourcesDirectory)\igniteui-xplat-examples\samples\charts\sparkline'
+
+# This pipeline is meant to validate changes in developers' feature branches. It's not meant to be a part of PR validation.
+pr: none
+
+name: $(BuildDefinitionName)_$(Year:yyyy).$(Month).$(DayOfMonth)$(Rev:.r)
+variables:
+  - name: codeExporterAppBranch
+    value: 'master'
+
+resources:
+  repositories:
+# [MTrela 18/04/2023] Exclude exporting this repo to IgniteUIAngularExamples because our Angular template is not complete  
+#    - repository: IgniteUIAngularExamples
+#      endpoint: IgniteUI
+#      type: github
+#      name: IgniteUI/igniteui-angular-examples
+#      ref: '$(Build.SourceBranch)'
+
+    - repository: IgniteUIBlazorExamples
+      endpoint: IgniteUI
+      type: github
+      name: IgniteUI/igniteui-blazor-examples
+      ref: 'vnext'
+
+    - repository: IgniteUIReactExamples
+      endpoint: IgniteUI
+      type: github
+      name: IgniteUI/igniteui-react-examples
+      ref: 'vnext'
+
+    - repository: IgniteUIWebComponentsExamples
+      endpoint: IgniteUI
+      type: github
+      name: IgniteUI/igniteui-wc-examples
+      ref: vnext
+
+    - repository: IgEditorTemplates
+      type: git
+      name: igeditor-templates
+      ref: 'master'
+
+    - repository: CodeGenerationLibrary
+      type: git
+      name: code-generation-library
+      ref: '2023.1'
+
+pool:
+  name: BuildAgentOnPrem
+
+jobs:
+# [MTrela 18/04/2023] Exclude exporting this repo to IgniteUIAngularExamples because our Angular template is not complete    
+#  - template: templates/convert-to-platform-job.yml
+#    parameters:
+#      platform: 'Angular'
+#      destinationGitRepo: 'igniteui-angular-examples'
+#      pathsToParse: ${{ parameters.pathsToParse }}
+#      codeExporterAppBranch: $(codeExporterAppBranch)
+#      createPR: false
+
+- template: templates/convert-to-platform-job.yml
+  parameters:
+    platform: 'Blazor'
+    destinationGitRepo: 'igniteui-blazor-examples'
+    pathsToParse: ${{ parameters.pathsToParse }}
+    codeExporterAppBranch: $(codeExporterAppBranch)
+    createPR: false
+
+- template: templates/convert-to-platform-job.yml
+  parameters:
+    platform: 'React'
+    destinationGitRepo: 'igniteui-react-examples'
+    pathsToParse: ${{ parameters.pathsToParse }}
+    codeExporterAppBranch: $(codeExporterAppBranch)
+    createPR: false
+
+- template: templates/convert-to-platform-job.yml
+  parameters:
+    platform: 'WebComponents'
+    destinationGitRepo: 'igniteui-wc-examples'
+    pathsToParse: ${{ parameters.pathsToParse }}
+    codeExporterAppBranch: $(codeExporterAppBranch)
+    createPR: false

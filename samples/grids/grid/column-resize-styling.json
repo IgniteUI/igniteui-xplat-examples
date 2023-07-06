@@ -1,0 +1,51 @@
+{
+  "todo": [
+     "Approved Defer - until we support injecting CSS styles"
+  ],
+  "export": false,
+  "skipAlterDataCasing": true,
+  "descriptions": {
+    "content": {
+      "type": "WebGrid",
+      "name": "grid",
+      "dataRef": "AthletesData",
+      "autoGenerate": false,
+      "columns": [
+        {
+          "type": "WebColumn",
+          "field": "Id",
+          "header": "Rank",
+          "resizable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "Name",
+          "header": "Athlete",
+          "resizable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "BeatsPerMinute",
+          "header": "Beats per Minute",
+          "resizable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "TopSpeed",
+          "header": "Top Speed",
+          "resizable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "TrackProgress",
+          "header": "Track Progress",
+          "resizable": true
+        }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "grids/WebGridModule"
+  ]
+}

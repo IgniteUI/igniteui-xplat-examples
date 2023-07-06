@@ -1,0 +1,75 @@
+{
+  "todo": [
+    "Approved Defer - until we can inject CSS styles"
+  ],
+  "export": false,
+  "skipAlterDataCasing": true,
+  "onInit": ["WebGridExcelStyleFilteringTemplate"],
+  "descriptions": {
+    "content": {
+      "type": "WebGrid",
+      "name": "grid",
+      "dataRef": "NwindData",
+      "moving": true,
+      "autoGenerate": false,
+      "allowFiltering": true,
+      "filterMode": "ExcelStyleFilter",
+      "columns": [{
+        "type": "WebColumn",
+        "name": "ProductName",
+        "field": "ProductName",
+        "header": "Product Name",
+        "sortable": true
+      },
+      {
+        "type": "WebColumn",
+        "name": "QuantityPerUnit",
+        "field": "QuantityPerUnit",
+        "header": "Quantity Per Unit",
+        "sortable": false,
+        "disablePinning": true,
+        "disableHiding": true
+      },
+      {
+        "type": "WebColumn",
+        "name": "UnitPrice",
+        "field": "UnitPrice",
+        "header": "Unit Price",
+        "dataType": "Currency",
+        "sortable": true,
+        "disablePinning": true,
+        "disableHiding": true,
+        "pipeArgs": {
+          "type": "WebColumnPipeArgs",
+          "digitsInfo": "1.2-2"
+        }
+      },
+      {
+        "type": "WebColumn",
+        "name": "OrderDate",
+        "field": "OrderDate",
+        "header": "Order Date",
+        "dataType": "Date",
+        "sortable": false,
+        "pipeArgs": {
+          "type": "WebColumnPipeArgs",
+          "format": "MM/dd/YYYY"
+        }
+      },
+      {
+        "type": "WebColumn",
+        "name": "Discontinued",
+        "field": "Discontinued",
+        "header": "Discontinued",
+        "sortable": true,
+        "bodyTemplateRef": "WebGridBooleanCellTemplate"
+      }
+    ]
+  }
+},
+"modules": [
+  "withDescriptions",
+  "layouts/PropertyEditorPanelModule",
+  "grids/WebGridModule"
+]
+}

@@ -1,0 +1,85 @@
+{
+  "todo": [
+    "add batch editing later"
+  ],
+  "skipAlterDataCasing": true,
+  "export": true,
+  "descriptions": {
+    "content": {
+      "name": "grid",
+      "type": "WebGrid",
+      "dataRef": "NwindData",
+      "rowEditable": true,
+      "allowFiltering": true,
+      "autoGenerate": false,
+      "pinning": {
+        "type": "WebPinningConfig",
+        "rows": "Top"
+      },
+      "actionStrip": {
+        "type": "WebActionStrip",
+        "name": "actionStrip",
+        "actionButtons": [
+          {
+            "type": "WebGridPinningActions"
+          },
+          {
+            "type": "WebGridEditingActions",
+            "editRow": true,
+            "deleteRow": false
+          }
+        ]
+      },
+      "primaryKey": "ProductID",
+      "columns": [
+        {
+          "type": "WebColumn",
+          "name": "ProductName",
+          "field": "ProductName",
+          "header": "Product Name"
+        },
+        {
+          "type": "WebColumn",
+          "name": "UnitPrice",
+          "field": "UnitPrice",
+          "header": "Unit Price"
+        },
+        {
+          "type": "WebColumn",
+          "name": "UnitsOnOrder",
+          "field": "UnitsOnOrder",
+          "header": "Units On Order"
+        },
+        {
+          "type": "WebColumn",
+          "name": "UnitsInStock",
+          "field": "UnitsInStock",
+          "header": "Units In Stock"
+        },
+        {
+          "type": "WebColumn",
+          "name": "QuantityPerUnit",
+          "field": "QuantityPerUnit",
+          "header": "Quantity Per Unit"
+        },
+        {
+          "type": "WebColumn",
+          "name": "ReorderLevel",
+          "field": "ReorderLevel",
+          "header": "Reorder Level"
+        },
+        {
+          "type": "WebColumn",
+          "name": "Discontinued",
+          "field": "Discontinued",
+          "header": "Discontinued"
+        }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
+    "grids/WebGridModule"
+  ]
+}

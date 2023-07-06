@@ -1,0 +1,43 @@
+{
+  "todo": [ "" ],
+  "export": true,
+  "skipAlterDataCasing": true,
+  "descriptions": {
+    "content": {
+      "name": "grid",
+      "type": "WebGrid",
+      "dataRef": "CustomersData",
+      "autoGenerate": true,
+      "rowSelection": "Multiple",
+      "rowSelectorTemplateRef": "WebGridRowSelectorTemplate",
+      "headSelectorTemplateRef": "WebGridHeaderRowSelectorTemplate",
+      "columns": [
+        {
+          "type": "WebColumn",
+          "field": "ContactName"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Country"
+        },
+        {
+          "type": "WebColumn",
+          "field": "City"
+        },
+        {
+          "type": "WebColumn",
+          "field": "PostalCode"
+        },
+        {
+          "type": "WebColumn",
+          "field": "CompanyName"
+        }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "grids/WebGridModule",
+    "webinputs/WebCheckboxModule"
+  ]
+}

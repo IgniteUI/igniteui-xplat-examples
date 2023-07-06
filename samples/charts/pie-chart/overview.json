@@ -5,28 +5,20 @@
   "descriptions": {
     "legend": {
       "type": "ItemLegend",
-      "name": "legend",
+      "name": "Legend",
       "orientation": "Horizontal"
     },
     "content": {
       "type": "PieChart",
       "name": "chart",
-      "labelMemberPath": "Category",
+      "legendLabelMemberPath": "Category",
+      "labelMemberPath": "Summary",
       "labelsPosition": "BestFit",
-      "valueMemberPath": "MarketShare",
+      "valueMemberPath": "Value",
       "radiusFactor": 0.7,
-      "dataSourceRef": "data",
-      "legendRef": "legend"
+      "dataSourceRef": "EnergyGlobalDemand",
+      "legendRef": "Legend"
     }
-  },
-  "refs": {
-    "data": [
-      { "MarketShare": 37, "Category": "Cooling" },
-      { "MarketShare": 25, "Category": "Residential" },
-      { "MarketShare": 12, "Category": "Heating" },
-      { "MarketShare": 11, "Category": "Lighting" },
-      { "MarketShare": 15, "Category": "Other" }
-    ]
   },
   "modules": [
     "charts/ItemLegendModule",

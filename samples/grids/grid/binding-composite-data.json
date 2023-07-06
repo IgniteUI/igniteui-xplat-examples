@@ -1,0 +1,63 @@
+{
+  "todo": [ "add Region values in CodeGenLib" ],
+  "skipAlterDataCasing": true,
+  "descriptions": {
+    "content": {
+      "type": "WebGrid",
+      "dataRef": "CustomersData",
+      "primaryKey": "ID",
+      "autoGenerate": false,
+      "name": "grid",
+      "columns": [
+        {
+          "type": "WebColumn",
+          "header": "ID",
+          "field": "ID"
+        },
+        {
+          "type": "WebColumn",
+          "field": "ContactName",
+          "header": "Contact",
+          "editable": true,
+          "bodyTemplateRef": "WebGridCompositeContactCellTemplate",
+          "inlineEditorTemplateRef": "WebGridCompositeContactEditCellTemplate",
+          "width": "250px",
+          "resizable": false
+        },
+        {
+          "type": "WebColumn",
+          "header": "Address",
+          "field": "Address",
+          "editable": true,
+          "bodyTemplateRef": "WebGridCompositeAddressCellTemplate",
+          "inlineEditorTemplateRef": "WebGridCompositeAddressEditCellTemplate",
+          "width": "250px",
+          "resizable": false
+        },
+        {
+          "type": "WebColumn",
+          "header": "Country",
+          "field": "Country"
+        },
+        {
+          "type": "WebColumn",
+          "header": "Region",
+          "field": "Region"
+        },
+        {
+          "type": "WebColumn",
+          "header": "Phone",
+          "field": "Phone"
+        },
+        {
+          "type": "WebColumn",
+          "header": "Fax",
+          "field": "Fax"
+        }
+      ]
+    }
+  },
+  "modules": [
+    "grids/WebGridModule"
+  ]
+}

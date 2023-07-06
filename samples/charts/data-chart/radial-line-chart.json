@@ -18,7 +18,7 @@
         {
           "type": "CategoryAngleAxis",
           "name": "angleAxis",
-          "dataSourceRef": "data",
+          "dataSourceRef": "FootballPlayerStats",
           "label": "Attribute"
         },
         {
@@ -34,11 +34,11 @@
         {
           "type": "RadialLineSeries",
           "name": "RadialLineSeries1",
-          "dataSourceRef": "data",
+          "dataSourceRef": "FootballPlayerStats",
           "angleAxisRef": "angleAxis",
           "valueAxisRef": "radiusAxis",
-          "valueMemberPath": "RonaldoValue",
-          "showDefaultTooltip": true,
+          "valueMemberPath": "Ronaldo",
+          "showDefaultTooltip": false,
           "areaFillOpacity": 0.8,
           "thickness": 3,
           "title": "Ronaldo",
@@ -47,36 +47,29 @@
         {
           "type": "RadialLineSeries",
           "name": "RadialLineSeries2",
-          "dataSourceRef": "data",
+          "dataSourceRef": "FootballPlayerStats",
           "angleAxisRef": "angleAxis",
           "valueAxisRef": "radiusAxis",
-          "valueMemberPath": "MessiValue",
-          "showDefaultTooltip": true,
+          "valueMemberPath": "Messi",
+          "showDefaultTooltip": false,
           "areaFillOpacity": 0.8,
           "thickness": 3,
           "title": "Messi",
           "markerType": "Circle"
+        },
+        {
+          "type": "DataToolTipLayer",
+          "name": "DataToolTipLayer"
         }
       ]
     }
-  },
-  "refs": {
-    "data": [
-      { "Attribute": "Dribbling",  "RonaldoValue": 8,  "MessiValue": 10 },
-      { "Attribute": "Passing",    "RonaldoValue": 8,  "MessiValue": 10 },
-      { "Attribute": "Finishing",  "RonaldoValue": 10, "MessiValue": 10 },
-      { "Attribute": "Free Kicks", "RonaldoValue": 8,  "MessiValue": 9 },
-      { "Attribute": "Penalties",  "RonaldoValue": 9,  "MessiValue": 7 },
-      { "Attribute": "Physical",   "RonaldoValue": 10, "MessiValue": 7 },
-      { "Attribute": "Team Play",  "RonaldoValue": 7,  "MessiValue": 9 },
-      { "Attribute": "Heading",    "RonaldoValue": 9,  "MessiValue": 6 }
-    ]
   },
   "modules": [
     "charts/LegendModule",
     "charts/DataChartCoreModule",
     "charts/DataChartRadialModule",
     "charts/DataChartRadialCoreModule",
-    "charts/DataChartInteractivityModule"
+    "charts/DataChartInteractivityModule",
+    "charts/DataChartAnnotationModule"
   ]
 }

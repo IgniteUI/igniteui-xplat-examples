@@ -1,7 +1,7 @@
-{  
+{
   "strings": {
     "legendTitle": "Where Online Shoppers Start Their Search"
-  },  
+  },
   "descriptions": {
     "content": {
       "type": "DataChart",
@@ -13,7 +13,7 @@
           "type": "CategoryYAxis",
           "name": "yAxis",
           "label": "Shop",
-          "dataSourceRef": "data",
+          "dataSourceRef": "OnlineShoppingSearches",
           "isInverted": true,
           "gap": 0.75
         },
@@ -21,20 +21,30 @@
           "type": "NumericXAxis",
           "name": "xAxis",
           "interval": 20,
-          "labelFormat": "{0}%"      
+          "maximumValue": 80,
+          "minimumValue": 0,
+          "labelFormat": "{0}%"
         }
       ],
       "series": [
         {
+          "type": "CategoryHighlightLayer",
+          "name": "CategoryHighlightLayer"
+        },
+        {
           "type": "BarSeries",
           "name": "BarSeries1",
           "xAxisRef": "xAxis",
-          "yAxisRef": "yAxis",          
+          "yAxisRef": "yAxis",
           "valueMemberPath": "Percent",
-          "dataSourceRef": "data",
+          "dataSourceRef": "OnlineShoppingSearches",
           "showDefaultTooltip": true,
           "isTransitionInEnabled": true,
-          "isHighlightingEnabled": true
+          "isHighlightingEnabled": true,
+          "brush": "rgba(134, 6, 138, 0.65)",
+          "outline": "rgb(133, 6, 138)",
+          "thickness": 2,
+          "areaFillOpacity": 0.5
         },
         {
           "type": "CalloutLayer",
@@ -43,35 +53,17 @@
           "yMemberPath": "Y",
           "labelMemberPath": "Label",
           "contentMemberPath": "Label",
-          "calloutTextColor": "black",
+          "calloutTextColor": "rgb(133, 6, 138)",
           "calloutBackground": "transparent",
           "calloutLeaderBrush": "transparent",
-          "dataSourceRef": "callouts"
+          "dataSourceRef": "OnlineShoppingSearches"
+        },
+        {
+          "type": "DataToolTipLayer",
+          "name": "Tooltips"
         }
       ]
     }
-  },
-  "refs": {
-    "data": [
-      { "Shop": "Amazon",                      "Percent": 63 },
-      { "Shop": "Search Engines",              "Percent": 48 },
-      { "Shop": "Retailer Sites",              "Percent": 33 },
-      { "Shop": "Other Marketplaces",          "Percent": 25 },
-      { "Shop": "At the Website of the Brand", "Percent": 21 },
-      { "Shop": "Comparison Sites",            "Percent": 10 },
-      { "Shop": "Social Media",                "Percent": 8  },
-      { "Shop": "Other",                       "Percent": 2  }
-    ],
-    "callouts": [
-      { "X": 63, "Y": 0, "Label": "63%" },
-      { "X": 48, "Y": 1, "Label": "48%" },
-      { "X": 33, "Y": 2, "Label": "33%" },
-      { "X": 25, "Y": 3, "Label": "25%" },
-      { "X": 21, "Y": 4, "Label": "21%" },
-      { "X": 10, "Y": 5, "Label": "10%" },
-      { "X": 8, "Y": 6, "Label": "8%" },
-      { "X": 2, "Y": 7, "Label": "2%" }
-    ]
   },
   "modules": [
     "charts/DataChartCoreModule",

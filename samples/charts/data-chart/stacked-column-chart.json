@@ -5,7 +5,7 @@
   "descriptions": {
     "legend": {
       "type": "Legend",
-      "name": "legend",
+      "name": "Legend",
       "orientation": "Horizontal"
     },
     "content": {
@@ -18,7 +18,7 @@
         {
           "type": "CategoryXAxis",
           "name": "xAxis",
-          "dataSourceRef": "data",
+          "dataSourceRef": "ContinentsBirthRate",
           "label": "Year",
           "gap": 0.75
         },
@@ -36,33 +36,24 @@
         {
           "type": "StackedColumnSeries",
           "name": "StackedColumnSeries",
-          "dataSourceRef": "data",
+          "dataSourceRef": "ContinentsBirthRate",
           "xAxisRef": "xAxis",
           "yAxisRef": "yAxis",
           "showDefaultTooltip": false,
           "series": [
-            { "type": "StackedFragmentSeries", "name": "s1", "valueMemberPath": "Asia" },
-            { "type": "StackedFragmentSeries", "name": "s2", "valueMemberPath": "Africa" },
-            { "type": "StackedFragmentSeries", "name": "s3", "valueMemberPath": "Europe" },
-            { "type": "StackedFragmentSeries", "name": "s4", "valueMemberPath": "NorthAmerica" },
-            { "type": "StackedFragmentSeries", "name": "s5", "valueMemberPath": "SouthAmerica" },
-            { "type": "StackedFragmentSeries", "name": "s6", "valueMemberPath": "Oceania" }
+            { "type": "StackedFragmentSeries", "name": "s1", "valueMemberPath": "Asia", "title": "Asia" },
+            { "type": "StackedFragmentSeries", "name": "s2", "valueMemberPath": "Africa", "title": "Africa" },
+            { "type": "StackedFragmentSeries", "name": "s3", "valueMemberPath": "Europe", "title": "Europe" },
+            { "type": "StackedFragmentSeries", "name": "s4", "valueMemberPath": "NorthAmerica", "title": "North America" },
+            { "type": "StackedFragmentSeries", "name": "s5", "valueMemberPath": "SouthAmerica", "title": "South America" }
           ]
+        },
+        {
+          "type": "DataToolTipLayer",
+          "name": "DataToolTipLayer"
         }
       ]
     }
-  },
-  "refs": {
-    "data": [
-      { "Year": "1950", "Asia": 62, "Africa": 13, "Europe": 10, "NorthAmerica": 4, "SouthAmerica": 8,  "Oceania": 2 },
-      { "Year": "1960", "Asia": 68, "Africa": 12, "Europe": 15, "NorthAmerica": 4, "SouthAmerica": 9,  "Oceania": 2 },
-      { "Year": "1970", "Asia": 80, "Africa": 17, "Europe": 11, "NorthAmerica": 3, "SouthAmerica": 9,  "Oceania": 2 },
-      { "Year": "1980", "Asia": 77, "Africa": 21, "Europe": 12, "NorthAmerica": 3, "SouthAmerica": 10, "Oceania": 2 },
-      { "Year": "1990", "Asia": 87, "Africa": 24, "Europe": 9,  "NorthAmerica": 3, "SouthAmerica": 10, "Oceania": 2 },
-      { "Year": "2000", "Asia": 79, "Africa": 28, "Europe": 8,  "NorthAmerica": 4, "SouthAmerica": 9,  "Oceania": 2 },
-      { "Year": "2010", "Asia": 78, "Africa": 35, "Europe": 10, "NorthAmerica": 4, "SouthAmerica": 8,  "Oceania": 2 },
-      { "Year": "2020", "Asia": 75, "Africa": 43, "Europe": 7,  "NorthAmerica": 4, "SouthAmerica": 7,  "Oceania": 2 }
-    ]
   },
   "modules": [
     "charts/LegendModule",
@@ -70,6 +61,7 @@
     "charts/DataChartCategoryModule",
     "charts/DataChartCategoryCoreModule",
     "charts/DataChartInteractivityModule",
+    "charts/DataChartAnnotationModule",
     "charts/DataChartStackedModule",
     "charts/StackedFragmentSeriesModule"
   ]

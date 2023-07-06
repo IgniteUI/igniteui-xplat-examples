@@ -1,0 +1,48 @@
+{
+  "strings": {
+    "legendTitle": "Average Temperature Range in New York"
+  },
+  "descriptions": {
+    "content": {
+      "type": "DataChart",
+      "name": "chart",
+      "axes": [
+        {
+          "type": "CategoryXAxis",
+          "name": "xAxis",
+          "useEnhancedIntervalManagement": true,
+          "enhancedIntervalPreferMoreCategoryLabels": true,
+          "dataSourceRef": "TemperatureAverageData",
+          "label": "Month",
+          "minimumGapSize": 25
+        },
+        {
+          "type": "NumericYAxis",
+          "name": "yAxis"
+        }
+      ],
+      "series": [
+        {
+          "type": "CategoryHighlightLayer",
+          "name": "CategoryHighlightLayer"},
+          {
+            "type": "ColumnSeries",
+            "name": "columnSeries1",
+            "xAxisRef": "xAxis",
+            "yAxisRef": "yAxis",
+            "dataSourceRef": "TemperatureAverageData",
+            "valueMemberPath": "Temperature"
+          },
+          {
+            "type": "DataToolTipLayer",
+            "name": "Tooltips"
+          }
+        ]
+      }
+    },
+    "modules": [
+      "charts/DataChartCategoryModule",
+      "charts/DataChartAnnotationModule",
+      "charts/DataChartInteractivityModule"
+    ]
+  }

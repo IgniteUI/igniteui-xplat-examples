@@ -1,0 +1,87 @@
+{
+  "todo": [
+    "Approved Defer - until we support injecting CSS styles"
+  ],
+  "export": false,
+  "onInit": ["WebGridRowPinStyleOnInitEvent"],
+  "skipAlterDataCasing": true,
+  "descriptions": {
+    "content": {
+      "type": "WebGrid",
+      "name": "grid",
+      "dataRef": "CustomersDataLocal",
+      "autoGenerate": false,
+      "primaryKey": "ID",
+      "cellSelection": "None",
+      "pinning": {
+        "type": "WebPinningConfig",
+        "rows": "Top"
+      },
+      "columns": [
+        {
+          "type": "WebColumn",
+          "name": "CompanyName",
+          "field": "CompanyName",
+          "header": "Company",
+          "width": "300px"
+        },
+        {
+          "type": "WebColumn",
+          "name": "ContactName",
+          "field": "ContactName",
+          "header": "Name"
+        },
+        {
+          "type": "WebColumn",
+          "name": "ContactTitle",
+          "field": "ContactTitle",
+          "header": "Title"
+        },
+        {
+          "type": "WebColumn",
+          "name": "Address",
+          "field": "Address",
+          "header": "Address"
+        },
+        {
+          "type": "WebColumn",
+          "name": "City",
+          "field": "City",
+          "header": "City"
+        },
+        {
+          "type": "WebColumn",
+          "name": "PostalCode",
+          "field": "PostalCode",
+          "header": "Postal Code"
+        },
+        {
+          "type": "WebColumn",
+          "name": "Phone",
+          "field": "Phone",
+          "header": "Phone"
+        },
+        {
+          "type": "WebColumn",
+          "name": "Fax",
+          "field": "Fax",
+          "header": "Fax"
+        }
+      ],
+      "actionStrip": {
+        "type": "WebActionStrip",
+        "hidden": true,
+        "actionButtons": [
+          {
+            "type": "WebGridPinningActions"
+          }
+        ]
+      }
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "grids/WebGridModule",
+    "WebActionStripModule"
+  ]
+}

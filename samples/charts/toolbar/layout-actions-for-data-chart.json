@@ -1,0 +1,99 @@
+{
+  "descriptions": {
+    "aboveContentLeft": {
+      "type": "Toolbar",
+      "name": "Toolbar",
+      "targetRef": "chart",
+      "orientation": "Horizontal",
+      "onCommandRef": "ToolbarToggleTooltip",
+      "actions": [
+        {
+          "name": "EnableTooltipsLabel",
+          "type": "ToolActionCheckbox",
+          "title": "Enable Tooltips",
+          "beforeId": "ZoomReset",
+          "commandId": "EnableTooltips"
+        },
+        {
+          "name": "ZoomResetHidden",
+          "type": "ToolActionLabel",
+          "overlayId": "ZoomReset",
+          "visibility": "Collapsed"
+        },
+        {
+          "name": "ZoomResetLabel",
+          "type": "ToolActionLabel",
+          "title": "Reset",
+          "afterId": "ZoomOut",
+          "iconName": "reset",
+          "iconCollectionName": "ChartToolbarIcons",
+          "commandId": "ZoomReset"
+        },
+        {
+          "name": "AnalyzeMenu",
+          "type": "ToolActionIconMenu",
+          "overlayId": "AnalyzeMenu",
+          "visibility": "Collapsed"
+        }
+      ]
+    },
+    "content": {
+      "type": "DataChart",
+      "computedPlotAreaMarginMode": "Series",
+      "isHorizontalZoomEnabled": true,
+      "isVerticalZoomEnabled": true,
+      "name": "chart",
+      "axes": [
+        {
+          "type": "CategoryXAxis",
+          "name": "xAxis",
+          "dataSourceRef": "CountryRenewableElectricity",
+          "label": "Year"
+        },
+        {
+          "type": "NumericYAxis",
+          "name": "yAxis",
+          "title": "TWh"
+        }
+      ],
+      "series": [
+        {
+          "type": "LineSeries",
+          "name": "LineSeries1",
+          "title": "Electricity",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "dataSourceRef": "CountryRenewableElectricity",
+          "valueMemberPath": "America"
+        },
+        {
+          "type": "LineSeries",
+          "name": "LineSeries2",
+          "title": "Electricity",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "dataSourceRef": "CountryRenewableElectricity",
+          "valueMemberPath": "Europe"
+        },
+        {
+          "type": "LineSeries",
+          "name": "LineSeries3",
+          "title": "Electricity",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "dataSourceRef": "CountryRenewableElectricity",
+          "valueMemberPath": "China"
+        }
+      ]
+    }
+  },
+  "modules": [
+    "layouts/ToolbarModule",
+    "charts/DataChartToolbarModule",
+    "charts/DataChartCoreModule",
+    "charts/DataChartCategoryModule",
+    "charts/DataChartAnnotationModule",
+    "charts/DataChartInteractivityModule",
+    "charts/DataChartCategoryTrendLineModule"
+  ]
+}

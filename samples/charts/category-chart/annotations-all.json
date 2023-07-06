@@ -1,0 +1,81 @@
+{
+  "strings": {
+    "legendTitle": "Average Temperature in Sydney"
+  },
+  "descriptions": {
+    "editor": {
+      "type": "PropertyEditorPanel",
+      "name": "PropertyEditor",
+      "componentRendererRef": "renderer",
+      "targetRef": "chart",
+      "descriptionType": "CategoryChart",
+      "isHorizontal": true,
+      "isWrappingEnabled": true,
+      "properties": [
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "CrosshairsDisplayMode",
+          "name": "CrosshairsDisplayModeEditor",
+          "label": "Crosshairs: ",
+          "primitiveValue": "Both"
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "HighlightingMode",
+          "name": "HighlightingModeEditor",
+          "label": "Highlighting: ",
+          "primitiveValue": "BrightenSpecific"
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "CalloutsVisible",
+          "name": "CalloutsVisibleEditor",
+          "label": "Callouts: ",
+          "shouldOverrideDefaultEditor": true,
+          "primitiveValue": true
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "FinalValueAnnotationsVisible",
+          "name": "FinalValueAnnotationsEditor",
+          "label": "Final Value: ",
+          "shouldOverrideDefaultEditor": true,
+          "primitiveValue": true
+        }
+      ]
+    },
+    "content": {
+      "type": "CategoryChart",
+      "name": "chart",
+      "chartType": "Column",
+      "computedPlotAreaMarginMode": "Series",
+      "isHorizontalZoomEnabled": false,
+      "isVerticalZoomEnabled": false,
+      "includedProperties": ["Month", "Temperature"],
+      "dataSourceRef": "TemperatureAnnotatedData",
+      "calloutsDataSourceRef": "TemperatureAnnotatedData",
+      "calloutsVisible": true,
+      "calloutsXMemberPath": "Index",
+      "calloutsYMemberPath": "Temperature",
+      "calloutsLabelMemberPath": "TempInfo",
+      "calloutsAllowedPositions": ["Top", "Bottom"],
+      "isCategoryHighlightingEnabled": true,
+      "highlightingMode": "BrightenSpecific",
+      "highlightingBehavior": "NearestItemsAndSeries",
+      "crosshairsDisplayMode": "Both",
+      "crosshairsAnnotationYAxisPrecision": 0,
+      "crosshairsAnnotationXAxisBackground": "black",
+      "finalValueAnnotationsVisible": true,
+      "finalValueAnnotationsBackground": "dodgerblue",
+      "finalValueAnnotationsTextColor": "white",
+      "finalValueAnnotationsPrecision": 0,
+      "yAxisMaximumValue": 35,
+      "yAxisLabelLocation": "OutsideRight"
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
+    "charts/CategoryChartModule"
+  ]
+}

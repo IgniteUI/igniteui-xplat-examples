@@ -1,0 +1,81 @@
+{
+  "export": false,
+  "descriptions": {
+    "editor": {
+      "type": "PropertyEditorPanel",
+      "componentRendererRef": "renderer",
+      "targetRef": "xAxis",
+      "descriptionType": "CategoryXAxis",
+      "isHorizontal": true,
+      "isWrappingEnabled": true,
+      "properties": [
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "EnhancedIntervalPreferMoreCategoryLabels",
+          "name": "EnhancedIntervals",
+          "label": "Use Enhanced Interval Management",
+          "shouldOverrideDefaultEditor": true
+        }
+      ]
+    },
+    "content": {
+      "type": "DataChart",
+      "name": "chart",
+      "computedPlotAreaMarginMode": "Series",
+      "shouldAutoExpandMarginForInitialLabels": true,
+      "axes": [
+        {
+          "type": "CategoryXAxis",
+          "name": "xAxis",
+          "dataSourceRef": "CountryRenewableElectricity",
+          "enhancedIntervalPreferMoreCategoryLabels": true,
+          "useEnhancedIntervalManagement": true,
+          "label": "Year"
+        },
+        {
+          "type": "NumericYAxis",
+          "name": "yAxis"
+        }
+      ],
+      "series": [
+        {
+          "type": "LineSeries",
+          "name": "LineSeries1",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "dataSourceRef": "CountryRenewableElectricity",
+          "valueMemberPath": "Europe",
+          "title": "Europe"
+        },
+        {
+          "type": "LineSeries",
+          "name": "LineSeries2",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "dataSourceRef": "CountryRenewableElectricity",
+          "valueMemberPath": "China",
+          "title": "China"
+        },
+        {
+          "type": "LineSeries",
+          "name": "LineSeries3",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "dataSourceRef": "CountryRenewableElectricity",
+          "valueMemberPath": "America",
+          "title": "America"
+        },
+        {
+          "type": "DataToolTipLayer",
+          "name": "Tooltips"
+        }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
+    "charts/DataChartCategoryModule",
+    "charts/DataChartInteractivityModule"
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "strings": {
+    "legendTitle": "Renewable Electricity Generated"
+  },
+  "descriptions": {
+    "editor": {
+      "type": "PropertyEditorPanel",
+      "componentRendererRef": "renderer",
+      "targetRef": "chart",
+      "descriptionType": "CategoryChart",
+      "isHorizontal": true,
+      "isWrappingEnabled": true,
+      "properties": [
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "XAxisInverted",
+          "name": "XAxisInvertedEditor",
+          "label": "X Axis - Inverted",
+          "shouldOverrideDefaultEditor": true,
+          "primitiveValue": true
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "YAxisInverted",
+          "name": "YAxisInvertedEditor",
+          "label": "Y Axis - Inverted",
+          "shouldOverrideDefaultEditor": true,
+          "primitiveValue": true
+        }
+      ]
+    },
+    "content": {
+      "type": "CategoryChart",
+      "name": "chart",
+      "chartType": "Line",
+      "computedPlotAreaMarginMode": "Series",
+      "isHorizontalZoomEnabled": false,
+      "isVerticalZoomEnabled": false,
+      "dataSourceRef": "CountryRenewableElectricity",
+      "includedProperties": ["Year", "Europe"],
+      "yAxisTitle": "TWh",
+      "yAxisTitleLeftMargin": 10,
+      "yAxisTitleRightMargin": 5,
+      "yAxisLabelLeftMargin": 0,
+      "xAxisInverted": true,
+      "yAxisInverted": true
+    }
+
+  },
+  "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
+    "charts/CategoryChartModule"
+  ]
+}
