@@ -1,8 +1,5 @@
 {
   "export": true,
-  "strings": {
-    "legendTitle": "Brexit Timeline"
-  },
   "descriptions": {
     "content": {
       "type": "DataChart",
@@ -13,14 +10,13 @@
       "axes": [
         {
           "type": "CategoryXAxis",
-          "name": "xAxis",
+          "name": "xAxis1",
           "dataSourceRef": "data",
-          "label": "Year",
           "labelLocation": "OutsideBottom"
         },
         {
           "type": "TimeXAxis",
-          "name": "xAxis",
+          "name": "xAxis2",
           "dataSourceRef": "data",
           "dateTimeMemberPath": "Year",
           "labelLocation": "OutsideBottom"
@@ -32,51 +28,42 @@
           "labelLocation": "OutsideRight"
         }
       ],
-      "plotAreaBackground": "rgba(255,255,255,1)",
       "series": [
-        {
-          "type": "LineSeries",
-          "name": "LineSeries1",
-          "xAxisRef": "xAxis",
-          "yAxisRef": "yAxis",
-          "dataSourceRef": "data",
-          "valueMemberPath": "Value",
-          "markerType": "Circle"
-        },
         {
           "type": "CalloutLayer",
           "name": "CalloutLayer1",
           "targetSeriesRef": "LineSeries1",
           "dataSourceRef": "data",
-          "xMemberPath": "",
+          "xMemberPath": "Index",
           "yMemberPath": "Value",
           "labelMemberPath": "Year",
           "isAutoCalloutBehaviorEnabled": false,
           "useValueForAutoCalloutLabels": false,
-          "calloutLeaderBrush": "#EC0D00",
-          "calloutTextColor": "navy",
-          "calloutOutline": "#EC0D00",
-          "calloutBackground": "transparent",
           "isCalloutOffsettingEnabled": false,
-          "textStyle": "font-size: 0.8rem",
           "calloutPositionPadding": 50,
           "calloutCollisionMode": "Greedy",
           "showDefaultTooltip": false
+        },
+        {
+          "type": "LineSeries",
+          "name": "LineSeries1",
+          "xAxisRef": "xAxis1",
+          "yAxisRef": "yAxis",
+          "dataSourceRef": "data",
+          "valueMemberPath": "Value"
         }
-      ],
-      "legendRef": null,
-      "background": "rgba(0, 0, 0, 0)"
+      ]
     }
   },
   "refs": {
     "data": [
-      {"Date": "2016, 6, 23", "Year": "23 JUN, 2016", "Value": 5, "Details": "UK votes to exit the EU"},
-      {"Date": "2017, 3, 29", "Year": "29 MAR, 2017", "Value": 5, "Details": "The UK triggers Article 50"},
-      {"Date": "2017, 6, 19", "Year": "19 JUN, 2017", "Value": 5, "Details": "Brexit negotiations begin"},
-      {"Date": "2017, 3, 19", "Year": "19 MAR, 2018", "Value": 5, "Details": "The EU and the UK agree on a transition phase"},
-      {"Date": "2018, 11, 25", "Year": "25 NOV, 2018", "Value": 5, "Details": "Draft withdrawl deal agreed"},
-      {"Date": "2019, 10, 29", "Year": "29 OCT, 2019", "Value": 5, "Details": "EU heads of state and government approve postponing the Brexit date"},
-      {"Date": "2020, 12, 31", "Year": "31 DEC, 2020", "Value": 5, "Details": "Transition period ends"}
+      {"Index": 0, "Date": "2016, 6, 23", "Year": "23 JUN, 2016", "Value": 5, "Details": "UK votes to exit the EU"},
+      {"Index": 1, "Date": "2017, 3, 29", "Year": "29 MAR, 2017", "Value": 5, "Details": "The UK triggers Article 50"},
+      {"Index": 2, "Date": "2017, 6, 19", "Year": "19 JUN, 2017", "Value": 5, "Details": "Brexit negotiations begin"},
+      {"Index": 3, "Date": "2017, 3, 19", "Year": "19 MAR, 2018", "Value": 5, "Details": "The EU and the UK agree on a transition phase"},
+      {"Index": 4, "Date": "2018, 11, 25", "Year": "25 NOV, 2018", "Value": 5, "Details": "Draft withdrawl deal agreed"},
+      {"Index": 5, "Date": "2019, 10, 29", "Year": "29 OCT, 2019", "Value": 5, "Details": "EU heads of state and government approve postponing the Brexit date"},
+      {"Index": 6, "Date": "2020, 12, 31", "Year": "31 DEC, 2020", "Value": 5, "Details": "Transition period ends"}
     ]
   },
   "modules": [
