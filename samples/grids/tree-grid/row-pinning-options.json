@@ -1,7 +1,6 @@
 {
     "todo": [
-      "pin rows 0 and 3 on top",
-      "action strip not working"
+      "pin rows 0 and 3 on top"
     ],
     "export": false,
     "skipAlterDataCasing": true,
@@ -61,7 +60,6 @@
         "actionStrip": {
           "type": "WebActionStrip",
           "name": "actionStrip",
-          "hidden": true,
           "actionButtons": [
             {
               "type": "WebGridPinningActions"
@@ -77,4 +75,3 @@
       "WebActionStripModule"
     ]
   }
-  
