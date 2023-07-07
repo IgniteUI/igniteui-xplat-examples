@@ -3,7 +3,7 @@
     "add event handlers for row dragging",
 	"action strip not working"
   ],
-  "export": false,
+  "export": true,
   "skipAlterDataCasing": true,
   "descriptions": {
     "content": {
@@ -44,7 +44,6 @@
 	  "actionStrip": {
         "type": "WebActionStrip",
 		"name": "actionStrip",
-		"hidden": true,
         "actionButtons": [
           {
             "type": "WebGridPinningActions"
