@@ -16,6 +16,7 @@
           "type": "CategoryXAxis",
           "name": "xAxis",
           "dataSourceRef": "HistoricalStockTSLA",
+          "useEnhancedIntervalManagement": true,
           "labelTextColor": "black",
           "label": "Label"
         },
@@ -26,6 +27,7 @@
           "dateTimeMemberPath": "Date",
           "labelTextColor": "red",
           "labelLocation": "OutsideBottom",
+          "useEnhancedIntervalManagement": true,
           "labelFormats": [
             {"type": "TimeAxisLabelFormat", "range": 500, "format": "yyyy" },
             {"type": "TimeAxisLabelFormat", "range": 365, "format": "MMM yy" }
