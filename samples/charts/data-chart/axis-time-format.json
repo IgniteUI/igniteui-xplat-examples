@@ -1,0 +1,64 @@
+{
+  "issue1": "axis interval does not update when axis visible range is changed to less than 365 days",
+  "issue2": "axis label format does not update when axis visible range is changed to less than 365 days",
+  "note": "added additional CategoryXAxis as reference for verifying format and interval of TimeXAXis",
+  "export": false,
+  "descriptions": {
+    "content": {
+      "type": "DataChart",
+      "name": "chart",
+      "isHorizontalZoomEnabled": true,
+      "isVerticalZoomEnabled": false,
+      "plotAreaMarginLeft": 20,
+      "plotAreaMarginRight": 20,
+      "axes": [
+        {
+          "type": "CategoryXAxis",
+          "name": "xAxis",
+          "dataSourceRef": "HistoricalStockTSLA",
+          "labelTextColor": "black",
+          "label": "Label"
+        },
+        {
+          "type": "TimeXAxis",
+          "name": "tAxis",
+          "dataSourceRef": "HistoricalStockTSLA",
+          "dateTimeMemberPath": "Date",
+          "labelTextColor": "red",
+          "labelLocation": "OutsideBottom",
+          "labelFormats": [
+            {"type": "TimeAxisLabelFormat", "range": 500, "format": "yyyy" },
+            {"type": "TimeAxisLabelFormat", "range": 365, "format": "MMM yy" }
+          ],
+          "intervals": [
+            { "type": "TimeAxisInterval", "range": 500, "interval": 1, "intervalType": "Years" },
+            { "type": "TimeAxisInterval", "range": 365, "interval": 1, "intervalType": "Months" },
+            { "type": "TimeAxisInterval", "range": 100, "interval": 30, "intervalType": "Days" }
+          ]
+        },
+        {
+          "type": "NumericYAxis",
+          "name": "yAxis"
+        }
+      ],
+      "series": [
+        {
+          "type": "LineSeries",
+          "name": "LineSeries1",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "dataSourceRef": "HistoricalStockTSLA",
+          "valueMemberPath": "Close",
+          "markerType": "None"
+        }
+      ]
+    }
+  },
+  "modules": [
+    "charts/TimeXAxisModule",
+    "charts/TimeAxisLabelFormatModule",
+    "charts/DataChartCategoryModule",
+    "charts/DataChartExtendedAxesModule",
+    "charts/DataChartInteractivityModule"
+  ]
+}
