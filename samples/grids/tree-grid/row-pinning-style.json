@@ -1,8 +1,5 @@
 {
-    "todo": [
-      "action strip not working"
-    ],
-    "export": false,
+    "export": true,
     "onInit": ["WebGridRowPinStyleOnInitEvent"],
     "skipAlterDataCasing": true,
     "descriptions": {
@@ -45,7 +42,6 @@
         "actionStrip": {
           "type": "WebActionStrip",
           "name": "actionStrip",
-          "hidden": true,
           "actionButtons": [
             {
               "type": "WebGridPinningActions"
@@ -60,4 +56,3 @@
       "WebActionStripModule"
     ]
   }
-  
