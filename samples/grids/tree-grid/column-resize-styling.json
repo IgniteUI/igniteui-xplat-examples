@@ -2,7 +2,7 @@
   "todo": [ "" ],
   "export": true,
   "skipAlterDataCasing": true,
-  "onInit": ["WebTreeGridColumnResizingStyleTemplate"],
+  "onInit": ["WebGridResizeStyleWithCustomCSS"],
   "descriptions": {
     "content": {
       "type": "WebTreeGrid",
