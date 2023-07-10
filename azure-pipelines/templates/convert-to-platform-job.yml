@@ -60,13 +60,13 @@ jobs:
     inputs:
       targetType: 'inline'
       script: |
-        $changedExisting = $(git diff HEAD --name-only) | `
-        ForEach-Object { [System.IO.Path]::GetFullPath("$(Join-Path $pwd $_)\..\..") } | `
+        $changedExisting = $(git diff HEAD --name-only --dirstat=files) | `
+        ForEach-Object { [System.IO.Path]::GetFullPath("$(Join-Path $pwd $_)\..") } | `
         Select-Object -Unique
         Write-Output "Changed existing samples identified: $changedExisting"
         
-        $brandNew = $(git ls-files --others --exclude-standard) | `
-        ForEach-Object { [System.IO.Path]::GetFullPath("$(Join-Path $pwd $_)\..\..") } | `
+        $brandNew = $(git ls-files --others --exclude-standard --directory) | `
+        ForEach-Object { [System.IO.Path]::GetFullPath("$(Join-Path $pwd $_)") } | `
         Select-Object -Unique
         Write-Output "Brand new samples identified: $brandNew"
 
