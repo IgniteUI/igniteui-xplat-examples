@@ -60,20 +60,21 @@ jobs:
     inputs:
       targetType: 'inline'
       script: |
-        $changedExisting = $(git diff HEAD --name-only --dirstat=files) | `
+        $changedExistingSamplesDirs = $(git diff HEAD --name-only --dirstat=files) | `
         ForEach-Object { [System.IO.Path]::GetFullPath("$(Join-Path $pwd $_)\..") } | `
         Select-Object -Unique
-        Write-Output "Changed existing samples identified: $changedExisting"
+        Write-Output "Changed existing samples identified: "
+        Write-Output $changedExistingSamplesDirs
         
-        $brandNew = $(git ls-files --others --exclude-standard --directory) | `
+        $brandNewSamplesDirs = $(git ls-files --others --exclude-standard --directory) | `
         ForEach-Object { [System.IO.Path]::GetFullPath("$(Join-Path $pwd $_)") } | `
         Select-Object -Unique
-        Write-Output "Brand new samples identified: $brandNew"
+        Write-Output "Brand new samples identified: "
+        Write-Output $brandNewSamplesDirs
 
         if ($changedExisting + $brandNew -eq $null) 
         { 
-            Write-Output "No changed samples were identified"
-            Write-Host "##vso[task.complete result=SucceededWithIssues;]"
+            Write-Output "No changed samples were identified - this run just executed the code-exporter app successfully"
         }
         else 
         {
