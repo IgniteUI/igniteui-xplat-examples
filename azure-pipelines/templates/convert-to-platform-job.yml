@@ -60,11 +60,19 @@ jobs:
     inputs:
       targetType: 'inline'
       script: |
-        # The goal here is to identify the samples based on the subpaths of the changed files
-        $(git diff HEAD --name-only) | `
+        $changedExisting = $(git diff HEAD --name-only) | `
         ForEach-Object { [System.IO.Path]::GetFullPath("$(Join-Path $pwd $_)\..\..") } | `
-        Get-Unique | `
+        Select-Object -Unique
+        Write-Output "Changed existing samples identified: $changedExisting"
+        
+        $brandNew = $(git ls-files --others --exclude-standard) | `
+        ForEach-Object { [System.IO.Path]::GetFullPath("$(Join-Path $pwd $_)\..\..") } | `
+        Select-Object -Unique
+        Write-Output "Brand new samples identified: $brandNew"
+        
+        $changedExisting + $brandNew  | `
         Copy-Item -Recurse -Force -Destination $(Build.ArtifactStagingDirectory)
+        Write-Output "Identified changed existing and brand new copied to $(Build.ArtifactStagingDirectory) - to be exposed as pipeline artifacts"
       failOnStderr: true
       showWarnings: true
       pwsh: true
