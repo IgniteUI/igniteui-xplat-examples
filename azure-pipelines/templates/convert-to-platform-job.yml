@@ -69,10 +69,17 @@ jobs:
         ForEach-Object { [System.IO.Path]::GetFullPath("$(Join-Path $pwd $_)\..\..") } | `
         Select-Object -Unique
         Write-Output "Brand new samples identified: $brandNew"
-        
-        $changedExisting + $brandNew  | `
-        Copy-Item -Recurse -Force -Destination $(Build.ArtifactStagingDirectory)
-        Write-Output "Identified changed existing and brand new copied to $(Build.ArtifactStagingDirectory) - to be exposed as pipeline artifacts"
+
+        if ($changedExisting + $brandNew -eq $null) 
+        { 
+            Write-Output "No changed samples were identified"
+            Write-Host "##vso[task.complete result=SucceededWithIssues;]"
+        }
+        else 
+        {
+           $changedExisting + $brandNew  | Copy-Item -Recurse -Force -Destination $(Build.ArtifactStagingDirectory)
+           Write-Output "Identified changed existing and brand new copied to $(Build.ArtifactStagingDirectory) - to be exposed as pipeline artifacts"
+        }
       failOnStderr: true
       showWarnings: true
       pwsh: true
