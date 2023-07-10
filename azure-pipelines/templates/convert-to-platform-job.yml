@@ -72,13 +72,13 @@ jobs:
         Write-Output "Brand new samples identified: "
         Write-Output $brandNewSamplesDirs
 
-        if ($changedExisting + $brandNew -eq $null) 
+        if ($changedExistingSamplesDirs + $brandNewSamplesDirs -eq $null) 
         { 
             Write-Output "No changed samples were identified - this run just executed the code-exporter app successfully"
         }
         else 
         {
-           $changedExisting + $brandNew  | Copy-Item -Recurse -Force -Destination $(Build.ArtifactStagingDirectory)
+           $changedExistingSamplesDirs + $brandNewSamplesDirs  | Copy-Item -Recurse -Force -Destination $(Build.ArtifactStagingDirectory)
            Write-Output "Identified changed existing and brand new copied to $(Build.ArtifactStagingDirectory) - to be exposed as pipeline artifacts"
         }
       failOnStderr: true
