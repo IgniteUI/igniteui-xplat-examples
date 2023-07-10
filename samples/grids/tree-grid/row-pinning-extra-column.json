@@ -18,7 +18,7 @@
         "columns": [
           {
             "type": "WebColumn",
-            "width": "100px",
+            "width": "150px",
             "filterable": false,
             "pinned": true,
             "bodyTemplateRef": "WebTreeGridRowPinCellTemplate"
@@ -42,21 +42,11 @@
             "field": "HireDate",
             "dataType": "Date"
           }
-        ],
-        "actionStrip": {
-          "type": "WebActionStrip",
-          "name": "actionStrip",
-          "actionButtons": [
-            {
-              "type": "WebGridPinningActions"
-            }
-          ]
-        }
+        ]
       }
     },
     "modules": [
       "withDescriptions",
-      "grids/WebTreeGridModule",
-      "WebActionStripModule"
+      "grids/WebTreeGridModule"
     ]
   }

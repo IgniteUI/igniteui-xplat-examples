@@ -1,8 +1,6 @@
 {
-    "todo": [
-      "pin rows 0 and 3 on top"
-    ],
-    "export": false,
+    "todo": [""],
+    "export": true,
     "skipAlterDataCasing": true,
     "descriptions": {
       "editor": {
@@ -25,13 +23,13 @@
         "id": "treeGrid",
         "name": "treeGrid",
         "type": "WebTreeGrid",
-        "dataRef": "EmployeesNestedTreeData",
-        "rowDraggable": true,      
+        "dataRef": "EmployeesNestedTreeData",  
         "rowEditable": true,
         "autoGenerate": false,
         "primaryKey": "ID",      
         "foreignKey": "ParentID",
         "cellSelection": "None",
+		"renderedRef": "WebTreeGridPinRowOnRendered",
         "pinning": {
           "type": "WebPinningConfig",
           "rows": "Top"
