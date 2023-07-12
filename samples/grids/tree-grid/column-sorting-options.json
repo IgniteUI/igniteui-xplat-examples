@@ -1,0 +1,104 @@
+{
+  "todo": [ "" ],
+  "export": true,
+  "skipAlterDataCasing": true,
+  "descriptions": {
+    "editor": {
+      "type": "PropertyEditorPanel",
+      "name": "PropertyEditor",
+      "componentRendererRef": "renderer",
+      "targetRef": "grid",
+      "descriptionType": "WebGrid",
+      "isHorizontal": true,
+      "isWrappingEnabled": true,
+      "properties": [
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "SortingOptions",
+          "name": "SortingOptionsEditor"
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "valueType": "Button",
+          "primitiveValue": "Clear Sorting",
+          "buttonClickedRef": "WebGridClearSort"
+        }
+      ]
+    },
+    "content": {
+      "type": "WebTreeGrid",
+      "dataRef": "OrdersTreeData",
+      "name": "grid",
+      "autoGenerate": false,
+      "sortingExpressions": [
+        {
+          "type": "WebSortingExpression",
+          "fieldName": "Category",
+          "dir": "Asc",
+          "ignoreCase": true
+        }
+      ],
+      "primaryKey": "ID",
+      "foreignKey": "ParentID",
+      "columns": [
+        {
+          "type": "WebColumn",
+          "field": "ID",
+          "header": "Order ID",
+          "sortable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "Name",
+          "header": "Name",
+          "dataType": "String",
+          "sortable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "Category",
+          "header": "Category",
+          "dataType": "String",
+          "sortable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "OrderDate",
+          "header": "Order Date",
+          "dataType": "Date",
+          "sortable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "Price",
+          "dataType": "Currency",
+          "sortable": true,
+          "pipeArgs": {
+            "currencyCode": "USD",
+            "type": "WebColumnPipeArgs",
+            "digitsInfo": "1.2-2"
+          }
+        },
+        {
+          "type": "WebColumn",
+          "field": "Units",
+          "header": "Units",
+          "dataType": "Number",
+          "sortable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "Delivered",
+          "header": "Units",
+          "dataType": "Boolean",
+          "sortable": true
+        }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
+    "grids/WebTreeGridModule"
+  ]
+}

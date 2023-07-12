@@ -1,0 +1,119 @@
+{
+  "todo": [ "" ],
+  "export": true,
+  "skipAlterDataCasing": true,
+  "descriptions": {
+    "content": {
+      "type": "WebTreeGrid",
+      "dataRef": "OrdersTreeData",
+      "autoGenerate": false,
+      "name": "grid",
+      "sortingExpressions": [
+        {
+          "type": "WebSortingExpression",
+          "dir": "Asc",
+          "fieldName": "ID",
+          "ignoreCase": true
+        },
+        {
+          "type": "WebSortingExpression",
+          "dir": "Desc",
+          "fieldName": "Name",
+          "ignoreCase": true
+        },
+        {
+          "type": "WebSortingExpression",
+          "dir": "Asc",
+          "fieldName": "Category",
+          "ignoreCase": true
+        },
+        {
+          "type": "WebSortingExpression",
+          "dir": "Asc",
+          "fieldName": "OrderDate",
+          "ignoreCase": true
+        },
+        {
+          "type": "WebSortingExpression",
+          "dir": "Asc",
+          "fieldName": "Price",
+          "ignoreCase": true
+        },
+        {
+          "type": "WebSortingExpression",
+          "dir": "Asc",
+          "fieldName": "Units",
+          "ignoreCase": true
+        },
+        {
+          "type": "WebSortingExpression",
+          "dir": "Asc",
+          "fieldName": "Delivered",
+          "ignoreCase": true
+        }
+      ],
+      "id": "grid",
+      "primaryKey": "ID",
+      "foreignKey": "ParentID",
+      "columns": [
+        {
+          "type": "WebColumn",
+          "field": "ID",
+          "header": "Order ID",
+          "groupable": true,
+          "sortable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "Name",
+          "header": "Name",
+          "dataType": "String",
+          "groupable": true,
+          "sortable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "Category",
+          "header": "Category",
+          "dataType": "String",
+          "sortable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "OrderDate",
+          "header": "Order Date",
+          "dataType": "Date",
+          "sortable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "Price",
+          "dataType": "Currency",
+          "sortable": true,
+          "pipeArgs": {
+            "currencyCode": "USD",
+            "type": "WebColumnPipeArgs",
+            "digitsInfo": "1.2-2"
+          }
+        },
+        {
+          "type": "WebColumn",
+          "field": "Units",
+          "header": "Units",
+          "dataType": "Number",
+          "sortable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "Delivered",
+          "header": "Units",
+          "dataType": "Boolean",
+          "sortable": true
+        }
+      ]
+    }
+  },
+  "modules": [
+    "grids/WebTreeGridModule"
+  ]
+}

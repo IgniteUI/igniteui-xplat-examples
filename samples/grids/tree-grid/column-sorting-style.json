@@ -1,0 +1,79 @@
+{
+  "todo": [ "" ],
+  "skipAlterDataCasing": true,
+  "onInit": ["WebGridSortingStyling"],
+  "descriptions": {
+    "content": {
+      "type": "WebTreeGrid",
+      "name": "grid",
+      "dataRef": "OrdersTreeData",
+      "autoGenerate": false,
+      "primaryKey": "ID",
+      "foreignKey": "ParentID",
+      "columns": [
+        {
+          "type": "WebColumn",
+          "field": "ID",
+          "header": "Order ID",
+          "groupable": true,
+          "sortable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "Name",
+          "header": "Name",
+          "dataType": "String",
+          "groupable": true,
+          "sortable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "Category",
+          "header": "Category",
+          "dataType": "String",
+          "groupable": true,
+          "sortable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "OrderDate",
+          "header": "Order Date",
+          "dataType": "Date",
+          "groupable": true,
+          "sortable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "Price",
+          "dataType": "Currency",
+          "groupable": true,
+          "sortable": true,
+          "pipeArgs": {
+            "currencyCode": "USD",
+            "type": "WebColumnPipeArgs",
+            "digitsInfo": "1.2-2"
+          }
+        },
+        {
+          "type": "WebColumn",
+          "field": "Units",
+          "header": "Units",
+          "dataType": "Number",
+          "sortable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "Delivered",
+          "header": "Units",
+          "dataType": "Boolean",
+          "sortable": true
+        }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
+    "grids/WebTreeGridModule"
+  ]
+}
