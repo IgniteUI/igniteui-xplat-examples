@@ -11,20 +11,20 @@
       "autoGenerate": false,
       "primaryKey": "ID",
       "foreignKey": "ParentID",
-	  "toolbar": [
-        {
-          "type": "WebGridToolbar",
-          "tools": [
-            {
-              "type": "WebGridToolbarActions",
-              "actions": [
-                {
-                  "type": "WebGridToolbarPinning"
-                }
-              ]
-            }
-          ]
-        }
+      "toolbar": [
+	{
+	  "type": "WebGridToolbar",
+	  "tools": [
+	    {
+	      "type": "WebGridToolbarActions",
+	      "actions": [
+		{
+		  "type": "WebGridToolbarPinning"
+		}
+	      ]
+	    }
+	  ]
+	}
       ],
       "columns": [
         {
