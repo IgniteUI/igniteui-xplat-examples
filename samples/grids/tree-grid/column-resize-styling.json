@@ -6,8 +6,8 @@
   "descriptions": {
     "content": {
       "type": "WebTreeGrid",
-      "name": "treeGrid",
-      "id": "treeGrid",
+      "name": "grid",
+      "id": "grid",
       "dataRef": "EmployeesFlatDetails",
       "autoGenerate": false,
       "primaryKey": "ID",
