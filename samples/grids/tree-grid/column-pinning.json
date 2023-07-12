@@ -1,0 +1,69 @@
+{
+  "todo": [ "" ],
+  "export": true,
+  "skipAlterDataCasing": true,
+  "descriptions": {
+    "content": {
+      "type": "WebTreeGrid",
+      "name": "treeGrid",
+      "id": "treeGrid",
+      "dataRef": "EmployeesFlatData",
+      "autoGenerate": false,
+      "primaryKey": "ID",
+      "foreignKey": "ParentID",
+	  "toolbar": [
+        {
+          "type": "WebGridToolbar",
+          "tools": [
+            {
+              "type": "WebGridToolbarActions",
+              "actions": [
+                {
+                  "type": "WebGridToolbarPinning"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "columns": [
+        {
+          "type": "WebColumn",
+          "field": "Name",
+          "dataType": "String",
+          "pinned": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "Title",
+          "dataType": "String",
+        },
+        {
+          "type": "WebColumn",
+          "field": "Phone",
+          "dataType": "String",
+		  "pinned": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "Age",
+          "dataType": "Number"
+        },
+        {
+          "type": "WebColumn",
+          "field": "HireDate",
+          "dataType": "Date"
+        },
+        {
+          "type": "WebColumn",
+          "field": "OnPTO",
+          "dataType": "Boolean"
+        }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "grids/WebTreeGridModule"
+  ]
+}
