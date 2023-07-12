@@ -21,13 +21,13 @@
           "type": "WebColumn",
           "field": "Race",
           "dataType": "String",
-          "inlineEditorTemplateRef": "WebGridCellEditCellTemplate",
+          "inlineEditorTemplateRef": "WebTreeGridCellEditCellTemplate",
           "editable": true
         },
         {
           "type": "WebColumn",
           "field": "Class",
-          "inlineEditorTemplateRef": "WebGridCellEditCellTemplate",
+          "inlineEditorTemplateRef": "WebTreeGridCellEditCellTemplate",
           "editable": true,
           "dataType": "String"
         },
@@ -40,7 +40,7 @@
         {
           "type": "WebColumn",
           "field": "Alignment",
-          "inlineEditorTemplateRef": "WebGridCellEditCellTemplate",
+          "inlineEditorTemplateRef": "WebTreeGridCellEditCellTemplate",
           "editable": true,
           "dataType": "String"
         }
