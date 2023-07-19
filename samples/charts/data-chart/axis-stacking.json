@@ -1,0 +1,148 @@
+{
+  "note": "TODO test export of local data to all platforms",
+  "export": false,
+  "descriptions": {
+    "legend": {
+      "type": "Legend",
+      "name": "Legend",
+      "orientation": "Horizontal"
+    },
+    "content": {
+      "type": "DataChart",
+      "name": "chart",
+      "legendRef": "Legend",
+      "isHorizontalZoomEnabled": false,
+      "isVerticalZoomEnabled": false,
+      "axes": [
+        {
+          "type": "CategoryXAxis",
+          "name": "xAxis",
+          "dataSourceRef": "LocalData",
+          "label": "Year",
+          "labelFontSize": 15, "gap": 0.7, "interval": 1
+        },
+        {
+          "type": "NumericYAxis",
+          "name": "yAxis1",
+          "title": "Income",
+          "titleAngle": -90,
+          "minimumValue": 0,
+          "maximumValue": 10,
+          "stroke": "dodgerblue", "strokeThickness": 5,
+          "tickLength": 5, "tickStrokeThickness": 2, "tickStroke": "dodgerblue",
+          "titleFontSize": 15,
+          "titleLeftMargin": 10,
+          "titleTextColor": "dodgerblue",
+          "labelTextColor": "dodgerblue",
+          "labelFontSize": 15,
+          "labelRightMargin": 5,
+          "labelHorizontalAlignment": "Right",
+          "labelLocation": "OutsideLeft"
+        },
+        {
+          "type": "NumericYAxis",
+          "name": "yAxis3", "title": "Revenue", "titleAngle": 90,
+          "minimumValue": 0, "maximumValue": 100,
+          "stroke": "orange", "strokeThickness": 5,
+          "tickLength": 5, "tickStrokeThickness": 2, "tickStroke": "orange",
+          "titleFontSize": 15,
+          "titleRightMargin": 10,
+          "titleTextColor": "orange",
+          "labelTextColor": "orange",
+          "labelFontSize": 15,
+          "labelLeftMargin": 5,
+          "labelHorizontalAlignment": "Left",
+          "labelLocation": "OutsideRight"
+        },
+        {
+          "type": "NumericYAxis",
+          "name": "yAxis2",
+          "title": "Operating Cashflow",
+          "titleAngle": 90,
+          "minimumValue": 0, "maximumValue": 10,
+          "stroke": "green", "strokeThickness": 5,
+          "tickLength": 5, "tickStrokeThickness": 2, "tickStroke": "green",
+          "titleFontSize": 15,
+          "titleTextColor": "green",
+          "labelTextColor": "green",
+          "labelFontSize": 15,
+          "labelLeftMargin": 5,
+          "labelHorizontalAlignment": "Left",
+          "labelLocation": "OutsideRight"
+        }
+      ],
+      "series": [
+        {
+          "type": "ColumnSeries",
+          "name": "ColumnSeries1",
+          "dataSourceRef": "LocalData",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis1",
+          "showDefaultTooltip": true,
+          "valueMemberPath": "Income",
+          "title": "Income",
+          "brush": "dodgerblue", "outline": "dodgerblue"
+        },
+        {
+          "type": "ColumnSeries",
+          "name": "ColumnSeries2",
+          "dataSourceRef": "LocalData",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis2",
+          "showDefaultTooltip": true,
+          "valueMemberPath": "Cashflow",
+          "title": "Cashflow",
+          "brush": "green", "outline": "green"
+        },
+        {
+          "type": "LineSeries",
+          "name": "LineSeries2",
+          "dataSourceRef": "LocalData",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis3",
+          "showDefaultTooltip": true,
+          "valueMemberPath": "Revenue",
+          "thickness": 5,
+          "title": "Revenue",
+          "brush": "orange", "outline": "orange",
+          "markerOutline": "orange", "markerBrush": "white",
+          "markerThickness": 2,
+          "legendItemBadgeShape": "Circle"
+        },
+        {
+          "type": "DataToolTipLayer",
+          "name": "DataToolTipLayer"
+        }
+      ]
+    }
+  },
+  "refs": {
+    "LocalData": [
+      { "Year": 2009, "Income": 4.5, "Cashflow": 4.0, "Revenue": 50 },
+      { "Year": 2010, "Income": 3.0, "Cashflow": 5.0, "Revenue": 70 },
+      { "Year": 2011, "Income": 4.5, "Cashflow": 4.0, "Revenue": 80 },
+      { "Year": 2012, "Income": 4.0, "Cashflow": 5.0, "Revenue": 90 },
+      { "Year": 2013, "Income": 3.5, "Cashflow": 5.0, "Revenue": 85 },
+      { "Year": 2014, "Income": 4.0, "Cashflow": 6.0, "Revenue": 90 },
+      { "Year": 2015, "Income": 3.5, "Cashflow": 7.0, "Revenue": 80 },
+      { "Year": 2016, "Income": 4.0, "Cashflow": 6.0, "Revenue": 95 },
+      { "Year": 2017, "Income": 5.5, "Cashflow": 5.0, "Revenue": 85 },
+      { "Year": 2018, "Income": 6.5, "Cashflow": 6.0, "Revenue": 90 },
+      { "Year": 2019, "Income": 7.0, "Cashflow": 7.5, "Revenue": 95 },
+      { "Year": 2020, "Income": 2.5, "Cashflow": 4.0, "Revenue": 65 },
+      { "Year": 2021, "Income": 4.5, "Cashflow": 5.0, "Revenue": 70 },
+      { "Year": 2022, "Income": 5.0, "Cashflow": 6.0, "Revenue": 85 },
+      { "Year": 2023, "Income": 6.5, "Cashflow": 7.0, "Revenue": 95 }
+    ]
+  },
+  "modules": [
+    "charts/LegendModule",
+    "charts/DataChartCoreModule",
+    "charts/DataChartCategoryModule",
+    "charts/DataChartCategoryCoreModule",
+    "charts/DataChartInteractivityModule",
+    "charts/DataChartAnnotationModule",
+    "charts/CalloutLayerModule",
+    "charts/AnnotationLayerProxyModule"
+  ]
+}
