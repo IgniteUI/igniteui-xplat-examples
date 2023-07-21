@@ -1,0 +1,1 @@
+606 major cities in the world with x/y geo coordinates and population
