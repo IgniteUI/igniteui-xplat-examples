@@ -1,0 +1,107 @@
+@using IgniteUI.Blazor.Controls
+//insert handlersImports
+//end handlersImports
+//insert templateImports
+//end templateImports
+
+// ifdef eventScript, templateScripts
+@inject IJSRuntime JS
+// endifdef eventScript, templateScripts
+
+<!-- insert templateStyles -->
+<!-- end templateStyles -->
+<div class="container vertical">
+<!-- ifdef editor -->
+    <div class="options vertical">
+        <!-- insert editor -->
+        <!-- end editor -->
+    </div>
+<!-- endifdef editor -->
+<!-- ifdef legendTitle -->
+    <div class="legend-title">
+        $$legendTitle
+    </div>
+<!-- endifdef legendTitle -->
+<!-- ifdef legend -->
+    <div class="legend">
+        <!-- insert legend -->
+        <!-- end legend -->
+    </div>
+<!-- endifdef legend -->
+<!-- ifdef aboveContent -->
+    <div class="aboveContent">
+        <!-- insert aboveContent -->
+        <!-- end aboveContent -->
+    </div>
+<!-- endifdef aboveContent -->
+<!-- ifdef aboveContentLeft, aboveContentRight -->
+    <div id="aboveContentSplit">
+        <div id="aboveContentLeftContainer">
+            <!-- insert aboveContentLeft -->
+            <!-- end aboveContentLeft -->
+        </div>
+        <div id="aboveContentRightContainer">
+            <!-- insert aboveContentRight -->
+            <!-- end aboveContentRight -->
+        </div>
+    </div>
+<!-- endifdef aboveContentLeft, aboveContentRight -->
+    <div class="container vertical fill">
+        <!-- insert content -->
+        <!-- end content -->
+    </div>
+</div>
+
+@code {
+//ifdef onInit
+    protected override async Task OnInitializedAsync()
+    {
+        //insert onInit
+        //end onInit
+    }
+//endifdef onInit
+
+//ifdef bindingCode
+    private Action BindElements { get; set; }
+//endifdef bindingCode
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        //insert bindingInit
+        //end bindingInit
+
+//ifdef bindingCode
+        this.BindElements = () => {
+            //insert bindingCode
+            //end bindingCode
+        };
+        this.BindElements();
+//endifdef bindingCode
+
+//ifdef onViewInit
+        if (firstRender) {
+            //insert onViewInit
+            //end onViewInit
+        }
+//endifdef onViewInit
+    }
+
+    //insert bindingFields
+    //end bindingFields
+
+    //insert eventHandlers
+
+    //end eventHandlers
+    //insert templateContents
+
+    //end templateContents
+    //insert templateSupportingMethods
+
+    //end templateSupportingMethods
+    //insert vmProperties
+
+    //end vmProperties
+    //insert descriptionRegister
+
+    //end descriptionRegister
+}

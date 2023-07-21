@@ -1,0 +1,45 @@
+<div class="container vertical sample">
+<!-- ifdef editor -->
+  <div class="options vertical">
+      <!-- insert editor -->
+      <!-- end editor -->
+  </div>
+<!-- endifdef editor -->
+<!-- ifdef legendTitle -->
+  <div class="legend-title">
+      $$legendTitle
+  </div>
+<!-- endifdef legendTitle -->
+<!-- ifdef legend -->
+  <div class="legend">
+      <!-- insert legend -->
+      <!-- end legend -->
+  </div>
+<!-- endifdef legend -->
+<!-- ifdef aboveContent -->
+  <div class="aboveContent">
+    <!-- insert aboveContent -->
+    <!-- end aboveContent -->
+  </div>
+<!-- endifdef aboveContent -->
+<!-- ifdef aboveContentLeft, aboveContentRight -->
+  <div class="aboveContentSplit">
+    <div class="aboveContentLeftContainer">
+      <!-- insert aboveContentLeft -->
+      <!-- end aboveContentLeft -->
+    </div>
+    <div class="aboveContentRightContainer">
+      <!-- insert aboveContentRight -->
+      <!-- end aboveContentRight -->
+    </div>
+  </div>
+<!-- endifdef aboveContentLeft, aboveContentRight -->
+  <div class="container fill">
+      <!-- insert content -->
+      <igx-category-chart
+        yAxisMinimumValue="0"
+        [dataSource]="data" >
+      </igx-category-chart>
+      <!-- end content -->
+  </div>
+</div>
