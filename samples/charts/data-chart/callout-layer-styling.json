@@ -31,15 +31,13 @@
           "dataSourceRef": "CountryRenewableElectricity",
           "valueMemberPath": "America",
           "brush": "#8961A9",
-          "markerOutline": "#8961A9"
+          "markerOutline": "#8961A9",
+          "shouldHideAutoCallouts": false
         },
         {
           "type": "CalloutLayer",
           "name": "CalloutLayer1",
-          "dataSourceRef": "CountryRenewableCallouts",
-          "xMemberPath": "Index",
-          "yMemberPath": "Value",
-          "labelMemberPath": "Label",
+          "isAutoCalloutBehaviorEnabled": true,
           "calloutLeaderBrush": "#8961A9",
           "calloutOutline": "#8961A9",
           "calloutBackground": "white",
