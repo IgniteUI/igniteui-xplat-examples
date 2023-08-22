@@ -43,8 +43,8 @@ jobs:
       script: |
         $(Build.SourcesDirectory)\CodeExporterApp\CodeExporter.App.exe `
         -platform=${{ parameters.platform }} `
-        -template=$(Build.SourcesDirectory)\$(Build.Repository.Name)\editor-templates\${{ parameters.platform }}\main-template `
-        -library=$(Build.SourcesDirectory)\$(Build.Repository.Name)\code-gen-library `
+        -template=$(Build.SourcesDirectory)\igniteui-xplat-examples\editor-templates\${{ parameters.platform }}\main-template `
+        -library=$(Build.SourcesDirectory)\igniteui-xplat-examples\code-gen-library `
         -output=$(Build.SourcesDirectory)\${{ parameters.destinationGitRepo }}\samples\ `
         -source=${{ parameters.pathsToParse }}
       failOnStderr: true
