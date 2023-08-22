@@ -21,16 +21,6 @@
       "columns": [
         {
           "type": "WebColumn",
-          "field": "ProductName",
-          "header": "Product Name",
-          "dataType": "String",
-          "sortable": true,
-          "hasSummary": true,
-          "editable": true,
-          "resizable": true
-        },
-        {
-          "type": "WebColumn",
           "field": "UnitPrice",
           "header": "Unit Price",
           "dataType": "Number",
