@@ -1,0 +1,39 @@
+{
+  "strings": {
+    "legendTitle": "Highest Grossing Movie Franchises"
+  },
+  "descriptions": {
+    "legend": {
+      "type": "Legend",
+      "name": "Legend",
+      "orientation": "Horizontal"
+    },
+    "content": {
+      "type": "CategoryChart",
+      "legendRef": "Legend",
+      "name": "chart",
+      "dataSourceRef": "HighestGrossingMovies",
+      "chartType": "Column",
+      "isHorizontalZoomEnabled": false,
+      "isVerticalZoomEnabled": false,
+      "dataToolTipValueFormatMode": "Currency",
+      "dataToolTipValueFormatString": "${0} Billion",
+      "yAxisLabelFormat": "{0}B",
+      "yAxisLabelFormatSpecifiers": [
+        {
+          "type": "NumberFormatSpecifier",
+          "style": "currency",
+          "currency": "USD",
+          "currencyDisplay": "symbol",
+          "minimumFractionDigits": 0
+        }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
+    "charts/LegendModule",
+    "charts/CategoryChartModule"
+  ]
+}
