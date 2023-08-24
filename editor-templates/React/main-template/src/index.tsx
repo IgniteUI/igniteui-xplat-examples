@@ -14,6 +14,8 @@ import './index.css';
 //end vmLibraryImports
 //insert handlersImports
 //end handlersImports
+//insert templateImports
+//end templateImports
 
 //ifdef editor
 import 'igniteui-webcomponents/themes/light/bootstrap.css';
@@ -104,6 +106,12 @@ export default class Sample extends React.Component<any, any> {
 
     //insert eventHandlers
     //end eventHandlers
+    
+    //insert templateContents
+    //end templateContents
+
+    //insert templateSupportingMethods
+    //end templateSupportingMethods
 }
 
 
