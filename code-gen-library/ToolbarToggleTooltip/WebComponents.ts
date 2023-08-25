@@ -15,7 +15,7 @@ export class ToolbarToggleTooltip {
 				var enable = args.command.argumentsList[0].value as boolean;
 				if (enable)
 				{
-					target.series.add(new IgcDataToolTipLayerComponent({ name: "tooltipLayer" }));
+					target.series.add(new IgcDataToolTipLayerComponent());
 				}
 				else
 				{
