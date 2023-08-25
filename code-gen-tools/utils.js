@@ -1,3 +1,4 @@
+let fs = require('fs.extra');
 
 function randomInteger(start, end) {
   return Math.floor(Math.random() * (end - start + 1)) + start;
@@ -57,20 +58,39 @@ function strToNumber(str, precision, normalize) {
   // console.log(chars)
 
   // dates
-  if (chars.includes('/')) return null;
-  if (chars.includes('\\')) return null;
-  if (chars.split("-").length > 2) return null; // fax
-  if (chars.split(" ").length > 2) return null; // cell
+  if (chars.includes('/')) return str;
+  if (chars.includes('\\')) return str;
+  if (chars.split("-").length > 2) return str; // fax
+  if (chars.split(" ").length > 2) return str; // cell
 
   chars = strReplace(chars, '$', '');
   chars = strReplace(chars, '%', '');
-  chars = strReplace(chars, ' ', '');
+
+  if (chars.endsWith(' T')) {
+    let value = chars.replace(' T', '');
+    // console.log('parse T ' + value)
+    value = parseFloat(value) * 1000000000000;
+    // console.log('parse T ' + value)
+    return Math.round(value);
+  }
+  else if (chars.endsWith(' B')) {
+    let value = chars.replace(' B', '');
+    value = parseFloat(value) * 1000000000;
+    return Math.round(value);
+  }
+  else if (chars.endsWith(' M')) {
+    let value = chars.replace(' M', '');
+    value = parseFloat(value) * 1000000;
+    return Math.round(value);
+  }
   // console.log('clean')
   // console.log(chars)
 
+  chars = strReplace(chars, ' ', '');
+
   for (let i = 0; i < chars.length; i++) {
     if (!numericChars.includes(chars[i])) {
-        return null;
+        return str;
     }
   }
 
@@ -149,11 +169,98 @@ function toNumberRecursive(item, precision, targetColumns, normalize) {
   return item;
 }
 
-function strStart(str, skip) {
+exports.strStart = function strStart(str, skip) {
   if (skip === undefined) skip = "";
   for (let i = 0; i < str.length; i++) {
       if (str[i] !== skip) return;
   }
   return 0;
 }
-exports.strStart = strStart;
+function strTitleCase(str) {
+  return str.replace(
+    /\w\S*/g,
+    function(txt) {
+      return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+    }
+  );
+}
+
+exports.toStringLine = function toStringLine(dataItem) {
+  return JSON.stringify(dataItem, null, ' ').replace(/\n/g, '');
+}
+
+exports.splice = function splice(array, from, to) {
+  if (from >= array.length) return null;
+
+  to = Math.min(to, array.length)
+
+  let ret = [];
+  for (let i = from; i < to; i++) {
+    ret.push(array[i]);
+  }
+  return ret;
+}
+
+exports.hash = function hash(dataColumn, dataSource) {
+  let lookup = {}
+  for (const dataItem of dataSource) {
+    if (dataItem === null) continue;
+    if (dataItem[dataColumn] === null) continue;
+    if (dataItem[dataColumn] === undefined) continue;
+    lookup[dataItem[dataColumn]] = dataItem;
+  }
+  return lookup;
+}
+
+class CSV {
+  lines = [];
+  columns = [];
+  data = [];
+  content = "";
+  path = "";
+
+  constructor(csvPath) {
+    this.path = csvPath;
+    this.content = fs.readFileSync(csvPath, "utf8");
+    this.lines = this.content.split('\n');
+
+    for (let i = 0; i < this.lines.length; i++) {
+      // let values = this.lines[i].split(',');
+      this.lines[i] = this.lines[i].split('"').join('').trim();
+    }
+
+    if (this.lines.length > 0) {
+        this.columns = this.lines[0].split(',');
+        for (let c = 0; c < this.columns.length; c++) {
+            // this.columns[c] = strTitleCase(this.columns[c]);
+        }
+
+        for (let i = 1; i < this.lines.length; i++) {
+          let line = this.lines[i];
+          if (line === '') continue;
+          if (line.indexOf(',') < 1) continue;
+
+          let item = {};
+          let values = this.lines[i].split(',');
+          for (let c = 0; c < this.columns.length; c++) {
+            let column = this.columns[c];
+            item[column] = strToNumber(values[c]);
+          }
+          this.data.push(item);
+
+          // if (i > 1) {
+          //     break;
+          // }
+
+        }
+
+        // console.log(this.data);
+    }
+
+  }
+}
+
+exports.readCSV = function readCSV(csvPath) {
+  let csv = new CSV(csvPath);
+  return csv;
+}

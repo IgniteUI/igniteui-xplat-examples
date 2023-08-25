@@ -390,8 +390,60 @@ function convertColumnTypes(cb) {
 }
 exports.convertColumnTypes = convertColumnTypes;
 
+exports.convertWorldStats = function convertWorldStats(cb) {
 
-exports.convertCSV = function convertCSV(cb) {
+    let csvName = 'world_countries_all'
+    let csvPath = '../convert/' + csvName + '.csv';
+    csvData = fs.readFileSync(csvPath, "utf8");
+
+    let jsonData = [];
+    let csvLines = csvData.split('\r\n');
+    let csvColumns = csvLines[0].split(',');
+
+    for (let i = 1; i < csvLines.length; i++) {
+        const csvRow = csvLines[i].split(',');
+        if (csvRow === undefined || csvRow.length <= 1) {
+            continue;
+        }
+
+        let jsonItem = {};
+        for (let c = 0; c < csvColumns.length; c++) {
+            const column = csvColumns[c];
+            if (column === "") continue;
+
+            let value = csvRow[c];
+            if (value === undefined) {
+                console.log("ERROR: undefined value at " + i + " row and col: " + column )
+                continue;
+            }
+            value = value.trim();
+
+            let num = utils.strToNumber(value);
+            if (num !== null) {
+                jsonItem[column] = num;
+            } else {
+                jsonItem[column] = value;
+            }
+        }
+
+        if (jsonItem.Population > 1000) {
+            jsonItem["GDPPerPerson"] = Math.round(jsonItem["GDPTotal"] * 1000000 / jsonItem["Population"]);
+            jsonData.push(jsonItem);
+        }
+
+    }
+    jsonData.sort((a, b) => a.Population < b.Population ? 1 : -1);
+
+    for (let i = 0; i < jsonData.length; i++) {
+        jsonData[i].Rank = i + 1;
+    }
+
+    let jsonPath = CodeGenLib + "/WorldStats/XPLAT.json";
+    saveJSON(jsonPath, jsonData,  "compact");
+    cb();
+}
+
+exports.convertStockSP500 = function convertStockSP500(cb) {
     // let csvName = 'StockSP500Prices'
     let csvName = 'StockSP500Cap'
     let csvPath = '../convert/' + csvName + '.csv';
@@ -404,7 +456,7 @@ exports.convertCSV = function convertCSV(cb) {
     // console.log('csvLines ' + csvLines.length)
     let csvColumns = csvLines[0].split(',');
 
-    let min = 100000000000000000;
+    // let min = 100000000000000000;
     // console.log(csvColumns)
     for (let i = 1; i < csvLines.length; i++) {
         const csvRow = csvLines[i].split(',');
@@ -480,4 +532,113 @@ exports.convertCSV = function convertCSV(cb) {
     let jsonPath = CodeGenLib + "/" + csvName + "/XPLAT.json";
     saveJSON(jsonPath, jsonData,  "compact");
     cb();
+}
+
+exports.convertStockMarket = function convertStockMarket(cb) {
+
+    let csvMarketCaps = utils.readCSV('../convert/market-capitalization.csv');
+    // let csvSectors = ;
+    // console.log('csvMarketCaps ');
+    // console.log(  csvMarketCaps.data);
+
+    let companiesALL = [];
+
+    let csvMappings = [
+        utils.hash('Symbol', utils.readCSV('../convert/market-sectors.csv').data),
+        utils.hash('Symbol', utils.readCSV('../convert/market-earnings.csv').data),
+        utils.hash('Symbol', utils.readCSV('../convert/market-employees.csv').data),
+        utils.hash('Symbol', utils.readCSV('../convert/market-operating-margin.csv').data),
+        utils.hash('Symbol', utils.readCSV('../convert/market-revenue.csv').data),
+        utils.hash('Symbol', utils.readCSV('../convert/market-PE-ratio.csv').data),
+    ];
+
+    for (let i = 0; i < csvMarketCaps.data.length; i++) {
+        let company = csvMarketCaps.data[i];
+        for (const csv of csvMappings) {
+            let lookup = csv[company.Symbol];
+            if (lookup !== undefined) {
+                let lookupColumns = Object.keys(lookup);
+                for (const column of lookupColumns) {
+                    if (company[column]) continue;
+                    company[column] = lookup[column];
+                }
+            }
+        }
+
+        company.Country = undefined;
+        company.Rank = undefined;
+
+        if (company.MarketCap > 0 && company.Price > 0) {
+            company.Shares = Math.round(company.MarketCap / company.Price);
+        } else {
+            company.Shares = 0;
+        }
+
+        if (company.Earnings > 0 && company.Shares > 0) {
+            company.EarningsPerShare = Math.round(company.Earnings / company.Shares * 100) / 100;
+        } else {
+            company.EarningsPerShare = 0;
+        }
+
+        if (company.Revenue > 0 && company.Shares > 0) {
+            company.RevenuePerShare = Math.round(company.Revenue / company.Shares * 100) / 100;
+        } else {
+            company.RevenuePerShare = 0;
+        }
+
+        companiesALL.push(company);
+        // if (i > 10) {
+        //     break;
+        // }
+    }
+
+    companiesALL = companiesALL.sort((a, b) => a.MarketCap < b.MarketCap ? 1 : -1);
+
+    var missing = [];
+    let rank = 1;
+    for (const company of companiesALL) {
+        company.Rank = rank++;
+        // console.log(utils.toStringLine(company));
+
+            if (company.Sector === undefined) {
+            // console.log(symbol);
+            missing.push(company.Symbol);
+        }
+    }
+    // console.log(missing.join(','));
+
+    function saveCompanies(number) {
+        let data = utils.splice(companiesALL, 0, number);
+        let path = CodeGenLib + "/StockMarket" + number + "/XPLAT.json";
+        saveJSON(path, data,  "compact");
+
+    }
+   // saveCompanies( 4000);
+    saveCompanies(  500);
+    saveCompanies(  100);
+    saveCompanies(  10);
+
+
+    // console.log( 'companiesALL ' )
+    // console.log(companiesALL);
+
+    // console.log(stocks);
+
+    // var missing = [];
+    // var stockSymbols = Object.keys(stocks);
+    // for (const symbol of stockSymbols) {
+    //     let item = stocks[symbol];
+
+
+    //     // console.log(utils.toStringLine(item))
+    // }
+    //
+
+    cb();
+
+
+
+    cb();
+
+
 }
