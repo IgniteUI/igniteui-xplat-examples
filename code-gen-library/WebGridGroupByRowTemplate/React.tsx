@@ -1,11 +1,12 @@
 //begin imports
-import { IgcGroupByRowTemplateContext } from 'igniteui-react-grids';
+import { IgrGroupByRowTemplateContext } from 'igniteui-react-grids';
+import { IgrBadge } from 'igniteui-react';
 //end imports
 
 export class WebGridGroupByRowTemplate {
     //begin template
     //begin content
-    public webGridGroupByRowTemplate = (ctx: IgcGroupByRowTemplateContext) => {
+    public webGridGroupByRowTemplate = (ctx: IgrGroupByRowTemplateContext) => {
 
         const groupRow: any = ctx["$implicit"];
         const values = groupRow.records;
@@ -17,7 +18,7 @@ export class WebGridGroupByRowTemplate {
         return <><div>
             <span style="color:#09f;">${groupRow.expression.fieldName} :</span>
             <span>${groupRow.value}</span>
-            <igc-badge>${groupRow.records.length}</igc-badge>
+            <IgrBadge>${groupRow.records.length}</IgrBadge>
             <span style="color:#09f;"> Ordered in 2017:</span><span>${calc2017}</span>
         </div>
         </>;
