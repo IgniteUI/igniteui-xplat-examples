@@ -14,28 +14,32 @@
     "lint": "eslint ./src/**/*.{ts,tsx}"
   },
   "dependencies": {
+    "igniteui-react": "18.2.0",
     "igniteui-react-core": "18.2.0",
 //ifdef charts, maps
     "igniteui-react-charts": "18.2.0",
 //endifdef charts, maps
-//ifdef grid
+//ifdef grid, webgrids
     "igniteui-react-datasources": "18.2.0",
-//endifdef grid
+//endifdef grid, webgrids
 //ifdef excel, spreadsheet
     "igniteui-react-excel": "18.2.0",
 //endifdef excel, spreadsheet
 //ifdef gauges
     "igniteui-react-gauges": "18.2.0",
 //endifdef gauges
-//ifdef grid
+//ifdef grid, webgrids
     "igniteui-react-grids": "18.2.0",
-//endifdef grid
-//ifdef grid, inputs, layouts, editor
+//endifdef grid, webgrids
+//ifdef grid, webgrids, inputs, layouts, editor
     "igniteui-react-inputs": "18.2.0",
-//endifdef grid, inputs, layouts, editor
-//ifdef grid, editor, layouts
+//endifdef grid, webgrids, inputs, layouts, editor
+//ifdef grid, webgrids, editor, layouts
     "igniteui-react-layouts": "18.2.0",
-//endifdef grid, editor, layouts
+//endifdef grid, webgrids, editor, layouts
+//ifdef webgrids
+    "igniteui-dockmanager": "^1.13.0",
+//endifdef webgrids
 //ifdef maps
     "igniteui-react-maps": "18.2.0",
 //endifdef maps
