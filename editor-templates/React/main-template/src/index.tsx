@@ -73,18 +73,24 @@ export default class Sample extends React.Component<any, any> {
 //endifdef aboveContent
 //ifdef aboveContentLeft, aboveContentRight
             <div className="aboveContentSplit">
+//endifdef aboveContentLeft, aboveContentRight
+//ifdef aboveContentLeft
                 <div className="aboveContentLeftContainer">
                     <div>
                         //insert aboveContentLeft
                         //end aboveContentLeft
                     </div>
                 </div>
+//endifdef aboveContentLeft
+//ifdef aboveContentRight
                 <div className="aboveContentRightContainer">
                     <div>
                         //insert aboveContentRight
                         //end aboveContentRight
                     </div>
                 </div>
+//endifdef aboveContentRight
+//ifdef aboveContentLeft, aboveContentRight
             </div>
 //endifdef aboveContentLeft, aboveContentRight
 
