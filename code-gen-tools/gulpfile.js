@@ -67,6 +67,7 @@ function toJSON(cb) {
     let outputLines = [];
     for (let i = 0; i < lines.length; i++) {
         let line = lines[i];
+        // skip comments
         if (line.indexOf("/*") >= 0) continue;
         if (line.indexOf("//") >= 0) continue;
 
@@ -545,7 +546,8 @@ exports.convertStockMarket = function convertStockMarket(cb) {
     let companiesALL = [];
 
     let csvMappings = [
-        utils.hash('Symbol', utils.readCSV('../convert/market-sectors.csv').data),
+        utils.hash('Symbol', utils.readCSV('../convert/market-sectors-yahoo.csv').data),
+        // utils.hash('Symbol', utils.readCSV('../convert/market-sectors.csv').data),
         utils.hash('Symbol', utils.readCSV('../convert/market-earnings.csv').data),
         utils.hash('Symbol', utils.readCSV('../convert/market-employees.csv').data),
         utils.hash('Symbol', utils.readCSV('../convert/market-operating-margin.csv').data),
@@ -629,28 +631,16 @@ exports.convertStockMarket = function convertStockMarket(cb) {
         saveJSON(path, data,  "compact");
 
     }
-   // saveCompanies( 4000);
-    saveCompanies(  501);
-    // saveCompanies(  100);
-    // saveCompanies(  10);
-
+    saveCompanies( 2000);
+    saveCompanies( 1000);
+    saveCompanies(  500);
+    saveCompanies(  100);
+    saveCompanies(  10);
 
     // console.log( 'companiesALL ' )
     // console.log(companiesALL);
-
     // console.log(stocks);
 
-    // var missing = [];
-    // var stockSymbols = Object.keys(stocks);
-    // for (const symbol of stockSymbols) {
-    //     let item = stocks[symbol];
-
-
-    //     // console.log(utils.toStringLine(item))
-    // }
-    //
-
-    // cb();
     cb();
 }
 
@@ -660,7 +650,7 @@ function getStockSymbols(limit) {
     // let CSV = utils.readCSV('../convert/sp500.csv');
     let CSV = utils.readCSV('../convert/market-capitalization.csv');
 
-    // var stockSymbols = ['IBM', 'TSLA', 'MSFT', 'PANW'];
+    // var stockSymbols = ['IBM', 'TSLA', 'MSFT', ];
     var stockSymbols = [];
     for (let i = 0; i < CSV.data.length; i++) {
         let company = CSV.data[i];
@@ -685,7 +675,6 @@ exports.fetchYahooProfile = function fetchYahooProfile(cb)
 {
     let stocksFolder = '../convert/yahoo/'
     var stockCounter = 0;
-    // var stockSymbols = ['IBM', 'TSLA', 'MSFT', 'PANW'];
     var allSymbols = getStockSymbols(4000);
     var stockSymbols = [];
     var lastSymbol = 0;
@@ -790,7 +779,6 @@ exports.fetchStock = function fetchStock(cb, symbol)
     let stocksFolder = '../convert/stocks/'
     let sp500 = utils.readCSV('../convert/sp500.csv');
 
-    // var stockSymbols = ['IBM', 'TSLA', 'MSFT', 'PANW'];
     var stockSymbols = [];
     for (let i = 0; i < sp500.data.length; i++) {
         let company = sp500.data[i];
@@ -845,13 +833,11 @@ exports.fetchStock = function fetchStock(cb, symbol)
             stockCounter++;
             continue;
         }
-
         // var url = 'https://www.alphavantage.co/query?function=OVERVIEW&symbol=' + symbol + '&apikey=demo';
         // var url = 'https://www.alphavantage.co/query?function=OVERVIEW&symbol=' + symbol + '&apikey=AZ6V4V9MYY61IDL5';
         // var url = 'https://www.alphavantage.co/query?function=OVERVIEW&symbol=' + symbol + '&apikey=MF509CVMN4P2ACMP';
         var url = 'https://www.alphavantage.co/query?function=OVERVIEW&symbol=' + symbol + '&apikey=KLP643CXASZEMGZY';
         // var url = 'https://www.alphavantage.co/query?function=OVERVIEW&symbol=' + symbol + '&apikey=B0KRIHH8G3ODPKGZ';
-//
         // var url = 'https://www.alphavantage.co/query?function=OVERVIEW&symbol=IMB&apikey=demo';
         // var url = 'https://www.alphavantage.co/query?function=OVERVIEW&symbol=IMB&apikey=AZ6V4V9MYY61IDL5';
 
@@ -873,9 +859,6 @@ exports.fetchStock = function fetchStock(cb, symbol)
             // stockCounter = stockCounter + 1;
         });
     }
-
-
-    // cb();
 }
 
 exports.combineYahooProfile = function combineYahooProfile(cb)
@@ -899,8 +882,11 @@ exports.combineYahooProfile = function combineYahooProfile(cb)
         let jsonArray = JSON.parse(content);
         jsonCounter += jsonArray.length;
         // var filePath = getPath(file);
-        for (const item of jsonArray) {
+        for (let item of jsonArray) {
+
+            item.Employees = item.Employees === '' ? 100 : utils.strToNumber(item.Employees);
             jsonStocks.push(item);
+
             if (!stockSectors.includes(item.Sector)){
                  stockSectors.push(item.Sector);
             }
@@ -929,16 +915,45 @@ exports.combineYahooProfile = function combineYahooProfile(cb)
     .on("end", function() {
         console.log('fileCounter=' + fileCounter)
         console.log('jsonCounter=' + jsonCounter)
-        console.log('stockSectors=')
-        console.log(stockSectors)
+        // console.log('stockSectors=')
+        // console.log(stockSectors)
 
         // console.log('stockIndustry=')
         // console.log(stockIndustry)
-        console.log('stockIncomplete=')
-        console.log(stockIncomplete)
+        // console.log('stockIncomplete=')
+        // console.log(stockIncomplete)
 
-        saveJSON("../convert/sectors.json", jsonStocks,  "compact");
+        saveJSON("../convert/market-sectors-yahoo.json", jsonStocks,  "compact");
 
         cb();
      });
+}
+
+exports.toCSV = function toCSV(cb) {
+    let jsonPath = "../convert/market-sectors-yahoo.json";
+    let jsonFile = fs.readFileSync(jsonPath, "utf8");
+    let items = JSON.parse(jsonFile);
+
+    var lines = [];
+
+    for (let i = 0; i < items.length; i++) {
+        const item = items[i];
+
+        var columns = Object.keys(item);
+        if (i === 0) {
+            var line = '"' + columns.join('","') + '"';
+            lines.push(line);
+        }
+
+        var line = JSON.stringify(item, null, '');
+        for (const column of columns) {
+            line = line.replace('"' + column + '":', '').replace('{','').replace('}','');
+        }
+        lines.push(line);
+    }
+
+    var cvsContent = lines.join('\n');
+    var cvsPath = jsonPath.replace('.json', '.csv');
+    saveFile(cvsPath, cvsContent);
+    cb();
 }

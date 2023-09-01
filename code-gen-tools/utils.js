@@ -258,6 +258,8 @@ class CSV {
     }
 
   }
+
+
 }
 
 exports.readCSV = function readCSV(csvPath) {
