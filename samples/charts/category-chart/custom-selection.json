@@ -24,7 +24,7 @@
       "crosshairsAnnotationEnabled": false,
       "dataToolTipSummaryType": "None",
       "dataToolTipValueFormatMaxFractions": 0,
-      "seriesPointerDownRef": "CustomSelectionSeriesPointerDown"
+      "seriesPointerDownRef": "CategoryChartCustomSelectionPointerDown"
     }
   },
   "modules": [

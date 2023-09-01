@@ -1,6 +1,6 @@
-export class CustomSelectionSeriesPointerDown {
+export class CategoryChartCustomSelectionPointerDown {
     //begin eventHandler
-    public customSelectionSeriesPointerDown(o: any, e: any): void {
+    public categoryChartCustomSelectionPointerDown(o: any, e: any): void {
         let oldItem = e.item as SelectableDataItem;
 
         if (oldItem === null) return;

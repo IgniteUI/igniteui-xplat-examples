@@ -3,13 +3,10 @@ using IgniteUI.Blazor.Controls;
 using System;
 //end imports
 
-
-
-public class CustomSelectionSeriesPointerDown
+public class CategoryChartCustomSelectionPointerDown
 {
-
     //begin eventHandler
-    public void CustomSelectionSeriesPointerDown(IgbDomainChartSeriesPointerEventArgs args)
+    public void CategoryChartCustomSelectionPointerDown(IgbDomainChartSeriesPointerEventArgs args)
     {
         var selectedItem = args.Item as SelectableDataItem;
         if (selectedItem == null) return;

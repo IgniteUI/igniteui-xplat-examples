@@ -5,7 +5,7 @@
 
 tests/
 exports/
-convert/*.*
+convert/**/*.*
 **/dev-template
 **/.vscode
 

@@ -1,9 +1,9 @@
-export class CustomSelectionSeriesPointerDown {
+export class CategoryChartCustomSelectionPointerDown {
     //begin eventHandler
-    public customSelectionSeriesPointerDown(e: any): void {
-        
+    public categoryChartCustomSelectionPointerDown(e: any): void {
+
         let oldItem = e.args.item as SelectableDataItem;
-        
+
         if (oldItem === null) return;
 
         let newItem: SelectableDataItem = new SelectableDataItem({
@@ -26,6 +26,6 @@ export class CustomSelectionSeriesPointerDown {
             newItem.selectedValue = newItem.dataValue;
 
         this.chart.notifySetItem(this.selectableData, selectedIndex, oldItem, newItem);
-    }  
+    }
     //end eventHandler
 }

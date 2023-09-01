@@ -1,16 +1,16 @@
-export class CustomSelectionSeriesPointerDown {
+export class CategoryChartCustomSelectionPointerDown {
     //begin eventHandler
-    public customSelectionSeriesPointerDown(o: any, e: any): void {
+    public categoryChartCustomSelectionPointerDown(o: any, e: any): void {
     	let oldItem = e.item as SelectableDataItem;
-            
+
         if (oldItem === null) return;
-    
+
         let newItem: SelectableDataItem = new SelectableDataItem({
             category: oldItem.category,
             dataValue: oldItem.dataValue,
             selectedValue: oldItem.selectedValue
         });
-    
+
         var selectedIndex = -1;
         for (var i = 0; i < this.selectableData.length; i++) {
             if (oldItem.category === this.selectableData[i].category) {
@@ -18,13 +18,13 @@ export class CustomSelectionSeriesPointerDown {
                 break;
             }
         }
-    
+
         if (oldItem.selectedValue === oldItem.dataValue)
             newItem.selectedValue = null;
         else
             newItem.selectedValue = newItem.dataValue;
-    
+
         this.chart.notifySetItem(this.selectableData, selectedIndex, oldItem, newItem);
-    }   
+    }
     //end eventHandler
 }
