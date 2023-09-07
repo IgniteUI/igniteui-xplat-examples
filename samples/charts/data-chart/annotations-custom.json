@@ -15,8 +15,7 @@
         },
         {
           "type": "NumericYAxis",
-          "name": "yAxis",
-          "title": "TWh"
+          "name": "yAxis"
         }
       ],
       "series": [
@@ -32,7 +31,10 @@
         {
           "type": "CalloutLayer",
           "name": "CalloutLayer1",
-          "isAutoCalloutBehaviorEnabled": true,
+          "dataSourceRef": "CountryRenewableCallouts",
+          "xMemberPath": "Index",
+          "yMemberPath": "Value",
+          "labelMemberPath": "Label",
           "calloutPaddingLeft": 20,
           "calloutPaddingRight": 20,
           "calloutPaddingBottom": 10,
