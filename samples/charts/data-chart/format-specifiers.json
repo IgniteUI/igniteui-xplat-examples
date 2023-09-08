@@ -4,13 +4,15 @@
   },
   "descriptions": {
     "legend": {
-      "type": "Legend",
+      "type": "DataLegend",
       "name": "Legend",
-      "orientation": "Horizontal"
+      "targetRef": "chart",
+      "valueFormatMode": "Currency",
+      "valueFormatString": "${0} Billion"
     },
     "content": {
       "type": "DataChart",
-      "name": "Chart",
+      "name": "chart",
       "legendRef": "Legend",
       "axes": [
         {
@@ -72,7 +74,7 @@
     }
   },
   "modules": [
-    "charts/LegendModule",
+    "charts/DataLegendModule",
     "charts/DataChartCoreModule",
     "charts/DataChartCategoryCoreModule",
     "charts/DataChartCategoryModule",
