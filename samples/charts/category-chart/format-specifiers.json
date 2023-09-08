@@ -4,9 +4,11 @@
   },
   "descriptions": {
     "legend": {
-      "type": "Legend",
-      "name": "Legend",
-      "orientation": "Horizontal"
+      "type": "DataLegend",
+      "targetRef": "chart",
+      "valueFormatMode": "Currency",
+      "valueFormatString": "${0} Billion",
+      "name": "Legend"
     },
     "content": {
       "type": "CategoryChart",
@@ -33,7 +35,7 @@
   "modules": [
     "withDescriptions",
     "layouts/PropertyEditorPanelModule",
-    "charts/LegendModule",
+    "charts/DataLegendModule",
     "charts/CategoryChartModule"
   ]
 }
