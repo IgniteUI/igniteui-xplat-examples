@@ -27,6 +27,7 @@
           "type": "NumberFormatSpecifier",
           "currency": "EUR",
           "style": "currency",
+          "locale": "en-GB",
           "minimumFractionDigits": 0
         }
       ],
