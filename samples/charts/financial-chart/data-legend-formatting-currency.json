@@ -20,7 +20,24 @@
       "dataToolTipLabelDisplayMode": "Hidden",
       "dataToolTipIncludedColumns": ["Close", "Change", "Value"],
       "dataToolTipHeaderFormatTime": "None",
-      "zoomSliderType": "None"
+      "zoomSliderType": "None",
+      "yAxisLabelFormat": "{0}",
+      "yAxisLabelFormatSpecifiers": [
+        {
+          "type": "NumberFormatSpecifier",
+          "currency": "EUR",
+          "style": "currency",
+          "minimumFractionDigits": 0
+        }
+      ],
+      "xAxisLabelFormat": "{0}",
+      "xAxisLabelFormatSpecifiers": [
+        {
+          "type": "DateTimeFormatSpecifier",
+          "locale": "en-GB",
+          "dateStyle": "long"
+        }
+      ]
     }
   },
   "modules": [
