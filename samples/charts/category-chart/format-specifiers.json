@@ -12,7 +12,6 @@
     },
     "content": {
       "type": "CategoryChart",
-      "legendRef": "Legend",
       "name": "chart",
       "dataSourceRef": "HighestGrossingMovies",
       "chartType": "Column",

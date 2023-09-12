@@ -13,7 +13,6 @@
     "content": {
       "type": "DataChart",
       "name": "chart",
-      "legendRef": "Legend",
       "axes": [
         {
           "type": "CategoryYAxis",
