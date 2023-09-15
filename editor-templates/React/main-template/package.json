@@ -14,39 +14,39 @@
     "lint": "eslint ./src/**/*.{ts,tsx}"
   },
   "dependencies": {
-    "igniteui-react": "18.2.2-beta.0",
-    "igniteui-react-core": "18.2.2-beta.0",
+    "@infragistics/igniteui-react": "23.2.152",
+    "@infragistics/igniteui-react-core": "23.2.152",
 //ifdef charts, maps
-    "igniteui-react-charts": "18.2.2-beta.0",
+    "@infragistics/igniteui-react-charts": "23.2.152",
 //endifdef charts, maps
 //ifdef grid, webgrids
-    "igniteui-react-datasources": "18.2.2-beta.0",
+    "@infragistics/igniteui-react-datasources": "23.2.152",
 //endifdef grid, webgrids
 //ifdef excel, spreadsheet
-    "igniteui-react-excel": "18.2.2-beta.0",
+    "@infragistics/igniteui-react-excel": "23.2.152",
 //endifdef excel, spreadsheet
 //ifdef gauges
-    "igniteui-react-gauges": "18.2.2-beta.0",
+    "@infragistics/igniteui-react-gauges": "23.2.152",
 //endifdef gauges
 //ifdef grid, webgrids
-    "igniteui-react-grids": "18.2.2-beta.0",
+    "@infragistics/igniteui-react-grids": "23.2.152",
 //endifdef grid, webgrids
 //ifdef grid, webgrids, inputs, layouts, editor
-    "igniteui-react-inputs": "18.2.2-beta.0",
+    "@infragistics/igniteui-react-inputs": "23.2.152",
 //endifdef grid, webgrids, inputs, layouts, editor
 //ifdef grid, webgrids, editor, layouts
-    "igniteui-react-layouts": "18.2.2-beta.0",
+    "@infragistics/igniteui-react-layouts": "23.2.152",
 //endifdef grid, webgrids, editor, layouts
-//ifdef webgrids
-    "igniteui-dockmanager": "^1.13.0",
-//endifdef webgrids
 //ifdef maps
-    "igniteui-react-maps": "18.2.2-beta.0",
+    "@infragistics/igniteui-react-maps": "23.2.152",
 //endifdef maps
 //ifdef spreadsheet
-    "igniteui-react-spreadsheet": "18.2.2-beta.0",
-    "igniteui-react-spreadsheet-chart-adapter": "18.2.2-beta.0",
+    "@infragistics/igniteui-react-spreadsheet": "23.2.152",
+    "@infragistics/igniteui-react-spreadsheet-chart-adapter": "23.2.152",
 //endifdef spreadsheet
+//ifdef webgrids
+    "igniteui-dockmanager": "1.13.0",
+//endifdef webgrids
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "^5.0.1",
