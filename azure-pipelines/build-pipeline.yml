@@ -1,12 +1,13 @@
 trigger:
   branches:
     include:
-    - '23.1.x'
+    - '23.2.x'
   paths:
     include:
       - 'samples/**/*.json'
     exclude:
       - 'master'
+      - '23.1.x'
 
 parameters:
   - name: pathsToParse
@@ -21,7 +22,7 @@ pr: none
 name: $(BuildDefinitionName)_$(Year:yyyy).$(Month).$(DayOfMonth)$(Rev:.r)
 variables:
   - name: codeExporterAppBranch
-    value: 'master'
+    value: '2023.2'
 
 resources:
   repositories:
