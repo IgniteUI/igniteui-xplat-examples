@@ -17,7 +17,7 @@
         {
           "type": "CategoryXAxis",
           "name": "xAxis",
-          "dataSourceRef": "LocalData",
+          "dataSourceRef": "CompanyFinancialData",
           "label": "Year",
           "labelFontSize": 15, "gap": 0.7, "interval": 1
         },
@@ -75,7 +75,7 @@
         {
           "type": "ColumnSeries",
           "name": "ColumnSeries1",
-          "dataSourceRef": "LocalData",
+          "dataSourceRef": "CompanyFinancialData",
           "xAxisRef": "xAxis",
           "yAxisRef": "yAxis1",
           "showDefaultTooltip": true,
@@ -86,7 +86,7 @@
         {
           "type": "ColumnSeries",
           "name": "ColumnSeries2",
-          "dataSourceRef": "LocalData",
+          "dataSourceRef": "CompanyFinancialData",
           "xAxisRef": "xAxis",
           "yAxisRef": "yAxis2",
           "showDefaultTooltip": true,
@@ -97,7 +97,7 @@
         {
           "type": "LineSeries",
           "name": "LineSeries2",
-          "dataSourceRef": "LocalData",
+          "dataSourceRef": "CompanyFinancialData",
           "xAxisRef": "xAxis",
           "yAxisRef": "yAxis3",
           "showDefaultTooltip": true,
@@ -115,25 +115,6 @@
         }
       ]
     }
-  },
-  "refs": {
-    "LocalData": [
-      { "Year": 2009, "Income": 4.5, "Cashflow": 4.0, "Revenue": 50 },
-      { "Year": 2010, "Income": 3.0, "Cashflow": 5.0, "Revenue": 70 },
-      { "Year": 2011, "Income": 4.5, "Cashflow": 4.0, "Revenue": 80 },
-      { "Year": 2012, "Income": 4.0, "Cashflow": 5.0, "Revenue": 90 },
-      { "Year": 2013, "Income": 3.5, "Cashflow": 5.0, "Revenue": 85 },
-      { "Year": 2014, "Income": 4.0, "Cashflow": 6.0, "Revenue": 90 },
-      { "Year": 2015, "Income": 3.5, "Cashflow": 7.0, "Revenue": 80 },
-      { "Year": 2016, "Income": 4.0, "Cashflow": 6.0, "Revenue": 95 },
-      { "Year": 2017, "Income": 5.5, "Cashflow": 5.0, "Revenue": 85 },
-      { "Year": 2018, "Income": 6.5, "Cashflow": 6.0, "Revenue": 90 },
-      { "Year": 2019, "Income": 7.0, "Cashflow": 7.5, "Revenue": 95 },
-      { "Year": 2020, "Income": 2.5, "Cashflow": 4.0, "Revenue": 65 },
-      { "Year": 2021, "Income": 4.5, "Cashflow": 5.0, "Revenue": 70 },
-      { "Year": 2022, "Income": 5.0, "Cashflow": 6.0, "Revenue": 85 },
-      { "Year": 2023, "Income": 6.5, "Cashflow": 7.0, "Revenue": 95 }
-    ]
   },
   "modules": [
     "charts/LegendModule",
