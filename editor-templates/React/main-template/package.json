@@ -45,7 +45,7 @@
     "@infragistics/igniteui-react-spreadsheet-chart-adapter": "23.2.152",
 //endifdef spreadsheet
 //ifdef webgrids
-    "igniteui-dockmanager": "1.13.0",
+    "igniteui-dockmanager": "1.14.2",
 //endifdef webgrids
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
