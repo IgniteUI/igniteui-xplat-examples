@@ -17,17 +17,18 @@ export class WebGridNestedDataCellTemplate {
                 </div>
                 <div className="description">
                     <div style={{display: "flex", alignItems: "center"}}>
-                        <div for="title" style={{width: "2rem", margin: "0rem"}}>Title</div>
+                        <label htmlFor="title" style={{width: "2rem", margin: "0rem"}}>Title</label>
                         <input id='Title' type="text" name="title" value={props.dataContext.cell.value[0].Title} style={{textOverflow: "ellipsis"}} />
                     </div>
                     <div style={{display: "flex", alignItems: "center"}}>
-                        <div for="age" style={{width: "2rem", margin: "0rem"}}>Age</div>
+                        <label htmlFor="age" style={{width: "2rem", margin: "0rem"}}>Age</label>
                         <input id='Age' type="text" name="title" value={props.dataContext.cell.value[0].Age} style={{textOverflow: "ellipsis"}} />
                     </div>
                 </div>
             </IgrExpansionPanel>
         </>);
         }
+        return <></>;
     };
     //end content
     //end template
