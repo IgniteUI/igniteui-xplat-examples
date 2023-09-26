@@ -2,10 +2,10 @@
 import { IgrCellTemplateContext } from 'igniteui-react-grids';
 //end imports
 
-export class WebGridCompositeAddressEditCellTemplate {
+export class WebGridCompositeContactEditCellTemplate {
     //begin template
     //begin content
-    public webGridCompositeAddressEditCellTemplate = (props: {dataContext: IgrCellTemplateContext}) => {
+    public webGridCompositeContactEditCellTemplate = (props: {dataContext: IgrCellTemplateContext}) => {
 
         var cell = props.dataContext.cell as any;
         if (cell === undefined || cell.row === undefined || cell.row.data === undefined) {

@@ -13,7 +13,7 @@ export class WebGridCompositeContactCellTemplate {
     
         return (
         <>
-            <div class="contact-container">
+            <div className="contact-container">
                 <span><strong>Name:</strong> {cell.row.data.ContactName}</span>
                 <span><strong>Title:</strong> {cell.row.data.ContactTitle}</span>
                 <br />
