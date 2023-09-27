@@ -16,7 +16,6 @@ export class WebGridBooleanCellTemplate {
             );
         }
     }
-}
 //end content
 //end template
 }
