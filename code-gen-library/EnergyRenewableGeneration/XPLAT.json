@@ -1,0 +1,13 @@
+[
+  { "Year": "2009", "Europe": 31, "America": 19, "China": 21  },
+  { "Year": "2010", "Europe": 43, "America": 24, "China": 26  },
+  { "Year": "2011", "Europe": 66, "America": 28, "China": 29  },
+  { "Year": "2012", "Europe": 69, "America": 26, "China": 32  },
+  { "Year": "2013", "Europe": 58, "America": 38, "China": 47  },
+  { "Year": "2014", "Europe": 40, "America": 31, "China": 46  },
+  { "Year": "2015", "Europe": 78, "America": 19, "China": 50  },
+  { "Year": "2016", "Europe": 13, "America": 52, "China": 90  },
+  { "Year": "2017", "Europe": 78, "America": 50, "China": 132 },
+  { "Year": "2018", "Europe": 40, "America": 34, "China": 134 },
+  { "Year": "2019", "Europe": 80, "America": 38, "China": 96  }
+]

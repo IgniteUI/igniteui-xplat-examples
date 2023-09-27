@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sample | Ignite UI | Web Components | infragistics</title>
+    <meta charset="UTF-8" />
+
+    <link rel="shortcut icon" href="https://static.infragistics.com/xplatform/images/browsers/wc.png" >
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kanit&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium Web" />
+    <link rel="stylesheet" href="https://static.infragistics.com/xplatform/css/samples/shared.v8.css" />
+    <link rel="stylesheet" href="/src/index.css" type="text/css" />
+
+  </head>
+
+  <body>
+    <div id="root">
+
+<div class="container sample">
+<!-- ifdef editor -->
+    <div class="options vertical">
+        <!-- insert editor -->
+        <!-- end editor -->
+    </div>
+<!-- endifdef editor -->
+
+<!-- ifdef legendTitle -->
+    <div class="legend-title">
+        $$legendTitle
+    </div>
+<!-- endifdef legendTitle -->
+
+<!-- ifdef legend -->
+    <div class="legend">
+        <!-- insert legend -->
+        <!-- end legend -->
+    </div>
+<!-- endifdef legend -->
+<!-- ifdef aboveContent -->
+    <div class="aboveContent">
+        <!-- insert aboveContent -->
+        <!-- end aboveContent -->
+    </div>
+<!-- endifdef aboveContent -->
+<!-- ifdef aboveContentLeft, aboveContentRight -->
+    <div class="aboveContentSplit">
+        <div class="aboveContentLeftContainer">
+            <!-- insert aboveContentLeft -->
+            <!-- end aboveContentLeft -->
+        </div>
+        <div class="aboveContentRightContainer">
+            <!-- insert aboveContentRight -->
+            <!-- end aboveContentRight -->
+        </div>
+    </div>
+<!-- endifdef aboveContentLeft, aboveContentRight -->
+
+    <div class="container fill">
+        <!-- insert content -->
+        <igc-data-chart id="chart"
+            is-horizontal-zoom-enabled="true"
+            is-vertical-zoom-enabled="true">
+            <igc-numeric-x-axis name="xAxis"
+                is-logarithmic="true"
+                abbreviate-large-numbers="true"
+                title="Population">
+            </igc-numeric-x-axis>
+            <igc-numeric-y-axis name="yAxis"
+                is-logarithmic="true"
+                abbreviate-large-numbers="true"
+                title="Total GDP ($)">
+            </igc-numeric-y-axis>
+        </igc-data-chart>
+        <!-- end content -->
+    </div>
+</div>
+
+    </div>
+
+    <!-- This script is needed only for parcel and it will be excluded for webpack -->
+    <% if (false) { %><script src="src/index.ts"></script><% } %>
+  </body>
+</html>
