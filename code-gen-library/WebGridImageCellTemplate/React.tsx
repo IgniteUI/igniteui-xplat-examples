@@ -14,7 +14,7 @@ export class WebGridBeatsPerMinuteTemplate {
         return (
             <>
                 <div>
-                    <img src="${ctx.cell.value}"
+                    <img src="${cell.value}"
                         style="border: 1px solid black;
                         object-fit: fill;
                         height: 2rem;
