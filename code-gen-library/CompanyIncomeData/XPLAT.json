@@ -1,0 +1,9 @@
+[
+  { "Costs": 55, "NetIncome": null,  "Category": "Revenue" },
+  { "Costs": 45, "NetIncome": null,  "Category": "Expenses" },
+  { "Costs": 35, "NetIncome": null,  "Category": "Research" },
+  { "Costs": 28, "NetIncome": null,  "Category": "Marketing" },
+  { "Costs": 25, "NetIncome": null,  "Category": "Administration" },
+  { "Costs": 55, "NetIncome": null,  "Category": "Total Costs" },
+  { "Costs": 0,  "NetIncome": 25,    "Category": "Net Income" }
+]

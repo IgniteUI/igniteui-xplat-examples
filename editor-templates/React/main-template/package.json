@@ -1,0 +1,75 @@
+{
+  "name": "example-ignite-ui-react",
+  "description": "This project provides example of using Ignite UI for React components",
+  "author": "Infragistics",
+  "version": "1.4.0",
+  "license": "",
+  "homepage": ".",
+  "private": true,
+  "scripts": {
+    "start": "set PORT=4200 && react-scripts --max_old_space_size=10240 start",
+    "build": "react-scripts --max_old_space_size=10240 build ",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "lint": "eslint ./src/**/*.{ts,tsx}"
+  },
+  "dependencies": {
+    "@infragistics/igniteui-react": "23.2.152",
+    "@infragistics/igniteui-react-core": "23.2.152",
+//ifdef charts, maps
+    "@infragistics/igniteui-react-charts": "23.2.152",
+//endifdef charts, maps
+//ifdef grid, webgrids
+    "@infragistics/igniteui-react-datasources": "23.2.152",
+//endifdef grid, webgrids
+//ifdef excel, spreadsheet
+    "@infragistics/igniteui-react-excel": "23.2.152",
+//endifdef excel, spreadsheet
+//ifdef gauges
+    "@infragistics/igniteui-react-gauges": "23.2.152",
+//endifdef gauges
+//ifdef grid, webgrids
+    "@infragistics/igniteui-react-grids": "23.2.152",
+//endifdef grid, webgrids
+//ifdef grid, webgrids, inputs, layouts, editor
+    "@infragistics/igniteui-react-inputs": "23.2.152",
+//endifdef grid, webgrids, inputs, layouts, editor
+//ifdef grid, webgrids, editor, layouts
+    "@infragistics/igniteui-react-layouts": "23.2.152",
+//endifdef grid, webgrids, editor, layouts
+//ifdef maps
+    "@infragistics/igniteui-react-maps": "23.2.152",
+//endifdef maps
+//ifdef spreadsheet
+    "@infragistics/igniteui-react-spreadsheet": "23.2.152",
+    "@infragistics/igniteui-react-spreadsheet-chart-adapter": "23.2.152",
+//endifdef spreadsheet
+//ifdef webgrids
+    "igniteui-dockmanager": "1.14.2",
+//endifdef webgrids
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "^5.0.1",
+    "tslib": "^2.4.0",
+    "igniteui-webcomponents": "4.3.0-beta.0",
+    "lit-html": "^2.2.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.2.0",
+    "@types/node": "^18.11.7",
+    "@types/react": "^18.0.24",
+    "@types/react-dom": "^18.0.8",
+    "eslint": "^8.33.0",
+    "eslint-config-react": "^1.1.7",
+    "eslint-plugin-react": "^7.20.0",
+    "react-app-rewired": "^2.2.1",
+    "typescript": "^4.8.4",
+    "worker-loader": "^3.0.8"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
