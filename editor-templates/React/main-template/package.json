@@ -15,10 +15,10 @@
   },
   "dependencies": {
     "@infragistics/igniteui-react": "23.2.152",
-    "@infragistics/igniteui-react-core": "23.2.152",
 //ifdef charts, maps
     "@infragistics/igniteui-react-charts": "23.2.152",
 //endifdef charts, maps
+    "@infragistics/igniteui-react-core": "23.2.152",
 //ifdef grid, webgrids
     "@infragistics/igniteui-react-datasources": "23.2.152",
 //endifdef grid, webgrids
@@ -47,12 +47,12 @@
 //ifdef webgrids
     "igniteui-dockmanager": "1.14.2",
 //endifdef webgrids
+    "igniteui-webcomponents": "4.5.0-beta.1",
+    "lit-html": "^2.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "^5.0.1",
-    "tslib": "^2.4.0",
-    "igniteui-webcomponents": "4.3.0-beta.0",
-    "lit-html": "^2.2.0"
+    "tslib": "^2.4.0"
   },
   "devDependencies": {
     "@types/jest": "^29.2.0",
