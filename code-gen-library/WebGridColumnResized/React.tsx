@@ -1,10 +1,10 @@
 //begin imports
-import { IgrGridBaseDirective, IgrRowSelectionEventArgs } from 'igniteui-react-grids';
+import { IgrGridBaseDirective, IgrColumnResizeEventArgs } from 'igniteui-react-grids';
 //end imports
 
 export class WebGridColumnResized {
     //begin eventHandler
-    public webGridColumnResized(grid: IgrGridBaseDirective, args: IgrRowSelectionEventArgs): void {
+    public webGridColumnResized(grid: IgrGridBaseDirective, args: IgrColumnResizeEventArgs): void {
         var col = args.detail.column;
         var pWidth = args.detail.prevWidth;
         var nWidth = args.detail.newWidth;
