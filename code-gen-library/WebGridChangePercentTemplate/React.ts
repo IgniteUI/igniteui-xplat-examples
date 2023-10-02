@@ -7,19 +7,13 @@ export class WebGridChangePercentTemplate {
 //begin template
 //begin content
     public webGridChangePercentTemplate = (props: { dataContext: IgrCellTemplateContext }) => {
-        if (props.dataContext.cell.value > 0) {
-            return (
-                <div>
-                <span style={{ color: 'green' }}> { props.dataContext.cell.value.toFixed(2) }%</span>
-                </div>
-            );
-        } else {
-            return (
-                <div>
-                <span style={{ color: 'red' }}>{ props.dataContext.cell.value.toFixed(2) }%</span>
-                </div>
-            );
-        }
+        const valueColor = props.dataContext.cell.value > 0 ? 'up' : 'down';
+        return (
+            <div className="cellAlignStyle">
+            <span className={valueColor}> { props.dataContext.cell.value.toFixed(2) }%</span>
+            </div>
+        );
+        
     }
 //end content
 
@@ -37,9 +31,6 @@ export class WebGridChangePercentTemplate {
 }
 .down {
     color: red;
-}
-.grid__wrapper {
-  padding: 16px;
 }
 <!--end styles-->
 `;
