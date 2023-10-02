@@ -2,7 +2,7 @@
 import { IgrCellTemplateContext } from 'igniteui-react-grids';
 //end imports
 
-export class WebGridBeatsPerMinuteTemplate {
+export class webGridBeatsPerMinuteTemplate {
     //begin template
     //begin content
     public IgrCellTemplateContext = (props: {dataContext: IgrCellTemplateContext}) => {
@@ -15,7 +15,7 @@ export class WebGridBeatsPerMinuteTemplate {
         return (
             <>
                 <div>
-                    <span style="color: red;">${cell.value}</span>
+                    <span style={{color: 'red'}}>${cell.value}</span>
                 </div>
             </>
         );
@@ -24,7 +24,7 @@ export class WebGridBeatsPerMinuteTemplate {
         return (
             <>
                 <div>
-                    <span style="color: green;">${cell.value}</span>
+                    <span style={{color: 'green'}}>${cell.value}</span>
                 </div>`;
             </>
         )

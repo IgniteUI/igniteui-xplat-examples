@@ -2,7 +2,7 @@
 import { IgrCellTemplateContext } from 'igniteui-react-grids';
 //end imports
 
-export class WebGridBeatsPerMinuteTemplate {
+export class webGridImageCellTemplate {
     //begin template
     //begin content
     public IgrCellTemplateContext = (props: {dataContext: IgrCellTemplateContext}) => {
