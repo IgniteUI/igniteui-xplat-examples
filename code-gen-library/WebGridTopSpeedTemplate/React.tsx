@@ -15,7 +15,7 @@ export class WebGridTopSpeedTemplate {
         return (
             <>
                 <div>
-                    <span style="color: royalblue;">${cell.value}</span>
+                    <span style={{color: royalblue}}>${cell.value}</span>
                 </div>
             </>
         );
