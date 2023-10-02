@@ -6,7 +6,7 @@ import { IgrCombo } from "igniteui-react";
 export class WebGridCountryDropDownTemplate {
     //begin template
     //begin content
-    public IgrCellTemplateContext = (props: {dataContext: IgrCellTemplateContext}) => {
+    public webGridCountryDropDownTemplate = (props: {dataContext: IgrCellTemplateContext}) => {
         var cell = props.dataContext.cell as any;
         if (cell === undefined || cell.row === undefined || cell.row.data === undefined) {
             return <></>;
