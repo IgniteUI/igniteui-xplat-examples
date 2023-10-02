@@ -1,0 +1,57 @@
+{
+  "skipAlterDataCasing": true,
+  "descriptions": {
+    "content": {
+      "type": "WebGrid",
+      "id": "grid",
+      "dataRef": "WebGridCellEditSampleRoleplay",
+      "autoGenerate": false,
+      "primaryKey": "name",
+      "columns": [
+        {
+          "type": "WebColumn",
+          "field": "name",
+          "header": "Character Name",
+          "dataType": "String"
+        },
+        {
+          "type": "WebColumn",
+          "field": "race",
+          "header": "Race",
+          "dataType": "String",
+          "inlineEditorTemplateRef": "WebGridCellEditCellTemplate",
+          "editable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "class",
+          "header": "Class",
+          "inlineEditorTemplateRef": "WebGridCellEditCellTemplate",
+          "editable": true,
+          "dataType": "String"
+        },
+        {
+          "type": "WebColumn",
+          "field": "age",
+          "header": "Age",
+          "dataType": "String",
+          "editable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "alignment",
+          "header": "Alignment",
+          "inlineEditorTemplateRef": "WebGridCellEditCellTemplate",
+          "editable": true,
+          "dataType": "String"
+
+        }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "grids/WebGridModule",
+    "webinputs/WebSelectModule"
+  ]
+}
