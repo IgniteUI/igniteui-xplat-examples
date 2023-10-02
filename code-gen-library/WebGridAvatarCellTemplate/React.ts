@@ -1,4 +1,5 @@
 //begin imports
+import { IgrAvatar } from 'igniteui-react';
 import { IgrCellTemplateContext } from 'igniteui-react-grids';
 //end imports
 
