@@ -6,17 +6,17 @@
       "id": "grid",
       "dataRef": "WebGridCellEditSampleRoleplay",
       "autoGenerate": false,
-      "primaryKey": "name",
+      "primaryKey": "Name",
       "columns": [
         {
           "type": "WebColumn",
-          "field": "name",
+          "field": "Name",
           "header": "Character Name",
           "dataType": "String"
         },
         {
           "type": "WebColumn",
-          "field": "race",
+          "field": "Race",
           "header": "Race",
           "dataType": "String",
           "inlineEditorTemplateRef": "WebGridCellEditCellTemplate",
@@ -24,7 +24,7 @@
         },
         {
           "type": "WebColumn",
-          "field": "class",
+          "field": "Class",
           "header": "Class",
           "inlineEditorTemplateRef": "WebGridCellEditCellTemplate",
           "editable": true,
@@ -32,14 +32,14 @@
         },
         {
           "type": "WebColumn",
-          "field": "age",
+          "field": "Age",
           "header": "Age",
           "dataType": "String",
           "editable": true
         },
         {
           "type": "WebColumn",
-          "field": "alignment",
+          "field": "Alignment",
           "header": "Alignment",
           "inlineEditorTemplateRef": "WebGridCellEditCellTemplate",
           "editable": true,
