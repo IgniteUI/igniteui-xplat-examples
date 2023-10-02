@@ -2,10 +2,10 @@
 import { IgrCellTemplateContext } from 'igniteui-react-grids';
 //end imports
 
-export class webGridBeatsPerMinuteTemplate {
+export class WebGridBeatsPerMinuteTemplate {
     //begin template
     //begin content
-    public IgrCellTemplateContext = (props: {dataContext: IgrCellTemplateContext}) => {
+    public webGridBeatsPerMinuteTemplate = (props: {dataContext: IgrCellTemplateContext}) => {
         var cell = props.dataContext.cell as any;
         if (cell === undefined || cell.row === undefined || cell.row.data === undefined) {
             return <></>;
