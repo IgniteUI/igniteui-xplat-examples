@@ -11,11 +11,10 @@
         {
           "type": "PropertyEditorPropertyDescription",
           "propertyPath": "BaseTheme",
-          "name": "BaseTheme",
           "label": "Theme",
           "shouldOverrideDefaultEditor": true,
           "valueType": "EnumValue",
-          "primitiveValue": "SlingshotDark"
+          "primitiveValue": "Default"
         }
       ]
     },
@@ -24,10 +23,12 @@
       "name": "Toolbar",
       "targetRef": "chart",
       "orientation": "Horizontal",
-      "baseTheme": "SlingshotDark"
+      "baseTheme": "Default"
     },
     "content": {
       "type": "DataChart",
+      "computedPlotAreaMarginMode": "Series",
+      "isVerticalZoomEnabled": true,
       "isHorizontalZoomEnabled": true,
       "name": "chart",
       "axes": [
@@ -40,7 +41,8 @@
         {
           "type": "NumericYAxis",
           "name": "yAxis",
-          "title": "TWh"
+          "title": "TWh",
+          "labelLocation": "OutsideRight"
         }
       ],
       "series": [
@@ -61,10 +63,10 @@
     "layouts/PropertyEditorPanelModule",
     "layouts/ToolbarModule",
     "charts/DataChartToolbarModule",
-    "charts/NumberAbbreviatorModule",
-    "charts/DataChartCategoryeModule",
     "charts/DataChartCoreModule",
+    "charts/DataChartCategoryModule",
+    "charts/DataChartAnnotationModule",
     "charts/DataChartInteractivityModule",
-    "charts/DataChartAnnotationModule"
-  ]
-}
+    "charts/AnnotationLayerProxyModule",
+    "charts/DataChartCategoryTrendLineModule"  ]
+  }
