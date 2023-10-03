@@ -14,7 +14,7 @@
       "properties": [
         {
           "type": "PropertyEditorPropertyDescription",
-          "propertyPath": "CalloutsVisible",
+          "propertyPath": "AutoCalloutsVisible",
           "name": "CalloutsVisibleEditor",
           "label": "Callouts Visible",
           "shouldOverrideDefaultEditor": true,
@@ -31,14 +31,10 @@
       "isVerticalZoomEnabled": false,
       "includedProperties": ["Month", "Temperature"],
       "dataSourceRef": "TemperatureAnnotatedData",
-      "calloutsDataSourceRef": "TemperatureAnnotatedData",
-      "calloutsVisible": true,
-      "calloutsXMemberPath": "Index",
-      "calloutsYMemberPath": "Temperature",
-      "calloutsLabelMemberPath": "TempInfo",
-      "calloutsAllowedPositions": ["Top", "Bottom"],
+      "autoCalloutsVisible": true,
       "crosshairsAnnotationYAxisPrecision": 0,
       "yAxisMaximumValue": 35,
+      "yAxisTitle": "Degrees Celsius",
       "yAxisLabelLocation": "OutsideRight"
     }
   },

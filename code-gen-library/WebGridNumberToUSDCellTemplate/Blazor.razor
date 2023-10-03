@@ -1,0 +1,25 @@
+//begin template
+@using IgniteUI.Blazor.Controls
+
+@inject IIgniteUIBlazor IgniteUIBlazor;
+
+<!--begin styles-->
+<style>
+</style>
+<!--end styles-->
+
+@code {
+    //begin content
+    public RenderFragment<IgbCellTemplateContext> WebGridNumberToUSDCellTemplate = (ctx) => {
+        return @<span>@formatNumber(ctx.Cell.Value)</span>;
+    };
+    //end content
+
+    //begin supportingMethods
+    private static string formatNumber(object value)
+    {
+        return "$" + value;
+    }
+    //end supportingMethods
+}
+//end template

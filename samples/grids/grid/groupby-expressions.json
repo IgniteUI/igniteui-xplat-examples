@@ -7,7 +7,7 @@
   "descriptions": {
     "content": {
       "type": "WebGrid",
-      "dataRef": "InvoicesData",
+      "dataRef": "InvoicesWorldData",
       "autoGenerate": false,
       "name": "grid",
       "id": "grid",

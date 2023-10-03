@@ -1,6 +1,6 @@
 {
-  "todo": [ "" ],
-  "export": true,
+  "todo": [ "Conditional Cell Classes sample - Can set the cellClassesRef property but cannot set css class. Deferred until until we support injecting CSS classes." ],
+  "export": false,
   "skipAlterDataCasing": true,
   "descriptions": {
     "content": {
