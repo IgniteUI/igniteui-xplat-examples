@@ -11,6 +11,24 @@
         "type": "WebPinningConfig",
         "columns": "End"
       },
+      "toolbar": [
+        {
+          "type": "WebGridToolbar",
+          "tools": [
+            {
+              "type": "WebGridToolbarTitle"
+            },
+            {
+              "type": "WebGridToolbarActions",
+              "actions": [
+                {
+                  "type": "WebGridToolbarPinning"
+                }
+              ]
+            }
+          ]
+        }
+      ],
       "columns": [
         {
           "type": "WebColumn",

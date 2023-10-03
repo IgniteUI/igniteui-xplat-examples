@@ -8,7 +8,7 @@
     "content": {
       "name": "grid",
       "type": "WebGrid",
-      "dataRef": "CustomersData",
+      "dataRef": "CustomersDataLocal",
       "rowDraggable": true,
       "autoGenerate": false,
       "pinning": {

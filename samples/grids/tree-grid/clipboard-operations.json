@@ -1,8 +1,5 @@
 {
-  "todo": [
-    ""
-  ],
-  "export": true,
+  "export": false,
   "skipAlterDataCasing": true,
   "descriptions": {
     "editor": {

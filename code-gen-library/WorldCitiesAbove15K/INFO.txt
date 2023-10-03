@@ -1,0 +1,1 @@
+25245 cities in the world with population more than 15000 or capitals
