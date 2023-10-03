@@ -1,0 +1,73 @@
+{
+  "strings": {
+    "legendTitle": "Renewable Electricity Generated"
+  },
+  "descriptions": {
+    "legend": {
+      "type": "Legend",
+      "name": "Legend",
+      "orientation": "Horizontal"
+    },
+    "content": {
+      "type": "DataChart",
+      "name": "chart",
+      "computedPlotAreaMarginMode": "Series",
+      "legendRef": "Legend",
+      "axes": [
+        {
+          "type": "CategoryXAxis",
+          "name": "xAxis",
+          "dataSourceRef": "CountryRenewableElectricity",
+          "label": "Year"
+        },
+        {
+          "type": "NumericYAxis",
+          "name": "yAxis"
+        }
+      ],
+      "series": [
+        {
+          "type": "LineSeries",
+          "name": "LineSeries1",
+          "title": "Europe",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "markerType": "Circle",
+          "dataSourceRef": "CountryRenewableElectricity",
+          "valueMemberPath": "Europe",
+          "showDefaultTooltip": true,
+          "dashArray": [2, 2]
+        },
+        {
+          "type": "LineSeries",
+          "name": "LineSeries2",
+          "title": "China",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "markerType": "Circle",
+          "dataSourceRef": "CountryRenewableElectricity",
+          "valueMemberPath": "China",
+          "showDefaultTooltip": true,
+          "dashArray": [5, 5]
+        },
+        {
+          "type": "LineSeries",
+          "name": "LineSeries3",
+          "title": "America",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "markerType": "Circle",
+          "dataSourceRef": "CountryRenewableElectricity",
+          "valueMemberPath": "America",
+          "showDefaultTooltip": true,
+          "dashArray": [10, 10]
+        }
+      ]
+    }
+  },
+  "modules": [
+    "charts/LegendModule",
+    "charts/DataChartCategoryModule",
+    "charts/DataChartInteractivityModule"
+  ]
+}

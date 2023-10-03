@@ -21,16 +21,6 @@
       "columns": [
         {
           "type": "WebColumn",
-          "field": "ProductID",
-          "header": "Product ID",
-          "dataType": "Number",
-          "sortable": true,
-          "hasSummary": true,
-          "editable": true,
-          "resizable": true
-        },
-        {
-          "type": "WebColumn",
           "field": "ProductName",
           "header": "Product Name",
           "dataType": "String",
@@ -76,7 +66,8 @@
           "dataType": "Boolean",
           "sortable": true,
           "hasSummary": true,
-          "editable": true
+          "editable": true,
+          "bodyTemplateRef": "WebGridBooleanCellTemplate"
         },
         {
           "type": "WebColumn",

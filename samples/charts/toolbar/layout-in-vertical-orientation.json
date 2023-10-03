@@ -1,5 +1,4 @@
 {
-  "export": false,
   "note": "P2, wait until popups expand sideways when in vertical orientation",
   "descriptions": {
     "aboveContent": {
@@ -22,7 +21,8 @@
         {
           "type": "NumericYAxis",
           "name": "yAxis",
-          "title": "TWh"
+          "title": "TWh",
+          "labelLocation": "OutsideRight"
         }
       ],
       "series": [
@@ -39,9 +39,13 @@
     }
   },
   "modules": [
-    "withDescriptions",
-    "layout/ToolbarModule",
+    "layouts/ToolbarModule",
     "charts/DataChartToolbarModule",
-    "charts/DataChartCoreModule"
+    "charts/DataChartCoreModule",
+    "charts/DataChartCategoryModule",
+    "charts/DataChartAnnotationModule",
+    "charts/DataChartInteractivityModule",
+    "charts/AnnotationLayerProxyModule",
+    "charts/DataChartCategoryTrendLineModule"
   ]
 }
