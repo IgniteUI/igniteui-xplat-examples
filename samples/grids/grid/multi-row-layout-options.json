@@ -1,163 +1,163 @@
 {
-    "todo": [
-        ""
-    ],
-    "export": true,
+  "todo": [
+    ""
+  ],
+  "export": true,
   "skipAlterDataCasing": true,
-    "descriptions": {
-        "content": {
-            "name": "grid",
-            "type": "WebGrid",
-            "dataRef": "CustomersData",
-            "rowEditable": true,
-            "allowFiltering": true,
-            "primaryKey": "CompanyName",
-            "groupingExpressions": [
-                {
-                    "type": "WebGroupingExpression",
-                    "fieldName": "Country",
-                    "ignoreCase": false,
-                    "dir": "Asc"
-                }
-            ],
-            "columns": [
-                {
-                    "type": "WebColumnLayout",
-                    "pinned": true,
-                    "header": "ID",
-                    "children": [
-                        {
-                            "type": "WebColumn",
-                            "field": "ID",
-                            "rowStart": 1,
-                            "colStart": 1,
-                            "rowEnd": 3,
-                            "filterable": false,
-                            "width": "150px"
-                        }
-                    ]
-                },
-                {
-                    "type": "WebColumnLayout",
-                    "pinned": true,
-                    "header": "Contact Details",
-                    "children": [
-                        {
-                            "type": "WebColumn",
-                            "field": "CompanyName",
-                            "header": "Company",
-                            "rowStart": 1,
-                            "colStart": 1,
-                            "colEnd": 3,
-                            "sortable": true,
-                            "width": "350px"
-                        },
-                        {
-                            "type": "WebColumn",
-                            "field": "ContactName",
-                            "header": "Name",
-                            "rowStart": 2,
-                            "colStart": 1,
-                            "colEnd": 2,
-                            "groupable": true
-                        },
-                        {
-                            "type": "WebColumn",
-                            "field": "ContactTitle",
-                            "header": "Title",
-                            "rowStart": 3,
-                            "rowEnd": 3,
-                            "colStart": 2,
-                            "colEnd": 2,
-                            "groupable": true
-                        }
-                    ]
-                },
-                {
-                    "type": "WebColumnLayout",
-                    "pinned": false,
-                    "header": "Address Details",
-                    "children": [
-                        {
-                            "type": "WebColumn",
-                            "field": "Country",
-                            "rowStart": 1,
-                            "colStart": 1,
-                            "colEnd": 3,
-                            "groupable": true,
-                            "filterable": false,
-                            "width": "220px"
-                        },
-                        {
-                            "type": "WebColumn",
-                            "field": "Region",
-                            "rowStart": 1,
-                            "colStart": 3,
-                            "colEnd": 5,
-                            "groupable": true,
-                            "filterable": false,
-                            "width": "220px"
-                        },
-                        {
-                            "type": "WebColumn",
-                            "field": "PostalCode",
-                            "rowStart": 1,
-                            "colStart": 5,
-                            "colEnd": 7,
-                            "groupable": true,
-                            "filterable": false,
-                            "width": "220px"
-                        },
-                        {
-                            "type": "WebColumn",
-                            "field": "City",
-                            "rowStart": 2,
-                            "colStart": 1,
-                            "colEnd": 4,
-                            "groupable": true,
-                            "filterable": false,
-                            "width": "220px"
-                        },
-                        {
-                            "type": "WebColumn",
-                            "field": "Address",
-                            "rowStart": 2,
-                            "colStart": 4,
-                            "colEnd": 7,
-                            "filterable": false
-                        }
-                    ]
-                },
-                {
-                    "type": "WebColumnLayout",
-                    "header": "Phone Details",
-                    "children": [
-                        {
-                            "type": "WebColumn",
-                            "field": "Phone",
-                            "rowStart": 1,
-                            "colStart": 1,
-                            "colEnd": 2,
-                            "filterable": false,
-                            "width": "220px"
-                        },
-                        {
-                            "type": "WebColumn",
-                            "field": "Fax",
-                            "rowStart": 2,
-                            "colStart": 1,
-                            "colEnd": 2,
-                            "filterable": false,
-                            "width": "220px"
-                        }
-                    ]
-                }
-            ]
+  "descriptions": {
+    "content": {
+      "name": "grid",
+      "type": "WebGrid",
+      "dataRef": "CustomersData",
+      "rowEditable": true,
+      "allowFiltering": true,
+      "filterMode": "ExcelStyleFilter",
+      "primaryKey": "CompanyName",
+      "groupingExpressions": [
+        {
+          "type": "WebGroupingExpression",
+          "fieldName": "Country",
+          "ignoreCase": false,
+          "dir": "Asc"
         }
-    },
-    "modules": [
-        "withDescriptions",
-        "layouts/PropertyEditorPanelModule",
-        "grids/WebGridModule"
-    ]
+      ],
+      "columns": [
+        {
+          "type": "WebColumnLayout",
+          "hidden": true,
+          "header": "ID",
+          "children": [
+            {
+              "type": "WebColumn",
+              "field": "ID",
+              "rowStart": 1,
+              "colStart": 1,
+              "rowEnd": 3,
+              "filterable": false,
+              "width": "150px"
+            }
+          ]
+        },
+        {
+          "type": "WebColumnLayout",
+          "pinned": true,
+          "header": "Contact Details",
+          "children": [
+            {
+              "type": "WebColumn",
+              "field": "CompanyName",
+              "header": "Company",
+              "rowStart": 1,
+              "colStart": 1,
+              "colEnd": 3,
+              "sortable": true,
+              "width": "350px"
+            },
+            {
+              "type": "WebColumn",
+              "field": "ContactName",
+              "header": "Name",
+              "rowStart": 2,
+              "colStart": 1,
+              "colEnd": 2,
+              "groupable": true
+            },
+            {
+              "type": "WebColumn",
+              "field": "ContactTitle",
+              "header": "Title",
+              "rowStart": 2,
+              "colStart": 2,
+              "colEnd": 3,
+              "groupable": true
+            }
+          ]
+        },
+        {
+          "type": "WebColumnLayout",
+          "pinned": false,
+          "header": "Address Details",
+          "children": [
+            {
+              "type": "WebColumn",
+              "field": "Country",
+              "rowStart": 1,
+              "colStart": 1,
+              "colEnd": 3,
+              "groupable": true,
+              "filterable": false,
+              "width": "220px"
+            },
+            {
+              "type": "WebColumn",
+              "field": "Region",
+              "rowStart": 1,
+              "colStart": 3,
+              "colEnd": 5,
+              "groupable": true,
+              "filterable": false,
+              "width": "220px"
+            },
+            {
+              "type": "WebColumn",
+              "field": "PostalCode",
+              "rowStart": 1,
+              "colStart": 5,
+              "colEnd": 7,
+              "groupable": true,
+              "filterable": false,
+              "width": "220px"
+            },
+            {
+              "type": "WebColumn",
+              "field": "City",
+              "rowStart": 2,
+              "colStart": 1,
+              "colEnd": 4,
+              "groupable": true,
+              "filterable": false,
+              "width": "220px"
+            },
+            {
+              "type": "WebColumn",
+              "field": "Address",
+              "rowStart": 2,
+              "colStart": 4,
+              "colEnd": 7,
+              "filterable": false
+            }
+          ]
+        },
+        {
+          "type": "WebColumnLayout",
+          "header": "Phone Details",
+          "children": [
+            {
+              "type": "WebColumn",
+              "field": "Phone",
+              "rowStart": 1,
+              "colStart": 1,
+              "colEnd": 2,
+              "filterable": false,
+              "width": "220px"
+            },
+            {
+              "type": "WebColumn",
+              "field": "Fax",
+              "rowStart": 2,
+              "colStart": 1,
+              "colEnd": 2,
+              "filterable": false,
+              "width": "220px"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
+    "grids/WebGridModule"
+  ]
 }

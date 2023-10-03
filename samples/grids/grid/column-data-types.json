@@ -1,140 +1,140 @@
 {
-    "todo": [ "missing Web.ts for InvoicesDataExtendedDates" ],
-    "export": false,
+  "todo": [ "missing Web.ts for InvoicesDataExtendedDates" ],
+  "export": false,
   "skipAlterDataCasing": true,
-    "descriptions": {
-        "content": {
-            "type": "WebGrid",
-            "dataRef": "InvoicesDataExtendedDates",
-            "autoGenerate": false,
-            "name": "grid",
-            "id": "grid",
-            "allowFiltering": true,
-            "filterMode": "ExcelStyleFilter",
-            "displayDensity": "Compact",
-            "locale": "EN",
-            "columns": [
-                {
-                    "type": "WebColumn",
-                    "field": "ProductName",
-                    "header": "Prod. Name",
-                    "width": "120px",
-                    "sortable": true,
-                    "hasSummary": true,
-                    "editable": true,
-                    "resizable": true,
-                    "dataType": "String"
-                },
-                {
-                    "type": "WebColumn",
-                    "field": "UnitPrice",
-                    "header": "Unit Price",
-                    "width": "120px",
-                    "sortable": true,
-                    "hasSummary": true,
-                    "editable": true,
-                    "resizable": true,
-                    "dataType": "Number",
-                    "pipeArgs": {
-                        "type": "WebColumnPipeArgs",
-                        "currencyCode": "",
-                        "digitsInfo": "1.4-4"
-                    }
-                },
-                {
-                    "type": "WebColumn",
-                    "field": "OrderFullDate",
-                    "header": "Order Full Date",
-                    "width": "300px",
-                    "sortable": true,
-                    "hasSummary": true,
-                    "editable": true,
-                    "resizable": true,
-                    "dataType": "DateTime",
-                    "pipeArgs": {
-                        "type": "WebColumnPipeArgs",
-                        "format": "long",
-                        "timezone": "UTC+0"
-                    }
-                },
-                {
-                    "type": "WebColumn",
-                    "field": "OrderDate",
-                    "header": "Order Date",
-                    "width": "160px",
-                    "sortable": true,
-                    "hasSummary": true,
-                    "editable": true,
-                    "resizable": true,
-                    "dataType": "Date",
-                    "pipeArgs": {
-                        "type": "WebColumnPipeArgs",
-                        "format": "mediumDate"
-                    }
-                },
-                {
-                    "type": "WebColumn",
-                    "field": "OrderDateDelay",
-                    "header": "Order Time",
-                    "width": "120px",
-                    "sortable": true,
-                    "hasSummary": true,
-                    "editable": true,
-                    "resizable": true,
-                    "dataType": "Time",
-                    "pipeArgs": {
-                        "type": "WebColumnPipeArgs",
-                        "format": "shortTime",
-                        "timezone": "UTC+0"
-                    }
-                },
-                {
-                    "type": "WebColumn",
-                    "field": "UnitsInStock",
-                    "header": "Stock Value",
-                    "width": "120px",
-                    "sortable": true,
-                    "hasSummary": true,
-                    "editable": true,
-                    "resizable": true,
-                    "dataType": "Currency",
-                    "pipeArgs": {
-                        "type": "WebColumnPipeArgs",
-                        "currencyCode": "",
-                        "digitsInfo": "1.4-4"
-                    }
-                },
-                {
-                    "type": "WebColumn",
-                    "field": "UnitsOnOrder",
-                    "header": "% Change",
-                    "width": "120px",
-                    "sortable": true,
-                    "hasSummary": true,
-                    "editable": true,
-                    "resizable": true,
-                    "dataType": "Percent",
-                    "pipeArgs": {
-                        "type": "WebColumnPipeArgs",
-                        "currencyCode": "",
-                        "digitsInfo": "1.4-4"
-                    }
-                },
-                {
-                    "type": "WebColumn",
-                    "field": "Discontinued",
-                    "header": "Discontinued",
-                    "width": "160px",
-                    "sortable": true,
-                    "hasSummary": true,
-                    "editable": true,
-                    "resizable": true,
-                    "dataType": "Boolean"
-                }
-            ]
+  "descriptions": {
+    "content": {
+      "type": "WebGrid",
+      "dataRef": "InvoicesDataExtendedDates",
+      "autoGenerate": false,
+      "name": "grid",
+      "id": "grid",
+      "allowFiltering": true,
+      "filterMode": "ExcelStyleFilter",
+      "displayDensity": "Compact",
+      "locale": "EN",
+      "columns": [
+        {
+          "type": "WebColumn",
+          "field": "ProductName",
+          "header": "Prod. Name",
+          "width": "120px",
+          "sortable": true,
+          "hasSummary": true,
+          "editable": true,
+          "resizable": true,
+          "dataType": "String"
+        },
+        {
+          "type": "WebColumn",
+          "field": "UnitPrice",
+          "header": "Unit Price",
+          "width": "120px",
+          "sortable": true,
+          "hasSummary": true,
+          "editable": true,
+          "resizable": true,
+          "dataType": "Number",
+          "pipeArgs": {
+            "type": "WebColumnPipeArgs",
+            "currencyCode": "",
+            "digitsInfo": "1.4-4"
+          }
+        },
+        {
+          "type": "WebColumn",
+          "field": "OrderFullDate",
+          "header": "Order Full Date",
+          "width": "300px",
+          "sortable": true,
+          "hasSummary": true,
+          "editable": true,
+          "resizable": true,
+          "dataType": "DateTime",
+          "pipeArgs": {
+            "type": "WebColumnPipeArgs",
+            "format": "long",
+            "timezone": "UTC+0"
+          }
+        },
+        {
+          "type": "WebColumn",
+          "field": "OrderDate",
+          "header": "Order Date",
+          "width": "160px",
+          "sortable": true,
+          "hasSummary": true,
+          "editable": true,
+          "resizable": true,
+          "dataType": "Date",
+          "pipeArgs": {
+            "type": "WebColumnPipeArgs",
+            "format": "mediumDate"
+          }
+        },
+        {
+          "type": "WebColumn",
+          "field": "OrderDateDelay",
+          "header": "Order Time",
+          "width": "120px",
+          "sortable": true,
+          "hasSummary": true,
+          "editable": true,
+          "resizable": true,
+          "dataType": "Time",
+          "pipeArgs": {
+            "type": "WebColumnPipeArgs",
+            "format": "shortTime",
+            "timezone": "UTC+0"
+          }
+        },
+        {
+          "type": "WebColumn",
+          "field": "UnitsInStock",
+          "header": "Stock Value",
+          "width": "120px",
+          "sortable": true,
+          "hasSummary": true,
+          "editable": true,
+          "resizable": true,
+          "dataType": "Currency",
+          "pipeArgs": {
+            "type": "WebColumnPipeArgs",
+            "currencyCode": "",
+            "digitsInfo": "1.4-4"
+          }
+        },
+        {
+          "type": "WebColumn",
+          "field": "UnitsOnOrder",
+          "header": "% Change",
+          "width": "120px",
+          "sortable": true,
+          "hasSummary": true,
+          "editable": true,
+          "resizable": true,
+          "dataType": "Percent",
+          "pipeArgs": {
+            "type": "WebColumnPipeArgs",
+            "currencyCode": "",
+            "digitsInfo": "1.4-4"
+          }
+        },
+        {
+          "type": "WebColumn",
+          "field": "Discontinued",
+          "header": "Discontinued",
+          "width": "160px",
+          "sortable": true,
+          "hasSummary": true,
+          "editable": true,
+          "resizable": true,
+          "dataType": "Boolean"
         }
-    },
-    "modules": [
-        "grids/WebGridModule"
-    ]
+      ]
+    }
+  },
+  "modules": [
+    "grids/WebGridModule"
+  ]
 }

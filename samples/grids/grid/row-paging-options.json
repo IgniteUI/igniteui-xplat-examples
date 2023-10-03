@@ -1,6 +1,6 @@
 {
   "todo": [
-    "TODO Ability to Hide itemrs per page dropdown",
+    "TODO Ability to Hide item per page dropdown",
     "TODO Ability to hide Page Buttons (First, Prev, Next, Last)"
   ],
   "export": true,
@@ -19,7 +19,6 @@
           "name": "paginator",
           "perPage": 15,
           "displayDensity": "Cosy",
-          "selectOptions": [5, 15, 20, 50],
           "resourceStrings": {
             "type": "WebPaginatorResourceStrings",
             "igx_paginator_label": "Records per page"
@@ -40,11 +39,13 @@
         {
           "type": "WebColumn",
           "field": "BeatsPerMinute",
+          "header": "Beats Per Minute",
           "dataType": "Number"
         },
         {
           "type": "WebColumn",
           "field": "TopSpeed",
+          "header": "Top Speed",
           "dataType": "Number",
           "pipeArgs": {
             "type": "WebColumnPipeArgs",

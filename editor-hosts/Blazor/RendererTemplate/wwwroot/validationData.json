@@ -1,0 +1,4006 @@
+{
+	"types": [
+		"ApplyButtonClickEventArgs",
+		"ArcGISOnlineMapImagery",
+		"AssigningPolarMarkerStyleEventArgs",
+		"AssigningPolarStyleEventArgs",
+		"AssigningPolarStyleEventArgsBase",
+		"AssigningRadialMarkerStyleEventArgs",
+		"AssigningRadialStyleEventArgs",
+		"AssigningRadialStyleEventArgsBase",
+		"AssigningScatterMarkerStyleEventArgs",
+		"AssigningScatterStyleEventArgs",
+		"AssigningScatterStyleEventArgsBase",
+		"AssigningSeriesShapeStyleEventArgsBase",
+		"AssigningSeriesStyleEventArgsBase",
+		"AssigningShapeMarkerStyleEventArgs",
+		"AssigningShapeStyleEventArgs",
+		"AssigningShapeStyleEventArgsBase",
+		"AsyncCompletedEventArgs",
+		"BaseDataSource",
+		"BingMapsMapImagery",
+		"Button",
+		"ButtonClickEventArgs",
+		"ButtonGroup",
+		"ButtonGroupSelectionChangedEventArgs",
+		"Calendar",
+		"CalendarDate",
+		"CalendarFormatOptions",
+		"CalloutRenderStyleUpdatingEventArgs",
+		"CancelButtonClickEventArgs",
+		"CancelEventArgs",
+		"CancellingMultiScaleImageEventArgs",
+		"CellKey",
+		"CellRange",
+		"ChartGroupDescription",
+		"ChartSortDescription",
+		"ChartSummaryDescription",
+		"Checkbox",
+		"CheckboxChangeEventArgs",
+		"CheckboxList",
+		"CheckedChangedEventArgs",
+		"ColumnChooser",
+		"ColumnCustomFilterCondition",
+		"ColumnGrouping",
+		"ColumnHiddenChangedEventArgs",
+		"ColumnMovingSeparator",
+		"ColumnPinnedChangedEventArgs",
+		"ColumnPinning",
+		"ColumnResizingSeparator",
+		"ColumnSummaryDescription",
+		"ComboBoxColumn",
+		"CustomMapImagery",
+		"DataGridComparisonOperatorSelector",
+		"DataGridExpansionIndicator",
+		"DataGridPager",
+		"DataGridToolbar",
+		"DataLegend",
+		"DataLegendSeriesContext",
+		"DataLegendSeriesValueInfo",
+		"DataLegendStylingColumnEventArgs",
+		"DataLegendStylingRowEventArgs",
+		"DataLegendSummaryColumn",
+		"DataLegendSummaryEventArgs",
+		"DataSourceAggregatedResult",
+		"DataSourceRowExpansionChangedEventArgs",
+		"DataSourceSpecialRow",
+		"DataToolTipLayer",
+		"DatePartDeltas",
+		"DatePicker",
+		"DateRangeDescriptor",
+		"DateTimeFormatSpecifier",
+		"DoubleValueChangedEventArgs",
+		"DownloadingMultiScaleImageEventArgs",
+		"EditorCellInfo",
+		"EditorDefinition",
+		"EditorRowCellInfo",
+		"EditRowDefinition",
+		"ExpansionPanel",
+		"FilterApplyButtonClickEventArgs",
+		"FilterCancelButtonClickEventArgs",
+		"FilterCellInfo",
+		"FilterDialogRenderCompletedEventArgs",
+		"FilterOperand",
+		"FilterRowDefinition",
+		"FocusOptions",
+		"FormatSpecifier",
+		"FormatSummaryTextEventArgs",
+		"FunnelChart",
+		"FunnelDataContext",
+		"FunnelSliceClickedEventArgs",
+		"FunnelSliceDataContext",
+		"FunnelSliceEventArgs",
+		"GeographicContourLineSeries",
+		"GeographicHighDensityScatterSeries",
+		"GeographicMap",
+		"GeographicMapImagery",
+		"GeographicMapSeriesHost",
+		"GeographicMarkerSeries",
+		"GeographicMarkerSeriesBase",
+		"GeographicPolylineSeries",
+		"GeographicProportionalSymbolSeries",
+		"GeographicProportionalSymbolSeriesBase",
+		"GeographicScatterAreaSeries",
+		"GeographicShapeSeries",
+		"GeographicShapeSeriesBase",
+		"GeographicShapeSeriesBaseBase",
+		"GeographicSymbolSeries",
+		"GeographicSymbolSeriesBase",
+		"GeographicTileSeries",
+		"GeographicXYTriangulatingSeries",
+		"GeographicXYTriangulatingSeriesBase",
+		"GetTileImageUriArgs",
+		"GotFocusEventArgs",
+		"GridActiveCellChangedEventArgs",
+		"GridCellEditEndedEventArgs",
+		"GridCellEditEventArgs",
+		"GridCellEditStartedEventArgs",
+		"GridCellPosition",
+		"GridCellValueChangedEventArgs",
+		"GridCellValueChangingEventArgs",
+		"GridColumnButtonOptions",
+		"GridColumnFilterOptions",
+		"GridColumnGroupOptions",
+		"GridColumnHideOptions",
+		"GridColumnMoveOptions",
+		"GridColumnOptions",
+		"GridColumnOptionsBase",
+		"GridColumnOptionsSectionBase",
+		"GridColumnOptionsSimpleSectionBase",
+		"GridColumnPinOptions",
+		"GridColumnsChangedEventArgs",
+		"GridColumnSortOptions",
+		"GridColumnSummaryOptions",
+		"GridColumnWidthChangedEventArgs",
+		"GridCommitCompletedEventArgs",
+		"GridCustomFilterRequestedEventArgs",
+		"GridDataCommittedEventArgs",
+		"GridDataCommittingEventArgs",
+		"GridGroupDescriptionsChangedEventArgs",
+		"GridRowEditEndedEventArgs",
+		"GridRowEditStartedEventArgs",
+		"GridSelectedCellRangesChangedEventArgs",
+		"GridSelectedCellsChangedEventArgs",
+		"GridSelectionChangedEventArgs",
+		"GridSizeChangedEventArgs",
+		"GridSortDescriptionsChangedEventArgs",
+		"GridSummaryDescriptionsChangedEventArgs",
+		"HeaderRowSeparator",
+		"HeaderSeparator",
+		"HeatTileGenerator",
+		"Icon",
+		"ImagesChangedEventArgs",
+		"ImageTilesReadyEventArgs",
+		"Input",
+		"InputChangeEventArgs",
+		"InputGroup",
+		"InputGroupItem",
+		"KeyEventArgs",
+		"Label",
+		"LastMonthExpression",
+		"LastQuarterExpression",
+		"LastWeekExpression",
+		"LastYearExpression",
+		"ListPanel",
+		"ListPanelContentRefreshedEventArgs",
+		"ListPanelItemModel",
+		"ListPanelTemplateHeightRequestedEventArgs",
+		"ListPanelTemplateItemUpdatingEventArgs",
+		"ListPanelTemplateWidthRequestedEventArgs",
+		"LocalDataSource",
+		"LostFocusEventArgs",
+		"MultiColumnComboBox",
+		"MultiColumnComboBoxTextChangedEventArgs",
+		"MultiColumnComboBoxValueChangedEventArgs",
+		"NextMonthExpression",
+		"NextQuarterExpression",
+		"NextWeekExpression",
+		"NextYearExpression",
+		"NumberFormatSpecifier",
+		"OffsettableWeekExpression",
+		"OnClosedEventArgs",
+		"OnCollapsedEventArgs",
+		"OnExpandedEventArgs",
+		"OnPopupEventArgs",
+		"OpenStreetMapImagery",
+		"OperatorSelectorClosingEventArgs",
+		"OperatorSelectorOpeningEventArgs",
+		"OperatorSelectorValueChangedEventArgs",
+		"PageChangedEventArgs",
+		"PagedDataSource",
+		"PinnedAreaSeparator",
+		"PlotAreaMouseButtonEventArgs",
+		"PlotAreaMouseEventArgs",
+		"Popup",
+		"Prefix",
+		"ProgressiveLoadStatusEventArgs",
+		"PropertyEditor",
+		"PropertyEditorDataSource",
+		"PropertyEditorDescriptionObject",
+		"PropertyEditorPanel",
+		"PropertyEditorPropertyDescription",
+		"PropertyEditorPropertyDescriptionButtonClickEventArgs",
+		"PropertyEditorPropertyDescriptionChangedEventArgs",
+		"PropertyEditorPropertyDescriptionTargetPropertyUpdatingEventArgs",
+		"ProvideCalculatorEventArgs",
+		"Q1Expression",
+		"Q2Expression",
+		"Q3Expression",
+		"Q4Expression",
+		"RefreshCompletedEventArgs",
+		"Ripple",
+		"SectionInformation",
+		"SelectAllCheckboxChangedEventArgs",
+		"SelectedValueChangedEventArgs",
+		"SelectionChangedEventArgs",
+		"SeriesViewerManipulationEventArgs",
+		"ShapeDataSource",
+		"ShapefileRecord",
+		"ShapeFilterRecordEventArgs",
+		"SliceEventArgs",
+		"SortIndicatorRenderCompletedEventArgs",
+		"Sparkline",
+		"StockChangedEventArgs",
+		"StockPopulateEventArgs",
+		"StyleShapeEventArgs",
+		"Suffix",
+		"SummaryCellInfo",
+		"SummaryChangedEventArgs",
+		"SummaryData",
+		"SummaryResult",
+		"SummaryRow",
+		"SummaryRowRoot",
+		"SummaryRowSection",
+		"TextChangedEventArgs",
+		"ThisMonthExpression",
+		"ThisQuarterExpression",
+		"ThisWeekExpression",
+		"ThisYearExpression",
+		"TileGenerator",
+		"TileGeneratorMapImagery",
+		"TileSeries",
+		"TodayExpression",
+		"TomorrowExpression",
+		"ToolAction",
+		"ToolActionCheckbox",
+		"ToolActionEventDetail",
+		"ToolActionGroupHeader",
+		"ToolActionIconButton",
+		"ToolActionIconMenu",
+		"ToolActionMenuAction",
+		"ToolActionNumberInput",
+		"ToolActionPerformedEventArgs",
+		"ToolActionSeparator",
+		"Toolbar",
+		"ToolCommand",
+		"ToolCommandArgument",
+		"ToolCommandEventArgs",
+		"ToolPanel",
+		"ToolPanelContentRefreshedEventArgs",
+		"TransactionState",
+		"Treemap",
+		"TreemapNodePointerEventArgs",
+		"TreemapNodeStyle",
+		"TreemapNodeStyleMapping",
+		"TreemapNodeStylingEventArgs",
+		"TriangulationDataSource",
+		"TriangulationStatusEventArgs",
+		"UploadDataCompletedEventArgs",
+		"UploadStringCompletedEventArgs",
+		"ValueOverlay",
+		"VerticalSeparatorCellInfo",
+		"VirtualDataSource",
+		"VoidEventArgs",
+		"WebActionStrip",
+		"WebActionStripResourceStrings",
+		"WebActiveNodeChangeEventArgs",
+		"WebActivePaneEventArgs",
+		"WebBadge",
+		"WebBaseEventArgs",
+		"WebBaseExporter",
+		"WebButton",
+		"WebButtonBase",
+		"WebCalendar",
+		"WebCalendarBase",
+		"WebCalendarDateEventArgs",
+		"WebCalendarResourceStrings",
+		"WebCancelableBrowserEventArgs",
+		"WebCancelableEventArgs",
+		"WebCard",
+		"WebCardActions",
+		"WebCardContent",
+		"WebCardHeader",
+		"WebCardMedia",
+		"WebCell",
+		"WebCellType",
+		"WebCheckbox",
+		"WebCheckboxBase",
+		"WebChip",
+		"WebCircularGradient",
+		"WebCircularProgress",
+		"WebColumnComponentEventArgs",
+		"WebColumnExportingEventArgs",
+		"WebColumnMovingEndEventArgs",
+		"WebColumnMovingEventArgs",
+		"WebColumnMovingService",
+		"WebColumnMovingStartEventArgs",
+		"WebColumnPipeArgs",
+		"WebColumnResizeEventArgs",
+		"WebColumnSelectionEventArgs",
+		"WebColumnType",
+		"WebColumnVisibilityChangedEventArgs",
+		"WebColumnVisibilityChangingEventArgs",
+		"WebComponentBoolValueChangedEventArgs",
+		"WebComponentDataValueChangedEventArgs",
+		"WebComponentDateValueChangedEventArgs",
+		"WebContentPane",
+		"WebDataCloneStrategy",
+		"WebDateTimeInput",
+		"WebDensityChangedEventArgs",
+		"WebDisplayDensityBase",
+		"WebDockingIndicator",
+		"WebDockManager",
+		"WebDockManagerLayout",
+		"WebDockManagerPane",
+		"WebDockManagerPoint",
+		"WebDockManagerResourceStrings",
+		"WebDockPaneAction",
+		"WebDocumentHost",
+		"WebDragService",
+		"WebDropdown",
+		"WebDropdownGroup",
+		"WebDropdownHeader",
+		"WebDropdownItem",
+		"WebDropdownItemComponentEventArgs",
+		"WebExpansionPanel",
+		"WebExpansionPanelComponentEventArgs",
+		"WebExporterOptionsBase",
+		"WebFilteringEventArgs",
+		"WebFilteringExpressionsTree",
+		"WebFilteringExpressionsTreeEventArgs",
+		"WebFilteringExpressionsTreeOrFilteringExpression",
+		"WebFilteringExpressionsTreeOrFilteringOperation",
+		"WebFilteringOperand",
+		"WebFilteringOperation",
+		"WebFilteringStrategy",
+		"WebFloatingPaneResizeEventArgs",
+		"WebFloatingPaneResizeMoveEventArgs",
+		"WebFloatPaneAction",
+		"WebForm",
+		"WebFormData",
+		"WebFormDataEventArgs",
+		"WebForOfDataChangingEventArgs",
+		"WebForOfState",
+		"WebForOfStateEventArgs",
+		"WebGrid",
+		"WebGridBaseDirective",
+		"WebGridCellEventArgs",
+		"WebGridCellIdentifier",
+		"WebGridClipboardEvent",
+		"WebGridClipboardEventEventArgs",
+		"WebGridClipboardOptions",
+		"WebGridColumn",
+		"WebGridDataBindable",
+		"WebGridEditDoneEventArgs",
+		"WebGridEditEventArgs",
+		"WebGridGroupingStrategy",
+		"WebGridKeydownEventArgs",
+		"WebGridResourceStrings",
+		"WebGridRow",
+		"WebGridScrollEventArgs",
+		"WebGridSelectionRange",
+		"WebGridSelectionRangeEventArgs",
+		"WebGridServiceType",
+		"WebGridSortingStrategy",
+		"WebGridSummaryOperand",
+		"WebGridSummaryResult",
+		"WebGridToolbarExportEventArgs",
+		"WebGridType",
+		"WebGroupByExpandState",
+		"WebGroupByKey",
+		"WebGroupByRecord",
+		"WebGroupingDoneEventArgs",
+		"WebGroupingExpression",
+		"WebGroupingExpressionEventArgs",
+		"WebIcon",
+		"WebIconButton",
+		"WebInput",
+		"WebInputBase",
+		"WebLinearProgress",
+		"WebList",
+		"WebListHeader",
+		"WebListItem",
+		"WebMaskInput",
+		"WebMaskInputBase",
+		"WebMoveFloatingPaneAction",
+		"WebMoveTabAction",
+		"WebMRLColumnSizeInfo",
+		"WebMRLResizeColumnInfo",
+		"WebNavbar",
+		"WebNavDrawer",
+		"WebNavDrawerHeaderItem",
+		"WebNavDrawerItem",
+		"WebNumberEventArgs",
+		"WebOverlayOutletDirective",
+		"WebOverlaySettings",
+		"WebPageCancellableEventArgs",
+		"WebPageEventArgs",
+		"WebPaginator",
+		"WebPaginatorResourceStrings",
+		"WebPaneCloseEventArgs",
+		"WebPaneDragAction",
+		"WebPaneDragEndEventArgs",
+		"WebPaneDragOverEventArgs",
+		"WebPaneDragStartEventArgs",
+		"WebPaneHeaderConnectionEventArgs",
+		"WebPaneHeaderElement",
+		"WebPanePinnedEventArgs",
+		"WebPathSegment",
+		"WebPinColumnCancellableEventArgs",
+		"WebPinColumnEventArgs",
+		"WebPinningConfig",
+		"WebPinRowEventArgs",
+		"WebPositionSettings",
+		"WebPositionStrategy",
+		"WebProgressBase",
+		"WebRadio",
+		"WebRadioGroup",
+		"WebRangeSlider",
+		"WebRangeSliderValue",
+		"WebRangeSliderValueEventArgs",
+		"WebRating",
+		"WebRatingSymbol",
+		"WebRenderFunction",
+		"WebRipple",
+		"WebRowDataEventArgs",
+		"WebRowDirective",
+		"WebRowDragEndEventArgs",
+		"WebRowDragStartEventArgs",
+		"WebRowExportingEventArgs",
+		"WebRowSelectionEventArgs",
+		"WebRowToggleEventArgs",
+		"WebRowType",
+		"WebScrollStrategy",
+		"WebSearchInfo",
+		"WebSize",
+		"WebSlider",
+		"WebSliderBase",
+		"WebSliderLabel",
+		"WebSnackbar",
+		"WebSortingEventArgs",
+		"WebSortingExpression",
+		"WebSortingExpressionEventArgs",
+		"WebSortingOptions",
+		"WebSortingStrategy",
+		"WebSplitPane",
+		"WebSwitch",
+		"WebComponentValueChangedEventArgs",
+		"WebTab",
+		"WebTabComponentEventArgs",
+		"WebTabGroupPane",
+		"WebTabHeaderConnectionEventArgs",
+		"WebTabHeaderElement",
+		"WebTabPanel",
+		"WebTabs",
+		"WebThemeController",
+		"WebToast",
+		"WebToggleDirective",
+		"WebToggleViewCancelableEventArgs",
+		"WebToggleViewEventArgs",
+		"WebTransactionService",
+		"WebTree",
+		"WebTreeGridRecord",
+		"WebTreeItem",
+		"WebTreeItemComponentEventArgs",
+		"WebTreeSelectionOptionsEventArgs",
+		"WebTreeSelectionOptionsEventDetail",
+		"WebValueChangedEventArgs",
+		"WrapperExpression",
+		"YearToDateExpression",
+		"YesterdayExpression",
+		"FinancialChart",
+		"TemplateColumn",
+		"DataGrid",
+		"ZoomSlider",
+		"ItemLegend",
+		"LegendBase",
+		"Legend",
+		"DoughnutChart",
+		"BulletGraph",
+		"LinearGauge",
+		"CategoryChart",
+		"RadialGauge",
+		"PieChartBase",
+		"RingSeriesBase",
+		"",
+		"EmbeddedRef",
+		"PieChart",
+		"AreaFragment",
+		"BarFragment",
+		"ColumnFragment",
+		"FragmentBase",
+		"HorizontalStackedSeriesBase",
+		"LineFragment",
+		"SplineAreaFragment",
+		"SplineFragment",
+		"SplineFragmentBase",
+		"Stacked100AreaSeries",
+		"Stacked100BarSeries",
+		"Stacked100ColumnSeries",
+		"Stacked100LineSeries",
+		"Stacked100SplineAreaSeries",
+		"Stacked100SplineSeries",
+		"StackedAreaSeries",
+		"StackedBarSeries",
+		"StackedColumnSeries",
+		"StackedFragmentSeries",
+		"StackedLineSeries",
+		"StackedSeriesBase",
+		"StackedSeriesCreatedEventArgs",
+		"StackedSplineAreaSeries",
+		"StackedSplineSeries",
+		"VerticalStackedSeriesBase",
+		"AbsoluteVolumeOscillatorIndicator",
+		"AccumulationDistributionIndicator",
+		"AlignLinearGraphLabelEventArgs",
+		"AlignRadialGaugeLabelEventArgs",
+		"AnchoredCategorySeries",
+		"AnchoredRadialSeries",
+		"AnnotationLayer",
+		"AreaSeries",
+		"AssigningCategoryMarkerStyleEventArgs",
+		"AssigningCategoryStyleEventArgs",
+		"AssigningCategoryStyleEventArgsBase",
+		"AverageDirectionalIndexIndicator",
+		"AverageTrueRangeIndicator",
+		"Axis",
+		"AxisAnnotation",
+		"AxisRangeChangedEventArgs",
+		"BarSeries",
+		"BollingerBandsOverlay",
+		"BollingerBandWidthIndicator",
+		"BrushScale",
+		"BubbleSeries",
+		"CalculatedColumn",
+		"CalloutAnnotation",
+		"CalloutContentUpdatingEventArgs",
+		"CalloutLabelUpdatingEventArgs",
+		"CalloutLayer",
+		"CalloutSeriesSelectingEventArgs",
+		"CalloutStyleUpdatingEventArgs",
+		"CategoryAngleAxis",
+		"CategoryAxisBase",
+		"CategoryDateTimeXAxis",
+		"CategoryHighlightLayer",
+		"CategoryItemHighlightLayer",
+		"CategorySeries",
+		"CategoryToolTipLayer",
+		"CategoryXAxis",
+		"CategoryYAxis",
+		"CellInfo",
+		"CellStyleRequestedEventArgs",
+		"ChaikinOscillatorIndicator",
+		"ChaikinVolatilityIndicator",
+		"ChartCursorEventArgs",
+		"ChartMouseEventArgs",
+		"ChartSeriesEventArgs",
+		"ColorScale",
+		"Column",
+		"ColumnComparisonFilterCondition",
+		"ColumnExchanger",
+		"ColumnFilterCondition",
+		"ColumnFilterConditionGroup",
+		"ColumnGroupDescription",
+		"ColumnPropertySetter",
+		"ColumnSeries",
+		"ColumnSortDescription",
+		"ColumnSupportingCalculation",
+		"ColumnWidth",
+		"CommodityChannelIndexIndicator",
+		"ContourValueResolver",
+		"CrosshairLayer",
+		"CustomContourValueResolver",
+		"CustomContourValueResolverEventArgs",
+		"CustomIndicator",
+		"CustomPaletteBrushScale",
+		"CustomPaletteColorScale",
+		"DataBindingEventArgs",
+		"DataChart",
+		"DataChartMouseButtonEventArgs",
+		"DataContext",
+		"DataSourceDataProviderSchemaChangedEventArgs",
+		"DataSourceSchemaChangedEventArgs",
+		"DataSourceSupportingCalculation",
+		"DateTimeCellInfo",
+		"DateTimeColumn",
+		"DefinitionBase",
+		"DetrendedPriceOscillatorIndicator",
+		"DomainChart",
+		"DomainChartSeriesPointerEventArgs",
+		"EaseOfMovementIndicator",
+		"FastStochasticOscillatorIndicator",
+		"FilterExpression",
+		"FinalValueLayer",
+		"FinancialCalculationDataSource",
+		"FinancialCalculationSupportingCalculations",
+		"FinancialChartCustomIndicatorArgs",
+		"FinancialEventArgs",
+		"FinancialIndicator",
+		"FinancialLegend",
+		"FinancialOverlay",
+		"FinancialPriceSeries",
+		"FinancialSeries",
+		"ForceIndexIndicator",
+		"FormatGroupTextEventArgs",
+		"FormatLinearGraphLabelEventArgs",
+		"FormatRadialGaugeLabelEventArgs",
+		"FullStochasticOscillatorIndicator",
+		"FunctionFilterExpression",
+		"GridAnimationPhaseSettings",
+		"GridAnimationSettings",
+		"GridCellEventArgs",
+		"GridColumnAnimationSettings",
+		"GridColumnsAutoGeneratedEventArgs",
+		"GridFilterDialogFilterChangeEventArgs",
+		"GridFilterDialogOpeningEventArgs",
+		"GridFilterDialogViewModel",
+		"GridFilterDialogViewModelGrouping",
+		"GridFilterDialogViewModelRow",
+		"GridFilterExpressionsEventArgs",
+		"GridSelectedItemsChangedEventArgs",
+		"GridSelectedKeysChangedEventArgs",
+		"GroupData",
+		"Header",
+		"HierarchicalRingSeries",
+		"HighDensityScatterSeries",
+		"HighlightingInfo",
+		"HoleDimensionsChangedEventArgs",
+		"HorizontalAnchoredCategorySeries",
+		"HorizontalRangeCategorySeries",
+		"CellActionManager",
+		"ImageCellInfo",
+		"ImageColumn",
+		"ItemToolTipLayer",
+		"ItemwiseStrategyBasedIndicator",
+		"LabelClickEventArgs",
+		"LegendMouseButtonEventArgs",
+		"LegendMouseEventArgs",
+		"LinearContourValueResolver",
+		"LinearGraphRange",
+		"LineSeries",
+		"LiteralFilterExpression",
+		"DataGridFilterDialog",
+		"DataGridSortIndicator",
+		"MarkerSeries",
+		"MarketFacilitationIndexIndicator",
+		"MassIndexIndicator",
+		"MedianPriceIndicator",
+		"MoneyFlowIndexIndicator",
+		"MovingAverageConvergenceDivergenceIndicator",
+		"NegativeVolumeIndexIndicator",
+		"NumericAngleAxis",
+		"NumericAxisBase",
+		"NumericCellInfo",
+		"NumericColumn",
+		"NumericRadiusAxis",
+		"NumericXAxis",
+		"NumericYAxis",
+		"OnBalanceVolumeIndicator",
+		"OperationFilterExpression",
+		"OrdinalTimeXAxis",
+		"PercentagePriceOscillatorIndicator",
+		"PercentageVolumeOscillatorIndicator",
+		"PercentChangeYAxis",
+		"PieSliceDataContext",
+		"PieSliceOthersContext",
+		"PointSeries",
+		"PolarAreaSeries",
+		"PolarBase",
+		"PolarLineSeries",
+		"PolarLineSeriesBase",
+		"PolarScatterSeries",
+		"PolarSplineAreaSeries",
+		"PolarSplineSeries",
+		"PositiveVolumeIndexIndicator",
+		"PriceChannelOverlay",
+		"PriceVolumeTrendIndicator",
+		"PrimaryKeyValue",
+		"PropertyReferenceFilterExpression",
+		"PropertyUpdatedEventArgs",
+		"RadialAreaSeries",
+		"RadialBase",
+		"RadialColumnSeries",
+		"RadialGaugeRange",
+		"RadialLineSeries",
+		"RadialPieSeries",
+		"RangeAreaSeries",
+		"RangeCategorySeries",
+		"RangeColumnSeries",
+		"RateOfChangeAndMomentumIndicator",
+		"RectChangedEventArgs",
+		"RelativeStrengthIndexIndicator",
+		"RenderRequestedEventArgs",
+		"ResponsivePhase",
+		"ResponsiveState",
+		"ResponsiveStateEnteredEventArgs",
+		"ResponsiveStateEnteringEventArgs",
+		"ResponsiveStateExitedEventArgs",
+		"Ring",
+		"RingSeries",
+		"RowSeparator",
+		"RowSeparatorInfo",
+		"ScaleLegend",
+		"ScalerParams",
+		"ScatterAreaSeries",
+		"ScatterBase",
+		"ScatterContourSeries",
+		"ScatterLineSeries",
+		"ScatterPolygonSeries",
+		"ScatterPolylineSeries",
+		"ScatterSeries",
+		"ScatterSplineSeries",
+		"ScatterTriangulationSeries",
+		"SectionFooter",
+		"SectionHeader",
+		"SectionHeaderCellInfo",
+		"SelectedItemChangedEventArgs",
+		"SelectedItemChangingEventArgs",
+		"SelectedItemsChangedEventArgs",
+		"SelectedItemsChangingEventArgs",
+		"Series",
+		"SeriesViewer",
+		"ShapeSeriesBase",
+		"SizeScale",
+		"SliceClickEventArgs",
+		"SlowStochasticOscillatorIndicator",
+		"SortDescription",
+		"SplineAreaSeries",
+		"SplineSeries",
+		"SplineSeriesBase",
+		"StandardDeviationIndicator",
+		"StepAreaSeries",
+		"StepLineSeries",
+		"StochRSIIndicator",
+		"StraightNumericAxisBase",
+		"StrategyBasedIndicator",
+		"Style",
+		"StyleSelector",
+		"TemplateCellInfo",
+		"TemplateCellUpdatingEventArgs",
+		"TemplateHeader",
+		"TemplateHeaderCellInfo",
+		"TemplateHeaderCellUpdatingEventArgs",
+		"TemplateSectionHeader",
+		"TemplateSectionHeaderCellInfo",
+		"TemplateSectionHeaderCellUpdatingEventArgs",
+		"TextCellInfo",
+		"TextColumn",
+		"TextHeader",
+		"TextHeaderCellInfo",
+		"TimeAxisBase",
+		"TimeAxisBreak",
+		"TimeAxisInterval",
+		"TimeAxisLabelFormat",
+		"TimeXAxis",
+		"TRIXIndicator",
+		"TypicalPriceIndicator",
+		"UltimateOscillatorIndicator",
+		"ValueBrushScale",
+		"VerticalAnchoredCategorySeries",
+		"WaterfallSeries",
+		"WeightedCloseIndicator",
+		"WilliamsPercentRIndicator",
+		"XYChart",
+		"ZoomSliderResolvingAxisValueEventArgs",
+		"WebAccordion",
+		"WebAvatar"
+	],
+	"containingModules": {
+		"ArcGISOnlineMapImagery": [
+			"ArcGISOnlineMapImageryModule",
+			"GeographicMapCoreModule",
+			"GeographicMapModule"
+		],
+		"BingMapsMapImagery": [
+			"BingMapsMapImageryModule",
+			"GeographicMapCoreModule",
+			"GeographicMapModule"
+		],
+		"FormatLinearGraphLabelEventArgs": [
+			"BulletGraphCoreModule",
+			"BulletGraphModule",
+			"LinearGaugeCoreModule",
+			"LinearGaugeModule"
+		],
+		"AlignLinearGraphLabelEventArgs": [
+			"BulletGraphCoreModule",
+			"BulletGraphModule",
+			"LinearGaugeCoreModule",
+			"LinearGaugeModule"
+		],
+		"BulletGraph": [
+			"BulletGraphCoreModule",
+			"BulletGraphModule"
+		],
+		"LinearGraphRange": [
+			"BulletGraphCoreModule",
+			"BulletGraphModule",
+			"LinearGaugeCoreModule",
+			"LinearGaugeModule",
+			"LinearGraphRangeModule"
+		],
+		"FormatSpecifier": [
+			"BulletGraphCoreModule",
+			"BulletGraphModule",
+			"CheckboxListModule",
+			"ColumnChooserModule",
+			"ColumnPinningModule",
+			"DataChartCategoryCoreModule",
+			"DataChartCategoryModule",
+			"DataChartCoreModule",
+			"DataChartExtendedAxesModule",
+			"DataChartFinancialCoreModule",
+			"DataChartFinancialIndicatorsModule",
+			"DataChartFinancialModule",
+			"DataChartFinancialOverlaysModule",
+			"DataChartPolarCoreModule",
+			"DataChartPolarModule",
+			"DataChartRadialCoreModule",
+			"DataChartRadialModule",
+			"DataChartScatterCoreModule",
+			"DataChartScatterModule",
+			"DataChartShapeCoreModule",
+			"DataChartShapeModule",
+			"DataChartStackedModule",
+			"DataChartVerticalCategoryCoreModule",
+			"DataChartVerticalCategoryModule",
+			"DataGridAllColumnsModule",
+			"DataGridCoreModule",
+			"DataGridModule",
+			"DataGridToolbarModule",
+			"DateTimeFormatSpecifierModule",
+			"FormatSpecifierModule",
+			"FunnelChartCoreModule",
+			"FunnelChartModule",
+			"GridColumnFilterOptionsModule",
+			"GridColumnOptionsModule",
+			"GridColumnSummaryOptionsModule",
+			"LinearGaugeCoreModule",
+			"LinearGaugeModule",
+			"MultiColumnComboBoxModule",
+			"NumberFormatSpecifierModule",
+			"PieChartCoreModule",
+			"PieChartModule",
+			"PropertyEditorModule",
+			"RadialGaugeCoreModule",
+			"RadialGaugeModule",
+			"SparklineCoreModule",
+			"SparklineModule"
+		],
+		"NumberFormatSpecifier": [
+			"BulletGraphCoreModule",
+			"BulletGraphModule",
+			"CheckboxListModule",
+			"ColumnChooserModule",
+			"ColumnPinningModule",
+			"DataChartCategoryCoreModule",
+			"DataChartCategoryModule",
+			"DataChartCoreModule",
+			"DataChartExtendedAxesModule",
+			"DataChartFinancialCoreModule",
+			"DataChartFinancialIndicatorsModule",
+			"DataChartFinancialModule",
+			"DataChartFinancialOverlaysModule",
+			"DataChartPolarCoreModule",
+			"DataChartPolarModule",
+			"DataChartRadialCoreModule",
+			"DataChartRadialModule",
+			"DataChartScatterCoreModule",
+			"DataChartScatterModule",
+			"DataChartShapeCoreModule",
+			"DataChartShapeModule",
+			"DataChartStackedModule",
+			"DataChartVerticalCategoryCoreModule",
+			"DataChartVerticalCategoryModule",
+			"DataGridAllColumnsModule",
+			"DataGridCoreModule",
+			"DataGridModule",
+			"DataGridToolbarModule",
+			"FunnelChartCoreModule",
+			"FunnelChartModule",
+			"GridColumnFilterOptionsModule",
+			"GridColumnOptionsModule",
+			"GridColumnSummaryOptionsModule",
+			"LinearGaugeCoreModule",
+			"LinearGaugeModule",
+			"MultiColumnComboBoxModule",
+			"NumberFormatSpecifierModule",
+			"PieChartCoreModule",
+			"PieChartModule",
+			"PropertyEditorModule",
+			"RadialGaugeCoreModule",
+			"RadialGaugeModule",
+			"SparklineCoreModule",
+			"SparklineModule"
+		],
+		"Ripple": [
+			"ButtonGroupModule",
+			"ButtonModule",
+			"CalendarModule",
+			"CheckboxListModule",
+			"CheckboxModule",
+			"ColumnChooserModule",
+			"ColumnPinningModule",
+			"DataGridModule",
+			"DataGridPagerModule",
+			"DataGridToolbarModule",
+			"DatePickerModule",
+			"GridColumnFilterOptionsModule",
+			"GridColumnOptionsModule",
+			"GridColumnSummaryOptionsModule",
+			"PropertyEditorModule",
+			"RippleModule"
+		],
+		"ButtonClickEventArgs": [
+			"ButtonGroupModule",
+			"ButtonModule",
+			"CalendarModule",
+			"ColumnChooserModule",
+			"DataGridModule",
+			"DataGridPagerModule",
+			"DataGridToolbarModule",
+			"DatePickerModule",
+			"PropertyEditorModule"
+		],
+		"Button": [
+			"ButtonGroupModule",
+			"ButtonModule",
+			"CalendarModule",
+			"ColumnChooserModule",
+			"DataGridModule",
+			"DataGridPagerModule",
+			"DataGridToolbarModule",
+			"DatePickerModule",
+			"PropertyEditorModule"
+		],
+		"ButtonGroupSelectionChangedEventArgs": [
+			"ButtonGroupModule"
+		],
+		"ButtonGroup": [
+			"ButtonGroupModule"
+		],
+		"Icon": [
+			"CalendarModule",
+			"DataGridModule",
+			"DataGridToolbarModule",
+			"DatePickerModule",
+			"IconModule"
+		],
+		"SelectedValueChangedEventArgs": [
+			"CalendarModule",
+			"DatePickerModule"
+		],
+		"Calendar": [
+			"CalendarModule",
+			"DatePickerModule"
+		],
+		"CategoryChart": [
+			"CategoryChartCoreModule",
+			"CategoryChartModule"
+		],
+		"CategoryXAxis": [
+			"CategoryChartCoreModule",
+			"CategoryChartModule",
+			"DataChartCategoryCoreModule",
+			"DataChartCategoryModule",
+			"DataChartExtendedAxesModule",
+			"DataChartFinancialCoreModule",
+			"DataChartFinancialIndicatorsModule",
+			"DataChartFinancialModule",
+			"DataChartFinancialOverlaysModule",
+			"DataChartStackedModule",
+			"FinancialChartModule",
+			"CategoryXAxisModule",
+			"OrdinalTimeXAxisModule"
+		],
+		"NumericYAxis": [
+			"CategoryChartCoreModule",
+			"CategoryChartModule",
+			"DataChartCategoryCoreModule",
+			"DataChartCategoryModule",
+			"DataChartFinancialCoreModule",
+			"DataChartFinancialIndicatorsModule",
+			"DataChartFinancialModule",
+			"DataChartFinancialOverlaysModule",
+			"DataChartScatterCoreModule",
+			"DataChartScatterModule",
+			"DataChartShapeCoreModule",
+			"DataChartShapeModule",
+			"DataChartStackedModule",
+			"FinancialChartModule",
+			"NumericYAxisModule",
+			"PercentChangeYAxisModule"
+		],
+		"LineSeries": [
+			"CategoryChartModule",
+			"DataChartCategoryModule",
+			"FinancialChartModule",
+			"LineSeriesModule"
+		],
+		"AreaSeries": [
+			"CategoryChartModule",
+			"DataChartCategoryModule",
+			"FinancialChartModule",
+			"AreaSeriesModule"
+		],
+		"ColumnSeries": [
+			"CategoryChartModule",
+			"DataChartCategoryModule",
+			"FinancialChartModule",
+			"ColumnSeriesModule"
+		],
+		"SplineSeries": [
+			"CategoryChartModule",
+			"DataChartCategoryModule",
+			"SplineSeriesModule"
+		],
+		"SplineAreaSeries": [
+			"CategoryChartModule",
+			"DataChartCategoryModule",
+			"SplineAreaSeriesModule"
+		],
+		"StepLineSeries": [
+			"CategoryChartModule",
+			"DataChartCategoryModule",
+			"StepLineSeriesModule"
+		],
+		"StepAreaSeries": [
+			"CategoryChartModule",
+			"DataChartCategoryModule",
+			"StepAreaSeriesModule"
+		],
+		"PointSeries": [
+			"CategoryChartModule",
+			"DataChartCategoryModule",
+			"PointSeriesModule"
+		],
+		"WaterfallSeries": [
+			"CategoryChartModule",
+			"DataChartCategoryModule",
+			"WaterfallSeriesModule"
+		],
+		"CrosshairLayer": [
+			"CategoryChartModule",
+			"DataChartAnnotationModule",
+			"FinancialChartModule",
+			"CrosshairLayerModule"
+		],
+		"RenderRequestedEventArgs": [
+			"CategoryChartModule",
+			"DataChartAnnotationModule",
+			"FinancialChartCoreModule",
+			"FinancialChartModule",
+			"CalloutLayerModule"
+		],
+		"Series": [
+			"CategoryChartModule",
+			"DataChartAnnotationModule",
+			"FinancialChartCoreModule",
+			"FinancialChartModule",
+			"CalloutLayerModule"
+		],
+		"CalloutStyleUpdatingEventArgs": [
+			"CategoryChartModule",
+			"DataChartAnnotationModule",
+			"FinancialChartModule",
+			"CalloutLayerModule"
+		],
+		"CalloutRenderStyleUpdatingEventArgs": [
+			"CategoryChartModule",
+			"DataChartAnnotationModule",
+			"FinancialChartModule",
+			"CalloutLayerModule"
+		],
+		"CalloutContentUpdatingEventArgs": [
+			"CategoryChartModule",
+			"DataChartAnnotationModule",
+			"FinancialChartModule",
+			"CalloutLayerModule"
+		],
+		"CalloutLabelUpdatingEventArgs": [
+			"CategoryChartModule",
+			"DataChartAnnotationModule",
+			"FinancialChartModule",
+			"CalloutLayerModule"
+		],
+		"CalloutSeriesSelectingEventArgs": [
+			"CategoryChartModule",
+			"DataChartAnnotationModule",
+			"FinancialChartModule",
+			"CalloutLayerModule"
+		],
+		"CalloutLayer": [
+			"CategoryChartModule",
+			"DataChartAnnotationModule",
+			"FinancialChartModule",
+			"CalloutLayerModule"
+		],
+		"ItemToolTipLayer": [
+			"CategoryChartModule",
+			"DataChartAnnotationModule",
+			"FinancialChartModule",
+			"ItemToolTipLayerModule"
+		],
+		"CategoryToolTipLayer": [
+			"CategoryChartModule",
+			"DataChartAnnotationModule",
+			"FinancialChartModule",
+			"CategoryToolTipLayerModule"
+		],
+		"CategoryHighlightLayer": [
+			"CategoryChartModule",
+			"DataChartAnnotationModule",
+			"FinancialChartModule",
+			"CategoryHighlightLayerModule"
+		],
+		"CategoryItemHighlightLayer": [
+			"CategoryChartModule",
+			"DataChartAnnotationModule",
+			"FinancialChartModule",
+			"CategoryItemHighlightLayerModule"
+		],
+		"DataToolTipLayer": [
+			"CategoryChartModule",
+			"DataChartAnnotationModule",
+			"DataToolTipLayerModule",
+			"FinancialChartModule"
+		],
+		"FinalValueLayer": [
+			"CategoryChartModule",
+			"DataChartAnnotationModule",
+			"FinancialChartModule",
+			"FinalValueLayerModule"
+		],
+		"PrimaryKeyValue": [
+			"CellKeyModule",
+			"CheckboxListModule",
+			"ColumnChooserModule",
+			"ColumnPinningModule",
+			"DataGridAllColumnsModule",
+			"DataGridCoreModule",
+			"DataGridModule",
+			"DataGridToolbarModule",
+			"GridColumnFilterOptionsModule",
+			"GridColumnOptionsModule",
+			"GridColumnSummaryOptionsModule",
+			"MultiColumnComboBoxModule",
+			"PropertyEditorModule",
+			"PrimaryKeyValueModule"
+		],
+		"CellKey": [
+			"CellKeyModule",
+			"CheckboxListModule",
+			"ColumnChooserModule",
+			"ColumnPinningModule",
+			"DataGridAllColumnsModule",
+			"DataGridCoreModule",
+			"DataGridModule",
+			"DataGridToolbarModule",
+			"GridColumnFilterOptionsModule",
+			"GridColumnOptionsModule",
+			"GridColumnSummaryOptionsModule",
+			"MultiColumnComboBoxModule",
+			"PropertyEditorModule"
+		],
+		"CellRange": [
+			"CellRangeModule",
+			"CheckboxListModule",
+			"ColumnChooserModule",
+			"ColumnPinningModule",
+			"DataGridAllColumnsModule",
+			"DataGridCoreModule",
+			"DataGridModule",
+			"DataGridToolbarModule",
+			"GridColumnFilterOptionsModule",
+			"GridColumnOptionsModule",
+			"GridColumnSummaryOptionsModule",
+			"MultiColumnComboBoxModule",
+			"PropertyEditorModule"
+		],
+		"ChartSortDescription": [
+			"ChartGroupDescriptionModule",
+			"ChartSortDescriptionModule"
+		],
+		"ChartGroupDescription": [
+			"ChartGroupDescriptionModule"
+		],
+		"ProvideCalculatorEventArgs": [
+			"ChartSummaryDescriptionModule",
+			"CheckboxListModule",
+			"ColumnChooserModule",
+			"ColumnPinningModule",
+			"ColumnSummaryDescriptionModule",
+			"DataGridAllColumnsModule",
+			"DataGridCoreModule",
+			"DataGridModule",
+			"DataGridToolbarModule",
+			"GridColumnFilterOptionsModule",
+			"GridColumnOptionsModule",
+			"GridColumnSummaryOptionsModule",
+			"MultiColumnComboBoxModule",
+			"PropertyEditorModule"
+		],
+		"ChartSummaryDescription": [
+			"ChartSummaryDescriptionModule"
+		],
+		"TextHeader": [
+			"CheckboxListModule",
+			"ColumnChooserModule",
+			"ColumnPinningModule",
+			"DataGridAllColumnsModule",
+			"DataGridCoreModule",
+			"DataGridModule",
+			"DataGridToolbarModule",
+			"GridColumnFilterOptionsModule",
+			"GridColumnOptionsModule",
+			"GridColumnSummaryOptionsModule",
+			"MultiColumnComboBoxModule",
+			"PropertyEditorModule",
+			"TextHeaderModule"
+		],
+		"SectionHeader": [
+			"CheckboxListModule",
+			"ColumnChooserModule",
+			"ColumnPinningModule",
+			"DataGridAllColumnsModule",
+			"DataGridCoreModule",
+			"DataGridModule",
+			"DataGridToolbarModule",
+			"GridColumnFilterOptionsModule",
+			"GridColumnOptionsModule",
+			"GridColumnSummaryOptionsModule",
+			"MultiColumnComboBoxModule",
+			"PropertyEditorModule",
+			"SectionHeaderModule",
+			"TemplateSectionHeaderModule"
+		],
+		"RowSeparator": [
+			"CheckboxListModule",
+			"ColumnChooserModule",
+			"ColumnPinningModule",
+			"DataGridAllColumnsModule",
+			"DataGridCoreModule",
+			"DataGridModule",
+			"DataGridToolbarModule",
+			"GridColumnFilterOptionsModule",
+			"GridColumnOptionsModule",
+			"GridColumnSummaryOptionsModule",
+			"MultiColumnComboBoxModule",
+			"PropertyEditorModule",
+			"RowSeparatorModule"
+		],
+		"HeaderSeparator": [
+			"CheckboxListModule",
+			"ColumnChooserModule",
+			"ColumnPinningModule",
+			"DataGridAllColumnsModule",
+			"DataGridCoreModule",
+			"DataGridModule",
+			"DataGridToolbarModule",
+			"GridColumnFilterOptionsModule",
+			"GridColumnOptionsModule",
+			"GridColumnSummaryOptionsModule",
+			"HeaderSeparatorModule",
+			"MultiColumnComboBoxModule",
+			"PropertyEditorModule"
+		],
+		"ColumnResizingSeparator": [
+			"CheckboxListModule",
+			"ColumnChooserModule",
+			"ColumnPinningModule",
+			"ColumnResizingSeparatorModule",
+			"DataGridAllColumnsModule",
+			"DataGridCoreModule",
+			"DataGridModule",
+			"DataGridToolbarModule",
+			"GridColumnFilterOptionsModule",
+			"GridColumnOptionsModule",
+			"GridColumnSummaryOptionsModule",
+			"MultiColumnComboBoxModule",
+			"PropertyEditorModule"
+		],
+		"ColumnMovingSeparator": [
+			"CheckboxListModule",
+			"ColumnChooserModule",
+			"ColumnMovingSeparatorModule",
+			"ColumnPinningModule",
+			"DataGridAllColumnsModule",
+			"DataGridCoreModule",
+			"DataGridModule",
+			"DataGridToolbarModule",
+			"GridColumnFilterOptionsModule",
+			"GridColumnOptionsModule",
+			"GridColumnSummaryOptionsModule",
+			"MultiColumnComboBoxModule",
+			"PropertyEditorModule"
+		],
+		"SummaryRowRoot": [
+			"CheckboxListModule",
+			"ColumnChooserModule",
+			"ColumnPinningModule",
+			"DataGridAllColumnsModule",
+			"DataGridCoreModule",
+			"DataGridModule",
+			"DataGridToolbarModule",
+			"GridColumnFilterOptionsModule",
+			"GridColumnOptionsModule",
+			"GridColumnSummaryOptionsModule",
+			"MultiColumnComboBoxModule",
+			"PropertyEditorModule",
+			"SummaryRowRootModule"
+		],
+		"SummaryRowSection": [
+			"CheckboxListModule",
+			"ColumnChooserModule",
+			"ColumnPinningModule",
+			"DataGridAllColumnsModule",
+			"DataGridCoreModule",
+			"DataGridModule",
+			"DataGridToolbarModule",
+			"GridColumnFilterOptionsModule",
+			"GridColumnOptionsModule",
+			"GridColumnSummaryOptionsModule",
+			"MultiColumnComboBoxModule",
+			"PropertyEditorModule",
+			"SummaryRowSectionModule"
+		],
+		"ColumnWidth": [
+			"CheckboxListModule",
+			"ColumnChooserModule",
+			"ColumnPinningModule",
+			"DataGridAllColumnsModule",
+			"DataGridCoreModule",
+			"DataGridModule",
+			"DataGridToolbarModule",
+			"FilterOperandModule",
+			"GridColumnFilterOptionsModule",
+			"GridColumnOptionsModule",
+			"GridColumnSummaryOptionsModule",
+			"MultiColumnComboBoxModule",
+			"PropertyEditorModule",
+			"ColumnWidthModule"
+		],
+		"ColumnSortDescription": [
+			"CheckboxListModule",
+			"ColumnChooserModule",
+			"ColumnPinningModule",
+			"DataGridAllColumnsModule",
+			"DataGridCoreModule",
+			"DataGridModule",
+			"DataGridToolbarModule",
+			"GridColumnFilterOptionsModule",
+			"GridColumnOptionsModule",
+			"GridColumnSummaryOptionsModule",
+			"MultiColumnComboBoxModule",
+			"PropertyEditorModule",
+			"ColumnGroupDescriptionModule",
+			"ColumnSortDescriptionModule"
+		],
+		"FormatGroupTextEventArgs": [
+			"CheckboxListModule",
+			"ColumnChooserModule",
+			"ColumnPinningModule",
+			"DataGridAllColumnsModule",
+			"DataGridCoreModule",
+			"DataGridModule",
+			"DataGridToolbarModule",
+			"GridColumnFilterOptionsModule",
+			"GridColumnOptionsModule",
+			"GridColumnSummaryOptionsModule",
+			"MultiColumnComboBoxModule",
+			"PropertyEditorModule",
+			"ColumnGroupDescriptionModule"
+		],
+		"ColumnGroupDescription": [
+			"CheckboxListModule",
+			"ColumnChooserModule",
+			"ColumnPinningModule",
+			"DataGridAllColumnsModule",
+			"DataGridCoreModule",
+			"DataGridModule",
+			"DataGridToolbarModule",
+			"GridColumnFilterOptionsModule",
+			"GridColumnOptionsModule",
+			"GridColumnSummaryOptionsModule",
+			"MultiColumnComboBoxModule",
+			"PropertyEditorModule",
+			"ColumnGroupDescriptionModule"
+		],
+		"FormatSummaryTextEventArgs": [
+			"CheckboxListModule",
+			"ColumnChooserModule",
+			"ColumnPinningModule",
+			"ColumnSummaryDescriptionModule",
+			"DataGridAllColumnsModule",
+			"DataGridCoreModule",
+			"DataGridModule",
+			"DataGridToolbarModule",
+			"GridColumnFilterOptionsModule",
+			"GridColumnOptionsModule",
+			"GridColumnSummaryOptionsModule",
+			"MultiColumnComboBoxModule",
+			"PropertyEditorModule"
+		],
+		"ColumnSummaryDescription": [
+			"CheckboxListModule",
+			"ColumnChooserModule",
+			"ColumnPinningModule",
+			"ColumnSummaryDescriptionModule",
+			"DataGridAllColumnsModule",
+			"DataGridCoreModule",
+			"DataGridModule",
+			"DataGridToolbarModule",
+			"GridColumnFilterOptionsModule",
+			"GridColumnOptionsModule",
+			"GridColumnSummaryOptionsModule",
+			"MultiColumnComboBoxModule",
+			"PropertyEditorModule"
+		],
+		"GridCellPosition": [
+			"CheckboxListModule",
+			"ColumnChooserModule",
+			"ColumnPinningModule",
+			"DataGridAllColumnsModule",
+			"DataGridCoreModule",
+			"DataGridModule",
+			"DataGridToolbarModule",
+			"GridCellPositionModule",
+			"GridColumnFilterOptionsModule",
+			"GridColumnOptionsModule",
+			"GridColumnSummaryOptionsModule",
+			"MultiColumnComboBoxModule",
+			"PropertyEditorModule"
+		],
+		"LocalDataSource": [
+			"CheckboxListModule",
+			"ColumnChooserModule",
+			"ColumnPinningModule",
+			"DataGridAllColumnsModule",
+			"DataGridCoreModule",
+			"DataGridModule",
+			"DataGridToolbarModule",
+			"GridColumnFilterOptionsModule",
+			"GridColumnOptionsModule",
+			"GridColumnSummaryOptionsModule",
+			"LocalDataSourceModule",
+			"MultiColumnComboBoxModule",
+			"PropertyEditorModule"
+		],
+		"LiteralFilterExpression": [
+			"CheckboxListModule",
+			"ColumnChooserModule",
+			"ColumnPinningModule",
+			"DataGridAllColumnsModule",
+			"DataGridCoreModule",
+			"DataGridModule",
+			"DataGridToolbarModule",
+			"GridColumnFilterOptionsModule",
+			"GridColumnOptionsModule",
+			"GridColumnSummaryOptionsModule",
+			"LocalDataSourceModule",
+			"MultiColumnComboBoxModule",
+			"PropertyEditorModule"
+		],
+		"PropertyReferenceFilterExpression": [
+			"CheckboxListModule",
+			"ColumnChooserModule",
+			"ColumnPinningModule",
+			"DataGridAllColumnsModule",
+			"DataGridCoreModule",
+			"DataGridModule",
+			"DataGridToolbarModule",
+			"GridColumnFilterOptionsModule",
+			"GridColumnOptionsModule",
+			"GridColumnSummaryOptionsModule",
+			"LocalDataSourceModule",
+			"MultiColumnComboBoxModule",
+			"PropertyEditorModule"
+		],
+		"FilterExpression": [
+			"CheckboxListModule",
+			"ColumnChooserModule",
+			"ColumnPinningModule",
+			"DataGridAllColumnsModule",
+			"DataGridCoreModule",
+			"DataGridModule",
+			"DataGridToolbarModule",
+			"FilterOperandModule",
+			"GridColumnFilterOptionsModule",
+			"GridColumnOptionsModule",
+			"GridColumnSummaryOptionsModule",
+			"LocalDataSourceModule",
+			"MultiColumnComboBoxModule",
+			"PropertyEditorModule"
+		],
+		"OperationFilterExpression": [
+			"CheckboxListModule",
+			"ColumnChooserModule",
+			"ColumnPinningModule",
+			"DataGridAllColumnsModule",
+			"DataGridCoreModule",
+			"DataGridModule",
+			"DataGridToolbarModule",
+			"GridColumnFilterOptionsModule",
+			"GridColumnOptionsModule",
+			"GridColumnSummaryOptionsModule",
+			"LocalDataSourceModule",
+			"MultiColumnComboBoxModule",
+			"PropertyEditorModule"
+		],
+		"FunctionFilterExpression": [
+			"CheckboxListModule",
+			"ColumnChooserModule",
+			"ColumnPinningModule",
+			"DataGridAllColumnsModule",
+			"DataGridCoreModule",
+			"DataGridModule",
+			"DataGridToolbarModule",
+			"GridColumnFilterOptionsModule",
+			"GridColumnOptionsModule",
+			"GridColumnSummaryOptionsModule",
+			"LocalDataSourceModule",
+			"MultiColumnComboBoxModule",
+			"PropertyEditorModule"
+		],
+		"DateTimeFormatSpecifier": [
+			"CheckboxListModule",
+			"ColumnChooserModule",
+			"ColumnPinningModule",
+			"DataChartCategoryCoreModule",
+			"DataChartCategoryModule",
+			"DataChartCoreModule",
+			"DataChartExtendedAxesModule",
+			"DataChartFinancialCoreModule",
+			"DataChartFinancialIndicatorsModule",
+			"DataChartFinancialModule",
+			"DataChartFinancialOverlaysModule",
+			"DataChartPolarCoreModule",
+			"DataChartPolarModule",
+			"DataChartRadialCoreModule",
+			"DataChartRadialModule",
+			"DataChartScatterCoreModule",
+			"DataChartScatterModule",
+			"DataChartShapeCoreModule",
+			"DataChartShapeModule",
+			"DataChartStackedModule",
+			"DataChartVerticalCategoryCoreModule",
+			"DataChartVerticalCategoryModule",
+			"DataGridAllColumnsModule",
+			"DataGridCoreModule",
+			"DataGridModule",
+			"DataGridToolbarModule",
+			"DateTimeFormatSpecifierModule",
+			"FunnelChartCoreModule",
+			"FunnelChartModule",
+			"GridColumnFilterOptionsModule",
+			"GridColumnOptionsModule",
+			"GridColumnSummaryOptionsModule",
+			"MultiColumnComboBoxModule",
+			"PieChartCoreModule",
+			"PieChartModule",
+			"PropertyEditorModule",
+			"SparklineCoreModule",
+			"SparklineModule"
+		],
+		"HeaderRowSeparator": [
+			"CheckboxListModule",
+			"ColumnChooserModule",
+			"ColumnPinningModule",
+			"DataGridAllColumnsModule",
+			"DataGridCoreModule",
+			"DataGridModule",
+			"DataGridToolbarModule",
+			"GridColumnFilterOptionsModule",
+			"GridColumnOptionsModule",
+			"GridColumnSummaryOptionsModule",
+			"HeaderRowSeparatorModule",
+			"MultiColumnComboBoxModule",
+			"PropertyEditorModule"
+		],
+		"PinnedAreaSeparator": [
+			"CheckboxListModule",
+			"ColumnChooserModule",
+			"ColumnPinningModule",
+			"DataGridAllColumnsModule",
+			"DataGridCoreModule",
+			"DataGridModule",
+			"DataGridToolbarModule",
+			"GridColumnFilterOptionsModule",
+			"GridColumnOptionsModule",
+			"GridColumnSummaryOptionsModule",
+			"MultiColumnComboBoxModule",
+			"PinnedAreaSeparatorModule",
+			"PropertyEditorModule"
+		],
+		"GridAnimationSettings": [
+			"CheckboxListModule",
+			"ColumnChooserModule",
+			"ColumnPinningModule",
+			"DataGridAllColumnsModule",
+			"DataGridCoreModule",
+			"DataGridModule",
+			"DataGridToolbarModule",
+			"GridColumnFilterOptionsModule",
+			"GridColumnOptionsModule",
+			"GridColumnSummaryOptionsModule",
+			"MultiColumnComboBoxModule",
+			"PropertyEditorModule"
+		],
+		"GridFilterExpressionsEventArgs": [
+			"CheckboxListModule",
+			"ColumnChooserModule",
+			"ColumnPinningModule",
+			"DataGridAllColumnsModule",
+			"DataGridCoreModule",
+			"DataGridModule",
+			"DataGridToolbarModule",
+			"GridColumnFilterOptionsModule",
+			"GridColumnOptionsModule",
+			"GridColumnSummaryOptionsModule",
+			"MultiColumnComboBoxModule",
+			"PropertyEditorModule"
+		],
+		"CellInfo": [
+			"CheckboxListModule",
+			"ColumnChooserModule",
+			"ColumnPinningModule",
+			"DataGridAllColumnsModule",
+			"DataGridCoreModule",
+			"DataGridModule",
+			"DataGridToolbarModule",
+			"GridColumnFilterOptionsModule",
+			"GridColumnOptionsModule",
+			"GridColumnSummaryOptionsModule",
+			"MultiColumnComboBoxModule",
+			"PropertyEditorModule"
+		],
+		"DataGrid": [
+			"CheckboxListModule",
+			"ColumnChooserModule",
+			"ColumnPinningModule",
+			"DataGridAllColumnsModule",
+			"DataGridCoreModule",
+			"DataGridModule",
+			"DataGridToolbarModule",
+			"GridColumnFilterOptionsModule",
+			"GridColumnOptionsModule",
+			"GridColumnSummaryOptionsModule",
+			"MultiColumnComboBoxModule",
+			"PropertyEditorModule"
+		],
+		"GridCellEventArgs": [
+			"CheckboxListModule",
+			"ColumnChooserModule",
+			"ColumnPinningModule",
+			"DataGridAllColumnsModule",
+			"DataGridCoreModule",
+			"DataGridModule",
+			"DataGridToolbarModule",
+			"GridColumnFilterOptionsModule",
+			"GridColumnOptionsModule",
+			"GridColumnSummaryOptionsModule",
+			"MultiColumnComboBoxModule",
+			"PropertyEditorModule"
+		],
+		"GridSortDescriptionsChangedEventArgs": [
+			"CheckboxListModule",
+			"ColumnChooserModule",
+			"ColumnPinningModule",
+			"DataGridAllColumnsModule",
+			"DataGridCoreModule",
+			"DataGridModule",
+			"DataGridToolbarModule",
+			"GridColumnFilterOptionsModule",
+			"GridColumnOptionsModule",
+			"GridColumnSummaryOptionsModule",
+			"MultiColumnComboBoxModule",
+			"PropertyEditorModule"
+		],
+		"GridGroupDescriptionsChangedEventArgs": [
+			"CheckboxListModule",
+			"ColumnChooserModule",
+			"ColumnPinningModule",
+			"DataGridAllColumnsModule",
+			"DataGridCoreModule",
+			"DataGridModule",
+			"DataGridToolbarModule",
+			"GridColumnFilterOptionsModule",
+			"GridColumnOptionsModule",
+			"GridColumnSummaryOptionsModule",
+			"MultiColumnComboBoxModule",
+			"PropertyEditorModule"
+		],
+		"GridSummaryDescriptionsChangedEventArgs": [
+			"CheckboxListModule",
+			"ColumnChooserModule",
+			"ColumnPinningModule",
+			"DataGridAllColumnsModule",
+			"DataGridCoreModule",
+			"DataGridModule",
+			"DataGridToolbarModule",
+			"GridColumnFilterOptionsModule",
+			"GridColumnOptionsModule",
+			"GridColumnSummaryOptionsModule",
+			"MultiColumnComboBoxModule",
+			"PropertyEditorModule"
+		],
+		"GridColumnAnimationSettings": [
+			"CheckboxListModule",
+			"ColumnChooserModule",
+			"ColumnPinningModule",
+			"DataGridAllColumnsModule",
+			"DataGridCoreModule",
+			"DataGridModule",
+			"DataGridToolbarModule",
+			"FilterOperandModule",
+			"GridColumnFilterOptionsModule",
+			"GridColumnOptionsModule",
+			"GridColumnSummaryOptionsModule",
+			"MultiColumnComboBoxModule",
+			"PropertyEditorModule"
+		],
+		"ColumnFilterCondition": [
+			"CheckboxListModule",
+			"ColumnChooserModule",
+			"ColumnPinningModule",
+			"DataGridAllColumnsModule",
+			"DataGridCoreModule",
+			"DataGridModule",
+			"DataGridToolbarModule",
+			"FilterOperandModule",
+			"GridColumnFilterOptionsModule",
+			"GridColumnOptionsModule",
+			"GridColumnSummaryOptionsModule",
+			"MultiColumnComboBoxModule",
+			"PropertyEditorModule"
+		],
+		"Header": [
+			"CheckboxListModule",
+			"ColumnChooserModule",
+			"ColumnPinningModule",
+			"DataGridAllColumnsModule",
+			"DataGridCoreModule",
+			"DataGridModule",
+			"DataGridToolbarModule",
+			"FilterOperandModule",
+			"GridColumnFilterOptionsModule",
+			"GridColumnOptionsModule",
+			"GridColumnSummaryOptionsModule",
+			"MultiColumnComboBoxModule",
+			"PropertyEditorModule"
+		],
+		"Column": [
+			"CheckboxListModule",
+			"ColumnChooserModule",
+			"ColumnPinningModule",
+			"DataGridAllColumnsModule",
+			"DataGridCoreModule",
+			"DataGridModule",
+			"DataGridToolbarModule",
+			"FilterOperandModule",
+			"GridColumnFilterOptionsModule",
+			"GridColumnOptionsModule",
+			"GridColumnSummaryOptionsModule",
+			"MultiColumnComboBoxModule",
+			"PropertyEditorModule"
+		],
+		"ColumnHiddenChangedEventArgs": [
+			"CheckboxListModule",
+			"ColumnChooserModule",
+			"ColumnPinningModule",
+			"DataGridAllColumnsModule",
+			"DataGridCoreModule",
+			"DataGridModule",
+			"DataGridToolbarModule",
+			"GridColumnFilterOptionsModule",
+			"GridColumnOptionsModule",
+			"GridColumnSummaryOptionsModule",
+			"MultiColumnComboBoxModule",
+			"PropertyEditorModule"
+		],
+		"ColumnPinnedChangedEventArgs": [
+			"CheckboxListModule",
+			"ColumnChooserModule",
+			"ColumnPinningModule",
+			"DataGridAllColumnsModule",
+			"DataGridCoreModule",
+			"DataGridModule",
+			"DataGridToolbarModule",
+			"GridColumnFilterOptionsModule",
+			"GridColumnOptionsModule",
+			"GridColumnSummaryOptionsModule",
+			"MultiColumnComboBoxModule",
+			"PropertyEditorModule"
+		],
+		"GridCellValueChangingEventArgs": [
+			"CheckboxListModule",
+			"ColumnChooserModule",
+			"ColumnPinningModule",
+			"DataGridAllColumnsModule",
+			"DataGridCoreModule",
+			"DataGridModule",
+			"DataGridToolbarModule",
+			"GridColumnFilterOptionsModule",
+			"GridColumnOptionsModule",
+			"GridColumnSummaryOptionsModule",
+			"MultiColumnComboBoxModule",
+			"PropertyEditorModule"
+		],
+		"DataSourceAggregatedResult": [
+			"CheckboxListModule",
+			"ColumnChooserModule",
+			"ColumnPinningModule",
+			"DataGridAllColumnsModule",
+			"DataGridCoreModule",
+			"DataGridModule",
+			"DataGridToolbarModule",
+			"GridColumnFilterOptionsModule",
+			"GridColumnOptionsModule",
+			"GridColumnSummaryOptionsModule",
+			"MultiColumnComboBoxModule",
+			"PropertyEditorModule"
+		],
+		"GridDataCommittedEventArgs": [
+			"CheckboxListModule",
+			"ColumnChooserModule",
+			"ColumnPinningModule",
+			"DataGridAllColumnsModule",
+			"DataGridCoreModule",
+			"DataGridModule",
+			"DataGridToolbarModule",
+			"GridColumnFilterOptionsModule",
+			"GridColumnOptionsModule",
+			"GridColumnSummaryOptionsModule",
+			"MultiColumnComboBoxModule",
+			"PropertyEditorModule"
+		],
+		"GridDataCommittingEventArgs": [
+			"CheckboxListModule",
+			"ColumnChooserModule",
+			"ColumnPinningModule",
+			"DataGridAllColumnsModule",
+			"DataGridCoreModule",
+			"DataGridModule",
+			"DataGridToolbarModule",
+			"GridColumnFilterOptionsModule",
+			"GridColumnOptionsModule",
+			"GridColumnSummaryOptionsModule",
+			"MultiColumnComboBoxModule",
+			"PropertyEditorModule"
+		],
+		"GridSizeChangedEventArgs": [
+			"CheckboxListModule",
+			"ColumnChooserModule",
+			"ColumnPinningModule",
+			"DataGridAllColumnsModule",
+			"DataGridCoreModule",
+			"DataGridModule",
+			"DataGridToolbarModule",
+			"GridColumnFilterOptionsModule",
+			"GridColumnOptionsModule",
+			"GridColumnSummaryOptionsModule",
+			"MultiColumnComboBoxModule",
+			"PropertyEditorModule"
+		],
+		"GridColumnsChangedEventArgs": [
+			"CheckboxListModule",
+			"ColumnChooserModule",
+			"ColumnPinningModule",
+			"DataGridAllColumnsModule",
+			"DataGridCoreModule",
+			"DataGridModule",
+			"DataGridToolbarModule",
+			"GridColumnFilterOptionsModule",
+			"GridColumnOptionsModule",
+			"GridColumnSummaryOptionsModule",
+			"MultiColumnComboBoxModule",
+			"PropertyEditorModule"
+		],
+		"GridColumnsAutoGeneratedEventArgs": [
+			"CheckboxListModule",
+			"ColumnChooserModule",
+			"ColumnPinningModule",
+			"DataGridAllColumnsModule",
+			"DataGridCoreModule",
+			"DataGridModule",
+			"DataGridToolbarModule",
+			"GridColumnFilterOptionsModule",
+			"GridColumnOptionsModule",
+			"GridColumnSummaryOptionsModule",
+			"MultiColumnComboBoxModule",
+			"PropertyEditorModule"
+		],
+		"GridSelectedItemsChangedEventArgs": [
+			"CheckboxListModule",
+			"ColumnChooserModule",
+			"ColumnPinningModule",
+			"DataGridAllColumnsModule",
+			"DataGridCoreModule",
+			"DataGridModule",
+			"DataGridToolbarModule",
+			"GridColumnFilterOptionsModule",
+			"GridColumnOptionsModule",
+			"GridColumnSummaryOptionsModule",
+			"MultiColumnComboBoxModule",
+			"PropertyEditorModule"
+		],
+		"GridSelectedKeysChangedEventArgs": [
+			"CheckboxListModule",
+			"ColumnChooserModule",
+			"ColumnPinningModule",
+			"DataGridAllColumnsModule",
+			"DataGridCoreModule",
+			"DataGridModule",
+			"DataGridToolbarModule",
+			"GridColumnFilterOptionsModule",
+			"GridColumnOptionsModule",
+			"GridColumnSummaryOptionsModule",
+			"MultiColumnComboBoxModule",
+			"PropertyEditorModule"
+		],
+		"GridSelectedCellsChangedEventArgs": [
+			"CheckboxListModule",
+			"ColumnChooserModule",
+			"ColumnPinningModule",
+			"DataGridAllColumnsModule",
+			"DataGridCoreModule",
+			"DataGridModule",
+			"DataGridToolbarModule",
+			"GridColumnFilterOptionsModule",
+			"GridColumnOptionsModule",
+			"GridColumnSummaryOptionsModule",
+			"MultiColumnComboBoxModule",
+			"PropertyEditorModule"
+		],
+		"GridSelectionChangedEventArgs": [
+			"CheckboxListModule",
+			"ColumnChooserModule",
+			"ColumnPinningModule",
+			"DataGridAllColumnsModule",
+			"DataGridCoreModule",
+			"DataGridModule",
+			"DataGridToolbarModule",
+			"GridColumnFilterOptionsModule",
+			"GridColumnOptionsModule",
+			"GridColumnSummaryOptionsModule",
+			"MultiColumnComboBoxModule",
+			"PropertyEditorModule"
+		],
+		"GridActiveCellChangedEventArgs": [
+			"CheckboxListModule",
+			"ColumnChooserModule",
+			"ColumnPinningModule",
+			"DataGridAllColumnsModule",
+			"DataGridCoreModule",
+			"DataGridModule",
+			"DataGridToolbarModule",
+			"GridColumnFilterOptionsModule",
+			"GridColumnOptionsModule",
+			"GridColumnSummaryOptionsModule",
+			"MultiColumnComboBoxModule",
+			"PropertyEditorModule"
+		],
+		"GridSelectedCellRangesChangedEventArgs": [
+			"CheckboxListModule",
+			"ColumnChooserModule",
+			"ColumnPinningModule",
+			"DataGridAllColumnsModule",
+			"DataGridCoreModule",
+			"DataGridModule",
+			"DataGridToolbarModule",
+			"GridColumnFilterOptionsModule",
+			"GridColumnOptionsModule",
+			"GridColumnSummaryOptionsModule",
+			"MultiColumnComboBoxModule",
+			"PropertyEditorModule"
+		],
+		"GridColumnWidthChangedEventArgs": [
+			"CheckboxListModule",
+			"ColumnChooserModule",
+			"ColumnPinningModule",
+			"DataGridAllColumnsModule",
+			"DataGridCoreModule",
+			"DataGridModule",
+			"DataGridToolbarModule",
+			"GridColumnFilterOptionsModule",
+			"GridColumnOptionsModule",
+			"GridColumnSummaryOptionsModule",
+			"MultiColumnComboBoxModule",
+			"PropertyEditorModule"
+		],
+		"GridCellEditStartedEventArgs": [
+			"CheckboxListModule",
+			"ColumnChooserModule",
+			"ColumnPinningModule",
+			"DataGridAllColumnsModule",
+			"DataGridCoreModule",
+			"DataGridModule",
+			"DataGridToolbarModule",
+			"GridColumnFilterOptionsModule",
+			"GridColumnOptionsModule",
+			"GridColumnSummaryOptionsModule",
+			"MultiColumnComboBoxModule",
+			"PropertyEditorModule"
+		],
+		"GridCellEditEndedEventArgs": [
+			"CheckboxListModule",
+			"ColumnChooserModule",
+			"ColumnPinningModule",
+			"DataGridAllColumnsModule",
+			"DataGridCoreModule",
+			"DataGridModule",
+			"DataGridToolbarModule",
+			"GridColumnFilterOptionsModule",
+			"GridColumnOptionsModule",
+			"GridColumnSummaryOptionsModule",
+			"MultiColumnComboBoxModule",
+			"PropertyEditorModule"
+		],
+		"GridRowEditStartedEventArgs": [
+			"CheckboxListModule",
+			"ColumnChooserModule",
+			"ColumnPinningModule",
+			"DataGridAllColumnsModule",
+			"DataGridCoreModule",
+			"DataGridModule",
+			"DataGridToolbarModule",
+			"GridColumnFilterOptionsModule",
+			"GridColumnOptionsModule",
+			"GridColumnSummaryOptionsModule",
+			"MultiColumnComboBoxModule",
+			"PropertyEditorModule"
+		],
+		"GridRowEditEndedEventArgs": [
+			"CheckboxListModule",
+			"ColumnChooserModule",
+			"ColumnPinningModule",
+			"DataGridAllColumnsModule",
+			"DataGridCoreModule",
+			"DataGridModule",
+			"DataGridToolbarModule",
+			"GridColumnFilterOptionsModule",
+			"GridColumnOptionsModule",
+			"GridColumnSummaryOptionsModule",
+			"MultiColumnComboBoxModule",
+			"PropertyEditorModule"
+		],
+		"GridCustomFilterRequestedEventArgs": [
+			"CheckboxListModule",
+			"ColumnChooserModule",
+			"ColumnPinningModule",
+			"DataGridAllColumnsModule",
+			"DataGridCoreModule",
+			"DataGridModule",
+			"DataGridToolbarModule",
+			"FilterOperandModule",
+			"GridColumnFilterOptionsModule",
+			"GridColumnOptionsModule",
+			"GridColumnSummaryOptionsModule",
+			"MultiColumnComboBoxModule",
+			"PropertyEditorModule"
+		],
+		"FilterOperand": [
+			"CheckboxListModule",
+			"ColumnChooserModule",
+			"ColumnPinningModule",
+			"DataGridAllColumnsModule",
+			"DataGridCoreModule",
+			"DataGridModule",
+			"DataGridToolbarModule",
+			"FilterOperandModule",
+			"GridColumnFilterOptionsModule",
+			"GridColumnOptionsModule",
+			"GridColumnSummaryOptionsModule",
+			"MultiColumnComboBoxModule",
+			"PropertyEditorModule"
+		],
+		"TextColumn": [
+			"CheckboxListModule",
+			"ColumnChooserModule",
+			"ColumnPinningModule",
+			"DataGridAllColumnsModule",
+			"DataGridModule",
+			"DataGridToolbarModule",
+			"GridColumnFilterOptionsModule",
+			"GridColumnOptionsModule",
+			"GridColumnSummaryOptionsModule",
+			"MultiColumnComboBoxModule",
+			"PropertyEditorModule",
+			"TextColumnModule"
+		],
+		"NumericColumn": [
+			"CheckboxListModule",
+			"ColumnChooserModule",
+			"ColumnPinningModule",
+			"DataGridAllColumnsModule",
+			"DataGridModule",
+			"DataGridToolbarModule",
+			"GridColumnFilterOptionsModule",
+			"GridColumnOptionsModule",
+			"GridColumnSummaryOptionsModule",
+			"MultiColumnComboBoxModule",
+			"PropertyEditorModule",
+			"NumericColumnModule"
+		],
+		"DateTimeColumn": [
+			"CheckboxListModule",
+			"ColumnChooserModule",
+			"ColumnPinningModule",
+			"DataGridAllColumnsModule",
+			"DataGridModule",
+			"DataGridToolbarModule",
+			"GridColumnFilterOptionsModule",
+			"GridColumnOptionsModule",
+			"GridColumnSummaryOptionsModule",
+			"MultiColumnComboBoxModule",
+			"PropertyEditorModule",
+			"DateTimeColumnModule"
+		],
+		"TemplateCellUpdatingEventArgs": [
+			"CheckboxListModule",
+			"ColumnChooserModule",
+			"ColumnPinningModule",
+			"DataGridAllColumnsModule",
+			"DataGridModule",
+			"DataGridToolbarModule",
+			"GridColumnFilterOptionsModule",
+			"GridColumnOptionsModule",
+			"GridColumnSummaryOptionsModule",
+			"PropertyEditorModule",
+			"TemplateColumnModule"
+		],
+		"TemplateColumn": [
+			"CheckboxListModule",
+			"ColumnChooserModule",
+			"ColumnPinningModule",
+			"DataGridAllColumnsModule",
+			"DataGridModule",
+			"DataGridToolbarModule",
+			"GridColumnFilterOptionsModule",
+			"GridColumnOptionsModule",
+			"GridColumnSummaryOptionsModule",
+			"PropertyEditorModule",
+			"TemplateColumnModule"
+		],
+		"CheckboxChangeEventArgs": [
+			"CheckboxListModule",
+			"CheckboxModule",
+			"ColumnChooserModule",
+			"ColumnPinningModule",
+			"DataGridModule",
+			"DataGridToolbarModule",
+			"GridColumnFilterOptionsModule",
+			"GridColumnOptionsModule",
+			"GridColumnSummaryOptionsModule",
+			"PropertyEditorModule"
+		],
+		"Checkbox": [
+			"CheckboxListModule",
+			"CheckboxModule",
+			"ColumnChooserModule",
+			"ColumnPinningModule",
+			"DataGridModule",
+			"DataGridToolbarModule",
+			"GridColumnFilterOptionsModule",
+			"GridColumnOptionsModule",
+			"GridColumnSummaryOptionsModule",
+			"PropertyEditorModule"
+		],
+		"KeyEventArgs": [
+			"CheckboxListModule",
+			"ColumnChooserModule",
+			"ColumnPinningModule",
+			"DataGridModule",
+			"DataGridToolbarModule",
+			"DatePickerModule",
+			"GridColumnFilterOptionsModule",
+			"GridColumnOptionsModule",
+			"GridColumnSummaryOptionsModule",
+			"InputGroupModule",
+			"InputModule",
+			"MultiColumnComboBoxModule",
+			"PropertyEditorModule"
+		],
+		"InputChangeEventArgs": [
+			"CheckboxListModule",
+			"ColumnChooserModule",
+			"ColumnPinningModule",
+			"DataGridModule",
+			"DataGridToolbarModule",
+			"DatePickerModule",
+			"GridColumnFilterOptionsModule",
+			"GridColumnOptionsModule",
+			"GridColumnSummaryOptionsModule",
+			"InputGroupModule",
+			"InputModule",
+			"MultiColumnComboBoxModule",
+			"PropertyEditorModule"
+		],
+		"Input": [
+			"CheckboxListModule",
+			"ColumnChooserModule",
+			"ColumnPinningModule",
+			"DataGridModule",
+			"DataGridToolbarModule",
+			"DatePickerModule",
+			"GridColumnFilterOptionsModule",
+			"GridColumnOptionsModule",
+			"GridColumnSummaryOptionsModule",
+			"InputGroupModule",
+			"InputModule",
+			"MultiColumnComboBoxModule",
+			"PropertyEditorModule"
+		],
+		"Label": [
+			"CheckboxListModule",
+			"ColumnChooserModule",
+			"ColumnPinningModule",
+			"DataGridModule",
+			"DataGridToolbarModule",
+			"DatePickerModule",
+			"GridColumnFilterOptionsModule",
+			"GridColumnOptionsModule",
+			"GridColumnSummaryOptionsModule",
+			"InputGroupModule",
+			"LabelModule",
+			"MultiColumnComboBoxModule",
+			"PropertyEditorModule"
+		],
+		"InputGroup": [
+			"CheckboxListModule",
+			"ColumnChooserModule",
+			"ColumnPinningModule",
+			"DataGridModule",
+			"DataGridToolbarModule",
+			"DatePickerModule",
+			"GridColumnFilterOptionsModule",
+			"GridColumnOptionsModule",
+			"GridColumnSummaryOptionsModule",
+			"InputGroupModule",
+			"MultiColumnComboBoxModule",
+			"PropertyEditorModule"
+		],
+		"CheckedChangedEventArgs": [
+			"CheckboxListModule",
+			"ColumnChooserModule",
+			"ColumnPinningModule",
+			"DataGridModule",
+			"DataGridToolbarModule",
+			"GridColumnFilterOptionsModule",
+			"GridColumnOptionsModule",
+			"GridColumnSummaryOptionsModule"
+		],
+		"SelectAllCheckboxChangedEventArgs": [
+			"CheckboxListModule",
+			"ColumnChooserModule",
+			"ColumnPinningModule",
+			"DataGridModule",
+			"DataGridToolbarModule",
+			"GridColumnFilterOptionsModule",
+			"GridColumnOptionsModule",
+			"GridColumnSummaryOptionsModule"
+		],
+		"CheckboxList": [
+			"CheckboxListModule",
+			"ColumnChooserModule",
+			"ColumnPinningModule",
+			"DataGridModule",
+			"DataGridToolbarModule",
+			"GridColumnFilterOptionsModule",
+			"GridColumnOptionsModule",
+			"GridColumnSummaryOptionsModule"
+		],
+		"ColumnChooser": [
+			"ColumnChooserModule",
+			"DataGridModule",
+			"DataGridToolbarModule"
+		],
+		"ColumnGrouping": [
+			"ColumnGroupingModule",
+			"DataGridModule"
+		],
+		"ColumnPinning": [
+			"ColumnPinningModule",
+			"DataGridModule",
+			"DataGridToolbarModule"
+		],
+		"ComboBoxColumn": [
+			"ComboBoxColumnModule",
+			"DataGridAllColumnsModule",
+			"DataGridModule"
+		],
+		"GetTileImageUriArgs": [
+			"CustomMapImageryModule",
+			"GeographicMapCoreModule",
+			"GeographicMapModule"
+		],
+		"CustomMapImagery": [
+			"CustomMapImageryModule",
+			"GeographicMapCoreModule",
+			"GeographicMapModule"
+		],
+		"DataChart": [
+			"DataChartCategoryCoreModule",
+			"DataChartCategoryModule",
+			"DataChartCoreModule",
+			"DataChartExtendedAxesModule",
+			"DataChartFinancialCoreModule",
+			"DataChartFinancialIndicatorsModule",
+			"DataChartFinancialModule",
+			"DataChartFinancialOverlaysModule",
+			"DataChartPolarCoreModule",
+			"DataChartPolarModule",
+			"DataChartRadialCoreModule",
+			"DataChartRadialModule",
+			"DataChartScatterCoreModule",
+			"DataChartScatterModule",
+			"DataChartShapeCoreModule",
+			"DataChartShapeModule",
+			"DataChartStackedModule",
+			"DataChartVerticalCategoryCoreModule",
+			"DataChartVerticalCategoryModule"
+		],
+		"RangeAreaSeries": [
+			"DataChartCategoryModule",
+			"RangeAreaSeriesModule"
+		],
+		"RangeColumnSeries": [
+			"DataChartCategoryModule",
+			"RangeColumnSeriesModule"
+		],
+		"CategoryDateTimeXAxis": [
+			"DataChartExtendedAxesModule",
+			"CategoryDateTimeXAxisModule"
+		],
+		"TimeAxisBreak": [
+			"DataChartExtendedAxesModule",
+			"FinancialChartModule",
+			"TimeAxisBreakModule"
+		],
+		"TimeAxisInterval": [
+			"DataChartExtendedAxesModule",
+			"FinancialChartModule",
+			"TimeAxisIntervalModule"
+		],
+		"TimeAxisLabelFormat": [
+			"DataChartExtendedAxesModule",
+			"FinancialChartModule",
+			"TimeAxisLabelFormatModule"
+		],
+		"TimeXAxis": [
+			"DataChartExtendedAxesModule",
+			"FinancialChartModule",
+			"TimeXAxisModule"
+		],
+		"OrdinalTimeXAxis": [
+			"DataChartExtendedAxesModule",
+			"FinancialChartModule",
+			"OrdinalTimeXAxisModule"
+		],
+		"AbsoluteVolumeOscillatorIndicator": [
+			"DataChartFinancialIndicatorsModule",
+			"FinancialChartModule",
+			"IndicatorsModule",
+			"AbsoluteVolumeOscillatorIndicatorModule"
+		],
+		"AccumulationDistributionIndicator": [
+			"DataChartFinancialIndicatorsModule",
+			"FinancialChartModule",
+			"IndicatorsModule",
+			"AccumulationDistributionIndicatorModule"
+		],
+		"AverageDirectionalIndexIndicator": [
+			"DataChartFinancialIndicatorsModule",
+			"FinancialChartModule",
+			"IndicatorsModule",
+			"AverageDirectionalIndexIndicatorModule"
+		],
+		"AverageTrueRangeIndicator": [
+			"DataChartFinancialIndicatorsModule",
+			"FinancialChartModule",
+			"IndicatorsModule",
+			"AverageTrueRangeIndicatorModule"
+		],
+		"BollingerBandWidthIndicator": [
+			"DataChartFinancialIndicatorsModule",
+			"FinancialChartModule",
+			"IndicatorsModule",
+			"BollingerBandWidthIndicatorModule"
+		],
+		"ChaikinOscillatorIndicator": [
+			"DataChartFinancialIndicatorsModule",
+			"FinancialChartModule",
+			"IndicatorsModule",
+			"ChaikinOscillatorIndicatorModule"
+		],
+		"ChaikinVolatilityIndicator": [
+			"DataChartFinancialIndicatorsModule",
+			"FinancialChartModule",
+			"IndicatorsModule",
+			"ChaikinVolatilityIndicatorModule"
+		],
+		"CommodityChannelIndexIndicator": [
+			"DataChartFinancialIndicatorsModule",
+			"FinancialChartModule",
+			"IndicatorsModule",
+			"CommodityChannelIndexIndicatorModule"
+		],
+		"DetrendedPriceOscillatorIndicator": [
+			"DataChartFinancialIndicatorsModule",
+			"FinancialChartModule",
+			"IndicatorsModule",
+			"DetrendedPriceOscillatorIndicatorModule"
+		],
+		"EaseOfMovementIndicator": [
+			"DataChartFinancialIndicatorsModule",
+			"FinancialChartModule",
+			"IndicatorsModule",
+			"EaseOfMovementIndicatorModule"
+		],
+		"FastStochasticOscillatorIndicator": [
+			"DataChartFinancialIndicatorsModule",
+			"FinancialChartModule",
+			"IndicatorsModule",
+			"FastStochasticOscillatorIndicatorModule"
+		],
+		"ForceIndexIndicator": [
+			"DataChartFinancialIndicatorsModule",
+			"FinancialChartModule",
+			"IndicatorsModule",
+			"ForceIndexIndicatorModule"
+		],
+		"FullStochasticOscillatorIndicator": [
+			"DataChartFinancialIndicatorsModule",
+			"FinancialChartModule",
+			"IndicatorsModule",
+			"FullStochasticOscillatorIndicatorModule"
+		],
+		"MarketFacilitationIndexIndicator": [
+			"DataChartFinancialIndicatorsModule",
+			"FinancialChartModule",
+			"IndicatorsModule",
+			"MarketFacilitationIndexIndicatorModule"
+		],
+		"MassIndexIndicator": [
+			"DataChartFinancialIndicatorsModule",
+			"FinancialChartModule",
+			"IndicatorsModule",
+			"MassIndexIndicatorModule"
+		],
+		"MedianPriceIndicator": [
+			"DataChartFinancialIndicatorsModule",
+			"FinancialChartModule",
+			"IndicatorsModule",
+			"MedianPriceIndicatorModule"
+		],
+		"MoneyFlowIndexIndicator": [
+			"DataChartFinancialIndicatorsModule",
+			"FinancialChartModule",
+			"IndicatorsModule",
+			"MoneyFlowIndexIndicatorModule"
+		],
+		"MovingAverageConvergenceDivergenceIndicator": [
+			"DataChartFinancialIndicatorsModule",
+			"FinancialChartModule",
+			"IndicatorsModule",
+			"MovingAverageConvergenceDivergenceIndicatorModule"
+		],
+		"NegativeVolumeIndexIndicator": [
+			"DataChartFinancialIndicatorsModule",
+			"FinancialChartModule",
+			"IndicatorsModule",
+			"NegativeVolumeIndexIndicatorModule"
+		],
+		"OnBalanceVolumeIndicator": [
+			"DataChartFinancialIndicatorsModule",
+			"FinancialChartModule",
+			"IndicatorsModule",
+			"OnBalanceVolumeIndicatorModule"
+		],
+		"PercentagePriceOscillatorIndicator": [
+			"DataChartFinancialIndicatorsModule",
+			"FinancialChartModule",
+			"IndicatorsModule",
+			"PercentagePriceOscillatorIndicatorModule"
+		],
+		"PercentageVolumeOscillatorIndicator": [
+			"DataChartFinancialIndicatorsModule",
+			"FinancialChartModule",
+			"IndicatorsModule",
+			"PercentageVolumeOscillatorIndicatorModule"
+		],
+		"PositiveVolumeIndexIndicator": [
+			"DataChartFinancialIndicatorsModule",
+			"FinancialChartModule",
+			"IndicatorsModule",
+			"PositiveVolumeIndexIndicatorModule"
+		],
+		"PriceVolumeTrendIndicator": [
+			"DataChartFinancialIndicatorsModule",
+			"FinancialChartModule",
+			"IndicatorsModule",
+			"PriceVolumeTrendIndicatorModule"
+		],
+		"RateOfChangeAndMomentumIndicator": [
+			"DataChartFinancialIndicatorsModule",
+			"FinancialChartModule",
+			"IndicatorsModule",
+			"RateOfChangeAndMomentumIndicatorModule"
+		],
+		"RelativeStrengthIndexIndicator": [
+			"DataChartFinancialIndicatorsModule",
+			"FinancialChartModule",
+			"IndicatorsModule",
+			"RelativeStrengthIndexIndicatorModule"
+		],
+		"SlowStochasticOscillatorIndicator": [
+			"DataChartFinancialIndicatorsModule",
+			"FinancialChartModule",
+			"IndicatorsModule",
+			"SlowStochasticOscillatorIndicatorModule"
+		],
+		"StandardDeviationIndicator": [
+			"DataChartFinancialIndicatorsModule",
+			"FinancialChartModule",
+			"IndicatorsModule",
+			"StandardDeviationIndicatorModule"
+		],
+		"StochRSIIndicator": [
+			"DataChartFinancialIndicatorsModule",
+			"FinancialChartModule",
+			"IndicatorsModule",
+			"StochRSIIndicatorModule"
+		],
+		"TRIXIndicator": [
+			"DataChartFinancialIndicatorsModule",
+			"FinancialChartModule",
+			"IndicatorsModule",
+			"TRIXIndicatorModule"
+		],
+		"TypicalPriceIndicator": [
+			"DataChartFinancialIndicatorsModule",
+			"FinancialChartModule",
+			"IndicatorsModule",
+			"TypicalPriceIndicatorModule"
+		],
+		"UltimateOscillatorIndicator": [
+			"DataChartFinancialIndicatorsModule",
+			"FinancialChartModule",
+			"IndicatorsModule",
+			"UltimateOscillatorIndicatorModule"
+		],
+		"WeightedCloseIndicator": [
+			"DataChartFinancialIndicatorsModule",
+			"FinancialChartModule",
+			"IndicatorsModule",
+			"WeightedCloseIndicatorModule"
+		],
+		"WilliamsPercentRIndicator": [
+			"DataChartFinancialIndicatorsModule",
+			"FinancialChartModule",
+			"IndicatorsModule",
+			"WilliamsPercentRIndicatorModule"
+		],
+		"CustomIndicator": [
+			"DataChartFinancialIndicatorsModule",
+			"FinancialChartModule",
+			"IndicatorsModule",
+			"CustomIndicatorModule"
+		],
+		"FinancialPriceSeries": [
+			"DataChartFinancialModule",
+			"FinancialChartModule",
+			"FinancialPriceSeriesModule"
+		],
+		"PriceChannelOverlay": [
+			"DataChartFinancialOverlaysModule",
+			"FinancialChartModule",
+			"OverlaysModule",
+			"PriceChannelOverlayModule"
+		],
+		"BollingerBandsOverlay": [
+			"DataChartFinancialOverlaysModule",
+			"FinancialChartModule",
+			"OverlaysModule",
+			"BollingerBandsOverlayModule"
+		],
+		"NumericAngleAxis": [
+			"DataChartPolarCoreModule",
+			"DataChartPolarModule",
+			"NumericAngleAxisModule"
+		],
+		"NumericRadiusAxis": [
+			"DataChartPolarCoreModule",
+			"DataChartPolarModule",
+			"DataChartRadialCoreModule",
+			"DataChartRadialModule",
+			"NumericRadiusAxisModule"
+		],
+		"PolarAreaSeries": [
+			"DataChartPolarModule",
+			"PolarAreaSeriesModule"
+		],
+		"PolarLineSeries": [
+			"DataChartPolarModule",
+			"PolarLineSeriesModule"
+		],
+		"PolarScatterSeries": [
+			"DataChartPolarModule",
+			"PolarScatterSeriesModule"
+		],
+		"PolarSplineSeries": [
+			"DataChartPolarModule",
+			"PolarSplineSeriesModule"
+		],
+		"PolarSplineAreaSeries": [
+			"DataChartPolarModule",
+			"PolarSplineAreaSeriesModule"
+		],
+		"CategoryAngleAxis": [
+			"DataChartRadialCoreModule",
+			"DataChartRadialModule",
+			"CategoryAngleAxisModule"
+		],
+		"RadialAreaSeries": [
+			"DataChartRadialModule",
+			"RadialAreaSeriesModule"
+		],
+		"RadialColumnSeries": [
+			"DataChartRadialModule",
+			"RadialColumnSeriesModule"
+		],
+		"RadialLineSeries": [
+			"DataChartRadialModule",
+			"RadialLineSeriesModule"
+		],
+		"RadialPieSeries": [
+			"DataChartRadialModule",
+			"RadialPieSeriesModule"
+		],
+		"NumericXAxis": [
+			"DataChartScatterCoreModule",
+			"DataChartScatterModule",
+			"DataChartShapeCoreModule",
+			"DataChartShapeModule",
+			"DataChartStackedModule",
+			"DataChartVerticalCategoryCoreModule",
+			"DataChartVerticalCategoryModule",
+			"NumericXAxisModule"
+		],
+		"PropertyUpdatedEventArgs": [
+			"DataChartScatterModule",
+			"DataChartShapeModule",
+			"DataChartStackedModule",
+			"DoughnutChartCoreModule",
+			"DoughnutChartModule",
+			"GeographicMapModule",
+			"GeographicProportionalSymbolSeriesModule",
+			"GeographicScatterAreaSeriesModule",
+			"StackedFragmentSeriesModule",
+			"BrushScaleModule",
+			"BubbleSeriesModule",
+			"CustomPaletteBrushScaleModule",
+			"RingSeriesModule",
+			"ScatterAreaSeriesModule",
+			"SizeScaleModule",
+			"ValueBrushScaleModule"
+		],
+		"SizeScale": [
+			"DataChartScatterModule",
+			"GeographicMapModule",
+			"GeographicProportionalSymbolSeriesModule",
+			"BubbleSeriesModule",
+			"SizeScaleModule"
+		],
+		"BrushScale": [
+			"DataChartScatterModule",
+			"GeographicMapModule",
+			"GeographicProportionalSymbolSeriesModule",
+			"BrushScaleModule",
+			"BubbleSeriesModule",
+			"CustomPaletteBrushScaleModule",
+			"ValueBrushScaleModule"
+		],
+		"ValueBrushScale": [
+			"DataChartScatterModule",
+			"DataChartShapeModule",
+			"GeographicContourLineSeriesModule",
+			"GeographicMapModule",
+			"ScatterContourSeriesModule",
+			"ValueBrushScaleModule"
+		],
+		"CustomPaletteColorScale": [
+			"DataChartScatterModule",
+			"GeographicMapModule",
+			"CustomPaletteColorScaleModule"
+		],
+		"BubbleSeries": [
+			"DataChartScatterModule",
+			"BubbleSeriesModule"
+		],
+		"ScatterSeries": [
+			"DataChartScatterModule",
+			"ScatterSeriesModule"
+		],
+		"ScatterLineSeries": [
+			"DataChartScatterModule",
+			"ScatterLineSeriesModule"
+		],
+		"ScatterSplineSeries": [
+			"DataChartScatterModule",
+			"ScatterSplineSeriesModule"
+		],
+		"ProgressiveLoadStatusEventArgs": [
+			"DataChartScatterModule",
+			"GeographicHighDensityScatterSeriesModule",
+			"GeographicMapModule",
+			"HighDensityScatterSeriesModule"
+		],
+		"HighDensityScatterSeries": [
+			"DataChartScatterModule",
+			"HighDensityScatterSeriesModule"
+		],
+		"ColorScale": [
+			"DataChartShapeModule",
+			"GeographicMapModule",
+			"GeographicScatterAreaSeriesModule",
+			"ScatterAreaSeriesModule"
+		],
+		"ScatterAreaSeries": [
+			"DataChartShapeModule",
+			"ScatterAreaSeriesModule"
+		],
+		"ContourValueResolver": [
+			"DataChartShapeModule",
+			"GeographicContourLineSeriesModule",
+			"GeographicMapModule",
+			"ScatterContourSeriesModule"
+		],
+		"ScatterContourSeries": [
+			"DataChartShapeModule",
+			"ScatterContourSeriesModule"
+		],
+		"Style": [
+			"DataChartShapeModule",
+			"ScatterPolygonSeriesModule",
+			"ScatterPolylineSeriesModule"
+		],
+		"ScatterPolygonSeries": [
+			"DataChartShapeModule",
+			"ScatterPolygonSeriesModule"
+		],
+		"ScatterPolylineSeries": [
+			"DataChartShapeModule",
+			"ScatterPolylineSeriesModule"
+		],
+		"StackedFragmentSeries": [
+			"DataChartStackedModule",
+			"StackedFragmentSeriesModule"
+		],
+		"StackedAreaSeries": [
+			"DataChartStackedModule",
+			"Stacked100AreaSeriesModule",
+			"StackedAreaSeriesModule"
+		],
+		"Stacked100AreaSeries": [
+			"DataChartStackedModule",
+			"Stacked100AreaSeriesModule"
+		],
+		"StackedBarSeries": [
+			"DataChartStackedModule",
+			"Stacked100BarSeriesModule",
+			"StackedBarSeriesModule"
+		],
+		"Stacked100BarSeries": [
+			"DataChartStackedModule",
+			"Stacked100BarSeriesModule"
+		],
+		"StackedColumnSeries": [
+			"DataChartStackedModule",
+			"Stacked100ColumnSeriesModule",
+			"StackedColumnSeriesModule"
+		],
+		"Stacked100ColumnSeries": [
+			"DataChartStackedModule",
+			"Stacked100ColumnSeriesModule"
+		],
+		"StackedLineSeries": [
+			"DataChartStackedModule",
+			"Stacked100LineSeriesModule",
+			"StackedLineSeriesModule"
+		],
+		"Stacked100LineSeries": [
+			"DataChartStackedModule",
+			"Stacked100LineSeriesModule"
+		],
+		"StackedSplineSeries": [
+			"DataChartStackedModule",
+			"Stacked100SplineSeriesModule",
+			"StackedSplineSeriesModule"
+		],
+		"Stacked100SplineSeries": [
+			"DataChartStackedModule",
+			"Stacked100SplineSeriesModule"
+		],
+		"StackedSplineAreaSeries": [
+			"DataChartStackedModule",
+			"Stacked100SplineAreaSeriesModule",
+			"StackedSplineAreaSeriesModule"
+		],
+		"Stacked100SplineAreaSeries": [
+			"DataChartStackedModule",
+			"Stacked100SplineAreaSeriesModule"
+		],
+		"AreaFragment": [
+			"DataChartStackedModule",
+			"AreaFragmentModule"
+		],
+		"ColumnFragment": [
+			"DataChartStackedModule",
+			"BarFragmentModule",
+			"ColumnFragmentModule"
+		],
+		"BarFragment": [
+			"DataChartStackedModule",
+			"BarFragmentModule"
+		],
+		"LineFragment": [
+			"DataChartStackedModule",
+			"LineFragmentModule"
+		],
+		"SplineFragment": [
+			"DataChartStackedModule",
+			"SplineFragmentModule"
+		],
+		"SplineAreaFragment": [
+			"DataChartStackedModule",
+			"SplineAreaFragmentModule"
+		],
+		"CategoryYAxis": [
+			"DataChartStackedModule",
+			"DataChartVerticalCategoryCoreModule",
+			"DataChartVerticalCategoryModule",
+			"CategoryYAxisModule"
+		],
+		"BarSeries": [
+			"DataChartVerticalCategoryModule",
+			"BarSeriesModule"
+		],
+		"ImageColumn": [
+			"DataGridAllColumnsModule",
+			"DataGridModule",
+			"MultiColumnComboBoxModule",
+			"PropertyEditorModule",
+			"ImageColumnModule"
+		],
+		"TemplateHeaderCellUpdatingEventArgs": [
+			"DataGridAllColumnsModule",
+			"DataGridModule",
+			"TemplateHeaderModule"
+		],
+		"TemplateHeader": [
+			"DataGridAllColumnsModule",
+			"DataGridModule",
+			"TemplateHeaderModule"
+		],
+		"GridColumnSortOptions": [
+			"DataGridModule",
+			"GridColumnOptionsModule",
+			"GridColumnSortOptionsModule"
+		],
+		"GridColumnMoveOptions": [
+			"DataGridModule",
+			"GridColumnMoveOptionsModule",
+			"GridColumnOptionsModule"
+		],
+		"GridColumnPinOptions": [
+			"DataGridModule",
+			"GridColumnOptionsModule",
+			"GridColumnPinOptionsModule"
+		],
+		"GridColumnHideOptions": [
+			"DataGridModule",
+			"GridColumnHideOptionsModule",
+			"GridColumnOptionsModule"
+		],
+		"GridColumnGroupOptions": [
+			"DataGridModule",
+			"GridColumnGroupOptionsModule",
+			"GridColumnOptionsModule"
+		],
+		"GridColumnFilterOptions": [
+			"DataGridModule",
+			"GridColumnFilterOptionsModule",
+			"GridColumnOptionsModule"
+		],
+		"GridColumnSummaryOptions": [
+			"DataGridModule",
+			"GridColumnOptionsModule",
+			"GridColumnSummaryOptionsModule"
+		],
+		"ApplyButtonClickEventArgs": [
+			"DataGridModule",
+			"GridColumnButtonOptionsModule",
+			"GridColumnOptionsModule"
+		],
+		"CancelButtonClickEventArgs": [
+			"DataGridModule",
+			"GridColumnButtonOptionsModule",
+			"GridColumnOptionsModule"
+		],
+		"GridColumnButtonOptions": [
+			"DataGridModule",
+			"GridColumnButtonOptionsModule",
+			"GridColumnOptionsModule"
+		],
+		"GridColumnOptions": [
+			"DataGridModule",
+			"GridColumnOptionsModule"
+		],
+		"GotFocusEventArgs": [
+			"DataGridModule",
+			"DatePickerModule",
+			"MultiColumnComboBoxModule",
+			"PropertyEditorModule"
+		],
+		"LostFocusEventArgs": [
+			"DataGridModule",
+			"DatePickerModule",
+			"MultiColumnComboBoxModule",
+			"PropertyEditorModule"
+		],
+		"MultiColumnComboBoxTextChangedEventArgs": [
+			"DataGridModule",
+			"MultiColumnComboBoxModule",
+			"PropertyEditorModule"
+		],
+		"MultiColumnComboBoxValueChangedEventArgs": [
+			"DataGridModule",
+			"MultiColumnComboBoxModule",
+			"PropertyEditorModule"
+		],
+		"MultiColumnComboBox": [
+			"DataGridModule",
+			"MultiColumnComboBoxModule",
+			"PropertyEditorModule"
+		],
+		"PageChangedEventArgs": [
+			"DataGridModule",
+			"DataGridPagerModule"
+		],
+		"DataGridPager": [
+			"DataGridModule",
+			"DataGridPagerModule"
+		],
+		"DataGridToolbar": [
+			"DataGridModule",
+			"DataGridToolbarModule"
+		],
+		"DataLegendSummaryEventArgs": [
+			"DataLegendModule"
+		],
+		"DataLegendStylingRowEventArgs": [
+			"DataLegendModule"
+		],
+		"DataLegendStylingColumnEventArgs": [
+			"DataLegendModule"
+		],
+		"DataLegend": [
+			"DataLegendModule"
+		],
+		"DatePicker": [
+			"DatePickerModule"
+		],
+		"RingSeriesBase": [
+			"DoughnutChartCoreModule",
+			"DoughnutChartModule",
+			"RingSeriesModule"
+		],
+		"Ring": [
+			"DoughnutChartCoreModule",
+			"DoughnutChartModule",
+			"RingSeriesModule"
+		],
+		"RingSeries": [
+			"DoughnutChartCoreModule",
+			"DoughnutChartModule",
+			"RingSeriesModule"
+		],
+		"SliceClickEventArgs": [
+			"DoughnutChartCoreModule",
+			"DoughnutChartModule"
+		],
+		"HoleDimensionsChangedEventArgs": [
+			"DoughnutChartCoreModule",
+			"DoughnutChartModule"
+		],
+		"DoughnutChart": [
+			"DoughnutChartCoreModule",
+			"DoughnutChartModule"
+		],
+		"EditorDefinition": [
+			"EditorDefinitionModule"
+		],
+		"EditRowDefinition": [
+			"EditRowDefinitionModule"
+		],
+		"OnCollapsedEventArgs": [
+			"ExpansionPanelModule"
+		],
+		"OnExpandedEventArgs": [
+			"ExpansionPanelModule"
+		],
+		"ExpansionPanel": [
+			"ExpansionPanelModule"
+		],
+		"FilterRowDefinition": [
+			"FilterRowDefinitionModule"
+		],
+		"FinancialChartCustomIndicatorArgs": [
+			"FinancialChartCoreModule",
+			"FinancialChartModule"
+		],
+		"FinancialChart": [
+			"FinancialChartCoreModule",
+			"FinancialChartModule"
+		],
+		"PercentChangeYAxis": [
+			"FinancialChartModule",
+			"PercentChangeYAxisModule"
+		],
+		"ZoomSliderResolvingAxisValueEventArgs": [
+			"FinancialChartModule",
+			"ZoomSliderModule"
+		],
+		"RectChangedEventArgs": [
+			"FinancialChartModule",
+			"ZoomSliderModule"
+		],
+		"ZoomSlider": [
+			"FinancialChartModule",
+			"ZoomSliderModule"
+		],
+		"FinancialLegend": [
+			"FinancialChartModule",
+			"FinancialLegendModule"
+		],
+		"FunnelSliceClickedEventArgs": [
+			"FunnelChartCoreModule",
+			"FunnelChartModule"
+		],
+		"FunnelSliceEventArgs": [
+			"FunnelChartCoreModule",
+			"FunnelChartModule"
+		],
+		"FunnelChart": [
+			"FunnelChartCoreModule",
+			"FunnelChartModule"
+		],
+		"TriangulationStatusEventArgs": [
+			"GeographicContourLineSeriesModule",
+			"GeographicMapModule",
+			"GeographicScatterAreaSeriesModule"
+		],
+		"GeographicContourLineSeries": [
+			"GeographicContourLineSeriesModule",
+			"GeographicMapModule"
+		],
+		"GeographicHighDensityScatterSeries": [
+			"GeographicHighDensityScatterSeriesModule",
+			"GeographicMapModule"
+		],
+		"OpenStreetMapImagery": [
+			"GeographicMapCoreModule",
+			"GeographicMapModule",
+			"OpenStreetMapImageryModule"
+		],
+		"GeographicMap": [
+			"GeographicMapCoreModule",
+			"GeographicMapModule",
+			"GeographicTileSeriesModule",
+			"TileSeriesModule"
+		],
+		"ImageTilesReadyEventArgs": [
+			"GeographicMapCoreModule",
+			"GeographicMapModule",
+			"GeographicTileSeriesModule",
+			"TileSeriesModule"
+		],
+		"ImagesChangedEventArgs": [
+			"GeographicMapCoreModule",
+			"GeographicMapModule",
+			"GeographicTileSeriesModule",
+			"TileSeriesModule"
+		],
+		"CancellingMultiScaleImageEventArgs": [
+			"GeographicMapCoreModule",
+			"GeographicMapModule",
+			"GeographicTileSeriesModule",
+			"TileSeriesModule"
+		],
+		"DownloadingMultiScaleImageEventArgs": [
+			"GeographicMapCoreModule",
+			"GeographicMapModule",
+			"GeographicTileSeriesModule",
+			"TileSeriesModule"
+		],
+		"GeographicMapImagery": [
+			"GeographicMapCoreModule",
+			"GeographicMapModule",
+			"GeographicTileSeriesModule",
+			"TileSeriesModule"
+		],
+		"StyleShapeEventArgs": [
+			"GeographicMapModule",
+			"GeographicPolylineSeriesModule",
+			"GeographicShapeSeriesModule"
+		],
+		"GeographicShapeSeries": [
+			"GeographicMapModule",
+			"GeographicShapeSeriesModule"
+		],
+		"GeographicPolylineSeries": [
+			"GeographicMapModule",
+			"GeographicPolylineSeriesModule"
+		],
+		"TileGeneratorMapImagery": [
+			"GeographicMapModule",
+			"TileGeneratorMapImageryModule"
+		],
+		"HeatTileGenerator": [
+			"GeographicMapModule",
+			"HeatTileGeneratorModule"
+		],
+		"GeographicTileSeries": [
+			"GeographicMapModule",
+			"GeographicTileSeriesModule"
+		],
+		"AssigningScatterStyleEventArgs": [
+			"GeographicMapModule",
+			"GeographicProportionalSymbolSeriesModule",
+			"GeographicSymbolSeriesModule"
+		],
+		"AssigningScatterMarkerStyleEventArgs": [
+			"GeographicMapModule",
+			"GeographicProportionalSymbolSeriesModule",
+			"GeographicSymbolSeriesModule"
+		],
+		"GeographicProportionalSymbolSeries": [
+			"GeographicMapModule",
+			"GeographicProportionalSymbolSeriesModule"
+		],
+		"GeographicSymbolSeries": [
+			"GeographicMapModule",
+			"GeographicSymbolSeriesModule"
+		],
+		"GeographicScatterAreaSeries": [
+			"GeographicMapModule",
+			"GeographicScatterAreaSeriesModule"
+		],
+		"AsyncCompletedEventArgs": [
+			"GeographicMapModule",
+			"ShapeDataSourceModule"
+		],
+		"ShapefileRecord": [
+			"GeographicMapModule",
+			"ShapeDataSourceModule"
+		],
+		"ShapeFilterRecordEventArgs": [
+			"GeographicMapModule",
+			"ShapeDataSourceModule"
+		],
+		"ShapeDataSource": [
+			"GeographicMapModule",
+			"ShapeDataSourceModule"
+		],
+		"ItemLegend": [
+			"ItemLegendModule"
+		],
+		"Legend": [
+			"LegendModule"
+		],
+		"DoubleValueChangedEventArgs": [
+			"LinearGaugeCoreModule",
+			"LinearGaugeModule",
+			"RadialGaugeCoreModule",
+			"RadialGaugeModule"
+		],
+		"LinearGauge": [
+			"LinearGaugeCoreModule",
+			"LinearGaugeModule"
+		],
+		"ListPanelContentRefreshedEventArgs": [
+			"ListPanelModule",
+			"ToolbarModule",
+			"ToolPanelModule"
+		],
+		"ListPanelItemModel": [
+			"ListPanelModule",
+			"ToolbarModule",
+			"ToolPanelModule"
+		],
+		"ListPanelTemplateItemUpdatingEventArgs": [
+			"ListPanelModule",
+			"ToolbarModule",
+			"ToolPanelModule"
+		],
+		"ListPanelTemplateWidthRequestedEventArgs": [
+			"ListPanelModule",
+			"ToolbarModule",
+			"ToolPanelModule"
+		],
+		"ListPanelTemplateHeightRequestedEventArgs": [
+			"ListPanelModule",
+			"ToolbarModule",
+			"ToolPanelModule"
+		],
+		"ListPanel": [
+			"ListPanelModule",
+			"ToolbarModule",
+			"ToolPanelModule"
+		],
+		"PieChart": [
+			"PieChartCoreModule",
+			"PieChartModule"
+		],
+		"OnClosedEventArgs": [
+			"PopupModule"
+		],
+		"OnPopupEventArgs": [
+			"PopupModule"
+		],
+		"Popup": [
+			"PopupModule"
+		],
+		"Prefix": [
+			"PrefixModule"
+		],
+		"PropertyEditorDescriptionObject": [
+			"PropertyEditorModule",
+			"PropertyEditorPanelModule",
+			"PropertyEditorPropertyDescriptionModule"
+		],
+		"PropertyEditorPropertyDescriptionButtonClickEventArgs": [
+			"PropertyEditorModule",
+			"PropertyEditorPanelModule",
+			"PropertyEditorPropertyDescriptionModule"
+		],
+		"PropertyEditorPropertyDescriptionChangedEventArgs": [
+			"PropertyEditorModule",
+			"PropertyEditorPanelModule",
+			"PropertyEditorPropertyDescriptionModule"
+		],
+		"PropertyEditorPropertyDescriptionTargetPropertyUpdatingEventArgs": [
+			"PropertyEditorModule",
+			"PropertyEditorPanelModule",
+			"PropertyEditorPropertyDescriptionModule"
+		],
+		"PropertyEditorPropertyDescription": [
+			"PropertyEditorModule",
+			"PropertyEditorPanelModule",
+			"PropertyEditorPropertyDescriptionModule"
+		],
+		"PropertyEditor": [
+			"PropertyEditorModule"
+		],
+		"PropertyEditorPanel": [
+			"PropertyEditorPanelModule"
+		],
+		"FormatRadialGaugeLabelEventArgs": [
+			"RadialGaugeCoreModule",
+			"RadialGaugeModule"
+		],
+		"AlignRadialGaugeLabelEventArgs": [
+			"RadialGaugeCoreModule",
+			"RadialGaugeModule"
+		],
+		"RadialGauge": [
+			"RadialGaugeCoreModule",
+			"RadialGaugeModule"
+		],
+		"RadialGaugeRange": [
+			"RadialGaugeCoreModule",
+			"RadialGaugeModule",
+			"RadialGaugeRangeModule"
+		],
+		"ScaleLegend": [
+			"ScaleLegendModule"
+		],
+		"Sparkline": [
+			"SparklineCoreModule",
+			"SparklineModule"
+		],
+		"TileSeries": [
+			"TileSeriesModule"
+		],
+		"ToolCommand": [
+			"ToolActionModule",
+			"ToolActionCheckboxModule",
+			"ToolActionGroupHeaderModule",
+			"ToolActionIconButtonModule",
+			"ToolActionNumberInputModule",
+			"ToolActionSeparatorModule",
+			"ToolbarModule",
+			"ToolPanelModule"
+		],
+		"ToolCommandEventArgs": [
+			"ToolActionModule",
+			"ToolActionCheckboxModule",
+			"ToolActionGroupHeaderModule",
+			"ToolActionIconButtonModule",
+			"ToolActionNumberInputModule",
+			"ToolActionSeparatorModule",
+			"ToolbarModule",
+			"ToolPanelModule"
+		],
+		"ToolAction": [
+			"ToolActionModule",
+			"ToolActionCheckboxModule",
+			"ToolActionGroupHeaderModule",
+			"ToolActionIconButtonModule",
+			"ToolActionNumberInputModule",
+			"ToolActionSeparatorModule",
+			"ToolbarModule",
+			"ToolPanelModule"
+		],
+		"ToolActionEventDetail": [
+			"ToolActionModule",
+			"ToolActionCheckboxModule",
+			"ToolActionGroupHeaderModule",
+			"ToolActionIconButtonModule",
+			"ToolActionNumberInputModule",
+			"ToolActionSeparatorModule",
+			"ToolbarModule",
+			"ToolPanelModule"
+		],
+		"ToolActionPerformedEventArgs": [
+			"ToolActionModule",
+			"ToolActionCheckboxModule",
+			"ToolActionGroupHeaderModule",
+			"ToolActionIconButtonModule",
+			"ToolActionNumberInputModule",
+			"ToolActionSeparatorModule",
+			"ToolbarModule",
+			"ToolPanelModule"
+		],
+		"ToolActionCheckbox": [
+			"ToolActionCheckboxModule",
+			"ToolbarModule",
+			"ToolPanelModule"
+		],
+		"ToolActionGroupHeader": [
+			"ToolActionGroupHeaderModule",
+			"ToolbarModule",
+			"ToolPanelModule"
+		],
+		"ToolActionIconButton": [
+			"ToolActionIconButtonModule",
+			"ToolbarModule",
+			"ToolPanelModule"
+		],
+		"ToolActionIconMenu": [
+			"ToolActionIconMenuModule",
+			"ToolbarModule",
+			"ToolPanelModule"
+		],
+		"ToolActionNumberInput": [
+			"ToolActionNumberInputModule",
+			"ToolbarModule",
+			"ToolPanelModule"
+		],
+		"ToolActionSeparator": [
+			"ToolActionSeparatorModule"
+		],
+		"TreemapNodeStyle": [
+			"TreemapModule",
+			"TreemapNodeStyleModule",
+			"TreemapNodeStyleMappingModule"
+		],
+		"TreemapNodeStylingEventArgs": [
+			"TreemapModule"
+		],
+		"TreemapNodePointerEventArgs": [
+			"TreemapModule"
+		],
+		"Treemap": [
+			"TreemapModule"
+		],
+		"TreemapNodeStyleMapping": [
+			"TreemapModule",
+			"TreemapNodeStyleMappingModule"
+		],
+		"ValueOverlay": [
+			"ValueOverlayModule"
+		],
+		"WebActionStripResourceStrings": [
+			"WebActionStripModule"
+		],
+		"WebActionStrip": [
+			"WebActionStripModule"
+		],
+		"WebBadge": [
+			"WebBadgeModule"
+		],
+		"VoidEventArgs": [
+			"WebButtonBaseModule",
+			"WebButtonModule",
+			"WebCheckboxBaseModule",
+			"WebCheckboxModule",
+			"WebDateTimeInputModule",
+			"WebFormModule",
+			"WebGridModule",
+			"WebIconButtonModule",
+			"WebInputBaseModule",
+			"WebInputModule",
+			"WebMaskInputBaseModule",
+			"WebMaskInputModule",
+			"WebPaginatorModule",
+			"WebRadioModule",
+			"WebSnackbarModule",
+			"WebSwitchModule"
+		],
+		"WebButtonBase": [
+			"WebButtonBaseModule",
+			"WebButtonModule",
+			"WebIconButtonModule"
+		],
+		"WebButton": [
+			"WebButtonModule"
+		],
+		"DateRangeDescriptor": [
+			"WebCalendarBaseModule",
+			"WebCalendarModule"
+		],
+		"WebCalendarBase": [
+			"WebCalendarBaseModule",
+			"WebCalendarModule"
+		],
+		"CalendarFormatOptions": [
+			"WebCalendarModule"
+		],
+		"WebCalendarResourceStrings": [
+			"WebCalendarModule"
+		],
+		"WebComponentDataValueChangedEventArgs": [
+			"WebCalendarModule"
+		],
+		"WebCalendar": [
+			"WebCalendarModule"
+		],
+		"WebCardActions": [
+			"WebCardActionsModule"
+		],
+		"WebCardContent": [
+			"WebCardContentModule"
+		],
+		"WebCardHeader": [
+			"WebCardHeaderModule"
+		],
+		"WebCardMedia": [
+			"WebCardMediaModule"
+		],
+		"WebCard": [
+			"WebCardModule"
+		],
+		"WebComponentBoolValueChangedEventArgs": [
+			"WebCheckboxBaseModule",
+			"WebCheckboxModule",
+			"WebChipModule",
+			"WebRadioModule",
+			"WebSwitchModule"
+		],
+		"WebCheckboxBase": [
+			"WebCheckboxBaseModule",
+			"WebCheckboxModule",
+			"WebSwitchModule"
+		],
+		"WebCheckbox": [
+			"WebCheckboxModule"
+		],
+		"WebChip": [
+			"WebChipModule"
+		],
+		"WebCircularGradient": [
+			"WebCircularGradientModule"
+		],
+		"WebProgressBase": [
+			"WebCircularProgressModule",
+			"WebLinearProgressModule",
+			"WebProgressBaseModule"
+		],
+		"WebCircularProgress": [
+			"WebCircularProgressModule"
+		],
+		"WebDockManagerPane": [
+			"WebContentPaneModule",
+			"WebDockManagerModule",
+			"WebDockManagerPaneModule",
+			"WebDocumentHostModule",
+			"WebSplitPaneModule",
+			"WebTabGroupPaneModule"
+		],
+		"WebContentPane": [
+			"WebContentPaneModule",
+			"WebDockManagerModule"
+		],
+		"WebComponentValueChangedEventArgs": [
+			"WebDateTimeInputModule",
+			"WebInputBaseModule",
+			"WebInputModule",
+			"WebMaskInputBaseModule",
+			"WebMaskInputModule"
+		],
+		"WebInputBase": [
+			"WebDateTimeInputModule",
+			"WebInputBaseModule",
+			"WebInputModule",
+			"WebMaskInputBaseModule",
+			"WebMaskInputModule"
+		],
+		"WebMaskInputBase": [
+			"WebDateTimeInputModule",
+			"WebMaskInputBaseModule",
+			"WebMaskInputModule"
+		],
+		"DatePartDeltas": [
+			"WebDateTimeInputModule"
+		],
+		"WebComponentDateValueChangedEventArgs": [
+			"WebDateTimeInputModule"
+		],
+		"WebDateTimeInput": [
+			"WebDateTimeInputModule"
+		],
+		"WebDockManagerPoint": [
+			"WebDockManagerLayoutModule",
+			"WebDockManagerModule",
+			"WebDockManagerPointModule",
+			"WebDocumentHostModule",
+			"WebSplitPaneModule"
+		],
+		"WebSplitPane": [
+			"WebDockManagerLayoutModule",
+			"WebDockManagerModule",
+			"WebDocumentHostModule",
+			"WebSplitPaneModule"
+		],
+		"WebDockManagerLayout": [
+			"WebDockManagerLayoutModule",
+			"WebDockManagerModule"
+		],
+		"WebDockManagerResourceStrings": [
+			"WebDockManagerModule"
+		],
+		"WebDockManager": [
+			"WebDockManagerModule"
+		],
+		"WebDocumentHost": [
+			"WebDocumentHostModule"
+		],
+		"WebDragService": [
+			"WebDragServiceModule",
+			"WebPaneHeaderElementModule",
+			"WebTabHeaderElementModule"
+		],
+		"WebDropdownGroup": [
+			"WebDropdownGroupModule",
+			"WebDropdownModule"
+		],
+		"WebDropdownHeader": [
+			"WebDropdownHeaderModule",
+			"WebDropdownModule"
+		],
+		"WebDropdownItem": [
+			"WebDropdownItemModule",
+			"WebDropdownModule"
+		],
+		"WebDropdownItemComponentEventArgs": [
+			"WebDropdownModule"
+		],
+		"WebDropdown": [
+			"WebDropdownModule"
+		],
+		"WebExpansionPanel": [
+			"WebExpansionPanelModule"
+		],
+		"WebExpansionPanelComponentEventArgs": [
+			"WebExpansionPanelModule"
+		],
+		"WebFormData": [
+			"WebFormModule"
+		],
+		"WebFormDataEventArgs": [
+			"WebFormModule"
+		],
+		"WebForm": [
+			"WebFormModule"
+		],
+		"WebFilteringOperation": [
+			"WebGridColumnModule",
+			"WebGridModule"
+		],
+		"WebFilteringOperand": [
+			"WebGridColumnModule",
+			"WebGridModule"
+		],
+		"WebSortingStrategy": [
+			"WebGridColumnModule",
+			"WebGridModule"
+		],
+		"WebRenderFunction": [
+			"WebGridColumnModule",
+			"WebGridModule"
+		],
+		"WebColumnPipeArgs": [
+			"WebGridColumnModule",
+			"WebGridModule"
+		],
+		"WebGridColumn": [
+			"WebGridColumnModule"
+		],
+		"WebSortingExpression": [
+			"WebGridModule"
+		],
+		"WebGroupByRecord": [
+			"WebGridModule"
+		],
+		"WebGridResourceStrings": [
+			"WebGridModule"
+		],
+		"WebDataCloneStrategy": [
+			"WebGridModule"
+		],
+		"WebGridType": [
+			"WebGridModule"
+		],
+		"WebColumnMovingService": [
+			"WebGridModule"
+		],
+		"WebGridServiceType": [
+			"WebGridModule"
+		],
+		"WebSize": [
+			"WebGridModule",
+			"WebPaginatorModule"
+		],
+		"WebPositionSettings": [
+			"WebGridModule",
+			"WebPaginatorModule"
+		],
+		"WebPositionStrategy": [
+			"WebGridModule",
+			"WebPaginatorModule"
+		],
+		"WebScrollStrategy": [
+			"WebGridModule",
+			"WebPaginatorModule"
+		],
+		"WebOverlaySettings": [
+			"WebGridModule",
+			"WebPaginatorModule"
+		],
+		"WebPaginatorResourceStrings": [
+			"WebGridModule",
+			"WebPaginatorModule"
+		],
+		"WebPageCancellableEventArgs": [
+			"WebGridModule",
+			"WebPaginatorModule"
+		],
+		"WebPageEventArgs": [
+			"WebGridModule",
+			"WebPaginatorModule"
+		],
+		"WebPaginator": [
+			"WebGridModule",
+			"WebPaginatorModule"
+		],
+		"WebForOfState": [
+			"WebGridModule"
+		],
+		"WebPinningConfig": [
+			"WebGridModule"
+		],
+		"WebColumnType": [
+			"WebGridModule"
+		],
+		"WebTransactionService": [
+			"WebGridModule"
+		],
+		"WebToggleViewEventArgs": [
+			"WebGridModule"
+		],
+		"WebToggleViewCancelableEventArgs": [
+			"WebGridModule"
+		],
+		"WebToggleDirective": [
+			"WebGridModule"
+		],
+		"WebSearchInfo": [
+			"WebGridModule"
+		],
+		"WebTreeGridRecord": [
+			"WebGridModule"
+		],
+		"WebGridSortingStrategy": [
+			"WebGridModule"
+		],
+		"WebGridGroupingStrategy": [
+			"WebGridModule"
+		],
+		"WebFilteringStrategy": [
+			"WebGridModule"
+		],
+		"WebFilteringExpressionsTreeOrFilteringExpression": [
+			"WebGridModule"
+		],
+		"WebFilteringExpressionsTree": [
+			"WebGridModule"
+		],
+		"WebSortingOptions": [
+			"WebGridModule"
+		],
+		"WebGroupByKey": [
+			"WebGridModule"
+		],
+		"WebGroupByExpandState": [
+			"WebGridModule"
+		],
+		"WebGroupingExpression": [
+			"WebGridModule"
+		],
+		"WebCellType": [
+			"WebGridModule"
+		],
+		"WebRowType": [
+			"WebGridModule"
+		],
+		"WebGridCellIdentifier": [
+			"WebGridModule"
+		],
+		"WebActiveNodeChangeEventArgs": [
+			"WebGridModule"
+		],
+		"WebGridKeydownEventArgs": [
+			"WebGridModule"
+		],
+		"WebGridCellEventArgs": [
+			"WebGridModule"
+		],
+		"WebGridSelectionRange": [
+			"WebGridModule"
+		],
+		"WebGridSelectionRangeEventArgs": [
+			"WebGridModule"
+		],
+		"WebRowSelectionEventArgs": [
+			"WebGridModule"
+		],
+		"WebFilteringEventArgs": [
+			"WebGridModule"
+		],
+		"WebFilteringExpressionsTreeEventArgs": [
+			"WebGridModule"
+		],
+		"WebPinColumnEventArgs": [
+			"WebGridModule"
+		],
+		"WebColumnResizeEventArgs": [
+			"WebGridModule"
+		],
+		"WebColumnMovingEndEventArgs": [
+			"WebGridModule"
+		],
+		"WebColumnSelectionEventArgs": [
+			"WebGridModule"
+		],
+		"WebColumnMovingEventArgs": [
+			"WebGridModule"
+		],
+		"WebColumnMovingStartEventArgs": [
+			"WebGridModule"
+		],
+		"WebPinColumnCancellableEventArgs": [
+			"WebGridModule"
+		],
+		"WebColumnVisibilityChangingEventArgs": [
+			"WebGridModule"
+		],
+		"WebColumnVisibilityChangedEventArgs": [
+			"WebGridModule"
+		],
+		"WebDensityChangedEventArgs": [
+			"WebGridModule"
+		],
+		"WebGridEditEventArgs": [
+			"WebGridModule"
+		],
+		"WebRowDataEventArgs": [
+			"WebGridModule"
+		],
+		"WebGridEditDoneEventArgs": [
+			"WebGridModule"
+		],
+		"WebRowDragStartEventArgs": [
+			"WebGridModule"
+		],
+		"WebRowDragEndEventArgs": [
+			"WebGridModule"
+		],
+		"WebRowToggleEventArgs": [
+			"WebGridModule"
+		],
+		"WebGridToolbarExportEventArgs": [
+			"WebGridModule"
+		],
+		"WebSortingExpressionEventArgs": [
+			"WebGridModule"
+		],
+		"WebGroupingExpressionEventArgs": [
+			"WebGridModule"
+		],
+		"WebForOfStateEventArgs": [
+			"WebGridModule"
+		],
+		"WebGroupingDoneEventArgs": [
+			"WebGridModule"
+		],
+		"WebGrid": [
+			"WebGridModule"
+		],
+		"WebIconButton": [
+			"WebIconButtonModule"
+		],
+		"WebIcon": [
+			"WebIconModule"
+		],
+		"WebInput": [
+			"WebInputModule"
+		],
+		"WebLinearProgress": [
+			"WebLinearProgressModule"
+		],
+		"WebListHeader": [
+			"WebListHeaderModule"
+		],
+		"WebListItem": [
+			"WebListItemModule"
+		],
+		"WebList": [
+			"WebListModule"
+		],
+		"WebMaskInput": [
+			"WebMaskInputModule"
+		],
+		"WebNavbar": [
+			"WebNavbarModule"
+		],
+		"WebNavDrawerHeaderItem": [
+			"WebNavDrawerHeaderItemModule"
+		],
+		"WebNavDrawerItem": [
+			"WebNavDrawerItemModule"
+		],
+		"WebNavDrawer": [
+			"WebNavDrawerModule"
+		],
+		"WebPaneHeaderElement": [
+			"WebPaneHeaderElementModule"
+		],
+		"WebRadioGroup": [
+			"WebRadioGroupModule"
+		],
+		"WebRadio": [
+			"WebRadioModule"
+		],
+		"WebSliderBase": [
+			"WebRangeSliderModule",
+			"WebSliderBaseModule",
+			"WebSliderModule"
+		],
+		"WebRangeSliderValue": [
+			"WebRangeSliderModule"
+		],
+		"WebRangeSliderValueEventArgs": [
+			"WebRangeSliderModule"
+		],
+		"WebRangeSlider": [
+			"WebRangeSliderModule"
+		],
+		"WebNumberEventArgs": [
+			"WebRatingModule",
+			"WebSliderModule"
+		],
+		"WebRating": [
+			"WebRatingModule"
+		],
+		"WebRatingSymbol": [
+			"WebRatingSymbolModule"
+		],
+		"WebRipple": [
+			"WebRippleModule"
+		],
+		"WebSliderLabel": [
+			"WebSliderLabelModule"
+		],
+		"WebSlider": [
+			"WebSliderModule"
+		],
+		"WebSnackbar": [
+			"WebSnackbarModule"
+		],
+		"WebSwitch": [
+			"WebSwitchModule"
+		],
+		"WebTabGroupPane": [
+			"WebTabGroupPaneModule"
+		],
+		"WebTabHeaderElement": [
+			"WebTabHeaderElementModule"
+		],
+		"WebTab": [
+			"WebTabModule",
+			"WebTabsModule"
+		],
+		"WebTabPanel": [
+			"WebTabPanelModule",
+			"WebTabsModule"
+		],
+		"WebTabComponentEventArgs": [
+			"WebTabsModule"
+		],
+		"WebTabs": [
+			"WebTabsModule"
+		],
+		"WebToast": [
+			"WebToastModule"
+		],
+		"WebTreeItem": [
+			"WebTreeItemModule",
+			"WebTreeModule"
+		],
+		"WebTreeSelectionOptionsEventDetail": [
+			"WebTreeModule"
+		],
+		"WebTreeSelectionOptionsEventArgs": [
+			"WebTreeModule"
+		],
+		"WebTreeItemComponentEventArgs": [
+			"WebTreeModule"
+		],
+		"WebTree": [
+			"WebTreeModule"
+		],
+		"CustomContourValueResolverEventArgs": [
+			"CustomContourValueResolverModule"
+		],
+		"CustomContourValueResolver": [
+			"CustomContourValueResolverModule"
+		],
+		"CustomPaletteBrushScale": [
+			"CustomPaletteBrushScaleModule"
+		],
+		"HierarchicalRingSeries": [
+			"HierarchicalRingSeriesModule"
+		],
+		"LinearContourValueResolver": [
+			"LinearContourValueResolverModule"
+		],
+		"SectionFooter": [
+			"SectionFooterModule"
+		],
+		"TemplateSectionHeaderCellUpdatingEventArgs": [
+			"TemplateSectionHeaderModule"
+		],
+		"TemplateSectionHeader": [
+			"TemplateSectionHeaderModule"
+		],
+		"WebAccordion": [
+			"WebAccordionModule"
+		],
+		"WebAvatar": [
+			"WebAvatarModule"
+		],
+		"ToolPanelContentRefreshedEventArgs": [
+			"ToolbarModule",
+			"ToolPanelModule"
+		],
+		"ToolPanel": [
+			"ToolbarModule",
+			"ToolPanelModule"
+		],
+		"Toolbar": [
+			"ToolbarModule"
+		]
+	}
+}

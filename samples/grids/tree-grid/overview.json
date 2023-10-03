@@ -1,6 +1,7 @@
 {
   "todo": [ "add Performance column with a template" ],
   "export": true,
+  "skipAlterDataCasing": true,
   "descriptions": {
     "content": {
       "type": "WebTreeGrid",
@@ -12,6 +13,7 @@
       "rowSelection": "Multiple",
       "moving": true,
       "allowFiltering": true,
+      "filterMode": "ExcelStyleFilter",
       "paging": true,
       "toolbar": [
         {

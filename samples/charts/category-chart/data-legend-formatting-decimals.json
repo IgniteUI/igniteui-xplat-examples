@@ -29,7 +29,7 @@
     }
   },
   "modules": [
-    "charts/LegendModule",
+    "charts/DataLegendModule",
     "charts/CategoryChartModule"
   ]
 }

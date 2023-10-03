@@ -1,0 +1,13 @@
+{
+  "export": false,
+  "descriptions": {
+    "content": {
+      "type": "GeographicMap",
+      "name": "map"
+    }
+  },
+  "modules": [
+    "charts/DataChartInteractivityModule",
+    "maps/GeographicMapModule"
+  ]
+}

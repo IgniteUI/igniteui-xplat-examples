@@ -11,6 +11,7 @@
       "primaryKey": "ProductID",
       "displayDensity": "Cosy",
       "allowFiltering": true,
+      "filterMode": "ExcelStyleFilter",
       "paginationComponents": [
         {
           "type": "WebPaginator",
@@ -18,16 +19,6 @@
         }
       ],
       "columns": [
-        {
-          "type": "WebColumn",
-          "field": "ProductID",
-          "header": "Product ID",
-          "dataType": "Number",
-          "sortable": true,
-          "hasSummary": true,
-          "editable": true,
-          "resizable": true
-        },
         {
           "type": "WebColumn",
           "field": "ProductName",
@@ -75,7 +66,8 @@
           "dataType": "Boolean",
           "sortable": true,
           "hasSummary": true,
-          "editable": true
+          "editable": true,
+          "bodyTemplateRef": "WebGridBooleanCellTemplate"
         },
         {
           "type": "WebColumn",

@@ -1,8 +1,8 @@
 {
-  "todo": [ 
-     ""
+  "todo": [
+    "The property editor bindings to complex properties don't seem to work, hence skipping this sample."
   ],
-  "export": true,
+  "export": false,
   "skipAlterDataCasing": true,
   "descriptions": {
     "editor": {
@@ -62,31 +62,38 @@
       "columns": [
         {
           "type": "WebColumn",
-          "field": "ProductID"
+          "field": "ProductID",
+          "header": "Product ID"
         },
         {
           "type": "WebColumn",
-          "field": "ProductName"
+          "field": "ProductName",
+          "header": "Product Name"
         },
         {
           "type": "WebColumn",
-          "field": "SupplierID"
+          "field": "SupplierID",
+          "header": "Supplier ID"
         },
         {
           "type": "WebColumn",
-          "field": "CategoryID"
+          "field": "CategoryID",
+          "header": "Category ID"
         },
         {
           "type": "WebColumn",
-          "field": "QuantityPerUnit"
+          "field": "QuantityPerUnit",
+          "header": "Quantity Per Unit"
         },
         {
           "type": "WebColumn",
-          "field": "UnitPrice"
+          "field": "UnitPrice",
+          "header": "Unit Price"
         },
         {
           "type": "WebColumn",
-          "field": "UnitsInStock"
+          "field": "UnitsInStock",
+          "header": "Units In Stock"
         }
       ]
     }
