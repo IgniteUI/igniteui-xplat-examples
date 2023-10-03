@@ -6,6 +6,7 @@
   "descriptions": {
     "content": {
       "name": "grid",
+      "id": "grid",
       "type": "WebGrid",
       "dataRef": "CustomersData",
       "primaryKey": "CompanyName",
