@@ -3,21 +3,22 @@ import { IgrCellTemplateContext } from 'igniteui-react-grids';
 import { IgrCombo, IgrLinearProgress } from "igniteui-react";
 //end imports
 
-export class WebGridCountryDropDownTemplate {
+export class WebGridRegionDropDownTemplate {
     //begin template
     //begin content
-    public webGridCountryDropDownTemplate = (props: {dataContext: IgrCellTemplateContext}) => {
+    public webGridRegionDropDownTemplate = (props: {dataContext: IgrCellTemplateContext}) => {
         var cell = props.dataContext.cell as any;
-        if (cell === undefined || cell.row === undefined || cell.row.data === undefined) {
+        if (cell === undefined) {
             return <></>;
         }
-
+        const id = cell.id.rowID;
+        const comboId = "region_" + id;
         return (
         <>
-            <div style={{display: "flex", flex-direction: "column"}}>
-                <IgrCombo placeholder="Choose Region..." disabled value-key="Region"  display-key="Region" single-select id="${comboId}">
+            <div style={{display: "flex", flexDirection: "column"}}>
+                <IgrCombo placeholder="Choose Region..." disabled="true" valueKey="Region"  displayKey="Region" singleSelect="true" id={comboId}>
                 </IgrCombo>
-                <IgrLinearProgress style={{display: "none"}} indeterminate id="${progressId}">
+                <IgrLinearProgress style={{display: "none"}} indeterminate>
                 </IgrLinearProgress>
             </div>
         </>

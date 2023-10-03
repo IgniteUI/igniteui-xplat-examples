@@ -8,13 +8,13 @@ export class WebGridCountryDropDownTemplate {
     //begin content
     public webGridCountryDropDownTemplate = (props: {dataContext: IgrCellTemplateContext}) => {
         var cell = props.dataContext.cell as any;
-        if (cell === undefined || cell.row === undefined || cell.row.data === undefined) {
+        if (cell === undefined) {
             return <></>;
         }
 
         return (
         <>
-            <IgrCombo placeholder="Choose Country..." value-key="Country" display-key="Country" single-select id="${comboId}"></IgrCombo>
+            <IgrCombo placeholder="Choose Country..." valueKey="Country" displayKey="Country" singleSelect="true" id="${comboId}"></IgrCombo>
         </>
         );
     }
