@@ -10,15 +10,19 @@ export class WebGridCurrencyCellTemplate {
         if (props.dataContext.cell.value > 0) {
             return (
                 <div className="currency-badge-container">
-                <IgrBadge variant="success" className="badge-left"><span>▲</span></IgrBadge>
-                <span className="up">{ props.dataContext.cell.value.toFixed(2) }</span>
+                    <div className="badge-left">
+                        <IgrBadge variant="success"><span>▲</span></IgrBadge>
+                    </div>
+                    <span className="up">{ props.dataContext.cell.value.toFixed(2) }</span>
                 </div>
             );
         } else {
             return (
                 <div className="currency-badge-container">
-                <IgrBadge variant="danger" className="badge-left"><span>▼</span></IgrBadge>
-                <span className="down">{ props.dataContext.cell.value.toFixed(2) }</span>
+                    <div className="badge-left">
+                        <IgrBadge variant="danger"><span>▼</span></IgrBadge>
+                    </div>
+                    <span className="down">{ props.dataContext.cell.value.toFixed(2) }</span>
                 </div>
             );
         }
