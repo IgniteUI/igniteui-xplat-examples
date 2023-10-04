@@ -9,8 +9,8 @@ export class WebGridCellStylesHandler {
 //begin template
 //begin content
     public webGridCellStylesHandler = {
-        background: (rowData, columnKey, cellValue, rowIndex) => rowIndex % 2 === 0 ? "#EFF4FD" : null,
-        color: (rowData, columnKey, cellValue, rowIndex) => {
+        background: (rowData: any, columnKey: any, cellValue: any, rowIndex: any) => rowIndex % 2 === 0 ? "#EFF4FD" : null,
+        color: (rowData: any, columnKey: any, cellValue: any, rowIndex: any) => {
             if (columnKey === "Position") {
                 switch (cellValue) {
                     case "up": return "#28a745";
@@ -18,6 +18,7 @@ export class WebGridCellStylesHandler {
                     case "current": return "#17a2b8"
                 }
             }
+            return undefined;
         }
     };
 //end content
