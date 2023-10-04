@@ -1,5 +1,12 @@
 # code owners must approve PRs
-* @HUSSAR-mtrela
+
+# code-gen-library ANYBODY
+code-gen-tools/**/*.* @HUSSAR-mtrela
+editor-hosts/**/*.* @HUSSAR-mtrela
+editor-templates/**/*.* @HUSSAR-mtrela
+samples/charts/**/*.* @HUSSAR-mtrela
+samples/gauges/**/*.* @HUSSAR-mtrela
+samples/maps/**/*.* @HUSSAR-mtrela
 
 # *.md @HUSSAR-mtrela
 # *.js @HUSSAR-mtrela
