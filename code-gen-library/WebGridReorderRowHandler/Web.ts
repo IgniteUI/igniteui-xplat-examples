@@ -1,13 +1,15 @@
 //begin imports
-import { IgcRowDragEndEventArgs } from 'igniteui-webcomponents-grids/grids';
+import { IgcGridComponent, IgcRowDragEndEventArgs } from 'igniteui-webcomponents-grids/grids';
 //end imports
+
+import { CodeGenHelper } from 'igniteui-webcomponents-core';
 
 export class WebGridReorderRowHandler {
     //begin eventHandler
     public webGridReorderRowHandler(args: CustomEvent<IgcRowDragEndEventArgs>): void {
         const ghostElement = args.detail.dragDirective.ghostElement;
         const dragElementPos = ghostElement.getBoundingClientRect();
-        const grid = document.getElementsByTagName("igc-grid")[0] as any;
+        const grid = CodeGenHelper.getDescription<IgcGridComponent>("content");
         const rows = Array.prototype.slice.call(document.getElementsByTagName("igx-grid-row"));
         const currRowIndex = this.getCurrentRowIndex(rows,
         { x: dragElementPos.x, y: dragElementPos.y });
@@ -17,7 +19,7 @@ export class WebGridReorderRowHandler {
         grid.data.splice(currRowIndex, 0, args.detail.dragData.data);
     }
     
-    public getCurrentRowIndex(rowList: any[], cursorPosition) {
+    public getCurrentRowIndex(rowList: any[], cursorPosition: any) {
         for (const row of rowList) {
             const rowRect = row.getBoundingClientRect();
             if (cursorPosition.y > rowRect.top + window.scrollY && cursorPosition.y < rowRect.bottom + window.scrollY &&

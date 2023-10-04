@@ -3,6 +3,8 @@ import { IgcTreeGridComponent, IgcColumnTemplateContext} from 'igniteui-webcompo
 import { html, nothing } from 'lit-html';
 //end imports
 
+import { CodeGenHelper } from 'igniteui-webcomponents-core';
+
 export class WebTreeGridPinHeaderTemplateComponent {
 //begin template
 //begin content
@@ -17,7 +19,7 @@ public webTreeGridPinHeaderTemplate = (ctx: IgcColumnTemplateContext) => {
 //end content
 //begin supportingMethods
 public toggleColumnPin(field: string) {
-    var grid = document.getElementsByTagName("igc-tree-grid")[0] as IgcTreeGridComponent;
+    var grid = CodeGenHelper.getDescription<IgcTreeGridComponent>("content");
     var col = grid.getColumnByName(field);
     col.pinned = !col.pinned;
     grid.markForCheck();

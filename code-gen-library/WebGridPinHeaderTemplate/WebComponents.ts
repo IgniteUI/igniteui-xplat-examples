@@ -3,6 +3,8 @@ import { IgcGridComponent, IgcColumnTemplateContext} from 'igniteui-webcomponent
 import { html, nothing } from 'lit-html';
 //end imports
 
+import { CodeGenHelper } from 'igniteui-webcomponents-core';
+
 export class WebGridPinHeaderTemplateComponent {
 //begin template
 //begin content
@@ -17,7 +19,7 @@ public webGridPinHeaderTemplate = (ctx: IgcColumnTemplateContext) => {
 //end content
 //begin supportingMethods
 public toggleColumnPin(field: string) {
-    var grid = document.getElementsByTagName("igc-grid")[0] as IgcGridComponent;
+    var grid: IgcGridComponent = CodeGenHelper.getDescription<IgcGridComponent>("content");
     var col = grid.getColumnByName(field);
     col.pinned = !col.pinned;
     grid.markForCheck();
