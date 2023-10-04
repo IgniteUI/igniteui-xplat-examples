@@ -14,6 +14,9 @@
     "lint": "eslint ./src/**/*.{ts,tsx}"
   },
   "dependencies": {
+//ifdef webgrids
+    "igniteui-dockmanager": "1.14.2",
+//endifdef webgrids
     "igniteui-react": "18.3.0-beta.1",
 //ifdef charts, maps
     "igniteui-react-charts": "18.3.0-beta.1",
@@ -44,9 +47,6 @@
     "igniteui-react-spreadsheet": "18.3.0-beta.1",
     "igniteui-react-spreadsheet-chart-adapter": "18.3.0-beta.1",
 //endifdef spreadsheet
-//ifdef webgrids
-    "igniteui-dockmanager": "1.14.2",
-//endifdef webgrids
     "igniteui-webcomponents": "4.5.0-beta.1",
     "lit-html": "^2.2.0",
     "react": "^18.2.0",
