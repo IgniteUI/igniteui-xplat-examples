@@ -1,12 +1,12 @@
 //begin imports
-import { IgcGridComponent } from 'igniteui-webcomponents-grids/grids';
+import { IgcGridComponent, IgrGridEditDoneEventArgs } from 'igniteui-webcomponents-grids/grids';
 //end imports
 
 import { CodeGenHelper } from 'igniteui-webcomponents-core';
 
 export class WebGridCellEditExit {
     //begin eventHandler
-    public webGridCellEditExit(args: any): void {
+    public webGridCellEditExit(args: CustomEvent<IgrGridEditDoneEventArgs>): void {
         let container = document.getElementById("container");
         const message = document.createElement("p");
         message.textContent = `=> 'cellEditExit'`;
