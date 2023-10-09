@@ -14,14 +14,16 @@
           "type": "PropertyEditorPropertyDescription",
           "propertyPath": "SummaryRowHeight",
           "label": "Summary Row Height",
-          "valueType": "Number"
+          "valueType": "Number",
+          "name": "SummaryHeightEditor"
         },
         {
           "type": "PropertyEditorPropertyDescription",
           "label": "Toggle Summaries",
           "valueType": "Boolean1",
           "primitiveValue": true,
-          "changedRef": "WebGridHasSummariesChange"
+          "changedRef": "WebGridHasSummariesChange",
+          "name": "ToggleSummaryEditor"
         },
         {
           "type": "PropertyEditorPropertyDescription",
