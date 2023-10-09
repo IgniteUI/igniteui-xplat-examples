@@ -1,0 +1,49 @@
+﻿<Window x:Class="Sample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Sample"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="700"
+        xmlns:ig="http://schemas.infragistics.com/xaml">
+    <Grid>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition />
+      </Grid.RowDefinitions>
+      <Grid Grid.Row="0">
+        <!-- insert editor -->
+        <!-- end editor-->
+      </Grid>
+      <Grid Grid.Row="1">
+        <!-- insert legend -->
+        <!-- end legend -->
+      </Grid>
+      <Grid Grid.Row="2">
+        <!-- insert aboveContent -->
+        <!-- end aboveContent -->
+      </Grid>
+      <Grid Grid.Row="3">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="*"/>
+          <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0" HorizontalAlignment="Left" Margin="10 0 0 0">
+          <!-- insert aboveContentLeft -->
+          <!-- end aboveContentLeft -->
+        </Grid>
+        <Grid Grid.Column="1" HorizontalAlignment="Right" Margin="0 0 10 0">
+          <!-- insert aboveContentRight -->
+          <!-- end aboveContentRight -->
+        </Grid>
+      </Grid>
+      <Grid Grid.Row="4">
+        <!-- insert content -->
+        <!-- end content -->
+      </Grid>
+    </Grid>
+</Window>

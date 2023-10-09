@@ -1,0 +1,56 @@
+{
+  "strings": {
+    "legendTitle": "Renewable Electricity Generated"
+  },
+  "descriptions": {
+    "legend": {
+      "type": "Legend",
+      "name": "Legend",
+      "orientation": "Horizontal"
+    },
+    "editor": {
+      "type": "PropertyEditorPanel",
+      "name": "PropertyEditor",
+      "componentRendererRef": "renderer",
+      "targetRef": "chart",
+      "descriptionType": "CategoryChart",
+      "isHorizontal": true,
+      "isWrappingEnabled": true,
+      "properties": [
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "ValueListHandler",
+          "name": "ValueListEditor",
+          "label": "Value List",
+          "shouldOverrideDefaultEditor": true,
+          "valueType": "EnumValue",
+          "dropDownValues": [ "Auto", "Average", "GlobalAverage", "GlobalMaximum", "GlobalMinimum", "Maximum", "Minimum" ],
+          "dropDownNames": [ "Auto", "Average", "GlobalAverage", "GlobalMaximum", "GlobalMinimum", "Maximum", "Minimum" ],
+          "primitiveValue": "Auto",
+          "changedRef": "EditorChangeUpdateValueLines"
+        }
+      ]
+    },
+    "content": {
+      "type": "CategoryChart",
+      "name": "chart",
+      "dataSourceRef": "CountryRenewableElectricity",
+      "includedProperties": ["Year", "America", "Europe"],
+      "chartType": "Column",
+      "legendRef": "Legend",
+      "isHorizontalZoomEnabled": false,
+      "isVerticalZoomEnabled": false,
+      "crosshairsDisplayMode": "None",
+      "valueLines": ["Auto"],
+      "isTransitionInEnabled": false,
+      "yAxisMinimumValue": 0,
+      "yAxisMaximumValue": 100
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
+    "charts/LegendModule",
+    "charts/CategoryChartModule"
+  ]
+}
