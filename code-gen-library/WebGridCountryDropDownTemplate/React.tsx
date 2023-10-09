@@ -11,10 +11,12 @@ export class WebGridCountryDropDownTemplate {
         if (cell === undefined) {
             return <></>;
         }
-
+        this.comboRefs = this.comboRefs.bind(this);
+        const id = cell.id.rowID;
+        const comboId = "country" + id;
         return (
         <>
-            <IgrCombo placeholder="Choose Country..." valueKey="Country" displayKey="Country" singleSelect="true" id="${comboId}"></IgrCombo>
+            <IgrCombo data={this.countries} ref={this.comboRefs} change={(x: any, args: any) => { this.onCountryChange(id, x, args) }} placeholder="Choose Country..." valueKey="Country" displayKey="Country" singleSelect="true" name={comboId}></IgrCombo>
         </>
         );
     }
