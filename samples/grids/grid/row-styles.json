@@ -1,8 +1,7 @@
 {
   "todo": [
-    "Add working WebGridCurrencyCellTemplate with badge and icon"
   ],
-  "export": false,
+  "export": true,
   "skipAlterDataCasing": true,
   "descriptions": {
     "content": {
@@ -42,14 +41,16 @@
           "type": "WebColumn",
           "field": "Change",
           "width": "120px",
-          "dataType": "Number"
+          "dataType": "Number",
+          "bodyTemplateRef": "WebGridCurrencyCellTemplate"
         },
         {
           "type": "WebColumn",
           "field": "ChangePercent",
           "header": "Change(%)",
           "width": "120px",
-          "dataType": "Number"
+          "dataType": "Percent",
+          "bodyTemplateRef": "WebGridCurrencyCellTemplate"
         },
         {
           "type": "WebColumn",
@@ -121,6 +122,7 @@
     }
   },
   "modules": [
-    "grids/WebGridModule"
+    "grids/WebGridModule",
+    "webinputs/WebBadgeModule"
   ]
 }

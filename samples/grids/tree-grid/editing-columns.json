@@ -1,13 +1,18 @@
 {
-  "skipAlterDataCasing": true,
+  "todo": [ "wait for Graham to provide access to WC classes in WebTreeGridCustomNumberSummary event handler" ],
+  "export": false,
   "descriptions": {
     "content": {
       "type": "WebTreeGrid",
-      "dataRef": "NwindData",
+      "name": "treeGrid",
+      "id": "treeGrid",
+      "dataRef": "EmployeesNestedTreeData",
+      "primaryKey": "ID",
       "autoGenerate": false,
-      "primaryKey": "ProductID",
-      "displayDensity": "Cosy",
+      "displayDensity": "Comfortable",
       "allowFiltering": true,
+      "paging": true,
+      "foreignKey": "ParentID",
       "paginationComponents": [
         {
           "type": "WebPaginator",
@@ -17,59 +22,47 @@
       "columns": [
         {
           "type": "WebColumn",
-          "field": "ProductName",
-          "header": "Product Name",
+          "field": "Name",
           "dataType": "String",
-          "sortable": true,
-          "hasSummary": true,
           "editable": true,
-          "resizable": true
+          "hasSummary": true
         },
         {
           "type": "WebColumn",
-          "field": "UnitsInStock",
-          "header": "Units in Stock",
+          "field": "Title",
+          "dataType": "String",
+          "editable": true,
+          "hasSummary": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "Age",
           "dataType": "Number",
-          "sortable": true,
-          "hasSummary": true,
           "editable": true,
-          "resizable": true
+          "hasSummary": true,
+          "summaryTemplateRef": "WebTreeGridCustomNumberSummary"
         },
         {
           "type": "WebColumn",
-          "field": "OrderDate",
-          "header": "Order Date",
+          "field": "HireDate",
           "dataType": "Date",
-          "sortable": true,
-          "hasSummary": true,
           "editable": true,
-          "resizable": true
+          "hasSummary": true
         },
         {
           "type": "WebColumn",
-          "field": "Discontinued",
-          "header": "Discontinued",
+          "field": "OnPTO",
           "dataType": "Boolean",
-          "sortable": true,
-          "hasSummary": true,
-          "editable": true
-        },
-        {
-          "type": "WebColumn",
-          "field": "ReorderLevel",
-          "header": "Reorder Level",
-          "dataType": "Number",
-          "sortable": true,
-          "hasSummary": true,
           "editable": true,
-          "filterable": false
+          "hasSummary": true,
+          "width": "130px"
         }
       ]
     }
   },
   "modules": [
     "withDescriptions",
-    "grids/WebTreeGridModule",
-    "grids/WebPaginatorModule"
+    "grids/WebPaginatorModule",
+    "grids/WebTreeGridModule"
   ]
 }
