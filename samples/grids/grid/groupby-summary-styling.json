@@ -1,9 +1,7 @@
 {
-  "todo": [
-    ""
-  ],
   "export": true,
   "skipAlterDataCasing": true,
+  "onInit": ["WebGridGroupBySummaryStyleWithCustomCSS"],
   "descriptions": {
     "editor": {
       "type": "PropertyEditorPanel",
@@ -29,6 +27,7 @@
     "content": {
       "type": "WebGrid",
       "name": "grid",
+      "id": "grid",
       "dataRef": "InvoicesData",
       "autoGenerate": false,
       "groupingExpressions": [

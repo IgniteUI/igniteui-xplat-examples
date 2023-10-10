@@ -1,0 +1,10 @@
+[
+  { "Value": 30, "Label": "A" },
+  { "Value": 40, "Label": "B" },
+  { "Value": 50, "Label": "C" },
+  { "Value": 40, "Label": "D" },
+  { "Value": 30, "Label": "E" },
+  { "Value": 20, "Label": "F" },
+  { "Value": 30, "Label": "G" },
+  { "Value": 40, "Label": "H" }
+]

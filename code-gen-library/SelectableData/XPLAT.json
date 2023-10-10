@@ -1,0 +1,18 @@
+[
+    { "Category": "2010", "DataValue": 20, "SelectedValue": 20 },
+    { "Category": "2011", "DataValue": 40, "SelectedValue": null },
+    { "Category": "2012", "DataValue": 35, "SelectedValue": null },
+    { "Category": "2013", "DataValue": 50, "SelectedValue": 50 },
+    { "Category": "2014", "DataValue": 45, "SelectedValue": null },
+    { "Category": "2015", "DataValue": 60, "SelectedValue": 60 },
+    { "Category": "2016", "DataValue": 35, "SelectedValue": null },
+    { "Category": "2017", "DataValue": 40, "SelectedValue": null },
+    { "Category": "2018", "DataValue": 50, "SelectedValue": 50 },
+    { "Category": "2019", "DataValue": 75, "SelectedValue": 75 },
+    { "Category": "2020", "DataValue": 65, "SelectedValue": null },
+    { "Category": "2021", "DataValue": 40, "SelectedValue": null },
+    { "Category": "2022", "DataValue": 50, "SelectedValue": null },
+    { "Category": "2023", "DataValue": 65, "SelectedValue": 65 },
+    { "Category": "2024", "DataValue": 70, "SelectedValue": 70 },
+    { "Category": "2025", "DataValue": 85, "SelectedValue": null }
+]
