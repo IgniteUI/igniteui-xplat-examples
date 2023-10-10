@@ -2,6 +2,7 @@
   "todo": [ "" ],
   "export": true,
   "skipAlterDataCasing": true,
+  "onInit": ["WebTreeGridAdvancedFilteringStyle"],
   "descriptions": {
     "content": {
       "type": "WebTreeGrid",
