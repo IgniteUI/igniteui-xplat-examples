@@ -9,6 +9,7 @@
       "type": "WebGrid",
       "dataRef": "AthletesData",
       "autoGenerate": false,
+      "toolbarExportingRef": "WebGridToolbarExporting",
       "toolbar": [
         {
           "type": "WebGridToolbar",

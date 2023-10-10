@@ -37,6 +37,7 @@
   },
   "modules": [
     "withDescriptions",
-    "grids/WebGridModule"
+    "grids/WebGridModule",
+    "webinputs/WebCheckboxModule"
   ]
 }

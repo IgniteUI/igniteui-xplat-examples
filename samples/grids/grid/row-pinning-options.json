@@ -24,7 +24,7 @@
     "content": {
       "type": "WebGrid",
       "name": "grid",
-      "dataRef": "CustomersData",
+      "dataRef": "CustomersDataLocal",
       "autoGenerate": false,
       "pinning": {
         "type": "WebPinningConfig",
