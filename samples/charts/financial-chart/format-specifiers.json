@@ -1,0 +1,49 @@
+{
+  "descriptions": {
+    "legend": {
+      "type": "DataLegend",
+      "name": "Legend",
+      "targetRef": "chart",
+      "includedColumns": ["Close", "Change", "Value"],
+      "excludedColumns": ["High", "Low", "Open", "Volume"],
+      "labelDisplayMode": "Hidden",
+      "valueFormatMode": "Currency",
+      "valueFormatCulture": "en-GB"
+    },
+    "content": {
+      "type": "FinancialChart",
+      "name": "chart",
+      "chartType": "Candle",
+      "dataSourceRef": "MultipleStocks",
+      "dataToolTipValueFormatMode": "Currency",
+      "dataToolTipValueFormatCulture": "en-GB",
+      "dataToolTipLabelDisplayMode": "Hidden",
+      "dataToolTipIncludedColumns": ["Close", "Change", "Value"],
+      "dataToolTipHeaderFormatTime": "None",
+      "zoomSliderType": "None",
+      "yAxisLabelFormat": "{0}",
+      "yAxisLabelFormatSpecifiers": [
+        {
+          "type": "NumberFormatSpecifier",
+          "currency": "EUR",
+          "style": "currency",
+          "locale": "en-GB",
+          "minimumFractionDigits": 0
+        }
+      ],
+      "xAxisLabelFormat": "{0}",
+      "xAxisLabelFormatSpecifiers": [
+        {
+          "type": "DateTimeFormatSpecifier",
+          "locale": "en-GB",
+          "dateStyle": "long"
+        }
+      ]
+    }
+  },
+  "modules": [
+    "charts/FinancialChartModule",
+    "charts/DataChartInteractivityModule",
+    "charts/DataLegendModule"
+  ]
+}

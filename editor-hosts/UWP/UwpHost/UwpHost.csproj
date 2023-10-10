@@ -1,0 +1,64 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <Platforms>AnyCPU;x64;x86</Platforms>
+    <AssetTargetFallback>uap10.0.19041</AssetTargetFallback>
+    <StartupObject>UwpHost.Program</StartupObject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Infragistics.UWP.Core" Version="$$nugetVersion">
+      <Aliases>iguwp</Aliases>
+    </PackageReference>
+    <PackageReference Include="Infragistics.UWP.DataGrid" Version="$$nugetVersion">
+      <Aliases>iguwp</Aliases>
+    </PackageReference>
+    <PackageReference Include="Infragistics.UWP.DataVisualization" Version="$$nugetVersion">
+      <Aliases>iguwp</Aliases>
+    </PackageReference>
+    <PackageReference Include="Infragistics.UWP.Gauges" Version="$$nugetVersion">
+      <Aliases>iguwp</Aliases>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNet.SignalR.Client" Version="2.4.2" />
+    <PackageReference Include="Microsoft.Toolkit.Wpf.UI.XamlHost" Version="6.1.2" />
+    <PackageReference Include="Microsoft.VCRTForwarders.140" Version="1.0.6" />
+    <PackageReference Include="NLog" Version="4.7.10" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\UwpHostApp\UwpHostApp.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="NLog.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Infragistics.Core.Platform">
+      <HintPath>$(UserProfile)\.nuget\packages\infragistics.uwp.core\$$nugetVersion\lib\uap10.0.16299\Infragistics.Core.Platform.dll</HintPath>
+      <Aliases>iguwp</Aliases>
+    </Reference>
+    <Reference Include="Infragistics.UWP.Charts">
+      <HintPath>$(UserProfile)\.nuget\packages\infragistics.uwp.charts\$$nugetVersion\lib\uap10.0.16299\Infragistics.UWP.Charts.dll</HintPath>
+      <Aliases>iguwp</Aliases>
+    </Reference>
+    <Reference Include="Infragistics.UWP.DataVisualization">
+      <HintPath>$(UserProfile)\.nuget\packages\infragistics.uwp.datavisualization\$$nugetVersion\lib\uap10.0.16299\Infragistics.UWP.DataVisualization.dll</HintPath>
+      <Aliases>iguwp</Aliases>
+    </Reference>
+    <Reference Include="Infragistics.UWP.Gauges">
+      <HintPath>$(UserProfile)\.nuget\packages\infragistics.uwp.gauges\$$nugetVersion\lib\uap10.0.16299\Infragistics.UWP.Gauges.dll</HintPath>
+      <Aliases>iguwp</Aliases>
+    </Reference>
+    <Reference Include="Infragistics.UWP.DataGrid">
+      <HintPath>$(UserProfile)\.nuget\packages\infragistics.uwp.datagrid\$$nugetVersion\lib\uap10.0.16299\Infragistics.UWP.DataGrid.dll</HintPath>
+      <Aliases>iguwp</Aliases>
+    </Reference>
+  </ItemGroup>
+
+</Project>

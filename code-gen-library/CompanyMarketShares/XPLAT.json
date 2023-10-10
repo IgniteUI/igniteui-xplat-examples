@@ -1,0 +1,7 @@
+[
+  { "Value": 30, "Category": "Google", "Summary": "Google 30%" },
+  { "Value": 25, "Category": "Apple", "Summary": "Apple 25%" },
+  { "Value": 20, "Category": "Microsoft", "Summary": "Microsoft 20%" },
+  { "Value": 15, "Category": "Samsung", "Summary": "Samsung 15%" },
+  { "Value": 10, "Category": "Other", "Summary": "Other 10%" }
+]
