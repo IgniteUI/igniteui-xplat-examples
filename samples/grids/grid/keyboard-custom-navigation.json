@@ -1,8 +1,7 @@
 {
-  "todo": [ 
-     "Approved Defer - until we have keyboard events"
+  "todo": [
   ], 
-  "export": false,
+  "export": true,
   "skipAlterDataCasing": true,
   "descriptions": {
     "content": {
@@ -14,6 +13,7 @@
       "autoGenerate": false,
       "displayDensity": "Cosy",
       "rowEditable": true,
+      "gridKeydownRef": "WebGridCustomKBNav",
       "columns": [
         {
           "type": "WebColumn",
@@ -25,7 +25,8 @@
           "type": "WebColumn",
           "name": "ReorderLevel",
           "field": "ReorderLevel",
-          "header": "Reorder Level"
+          "header": "Reorder Level",
+          "dataType": "Number"
         },
         {
           "type": "WebColumn",
@@ -37,7 +38,8 @@
           "type": "WebColumn",
           "name": "UnitsInStock",
           "field": "UnitsInStock",
-          "header": "Units In Stock"
+          "header": "Units In Stock",
+          "dataType": "Number"
         },
         {
           "type": "WebColumn",

@@ -20,10 +20,6 @@ jobs:
       packageType: 'sdk'
       version: '6.x'
 
-  - checkout: IgEditorTemplates
-
-  - checkout: CodeGenerationLibrary
-
   - task: DownloadPipelineArtifact@2
     displayName: 'Get CodeExporterApp (${{ parameters.codeExporterAppBranch }}) branch'
     inputs:
@@ -47,8 +43,8 @@ jobs:
       script: |
         $(Build.SourcesDirectory)\CodeExporterApp\CodeExporter.App.exe `
         -platform=${{ parameters.platform }} `
-        -template=$(Build.SourcesDirectory)\igeditor-templates\${{ parameters.platform }}\main-template `
-        -library=$(Build.SourcesDirectory)\code-generation-library `
+        -template=$(Build.SourcesDirectory)\igniteui-xplat-examples\editor-templates\${{ parameters.platform }}\main-template `
+        -library=$(Build.SourcesDirectory)\igniteui-xplat-examples\code-gen-library `
         -output=$(Build.SourcesDirectory)\${{ parameters.destinationGitRepo }}\samples\ `
         -source=${{ parameters.pathsToParse }}
       failOnStderr: true
@@ -60,11 +56,26 @@ jobs:
     inputs:
       targetType: 'inline'
       script: |
-        # The goal here is to identify the samples based on the subpaths of the changed files
-        $(git diff HEAD --name-only) | `
-        ForEach-Object { [System.IO.Path]::GetFullPath("$(Join-Path $pwd $_)\..\..") } | `
-        Get-Unique | `
-        Copy-Item -Recurse -Force -Destination $(Build.ArtifactStagingDirectory)
+        $changedExistingSamplesDirs = $(git diff HEAD --name-only --dirstat=files) | `
+        ForEach-Object { [System.IO.Path]::GetFullPath("$(Join-Path $pwd $_)\..\..\") } | `
+        Select-Object -Unique
+        Write-Output "Changed existing samples identified: "
+        Write-Output $changedExistingSamplesDirs
+        
+        $brandNewSamplesDirs = $(git ls-files --others --exclude-standard --directory) | `
+        ForEach-Object { [System.IO.Path]::GetFullPath("$(Join-Path $pwd $_)") } | `
+        Select-Object -Unique
+        Write-Output "Brand new samples identified: "
+        Write-Output $brandNewSamplesDirs
+        if (@($changedExistingSamplesDirs) + @($brandNewSamplesDirs) -eq $null) 
+        { 
+            Write-Output "No changed samples were identified - this run just executed the code-exporter app successfully"
+        }
+        else 
+        {
+           @($changedExistingSamplesDirs) + @($brandNewSamplesDirs)  | Copy-Item -Recurse -Force -Destination $(Build.ArtifactStagingDirectory)
+           Write-Output "Identified changed existing and brand new copied to $(Build.ArtifactStagingDirectory) - to be exposed as pipeline artifacts"
+        }
       failOnStderr: true
       showWarnings: true
       pwsh: true

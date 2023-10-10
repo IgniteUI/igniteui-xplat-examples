@@ -1,0 +1,16 @@
+[
+{ "Code": "AUS", "Population": 23932000, "WorkedHours": 33.6, "GDP": 43923, "Name": "Australia" },
+{ "Code": "FJI", "Population": 869000, "WorkedHours": 43.6, "GDP": 8478, "Name": "Fiji" },
+{ "Code": "KIR", "Population": 111000, "WorkedHours": 37.6, "GDP": 1967, "Name": "Kiribati" },
+{ "Code": "MHL", "Population": 57000, "WorkedHours": 42.7, "GDP": 3665, "Name": "Marshall Islands" },
+{ "Code": "FSM", "Population": 109000, "WorkedHours": 38.9, "GDP": 3271, "Name": "Micronesia" },
+{ "Code": "NRU", "Population": 10000, "WorkedHours": 36.6, "GDP": 12270, "Name": "Nauru" },
+{ "Code": "NZL", "Population": 4615000, "WorkedHours": 33.79, "GDP": 35310, "Name": "New Zealand" },
+{ "Code": "PLW", "Population": 18000, "WorkedHours": 38.8, "GDP": 14029, "Name": "Palau" },
+{ "Code": "PNG", "Population": 8108000, "WorkedHours": 37.3, "GDP": 3825, "Name": "Papua New Guinea" },
+{ "Code": "WSM", "Population": 194000, "WorkedHours": 41.9, "GDP": 5559, "Name": "Samoa" },
+{ "Code": "SLB", "Population": 603000, "WorkedHours": 38.5, "GDP": 2149, "Name": "Solomon Islands" },
+{ "Code": "TON", "Population": 101000, "WorkedHours": 40.6, "GDP": 5190, "Name": "Tonga" },
+{ "Code": "TUV", "Population": 11000, "WorkedHours": 37.6, "GDP": 3419, "Name": "Tuvalu" },
+{ "Code": "VUT", "Population": 271000, "WorkedHours": 46.6, "GDP": 2807, "Name": "Vanuatu" }
+]

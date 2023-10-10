@@ -1,0 +1,1 @@
+Ported from Angular localData.ts
