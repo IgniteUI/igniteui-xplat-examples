@@ -1,12 +1,12 @@
 //begin imports
-import { IgcGridComponent } from 'igniteui-webcomponents-grids/grids';
+import { IgcGridComponent, IgcGridEditEventArgs } from 'igniteui-webcomponents-grids/grids';
 //end imports
 
 import { CodeGenHelper } from 'igniteui-webcomponents-core';
 
 export class WebGridEditingEventsCellEdit {
     //begin eventHandler
-    public webGridEditingEventsCellEdit(args: any): void {
+    public webGridEditingEventsCellEdit(args: CustomEvent<IgcGridEditEventArgs>): void {
         var d = args.detail;
 
         if (d.column != null && d.column.field == "UnitsOnOrder") {

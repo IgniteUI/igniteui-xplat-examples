@@ -23,11 +23,6 @@ import 'igniteui-react-grids/grids/themes/light/bootstrap.css';
 //endifdef webgrids
 //ifdef editor
 import 'igniteui-webcomponents/themes/light/bootstrap.css';
-import { defineAllComponents } from 'igniteui-webcomponents';
-//endifdef editor
-
-//ifdef editor
-defineAllComponents();
 //endifdef editor
 
 const mods: any[] = [
@@ -51,7 +46,12 @@ export default class Sample extends React.Component<any, any> {
 
     public render(): JSX.Element {
         return (
+//ifdef webgrids
+        <div className="container sample ig-typography">
+//endifdef webgrids
+//ifdef not webgrids
         <div className="container sample">
+//endifdef not webgrids
 //ifdef editor
             <div className="options vertical">
                 //insert editor

@@ -8,7 +8,7 @@ export class WebGridMRLCustomNavigationEvent {
     //begin eventHandler
     public webGridMRLCustomNavigationEvent(args: any): void {
         const target = args.detail.target;
-        const grid = document.getElementsByTagName("igc-grid")[0] as any;
+        const grid: IgcGridComponent = CodeGenHelper.getDescription<IgcGridComponent>("content");
         if (args.detail.event.key.toLowerCase() === 'enter') {
            args.detail.event.preventDefault();
            args.detail.cancel = true;
