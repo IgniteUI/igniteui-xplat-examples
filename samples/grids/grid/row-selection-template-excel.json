@@ -1,7 +1,5 @@
 {
   "todo": [
-    "TODO ability to select multiple rows by clicking the button",
-    "TODO the row number on the left on every line"
   ],
   "export": true,
   "skipAlterDataCasing": true,
@@ -13,6 +11,9 @@
       "name": "grid",
       "id": "grid",
       "displayDensity": "Cosy",
+      "rowSelection": "Multiple",
+      "rowSelectorTemplateRef": "WebGridRowSelectorExcelTemplate",
+      "headSelectorTemplateRef": "WebGridHeaderRowSelectorExcelTemplate",
       "paginationComponents": [
         {
           "type": "WebPaginator",
@@ -51,22 +52,6 @@
           "type": "WebColumn",
           "field": "CompanyName",
           "header": "Company"
-        }
-      ]
-    },
-    "editor": {
-      "type": "PropertyEditorPanel",
-      "name": "PropertyEditor",
-      "componentRendererRef": "renderer",
-      "targetRef": "grid",
-      "descriptionType": "WebGrid",
-      "isHorizontal": true,
-      "isWrappingEnabled": true,
-      "properties": [
-        {
-          "type": "PropertyEditorPropertyDescription",
-          "name": "selectionType",
-          "propertyPath": "RowSelection"
         }
       ]
     }

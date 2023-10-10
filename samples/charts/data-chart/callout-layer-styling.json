@@ -29,20 +29,21 @@
           "xAxisRef": "xAxis",
           "yAxisRef": "yAxis",
           "dataSourceRef": "CountryRenewableElectricity",
-          "valueMemberPath": "America"
+          "valueMemberPath": "America",
+          "brush": "#8961A9",
+          "markerOutline": "#8961A9",
+          "shouldHideAutoCallouts": false
         },
         {
           "type": "CalloutLayer",
           "name": "CalloutLayer1",
-          "dataSourceRef": "CountryRenewableCallouts",
-          "xMemberPath": "Index",
-          "yMemberPath": "Value",
-          "labelMemberPath": "Label",
-          "calloutLeaderBrush": "black",
-          "calloutOutline": "black",
-          "calloutBackground": "orange",
-          "calloutTextColor": "black",
-          "calloutStrokeThickness": 2
+          "isAutoCalloutBehaviorEnabled": true,
+          "calloutLeaderBrush": "#8961A9",
+          "calloutOutline": "#8961A9",
+          "calloutBackground": "white",
+          "calloutTextColor": "#8961A9",
+          "calloutStrokeThickness": 1,
+          "calloutCollisionMode": "Greedy"
         }
       ]
     }

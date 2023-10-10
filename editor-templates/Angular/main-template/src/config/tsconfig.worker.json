@@ -1,0 +1,14 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "outDir": "../../out-tsc/worker",
+    "lib": [
+      "es2018",
+      "DOM"
+    ],
+    "types": []
+  },
+  "include": [
+    "../**/*Worker.ts"
+  ]
+}
