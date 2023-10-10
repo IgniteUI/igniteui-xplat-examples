@@ -1,0 +1,31 @@
+{
+  "extends": "tslint:latest",
+  "rules": {
+    "deprecation": {
+      "severity": "warning"
+    },
+    "arrow-parens": false,
+    "indent": [true, "spaces"],
+    "interface-name": [true, "always-prefix"],
+    "max-classes-per-file": false,
+    "no-bitwise": false,
+    "no-console": false,
+    "no-empty": false,
+    "no-duplicate-imports": false,
+    "no-implicit-dependencies": false,
+    "no-object-literal-type-assertion": false,
+    "no-submodule-imports": [false],
+    "no-string-literal": false,
+    "no-trailing-whitespace": false,
+    "no-var-keyword": false,
+    "object-literal-sort-keys": false,
+    "only-arrow-functions": false,
+    "prefer-conditional-expression": false,
+    "prefer-const": false,
+    "prefer-for-of": false,
+    "prefer-object-spread": false,
+    "space-within-parens": false,
+    "trailing-comma": [true, {"multiline": "never", "singleline": "never"}],
+    "variable-name": [true, "allow-leading-underscore"]
+  }
+}
