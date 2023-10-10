@@ -21,20 +21,13 @@
         },
         {
           "type": "WebColumn",
-          "field": "UnitsInStock",
-          "header": "Units In Stock",
-          "dataType": "Number"
+          "field": "Address",
+          "header": "Address"
         },
         {
           "type": "WebColumn",
-          "field": "UnitPrice",
-          "header": "Unit Price",
-          "dataType": "Number"
-        },
-        {
-          "type": "WebColumn",
-          "field": "Discontinued",
-          "dataType": "Boolean"
+          "field": "PostalCode",
+          "header": "Postal Code"
         }
       ]
     }
