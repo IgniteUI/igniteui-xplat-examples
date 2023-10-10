@@ -1,17 +1,27 @@
 {
   "descriptions": {
-    "aboveContent": {
+    "aboveContentLeft": {
       "type": "Toolbar",
       "name": "Toolbar",
       "targetRef": "chart",
       "orientation": "Horizontal",
+      "onCommandRef": "ToolbarToggleTooltip",
       "actions": [
         {
+          "name": "EnableTooltipsLabel",
+          "type": "ToolActionCheckbox",
+          "title": "Enable Tooltips",
+          "beforeId": "ZoomReset",
+          "commandId": "EnableTooltips"
+        },
+        {
+          "name": "ZoomResetHidden",
           "type": "ToolActionLabel",
           "overlayId": "ZoomReset",
           "visibility": "Collapsed"
         },
         {
+          "name": "ZoomResetLabel",
           "type": "ToolActionLabel",
           "title": "Reset",
           "afterId": "ZoomOut",
@@ -20,6 +30,7 @@
           "commandId": "ZoomReset"
         },
         {
+          "name": "AnalyzeMenu",
           "type": "ToolActionIconMenu",
           "overlayId": "AnalyzeMenu",
           "visibility": "Collapsed"
@@ -28,7 +39,9 @@
     },
     "content": {
       "type": "DataChart",
+      "computedPlotAreaMarginMode": "Series",
       "isHorizontalZoomEnabled": true,
+      "isVerticalZoomEnabled": true,
       "name": "chart",
       "axes": [
         {
@@ -40,7 +53,8 @@
         {
           "type": "NumericYAxis",
           "name": "yAxis",
-          "title": "TWh"
+          "title": "TWh",
+          "labelLocation": "OutsideRight"
         }
       ],
       "series": [
@@ -81,7 +95,6 @@
     "charts/DataChartCategoryModule",
     "charts/DataChartAnnotationModule",
     "charts/DataChartInteractivityModule",
-    "charts/AnnotationLayerProxyModule",
     "charts/DataChartCategoryTrendLineModule"
   ]
 }

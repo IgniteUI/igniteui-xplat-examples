@@ -3,7 +3,7 @@
   "descriptions": {
     "content": {
       "type": "WebGrid",
-      "dataRef": "CustomersData",
+      "dataRef": "CustomersDataLocal",
       "autoGenerate": false,
       "name": "grid",
       "toolbar": [

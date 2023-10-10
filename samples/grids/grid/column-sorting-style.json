@@ -1,35 +1,28 @@
 {
-  "todo": [ "" ],
+  "todo": [""],
+  "export": true,
   "skipAlterDataCasing": true,
+  "onInit": ["WebGridSortingStyling"],
   "descriptions": {
-    "editor": {
-      "type": "PropertyEditorPanel",
-      "name": "PropertyEditor",
-      "componentRendererRef": "renderer",
-      "targetRef": "grid",
-      "descriptionType": "WebGrid",
-      "isHorizontal": true,
-      "isWrappingEnabled": true,
-      "properties": [
-        {
-          "type": "PropertyEditorPropertyDescription",
-          "propertyPath": "SortingOptions",
-          "label": "Select Sorting Type",
-          "name": "SortingOptionsEditor"
-        }
-      ]
-    },
     "content": {
       "type": "WebGrid",
-      "name": "grid",
       "dataRef": "ProductSales",
+      "name": "grid",
+      "id": "grid",
       "autoGenerate": false,
+      "sortingExpressions": [
+        {
+          "type": "WebSortingExpression",
+          "fieldName": "CategoryName",
+          "dir": "Asc",
+          "ignoreCase": true
+        }
+      ],
       "columns": [
         {
           "type": "WebColumn",
           "field": "OrderID",
           "header": "Order ID",
-          "groupable": true,
           "sortable": true
         },
         {
@@ -37,7 +30,6 @@
           "field": "CategoryName",
           "header": "Category Name",
           "dataType": "String",
-          "groupable": true,
           "sortable": true
         },
         {
@@ -45,7 +37,6 @@
           "field": "CompanyName",
           "header": "Company",
           "dataType": "String",
-          "groupable": true,
           "sortable": true
         },
         {
@@ -53,7 +44,6 @@
           "field": "ShipCountry",
           "header": "Ship Country",
           "dataType": "String",
-          "groupable": true,
           "sortable": true
         },
         {
@@ -61,7 +51,6 @@
           "field": "SaleAmount",
           "header": "Sale Amount",
           "dataType": "Currency",
-          "groupable": true,
           "sortable": true,
           "pipeArgs": {
             "currencyCode": "USD",
@@ -81,7 +70,6 @@
   },
   "modules": [
     "withDescriptions",
-    "layouts/PropertyEditorPanelModule",
     "grids/WebGridModule"
   ]
 }
