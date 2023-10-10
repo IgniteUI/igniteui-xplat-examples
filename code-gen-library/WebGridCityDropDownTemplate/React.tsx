@@ -1,6 +1,6 @@
 //begin imports
 import { IgrCellTemplateContext } from 'igniteui-react-grids';
-import { IgrCombo, IgrLinearProgress } from "igniteui-react";
+import { IgrCombo } from "igniteui-react";
 //end imports
 
 export class WebGridCityDropDownTemplate {
@@ -13,13 +13,12 @@ export class WebGridCityDropDownTemplate {
         }
         const id = cell.id.rowID;
         const comboId = "city_" + id;
+        this.comboRefs = this.comboRefs.bind(this);
         return (
         <>
             <div style={{display: "flex", flexDirection: "column"}}>
-                <IgrCombo placeholder="Choose City..." disabled="true" valueKey="Name"  displayKey="Name" id={comboId} singleSelect="true">
+                <IgrCombo ref={this.comboRefs} placeholder="Choose City..." disabled="true" valueKey="Name"  displayKey="Name" name={comboId} singleSelect="true">
                 </IgrCombo>
-                <IgrLinearProgress style={{display: "none"}} indeterminate>
-                </IgrLinearProgress>
             </div>
         </>
         );

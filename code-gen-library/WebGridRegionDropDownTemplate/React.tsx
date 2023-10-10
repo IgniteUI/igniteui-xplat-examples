@@ -1,6 +1,6 @@
 //begin imports
 import { IgrCellTemplateContext } from 'igniteui-react-grids';
-import { IgrCombo, IgrLinearProgress } from "igniteui-react";
+import { IgrCombo } from "igniteui-react";
 //end imports
 
 export class WebGridRegionDropDownTemplate {
@@ -13,13 +13,12 @@ export class WebGridRegionDropDownTemplate {
         }
         const id = cell.id.rowID;
         const comboId = "region_" + id;
+        this.comboRefs = this.comboRefs.bind(this);
         return (
         <>
             <div style={{display: "flex", flexDirection: "column"}}>
-                <IgrCombo placeholder="Choose Region..." disabled="true" valueKey="Region"  displayKey="Region" singleSelect="true" id={comboId}>
+                <IgrCombo ref={this.comboRefs} change={(x: any, args: any) => { this.onRegionChange(id, x, args) }} placeholder="Choose Region..." disabled="true" valueKey="Region"  displayKey="Region" singleSelect="true" name={comboId}>
                 </IgrCombo>
-                <IgrLinearProgress style={{display: "none"}} indeterminate>
-                </IgrLinearProgress>
             </div>
         </>
         );
