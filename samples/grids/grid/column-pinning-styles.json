@@ -1,8 +1,6 @@
 {
-  "todo": [
-     "Approved Defer until we support CSS styles"
-  ],
-  "export": false,
+  "export": true,
+  "onInit": [ "WebGridColumnPinningStyleWithCustomCSS" ],
   "skipAlterDataCasing": true,
   "descriptions": {
     "content": {
@@ -11,15 +9,62 @@
       "id": "grid",
       "dataRef": "CustomersData",
       "columnSelection": "Single",
+      "toolbar": [
+        {
+          "type": "WebGridToolbar",
+          "tools": [
+            {
+              "type": "WebGridToolbarActions",
+              "actions": [
+                {
+                    "type": "WebGridToolbarPinning"
+                }
+              ]
+            }
+          ]
+        }
+      ],
       "columns": [
         {
           "type": "WebColumn",
-          "field": "ID"
+          "field": "ID",
+          "hidden": true
         },
         {
           "type": "WebColumn",
           "field": "CompanyName",
-          "header": "Company"
+          "header": "Company",
+          "pinned": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "ContactName",
+          "header": "Contact Name"
+        },
+        {
+          "type": "WebColumn",
+          "field": "ContactTitle",
+          "header": "Contact Title"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Address"
+        },
+        {
+          "type": "WebColumn",
+          "field": "City"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Region"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Phone"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Fax"
         }
       ]
     }

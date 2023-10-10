@@ -1,0 +1,157 @@
+{
+  "note": "TODO test export of local data to all platforms",
+  "info": "Custom DataChart with multiple NumericYAxis and additional ScatterLineSeries showing forecast data",
+  "export": false,
+  "descriptions": {
+    "legend": {
+      "type": "Legend",
+      "name": "Legend",
+      "orientation": "Horizontal"
+    },
+    "content": {
+      "type": "DataChart",
+      "name": "chart",
+      "legendRef": "Legend",
+      "isHorizontalZoomEnabled": false,
+      "isVerticalZoomEnabled": false,
+      "plotAreaMarginLeft": 20,
+      "plotAreaMarginRight": 20,
+      "shouldAutoExpandMarginForInitialLabels": true,
+      "computedPlotAreaMarginMode": "Series",
+      "axes": [
+        {
+          "type": "NumericXAxis",
+          "name": "xAxis", "interval": 2
+        },
+        {
+          "type": "NumericYAxis",
+          "name": "yAxisWithForecastLabels",
+          "crossingValue": 2024,
+          "crossingAxisRef": "xAxis",
+          "tickLength": 15, "tickStroke": "transparent",
+          "minimumValue": 2,
+          "maximumValue": 10,
+          "labelTextColor": "brown",
+          "labelFormat": "{0} M",
+          "labelHorizontalAlignment": "Left",
+          "labelLocation": "InsideRight"
+        },
+        {
+          "type": "NumericYAxis",
+          "name": "yAxisWithForecastTitle",
+          "crossingValue": 2024,
+          "crossingAxisRef": "xAxis",
+          "strokeDashArray": [2, 4],
+          "strokeThickness": 2,
+          "stroke": "brown",
+          "title": "Data Forecast", "titleAngle": -90,
+          "titleTextColor": "brown",
+          "titleHorizontalAlignment": "Left",
+          "labelExtent": 0,
+          "labelLocation": "InsideRight"
+        },
+        {
+          "type": "NumericYAxis",
+          "name": "yAxisOnRightSide", "stroke": "transparent",
+          "tickLength": 5, "tickStroke": "transparent",
+          "minimumValue": 2,
+          "maximumValue": 10,
+          "labelRightMargin": 10,
+          "labelFormat": "{0} M",
+          "labelHorizontalAlignment": "Left",
+          "labelLocation": "OutsideRight"
+        },
+        {
+          "type": "NumericYAxis",
+          "name": "yAxisOnLeftSide",
+          "tickLength": 5, "tickStroke": "transparent",
+          "minimumValue": 2,
+          "maximumValue": 10,
+          "labelRightMargin": 10,
+          "labelFormat": "{0} M",
+          "labelHorizontalAlignment": "Right",
+          "labelLocation": "OutsideLeft"
+        }
+      ],
+      "series": [
+        {
+          "type": "ScatterLineSeries",
+          "name": "ScatterLineSeries1",
+          "dataSourceRef": "LocalData",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxisOnRightSide",
+          "showDefaultTooltip": true,
+          "yMemberPath": "Income",
+          "xMemberPath": "Year",
+          "title": "Actual Income"
+        },
+        {
+          "type": "ScatterLineSeries",
+          "name": "ScatterLineSeries2",
+          "dataSourceRef": "LocalData",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxisOnRightSide",
+          "showDefaultTooltip": true,
+          "yMemberPath": "PositiveForecast",
+          "xMemberPath": "Year",
+          "title": "Positive Forecast",
+          "dashArray": [2, 2]
+        },
+        {
+          "type": "ScatterLineSeries",
+          "name": "ScatterLineSeries3",
+          "dataSourceRef": "LocalData",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxisOnRightSide",
+          "showDefaultTooltip": true,
+          "yMemberPath": "NegativeForecast",
+          "xMemberPath": "Year",
+          "title": "Negative Forecast",
+          "dashArray": [2, 2]
+        },
+        {
+          "type": "DataToolTipLayer",
+          "name": "DataToolTipLayer"
+        }
+      ]
+    }
+  },
+  "refs": {
+    "LocalData": [
+      { "Year": 2010, "Income": 5.00, "PositiveForecast": null, "NegativeForecast": null },
+      { "Year": 2011, "Income": 4.00, "PositiveForecast": null, "NegativeForecast": null },
+      { "Year": 2012, "Income": 5.00, "PositiveForecast": null, "NegativeForecast": null },
+      { "Year": 2013, "Income": 6.25, "PositiveForecast": null, "NegativeForecast": null },
+      { "Year": 2014, "Income": 5.00, "PositiveForecast": null, "NegativeForecast": null },
+      { "Year": 2015, "Income": 6.00, "PositiveForecast": null, "NegativeForecast": null },
+      { "Year": 2016, "Income": 7.00, "PositiveForecast": null, "NegativeForecast": null },
+      { "Year": 2017, "Income": 6.00, "PositiveForecast": null, "NegativeForecast": null },
+      { "Year": 2018, "Income": 7.00, "PositiveForecast": null, "NegativeForecast": null },
+      { "Year": 2019, "Income": 8.00, "PositiveForecast": null, "NegativeForecast": null },
+      { "Year": 2020, "Income": 7.00, "PositiveForecast": null, "NegativeForecast": null },
+      { "Year": 2021, "Income": 5.00, "PositiveForecast": null, "NegativeForecast": null },
+      { "Year": 2022, "Income": 6.00, "PositiveForecast": null, "NegativeForecast": null },
+      { "Year": 2023, "Income": 6.75, "PositiveForecast": null, "NegativeForecast": null },
+      { "Year": 2024, "Income": 7.00, "PositiveForecast": 7.00, "NegativeForecast": 7.00 },
+      { "Year": 2025, "Income": null, "PositiveForecast": 7.50, "NegativeForecast": 6.5 },
+      { "Year": 2026, "Income": null, "PositiveForecast": 8.25, "NegativeForecast": 5.75 },
+      { "Year": 2027, "Income": null, "PositiveForecast": 8.50, "NegativeForecast": 5.50 },
+      { "Year": 2028, "Income": null, "PositiveForecast": 9.00, "NegativeForecast": 5.25 },
+      { "Year": 2029, "Income": null, "PositiveForecast": 9.25, "NegativeForecast": 5.00 },
+      { "Year": 2030, "Income": null, "PositiveForecast": 9.50, "NegativeForecast": 5.25 }
+    ]
+  },
+  "modules": [
+    "charts/LegendModule",
+    "charts/DataChartCoreModule",
+    "charts/DataChartCategoryModule",
+    "charts/DataChartCategoryCoreModule",
+    "charts/DataChartScatterModule",
+    "charts/DataChartScatterCoreModule",
+    "charts/DataChartInteractivityModule",
+    "charts/DataChartAnnotationModule",
+    "charts/CalloutLayerModule",
+    "charts/NumberAbbreviatorModule",
+    "charts/AnnotationLayerProxyModule"
+  ]
+}
