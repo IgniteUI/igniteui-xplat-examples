@@ -1,0 +1,1160 @@
+﻿@using IgniteUI.Blazor.Controls;
+@using Microsoft.AspNetCore.Razor.Language;
+@using Microsoft.AspNetCore.Razor;
+@using Microsoft.CodeAnalysis;
+@using Microsoft.CodeAnalysis.CSharp;
+@using IgniteUI.Blazor.Controls.Description;
+@using Ig = IgniteUI.Blazor.Controls
+@using System.Reflection;
+@using System.Collections;
+@using System.Text.Json;
+@using System.Text.RegularExpressions;
+@using System.IO;
+@using System.Text;
+@using Microsoft.CodeAnalysis.Razor;
+@using System.Net.Http;
+
+@inject IIgniteUIBlazor IgniteUIBlazor
+@inject IJSRuntime JS
+@inject HttpClient Http
+@implements IDisposable
+
+<div id="contentArea">
+    <div id="editor">
+        <IgbComponentRendererContainer @ref="editor">
+
+        </IgbComponentRendererContainer>
+    </div>
+    <div id="legend">
+        <IgbComponentRendererContainer @ref="legend">
+
+        </IgbComponentRendererContainer>
+    </div>
+    <div id="aboveContent">
+        <IgbComponentRendererContainer @ref="aboveContent">
+
+        </IgbComponentRendererContainer>
+    </div>
+    <div id="aboveContentSplit">
+        <div id="aboveContentLeftContainer">
+            <IgbComponentRendererContainer @ref="aboveContentLeft">
+
+            </IgbComponentRendererContainer>
+        </div>
+        <div id="aboveContentRightContainer">
+            <IgbComponentRendererContainer @ref="aboveContentRight">
+
+            </IgbComponentRendererContainer>
+        </div>
+    </div>
+    <div id="content">
+        <IgbComponentRendererContainer @ref="content">
+
+        </IgbComponentRendererContainer>
+    </div>
+    <DynamicContentHolder @ref="holder"></DynamicContentHolder>
+</div>
+
+@code {
+    private IgbComponentRendererContainer editor;
+    private IgbComponentRendererContainer legend;
+    private IgbComponentRendererContainer aboveContent;
+    private IgbComponentRendererContainer aboveContentLeft;
+    private IgbComponentRendererContainer aboveContentRight;
+    private IgbComponentRendererContainer content;
+    private DotNetObjectReference<App>? selfRef;
+    private DynamicContentHolder holder;
+
+    [JSInvokable]
+    public void OnMessageReceived(string msg)
+    {
+        LoadJson(msg);
+    }
+
+    public async Task StoreInstance()
+    {
+        selfRef = DotNetObjectReference.Create(this);
+        await JS.InvokeVoidAsync("storeInstance", selfRef);
+    }
+
+    public async Task SendReady()
+    {
+        await JS.InvokeVoidAsync("sendReady");
+    }
+
+    public void Dispose()
+    {
+        selfRef?.Dispose();
+    }
+
+    private async Task SpiderReferences(List<MetadataReference> references, HashSet<string> added, Assembly assembly)
+    {
+        Logger.Trace("spidering references for {0}", assembly);
+        if (!added.Contains(assembly.FullName))
+        {
+            added.Add(assembly.FullName);
+            if (!assembly.IsDynamic && !string.IsNullOrWhiteSpace(assembly.GetName().Name))
+            {
+                var name = assembly.GetName().Name + ".dll";
+                Logger.Trace("downloading: {0}", name);
+                var stream = await Http.GetStreamAsync($"_framework/{name}");
+                Logger.Trace("adding metdata reference for location: {0}", name);
+                references.Add(MetadataReference.CreateFromStream(stream));
+            }
+
+            //references.Add(MetadataReference.CreateFromFile(assembly.Location));
+        }
+        var refs = assembly.GetReferencedAssemblies();
+        foreach (var refr in refs)
+        {
+            var refAssm = Assembly.Load(refr);
+            if (!added.Contains(refAssm.FullName))
+            {
+                await SpiderReferences(references, added, refAssm);
+            }
+        }
+    }
+
+
+    protected async override Task OnAfterRenderAsync(bool firstRender)
+    {
+        await base.OnAfterRenderAsync(firstRender);
+
+        if (firstRender)
+        {
+            await Setup();
+        }
+    }
+
+    private ComponentRenderer _cr;
+    private ComponentRenderer _pcr;
+
+    protected async Task Setup()
+    {
+        await StoreInstance();
+
+        ComponentRenderer cr = new ComponentRenderer();
+        ComponentRenderer pcr = new ComponentRenderer();
+
+        _cr = cr;
+        _pcr = pcr;
+
+        var context = _cr.Context;
+        _context = context;
+        var pContext = _pcr.Context;
+        Logger.Info("filling metadata context");
+        foreach (var a in AppDomain.CurrentDomain.GetAssemblies())
+        {
+            var name = a.GetName().Name;
+            if (a.GetName().Name.StartsWith("IgniteUI"))
+            {
+                foreach (var m in a.GetModules())
+                {
+                    foreach (var t in m.GetTypes())
+                    {
+                        if (t.Name.EndsWith("DescriptionModule"))
+                        {
+                            if (t.Name == "SortDescriptionModule" || t.Name == "GroupDescriptionModule")
+                            {
+                                continue;
+                            }
+                            var reg = t.GetMethod("Register");
+
+                            if (reg != null && reg.GetParameters().First().ParameterType == typeof(TypeDescriptionContext))
+                            {
+                                reg.Invoke(null, new object[] { context });
+                                reg.Invoke(null, new object[] { pContext });
+                            }
+                            else
+                            {
+                                Logger.Error("undesired type: " + t.Name);
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+
+        Logger.Info("finding required renderer functions");
+        _cr.IsProceedOnErrorEnabled = true;
+        _cr.ProvideRefValue(editor, "renderer", _pcr);
+
+        var meth = _cr.GetType().GetMethod("QueueForIdle");
+        //_queueMethod = meth;
+        if (meth != null)
+        {
+            _hasIdleQueue = true;
+            _queueMethod = (container, action) => meth.Invoke(_cr, new object[] { container, action });
+        }
+
+        _loaded = true;
+        await EnsureLibrary();
+        await EnsureValidation();
+
+        await SendReady();
+    }
+
+    private Action<object, Action> _queueMethod;
+    private bool _hasIdleQueue = true;
+    private bool _loaded = false;
+
+    private async Task EnsureValidation()
+    {
+        if (!_loaded)
+        {
+            return;
+        }
+        if (_validation == null)
+        {
+            {
+                var validationDataStr = await Http.GetStringAsync("validationData.json");
+                _validation = DescriptionJsonValidator.FromJson(validationDataStr);
+            }
+        }
+    }
+
+    private async Task EnsureLibrary()
+    {
+        if (!_loaded)
+        {
+            return;
+        }
+        //Logger.Info("checking library path: {0}", LibraryPath);
+        if (_library == null)
+        {
+
+            try
+            {
+                try
+                {
+                    var content = await Http.GetStringAsync("http://igLibrary/library.json");
+
+                    Logger.Info("checking for editor code generation library type");
+
+                    Logger.Info("editor code generation library type found");
+
+                    Logger.Info("editor finding required library types and methods");
+
+                    var lib = CodeGenerationLibrary.FromJson(content);
+                    _library = lib;
+                }
+                catch (Exception ext)
+                {
+                    var content = await Http.GetStringAsync("library.json");
+
+                    Logger.Info("checking for code generation library type");
+
+                    Logger.Info("code generation library type found");
+
+                    Logger.Info("finding required library types and methods");
+
+                    var lib = CodeGenerationLibrary.FromJson(content);
+                    _library = lib;
+                }
+            }
+            catch (Exception ex)
+            {
+                Logger.Error(ex.ToString());
+            }
+
+        }
+    }
+
+    private string _currentJson;
+    private TypeDescriptionContext _context;
+    private CodeGenerationLibrary _library;
+
+
+    public List<Assembly> GetIgAssemblies()
+    {
+
+        List<Assembly> ret = new List<Assembly>();
+        foreach (var assm in AppDomain.CurrentDomain.GetAssemblies())
+        {
+            if (assm.FullName.Contains("IgniteUI"))
+            {
+                ret.Add(assm);
+            }
+
+        }
+        return ret;
+    }
+
+
+    public List<Assembly> GetExtraAssemblies()
+    {
+        return new List<Assembly>() 
+        {
+            typeof(HttpClient).Assembly,
+            typeof(System.Runtime.CompilerServices.AsyncTaskMethodBuilder).Assembly,
+            typeof(System.Runtime.CompilerServices.AsyncTaskMethodBuilder<>).Assembly       
+        };
+    }
+
+
+    private HashSet<string> _executedInitailizers = new HashSet<string>();
+    public async Task RunInitHandlers(JsonElement arr, CodeGenerationLibrary library, bool isViewInit)
+    {
+        var items = arr;
+        //if (items != null) 
+        {
+            Logger.Info("running init handlers");
+            Logger.Info(items.ToString());
+            Logger.Info("count: " + items.GetArrayLength().ToString());
+            for (var i = 0; i < items.GetArrayLength(); i++)
+            {
+                var jitem = (JsonElement)items[i];
+                var key = (string)jitem.GetString();
+                Logger.Info("running init handler: " + key);
+
+                if (_executedInitailizers.Contains(key))
+                {
+                    continue;
+                }
+                _executedInitailizers.Add(key);
+
+                Logger.Info("checking library for key: {0}", key);
+                if (_library.HasItem(key))
+                {
+                    Logger.Info("library has item for key: {0}", key);
+                    var item = _library.GetItem(key);
+                    var content = item.GetContentForPlatformString("Blazor");
+                    if (item.Type == CodeGenerationLibraryItemType.EventHandler)
+                    {
+                        Logger.Info("library item {0} is an event handler", key);
+                        var isJson = content.IsJson;
+                        var isJSContent = content.IsJSContent;
+                        if (isJSContent)
+                        {
+                            var handlerContent = content.Content;
+                            if (isJson)
+                            {
+                                var contentJObj = JsonDocument.Parse(handlerContent);
+                                var handler = contentJObj.RootElement.GetProperty("handler").GetString()!;
+                                var imports = contentJObj.RootElement.GetProperty("imports").GetString()!;
+                                handlerContent = handler;
+                            }
+                            await JS.InvokeVoidAsync("setupHandler", key, handlerContent);
+                            
+                            if (!isViewInit || !_hasIdleQueue)
+                            {
+                                await JS.InvokeVoidAsync("runHandler", key);
+                            }
+                            else
+                            {
+                                _queueMethod(this.content, async () => await JS.InvokeVoidAsync("runHandler", key));
+                            }
+                        }
+                        else if (isJson)
+                        {
+                            var handlerContent = content.Content;
+                            var contentJObj = JsonDocument.Parse(handlerContent);
+                            var handler = contentJObj.RootElement.GetProperty("handler").GetString()!;
+                            var imports = contentJObj.RootElement.GetProperty("imports").GetString()!;
+                            Logger.Info("obtaining compiler handler for item {0}", key);
+                            var actualHandler = await GetCompiledHandler(key, handler, imports);
+                            var handlerInst = (Action)actualHandler;
+                            if (!isViewInit || !_hasIdleQueue)
+                            {
+                                handlerInst();
+                            }
+                            else
+                            {
+                                _queueMethod(this.content, () => handlerInst());
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    public async Task<string> LoadJson(string json)
+    {
+        _currentJson = json;
+
+        
+
+        _cr.LoadJson(json, (Func<string, object>)GetContainer);
+
+        
+        //if (_getMissing != null)
+        {
+            
+            var doc = JsonDocument.Parse(json);
+            JsonElement onInitVal;
+            if (doc.RootElement.TryGetProperty("onInit", out onInitVal)) {
+                await RunInitHandlers(onInitVal, _library, false);
+            }
+            JsonElement onViewInitVal;
+            if (doc.RootElement.TryGetProperty("onViewInit", out onViewInitVal)) {
+                await RunInitHandlers(onViewInitVal, _library, true);
+            }
+
+            var missing = _cr.GetMissingRefs();
+            if (missing != null && missing.Length > 0)
+            {
+                Logger.Warn("some refs are missing, checking library if available: " + string.Join(",", missing));
+                for (var i = 0; i < missing.Length; i++)
+                {
+                    if (_library != null)
+                    {
+                        Logger.Info("library is available");
+                        Logger.Info("checking library for key: {0}", missing[i]);
+                        if (_library.HasItem(missing[i]))
+                        {
+                            Logger.Info("library has item for key: {0}", missing[i]);
+                            var item = _library.GetItem(missing[i]);
+                            var content = item.GetContentForPlatformString("Blazor");
+                            if (item.Type == CodeGenerationLibraryItemType.Data)
+                            {
+                                Logger.Info("library item {0} is a data item", missing[i]);
+                                var isJson = content.IsJson;
+                                var isJSContent = content.IsJSContent;
+                                if (isJSContent)
+                                {
+                                    var handlerContent = content.Content;
+                                    await JS.InvokeVoidAsync("setupHandler", missing[i], handlerContent);
+                                    var infos = _cr.GetRefChangeInfos(missing[i]);
+                                    foreach (var info in infos)
+                                    {
+                                        Logger.Info("found target info");
+                                        var propName = info.PropertyName + "Script";
+                                        var propInfo = info.Target.GetType().GetProperty(propName);
+                                        if (propInfo != null)
+                                        {
+                                            Logger.Info("found script property");
+                                            propInfo.SetValue(info.Target, missing[i]);
+                                        }
+                                    }
+                                }
+                                else if (isJson)
+                                {
+                                    Logger.Info("library item {0} is json data", missing[i]);
+                                    _cr.ProvideRefValueFromJson(this.content, missing[i], content.Content);
+                                }
+                                else
+                                {
+                                    Logger.Info("library item {0} is compiled data", missing[i]);
+                                    var dataContent = (string)content.Content;
+                                    //var contentJObj = JObject.Parse(dataContent);
+                                    //var dataCode = contentJObj.GetValue("data").Value<string>();
+                                    //var imports = contentJObj.GetValue("imports").Value<string>();
+                                    Logger.Info("obtaining compiled data for item {0}", missing[i]);
+                                    var actualDataType = await GetCompiledData(missing[i], dataContent);
+                                    if (actualDataType != null)
+                                    {
+                                        bool isAsync = false;
+                                        if (content.IsAsync)
+                                        {
+                                            isAsync = true;
+                                        }
+                                        if (isAsync)
+                                        {
+                                            Logger.Info("got async data type");
+                                            var key = missing[i];
+                                            var fetch = actualDataType.GetMethod("Fetch", BindingFlags.Static | BindingFlags.Public);
+                                            var task = (System.Threading.Tasks.Task)fetch.Invoke(null, new object[] { });
+                                            task.ContinueWith((t) =>
+                                            {
+                                                _cr.ProvideRefValue(this.content, key, (object)((dynamic)task).Result);
+                                            });
+                                        }
+                                        else
+                                        {
+                                            Logger.Info("got sync data type");
+                                            var inst = Activator.CreateInstance(actualDataType, new object[] { });
+                                            _cr.ProvideRefValue(this.content, missing[i], inst);
+                                        }
+                                    }
+                                }
+                            }
+                            if (item.Type == CodeGenerationLibraryItemType.Template)
+                            {
+                                Logger.Info("library item {0} is a template", missing[i]);
+                                var isJSContent = content.IsJSContent;
+                                if (isJSContent)
+                                {
+                                    var handlerContent = content.Content;
+                                    await JS.InvokeVoidAsync("setupHandler", missing[i], handlerContent);
+                                    var infos = _cr.GetRefChangeInfos(missing[i]);
+                                    foreach (var info in infos)
+                                    {
+                                        Logger.Info("found target info");
+                                        var propName = info.PropertyName + "Script";
+                                        var propInfo = info.Target.GetType().GetProperty(propName);
+                                        if (propInfo != null)
+                                        {
+                                            Logger.Info("found script property");
+                                            propInfo.SetValue(info.Target, missing[i]);
+                                        }
+                                    }
+                                }
+                                else
+                                {
+                                    var isJson = content.IsJson;
+                                    if (isJson)
+                                    {
+                                        var templateContent = content.Content;
+                                        var contentJObj = JsonDocument.Parse(templateContent);
+                                        var template = contentJObj.RootElement.GetProperty("template").GetString()!;
+                                        //var imports = contentJObj.RootElement.GetProperty("imports").GetString()!;
+                                        Logger.Info("obtaining compiled template for item {0}", missing[i]);
+                                        var actualTemplate = await GetCompiledTemplate(missing[i], template);
+                                        _cr.ProvideRefValue(this.content, missing[i], actualTemplate);
+                                    }
+                                    else 
+                                    {
+                                        var templateContent = content.Content;
+                                        Logger.Info("obtaining compiled template for item {0}", missing[i]);
+                                        var actualTemplate = await GetCompiledTemplate(missing[i], templateContent);
+                                        _cr.ProvideRefValue(this.content, missing[i], actualTemplate);
+                                    }
+                                }
+                            }
+                            if (item.Type == CodeGenerationLibraryItemType.EventHandler)
+                            {
+                                Logger.Info("library item {0} is an event handler", missing[i]);
+                                var isJson = content.IsJson;
+                                var isJSContent = content.IsJSContent;
+                                if (isJSContent)
+                                {
+                                    var handlerContent = content.Content;
+									if (isJson)
+									{
+										var contentJObj = JsonDocument.Parse(handlerContent);
+										var handler = contentJObj.RootElement.GetProperty("handler").GetString()!;
+										var imports = contentJObj.RootElement.GetProperty("imports").GetString()!;
+										handlerContent = handler;
+									}
+
+                                    await JS.InvokeVoidAsync("setupHandler", missing[i], handlerContent);
+                                    var infos = _cr.GetRefChangeInfos(missing[i]);
+                                    foreach (var info in infos)
+                                    {
+                                        Logger.Info("found target info");
+                                        var propName = info.PropertyName + "Script";
+                                        var propInfo = info.Target.GetType().GetProperty(propName);
+                                        if (propInfo != null)
+                                        {
+                                            Logger.Info("found script property");
+                                            propInfo.SetValue(info.Target, missing[i]);
+                                        }
+                                    }
+                                }
+                                else if (isJson)
+                                {
+                                    var handlerContent = content.Content;
+                                    var contentJObj = JsonDocument.Parse(handlerContent);
+                                    var handler = contentJObj.RootElement.GetProperty("handler").GetString()!;
+                                    var imports = contentJObj.RootElement.GetProperty("imports").GetString()!;
+                                    Logger.Info("obtaining compiler handler for item {0}", missing[i]);
+                                    var actualHandler = await GetCompiledHandler(missing[i], handler, imports);
+                                    try
+                                    {
+                                        _cr.ProvideRefValue(this.content, missing[i], actualHandler);
+                                    }
+                                    catch (Exception e)
+                                    {
+                                        Logger.Info("error providing handler ref: " + e.ToString());
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        if (_validation != null)
+        {
+            return (string)_validation.Validate(json);
+        }
+        return null;
+    }
+
+    private Dictionary<string, object> _dynamicHandlers = new Dictionary<string, object>();
+    private Dictionary<string, object> _dynamicTemplates = new Dictionary<string, object>();
+    private Dictionary<string, Type> _dynamicData = new Dictionary<string, Type>();
+    private DescriptionJsonValidator _validation;
+
+    private async Task<Type> GetCompiledData(string key, string dataCode)
+    {
+        if (_dynamicData.ContainsKey("key"))
+        {
+            Logger.Info("data library item {0} is already compiled", key);
+            return _dynamicData[key];
+        }
+
+        Type delegateType = typeof(Action);
+        using (var sr = new StringReader(dataCode))
+        {
+            var line = sr.ReadLine();
+            while (line != null)
+            {
+                //if (line.Trim().StartsWith("//WPF:"))
+                //{
+                //    line = line.Replace("//WPF:", "").Trim();
+                //    Logger.Info("searching for wpf delegate type: {0}", line);
+                //    foreach (var assm in GetIgAssemblies())
+                //    {
+                //        foreach (var t in assm.GetTypes())
+                //        {
+                //            if (t.Name == line || t.FullName == line)
+                //            {
+                //                Logger.Info("found wpf delegate type: {0}", line);
+                //                delegateType = t;
+                //                break;
+                //            }
+                //        }
+                //    }
+                //}
+                line = sr.ReadLine();
+            }
+        }
+
+
+        List<MetadataReference> references = new List<MetadataReference>();
+        HashSet<string> added = new HashSet<string>();
+        foreach (var assm in GetIgAssemblies())
+        {
+            await SpiderReferences(references, added, assm);
+        }
+        foreach (var assm in GetExtraAssemblies())
+        {
+            await SpiderReferences(references, added, assm);
+        }
+
+        //pin stuff.
+        //var mg = System.Runtime.CompilerServices.AsyncTaskMethodBuilder<object>.Create();
+        //var mgg = (object)(mg.AwaitOnCompleted);
+
+        var referencesArray = references.ToArray();
+
+        var helperRegex = new Regex(@"CodeGenHelper.GetDescription<([^\]]+)>\(\""([^\""]*)""\)");
+        dataCode = helperRegex.Replace(dataCode, @"GetDescription<$1>(""$2"")");
+
+        var code = $@"
+namespace SampleData
+{{
+{dataCode}
+}}
+";
+        Logger.Info("creating compilation");
+        var options = new CSharpCompilationOptions(OutputKind.DynamicallyLinkedLibrary).WithConcurrentBuild(false);
+
+        Logger.Info("references: ");
+        foreach (var refr in references)
+        {
+            Logger.Info("ref: " + refr.Display.ToString());
+        }
+
+        var compilation = CSharpCompilation.Create(
+            Path.GetRandomFileName(),
+            new[] { CSharpSyntaxTree.ParseText(code) },
+            references,
+            options
+        );
+
+        var test = compilation.GetTypeByMetadataName("System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1");
+
+        foreach (var item in test.MemberNames)
+        {
+            Logger.Info(item.ToString());
+        }
+        Logger.Info(test.ToString());
+
+        using (var ms = new MemoryStream())
+        {
+            Logger.Info("emitting compilation");
+            Microsoft.CodeAnalysis.Emit.EmitResult compilationResult = null;
+            try
+            {
+                compilationResult = compilation.Emit(ms);
+            }
+            catch (Exception ex)
+            {
+                Logger.Error(ex.ToString());
+                return null;
+            }
+            if (!compilationResult.Success)
+            {
+                Logger.Error("compilation was not successful");
+                var errors = compilationResult.Diagnostics.Where(
+                    diagnostic => diagnostic.IsWarningAsError ||
+                    diagnostic.Severity == DiagnosticSeverity.Error);
+
+                Logger.Error("errors compiling data class");
+                foreach (Diagnostic error in errors)
+                {
+                    Logger.Error($"error {error.Id}: {error.GetMessage()}");
+                }
+
+                return null;
+            }
+            else
+            {
+                Logger.Info("dynamic assembly compiled.");
+                ms.Seek(0, SeekOrigin.Begin);
+                Assembly dynamicAssymbly = Assembly.Load(ms.ToArray());
+
+                var types = dynamicAssymbly.GetTypes();
+                Type targetType = null;
+                foreach (var type in types)
+                {
+                    if (type.Namespace == "SampleData" && typeof(IEnumerable).IsAssignableFrom(type))
+                    {
+                        targetType = type;
+                        break;
+                    }
+                }
+
+                if (targetType == null)
+                {
+                    Logger.Error("failed to find compiled data type in dynamic assembly");
+                }
+
+
+                //                RazorConfiguration config = RazorConfiguration.Default;
+                //                MockProjectFileSystem projectFileSystem =
+                //                 new MockProjectFileSystem();
+
+                //                MockRazorProjectItem item = new MockRazorProjectItem("test.razor");
+                //                item.Content = @"
+                //@page ""/""
+
+                //@using IgniteUI.Blazor.Controls
+                //@using Ig = IgniteUI.Blazor.Controls
+                //@inject IIgniteUIBlazor IgniteUIBlazor
+
+                //<IgbButton @onclick=""onButtonClick"">
+                //    Click
+                //</IgbButton>
+                //<IgbGrid
+                //ShowGroupArea=""true""
+                // Width=""100%"" Height=""100%"" PrimaryKey=@primaryKey RowEditable=""true"" @ref=""grid""
+                // AllowFiltering=true
+                // FilterMode=""FilterMode.ExcelStyleFilter""
+                // AutoGenerate=false
+                // Data=@RemoteJson.From(""http://static.infragistics.com/xplatform/data/stocks-history/stockAmazon.json"")
+                // Selected=""onSelected""
+                // DisplayDensity=""DisplayDensity.Compact""
+                // Moving=""true"">
+
+                // <SortHeaderIconTemplate>
+                //    <div>Test</div>
+                // </SortHeaderIconTemplate>
+
+                // <ChildContent>
+                //    <IgbGridColumn Field=""date"" Header=""Date"" Sortable=""true"" Groupable=""true"" Filterable=""true"">
+                //    </IgbGridColumn>
+                //    <IgbGridColumn Field=""open"" Header=""Open"" Sortable=""true"" Groupable=""true"" Filterable=""true""></IgbGridColumn>
+                //    <IgbGridColumn Field=""high"" Header=""High"" Sortable=""true"" Groupable=""true"" Filterable=""true""></IgbGridColumn>
+                //    <IgbGridColumn Field=""close"" Header=""Close"" Sortable=""true"" Groupable=""true"" Filterable=""true""></IgbGridColumn>
+                // </ChildContent>
+
+
+                //</IgbGrid>
+
+                //<IgbCategoryChart
+                //ShowGroupArea=""true""
+                // Width=""100%"" Height=""500px""
+                // DataSource=@smallData
+                // SeriesPointerDown=""onPointerDown"">
+                //</IgbCategoryChart>
+
+                //@code {
+
+                //private void onPointerDown(IgbDomainChartSeriesPointerEventArgs args) {
+                //    Console.WriteLine(args.Item.GetType());
+                //    Console.WriteLine(args.Item);
+                //}
+
+                //    private List<IGSalesmanItem> smallData = IGSalesmanItem.GenerateData(10);
+                //    private List<IGSalesmanItem> data = IGSalesmanItem.GenerateData(1000);
+
+                //    private string primaryKey = ""Index"";
+
+                //    private IgbGrid grid;
+
+                //    private void onSelected(IgbGridCellEventArgs args)
+                //    {
+                //        Console.WriteLine(""test"");
+                //    }
+
+                //    private void onButtonClick()
+                //    {
+                //        grid.Columns.Add(
+                //            new IgbGridColumn() { Field = ""volume"", Header = ""Volume"", Sortable = true, Groupable = true }
+                //        );
+
+
+                //    }
+
+                //    protected async override Task OnAfterRenderAsync(bool firstRender)
+                //    {
+                //        await base.OnAfterRenderAsync(firstRender);
+
+                //        if (firstRender) {
+
+                //        }
+                //    }
+                //}
+
+
+                //        ";
+
+                //                RazorProjectEngine projectEngine =
+                //                  RazorProjectEngine.Create(config, projectFileSystem);
+                //                RazorCodeDocument codeDocument = projectEngine.ProcessDeclarationOnly(item);
+                //                RazorCSharpDocument cSharpDocument = codeDocument.GetCSharpDocument();
+                //                Console.WriteLine(cSharpDocument.GeneratedCode);
+
+                //var instance = Activator.CreateInstance(targetType, new object[] {  });
+                //var methInfo = handlerType.GetMethod(key);
+                //Logger.Info("obtaining handler for {0}", key);
+                _dynamicData[key] = targetType;
+
+                return _dynamicData[key];
+            }
+
+        }
+
+
+        //RazorCodeDocument codeDocument = templateEngine.CreateCodeDocument(projectItem);
+        //RazorCSharpDocument cSharpDocument = templateEngine.GenerateCode(codeDocument);
+
+    }
+
+    private async Task<object> GetCompiledHandler(string key, string handler, string imports)
+    {
+        if (_dynamicHandlers.ContainsKey("key"))
+        {
+            Logger.Info("event handler library item {0} is already compiled", key);
+            return _dynamicHandlers[key];
+        }
+
+        Type delegateType = typeof(Action);
+        using (var sr = new StringReader(handler))
+        {
+            var line = sr.ReadLine();
+            while (line != null)
+            {
+                if (line.Trim().StartsWith("//WPF:"))
+                {
+                    line = line.Replace("//WPF:", "").Trim();
+                    Logger.Info("searching for wpf delegate type: {0}", line);
+                    foreach (var assm in GetIgAssemblies())
+                    {
+                        foreach (var t in assm.GetTypes())
+                        {
+                            if (t.Name == line || t.FullName == line)
+                            {
+                                Logger.Info("found wpf delegate type: {0}", line);
+                                delegateType = t;
+                                break;
+                            }
+                        }
+                    }
+                }
+                line = sr.ReadLine();
+            }
+        }
+
+        List<MetadataReference> references = new List<MetadataReference>();
+        HashSet<string> added = new HashSet<string>();
+        foreach (var assm in GetIgAssemblies())
+        {
+            await SpiderReferences(references, added, assm);
+        }
+
+        var helperRegex = new Regex(@"CodeGenHelper.GetDescription<([^\]]+)>\(\""([^\""]*)""\)");
+        handler = helperRegex.Replace(handler, @"GetDescription<$1>(""$2"")");
+
+        var code = $@"
+{imports}
+
+public class HandlerHolder
+{{
+public HandlerHolder(System.Func<string, object> getDescription)
+{{
+    _getDescription = getDescription;
+}}
+
+private System.Func<string, object> _getDescription;
+
+private T GetDescription<T>(string descriptionName)
+{{
+    return (T)_getDescription(descriptionName);
+}}
+
+{handler}
+}}
+";
+        Logger.Info("handler logic");
+        if (code == null)
+        {
+            Logger.Info("code is null");
+        }
+        Logger.Info("code len: " + code.Length);
+        @* try
+        {
+        Logger.Info(code);
+        }
+        catch (Exception ex)
+        {
+            Logger.Info(ex.ToString());
+        } *@
+        Logger.Info("creating compilation");
+        var compilation = CSharpCompilation.Create(
+            Path.GetRandomFileName(),
+            new[] { CSharpSyntaxTree.ParseText(code) },
+            references,
+            new CSharpCompilationOptions(OutputKind.DynamicallyLinkedLibrary)
+        );
+
+        using (var ms = new MemoryStream())
+        {
+            Logger.Info("emitting compilation");
+            var compilationResult = compilation.Emit(ms);
+            if (!compilationResult.Success)
+            {
+                Logger.Error("compilation was not successful");
+                var errors = compilationResult.Diagnostics.Where(
+                    diagnostic => diagnostic.IsWarningAsError ||
+                    diagnostic.Severity == DiagnosticSeverity.Error);
+
+                Logger.Error("errors compiling dynamic library handler");
+                foreach (Diagnostic error in errors)
+                {
+                    Logger.Error($"error {error.Id}: {error.GetMessage()}");
+                }
+
+                return null;
+            }
+            else
+            {
+                Logger.Info("dynamic assembly compiled.");
+                ms.Seek(0, SeekOrigin.Begin);
+                Assembly dynamicAssymbly = Assembly.Load(ms.ToArray());
+
+                var handlerType = dynamicAssymbly.GetType("HandlerHolder");
+                var holder = Activator.CreateInstance(handlerType, new object[] { (Func<string, object>)this.GetDescription });
+                var methInfo = handlerType.GetMethod(key);
+                Logger.Info("obtaining handler for {0}", key);
+                try
+                {
+                    if (methInfo.GetParameters() != null && methInfo.GetParameters().Length > 0)
+                    {
+                        var del = typeof(Action<>).MakeGenericType(methInfo.GetParameters()[0].ParameterType);
+                        _dynamicHandlers[key] = Delegate.CreateDelegate(del, holder, key);
+                    }
+                    else
+                    {
+                        _dynamicHandlers[key] = Delegate.CreateDelegate(delegateType, holder, key);
+                    }
+                }
+                catch(
+                    Exception e
+                )
+                {
+                    Logger.Error("error obtaining delegate for handler: " + e.ToString());
+                }
+
+                return _dynamicHandlers[key];
+            }
+
+        }
+    }
+
+    private async Task<object> GetCompiledTemplate(string key, string templateContent)
+    {
+        if (_dynamicTemplates.ContainsKey("key"))
+        {
+            Logger.Info("template library item {0} is already compiled", key);
+            return _dynamicHandlers[key];
+        }
+
+        List<MetadataReference> references = new List<MetadataReference>();
+        HashSet<string> added = new HashSet<string>();
+        foreach (var assm in GetIgAssemblies())
+        {
+            await SpiderReferences(references, added, assm);
+        }
+        var curr = this.GetType().Assembly;
+        await SpiderReferences(references, added, curr);
+
+        RazorConfiguration config = RazorConfiguration.Default;
+        MockProjectFileSystem projectFileSystem =
+        new MockProjectFileSystem();
+
+        MockRazorProjectItem item = new MockRazorProjectItem("/Template.razor");
+        item.Content = templateContent;
+        projectFileSystem.Add(item);
+        MockRazorProjectItem imports = new MockRazorProjectItem("/_Imports.razor");
+        imports.Content = @"
+@using System.Net.Http
+@using IgniteUI.Blazor.Controls
+@using Microsoft.AspNetCore.Components.Routing
+@using Microsoft.AspNetCore.Components.Web
+@using Microsoft.JSInterop
+";
+        projectFileSystem.Add(imports);
+        RazorProjectEngine projectEngine =
+                          RazorProjectEngine.Create(config, projectFileSystem, builder =>
+        {
+            builder.Features.Add(new CompilationTagHelperFeature());
+            builder.Features.Add(new DefaultMetadataReferenceFeature() { References = references, });
+            CompilerFeatures.Register(builder);
+        });
+        RazorCodeDocument codeDocument = projectEngine.Process(item);
+        RazorCSharpDocument cSharpDocument = codeDocument.GetCSharpDocument();
+        Console.WriteLine(cSharpDocument.GeneratedCode);   
+
+        var helperRegex = new Regex(@"CodeGenHelper.GetDescription<([^\]]+)>\(\""([^\""]*)""\)");
+        templateContent = helperRegex.Replace(templateContent, @"GetDescription<$1>(""$2"")");
+
+        var code = cSharpDocument.GeneratedCode;
+
+
+        Logger.Info("creating compilation");
+        var compilation = CSharpCompilation.Create(
+            Path.GetRandomFileName(),
+            new[] { CSharpSyntaxTree.ParseText(code) },
+            references,
+            new CSharpCompilationOptions(OutputKind.DynamicallyLinkedLibrary)
+        );
+
+        using (var ms = new MemoryStream())
+        {
+            Logger.Info("emitting compilation");
+            var compilationResult = compilation.Emit(ms);
+            if (!compilationResult.Success)
+            {
+                Logger.Error("compilation was not successful");
+                var errors = compilationResult.Diagnostics.Where(
+                    diagnostic => diagnostic.IsWarningAsError ||
+                    diagnostic.Severity == DiagnosticSeverity.Error);
+
+                Logger.Error("errors compiling dynamic library handler");
+                foreach (Diagnostic error in errors)
+                {
+                    Logger.Error($"error {error.Id}: {error.GetMessage()}");
+                }
+
+                return null;
+            }
+            else
+            {
+                Logger.Info("dynamic assembly compiled.");
+                ms.Seek(0, SeekOrigin.Begin);
+                Assembly dynamicAssymbly = Assembly.Load(ms.ToArray());
+
+                Type templateType = null;
+                //var templateType = dynamicAssymbly.GetType(key);
+                foreach (var type in dynamicAssymbly.GetTypes())
+                {
+                    if (type.GetField("Template") != null)
+                    {
+                        templateType = type;
+                    }
+                }
+
+                Logger.Info("creating dynamic content info.");
+                TypedDynamicContent dc = new TypedDynamicContent(templateType);
+                dc.RefName = key;
+                holder.AddDynamicContent(dc);
+                Logger.Info("added dynamic content. waiting....");
+                var component = await dc.GetInstanceAsync();
+                Logger.Info("found dynamic content.");
+                if (component == null) 
+                {
+                    Logger.Info("component is null.");
+                }
+                var pi = component.GetType().GetField("Template");
+                if (pi != null)
+                {
+                    Logger.Info("found template field.");
+                } else
+                {
+                    Logger.Info("couldn't find template field on type: ");
+                    Logger.Info("type: " + component.GetType().ToString());
+                }
+                var template = pi.GetValue(component);
+                Logger.Info("found template.");
+                _dynamicTemplates[key] = template;
+
+                return _dynamicTemplates[key];
+            }
+
+        }
+    }
+
+
+    private object GetDescription(string descriptionName)
+    {
+        return ((IgbComponentRendererContainer)GetContainer(descriptionName)).RootComponent;
+    }
+
+
+
+    private object GetContainer(string id)
+    {
+        if (id == "content")
+        {
+            return content;
+        }
+        if (id == "legend")
+        {
+            return legend;
+        }
+        if (id == "aboveContent")
+        {
+            return aboveContent;
+        }
+        if (id == "aboveContentLeft")
+        {
+            return aboveContentLeft;
+        }
+        if (id == "aboveContentRight")
+        {
+            return aboveContentRight;
+        }
+        if (id == "editor")
+        {
+            return editor;
+        }
+        return content;
+    }
+
+    public bool CheckReady()
+    {
+        return content != null;
+    }
+
+    private ConsoleLogger Logger = new ConsoleLogger();
+
+    class ConsoleLogger
+    {
+        public void Info(string format, params object[] args)
+        {
+            Console.WriteLine(format, args);
+        }
+        public void Error(string format, params object[] args)
+        {
+            Console.WriteLine(format, args);
+        }
+        public void Warn(string format, params object[] args)
+        {
+            Console.WriteLine(format, args);
+        }
+
+        public void Trace(string format, params object[] args)
+        {
+            Console.WriteLine(format, args);
+        }
+    }
+}
+

@@ -1,5 +1,5 @@
 {
-  "todo": [ "Need row styles ref" ],
+  "todo": [ "Need row styles ref - fix exporting WebTreeGridRowStylesHandler to WC samples" ],
   "export": true,
   "skipAlterDataCasing": true,
   "descriptions": {

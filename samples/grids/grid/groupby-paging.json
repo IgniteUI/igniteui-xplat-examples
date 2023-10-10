@@ -13,7 +13,7 @@
       "type": "WebGrid",
       "name": "grid",
       "id": "grid",
-      "dataRef": "InvoicesData",
+      "dataRef": "InvoicesWorldData",
       "rowSelection": "Multiple",
       "autoGenerate": false,
       "groupingExpressions": [

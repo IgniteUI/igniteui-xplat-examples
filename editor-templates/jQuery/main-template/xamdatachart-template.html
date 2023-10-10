@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Line Series demo</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" type="text/javascript"></script>
+
+    <script type="text/javascript" src="./scripts/js/modules/infragistics.util.js"></script>
+    <script type="text/javascript" src="./scripts/js/modules/infragistics.util.jquery.js"></script>
+    <script type="text/javascript" src="./scripts/js/modules/infragistics.ui.widget.js"></script>
+    <script type="text/javascript" src="./scripts/js/modules/infragistics.datasource.js"></script>
+    <script type="text/javascript" src="./scripts/js/modules/infragistics.templating.js"></script>
+    <script type="text/javascript" src="./scripts/js/modules/infragistics.ext_core.js"></script>
+    <script type="text/javascript" src="./scripts/js/modules/infragistics.ext_collections.js"></script>
+    <script type="text/javascript" src="./scripts/js/modules/infragistics.ext_ui.js"></script>
+    <script type="text/javascript" src="./scripts/js/modules/infragistics.dv_core.js"></script>
+    <script type="text/javascript" src="./scripts/js/modules/infragistics.dv_datasource.js"></script>
+    <script type="text/javascript" src="./scripts/js/modules/infragistics.dv_dataseriesadapter.js"></script>
+    <script type="text/javascript" src="./scripts/js/modules/infragistics.dv_geometry.js"></script>
+    <script type="text/javascript" src="./scripts/js/modules/infragistics.dv_interactivity.js"></script>
+    <script type="text/javascript" src="./scripts/js/modules/infragistics.datachart_core.js"></script>
+    <script type="text/javascript" src="./scripts/js/modules/infragistics.datachart_categorycore.js"></script>
+    <script type="text/javascript" src="./scripts/js/modules/infragistics.datachart_interactivity.js"></script>
+    <script type="text/javascript" src="./scripts/js/modules/infragistics.dv_jquerydom.js"></script>
+    <script type="text/javascript" src="./scripts/js/modules/infragistics.dvcommonwidget.js"></script>
+    <script type="text/javascript" src="./scripts/js/modules/infragistics.ui.basechart.js"></script>
+    <script type="text/javascript" src="./scripts/js/modules/infragistics.datachart_extendedaxes.js"></script>
+    <script type="text/javascript" src="./scripts/js/modules/infragistics.datachart_category.js"></script>
+    <script type="text/javascript" src="./scripts/js/modules/infragistics.datachart_financial.js"></script>
+    <script type="text/javascript" src="./scripts/js/modules/infragistics.datachart_radial.js"></script>
+    <script type="text/javascript" src="./scripts/js/modules/infragistics.datachart_polar.js"></script>
+    <script type="text/javascript" src="./scripts/js/modules/infragistics.datachart_verticalcategory.js"></script>
+    <script type="text/javascript" src="./scripts/js/modules/infragistics.datachart_rangecategory.js"></script>
+    <script type="text/javascript" src="./scripts/js/modules/infragistics.datachart_stacked.js"></script>
+    <script type="text/javascript" src="./scripts/js/modules/infragistics.datachart_annotation.js"></script>
+    <script type="text/javascript" src="./scripts/js/modules/infragistics.datachart_extendedfinancial.js"></script>
+    <script type="text/javascript" src="./scripts/js/modules/infragistics.ui.chart.js"></script>
+
+    <link href="Scripts/css/themes/infragistics/infragistics.theme.css" rel="stylesheet" type="text/css" />
+    <link href="Scripts/css/structure/modules/infragistics.ui.chart.css" rel="stylesheet" type="text/css" />
+
+
+    <style>
+        html, body {
+            height: 100%;
+        }
+    </style>
+
+    <script>
+        $(function () {
+
+            var data = [
+                { label: "Shoes", Value: 21 },
+                { label: "Hats", Value: 53 },
+                { label: "Gloves", Value: 40 },
+                { label: "Coats", Value: 15 },
+                { label: "Boots", Value: 20 },
+                { label: "Scarves", Value: 10 },
+            ];
+
+            // insert content
+            $("#container").igDataChart({
+                dataSource: data,
+                axes: [{
+                    type: "numericY",
+                    name: "yAxis"
+                }, {
+                    type: "categoryX",
+                    name: "xAxis",
+                    label: "label"
+                }],
+                series: [{
+                    type: "column",
+                    name: "series",
+                    xAxis: "xAxis",
+                    yAxis: "yAxis",
+                    valueMemberPath: "Value"
+                }]
+            });
+            // end content
+        });
+    </script>
+    <style>
+
+    </style>
+</head>
+<body>
+    <div id="container" style="width: 700px; height: 500px"></div>
+    <div id="legend" style="width: 100px; height: 200px;">
+    </div>
+
+</body>
+</html>

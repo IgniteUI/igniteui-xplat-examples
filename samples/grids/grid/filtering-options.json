@@ -9,7 +9,7 @@
       "moving": true,
       "autoGenerate": false,
       "allowFiltering": true,
-      "filterMode": "ExcelStyleFilter",
+      "filterMode": "QuickFilter",
       "columns": [{
         "type": "WebColumn",
         "name": "ProductName",
