@@ -1,28 +1,61 @@
 {
-  "todo": [ "Approved Defer - implement" ],
-  "export": false,
+  "todo": [ "" ],
   "skipAlterDataCasing": true,
+  "onInit": [ "WebGridRowEditingStyle" ],
   "descriptions": {
     "content": {
       "type": "WebGrid",
+      "dataRef": "NwindData",
+      "autoGenerate": false,
       "name": "grid",
       "id": "grid",
-      "dataRef": "CustomersData",
-      "columnSelection": "Single",
+      "primaryKey": "ProductID",
+      "rowEditable": true,
       "columns": [
         {
           "type": "WebColumn",
-          "field": "ID"
+          "field": "ProductID",
+          "header": "Product ID",
+          "dataType": "Number"
         },
         {
           "type": "WebColumn",
-          "field": "CompanyName",
-          "header": "Company"
+          "field": "ReorderLevel",
+          "header": "Reorder Level",
+          "dataType": "Number"
+        },
+        {
+          "type": "WebColumn",
+          "field": "ProductName",
+          "header": "Prod. Name",
+          "dataType": "String"
+        },
+        {
+          "type": "WebColumn",
+          "field": "UnitsInStock",
+          "header": "Units In Stock",
+          "dataType": "Number"
+        },
+         {
+          "type": "WebColumn",
+          "field": "OrderDate",
+          "header": "Order Date",
+          "dataType": "Date",
+          "pipeArgs": {
+              "type": "WebColumnPipeArgs",
+              "format": "mediumDate"
+          }
+        },
+        {
+          "type": "WebColumn",
+          "field": "Discontinued",
+          "header": "Discontinued",
+          "dataType": "Boolean"
         }
       ]
     }
   },
   "modules": [
-    "grids/WebGridModule"
+      "grids/WebGridModule"
   ]
 }
