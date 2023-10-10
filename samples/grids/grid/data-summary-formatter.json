@@ -1,5 +1,4 @@
 {
-  "todo": ["missing summary formatter prop"],
   "export": true,
   "skipAlterDataCasing": true,
   "descriptions": {
@@ -39,10 +38,7 @@
           "sortable": true,
           "hasSummary": true,
           "dataType": "Date",
-          "pipeArgs": {
-              "type": "WebColumnPipeArgs",
-              "format": "MMM YYYY"
-          }
+          "summaryFormatterRef": "WebGridSummaryFormatter"
         },
         {
           "type": "WebColumn",

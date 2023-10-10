@@ -1,8 +1,9 @@
 {
   "todo": [ 
-     ""
+     "No option to set custom content inside the toolbar via the editor."
   ],
   "skipAlterDataCasing": true,
+  "export": false,
   "descriptions": {
     "content": {
       "type": "WebGrid",

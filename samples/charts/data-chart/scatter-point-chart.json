@@ -1,4 +1,6 @@
 {
+  "todo1": "replace CountryDemographicEurope with CountryStatsEurope",
+  "todo2": "replace CountryDemographicAfrican with CountryStatsAfrica",
   "strings": {
     "legendTitle": "Population Statistics for Selected Continents"
   },

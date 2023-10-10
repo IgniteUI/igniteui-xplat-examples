@@ -7,7 +7,7 @@
       "type": "WebGrid",
       "name": "grid",
       "id": "grid",
-      "dataRef": "CustomersData",
+      "dataRef": "CustomersDataLocal",
       "autoGenerate": false,
       "primaryKey": "ID",
       "cellSelection": "None",
