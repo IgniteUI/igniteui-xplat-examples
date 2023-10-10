@@ -5,6 +5,8 @@
 
 tests/
 exports/
+convert/**/*.*
+**/dev-template
 **/.vscode
 
 # User-specific files
@@ -352,3 +354,5 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+code-gen-tools/package-lock.json
+convert/*

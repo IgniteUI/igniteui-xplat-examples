@@ -1,0 +1,59 @@
+{
+  "descriptions": {
+    "content": {
+      "type": "DataChart",
+      "name": "chart",
+      "shouldAutoExpandMarginForInitialLabels": true,
+      "computedPlotAreaMarginMode": "Series",
+      "isVerticalZoomEnabled": true,
+      "isHorizontalZoomEnabled": true,
+      "axes": [
+        {
+          "type": "CategoryXAxis",
+          "name": "xAxis",
+          "dataSourceRef": "Stock2Years",
+          "labelLocation": "OutsideBottom",
+          "label": "Month",
+          "interval": 1,
+          "labelExtent": 30
+        },
+        {
+          "type": "NumericYAxis",
+          "name": "yAxis",
+          "labelLocation": "OutsideRight"
+        }
+      ],
+      "series": [
+        {
+          "type": "FinancialPriceSeries",
+          "name": "Series1",
+          "title": "Stock Price",
+          "displayType": "Candlestick",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "dataSourceRef": "Stock2Years",
+          "openMemberPath": "Open",
+          "highMemberPath": "High",
+          "lowMemberPath": "Low",
+          "closeMemberPath": "Close",
+          "volumeMemberPath": "Volume",
+          "showDefaultTooltip": true,
+          "trendLineType": "QuarticFit",
+          "trendLineBrush": "dodgerblue",
+          "trendLineDashArray": [5, 5]
+        }
+      ]
+    }
+  },
+  "modules": [
+    "charts/DataChartCoreModule",
+    "charts/DataChartCategoryModule",
+    "charts/DataChartCategoryCoreModule",
+    "charts/DataChartCategoryTrendLineModule",
+    "charts/DataChartFinancialCoreModule",
+    "charts/DataChartFinancialModule",
+    "charts/DataChartFinancialOverlaysModule",
+    "charts/DataChartInteractivityModule",
+    "charts/DataChartAnnotationModule"
+  ]
+}

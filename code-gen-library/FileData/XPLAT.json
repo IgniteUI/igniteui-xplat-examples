@@ -1,0 +1,338 @@
+[
+ {
+  "Directory": "A",
+  "Size": null,
+  "Name": "Main Drive",
+  "System": true,
+  "ID": 0,
+  "Folders": [
+   {
+    "Name": "Work Items 10/13/2020",
+    "Size": 120,
+    "CreatedOn": "10/13/2020",
+    "CreatedBy": "Dave",
+    "ID": 0,
+    "Files": [
+     {
+      "Name": "Work Report",
+      "Extension": ".xls",
+      "Owner": "Administrator",
+      "ID": 0,
+      "Size": 63,
+      "CreatedBy": "Anna"
+     },
+     {
+      "Name": "Work Report",
+      "Extension": ".csv",
+      "Owner": "Guest",
+      "ID": 1,
+      "Size": 57,
+      "CreatedBy": "Marta"
+     }
+    ]
+   },
+   {
+    "Name": "Data 12/15/2013",
+    "Size": 72,
+    "CreatedOn": "12/15/2013",
+    "CreatedBy": "Dave",
+    "ID": 1,
+    "Files": [
+     {
+      "Name": "Clients Quota",
+      "Extension": ".pdf",
+      "Owner": "Guest",
+      "ID": 0,
+      "Size": 29,
+      "CreatedBy": "Robert"
+     },
+     {
+      "Name": "Salaries Document",
+      "Extension": ".doc",
+      "Owner": "Guest",
+      "ID": 1,
+      "Size": 43,
+      "CreatedBy": "Carol"
+     }
+    ]
+   },
+   {
+    "Name": "Reports 7/7/2010",
+    "Size": 91,
+    "CreatedOn": "7/7/2010",
+    "CreatedBy": "Andrew",
+    "ID": 2,
+    "Files": [
+     {
+      "Name": "Salaries Quota",
+      "Extension": ".xlsx",
+      "Owner": "Guest",
+      "ID": 0,
+      "Size": 29,
+      "CreatedBy": "Pete"
+     },
+     {
+      "Name": "Sales Document",
+      "Extension": ".xls",
+      "Owner": "Administrator",
+      "ID": 1,
+      "Size": 62,
+      "CreatedBy": "Pete"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "Directory": "B",
+  "Size": null,
+  "Name": "Drive 1",
+  "System": false,
+  "ID": 1,
+  "Folders": [
+   {
+    "Name": "Data 12/15/2015",
+    "Size": 70,
+    "CreatedOn": "12/15/2015",
+    "CreatedBy": "Pete",
+    "ID": 0,
+    "Files": [
+     {
+      "Name": "Salaries Memo",
+      "Extension": ".pdf",
+      "Owner": "Administrator",
+      "ID": 0,
+      "Size": 34,
+      "CreatedBy": "Maria"
+     },
+     {
+      "Name": "Management Document",
+      "Extension": ".dbf",
+      "Owner": "Guest",
+      "ID": 1,
+      "Size": 36,
+      "CreatedBy": "Marta"
+     }
+    ]
+   },
+   {
+    "Name": "Reports 1/11/2017",
+    "Size": 60,
+    "CreatedOn": "1/11/2017",
+    "CreatedBy": "Cindy",
+    "ID": 1,
+    "Files": [
+     {
+      "Name": "Salaries Report",
+      "Extension": ".json",
+      "Owner": "All Users",
+      "ID": 0,
+      "Size": 29,
+      "CreatedBy": "Anna"
+     },
+     {
+      "Name": "Clients Memo",
+      "Extension": ".doc",
+      "Owner": "Guest",
+      "ID": 1,
+      "Size": 31,
+      "CreatedBy": "Anna"
+     }
+    ]
+   },
+   {
+    "Name": "Data 10/2/2011",
+    "Size": 63,
+    "CreatedOn": "10/2/2011",
+    "CreatedBy": "James",
+    "ID": 2,
+    "Files": [
+     {
+      "Name": "Clients Memo",
+      "Extension": ".xlsx",
+      "Owner": "Guest",
+      "ID": 0,
+      "Size": 26,
+      "CreatedBy": "Marta"
+     },
+     {
+      "Name": "Work Memo",
+      "Extension": ".json",
+      "Owner": "Administrator",
+      "ID": 1,
+      "Size": 37,
+      "CreatedBy": "Karl"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "Directory": "C",
+  "Size": null,
+  "Name": "Drive 2",
+  "System": false,
+  "ID": 2,
+  "Folders": [
+   {
+    "Name": "Documents 7/7/2020",
+    "Size": 92,
+    "CreatedOn": "7/7/2020",
+    "CreatedBy": "Marta",
+    "ID": 0,
+    "Files": [
+     {
+      "Name": "Clients Quota",
+      "Extension": ".json",
+      "Owner": "Guest",
+      "ID": 0,
+      "Size": 39,
+      "CreatedBy": "Maria"
+     },
+     {
+      "Name": "Management Document",
+      "Extension": ".shp",
+      "Owner": "Guest",
+      "ID": 1,
+      "Size": 53,
+      "CreatedBy": "Pete"
+     }
+    ]
+   },
+   {
+    "Name": "Reports 7/25/2018",
+    "Size": 79,
+    "CreatedOn": "7/25/2018",
+    "CreatedBy": "Anna",
+    "ID": 1,
+    "Files": [
+     {
+      "Name": "Management Document",
+      "Extension": ".xls",
+      "Owner": "All Users",
+      "ID": 0,
+      "Size": 45,
+      "CreatedBy": "Cindy"
+     },
+     {
+      "Name": "Sales Report",
+      "Extension": ".json",
+      "Owner": "All Users",
+      "ID": 1,
+      "Size": 34,
+      "CreatedBy": "Cindy"
+     }
+    ]
+   },
+   {
+    "Name": "Reports 10/6/2014",
+    "Size": 72,
+    "CreatedOn": "10/6/2014",
+    "CreatedBy": "Marta",
+    "ID": 2,
+    "Files": [
+     {
+      "Name": "Salaries Report",
+      "Extension": ".xls",
+      "Owner": "Guest",
+      "ID": 0,
+      "Size": 28,
+      "CreatedBy": "Robert"
+     },
+     {
+      "Name": "Sales Memo",
+      "Extension": ".xls",
+      "Owner": "Guest",
+      "ID": 1,
+      "Size": 44,
+      "CreatedBy": "Ivan"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "Directory": "D",
+  "Size": null,
+  "Name": "Drive 3",
+  "System": true,
+  "ID": 3,
+  "Folders": [
+   {
+    "Name": "Work Items 8/16/2018",
+    "Size": 80,
+    "CreatedOn": "8/16/2018",
+    "CreatedBy": "Robert",
+    "ID": 0,
+    "Files": [
+     {
+      "Name": "Sales Memo",
+      "Extension": ".dbf",
+      "Owner": "Guest",
+      "ID": 0,
+      "Size": 51,
+      "CreatedBy": "Maria"
+     },
+     {
+      "Name": "Clients Report",
+      "Extension": ".csv",
+      "Owner": "Guest",
+      "ID": 1,
+      "Size": 29,
+      "CreatedBy": "Maria"
+     }
+    ]
+   },
+   {
+    "Name": "Work Items 1/12/2013",
+    "Size": 83,
+    "CreatedOn": "1/12/2013",
+    "CreatedBy": "Karl",
+    "ID": 1,
+    "Files": [
+     {
+      "Name": "Management Memo",
+      "Extension": ".csv",
+      "Owner": "All Users",
+      "ID": 0,
+      "Size": 31,
+      "CreatedBy": "Pete"
+     },
+     {
+      "Name": "Work Quota",
+      "Extension": ".csv",
+      "Owner": "All Users",
+      "ID": 1,
+      "Size": 52,
+      "CreatedBy": "Karl"
+     }
+    ]
+   },
+   {
+    "Name": "Data 10/6/2015",
+    "Size": 86,
+    "CreatedOn": "10/6/2015",
+    "CreatedBy": "Carol",
+    "ID": 2,
+    "Files": [
+     {
+      "Name": "Work Document",
+      "Extension": ".doc",
+      "Owner": "All Users",
+      "ID": 0,
+      "Size": 27,
+      "CreatedBy": "Karl"
+     },
+     {
+      "Name": "Management Quota",
+      "Extension": ".json",
+      "Owner": "Guest",
+      "ID": 1,
+      "Size": 59,
+      "CreatedBy": "Ivan"
+     }
+    ]
+   }
+  ]
+ }
+]

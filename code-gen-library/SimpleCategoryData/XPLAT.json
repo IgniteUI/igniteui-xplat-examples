@@ -1,0 +1,8 @@
+[
+  { "Label": "2000", "Shoes": 21, "Hats": 40, "Coats": 8, "Scarves": 14 },
+  { "Label": "2001", "Shoes": 24, "Hats": 38, "Coats": 9, "Scarves": 16 },
+  { "Label": "2002", "Shoes": 26, "Hats": 38, "Coats": 8, "Scarves": 18 },
+  { "Label": "2003", "Shoes": 31, "Hats": 36, "Coats": 10, "Scarves": 20 },
+  { "Label": "2004", "Shoes": 36, "Hats": 36, "Coats": 11, "Scarves": 20 },
+  { "Label": "2005", "Shoes": 30, "Hats": 32, "Coats": 12, "Scarves": 22 }
+]

@@ -1,6 +1,6 @@
 {
   "descriptions": {
-    "aboveContent": {
+    "aboveContentLeft": {
       "type": "Toolbar",
       "name": "Toolbar",
       "targetRef": "chart",
@@ -9,6 +9,8 @@
     "content": {
       "type": "DataChart",
       "isHorizontalZoomEnabled": true,
+      "isVerticalZoomEnabled": true,
+      "computedPlotAreaMarginMode": "Series",
       "name": "chart",
       "axes": [
         {
@@ -20,7 +22,8 @@
         {
           "type": "NumericYAxis",
           "name": "yAxis",
-          "title": "TWh"
+          "title": "TWh",
+          "labelLocation": "OutsideRight"
         }
       ],
       "series": [
@@ -50,6 +53,10 @@
           "yAxisRef": "yAxis",
           "dataSourceRef": "CountryRenewableElectricity",
           "valueMemberPath": "China"
+        },
+        {
+          "type": "DataToolTipLayer",
+          "name": "tooltipLayer"
         }
       ]
     }
@@ -61,6 +68,7 @@
     "charts/DataChartCategoryModule",
     "charts/DataChartAnnotationModule",
     "charts/DataChartInteractivityModule",
-    "charts/AnnotationLayerProxyModule"
+    "charts/AnnotationLayerProxyModule",
+    "charts/DataChartCategoryTrendLineModule"
   ]
 }
