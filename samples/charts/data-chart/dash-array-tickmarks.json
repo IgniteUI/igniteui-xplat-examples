@@ -1,0 +1,45 @@
+{
+  "descriptions": {
+    "content": {
+      "type": "DataChart",
+      "name": "chart",
+      "computedPlotAreaMarginMode": "Series",
+      "axes": [
+        {
+          "type": "CategoryXAxis",
+          "name": "xAxis",
+          "dataSourceRef": "CountryRenewableElectricity",
+          "label": "Year",
+          "tickLength": 20,
+          "tickStrokeDashArray": [2, 2],
+          "tickStroke": "darkslategray",
+          "interval": 1
+        },
+        {
+          "type": "NumericYAxis",
+          "name": "yAxis",
+          "tickLength": 20,
+          "tickStrokeDashArray": [2, 2],
+          "tickStroke": "darkslategray",
+          "minimumValue": 0
+        }
+      ],
+      "series": [
+        {
+          "type": "ColumnSeries",
+          "name": "columnSeries1",
+          "title": "China",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "dataSourceRef": "CountryRenewableElectricity",
+          "valueMemberPath": "China",
+          "showDefaultTooltip": true
+        }
+      ]
+    }
+  },
+  "modules": [
+    "charts/DataChartCategoryModule",
+    "charts/DataChartInteractivityModule"
+  ]
+}
