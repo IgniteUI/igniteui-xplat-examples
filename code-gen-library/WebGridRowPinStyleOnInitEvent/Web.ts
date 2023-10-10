@@ -15,10 +15,10 @@ export class WebGridRowPinStyleOnInitEvent {
     public requiredStyles = `
     <!--begin styles-->
     #grid {
-        --igx-grid-pinned-border-width: 5px;
-        --igx-grid-pinned-border-style: double;
-        --igx-grid-pinned-border-color: red;
-        --igx-grid-cell-active-border-color: red;
+        --ig-grid-pinned-border-width: 5px;
+        --ig-grid-pinned-border-style: double;
+        --ig-grid-pinned-border-color: red;
+        --ig-grid-cell-active-border-color: red;
     }
     <!--end styles-->
         `;
