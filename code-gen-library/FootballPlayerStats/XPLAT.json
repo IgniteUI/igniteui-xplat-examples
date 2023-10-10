@@ -1,0 +1,10 @@
+[
+  { "Attribute": "Dribbling",  "Ronaldo": 8,  "Messi": 10 },
+  { "Attribute": "Passing",    "Ronaldo": 8,  "Messi": 10 },
+  { "Attribute": "Finishing",  "Ronaldo": 10, "Messi": 10 },
+  { "Attribute": "Free Kicks", "Ronaldo": 8,  "Messi": 9 },
+  { "Attribute": "Penalties",  "Ronaldo": 9,  "Messi": 7 },
+  { "Attribute": "Physical",   "Ronaldo": 10, "Messi": 7 },
+  { "Attribute": "Team Play",  "Ronaldo": 7,  "Messi": 9 },
+  { "Attribute": "Heading",    "Ronaldo": 9,  "Messi": 6 }
+]

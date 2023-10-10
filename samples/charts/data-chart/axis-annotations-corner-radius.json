@@ -32,10 +32,7 @@
         {
           "type": "CalloutLayer",
           "name": "CalloutLayer1",
-          "dataSourceRef": "CountryRenewableCallouts",
-          "xMemberPath": "Index",
-          "yMemberPath": "Value",
-          "labelMemberPath": "Label",
+          "isAutoCalloutBehaviorEnabled": true,
           "calloutPaddingLeft": 20,
           "calloutPaddingRight": 20,
           "calloutPaddingBottom": 10,

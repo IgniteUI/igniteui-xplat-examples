@@ -1,0 +1,464 @@
+[
+  {
+    "Name": "Alanine",
+    "Abbreviation": {
+      "Short": "A",
+      "Long": "Ala"
+    },
+    "Weight": {
+      "Molecular": 89.10,
+      "Residue": 71.08
+    },
+    "Formula": {
+      "Molecular": "C3H7NO2",
+      "Residue": "C3H5NO"
+    },
+    "P": {
+      "Ka": 2.34,
+      "Kb": 9.69,
+      "Kx": null,
+      "L": 6.00
+    }
+  },
+  {
+    "Name": "Arginine",
+    "Abbreviation": {
+      "Short": "R",
+      "Long": "Arg"
+    },
+    "Weight": {
+      "Molecular": 174.20,
+      "Residue": 156.19
+    },
+    "Formula": {
+      "Molecular": "C6H14N4O2",
+      "Residue": "C6H12N4O"
+    },
+    "P": {
+      "Ka": 2.17,
+      "Kb": 9.04,
+      "Kx": 12.48,
+      "L": 10.76
+    }
+  },
+  {
+    "Name": "Asparagine",
+    "Abbreviation": {
+      "Short": "N",
+      "Long": "Asn"
+    },
+    "Weight": {
+      "Molecular": 132.12,
+      "Residue": 114.11
+    },
+    "Formula": {
+      "Molecular": "C4H8N2O3",
+      "Residue": "C4H6N2O2"
+    },
+    "P": {
+      "Ka": 2.02,
+      "Kb": 8.80,
+      "Kx": null,
+      "L": 5.41
+    }
+  },
+  {
+    "Name": "Aspartic acid",
+    "Abbreviation": {
+      "Short": "D",
+      "Long": "Asp"
+    },
+    "Weight": {
+      "Molecular": 133.11,
+      "Residue": 115.09
+    },
+    "Formula": {
+      "Molecular": "C4H7NO4",
+      "Residue": "C4H5NO3"
+    },
+    "P": {
+      "Ka": 1.88,
+      "Kb": 9.60,
+      "Kx": 3.65,
+      "L": 2.77
+    }
+  },
+  {
+    "Name": "Cysteine",
+    "Abbreviation": {
+      "Short": "C",
+      "Long": "Cys"
+    },
+    "Weight": {
+      "Molecular": 121.16,
+      "Residue": 103.15
+    },
+    "Formula": {
+      "Molecular": "C3H7NO2S",
+      "Residue": "C3H5NOS"
+    },
+    "P": {
+      "Ka": 1.96,
+      "Kb": 10.28,
+      "Kx": 8.18,
+      "L": 5.07
+    }
+  },
+  {
+    "Name": "Glutamic acid",
+    "Abbreviation": {
+      "Short": "E",
+      "Long": "Glu"
+    },
+    "Weight": {
+      "Molecular": 147.13,
+      "Residue": 129.12
+    },
+    "Formula": {
+      "Molecular": "C5H9NO4",
+      "Residue": "C5H7NO3"
+    },
+    "P": {
+      "Ka": 2.19,
+      "Kb": 9.67,
+      "Kx": 4.25,
+      "L": 3.22
+    }
+  },
+  {
+    "Name": "Glutamine",
+    "Abbreviation": {
+      "Short": "Q",
+      "Long": "Gln"
+    },
+    "Weight": {
+      "Molecular": 146.15,
+      "Residue": 128.13
+    },
+    "Formula": {
+      "Molecular": "C5H10N2O3",
+      "Residue": "C5H8N2O2"
+    },
+    "P": {
+      "Ka": 2.17,
+      "Kb": 9.13,
+      "Kx": null,
+      "L": 5.65
+    }
+  },
+  {
+    "Name": "Glycine",
+    "Abbreviation": {
+      "Short": "G",
+      "Long": "Gly"
+    },
+    "Weight": {
+      "Molecular": 75.07,
+      "Residue": 57.05
+    },
+    "Formula": {
+      "Molecular": "C2H5NO2",
+      "Residue": "C2H3NO"
+    },
+    "P": {
+      "Ka": 2.34,
+      "Kb": 9.60,
+      "Kx": null,
+      "L": 5.97
+    }
+  },
+  {
+    "Name": "Histidine",
+    "Abbreviation": {
+      "Short": "H",
+      "Long": "His"
+    },
+    "Weight": {
+      "Molecular": 155.16,
+      "Residue": 137.14
+    },
+    "Formula": {
+      "Molecular": "C6H9N3O2",
+      "Residue": "C6H7N3O"
+    },
+    "P": {
+      "Ka": 1.82,
+      "Kb": 9.17,
+      "Kx": 6.00,
+      "L": 7.59
+    }
+  },
+  {
+    "Name": "Hydroxyproline",
+    "Abbreviation": {
+      "Short": "O",
+      "Long": "Hyp"
+    },
+    "Weight": {
+      "Molecular": 131.13,
+      "Residue": 113.11
+    },
+    "Formula": {
+      "Molecular": "C5H9NO3",
+      "Residue": "C5H7NO2"
+    },
+    "P": {
+      "Ka": 1.82,
+      "Kb": 9.65,
+      "Kx": null,
+      "L": null
+    }
+  },
+  {
+    "Name": "Isoleucine",
+    "Abbreviation": {
+      "Short": "I",
+      "Long": "Ile"
+    },
+    "Weight": {
+      "Molecular": 131.18,
+      "Residue": 113.16
+    },
+    "Formula": {
+      "Molecular": "C6H13NO2",
+      "Residue": "C6H11NO"
+    },
+    "P": {
+      "Ka": 2.36,
+      "Kb": 9.60,
+      "Kx": null,
+      "L": 6.02
+    }
+  },
+  {
+    "Name": "Leucine",
+    "Abbreviation": {
+      "Short": "L",
+      "Long": "Leu"
+    },
+    "Weight": {
+      "Molecular": 131.18,
+      "Residue": 113.16
+    },
+    "Formula": {
+      "Molecular": "C6H13NO2",
+      "Residue": "C6H11NO"
+    },
+    "P": {
+      "Ka": 2.36,
+      "Kb": 9.60,
+      "Kx": null,
+      "L": 5.98
+    }
+  },
+  {
+    "Name": "Lysine",
+    "Abbreviation": {
+      "Short": "K",
+      "Long": "Lys"
+    },
+    "Weight": {
+      "Molecular": 146.19,
+      "Residue": 128.18
+    },
+    "Formula": {
+      "Molecular": "C6H14N2O2",
+      "Residue": "C6H12N2O"
+    },
+    "P": {
+      "Ka": 2.18,
+      "Kb": 8.95,
+      "Kx": 10.53,
+      "L": 9.74
+    }
+  },
+  {
+    "Name": "Methionine",
+    "Abbreviation": {
+      "Short": "M",
+      "Long": "Met"
+    },
+    "Weight": {
+      "Molecular": 149.21,
+      "Residue": 131.20
+    },
+    "Formula": {
+      "Molecular": "C5H11NO2S",
+      "Residue": "C5H9NOS"
+    },
+    "P": {
+      "Ka": 2.28,
+      "Kb": 9.21,
+      "Kx": null,
+      "L": 5.74
+    }
+  },
+  {
+    "Name": "Phenylalanine",
+    "Abbreviation": {
+      "Short": "F",
+      "Long": "Phe"
+    },
+    "Weight": {
+      "Molecular": 165.19,
+      "Residue": 147.18
+    },
+    "Formula": {
+      "Molecular": "C9H11NO2",
+      "Residue": "C9H9NO"
+    },
+    "P": {
+      "Ka": 1.83,
+      "Kb": 9.13,
+      "Kx": null,
+      "L": 5.48
+    }
+  },
+  {
+    "Name": "Proline",
+    "Abbreviation": {
+      "Short": "P",
+      "Long": "Pro"
+    },
+    "Weight": {
+      "Molecular": 115.13,
+      "Residue": 97.12
+    },
+    "Formula": {
+      "Molecular": "C5H9NO2",
+      "Residue": "C5H7NO"
+    },
+    "P": {
+      "Ka": 1.99,
+      "Kb": 10.60,
+      "Kx": null,
+      "L": 6.30
+    }
+  },
+  {
+    "Name": "Pyroglutamatic",
+    "Abbreviation": {
+      "Short": "U",
+      "Long": "Glp"
+    },
+    "Weight": {
+      "Molecular": 139.11,
+      "Residue": 121.09
+    },
+    "Formula": {
+      "Molecular": "C5H7NO3",
+      "Residue": "C5H5NO2"
+    },
+    "P": {
+      "Ka": null,
+      "Kb": null,
+      "Kx": null,
+      "L": 5.68
+    }
+  },
+  {
+    "Name": "Serine",
+    "Abbreviation": {
+      "Short": "S",
+      "Long": "Ser"
+    },
+    "Weight": {
+      "Molecular": 105.09,
+      "Residue": 87.08
+    },
+    "Formula": {
+      "Molecular": "C3H7NO3",
+      "Residue": "C3H5NO2"
+    },
+    "P": {
+      "Ka": 2.21,
+      "Kb": 9.15,
+      "Kx": null,
+      "L": 5.68
+    }
+  },
+  {
+    "Name": "Threonine",
+    "Abbreviation": {
+      "Short": "T",
+      "Long": "Thr"
+    },
+    "Weight": {
+      "Molecular": 119.12,
+      "Residue": 101.11
+    },
+    "Formula": {
+      "Molecular": "C4H9NO3",
+      "Residue": "C4H7NO2"
+    },
+    "P": {
+      "Ka": 2.09,
+      "Kb": 9.10,
+      "Kx": null,
+      "L": 5.60
+    }
+  },
+  {
+    "Name": "Tryptophan",
+    "Abbreviation": {
+      "Short": "W",
+      "Long": "Trp"
+    },
+    "Weight": {
+      "Molecular": 204.23,
+      "Residue": 186.22
+    },
+    "Formula": {
+      "Molecular": "C11H12N2O2",
+      "Residue": "C11H10N2O"
+    },
+    "P": {
+      "Ka": 2.83,
+      "Kb": 9.39,
+      "Kx": null,
+      "L": 5.89
+    }
+  },
+  {
+    "Name": "Tyrosine",
+    "Abbreviation": {
+      "Short": "Y",
+      "Long": "Tyr"
+    },
+    "Weight": {
+      "Molecular": 181.19,
+      "Residue": 163.18
+    },
+    "Formula": {
+      "Molecular": "C9H11NO3",
+      "Residue": "C9H9NO2"
+    },
+    "P": {
+      "Ka": 2.20,
+      "Kb": 9.11,
+      "Kx": 10.07,
+      "L": 5.66
+    }
+  },
+  {
+    "Name": "Valine",
+    "Abbreviation": {
+      "Short": "V",
+      "Long": "Val"
+    },
+    "Weight": {
+      "Molecular": 117.15,
+      "Residue": 99.13
+    },
+    "Formula": {
+      "Molecular": "C5H11NO2",
+      "Residue": "C5H9NO"
+    },
+    "P": {
+      "Ka": 2.32,
+      "Kb": 9.62,
+      "Kx": null,
+      "L": 5.96
+    }
+  }
+]

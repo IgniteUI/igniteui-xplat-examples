@@ -1,0 +1,70 @@
+//begin template
+@using IgniteUI.Blazor.Controls
+
+@inject IIgniteUIBlazor IgniteUIBlazor;
+
+<!--begin styles-->
+<style>
+    .cellAlignStyle {
+        text-align: right;
+        float:right;
+    }
+    .cellAlignStyle > span {
+        float:right;
+    }
+    .up {
+        color: green;
+    }
+    .down {
+        color: red;
+    }
+    .grid__wrapper {
+    padding: 16px;
+    }
+
+    .change-percentage-container {
+        width: 100px;
+        float: right;
+    }
+
+    .badge-left {
+        float: left;
+    }
+</style>
+<!--end styles-->
+
+@code {
+    //begin content
+    public RenderFragment<IgbCellTemplateContext> WebGridChangeOnYearPercentTemplate = (ctx) => {
+        return @<div class="change-percentage-container">
+            @if (Convert.ToDouble(ctx.Cell.Value) > 0)
+            {
+                <IgbBadge Variant="BadgeVariant.Success" Shape="BadgeShape.Rounded" Position="bottom-right" Icon="arrow_upward" class="badge-left">
+                    ▲
+                </IgbBadge>
+            }
+            @if (Convert.ToDouble(ctx.Cell.Value) < 0)
+            {
+                <IgbBadge Variant="BadgeVariant.Danger" Shape="BadgeShape.Rounded" Position="bottom-right" Icon="arrow_downward" class="error badge-left">
+                    ▼
+                </IgbBadge>
+            }
+            <span class=@(Convert.ToDouble(ctx.Cell.Value) > 0 ? "cellAlignStyle up" : "cellAlignStyle down")>@formatNumber(ctx.Cell.Value)%</span>
+        </div>;
+    };
+    //end content
+
+    protected override void OnInitialized()
+    {
+        IgbButtonModule.Register(IgniteUIBlazor);
+        IgbBadgeModule.Register(IgniteUIBlazor);
+    }
+
+    //begin supportingMethods
+    private static string formatNumber(object value)
+    {
+        return Math.Round(Convert.ToSingle(value), 2).ToString();
+    }
+    //end supportingMethods
+}
+//end template
