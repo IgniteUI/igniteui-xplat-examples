@@ -76,7 +76,7 @@
           "header": "Fax"
         }
       ],
-      "actionStrip": {
+      "actionStripComponents": [{
         "type": "WebActionStrip",
         "name": "actionStrip",
         "actionButtons": [
@@ -84,7 +84,7 @@
             "type": "WebGridPinningActions"
           }
         ]
-      }
+      }]
     }
   },
   "modules": [
