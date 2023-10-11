@@ -1,13 +1,14 @@
 //begin imports
 import { IgrCellTemplateContext } from 'igniteui-react-grids';
 //end imports
-
+import { CodeGenHelper } from 'igniteui-webcomponents-core';
 export class WebGridCompositeAddressEditCellTemplate {
     //begin template
     //begin content
     public webGridCompositeAddressEditCellTemplate = (props: {dataContext: IgrCellTemplateContext}) => {
 
         var cell = props.dataContext.cell as any;
+        var grid = CodeGenHelper.getDescription<IgcGridComponent>("content");
         if (cell === undefined || cell.row === undefined || cell.row.data === undefined) {
             return <></>;
         }
@@ -20,14 +21,14 @@ export class WebGridCompositeAddressEditCellTemplate {
                         <input id='Country' onChange={(e: any) => 
                             {
                                 cell.row.data.Country = e.target.value;
-                                this.forceUpdate();
+                                grid.markForCheck();
                             }} value={cell.row.data.Country}></input>
                         <br/>
                         <span><strong>City:</strong></span>
                         <input id='City' onChange={(e: any) => 
                             {
                                 cell.row.data.City = e.target.value;
-                                this.forceUpdate();
+                                grid.markForCheck();
                             }} value={cell.row.data.City}></input>
                     </div>
                     <div>
@@ -35,14 +36,14 @@ export class WebGridCompositeAddressEditCellTemplate {
                         <input id='PostalCode' onChange={(e: any) => 
                             {
                                 cell.row.data.PostalCode = e.target.value;
-                                this.forceUpdate();
+                                grid.markForCheck();
                             }} value={cell.row.data.PostalCode}></input>
                         <br/>
                         <span><strong>Selected:</strong></span>
                         <input id='Phone' onChange={(e: any) => 
                             {
                                 cell.row.data.Phone = e.target.value;
-                                this.forceUpdate();
+                                grid.markForCheck();
                             }} value={cell.row.data.Phone}></input>
                     </div>
                     <br/>
