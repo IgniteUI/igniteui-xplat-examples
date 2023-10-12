@@ -2,6 +2,11 @@
 CSS styles are loaded from the shared CSS file located at:
 https://static.infragistics.com/xplatform/css/samples/
 */
+// ifdef templateStyles
+// insert templateStyles
+
+// end templateStyles
+// endifdef templateStyles
 // insert handlersStyles
 // end handlersStyles
 // ifdef aboveContentLeft, aboveContentRight
