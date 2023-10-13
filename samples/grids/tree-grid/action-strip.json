@@ -13,7 +13,7 @@
       "rowEditable": true,
       "batchEditing": true,
       "allowFiltering": true,
-      "actionStrip": {
+      "actionStripComponents": [{
         "type": "WebActionStrip",
         "name": "actionStrip",
         "actionButtons": [
@@ -21,7 +21,7 @@
             "type": "WebGridEditingActions"
           }
         ]
-      },
+      }],
       "columns": [
         {
           "type": "WebColumn",

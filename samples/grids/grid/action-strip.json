@@ -16,7 +16,7 @@
         "type": "WebPinningConfig",
         "rows": "Top"
       },
-      "actionStrip": {
+      "actionStripComponents": [{
         "type": "WebActionStrip",
         "name": "actionStrip",
         "actionButtons": [
@@ -29,7 +29,7 @@
             "deleteRow": false
           }
         ]
-      },
+      }],
       "primaryKey": "ProductID",
       "columns": [
         {
