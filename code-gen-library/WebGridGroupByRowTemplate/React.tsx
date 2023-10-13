@@ -17,13 +17,16 @@ export class WebGridGroupByRowTemplate {
         const spanStyle = {
             color: '#09f'
           };
-        return <><div>
-            <span style={spanStyle}>{groupRow.expression.fieldName} :</span>
-            <span>${groupRow.value}</span>
-            <IgrBadge><span key="content">{groupRow.records.length}</span></IgrBadge>
-            <span style={spanStyle}> Ordered in 2017:</span><span>${calc2017}</span>
-        </div>
-        </>;
+        return (
+            <>
+                <div>
+                    <span style={spanStyle}>{groupRow.expression.fieldName}: </span>
+                    <span>{groupRow.value instanceof Date ? groupRow.value.toLocaleDateString() : groupRow.value} </span>
+                    <IgrBadge><span key="content">{groupRow.records.length}</span></IgrBadge>
+                    <span style={spanStyle}> Ordered in 2017: </span><span>{calc2017}</span>
+                </div>
+            </>
+        );
     };
     //end content
     //end template
