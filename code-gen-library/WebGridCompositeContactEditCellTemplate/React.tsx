@@ -11,28 +11,34 @@ export class WebGridCompositeContactEditCellTemplate {
         if (cell === undefined || cell.row === undefined || cell.row.data === undefined) {
             return <></>
         }
-    
-        function keyUpHandler(event: any, ctx: IgrCellTemplateContext) {
-            var cell = ctx.cell as any;
-            if (cell !== undefined && cell.row !== undefined && cell.row.data !== undefined) {
-                cell.row.data[event.target.id] = event.target.value;
-            }
-        }
-    
+
         return (
             <>
-                <div className="contact-container--edit" style={{display: "inline-grid"}}>         
+                <div className="contact-container--edit" style={{display: "inline-grid"}}>
                     <div>
                         <strong>Name:</strong>
-                        <input id='ContactName' onKeyUp={(e: any) => keyUpHandler(e, props.dataContext)} value={cell.row.data.ContactName}></input>
+                        <input id='ContactName' onChange={(e: any) => 
+                            {
+                                cell.row.data.ContactName = e.target.value;
+                                this.forceUpdate();
+                            }
+                            } value={cell.row.data.ContactName}></input>
                     </div>
                     <div>
                         <strong>Title:</strong>
-                        <input id='ContactTitle' onKeyUp={(e: any) => keyUpHandler(e, props.dataContext)} value={cell.row.data.ContactTitle}></input>
-                    </div>         
+                        <input id='ContactTitle' onChange={(e: any) =>
+                            {
+                                cell.row.data.ContactTitle = e.target.value;
+                                this.forceUpdate();
+                            }} value={cell.row.data.ContactTitle}></input>
+                    </div>
                     <div>
                         <strong>Company:</strong>
-                        <input id='CompanyName' onKeyUp={(e: any) => keyUpHandler(e, props.dataContext)} value={cell.row.data.CompanyName}></input>
+                        <input id='CompanyName' onChange={(e: any) =>
+                            {
+                                cell.row.data.CompanyName = e.target.value;
+                                this.forceUpdate();
+                            }} value={cell.row.data.CompanyName}></input>
                     </div>
                 </div>
             </>
