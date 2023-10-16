@@ -70,7 +70,8 @@
           "dataType": "Number",
           "editable": true,
           "groupable": true,
-          "hasSummary": true
+          "hasSummary": true,
+          "summariesRef": "DiscontinuedSummary"
         },
         {
           "type": "WebColumn",

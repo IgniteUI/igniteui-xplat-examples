@@ -22,7 +22,7 @@ export class WebGridCurrencyCellTemplate {
                 <span style={{color:'red',float: 'right'}}>${cell.value.toFixed(2)}</span>
             </div>
             );
-        };
+        }
     }
 //end content
 

@@ -1,103 +1,98 @@
 {
-  "todo": [],
+  "todo": [ "" ],
+  "export": true,
   "skipAlterDataCasing": true,
+  "onInit": ["WebGridColumnMovingStyle"],
   "descriptions": {
     "content": {
       "type": "WebTreeGrid",
-      "name": "treeGrid",
-      "id": "treeGrid",
+      "name": "grid",
+      "id": "grid",
       "dataRef": "EmployeesFlatDetails",
+      "autoGenerate": false,
       "primaryKey": "ID",
       "foreignKey": "ParentID",
-      "autoGenerate": false,
-      "rowEditable": true,
-      "batchEditing": true,
-      "allowFiltering": true,
-      "actionStripComponents": [{
-        "type": "WebActionStrip",
-        "name": "actionStrip",
-        "actionButtons": [
-          {
-            "type": "WebGridEditingActions"
-          }
-        ]
-      }],
+      "moving": true,
+      "columnWidth": "200",
+      "paginationComponents": [
+        {
+          "type": "WebPaginator",
+          "perPage": 10,
+          "totalRecords": 20
+        }
+      ],
       "columns": [
         {
           "type": "WebColumn",
           "field": "Name",
           "dataType": "String",
-          "sortable": true,
-          "disableHiding": true
-        },
-        {
-          "type": "WebColumn",
-          "field": "ID",
-          "dataType": "Number",
-          "sortable": true
+          "headerTemplateRef": "WebTreeGridPinHeaderTemplate"
         },
         {
           "type": "WebColumn",
           "field": "Title",
           "dataType": "String",
-          "sortable": true,
-          "disableHiding": true
+          "headerTemplateRef": "WebTreeGridPinHeaderTemplate"
+        },
+        {
+          "type": "WebColumn",
+          "field": "ID",
+          "dataType": "Number",
+          "headerTemplateRef": "WebTreeGridPinHeaderTemplate"
         },
         {
           "type": "WebColumn",
           "field": "HireDate",
           "dataType": "Date",
-          "sortable": true,
-          "hidden": true
+          "headerTemplateRef": "WebTreeGridPinHeaderTemplate"
         },
         {
           "type": "WebColumn",
           "field": "Age",
           "dataType": "Number",
-          "sortable": true,
-          "hidden": true
+          "headerTemplateRef": "WebTreeGridPinHeaderTemplate"
         },
         {
           "type": "WebColumn",
           "field": "Address",
           "dataType": "String",
-          "sortable": true
+          "headerTemplateRef": "WebTreeGridPinHeaderTemplate"
         },
         {
           "type": "WebColumn",
           "field": "City",
           "dataType": "String",
-          "sortable": true
+          "headerTemplateRef": "WebTreeGridPinHeaderTemplate"
         },
         {
           "type": "WebColumn",
           "field": "Country",
           "dataType": "String",
-          "sortable": true
+          "headerTemplateRef": "WebTreeGridPinHeaderTemplate"
         },
         {
           "type": "WebColumn",
           "field": "Fax",
           "dataType": "String",
-          "sortable": true
+          "headerTemplateRef": "WebTreeGridPinHeaderTemplate"
         },
         {
           "type": "WebColumn",
           "field": "PostalCode",
-          "header": "Postal Code",
           "dataType": "String",
-          "sortable": true
+          "headerTemplateRef": "WebTreeGridPinHeaderTemplate"
         },
         {
           "type": "WebColumn",
           "field": "Phone",
           "dataType": "String",
-          "sortable": true
+          "headerTemplateRef": "WebTreeGridPinHeaderTemplate"
         }
       ]
     }
   },
   "modules": [
+    "withDescriptions",
     "grids/WebTreeGridModule"
   ]
 }
