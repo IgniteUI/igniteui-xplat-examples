@@ -1,6 +1,4 @@
 {
-  "todo": [ "Conditional Cell Classes sample - Can set the cellClassesRef property but cannot set css class. Deferred until until we support injecting CSS classes." ],
-  "export": false,
   "skipAlterDataCasing": true,
   "descriptions": {
     "content": {
@@ -29,7 +27,7 @@
           "dataType": "Number",
           "editable": true,
           "sortable": true,
-          "bodyTemplateRef": "WebGridBeatsPerMinuteTemplate"
+          "cellClassesRef": "WebGridCellClassesHandler"
         },
         {
           "type": "WebColumn",
