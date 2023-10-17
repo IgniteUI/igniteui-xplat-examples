@@ -5,7 +5,7 @@ import { IgcRowType } from "igniteui-webcomponents-grids/grids";
 export class WebGridRowClassesHandler {
   //begin eventHandler
   public webGridRowClassesHandler = {
-    activeRow: (row: IgcRowType) => row.index % 2,
+    activeRow: (row: IgcRowType) => row.index % 2 === 0
   };
   //end eventHandler
 
