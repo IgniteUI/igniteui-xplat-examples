@@ -27,7 +27,7 @@
           "dataType": "Number",
           "editable": true,
           "sortable": true,
-          "cellClassesRef": "WebGridCellClassesHandler"
+          "cellClassesRef": "WebGridBeatsPerMinuteCellClassesHandler"
         },
         {
           "type": "WebColumn",
@@ -36,7 +36,7 @@
           "dataType": "Number",
           "editable": true,
           "sortable": true,
-          "bodyTemplateRef": "WebGridTopSpeedTemplate"
+          "cellClassesRef": "WebGridTopSpeedCellClassesHandler"
         },
         {
           "type": "WebColumn",

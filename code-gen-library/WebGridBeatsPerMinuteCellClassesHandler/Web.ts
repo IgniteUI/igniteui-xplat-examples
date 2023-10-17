@@ -1,9 +1,9 @@
 //begin imports
 //end imports
 
-export class WebGridCellClassesHandler {
+export class WebGridBeatsPerMinuteCellClassesHandler {
 //begin eventHandler
-    public webGridCellClassesHandler = {
+    public webGridBeatsPerMinuteCellClassesHandler = {
         upFont: (rowData: any, columnKey: any): boolean => rowData[columnKey] > 95,
         downFont: (rowData: any, columnKey: any): boolean => rowData[columnKey] <= 95
     }

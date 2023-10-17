@@ -1,5 +1,5 @@
 //begin eventHandler
-igRegisterScript("WebGridCellClassesHandler", () => {
+igRegisterScript("WebGridBeatsPerMinuteCellClassesHandler", () => {
     return {
         upFont: (rowData, columnKey) => rowData[columnKey] > 95,
         downFont: (rowData, columnKey) => rowData[columnKey] <= 95
