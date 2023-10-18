@@ -1,14 +1,11 @@
 {
-  "todo": [
-    "Approved Defer - until we support injecting CSS styles",
-    "add ActiveNodeChange and ConextMenu events"
-  ],
-  "export": false,
   "skipAlterDataCasing": true,
   "descriptions": {
     "content": {
       "type": "WebGrid",
       "dataRef": "NwindData",
+      "autoGenerate": false,
+      "rowClassesRef": "WebGridRowClassesHandler",
       "columns": [
         {
           "type": "WebColumn",
