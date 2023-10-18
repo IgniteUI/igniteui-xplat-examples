@@ -1,0 +1,91 @@
+{
+  "todo": [""],
+  "export": true,
+  "skipAlterDataCasing": true,
+  "descriptions": {
+    "content": {
+      "type": "WebGrid",
+      "dataRef": "InvoicesData",
+      "autoGenerate": false,
+      "name": "grid",
+      "id": "grid",
+      "toolbar": [
+        {
+          "type": "WebGridToolbar",
+          "tools": [
+            {
+              "type": "WebGridToolbarActions",
+              "actions": [
+                {
+                  "type": "WebGridToolbarExporter",
+                  "exportCSV": false,
+                  "exportExcel": true
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "groupingExpressions": [
+        {
+          "type": "WebGroupingExpression",
+          "fieldName": "ShipCountry",
+          "ignoreCase": false,
+          "dir": "Asc"
+        },
+        {
+          "type": "WebGroupingExpression",
+          "fieldName": "ShipCity",
+          "ignoreCase": false,
+          "dir": "Asc"
+        }
+      ],
+      "hideGroupedColumns": true,
+      "columns": [
+        {
+          "type": "WebColumn",
+          "field": "ShipCountry",
+          "header": "Ship Country",
+          "width": "150px",
+          "groupable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "ShipCity",
+          "header": "Ship City",
+          "width": "150px",
+          "groupable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "ShipAddress",
+          "header": "Ship Address",
+          "width": "150px",
+          "groupable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "PostalCode",
+          "header": "Postal Code",
+          "width": "150px",
+          "groupable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "OrderDate",
+          "header": "Order Date",
+          "dataType": "Date",
+          "width": "150px",
+          "groupable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "Quantity",
+          "width": "150px",
+          "groupable": true
+        }
+      ]
+    }
+  },
+  "modules": ["grids/WebGridModule", "grids/WebGridToolbarModule"]
+}
