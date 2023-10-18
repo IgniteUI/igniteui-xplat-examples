@@ -14,8 +14,8 @@ igRegisterScript("WebGridNestedDataCellTemplate", (ctx) => {
         ${person.Name}
         </div>
         <div class="description">
-            <igc-input label='Title' type="text" name="title" value="${person.Title}" style="text-overflow: ellipsis;" />
-            <igc-input label="Age" type="text" name="title" value="${person.Age}" style="text-overflow: ellipsis;" />
+            <igc-input label='Title' type="text" name="title" value="${person.Title}" style="text-overflow: ellipsis;"></igc-input>
+            <igc-input label="Age" type="text" name="title" value="${person.Age}" style="text-overflow: ellipsis;"></igc-input>
         </div>
     </igc-expansion-panel>
         `;
