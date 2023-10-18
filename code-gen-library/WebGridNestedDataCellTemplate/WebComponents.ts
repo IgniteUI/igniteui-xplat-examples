@@ -15,14 +15,8 @@ public webGridNestedDataCellTemplate = (ctx: IgcCellTemplateContext) => {
         ${ctx.cell.value[0].Name}
         </div>
         <div class="description">
-            <div style="display: flex; align-items: center;">
-                <div for="title" style="width: 2rem; margin: 0rem;">Title</div>
-                <input id='Title' type="text" name="title" value="${ctx.cell.value[0].Title}" style="text-overflow: ellipsis;" />
-            </div>
-            <div style="display: flex; align-items: center;">
-                <div for="age" style="width: 2rem; margin: 0rem;">Age</div>
-                <input id='Age' type="text" name="title" value="${ctx.cell.value[0].Age}" style="text-overflow: ellipsis;" />
-            </div>
+            <igc-input label='Title' type="text" name="title" value="${ctx.cell.value[0].Title}" style="text-overflow: ellipsis;" />
+            <igc-input label="Age" type="text" name="title" value="${ctx.cell.value[0].Age}" style="text-overflow: ellipsis;" />
         </div>
     </igc-expansion-panel>
         `;
