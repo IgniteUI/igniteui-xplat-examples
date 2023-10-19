@@ -25,10 +25,10 @@ public webGridCompositeAddressEditCellTemplate = (ctx: IgcCellTemplateContext) =
 
     return html`
                 <div class="contact-container--edit" style="padding: 1rem">         
-                    <igc-input id="Country" label='Country' type="text" name="country" value="${ctx.row.data.Country}" @keyup=${(e: any) => keyUpHandler(e, ctx)}></igc-input>
-                    <igc-input id="City" label='City' type="text" name="city" value="${ctx.row.data.City}" @keyup=${(e: any) => keyUpHandler(e, ctx)}></igc-input>
-                    <igc-input id="PostalCode" label='PostalCode' type="text" name="postalcode" value="${ctx.row.data.PostsalCode}" @keyup=${(e: any) => keyUpHandler(e, ctx)}></igc-input>
-                    <igc-input id="Phone" label='Phone' type="text" name="phone" value="${ctx.row.data.Phone}" @keyup=${(e: any) => keyUpHandler(e, ctx)}></igc-input>
+                    <igc-input id="Country" label='Country' type="text" name="country" value="${ctx.cell.row.data.Country}" @keyup=${(e: any) => keyUpHandler(e, ctx)}></igc-input>
+                    <igc-input id="City" label='City' type="text" name="city" value="${ctx.cell.row.data.City}" @keyup=${(e: any) => keyUpHandler(e, ctx)}></igc-input>
+                    <igc-input id="PostalCode" label='PostalCode' type="text" name="postalcode" value="${ctx.cell.row.data.PostalCode}" @keyup=${(e: any) => keyUpHandler(e, ctx)}></igc-input>
+                    <igc-input id="Phone" label='Phone' type="text" name="phone" value="${ctx.cell.row.data.Phone}" @keyup=${(e: any) => keyUpHandler(e, ctx)}></igc-input>
                 </div>`;
     }
 //end content
