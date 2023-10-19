@@ -17,6 +17,7 @@ public webGridCompositeContactCellTemplate = (ctx: IgcCellTemplateContext) => {
 
     return html` <div class="contact-container">
     <span><strong>Name:</strong> ${cell.row.data.ContactName}</span>
+    <br />
     <span><strong>Title:</strong> ${cell.row.data.ContactTitle}</span>
     <br />
     <span><strong>Company:</strong> ${cell.row.data.CompanyName}</span>

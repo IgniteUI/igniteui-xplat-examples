@@ -58,6 +58,7 @@
     }
   },
   "modules": [
-    "grids/WebGridModule"
+    "grids/WebGridModule",
+    "webinputs/WebInputModule"
   ]
 }

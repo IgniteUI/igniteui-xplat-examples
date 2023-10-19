@@ -22,20 +22,11 @@ public webGridCompositeContactEditCellTemplate = (ctx: IgcCellTemplateContext) =
         }
     }
 
-    return html`<div class="contact-container--edit" style="display: inline-grid">         
-             <div>
-                 <strong>Name:</strong>
-                 <input id='ContactName' @keyup=${(e: any) => keyUpHandler(e, ctx)} value="${cell.row.data.ContactName}"></input>
-             </div>
-             <div>
-                 <strong>Title:</strong>
-                 <input id='ContactTitle' @keyup=${(e: any) => keyUpHandler(e, ctx)} value='${cell.row.data.ContactTitle}'></input>
-             </div>         
-         <div>
-             <strong>Company:</strong>
-             <input id='CompanyName' @keyup=${(e: any) => keyUpHandler(e, ctx)} value='${cell.row.data.CompanyName}'></input>
-         </div>
-     </div>`;
+    return html`<div class="contact-container--edit" style="padding: 1rem">         
+                    <igc-input id="ContactName" label='Name' type="text" name="name" value="${ctx.row.data.ContactName}" @keyup=${(e: any) => keyUpHandler(e, ctx)}></igc-input>
+                    <igc-input id="ContactTitle" label='Title' type="text" name="title" value="${ctx.row.data.ContactTitle}" @keyup=${(e: any) => keyUpHandler(e, ctx)}></igc-input>
+                    <igc-input id="CompanyName" label='Company' type="text" name="company" value="${ctx.row.data.CompanyName}" @keyup=${(e: any) => keyUpHandler(e, ctx)}></igc-input>
+                </div>`;
 }
 //end content
 //end template

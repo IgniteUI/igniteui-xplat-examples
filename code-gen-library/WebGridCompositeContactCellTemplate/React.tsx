@@ -15,6 +15,7 @@ export class WebGridCompositeContactCellTemplate {
         <>
             <div className="contact-container">
                 <span><strong>Name:</strong> {cell.row.data.ContactName}</span>
+                <br />
                 <span><strong>Title:</strong> {cell.row.data.ContactTitle}</span>
                 <br />
                 <span><strong>Company:</strong> {cell.row.data.CompanyName}</span>

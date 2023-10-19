@@ -1,4 +1,5 @@
 //begin imports
+import { IgrInput } from 'igniteui-react';
 import { IgrCellTemplateContext } from 'igniteui-react-grids';
 //end imports
 
@@ -14,32 +15,25 @@ export class WebGridCompositeContactEditCellTemplate {
 
         return (
             <>
-                <div className="contact-container--edit" style={{display: "inline-grid"}}>
-                    <div>
-                        <strong>Name:</strong>
-                        <input id='ContactName' onChange={(e: any) => 
-                            {
-                                cell.row.data.ContactName = e.target.value;
-                                this.forceUpdate();
-                            }
-                            } value={cell.row.data.ContactName}></input>
-                    </div>
-                    <div>
-                        <strong>Title:</strong>
-                        <input id='ContactTitle' onChange={(e: any) =>
-                            {
-                                cell.row.data.ContactTitle = e.target.value;
-                                this.forceUpdate();
-                            }} value={cell.row.data.ContactTitle}></input>
-                    </div>
-                    <div>
-                        <strong>Company:</strong>
-                        <input id='CompanyName' onChange={(e: any) =>
-                            {
-                                cell.row.data.CompanyName = e.target.value;
-                                this.forceUpdate();
-                            }} value={cell.row.data.CompanyName}></input>
-                    </div>
+                <div className="contact-container--edit" style={{padding: "1rem"}}>
+                    <IgrInput label='Name' inputOcurred={(input: any, e: any) =>
+                        {
+                            cell.row.data.ContactName = e.detail;
+                            this.forceUpdate();
+                        }
+                        } value={cell.row.data.ContactName}></IgrInput>
+                    <IgrInput label='Title' inputOcurred={(input: any, e: any) =>
+                        {
+                            cell.row.data.ContactTitle = e.detail;
+                            this.forceUpdate();
+                        }
+                        } value={cell.row.data.ContactTitle}></IgrInput>
+                    <IgrInput label='Company' inputOcurred={(input: any, e: any) =>
+                        {
+                            cell.row.data.CompanyName = e.detail;
+                            this.forceUpdate();
+                        }
+                        } value={cell.row.data.CompanyName}></IgrInput>
                 </div>
             </>
         );

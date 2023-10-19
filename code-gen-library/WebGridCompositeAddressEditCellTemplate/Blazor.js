@@ -5,22 +5,12 @@ igRegisterScript("WebGridCompositeAddressEditCellTemplate", (ctx) => {
         ctx.cell.row.data[window.event.target.id] = window.event.target.value;
     }
 
-    return html`<div class="address-container--edit">
-    <div>
-        <span><strong>Country:</strong></span>
-        <input id='Country' onkeyup='keyUpHandler()' value="${ctx.cell.row.data.Country}"></input>
-        <br>
-        <span><strong>City:</strong></span>
-        <input id='City' onkeyup='keyUpHandler()' value="${ctx.cell.row.data.City}"></input>
-    </div>
-    <div>
-        <span><strong>Postal Code:</strong></span>
-        <input id='PostalCode' onkeyup='keyUpHandler()' value="${ctx.cell.row.data.PostalCode}"></input>
-        <br>
-        <span><strong>Selected:</strong></span>
-        <input id='Phone' onkeyup='keyUpHandler()' value="${ctx.cell.row.data.Phone}"></input>
-    </div>
-    <br>
-</div>`;
+    return html`
+                <div class="contact-container--edit" style="padding: 1rem">         
+                    <igc-input id="Country" label='Country' type="text" name="country" value="${ctx.cell.row.data.Country}" onkeyup='keyUpHandler()'></igc-input>
+                    <igc-input id="City" label='City' type="text" name="city" value="${ctx.cell.row.data.City}" onkeyup='keyUpHandler()'></igc-input>
+                    <igc-input id="PostalCode" label='PostalCode' type="text" name="postalcode" value="${ctx.cell.row.data.PostalCode}" onkeyup='keyUpHandler()'></igc-input>
+                    <igc-input id="Phone" label='Phone' type="text" name="phone" value="${ctx.cell.row.data.Phone}" onkeyup='keyUpHandler()'></igc-input>
+                </div>`;
 }, false);
 //end template
