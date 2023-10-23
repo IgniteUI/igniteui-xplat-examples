@@ -8,7 +8,7 @@ import { CodeGenHelper } from 'igniteui-webcomponents-core';
 export class WebGridPinFirstGroupToggle {
     //begin eventHandler
     public webGridPinFirstGroupToggle(sender: any, args: IgcPropertyEditorPropertyDescriptionButtonClickEventArgs): void {
-        const grid: IgcGridComponent = CodeGenHelper.getDescription<IgcGridComponent>("content")
+        const grid: IgcGridComponent = CodeGenHelper.getDescription<IgcGridComponent>("content");
         const firstColumnGroup = grid.getColumnByName("CompanyName").parent;
         firstColumnGroup.pinned = !firstColumnGroup.pinned;
         grid.markForCheck();
