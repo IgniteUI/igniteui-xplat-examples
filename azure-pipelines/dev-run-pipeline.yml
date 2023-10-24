@@ -56,13 +56,13 @@ pool:
 
 jobs:
 # [MTrela 18/04/2023] Exclude exporting this repo to IgniteUIAngularExamples because our Angular template is not complete    
-#  - template: templates/convert-to-platform-job.yml
-#    parameters:
-#      platform: 'Angular'
-#      destinationGitRepo: 'igniteui-angular-examples'
-#      pathsToParse: ${{ parameters.pathsToParse }}
-#      codeExporterAppBranch: $(codeExporterAppBranch)
-#      createPR: false
+  - template: templates/convert-to-platform-job.yml
+    parameters:
+      platform: 'Angular'
+      destinationGitRepo: 'igniteui-angular-examples'
+      pathsToParse: ${{ parameters.pathsToParse }}
+      codeExporterAppBranch: $(codeExporterAppBranch)
+      createPR: false
 
 - template: templates/convert-to-platform-job.yml
   parameters:
