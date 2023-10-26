@@ -1,10 +1,9 @@
 //begin imports
-import { IgrGridComponent, IgrGridKeydownEventArgs, GridKeydownTargetType } from 'igniteui-webcomponents-grids/grids';
+import { IgrGridComponent, IgrGridKeydownEventArgs, GridKeydownTargetType } from 'igniteui-react-grids';
 
 //end imports
 
 export class WebGridCustomKBNav {
-    //begin eventHandler
     //begin eventHandler
     public webGridCustomKBNav(grid: IgrGridComponent, eventArgs: IgrGridKeydownEventArgs): void {
         const args = eventArgs.detail;
@@ -35,6 +34,5 @@ export class WebGridCustomKBNav {
             });
         }
     }
-    //end eventHandler
     //end eventHandler
 }
