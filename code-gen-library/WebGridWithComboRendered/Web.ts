@@ -7,14 +7,6 @@ import { CodeGenHelper } from 'igniteui-webcomponents-core';
 
 export class WebGridWithComboRendered {
     //begin eventHandler
-    public countryNames = [
-        'United States',
-        'Japan',
-        'United Kingdom'
-    ];
-    public countries = [...this.worldCitiesAbove500K].filter(x => this.countryNames.indexOf(x.Country) !== -1).filter((value, index, array) => array.findIndex(x => x.Country === value.Country) === index); 
-    public regions = [...this.worldCitiesAbove500K].filter((value, index, array) => array.findIndex(x => x.Region === value.Region) === index);
-    public cities = [...this.worldCitiesAbove500K].filter((value, index, array) => array.findIndex(x => x.Name === value.Name) === index);
     public webGridWithComboRendered(args:any): void {
         const grid = CodeGenHelper.getDescription<IgcGridComponent>("content");
         grid.data = [
@@ -48,6 +40,14 @@ export class WebGridWithComboRendered {
         }, 100);
     }
 
+    public countryNames = [
+        'United States',
+        'Japan',
+        'United Kingdom'
+    ];
+    public countries = [...this.worldCitiesAbove500K].filter(x => this.countryNames.indexOf(x.Country) !== -1).filter((value, index, array) => array.findIndex(x => x.Country === value.Country) === index); 
+    public regions = [...this.worldCitiesAbove500K].filter((value, index, array) => array.findIndex(x => x.Region === value.Region) === index);
+    public cities = [...this.worldCitiesAbove500K].filter((value, index, array) => array.findIndex(x => x.Name === value.Name) === index);
     public bindEventsCountryCombo(rowId: any, cell: any) {
         const comboId = "country_" + rowId;
         var combo = document.getElementById(comboId) as IgcComboComponent<any>;
