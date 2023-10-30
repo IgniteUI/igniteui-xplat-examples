@@ -1,6 +1,6 @@
 //begin imports
 import { IgrCellTemplateContext } from 'igniteui-react-grids';
-import { IgrExpansionPanel } from 'igniteui-react';
+import { IgrExpansionPanel, IgrInput } from 'igniteui-react';
 //end imports
 
 import { CodeGenHelper } from 'igniteui-webcomponents-core';
@@ -20,20 +20,14 @@ export class WebGridNestedDataCellTemplate {
                 {value.Name}
                 </div>
                 <div className="description">
-                    <div style={{display: "flex", alignItems: "center"}}>
-                        <label htmlFor="title" style={{width: "2rem", margin: "0rem"}}>Title</label>
-                        <input id='Title' type="text" name="title" value={value.Title} onChange={(e: any) => {
-                             props.dataContext.cell.value[0][e.target.id] = e.target.value;
-                             grid.markForCheck();
-                            }} style={{textOverflow: "ellipsis"}} />
-                    </div>
-                    <div style={{display: "flex", alignItems: "center"}}>
-                        <label htmlFor="age" style={{width: "2rem", margin: "0rem"}}>Age</label>
-                        <input id='Age' type="number" name="title" value={value.Age} onChange={(e: any) => {
-                                props.dataContext.cell.value[0][e.target.id] = e.target.value;
-                                grid.markForCheck();
-                            }} style={{textOverflow: "ellipsis"}} />
-                    </div>
+                    <IgrInput type="text" label="Title" name="title" value={value.Title} change={(s:any, e: any) => {
+                            props.dataContext.cell.value[0][s.label] = e.detail;
+                            grid.markForCheck();
+                        }} style={{textOverflow: "ellipsis"}} />
+                    <IgrInput type="number" label="Age" name="title" value={value.Age} inputOcurred={(s:any, e: any) => {
+                            props.dataContext.cell.value[0][s.label] = e.detail;
+                            grid.markForCheck();
+                        }} style={{textOverflow: "ellipsis"}} />
                 </div>
             </IgrExpansionPanel>
         </>);
