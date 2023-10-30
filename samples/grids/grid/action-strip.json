@@ -26,7 +26,8 @@
           {
             "type": "WebGridEditingActions",
             "editRow": true,
-            "deleteRow": false
+            "deleteRow": true,
+            "addRow": true
           }
         ]
       }],
