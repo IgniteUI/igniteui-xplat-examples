@@ -5,7 +5,7 @@
       "type": "PropertyEditorPanel",
       "name": "PropertyEditor",
       "componentRendererRef": "renderer",
-      "targetRef": "treegrid",
+      "targetRef": "treeGrid",
       "descriptionType": "WebTreeGrid",
       "isHorizontal": true,
       "isWrappingEnabled": true,
@@ -14,13 +14,13 @@
           "type": "PropertyEditorPropertyDescription",
           "valueType": "Button",
           "primitiveValue": "Toggle First Group Pinned",
-          "buttonClickedRef": "WebGridPinFirstGroupToggle"
+          "buttonClickedRef": "WebTreeGridPinFirstGroupToggle"
         },
         {
           "type": "PropertyEditorPropertyDescription",
           "valueType": "Button",
           "primitiveValue": "Toggle First Group Hidden",
-          "buttonClickedRef": "WebGridHideFirstGroupToggle"
+          "buttonClickedRef": "WebTreeGridHideFirstGroupToggle"
         }
       ]
     },
