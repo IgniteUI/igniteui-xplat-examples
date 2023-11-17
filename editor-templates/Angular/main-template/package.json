@@ -45,7 +45,7 @@
     "igniteui-webcomponents": "4.5.0",
 //endifdef webcomponents, editor
     "intl": "1.2.5",
-    "jszip": "3.7.1",
+    "jszip": "3.8.0",
     "rxjs": "6.6.7",
     "tslib": "2.3.1",
     "web-animations-js": "2.3.2",
