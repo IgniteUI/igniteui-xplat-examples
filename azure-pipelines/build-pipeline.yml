@@ -54,7 +54,7 @@ pool:
   name: BuildAgentOnPrem
 
 jobs:
-  - template: templates/convert-to-platform-job.yml
+- template: templates/convert-to-platform-job.yml
   parameters:
     platform: 'Angular'
     destinationGitRepo: 'igniteui-angular-examples'
