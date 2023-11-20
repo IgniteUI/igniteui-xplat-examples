@@ -55,12 +55,12 @@ pool:
 
 jobs:
   - template: templates/convert-to-platform-job.yml
-    parameters:
-      platform: 'Angular'
-      destinationGitRepo: 'igniteui-angular-examples'
-      pathsToParse: ${{ parameters.pathsToParse }}
-      codeExporterAppBranch: $(codeExporterAppBranch)
-      createPR: true
+  parameters:
+    platform: 'Angular'
+    destinationGitRepo: 'igniteui-angular-examples'
+    pathsToParse: ${{ parameters.pathsToParse }}
+    codeExporterAppBranch: $(codeExporterAppBranch)
+    createPR: true
 
 - template: templates/convert-to-platform-job.yml
   parameters:
