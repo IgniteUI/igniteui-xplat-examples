@@ -26,7 +26,6 @@ export class WebGridRowSelectionConditional {
                 // all selected from header, de-select instead
                 event.newSelection = [];
         }
-        grid.markForCheck();
     }
     //end eventHandler
 }
