@@ -30,33 +30,33 @@
     "igniteui-webcomponents": "4.5.0",
 //endifdef editor, webinputs
 //ifdef charts, maps
-    "igniteui-webcomponents-charts": "4.3.1",
+    "igniteui-webcomponents-charts": "4.3.2",
 //endifdef charts, maps
-    "igniteui-webcomponents-core": "4.3.1",
+    "igniteui-webcomponents-core": "4.3.2",
 //ifdef grid
-    "igniteui-webcomponents-datasources": "4.3.1",
+    "igniteui-webcomponents-datasources": "4.3.2",
 //endifdef grid
 //ifdef excel, spreadsheet
-    "igniteui-webcomponents-excel": "4.3.1",
+    "igniteui-webcomponents-excel": "4.3.2",
 //endifdef excel, spreadsheet
 //ifdef gauges
-    "igniteui-webcomponents-gauges": "4.3.1",
+    "igniteui-webcomponents-gauges": "4.3.2",
 //endifdef gauges
 //ifdef grid, webgrids
-    "igniteui-webcomponents-grids": "4.3.1",
+    "igniteui-webcomponents-grids": "4.3.2",
 //endifdef grid, webgrids
 //ifdef grid, inputs, webgrids, editor, layouts
-    "igniteui-webcomponents-inputs": "4.3.1",
+    "igniteui-webcomponents-inputs": "4.3.2",
 //endifdef grid, inputs, webgrids, editor, layouts
 //ifdef grid, editor, layouts, webgrids
-    "igniteui-webcomponents-layouts": "4.3.1",
+    "igniteui-webcomponents-layouts": "4.3.2",
 //endifdef grid, editor, layouts, webgrids
 //ifdef maps
-    "igniteui-webcomponents-maps": "4.3.1",
+    "igniteui-webcomponents-maps": "4.3.2",
 //endifdef maps
 //ifdef spreadsheet
-    "igniteui-webcomponents-spreadsheet": "4.3.1",
-    "igniteui-webcomponents-spreadsheet-chart-adapter": "4.3.1",
+    "igniteui-webcomponents-spreadsheet": "4.3.2",
+    "igniteui-webcomponents-spreadsheet-chart-adapter": "4.3.2",
 //endifdef spreadsheet
     "lit-html": "^2.2.0",
     "tslib": "^2.0.0"
