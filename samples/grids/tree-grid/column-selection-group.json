@@ -15,7 +15,8 @@
         {
           "type": "WebColumn",
           "field": "Name",
-          "dataType": "String"
+          "dataType": "String",
+          "width": "auto"
         },
         {
           "type": "WebColumnGroup",
