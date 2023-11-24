@@ -8,10 +8,25 @@ export class WebGridCityDropDownTemplate {
 //begin template
 //begin content
 public webGridCityDropDownTemplate: IgcRenderFunction<IgcCellTemplateContext> = (ctx: IgcCellTemplateContext) => {
+    if (!ctx || !ctx.cell) {
+        return nothing;
+    }
+
     const id = ctx.cell.id.rowID;
     const comboId = "city_" + id;
-    const progressId = "progress_city_" + id;
-    return html`<div style="display:flex; flex-direction: column;"><igc-combo placeholder="Choose City..." disabled value-key="Name"  display-key="Name" id="${comboId}" single-select></igc-combo><igc-linear-progress style="display:none;" indeterminate id="${progressId}"></<igc-linear-progress></div>`;
+
+    return html`
+        <div style="display: flex; flex-direction: column;">
+            <igc-combo 
+                id="${comboId}" 
+                placeholder="Choose City..." 
+                value-key="Name" 
+                display-key="Name" 
+                single-select 
+                disabled
+            ></igc-combo>
+        </div>
+    `;
 }
 //end content
 //end template
