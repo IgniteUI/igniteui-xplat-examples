@@ -37,77 +37,56 @@ export class WebGridWithComboRendered {
               City: ''
             }
         ];
-
-        setTimeout(() => {
-            for (let index = 0; index < grid.data.length; index++) {
-                const rowId = grid.data[index].ID;
-                this.bindEventsCountryCombo(rowId, grid.getCellByKey(rowId , "Country"));
-                this.bindEventsRegionCombo(rowId, grid.getCellByKey(rowId , "Region"));
-                this.bindEventsCityCombo(rowId, grid.getCellByKey(rowId , "City"));
-            }
-        }, 100);
     }
 
-    public bindEventsCountryCombo(rowId: any, cell: any) {
-        const comboId = "country_" + rowId;
-        var combo = document.getElementById(comboId) as IgcComboComponent<any>;
-        combo?.addEventListener("igcChange", (e:any) => {
-            const value = e.detail.newValue[0];
-            cell.update(value);
-            const nextCombo = document.getElementById("region_" + cell.id.rowID) as IgcComboComponent<any>;
-            const nextProgress = document.getElementById("progress_region_" + cell.id.rowID) as IgcLinearProgressComponent;
-            if (value === "") {
-                nextCombo.deselect(nextCombo.value);
-                nextCombo.disabled = true;
-                nextCombo.data = [];
-            } else {
-                nextProgress.style.display = "block";
-                setTimeout(() => {
-                    nextProgress.style.display = "none";
-                    nextCombo.disabled = false;
-                    nextCombo.data = this.regions.filter(x => x.Country === value);
-                }, 2000);
-  
-            }
-        });
-        combo?.addEventListener("igcOpening", (e:any) => {
-            var currCombo = e.target;
-            if (currCombo.data.length === 0) {
-                combo.data = this.countries;
-            };
-        });
+    public onCountryChange(rowId: string, e: CustomEvent) {
+        const newValue = e.detail.newValue[0];
+        const regionComboId = "region_" + rowId;
+        const cityComboId = "city_" + rowId;
+        const regionCombo = document.getElementById(regionComboId) as IgcComboComponent<any>;
+        const cityCombo = document.getElementById(cityComboId) as IgcComboComponent;
+
+        if (!regionCombo || !cityCombo) return;
+
+        if (newValue === undefined || newValue === '') {
+            // Deselect, disable and clear region combo
+            regionCombo.deselect(regionCombo.value);
+            regionCombo.disabled = true;
+            regionCombo.data = [];
+    
+            // Deselect, disable and clear city combo
+            cityCombo.deselect(cityCombo.value);
+            cityCombo.disabled = true;
+            cityCombo.data = [];
+        } else {
+            // Populate and enable region combo based on selected country
+            regionCombo.disabled = false;
+            regionCombo.data = this.regions.filter(region => region.Country === newValue);
+    
+            // Ensure city combo is reset when changing country
+            cityCombo.deselect(cityCombo.value);
+            cityCombo.disabled = true;
+            cityCombo.data = [];
+        }
     }
 
-    public bindEventsRegionCombo(rowId: any, cell: any) {
-        const comboId = "region_" + rowId;
-        var combo = document.getElementById(comboId) as IgcComboComponent<any>;
-        combo?.addEventListener("igcChange", (e:any) => {
-            const value = e.detail.newValue[0];
-            cell.update(value);
-            const nextCombo = document.getElementById("city_" + cell.id.rowID) as IgcComboComponent<any>;
-            const nextProgress = document.getElementById("progress_city_" + cell.id.rowID) as IgcLinearProgressComponent;
-            if (value === "") {
-                nextCombo.deselect(nextCombo.value);
-                nextCombo.disabled = true;
-                nextCombo.data = [];
-            } else {
-                nextProgress.style.display = "block";
-                setTimeout(() => {
-                    nextProgress.style.display = "none";
-                    nextCombo.disabled = false;
-                    nextCombo.data = this.cities.filter(x => x.Region === value);
-                }, 2000);
-            }
-        });
-    }
-
-    public bindEventsCityCombo(rowId: any, cell: any) {
-        const comboId = "city_" + rowId;
-        var combo = document.getElementById(comboId) as IgcComboComponent<any>;
-        combo?.addEventListener("igcChange", (e:any) => {
-            const value = e.detail.newValue[0];
-            cell.update(value);
-        });
+    public onRegionChange(rowId: string, e: CustomEvent) {
+        const newValue = e.detail.newValue[0];
+        const cityComboId = "city_" + rowId;
+        const cityCombo = document.getElementById(cityComboId) as IgcComboComponent;
+    
+        if (!cityCombo) return;
+    
+        if (newValue === undefined || newValue === '') {
+            // Deselect, disable and clear city combo
+            cityCombo.deselect(cityCombo.value);
+            cityCombo.disabled = true;
+            cityCombo.data = [];
+        } else {
+            // Populate and enable city combo based on selected country
+            cityCombo.disabled = false;
+            cityCombo.data = this.cities.filter(city => city.Region === newValue);
+        }
     }
     //end eventHandler
 }
