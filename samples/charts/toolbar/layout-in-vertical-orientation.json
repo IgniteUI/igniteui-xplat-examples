@@ -1,7 +1,6 @@
 {
-  "note": "P2, wait until popups expand sideways when in vertical orientation",
   "descriptions": {
-    "aboveContent": {
+    "aboveContentRight": {
       "type": "Toolbar",
       "name": "Toolbar",
       "targetRef": "chart",
