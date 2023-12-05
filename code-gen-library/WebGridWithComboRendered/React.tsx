@@ -28,6 +28,7 @@ export class WebGridWithComboRendered {
         // find next combo
         // args incomplete, so gte value from component on timeout as workaround.
         const regionCombo = this.comboRefCollection.get("region_" + rowId);
+        const cityCombo = this.comboRefCollection.get("city_" + rowId);
         const regions = this.regions;
        setTimeout(() => {
             const newValue = cmp.value[0];
@@ -35,9 +36,17 @@ export class WebGridWithComboRendered {
                 regionCombo.deselect(regionCombo.value);
                 regionCombo.disabled = true;
                 regionCombo.data = [];
+
+                cityCombo.deselect(regionCombo.value);
+                cityCombo.disabled = true;
+                cityCombo.data = [];
             } else {
                 regionCombo.disabled = false;
                 regionCombo.data = regions.filter(x => x.Country === newValue);
+
+                cityCombo.deselect(cityCombo.value);
+                cityCombo.disabled = true;
+                cityCombo.data = [];
             }
        });
     }
