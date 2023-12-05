@@ -1,0 +1,63 @@
+{
+  "todo": [""],
+  "export": true,
+  "skipAlterDataCasing": true,
+  "descriptions": {
+    "content": {
+      "type": "WebTreeGrid",
+      "name": "treeGrid",
+      "id": "treeGrid",
+      "dataRef": "EmployeesNestedTreeData",
+      "primaryKey": "ID",
+      "foreignKey": "ParentID",
+      "autoGenerate": false,
+      "moving": true,
+      "rowEditable": true,
+      "rowSelection": "Multiple",
+      "columns": [
+        {
+          "type": "WebColumn",
+          "field": "Name",
+          "header": "Full Name",
+          "dataType": "String",
+          "resizable": true,
+          "sortable": true,
+          "filterable": true,
+          "editable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "Age",
+          "dataType": "Number",
+          "resizable": false,
+          "sortable": false,
+          "filterable": false,
+          "editable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "Title",
+          "dataType": "String",
+          "resizable": true,
+          "sortable": true,
+          "filterable": true,
+          "editable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "HireDate",
+          "header": "Hire Date",
+          "dataType": "Date",
+          "resizable": true,
+          "sortable": true,
+          "filterable": true,
+          "editable": true
+        }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "grids/WebTreeGridModule"
+  ]
+}

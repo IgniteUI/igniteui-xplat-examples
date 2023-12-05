@@ -1,7 +1,5 @@
 {
     "todo": [
-        "TODO add switch to toggle row pinning position",
-        "TODO add template column with icon for pinning",
         "TODO add event to handle row pinning"
     ],
   "skipAlterDataCasing": true,
@@ -9,7 +7,7 @@
         "content": {
             "name": "grid",
             "type": "WebGrid",
-            "dataRef": "CustomersData",
+            "dataRef": "CustomersDataLocal",
             "primaryKey": "ID",
             "cellSelection": "None",
             "columns": [
@@ -17,7 +15,8 @@
                     "type": "WebColumn",
                     "width": "70px",
                     "filterable": false,
-                    "pinned": true
+                    "pinned": true,
+                    "bodyTemplateRef": "WebGridRowPinCellTemplate"
                 },
                 {
                     "type": "WebColumn",
