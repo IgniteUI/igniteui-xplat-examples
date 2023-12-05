@@ -1,52 +1,69 @@
 {
-  "todo": [ "Approved Defer until we support CSS styles" ],
-  "export": false,
+  "todo": [""],
+  "export": true,
   "skipAlterDataCasing": true,
+  "onInit": ["WebGridAdvancedFilteringStyle"],
   "descriptions": {
     "content": {
-      "name": "grid",
       "type": "WebGrid",
+      "name": "grid",
+      "id": "grid",
       "dataRef": "NwindData",
-      "moving":true,
-      "allowAdvancedFiltering":true,
       "autoGenerate": false,
+      "moving": true,
+      "toolbar": [
+        {
+          "type": "WebGridToolbar",
+          "tools": [
+            {
+              "type": "WebGridToolbarActions",
+              "actions": [
+                {
+                  "type": "WebGridToolbarAdvancedFiltering"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "allowAdvancedFiltering": true,
       "columns": [
         {
           "type": "WebColumn",
-          "name": "ProductName",
           "field": "ProductName",
-          "header": "Product Name"
+          "header": "Product Name",
+          "sortable": true
         },
         {
           "type": "WebColumn",
-          "name": "QuantityPerUnit",
           "field": "QuantityPerUnit",
-          "header": "Quantity Per Unit"
+          "header": "Quantity Per Unit",
+          "sortable": true
         },
         {
           "type": "WebColumn",
-          "name": "UnitPrice",
           "field": "UnitPrice",
-          "header": "Unit Price"
+          "header": "Unit Price",
+          "sortable": true,
+          "dataType": "Currency"
         },
         {
           "type": "WebColumn",
-          "name": "OrderDate",
           "field": "OrderDate",
-          "header": "Order Date"
+          "header": "Order Date",
+          "dataType": "Date",
+          "sortable": true
         },
         {
           "type": "WebColumn",
-          "name": "Discontinued",
           "field": "Discontinued",
-          "header": "Discontinued"
+          "header": "Discontinued",
+          "dataType": "Boolean",
+          "bodyTemplateRef": "WebGridDiscontinuedCellTemplate",
+          "sortable": true
         }
       ]
     }
   },
-  "modules": [
-    "withDescriptions",
-    "layouts/PropertyEditorPanelModule",
-    "grids/WebGridModule"
-  ]
+  "modules": ["withDescriptions", "grids/WebGridModule"]
 }

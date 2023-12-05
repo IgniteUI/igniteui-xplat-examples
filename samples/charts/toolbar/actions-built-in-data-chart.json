@@ -22,7 +22,8 @@
         {
           "type": "NumericYAxis",
           "name": "yAxis",
-          "title": "TWh"
+          "title": "TWh",
+          "labelLocation": "OutsideRight"
         }
       ],
       "series": [

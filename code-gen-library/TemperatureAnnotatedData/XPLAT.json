@@ -1,0 +1,14 @@
+[
+  { "Index": 0,   "TempInfo": "27°C", "Temperature": 27, "Month": "Jan" },
+  { "Index": 1,   "TempInfo": "25°C", "Temperature": 25, "Month": "Feb" },
+  { "Index": 2,   "TempInfo": "21°C", "Temperature": 21, "Month": "Mar" },
+  { "Index": 3,   "TempInfo": "19°C", "Temperature": 19, "Month": "Apr" },
+  { "Index": 4,   "TempInfo": "16°C", "Temperature": 16, "Month": "May" },
+  { "Index": 5,   "TempInfo": "13°C", "Temperature": 13, "Month": "Jun" },
+  { "Index": 6,   "TempInfo": "14°C", "Temperature": 14, "Month": "Jul" },
+  { "Index": 7,   "TempInfo": "15°C", "Temperature": 15, "Month": "Aug" },
+  { "Index": 8,   "TempInfo": "19°C", "Temperature": 19, "Month": "Sep" },
+  { "Index": 9,   "TempInfo": "22°C", "Temperature": 22, "Month": "Oct" },
+  { "Index": 10,  "TempInfo": "26°C", "Temperature": 26, "Month": "Nov" },
+  { "Index": 11,  "TempInfo": "30°C", "Temperature": 30, "Month": "Dec" }
+]

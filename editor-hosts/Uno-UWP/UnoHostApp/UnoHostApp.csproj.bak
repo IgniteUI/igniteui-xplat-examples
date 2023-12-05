@@ -1,0 +1,73 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <Platforms>AnyCPU;x86;x64</Platforms>
+    <StartupObject>UnoHostApp.Program</StartupObject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Infragistics.Uno.Core" Version="$$nugetVersion">
+      <Aliases>iguwp</Aliases>
+    </PackageReference>
+    <PackageReference Include="Infragistics.Uno.DataGrid" Version="$$nugetVersion">
+      <Aliases>iguwp</Aliases>
+    </PackageReference>
+    <PackageReference Include="Infragistics.Uno.DataVisualization" Version="$$nugetVersion">
+      <Aliases>iguwp</Aliases>
+    </PackageReference>
+    <PackageReference Include="Infragistics.Uno.Gauges" Version="$$nugetVersion">
+      <Aliases>iguwp</Aliases>
+    </PackageReference>
+    <PackageReference Include="Uno.UI" Version="3.7.6">
+      <Aliases>iguwp</Aliases>
+    </PackageReference>
+    <PackageReference Include="SkiaSharp" Version="2.80.3-preview.93" />
+    <PackageReference Include="SkiaSharp.Views.Uno" Version="2.80.3-preview.93" />
+    <PackageReference Include="Microsoft.AspNet.SignalR.Client" Version="2.4.2" />
+    <PackageReference Include="Microsoft.Toolkit.Wpf.UI.XamlHost" Version="6.1.2" />
+    <PackageReference Include="Microsoft.VCRTForwarders.140" Version="1.0.6" />
+    <PackageReference Include="NLog" Version="4.7.10" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\UnoHost\UnoHost.UWP\UnoHost.UWP.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Infragistics.Core.Platform">
+      <HintPath>$(UserProfile)\.nuget\packages\infragistics.uno.core\$$nugetVersion\lib\uap10.0.16299\Infragistics.Core.Platform.dll</HintPath>
+      <Aliases>iguwp</Aliases>
+    </Reference>
+    <Reference Include="Infragistics.Uno.Charts">
+      <HintPath>$(UserProfile)\.nuget\packages\infragistics.uno.charts\$$nugetVersion\lib\uap10.0.16299\Infragistics.UNO.Charts.dll</HintPath>
+      <Aliases>iguwp</Aliases>
+    </Reference>
+    <Reference Include="Infragistics.Uno.DataVisualization">
+      <HintPath>$(UserProfile)\.nuget\packages\infragistics.uno.datavisualization\$$nugetVersion\lib\uap10.0.16299\Infragistics.UNO.DataVisualization.dll</HintPath>
+      <Aliases>iguwp</Aliases>
+    </Reference>
+    <Reference Include="Infragistics.Uno.Gauges">
+      <HintPath>$(UserProfile)\.nuget\packages\infragistics.uno.gauges\$$nugetVersion\lib\uap10.0.16299\Infragistics.UNO.Gauges.dll</HintPath>
+      <Aliases>iguwp</Aliases>
+    </Reference>
+    <Reference Include="Infragistics.Uno.DataGrid">
+      <HintPath>$(UserProfile)\.nuget\packages\infragistics.uno.datagrid\$$nugetVersion\lib\uap10.0.16299\Infragistics.UNO.DataGrid.dll</HintPath>
+      <Aliases>iguwp</Aliases>
+    </Reference>
+
+    <Reference Include="Uno.UI.Toolkit">
+      <HintPath>$(UserProfile)\.nuget\packages\uno.ui\3.7.6\lib\UAP\Uno.UI.Toolkit.dll</HintPath>
+      <Aliases>iguwp</Aliases>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="NLog.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  
+</Project>
