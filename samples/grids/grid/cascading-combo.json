@@ -6,6 +6,7 @@
       "dataRef": "WorldCitiesAbove500K",
       "autoGenerate": false,
       "primaryKey": "ID",
+      "name": "grid",
       "renderedRef": "WebGridWithComboRendered",
       "columns": [
         {

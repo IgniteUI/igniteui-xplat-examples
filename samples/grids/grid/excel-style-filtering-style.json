@@ -1,13 +1,10 @@
 {
-  "todo": [
-    "Approved Defer - until we can inject CSS styles"
-  ],
-  "export": false,
   "skipAlterDataCasing": true,
   "onInit": ["WebGridExcelStyleFilteringTemplate"],
   "descriptions": {
     "content": {
       "type": "WebGrid",
+      "id": "grid",
       "name": "grid",
       "dataRef": "NwindData",
       "moving": true,

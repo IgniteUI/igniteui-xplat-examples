@@ -1,0 +1,72 @@
+{
+  "todo": [""],
+  "skipAlterDataCasing": true,
+  "descriptions": {
+    "content": {
+      "type": "WebTreeGrid",
+      "name": "grid",
+      "dataRef": "FoodsData",
+      "primaryKey": "ID",
+      "foreignKey": "ParentID",
+      "moving": true,
+      "autoGenerate": false,
+      "allowFiltering": true,
+      "filterMode": "ExcelStyleFilter",
+      "toolbar": [
+        {
+          "type": "WebGridToolbar",
+          "tools": [
+            {
+              "type": "WebGridToolbarActions",
+              "actions": [
+                {
+                  "type": "WebGridToolbarHiding"
+                },
+                {
+                  "type": "WebGridToolbarPinning"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "columns": [
+        {
+          "type": "WebColumn",
+          "field": "ID",
+          "header": "ID"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Name",
+          "header": "Product Name",
+          "sortable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "UnitPrice",
+          "header": "Unit Price",
+          "sortable": false,
+          "dataType": "Number",
+          "disablePinning": true,
+          "disableHiding": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "AddedDate",
+          "header": "Added Date",
+          "sortable": false,
+          "dataType": "Date"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Discontinued",
+          "dataType": "Boolean",
+          "bodyTemplateRef": "WebGridBooleanCellTemplate",
+          "sortable": true
+        }
+      ]
+    }
+  },
+  "modules": ["withDescriptions", "grids/WebGridModule"]
+}
