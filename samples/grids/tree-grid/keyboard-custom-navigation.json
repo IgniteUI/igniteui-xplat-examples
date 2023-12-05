@@ -12,6 +12,7 @@
       "rowSelection": "Multiple",
       "moving": true,
       "allowFiltering": true,
+      "gridKeydownRef": "WebGridCustomKBNav",
       "paginationComponents": [
         {
           "type": "WebPaginator",
