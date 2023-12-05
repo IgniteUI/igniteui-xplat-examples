@@ -1,106 +1,95 @@
 {
-  "todo": [
-    "defer until we can inject CSS styles"
-  ],
-  "export": false,
+  "todo": [ "" ],
   "skipAlterDataCasing": true,
+  "onInit": ["WebGridColumnMovingStyle"],
   "descriptions": {
     "content": {
       "type": "WebGrid",
-      "name": "grid",
       "dataRef": "FinancialDataAll",
       "autoGenerate": false,
+      "primaryKey": "ProductID",
       "moving": true,
-      "paginationComponents": [
-        {
-          "type": "WebPaginator",
-          "perPage": 10
-        }
-      ],
+      "name": "grid",
+      "id": "grid",
       "columns": [
         {
           "type": "WebColumn",
-          "name": "Category",
           "field": "Category",
-          "header": "Category",
+          "pinned": true,
           "width": "200px",
-          "pinned": true,
           "headerTemplateRef": "WebGridPinHeaderTemplate"
         },
         {
           "type": "WebColumn",
-          "name": "Type",
           "field": "Type",
-          "header": "Type",
           "pinned": true,
           "headerTemplateRef": "WebGridPinHeaderTemplate"
         },
         {
           "type": "WebColumn",
-          "name": "Price",
           "field": "Price",
-          "header": "Price",
-          "dataType": "Number",
+          "dataType": "Currency",
+          "pipeArgs": {
+            "currencyCode": "USD",
+            "type": "WebColumnPipeArgs",
+            "digitsInfo": "1.2-2"
+          },
           "headerTemplateRef": "WebGridPinHeaderTemplate"
         },
         {
           "type": "WebColumn",
-          "name": "Buy",
           "field": "Buy",
-          "header": "Buy",
-          "dataType": "Number",
+          "dataType": "Currency",
+          "pipeArgs": {
+            "currencyCode": "USD",
+            "type": "WebColumnPipeArgs",
+            "digitsInfo": "1.2-2"
+          },
           "headerTemplateRef": "WebGridPinHeaderTemplate"
         },
         {
           "type": "WebColumn",
-          "name": "Sell",
           "field": "Sell",
-          "header": "Sell",
-          "dataType": "Number",
+          "dataType": "Currency",
+          "pipeArgs": {
+            "currencyCode": "USD",
+            "type": "WebColumnPipeArgs",
+            "digitsInfo": "1.2-2"
+          },
           "headerTemplateRef": "WebGridPinHeaderTemplate"
         },
         {
           "type": "WebColumn",
-          "name": "Spread",
           "field": "Spread",
-          "header": "Spread",
-          "dataType": "Number",
           "headerTemplateRef": "WebGridPinHeaderTemplate"
         },
         {
           "type": "WebColumn",
-          "name": "Change",
           "field": "Change",
-          "header": "Change",
-          "dataType": "Number",
-          "headerTemplateRef": "WebGridPinHeaderTemplate",
-          "bodyTemplateRef": "WebGridCurrencyCellTemplate"
+          "bodyTemplateRef": "WebGridCurrencyCellTemplate",
+          "headerTemplateRef": "WebGridPinHeaderTemplate"
         },
         {
           "type": "WebColumn",
-          "name": "ChangePercent",
           "field": "ChangePercent",
           "header": "Change Percent",
           "dataType": "Number",
-          "width": "150px",
-          "headerTemplateRef": "WebGridPinHeaderTemplate",
-          "bodyTemplateRef": "WebGridChangePercentTemplate"
+          "bodyTemplateRef": "WebGridCurrencyCellTemplate",
+          "headerTemplateRef": "WebGridPinHeaderTemplate"
         },
         {
           "type": "WebColumn",
-          "name": "AnnualChange",
           "field": "AnnualChange",
           "header": "Annual Change",
           "dataType": "Number",
-          "width": "170px",
-          "headerTemplateRef": "WebGridPinHeaderTemplate",
-          "bodyTemplateRef": "WebGridCurrencyCellTemplate"
+          "bodyTemplateRef": "WebGridCurrencyCellTemplate",
+          "headerTemplateRef": "WebGridPinHeaderTemplate"
         }
       ]
     }
   },
   "modules": [
-    "withDescriptions",
+    "webinputs/WebBadgeModule",
     "grids/WebGridModule"
   ]
 }

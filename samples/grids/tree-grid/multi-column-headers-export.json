@@ -1,0 +1,157 @@
+{
+  "todo": [""],
+  "export": true,
+  "skipAlterDataCasing": true,
+  "descriptions": {
+    "content": {
+      "type": "WebTreeGrid",
+      "name": "treeGrid",
+      "id": "treeGrid",
+      "dataRef": "EmployeesFlatDetails",
+      "foreignKey": "ParentID",
+      "primaryKey": "ID",
+      "autoGenerate": false,
+      "toolbar": [
+        {
+          "type": "WebGridToolbar",
+          "tools": [
+            {
+              "type": "WebGridToolbarActions",
+              "actions": [
+                {
+                  "type": "WebGridToolbarPinning"
+                },
+                {
+                  "type": "WebGridToolbarHiding"
+                },
+                {
+                  "type": "WebGridToolbarExporter",
+                  "exportCSV": false,
+                  "exportExcel": true,
+                  "exportStartedRef": "WebGridExportEventMultiColumnHeaders"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "columns": [
+        {
+          "type": "WebColumn",
+          "field": "ID",
+          "header": "ID",
+          "resizable": true,
+          "filterable": false
+        },
+        {
+          "type": "WebColumn",
+          "field": "Name",
+          "header": "Name",
+          "resizable": true,
+          "sortable": true,
+          "width": "200px"
+        },
+        {
+          "type": "WebColumnGroup",
+          "header": "General Information",
+          "children": [
+            {
+              "type": "WebColumn",
+              "field": "HireDate",
+              "header": "HireDate",
+              "dataType": "Date",
+              "resizable": true,
+              "sortable": true
+            },
+            {
+              "type": "WebColumnGroup",
+              "header": "Personal Details",
+              "children": [
+                {
+                  "type": "WebColumn",
+                  "header": "Title",
+                  "field": "Title",
+                  "resizable": true,
+                  "sortable": true
+                },
+                {
+                  "type": "WebColumn",
+                  "header": "Age",
+                  "field": "Age",
+                  "dataType": "Number",
+                  "resizable": true,
+                  "sortable": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "WebColumnGroup",
+          "header": "Address Information",
+          "children": [
+            {
+              "type": "WebColumnGroup",
+              "header": "Location",
+              "children": [
+                {
+                  "type": "WebColumn",
+                  "header": "Country",
+                  "field": "Country",
+                  "resizable": true,
+                  "sortable": true
+                },
+                {
+                  "type": "WebColumn",
+                  "field": "City",
+                  "header": "City",
+                  "resizable": true,
+                  "sortable": true
+                },
+                {
+                  "type": "WebColumn",
+                  "header": "Address",
+                  "field": "Address",
+                  "resizable": true,
+                  "sortable": true
+                }
+              ]
+            },
+            {
+              "type": "WebColumnGroup",
+              "header": "Contact Information",
+              "children": [
+                {
+                  "type": "WebColumn",
+                  "header": "Phone",
+                  "field": "Phone",
+                  "resizable": true,
+                  "sortable": true
+                },
+                {
+                  "type": "WebColumn",
+                  "header": "Fax",
+                  "field": "Fax",
+                  "resizable": true,
+                  "sortable": true
+                },
+                {
+                  "type": "WebColumn",
+                  "header": "PostalCode",
+                  "field": "PostalCode",
+                  "resizable": true,
+                  "sortable": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "grids/WebGridModule",
+    "grids/WebGridToolbarModule"
+  ]
+}

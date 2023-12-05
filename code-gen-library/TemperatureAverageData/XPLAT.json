@@ -1,0 +1,14 @@
+[
+  { "Month": "Jan", "Temperature": 3 },
+  { "Month": "Feb", "Temperature": 4 },
+  { "Month": "Mar", "Temperature": 9 },
+  { "Month": "Apr", "Temperature": 15 },
+  { "Month": "May", "Temperature": 21 },
+  { "Month": "Jun", "Temperature": 26 },
+  { "Month": "Jul", "Temperature": 29 },
+  { "Month": "Aug", "Temperature": 28 },
+  { "Month": "Sep", "Temperature": 24 },
+  { "Month": "Oct", "Temperature": 18 },
+  { "Month": "Nov", "Temperature": 11 },
+  { "Month": "Dec", "Temperature": 5 }
+]

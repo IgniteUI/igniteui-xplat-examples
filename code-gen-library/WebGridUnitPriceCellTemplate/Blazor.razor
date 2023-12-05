@@ -1,0 +1,61 @@
+//begin template
+@using IgniteUI.Blazor.Controls
+
+@inject IIgniteUIBlazor IgniteUIBlazor;
+
+<!--begin styles-->
+<style>
+    .grid__wrapper {
+        margin: 16px;
+    }
+
+    .gridSample__filter {
+        width: rem(200px);
+    }
+
+    .cell__inner,
+    .cell__inner_2 {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    }
+
+    .cell__inner {
+    position: relative;
+    justify-content: space-between;
+    }
+
+    .density-chooser {
+        margin-bottom: 16px;
+    }
+
+    igx-buttongroup {
+        display: block;
+        width: 500px;
+    }
+</style>
+<!--end styles-->
+
+@code {
+    //begin content
+    public RenderFragment<IgbCellTemplateContext> WebGridUnitPriceCellTemplate = (ctx) => {
+        return @<div class="currency-badge-container">
+            {{+val | currency}}
+        </div>;
+    };
+    //end content
+
+    protected override void OnInitialized()
+    {
+        IgbButtonModule.Register(IgniteUIBlazor);
+        IgbBadgeModule.Register(IgniteUIBlazor);
+    }
+
+    //begin supportingMethods
+    public formatCurrency(val: string)
+    {
+        return parseInt(val, 10).toFixed(2);
+    }
+    //end supportingMethods
+}
+//end template
