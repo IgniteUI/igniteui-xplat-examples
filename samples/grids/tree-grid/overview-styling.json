@@ -1,0 +1,51 @@
+{
+  "export": true,
+  "skipAlterDataCasing": true,
+  "onInit": [ "WebTreeGridOverviewStyleWithCustomCSS" ],
+  "descriptions": {
+    "content": {
+      "type": "WebTreeGrid",
+      "name": "treeGrid",
+      "id": "treeGrid",
+      "dataRef": "EmployeesNestedData",
+      "childDataKey": "Employees",
+      "autoGenerate": false,
+      "columns": [
+        {
+          "type": "WebColumn",
+          "field": "Name",
+          "header": "Name",
+          "dataType": "String"
+        },
+        {
+          "type": "WebColumn",
+          "field": "HireDate",
+          "header": "Hire Date",
+          "dataType": "Date"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Age",
+          "header": "Age",
+          "dataType": "Number"
+        },
+        {
+          "type": "WebColumn",
+          "field": "salary",
+          "header": "Salary",
+          "dataType": "Number"
+        },
+        {
+          "type": "WebColumn",
+          "field": "productivity",
+          "header": "Productivity",
+          "dataType": "Number"
+        }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "grids/WebTreeGridModule"
+  ]
+}

@@ -1,0 +1,140 @@
+{
+  "skipAlterDataCasing": true,
+  "descriptions": {
+    "editor": {
+      "type": "PropertyEditorPanel",
+      "name": "PropertyEditor",
+      "componentRendererRef": "renderer",
+      "targetRef": "treeGrid",
+      "descriptionType": "WebTreeGrid",
+      "isHorizontal": true,
+      "isWrappingEnabled": true,
+      "properties": [
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "valueType": "Button",
+          "primitiveValue": "Toggle First Group Pinned",
+          "buttonClickedRef": "WebTreeGridPinFirstGroupToggle"
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "valueType": "Button",
+          "primitiveValue": "Toggle First Group Hidden",
+          "buttonClickedRef": "WebTreeGridHideFirstGroupToggle"
+        }
+      ]
+    },
+    "content": {
+      "type": "WebTreeGrid",
+      "dataRef": "EmployeesFlatDetails",
+      "autoGenerate": false,
+      "name": "treeGrid",
+      "id": "treeGrid",
+      "primaryKey": "ID",
+      "foreignKey": "ParentID",
+      "columns": [
+        {
+          "type": "WebColumn",
+          "field": "Name",
+          "resizable": true
+        },
+        {
+          "type": "WebColumnGroup",
+          "header": "General Information",
+          "children": [
+            {
+              "type": "WebColumn",
+              "field": "HireDate",
+              "sortable": true,
+              "resizable": true
+            },
+            {
+              "type": "WebColumnGroup",
+              "header": "Personal Details",
+              "children": [
+                {
+                  "type": "WebColumn",
+                  "field": "ID",
+                  "sortable": true,
+                  "resizable": true
+                },
+                {
+                  "type": "WebColumn",
+                  "field": "Title",
+                  "sortable": true,
+                  "resizable": true
+                },
+                {
+                  "type": "WebColumn",
+                  "field": "Age",
+                  "sortable": true,
+                  "resizable": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "WebColumnGroup",
+          "header": "Address Information",
+          "children": [
+            {
+              "type": "WebColumnGroup",
+              "header": "Location",
+              "children": [
+                {
+                  "type": "WebColumn",
+                  "field": "Country",
+                  "sortable": true,
+                  "resizable": true
+                },
+                {
+                  "type": "WebColumn",
+                  "field": "City",
+                  "sortable": true,
+                  "resizable": true
+                },
+                {
+                  "type": "WebColumn",
+                  "field": "Address",
+                  "sortable": true,
+                  "resizable": true
+                }
+              ]
+            },
+            {
+              "type": "WebColumnGroup",
+              "header": "Contact Information",
+              "children": [
+                {
+                  "type": "WebColumn",
+                  "field": "Phone",
+                  "sortable": true,
+                  "resizable": true
+                },
+                {
+                  "type": "WebColumn",
+                  "field": "Fax",
+                  "sortable": true,
+                  "resizable": true
+                },
+                {
+                  "type": "WebColumn",
+                  "field": "PostalCode",
+                  "sortable": true,
+                  "resizable": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "grids/WebGridModule",
+    "grids/WebColumnGroupModule",
+    "layouts/PropertyEditorPanelModule"
+  ]
+}

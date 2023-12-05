@@ -1,0 +1,50 @@
+{
+  "strings": {
+    "legendTitle": "Average Temperature in Sydney"
+  },
+  "descriptions": {
+    "editor": {
+      "type": "PropertyEditorPanel",
+      "name": "PropertyEditor",
+      "componentRendererRef": "renderer",
+      "targetRef": "chart",
+      "descriptionType": "CategoryChart",
+      "isHorizontal": true,
+      "isWrappingEnabled": true,
+      "properties": [
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "CalloutsVisible",
+          "name": "CalloutsVisibleEditor",
+          "label": "Callouts Visible",
+          "shouldOverrideDefaultEditor": true,
+          "primitiveValue": true
+        }
+      ]
+    },
+    "content": {
+      "type": "CategoryChart",
+      "name": "chart",
+      "chartType": "Column",
+      "computedPlotAreaMarginMode": "Series",
+      "isHorizontalZoomEnabled": false,
+      "isVerticalZoomEnabled": false,
+      "includedProperties": ["Month", "Temperature"],
+      "dataSourceRef": "TemperatureAnnotatedData",
+      "crosshairsAnnotationYAxisPrecision": 0,
+      "calloutsDataSourceRef": "TemperatureAnnotatedData",
+      "calloutsVisible": true,
+      "calloutsXMemberPath": "Index",
+      "calloutsYMemberPath": "Temperature",
+      "calloutsLabelMemberPath": "TempInfo",
+      "calloutsAllowedPositions": ["Top", "Bottom"],
+      "yAxisMaximumValue": 35,
+      "yAxisLabelLocation": "OutsideRight"
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
+    "charts/CategoryChartModule"
+  ]
+}

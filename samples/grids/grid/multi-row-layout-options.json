@@ -21,10 +21,30 @@
           "dir": "Asc"
         }
       ],
+      "toolbar": [
+        {
+          "type": "WebGridToolbar",
+          "tools": [
+            {
+              "type": "WebGridToolbarTitle"
+            },
+            {
+              "type": "WebGridToolbarActions",
+              "actions": [
+                {
+                  "type": "WebGridToolbarPinning"
+                },
+                {
+                  "type": "WebGridToolbarHiding"
+                }
+              ]
+            }
+          ]
+        }
+      ],
       "columns": [
         {
           "type": "WebColumnLayout",
-          "hidden": true,
           "header": "ID",
           "children": [
             {
@@ -157,7 +177,6 @@
   },
   "modules": [
     "withDescriptions",
-    "layouts/PropertyEditorPanelModule",
     "grids/WebGridModule"
   ]
 }

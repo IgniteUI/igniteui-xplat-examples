@@ -56,7 +56,8 @@
           "dataSourceRef": "RoadblocksToSuccess",
           "showDefaultTooltip": true,
           "isTransitionInEnabled": true,
-          "isHighlightingEnabled": true
+          "isHighlightingEnabled": true,
+          "markerType": "Hidden"
         },
         {
           "type": "BarSeries",
@@ -68,15 +69,14 @@
           "dataSourceRef": "RoadblocksToSuccess",
           "showDefaultTooltip": true,
           "isTransitionInEnabled": true,
-          "isHighlightingEnabled": true
+          "isHighlightingEnabled": true,
+          "markerType": "Hidden"
         },
         {
           "type": "CalloutLayer",
           "name": "CalloutLayer1",
-          "dataSourceRef": "RoadblocksToSuccess",
-          "yMemberPath": "Index",
-          "xMemberPath": "FirstChoice",
-          "labelMemberPath": "FirstChoiceLabel",
+          "isAutoCalloutBehaviorEnabled": true,
+          "allowedPositions": ["Right"],
           "calloutLeaderBrush": "transparent",
           "calloutOutline": "transparent",
           "calloutBackground": "transparent",
@@ -88,10 +88,8 @@
         {
           "type": "CalloutLayer",
           "name": "CalloutLayer2",
-          "dataSourceRef": "RoadblocksToSuccess",
-          "yMemberPath": "Index",
-          "xMemberPath": "TopChoices",
-          "labelMemberPath": "TopChoicesLabel",
+          "isAutoCalloutBehaviorEnabled": true,
+          "allowedPositions": ["Right"],
           "calloutLeaderBrush": "transparent",
           "calloutOutline": "transparent",
           "calloutBackground": "transparent",
