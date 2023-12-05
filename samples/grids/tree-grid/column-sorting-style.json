@@ -5,6 +5,7 @@
   "descriptions": {
     "content": {
       "type": "WebTreeGrid",
+      "id": "grid",
       "name": "grid",
       "dataRef": "OrdersTreeData",
       "autoGenerate": false,
