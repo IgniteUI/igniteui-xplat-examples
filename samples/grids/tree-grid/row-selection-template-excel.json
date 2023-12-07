@@ -10,7 +10,8 @@
       "name": "treeGrid",
       "id": "treeGrid",
       "primaryKey": "ID",
-      "foreignKey": "ParentID",	
+      "foreignKey": "ParentID",
+      "rowSelection": "Multiple",
       "displayDensity": "Cosy",
       "rowSelectorTemplateRef": "WebGridRowSelectorExcelTemplate",
       "headSelectorTemplateRef": "WebGridHeaderRowSelectorExcelTemplate",
@@ -64,22 +65,6 @@
           "field": "OnPTO",
           "dataType": "Boolean",
           "sortable": true
-        }
-      ]
-    },
-    "editor": {
-      "type": "PropertyEditorPanel",
-      "name": "PropertyEditor",
-      "componentRendererRef": "renderer",
-      "targetRef": "treeGrid",
-      "descriptionType": "WebTreeGrid",
-      "isHorizontal": true,
-      "isWrappingEnabled": true,
-      "properties": [
-        {
-          "type": "PropertyEditorPropertyDescription",
-          "name": "selectionType",
-          "propertyPath": "RowSelection"
         }
       ]
     }
