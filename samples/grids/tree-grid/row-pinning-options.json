@@ -55,21 +55,21 @@
             "dataType": "Date"
           }
         ],
-        "actionStrip": {
-          "type": "WebActionStrip",
-          "name": "actionStrip",
-          "actionButtons": [
-            {
-              "type": "WebGridPinningActions"
-            }
-          ]
-        }
+      "actionStripComponents": [{
+        "type": "WebActionStrip",
+        "name": "actionStrip",
+        "actionButtons": [
+          {
+            "type": "WebGridPinningActions"
+          }
+        ]
+      }]
       }
     },
     "modules": [
       "withDescriptions",
       "layouts/PropertyEditorPanelModule",
       "grids/WebTreeGridModule",
-      "WebActionStripModule"
+      "grids/WebActionStripModule"
     ]
   }

@@ -1,7 +1,6 @@
 {
   "todo": [
-    "add event handlers for row dragging",
-	"action strip not working"
+    "add event handlers for row dragging"
   ],
   "export": true,
   "skipAlterDataCasing": true,
@@ -41,20 +40,20 @@
 		  "dataType": "Date"
         }
       ],
-	  "actionStrip": {
+      "actionStripComponents": [{
         "type": "WebActionStrip",
-		"name": "actionStrip",
+        "name": "actionStrip",
         "actionButtons": [
           {
             "type": "WebGridPinningActions"
           }
         ]
-      }
+      }]
     }
   },
   "modules": [
     "withDescriptions",
     "grids/WebTreeGridModule",
-	"WebActionStripModule"
+    "grids/WebActionStripModule"
   ]
 }

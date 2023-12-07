@@ -8,7 +8,7 @@ export class WebTreeGridPinRowOnRendered {
     //begin eventHandler
     public webTreeGridPinRowOnRendered(args:any): void {
         const treeGrid = document.getElementById("treeGrid") as IgcTreeGridComponent;
-        treeGrid.data = [...tGrid.data];
+        treeGrid.data = [...treeGrid.data];
         treeGrid.pinRow(1);
         treeGrid.pinRow(11);
     }
