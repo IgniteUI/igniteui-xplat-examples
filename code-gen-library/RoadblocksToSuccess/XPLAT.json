@@ -1,0 +1,7 @@
+[
+  { "Index": 0, "FirstChoice":  6, "TopChoices": 22, "FirstChoiceLabel":  "6%", "TopChoicesLabel": "22%", "Category": "Poor Prioritization of Tasks" },
+  { "Index": 1, "FirstChoice":  8, "TopChoices": 25, "FirstChoiceLabel":  "8%", "TopChoicesLabel": "25%", "Category": "Poor Data Literacy" },
+  { "Index": 2, "FirstChoice": 10, "TopChoices": 35, "FirstChoiceLabel": "10%", "TopChoicesLabel": "35%", "Category": "Lack of Relevant Skills" },
+  { "Index": 3, "FirstChoice": 14, "TopChoices": 37, "FirstChoiceLabel": "14%", "TopChoicesLabel": "37%", "Category": "Lack of Resources" },
+  { "Index": 4, "FirstChoice": 20, "TopChoices": 46, "FirstChoiceLabel": "20%", "TopChoicesLabel": "46%", "Category": "Cultural Challenges" }
+]

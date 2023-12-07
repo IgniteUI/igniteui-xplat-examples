@@ -1,6 +1,6 @@
 {
-  "todo": [ "" ],
-  "export": true,
+  "todo": [ "add WebTreeGridIconCellTemplate to code-gen library" ],
+  "export": false,
   "onInit": ["WebTreeGridCellEditingStyleTemplate"],
   "descriptions": {
     "content": {

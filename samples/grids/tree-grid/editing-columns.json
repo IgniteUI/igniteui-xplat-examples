@@ -1,6 +1,6 @@
 {
-  "todo": [ "" ],
-  "export": true,
+  "todo": [ "wait for Graham to provide access to WC classes in WebTreeGridCustomNumberSummary event handler" ],
+  "export": false,
   "descriptions": {
     "content": {
       "type": "WebTreeGrid",

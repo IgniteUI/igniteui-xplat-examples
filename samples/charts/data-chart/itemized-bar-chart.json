@@ -2,6 +2,8 @@
   "strings": {
     "legendTitle": "Market Capitalization of Technology Companies"
   },
+  "todo": [ "fix exporting CompanyMarketCapItemized with null values" ],
+  "export": false,
   "descriptions": {
     "legend": {
       "type": "Legend",

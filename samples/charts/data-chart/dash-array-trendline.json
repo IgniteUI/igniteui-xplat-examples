@@ -49,6 +49,7 @@
     "charts/DataChartCoreModule",
     "charts/DataChartCategoryModule",
     "charts/DataChartCategoryCoreModule",
+    "charts/DataChartCategoryTrendLineModule",
     "charts/DataChartFinancialCoreModule",
     "charts/DataChartFinancialModule",
     "charts/DataChartFinancialOverlaysModule",

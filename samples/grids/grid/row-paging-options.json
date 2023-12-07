@@ -19,7 +19,6 @@
           "name": "paginator",
           "perPage": 15,
           "displayDensity": "Cosy",
-          "selectOptions": [5, 15, 20, 50],
           "resourceStrings": {
             "type": "WebPaginatorResourceStrings",
             "igx_paginator_label": "Records per page"

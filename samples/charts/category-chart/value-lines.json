@@ -41,7 +41,10 @@
       "isHorizontalZoomEnabled": false,
       "isVerticalZoomEnabled": false,
       "crosshairsDisplayMode": "None",
-      "valueLines": ["Auto"]
+      "valueLines": ["Auto"],
+      "isTransitionInEnabled": false,
+      "yAxisMinimumValue": 0,
+      "yAxisMaximumValue": 100
     }
   },
   "modules": [

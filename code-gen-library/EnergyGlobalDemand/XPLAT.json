@@ -1,0 +1,7 @@
+[
+  { "Value": 37, "Category": "Cooling", "Summary": "Cooling 37%" },
+  { "Value": 25, "Category": "Residential", "Summary": "Residential 25%" },
+  { "Value": 12, "Category": "Heating", "Summary": "Heating 12%" },
+  { "Value": 11, "Category": "Lighting", "Summary": "Lighting 11%" },
+  { "Value": 15, "Category": "Other", "Summary": "Other 15%" }
+]
