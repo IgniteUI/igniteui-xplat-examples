@@ -1,8 +1,9 @@
 {
   "todo": [
-    "add event handlers for row dragging"
+    "add event handlers for row dragging",
+    "no such sample for the tree grid in any the platforms in the docs"
   ],
-  "export": true,
+  "export": false,
   "skipAlterDataCasing": true,
   "descriptions": {
     "content": {
