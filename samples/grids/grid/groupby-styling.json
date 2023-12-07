@@ -1,14 +1,12 @@
 {
-  "todo": [
-    "Approved Defer - until we support injecting CSS styles",
-    ""
-  ],
-  "export": false,
+  "export": true,
   "skipAlterDataCasing": true,
+  "onInit": [ "WebGridGroupByStyleWithCustomCSS" ],
   "descriptions": {
     "content": {
       "type": "WebGrid",
       "name": "grid",
+      "id": "grid",
       "dataRef": "InvoicesData",
       "autoGenerate": false,
       "groupingExpressions": [

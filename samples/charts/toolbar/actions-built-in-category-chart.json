@@ -3,12 +3,12 @@
     "legendTitle": "Renewable Electricity Generated"
   },
   "descriptions": {
-    "legend": {
+    "aboveContentRight": {
       "type": "Legend",
       "name": "Legend",
       "orientation": "Horizontal"
     },
-    "aboveContent": {
+    "aboveContentLeft": {
       "type": "Toolbar",
       "name": "Toolbar",
       "targetRef": "chart",
@@ -18,8 +18,8 @@
       "type": "CategoryChart",
       "name": "chart",
       "chartType": "Line",
-      "isHorizontalZoomEnabled": false,
-      "isVerticalZoomEnabled": false,
+      "isHorizontalZoomEnabled": true,
+      "isVerticalZoomEnabled": true,
       "dataSourceRef": "CountryRenewableElectricity",
       "includedProperties": ["Year", "Europe", "China", "America"],
       "legendRef": "Legend",
@@ -27,7 +27,8 @@
       "yAxisTitleLeftMargin": 10,
       "yAxisTitleRightMargin": 5,
       "yAxisLabelLeftMargin": 0,
-      "computedPlotAreaMarginMode": "Series"
+      "yAxisLabelLocation": "OutsideRight",
+      "isTransitionInEnabled": true
     }
   },
   "modules": [

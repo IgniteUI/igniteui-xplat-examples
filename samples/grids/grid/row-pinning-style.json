@@ -1,18 +1,17 @@
 {
-  "todo": [
-    "Approved Defer - until we support injecting CSS styles"
-  ],
-  "export": false,
+  "export": true,
   "onInit": ["WebGridRowPinStyleOnInitEvent"],
   "skipAlterDataCasing": true,
   "descriptions": {
     "content": {
       "type": "WebGrid",
       "name": "grid",
-      "dataRef": "CustomersData",
+      "id": "grid",
+      "dataRef": "CustomersDataLocal",
       "autoGenerate": false,
       "primaryKey": "ID",
       "cellSelection": "None",
+      "renderedRef": "WebGridPinRowOnRendered",
       "pinning": {
         "type": "WebPinningConfig",
         "rows": "Top"
@@ -68,20 +67,19 @@
           "header": "Fax"
         }
       ],
-      "actionStrip": {
+      "actionStripComponents": [{
         "type": "WebActionStrip",
-        "hidden": true,
         "actionButtons": [
           {
             "type": "WebGridPinningActions"
           }
         ]
-      }
+      }]
     }
   },
   "modules": [
     "withDescriptions",
     "grids/WebGridModule",
-    "WebActionStripModule"
+    "grids/WebActionStripModule"
   ]
 }
