@@ -1,0 +1,7 @@
+[
+  { "V1": 180, "V2": null,  "V3": null, "V4": null, "V5": null, "Category": "Apple" },
+  { "V1": null, "V2": 160,  "V3": null, "V4": null, "V5": null, "Category": "Microsoft" },
+  { "V1": null, "V2": null, "V3": 90,   "V4": null, "V5": null, "Category": "Google" },
+  { "V1": null, "V2": null, "V3": null, "V4": 50,   "V5": null, "Category": "NVidia" },
+  { "V1": null, "V2": null, "V3": null, "V4": null, "V5": 120,  "Category": "Tesla" }
+]
