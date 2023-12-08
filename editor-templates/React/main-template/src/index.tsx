@@ -37,11 +37,15 @@ export default class Sample extends React.Component<any, any> {
 
     constructor(props: any) {
         super(props);
-
+        
+        //insert onInit
+        //end onInit
         //insert bindingInit
         //end bindingInit
         //insert bindingCode
         //end bindingCode
+        //insert onViewInit
+        //end onViewInit
     }
 
     public render(): JSX.Element {

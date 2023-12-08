@@ -24,12 +24,24 @@ defineAllComponents();
     templateUrl: "./app.component.html",
     changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class AppComponent {
+export class AppComponent 
+//ifdef onViewInit 
+implements AfterViewInit 
+//endifdef onViewInit
+{
 
     public constructor(private _detector: ChangeDetectorRef) {
-
+		//insert onInit
+        //end onInit		
     }
 
+//ifdef onViewInit
+	public ngAfterViewInit(): void {
+		//insert onViewInit
+		//end onViewInit
+	}
+//endifdef onViewInit
+	
     //insert bindingFields
     //end bindingFields
 

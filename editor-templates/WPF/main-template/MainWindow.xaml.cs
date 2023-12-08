@@ -30,8 +30,22 @@ namespace Sample
             InitializeComponent();
 
             DataContext = new SampleViewModel();
+			//insert onInit
+			//end onInit
+		
+//ifdef onViewInit 
+			this.Loaded += MainWindow_Loaded;
+//endifdef onViewInit
         }
 
+//ifdef onViewInit 
+		private void MainWindow_Loaded(object sender, RoutedEventArgs e)
+		{
+					//insert onViewInit
+					//end onViewInit
+		}
+//endifdef onViewInit
+		
         //insert eventHandlers
 
         //end eventHandlers
