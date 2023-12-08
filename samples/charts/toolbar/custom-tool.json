@@ -1,0 +1,39 @@
+{
+  "onViewInit": [ "ToolbarCustomIconOnViewInit" ],
+  "descriptions": {
+    "aboveContentLeft": {
+      "type": "Toolbar",
+      "name": "Toolbar",
+      "targetRef": "chart",
+      "orientation": "Horizontal",
+      "actions": [
+        {
+          "type": "ToolActionLabel",
+          "title": "Custom Icon",
+          "iconName": "CustomIcon",
+          "iconCollectionName": "CustomCollection"
+        }
+      ]
+    },
+    "content": {
+      "type": "CategoryChart",
+      "name": "chart",
+      "chartType": "Line",
+      "isHorizontalZoomEnabled": true,
+      "isVerticalZoomEnabled": true,
+      "dataSourceRef": "CountryRenewableElectricity",
+      "includedProperties": ["Year", "Europe", "China", "America"],
+      "yAxisTitle": "TWh",
+      "yAxisTitleLeftMargin": 10,
+      "yAxisTitleRightMargin": 5,
+      "yAxisLabelLeftMargin": 0,
+      "yAxisLabelLocation": "OutsideRight",
+      "isTransitionInEnabled": true
+    }
+  },
+  "modules": [
+    "layouts/ToolbarModule",
+    "charts/CategoryChartModule",
+    "charts/CategoryChartToolbarModule"
+  ]
+}
