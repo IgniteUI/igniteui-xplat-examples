@@ -26,12 +26,12 @@ defineAllComponents();
 })
 export class AppComponent 
 //ifdef onViewInit 
-implements AfterViewInit 
+	implements AfterViewInit 
 //endifdef onViewInit
 {
 
     public constructor(private _detector: ChangeDetectorRef) {
-		//insert onInit
+	//insert onInit
         //end onInit		
     }
 
