@@ -19,11 +19,11 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 //end imports
 	
-public class ToolbarCustomIconOnViewInit
+public class ToolbarCustomIconOnInit
 {
 	
 	//begin eventHandler
-	public void ToolbarCustomIconOnViewInit()
+	public void ToolbarCustomIconOnInit()
 	{
 		string Icon =
 		@"

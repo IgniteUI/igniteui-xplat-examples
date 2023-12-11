@@ -39,29 +39,29 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="InfragisticsWPF4.Controls.Charts.XamDataChart.v20.2, Version=18.1.0.9000, Culture=neutral, PublicKeyToken=1102135f7483647e, processorArchitecture=MSIL">
+    <Reference Include="InfragisticsWPF4.Controls.Charts.XamDataChart.v23.2">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>c:\work\NetAdvantage\DEV\XAML\2020.2\Source\Build\InfragisticsWPF4.Controls.Charts.XamDataChart.v20.2.dll</HintPath>
+      <HintPath>C:\Work\dev-tools\XAML\Main\Source\Build\InfragisticsWPF4.Controls.Charts.XamDataChart.v23.2.dll</HintPath>
     </Reference>
-    <Reference Include="InfragisticsWPF4.Controls.Grids.XamPropertyEditor.v20.2, Version=20.2.0.9000, Culture=neutral, PublicKeyToken=1102135f7483647e, processorArchitecture=MSIL">
+    <Reference Include="InfragisticsWPF4.Controls.Grids.XamPropertyEditor.v23.2">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\XAML\2020.2\Source\Build\InfragisticsWPF4.Controls.Grids.XamPropertyEditor.v20.2.dll</HintPath>
+      <HintPath>C:\Work\dev-tools\XAML\Main\Source\Build\InfragisticsWPF4.Controls.Grids.XamPropertyEditor.v23.2.dll</HintPath>
     </Reference>
-    <Reference Include="InfragisticsWPF4.Controls.Layouts.v20.2, Version=20.2.0.9000, Culture=neutral, PublicKeyToken=1102135f7483647e, processorArchitecture=MSIL">
+    <Reference Include="InfragisticsWPF4.Controls.Layouts.v23.2">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\XAML\2020.2\Source\Build\InfragisticsWPF4.Controls.Layouts.v20.2.dll</HintPath>
+      <HintPath>C:\Work\dev-tools\XAML\Main\Source\Build\InfragisticsWPF4.Controls.Layouts.v23.2.dll</HintPath>
     </Reference>
-    <Reference Include="InfragisticsWPF4.Controls.Inputs.v20.2, Version=20.2.0.9000, Culture=neutral, PublicKeyToken=1102135f7483647e, processorArchitecture=MSIL">
+    <Reference Include="InfragisticsWPF4.Controls.Inputs.v23.2">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\XAML\2020.2\Source\Build\InfragisticsWPF4.Controls.Inputs.v20.2.dll</HintPath>
+      <HintPath>C:\Work\dev-tools\XAML\Main\Source\Build\InfragisticsWPF4.Controls.Inputs.v23.2.dll</HintPath>
     </Reference>
-    <Reference Include="InfragisticsWPF4.DataVisualization.v20.2, Version=18.1.0.9000, Culture=neutral, PublicKeyToken=1102135f7483647e, processorArchitecture=MSIL">
+    <Reference Include="InfragisticsWPF4.DataVisualization.v23.2">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>c:\work\NetAdvantage\DEV\XAML\2020.2\Source\Build\InfragisticsWPF4.DataVisualization.v20.2.dll</HintPath>
+      <HintPath>C:\Work\dev-tools\XAML\Main\Source\Build\InfragisticsWPF4.DataVisualization.v23.2.dll</HintPath>
     </Reference>
-    <Reference Include="InfragisticsWPF4.v20.2, Version=18.1.0.9000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+    <Reference Include="InfragisticsWPF4.v23.2">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>c:\work\NetAdvantage\DEV\XAML\2020.2\Source\Build\InfragisticsWPF4.v20.2.dll</HintPath>
+      <HintPath>C:\Work\dev-tools\XAML\Main\Source\Build\InfragisticsWPF4.v23.2.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />

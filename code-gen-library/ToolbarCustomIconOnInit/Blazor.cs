@@ -3,11 +3,12 @@ using IgniteUI.Blazor.Controls;
 using System;
 //end imports
 
-public class ToolbarCustomIconOnViewInit
+public class ToolbarCustomIconOnInit
 {
     //begin eventHandler
-    public void ToolbarCustomIconOnViewInit()
+    public void ToolbarCustomIconOnInit()
 	{
+		
 		this.toolbar.EnsureReady().ContinueWith(new Action<Task>((e) =>
 		{
 			string icon =
@@ -16,6 +17,7 @@ public class ToolbarCustomIconOnViewInit
 			";
 			this.toolbar.RegisterIconFromTextAsync("CustomCollection", "CustomIcon", icon);
 		}));
+		
 	}
     //end eventHandler
 }
