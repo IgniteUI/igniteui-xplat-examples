@@ -8,7 +8,6 @@ export class WebGridPinRowOnRendered {
     //begin eventHandler
     public webGridPinRowOnRendered(args: any): void {
         var grid = CodeGenHelper.getDescription<IgcGridComponent>("content") as any;
-        grid.data = [...grid.data];
         grid.pinRow("ALFKI");
         grid.pinRow("AROUT");
     }
