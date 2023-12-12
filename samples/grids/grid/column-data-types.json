@@ -1,6 +1,4 @@
 {
-  "todo": [ "missing Web.ts for InvoicesDataExtendedDates" ],
-  "export": false,
   "skipAlterDataCasing": true,
   "descriptions": {
     "content": {
