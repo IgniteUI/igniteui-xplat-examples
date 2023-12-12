@@ -28,13 +28,14 @@ defineAllComponents();
 
 export class AppComponent implements AfterViewInit
 {	
-    //insert bindingFields
+		
+	//insert bindingFields
     //end bindingFields
     //insert vmProperties
     //end vmProperties
     //insert descriptionRegister
     //end descriptionRegister
-    	
+		
 	public constructor(private _detector: ChangeDetectorRef) 
 	{
 		//insert onInit
@@ -49,5 +50,6 @@ export class AppComponent implements AfterViewInit
 	
 	//insert eventHandlers
     //end eventHandlers
+
 }
 
