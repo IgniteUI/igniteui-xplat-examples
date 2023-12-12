@@ -1,6 +1,5 @@
 //begin imports
 import { IgrToolbarComponent, IgrToolActionLabelComponent, IgrToolActionComponent, IgrToolCommandEventArgs } from 'igniteui-react-layouts';
-import { CodeGenHelper, SvgIconRegistry } from 'igniteui-react-core';
 //end imports
 
 
