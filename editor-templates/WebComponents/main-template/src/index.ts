@@ -40,7 +40,6 @@ export class Sample {
 
     //insert bindingFields
     //end bindingFields
-	
 //ifdef bindingCode
     private _bind: () => void;
 //endifdef bindingCode
