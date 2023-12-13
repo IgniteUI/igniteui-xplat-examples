@@ -152,10 +152,13 @@ exports.filterJSON = function filterJSON(cb) {
 
 exports.compactJSON = function compactJSON(cb) {
     let filePaths = [
-        CodeGenLib + "/AnalyzeOrders/XPLAT.json",
+        "/AnalyzeOrders/XPLAT.json",
+        "/CompanyEmployees/XPLAT.json",
+        "/NwindLocations/XPLAT.json",
+        "/ProductSales/XPLAT.json",
     ];
     for (const filePath of filePaths) {
-        let file = fs.readFileSync(filePath, "utf8");
+        let file = fs.readFileSync(CodeGenLib + filePath, "utf8");
         let dataItems = JSON.parse(file);
         saveJSON(filePath, dataItems,  "compact");
     }

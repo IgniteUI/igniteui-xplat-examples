@@ -23,5 +23,5 @@
   { "ID": 401, "ParentID": 4, "Name": "Mini Milk Chocolate Cookie Bites", "Category": "Cookies", "OrderDate":"2023-01-04", "Units": 68, "UnitPrice": 2.25, "Price": 153, "Delivered": true },
   { "ID": 402, "ParentID": 4, "Name": "Wild Salmon Fillets", "Category": "Seafood", "OrderDate":"2023-01-04", "Units": 320, "UnitPrice": 16.15, "Price": 5168, "Delivered": true },
   { "ID": 403, "ParentID": 4, "Name": "Diet Lemonade", "Category": "Beverages", "OrderDate":"2023-01-04", "Units": 437, "UnitPrice": 0.5, "Price": 218.5, "Delivered": true },
-  { "ID": 404, "ParentID": 4, "Name": "Potatos", "Category": "Vegetables", "OrderDate":"2023-01-04", "Units": 240, "UnitPrice": 1.6, "Price": 384, "Delivered": true }
+  { "ID": 404, "ParentID": 4, "Name": "Potatoes", "Category": "Vegetables", "OrderDate":"2023-01-04", "Units": 240, "UnitPrice": 1.6, "Price": 384, "Delivered": true }
 ]
