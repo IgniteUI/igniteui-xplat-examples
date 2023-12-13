@@ -40,13 +40,12 @@ export class Sample {
 
     //insert bindingFields
     //end bindingFields
+	
 //ifdef bindingCode
     private _bind: () => void;
 //endifdef bindingCode
 
     constructor() {
-        //insert onInit
-        //end onInit
         //insert bindingInit
         //end bindingInit
 
@@ -58,6 +57,9 @@ export class Sample {
         this._bind();
 //endifdef bindingCode
 
+        //insert onInit
+        //end onInit
+		
         //insert onViewInit
         //end onViewInit
     }
