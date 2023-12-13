@@ -45,8 +45,6 @@ export class Sample {
 //endifdef bindingCode
 
     constructor() {
-        //insert onInit
-        //end onInit
         //insert bindingInit
         //end bindingInit
 
@@ -58,6 +56,9 @@ export class Sample {
         this._bind();
 //endifdef bindingCode
 
+        //insert onInit
+        //end onInit
+		
         //insert onViewInit
         //end onViewInit
     }
