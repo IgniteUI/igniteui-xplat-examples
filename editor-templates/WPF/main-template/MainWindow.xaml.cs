@@ -29,12 +29,26 @@ namespace Sample
         {
             InitializeComponent();
 
-            DataContext = new SampleViewModel();
-        }
+            DataContext = new SampleViewModel();					
 
+			this.Loaded += (s,e) => {
+//ifdef onInit				
+				//insert onInit
+				//end onInit
+//endifdef onInit
+
+//ifdef onViewInit
+				//insert onViewInit
+				//end onViewInit
+//endifdef onViewInit
+			};
+
+        }
+		
         //insert eventHandlers
 
         //end eventHandlers
+		
     }
 
     

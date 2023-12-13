@@ -1,0 +1,21 @@
+{
+  "onViewInit": [ "ToolbarCustomIconOnViewInit" ],
+  "descriptions": {
+    "content": {
+      "type": "Toolbar",
+      "name": "Toolbar",
+      "orientation": "Horizontal",
+      "actions": [
+        {
+          "type": "ToolActionLabel",
+          "title": "Custom Icon",
+          "iconName": "CustomIcon",
+          "iconCollectionName": "CustomCollection"
+        }
+      ]
+    }
+  },
+  "modules": [
+    "layouts/ToolbarModule"
+  ]
+}

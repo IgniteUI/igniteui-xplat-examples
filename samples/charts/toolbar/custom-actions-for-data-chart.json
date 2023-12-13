@@ -1,6 +1,6 @@
 {
   "export": false,
-  "onInit": [ "ToolbarActionIconCommandInit" ],
+  "onInit": [ "ToolbarCustomIconOnViewInit" ],
   "descriptions": {
     "legend": {
       "type": "Legend",
@@ -14,19 +14,9 @@
       "actions": [
         {
           "type": "ToolActionLabel",
-          "title": "Toggle Legend",
-          "iconName": "CustomLegendIcon",
-          "iconCollectionName": "CustomLegendCollection",
-          "commandId": "ToolbarCustomLegendAction",
-          "onCommandRef": "ToolbarCustomAction"
-        },
-        {
-          "type": "ToolActionLabel",
-          "title": "Custom Icon - Infragistics, Inc. Homepage URL",
+          "title": "Custom Icon",
           "iconName": "CustomIcon",
-          "iconCollectionName": "CustomCollection",
-          "commandId": "ToolbarCustomLinkAction",
-          "onCommandRef": "ToolbarCustomAction"
+          "iconCollectionName": "CustomCollection"
         }
       ]
     },
@@ -81,6 +71,7 @@
     }
   },
   "modules": [
+    "inputs/IconModule",
     "layouts/ToolbarModule",
     "charts/DataChartToolbarModule",
     "charts/LegendModule",
