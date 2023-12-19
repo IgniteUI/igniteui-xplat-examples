@@ -1,0 +1,34 @@
+{
+  "todo": ["Need to add InitialHighlightFilter and HighlightedValuesDisplayMode when implemented for IgEditor"],
+  "editor": {
+    "type": "PropertyEditorPanel",
+    "name": "PropertyEditor",
+    "componentRendererRef": "renderer",
+    "targetRef": "chart",
+    "descriptionType": "CategoryChart",
+    "isHorizontal": true,
+    "isWrappingEnabled": true,
+    "properties": [
+      {
+        "type": "PropertyEditorPropertyDescription",
+        "propertyPath": "ChartType",
+        "name": "ChartTypeEditor",
+        "label": "Chart Type",
+        "primitiveValue": "Line"
+      }
+    ]
+  },
+  "descriptions": {
+    "content": {
+      "type": "CategoryChart",
+      "name": "chart",
+      "chartType": "Column",
+      "dataSourceRef": "SalesData",
+      "initialGroups": "MonthName"
+    }
+  },
+  "modules": [
+    "layouts/PropertyEditorPanelModule",
+    "charts/CategoryChartModule"
+  ]
+}
