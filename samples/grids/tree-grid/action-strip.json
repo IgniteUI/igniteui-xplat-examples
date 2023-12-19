@@ -18,6 +18,9 @@
         "name": "actionStrip",
         "actionButtons": [
           {
+            "type": "WebGridPinningActions"
+          },
+          {
             "type": "WebGridEditingActions"
           }
         ]
