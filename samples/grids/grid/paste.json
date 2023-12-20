@@ -19,8 +19,7 @@
                   "label": "Paste as:",
                   "dropDownNames": ["NewRecords", "FromActiveCell"],
                   "dropDownValues": ["NewRecords", "FromActiveCell"],
-                  "changedRef": "WebGridPasteModeChange",
-                  "shouldOverrideDefaultEditor": true
+                  "changedRef": "WebGridPasteModeChange"
                 }
               ]
           },
@@ -89,7 +88,8 @@
       }
     },
     "modules": [
-      "grids/WebGridModule",
-      "layouts/PropertyEditorPanelModule"
+      "withDescriptions",
+      "layouts/PropertyEditorPanelModule",
+      "grids/WebGridModule"
     ]
   }
