@@ -1,23 +1,23 @@
 {
-  "editor": {
-    "type": "PropertyEditorPanel",
-    "name": "PropertyEditor",
-    "componentRendererRef": "renderer",
-    "targetRef": "chart",
-    "descriptionType": "CategoryChart",
-    "isHorizontal": true,
-    "isWrappingEnabled": true,
-    "properties": [
-      {
-        "type": "PropertyEditorPropertyDescription",
-        "propertyPath": "ChartType",
-        "name": "ChartTypeEditor",
-        "label": "Chart Type",
-        "primitiveValue": "Line"
-      }
-    ]
-  },
   "descriptions": {
+    "editor": {
+      "type": "PropertyEditorPanel",
+      "name": "PropertyEditor",
+      "componentRendererRef": "renderer",
+      "targetRef": "chart",
+      "descriptionType": "CategoryChart",
+      "isHorizontal": true,
+      "isWrappingEnabled": true,
+      "properties": [
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "HighlightedValuesDisplayMode",
+          "name": "HighlightedValuesDisplayModeEditor",
+          "label": "Highlight Display Mode: ",
+          "primitiveValue": "Hidden"
+        }
+      ]
+    },
     "content": {
       "type": "CategoryChart",
       "name": "chart",
@@ -25,7 +25,7 @@
       "dataSourceRef": "SalesData",
       "initialGroups": "MonthName",
       "initialHighlightFilter": "Country ne 'UK'",
-      "highlightedValuesDisplayMode": "Overlay"
+      "highlightedValuesDisplayMode": "Hidden"
     }
   },
   "modules": [
