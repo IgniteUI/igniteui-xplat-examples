@@ -1,0 +1,36 @@
+{
+  "descriptions": {
+    "editor": {
+      "type": "PropertyEditorPanel",
+      "name": "PropertyEditor",
+      "componentRendererRef": "renderer",
+      "targetRef": "chart",
+      "descriptionType": "CategoryChart",
+      "isHorizontal": true,
+      "isWrappingEnabled": true,
+      "properties": [
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "HighlightedValuesDisplayMode",
+          "name": "HighlightedValuesDisplayModeEditor",
+          "label": "Highlight Display Mode: ",
+          "primitiveValue": "Hidden"
+        }
+      ]
+    },
+    "content": {
+      "type": "CategoryChart",
+      "name": "chart",
+      "chartType": "Column",
+      "dataSourceRef": "SalesData",
+      "initialGroups": "MonthName",
+      "initialHighlightFilter": "Country ne 'UK'",
+      "highlightedValuesDisplayMode": "Hidden"
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
+    "charts/CategoryChartModule"
+  ]
+}

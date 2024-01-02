@@ -1,0 +1,60 @@
+{
+  "descriptions": {
+    "editor": {
+      "type": "PropertyEditorPanel",
+      "name": "PropertyEditor",
+      "componentRendererRef": "renderer",
+      "targetRef": "chart",
+      "descriptionType": "DataChart",
+      "isHorizontal": true,
+      "isWrappingEnabled": true,
+      "properties": [
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "HighlightedValuesDisplayMode",
+          "name": "HighlightedValuesDisplayModeEditor",
+          "label": "Highlight Display Mode: ",
+          "primitiveValue": "Hidden"
+        }
+      ]
+    },
+    "content": {
+      "type": "DataChart",
+      "shouldAutoExpandMarginForInitialLabels": true,
+      "computedPlotAreaMarginMode": "Series",
+      "highlightedValuesDisplayMode": "Hidden",
+      "name": "chart",
+      "axes": [
+        {
+          "type": "CategoryXAxis",
+          "name": "xAxis",
+          "dataSourceRef": "OlympicMedalsTopCountriesWithTotals",
+          "label": "Year"
+        },
+        {
+          "type": "NumericYAxis",
+          "name": "yAxis",
+          "minimumValue": 0,
+          "maximumValue": 400
+        }
+      ],
+      "series": [
+        {
+          "type": "ColumnSeries",
+          "name": "ColumnSeries1",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "dataSourceRef": "OlympicMedalsTopCountriesWithTotals",
+          "valueMemberPath": "Total",
+          "highlightedValueMemberPath": "America"
+        }
+      ]
+    }
+  },
+  "modules": [
+    "layouts/PropertyEditorPanelModule",
+    "charts/DataChartCoreModule",
+    "charts/DataChartCategoryModule",
+    "charts/DataChartInteractivityModule"
+  ]
+}
