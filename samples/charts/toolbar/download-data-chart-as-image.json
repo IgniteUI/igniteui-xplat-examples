@@ -1,4 +1,5 @@
 {
+  "TODO": "CodeGen does not yet support external JS scripts called from event handler",
   "export": false,
   "descriptions": {
     "aboveContentLeft": {
@@ -14,6 +15,7 @@
           "title": "Download as Image",
           "overlayId": "CopyAsImage",
           "commandId": "DownloadAsImage"
+
         }
       ]
     },

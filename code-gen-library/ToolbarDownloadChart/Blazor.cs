@@ -12,7 +12,7 @@ public class ToolbarDownloadChart
 		switch (args.Command.CommandId)
 		{
 			case "DownloadAsImage":
-				JS.InvokeVoidAsync("renderChartToImage", null);
+				JS.InvokeVoidAsync("ToolbarDownloadScript", null);
 					break;
 		}
 	}
