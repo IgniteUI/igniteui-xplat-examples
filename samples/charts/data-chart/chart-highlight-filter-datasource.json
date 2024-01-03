@@ -52,6 +52,7 @@
     }
   },
   "modules": [
+    "withDescriptions",
     "layouts/PropertyEditorPanelModule",
     "charts/DataChartCoreModule",
     "charts/DataChartCategoryModule",
