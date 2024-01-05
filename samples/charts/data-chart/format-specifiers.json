@@ -1,4 +1,6 @@
 {
+  "note": "casing issue during export, exported already, but turned off until this is codegen is fixed",
+  "export": "false",
   "strings": {
     "legendTitle": "Highest Grossing Movie Franchises"
   },
