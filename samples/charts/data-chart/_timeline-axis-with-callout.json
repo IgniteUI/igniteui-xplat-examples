@@ -1,0 +1,68 @@
+{
+  "export": false,
+  "descriptions": {
+    "content": {
+      "type": "DataChart",
+      "name": "chart",
+      "isHorizontalZoomEnabled": true,
+      "isVerticalZoomEnabled": true,
+      "plotAreaMarginLeft": 100,
+      "plotAreaMarginRight": 100,
+      "axes": [
+        {
+          "type": "CategoryXAxis",
+          "name": "xAxis",
+          "dataSourceRef": "MyTimelineData",
+          "label": "Label"
+        },
+        {
+          "type": "TimeXAxis",
+          "name": "tAxis",
+          "dataSourceRef": "MyTimelineData",
+          "dateTimeMemberPath": "Date",
+          "labelLocation": "OutsideBottom"
+        },
+        {
+          "type": "NumericYAxis",
+          "name": "yAxis"
+        }
+      ],
+      "series": [
+        {
+          "type": "LineSeries",
+          "name": "LineSeries1",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "dataSourceRef": "MyTimelineData",
+          "valueMemberPath": "Value"
+        },
+        {
+          "type": "CalloutLayer",
+          "name": "CalloutLayer1",
+          "targetSeriesRef": "LineSeries1",
+          "dataSourceRef": "MyTimelineData",
+          "xMemberPath": "Index",
+          "yMemberPath": "Value",
+          "labelMemberPath": "Label",
+          "isAutoCalloutBehaviorEnabled": false,
+          "useValueForAutoCalloutLabels": false,
+          "calloutLeaderBrush": "#EC0D00",
+          "calloutTextColor": "navy",
+          "calloutOutline": "#EC0D00",
+          "calloutBackground": "transparent",
+          "isCalloutOffsettingEnabled": false,
+          "textStyle": "10pt Verdana",
+          "calloutPositionPadding": 50,
+          "calloutCollisionMode": "Greedy",
+          "showDefaultTooltip": false
+        }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
+    "charts/DataChartCategoryModule",
+    "charts/DataChartInteractivityModule"
+  ]
+}
