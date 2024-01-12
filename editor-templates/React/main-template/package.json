@@ -15,7 +15,7 @@
   },
   "dependencies": {
 //ifdef webgrids
-    "igniteui-dockmanager": "1.14.2",
+    "igniteui-dockmanager": "1.14.3",
 //endifdef webgrids
     "igniteui-react": "18.5.0",
 //ifdef charts, maps
