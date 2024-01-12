@@ -14,7 +14,7 @@
           "propertyPath": "HighlightedValuesDisplayMode",
           "name": "HighlightedValuesDisplayModeEditor",
           "label": "Highlight Display Mode: ",
-          "primitiveValue": "Hidden"
+          "primitiveValue": "Overlay"
         }
       ]
     },
@@ -23,7 +23,7 @@
       "shouldAutoExpandMarginForInitialLabels": true,
       "computedPlotAreaMarginMode": "Series",
       "name": "chart",
-      "highlightedValuesDisplayMode": "Hidden",
+      "highlightedValuesDisplayMode": "Overlay",
       "axes": [
         {
           "type": "CategoryXAxis",
