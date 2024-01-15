@@ -20,7 +20,6 @@
           "shouldOverrideDefaultEditor": true,
           "dropDownNames": ["Country", "Product", "MonthName", "Year"],
           "dropDownValues": ["Country", "Product", "MonthName", "Year"],
-          "primitiveValue": "Country",
           "changedRef": "EditorChangeUpdateInitialGroups"
         },
         {
@@ -32,7 +31,6 @@
           "shouldOverrideDefaultEditor": true,
           "dropDownNames": ["Sum(Sales) as Sales", "Avg(Sales) as Sales", "Min(Sales) as Sales", "Max(Sales) as Sales", "Count(Sales) as Sales" ],
           "dropDownValues": ["Sum(Sales) as Sales", "Avg(Sales) as Sales", "Min(Sales) as Sales", "Max(Sales) as Sales", "Count(Sales) as Sales"],
-          "primitiveValue": "Sum(Sales) as Sales",
           "changedRef": "EditorChangeUpdateInitialSummaries"
         },
         {
@@ -44,7 +42,6 @@
           "shouldOverrideDefaultEditor": true,
           "dropDownNames": ["Sales Desc", "Sales Asc"],
           "dropDownValues": ["Sales Desc", "Sales Asc"],
-          "primitiveValue": "Sales Desc",
           "changedRef": "EditorChangeUpdateGroupSorts"
         }
       ]
