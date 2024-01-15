@@ -14,7 +14,7 @@
           "propertyPath": "HighlightedValuesDisplayMode",
           "name": "HighlightedValuesDisplayModeEditor",
           "label": "Highlight Display Mode: ",
-          "primitiveValue": "Overlay"
+          "primitiveValue": "Hidden"
         }
       ]
     },
@@ -25,7 +25,7 @@
       "dataSourceRef": "SalesData",
       "initialGroups": "MonthName",
       "initialHighlightFilter": "Country ne 'UK'",
-      "highlightedValuesDisplayMode": "Overlay"
+      "highlightedValuesDisplayMode": "Hidden"
     }
   },
   "modules": [
