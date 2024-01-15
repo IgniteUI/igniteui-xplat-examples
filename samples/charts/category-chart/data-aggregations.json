@@ -13,36 +13,39 @@
       "properties": [
         {
           "type": "PropertyEditorPropertyDescription",
-          "propertyPath": "InitialGroups",
+          "propertyPath": "InitialGroupsHandler",
           "name": "InitialGroups",
           "label": "Initial Groups",
           "valueType": "EnumValue",
           "shouldOverrideDefaultEditor": true,
           "dropDownNames": ["Country", "Product", "MonthName", "Year"],
           "dropDownValues": ["Country", "Product", "MonthName", "Year"],
-          "primitiveValue": "Country"
+          "primitiveValue": "Country",
+          "changedRef": "EditorChangeUpdateInitialGroups"
         },
         {
           "type": "PropertyEditorPropertyDescription",
-          "propertyPath": "InitialSummaries",
+          "propertyPath": "InitialSummariesHandler",
           "name": "InitialSummaries",
           "label": "Initial Summaries",
           "valueType": "EnumValue",
           "shouldOverrideDefaultEditor": true,
-          "dropDownNames": ["Sum(Sales)", "Avg(Sales)", "Min(Sales)", "Max(Sales)", "Count(Sales)" ],
+          "dropDownNames": ["Sum(Sales) as Sales", "Avg(Sales) as Sales", "Min(Sales) as Sales", "Max(Sales) as Sales", "Count(Sales) as Sales" ],
           "dropDownValues": ["Sum(Sales) as Sales", "Avg(Sales) as Sales", "Min(Sales) as Sales", "Max(Sales) as Sales", "Count(Sales) as Sales"],
-          "primitiveValue": "Sum(Sales) as Sales"
+          "primitiveValue": "Sum(Sales) as Sales",
+          "changedRef": "EditorChangeUpdateInitialSummaries"
         },
         {
           "type": "PropertyEditorPropertyDescription",
-          "propertyPath": "GroupSorts",
+          "propertyPath": "GroupSortsHandler",
           "name": "GroupSorts",
           "label": "Sort Groups",
           "valueType": "EnumValue",
           "shouldOverrideDefaultEditor": true,
           "dropDownNames": ["Sales Desc", "Sales Asc"],
           "dropDownValues": ["Sales Desc", "Sales Asc"],
-          "primitiveValue": "Sales Desc"
+          "primitiveValue": "Sales Desc",
+          "changedRef": "EditorChangeUpdateGroupSorts"
         }
       ]
     },
