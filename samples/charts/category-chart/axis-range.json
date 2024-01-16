@@ -37,7 +37,7 @@
           "valueType": "EnumValue",
           "dropDownNames": ["100", "110", "120", "130", "140", "150", "160", "170", "180", "190", "200"],
           "dropDownValues": ["100", "110", "120", "130", "140", "150", "160", "170", "180", "190", "200"],
-          "primitiveValue": 10,
+          "primitiveValue": 150,
           "changedRef": "EditorChangeUpdateYAxisMaximumValue"
         }
       ]
