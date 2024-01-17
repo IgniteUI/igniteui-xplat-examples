@@ -7,8 +7,17 @@
       "type": "DataLegend",
       "name": "Legend",
       "targetRef": "chart",
-      "valueFormatMode": "Currency",
-      "valueFormatString": "${0} Billion"
+      "valueFormatString": "{0} Billion",
+      "valueFormatSpecifiers": [
+        {
+          "type": "NumberFormatSpecifier",
+          "style": "currency",
+          "currency": "USD",
+          "currencyDisplay": "symbol",
+          "minimumFractionDigits": 2,
+          "maximumFractionDigits": 2
+        }
+      ]
     },
     "content": {
       "type": "DataChart",
@@ -66,8 +75,17 @@
         {
           "type": "DataToolTipLayer",
           "name": "Tooltips",
-          "valueFormatMode": "Currency",
-          "valueFormatString": "${0} Billion"
+          "valueFormatString": "{0} Billion",
+          "valueFormatSpecifiers": [
+            {
+              "type": "NumberFormatSpecifier",
+              "style": "currency",
+              "currency": "USD",
+              "currencyDisplay": "symbol",
+              "minimumFractionDigits": 2,
+              "maximumFractionDigits": 2
+            }
+          ]
         }
       ]
     }

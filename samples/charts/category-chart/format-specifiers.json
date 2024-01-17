@@ -4,11 +4,20 @@
   },
   "descriptions": {
     "legend": {
+      "name": "Legend",
       "type": "DataLegend",
       "targetRef": "chart",
-      "valueFormatMode": "Currency",
-      "valueFormatString": "${0} Billion",
-      "name": "Legend"
+      "valueFormatString": "{0} Billion",
+      "valueFormatSpecifiers": [
+        {
+          "type": "NumberFormatSpecifier",
+          "style": "currency",
+          "currency": "USD",
+          "currencyDisplay": "symbol",
+          "maximumFractionDigits": 2,
+          "minimumFractionDigits": 2
+        }
+      ]
     },
     "content": {
       "type": "CategoryChart",
@@ -17,8 +26,18 @@
       "chartType": "Column",
       "isHorizontalZoomEnabled": false,
       "isVerticalZoomEnabled": false,
-      "dataToolTipValueFormatMode": "Currency",
-      "dataToolTipValueFormatString": "${0} Billion",
+      "finalValueAnnotationsPrecision": 2,
+      "dataToolTipValueFormatString": "{0} Billion",
+      "dataToolTipValueFormatSpecifiers": [
+        {
+          "type": "NumberFormatSpecifier",
+          "style": "currency",
+          "currency": "USD",
+          "currencyDisplay": "symbol",
+          "maximumFractionDigits": 2,
+          "minimumFractionDigits": 2
+        }
+      ],
       "yAxisLabelFormat": "{0}B",
       "yAxisLabelFormatSpecifiers": [
         {
@@ -35,6 +54,7 @@
     "withDescriptions",
     "layouts/PropertyEditorPanelModule",
     "charts/DataLegendModule",
-    "charts/CategoryChartModule"
+    "charts/CategoryChartModule",
+    "NumberFormatSpecifierModule"
   ]
 }
