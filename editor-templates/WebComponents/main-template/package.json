@@ -27,7 +27,7 @@
     "babel-runtime": "^6.26.0",
     "core-js": "^3.6.5",
 //ifdef editor, webinputs
-    "igniteui-webcomponents": "4.7.0",
+    "igniteui-webcomponents": "4.7.1",
 //endifdef editor, webinputs
 //ifdef charts, maps
     "igniteui-webcomponents-charts": "4.7.1",
