@@ -11,7 +11,7 @@ export class EditorChangeUpdateGroupSorts {
     public editorChangeUpdateGroupSorts(sender: any, args: IgcPropertyEditorPropertyDescriptionChangedEventArgs): void {
 	
         var groupSortsVal = args.newValue.toString();
-        chart.groupSorts = groupSortsVal;      
+        this.chart.groupSorts = groupSortsVal;      
     }
     //end eventHandler
 }

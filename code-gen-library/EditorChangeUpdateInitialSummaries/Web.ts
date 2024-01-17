@@ -11,7 +11,7 @@ export class EditorChangeUpdateInitialSummaries {
     public editorChangeUpdateInitialSummaries(sender: any, args: IgcPropertyEditorPropertyDescriptionChangedEventArgs): void {
 	
         var intialSummaryVal = args.newValue.toString();
-        chart.initialSummaries = intialSummaryVal;   
+        this.chart.initialSummaries = intialSummaryVal;   
     }
     //end eventHandler
 }
