@@ -30,7 +30,7 @@
           "label": "Initial Summaries",
           "valueType": "EnumValue",
           "shouldOverrideDefaultEditor": true,
-          "dropDownNames": ["Sum(Sales) as Sales", "Avg(Sales) as Sales", "Min(Sales) as Sales", "Max(Sales) as Sales", "Count(Sales) as Sales" ],
+          "dropDownNames": ["Sum(Sales)", "Avg(Sales)", "Min(Sales)", "Max(Sales)", "Count(Sales)" ],
           "dropDownValues": ["Sum(Sales) as Sales", "Avg(Sales) as Sales", "Min(Sales) as Sales", "Max(Sales) as Sales", "Count(Sales) as Sales"],
           "primitiveValue": "Sum(Sales) as Sales",
           "changedRef": "EditorChangeUpdateInitialSummaries"
@@ -42,7 +42,7 @@
           "label": "Sort Groups",
           "valueType": "EnumValue",
           "shouldOverrideDefaultEditor": true,
-          "dropDownNames": ["Sales Desc", "Sales Asc"],
+          "dropDownNames": ["SalesDesc", "SalesAsc"],
           "dropDownValues": ["Sales Desc", "Sales Asc"],
           "primitiveValue": "Sales Desc",
           "changedRef": "EditorChangeUpdateGroupSorts"
