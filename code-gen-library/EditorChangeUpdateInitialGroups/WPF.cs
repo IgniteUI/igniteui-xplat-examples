@@ -12,6 +12,7 @@ public class EditorChangeUpdateMarkerType
     //WPF: Infragistics.Controls.Layouts.PropertyEditorPropertyDescriptionChangedEventHandler
     public void EditorChangeUpdateMarkerType(object sender, PropertyEditorPropertyDescriptionChangedEventArgs args)
     {        
+        var chart = CodeGenHelper.GetDescription<XamCategoryChart>("content");
         var intialGroupVal = args.NewValue.ToString();
         chart.InitialGroups = null;
         chart.InitialGroups = intialGroupVal;

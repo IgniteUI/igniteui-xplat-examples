@@ -10,8 +10,9 @@ export class EditorChangeUpdateInitialGroups {
     //begin eventHandler
     public editorChangeUpdateInitialGroups(sender: any, args: IgcPropertyEditorPropertyDescriptionChangedEventArgs): void {
         
+        var chart = CodeGenHelper.getDescription<IgcCategoryChartComponent>("content");
         var intialGroupVal = args.newValue.toString();
-        this.chart.initialGroups = intialGroupVal;   
+        chart.initialGroups = intialGroupVal;   
     }
     //end eventHandler
 }
