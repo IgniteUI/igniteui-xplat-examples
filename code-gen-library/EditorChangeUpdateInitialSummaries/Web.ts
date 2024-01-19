@@ -10,8 +10,9 @@ export class EditorChangeUpdateInitialSummaries {
     //begin eventHandler
     public editorChangeUpdateInitialSummaries(sender: any, args: IgcPropertyEditorPropertyDescriptionChangedEventArgs): void {
 	
+        var chart = CodeGenHelper.getDescription<IgcCategoryChartComponent>("content");
         var intialSummaryVal = args.newValue.toString();
-        this.chart.initialSummaries = intialSummaryVal;   
+        chart.initialSummaries = intialSummaryVal;   
     }
     //end eventHandler
 }

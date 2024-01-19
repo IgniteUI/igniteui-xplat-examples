@@ -9,9 +9,9 @@ import { CodeGenHelper } from 'igniteui-webcomponents-core';
 export class EditorChangeUpdateGroupSorts {
     //begin eventHandler
     public editorChangeUpdateGroupSorts(sender: any, args: IgcPropertyEditorPropertyDescriptionChangedEventArgs): void {
-	
+        var chart = CodeGenHelper.getDescription<IgcCategoryChartComponent>("content");
         var groupSortsVal = args.newValue.toString();
-        this.chart.groupSorts = groupSortsVal;      
+        chart.groupSorts = groupSortsVal;      
     }
     //end eventHandler
 }
