@@ -42,8 +42,6 @@
           "label": "Sort Groups",
           "valueType": "EnumValue",
           "shouldOverrideDefaultEditor": true,
-          "dropDownNames": ["Sales Desc", "Sales Asc"],
-          "dropDownValues": ["Sales Desc", "Sales Asc"],
           "primitiveValue": "Sales Desc",
           "changedRef": "EditorChangeUpdateGroupSorts"
         }

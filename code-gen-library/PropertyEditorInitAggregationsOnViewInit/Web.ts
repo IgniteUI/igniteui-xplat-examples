@@ -13,6 +13,9 @@ export class PropertyEditorInitAggregationsOnViewInit {
         initialSummaries.dropDownNames = ["Sum(Sales) as Sales", "Avg(Sales) as Sales", "Min(Sales) as Sales", "Max(Sales) as Sales", "Count(Sales) as Sales" ];
         initialSummaries.dropDownValues = ["Sum(Sales) as Sales", "Avg(Sales) as Sales", "Min(Sales) as Sales", "Max(Sales) as Sales", "Count(Sales) as Sales" ];
 		
+        var groupSorts = editor.actualProperties.filter((p) => p.label == "Sort Groups")[0];
+        groupSorts.dropDownNames = ["Sales Desc", "Sales Asc"];
+        groupSorts.dropDownValues = ["Sales Desc", "Sales Asc"];
     }
     //end eventHandler
 
