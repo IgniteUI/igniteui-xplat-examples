@@ -8,7 +8,7 @@ export class PropertyEditorInitAggregationsOnViewInit {
     //begin eventHandler
     public propertyEditorInitAggregationsOnViewInit(): void {
 	
-        var editor = CodeGenHelper.getDescription<IgrPropertyEditorPanelComponent>("editor");
+        var editor = CodeGenHelper.getDescription<IgxPropertyEditorPanelComponent>("editor");
         var initialSummariesDropdown = new IgxPropertyEditorPropertyDescriptionComponent({});
         var sortGroupsDropdown = new IgxPropertyEditorPropertyDescriptionComponent({});
 
