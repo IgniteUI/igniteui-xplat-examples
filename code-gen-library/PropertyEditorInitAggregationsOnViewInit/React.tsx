@@ -1,5 +1,5 @@
 //begin imports
-import { IgcPropertyEditorPanelComponent, PropertyEditorValueType } from 'igniteui-webcomponents-layouts';
+import { IgrPropertyEditorPanelComponent, PropertyEditorValueType } from 'igniteui-webcomponents-layouts';
 //end imports
 
 
@@ -8,9 +8,9 @@ export class PropertyEditorInitAggregationsOnViewInit {
     //begin eventHandler
     public propertyEditorInitAggregationsOnViewInit(): void {
 	
-        var editor = CodeGenHelper.getDescription<IgcPropertyEditorPanelComponent>("editor");
-        var initialSummariesDropdown = new IgcPropertyEditorPropertyDescriptionComponent();
-        var sortGroupsDropdown = new IgcPropertyEditorPropertyDescriptionComponent();
+        var editor = CodeGenHelper.getDescription<IgrPropertyEditorPanelComponent>("editor");
+        var initialSummariesDropdown = new IgrPropertyEditorPropertyDescriptionComponent({});
+        var sortGroupsDropdown = new IgrPropertyEditorPropertyDescriptionComponent({});
 
         initialSummariesDropdown.label = "Initial Summaries";
         initialSummariesDropdown.valueType = PropertyEditorValueType.EnumValue;
@@ -33,14 +33,14 @@ export class PropertyEditorInitAggregationsOnViewInit {
         sortGroupsDropdown.changed = this.editorChangeUpdateGroupSorts;
     }
 	
-	public editorChangeUpdateInitialSummaries(sender: any, args: IgcPropertyEditorPropertyDescriptionChangedEventArgs): void {
+	public editorChangeUpdateInitialSummaries(sender: any, args: IgrPropertyEditorPropertyDescriptionChangedEventArgs): void {
 
         var chart = this.chart;
         var intialSummaryVal = args.newValue.toString();
         chart.initialSummaries = intialSummaryVal;
     }
 
-    public editorChangeUpdateGroupSorts(sender: any, args: IgcPropertyEditorPropertyDescriptionChangedEventArgs): void {
+    public editorChangeUpdateGroupSorts(sender: any, args: IgrPropertyEditorPropertyDescriptionChangedEventArgs): void {
         var chart = this.chart;
         var groupSortsVal = args.newValue.toString();
         chart.groupSorts = groupSortsVal;
