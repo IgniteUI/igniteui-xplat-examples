@@ -1,5 +1,5 @@
 //begin imports
-import { IgrPropertyEditorPanelComponent, PropertyEditorValueType, IgxPropertyEditorPropertyDescriptionComponent, IgrPropertyEditorPropertyDescriptionChangedEventArgs } from 'igniteui-angular-layouts';
+import { IgxPropertyEditorPanelComponent, PropertyEditorValueType, IgxPropertyEditorPropertyDescriptionComponent, IgxPropertyEditorPropertyDescriptionChangedEventArgs } from 'igniteui-angular-layouts';
 //end imports
 
 
