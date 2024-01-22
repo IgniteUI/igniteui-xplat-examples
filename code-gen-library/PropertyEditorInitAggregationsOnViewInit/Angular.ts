@@ -9,8 +9,8 @@ export class PropertyEditorInitAggregationsOnViewInit {
     public propertyEditorInitAggregationsOnViewInit(): void {
 	
         var editor = CodeGenHelper.getDescription<IgxPropertyEditorPanelComponent>("editor");
-        var initialSummariesDropdown = new IgxPropertyEditorPropertyDescriptionComponent({});
-        var sortGroupsDropdown = new IgxPropertyEditorPropertyDescriptionComponent({});
+        var initialSummariesDropdown = new IgxPropertyEditorPropertyDescriptionComponent();
+        var sortGroupsDropdown = new IgxPropertyEditorPropertyDescriptionComponent();
 
         initialSummariesDropdown.label = "Initial Summaries";
         initialSummariesDropdown.valueType = PropertyEditorValueType.EnumValue;
