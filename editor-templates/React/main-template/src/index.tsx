@@ -47,8 +47,8 @@ export default class Sample extends React.Component<any, any> {
     }
 	
 	public componentDidMount() {
-	    //insert onViewInit
-	    //end onViewInit
+		//insert onViewInit
+		//end onViewInit
 	}
 
     public render(): JSX.Element {
