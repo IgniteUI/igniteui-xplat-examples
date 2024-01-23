@@ -44,6 +44,9 @@ export default class Sample extends React.Component<any, any> {
         //end bindingInit
         //insert bindingCode
         //end bindingCode
+    }
+
+    public componentDidMount() {
         //insert onViewInit
         //end onViewInit
     }

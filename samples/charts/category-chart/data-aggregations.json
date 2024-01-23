@@ -24,26 +24,6 @@
           "dropDownValues": ["Country", "Product", "MonthName", "Year"],
           "primitiveValue": "Country",
           "changedRef": "EditorChangeUpdateInitialGroups"
-        },
-        {
-          "type": "PropertyEditorPropertyDescription",
-          "propertyPath": "InitialSummariesHandler",
-          "name": "InitialSummaries",
-          "label": "Initial Summaries",
-          "valueType": "EnumValue",
-          "shouldOverrideDefaultEditor": true,
-          "primitiveValue": "Sum(Sales) as Sales",
-          "changedRef": "EditorChangeUpdateInitialSummaries"
-        },
-        {
-          "type": "PropertyEditorPropertyDescription",
-          "propertyPath": "GroupSortsHandler",
-          "name": "GroupSorts",
-          "label": "Sort Groups",
-          "valueType": "EnumValue",
-          "shouldOverrideDefaultEditor": true,
-          "primitiveValue": "Sales Desc",
-          "changedRef": "EditorChangeUpdateGroupSorts"
         }
       ]
     },
