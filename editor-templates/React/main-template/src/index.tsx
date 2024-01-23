@@ -45,11 +45,12 @@ export default class Sample extends React.Component<any, any> {
         //insert bindingCode
         //end bindingCode
     }
-
+//ifdef onViewInit
     public componentDidMount() {
         //insert onViewInit
         //end onViewInit
     }
+//endifdef onViewInit
 
     public render(): JSX.Element {
         return (

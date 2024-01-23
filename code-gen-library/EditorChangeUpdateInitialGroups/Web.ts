@@ -9,10 +9,8 @@ import { CodeGenHelper } from 'igniteui-webcomponents-core';
 export class EditorChangeUpdateInitialGroups {
     //begin eventHandler
     public editorChangeUpdateInitialGroups(sender: any, args: IgcPropertyEditorPropertyDescriptionChangedEventArgs): void {
-        
         var chart = CodeGenHelper.getDescription<IgcCategoryChartComponent>("content");
-        var intialGroupVal = args.newValue.toString();
-        chart.initialGroups = intialGroupVal;   
+        chart.initialGroups = args.newValue.toString();
     }
     //end eventHandler
 }

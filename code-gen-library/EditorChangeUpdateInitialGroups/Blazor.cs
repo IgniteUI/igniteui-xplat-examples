@@ -13,9 +13,9 @@ public class EditorChangeUpdateInitialGroups
     public void EditorChangeUpdateInitialGroups(IgbPropertyEditorPropertyDescriptionChangedEventArgs args)
     {
         var chart = CodeGenHelper.GetDescription<IgbCategoryChart>("content");
-        var intialGroupVal = args.NewValue.ToString();
+        var initialGroupVal = args.NewValue.ToString();
         chart.InitialGroups = null;
-        chart.InitialGroups = intialGroupVal;
+        chart.InitialGroups = initialGroupVal;
     }
     //end eventHandler
 }
