@@ -43,7 +43,7 @@ export default class Sample extends React.Component<any, any> {
         //insert bindingInit
         //end bindingInit
         //insert bindingCode
-        //end bindingCode        
+        //end bindingCode
     }
 
     public componentDidMount() {
