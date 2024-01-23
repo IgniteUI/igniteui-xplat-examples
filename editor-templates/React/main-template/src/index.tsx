@@ -43,10 +43,13 @@ export default class Sample extends React.Component<any, any> {
         //insert bindingInit
         //end bindingInit
         //insert bindingCode
-        //end bindingCode
-        //insert onViewInit
-        //end onViewInit
+        //end bindingCode        
     }
+	
+	public componentDidMount() {
+	    //insert onViewInit
+	    //end onViewInit
+	}
 
     public render(): JSX.Element {
         return (
