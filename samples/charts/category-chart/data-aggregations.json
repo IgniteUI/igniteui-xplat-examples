@@ -1,6 +1,6 @@
 {
   "strings": {
-    "legendTitle": "Sales Data Grouped, Summarized, and Sorted"
+    "legendTitle": "Sales Aggregated by Country and Product"
   },
   "onViewInit": ["PropertyEditorInitAggregationsOnViewInit"],
   "descriptions": {
