@@ -1,6 +1,6 @@
 {
   "strings": {
-    "legendTitle": "Sales Generated"
+    "legendTitle": "Sales Data Grouped, Summarized, and Sorted"
   },
   "onViewInit": ["PropertyEditorInitAggregationsOnViewInit"],
   "descriptions": {
