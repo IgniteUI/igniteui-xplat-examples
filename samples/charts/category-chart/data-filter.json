@@ -3,6 +3,11 @@
     "legendTitle": "Sales Data Filtered Country and Product"
   },
   "descriptions": {
+    "legend": {
+      "type": "Legend",
+      "name": "Legend",
+      "orientation": "Horizontal"
+    },
     "editor": {
       "name": "editor",
       "type": "PropertyEditorPanel",
@@ -28,6 +33,7 @@
       "type": "CategoryChart",
       "name": "chart",
       "dataSourceRef": "SalesData",
+      "legendRef": "Legend",
       "chartType": "Column",
       "isHorizontalZoomEnabled": false,
       "isVerticalZoomEnabled": false,
