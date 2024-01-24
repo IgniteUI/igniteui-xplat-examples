@@ -5,17 +5,17 @@ using Infragistics.Controls.Charts;
 using System;
 //end imports
 
-public class EditorChangeUpdateInitialGroups
+public class EditorChangeUpdateInitialFilter
 {
 
     //begin eventHandler
     //WPF: Infragistics.Controls.Layouts.PropertyEditorPropertyDescriptionChangedEventHandler
-    public void EditorChangeUpdateInitialGroups(object sender, PropertyEditorPropertyDescriptionChangedEventArgs args)
+    public void EditorChangeUpdateInitialFilter(object sender, PropertyEditorPropertyDescriptionChangedEventArgs args)
     {        
         var chart = CodeGenHelper.GetDescription<XamCategoryChart>("content");
-        var intialGroupVal = args.NewValue.ToString();
-        chart.InitialGroups = null;
-        chart.InitialGroups = intialGroupVal;
+        var intialFilterVal = args.NewValue.ToString();
+        chart.InitialFilter = null;
+        chart.InitialFilter = intialFilterVal;
     }
     //end eventHandler
 }
