@@ -1,6 +1,6 @@
 {
   "strings": {
-    "legendTitle": "Sales Generated"
+    "legendTitle": "Sales Data Filtered Country and Product"
   },
   "descriptions": {
     "editor": {
@@ -32,7 +32,6 @@
       "isHorizontalZoomEnabled": false,
       "isVerticalZoomEnabled": false,
       "crosshairsDisplayMode": "None",
-      "xAxisTitle": "Total Sales Data for Royal Oak units sold in Brazil",
       "includedProperties": ["Date", "GrossSales", "Profit", "Sales"],
       "initialFilter": "(startswith(Country, 'B') and endswith(Country, 'l') and contains(Product, 'Royal Oak') and contains(Date, '3/1/20'))"
     }
