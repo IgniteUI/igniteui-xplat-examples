@@ -1,9 +1,13 @@
 {
   "strings": {
-    "legendTitle": "Sales Data Grouped, Summarized, and Sorted"
+    "legendTitle": "Sales Data Filtered Country and Product"
   },
-  "onViewInit": ["PropertyEditorInitAggregationsOnViewInit"],
   "descriptions": {
+    "legend": {
+      "type": "Legend",
+      "name": "Legend",
+      "orientation": "Horizontal"
+    },
     "editor": {
       "name": "editor",
       "type": "PropertyEditorPanel",
@@ -15,15 +19,13 @@
       "properties": [
         {
           "type": "PropertyEditorPropertyDescription",
-          "propertyPath": "InitialGroupsHandler",
-          "name": "InitialGroups",
-          "label": "Initial Groups",
-          "valueType": "EnumValue",
+          "propertyPath": "InitialFilterHandler",
+          "editorWidth": 800,
+          "name": "InitialFilter",
+          "label": "Modify Chart Filter",
+          "valueType": "StringValue",
           "shouldOverrideDefaultEditor": true,
-          "dropDownNames": ["Country", "Product", "MonthName", "Year"],
-          "dropDownValues": ["Country", "Product", "MonthName", "Year"],
-          "primitiveValue": "Country",
-          "changedRef": "EditorChangeUpdateInitialGroups"
+          "changedRef": "EditorChangeUpdateInitialFilter"
         }
       ]
     },
@@ -31,13 +33,13 @@
       "type": "CategoryChart",
       "name": "chart",
       "dataSourceRef": "SalesData",
+      "legendRef": "Legend",
       "chartType": "Column",
       "isHorizontalZoomEnabled": false,
       "isVerticalZoomEnabled": false,
       "crosshairsDisplayMode": "None",
-      "initialGroups": "Country",
-      "initialSummaries": "Sum(Sales) as Sales",
-      "groupSorts": "Sales Desc"
+      "includedProperties": ["Date", "GrossSales", "Profit", "Sales"],
+      "initialFilter": "(startswith(Country, 'B') and endswith(Country, 'l') and contains(Product, 'Royal Oak') and contains(Date, '3/1/20'))"
     }
   },
   "modules": [
