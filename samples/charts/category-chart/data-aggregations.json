@@ -1,6 +1,6 @@
 {
   "strings": {
-    "legendTitle": "Renewable Electricity Generated"
+    "legendTitle": "Sales Generated"
   },
   "onViewInit": ["PropertyEditorInitAggregationsOnViewInit"],
   "descriptions": {
