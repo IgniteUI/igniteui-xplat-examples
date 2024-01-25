@@ -2,6 +2,7 @@
   "strings": {
     "legendTitle": "Sales Filtered by Country, Product, and Dates"
   },
+  "skipAlterDataCasing": true,
   "descriptions": {
     "legend": {
       "type": "Legend",

@@ -3,6 +3,7 @@
     "legendTitle": "Sales Aggregated by Country and Product"
   },
   "onViewInit": ["PropertyEditorInitAggregationsOnViewInit"],
+  "skipAlterDataCasing": true,
   "descriptions": {
     "editor": {
       "name": "editor",
