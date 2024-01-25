@@ -17,7 +17,7 @@ export class PropertyEditorInitAggregationsOnViewInit {
         initialSummariesDropdown.shouldOverrideDefaultEditor = true;
         initialSummariesDropdown.dropDownNames = ["Sum(Sales) as Sales", "Avg(Sales) as Sales", "Min(Sales) as Sales", "Max(Sales) as Sales", "Count(Sales) as Sales" ];
         initialSummariesDropdown.dropDownValues = ["Sum(Sales) as Sales", "Avg(Sales) as Sales", "Min(Sales) as Sales", "Max(Sales) as Sales", "Count(Sales) as Sales" ];
-    
+
         sortGroupsDropdown.label = "Sort Groups"
         sortGroupsDropdown.valueType = PropertyEditorValueType.EnumValue;
         sortGroupsDropdown.shouldOverrideDefaultEditor = true;
@@ -26,14 +26,14 @@ export class PropertyEditorInitAggregationsOnViewInit {
 
         editor.properties.add(initialSummariesDropdown);
         editor.properties.add(sortGroupsDropdown);
-      
+
         initialSummariesDropdown.changed.subscribe((event: { sender: any, args: IgxPropertyEditorPropertyDescriptionChangedEventArgs }) => { 
-        
+
             var chart = this.chart;
             var intialSummaryVal = event.args.newValue.toString();
             chart.initialSummaries = intialSummaryVal;
         });
-		
+
         sortGroupsDropdown.changed.subscribe((event: { sender: any, args: IgxPropertyEditorPropertyDescriptionChangedEventArgs }) => { 
         
             var chart = this.chart;
