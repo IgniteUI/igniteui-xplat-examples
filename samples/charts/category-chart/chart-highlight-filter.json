@@ -1,4 +1,8 @@
 {
+  "strings": {
+    "legendTitle": "Sales Filtered by Country"
+  },
+  "skipAlterDataCasing": true,
   "descriptions": {
     "editor": {
       "type": "PropertyEditorPanel",
