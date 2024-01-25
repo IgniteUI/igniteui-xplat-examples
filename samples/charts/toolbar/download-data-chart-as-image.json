@@ -1,0 +1,82 @@
+{
+  "TODO": "CodeGen does not yet support external JS scripts called from event handler",
+  "export": false,
+  "descriptions": {
+    "aboveContentLeft": {
+      "type": "Toolbar",
+      "name": "Toolbar",
+      "targetRef": "chart",
+      "orientation": "Horizontal",
+      "onCommandRef": "ToolbarDownloadChart",
+      "actions": [
+        {
+          "name": "DownloadChartImage",
+          "type": "ToolActionIconButton",
+          "title": "Download as Image",
+          "overlayId": "CopyAsImage",
+          "commandId": "DownloadAsImage"
+
+        }
+      ]
+    },
+    "content": {
+      "type": "DataChart",
+      "computedPlotAreaMarginMode": "Series",
+      "isHorizontalZoomEnabled": true,
+      "isVerticalZoomEnabled": true,
+      "name": "chart",
+      "axes": [
+        {
+          "type": "CategoryXAxis",
+          "name": "xAxis",
+          "dataSourceRef": "CountryRenewableElectricity",
+          "label": "Year"
+        },
+        {
+          "type": "NumericYAxis",
+          "name": "yAxis",
+          "title": "TWh",
+          "labelLocation": "OutsideRight"
+        }
+      ],
+      "series": [
+        {
+          "type": "LineSeries",
+          "name": "LineSeries1",
+          "title": "Electricity",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "dataSourceRef": "CountryRenewableElectricity",
+          "valueMemberPath": "America"
+        },
+        {
+          "type": "LineSeries",
+          "name": "LineSeries2",
+          "title": "Electricity",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "dataSourceRef": "CountryRenewableElectricity",
+          "valueMemberPath": "Europe"
+        },
+        {
+          "type": "LineSeries",
+          "name": "LineSeries3",
+          "title": "Electricity",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "dataSourceRef": "CountryRenewableElectricity",
+          "valueMemberPath": "China"
+        }
+      ]
+    }
+  },
+  "modules": [
+    "layouts/ToolbarModule",
+    "charts/DataChartToolbarModule",
+    "charts/DataChartCoreModule",
+    "charts/DataChartCategoryModule",
+    "charts/DataChartAnnotationModule",
+    "charts/DataChartInteractivityModule",
+    "charts/DataChartCategoryTrendLineModule"
+  ]
+}
