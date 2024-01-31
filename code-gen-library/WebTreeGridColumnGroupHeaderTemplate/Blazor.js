@@ -1,7 +1,7 @@
 //begin template
-const columnGroupStates = new Map();
+const columnGroupStatesTreeGrid = new Map();
 function toggleColumnGroup(name) {
-    const grid = CodeGenHelper.getDescription<IgcGridComponent>("content");
+    const grid = CodeGenHelper.getDescription<IgcTreeGridComponent>("content");
     var columnGroup = grid.columns.find((col) => col.header === name)
     const columns = columnGroup.children.toArray();
     if (columnGroup.header === 'General Information') {
@@ -12,11 +12,11 @@ function toggleColumnGroup(name) {
             col.hidden = !col.hidden;
         }
     }
-    columnGroupStates.set(name, !columnGroupStates.get(name));
+    columnGroupStatesTreeGrid.set(name, !columnGroupStatesTreeGrid.get(name));
 }
-igRegisterScript("WebGridColumnGroupHeaderTemplate", (ctx) => {
+igRegisterScript("WebTreeGridColumnGroupHeaderTemplate", (ctx) => {
     var html = window.igTemplating.html;
-    var iconName = columnGroupStates.get(ctx.column.header) ? '🔽' : '🔼';
+    var iconName = columnGroupStatesTreeGrid.get(ctx.column.header) ? '🔽' : '🔼';
     return html`<div>
     <span draggable="false" onclick='toggleColumnGroup("${ctx.column.header}")'>${iconName}</span>
     <span>${ctx.column.header}</span>
