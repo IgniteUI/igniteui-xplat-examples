@@ -1,7 +1,7 @@
 //begin template
 const columnGroupStates = new Map();
 function toggleColumnGroup(name) {
-    const grid = CodeGenHelper.getDescription<IgcGridComponent>("content");
+    const grid = document.getElementsByTagName("igc-grid")[0];
     var columnGroup = grid.columns.find((col) => col.header === name)
     const columns = columnGroup.children.toArray();
     if (columnGroup.header === 'General Information') {
