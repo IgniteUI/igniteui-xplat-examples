@@ -23,7 +23,7 @@ import {
     `,
     styles: [``]
 })
-export class WebTreeGridColumnGroupHeaderTemplate {
+export class WebTreeGridColumnGroupHeaderTemplateComponent {
     @ViewChild("template", { static: true})
     public template: TemplateRef<any>;
 
@@ -46,7 +46,7 @@ export class WebTreeGridColumnGroupHeaderTemplate {
 @NgModule({
     bootstrap: [],
     declarations: [
-        WebTreeGridColumnGroupHeaderTemplate
+        WebTreeGridColumnGroupHeaderTemplateComponent
     ],
     imports: [
       BrowserModule,
@@ -58,6 +58,6 @@ export class WebTreeGridColumnGroupHeaderTemplate {
     entryComponents: [],
     schemas: []
 })
-export class WebGridColumnGroupHeaderTemplateModule {
+export class WebTreeGridColumnGroupHeaderTemplateModule {
 }
 //end template
