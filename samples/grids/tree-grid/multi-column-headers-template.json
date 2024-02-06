@@ -18,7 +18,7 @@
         {
           "type": "WebColumnGroup",
           "header": "General Information",
-          "headerTemplateRef": "WebGridColumnGroupHeaderTemplate",
+          "headerTemplateRef": "WebTreeGridColumnGroupHeaderTemplate",
           "children": [
             {
               "type": "WebColumn",
@@ -55,8 +55,23 @@
         {
           "type": "WebColumnGroup",
           "header": "Address Information",
-          "headerTemplateRef": "WebGridColumnGroupHeaderTemplate",
+          "headerTemplateRef": "WebTreeGridColumnGroupHeaderTemplate",
           "children": [
+            {
+              "type": "WebColumn",
+              "header": "Location",
+              "field": "Address",
+              "hidden": true,
+              "sortable": true,
+              "resizable": true
+            },
+            {
+              "type": "WebColumn",
+              "field": "Phone",
+              "hidden": true,
+              "sortable": true,
+              "resizable": true
+            },
             {
               "type": "WebColumnGroup",
               "header": "Location",
