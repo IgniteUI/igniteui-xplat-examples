@@ -7,7 +7,7 @@ export class PropertyEditorInitAggregationsOnViewInit {
 
     //begin eventHandler
     public propertyEditorInitAggregationsOnViewInit(): void {
-	
+
         var editor = CodeGenHelper.getDescription<IgrPropertyEditorPanelComponent>("editor");
         var initialSummariesDropdown = new IgrPropertyEditorPropertyDescriptionComponent({});
         var sortGroupsDropdown = new IgrPropertyEditorPropertyDescriptionComponent({});
@@ -32,7 +32,7 @@ export class PropertyEditorInitAggregationsOnViewInit {
         initialSummariesDropdown.changed = this.editorChangeUpdateInitialSummaries;
         sortGroupsDropdown.changed = this.editorChangeUpdateGroupSorts;
     }
-	
+
 	public editorChangeUpdateInitialSummaries(sender: any, args: IgrPropertyEditorPropertyDescriptionChangedEventArgs): void {
 
         var chart = this.chart;

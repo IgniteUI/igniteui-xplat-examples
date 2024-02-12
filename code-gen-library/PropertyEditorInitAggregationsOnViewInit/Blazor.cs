@@ -8,7 +8,7 @@ public class PropertyEditorInitAggregationsOnViewInit
     //begin eventHandler
     public void PropertyEditorInitAggregationsOnViewInit()
 	{
-		
+
 		this.editor.EnsureReady().ContinueWith(new Action<Task>((e) =>
 		{
 			var editor = CodeGenHelper.GetDescription<IgbPropertyEditorPanel>("editor");
@@ -33,9 +33,9 @@ public class PropertyEditorInitAggregationsOnViewInit
 			initialSummariesDropdown.Changed += this.EditorChangeUpdateInitialSummaries;
 			sortGroupsDropdown.Changed += this.EditorChangeUpdateGroupSorts;
 		}));
-		
+
 	}
-	
+
 	public void EditorChangeUpdateInitialSummaries(IgbPropertyEditorPropertyDescriptionChangedEventArgs args)
 	{
 		var chart = this.chart;
