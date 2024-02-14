@@ -1,0 +1,58 @@
+{
+  "skipAlterDataCasing": true,
+  "descriptions": {
+    "content": {
+      "type": "WebHierarchicalGrid",
+      "dataRef": "SingersData",
+      "autoGenerate": false,
+      "primaryKey": "ProductID",
+      "columns": [
+        {
+          "type": "WebColumn",
+          "field": "Artist",
+          "header": "Artist",
+          "dataType": "String",
+          "resizable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "Photo",
+          "header": "Photo",
+          "dataType": "Image",
+          "minWidth": "115px",
+          "resizable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "Debut",
+          "header": "Debut",
+          "dataType": "Number",
+          "minWidth": "88px",
+          "maxWidth": "230px",
+          "resizable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "GrammyNominations",
+          "header": "Grammy Nominations",
+          "dataType": "String",
+          "resizable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "GrammyAwards",
+          "header": "Grammy Awards",
+          "dataType": "String",
+          "resizable": true
+        }
+      ],
+      "childLayoutList": [
+        {
+          "childDataKey": "Albums",
+          "autoGenerate": true
+        }
+      ]
+    }
+  },
+  "modules": ["grids/WebHierarchicalGridModule"]
+}
