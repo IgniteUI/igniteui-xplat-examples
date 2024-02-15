@@ -5,7 +5,7 @@
       "type": "WebHierarchicalGrid",
       "dataRef": "SingersData",
       "autoGenerate": false,
-      "primaryKey": "ProductID",
+      "primaryKey": "ID",
       "columns": [
         {
           "type": "WebColumn",
@@ -50,7 +50,109 @@
         {
           "type": "WebRowIsland",
           "childDataKey": "Albums",
-          "autoGenerate": true
+          "autoGenerate": false,
+          "columns": [
+            {
+              "type": "WebColumn",
+              "field": "Album",
+              "header": "Album",
+              "dataType": "String",
+              "resizable": true
+            },
+            {
+              "type": "WebColumn",
+              "field": "LaunchDate",
+              "header": "Launch Date",
+              "dataType": "Date",
+              "resizable": true
+            },
+            {
+              "type": "WebColumn",
+              "field": "BillboardReview",
+              "header": "Billboard Review",
+              "dataType": "String",
+              "resizable": true
+            },
+            {
+              "type": "WebColumn",
+              "field": "USBillboard200",
+              "header": "US Billboard 200",
+              "dataType": "String",
+              "resizable": true
+            }
+          ],
+          "childLayoutList": [
+            {
+              "type": "WebRowIsland",
+              "childDataKey": "Songs",
+              "autoGenerate": false,
+              "columns": [
+                {
+                  "type": "WebColumn",
+                  "field": "Number",
+                  "header": "No.",
+                  "dataType": "String",
+                  "resizable": true
+                },
+                {
+                  "type": "WebColumn",
+                  "field": "Title",
+                  "header": "Title",
+                  "dataType": "String",
+                  "resizable": true
+                },
+                {
+                  "type": "WebColumn",
+                  "field": "Released",
+                  "header": "Released",
+                  "dataType": "Date",
+                  "resizable": true
+                },
+                {
+                  "type": "WebColumn",
+                  "field": "Genre",
+                  "header": "Genre",
+                  "dataType": "String",
+                  "resizable": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "WebRowIsland",
+          "childDataKey": "Tours",
+          "autoGenerate": false,
+          "columns": [
+            {
+              "type": "WebColumn",
+              "field": "Tour",
+              "header": "Tour",
+              "dataType": "String",
+              "resizable": true
+            },
+            {
+              "type": "WebColumn",
+              "field": "StartedOn",
+              "header": "Started on",
+              "dataType": "String",
+              "resizable": true
+            },
+            {
+              "type": "WebColumn",
+              "field": "Location",
+              "header": "Location",
+              "dataType": "String",
+              "resizable": true
+            },
+            {
+              "type": "WebColumn",
+              "field": "Headliner",
+              "header": "Headliner",
+              "dataType": "String",
+              "resizable": true
+            }
+          ]
         }
       ]
     }
