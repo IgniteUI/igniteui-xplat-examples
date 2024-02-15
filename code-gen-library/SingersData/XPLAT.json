@@ -78,7 +78,8 @@
         "LaunchDate": "September 3, 2013",
         "BillboardReview": 86,
         "USBillboard200": 1,
-        "Artist": "Naomí Yepes"
+        "Artist": "Naomí Yepes",
+        "Songs": []
       },
       {
         "Album": "Dream Driven",
@@ -86,97 +87,100 @@
         "BillboardReview": 81,
         "USBillboard200": 1,
         "Artist": "Naomí Yepes",
-        "Songs": [{
-          "Number": 1,
-          "Title": "Intro",
-          "Released": "29 Apr 2021",
-          "Genre": "*",
-          "Album": "Dream Driven"
-        },
-        {
-          "Number": 2,
-          "Title": "Ferocious",
-          "Released": "28 Apr 2014",
-          "Genre": "Dance-pop R&B",
-          "Album": "Dream Driven"
-        },
-        {
-          "Number": 3,
-          "Title": "Going crazy",
-          "Released": "10 Feb 2015",
-          "Genre": "Dance-pop EDM",
-          "Album": "Dream Driven"
-        },
-        {
-          "Number": 4,
-          "Title": "Future past",
-          "Released": false,
-          "Genre": "*",
-          "Album": "Dream Driven"
-        },
-        {
-          "Number": 5,
-          "Title": "Roaming like them",
-          "Released": "2 Jul 2014",
-          "Genre": "Electro house Electropop",
-          "Album": "Dream Driven"
-        },
-        {
-          "Number": 6,
-          "Title": "Last Wishes",
-          "Released": "12 Aug 2014",
-          "Genre": "R&B",
-          "Album": "Dream Driven"
-        },
-        {
-          "Number": 7,
-          "Title": "Stay where you are",
-          "Released": false,
-          "Genre": "*",
-          "Album": "Dream Driven"
-        },
-        {
-          "Number": 8,
-          "Title": "Imaginarium",
-          "Released": false,
-          "Genre": "*",
-          "Album": "Dream Driven"
-        },
-        {
-          "Number": 9,
-          "Title": "Tell me",
-          "Released": "30 Sep 2014",
-          "Genre": "Synth-pop R&B",
-          "Album": "Dream Driven"
-        },
-        {
-          "Number": 10,
-          "Title": "Shredded into pieces",
-          "Released": false,
-          "Genre": "*",
-          "Album": "Dream Driven"
-        },
-        {
-          "Number": 11,
-          "Title": "Capture this moment",
-          "Released": false,
-          "Genre": "*",
-          "Album": "Dream Driven"
-        },
-        {
-          "Number": 12,
-          "Title": "Dream Driven",
-          "Released": false,
-          "Genre": "*",
-          "Album": "Dream Driven"
-        }]
+        "Songs": [
+          {
+            "Number": 1,
+            "Title": "Intro",
+            "Released": "29 Apr 2021",
+            "Genre": "*",
+            "Album": "Dream Driven"
+          },
+          {
+            "Number": 2,
+            "Title": "Ferocious",
+            "Released": "28 Apr 2014",
+            "Genre": "Dance-pop R&B",
+            "Album": "Dream Driven"
+          },
+          {
+            "Number": 3,
+            "Title": "Going crazy",
+            "Released": "10 Feb 2015",
+            "Genre": "Dance-pop EDM",
+            "Album": "Dream Driven"
+          },
+          {
+            "Number": 4,
+            "Title": "Future past",
+            "Released": false,
+            "Genre": "*",
+            "Album": "Dream Driven"
+          },
+          {
+            "Number": 5,
+            "Title": "Roaming like them",
+            "Released": "2 Jul 2014",
+            "Genre": "Electro house Electropop",
+            "Album": "Dream Driven"
+          },
+          {
+            "Number": 6,
+            "Title": "Last Wishes",
+            "Released": "12 Aug 2014",
+            "Genre": "R&B",
+            "Album": "Dream Driven"
+          },
+          {
+            "Number": 7,
+            "Title": "Stay where you are",
+            "Released": false,
+            "Genre": "*",
+            "Album": "Dream Driven"
+          },
+          {
+            "Number": 8,
+            "Title": "Imaginarium",
+            "Released": false,
+            "Genre": "*",
+            "Album": "Dream Driven"
+          },
+          {
+            "Number": 9,
+            "Title": "Tell me",
+            "Released": "30 Sep 2014",
+            "Genre": "Synth-pop R&B",
+            "Album": "Dream Driven"
+          },
+          {
+            "Number": 10,
+            "Title": "Shredded into pieces",
+            "Released": false,
+            "Genre": "*",
+            "Album": "Dream Driven"
+          },
+          {
+            "Number": 11,
+            "Title": "Capture this moment",
+            "Released": false,
+            "Genre": "*",
+            "Album": "Dream Driven"
+          },
+          {
+            "Number": 12,
+            "Title": "Dream Driven",
+            "Released": false,
+            "Genre": "*",
+            "Album": "Dream Driven"
+          }
+        ]
       },
       {
         "Album": "The dragon journey",
         "LaunchDate": "May 20, 2016",
         "BillboardReview": 60,
         "USBillboard200": 2,
-        "Artist": "Naomí Yepes"
+        "Artist": "Naomí Yepes",
+        "Songs": []
       },
       {
         "Album": "Organic me",
@@ -184,90 +188,93 @@
         "BillboardReview": 82,
         "USBillboard200": 1,
         "Artist": "Naomí Yepes",
-        "Songs": [{
-          "Number": 1,
-          "Title": "I Love",
-          "Released": "11 May 2019",
-          "Genre": "Crunk reggaeton",
-          "Album": "Organic me"
-        },
-        {
-          "Number": 2,
-          "Title": "Early Morning Compass",
-          "Released": "15 Jan 2020",
-          "Genre": "mystical parody-bap ",
-          "Album": "Organic me"
-        },
-        {
-          "Number": 3,
-          "Title": "Key Fields Forever",
-          "Released": "2 Jan 2020",
-          "Genre": "Dance-pop EDM",
-          "Album": "Organic me"
-        },
-        {
-          "Number": 4,
-          "Title": "Stand by Your Goblins",
-          "Released": "20 Nov 2019",
-          "Genre": "*",
-          "Album": "Organic me"
-        },
-        {
-          "Number": 5,
-          "Title": "Mad to Walk",
-          "Released": "12 May 2019",
-          "Genre": "Electro house Electropop",
-          "Album": "Organic me"
-        },
-        {
-          "Number": 6,
-          "Title": "Alice's Waiting",
-          "Released": "28 Jan 2020",
-          "Genre": "R&B",
-          "Album": "Organic me"
-        },
-        {
-          "Number": 7,
-          "Title": "We Shall Kiss",
-          "Released": "30 Oct 2019",
-          "Genre": "*",
-          "Album": "Organic me"
-        },
-        {
-          "Number": 8,
-          "Title": "Behind Single Ants",
-          "Released": "2 Oct 2019",
-          "Genre": "*",
-          "Album": "Organic me"
-        },
-        {
-          "Number": 9,
-          "Title": "Soap Autopsy",
-          "Released": "8 Aug 2019",
-          "Genre": "Synth-pop R&B",
-          "Album": "Organic me"
-        },
-        {
-          "Number": 10,
-          "Title": "Have You Met Rich?",
-          "Released": "1 Jul 2019",
-          "Genre": "ethno-tunes",
-          "Album": "Organic me"
-        },
-        {
-          "Number": 11,
-          "Title": "Livin' on a Banana",
-          "Released": "22 Nov 2019",
-          "Genre": "Crunk reggaeton",
-          "Album": "Organic me"
-        }]
+        "Songs": [
+          {
+            "Number": 1,
+            "Title": "I Love",
+            "Released": "11 May 2019",
+            "Genre": "Crunk reggaeton",
+            "Album": "Organic me"
+          },
+          {
+            "Number": 2,
+            "Title": "Early Morning Compass",
+            "Released": "15 Jan 2020",
+            "Genre": "mystical parody-bap ",
+            "Album": "Organic me"
+          },
+          {
+            "Number": 3,
+            "Title": "Key Fields Forever",
+            "Released": "2 Jan 2020",
+            "Genre": "Dance-pop EDM",
+            "Album": "Organic me"
+          },
+          {
+            "Number": 4,
+            "Title": "Stand by Your Goblins",
+            "Released": "20 Nov 2019",
+            "Genre": "*",
+            "Album": "Organic me"
+          },
+          {
+            "Number": 5,
+            "Title": "Mad to Walk",
+            "Released": "12 May 2019",
+            "Genre": "Electro house Electropop",
+            "Album": "Organic me"
+          },
+          {
+            "Number": 6,
+            "Title": "Alice's Waiting",
+            "Released": "28 Jan 2020",
+            "Genre": "R&B",
+            "Album": "Organic me"
+          },
+          {
+            "Number": 7,
+            "Title": "We Shall Kiss",
+            "Released": "30 Oct 2019",
+            "Genre": "*",
+            "Album": "Organic me"
+          },
+          {
+            "Number": 8,
+            "Title": "Behind Single Ants",
+            "Released": "2 Oct 2019",
+            "Genre": "*",
+            "Album": "Organic me"
+          },
+          {
+            "Number": 9,
+            "Title": "Soap Autopsy",
+            "Released": "8 Aug 2019",
+            "Genre": "Synth-pop R&B",
+            "Album": "Organic me"
+          },
+          {
+            "Number": 10,
+            "Title": "Have You Met Rich?",
+            "Released": "1 Jul 2019",
+            "Genre": "ethno-tunes",
+            "Album": "Organic me"
+          },
+          {
+            "Number": 11,
+            "Title": "Livin' on a Banana",
+            "Released": "22 Nov 2019",
+            "Genre": "Crunk reggaeton",
+            "Album": "Organic me"
+          }
+        ]
       },
       {
         "Album": "Curiosity",
         "LaunchDate": "December 7, 2019",
         "BillboardReview": 75,
         "USBillboard200": 12,
-        "Artist": "Naomí Yepes"
+        "Artist": "Naomí Yepes",
+        "Songs": []
       }
     ]
   },
@@ -314,7 +321,8 @@
         "Location": "North America",
         "Headliner": "YES",
         "TouredBy": "Babila Ebwélé"
-      }],
+      }
+    ],
     "Albums": [
       {
         "Album": "Pushing up daisies",
@@ -322,76 +330,78 @@
         "BillboardReview": 86,
         "USBillboard200": 42,
         "Artist": "Babila Ebwélé",
-        "Songs": [{
-          "Number": 1,
-          "Title": "Wood Shavings Forever",
-          "Released": "9 Jun 2019",
-          "Genre": "*",
-          "Album": "Pushing up daisies"
-        },
-        {
-          "Number": 2,
-          "Title": "Early Morning Drive",
-          "Released": "20 May 2019",
-          "Genre": "*",
-          "Album": "Pushing up daisies"
-        },
-        {
-          "Number": 3,
-          "Title": "Don't Natter",
-          "Released": "10 Jun 2019",
-          "Genre": "adult calypso-industrial",
-          "Album": "Pushing up daisies"
-        },
-        {
-          "Number": 4,
-          "Title": "Stairway to Balloons",
-          "Released": "18 Jun 2019",
-          "Genre": "calypso and mariachi",
-          "Album": "Pushing up daisies"
-        },
-        {
-          "Number": 5,
-          "Title": "The Number of your Apple",
-          "Released": "29 Oct 2019",
-          "Genre": "*",
-          "Album": "Pushing up daisies"
-        },
-        {
-          "Number": 6,
-          "Title": "Your Delightful Heart",
-          "Released": "24 Feb 2019",
-          "Genre": "*",
-          "Album": "Pushing up daisies"
-        },
-        {
-          "Number": 7,
-          "Title": "Nice Weather For Balloons",
-          "Released": "1 Aug 2019",
-          "Genre": "rap-hop",
-          "Album": "Pushing up daisies"
-        },
-        {
-          "Number": 8,
-          "Title": "The Girl From Cornwall",
-          "Released": "4 May 2019",
-          "Genre": "enigmatic rock-and-roll",
-          "Album": "Pushing up daisies"
-        },
-        {
-          "Number": 9,
-          "Title": "Here Without Jack",
-          "Released": "24 Oct 2019",
-          "Genre": "*",
-          "Album": "Pushing up daisies"
-        },
-        {
-          "Number": 10,
-          "Title": "Born Rancid",
-          "Released": "19 Mar 2019",
-          "Genre": "*",
-          "Album": "Pushing up daisies"
-        }]
+        "Songs": [
+          {
+            "Number": 1,
+            "Title": "Wood Shavings Forever",
+            "Released": "9 Jun 2019",
+            "Genre": "*",
+            "Album": "Pushing up daisies"
+          },
+          {
+            "Number": 2,
+            "Title": "Early Morning Drive",
+            "Released": "20 May 2019",
+            "Genre": "*",
+            "Album": "Pushing up daisies"
+          },
+          {
+            "Number": 3,
+            "Title": "Don't Natter",
+            "Released": "10 Jun 2019",
+            "Genre": "adult calypso-industrial",
+            "Album": "Pushing up daisies"
+          },
+          {
+            "Number": 4,
+            "Title": "Stairway to Balloons",
+            "Released": "18 Jun 2019",
+            "Genre": "calypso and mariachi",
+            "Album": "Pushing up daisies"
+          },
+          {
+            "Number": 5,
+            "Title": "The Number of your Apple",
+            "Released": "29 Oct 2019",
+            "Genre": "*",
+            "Album": "Pushing up daisies"
+          },
+          {
+            "Number": 6,
+            "Title": "Your Delightful Heart",
+            "Released": "24 Feb 2019",
+            "Genre": "*",
+            "Album": "Pushing up daisies"
+          },
+          {
+            "Number": 7,
+            "Title": "Nice Weather For Balloons",
+            "Released": "1 Aug 2019",
+            "Genre": "rap-hop",
+            "Album": "Pushing up daisies"
+          },
+          {
+            "Number": 8,
+            "Title": "The Girl From Cornwall",
+            "Released": "4 May 2019",
+            "Genre": "enigmatic rock-and-roll",
+            "Album": "Pushing up daisies"
+          },
+          {
+            "Number": 9,
+            "Title": "Here Without Jack",
+            "Released": "24 Oct 2019",
+            "Genre": "*",
+            "Album": "Pushing up daisies"
+          },
+          {
+            "Number": 10,
+            "Title": "Born Rancid",
+            "Released": "19 Mar 2019",
+            "Genre": "*",
+            "Album": "Pushing up daisies"
+          }
+        ]
       },
       {
         "Album": "Death's dead",
@@ -399,84 +409,87 @@
         "BillboardReview": 85,
         "USBillboard200": 95,
         "Artist": "Babila Ebwélé",
-        "Songs": [{
-          "Number": 1,
-          "Title": "Men Sound Better With You",
-          "Released": "20 Oct 2019",
-          "Genre": "rap-hop",
-          "Album": "Death's dead"
-        },
-        {
-          "Number": 2,
-          "Title": "Ghost in My Rod",
-          "Released": "5 Oct 2019",
-          "Genre": "enigmatic rock-and-roll",
-          "Album": "Death's dead"
-        },
-        {
-          "Number": 3,
-          "Title": "Bed of Men",
-          "Released": "14 Nov 2019",
-          "Genre": "whimsical comedy-grass ",
-          "Album": "Death's dead"
-        },
-        {
-          "Number": 4,
-          "Title": "Don't Push",
-          "Released": "2 Jan 2020",
-          "Genre": "unblack electronic-trip-hop",
-          "Album": "Death's dead"
-        },
-        {
-          "Number": 5,
-          "Title": "Nice Weather For Men",
-          "Released": "18 Dec 2019",
-          "Genre": "*",
-          "Album": "Death's dead"
-        },
-        {
-          "Number": 6,
-          "Title": "Rancid Rhapsody",
-          "Released": "10 Mar 2019",
-          "Genre": "*",
-          "Album": "Death's dead"
-        },
-        {
-          "Number": 7,
-          "Title": "Push, Push, Push!",
-          "Released": "21 Feb 2019",
-          "Genre": "*",
-          "Album": "Death's dead"
-        },
-        {
-          "Number": 8,
-          "Title": "My Name is Sarah",
-          "Released": "15 Nov 2019",
-          "Genre": "*",
-          "Album": "Death's dead"
-        },
-        {
-          "Number": 9,
-          "Title": "The Girl From My Hotel",
-          "Released": "6 Nov 2019",
-          "Genre": "*",
-          "Album": "Death's dead"
-        },
-        {
-          "Number": 10,
-          "Title": "Free Box",
-          "Released": "18 Apr 2019",
-          "Genre": "splitter-funk",
-          "Album": "Death's dead"
-        },
-        {
-          "Number": 11,
-          "Title": "Hotel Cardiff",
-          "Released": "30 Dec 2019",
-          "Genre": "guilty pleasure ebm",
-          "Album": "Death's dead"
-        }]
-      }]
+        "Songs": [
+          {
+            "Number": 1,
+            "Title": "Men Sound Better With You",
+            "Released": "20 Oct 2019",
+            "Genre": "rap-hop",
+            "Album": "Death's dead"
+          },
+          {
+            "Number": 2,
+            "Title": "Ghost in My Rod",
+            "Released": "5 Oct 2019",
+            "Genre": "enigmatic rock-and-roll",
+            "Album": "Death's dead"
+          },
+          {
+            "Number": 3,
+            "Title": "Bed of Men",
+            "Released": "14 Nov 2019",
+            "Genre": "whimsical comedy-grass ",
+            "Album": "Death's dead"
+          },
+          {
+            "Number": 4,
+            "Title": "Don't Push",
+            "Released": "2 Jan 2020",
+            "Genre": "unblack electronic-trip-hop",
+            "Album": "Death's dead"
+          },
+          {
+            "Number": 5,
+            "Title": "Nice Weather For Men",
+            "Released": "18 Dec 2019",
+            "Genre": "*",
+            "Album": "Death's dead"
+          },
+          {
+            "Number": 6,
+            "Title": "Rancid Rhapsody",
+            "Released": "10 Mar 2019",
+            "Genre": "*",
+            "Album": "Death's dead"
+          },
+          {
+            "Number": 7,
+            "Title": "Push, Push, Push!",
+            "Released": "21 Feb 2019",
+            "Genre": "*",
+            "Album": "Death's dead"
+          },
+          {
+            "Number": 8,
+            "Title": "My Name is Sarah",
+            "Released": "15 Nov 2019",
+            "Genre": "*",
+            "Album": "Death's dead"
+          },
+          {
+            "Number": 9,
+            "Title": "The Girl From My Hotel",
+            "Released": "6 Nov 2019",
+            "Genre": "*",
+            "Album": "Death's dead"
+          },
+          {
+            "Number": 10,
+            "Title": "Free Box",
+            "Released": "18 Apr 2019",
+            "Genre": "splitter-funk",
+            "Album": "Death's dead"
+          },
+          {
+            "Number": 11,
+            "Title": "Hotel Cardiff",
+            "Released": "30 Dec 2019",
+            "Genre": "guilty pleasure ebm",
+            "Album": "Death's dead"
+          }
+        ]
+      }
+    ]
   },
   {
     "ID": 2,
@@ -493,14 +506,16 @@
         "LaunchDate": "March 6, 2004",
         "BillboardReview": 98,
         "USBillboard200": 69,
-        "Artist": "Ahmad Nazeri"
+        "Artist": "Ahmad Nazeri",
+        "Songs": []
       },
       {
         "Album": "Bursting bubbles",
         "LaunchDate": "April 17, 2006",
         "BillboardReview": 69,
         "USBillboard200": 39,
-        "Artist": "Ahmad Nazeri"
+        "Artist": "Ahmad Nazeri",
+        "Songs": []
       }
     ]
   },
@@ -519,7 +534,8 @@
         "LaunchDate": "November 18, 2017",
         "BillboardReview": 68,
         "USBillboard200": 1,
-        "Artist": "Kimmy McIlmorie"
+        "Artist": "Kimmy McIlmorie",
+        "Songs": []
       }
     ]
   },
@@ -579,76 +595,77 @@
         "BillboardReview": 79,
         "USBillboard200": 53,
         "Artist": "Izabella Tabakova",
-        "Songs": [{
-          "Number": 1,
-          "Title": "Whole Lotta Super Cats",
-          "Released": "21 May 2019",
-          "Genre": "*",
-          "Album": "Once bitten"
-        },
-        {
-          "Number": 2,
-          "Title": "Enter Becky",
-          "Released": "16 Jan 2020",
-          "Genre": "*",
-          "Album": "Once bitten"
-        },
-        {
-          "Number": 3,
-          "Title": "Your Cheatin' Flamingo",
-          "Released": "14 Jan 2020",
-          "Genre": "*",
-          "Album": "Once bitten"
-        },
-        {
-          "Number": 4,
-          "Title": "Mad to Kiss",
-          "Released": "6 Nov 2019",
-          "Genre": "Synth-pop R&B",
-          "Album": "Once bitten"
-        },
-        {
-          "Number": 5,
-          "Title": "Hotel Prague",
-          "Released": "20 Oct 2019",
-          "Genre": "ethno-tunes",
-          "Album": "Once bitten"
-        },
-        {
-          "Number": 6,
-          "Title": "Jail on My Mind",
-          "Released": "31 May 2019",
-          "Genre": "Crunk reggaeton",
-          "Album": "Once bitten"
-        },
-        {
-          "Number": 7,
-          "Title": "Amazing Blues",
-          "Released": "29 May 2019",
-          "Genre": "mystical parody-bap ",
-          "Album": "Once bitten"
-        },
-        {
-          "Number": 8,
-          "Title": "Goody Two Iron Filings",
-          "Released": "4 Jul 2019",
-          "Genre": "Electro house Electropop",
-          "Album": "Once bitten"
-        },
-        {
-          "Number": 9,
-          "Title": "I Love in Your Arms",
-          "Released": "7 Jun 2019",
-          "Genre": "R&B",
-          "Album": "Once bitten"
-        },
-        {
-          "Number": 10,
-          "Title": "Truly Madly Amazing",
-          "Released": "12 Sep 2019",
-          "Genre": "ethno-tunes",
-          "Album": "Once bitten"
-        }
+        "Songs": [
+          {
+            "Number": 1,
+            "Title": "Whole Lotta Super Cats",
+            "Released": "21 May 2019",
+            "Genre": "*",
+            "Album": "Once bitten"
+          },
+          {
+            "Number": 2,
+            "Title": "Enter Becky",
+            "Released": "16 Jan 2020",
+            "Genre": "*",
+            "Album": "Once bitten"
+          },
+          {
+            "Number": 3,
+            "Title": "Your Cheatin' Flamingo",
+            "Released": "14 Jan 2020",
+            "Genre": "*",
+            "Album": "Once bitten"
+          },
+          {
+            "Number": 4,
+            "Title": "Mad to Kiss",
+            "Released": "6 Nov 2019",
+            "Genre": "Synth-pop R&B",
+            "Album": "Once bitten"
+          },
+          {
+            "Number": 5,
+            "Title": "Hotel Prague",
+            "Released": "20 Oct 2019",
+            "Genre": "ethno-tunes",
+            "Album": "Once bitten"
+          },
+          {
+            "Number": 6,
+            "Title": "Jail on My Mind",
+            "Released": "31 May 2019",
+            "Genre": "Crunk reggaeton",
+            "Album": "Once bitten"
+          },
+          {
+            "Number": 7,
+            "Title": "Amazing Blues",
+            "Released": "29 May 2019",
+            "Genre": "mystical parody-bap ",
+            "Album": "Once bitten"
+          },
+          {
+            "Number": 8,
+            "Title": "Goody Two Iron Filings",
+            "Released": "4 Jul 2019",
+            "Genre": "Electro house Electropop",
+            "Album": "Once bitten"
+          },
+          {
+            "Number": 9,
+            "Title": "I Love in Your Arms",
+            "Released": "7 Jun 2019",
+            "Genre": "R&B",
+            "Album": "Once bitten"
+          },
+          {
+            "Number": 10,
+            "Title": "Truly Madly Amazing",
+            "Released": "12 Sep 2019",
+            "Genre": "ethno-tunes",
+            "Album": "Once bitten"
+          }
         ]
       },
       {
@@ -727,14 +744,16 @@
             "Released": "25 Jul 2019",
             "Genre": "*",
             "Album": "Your graciousness"
-          }]
+          }
+        ]
       },
       {
         "Album": "Dark matters",
         "LaunchDate": "November 3, 2002",
         "BillboardReview": 79,
         "USBillboard200": 85,
-        "Artist": "Izabella Tabakova"
+        "Artist": "Izabella Tabakova",
+        "Songs": []
       }
     ]
   },
@@ -753,7 +772,8 @@
         "LaunchDate": "December 22, 2003",
         "BillboardReview": 93,
         "USBillboard200": 5,
-        "Artist": "Nguyễn Diệp Chi"
+        "Artist": "Nguyễn Diệp Chi",
+        "Songs": []
       }
     ]
   },
@@ -772,7 +792,8 @@
         "LaunchDate": "May 3, 2001",
         "BillboardReview": 91,
         "USBillboard200": 29,
-        "Artist": "Eva Lee"
+        "Artist": "Eva Lee",
+        "Songs": []
       }
     ]
   },
@@ -996,7 +1017,8 @@
         "LaunchDate": "August 4, 2017",
         "BillboardReview": 93,
         "USBillboard200": 98,
-        "Artist": "Pablo Cambeiro"
+        "Artist": "Pablo Cambeiro",
+        "Songs": []
       },
       {
         "Album": "Crowd control",
@@ -1004,70 +1026,73 @@
         "BillboardReview": 68,
         "USBillboard200": 84,
         "Artist": "Pablo Cambeiro",
-        "Songs": [{
-          "Number": 1,
-          "Title": "My Bed on My Mind",
-          "Released": "25 Mar 2019",
-          "Genre": "ethno-tunes",
-          "Album": "Crowd control"
-        },
-        {
-          "Number": 2,
-          "Title": "Bright Blues",
-          "Released": "28 Sep 2019",
-          "Genre": "neuro-tunes",
-          "Album": "Crowd control"
-        },
-        {
-          "Number": 3,
-          "Title": "Sail, Sail, Sail!",
-          "Released": "5 Mar 2019",
-          "Genre": "*",
-          "Album": "Crowd control"
-        },
-        {
-          "Number": 4,
-          "Title": "Hotel My Bed",
-          "Released": "22 Mar 2019",
-          "Genre": "*",
-          "Album": "Crowd control"
-        },
-        {
-          "Number": 5,
-          "Title": "Gonna Make You Mash",
-          "Released": "18 May 2019",
-          "Genre": "*",
-          "Album": "Crowd control"
-        },
-        {
-          "Number": 6,
-          "Title": "Straight Outta America",
-          "Released": "16 Jan 2020",
-          "Genre": "hardcore opera",
-          "Album": "Crowd control"
-        },
-        {
-          "Number": 7,
-          "Title": "I Drive",
-          "Released": "23 Feb 2019",
-          "Genre": "emotional C-jam ",
-          "Album": "Crowd control"
-        },
-        {
-          "Number": 8,
-          "Title": "Like a Teddy",
-          "Released": "31 Aug 2019",
-          "Genre": "*",
-          "Album": "Crowd control"
-        },
-        {
-          "Number": 9,
-          "Title": "Teddy Boogie",
-          "Released": "30 Nov 2019",
-          "Genre": "*",
-          "Album": "Crowd control"
-        }]
-      }]
+        "Songs": [
+          {
+            "Number": 1,
+            "Title": "My Bed on My Mind",
+            "Released": "25 Mar 2019",
+            "Genre": "ethno-tunes",
+            "Album": "Crowd control"
+          },
+          {
+            "Number": 2,
+            "Title": "Bright Blues",
+            "Released": "28 Sep 2019",
+            "Genre": "neuro-tunes",
+            "Album": "Crowd control"
+          },
+          {
+            "Number": 3,
+            "Title": "Sail, Sail, Sail!",
+            "Released": "5 Mar 2019",
+            "Genre": "*",
+            "Album": "Crowd control"
+          },
+          {
+            "Number": 4,
+            "Title": "Hotel My Bed",
+            "Released": "22 Mar 2019",
+            "Genre": "*",
+            "Album": "Crowd control"
+          },
+          {
+            "Number": 5,
+            "Title": "Gonna Make You Mash",
+            "Released": "18 May 2019",
+            "Genre": "*",
+            "Album": "Crowd control"
+          },
+          {
+            "Number": 6,
+            "Title": "Straight Outta America",
+            "Released": "16 Jan 2020",
+            "Genre": "hardcore opera",
+            "Album": "Crowd control"
+          },
+          {
+            "Number": 7,
+            "Title": "I Drive",
+            "Released": "23 Feb 2019",
+            "Genre": "emotional C-jam ",
+            "Album": "Crowd control"
+          },
+          {
+            "Number": 8,
+            "Title": "Like a Teddy",
+            "Released": "31 Aug 2019",
+            "Genre": "*",
+            "Album": "Crowd control"
+          },
+          {
+            "Number": 9,
+            "Title": "Teddy Boogie",
+            "Released": "30 Nov 2019",
+            "Genre": "*",
+            "Album": "Crowd control"
+          }
+        ]
+      }
+    ]
   },
   {
     "ID": 10,
@@ -1084,7 +1109,8 @@
         "LaunchDate": "February 24, 2016",
         "BillboardReview": 74,
         "USBillboard200": 77,
-        "Artist": "Athar Malakooti"
+        "Artist": "Athar Malakooti",
+        "Songs": []
       }
     ]
   },
@@ -1110,14 +1136,16 @@
         "Location": "United States, Europe",
         "Headliner": "NO",
         "TouredBy": "Marti Valencia"
-      }],
+      }
+    ],
     "Albums": [
       {
         "Album": "Nemesis",
         "LaunchDate": "June 30, 2004",
         "BillboardReview": 94,
         "USBillboard200": 9,
-        "Artist": "Marti Valencia"
+        "Artist": "Marti Valencia",
+        "Songs": []
       },
       {
         "Album": "First chance",
@@ -1125,97 +1153,100 @@
         "BillboardReview": 96,
         "USBillboard200": 19,
         "Artist": "Marti Valencia",
-        "Songs": [{
-          "Number": 1,
-          "Title": "My Name is Jason",
-          "Released": "12 Jul 2019",
-          "Genre": "*",
-          "Album": "First chance"
-        },
-        {
-          "Number": 2,
-          "Title": "Amazing Andy",
-          "Released": "5 Mar 2019",
-          "Genre": "*",
-          "Album": "First chance"
-        },
-        {
-          "Number": 3,
-          "Title": "The Number of your Knight",
-          "Released": "4 Dec 2019",
-          "Genre": "*",
-          "Album": "First chance"
-        },
-        {
-          "Number": 4,
-          "Title": "I Sail",
-          "Released": "3 Mar 2019",
-          "Genre": "*",
-          "Album": "First chance"
-        },
-        {
-          "Number": 5,
-          "Title": "Goody Two Hands",
-          "Released": "11 Oct 2019",
-          "Genre": "Electro house Electropop",
-          "Album": "First chance"
-        },
-        {
-          "Number": 6,
-          "Title": "Careful With That Knife",
-          "Released": "18 Dec 2019",
-          "Genre": "R&B",
-          "Album": "First chance"
-        },
-        {
-          "Number": 7,
-          "Title": "Four Single Ants",
-          "Released": "18 Jan 2020",
-          "Genre": "*",
-          "Album": "First chance"
-        },
-        {
-          "Number": 8,
-          "Title": "Kiss Forever",
-          "Released": "10 Aug 2019",
-          "Genre": "*",
-          "Album": "First chance"
-        },
-        {
-          "Number": 9,
-          "Title": "Rich's Waiting",
-          "Released": "15 Mar 2019",
-          "Genre": "Synth-pop R&B",
-          "Album": "First chance"
-        },
-        {
-          "Number": 10,
-          "Title": "Japan is Your Land",
-          "Released": "7 Mar 2019",
-          "Genre": "ethno-tunes",
-          "Album": "First chance"
-        },
-        {
-          "Number": 11,
-          "Title": "Pencils in My Banana",
-          "Released": "21 Jun 2019",
-          "Genre": "Crunk reggaeton",
-          "Album": "First chance"
-        },
-        {
-          "Number": 12,
-          "Title": "I Sail in Your Arms",
-          "Released": "30 Apr 2019",
-          "Genre": "Synth-pop R&B",
-          "Album": "First chance"
-        }]
+        "Songs": [
+          {
+            "Number": 1,
+            "Title": "My Name is Jason",
+            "Released": "12 Jul 2019",
+            "Genre": "*",
+            "Album": "First chance"
+          },
+          {
+            "Number": 2,
+            "Title": "Amazing Andy",
+            "Released": "5 Mar 2019",
+            "Genre": "*",
+            "Album": "First chance"
+          },
+          {
+            "Number": 3,
+            "Title": "The Number of your Knight",
+            "Released": "4 Dec 2019",
+            "Genre": "*",
+            "Album": "First chance"
+          },
+          {
+            "Number": 4,
+            "Title": "I Sail",
+            "Released": "3 Mar 2019",
+            "Genre": "*",
+            "Album": "First chance"
+          },
+          {
+            "Number": 5,
+            "Title": "Goody Two Hands",
+            "Released": "11 Oct 2019",
+            "Genre": "Electro house Electropop",
+            "Album": "First chance"
+          },
+          {
+            "Number": 6,
+            "Title": "Careful With That Knife",
+            "Released": "18 Dec 2019",
+            "Genre": "R&B",
+            "Album": "First chance"
+          },
+          {
+            "Number": 7,
+            "Title": "Four Single Ants",
+            "Released": "18 Jan 2020",
+            "Genre": "*",
+            "Album": "First chance"
+          },
+          {
+            "Number": 8,
+            "Title": "Kiss Forever",
+            "Released": "10 Aug 2019",
+            "Genre": "*",
+            "Album": "First chance"
+          },
+          {
+            "Number": 9,
+            "Title": "Rich's Waiting",
+            "Released": "15 Mar 2019",
+            "Genre": "Synth-pop R&B",
+            "Album": "First chance"
+          },
+          {
+            "Number": 10,
+            "Title": "Japan is Your Land",
+            "Released": "7 Mar 2019",
+            "Genre": "ethno-tunes",
+            "Album": "First chance"
+          },
+          {
+            "Number": 11,
+            "Title": "Pencils in My Banana",
+            "Released": "21 Jun 2019",
+            "Genre": "Crunk reggaeton",
+            "Album": "First chance"
+          },
+          {
+            "Number": 12,
+            "Title": "I Sail in Your Arms",
+            "Released": "30 Apr 2019",
+            "Genre": "Synth-pop R&B",
+            "Album": "First chance"
+          }
+        ]
       },
       {
         "Album": "God's advocate",
         "LaunchDate": "April 29, 2007",
         "BillboardReview": 66,
         "USBillboard200": 37,
-        "Artist": "Marti Valencia"
+        "Artist": "Marti Valencia",
+        "Songs": []
       }
     ]
   },
@@ -1234,7 +1265,8 @@
         "LaunchDate": "November 3, 2005",
         "BillboardReview": 82,
         "USBillboard200": 7,
-        "Artist": "Alicia Stanger"
+        "Artist": "Alicia Stanger",
+        "Songs": []
       }
     ]
   },
@@ -1296,14 +1328,16 @@
         "LaunchDate": "April 10, 2008",
         "BillboardReview": 85,
         "USBillboard200": 35,
-        "Artist": "Peter Taylor"
+        "Artist": "Peter Taylor",
+        "Songs": []
       },
       {
         "Album": "Climate changed",
         "LaunchDate": "June 20, 2015",
         "BillboardReview": 66,
         "USBillboard200": 89,
-        "Artist": "Peter Taylor"
+        "Artist": "Peter Taylor",
+        "Songs": []
       }
     ]
   }
