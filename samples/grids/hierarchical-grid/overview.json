@@ -105,7 +105,7 @@
                   "type": "WebColumn",
                   "field": "Released",
                   "header": "Released",
-                  "dataType": "Date",
+                  "dataType": "String",
                   "resizable": true
                 },
                 {
