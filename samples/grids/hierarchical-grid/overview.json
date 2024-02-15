@@ -48,6 +48,7 @@
       ],
       "childLayoutList": [
         {
+          "type": "WebRowIsland",
           "childDataKey": "Albums",
           "autoGenerate": true
         }
