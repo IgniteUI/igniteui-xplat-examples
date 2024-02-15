@@ -512,6 +512,7 @@
     "GrammyNominations": 21,
     "GrammyAwards": 3,
     "HasGrammyAward": true,
+    "Tours": [],
     "Albums": [
       {
         "Album": "Here we go again",
@@ -529,7 +530,9 @@
     "Debut": 1996,
     "GrammyNominations": 14,
     "GrammyAwards": 2,
-    "HasGrammyAward": true
+    "HasGrammyAward": true,
+    "Tours": [],
+    "Albums": []
   },
   {
     "ID": 5,
@@ -743,6 +746,7 @@
     "GrammyNominations": 4,
     "GrammyAwards": 2,
     "HasGrammyAward": true,
+    "Tours": [],
     "Albums": [
       {
         "Album": "Library of liberty",
@@ -761,6 +765,7 @@
     "GrammyNominations": 2,
     "GrammyAwards": 0,
     "HasGrammyAward": false,
+    "Tours": [],
     "Albums": [
       {
         "Album": "Just a tease",
@@ -1072,6 +1077,7 @@
     "GrammyNominations": 0,
     "GrammyAwards": 0,
     "HasGrammyAward": false,
+    "Tours": [],
     "Albums": [
       {
         "Album": "Pushing up daisies",
@@ -1221,6 +1227,7 @@
     "GrammyNominations": 1,
     "GrammyAwards": 0,
     "HasGrammyAward": false,
+    "Tours": [],
     "Albums": [
       {
         "Album": "Forever alone",
