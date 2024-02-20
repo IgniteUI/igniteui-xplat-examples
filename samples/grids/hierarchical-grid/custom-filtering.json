@@ -34,7 +34,8 @@
             "dataType": "Number",
             "minWidth": "88px",
             "maxWidth": "230px",
-            "resizable": true
+            "resizable": true,
+            "filterable": false
           },
           {
             "type": "WebColumn",
