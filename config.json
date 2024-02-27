@@ -12,7 +12,6 @@
     {
       "name": "React",
       "exclusions": [
-        { "reason": "component isn't in React product", "path": "grids\\hierarchical-grid\\" },
         { "reason": "component isn't in React product", "path": "grids\\pivot-grid\\" },
         { "reason": "component isn't in React product", "path": "grids\\tree-grid\\" }
       ]
