@@ -47,7 +47,8 @@
             "dataType": "Number",
             "minWidth": "88px",
             "maxWidth": "230px",
-            "resizable": true
+            "resizable": true,
+            "filterable": false
           },
           {
             "type": "WebColumn",
@@ -70,21 +71,7 @@
             "childDataKey": "Albums",
             "autoGenerate": false,
             "allowAdvancedFiltering": true,
-            "toolbar": [
-                {
-                "type": "WebGridToolbar",
-                "tools": [
-                    {
-                    "type": "WebGridToolbarActions",
-                    "actions": [
-                        {
-                        "type": "WebGridToolbarAdvancedFiltering"
-                        }
-                    ]
-                    }
-                ]
-                }
-            ],
+            "toolbarTemplateRef": "webGridToolbarDefaultTemplate",
             "columns": [
               {
                 "type": "WebColumn",
@@ -121,21 +108,7 @@
                 "childDataKey": "Songs",
                 "autoGenerate": false,
                 "allowAdvancedFiltering": true,
-                "toolbar": [
-                    {
-                    "type": "WebGridToolbar",
-                    "tools": [
-                        {
-                        "type": "WebGridToolbarActions",
-                        "actions": [
-                            {
-                            "type": "WebGridToolbarAdvancedFiltering"
-                            }
-                        ]
-                        }
-                    ]
-                    }
-                ],
+                "toolbarTemplateRef": "webGridToolbarDefaultTemplate",
                 "columns": [
                   {
                     "type": "WebColumn",
@@ -174,21 +147,7 @@
             "childDataKey": "Tours",
             "autoGenerate": false,
             "allowAdvancedFiltering": true,
-            "toolbar": [
-                {
-                "type": "WebGridToolbar",
-                "tools": [
-                    {
-                    "type": "WebGridToolbarActions",
-                    "actions": [
-                        {
-                        "type": "WebGridToolbarAdvancedFiltering"
-                        }
-                    ]
-                    }
-                ]
-                }
-            ],
+            "toolbarTemplateRef": "webGridToolbarDefaultTemplate",
             "columns": [
               {
                 "type": "WebColumn",

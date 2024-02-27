@@ -1,6 +1,7 @@
 {
     "export": true,
     "skipAlterDataCasing": true,
+    "onInit": ["WebHGridFilteringStyle"],
     "descriptions": {
       "content": {
         "type": "WebHierarchicalGrid",

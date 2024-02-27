@@ -1,7 +1,7 @@
 {
     "export": true,
     "skipAlterDataCasing": true,
-    "onInit": ["WebTreeGridAdvancedFilteringStyle"],
+    "onInit": ["WebHGridAdvancedFilteringStyle"],
     "descriptions": {
       "content": {
         "type": "WebHierarchicalGrid",
@@ -72,21 +72,7 @@
             "childDataKey": "Albums",
             "autoGenerate": false,
             "allowAdvancedFiltering": true,
-            "toolbar": [
-                {
-                "type": "WebGridToolbar",
-                "tools": [
-                    {
-                    "type": "WebGridToolbarActions",
-                    "actions": [
-                        {
-                        "type": "WebGridToolbarAdvancedFiltering"
-                        }
-                    ]
-                    }
-                ]
-                }
-            ],
+            "toolbarTemplateRef": "webGridToolbarDefaultTemplate",
             "columns": [
               {
                 "type": "WebColumn",
@@ -123,21 +109,7 @@
                 "childDataKey": "Songs",
                 "autoGenerate": false,
                 "allowAdvancedFiltering": true,
-                "toolbar": [
-                    {
-                    "type": "WebGridToolbar",
-                    "tools": [
-                        {
-                        "type": "WebGridToolbarActions",
-                        "actions": [
-                            {
-                            "type": "WebGridToolbarAdvancedFiltering"
-                            }
-                        ]
-                        }
-                    ]
-                    }
-                ],
+                "toolbarTemplateRef": "webGridToolbarDefaultTemplate",
                 "columns": [
                   {
                     "type": "WebColumn",
@@ -176,21 +148,7 @@
             "childDataKey": "Tours",
             "autoGenerate": false,
             "allowAdvancedFiltering": true,
-            "toolbar": [
-                {
-                "type": "WebGridToolbar",
-                "tools": [
-                    {
-                    "type": "WebGridToolbarActions",
-                    "actions": [
-                        {
-                        "type": "WebGridToolbarAdvancedFiltering"
-                        }
-                    ]
-                    }
-                ]
-                }
-            ],
+            "toolbarTemplateRef": "webGridToolbarDefaultTemplate",
             "columns": [
               {
                 "type": "WebColumn",
