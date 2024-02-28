@@ -68,21 +68,7 @@
             "type": "WebRowIsland",
             "childDataKey": "Albums",
             "autoGenerate": false,
-            "toolbar": [
-              {
-                "type": "WebGridToolbar",
-                "tools": [
-                  {
-                    "type": "WebGridToolbarActions",
-                    "actions": [
-                      {
-                        "type": "WebGridToolbarHiding"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
+            "toolbarTemplateRef": "WebHierarchicalGridHidingTemplate",
             "columns": [
               {
                 "type": "WebColumn",
@@ -118,21 +104,7 @@
                 "type": "WebRowIsland",
                 "childDataKey": "Songs",
                 "autoGenerate": false,
-                "toolbar": [
-                  {
-                    "type": "WebGridToolbar",
-                    "tools": [
-                      {
-                        "type": "WebGridToolbarActions",
-                        "actions": [
-                          {
-                            "type": "WebGridToolbarHiding"
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ],
+                "toolbarTemplateRef": "WebHierarchicalGridHidingTemplate",
                 "columns": [
                   {
                     "type": "WebColumn",
@@ -166,21 +138,7 @@
             "type": "WebRowIsland",
             "childDataKey": "Tours",
             "autoGenerate": false,
-            "toolbar": [
-              {
-                "type": "WebGridToolbar",
-                "tools": [
-                  {
-                    "type": "WebGridToolbarActions",
-                    "actions": [
-                      {
-                        "type": "WebGridToolbarHiding"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
+            "toolbarTemplateRef": "WebHierarchicalGridHidingTemplate",
             "columns": [
               {
                 "type": "WebColumn",
