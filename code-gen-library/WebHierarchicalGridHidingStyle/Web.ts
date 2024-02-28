@@ -9,7 +9,7 @@ export class WebHierarchicalGridHidingStyle {
     //end eventHandler
     public requiredStyles = `
 <!--begin styles-->
-#hierarchicalGrid igc-grid-toolbar-actions, igx-column-actions {
+#hierarchicalGrid {
     --ig-column-actions-background-color: #292826;
     --ig-column-actions-title-color: #ffcd0f;
     --ig-checkbox-tick-color: #292826;
