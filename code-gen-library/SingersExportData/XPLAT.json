@@ -1,0 +1,505 @@
+[
+  {
+    "ID": 0,
+    "Artist": "Naomí Yepes",
+    "Photo": "https://static.infragistics.com/xplatform/images/people/names/naomi.jpg",
+    "Debut": 2011,
+    "GrammyNominations": 6,
+    "GrammyAwards": 0,
+    "HasGrammyAward": false,
+    "Tours": [
+      {
+        "Tour": "Faithful Tour",
+        "StartedOn": "Sep 12",
+        "Location": "Worldwide",
+        "Headliner": "NO",
+        "TouredBy": "Naomí Yepes"
+      },
+      {
+        "Tour": "City Jam Sessions",
+        "StartedOn": "Aug 13",
+        "Location": "North America",
+        "Headliner": "YES",
+        "TouredBy": "Naomí Yepes"
+      },
+      {
+        "Tour": "Christmas NYC 2013",
+        "StartedOn": "Dec 13",
+        "Location": "United States",
+        "Headliner": "NO",
+        "TouredBy": "Naomí Yepes"
+      },
+      {
+        "Tour": "Christmas NYC 2014",
+        "StartedOn": "Dec 14",
+        "Location": "North America",
+        "Headliner": "NO",
+        "TouredBy": "Naomí Yepes"
+      },
+      {
+        "Tour": "Watermelon Tour",
+        "StartedOn": "Feb 15",
+        "Location": "Worldwide",
+        "Headliner": "YES",
+        "TouredBy": "Naomí Yepes"
+      },
+      {
+        "Tour": "Christmas NYC 2016",
+        "StartedOn": "Dec 16",
+        "Location": "United States",
+        "Headliner": "NO",
+        "TouredBy": "Naomí Yepes"
+      },
+      {
+        "Tour": "The Dragon Tour",
+        "StartedOn": "Feb 17",
+        "Location": "Worldwide",
+        "Headliner": "NO",
+        "TouredBy": "Naomí Yepes"
+      },
+      {
+        "Tour": "Organic Sessions",
+        "StartedOn": "Aug 18",
+        "Location": "United States, England",
+        "Headliner": "YES",
+        "TouredBy": "Naomí Yepes"
+      },
+      {
+        "Tour": "Hope World Tour",
+        "StartedOn": "Mar 19",
+        "Location": "Worldwide",
+        "Headliner": "NO",
+        "TouredBy": "Naomí Yepes"
+      }
+    ],
+    "Albums": [
+      {
+        "Album": "Initiation",
+        "LaunchDate": "September 3, 2013",
+        "BillboardReview": 86,
+        "USBillboard200": 1,
+        "Artist": "Naomí Yepes",
+        "Songs": []
+      },
+      {
+        "Album": "Dream Driven",
+        "LaunchDate": "August 25, 2014",
+        "BillboardReview": 81,
+        "USBillboard200": 1,
+        "Artist": "Naomí Yepes",
+        "Songs": [
+          {
+            "Number": 1,
+            "Title": "Intro",
+            "Released": "29 Apr 2021",
+            "Genre": "*",
+            "Album": "Dream Driven"
+          },
+          {
+            "Number": 2,
+            "Title": "Ferocious",
+            "Released": "28 Apr 2014",
+            "Genre": "Dance-pop R&B",
+            "Album": "Dream Driven"
+          },
+          {
+            "Number": 3,
+            "Title": "Going crazy",
+            "Released": "10 Feb 2015",
+            "Genre": "Dance-pop EDM",
+            "Album": "Dream Driven"
+          },
+          {
+            "Number": 4,
+            "Title": "Future past",
+            "Released": "false",
+            "Genre": "*",
+            "Album": "Dream Driven"
+          },
+          {
+            "Number": 5,
+            "Title": "Roaming like them",
+            "Released": "2 Jul 2014",
+            "Genre": "Electro house Electropop",
+            "Album": "Dream Driven"
+          },
+          {
+            "Number": 6,
+            "Title": "Last Wishes",
+            "Released": "12 Aug 2014",
+            "Genre": "R&B",
+            "Album": "Dream Driven"
+          },
+          {
+            "Number": 7,
+            "Title": "Stay where you are",
+            "Released": "false",
+            "Genre": "*",
+            "Album": "Dream Driven"
+          },
+          {
+            "Number": 8,
+            "Title": "Imaginarium",
+            "Released": "false",
+            "Genre": "*",
+            "Album": "Dream Driven"
+          },
+          {
+            "Number": 9,
+            "Title": "Tell me",
+            "Released": "30 Sep 2014",
+            "Genre": "Synth-pop R&B",
+            "Album": "Dream Driven"
+          },
+          {
+            "Number": 10,
+            "Title": "Shredded into pieces",
+            "Released": "false",
+            "Genre": "*",
+            "Album": "Dream Driven"
+          },
+          {
+            "Number": 11,
+            "Title": "Capture this moment",
+            "Released": "false",
+            "Genre": "*",
+            "Album": "Dream Driven"
+          },
+          {
+            "Number": 12,
+            "Title": "Dream Driven",
+            "Released": "false",
+            "Genre": "*",
+            "Album": "Dream Driven"
+          }
+        ]
+      },
+      {
+        "Album": "The dragon journey",
+        "LaunchDate": "May 20, 2016",
+        "BillboardReview": 60,
+        "USBillboard200": 2,
+        "Artist": "Naomí Yepes",
+        "Songs": []
+      },
+      {
+        "Album": "Organic me",
+        "LaunchDate": "August 17, 2018",
+        "BillboardReview": 82,
+        "USBillboard200": 1,
+        "Artist": "Naomí Yepes",
+        "Songs": [
+          {
+            "Number": 1,
+            "Title": "I Love",
+            "Released": "11 May 2019",
+            "Genre": "Crunk reggaeton",
+            "Album": "Organic me"
+          },
+          {
+            "Number": 2,
+            "Title": "Early Morning Compass",
+            "Released": "15 Jan 2020",
+            "Genre": "mystical parody-bap ",
+            "Album": "Organic me"
+          },
+          {
+            "Number": 3,
+            "Title": "Key Fields Forever",
+            "Released": "2 Jan 2020",
+            "Genre": "Dance-pop EDM",
+            "Album": "Organic me"
+          },
+          {
+            "Number": 4,
+            "Title": "Stand by Your Goblins",
+            "Released": "20 Nov 2019",
+            "Genre": "*",
+            "Album": "Organic me"
+          },
+          {
+            "Number": 5,
+            "Title": "Mad to Walk",
+            "Released": "12 May 2019",
+            "Genre": "Electro house Electropop",
+            "Album": "Organic me"
+          },
+          {
+            "Number": 6,
+            "Title": "Alice's Waiting",
+            "Released": "28 Jan 2020",
+            "Genre": "R&B",
+            "Album": "Organic me"
+          },
+          {
+            "Number": 7,
+            "Title": "We Shall Kiss",
+            "Released": "30 Oct 2019",
+            "Genre": "*",
+            "Album": "Organic me"
+          },
+          {
+            "Number": 8,
+            "Title": "Behind Single Ants",
+            "Released": "2 Oct 2019",
+            "Genre": "*",
+            "Album": "Organic me"
+          },
+          {
+            "Number": 9,
+            "Title": "Soap Autopsy",
+            "Released": "8 Aug 2019",
+            "Genre": "Synth-pop R&B",
+            "Album": "Organic me"
+          },
+          {
+            "Number": 10,
+            "Title": "Have You Met Rich?",
+            "Released": "1 Jul 2019",
+            "Genre": "ethno-tunes",
+            "Album": "Organic me"
+          },
+          {
+            "Number": 11,
+            "Title": "Livin' on a Banana",
+            "Released": "22 Nov 2019",
+            "Genre": "Crunk reggaeton",
+            "Album": "Organic me"
+          }
+        ]
+      },
+      {
+        "Album": "Curiosity",
+        "LaunchDate": "December 7, 2019",
+        "BillboardReview": 75,
+        "USBillboard200": 12,
+        "Artist": "Naomí Yepes",
+        "Songs": []
+      }
+    ]
+  },
+  {
+    "ID": 1,
+    "Artist": "Babila Ebwélé",
+    "Photo": "https://static.infragistics.com/xplatform/images/people/names/babila.jpg",
+    "Debut": 2009,
+    "GrammyNominations": 0,
+    "GrammyAwards": 11,
+    "HasGrammyAward": true,
+    "Tours": [
+      {
+        "Tour": "The last straw",
+        "StartedOn": "May 09",
+        "Location": "Europe, Asia",
+        "Headliner": "NO",
+        "TouredBy": "Babila Ebwélé"
+      },
+      {
+        "Tour": "No foundations",
+        "StartedOn": "Jun 04",
+        "Location": "United States, Europe",
+        "Headliner": "YES",
+        "TouredBy": "Babila Ebwélé"
+      },
+      {
+        "Tour": "Crazy eyes",
+        "StartedOn": "Jun 08",
+        "Location": "North America",
+        "Headliner": "NO",
+        "TouredBy": "Babila Ebwélé"
+      },
+      {
+        "Tour": "Zero gravity",
+        "StartedOn": "Apr 19",
+        "Location": "United States",
+        "Headliner": "NO",
+        "TouredBy": "Babila Ebwélé"
+      },
+      {
+        "Tour": "Battle with myself",
+        "StartedOn": "Mar 08",
+        "Location": "North America",
+        "Headliner": "YES",
+        "TouredBy": "Babila Ebwélé"
+      }
+    ],
+    "Albums": [
+      {
+        "Album": "Pushing up daisies",
+        "LaunchDate": "May 31, 2000",
+        "BillboardReview": 86,
+        "USBillboard200": 42,
+        "Artist": "Babila Ebwélé",
+        "Songs": [
+          {
+            "Number": 1,
+            "Title": "Wood Shavings Forever",
+            "Released": "9 Jun 2019",
+            "Genre": "*",
+            "Album": "Pushing up daisies"
+          },
+          {
+            "Number": 2,
+            "Title": "Early Morning Drive",
+            "Released": "20 May 2019",
+            "Genre": "*",
+            "Album": "Pushing up daisies"
+          },
+          {
+            "Number": 3,
+            "Title": "Don't Natter",
+            "Released": "10 Jun 2019",
+            "Genre": "adult calypso-industrial",
+            "Album": "Pushing up daisies"
+          },
+          {
+            "Number": 4,
+            "Title": "Stairway to Balloons",
+            "Released": "18 Jun 2019",
+            "Genre": "calypso and mariachi",
+            "Album": "Pushing up daisies"
+          },
+          {
+            "Number": 5,
+            "Title": "The Number of your Apple",
+            "Released": "29 Oct 2019",
+            "Genre": "*",
+            "Album": "Pushing up daisies"
+          },
+          {
+            "Number": 6,
+            "Title": "Your Delightful Heart",
+            "Released": "24 Feb 2019",
+            "Genre": "*",
+            "Album": "Pushing up daisies"
+          },
+          {
+            "Number": 7,
+            "Title": "Nice Weather For Balloons",
+            "Released": "1 Aug 2019",
+            "Genre": "rap-hop",
+            "Album": "Pushing up daisies"
+          },
+          {
+            "Number": 8,
+            "Title": "The Girl From Cornwall",
+            "Released": "4 May 2019",
+            "Genre": "enigmatic rock-and-roll",
+            "Album": "Pushing up daisies"
+          },
+          {
+            "Number": 9,
+            "Title": "Here Without Jack",
+            "Released": "24 Oct 2019",
+            "Genre": "*",
+            "Album": "Pushing up daisies"
+          },
+          {
+            "Number": 10,
+            "Title": "Born Rancid",
+            "Released": "19 Mar 2019",
+            "Genre": "*",
+            "Album": "Pushing up daisies"
+          }
+        ]
+      },
+      {
+        "Album": "Death's dead",
+        "LaunchDate": "June 8, 2016",
+        "BillboardReview": 85,
+        "USBillboard200": 95,
+        "Artist": "Babila Ebwélé",
+        "Songs": [
+          {
+            "Number": 1,
+            "Title": "Men Sound Better With You",
+            "Released": "20 Oct 2019",
+            "Genre": "rap-hop",
+            "Album": "Death's dead"
+          },
+          {
+            "Number": 2,
+            "Title": "Ghost in My Rod",
+            "Released": "5 Oct 2019",
+            "Genre": "enigmatic rock-and-roll",
+            "Album": "Death's dead"
+          },
+          {
+            "Number": 3,
+            "Title": "Bed of Men",
+            "Released": "14 Nov 2019",
+            "Genre": "whimsical comedy-grass ",
+            "Album": "Death's dead"
+          },
+          {
+            "Number": 4,
+            "Title": "Don't Push",
+            "Released": "2 Jan 2020",
+            "Genre": "unblack electronic-trip-hop",
+            "Album": "Death's dead"
+          },
+          {
+            "Number": 5,
+            "Title": "Nice Weather For Men",
+            "Released": "18 Dec 2019",
+            "Genre": "*",
+            "Album": "Death's dead"
+          },
+          {
+            "Number": 6,
+            "Title": "Rancid Rhapsody",
+            "Released": "10 Mar 2019",
+            "Genre": "*",
+            "Album": "Death's dead"
+          },
+          {
+            "Number": 7,
+            "Title": "Push, Push, Push!",
+            "Released": "21 Feb 2019",
+            "Genre": "*",
+            "Album": "Death's dead"
+          },
+          {
+            "Number": 8,
+            "Title": "My Name is Sarah",
+            "Released": "15 Nov 2019",
+            "Genre": "*",
+            "Album": "Death's dead"
+          },
+          {
+            "Number": 9,
+            "Title": "The Girl From My Hotel",
+            "Released": "6 Nov 2019",
+            "Genre": "*",
+            "Album": "Death's dead"
+          },
+          {
+            "Number": 10,
+            "Title": "Free Box",
+            "Released": "18 Apr 2019",
+            "Genre": "splitter-funk",
+            "Album": "Death's dead"
+          },
+          {
+            "Number": 11,
+            "Title": "Hotel Cardiff",
+            "Released": "30 Dec 2019",
+            "Genre": "guilty pleasure ebm",
+            "Album": "Death's dead"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "ID": 2,
+    "Artist": "Chloe",
+    "Photo": "https://static.infragistics.com/xplatform/images/people/names/siri.jpg",
+    "Debut": 2015,
+    "GrammyNominations": 3,
+    "GrammyAwards": 1,
+    "HasGrammyAward": true,
+    "Tours": [],
+    "Albums": []
+  }
+]

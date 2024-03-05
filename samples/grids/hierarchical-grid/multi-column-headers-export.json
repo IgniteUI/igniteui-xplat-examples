@@ -1,0 +1,338 @@
+{
+    "export": true,
+    "skipAlterDataCasing": true,
+    "descriptions": {
+      "content": {
+        "type": "WebHierarchicalGrid",
+        "dataRef": "MultiColumnsExportData",
+        "autoGenerate": false,
+        "primaryKey": "ID",
+        "moving": true,
+        "allowFiltering": true,
+        "toolbar": [
+          {
+            "type": "WebGridToolbar",
+            "tools": [
+              {
+                "type": "WebGridToolbarActions",
+                "actions": [
+                  {
+                    "type": "WebGridToolbarExporter",
+                    "exportCSV": false,
+                    "exportExcel": true,
+                    "id": "hGridToolbarExporter",
+                    "name": "hGridToolbarExporter",
+                    "exportStartedRef": "WebGridExportEventMultiColumnHeaders"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "columns": [
+          {
+            "type": "WebColumnGroup",
+            "header": "General Information",
+            "children": [
+              {
+                "type": "WebColumn",
+                "field": "CompanyName",
+                "dataType": "String",
+                "sortable": true,
+                "resizable": true
+              },
+              {
+                "type": "WebColumnGroup",
+                "header": "Personal Details",
+                "children": [
+                  {
+                    "type": "WebColumn",
+                    "field": "ContactName",
+                    "dataType": "String",
+                    "sortable": true,
+                    "resizable": true
+                  },
+                  {
+                    "type": "WebColumn",
+                    "field": "ContactTitle",
+                    "dataType": "String",
+                    "sortable": true,
+                    "resizable": true
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "WebColumnGroup",
+            "header": "Address Information",
+            "children": [
+              {
+                "type": "WebColumnGroup",
+                "header": "Location",
+                "children": [
+                  {
+                    "type": "WebColumn",
+                    "field": "Address",
+                    "dataType": "String",
+                    "sortable": true,
+                    "resizable": true
+                  },
+                  {
+                    "type": "WebColumn",
+                    "field": "City",
+                    "dataType": "String",
+                    "sortable": true,
+                    "resizable": true
+                  },
+                  {
+                    "type": "WebColumn",
+                    "field": "PostalCode",
+                    "dataType": "String",
+                    "sortable": true,
+                    "resizable": true
+                  },
+                  {
+                    "type": "WebColumn",
+                    "field": "Country",
+                    "dataType": "String",
+                    "sortable": true,
+                    "resizable": true
+                  }
+                ]
+              },
+              {
+                "type": "WebColumnGroup",
+                "header": "Contact Information",
+                "children": [
+                  {
+                    "type": "WebColumn",
+                    "field": "Phone",
+                    "dataType": "String",
+                    "sortable": true,
+                    "resizable": true
+                  },
+                  {
+                    "type": "WebColumn",
+                    "field": "Fax",
+                    "dataType": "String",
+                    "sortable": true,
+                    "resizable": true
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "childLayoutList": [
+          {
+            "type": "WebRowIsland",
+            "childDataKey": "ChildCompanies",
+            "moving": true,
+            "autoGenerate": false,
+            "columns": [
+              {
+                "type": "WebColumnGroup",
+                "header": "General Information",
+                "children": [
+                  {
+                    "type": "WebColumn",
+                    "field": "CompanyName",
+                    "dataType": "String",
+                    "sortable": true,
+                    "resizable": true
+                  },
+                  {
+                    "type": "WebColumnGroup",
+                    "header": "Personal Details",
+                    "children": [
+                      {
+                        "type": "WebColumn",
+                        "field": "ContactName",
+                        "dataType": "String",
+                        "sortable": true,
+                        "resizable": true
+                      },
+                      {
+                        "type": "WebColumn",
+                        "field": "ContactTitle",
+                        "dataType": "String",
+                        "sortable": true,
+                        "resizable": true
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "WebColumnGroup",
+                "header": "Address Information",
+                "children": [
+                  {
+                    "type": "WebColumnGroup",
+                    "header": "Location",
+                    "children": [
+                      {
+                        "type": "WebColumn",
+                        "field": "Address",
+                        "dataType": "String",
+                        "sortable": true,
+                        "resizable": true
+                      },
+                      {
+                        "type": "WebColumn",
+                        "field": "City",
+                        "dataType": "String",
+                        "sortable": true,
+                        "resizable": true
+                      },
+                      {
+                        "type": "WebColumn",
+                        "field": "PostalCode",
+                        "dataType": "String",
+                        "sortable": true,
+                        "resizable": true
+                      },
+                      {
+                        "type": "WebColumn",
+                        "field": "Country",
+                        "dataType": "String",
+                        "sortable": true,
+                        "resizable": true
+                      }
+                    ]
+                  },
+                  {
+                    "type": "WebColumnGroup",
+                    "header": "Contact Information",
+                    "children": [
+                      {
+                        "type": "WebColumn",
+                        "field": "Phone",
+                        "dataType": "String",
+                        "sortable": true,
+                        "resizable": true
+                      },
+                      {
+                        "type": "WebColumn",
+                        "field": "Fax",
+                        "dataType": "String",
+                        "sortable": true,
+                        "resizable": true
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "childLayoutList": [
+              {
+                "type": "WebRowIsland",
+                "childDataKey": "ChildCompanies",
+                "moving": true,
+                "autoGenerate": false,
+                "columns": [
+                  {
+                    "type": "WebColumnGroup",
+                    "header": "General Information",
+                    "children": [
+                      {
+                        "type": "WebColumn",
+                        "field": "CompanyName",
+                        "dataType": "String",
+                        "sortable": true,
+                        "resizable": true
+                      },
+                      {
+                        "type": "WebColumnGroup",
+                        "header": "Personal Details",
+                        "children": [
+                          {
+                            "type": "WebColumn",
+                            "field": "ContactName",
+                            "dataType": "String",
+                            "sortable": true,
+                            "resizable": true
+                          },
+                          {
+                            "type": "WebColumn",
+                            "field": "ContactTitle",
+                            "dataType": "String",
+                            "sortable": true,
+                            "resizable": true
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "WebColumnGroup",
+                    "header": "Address Information",
+                    "children": [
+                      {
+                        "type": "WebColumnGroup",
+                        "header": "Location",
+                        "children": [
+                          {
+                            "type": "WebColumn",
+                            "field": "Address",
+                            "dataType": "String",
+                            "sortable": true,
+                            "resizable": true
+                          },
+                          {
+                            "type": "WebColumn",
+                            "field": "City",
+                            "dataType": "String",
+                            "sortable": true,
+                            "resizable": true
+                          },
+                          {
+                            "type": "WebColumn",
+                            "field": "PostalCode",
+                            "dataType": "String",
+                            "sortable": true,
+                            "resizable": true
+                          },
+                          {
+                            "type": "WebColumn",
+                            "field": "Country",
+                            "dataType": "String",
+                            "sortable": true,
+                            "resizable": true
+                          }
+                        ]
+                      },
+                      {
+                        "type": "WebColumnGroup",
+                        "header": "Contact Information",
+                        "children": [
+                          {
+                            "type": "WebColumn",
+                            "field": "Phone",
+                            "dataType": "String",
+                            "sortable": true,
+                            "resizable": true
+                          },
+                          {
+                            "type": "WebColumn",
+                            "field": "Fax",
+                            "dataType": "String",
+                            "sortable": true,
+                            "resizable": true
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "modules": [
+      "grids/WebHierarchicalGridModule"
+    ]
+  }

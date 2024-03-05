@@ -1,0 +1,185 @@
+{
+    "export": true,
+    "skipAlterDataCasing": true,
+    "descriptions": {
+      "content": {
+        "type": "WebHierarchicalGrid",
+        "dataRef": "SingersExportData",
+        "autoGenerate": false,
+        "primaryKey": "ID",
+        "allowFiltering": true,
+        "filterMode": "ExcelStyleFilter",
+        "toolbar": [
+          {
+            "type": "WebGridToolbar",
+            "tools": [
+              {
+                "type": "WebGridToolbarActions",
+                "actions": [
+                  {
+                    "type": "WebGridToolbarExporter",
+                    "exportCSV": false,
+                    "exportExcel": true
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "columns": [
+          {
+            "type": "WebColumn",
+            "field": "Artist",
+            "header": "Artist",
+            "dataType": "String",
+            "sortable": true
+          },
+          {
+            "type": "WebColumn",
+            "field": "Debut",
+            "header": "Debut",
+            "dataType": "Number"
+          },
+          {
+            "type": "WebColumn",
+            "field": "GrammyNominations",
+            "header": "Grammy Nominations",
+            "dataType": "Number",
+            "sortable": true
+          },
+          {
+            "type": "WebColumn",
+            "field": "GrammyAwards",
+            "header": "Grammy Awards",
+            "dataType": "Number",
+            "sortable": true
+          }
+        ],
+        "childLayoutList": [
+          {
+            "type": "WebRowIsland",
+            "childDataKey": "Albums",
+            "autoGenerate": false,
+            "columns": [
+              {
+                "type": "WebColumn",
+                "field": "Album",
+                "header": "Album",
+                "dataType": "String"
+              },
+              {
+                "type": "WebColumn",
+                "field": "LaunchDate",
+                "header": "Launch Date",
+                "dataType": "Date"
+              },
+              {
+                "type": "WebColumn",
+                "field": "BillboardReview",
+                "header": "Billboard Review",
+                "dataType": "String"
+              },
+              {
+                "type": "WebColumn",
+                "field": "USBillboard200",
+                "header": "US Billboard 200",
+                "dataType": "String"
+              }
+            ],
+            "childLayoutList": [
+              {
+                "type": "WebRowIsland",
+                "childDataKey": "Songs",
+                "autoGenerate": false,
+                "columns": [
+                  {
+                    "type": "WebColumn",
+                    "field": "Number",
+                    "header": "No.",
+                    "dataType": "String"
+                  },
+                  {
+                    "type": "WebColumn",
+                    "field": "Title",
+                    "header": "Title",
+                    "dataType": "String"
+                  },
+                  {
+                    "type": "WebColumn",
+                    "field": "Released",
+                    "header": "Released",
+                    "dataType": "Date"
+                  },
+                  {
+                    "type": "WebColumn",
+                    "field": "Genre",
+                    "header": "Genre",
+                    "dataType": "String"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "WebRowIsland",
+            "childDataKey": "Tours",
+            "autoGenerate": false,
+            "columns": [
+              {
+                "type": "WebColumn",
+                "field": "Tour",
+                "header": "Tour",
+                "dataType": "String"
+              },
+              {
+                "type": "WebColumn",
+                "field": "StartedOn",
+                "header": "Started on",
+                "dataType": "String"
+              },
+              {
+                "type": "WebColumn",
+                "field": "Location",
+                "header": "Location",
+                "dataType": "String"
+              },
+              {
+                "type": "WebColumn",
+                "field": "Headliner",
+                "header": "Headliner",
+                "dataType": "String"
+              }
+            ],
+            "childLayoutList": [
+              {
+                "type": "WebRowIsland",
+                "childDataKey": "Tours",
+                "autoGenerate": false,
+                "columns": [
+                  {
+                    "type": "WebColumn",
+                    "field": "Country",
+                    "header": "Country",
+                    "dataType": "String"
+                  },
+                  {
+                    "type": "WebColumn",
+                    "field": "TicketsSold",
+                    "header": "Tickets Sold",
+                    "dataType": "Number"
+                  },
+                  {
+                    "type": "WebColumn",
+                    "field": "Attendants",
+                    "header": "Attendants",
+                    "dataType": "Number"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "modules": ["grids/WebHierarchicalGridModule"]
+  }
