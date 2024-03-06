@@ -1,0 +1,165 @@
+{
+    "skipAlterDataCasing": true,
+    "descriptions": {
+      "content": {
+        "type": "WebHierarchicalGrid",
+        "dataRef": "SingersData",
+        "autoGenerate": false,
+        "cellEditRef": "WebGridEditingEventsCellEdit",
+        "primaryKey": "ID",
+        "columns": [
+          {
+            "type": "WebColumn",
+            "field": "Artist",
+            "header": "Artist",
+            "dataType": "String",
+            "resizable": true
+          },
+          {
+            "type": "WebColumn",
+            "field": "Photo",
+            "header": "Photo",
+            "dataType": "Image",
+            "minWidth": "115px",
+            "resizable": true
+          },
+          {
+            "type": "WebColumn",
+            "field": "Debut",
+            "header": "Debut",
+            "dataType": "Number",
+            "minWidth": "88px",
+            "maxWidth": "230px",
+            "resizable": true
+          },
+          {
+            "type": "WebColumn",
+            "field": "GrammyNominations",
+            "header": "Grammy Nominations",
+            "dataType": "String",
+            "resizable": true
+          },
+          {
+            "type": "WebColumn",
+            "field": "GrammyAwards",
+            "header": "Grammy Awards",
+            "dataType": "String",
+            "resizable": true
+          }
+        ],
+        "childLayoutList": [
+          {
+            "type": "WebRowIsland",
+            "childDataKey": "Albums",
+            "cellEditRef": "WebGridEditingEventsCellEdit",
+            "autoGenerate": false,
+            "columns": [
+              {
+                "type": "WebColumn",
+                "field": "Album",
+                "header": "Album",
+                "dataType": "String",
+                "resizable": true
+              },
+              {
+                "type": "WebColumn",
+                "field": "LaunchDate",
+                "header": "Launch Date",
+                "dataType": "Date",
+                "resizable": true
+              },
+              {
+                "type": "WebColumn",
+                "field": "BillboardReview",
+                "header": "Billboard Review",
+                "dataType": "String",
+                "resizable": true
+              },
+              {
+                "type": "WebColumn",
+                "field": "USBillboard200",
+                "header": "US Billboard 200",
+                "dataType": "String",
+                "resizable": true
+              }
+            ],
+            "childLayoutList": [
+              {
+                "type": "WebRowIsland",
+                "childDataKey": "Songs",
+                "autoGenerate": false,
+                "columns": [
+                  {
+                    "type": "WebColumn",
+                    "field": "Number",
+                    "header": "No.",
+                    "dataType": "String",
+                    "resizable": true
+                  },
+                  {
+                    "type": "WebColumn",
+                    "field": "Title",
+                    "header": "Title",
+                    "dataType": "String",
+                    "resizable": true
+                  },
+                  {
+                    "type": "WebColumn",
+                    "field": "Released",
+                    "header": "Released",
+                    "dataType": "String",
+                    "resizable": true
+                  },
+                  {
+                    "type": "WebColumn",
+                    "field": "Genre",
+                    "header": "Genre",
+                    "dataType": "String",
+                    "resizable": true
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "WebRowIsland",
+            "childDataKey": "Tours",
+            "cellEditRef": "WebGridEditingEventsCellEdit",
+            "autoGenerate": false,
+            "columns": [
+              {
+                "type": "WebColumn",
+                "field": "Tour",
+                "header": "Tour",
+                "dataType": "String",
+                "resizable": true
+              },
+              {
+                "type": "WebColumn",
+                "field": "StartedOn",
+                "header": "Started on",
+                "dataType": "String",
+                "resizable": true
+              },
+              {
+                "type": "WebColumn",
+                "field": "Location",
+                "header": "Location",
+                "dataType": "String",
+                "resizable": true
+              },
+              {
+                "type": "WebColumn",
+                "field": "Headliner",
+                "header": "Headliner",
+                "dataType": "String",
+                "resizable": true
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "modules": ["grids/WebHierarchicalGridModule"]
+  }
+  
