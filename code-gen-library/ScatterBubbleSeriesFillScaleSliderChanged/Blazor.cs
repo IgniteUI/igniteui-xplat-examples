@@ -8,13 +8,21 @@ using System.Linq;
 
 public class ScatterBubbleSeriesFillScaleSliderChanged
 {
-
     //begin eventHandler
     public void ScatterBubbleSeriesFillScaleSliderChanged(IgbPropertyEditorPropertyDescriptionChangedEventArgs args)
     {
-        //var item = CodeGenHelper.GetDescription<IgbPropertyEditorPanel>("editor").Properties.Where((p) => p.PropertyPath == "MarkerType").First();
-        //var value = (string)item.PrimitiveValue;
-        //var chart = CodeGenHelper.GetDescription<IgbCategoryChart>("content");
+        var series = this.chart.ActualSeries[0] as IgbBubbleSeries;
+		
+		var fillScale = series.FillScale as IgbValueBrushScale;
+		
+		double newValue = (double)args.NewValue;
+		
+		if(newValue >= 25000){
+            fillScale.MaximumValue = args.NewValue;            
+        }
+        else{
+            fillScale.MinimumValue = args.NewValue;
+        }
     }
     //end eventHandler
 }
