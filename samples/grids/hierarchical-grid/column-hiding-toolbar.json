@@ -167,5 +167,5 @@
       ]
     }
   },
-  "modules": ["grids/WebHierarchicalGridModule"]
+  "modules": ["grids/WebGridToolbarModule", "grids/WebHierarchicalGridModule"]
 }
