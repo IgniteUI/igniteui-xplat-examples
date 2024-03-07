@@ -1,0 +1,282 @@
+{
+  "export": true,
+  "skipAlterDataCasing": true,
+  "descriptions": {
+    "content": {
+      "type": "WebHierarchicalGrid",
+      "dataRef": "HierarchicalCustomers",
+      "autoGenerate": false,
+      "name": "hierarchicalGrid",
+      "id": "hierarchicalGrid",
+      "primaryKey": "ID",
+      "moving": true,
+      "allowFiltering": true,
+      "columns": [
+        {
+          "type": "WebColumn",
+          "field": "CustomerID",
+          "dataType": "String",
+          "sortable": true,
+          "resizable": true
+        },
+        {
+          "type": "WebColumnGroup",
+          "header": "General Information",
+          "headerTemplateRef": "WebHierarchicalGridColumnGroupHeaderTemplate",
+          "children": [
+            {
+              "type": "WebColumn",
+              "field": "CompanyName",
+              "dataType": "String",
+              "sortable": true,
+              "resizable": true
+            },
+            {
+              "type": "WebColumnGroup",
+              "header": "Personal Details",
+              "children": [
+                {
+                  "type": "WebColumn",
+                  "field": "ContactName",
+                  "dataType": "String",
+                  "sortable": true,
+                  "resizable": true
+                },
+                {
+                  "type": "WebColumn",
+                  "field": "ContactTitle",
+                  "dataType": "String",
+                  "sortable": true,
+                  "resizable": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "WebColumnGroup",
+          "header": "Address Information",
+          "headerTemplateRef": "WebHierarchicalGridColumnGroupHeaderTemplate",
+          "children": [
+            {
+              "type": "WebColumnGroup",
+              "header": "Location",
+              "children": [
+                {
+                  "type": "WebColumn",
+                  "field": "Address",
+                  "dataType": "String",
+                  "sortable": true,
+                  "resizable": true
+                },
+                {
+                  "type": "WebColumn",
+                  "field": "City",
+                  "dataType": "String",
+                  "sortable": true,
+                  "resizable": true
+                },
+                {
+                  "type": "WebColumn",
+                  "field": "PostalCode",
+                  "dataType": "String",
+                  "sortable": true,
+                  "resizable": true
+                },
+                {
+                  "type": "WebColumn",
+                  "field": "Country",
+                  "dataType": "String",
+                  "sortable": true,
+                  "resizable": true
+                }
+              ]
+            },
+            {
+              "type": "WebColumnGroup",
+              "header": "Contact Information",
+              "children": [
+                {
+                  "type": "WebColumn",
+                  "field": "Phone",
+                  "dataType": "String",
+                  "sortable": true,
+                  "resizable": true
+                },
+                {
+                  "type": "WebColumn",
+                  "field": "Fax",
+                  "dataType": "String",
+                  "sortable": true,
+                  "resizable": true
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "childLayoutList": [
+        {
+          "type": "WebRowIsland",
+          "childDataKey": "Orders",
+          "autoGenerate": false,
+          "columns": [
+            {
+              "type": "WebColumnGroup",
+              "header": "Order Information",
+              "children": [
+                {
+                  "type": "WebColumnGroup",
+                  "header": "Order Details",
+                  "headerTemplateRef": "WebHierarchicalGridColumnGroupHeaderTemplate",
+                  "children": [
+                    {
+                      "type": "WebColumn",
+                      "field": "OrderID",
+                      "dataType": "Number",
+                      "sortable": true,
+                      "resizable": true
+                    },
+                    {
+                      "type": "WebColumn",
+                      "field": "EmployeeID",
+                      "dataType": "Number",
+                      "sortable": true,
+                      "resizable": true
+                    },
+                    {
+                      "type": "WebColumn",
+                      "field": "OrderDate",
+                      "dataType": "Date",
+                      "sortable": true,
+                      "resizable": true
+                    },
+                    {
+                      "type": "WebColumn",
+                      "field": "RequiredDate",
+                      "dataType": "Date",
+                      "sortable": true,
+                      "resizable": true
+                    }
+                  ]
+                },
+                {
+                  "type": "WebColumnGroup",
+                  "header": "General Shipping Information",
+                  "headerTemplateRef": "WebHierarchicalGridColumnGroupHeaderTemplate",
+                  "children": [
+                    {
+                      "type": "WebColumn",
+                      "field": "ShipDate",
+                      "dataType": "Date",
+                      "sortable": true,
+                      "resizable": true
+                    },
+                    {
+                      "type": "WebColumn",
+                      "field": "ShipVia",
+                      "dataType": "Number",
+                      "sortable": true,
+                      "resizable": true
+                    },
+                    {
+                      "type": "WebColumn",
+                      "field": "Freight",
+                      "dataType": "Number",
+                      "sortable": true,
+                      "resizable": true
+                    },
+                    {
+                      "type": "WebColumn",
+                      "field": "ShipName",
+                      "dataType": "String",
+                      "sortable": true,
+                      "resizable": true
+                    }
+                  ]
+                },
+                {
+                  "type": "WebColumnGroup",
+                  "header": "Shipping Locations",
+                  "headerTemplateRef": "WebHierarchicalGridColumnGroupHeaderTemplate",
+                  "children": [
+                    {
+                      "type": "WebColumn",
+                      "field": "ShipAddress",
+                      "dataType": "String",
+                      "sortable": true,
+                      "resizable": true
+                    },
+                    {
+                      "type": "WebColumn",
+                      "field": "ShipCity",
+                      "dataType": "String",
+                      "sortable": true,
+                      "resizable": true
+                    },
+                    {
+                      "type": "WebColumn",
+                      "field": "ShipPostalCode",
+                      "dataType": "String",
+                      "sortable": true,
+                      "resizable": true
+                    },
+                    {
+                      "type": "WebColumn",
+                      "field": "ShipCountry",
+                      "dataType": "String",
+                      "sortable": true,
+                      "resizable": true
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "childLayoutList": [
+            {
+              "type": "WebRowIsland",
+              "childDataKey": "OrderDetails",
+              "autoGenerate": false,
+              "columns": [
+                {
+                  "type": "WebColumn",
+                  "field": "ProductID",
+                  "dataType": "Number",
+                  "sortable": true,
+                  "resizable": true
+                },
+                {
+                  "type": "WebColumn",
+                  "field": "UnitPrice",
+                  "dataType": "Number",
+                  "sortable": true,
+                  "resizable": true
+                },
+                {
+                  "type": "WebColumn",
+                  "field": "Quantity",
+                  "dataType": "Number",
+                  "sortable": true,
+                  "resizable": true
+                },
+                {
+                  "type": "WebColumn",
+                  "field": "Discount",
+                  "dataType": "Number",
+                  "sortable": true,
+                  "resizable": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "grids/WebHierarchicalGridModule",
+    "grids/WebColumnGroupModule"
+  ]
+}
