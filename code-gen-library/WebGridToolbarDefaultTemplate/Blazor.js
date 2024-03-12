@@ -1,12 +1,6 @@
-    //begin imports
-import { IgcExporterOptionsBase, IgcGridToolbarExportEventArgs } from 'igniteui-webcomponents-grids/grids';
-import { html } from 'lit-html';
-//end imports
-
-export class WebGridToolbarDefaultTemplate {
-    //begin eventHandler
-    public webGridToolbarDefaultTemplate(): any {
-        return html`
+//begin template
+igRegisterScript("WebGridToolbarDefaultTemplate", (ctx) => {
+    return html`
         <igc-grid-toolbar>
         <igc-grid-toolbar-title>My new toolbar</igc-grid-toolbar-title>
         <igc-grid-toolbar-actions>
@@ -20,6 +14,5 @@ export class WebGridToolbarDefaultTemplate {
             <igc-grid-toolbar-exporter></igc-grid-toolbar-exporter>
         </igc-grid-toolbar-actions>
     </igc-grid-toolbar>`
-        //end eventHandler
-    }
-}
+}, false);
+//end template
