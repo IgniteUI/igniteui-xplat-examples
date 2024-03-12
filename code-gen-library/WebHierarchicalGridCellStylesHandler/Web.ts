@@ -11,8 +11,8 @@ export class WebHierarchicalGridCellStylesHandler {
     public webHierarchicalGridCellStylesHandler = {
         background: (rowData: any, columnKey: any, cellValue: any, rowIndex: any) => rowIndex % 2 === 0 ? "#EFF4FD" : null,
         color: (rowData: any, columnKey: any, cellValue: any, rowIndex: any) => {
-            if (columnKey === "HasGrammyAward") {
-                return cellValue ? "#28a745" : "#dc3545";
+            if (columnKey === "Debut") {
+                return cellValue > 2000 ? "#28a745" : "#dc3545";
             }
             return undefined;
         }
