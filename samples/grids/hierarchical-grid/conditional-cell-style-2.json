@@ -12,7 +12,16 @@
           "field": "Artist",
           "header": "Artist",
           "dataType": "String",
-          "resizable": true
+          "resizable": true,
+          "cellStylesRef": "WebHierarchicalGridCellStylesHandler"
+        },
+        {
+          "type": "WebColumn",
+          "field": "HasGrammyAward",
+          "header": "Has Grammy Award?",
+          "dataType": "Boolean",
+          "resizable": true,
+          "cellStylesRef": "WebHierarchicalGridCellStylesHandler"
         },
         {
           "type": "WebColumn",
@@ -20,7 +29,8 @@
           "header": "Photo",
           "dataType": "Image",
           "minWidth": "115px",
-          "resizable": true
+          "resizable": true,
+          "cellStylesRef": "WebHierarchicalGridCellStylesHandler"
         },
         {
           "type": "WebColumn",
@@ -29,7 +39,8 @@
           "dataType": "Number",
           "minWidth": "88px",
           "maxWidth": "230px",
-          "resizable": true
+          "resizable": true,
+          "cellStylesRef": "WebHierarchicalGridCellStylesHandler"
         },
         {
           "type": "WebColumn",
@@ -37,14 +48,15 @@
           "header": "Grammy Nominations",
           "dataType": "String",
           "resizable": true,
-          "cellClassesRef": "WebGridGrammyNominationsCellClassesHandler"
+          "cellStylesRef": "WebHierarchicalGridCellStylesHandler"
         },
         {
           "type": "WebColumn",
           "field": "GrammyAwards",
           "header": "Grammy Awards",
           "dataType": "String",
-          "resizable": true
+          "resizable": true,
+          "cellStylesRef": "WebHierarchicalGridCellStylesHandler"
         }
       ],
       "childLayoutList": [
