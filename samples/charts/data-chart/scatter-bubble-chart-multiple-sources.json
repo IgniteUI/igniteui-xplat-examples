@@ -40,7 +40,13 @@
           "radiusMemberPath": "Population",
           "dataSourceRef": "CountryStatsAfrica",
           "markerType": "Circle",
-          "showDefaultTooltip": true
+          "showDefaultTooltip": true,
+          "radiusScale": {
+            "type": "SizeScale",
+            "isLogarithmic": false,
+            "minimumValue": 20,
+            "maximumValue": 50
+          }
         },
         {
           "type": "BubbleSeries",
@@ -53,7 +59,13 @@
           "radiusMemberPath": "Population",
           "dataSourceRef": "CountryStatsEurope",
           "markerType": "Circle",
-          "showDefaultTooltip": true
+          "showDefaultTooltip": true,
+          "radiusScale": {
+            "type": "SizeScale",
+            "isLogarithmic": false,
+            "minimumValue": 20,
+            "maximumValue": 50
+          }
         }
       ]
     }

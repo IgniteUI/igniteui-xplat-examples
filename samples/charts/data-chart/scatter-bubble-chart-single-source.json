@@ -1,11 +1,10 @@
 {
-  "strings": {
-    "legendTitle": "GDP per Capita vs Population"
-  },
   "descriptions": {
     "content": {
       "type": "DataChart",
       "name": "chart",
+      "chartTitle": "Public Debt vs. Population",
+      "subtitle": "GDP per Capita",
       "axes": [
         {
           "type": "NumericXAxis",
@@ -19,20 +18,27 @@
           "name": "yAxis",
           "title": "GDP per Capita",
           "isLogarithmic": false,
-          "abbreviateLargeNumbers": true
+          "abbreviateLargeNumbers": true,
+          "maximumValue": 120
         }
       ],
       "series": [
         {
           "type": "BubbleSeries",
           "name": "BubbleSeries1",
-          "title": "European Countries",
+          "xMemberPath": "Population",
+          "yMemberPath": "PublicDebt",
+          "radiusMemberPath": "GdpPerCapita",
+          "radiusScale": {
+            "type": "SizeScale",
+            "isLogarithmic": false,
+            "minimumValue": 0,
+            "maximumValue": 100
+          },
+          "fillMemberPath": "GdpPerCapita",
           "xAxisRef": "xAxis",
           "yAxisRef": "yAxis",
-          "xMemberPath": "Population",
-          "yMemberPath": "GDP",
-          "radiusMemberPath": "Population",
-          "dataSourceRef": "CountryStatsEurope",
+          "dataSourceRef": "WorldDebtAndPopulation",
           "markerType": "Circle",
           "showDefaultTooltip": true
         },
