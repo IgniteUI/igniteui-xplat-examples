@@ -4,6 +4,7 @@
     "content": {
       "type": "WebHierarchicalGrid",
       "dataRef": "HierarchicalCustomers",
+      "id":"hGrid",
       "autoGenerate": false,
       "columns": [
         {
