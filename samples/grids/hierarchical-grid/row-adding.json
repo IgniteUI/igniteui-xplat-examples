@@ -89,6 +89,15 @@
               "type": "WebRowIsland",
               "childDataKey": "Songs",
               "autoGenerate": false,
+              "actionStripComponents": [{
+                "type": "WebActionStrip",
+                "actionButtons": [
+                  {
+                    "type": "WebGridEditingActions",
+                    "addRow": true
+                  }
+                ]
+              }],
               "columns": [
                 {
                   "type": "WebColumn",
@@ -126,6 +135,15 @@
           "type": "WebRowIsland",
           "childDataKey": "Tours",
           "autoGenerate": false,
+          "actionStripComponents": [{
+            "type": "WebActionStrip",
+            "actionButtons": [
+              {
+                "type": "WebGridEditingActions",
+                "addRow": true
+              }
+            ]
+          }],
           "columns": [
             {
               "type": "WebColumn",
