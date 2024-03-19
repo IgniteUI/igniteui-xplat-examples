@@ -16,7 +16,7 @@
         {
           "type": "NumericYAxis",
           "name": "yAxis",
-          "title": "GDP per Capita",
+          "title": "Public Debt",
           "isLogarithmic": false,
           "abbreviateLargeNumbers": true,
           "maximumValue": 120
@@ -32,8 +32,8 @@
           "radiusScale": {
             "type": "SizeScale",
             "isLogarithmic": false,
-            "minimumValue": 0,
-            "maximumValue": 100
+            "minimumValue": 5,
+            "maximumValue": 40
           },
           "fillMemberPath": "GdpPerCapita",
           "xAxisRef": "xAxis",
