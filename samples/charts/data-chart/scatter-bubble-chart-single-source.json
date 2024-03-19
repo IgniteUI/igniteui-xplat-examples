@@ -33,7 +33,7 @@
             "type": "SizeScale",
             "isLogarithmic": false,
             "minimumValue": 5,
-            "maximumValue": 100
+            "maximumValue": 40
           },
           "fillMemberPath": "GdpPerCapita",
           "xAxisRef": "xAxis",
