@@ -29,12 +29,6 @@
           "xMemberPath": "Population",
           "yMemberPath": "PublicDebt",
           "radiusMemberPath": "GdpPerCapita",
-          "radiusScale": {
-            "type": "SizeScale",
-            "isLogarithmic": false,
-            "minimumValue": 5,
-            "maximumValue": 40
-          },
           "fillMemberPath": "GdpPerCapita",
           "xAxisRef": "xAxis",
           "yAxisRef": "yAxis",

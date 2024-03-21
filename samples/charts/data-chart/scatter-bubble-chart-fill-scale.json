@@ -1,4 +1,5 @@
 {
+  "export": false,
   "descriptions": {
     "editor": {
       "type": "PropertyEditorPanel",
