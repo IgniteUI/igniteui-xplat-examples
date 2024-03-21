@@ -61,7 +61,6 @@
           "field": "GrammyNominations",
           "header": "Grammy Nominations",
           "dataType": "Number",
-          "sortable": true,
           "hasSummary": true
         },
         {
@@ -69,7 +68,6 @@
           "field": "GrammyAwards",
           "header": "Grammy Awards",
           "dataType": "Number",
-          "sortable": true,
           "hasSummary": true
         }
       ],
