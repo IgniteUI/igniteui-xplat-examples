@@ -44,13 +44,7 @@
           "markerBrush": "rgb(69, 179, 224)",
           "markerFillOpacity": 0.5,
           "markerThickness": 2,
-          "showDefaultTooltip": true,
-          "radiusScale": {
-            "type": "SizeScale",
-            "isLogarithmic": false,
-            "minimumValue": 20,
-            "maximumValue": 40
-          }
+          "showDefaultTooltip": true
         },
         {
           "type": "BubbleSeries",
@@ -67,13 +61,7 @@
           "markerBrush": "rgb(135, 156, 235)",
           "markerFillOpacity": 0.5,
           "markerThickness": 2,
-          "showDefaultTooltip": true,
-          "radiusScale": {
-            "type": "SizeScale",
-            "isLogarithmic": false,
-            "minimumValue": 20,
-            "maximumValue": 40
-          }
+          "showDefaultTooltip": true
         },
         {
           "type": "DataToolTipLayer",
