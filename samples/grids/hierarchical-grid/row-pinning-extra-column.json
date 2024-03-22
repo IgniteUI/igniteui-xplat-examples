@@ -1,0 +1,221 @@
+{
+  "export": true,
+  "skipAlterDataCasing": true,
+  "descriptions": {
+    "editor": {
+      "type": "PropertyEditorPanel",
+      "name": "PropertyEditorHierarchicalGrid",
+      "componentRendererRef": "renderer",
+      "targetRef": "hierarchicalGrid",
+      "descriptionType": "WebHierarchicalGrid",
+      "isHorizontal": true,
+      "isWrappingEnabled": true,
+      "properties": [
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "Pinning.Rows",
+          "name": "rowPinningEditor",
+          "label": "Row Pinning toggle",
+          "changedRef": "WebHierarchicalGridChangePinningConfig"
+        }
+      ]
+    },
+    "content": {
+      "type": "WebHierarchicalGrid",
+      "dataRef": "SingersData",
+      "autoGenerate": false,
+      "primaryKey": "Photo",
+      "id": "hierarchicalGrid",
+      "name": "hierarchicalGrid",
+      "cellSelection": "None",
+      "pinning": {
+        "type": "WebPinningConfig",
+        "rows": "Top",
+        "columns": "End"
+      },
+      "columns": [
+        {
+          "type": "WebColumn",
+          "width": "70px",
+          "filterable": false,
+          "pinned": true,
+          "bodyTemplateRef": "WebHierarchicalGridRowPinCellTemplate"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Artist",
+          "header": "Artist",
+          "dataType": "String"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Photo",
+          "header": "Photo",
+          "dataType": "Image"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Debut",
+          "header": "Debut",
+          "dataType": "Number"
+        },
+        {
+          "type": "WebColumn",
+          "field": "GrammyNominations",
+          "header": "Grammy Nominations",
+          "dataType": "String"
+        },
+        {
+          "type": "WebColumn",
+          "field": "GrammyAwards",
+          "header": "Grammy Awards",
+          "dataType": "String"
+        }
+      ],
+      "childLayoutList": [
+        {
+          "type": "WebRowIsland",
+          "childDataKey": "Albums",
+          "primaryKey": "Album",
+          "cellSelection": "None",
+          "pinning": {
+            "type": "WebPinningConfig",
+            "rows": "Top",
+            "columns": "End"
+          },
+          "autoGenerate": false,
+          "columns": [
+            {
+              "type": "WebColumn",
+              "width": "70px",
+              "filterable": false,
+              "pinned": true,
+              "bodyTemplateRef": "WebHierarchicalGridRowPinCellTemplate"
+            },
+            {
+              "type": "WebColumn",
+              "field": "Album",
+              "header": "Album",
+              "dataType": "String"
+            },
+            {
+              "type": "WebColumn",
+              "field": "LaunchDate",
+              "header": "Launch Date",
+              "dataType": "Date"
+            },
+            {
+              "type": "WebColumn",
+              "field": "BillboardReview",
+              "header": "Billboard Review",
+              "dataType": "String"
+            },
+            {
+              "type": "WebColumn",
+              "field": "USBillboard200",
+              "header": "US Billboard 200",
+              "dataType": "String"
+            }
+          ],
+          "childLayoutList": [
+            {
+              "type": "WebRowIsland",
+              "childDataKey": "Songs",
+              "primaryKey": "Number",
+              "cellSelection": "None",
+              "pinning": {
+                "type": "WebPinningConfig",
+                "rows": "Top",
+                "columns": "End"
+              },
+              "autoGenerate": false,
+              "columns": [
+                {
+                  "type": "WebColumn",
+                  "width": "70px",
+                  "filterable": false,
+                  "pinned": true,
+                  "bodyTemplateRef": "WebHierarchicalGridRowPinCellTemplate"
+                },
+                {
+                  "type": "WebColumn",
+                  "field": "Number",
+                  "header": "No.",
+                  "dataType": "String"
+                },
+                {
+                  "type": "WebColumn",
+                  "field": "Title",
+                  "header": "Title",
+                  "dataType": "String"
+                },
+                {
+                  "type": "WebColumn",
+                  "field": "Released",
+                  "header": "Released",
+                  "dataType": "String"
+                },
+                {
+                  "type": "WebColumn",
+                  "field": "Genre",
+                  "header": "Genre",
+                  "dataType": "String"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "WebRowIsland",
+          "childDataKey": "Tours",
+          "primaryKey": "Tour",
+          "cellSelection": "None",
+          "pinning": {
+            "type": "WebPinningConfig",
+            "rows": "Top",
+            "columns": "End"
+          },
+          "autoGenerate": false,
+          "columns": [
+            {
+              "type": "WebColumn",
+              "width": "70px",
+              "filterable": false,
+              "pinned": true,
+              "bodyTemplateRef": "WebHierarchicalGridRowPinCellTemplate"
+            },
+            {
+              "type": "WebColumn",
+              "field": "Tour",
+              "header": "Tour",
+              "dataType": "String"
+            },
+            {
+              "type": "WebColumn",
+              "field": "StartedOn",
+              "header": "Started on",
+              "dataType": "String"
+            },
+            {
+              "type": "WebColumn",
+              "field": "Location",
+              "header": "Location",
+              "dataType": "String"
+            },
+            {
+              "type": "WebColumn",
+              "field": "Headliner",
+              "header": "Headliner",
+              "dataType": "String"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
+    "grids/WebHierarchicalGridModule"
+  ]
+}
