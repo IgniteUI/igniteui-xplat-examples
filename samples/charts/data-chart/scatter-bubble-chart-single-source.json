@@ -1,10 +1,12 @@
 {
+  "export": false,
+  "strings": {
+    "legendTitle": "Total Population of Selected Countries"
+  },
   "descriptions": {
     "content": {
       "type": "DataChart",
       "name": "chart",
-      "chartTitle": "Public Debt vs. Population",
-      "subtitle": "GDP per Capita",
       "axes": [
         {
           "type": "NumericXAxis",
@@ -29,6 +31,12 @@
           "xMemberPath": "Population",
           "yMemberPath": "PublicDebt",
           "radiusMemberPath": "GdpPerCapita",
+          "radiusScale": {
+            "type": "SizeScale",
+            "isLogarithmic": false,
+            "minimumValue": 10,
+            "maximumValue": 50
+          },
           "fillMemberPath": "GdpPerCapita",
           "xAxisRef": "xAxis",
           "yAxisRef": "yAxis",
