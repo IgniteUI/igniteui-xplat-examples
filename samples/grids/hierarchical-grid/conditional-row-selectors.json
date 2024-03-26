@@ -1,0 +1,130 @@
+{
+    "export": true,
+    "skipAlterDataCasing": true,
+    "descriptions": {
+        "content": {
+            "type": "WebHierarchicalGrid",
+            "dataRef": "SingersData",
+            "autoGenerate": false,
+            "name": "hierarchicalGrid",
+            "id": "hierarchicalGrid",
+            "primaryKey": "ID",
+            "rowSelection": "Multiple",
+            "cellSelection": "None",
+            "rowSelectionChangingRef": "WebHierarchicalGridRowSelectionConditional",
+            "paginationComponents": [
+                {
+                    "type": "WebPaginator",
+                    "name": "paginator"
+                }
+            ],
+            "columns": [
+                {
+                    "type": "WebColumn",
+                    "field": "Artist"
+                },
+                {
+                    "type": "WebColumn",
+                    "field": "Debut"
+                },
+                {
+                    "type": "WebColumn",
+                    "field": "GrammyNominations",
+                    "header": "Grammy Nominations"
+                },
+                {
+                    "type": "WebColumn",
+                    "field": "GrammyAwards",
+                    "header": "Grammy Awards"
+                }
+            ],
+            "childLayoutList": [
+                {
+                    "type": "WebRowIsland",
+                    "childDataKey": "Albums",
+                    "autoGenerate": false,
+                    "rowSelection": "Multiple",
+                    "columns": [
+                        {
+                            "type": "WebColumn",
+                            "field": "Album"
+                        },
+                        {
+                            "type": "WebColumn",
+                            "field": "LaunchDate",
+                            "header": "Launch Date",
+                            "dataType": "Date"
+                        },
+                        {
+                            "type": "WebColumn",
+                            "field": "BillboardReview",
+                            "header": "Billboard Review"
+                        },
+                        {
+                            "type": "WebColumn",
+                            "field": "USBillboard200",
+                            "header": "US Billboard 200"
+                        }
+                    ],
+                    "childLayoutList": [
+                        {
+                            "type": "WebRowIsland",
+                            "childDataKey": "Songs",
+                            "autoGenerate": false,
+                            "rowSelection": "Multiple",
+                            "columns": [
+                                {
+                                    "type": "WebColumn",
+                                    "field": "Number",
+                                    "header": "No."
+                                },
+                                {
+                                    "type": "WebColumn",
+                                    "field": "Title"
+                                },
+                                {
+                                    "type": "WebColumn",
+                                    "field": "Released",
+                                    "dataType": "Date"
+                                },
+                                {
+                                    "type": "WebColumn",
+                                    "field": "Genre"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "WebRowIsland",
+                    "childDataKey": "Tours",
+                    "autoGenerate": false,
+                    "rowSelection": "Multiple",
+                    "columns": [
+                        {
+                            "type": "WebColumn",
+                            "field": "Tour"
+                        },
+                        {
+                            "type": "WebColumn",
+                            "field": "StartedOn",
+                            "header": "Started on"
+                        },
+                        {
+                            "type": "WebColumn",
+                            "field": "Location"
+                        },
+                        {
+                            "type": "WebColumn",
+                            "field": "Headliner"
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "modules": [
+        "withDescriptions",
+        "grids/WebHierarchicalGridModule"
+    ]
+}
