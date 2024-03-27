@@ -25,6 +25,7 @@
     "content": {
       "type": "WebGrid",
       "dataRef": "FinancialDataAll",
+      "primaryKey": "ID",
       "autoGenerate": false,
       "moving": true,
       "id": "grid1",
