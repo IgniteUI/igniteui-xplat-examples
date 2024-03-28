@@ -1,4 +1,6 @@
 {  
+  "export": false,
+  "todo": "hide until Scale({}) is fixed",
   "descriptions": {
     "editor": {
       "type": "PropertyEditorPanel",

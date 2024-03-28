@@ -1,4 +1,6 @@
 {  
+  "export": false,
+  "todo": "hide until Scale({}) is fixed",
   "todo1": "replace CountryDemographicEurope with CountryStatsEurope",
   "todo2": "replace CountryDemographicAfrican with CountryStatsAfrica",
   "strings": {
