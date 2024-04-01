@@ -2,21 +2,14 @@
   "export": false,
   "descriptions": {
     "content": {
-	"type": "RadialGauge",
-	"name": "gauge",
-	"minimumValue": 0,
-	"maximumValue": 100,
-	"value": 75,
-	"interval": 10,
-	"labelInterval": 10,
-	"labelExtent": 0.65,
-	"labelInterval": 10,
-	"labelExtent": 0.025,
-	"labelsPreTerminal": 0,
-	"labelsPostInitial": 0,
-	"highlightValueDisplayMode": "Overlay",
-	"highlightValue": 25, 
-	"isHighlightNeedleDraggingEnabled": true
+      "type": "RadialGauge",
+      "name": "gauge",
+      "minimumValue": 0,
+      "maximumValue": 100,
+      "value": 75,
+      "interval": 10,
+      "labelInterval": 10,
+      "labelExtent": 0.65
     }
   },
   "modules": [
