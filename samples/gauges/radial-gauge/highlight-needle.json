@@ -9,7 +9,11 @@
       "value": 75,
       "interval": 10,
       "labelInterval": 10,
-      "labelExtent": 0.65
+      "labelExtent": 0.65, 
+      "isNeedleDraggingEnabled": true,
+      "isHighlightNeedleDraggingEnabled": true,
+      "highlightValueDisplayMode": "Overlay",
+      "highlightValue": "25"
     }
   },
   "modules": [
