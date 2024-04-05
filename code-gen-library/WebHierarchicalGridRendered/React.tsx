@@ -1,5 +1,11 @@
-//begin eventHandler
-igRegisterScript("WebHierarchicalGridRendered", (event) => {
+//begin imports
+import { IgrRowSelectionEventArgs } from 'igniteui-react-grids';
+import { IgrHierarchicalGridComponent } from 'igniteui-react-grids';
+//end imports
+
+export class WebHierarchicalGridRendered {
+    //begin eventHandler
+    public webHierarchicalGridRendered(args:any): void {
         const hierarchicalGrid = document.getElementById("hierarchicalGrid");
         hierarchicalGrid.parentElement.style.display = "flex";
         const container = document.createElement("div");
@@ -11,5 +17,6 @@ igRegisterScript("WebHierarchicalGridRendered", (event) => {
         const title = document.createElement("span");
         title.textContent = "Events execution sequence:";
         container.appendChild(title);
-}, false);
-//end eventHandler
+    }
+    //end eventHandler
+}
