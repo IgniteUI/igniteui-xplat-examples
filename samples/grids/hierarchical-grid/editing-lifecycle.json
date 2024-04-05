@@ -17,7 +17,6 @@
       "rowEditExitRef": "WebHierarchicalGridRowEditExit",
       "cellEditEnterRef": "WebHierarchicalGridCellEditEnter",
       "cellEditRef": "WebHierarchicalGridCellEdit",
-      "cellEditDoneRef": "WebHierarchicalGridCellEditDone",
       "cellEditExitRef": "WebHierarchicalGridCellEditExit",
       "columns": [
         {
@@ -65,7 +64,6 @@
           "rowEditExitRef": "WebRowIslandGridRowEditExit",
           "cellEditEnterRef": "WebRowIslandGridCellEditEnter",
           "cellEditRef": "WebRowIslandGridCellEdit",
-          "cellEditDoneRef": "WebRowIslandGridCellEditDone",
           "cellEditExitRef": "WebRowIslandGridCellEditExit",
           "columns": [
             {
