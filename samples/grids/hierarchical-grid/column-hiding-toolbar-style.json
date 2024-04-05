@@ -68,7 +68,6 @@
           "type": "WebRowIsland",
           "childDataKey": "Albums",
           "autoGenerate": false,
-          "toolbarTemplateRef": "WebHierarchicalGridHidingTemplate",
           "columns": [
             {
               "type": "WebColumn",
@@ -104,7 +103,6 @@
               "type": "WebRowIsland",
               "childDataKey": "Songs",
               "autoGenerate": false,
-              "toolbarTemplateRef": "WebHierarchicalGridHidingTemplate",
               "columns": [
                 {
                   "type": "WebColumn",
@@ -138,7 +136,6 @@
           "type": "WebRowIsland",
           "childDataKey": "Tours",
           "autoGenerate": false,
-          "toolbarTemplateRef": "WebHierarchicalGridHidingTemplate",
           "columns": [
             {
               "type": "WebColumn",
