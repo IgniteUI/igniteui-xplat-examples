@@ -1,4 +1,4 @@
-{  
+{
   "descriptions": {
     "editor": {
       "type": "PropertyEditorPanel",
@@ -64,6 +64,7 @@
           "radiusScale": {
             "type": "SizeScale",
             "isLogarithmic": false,
+            "name": "sizeScale11",
             "minimumValue": 10,
             "maximumValue": 120
           },
@@ -76,6 +77,7 @@
           "showDefaultTooltip": true,
           "fillScale": {
             "type": "ValueBrushScale",
+            "name": "valueBrushScale11",
             "isLogarithmic": false,
             "minimumValue": 0,
             "maximumValue": 100000,
