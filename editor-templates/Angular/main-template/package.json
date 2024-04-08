@@ -19,27 +19,27 @@
     "core-js": "3.21.0",
     "hammerjs": "2.0.8",
 //ifdef charts, maps
-    "igniteui-angular-charts": "17.3.0-beta.0",
+    "igniteui-angular-charts": "17.3.0",
 //endifdef charts, maps
-    "igniteui-angular-core": "17.3.0-beta.0",
+    "igniteui-angular-core": "17.3.0",
 //ifdef excel, spreadsheet
-    "igniteui-angular-excel": "17.3.0-beta.0",
+    "igniteui-angular-excel": "17.3.0",
 //endifdef excel, spreadsheet
 //ifdef gauges
-    "igniteui-angular-gauges": "17.3.0-beta.0",
+    "igniteui-angular-gauges": "17.3.0",
 //endifdef gauges
 //ifdef editor, layouts, inputs
-    "igniteui-angular-inputs": "17.3.0-beta.0",
+    "igniteui-angular-inputs": "17.3.0",
 //endifdef editor, layouts, inputs
 //ifdef grid, editor, layouts
-    "igniteui-angular-layouts": "17.3.0-beta.0",
+    "igniteui-angular-layouts": "17.3.0",
 //endifdef grid, editor, layouts
 //ifdef maps
-    "igniteui-angular-maps": "17.3.0-beta.0",
+    "igniteui-angular-maps": "17.3.0",
 //endifdef maps
 //ifdef spreadsheet
-    "igniteui-angular-spreadsheet": "17.3.0-beta.0",
-    "igniteui-angular-spreadsheet-chart-adapter": "17.3.0-beta.0",
+    "igniteui-angular-spreadsheet": "17.3.0",
+    "igniteui-angular-spreadsheet-chart-adapter": "17.3.0",
 //endifdef spreadsheet
 //ifdef webcomponents, editor
     "igniteui-webcomponents": "4.8.0",
