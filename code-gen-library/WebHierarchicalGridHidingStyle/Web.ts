@@ -3,7 +3,7 @@
 
 export class WebHierarchicalGridHidingStyle {
     //begin eventHandler
-    public WebHierarchicalGridHidingStyle(): void {
+    public webHierarchicalGridHidingStyle(): void {
         //OMIT HANDLER
     }
     //end eventHandler

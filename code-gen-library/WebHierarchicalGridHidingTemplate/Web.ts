@@ -4,7 +4,7 @@ import { html } from "/lit-html.js";
 
 export class WebHierarchicalGridHidingTemplate {
     //begin eventHandler
-    public WebHierarchicalGridHidingTemplate(): void {
+    public webHierarchicalGridHidingTemplate(): void {
         return html`<igc-grid-toolbar>
             <igc-grid-toolbar-actions>
                 <igc-grid-toolbar-hiding title="Column Hiding"></igc-grid-toolbar-hiding>
