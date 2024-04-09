@@ -20,9 +20,8 @@
                   "type": "WebGridToolbarExporter",
                   "exportCSV": false,
                   "exportExcel": true,
-                  "id": "hGridToolbarExporter",
                   "name": "hGridToolbarExporter",
-                  "exportStartedRef": "WebGridExportEventMultiColumnHeaders"
+                  "exportStartedRef": "WebHierarchicalGridExportMultiColumnHeaders"
                 }
               ]
             }
@@ -128,8 +127,8 @@
         {
           "type": "WebRowIsland",
           "childDataKey": "ChildCompanies",
-          "moving": true,
           "autoGenerate": false,
+          "moving": true,
           "columns": [
             {
               "type": "WebColumnGroup",
@@ -229,8 +228,8 @@
             {
               "type": "WebRowIsland",
               "childDataKey": "ChildCompanies",
-              "moving": true,
               "autoGenerate": false,
+              "moving": true,
               "columns": [
                 {
                   "type": "WebColumnGroup",
