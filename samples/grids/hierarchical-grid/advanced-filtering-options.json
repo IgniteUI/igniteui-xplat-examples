@@ -37,8 +37,7 @@
             "header": "Photo",
             "dataType": "Image",
             "minWidth": "115px",
-            "resizable": true,
-            "bodyTemplateRef": "WebHierarchicalGridArtistPhotoTemplate"
+            "resizable": true
           },
           {
             "type": "WebColumn",
@@ -71,7 +70,6 @@
             "childDataKey": "Albums",
             "autoGenerate": false,
             "allowAdvancedFiltering": true,
-            "toolbarTemplateRef": "webGridToolbarDefaultTemplate",
             "columns": [
               {
                 "type": "WebColumn",
@@ -108,7 +106,6 @@
                 "childDataKey": "Songs",
                 "autoGenerate": false,
                 "allowAdvancedFiltering": true,
-                "toolbarTemplateRef": "webGridToolbarDefaultTemplate",
                 "columns": [
                   {
                     "type": "WebColumn",
@@ -147,7 +144,6 @@
             "childDataKey": "Tours",
             "autoGenerate": false,
             "allowAdvancedFiltering": true,
-            "toolbarTemplateRef": "webGridToolbarDefaultTemplate",
             "columns": [
               {
                 "type": "WebColumn",

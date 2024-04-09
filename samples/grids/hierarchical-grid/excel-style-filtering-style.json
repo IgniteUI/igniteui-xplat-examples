@@ -42,8 +42,7 @@
             "header": "Photo",
             "dataType": "Image",
             "minWidth": "115px",
-            "resizable": true,
-            "bodyTemplateRef": "WebHierarchicalGridArtistPhotoTemplate"
+            "resizable": true
           },
           {
             "type": "WebColumn",
