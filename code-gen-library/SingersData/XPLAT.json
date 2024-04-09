@@ -78,8 +78,7 @@
         "LaunchDate": "September 3, 2013",
         "BillboardReview": 86,
         "USBillboard200": 1,
-        "Artist": "Naomí Yepes",
-        "Songs": []
+        "Artist": "Naomí Yepes"
       },
       {
         "Album": "Dream Driven",
@@ -87,92 +86,90 @@
         "BillboardReview": 81,
         "USBillboard200": 1,
         "Artist": "Naomí Yepes",
-        "Songs": [
-          {
-            "Number": 1,
-            "Title": "Intro",
-            "Released": "29 Apr 2021",
-            "Genre": "*",
-            "Album": "Dream Driven"
-          },
-          {
-            "Number": 2,
-            "Title": "Ferocious",
-            "Released": "28 Apr 2014",
-            "Genre": "Dance-pop R&B",
-            "Album": "Dream Driven"
-          },
-          {
-            "Number": 3,
-            "Title": "Going crazy",
-            "Released": "10 Feb 2015",
-            "Genre": "Dance-pop EDM",
-            "Album": "Dream Driven"
-          },
-          {
-            "Number": 4,
-            "Title": "Future past",
-            "Released": "false",
-            "Genre": "*",
-            "Album": "Dream Driven"
-          },
-          {
-            "Number": 5,
-            "Title": "Roaming like them",
-            "Released": "2 Jul 2014",
-            "Genre": "Electro house Electropop",
-            "Album": "Dream Driven"
-          },
-          {
-            "Number": 6,
-            "Title": "Last Wishes",
-            "Released": "12 Aug 2014",
-            "Genre": "R&B",
-            "Album": "Dream Driven"
-          },
-          {
-            "Number": 7,
-            "Title": "Stay where you are",
-            "Released": "false",
-            "Genre": "*",
-            "Album": "Dream Driven"
-          },
-          {
-            "Number": 8,
-            "Title": "Imaginarium",
-            "Released": "false",
-            "Genre": "*",
-            "Album": "Dream Driven"
-          },
-          {
-            "Number": 9,
-            "Title": "Tell me",
-            "Released": "30 Sep 2014",
-            "Genre": "Synth-pop R&B",
-            "Album": "Dream Driven"
-          },
-          {
-            "Number": 10,
-            "Title": "Shredded into pieces",
-            "Released": "false",
-            "Genre": "*",
-            "Album": "Dream Driven"
-          },
-          {
-            "Number": 11,
-            "Title": "Capture this moment",
-            "Released": "false",
-            "Genre": "*",
-            "Album": "Dream Driven"
-          },
-          {
-            "Number": 12,
-            "Title": "Dream Driven",
-            "Released": "false",
-            "Genre": "*",
-            "Album": "Dream Driven"
-          }
-        ]
+        "Songs": [{
+          "Number": 1,
+          "Title": "Intro",
+          "Released": false,
+          "Genre": "*",
+          "Album": "Dream Driven"
+        },
+        {
+          "Number": 2,
+          "Title": "Ferocious",
+          "Released": "28 Apr 2014",
+          "Genre": "Dance-pop R&B",
+          "Album": "Dream Driven"
+        },
+        {
+          "Number": 3,
+          "Title": "Going crazy",
+          "Released": "10 Feb 2015",
+          "Genre": "Dance-pop EDM",
+          "Album": "Dream Driven"
+        },
+        {
+          "Number": 4,
+          "Title": "Future past",
+          "Released": false,
+          "Genre": "*",
+          "Album": "Dream Driven"
+        },
+        {
+          "Number": 5,
+          "Title": "Roaming like them",
+          "Released": "2 Jul 2014",
+          "Genre": "Electro house Electropop",
+          "Album": "Dream Driven"
+        },
+        {
+          "Number": 6,
+          "Title": "Last Wishes",
+          "Released": "12 Aug 2014",
+          "Genre": "R&B",
+          "Album": "Dream Driven"
+        },
+        {
+          "Number": 7,
+          "Title": "Stay where you are",
+          "Released": false,
+          "Genre": "*",
+          "Album": "Dream Driven"
+        },
+        {
+          "Number": 8,
+          "Title": "Imaginarium",
+          "Released": false,
+          "Genre": "*",
+          "Album": "Dream Driven"
+        },
+        {
+          "Number": 9,
+          "Title": "Tell me",
+          "Released": "30 Sep 2014",
+          "Genre": "Synth-pop R&B",
+          "Album": "Dream Driven"
+        },
+        {
+          "Number": 10,
+          "Title": "Shredded into pieces",
+          "Released": false,
+          "Genre": "*",
+          "Album": "Dream Driven"
+        },
+        {
+          "Number": 11,
+          "Title": "Capture this moment",
+          "Released": false,
+          "Genre": "*",
+          "Album": "Dream Driven"
+        },
+        {
+          "Number": 12,
+          "Title": "Dream Driven",
+          "Released": false,
+          "Genre": "*",
+          "Album": "Dream Driven"
+        }]
       },
       {
         "Album": "The dragon journey",
