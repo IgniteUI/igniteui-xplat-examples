@@ -3,7 +3,7 @@
     "descriptions": {
       "content": {
         "type": "WebHierarchicalGrid",
-        "dataRef": "WebGridCellEditSampleRoleplay",
+        "dataRef": "HGridDndData",
         "autoGenerate": false,
         "primaryKey": "Name",
         "columns": [
@@ -18,14 +18,14 @@
             "field": "Race",
             "header": "Race",
             "dataType": "String",
-            "inlineEditorTemplateRef": "WebGridCellEditCellTemplate",
+            "inlineEditorTemplateRef": "HGridCellEditCellTemplate",
             "editable": true
           },
           {
             "type": "WebColumn",
             "field": "Class",
             "header": "Class",
-            "inlineEditorTemplateRef": "WebGridCellEditCellTemplate",
+            "inlineEditorTemplateRef": "HGridCellEditCellTemplate",
             "editable": true,
             "dataType": "String"
           },
@@ -40,7 +40,7 @@
             "type": "WebColumn",
             "field": "Alignment",
             "header": "Alignment",
-            "inlineEditorTemplateRef": "WebGridCellEditCellTemplate",
+            "inlineEditorTemplateRef": "HGridCellEditCellTemplate",
             "editable": true,
             "dataType": "String"
   
