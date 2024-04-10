@@ -4,8 +4,8 @@ import { IgrColumnTemplateContext, IgrColumn } from 'igniteui-react-grids';
 
 
 export class HierarchicalGridPinHeaderTemplate {
-
-    //begin eventHandler
+    //begin template
+    //begin content
     public hierarchicalGridPinHeaderTemplate = (props: {dataContext: IgrColumnTemplateContext}) => {
         const column = (props.dataContext as any).column;
         return (
@@ -22,6 +22,6 @@ export class HierarchicalGridPinHeaderTemplate {
             field.pinned = !field.pinned;
         }
     }
-    //end eventHandler
-
+    //end supportingMethods
+    //end template
 }
