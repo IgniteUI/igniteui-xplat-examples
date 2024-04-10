@@ -1,0 +1,98 @@
+{  
+  "descriptions": {
+    "editor": {
+      "type": "PropertyEditorPanel",
+      "name": "PropertyEditor",
+      "componentRendererRef": "renderer",
+      "targetRef": "chart",
+      "descriptionType": "DataChart",
+      "isHorizontal": true,
+      "isWrappingEnabled": true,
+      "properties": [
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "name": "FillScaleMinimumValueEditor",
+          "label": "MinimumValue: ",
+          "valueType": "Slider",
+          "min": 0,
+          "max": 20000,
+          "changedRef": "ScatterBubbleSeriesFillScaleSliderChanged"
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "name": "FillScaleMaximumValueEditor",
+          "label": "MaximumValue: ",
+          "valueType": "Slider",
+          "min": 25000,
+          "max": 100000,
+          "changedRef": "ScatterBubbleSeriesFillScaleSliderChanged"
+        }
+      ]
+    },
+    "content": {
+      "type": "DataChart",
+      "name": "chart",
+      "isHorizontalZoomEnabled": true,
+      "isVerticalZoomEnabled": true,
+      "chartTitle": "Public Debt vs. Population",
+      "subtitle": "GDP per Capita",
+      "axes": [
+        {
+          "type": "NumericXAxis",
+          "name": "xAxis",
+          "minimumValue": 10000,
+          "maximumValue": 10000000000,
+          "isLogarithmic": true,
+          "abbreviateLargeNumbers": true,
+          "title": "Population"
+        },
+        {
+          "type": "NumericYAxis",
+          "name": "yAxis",
+          "isLogarithmic": true,
+          "logarithmBase": 10,
+          "title": "Public Debt per GDP"
+        }
+      ],
+      "series": [
+        {
+          "type": "BubbleSeries",
+          "name": "BubbleSeries1",
+          "xMemberPath": "Population",
+          "yMemberPath": "PublicDebt",
+          "radiusMemberPath": "GdpPerCapita",
+          "radiusScale": {
+            "type": "SizeScale",
+            "isLogarithmic": false,
+            "minimumValue": 10,
+            "maximumValue": 120
+          },
+          "fillMemberPath": "GdpPerCapita",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "dataSourceRef": "WorldDebtAndPopulation",
+          "markerType": "Circle",
+          "markerOutline": "black",
+          "showDefaultTooltip": true,
+          "fillScale": {
+            "type": "ValueBrushScale",
+            "isLogarithmic": false,
+            "minimumValue": 0,
+            "maximumValue": 100000,
+            "brushes": ["#1AA1E2", "#189AD9", "#1692CE", "#1385BC", "#0F79AB", "#0C6B99", "#095E88", "#055277", "#024669", "#003F5E"]
+          }
+        }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "charts/NumberAbbreviatorModule",
+    "charts/DataChartCoreModule",
+    "charts/DataChartScatterModule",
+    "charts/DataChartScatterCoreModule",
+    "charts/DataChartInteractivityModule",
+    "charts/DataChartAnnotationModule",
+    "layouts/PropertyEditorPanelModule"
+  ]
+}
