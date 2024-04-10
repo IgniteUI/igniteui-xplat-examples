@@ -1,0 +1,180 @@
+{
+    "export": true,
+    "skipAlterDataCasing": true,
+    "descriptions": {
+      "editor": {
+        "type": "PropertyEditorPanel",
+        "name": "PropertyEditor",
+        "componentRendererRef": "renderer",
+        "targetRef": "hierarchicalGrid",
+        "descriptionType": "WebHierarchicalGrid",
+        "isHorizontal": true,
+        "isWrappingEnabled": true,
+        "properties": [
+          {
+            "type": "PropertyEditorPropertyDescription",
+            "propertyPath": "DisplayDensity",
+            "name": "DisplayDensityEditor"
+          }
+        ]
+      },
+      "content": {
+        "type": "WebHierarchicalGrid",
+        "dataRef": "HierarchicalCustomers",
+        "name": "hierarchicalGrid",
+        "id": "hierarchicalGrid",
+        "autoGenerate": false,
+        "allowFiltering": true,
+        "columns": [
+          {
+            "type": "WebColumn",
+            "field": "CustomerID",
+            "dataType": "String"
+          },
+          {
+            "type": "WebColumn",
+            "field": "CompanyName",
+            "dataType": "String"
+          },
+          {
+            "type": "WebColumn",
+            "field": "ContactName",
+            "dataType": "String"
+          },
+          {
+            "type": "WebColumn",
+            "field": "Address",
+            "dataType": "String"
+          },
+          {
+            "type": "WebColumn",
+            "field": "City",
+            "dataType": "String"
+          },
+          {
+            "type": "WebColumn",
+            "field": "PostalCode",
+            "dataType": "String"
+          },
+          {
+            "type": "WebColumn",
+            "field": "Country",
+            "dataType": "String"
+          },
+          {
+            "type": "WebColumn",
+            "field": "Phone",
+            "dataType": "String"
+          },
+          {
+            "type": "WebColumn",
+            "field": "Fax",
+            "dataType": "String"
+          }
+        ],
+        "childLayoutList": [
+          {
+            "type": "WebRowIsland",
+            "childDataKey": "Orders",
+            "autoGenerate": false,
+            "columns": [
+              {
+                "type": "WebColumn",
+                "field": "OrderID",
+                "dataType": "Number"
+              },
+              {
+                "type": "WebColumn",
+                "field": "EmployeeID",
+                "dataType": "Number"
+              },
+              {
+                "type": "WebColumn",
+                "field": "OrderDate",
+                "dataType": "Date"
+              },
+              {
+                "type": "WebColumn",
+                "field": "RequiredDate",
+                "dataType": "Date"
+              },
+              {
+                "type": "WebColumn",
+                "field": "ShippedDate",
+                "dataType": "Date"
+              },
+              {
+                "type": "WebColumn",
+                "field": "ShipVia",
+                "dataType": "Number"
+              },
+              {
+                "type": "WebColumn",
+                "field": "Freight",
+                "dataType": "Number"
+              },
+              {
+                "type": "WebColumn",
+                "field": "ShipName",
+                "dataType": "String"
+              },
+              {
+                "type": "WebColumn",
+                "field": "ShipAddress",
+                "dataType": "String"
+              },
+              {
+                "type": "WebColumn",
+                "field": "ShipCity",
+                "dataType": "String"
+              },
+              {
+                "type": "WebColumn",
+                "field": "ShipPostalCode",
+                "dataType": "String"
+              },
+              {
+                "type": "WebColumn",
+                "field": "ShipCountry",
+                "dataType": "String"
+              }
+            ],
+            "childLayoutList": [
+              {
+                "type": "WebRowIsland",
+                "childDataKey": "OrderDetails",
+                "autoGenerate": false,
+                "columns": [
+                  {
+                    "type": "WebColumn",
+                    "field": "ProductID",
+                    "dataType": "Number"
+                  },
+                  {
+                    "type": "WebColumn",
+                    "field": "UnitPrice",
+                    "dataType": "Number"
+                  },
+                  {
+                    "type": "WebColumn",
+                    "field": "Quantity",
+                    "dataType": "Number"
+                  },
+                  {
+                    "type": "WebColumn",
+                    "field": "Discount",
+                    "dataType": "Number"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "modules": [
+      "withDescriptions",
+      "layouts/PropertyEditorPanelModule",
+      "grids/WebHierarchicalGridModule"
+    ]
+  }

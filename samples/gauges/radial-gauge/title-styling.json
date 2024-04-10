@@ -1,0 +1,24 @@
+{
+  "descriptions": {
+    "content": {
+      "type": "RadialGauge",
+      "name": "gauge",
+      "minimumValue": 0,
+      "maximumValue": 100,
+      "value": 50,
+      "interval": 10,
+      "isNeedleDraggingEnabled": true,
+      "titleDisplaysValue": true,
+      "subtitleText": "MPH",
+      "titleFontSize": 50,
+      "titleFontFamily": "Arial",
+      "titleFontStyle": "Italic",
+      "titleFontWeight": "Bold",
+      "titleSnapsToNeedlePivot": true,
+      "titleBrush": "red"
+    }
+  },
+  "modules": [
+    "gauges/RadialGaugeModule"
+  ]
+}
