@@ -10,7 +10,7 @@
         return @<div class="summary-temp">
             <span>@(summaryResults[0].Label)<span>@(summaryResults[0].Result)</span></span>
             <span>@(summaryResults[1].Label)<span>@(summaryResults[1].Result)</span></span>
-            <span>@(summaryResults[2].Label)<span>@(summaryResults[1].Result)</span></span>
+            <span>@(summaryResults[2].Label)<span>@(summaryResults[2].Result)</span></span>
         </div>;
     };
     //end content
@@ -28,29 +28,29 @@
             };
             var result = new IgbSummaryResult[] { };
             result.Append(new IgbSummaryResult
-            {
-                Key: "nominatedSingers",
-                Label: "Nominated Singers",
-                Result: allData.filter((rec) => rec["GrammyNominations"] > 0).length
-            });
+                {
+                    Key = "nominatedSingers",
+                    Label =  "Nominated Singers",
+                    Result = allData.Count(rec => (int)((Dictionary<string, object>)rec)["GrammyNominations"] > 0)
+                });
             result.Append(new IgbSummaryResult
-            {
-                Key: "singersWithAwards",
-                Label: "Singers with Awards",
-                Result: allData.filter((rec) => rec["GrammyAwards"] > 0).length
-            });
+                {
+                    Key = "singersWithAwards",
+                    Label = "Singers with Awards",
+                    Result = allData.Count(rec => (int)((Dictionary<string, object>)rec)["GrammyAwards"] > 0)
+                });
             result.Append(new IgbSummaryResult
-            {
-                Key: "nominations",
-                Label: "Total Nominations",
-                Result: sum(allData.map(r => r["GrammyNominations"]))
-            });
+                {
+                    Key = "nominations",
+                    Label = "Total Nominations",
+                    Result = sum(allData.Select(r => (object)((int)((Dictionary<string, object>)r)["GrammyNominations"])).ToArray())
+                });
             result.Append(new IgbSummaryResult
-            {
-                Key = "awards",
-                Label = "Total Awards",
-                Result = sum(allData.map(r => r["GrammyAwards"]))
-            });
+                {
+                    Key = "awards",
+                    Label = "Total Awards",
+                    Result = sum(allData.Select(r => (object)((int)((Dictionary<string, object>)r)["GrammyAwards"])).ToArray())
+                });
             return result;
         })
     };
