@@ -12,7 +12,7 @@ public webRowIslandGridSummaryTemplateStyle = (e: { dataContext: IgrSummaryTempl
     return (
         <div className="summary-temp">
             <span><strong>{ summaryResults[0].label }</strong><span>{ (summaryResults[0] as any).summaryResult }</span></span>
-            <span><strong>{ summaryResults[1].label }</strong><span>{ new Date((summaryResults[2] as any).summaryResult) }</span></span>
+            <span><strong>{ summaryResults[1].label }</strong><span>{ (new Date((summaryResults[2] as any).summaryResult)).toDateString() }</span></span>
         </div>
     );
 }
