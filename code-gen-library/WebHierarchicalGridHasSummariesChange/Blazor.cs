@@ -10,9 +10,9 @@ public class WebHierarchicalGridHasSummariesChange
     {
         bool newValue = bool.Parse(args.NewValue.ToString());
 
-        var column1 = this.grid.ActualColumns[1];
-        var column2 = this.grid.ActualColumns[3];
-        var column2 = this.grid.ActualColumns[4];
+        var column1 = this.hierarchicalGrid.ActualColumns[1];
+        var column2 = this.hierarchicalGrid.ActualColumns[3];
+        var column2 = this.hierarchicalGrid.ActualColumns[4];
 
         column1.HasSummary = newValue;
         column2.HasSummary = newValue;
