@@ -50,7 +50,9 @@
           "type": "WebColumn",
           "field": "Photo",
           "header": "Photo",
-          "dataType": "Image"
+          "dataType": "Image",
+          "hasSummary": true,
+          "summariesRef": "SingerSummary"
         },
         {
           "type": "WebColumn",
