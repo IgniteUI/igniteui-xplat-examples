@@ -3,7 +3,7 @@
 
 export class WebHierarchicalGridRowEditingStyle {
     //begin eventHandler
-    public WebHierarchicalGridRowEditingStyle(): void {
+    public webHierarchicalGridRowEditingStyle(): void {
         //OMIT HANDLER
     }
     //end eventHandler
