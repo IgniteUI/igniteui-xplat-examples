@@ -1,5 +1,6 @@
 //begin eventHandler
 igRegisterScript("WebRowIslandCellSelectionChange", (sender, evtArgs) => {
-    this.rowIsland = evtArgs.newVal;
+    const rowIsland = document.getElementsByTagName("igc-row-island")[0];
+    rowIsland.cellSelection = evtArgs.newValue.toLocaleLowerCase();
 }, false);
 //end eventHandler
