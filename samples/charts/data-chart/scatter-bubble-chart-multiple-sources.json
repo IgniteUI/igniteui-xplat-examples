@@ -1,4 +1,4 @@
-{
+{  
   "strings": {
     "legendTitle": "Total Population of Selected Countries"
   },
@@ -44,7 +44,7 @@
           "radiusScale": {
             "type": "SizeScale",
             "isLogarithmic": false,
-            "minimumValue": 20,
+            "minimumValue": 10,
             "maximumValue": 50
           }
         },
@@ -63,7 +63,7 @@
           "radiusScale": {
             "type": "SizeScale",
             "isLogarithmic": false,
-            "minimumValue": 20,
+            "minimumValue": 10,
             "maximumValue": 50
           }
         }

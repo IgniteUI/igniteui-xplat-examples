@@ -1,0 +1,25 @@
+{
+  "export": false,
+  "descriptions": {
+    "content": {
+      "type": "LinearGauge",
+      "name": "gauge",
+      "height": "80px",
+      "width": "400px",
+      "minimumValue": 0,
+      "value": 50,
+      "maximumValue": 100,
+      "interval": 10,
+      "labelInterval": 10,
+      "labelExtent": 0.025,
+      "labelsPreTerminal": 0,
+      "labelsPostInitial": 0,
+      "highlightValueDisplayMode": "Overlay",
+      "highlightValue": 25,
+      "isHighlightNeedleDraggingEnabled": true
+    }
+  },
+  "modules": [
+    "gauges/LinearGaugeModule"
+  ]
+}

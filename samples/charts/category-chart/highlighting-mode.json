@@ -1,0 +1,40 @@
+{
+  "descriptions": {
+    "editor": {
+      "type": "PropertyEditorPanel",
+      "name": "PropertyEditor",
+      "componentRendererRef": "renderer",
+      "targetRef": "chart",
+      "descriptionType": "CategoryChart",
+      "isHorizontal": true,
+      "isWrappingEnabled": true,
+      "properties": [
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "HighlightingMode",
+          "name": "HighlightingModeEditor",
+          "label": "Highlighting Mode: ",
+          "primitiveValue": "BrightenSpecific"
+        }
+      ]
+    },
+    "content": {
+      "type": "CategoryChart",
+      "name": "chart",
+      "chartType": "Column",
+      "computedPlotAreaMarginMode": "Series",
+      "isHorizontalZoomEnabled": false,
+      "isVerticalZoomEnabled": false,
+      "dataSourceRef": "TemperatureAnnotatedData",
+      "highlightingMode": "BrightenSpecific",
+      "crosshairsAnnotationEnabled": false,
+      "toolTipType": "None",
+      "crosshairsDisplayMode": "None"
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
+    "charts/CategoryChartModule"
+  ]
+}
