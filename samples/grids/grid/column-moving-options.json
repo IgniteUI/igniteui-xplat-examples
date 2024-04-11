@@ -12,6 +12,7 @@
       "columns": [
         {
           "type": "WebColumn",
+          "header": "Category",
           "field": "Category",
           "pinned": true,
           "width": "200px",
@@ -19,12 +20,14 @@
         },
         {
           "type": "WebColumn",
+          "header": "Type",
           "field": "Type",
           "pinned": true,
           "headerTemplateRef": "WebGridPinHeaderTemplate"
         },
         {
           "type": "WebColumn",
+          "header": "Price",
           "field": "Price",
           "dataType": "Currency",
           "pipeArgs": {
@@ -36,6 +39,7 @@
         },
         {
           "type": "WebColumn",
+          "header": "Buy",
           "field": "Buy",
           "dataType": "Currency",
           "pipeArgs": {
@@ -47,6 +51,7 @@
         },
         {
           "type": "WebColumn",
+          "header": "Sell",
           "field": "Sell",
           "dataType": "Currency",
           "pipeArgs": {
@@ -58,26 +63,32 @@
         },
         {
           "type": "WebColumn",
+          "header": "Spread",
           "field": "Spread",
           "headerTemplateRef": "WebGridPinHeaderTemplate"
         },
         {
           "type": "WebColumn",
           "field": "Change",
+          "header": "Change",
           "bodyTemplateRef": "WebGridCurrencyCellTemplate",
           "headerTemplateRef": "WebGridPinHeaderTemplate"
         },
         {
           "type": "WebColumn",
           "field": "ChangePercent",
+          "header": "Change Percent",
           "dataType": "Number",
+          "width": "150px",
           "bodyTemplateRef": "WebGridCurrencyCellTemplate",
           "headerTemplateRef": "WebGridPinHeaderTemplate"
         },
         {
           "type": "WebColumn",
           "field": "AnnualChange",
+          "header": "Annual Change",
           "dataType": "Number",
+          "width": "150px",
           "bodyTemplateRef": "WebGridCurrencyCellTemplate",
           "headerTemplateRef": "WebGridPinHeaderTemplate"
         }
@@ -85,6 +96,7 @@
     }
   },
   "modules": [
+    "webinputs/WebBadgeModule",
     "grids/WebGridModule"
   ]
 }

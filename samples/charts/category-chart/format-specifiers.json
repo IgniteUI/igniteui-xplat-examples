@@ -1,0 +1,60 @@
+{
+  "strings": {
+    "legendTitle": "Highest Grossing Movie Franchises"
+  },
+  "descriptions": {
+    "legend": {
+      "name": "Legend",
+      "type": "DataLegend",
+      "targetRef": "chart",
+      "valueFormatString": "{0} Billion",
+      "valueFormatSpecifiers": [
+        {
+          "type": "NumberFormatSpecifier",
+          "style": "currency",
+          "currency": "USD",
+          "currencyDisplay": "symbol",
+          "maximumFractionDigits": 2,
+          "minimumFractionDigits": 2
+        }
+      ]
+    },
+    "content": {
+      "type": "CategoryChart",
+      "name": "chart",
+      "dataSourceRef": "HighestGrossingMovies",
+      "chartType": "Column",
+      "isHorizontalZoomEnabled": false,
+      "isVerticalZoomEnabled": false,
+      "finalValueAnnotationsPrecision": 2,
+      "dataToolTipValueFormatString": "{0} Billion",
+      "dataToolTipValueFormatSpecifiers": [
+        {
+          "type": "NumberFormatSpecifier",
+          "style": "currency",
+          "currency": "USD",
+          "currencyDisplay": "symbol",
+          "maximumFractionDigits": 2,
+          "minimumFractionDigits": 2
+        }
+      ],
+      "yAxisLabelFormat": "{0}B",
+      "yAxisLabelFormatSpecifiers": [
+        {
+          "type": "NumberFormatSpecifier",
+          "style": "currency",
+          "currency": "USD",
+          "currencyDisplay": "symbol",
+          "minimumFractionDigits": 0
+        }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
+    "charts/DataLegendModule",
+    "charts/CategoryChartModule",
+    "NumberFormatSpecifierModule"
+  ]
+}

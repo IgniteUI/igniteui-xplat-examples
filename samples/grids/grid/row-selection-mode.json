@@ -25,6 +25,7 @@
     "content": {
       "type": "WebGrid",
       "dataRef": "FinancialDataAll",
+      "primaryKey": "ID",
       "autoGenerate": false,
       "moving": true,
       "id": "grid1",
@@ -76,12 +77,14 @@
         {
           "type": "WebColumn",
           "field": "ChangePercent",
+          "header": "Change Percent",
           "dataType": "Number",
           "bodyTemplateRef": "WebGridCurrencyCellTemplate"
         },
         {
           "type": "WebColumn",
           "field": "AnnualChange",
+          "header": "Annual Change",
           "dataType": "Number",
           "bodyTemplateRef": "WebGridCurrencyCellTemplate"
         }
@@ -89,6 +92,7 @@
     }
   },
   "modules": [
+    "webinputs/WebBadgeModule",
     "withDescriptions",
     "grids/WebGridModule",
     "layouts/PropertyEditorPanelModule"

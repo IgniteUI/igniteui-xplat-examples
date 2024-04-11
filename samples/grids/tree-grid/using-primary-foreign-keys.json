@@ -1,5 +1,6 @@
 {
   "todo": [ "add Performance column with a template, MT test exporting" ],
+  "skipAlterDataCasing": true,
   "descriptions": {
     "content": {
       "type": "WebTreeGrid",

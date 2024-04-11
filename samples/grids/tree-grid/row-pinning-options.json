@@ -1,0 +1,78 @@
+{
+    "todo": [""],
+    "export": true,
+    "skipAlterDataCasing": true,
+    "descriptions": {
+      "editor": {
+        "type": "PropertyEditorPanel",
+        "componentRendererRef": "renderer",
+        "targetRef": "treeGrid",
+        "descriptionType": "WebTreeGrid",
+        "isHorizontal": true,
+        "isWrappingEnabled": false,
+        "properties": [
+          {
+            "type": "PropertyEditorPropertyDescription",
+            "name": "rowPinningEditor",
+            "valueType": "EnumValue",
+            "label": "Row Pinning toggle",
+            "dropDownNames": ["Top", "Bottom"],
+            "dropDownValues": ["Top", "Bottom"],
+            "changedRef": "WebGridSetRowPinning"
+          }
+        ]
+      },
+      "content": {
+        "id": "treeGrid",
+        "name": "treeGrid",
+        "type": "WebTreeGrid",
+        "dataRef": "EmployeesNestedTreeData",  
+        "rowEditable": true,
+        "autoGenerate": false,
+        "primaryKey": "ID",      
+        "foreignKey": "ParentID",
+        "cellSelection": "None",
+		"renderedRef": "WebTreeGridPinRowOnRendered",
+        "pinning": {
+          "type": "WebPinningConfig",
+          "rows": "Top"
+        },
+        "columns": [
+          {
+            "type": "WebColumn",
+            "field": "Name",
+            "header": "Full Name"
+          },
+          {
+            "type": "WebColumn",
+            "field": "Age",
+            "dataType": "Number"
+          },
+          {
+            "type": "WebColumn",
+            "field": "Title"
+          },
+          {
+            "type": "WebColumn",
+            "field": "HireDate",
+            "dataType": "Date"
+          }
+        ],
+      "actionStripComponents": [{
+        "type": "WebActionStrip",
+        "name": "actionStrip",
+        "actionButtons": [
+          {
+            "type": "WebGridPinningActions"
+          }
+        ]
+      }]
+      }
+    },
+    "modules": [
+      "withDescriptions",
+      "layouts/PropertyEditorPanelModule",
+      "grids/WebTreeGridModule",
+      "grids/WebActionStripModule"
+    ]
+  }

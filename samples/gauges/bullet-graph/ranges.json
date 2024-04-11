@@ -44,10 +44,9 @@
           "innerEndExtent": 0.075,
           "outerStartExtent": 0.95,
           "outerEndExtent": 0.95
-        },
+        }
       ]
     }
-
   },
   "modules": [
     "gauges/BulletGraphModule"

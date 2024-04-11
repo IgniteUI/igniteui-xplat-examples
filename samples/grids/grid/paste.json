@@ -1,0 +1,95 @@
+{
+    "todo": [
+      ""
+    ],
+    "export": true,
+    "skipAlterDataCasing": true,
+    "descriptions": {
+        "editor": {
+            "type": "PropertyEditorPanel",
+            "targetRef": "grid",
+            "descriptionType": "WebGrid",
+            "isHorizontal": true,
+            "isWrappingEnabled": false,
+            "properties": [
+                {
+                  "type": "PropertyEditorPropertyDescription",
+                  "name": "PasteModeEditor",
+                  "valueType": "EnumValue",
+                  "label": "Paste as:",
+                  "dropDownNames": ["NewRecords", "FromActiveCell"],
+                  "dropDownValues": ["NewRecords", "FromActiveCell"],
+                  "changedRef": "WebGridPasteModeChange"
+                }
+              ]
+          },
+      "content": {
+        "type": "WebGrid",
+        "dataRef": "InvoicesData",
+        "renderedRef": "WebGridPasteFromExcel",
+        "autoGenerate": false,
+        "name": "grid",
+        "id": "grid",
+        "primaryKey": "OrderID",
+        "toolbar": [
+            {
+              "type": "WebGridToolbar",
+              "tools": [
+                {
+                  "type": "WebGridToolbarActions",
+                  "actions": [
+                    {
+                      "type": "WebGridToolbarExporter",
+                      "exportExcel": true,
+                      "exportCSV": false
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+        "columns": [
+          {
+            "type": "WebColumn",
+            "field": "OrderID",
+            "hidden": true
+          },
+          {
+            "type": "WebColumn",
+            "field": "Salesperson",
+            "header": "Name",
+            "width": "200px"
+          },
+          {
+            "type": "WebColumn",
+            "field": "ShipName",
+            "header": "Ship Name",
+            "width": "200px"
+          },
+          {
+            "type": "WebColumn",
+            "field": "Country",
+            "header": "Country",
+            "width": "200px"
+          },
+          {
+            "type": "WebColumn",
+            "field": "ShipCity",
+            "header": "Ship City",
+            "width": "200px"
+          },
+          {
+            "type": "WebColumn",
+            "field": "PostalCode",
+            "header": "Postal Code",
+            "width": "200px"
+          }
+        ]
+      }
+    },
+    "modules": [
+      "withDescriptions",
+      "layouts/PropertyEditorPanelModule",
+      "grids/WebGridModule"
+    ]
+  }

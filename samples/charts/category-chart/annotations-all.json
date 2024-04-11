@@ -1,6 +1,6 @@
 {
   "strings": {
-    "legendTitle": "Average Temperature in Sedney"
+    "legendTitle": "Average Temperature in Sydney"
   },
   "descriptions": {
     "editor": {
@@ -28,7 +28,7 @@
         },
         {
           "type": "PropertyEditorPropertyDescription",
-          "propertyPath": "CalloutsVisible",
+          "propertyPath": "AutoCalloutsVisible",
           "name": "CalloutsVisibleEditor",
           "label": "Callouts: ",
           "shouldOverrideDefaultEditor": true,
@@ -53,11 +53,7 @@
       "isVerticalZoomEnabled": false,
       "includedProperties": ["Month", "Temperature"],
       "dataSourceRef": "TemperatureAnnotatedData",
-      "calloutsDataSourceRef": "TemperatureAnnotatedData",
-      "calloutsVisible": true,
-      "calloutsXMemberPath": "Index",
-      "calloutsYMemberPath": "Temperature",
-      "calloutsLabelMemberPath": "TempInfo",
+      "autoCalloutsVisible": true,
       "calloutsAllowedPositions": ["Top", "Bottom"],
       "isCategoryHighlightingEnabled": true,
       "highlightingMode": "BrightenSpecific",

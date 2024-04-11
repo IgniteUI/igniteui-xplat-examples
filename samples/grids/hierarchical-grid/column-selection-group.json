@@ -1,0 +1,207 @@
+{
+    "export": true,
+    "skipAlterDataCasing": true,
+    "descriptions": {
+        "content": {
+            "type": "WebHierarchicalGrid",
+            "dataRef": "HierarchicalCustomers",
+            "columnSelection": "Multiple",
+            "columns": [
+                {
+                    "type": "WebColumnGroup",
+                    "header": "General Information",
+                    "children": [
+                        {
+                            "type": "WebColumn",
+                            "field": "CompanyName",
+                            "header": "Company"
+                        },
+                        {
+                            "type": "WebColumnGroup",
+                            "header": "Personal Details",
+                            "children": [
+                                {
+                                    "type": "WebColumn",
+                                    "field": "ContactName",
+                                    "header": "Name"
+                                },
+                                {
+                                    "type": "WebColumn",
+                                    "field": "ContactTitle",
+                                    "header": "Title"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "WebColumnGroup",
+                    "header": "Address Information",
+                    "children": [
+                        {
+                            "type": "WebColumnGroup",
+                            "header": "Location",
+                            "children": [
+                                {
+                                    "type": "WebColumn",
+                                    "field": "Address",
+                                    "header": "Address",
+                                    "selectable": false
+                                },
+                                {
+                                    "type": "WebColumn",
+                                    "field": "City",
+                                    "header": "City"
+                                },
+                                {
+                                    "type": "WebColumn",
+                                    "field": "PostalCode",
+                                    "header": "Postal Code",
+                                    "selectable": false
+                                },
+                                {
+                                    "type": "WebColumn",
+                                    "field": "Country",
+                                    "header": "Country",
+                                    "selectable": false
+                                }
+                            ]
+                        },
+                        {
+                            "type": "WebColumnGroup",
+                            "header": "Contact Information",
+                            "children": [
+                                {
+                                    "type": "WebColumn",
+                                    "field": "Phone"
+                                },
+                                {
+                                    "type": "WebColumn",
+                                    "field": "Fax"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "childLayoutList": [
+                {
+                    "type": "WebRowIsland",
+                    "childDataKey": "Orders",
+                    "autoGenerate": false,
+                    "columnSelection": "Multiple",
+                    "columns": [
+                        {
+                            "type": "WebColumnGroup",
+                            "header": "Order Information",
+                            "children": [
+                                {
+                                    "type": "WebColumnGroup",
+                                    "header": "Order Details",
+                                    "children": [
+                                        {
+                                            "type": "WebColumn",
+                                            "field": "OrderID"
+                                        },
+                                        {
+                                            "type": "WebColumn",
+                                            "field": "EmployeeID"
+                                        },
+                                        {
+                                            "type": "WebColumn",
+                                            "field": "OrderDate",
+                                            "dataType": "Date"
+                                        },
+                                        {
+                                            "type": "WebColumn",
+                                            "field": "RequiredDate",
+                                            "dataType": "Date"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "WebColumnGroup",
+                                    "header": "General Shipping Information",
+                                    "children": [
+                                        {
+                                            "type": "WebColumn",
+                                            "field": "ShippedDate",
+                                            "dataType": "Date"
+                                        },
+                                        {
+                                            "type": "WebColumn",
+                                            "field": "ShipVia",
+                                            "selectable": false
+                                        },
+                                        {
+                                            "type": "WebColumn",
+                                            "field": "Freight",
+                                            "selectable": false
+                                        },
+                                        {
+                                            "type": "WebColumn",
+                                            "field": "ShipName"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "WebColumnGroup",
+                                    "header": "Shipping Location",
+                                    "children": [
+                                        {
+                                            "type": "WebColumn",
+                                            "field": "ShipAddress"
+                                        },
+                                        {
+                                            "type": "WebColumn",
+                                            "field": "ShipCity"
+                                        },
+                                        {
+                                            "type": "WebColumn",
+                                            "field": "ShipPostalCode"
+                                        },
+                                        {
+                                            "type": "WebColumn",
+                                            "field": "ShipCountry"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "childLayoutList": [
+                        {
+                            "type": "WebRowIsland",
+                            "childDataKey": "OrderDetails",
+                            "autoGenerate": false,
+                            "columnSelection": "Single",
+                            "columns": [
+                                {
+                                    "type": "WebColumn",
+                                    "field": "ProductID"
+                                },
+                                {
+                                    "type": "WebColumn",
+                                    "field": "UnitPrice"
+                                },
+                                {
+                                    "type": "WebColumn",
+                                    "field": "Quantity",
+                                    "selectable": false
+                                },
+                                {
+                                    "type": "WebColumn",
+                                    "field": "Discount"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "modules": [
+        "grids/WebHierarchicalGridModule",
+        "grids/WebColumnGroupModule"
+    ]
+}

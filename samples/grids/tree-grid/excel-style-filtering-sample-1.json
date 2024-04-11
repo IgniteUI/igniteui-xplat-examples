@@ -1,0 +1,90 @@
+{
+  "todo": [""],
+  "skipAlterDataCasing": true,
+  "descriptions": {
+    "editor": {
+      "type": "PropertyEditorPanel",
+      "name": "PropertyEditor",
+      "componentRendererRef": "renderer",
+      "targetRef": "grid",
+      "descriptionType": "WebGrid",
+      "isHorizontal": true,
+      "isWrappingEnabled": true,
+      "properties": [
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "DisplayDensity",
+          "name": "DisplayDensityEditor"
+        }
+      ]
+    },
+    "content": {
+      "type": "WebTreeGrid",
+      "name": "grid",
+      "dataRef": "FoodsData",
+      "primaryKey": "ID",
+      "foreignKey": "ParentID",
+      "moving": true,
+      "autoGenerate": false,
+      "allowFiltering": true,
+      "filterMode": "ExcelStyleFilter",
+      "toolbar": [
+        {
+          "type": "WebGridToolbar",
+          "tools": [
+            {
+              "type": "WebGridToolbarActions",
+              "actions": [
+                {
+                  "type": "WebGridToolbarHiding"
+                },
+                {
+                  "type": "WebGridToolbarPinning"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "columns": [
+        {
+          "type": "WebColumn",
+          "field": "ID",
+          "header": "ID",
+          "sortable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "Name",
+          "header": "Product Name",
+          "sortable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "UnitPrice",
+          "header": "Unit Price",
+          "sortable": true,
+          "dataType": "Currency"
+        },
+        {
+          "type": "WebColumn",
+          "field": "AddedDate",
+          "header": "Added Date",
+          "sortable": true,
+          "dataType": "Date"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Discontinued",
+          "dataType": "Boolean",
+          "bodyTemplateRef": "WebGridBooleanCellTemplate"
+        }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
+    "grids/WebGridModule"
+  ]
+}

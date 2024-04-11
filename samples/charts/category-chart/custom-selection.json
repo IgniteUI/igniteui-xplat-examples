@@ -1,0 +1,35 @@
+{
+  "strings": {
+    "legendTitle": "Chart with Multiple Selectable Data Columns"
+  },
+  "descriptions": {
+    "legend": {
+      "type": "DataLegend",
+      "name": "Legend",
+      "summaryType": "None",
+      "valueFormatMaxFractions": 0,
+      "targetRef": "chart"
+    },
+    "content": {
+      "type": "CategoryChart",
+      "name": "chart",
+      "dataSourceRef": "SelectableData",
+      "chartType": "Column",
+      "xAxisOverlap": 1,
+      "yAxisMinimumValue": 0,
+      "isHorizontalZoomEnabled": false,
+      "isVerticalZoomEnabled": false,
+      "isSeriesHighlightingEnabled": true,
+      "finalValueAnnotationsVisible": false,
+      "crosshairsAnnotationEnabled": false,
+      "dataToolTipSummaryType": "None",
+      "dataToolTipValueFormatMaxFractions": 0,
+      "seriesPointerDownRef": "CategoryChartCustomSelectionPointerDown"
+    }
+  },
+  "modules": [
+    "charts/DataLegendModule",
+    "charts/CategoryChartModule",
+    "charts/DataChartInteractivityModule"
+  ]
+}

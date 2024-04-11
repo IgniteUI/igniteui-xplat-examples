@@ -1,0 +1,53 @@
+{
+    "skipAlterDataCasing": true,
+    "descriptions": {
+      "content": {
+        "type": "WebGrid",
+        "dataRef": "CustomersData",
+        "primaryKey": "ID",
+        "autoGenerate": false,
+        "detailTemplateRef": "WebGridMasterDetailTemplate",
+        "name": "grid",
+        "columns": [
+          {
+            "type": "WebColumn",
+            "field": "ContactName",
+            "header": "Contact",
+            "width": "250px",
+            "resizable": false
+          },
+          {
+            "type": "WebColumn",
+            "header": "Address",
+            "field": "Address",
+            "editable": true,
+            "width": "250px",
+            "resizable": false
+          },
+          {
+            "type": "WebColumn",
+            "header": "Country",
+            "field": "Country"
+          },
+          {
+            "type": "WebColumn",
+            "header": "Region",
+            "field": "Region"
+          },
+          {
+            "type": "WebColumn",
+            "header": "Phone",
+            "field": "Phone"
+          },
+          {
+            "type": "WebColumn",
+            "header": "Fax",
+            "field": "Fax"
+          }
+        ]
+      }
+    },
+    "modules": [
+      "grids/WebGridModule"
+    ]
+  }

@@ -1,0 +1,54 @@
+{
+  "export": false,
+  "strings": {
+    "legendTitle": "Comparing Population of Countries"
+  },
+  "descriptions": {
+    "editor": {
+      "type": "PropertyEditorPanel",
+      "name": "PropertyEditor",
+      "componentRendererRef": "renderer",
+      "targetRef": "treemap",
+      "descriptionType": "Treemap",
+      "isHorizontal": true,
+      "isWrappingEnabled": true,
+      "properties": [
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "HighlightingMode",
+          "name": "HighlightedModeEditor",
+          "label": "Highlighting Mode: ",
+          "primitiveValue": "Brighten",
+          "dropDownValues": ["Brighten", "FadeOthers"]
+        }
+      ]
+    },
+    "content": {
+      "type": "Treemap",
+      "name": "treemap",
+      "dataSourceRef": "CountyHierarchicalData",
+      "parentIdMemberPath": "Parent",
+      "idMemberPath": "Name",
+      "labelMemberPath": "Name",
+      "valueMemberPath": "Population",
+      "fillScaleMode": "Value",
+      "fillScaleMinimumValue": 0,
+      "fillScaleMaximumValue": 1500000000,
+      "fillBrushes": ["#4e62cf", "#8a58d6"],
+      "isFillScaleLogarithmic": true,
+      "rootTitle": "Countries",
+      "headerDisplayMode": "Overlay",
+      "parentNodeBottomPadding": 0,
+      "parentNodeLeftPadding": 0,
+      "parentNodeRightPadding": 0,
+      "parentNodeTopPadding": 0,
+      "outline": "black",
+      "strokeThickness": 1
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
+    "charts/TreemapModule"
+  ]
+}

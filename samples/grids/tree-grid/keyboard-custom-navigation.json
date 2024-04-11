@@ -1,0 +1,58 @@
+{
+  "export": true,
+  "skipAlterDataCasing": true,
+  "descriptions": {
+    "content": {
+      "type": "WebTreeGrid",
+      "name": "treeGrid",
+      "id": "treeGrid",
+      "dataRef": "EmployeesNestedData",
+      "childDataKey": "Employees",
+      "autoGenerate": false,
+      "rowSelection": "Multiple",
+      "moving": true,
+      "allowFiltering": true,
+      "gridKeydownRef": "WebGridCustomKBNav",
+      "paginationComponents": [
+        {
+          "type": "WebPaginator",
+          "perPage": 15
+        }
+      ],
+      "columns": [
+        {
+          "type": "WebColumn",
+          "field": "Name",
+          "header": "Name",
+          "dataType": "String",
+          "sortable": true,
+          "editable": true,
+          "resizable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "HireDate",
+          "header": "Hire Date",
+          "dataType": "Date",
+          "sortable": true,
+          "editable": true,
+          "resizable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "Age",
+          "header": "Age",
+          "dataType": "Number",
+          "sortable": true,
+          "editable": true,
+          "resizable": true
+        }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
+    "grids/WebTreeGridModule"
+  ]
+}

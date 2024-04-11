@@ -15,16 +15,20 @@
       "properties": [
         {
           "type": "PropertyEditorPropertyDescription",
-          "propertyPath": "Pinning.Rows",
           "name": "rowPinningEditor",
-          "label": "Row Pinning toggle"
+          "valueType": "EnumValue",
+          "label": "Row Pinning toggle",
+          "dropDownNames": ["Top", "Bottom"],
+          "dropDownValues": ["Top", "Bottom"],
+          "changedRef": "WebGridSetRowPinning"
         }
       ]
     },
     "content": {
       "type": "WebGrid",
       "name": "grid",
-      "dataRef": "CustomersData",
+      "id": "grid",
+      "dataRef": "CustomersDataLocal",
       "autoGenerate": false,
       "pinning": {
         "type": "WebPinningConfig",
@@ -76,7 +80,7 @@
           "header": "Fax"
         }
       ],
-      "actionStrip": {
+      "actionStripComponents": [{
         "type": "WebActionStrip",
         "name": "actionStrip",
         "actionButtons": [
@@ -84,7 +88,7 @@
             "type": "WebGridPinningActions"
           }
         ]
-      }
+      }]
     }
   },
   "modules": [

@@ -1,5 +1,5 @@
 {
-  "todo": [ "" ],
+  "todo": [ "Add template columns with toggling summaries" ],
   "skipAlterDataCasing": true,
   "descriptions": {
     "content": {
@@ -19,13 +19,15 @@
           "type": "WebColumn",
           "name": "ProductName",
           "field": "ProductName",
-          "header": "Product Name"
+          "header": "Product Name",
+          "hasSummary": true
         },
         {
           "type": "WebColumn",
           "name": "UnitPrice",
           "field": "UnitPrice",
-          "header": "Unit Price"
+          "header": "Unit Price",
+          "hasSummary": true
         },
         {
           "type": "WebColumn",
@@ -53,6 +55,7 @@
     }
   },
   "modules": [
+    "withDescriptions",
     "grids/WebGridModule"
   ]
 }

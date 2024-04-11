@@ -16,7 +16,7 @@
         "type": "WebPinningConfig",
         "rows": "Top"
       },
-      "actionStrip": {
+      "actionStripComponents": [{
         "type": "WebActionStrip",
         "name": "actionStrip",
         "actionButtons": [
@@ -26,10 +26,11 @@
           {
             "type": "WebGridEditingActions",
             "editRow": true,
-            "deleteRow": false
+            "deleteRow": true,
+            "addRow": true
           }
         ]
-      },
+      }],
       "primaryKey": "ProductID",
       "columns": [
         {
@@ -78,6 +79,7 @@
     }
   },
   "modules": [
+    "withDescriptions",
     "layouts/PropertyEditorPanelModule",
     "grids/WebGridModule"
   ]

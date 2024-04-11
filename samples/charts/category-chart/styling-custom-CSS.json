@@ -1,0 +1,14 @@
+{
+  "note": "example of applying custom CSS properties to CategoryChart",
+  "export": false,
+  "onInit": [ "ChartStyleTest" ],
+  "descriptions": {
+    "content": {
+      "type": "CategoryChart",
+      "chartTitle": "TEST"
+    }
+  },
+  "modules": [
+    "charts/CategoryChartModule"
+  ]
+}

@@ -1,5 +1,6 @@
 {
   "todo": [],
+  "skipAlterDataCasing": true,
   "descriptions": {
     "content": {
       "type": "WebTreeGrid",
@@ -12,22 +13,26 @@
       "rowEditable": true,
       "batchEditing": true,
       "allowFiltering": true,
-      "actionStrip": {
+      "actionStripComponents": [{
         "type": "WebActionStrip",
         "name": "actionStrip",
         "actionButtons": [
           {
+            "type": "WebGridPinningActions"
+          },
+          {
             "type": "WebGridEditingActions"
           }
         ]
-      },
+      }],
       "columns": [
         {
           "type": "WebColumn",
           "field": "Name",
           "dataType": "String",
           "sortable": true,
-          "disableHiding": true
+          "disableHiding": true,
+          "width": "auto"
         },
         {
           "type": "WebColumn",
