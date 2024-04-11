@@ -8,11 +8,16 @@ export class HGridPaginatorStyle {
 
     public requiredStyles = `
     <!--begin styles-->
-    #grid {
-        --ig-grid-paginator-border-width: 5px;
-        --ig-grid-paginator-border-style: double;
-        --ig-grid-paginator-border-color: #FFCD0F;
-        --ig-grid-paginator-active-border-color: #FFCD0F;
+    #grid igc-paginator {
+        --ig-paginator-border-width: 5px;
+        --ig-paginator-background-color: #231c2c;
+        --ig-paginator-text-color: #d0ab23;
+        --ig-paginator-focused-text-color: #d0ab23;
+        --ig-paginator-border-color: #d0ab23;
+        --ig-grid-paginator-active-border-color: #d0ab23;
+        --ig-icon-color: #d0ab23;
+        --ig-input-group-filled-text-color: #d0ab23;
+        --ig-input-group-focused-text-color: #d0ab23;
     }
     <!--end styles-->
         `;

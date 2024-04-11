@@ -1,5 +1,6 @@
 {
     "skipAlterDataCasing": true,
+    "todo": [ "Enable paging for children once templates are available." ],
     "descriptions": {
       "content": {
         "type": "WebHierarchicalGrid",
@@ -10,7 +11,7 @@
             {
               "type": "WebPaginator",
               "name": "paginator",
-              "perPage": 15,
+              "perPage": 10,
               "displayDensity": "Cosy",
               "resourceStrings": {
                 "type": "WebPaginatorResourceStrings",

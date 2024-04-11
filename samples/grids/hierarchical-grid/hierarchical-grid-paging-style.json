@@ -1,9 +1,11 @@
 {
     "skipAlterDataCasing": true,
-    "onInit": ["HGridPaginatorStyles"],
+    "onInit": ["HGridPaginatorStyle"],
     "descriptions": {
       "content": {
         "type": "WebHierarchicalGrid",
+        "id": "grid",
+        "name": "grid",
         "dataRef": "SingersData",
         "autoGenerate": false,
         "primaryKey": "ID",
