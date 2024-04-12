@@ -1,5 +1,5 @@
 //begin eventHandler
-igRegisterScript("WebGridCellEditingStyleTemplate", (args) => {
+igRegisterScript("HGridPaginatorStyle", (args) => {
     //OMIT HANDLER
 }, false);
 //end eventHandler
