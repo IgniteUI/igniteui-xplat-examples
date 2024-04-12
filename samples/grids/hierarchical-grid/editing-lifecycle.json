@@ -1,0 +1,99 @@
+{
+  "export": true,
+  "skipAlterDataCasing": true,
+  "descriptions": {
+    "content": {
+      "type": "WebHierarchicalGrid",
+      "dataRef": "SingersData",
+      "autoGenerate": false,
+      "primaryKey": "ID",
+      "id": "hierarchicalGrid",
+      "name": "hierarchicalGrid",
+      "rowEditable": true,
+      "renderedRef": "WebHierarchicalGridRendered",
+      "rowEditEnterRef": "WebHierarchicalGridRowEditEnter",
+      "rowEditRef": "WebHierarchicalGridRowEdit",
+      "rowEditDoneRef": "WebHierarchicalGridRowEditDone",
+      "rowEditExitRef": "WebHierarchicalGridRowEditExit",
+      "cellEditEnterRef": "WebHierarchicalGridCellEditEnter",
+      "cellEditRef": "WebHierarchicalGridCellEdit",
+      "cellEditExitRef": "WebHierarchicalGridCellEditExit",
+      "columns": [
+        {
+          "type": "WebColumn",
+          "field": "Artist",
+          "header": "Artist",
+          "dataType": "String"
+        },
+        {
+          "type": "WebColumn",
+          "field": "HasGrammyAward",
+          "header": "Has Grammy Award",
+          "dataType": "Boolean"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Debut",
+          "header": "Debut",
+          "dataType": "Number"
+        },
+        {
+          "type": "WebColumn",
+          "field": "GrammyNominations",
+          "header": "Grammy Nominations",
+          "dataType": "Number"
+        },
+        {
+          "type": "WebColumn",
+          "field": "GrammyAwards",
+          "header": "Grammy Awards",
+          "dataType": "Number"
+        }
+      ],
+      "childLayoutList": [
+        {
+          "type": "WebRowIsland",
+          "childDataKey": "Albums",
+          "autoGenerate": false,
+          "name": "rowIsland",
+          "primaryKey": "Album",
+          "rowEditable": true,
+          "rowEditEnterRef": "WebRowIslandGridRowEditEnter",
+          "rowEditRef": "WebRowIslandGridRowEdit",
+          "rowEditDoneRef": "WebRowIslandGridRowEditDone",
+          "rowEditExitRef": "WebRowIslandGridRowEditExit",
+          "cellEditEnterRef": "WebRowIslandGridCellEditEnter",
+          "cellEditRef": "WebRowIslandGridCellEdit",
+          "cellEditExitRef": "WebRowIslandGridCellEditExit",
+          "columns": [
+            {
+              "type": "WebColumn",
+              "field": "Album",
+              "header": "Album",
+              "dataType": "String"
+            },
+            {
+              "type": "WebColumn",
+              "field": "LaunchDate",
+              "header": "Launch Date",
+              "dataType": "Date"
+            },
+            {
+              "type": "WebColumn",
+              "field": "BillboardReview",
+              "header": "Billboard Review",
+              "dataType": "String"
+            },
+            {
+              "type": "WebColumn",
+              "field": "USBillboard200",
+              "header": "US Billboard 200",
+              "dataType": "String"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "modules": ["grids/WebHierarchicalGridModule"]
+}
