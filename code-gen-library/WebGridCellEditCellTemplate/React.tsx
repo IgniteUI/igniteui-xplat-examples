@@ -18,14 +18,15 @@ public webGridCellEditCellTemplate = (e: {dataContext: IgrCellTemplateContext}) 
         if(uniqueValues.indexOf(i[field]) === -1 )
         {
             cellValues.push(<><IgrSelectItem selected={e.dataContext.cell.value == i[field]}
-             textContent={i[field]} value={i[field]} key={key + "_" + index}>
+             value={i[field]} key={key + "_" + index}>
+                <div key={key + "_" + index}>{i[field]}</div>
         </IgrSelectItem></>);
             uniqueValues.push(i[field]);
             
         }
         index++;
     }
-    return <><IgrSelect size="large" key={key} change={(x: any) => {
+    return <><IgrSelect key={key} change={(x: any) => {
             setTimeout(() => {
                 cell.editValue = x.value;
             });
