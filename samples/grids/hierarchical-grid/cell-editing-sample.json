@@ -1,0 +1,81 @@
+{
+    "skipAlterDataCasing": true,
+    "descriptions": {
+      "content": {
+        "type": "WebHierarchicalGrid",
+        "dataRef": "HGridDndData",
+        "autoGenerate": false,
+        "primaryKey": "Name",
+        "columns": [
+          {
+            "type": "WebColumn",
+            "field": "Name",
+            "header": "Character Name",
+            "dataType": "String"
+          },
+          {
+            "type": "WebColumn",
+            "field": "Race",
+            "header": "Race",
+            "dataType": "String",
+            "inlineEditorTemplateRef": "HGridCellEditCellTemplate",
+            "editable": true
+          },
+          {
+            "type": "WebColumn",
+            "field": "Class",
+            "header": "Class",
+            "inlineEditorTemplateRef": "HGridCellEditCellTemplate",
+            "editable": true,
+            "dataType": "String"
+          },
+          {
+            "type": "WebColumn",
+            "field": "Age",
+            "header": "Age",
+            "dataType": "String",
+            "editable": true
+          },
+          {
+            "type": "WebColumn",
+            "field": "Alignment",
+            "header": "Alignment",
+            "inlineEditorTemplateRef": "HGridCellEditCellTemplate",
+            "editable": true,
+            "dataType": "String"
+  
+          }
+        ],
+        "childLayoutList": [
+          {
+            "type": "WebRowIsland",
+            "childDataKey": "Skills",
+            "autoGenerate": false,
+            "columns": [
+              {
+                "type": "WebColumn",
+                "field": "Skill",
+                "header": "Skill",
+                "dataType": "String",
+                "editable": true,
+                "resizable": true
+              },
+              {
+                "type": "WebColumn",
+                "field": "Level",
+                "header": "Level",
+                "dataType": "String",
+                "editable": true,
+                "resizable": true
+              }
+          ]
+        }
+      ]
+      }
+    },
+    "modules": [
+      "withDescriptions",
+      "grids/WebHierarchicalGridModule",
+      "webinputs/WebSelectModule"
+    ]
+  }

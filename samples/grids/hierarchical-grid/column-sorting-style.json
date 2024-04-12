@@ -1,0 +1,169 @@
+{
+  "export": true,
+  "skipAlterDataCasing": true,
+  "onInit": ["WebHierarchicalGridSortingStyling"],
+  "descriptions": {
+    "content": {
+      "type": "WebHierarchicalGrid",
+      "dataRef": "SingersData",
+      "autoGenerate": false,
+      "name": "hierarchicalGrid",
+      "id": "hierarchicalGrid",
+      "primaryKey": "ID",
+      "sortingExpressions": [
+        {
+          "type": "WebSortingExpression",
+          "fieldName": "Artist",
+          "dir": "Asc",
+          "ignoreCase": true
+        }
+      ],
+      "columns": [
+        {
+          "type": "WebColumn",
+          "field": "Artist",
+          "header": "Artist",
+          "dataType": "String",
+          "sortable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "Photo",
+          "header": "Photo",
+          "dataType": "Image"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Debut",
+          "header": "Debut",
+          "dataType": "Number",
+          "sortable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "GrammyNominations",
+          "header": "Grammy Nominations",
+          "dataType": "Number",
+          "sortable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "GrammyAwards",
+          "header": "Grammy Awards",
+          "dataType": "Number",
+          "sortable": true
+        }
+      ],
+      "childLayoutList": [
+        {
+          "type": "WebRowIsland",
+          "childDataKey": "Albums",
+          "autoGenerate": false,
+          "columns": [
+            {
+              "type": "WebColumn",
+              "field": "Album",
+              "header": "Album",
+              "dataType": "String",
+              "sortable": true
+            },
+            {
+              "type": "WebColumn",
+              "field": "LaunchDate",
+              "header": "Launch Date",
+              "dataType": "Date",
+              "sortable": true
+            },
+            {
+              "type": "WebColumn",
+              "field": "BillboardReview",
+              "header": "Billboard Review",
+              "dataType": "String",
+              "sortable": true
+            },
+            {
+              "type": "WebColumn",
+              "field": "USBillboard200",
+              "header": "US Billboard 200",
+              "dataType": "String",
+              "sortable": true
+            }
+          ],
+          "childLayoutList": [
+            {
+              "type": "WebRowIsland",
+              "childDataKey": "Songs",
+              "autoGenerate": false,
+              "columns": [
+                {
+                  "type": "WebColumn",
+                  "field": "Number",
+                  "header": "No.",
+                  "dataType": "String",
+                  "sortable": true
+                },
+                {
+                  "type": "WebColumn",
+                  "field": "Title",
+                  "header": "Title",
+                  "dataType": "String",
+                  "sortable": true
+                },
+                {
+                  "type": "WebColumn",
+                  "field": "Released",
+                  "header": "Released",
+                  "dataType": "Date",
+                  "sortable": true
+                },
+                {
+                  "type": "WebColumn",
+                  "field": "Genre",
+                  "header": "Genre",
+                  "dataType": "String",
+                  "sortable": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "WebRowIsland",
+          "childDataKey": "Tours",
+          "autoGenerate": false,
+          "columns": [
+            {
+              "type": "WebColumn",
+              "field": "Tour",
+              "header": "Tour",
+              "dataType": "String",
+              "sortable": true
+            },
+            {
+              "type": "WebColumn",
+              "field": "StartedOn",
+              "header": "Started on",
+              "dataType": "String",
+              "sortable": true
+            },
+            {
+              "type": "WebColumn",
+              "field": "Location",
+              "header": "Location",
+              "dataType": "String",
+              "sortable": true
+            },
+            {
+              "type": "WebColumn",
+              "field": "Headliner",
+              "header": "Headliner",
+              "dataType": "String",
+              "sortable": true
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "modules": ["grids/WebHierarchicalGridModule"]
+}
