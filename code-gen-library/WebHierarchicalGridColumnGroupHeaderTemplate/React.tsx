@@ -19,7 +19,7 @@ public webHierarchicalGridColumnGroupHeaderTemplate = (e: { dataContext: IgrColu
 //begin supportingMethods
 public columnGroupStates = new Map<IgrColumn, boolean>();
 public toggleColumnGroup(column: IgrColumn) {
-    const columnGroup = this.grid.contentColumns.find((col) => col.name == column.name) as IgrColumnGroup;
+    const columnGroup = this.hierarchicalGrid.contentColumns.find((col) => col.name == column.name) as IgrColumnGroup;
     const columns = Array.from(columnGroup.actualChildren);
     if (columnGroup.header === 'General Information') {
         const column = columns[1] as IgrColumn;
