@@ -1,5 +1,5 @@
 //begin eventHandler
-igRegisterScript("WebHierarchicalGridStyling", (args) => {
+igRegisterScript("WebHierarchicalGridCellSelectionStyling", (args) => {
     //OMIT HANDLER
 }, false);
 //end eventHandler

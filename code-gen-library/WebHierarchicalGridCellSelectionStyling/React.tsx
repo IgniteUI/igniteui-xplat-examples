@@ -2,9 +2,9 @@
 import { IgrHierarchicalGridComponent } from 'igniteui-react-grids';
 //end imports
 
-export class WebHierarchicalGridStyling {
+export class WebHierarchicalGridCellSelectionStyling {
     //begin eventHandler
-    public webHierarchicalGridStyling(): void {
+    public webHierarchicalGridCellSelectionStyling(): void {
         //OMIT HANDLER
     }
     //end eventHandler
