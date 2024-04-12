@@ -1,9 +1,9 @@
 //begin imports
 //end imports
 
-export class WebGridSortingStyling {
+export class WebHierarchicalGridSortingStyling {
     //begin eventHandler
-    public webGridSortingStyling(): void {
+    public webHierarchicalGridSortingStyling(): void {
         //OMIT HANDLER
     }
     //end eventHandler

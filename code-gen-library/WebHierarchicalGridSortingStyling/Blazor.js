@@ -1,5 +1,5 @@
 //begin eventHandler
-igRegisterScript("WebGridSortingStyling", (args) => {
+igRegisterScript("WebHierarchicalGridSortingStyling", (args) => {
     //OMIT HANDLER
 }, false);
 //end eventHandler
