@@ -1,0 +1,186 @@
+{
+    "export": true,
+    "skipAlterDataCasing": true,
+    "descriptions": {
+      "content": {
+        "type": "WebHierarchicalGrid",
+        "name": "grid",
+        "id": "grid",
+        "dataRef": "HierarchicalCustomersData",
+        "columnSelection": "Single",
+        "primaryKey": "CustomerID",
+        "toolbar": [
+          {
+            "type": "WebGridToolbar",
+            "tools": [
+              {
+                "type": "WebGridToolbarActions",
+                "actions": [
+                  {
+                    "type": "WebGridToolbarPinning"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "columns": [
+          {
+            "type": "WebColumn",
+            "field": "CustomerID",
+            "hidden": true
+          },
+          {
+            "type": "WebColumn",
+            "field": "CompanyName",
+            "header": "Company Name",
+            "pinned": true
+          },
+          {
+            "type": "WebColumn",
+            "field": "ContactName",
+            "header": "Contact Name"
+          },
+          {
+            "type": "WebColumn",
+            "field": "ContactTitle",
+            "header": "Contact Title"
+          },
+          {
+            "type": "WebColumn",
+            "field": "Address",
+            "header": "Address"
+          },
+          {
+            "type": "WebColumn",
+            "field": "City",
+            "header": "City"
+          },
+          {
+            "type": "WebColumn",
+            "field": "PostalCode",
+            "header": "Postal Code"
+          },
+          {
+            "type": "WebColumn",
+            "field": "Country",
+            "header": "Country"
+          },
+          {
+            "type": "WebColumn",
+            "field": "Phone"
+          },
+          {
+            "type": "WebColumn",
+            "field": "Fax"
+          }
+        ],
+        "childLayoutList": [
+          {
+            "type": "WebRowIsland",
+            "childDataKey": "Orders",
+            "autoGenerate": false,
+            "columns": [
+              {
+                "type": "WebColumn",
+                "field": "OrderDate",
+                "header": "Order Date",
+                "dataType": "Date",
+                "resizable": true
+              },
+              {
+                "type": "WebColumn",
+                "field": "RequiredDate",
+                "header": "Required Date",
+                "dataType": "Date",
+                "resizable": true
+              },
+              {
+                "type": "WebColumn",
+                "field": "ShippedDate",
+                "header": "Shipped Date",
+                "dataType": "Date",
+                "resizable": true
+              },
+              {
+                "type": "WebColumn",
+                "field": "ShipName",
+                "header": "Ship Name",
+                "dataType": "String",
+                "resizable": true,
+                "pinned": true
+              },
+              {
+                "type": "WebColumn",
+                "field": "ShippedVia",
+                "header": "Shipped Via",
+                "dataType": "String",
+                "resizable": true
+              },
+              {
+                "type": "WebColumn",
+                "field": "Freight",
+                "header": "Freight",
+                "dataType": "String",
+                "resizable": true
+              }
+            ],
+            "childLayoutList": [
+              {
+                "type": "WebRowIsland",
+                "childDataKey": "OrderDetails",
+                "autoGenerate": false,
+                "columns": [
+                  {
+                    "type": "WebColumn",
+                    "field": "UnitPrice",
+                    "header": "Unit Price",
+                    "dataType": "String",
+                    "resizable": true
+                  },
+                  {
+                    "type": "WebColumn",
+                    "field": "Quantity",
+                    "header": "Quantity",
+                    "dataType": "String",
+                    "resizable": true
+                  },
+                  {
+                    "type": "WebColumn",
+                    "field": "Discount",
+                    "header": "Discount",
+                    "dataType": "String",
+                    "resizable": true
+                  },
+                  {
+                    "type": "WebColumn",
+                    "field": "Weight",
+                    "header": "Weight",
+                    "dataType": "String",
+                    "resizable": true
+                  },
+                  {
+                    "type": "WebColumn",
+                    "field": "Length",
+                    "header": "Length",
+                    "dataType": "String",
+                    "resizable": true
+                  },
+                  {
+                    "type": "WebColumn",
+                    "field": "TotalPrice",
+                    "header": "Total Price",
+                    "dataType": "String",
+                    "resizable": true
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "modules": [
+      "grids/WebHierarchicalGridModule"
+    ]
+  }
