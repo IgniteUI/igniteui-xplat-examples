@@ -8,6 +8,8 @@
         "dataRef": "SingersData",
         "autoGenerate": false,
         "primaryKey": "ID",
+        "id": "hierarchicalGrid1",
+        "name": "hierarchicalGrid1",
         "allowFiltering": true,
         "filterMode": "QuickFilter",
         "columns": [
