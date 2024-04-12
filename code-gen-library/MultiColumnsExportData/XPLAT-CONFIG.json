@@ -1,0 +1,10 @@
+[
+  {
+    "platform": "WebComponents",
+    "location": "jsonFile"
+  },
+  {
+    "platform": "React",
+    "location": "jsonFile"
+  }
+]
