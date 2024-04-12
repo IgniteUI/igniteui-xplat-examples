@@ -6,7 +6,7 @@ igRegisterScript("WebHierarchicalGridRowPinCellTemplate", (ctx) => {
     }
 	const row = ctx.cell.row;
     return html`<div>
-    <span onpointerdown='toggleRowPin("${row}")'>📌</span>
+    <span @pointerdown=${() => toggleRowPin(row)}>📌</span>
 </div>`;
 }, false);
 //end template

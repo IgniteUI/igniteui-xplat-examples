@@ -6,16 +6,18 @@
       "type": "PropertyEditorPanel",
       "name": "PropertyEditorHierarchicalGrid",
       "componentRendererRef": "renderer",
-      "targetRef": "hierarchicalGrid",
+      "targetRef": "grid",
       "descriptionType": "WebHierarchicalGrid",
       "isHorizontal": true,
       "isWrappingEnabled": true,
       "properties": [
         {
           "type": "PropertyEditorPropertyDescription",
-          "propertyPath": "Pinning.Rows",
           "name": "rowPinningEditor",
           "label": "Row Pinning toggle",
+          "valueType": "EnumValue",
+          "dropDownNames": ["Top", "Bottom"],
+          "dropDownValues": ["Top", "Bottom"],
           "changedRef": "WebHierarchicalGridChangePinningConfig"
         }
       ]
@@ -25,8 +27,8 @@
       "dataRef": "SingersData",
       "autoGenerate": false,
       "primaryKey": "Photo",
-      "id": "hierarchicalGrid",
-      "name": "hierarchicalGrid",
+      "id": "grid",
+      "name": "grid",
       "cellSelection": "None",
       "pinning": {
         "type": "WebPinningConfig",

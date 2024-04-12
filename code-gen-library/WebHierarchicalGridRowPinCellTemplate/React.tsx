@@ -6,7 +6,7 @@ export class WebHierarchicalGridRowPinCellTemplate {
 //begin template
 //begin content
 public webHierarchicalGridRowPinCellTemplate = (e: {dataContext: IgrCellTemplateContext}) => {
-	const row = e.dataContext.cell.row;
+    const row = e.dataContext.cell.row;
     return (
         <span onPointerDown={(e: any) => this.toggleRowPin(row)} style={{ cursor: 'pointer'}}>📌</span>
     );
