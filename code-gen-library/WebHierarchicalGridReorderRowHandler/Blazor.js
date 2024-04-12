@@ -1,5 +1,5 @@
 //begin eventHandler
-igRegisterScript("WebGridReorderRowHandler", (args) => {
+igRegisterScript("WebHierarchicalGridReorderRowHandler", (args) => {
     const ghostElement = args.detail.dragDirective.ghostElement;
     const dragElementPos = ghostElement.getBoundingClientRect();
     const grid = document.getElementsByTagName("igc-hierarchical-grid")[0];

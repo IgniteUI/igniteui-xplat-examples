@@ -4,9 +4,9 @@ import { IgcHierarchicalGridComponent, IgcRowDragEndEventArgs } from 'igniteui-w
 
 import { CodeGenHelper } from 'igniteui-webcomponents-core';
 
-export class WebGridReorderRowHandler {
+export class WebHierarchicalGridReorderRowHandler {
     //begin eventHandler
-    public webGridReorderRowHandler(args: CustomEvent<IgcRowDragEndEventArgs>): void {
+    public webHierarchicalGridReorderRowHandler(args: CustomEvent<IgcRowDragEndEventArgs>): void {
         const ghostElement = args.detail.dragDirective.ghostElement;
         const dragElementPos = ghostElement.getBoundingClientRect();
         const grid = CodeGenHelper.getDescription<IgcHierarchicalGridComponent>("content");
