@@ -15,13 +15,13 @@
           "type": "PropertyEditorPropertyDescription",
           "valueType": "Button",
           "primitiveValue": "Pin First Group",
-          "buttonClickedRef": "WebGridPinFirstGroupToggle"
+          "buttonClickedRef": "WebHierarchicalGridPinFirstGroupToggle"
         },
         {
           "type": "PropertyEditorPropertyDescription",
           "valueType": "Button",
           "primitiveValue": "Hide First Group",
-          "buttonClickedRef": "WebGridHideFirstGroupToggle"
+          "buttonClickedRef": "WebHierarchicalGridHideFirstGroupToggle"
         }
       ]
     },
