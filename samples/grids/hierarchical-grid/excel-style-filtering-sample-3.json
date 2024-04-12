@@ -8,6 +8,7 @@
         "autoGenerate": false,
         "primaryKey": "ID",
         "allowFiltering": true,
+        "excelStyleHeaderIconTemplateRef": "WebGridFilterAltIconTemplate",
         "filterMode": "ExcelStyleFilter",
         "toolbar": [
             {

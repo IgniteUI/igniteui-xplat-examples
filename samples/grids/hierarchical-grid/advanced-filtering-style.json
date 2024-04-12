@@ -6,6 +6,8 @@
       "content": {
         "type": "WebHierarchicalGrid",
         "dataRef": "SingersData",
+        "id": "hierarchicalGrid1",
+        "name": "hierarchicalGrid1",
         "autoGenerate": false,
         "primaryKey": "ID",
         "allowAdvancedFiltering": true,

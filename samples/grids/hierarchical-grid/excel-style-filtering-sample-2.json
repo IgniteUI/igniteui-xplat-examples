@@ -33,7 +33,8 @@
             "field": "Artist",
             "header": "Artist",
             "dataType": "String",
-            "resizable": true
+            "resizable": true,
+            "sortable": true
           },
           {
             "type": "WebColumn",
@@ -41,7 +42,9 @@
             "header": "Photo",
             "dataType": "Image",
             "minWidth": "115px",
-            "resizable": true
+            "resizable": true,
+            "disablePinning": true,
+            "disableHiding": true
           },
           {
             "type": "WebColumn",
@@ -81,14 +84,17 @@
                 "field": "Album",
                 "header": "Album",
                 "dataType": "String",
-                "resizable": true
+                "resizable": true,
+                "sortable": true
               },
               {
                 "type": "WebColumn",
                 "field": "LaunchDate",
                 "header": "Launch Date",
                 "dataType": "Date",
-                "resizable": true
+                "resizable": true,
+                "disablePinning": true,
+                "disableHiding": true
               },
               {
                 "type": "WebColumn",
