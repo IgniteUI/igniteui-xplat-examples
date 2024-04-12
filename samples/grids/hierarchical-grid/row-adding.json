@@ -6,6 +6,7 @@
       "dataRef": "SingersData",
       "autoGenerate": false,
       "id":"hGrid",
+      "name":"hGrid",
       "primaryKey": "ID",
       "rowEditable": true,
       "actionStripComponents": [{
@@ -54,6 +55,8 @@
           "type": "WebRowIsland",
           "childDataKey": "Albums",
           "autoGenerate": false,
+          "primaryKey": "Album",
+          "rowEditable": true,
           "columns": [
             {
               "type": "WebColumn",
@@ -89,6 +92,8 @@
               "type": "WebRowIsland",
               "childDataKey": "Songs",
               "autoGenerate": false,
+              "primaryKey": "Title",
+              "rowEditable": true,
               "actionStripComponents": [{
                 "type": "WebActionStrip",
                 "actionButtons": [
@@ -135,6 +140,8 @@
           "type": "WebRowIsland",
           "childDataKey": "Tours",
           "autoGenerate": false,
+          "primaryKey": "Tour",
+          "rowEditable": true,
           "actionStripComponents": [{
             "type": "WebActionStrip",
             "actionButtons": [
