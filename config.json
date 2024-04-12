@@ -4,7 +4,6 @@
     {
       "name": "All",
       "exclusions": [
-        { "reason": "TODO fix exporting for BubbleSeries.RadiusScale", "path": "bubble-chart" },
         { "reason": "TODO test exporting and sample template", "path": "maps\\" },
         { "reason": "TODO test exporting and sample template", "path": "gauges\\" }
       ]
