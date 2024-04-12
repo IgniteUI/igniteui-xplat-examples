@@ -1,0 +1,22 @@
+{
+  "export": false,
+  "descriptions": {
+    "content": {
+      "type": "RadialGauge",
+      "name": "gauge",
+      "minimumValue": 0,
+      "maximumValue": 100,
+      "value": 75,
+      "interval": 10,
+      "labelInterval": 10,
+      "labelExtent": 0.65, 
+      "isNeedleDraggingEnabled": true,
+      "isHighlightNeedleDraggingEnabled": true,
+      "highlightValueDisplayMode": "Overlay",
+      "highlightValue": "25"
+    }
+  },
+  "modules": [
+    "gauges/RadialGaugeModule"
+  ]
+}
