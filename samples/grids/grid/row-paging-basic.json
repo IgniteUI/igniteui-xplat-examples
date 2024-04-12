@@ -28,11 +28,13 @@
         {
           "type": "WebColumn",
           "field": "BeatsPerMinute",
+          "header": "Beats Per Minute",
           "dataType": "Number"
         },
         {
           "type": "WebColumn",
           "field": "TopSpeed",
+          "header": "Top Speed",
           "dataType": "Number",
           "pipeArgs": {
             "type": "WebColumnPipeArgs",
@@ -42,17 +44,20 @@
         {
           "type": "WebColumn",
           "field": "TrackProgress",
+          "header": "Track Progress",
           "bodyTemplateRef": "WebGridProgressCellTemplate"
         },
         {
           "type": "WebColumn",
           "field": "CountryFlag",
-          "bodyTemplateRef": "WebGridImageCellTemplate"
+          "header": "Country Flag"
+          ,          "bodyTemplateRef": "WebGridImageCellTemplate"
         }
       ]
     }
   },
   "modules": [
+    "webinputs/WebLinearProgressModule",
     "grids/WebGridModule"
   ]
 }

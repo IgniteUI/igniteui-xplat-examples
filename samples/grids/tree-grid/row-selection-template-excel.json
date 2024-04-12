@@ -1,0 +1,77 @@
+{
+  "todo": [""],
+  "export": true,
+  "skipAlterDataCasing": true,
+  "descriptions": {
+    "content": {
+      "type": "WebTreeGrid",
+      "dataRef": "EmployeesFlatData",
+      "autoGenerate": false,
+      "name": "treeGrid",
+      "id": "treeGrid",
+      "primaryKey": "ID",
+      "foreignKey": "ParentID",
+      "rowSelection": "Multiple",
+      "displayDensity": "Cosy",
+      "rowSelectorTemplateRef": "WebGridRowSelectorExcelTemplate",
+      "headSelectorTemplateRef": "WebGridHeaderRowSelectorExcelTemplate",
+      "paginationComponents": [
+        {
+          "type": "WebPaginator",
+          "name": "paginator",
+          "perPage": 15,
+          "displayDensity": "Cosy",
+          "selectOptions": [5, 10, 15, 25, 50],
+          "resourceStrings": {
+            "type": "WebPaginatorResourceStrings",
+            "igx_paginator_label": "Items per page"
+          }
+        }
+      ],
+      "columns": [
+       {
+          "type": "WebColumn",
+          "field": "Name",
+          "dataType": "String",
+          "sortable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "Title",
+          "header": "Job Title",
+          "dataType": "String",
+          "sortable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "HireDate",
+          "dataType": "Date",
+          "sortable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "ID",
+          "dataType": "Number",
+          "sortable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "Age",
+          "dataType": "Number",
+          "sortable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "OnPTO",
+          "dataType": "Boolean",
+          "sortable": true
+        }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
+    "grids/WebTreeGridModule"
+  ]
+}

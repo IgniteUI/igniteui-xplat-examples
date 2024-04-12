@@ -1,0 +1,87 @@
+{
+  "export": false,
+  "onInit": [ "ToolbarCustomIconOnViewInit" ],
+  "descriptions": {
+    "legend": {
+      "type": "Legend",
+      "name": "Legend",
+      "orientation": "Horizontal"
+    },
+    "aboveContent": {
+      "type": "Toolbar",
+      "name": "Toolbar",
+      "targetRef": "chart",
+      "actions": [
+        {
+          "type": "ToolActionLabel",
+          "title": "Custom Icon",
+          "iconName": "CustomIcon",
+          "iconCollectionName": "CustomCollection"
+        }
+      ]
+    },
+    "content": {
+      "type": "DataChart",
+      "isHorizontalZoomEnabled": true,
+      "legendRef": "Legend",
+      "name": "chart",
+      "axes": [
+        {
+          "type": "CategoryXAxis",
+          "name": "xAxis",
+          "dataSourceRef": "CountryRenewableElectricity",
+          "label": "Year"
+        },
+        {
+          "type": "NumericYAxis",
+          "name": "yAxis",
+          "title": "TWh",
+          "labelLocation": "OutsideRight"
+        }
+      ],
+      "series": [
+        {
+          "type": "LineSeries",
+          "name": "LineSeries1",
+          "title": "Electricity",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "dataSourceRef": "CountryRenewableElectricity",
+          "valueMemberPath": "America"
+        },
+        {
+          "type": "LineSeries",
+          "name": "LineSeries2",
+          "title": "Electricity",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "dataSourceRef": "CountryRenewableElectricity",
+          "valueMemberPath": "Europe"
+        },
+        {
+          "type": "LineSeries",
+          "name": "LineSeries3",
+          "title": "Electricity",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "dataSourceRef": "CountryRenewableElectricity",
+          "valueMemberPath": "China"
+        }
+      ]
+    }
+  },
+  "modules": [
+    "inputs/IconModule",
+    "layouts/ToolbarModule",
+    "charts/DataChartToolbarModule",
+    "charts/LegendModule",
+    "charts/DataLegendModule",
+    "charts/NumberAbbreviatorModule",
+    "charts/DataChartCategoryModule",
+    "charts/DataChartCoreModule",
+    "charts/DataChartCategoryModule",
+    "charts/DataChartAnnotationModule",
+    "charts/DataChartInteractivityModule",
+    "charts/DataChartAnnotationModule"
+  ]
+}

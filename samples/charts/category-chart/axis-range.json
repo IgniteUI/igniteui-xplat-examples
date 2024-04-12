@@ -18,25 +18,27 @@
       "properties": [
         {
           "type": "PropertyEditorPropertyDescription",
-          "propertyPath": "YAxisMinimumValue",
+          "propertyPath": "YAxisMinimumValueHandler",
           "name": "YAxisMinimumValue",
           "label": "Y Axis Minimum Value",
           "shouldOverrideDefaultEditor": true,
           "valueType": "EnumValue",
           "dropDownNames": ["0", "10", "20", "30", "40", "50", "60", "70", "80", "90", "100"],
           "dropDownValues": ["0", "10", "20", "30", "40", "50", "60", "70", "80", "90", "100"],
-          "primitiveValue": 0
+          "primitiveValue": 0,
+          "changedRef": "EditorChangeUpdateYAxisMinimumValue"
         },
         {
           "type": "PropertyEditorPropertyDescription",
-          "propertyPath": "YAxisMaximumValue",
+          "propertyPath": "YAxisMaximumValueHandler",
           "name": "YAxisMaximumValue",
           "label": "Y Axis Maximum Value",
           "shouldOverrideDefaultEditor": true,
           "valueType": "EnumValue",
           "dropDownNames": ["100", "110", "120", "130", "140", "150", "160", "170", "180", "190", "200"],
           "dropDownValues": ["100", "110", "120", "130", "140", "150", "160", "170", "180", "190", "200"],
-          "primitiveValue": 150
+          "primitiveValue": 150,
+          "changedRef": "EditorChangeUpdateYAxisMaximumValue"
         }
       ]
     },

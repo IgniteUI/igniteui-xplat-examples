@@ -1,0 +1,64 @@
+{
+  "todo": [ "add WebTreeGridIconCellTemplate to code-gen library" ],
+  "export": false,
+  "onInit": ["WebTreeGridCellEditingStyleTemplate"],
+  "descriptions": {
+    "content": {
+      "type": "WebTreeGrid",
+      "name": "treeGrid",
+      "id": "treeGrid",
+      "dataRef": "EmployeesNestedTreeData",
+      "primaryKey": "ID",
+      "autoGenerate": false,
+      "displayDensity": "Comfortable",
+      "allowFiltering": true,
+      "paging": true,
+      "foreignKey": "ParentID",
+      "paginationComponents": [
+        {
+          "type": "WebPaginator",
+          "perPage": 10
+        }
+      ],
+      "columns": [
+        {
+          "type": "WebColumn",
+          "field": "Name",
+          "dataType": "String",
+          "editable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "Title",
+          "dataType": "String",
+          "editable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "Age",
+          "dataType": "Number",
+          "editable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "HireDate",
+          "dataType": "Date",
+          "editable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "OnPTO",
+          "dataType": "Boolean",
+          "editable": true,
+          "width": "130px",
+          "bodyTemplateRef": "WebTreeGridIconCellTemplate"
+        }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "grids/WebPaginatorModule",
+    "grids/WebTreeGridModule"
+  ]
+}

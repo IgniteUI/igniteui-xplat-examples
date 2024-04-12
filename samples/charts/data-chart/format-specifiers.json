@@ -1,0 +1,103 @@
+{
+  "export": false,
+  "strings": {
+    "legendTitle": "Highest Grossing Movie Franchises"
+  },
+  "descriptions": {
+    "legend": {
+      "type": "DataLegend",
+      "name": "Legend",
+      "targetRef": "chart",
+      "valueFormatString": "{0} Billion",
+      "valueFormatSpecifiers": [
+        {
+          "type": "NumberFormatSpecifier",
+          "style": "currency",
+          "currency": "USD",
+          "currencyDisplay": "symbol",
+          "minimumFractionDigits": 2,
+          "maximumFractionDigits": 2
+        }
+      ]
+    },
+    "content": {
+      "type": "DataChart",
+      "name": "chart",
+      "axes": [
+        {
+          "type": "CategoryYAxis",
+          "name": "yAxis",
+          "label": "Franchise",
+          "useEnhancedIntervalManagement": true,
+          "enhancedIntervalPreferMoreCategoryLabels": true,
+          "dataSourceRef": "HighestGrossingMovies",
+          "isInverted": true,
+          "gap": 0.5,
+          "overlap": -0.1
+        },
+        {
+          "type": "NumericXAxis",
+          "name": "xAxis",
+          "title": "Billions of U.S. Dollars",
+          "labelFormat": "{0}B",
+          "abbreviateLargeNumbers": false,
+          "labelFormatSpecifiers": [
+            {
+              "type": "NumberFormatSpecifier",
+              "style": "currency",
+              "currency": "USD",
+              "currencyDisplay": "symbol",
+              "minimumFractionDigits": 0
+            }
+          ]
+        }
+      ],
+      "series": [
+        {
+          "type": "BarSeries",
+          "name": "BarSeries1",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "title": "Total Revenue of Franchise",
+          "valueMemberPath": "TotalRevenue",
+          "dataSourceRef": "HighestGrossingMovies",
+          "showDefaultTooltip": true
+        },
+        {
+          "type": "BarSeries",
+          "name": "BarSeries2",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "title": "Highest Grossing Movie in Series",
+          "valueMemberPath": "HighestGrossing",
+          "dataSourceRef": "HighestGrossingMovies",
+          "showDefaultTooltip": true
+        },
+        {
+          "type": "DataToolTipLayer",
+          "name": "Tooltips",
+          "valueFormatString": "{0} Billion",
+          "valueFormatSpecifiers": [
+            {
+              "type": "NumberFormatSpecifier",
+              "style": "currency",
+              "currency": "USD",
+              "currencyDisplay": "symbol",
+              "minimumFractionDigits": 2,
+              "maximumFractionDigits": 2
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "modules": [
+    "charts/DataLegendModule",
+    "charts/DataChartCoreModule",
+    "charts/DataChartCategoryCoreModule",
+    "charts/DataChartCategoryModule",
+    "charts/DataChartInteractivityModule",
+    "charts/DataChartVerticalCategoryModule",
+    "charts/DataChartAnnotationModule"
+  ]
+}

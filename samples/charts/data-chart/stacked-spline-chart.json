@@ -58,13 +58,13 @@
     }
   },
   "modules": [
-	"charts/LegendModule",
-	"charts/DataChartCoreModule",
-	"charts/DataChartCategoryModule",
-	"charts/DataChartCategoryCoreModule",
-	"charts/DataChartInteractivityModule",
-	"charts/DataChartAnnotationModule",
-	"charts/DataChartStackedModule",
-	"charts/StackedFragmentSeriesModule"
+    "charts/LegendModule",
+    "charts/DataChartCoreModule",
+    "charts/DataChartCategoryModule",
+    "charts/DataChartCategoryCoreModule",
+    "charts/DataChartInteractivityModule",
+    "charts/DataChartAnnotationModule",
+    "charts/DataChartStackedModule",
+    "charts/StackedFragmentSeriesModule"
   ]
 }

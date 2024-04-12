@@ -1,0 +1,69 @@
+{
+  "export": false,
+  "descriptions": {
+    "content": {
+      "type": "DataChart",
+      "shouldAutoExpandMarginForInitialLabels": true,
+      "computedPlotAreaMarginMode": "Series",
+      "name": "chart",
+      "axes": [
+        {
+          "type": "CategoryXAxis",
+          "name": "xAxis",
+          "dataSourceRef": "OlympicMedalsTopCountriesWithTotals",
+          "label": "Year"
+        },
+        {
+          "type": "NumericYAxis",
+          "name": "yAxis"
+        }
+      ],
+      "series": [
+        {
+          "type": "ColumnSeries",
+          "name": "ColumnSeries1",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "dataSourceRef": "OlympicMedalsTopCountriesWithTotals",
+          "title": "America",
+          "valueMemberPath": "America",
+          "dataLegendGroup": "Medals by Country"
+        },
+        {
+          "type": "ColumnSeries",
+          "name": "ColumnSeries2",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "dataSourceRef": "OlympicMedalsTopCountriesWithTotals",
+          "title": "China",
+          "valueMemberPath": "China",
+          "dataLegendGroup": "Medals by Country"
+        },
+        {
+          "type": "ColumnSeries",
+          "name": "ColumnSeries3",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "dataSourceRef": "OlympicMedalsTopCountriesWithTotals",
+          "title": "Russia",
+          "valueMemberPath": "Russia",
+          "dataLegendGroup": "Medals by Country"
+        },
+        {
+          "type": "DataToolTipLayer",
+          "name": "DataToolTipLayer",
+          "groupRowVisible": true,
+          "groupingMode": "Grouped"
+        }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
+    "charts/DataChartCoreModule",
+    "charts/DataChartCategoryModule",
+    "charts/DataChartInteractivityModule",
+    "charts/DataChartAnnotationModule"
+  ]
+}

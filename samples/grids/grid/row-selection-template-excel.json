@@ -1,79 +1,64 @@
 {
-    "todo": [
-        "TODO ability to select multiple rows by clicking the button",
-        "TODO the row number on the left on every line"
-    ],
-    "export": true,
-    "skipAlterDataCasing": true,
-    "descriptions": {
-        "content": {
-            "type": "WebGrid",
-            "dataRef": "CustomersData",
-            "autoGenerate": false,
-            "name": "grid",
-            "id": "grid",
-            "displayDensity": "Cosy",
-            "paginationComponents": [
-                {
-                    "type": "WebPaginator",
-                    "name": "paginator",
-                    "perPage": 15,
-                    "displayDensity": "Cosy",
-                    "selectOptions": [5, 10, 15, 25, 50],
-                    "resourceStrings": {
-                        "type": "WebPaginatorResourceStrings",
-                        "igx_paginator_label": "Items per page"
-                    }
-                }
-            ],
-            "columns": [
-                {
-                    "type": "WebColumn",
-                    "field": "ContactName",
-                    "header": "Name"
-                },
-                {
-                    "type": "WebColumn",
-                    "field": "Country",
-                    "header": "Country"
-                },
-                {
-                    "type": "WebColumn",
-                    "field": "City",
-                    "header": "City"
-                },
-                {
-                    "type": "WebColumn",
-                    "field": "PostalCode",
-                    "header": "Postal Code"
-                },
-                {
-                    "type": "WebColumn",
-                    "field": "CompanyName",
-                    "header": "Company"
-                }
-            ]
-        },
-        "editor": {
-            "type": "PropertyEditorPanel",
-            "name": "PropertyEditor",
-            "componentRendererRef": "renderer",
-            "targetRef": "grid",
-            "descriptionType": "WebGrid",
-            "isHorizontal": true,
-            "isWrappingEnabled": true,
-            "properties": [
-                {
-                    "type": "PropertyEditorPropertyDescription",
-                    "name": "selectionType",
-                    "propertyPath": "RowSelection"
-                }
-            ]
+  "todo": [
+  ],
+  "export": true,
+  "skipAlterDataCasing": true,
+  "descriptions": {
+    "content": {
+      "type": "WebGrid",
+      "dataRef": "CustomersData",
+      "autoGenerate": false,
+      "name": "grid",
+      "id": "grid",
+      "displayDensity": "Cosy",
+      "rowSelection": "Multiple",
+      "rowSelectorTemplateRef": "WebGridRowSelectorExcelTemplate",
+      "headSelectorTemplateRef": "WebGridHeaderRowSelectorExcelTemplate",
+      "paginationComponents": [
+        {
+          "type": "WebPaginator",
+          "name": "paginator",
+          "perPage": 15,
+          "displayDensity": "Cosy",
+          "selectOptions": [5, 10, 15, 25, 50],
+          "resourceStrings": {
+            "type": "WebPaginatorResourceStrings",
+            "igx_paginator_label": "Items per page"
+          }
         }
-    },
-    "modules": [
-        "withDescriptions",
-        "layouts/PropertyEditorPanelModule",
-        "grids/WebGridModule"
-    ]
+      ],
+      "columns": [
+        {
+          "type": "WebColumn",
+          "field": "ContactName",
+          "header": "Name"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Country",
+          "header": "Country"
+        },
+        {
+          "type": "WebColumn",
+          "field": "City",
+          "header": "City"
+        },
+        {
+          "type": "WebColumn",
+          "field": "PostalCode",
+          "header": "Postal Code"
+        },
+        {
+          "type": "WebColumn",
+          "field": "CompanyName",
+          "header": "Company"
+        }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
+    "grids/WebGridModule"
+  ]
 }

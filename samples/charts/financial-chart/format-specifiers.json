@@ -1,0 +1,69 @@
+{
+  "descriptions": {
+    "legend": {
+      "type": "DataLegend",
+      "name": "Legend",
+      "targetRef": "chart",
+      "includedColumns": ["Close", "Change", "Value"],
+      "excludedColumns": ["High", "Low", "Open", "Volume"],
+      "labelDisplayMode": "Hidden",
+      "valueFormatString": "{0}",
+      "valueFormatSpecifiers": [
+        {
+          "type": "NumberFormatSpecifier",
+          "currency": "EUR",
+          "style": "currency",
+          "locale": "en-GB",
+          "minimumFractionDigits": 2,
+          "maximumFractionDigits": 2
+        }
+      ]
+    },
+    "content": {
+      "type": "FinancialChart",
+      "name": "chart",
+      "chartType": "Candle",
+      "dataSourceRef": "MultipleStocks",
+      "dataToolTipValueFormatString": "{0}",
+      "dataToolTipValueFormatSpecifiers": [
+        {
+          "type": "NumberFormatSpecifier",
+          "currency": "EUR",
+          "style": "currency",
+          "locale": "en-GB",
+          "minimumFractionDigits": 2,
+          "maximumFractionDigits": 2
+        }
+      ],
+      "dataToolTipIncludedColumns": ["Close", "Change", "Value"],
+      "dataToolTipHeaderFormatTime": "None",
+      "zoomSliderType": "None",
+      "yAxisAbbreviateLargeNumbers": false,
+      "yAxisLabelFormat": "{0}",
+      "yAxisLabelFormatSpecifiers": [
+        {
+          "type": "NumberFormatSpecifier",
+          "currency": "EUR",
+          "style": "currency",
+          "locale": "en-GB",
+          "minimumFractionDigits": 0
+        }
+      ],
+      "xAxisLabelFormat": "{0}",
+      "xAxisLabelFormatSpecifiers": [
+        {
+          "type": "DateTimeFormatSpecifier",
+          "locale": "en-GB",
+          "dateStyle": "long"
+        }
+      ]
+    }
+  },
+  "modules": [
+    "charts/FinancialChartModule",
+    "charts/DataChartInteractivityModule",
+    "charts/DataLegendModule",
+    "NumberFormatSpecifierModule",
+    "DateTimeFormatSpecifierModule"
+  ]
+}

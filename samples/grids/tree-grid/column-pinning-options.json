@@ -16,39 +16,39 @@
           "type": "WebColumn",
           "field": "Name",
           "dataType": "String",
-          "headerTemplateRef": "WebGridPinHeaderTemplate",
+          "headerTemplateRef": "WebTreeGridPinHeaderTemplate",
           "pinned": true
         },
         {
           "type": "WebColumn",
           "field": "Title",
           "dataType": "String",
-          "headerTemplateRef": "WebGridPinHeaderTemplate",
+          "headerTemplateRef": "WebTreeGridPinHeaderTemplate",
           "pinned": true
         },
         {
           "type": "WebColumn",
           "field": "Phone",
           "dataType": "String",
-          "headerTemplateRef": "WebGridPinHeaderTemplate"
+          "headerTemplateRef": "WebTreeGridPinHeaderTemplate"
         },
         {
           "type": "WebColumn",
           "field": "Age",
           "dataType": "Number",
-          "headerTemplateRef": "WebGridPinHeaderTemplate"
+          "headerTemplateRef": "WebTreeGridPinHeaderTemplate"
         },
         {
           "type": "WebColumn",
           "field": "HireDate",
           "dataType": "Date",
-          "headerTemplateRef": "WebGridPinHeaderTemplate"
+          "headerTemplateRef": "WebTreeGridPinHeaderTemplate"
         },
         {
           "type": "WebColumn",
           "field": "OnPTO",
           "dataType": "Boolean",
-          "headerTemplateRef": "WebGridPinHeaderTemplate"
+          "headerTemplateRef": "WebTreeGridPinHeaderTemplate"
         }
       ]
     }

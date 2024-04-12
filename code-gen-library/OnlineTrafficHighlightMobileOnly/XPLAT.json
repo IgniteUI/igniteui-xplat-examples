@@ -1,0 +1,9 @@
+[
+  { "Category": "Apparel",     "Value": 66},
+  { "Category": "Beauty",      "Value": 66},
+  { "Category": "Travel",      "Value": 51},
+  { "Category": "Grocery",     "Value": 57},
+  { "Category": "Energy",      "Value": 39},
+  { "Category": "Home Supply", "Value": 56},
+  { "Category": "Financial",   "Value": 39}
+]

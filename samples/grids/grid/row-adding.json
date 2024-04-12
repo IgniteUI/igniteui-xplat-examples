@@ -11,7 +11,7 @@
       "autoGenerate": false,
       "primaryKey": "ProductID",
       "rowEditable": true,
-      "actionStrip": {
+      "actionStripComponents": [{
         "type": "WebActionStrip",
         "actionButtons": [
           {
@@ -19,7 +19,7 @@
             "addRow": true
           }
         ]
-      },
+      }],
       "columns": [
         {
           "type": "WebColumn",
@@ -76,6 +76,7 @@
     }
   },
   "modules": [
+    "withDescriptions",
     "grids/WebGridModule"
   ]
 }

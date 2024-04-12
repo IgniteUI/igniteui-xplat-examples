@@ -1,0 +1,80 @@
+{
+  "todo": [],
+  "skipAlterDataCasing": true,
+  "onInit": "WebGridFilteringStyle",
+  "descriptions": {
+    "content": {
+      "type": "WebTreeGrid",
+      "name": "grid",
+      "id": "grid",
+      "dataRef": "OrdersData",
+      "filterMode": "QuickFilter",
+      "primaryKey": "ID",
+      "foreignKey": "ParentID",
+      "autoGenerate": false,
+      "allowFiltering": true,
+      "columns": [
+        {
+          "type": "WebColumn",
+          "field": "ID",
+          "header": "Order ID",
+          "dataType": "Number"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Name",
+          "header": "Order Product",
+          "dataType": "String"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Category",
+          "dataType": "String"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Units",
+          "dataType": "Number"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Age",
+          "dataType": "Number",
+          "sortable": true,
+          "hidden": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "UnitPrice",
+          "header": "Unit Price",
+          "dataType": "Currency"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Price",
+          "dataType": "Currency"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Country",
+          "dataType": "String",
+          "sortable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "OrderDate",
+          "header": "Order Date",
+          "dataType": "Date"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Delivered",
+          "dataType": "Boolean"
+        }
+      ]
+    }
+  },
+  "modules": [
+    "grids/WebTreeGridModule"
+  ]
+}

@@ -60,10 +60,10 @@
     }
   },
   "modules": [
-	"charts/DataChartCoreModule",
-	"charts/DataChartPolarModule",
-	"charts/DataChartPolarCoreModule",
-	"charts/DataChartInteractivityModule",
-	"charts/DataChartAnnotationModule",
+    "charts/DataChartCoreModule",
+    "charts/DataChartPolarModule",
+    "charts/DataChartPolarCoreModule",
+    "charts/DataChartInteractivityModule",
+    "charts/DataChartAnnotationModule"
   ]
 }

@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>RendererTemplate</title>
+    <base href="/" />
+    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/app.css" rel="stylesheet" />
+    <link href="RendererTemplate.styles.css" rel="stylesheet" />
+    <style>
+        html, body, #contentArea, #app, igniteui-webcomponents {
+            height: 100%;
+            width: 100%;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            display: block !important;
+        }
+
+        #contentArea {
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+        }
+
+        #content {
+            flex-grow: 1;
+            min-height: 0px;
+        }
+
+        #content > * {
+            height: 100%;
+            width: 100%;
+        }
+
+        #aboveContentSplit {
+            display: flex;
+            flex-direction: row;
+        }
+
+        #aboveContentLeftContainer {
+            margin-left: 10px;
+            display: flex;
+            flex-grow: 1;
+            justify-content: start;
+            align-items: end;
+        }
+
+        #aboveContentRightContainer {
+            margin-right: 10px;
+            display: flex;
+            flex-grow: 1;
+            justify-content: end;
+            align-items: end;
+        }
+
+        html, body, #app {
+            overflow: hidden;
+        }
+    </style>
+
+    <link href="_content/IgniteUI.Blazor/themes/light/bootstrap.css" rel="stylesheet" />
+    <link href="_content/IgniteUI.Blazor/themes/grid/light/bootstrap.css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <div id="app">Loading...</div>
+
+    <div id="blazor-error-ui">
+        An unhandled error has occurred.
+        <a href="" class="reload">Reload</a>
+        <a class="dismiss">🗙</a>
+    </div>
+
+    <script>
+        window.storeInstance = (selfRef) => {
+            window.selfRef = selfRef;
+        };
+
+        window.sendReady = () => {
+            window.chrome.webview.postMessage({ type: "ready" });
+        };
+
+        window.chrome.webview.addEventListener("message", function (args) {
+            if (args.data && window.selfRef) {
+                window.selfRef.invokeMethodAsync('OnMessageReceived', args.data);
+            }
+        });
+
+        window.setupHandler = (key, handlerContent) => {
+            eval(handlerContent);
+        }
+    </script>
+
+    <script src="_framework/blazor.webassembly.js" autostart="false"></script>
+    <script type="module">
+        import { BrotliDecode } from './decode.min.js';
+        Blazor.start({
+            loadBootResource: function (type, name, defaultUri, integrity) {
+                if (type !== 'dotnetjs' && location.hostname !== 'localhost') {
+                    return (async function () {
+                        const response = await fetch(defaultUri + '.br', { cache: 'no-cache' });
+                        if (!response.ok) {
+                            throw new Error(response.statusText);
+                        }
+                        const originalResponseBuffer = await response.arrayBuffer();
+                        const originalResponseArray = new Int8Array(originalResponseBuffer);
+                        const decompressedResponseArray = BrotliDecode(originalResponseArray);
+                        const contentType = type ===
+                            'dotnetwasm' ? 'application/wasm' : 'application/octet-stream';
+                        return new Response(decompressedResponseArray,
+                            { headers: { 'content-type': contentType } });
+                    })();
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

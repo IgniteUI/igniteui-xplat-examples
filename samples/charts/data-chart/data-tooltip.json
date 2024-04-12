@@ -1,4 +1,6 @@
-{
+{  
+  "todo1": "replace CountryDemographicEurope with CountryStatsEurope",
+  "todo2": "replace CountryDemographicAfrican with CountryStatsAfrica",
   "strings": {
     "legendTitle": "Total Population of Selected Countries"
   },
@@ -34,7 +36,7 @@
           "xMemberPath": "DeathRate",
           "yMemberPath": "BirthRate",
           "radiusMemberPath": "Population",
-          "radiusScale": { "type": "SizeScale", "name": "SizeScale1", "minimumValue": 10, "maximumValue": 100},
+          "radiusScale": { "type": "SizeScale", "name": "SizeScale1", "minimumValue": 10, "maximumValue": 50},
           "title": "Africa",
           "radiusMemberAsLegendLabel": "Population: ",
           "xMemberAsLegendLabel": "Death Rate: ",
@@ -49,7 +51,7 @@
           "xMemberPath": "DeathRate",
           "yMemberPath": "BirthRate",
           "radiusMemberPath": "Population",
-          "radiusScale": { "type": "SizeScale", "name": "SizeScale2", "minimumValue": 10, "maximumValue": 100},
+          "radiusScale": { "type": "SizeScale", "name": "SizeScale2", "minimumValue": 10, "maximumValue": 50},
           "title": "Europe",
           "radiusMemberAsLegendLabel": "Population: ",
           "xMemberAsLegendLabel": "Death Rate: ",

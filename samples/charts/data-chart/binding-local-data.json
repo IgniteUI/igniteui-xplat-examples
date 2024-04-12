@@ -1,0 +1,79 @@
+{
+  "strings": {
+    "legendTitle": "Market Capitalization of Technology Companies"
+  },
+  "note": "TODO support local data in code gen",
+  "export": false,
+  "descriptions": {
+    "legend": {
+      "type": "Legend",
+      "name": "Legend",
+      "orientation": "Horizontal"
+    },
+    "content": {
+      "type": "DataChart",
+      "name": "chart",
+      "chartTitle": "Market Capitalization of Technology Companies",
+      "legendRef": "Legend",
+      "isHorizontalZoomEnabled": false,
+      "isVerticalZoomEnabled": false,
+      "axes": [
+        {
+          "type": "CategoryYAxis",
+          "name": "yAxis",
+          "dataSourceRef": "LocalData",
+          "label": "Category",
+          "isInverted": true,
+          "gap": 0.75
+        },
+        {
+          "type": "NumericXAxis",
+          "name": "xAxis",
+          "minimumValue": 0, "maximumValue": 220
+        }
+      ],
+      "series": [
+        {
+          "type": "StackedBarSeries",
+          "name": "StackedBarSeries",
+          "dataSourceRef": "LocalData",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "showDefaultTooltip": true,
+          "areaFillOpacity": 1,
+          "series": [
+            { "type": "StackedFragmentSeries", "name": "s1", "valueMemberPath": "V1", "title": "Apple" },
+            { "type": "StackedFragmentSeries", "name": "s2", "valueMemberPath": "V2", "title": "Microsoft" },
+            { "type": "StackedFragmentSeries", "name": "s3", "valueMemberPath": "V3", "title": "Google" },
+            { "type": "StackedFragmentSeries", "name": "s4", "valueMemberPath": "V4", "title": "NVidia" },
+            { "type": "StackedFragmentSeries", "name": "s5", "valueMemberPath": "V5", "title": "Tesla" }
+          ]
+        },
+        {
+          "type": "DataToolTipLayer",
+          "name": "DataToolTipLayer"
+        }
+      ]
+    }
+  },
+  "refs": {
+    "LocalData": [
+      { "V1": 180, "V2": null,  "V3": null, "V4": null, "V5": null, "Category": "Apple"  },
+      { "V1": null, "V2": 160,  "V3": null, "V4": null, "V5": null, "Category": "Microsoft"   },
+      { "V1": null, "V2": null, "V3": 90,   "V4": null, "V5": null, "Category": "Google"   },
+      { "V1": null, "V2": null, "V3": null, "V4": 50,   "V5": null, "Category": "NVidia"   },
+      { "V1": null, "V2": null, "V3": null, "V4": null, "V5": 120,  "Category": "Tesla"   }
+    ]
+  },
+  "modules": [
+    "charts/LegendModule",
+    "charts/DataChartCoreModule",
+    "charts/DataChartCategoryModule",
+    "charts/DataChartCategoryCoreModule",
+    "charts/DataChartInteractivityModule",
+    "charts/DataChartAnnotationModule",
+    "charts/DataChartStackedModule",
+    "charts/StackedFragmentSeriesModule",
+    "charts/CalloutLayerModule"
+  ]
+}

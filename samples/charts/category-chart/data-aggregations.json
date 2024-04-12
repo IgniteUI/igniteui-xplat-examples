@@ -1,9 +1,12 @@
 {
   "strings": {
-    "legendTitle": "Renewable Electricity Generated"
+    "legendTitle": "Sales Aggregated by Country and Product"
   },
+  "onViewInit": ["PropertyEditorInitAggregationsOnViewInit"],
+  "skipAlterDataCasing": true,
   "descriptions": {
     "editor": {
+      "name": "editor",
       "type": "PropertyEditorPanel",
       "componentRendererRef": "renderer",
       "targetRef": "chart",
@@ -13,24 +16,15 @@
       "properties": [
         {
           "type": "PropertyEditorPropertyDescription",
-          "propertyPath": "InitialGroups",
+          "propertyPath": "InitialGroupsHandler",
           "name": "InitialGroups",
           "label": "Initial Groups",
-          "valueType": "StringValue"
-        },
-        {
-          "type": "PropertyEditorPropertyDescription",
-          "propertyPath": "InitialSummaries",
-          "name": "InitialSummaries",
-          "label": "Initial Summaries",
-          "valueType": "StringValue"
-        },
-        {
-          "type": "PropertyEditorPropertyDescription",
-          "propertyPath": "GroupSorts",
-          "name": "GroupSorts",
-          "label": "Sort Groups",
-          "valueType": "StringValue"
+          "valueType": "EnumValue",
+          "shouldOverrideDefaultEditor": true,
+          "dropDownNames": ["Country", "Product", "MonthName", "Year"],
+          "dropDownValues": ["Country", "Product", "MonthName", "Year"],
+          "primitiveValue": "Country",
+          "changedRef": "EditorChangeUpdateInitialGroups"
         }
       ]
     },

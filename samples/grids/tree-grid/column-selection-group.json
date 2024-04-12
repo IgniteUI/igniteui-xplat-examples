@@ -1,5 +1,6 @@
 {
   "todo": [],
+  "skipAlterDataCasing": true,
   "descriptions": {
     "content": {
       "type": "WebTreeGrid",
@@ -14,7 +15,8 @@
         {
           "type": "WebColumn",
           "field": "Name",
-          "dataType": "String"
+          "dataType": "String",
+          "width": "auto"
         },
         {
           "type": "WebColumnGroup",

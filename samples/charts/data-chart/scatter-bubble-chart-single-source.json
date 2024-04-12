@@ -1,6 +1,6 @@
-{
+{  
   "strings": {
-    "legendTitle": "GDP per Capita vs Population"
+    "legendTitle": "Total Population of Selected Countries"
   },
   "descriptions": {
     "content": {
@@ -17,22 +17,29 @@
         {
           "type": "NumericYAxis",
           "name": "yAxis",
-          "title": "GDP per Capita",
+          "title": "Public Debt",
           "isLogarithmic": false,
-          "abbreviateLargeNumbers": true
+          "abbreviateLargeNumbers": true,
+          "maximumValue": 120
         }
       ],
       "series": [
         {
           "type": "BubbleSeries",
           "name": "BubbleSeries1",
-          "title": "European Countries",
+          "xMemberPath": "Population",
+          "yMemberPath": "PublicDebt",
+          "radiusMemberPath": "GdpPerCapita",
+          "radiusScale": {
+            "type": "SizeScale",
+            "isLogarithmic": false,
+            "minimumValue": 10,
+            "maximumValue": 50
+          },
+          "fillMemberPath": "GdpPerCapita",
           "xAxisRef": "xAxis",
           "yAxisRef": "yAxis",
-          "xMemberPath": "Population",
-          "yMemberPath": "GDP",
-          "radiusMemberPath": "Population",
-          "dataSourceRef": "CountryStatsEurope",
+          "dataSourceRef": "WorldDebtAndPopulation",
           "markerType": "Circle",
           "showDefaultTooltip": true
         },

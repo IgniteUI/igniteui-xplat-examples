@@ -1,6 +1,4 @@
 {
-  "todo": [ "" ],
-  "export": true,
   "skipAlterDataCasing": true,
   "descriptions": {
     "content": {
@@ -29,7 +27,7 @@
           "dataType": "Number",
           "editable": true,
           "sortable": true,
-          "bodyTemplateRef": "WebGridBeatsPerMinuteTemplate"
+          "cellClassesRef": "WebGridBeatsPerMinuteCellClassesHandler"
         },
         {
           "type": "WebColumn",
@@ -38,7 +36,7 @@
           "dataType": "Number",
           "editable": true,
           "sortable": true,
-          "bodyTemplateRef": "WebGridTopSpeedTemplate"
+          "cellClassesRef": "WebGridTopSpeedCellClassesHandler"
         },
         {
           "type": "WebColumn",
