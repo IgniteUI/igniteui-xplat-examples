@@ -15,15 +15,19 @@
       "properties": [
         {
           "type": "PropertyEditorPropertyDescription",
-          "propertyPath": "Pinning.Rows",
           "name": "rowPinningEditor",
-          "label": "Row Pinning toggle"
+          "valueType": "EnumValue",
+          "label": "Row Pinning toggle",
+          "dropDownNames": ["Top", "Bottom"],
+          "dropDownValues": ["Top", "Bottom"],
+          "changedRef": "WebGridSetRowPinning"
         }
       ]
     },
     "content": {
       "type": "WebGrid",
       "name": "grid",
+      "id": "grid",
       "dataRef": "CustomersDataLocal",
       "autoGenerate": false,
       "pinning": {

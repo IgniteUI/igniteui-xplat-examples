@@ -1,0 +1,26 @@
+{
+  "export": false,
+  "descriptions": {
+    "content": {
+	"type": "BulletGraph",
+	"name": "gauge",
+	"height": "80px",
+	"width": "400px",
+	"minimumValue": 0,
+	"value": 70,
+	"interval": 10,
+	"maximumValue": 100,
+	"targetValue": 90,
+	"labelInterval": 10,
+	"labelExtent": 0.025,
+	"labelsPreTerminal": 0,
+	"labelsPostInitial": 0,
+	"highlightValueDisplayMode": "Overlay",
+	"highlightValue": 25, 
+	"isHighlightNeedleDraggingEnabled": true
+    }
+  },
+  "modules": [
+    "gauges/BulletGraphModule"
+  ]
+}

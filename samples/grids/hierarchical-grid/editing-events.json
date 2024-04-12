@@ -1,0 +1,113 @@
+{
+  "skipAlterDataCasing": true,
+  "descriptions": {
+    "content": {
+      "type": "WebHierarchicalGrid",
+      "id": "grid",
+      "name": "grid",
+      "dataRef": "NwindData",
+      "cellEditRef": "WebGridEditingEventsCellEdit",
+      "autoGenerate": false,
+      "primaryKey": "ProductID",
+      "displayDensity": "Cosy",
+      "allowFiltering": true,
+      "paginationComponents": [
+        {
+          "type": "WebPaginator",
+          "perPage": 10
+        }
+      ],
+      "columns": [
+        {
+          "type": "WebColumn",
+          "field": "ProductName",
+          "header": "Product Name",
+          "dataType": "String",
+          "sortable": true,
+          "hasSummary": true,
+          "editable": true,
+          "resizable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "UnitsInStock",
+          "header": "Units in Stock",
+          "dataType": "Number",
+          "sortable": true,
+          "hasSummary": true,
+          "editable": true,
+          "resizable": true
+        },
+                {
+          "type": "WebColumn",
+          "field": "UnitsOnOrder",
+          "header": "Units in Order",
+          "dataType": "Number",
+          "sortable": true,
+          "hasSummary": true,
+          "editable": true,
+          "resizable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "OrderDate",
+          "header": "Order Date",
+          "dataType": "Date",
+          "sortable": true,
+          "hasSummary": true,
+          "editable": true,
+          "resizable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "Discontinued",
+          "header": "Discontinued",
+          "dataType": "Boolean",
+          "sortable": true,
+          "hasSummary": true,
+          "editable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "ReorderLevel",
+          "header": "Reorder Level",
+          "dataType": "Number",
+          "sortable": true,
+          "hasSummary": true,
+          "editable": true,
+          "filterable": false
+        }
+      ],
+        "childLayoutList": [
+          {
+            "type": "WebRowIsland",
+            "childDataKey": "Locations",
+            "autoGenerate": false,
+            "columns": [
+              {
+                "type": "WebColumn",
+                "field": "Shop",
+                "header": "Shop",
+                "dataType": "String",
+                "editable": true,
+                "resizable": true
+              },
+              {
+                "type": "WebColumn",
+                "field": "LastInventory",
+                "header": "Last Inventory",
+                "dataType": "Date",
+                "editable": true,
+                "resizable": true
+              }
+          ]
+        }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "grids/WebHierarchicalGridModule",
+    "grids/WebPaginatorModule"
+  ]
+}
