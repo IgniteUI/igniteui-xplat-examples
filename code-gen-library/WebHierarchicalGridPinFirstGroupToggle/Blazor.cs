@@ -9,7 +9,7 @@ public class WebHierarchicalGridPinFirstGroupToggle
     public void WebHierarchicalGridPinFirstGroupToggle(IgbPropertyEditorPropertyDescriptionButtonClickEventArgs args)
     {
         var columnGroup = this.hierarchicalGrid.ActualColumns[1];
-        columnGroup.Hidden = !columnGroup.Hidden;
+        columnGroup.Pinned = !columnGroup.Pinned;
     }
     //end eventHandler
 }
