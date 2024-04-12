@@ -31,7 +31,7 @@ function toggleColumnGroup(name) {
     }
     columnGroupStates.set(name, !columnGroupStates.get(name));
 }
-igRegisterScript("WebGridColumnGroupHeaderTemplate", (ctx) => {
+igRegisterScript("WebHierarchicalGridColumnGroupHeaderTemplate", (ctx) => {
     var html = window.igTemplating.html;
     var iconName = columnGroupStates.get(ctx.column.header) ? '🔽' : '🔼';
     return html`<div>

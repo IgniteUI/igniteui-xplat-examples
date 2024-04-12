@@ -1,10 +1,10 @@
 //begin imports
 import { IgrColumn, IgrColumnGroup, IgrColumnTemplateContext } from 'igniteui-react-grids';
 //end imports
-export class WebGridColumnGroupHeaderTemplate {
+export class WebHierarchicalGridColumnGroupHeaderTemplate {
 //begin template
 //begin content
-public webGridColumnGroupHeaderTemplate = (e: { dataContext: IgrColumnTemplateContext }) => {
+public webHierarchicalGridColumnGroupHeaderTemplate = (e: { dataContext: IgrColumnTemplateContext }) => {
     const column = e.dataContext.column;
     return (
         <div style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>

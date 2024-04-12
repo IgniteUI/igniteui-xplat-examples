@@ -2,10 +2,10 @@
 import { IgcGridComponent, IgcColumnTemplateContext, IgcColumnGroupComponent, IgcColumnComponent } from 'igniteui-webcomponents-grids/grids';
 import { html, nothing } from 'lit-html';
 //end imports
-export class WebGridColumnGroupHeaderTemplate {
+export class WebHierarchicalGridColumnGroupHeaderTemplate {
 //begin template
 //begin content
-public webGridColumnGroupHeaderTemplate = (ctx: IgcColumnTemplateContext) => {
+public webHierarchicalGridColumnGroupHeaderTemplate = (ctx: IgcColumnTemplateContext) => {
     const column = (ctx as any).column;
     return html`<div style="display:flex;align-items:center;gap:5px;">
                 <span draggable="false"  @click=${(e: any) => this.toggleColumnGroup(column)}>

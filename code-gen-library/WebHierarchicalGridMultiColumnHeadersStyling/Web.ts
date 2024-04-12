@@ -1,9 +1,9 @@
 //begin imports
 //end imports
 
-export class WebGridMultiColumnHeadersStyling {
+export class WebHierarchicalGridMultiColumnHeadersStyling {
     //begin eventHandler
-    public webGridMultiColumnHeadersStyling(): void {
+    public webHierarchicalGridMultiColumnHeadersStyling(): void {
         //OMIT HANDLER
     }
     //end eventHandler

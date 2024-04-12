@@ -1,5 +1,5 @@
 //begin eventHandler
-igRegisterScript("WebGridMultiColumnHeadersStyling", (args) => {
+igRegisterScript("WebHierarchicalGridMultiColumnHeadersStyling", (args) => {
     //OMIT HANDLER
 }, false);
 //end eventHandler
