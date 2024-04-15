@@ -26,6 +26,7 @@
       "autoGenerate": false,
       "id": "hGrid",
       "primaryKey": "ID",
+      "onInit": ["WebHierarchicalGridCellSelectionStyling"],
       "columns": [
         {
           "type": "WebColumn",
