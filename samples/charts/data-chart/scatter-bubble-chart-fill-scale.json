@@ -1,4 +1,4 @@
-{  
+{
   "descriptions": {
     "content": {
       "type": "DataChart",
@@ -66,3 +66,4 @@
     "charts/DataChartAnnotationModule"
   ]
 }
+
