@@ -1,34 +1,4 @@
 {  
-  "descriptions": {
-    "editor": {
-      "type": "PropertyEditorPanel",
-      "name": "PropertyEditor",
-      "componentRendererRef": "renderer",
-      "targetRef": "chart",
-      "descriptionType": "DataChart",
-      "isHorizontal": true,
-      "isWrappingEnabled": true,
-      "properties": [
-        {
-          "type": "PropertyEditorPropertyDescription",
-          "name": "FillScaleMinimumValueEditor",
-          "label": "MinimumValue: ",
-          "valueType": "Slider",
-          "min": 0,
-          "max": 20000,
-          "changedRef": "ScatterBubbleSeriesFillScaleSliderChanged"
-        },
-        {
-          "type": "PropertyEditorPropertyDescription",
-          "name": "FillScaleMaximumValueEditor",
-          "label": "MaximumValue: ",
-          "valueType": "Slider",
-          "min": 25000,
-          "max": 100000,
-          "changedRef": "ScatterBubbleSeriesFillScaleSliderChanged"
-        }
-      ]
-    },
     "content": {
       "type": "DataChart",
       "name": "chart",
@@ -92,7 +62,6 @@
     "charts/DataChartScatterModule",
     "charts/DataChartScatterCoreModule",
     "charts/DataChartInteractivityModule",
-    "charts/DataChartAnnotationModule",
-    "layouts/PropertyEditorPanelModule"
+    "charts/DataChartAnnotationModule"
   ]
 }
