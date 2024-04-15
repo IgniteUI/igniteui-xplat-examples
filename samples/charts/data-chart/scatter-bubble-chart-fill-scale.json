@@ -1,4 +1,5 @@
 {  
+    "descriptions": {
     "content": {
       "type": "DataChart",
       "name": "chart",
