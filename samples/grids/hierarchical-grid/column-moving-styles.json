@@ -1,71 +1,84 @@
 {
   "skipAlterDataCasing": true,
-  "descriptions": {    
+  "onInit": ["WebGridColumnMovingStyle"],
+  "descriptions": {
     "content": {
       "type": "WebHierarchicalGrid",
       "dataRef": "HierarchicalCustomers",
-      "id":"hGrid",
       "autoGenerate": false,
+      "moving": true,
+      "name": "grid",
+      "id": "grid",
+      "paginationComponents": [
+        {
+          "type": "WebPaginator",
+          "name": "paginator",
+          "perPage": 15
+        }
+      ],
       "columns": [
         {
           "type": "WebColumn",
           "field": "CustomerID",
-          "width": "auto",
-          "resizable": true
+          "dataType": "String",
+          "headerTemplateRef": "HierarchicalGridPinHeaderTemplate"
         },
         {
           "type": "WebColumn",
           "field": "CompanyName",
-          "width": "auto",
-          "resizable": true
+          "dataType": "String",
+          "width": "150px",
+          "headerTemplateRef": "HierarchicalGridPinHeaderTemplate"
         },
         {
           "type": "WebColumn",
           "field": "ContactName",
-          "width": "auto",
-          "resizable": true
+          "dataType": "String",
+          "width": "150px",
+          "headerTemplateRef": "HierarchicalGridPinHeaderTemplate"
         },
         {
           "type": "WebColumn",
           "field": "ContactTitle",
-          "width": "auto",
-          "resizable": true
+          "dataType": "String",
+          "width": "150px",
+          "headerTemplateRef": "HierarchicalGridPinHeaderTemplate"
         },
         {
           "type": "WebColumn",
           "field": "Address",
-          "width": "auto",
-          "resizable": true
+          "dataType": "String",
+          "headerTemplateRef": "HierarchicalGridPinHeaderTemplate"
         },
         {
           "type": "WebColumn",
           "field": "City",
-          "width": "auto",
-          "resizable": true
+          "dataType": "String",
+          "headerTemplateRef": "HierarchicalGridPinHeaderTemplate"
         },
         {
           "type": "WebColumn",
           "field": "PostalCode",
-          "width": "auto",
-          "resizable": true
+          "dataType": "String",
+          "headerTemplateRef": "HierarchicalGridPinHeaderTemplate"
         },
         {
           "type": "WebColumn",
           "field": "Country",
-          "width": "auto",
-          "resizable": true
+          "dataType": "String",
+          "headerTemplateRef": "HierarchicalGridPinHeaderTemplate"
         },
         {
           "type": "WebColumn",
           "field": "Phone",
-          "width": "auto",
-          "resizable": true
+          "dataType": "String",
+          "headerTemplateRef": "HierarchicalGridPinHeaderTemplate"
         },
         {
           "type": "WebColumn",
           "field": "Fax",
-          "width": "auto",
-          "resizable": true
+          "dataType": "String",
+          "headerTemplateRef": "HierarchicalGridPinHeaderTemplate"
         }
       ],
       "childLayoutList": [
@@ -73,81 +86,67 @@
           "type": "WebRowIsland",
           "childDataKey": "Orders",
           "autoGenerate": false,
+          "moving": true,
           "columns": [
             {
               "type": "WebColumn",
               "field": "OrderID",
-              "width": "auto",
-              "resizable": true
+              "dataType": "Number"
             },
             {
               "type": "WebColumn",
               "field": "EmployeeID",
-              "width": "auto",
-              "resizable": true
+              "dataType": "Number"
             },
             {
               "type": "WebColumn",
               "field": "OrderDate",
-              "width": "auto",
-              "dataType": "Date",
-              "resizable": true
+              "dataType": "Date"
             },
             {
               "type": "WebColumn",
               "field": "RequiredDate",
-              "width": "auto",
-              "dataType": "Date",
-              "resizable": true
+              "dataType": "Date"
             },
             {
               "type": "WebColumn",
               "field": "ShippedDate",
-              "width": "auto",
-              "dataType": "Date",
-              "resizable": true
+              "dataType": "Date"
             },
             {
               "type": "WebColumn",
               "field": "ShipVia",
-              "width": "auto",
-              "resizable": true
+              "dataType": "Number"
             },
             {
               "type": "WebColumn",
               "field": "Freight",
-              "width": "auto",
-              "resizable": true
+              "dataType": "Number"
             },
             {
               "type": "WebColumn",
               "field": "ShipName",
-              "width": "auto",
-              "resizable": true
+              "dataType": "String"
             },
             {
               "type": "WebColumn",
               "field": "ShipAddress",
-              "width": "auto",
-              "resizable": true
+              "dataType": "String"
             },
             {
               "type": "WebColumn",
               "field": "ShipCity",
-              "width": "auto",
-              "resizable": true
+              "dataType": "String"
             },
             {
               "type": "WebColumn",
               "field": "ShipPostalCode",
-              "width": "auto",
-              "resizable": true
+              "dataType": "String"
             },
             {
               "type": "WebColumn",
               "field": "ShipCountry",
-              "width": "auto",
-              "resizable": true
+              "dataType": "String"
             }
           ],
           "childLayoutList": [
@@ -155,30 +154,27 @@
               "type": "WebRowIsland",
               "childDataKey": "OrderDetails",
               "autoGenerate": false,
+              "moving": true,
               "columns": [
                 {
                   "type": "WebColumn",
                   "field": "ProductID",
-                  "width": "auto",
-                  "resizable": true
+                  "dataType": "Number"
                 },
                 {
                   "type": "WebColumn",
                   "field": "UnitPrice",
-                  "width": "auto",
-                  "resizable": true
+                  "dataType": "Number"
                 },
                 {
                   "type": "WebColumn",
                   "field": "Quantity",
-                  "width": "auto",
-                  "resizable": true
+                  "dataType": "Number"
                 },
                 {
                   "type": "WebColumn",
                   "field": "Discount",
-                  "width": "auto",
-                  "resizable": true
+                  "dataType": "Number"
                 }
               ]
             }
@@ -187,6 +183,5 @@
       ]
     }
   },
-  "modules": [    
-    "grids/WebHierarchicalGridModule"]
-  }
+  "modules": ["grids/WebHierarchicalGridModule"]
+}

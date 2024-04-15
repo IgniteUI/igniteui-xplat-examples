@@ -1,69 +1,57 @@
 {
+  "export": true,
   "skipAlterDataCasing": true,
+  "onInit": ["WebHierarchicalGridSortingStyling"],
   "descriptions": {
-    "editor": {
-      "type": "PropertyEditorPanel",
-      "name": "PropertyEditor",
-      "componentRendererRef": "renderer",
-      "targetRef": "grid",
-      "descriptionType": "WebHierarchicalGrid",
-      "isHorizontal": true,
-      "isWrappingEnabled": true,
-      "properties": [
-        {
-          "type": "PropertyEditorPropertyDescription",
-          "propertyPath": "CellSelection",
-          "name": "CellSelectionEditor",
-          "valueType": "EnumValue",
-          "dropDownNames": ["None", "Single", "Multiple"],
-          "dropDownValues": ["None", "Single", "Multiple"]
-        }
-      ]
-    },
     "content": {
       "type": "WebHierarchicalGrid",
       "dataRef": "SingersData",
       "autoGenerate": false,
-      "id":"hGrid",
+      "name": "hierarchicalGrid",
+      "id": "hierarchicalGrid",
       "primaryKey": "ID",
+      "sortingExpressions": [
+        {
+          "type": "WebSortingExpression",
+          "fieldName": "Artist",
+          "dir": "Asc",
+          "ignoreCase": true
+        }
+      ],
       "columns": [
         {
           "type": "WebColumn",
           "field": "Artist",
           "header": "Artist",
           "dataType": "String",
-          "resizable": true
+          "sortable": true
         },
         {
           "type": "WebColumn",
           "field": "Photo",
           "header": "Photo",
-          "dataType": "Image",
-          "minWidth": "115px",
-          "resizable": true
+          "dataType": "Image"
         },
         {
           "type": "WebColumn",
           "field": "Debut",
           "header": "Debut",
           "dataType": "Number",
-          "minWidth": "88px",
-          "maxWidth": "230px",
-          "resizable": true
+          "sortable": true
         },
         {
           "type": "WebColumn",
           "field": "GrammyNominations",
           "header": "Grammy Nominations",
-          "dataType": "String",
-          "resizable": true
+          "dataType": "Number",
+          "sortable": true
         },
         {
           "type": "WebColumn",
           "field": "GrammyAwards",
           "header": "Grammy Awards",
-          "dataType": "String",
-          "resizable": true
+          "dataType": "Number",
+          "sortable": true
         }
       ],
       "childLayoutList": [
@@ -77,28 +65,28 @@
               "field": "Album",
               "header": "Album",
               "dataType": "String",
-              "resizable": true
+              "sortable": true
             },
             {
               "type": "WebColumn",
               "field": "LaunchDate",
               "header": "Launch Date",
               "dataType": "Date",
-              "resizable": true
+              "sortable": true
             },
             {
               "type": "WebColumn",
               "field": "BillboardReview",
               "header": "Billboard Review",
               "dataType": "String",
-              "resizable": true
+              "sortable": true
             },
             {
               "type": "WebColumn",
               "field": "USBillboard200",
               "header": "US Billboard 200",
               "dataType": "String",
-              "resizable": true
+              "sortable": true
             }
           ],
           "childLayoutList": [
@@ -112,28 +100,28 @@
                   "field": "Number",
                   "header": "No.",
                   "dataType": "String",
-                  "resizable": true
+                  "sortable": true
                 },
                 {
                   "type": "WebColumn",
                   "field": "Title",
                   "header": "Title",
                   "dataType": "String",
-                  "resizable": true
+                  "sortable": true
                 },
                 {
                   "type": "WebColumn",
                   "field": "Released",
                   "header": "Released",
-                  "dataType": "String",
-                  "resizable": true
+                  "dataType": "Date",
+                  "sortable": true
                 },
                 {
                   "type": "WebColumn",
                   "field": "Genre",
                   "header": "Genre",
                   "dataType": "String",
-                  "resizable": true
+                  "sortable": true
                 }
               ]
             }
@@ -149,35 +137,33 @@
               "field": "Tour",
               "header": "Tour",
               "dataType": "String",
-              "resizable": true
+              "sortable": true
             },
             {
               "type": "WebColumn",
               "field": "StartedOn",
               "header": "Started on",
               "dataType": "String",
-              "resizable": true
+              "sortable": true
             },
             {
               "type": "WebColumn",
               "field": "Location",
               "header": "Location",
               "dataType": "String",
-              "resizable": true
+              "sortable": true
             },
             {
               "type": "WebColumn",
               "field": "Headliner",
               "header": "Headliner",
               "dataType": "String",
-              "resizable": true
+              "sortable": true
             }
           ]
         }
       ]
     }
   },
-  "modules": ["withDescriptions",
-    "layouts/PropertyEditorPanelModule",
-    "grids/WebHierarchicalGridModule"]
-  }
+  "modules": ["grids/WebHierarchicalGridModule"]
+}

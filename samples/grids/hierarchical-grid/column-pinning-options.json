@@ -1,0 +1,207 @@
+{
+    "export": true,
+    "skipAlterDataCasing": true,
+    "descriptions": {
+      "content": {
+        "type": "WebHierarchicalGrid",
+        "name": "grid",
+        "id": "grid",
+        "dataRef": "HierarchicalCustomersData",
+        "columnSelection": "Single",
+        "primaryKey": "CustomerID",
+        "toolbar": [
+          {
+            "type": "WebGridToolbar",
+            "tools": [
+              {
+                "type": "WebGridToolbarActions",
+                "actions": [
+                  {
+                    "type": "WebGridToolbarPinning"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "columns": [
+          {
+            "type": "WebColumn",
+            "field": "CustomerID",
+            "hidden": true
+          },
+          {
+            "type": "WebColumn",
+            "field": "CompanyName",
+            "header": "Company Name",
+            "pinned": true,
+            "headerTemplateRef": "HierarchicalGridPinHeaderTemplate"
+          },
+          {
+            "type": "WebColumn",
+            "field": "ContactName",
+            "header": "Contact Name",
+            "headerTemplateRef": "HierarchicalGridPinHeaderTemplate"
+          },
+          {
+            "type": "WebColumn",
+            "field": "ContactTitle",
+            "header": "Contact Title",
+            "headerTemplateRef": "HierarchicalGridPinHeaderTemplate"
+          },
+          {
+            "type": "WebColumn",
+            "field": "Address",
+            "header": "Address",
+            "headerTemplateRef": "HierarchicalGridPinHeaderTemplate"
+          },
+          {
+            "type": "WebColumn",
+            "field": "City",
+            "header": "City",
+            "headerTemplateRef": "HierarchicalGridPinHeaderTemplate"
+          },
+          {
+            "type": "WebColumn",
+            "field": "PostalCode",
+            "header": "Postal Code",
+            "headerTemplateRef": "HierarchicalGridPinHeaderTemplate"
+          },
+          {
+            "type": "WebColumn",
+            "field": "Country",
+            "header": "Country",
+            "headerTemplateRef": "HierarchicalGridPinHeaderTemplate"
+          },
+          {
+            "type": "WebColumn",
+            "field": "Phone",
+            "headerTemplateRef": "HierarchicalGridPinHeaderTemplate"
+          },
+          {
+            "type": "WebColumn",
+            "field": "Fax",
+            "headerTemplateRef": "HierarchicalGridPinHeaderTemplate"
+          }
+        ],
+        "childLayoutList": [
+          {
+            "type": "WebRowIsland",
+            "childDataKey": "Orders",
+            "autoGenerate": false,
+            "columns": [
+              {
+                "type": "WebColumn",
+                "field": "OrderDate",
+                "header": "Order Date",
+                "dataType": "Date",
+                "resizable": true,
+                "headerTemplateRef": "HierarchicalGridPinHeaderTemplate"
+              },
+              {
+                "type": "WebColumn",
+                "field": "RequiredDate",
+                "header": "Required Date",
+                "dataType": "Date",
+                "resizable": true,
+                "headerTemplateRef": "HierarchicalGridPinHeaderTemplate"
+              },
+              {
+                "type": "WebColumn",
+                "field": "ShippedDate",
+                "header": "Shipped Date",
+                "dataType": "Date",
+                "resizable": true,
+                "headerTemplateRef": "HierarchicalGridPinHeaderTemplate"
+              },
+              {
+                "type": "WebColumn",
+                "field": "ShipName",
+                "header": "Ship Name",
+                "dataType": "String",
+                "resizable": true,
+                "pinned": true,
+                "headerTemplateRef": "HierarchicalGridPinHeaderTemplate"
+              },
+              {
+                "type": "WebColumn",
+                "field": "ShippedVia",
+                "header": "Shipped Via",
+                "dataType": "String",
+                "resizable": true,
+                "headerTemplateRef": "HierarchicalGridPinHeaderTemplate"
+              },
+              {
+                "type": "WebColumn",
+                "field": "Freight",
+                "header": "Freight",
+                "dataType": "String",
+                "resizable": true,
+                "headerTemplateRef": "HierarchicalGridPinHeaderTemplate"
+              }
+            ],
+            "childLayoutList": [
+              {
+                "type": "WebRowIsland",
+                "childDataKey": "OrderDetails",
+                "autoGenerate": false,
+                "columns": [
+                  {
+                    "type": "WebColumn",
+                    "field": "UnitPrice",
+                    "header": "Unit Price",
+                    "dataType": "String",
+                    "resizable": true,
+                    "headerTemplateRef": "HierarchicalGridPinHeaderTemplate"
+                  },
+                  {
+                    "type": "WebColumn",
+                    "field": "Quantity",
+                    "header": "Quantity",
+                    "dataType": "String",
+                    "resizable": true,
+                    "headerTemplateRef": "HierarchicalGridPinHeaderTemplate"
+                  },
+                  {
+                    "type": "WebColumn",
+                    "field": "Discount",
+                    "header": "Discount",
+                    "dataType": "String",
+                    "resizable": true,
+                    "headerTemplateRef": "HierarchicalGridPinHeaderTemplate"
+                  },
+                  {
+                    "type": "WebColumn",
+                    "field": "Weight",
+                    "header": "Weight",
+                    "dataType": "String",
+                    "resizable": true,
+                    "headerTemplateRef": "HierarchicalGridPinHeaderTemplate"
+                  },
+                  {
+                    "type": "WebColumn",
+                    "field": "Length",
+                    "header": "Length",
+                    "dataType": "String",
+                    "resizable": true,
+                    "headerTemplateRef": "HierarchicalGridPinHeaderTemplate"
+                  },
+                  {
+                    "type": "WebColumn",
+                    "field": "TotalPrice",
+                    "header": "Total Price",
+                    "dataType": "String",
+                    "resizable": true,
+                    "headerTemplateRef": "HierarchicalGridPinHeaderTemplate"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "modules": [
+      "grids/WebHierarchicalGridModule"
+    ]
+  }
