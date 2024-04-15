@@ -5,7 +5,7 @@
       "type": "PropertyEditorPanel",
       "name": "PropertyEditor",
       "componentRendererRef": "renderer",
-      "targetRef": "grid",
+      "targetRef": "hGrid",
       "descriptionType": "WebHierarchicalGrid",
       "isHorizontal": true,
       "isWrappingEnabled": true,
@@ -25,6 +25,7 @@
       "dataRef": "SingersData",
       "autoGenerate": false,
       "id": "hGrid",
+      "name": "hGrid",
       "primaryKey": "ID",
       "onInit": ["WebHierarchicalGridCellSelectionStyling"],
       "columns": [
