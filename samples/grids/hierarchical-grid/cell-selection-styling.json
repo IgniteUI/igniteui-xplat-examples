@@ -1,5 +1,6 @@
 {
   "skipAlterDataCasing": true,
+  "onInit": ["WebHierarchicalGridCellSelectionStyling"],
   "descriptions": {
     "editor": {
       "type": "PropertyEditorPanel",
@@ -26,8 +27,7 @@
       "autoGenerate": false,
       "id": "hGrid",
       "name": "hGrid",
-      "primaryKey": "ID",
-      "onInit": ["WebHierarchicalGridCellSelectionStyling"],
+      "primaryKey": "ID",      
       "columns": [
         {
           "type": "WebColumn",

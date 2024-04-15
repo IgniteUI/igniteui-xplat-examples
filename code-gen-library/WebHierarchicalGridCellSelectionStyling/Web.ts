@@ -10,9 +10,9 @@ export class WebHierarchicalGridCellSelectionStyling {
     public requiredStyles = `
 <!--begin styles-->
 #hGrid {
-    --cell-selected-text-color: #FFFFFF;
-    --cell-active-border-color: #0578c4;
-    --cell-selected-background: #0578c4;
+    --ig-grid--cell-selected-text-color: #FFFFFF;
+    --ig-grid--cell-active-border-color: #0578c4;
+    --ig-grid--cell-selected-background: #0578c4;
 }
 <!--end styles-->
     `;
