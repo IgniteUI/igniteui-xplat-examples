@@ -22,12 +22,6 @@
               },
               {
                 "type": "WebColumn",
-                "field": "LastName",
-                "header": "Last Name",
-                "visibleWhenCollapsed": false
-              },
-              {
-                "type": "WebColumn",
                 "field": "ContactTitle",
                 "header": "Contact Title",
                 "visibleWhenCollapsed": false
@@ -35,7 +29,7 @@
               {
                 "type": "WebColumn",
                 "field": "CustomerID",
-                "header": "Last Name",
+                "header": "Customer ID",
                 "visibleWhenCollapsed": false
               },
               {
@@ -55,12 +49,6 @@
                     "width": "250px",
                     "visibleWhenCollapsed": true,
                     "children": [
-                        {
-                            "type": "WebColumn",
-                            "field": "FullAddress",
-                            "header": "Full Address",
-                            "visibleWhenCollapsed": true
-                        },
                         {
                             "type": "WebColumn",
                             "field": "Country",
@@ -191,43 +179,45 @@
                             }
                         ]
                     }
-                ]  
-            },
-            {
-                "type": "WebRowIsland",
-                "childDataKey": "OrderDetails",
-                "autoGenerate": false,
-                "columns": [
+                ],
+                "childLayoutList": [
                   {
-                    "type": "WebColumn",
-                    "field": "ProductID",
-                    "header": "Product ID",
-                    "dataType": "String",
-                    "resizable": true
-                  },
-                  {
-                    "type": "WebColumn",
-                    "field": "UnitPrice",
-                    "header": "Unit Price",
-                    "dataType": "String",
-                    "resizable": true
-                  },
-                  {
-                    "type": "WebColumn",
-                    "field": "Quantity",
-                    "header": "Quantity",
-                    "dataType": "String",
-                    "resizable": true
-                  },
-                  {
-                    "type": "WebColumn",
-                    "field": "Discount",
-                    "header": "Discount",
-                    "dataType": "String",
-                    "resizable": true
+                    "type": "WebRowIsland",
+                    "childDataKey": "OrderDetails",
+                    "autoGenerate": false,
+                    "columns": [
+                      {
+                        "type": "WebColumn",
+                        "field": "ProductID",
+                        "header": "Product ID",
+                        "dataType": "String",
+                        "resizable": true
+                      },
+                      {
+                        "type": "WebColumn",
+                        "field": "UnitPrice",
+                        "header": "Unit Price",
+                        "dataType": "String",
+                        "resizable": true
+                      },
+                      {
+                        "type": "WebColumn",
+                        "field": "Quantity",
+                        "header": "Quantity",
+                        "dataType": "String",
+                        "resizable": true
+                      },
+                      {
+                        "type": "WebColumn",
+                        "field": "Discount",
+                        "header": "Discount",
+                        "dataType": "String",
+                        "resizable": true
+                      }
+                    ]
                   }
                 ]
-              }
+            }
         ]
       }
     },
