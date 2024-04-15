@@ -1,5 +1,5 @@
 //begin eventHandler
-igRegisterScript("WebHGridFilteringStyle", (args) => {
+igRegisterScript("WebHGridAdvancedFilteringStyle", (args) => {
     //OMIT HANDLER
 }, false);
 //end eventHandler

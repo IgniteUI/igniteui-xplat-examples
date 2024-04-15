@@ -1,9 +1,9 @@
 //begin imports
 //end imports
 
-export class WebHGridFilteringStyle {
+export class WebHGridAdvancedFilteringStyle {
     //begin eventHandler
-    public webHGridFilteringStyle(): void {
+    public webHGridAdvancedFilteringStyle(): void {
         //OMIT HANDLER
     }
     //end eventHandler
