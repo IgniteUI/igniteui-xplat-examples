@@ -1,0 +1,227 @@
+{
+    "skipAlterDataCasing": true,
+    "descriptions": {
+      "content": {
+        "type": "WebHierarchicalGrid",
+        "dataRef": "HierarchicalCustomersData",
+        "autoGenerate": false,
+        "name": "grid",
+        "id": "grid",
+        "primaryKey": "ID",
+        "columns": [
+          {
+            "type": "WebColumnGroup",
+            "header": "General Information",
+            "collapsible": true,
+            "children": [
+              {
+                "type": "WebColumn",
+                "field": "ContactName",
+                "header": "Contact Name",
+                "visibleWhenCollapsed": true
+              },
+              {
+                "type": "WebColumn",
+                "field": "ContactTitle",
+                "header": "Contact Title",
+                "visibleWhenCollapsed": false
+              },
+              {
+                "type": "WebColumn",
+                "field": "CustomerID",
+                "header": "Customer ID",
+                "visibleWhenCollapsed": false
+              },
+              {
+                "type": "WebColumn",
+                "field": "CompanyName",
+                "header": "Company Name",
+                "visibleWhenCollapsed": false
+              },
+              {
+                "type": "WebColumnGroup",
+                "header": "Address Information",
+                "collapsible": true,
+                "children": [
+                  {
+                    "type": "WebColumnGroup",
+                    "header": "Location",
+                    "width": "250px",
+                    "visibleWhenCollapsed": true,
+                    "children": [
+                        {
+                            "type": "WebColumn",
+                            "field": "Country",
+                            "header": "Country",
+                            "visibleWhenCollapsed": true
+                        },
+                        {
+                            "type": "WebColumn",
+                            "field": "City",
+                            "header": "City",
+                            "visibleWhenCollapsed": true
+                        },
+                        {
+                            "type": "WebColumn",
+                            "field": "Address",
+                            "header": "Address",
+                            "visibleWhenCollapsed": true
+                        },
+                        {
+                            "type": "WebColumn",
+                            "field": "PostalCode",
+                            "header": "Postal Code",
+                            "visibleWhenCollapsed": true
+                        }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "childLayoutList": [
+            {
+                "type": "WebRowIsland",
+                "childDataKey": "Orders",
+                "autoGenerate": false,
+                "columns": [
+                    {
+                        "type": "WebColumnGroup",
+                        "header": "Order Details",
+                        "collapsible": true,
+                        "children": [
+                            {
+                                "type": "WebColumn",
+                                "field": "OrderID",
+                                "header": "Order ID",
+                                "visibleWhenCollapsed": true
+                            },
+                            {
+                                "type": "WebColumn",
+                                "field": "EmployeeID",
+                                "header": "Employee ID",
+                                "visibleWhenCollapsed": true
+                            },
+                            {
+                                "type": "WebColumn",
+                                "field": "OrderDate",
+                                "header": "Order Date",
+                                "visibleWhenCollapsed": true
+                            },
+                            {
+                                "type": "WebColumn",
+                                "field": "RequiredDate",
+                                "header": "Required Date",
+                                "visibleWhenCollapsed": true
+                            }
+                        ]   
+                    },
+                    {
+                        "type": "WebColumnGroup",
+                        "header": "General Shipping Information",
+                        "collapsible": true,
+                        "children": [
+                            {
+                                "type": "WebColumn",
+                                "field": "ShippedDate",
+                                "header": "Shipped Date",
+                                "visibleWhenCollapsed": true
+                            },
+                            {
+                                "type": "WebColumn",
+                                "field": "ShipVia",
+                                "header": "Ship Via",
+                                "visibleWhenCollapsed": true
+                            },
+                            {
+                                "type": "WebColumn",
+                                "field": "Freight",
+                                "header": "Freight",
+                                "visibleWhenCollapsed": true
+                            },
+                            {
+                                "type": "WebColumn",
+                                "field": "ShipName",
+                                "header": "Ship Name",
+                                "visibleWhenCollapsed": true
+                            }
+                        ]
+                    },
+                    {
+                        "type": "WebColumnGroup",
+                        "header": "Shipping Location",
+                        "collapsible": true,
+                        "children": [
+                            {
+                                "type": "WebColumn",
+                                "field": "ShipAddress",
+                                "header": "Ship Address",
+                                "visibleWhenCollapsed": true
+                            },
+                            {
+                                "type": "WebColumn",
+                                "field": "ShipCity",
+                                "header": "Ship City",
+                                "visibleWhenCollapsed": true
+                            },
+                            {
+                                "type": "WebColumn",
+                                "field": "ShipPostalCode",
+                                "header": "Ship Postal Code",
+                                "visibleWhenCollapsed": true
+                            },
+                            {
+                                "type": "WebColumn",
+                                "field": "ShipCountry",
+                                "header": "Ship Country",
+                                "visibleWhenCollapsed": true
+                            }
+                        ]
+                    }
+                ],
+                "childLayoutList": [
+                  {
+                    "type": "WebRowIsland",
+                    "childDataKey": "OrderDetails",
+                    "autoGenerate": false,
+                    "columns": [
+                      {
+                        "type": "WebColumn",
+                        "field": "ProductID",
+                        "header": "Product ID",
+                        "dataType": "String",
+                        "resizable": true
+                      },
+                      {
+                        "type": "WebColumn",
+                        "field": "UnitPrice",
+                        "header": "Unit Price",
+                        "dataType": "String",
+                        "resizable": true
+                      },
+                      {
+                        "type": "WebColumn",
+                        "field": "Quantity",
+                        "header": "Quantity",
+                        "dataType": "String",
+                        "resizable": true
+                      },
+                      {
+                        "type": "WebColumn",
+                        "field": "Discount",
+                        "header": "Discount",
+                        "dataType": "String",
+                        "resizable": true
+                      }
+                    ]
+                  }
+                ]
+            }
+        ]
+      }
+    },
+    "modules": [
+      "grids/WebHierarchicalGridModule"
+    ]
+  }
