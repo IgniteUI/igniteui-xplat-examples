@@ -1,0 +1,141 @@
+{
+  "export": true,
+  "skipAlterDataCasing": true,
+  "descriptions": {
+    "editor": {
+      "type": "PropertyEditorPanel",
+      "name": "PropertyEditorHierarchicalGrid",
+      "componentRendererRef": "renderer",
+      "targetRef": "grid",
+      "descriptionType": "WebHierarchicalGrid",
+      "isHorizontal": true,
+      "isWrappingEnabled": true,
+      "properties": [
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "name": "rowPinningEditor",
+          "label": "Row Pinning toggle",
+          "valueType": "EnumValue",
+          "dropDownNames": ["Top", "Bottom"],
+          "dropDownValues": ["Top", "Bottom"],
+          "changedRef": "WebHierarchicalGridChangePinningConfig"
+        }
+      ]
+    },
+    "content": {
+      "type": "WebHierarchicalGrid",
+      "dataRef": "SingersData",
+      "autoGenerate": false,
+      "primaryKey": "Photo",
+      "id": "grid",
+      "name": "grid",
+      "cellSelection": "None",
+      "renderedRef": "WebHierarchicalGridPinRowOnRendered",
+      "pinning": {
+        "type": "WebPinningConfig",
+        "rows": "Top",
+        "columns": "End"
+      },
+      "columns": [
+        {
+          "type": "WebColumn",
+          "field": "Artist",
+          "header": "Artist",
+          "dataType": "String"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Photo",
+          "header": "Photo",
+          "dataType": "Image",
+          "minWidth": "115px"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Debut",
+          "header": "Debut",
+          "dataType": "Number"
+        },
+        {
+          "type": "WebColumn",
+          "field": "GrammyNominations",
+          "header": "Grammy Nominations",
+          "dataType": "String"
+        },
+        {
+          "type": "WebColumn",
+          "field": "GrammyAwards",
+          "header": "Grammy Awards",
+          "dataType": "String"
+        }
+      ],
+      "actionStripComponents": [
+        {
+          "type": "WebActionStrip",
+          "name": "actionStrip1",
+          "actionButtons": [
+            {
+              "type": "WebGridPinningActions"
+            }
+          ]
+        }
+      ],
+      "childLayoutList": [
+        {
+          "type": "WebRowIsland",
+          "childDataKey": "Albums",
+          "primaryKey": "Album",
+          "cellSelection": "None",
+          "autoGenerate": false,
+          "pinning": {
+            "type": "WebPinningConfig",
+            "rows": "Top",
+            "columns": "End"
+          },
+          "columns": [
+            {
+              "type": "WebColumn",
+              "field": "Album",
+              "header": "Album",
+              "dataType": "String"
+            },
+            {
+              "type": "WebColumn",
+              "field": "LaunchDate",
+              "header": "Launch Date",
+              "dataType": "Date"
+            },
+            {
+              "type": "WebColumn",
+              "field": "BillboardReview",
+              "header": "Billboard Review",
+              "dataType": "String"
+            },
+            {
+              "type": "WebColumn",
+              "field": "USBillboard200",
+              "header": "US Billboard 200",
+              "dataType": "String"
+            }
+          ],
+          "actionStripComponents": [
+            {
+              "type": "WebActionStrip",
+              "name": "actionStrip2",
+              "actionButtons": [
+                {
+                  "type": "WebGridPinningActions"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
+    "grids/WebHierarchicalGridModule"
+  ]
+}
