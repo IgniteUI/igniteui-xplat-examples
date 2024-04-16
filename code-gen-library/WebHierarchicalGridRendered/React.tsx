@@ -7,7 +7,9 @@ export class WebHierarchicalGridRendered {
     //begin eventHandler
     public webHierarchicalGridRendered(args:any): void {
         const hierarchicalGrid = document.getElementById("hierarchicalGrid");
+        hierarchicalGrid.parentElement.className = "fill";
         hierarchicalGrid.parentElement.style.display = "flex";
+        hierarchicalGrid.parentElement.style.height = "100vh";
         const container = document.createElement("div");
         container.id = "container";
         container.style.height = "80vh";
