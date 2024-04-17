@@ -11,8 +11,8 @@ export class WebGridCellSelectionStyleWithCustomCSS {
 <!--begin styles-->
 #grid {
     --cell-selected-text-color: #FFFFFF;
-    --cell-active-border-color: #0578c4;
-    --cell-selected-background: #0578c4;
+    --cell-active-border-color: #f2c43c;
+    --cell-selected-background: #0062a3;
 }
 <!--end styles-->
     `;
