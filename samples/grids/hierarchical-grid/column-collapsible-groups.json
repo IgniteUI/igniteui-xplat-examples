@@ -7,7 +7,7 @@
         "autoGenerate": false,
         "name": "grid",
         "id": "grid",
-        "primaryKey": "ID",
+        "primaryKey": "CustomerID",
         "columns": [
           {
             "type": "WebColumnGroup",
