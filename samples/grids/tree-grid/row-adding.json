@@ -17,7 +17,8 @@
         "actionButtons": [
           {
             "type": "WebGridEditingActions",
-            "addRow": true
+            "addRow": true,
+            "addChild":true
           }
         ]
       }],      
