@@ -1,54 +1,64 @@
 {
-  "todo": [ "Add cell classes for product name and unit price" ],
-  "export": true,
   "skipAlterDataCasing": true,
   "descriptions": {
     "content": {
       "type": "WebTreeGrid",
       "name": "treeGrid",
       "id": "treeGrid",
-      "dataRef": "FoodsData",
+      "dataRef": "OrdersTreeData",
       "primaryKey": "ID",
       "foreignKey": "ParentID",
       "columns": [
         {
           "type": "WebColumn",
           "field": "ID",
-          "header": "Product ID",
+          "header": "Order ID",
           "dataType": "String"
         },
         {
           "type": "WebColumn",
           "field": "Name",
-          "header": "Product Name",
+          "header": "Order Product",
           "dataType": "String",
-          "bodyTemplateRef": "WebTreeGridProductNameTemplate"
+          "cellClassesRef": "WebTreeGridAllergensCellClassesHandler"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Category",
+          "dataType": "String"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Units",
+          "dataType": "Number"
         },
         {
           "type": "WebColumn",
           "field": "UnitPrice",
           "header": "Unit Price",
-          "dataType": "Number",
-          "bodyTemplateRef": "WebTreeGridUnitPriceTemplate"
+          "dataType": "Currency",
+          "cellClassesRef": "WebTreeGridUnitPriceCellClassesHandler"
         },
         {
           "type": "WebColumn",
-          "field": "AddedDate",
-          "header": "Added Date",
+          "field": "Price",
+          "dataType": "Currency"
+        },
+        {
+          "type": "WebColumn",
+          "field": "OrderDate",
+          "header": "Order Date",
           "dataType": "Date"
         },
         {
           "type": "WebColumn",
-          "field": "Discontinued",
-          "header": "Discontinued",
+          "field": "Delivered",
           "dataType": "Boolean"
         }
       ]
     }
   },
   "modules": [
-    "withDescriptions",
-    "layouts/PropertyEditorPanelModule",
     "grids/WebTreeGridModule"
   ]
 }
