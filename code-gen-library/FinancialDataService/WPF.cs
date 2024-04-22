@@ -53,10 +53,10 @@ namespace Infragistics.Samples
                 item.ChangePercent = json.Value<double>("ChangePercent");
                 item.High = json.Value<double>("High");
                 item.Low = json.Value<double>("Low");
-                item.AnnualHigh = json.Value<double>("AnnualHigh");
-                item.AnnualLow = json.Value<double>("AnnualLow");
-                item.AnnualStart = json.Value<double>("AnnualStart");
-                item.AnnualChange = json.Value<double>("AnnualChange");
+                item.YearlyHigh = json.Value<double>("YearlyHigh");
+                item.YearlyLow = json.Value<double>("YearlyLow");
+                item.YearlyStart = json.Value<double>("YearlyStart");
+                item.YearlyChange = json.Value<double>("YearlyChange");
                 item.ZV_SPREAD = json.Value<double>("ZV_SPREAD");
                 item.KRD_3YR = json.Value<double>("KRD_3YR");
                 item.KRD_5YR = json.Value<double>("KRD_5YR");
@@ -82,10 +82,10 @@ namespace Infragistics.Samples
         public double Volume { get; set; }
         public double High { get; set; }
         public double Low { get; set; }
-        public double AnnualHigh { get; set; }
-        public double AnnualLow { get; set; }
-        public double AnnualStart { get; set; }
-        public double AnnualChange { get; set; }
+        public double YearlyHigh { get; set; }
+        public double YearlyLow { get; set; }
+        public double YearlyStart { get; set; }
+        public double YearlyChange { get; set; }
         public string Settlement { get; set; }
         public string Contract { get; set; }
         public string Region { get; set; }
