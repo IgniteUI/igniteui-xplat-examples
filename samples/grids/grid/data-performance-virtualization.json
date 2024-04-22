@@ -52,7 +52,7 @@
           },
           {
               "type": "WebColumn",
-              "field": "AnnualChange",
+              "field": "YearlyChange",
               "header": "Change On Year(%)",
               "width": "150px",
               "dataType": "Number",
@@ -96,21 +96,21 @@
           },
           {
               "type": "WebColumn",
-              "field": "AnnualHigh",
+              "field": "YearlyHigh",
               "header": "High(Y)",
               "width": "130px",
               "dataType": "Currency"
           },
           {
               "type": "WebColumn",
-              "field": "AnnualLow",
+              "field": "YearlyLow",
               "header": "Low(Y)",
               "width": "130px",
               "dataType": "Currency"
           },
           {
               "type": "WebColumn",
-              "field": "AnnualStart",
+              "field": "YearlyStart",
               "header": "Start(Y)",
               "width": "130px",
               "dataType": "Currency"
