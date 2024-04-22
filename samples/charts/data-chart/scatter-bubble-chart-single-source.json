@@ -29,17 +29,17 @@
           "name": "BubbleSeries1",
           "xMemberPath": "Population",
           "yMemberPath": "PublicDebt",
-          "radiusMemberPath": "GdpPerCapita",
+          "radiusMemberPath": "GdpPerPerson",
           "radiusScale": {
             "type": "SizeScale",
             "isLogarithmic": false,
             "minimumValue": 10,
             "maximumValue": 50
           },
-          "fillMemberPath": "GdpPerCapita",
+          "fillMemberPath": "GdpPerPerson",
           "xAxisRef": "xAxis",
           "yAxisRef": "yAxis",
-          "dataSourceRef": "WorldDebtAndPopulation",
+          "dataSourceRef": "WorldStats",
           "markerType": "Circle",
           "showDefaultTooltip": true
         },
