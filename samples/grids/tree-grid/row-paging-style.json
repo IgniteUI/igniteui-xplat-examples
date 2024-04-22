@@ -1,0 +1,69 @@
+{
+  "todo": ["Approved Defer - until we support injecting CSS styles"],
+  "skipAlterDataCasing": true,
+  "descriptions": {
+    "content": {
+      "type": "WebTreeGrid",
+      "dataRef": "OrdersTreeData",
+      "autoGenerate": false,
+      "name": "treeGrid",
+      "id": "treeGrid",
+      "primaryKey": "ID",
+      "foreignKey": "ParentID",
+      "paginationComponents": [
+        {
+          "type": "WebPaginator",
+          "perPage": 10
+        }
+      ],
+      "columns": [
+        {
+          "type": "WebColumn",
+          "field": "ID",
+          "header": "Order ID"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Name",
+          "header": "Order Product"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Category",
+          "header": "Category"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Units",
+          "header": "Units",
+          "dataType": "Number"
+        },
+        {
+          "type": "WebColumn",
+          "field": "UnitPrice",
+          "header": "Unit Price",
+          "dataType": "Number"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Price",
+          "header": "Price",
+          "dataType": "Number"
+        },
+        {
+          "type": "WebColumn",
+          "field": "OrderDate",
+          "header": "Order Date",
+          "dataType": "Date"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Delivered",
+          "header": "Delivered",
+          "dataType": "Boolean"
+        }
+      ]
+    }
+  },
+  "modules": ["withDescriptions", "grids/WebTreeGridModule"]
+}
