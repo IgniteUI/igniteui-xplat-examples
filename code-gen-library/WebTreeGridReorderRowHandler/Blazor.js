@@ -8,8 +8,15 @@ igRegisterScript("WebTreeGridReorderRowHandler", (args) => {
     { x: dragElementPos.x, y: dragElementPos.y });
     if (currRowIndex === -1) { return; }
     // remove the row that was dragged and place it onto its new location
+    const draggedRow = args.detail.dragData.data;       
+    const childRows = this.findChildRows(grid.data, draggedRow);
+    //remove the row that was dragged and place it onto its new location
     grid.deleteRow(args.detail.dragData.key);
     grid.data.splice(currRowIndex, 0, args.detail.dragData.data);
+    // reinsert the child rows
+    childRows.reverse().forEach(childRow => {           
+        grid.data.splice(currRowIndex + 1, 0, childRow);
+    });
 }, false);
 
 function findChildRows(rows, parent) {
