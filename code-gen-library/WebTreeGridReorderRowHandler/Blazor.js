@@ -12,6 +12,19 @@ igRegisterScript("WebTreeGridReorderRowHandler", (args) => {
     grid.data.splice(currRowIndex, 0, args.detail.dragData.data);
 }, false);
 
+function findChildRows(rows, parent) {
+    const childRows = [];
+    rows.forEach(row => {
+        if (row.ParentID === parent.ID) {
+            childRows.push(row);
+            // Recursively find children of current row
+            const grandchildren = this.findChildRows(rows, row);
+            childRows.push(...grandchildren);
+        }
+    });
+    return childRows;
+}
+
 function getCurrentRowIndex(rowList, cursorPosition) {
     for (const row of rowList) {
         const rowRect = row.getBoundingClientRect();
@@ -20,7 +33,7 @@ function getCurrentRowIndex(rowList, cursorPosition) {
             // return the index of the targeted row
             return parseInt(row.attributes["data-rowindex"].value);
         }
-    }    
+    }
     return -1;
 }
 //end eventHandler

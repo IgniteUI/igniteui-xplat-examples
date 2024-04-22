@@ -11,6 +11,7 @@
       "primaryKey": "ID",
       "foreignKey": "ParentID",
       "autoGenerate": false,
+      "rowDragStartRef": "WebTreeGridReorderRowStartHandler",
       "rowDraggable": true,  
       "rowDragEndRef": "WebTreeGridReorderRowHandler",    
       "columns": [
