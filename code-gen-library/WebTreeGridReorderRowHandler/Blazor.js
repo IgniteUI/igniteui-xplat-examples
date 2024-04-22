@@ -6,8 +6,7 @@ igRegisterScript("WebTreeGridReorderRowHandler", (args) => {
     const rows = Array.prototype.slice.call(document.getElementsByTagName("igx-tree-grid-row"));
     const currRowIndex = this.getCurrentRowIndex(rows,
     { x: dragElementPos.x, y: dragElementPos.y });
-    if (currRowIndex === -1) { return; }
-    // remove the row that was dragged and place it onto its new location
+    if (currRowIndex === -1) { return; }    
     const draggedRow = args.detail.dragData.data;       
     const childRows = this.findChildRows(grid.data, draggedRow);
     //remove the row that was dragged and place it onto its new location
