@@ -153,8 +153,15 @@ exports.filterJSON = function filterJSON(cb) {
 
 exports.copyCDN = function copyCDN(cb)
 {
-    // del("./CDN")
+
+    var CDN = '//s0706dl2.igweb.local/download.infragistics.com/xplatform/library';
+    console.log("--------------------------------------------------------------------");   
+    console.log('uploading large data files from code-gen-library to CDN:');      
+    console.log(CDN);   
+    console.log("--------------------------------------------------------------------");   
+    // this function copied large data files to CDN 
     gulp.src([
+        './CDN/_Readme.md',
         CodeGenLib + '/CompanyData/XPLAT.json',
         CodeGenLib + '/CompanyEmployees/XPLAT.json',
         CodeGenLib + '/EmployeesData/XPLAT.json',
@@ -200,13 +207,10 @@ exports.copyCDN = function copyCDN(cb)
         CodeGenLib + '/WorldStats/XPLAT.json',   
     ],  {base: CodeGenLib + '/'})
     .pipe(es.map(function(file, fileCallback) {
-        console.log('copying ' + file.dirname + '/' + file.basename);
-
-        // let content = file.contents.toString();
-        
+        console.log(file.dirname + '/' + file.basename);        
         fileCallback(null, file);
     }))
-    .pipe(gulp.dest('./CDN'))
+    .pipe(gulp.dest(CDN, {overwrite: true}))
     .on("end", function() {
         cb();
      });
