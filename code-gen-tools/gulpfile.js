@@ -95,8 +95,8 @@ exports.toJSON = toJSON;
 
 function sortJSON(cb) {
 
-    let filePath = CodeGenLib + "/WorldCitiesAbove500K/XPLAT.json";
-    // let filePath = CodeGenLib + "/WorldCities/XPLAT.json";
+    // let filePath = CodeGenLib + "/WorldCitiesAbove500K/XPLAT.json";
+    let filePath = CodeGenLib + "/WorldCountries/XPLAT.json";
     let file = fs.readFileSync(filePath, "utf8");
     let dataItems = JSON.parse(file);
 
@@ -104,17 +104,17 @@ function sortJSON(cb) {
     dataItems = dataItems.sort((a, b) => a.Population < b.Population ? 1 : -1);
 
     for (let i = 0; i < dataItems.length; i++) {
-        dataItems[i].ID = 10000 + i;
+        // dataItems[i].ID = 10000 + i;
     }
 
     let newDataItems = [];
     for (const item of dataItems) {
-        if (item.Population > 1000000) {
+        // if (item.Population > 1000000) {
             newDataItems.push(item);
-        }
+        // }
     }
 
-    let outputPath = CodeGenLib + "/WorldCitiesAbove1M/XPLAT.json";
+    let outputPath = filePath; // CodeGenLib + "/WorldCitiesAbove1M/XPLAT.json";
     saveJSON(outputPath, newDataItems,  "compact");
     cb();
 }
@@ -175,7 +175,6 @@ exports.copyCDN = function copyCDN(cb)
         CodeGenLib + '/ProductSales/XPLAT.json',
         CodeGenLib + '/SingersCustomers/XPLAT.json',
         CodeGenLib + '/SingersData/XPLAT.json',
-        CodeGenLib + '/SalesData/XPLAT.json',
         CodeGenLib + '/StockAmazon/XPLAT.json',
         CodeGenLib + '/Stock2Years/XPLAT.json',
         CodeGenLib + '/StockGoogle/XPLAT.json',
@@ -199,9 +198,12 @@ exports.copyCDN = function copyCDN(cb)
         CodeGenLib + '/WorldCitiesAbove500K/XPLAT.json',
         CodeGenLib + '/WorldCountries/XPLAT.json',
         CodeGenLib + '/WorldStats/XPLAT.json',   
-    ])
+    ],  {base: CodeGenLib + '/'})
     .pipe(es.map(function(file, fileCallback) {
-        console.log('copied ' + file.dirname + '/' + file.basename)
+        console.log('copying ' + file.dirname + '/' + file.basename);
+
+        // let content = file.contents.toString();
+        
         fileCallback(null, file);
     }))
     .pipe(gulp.dest('./CDN'))
