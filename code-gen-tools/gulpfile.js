@@ -532,51 +532,58 @@ exports.injectWorldStats = function injectWorldStats(cb) {
     let file1Data = JSON.parse(file1);
     file1Data.sort((a, b) => a.Name < b.Name ? 1 : -1);
     
-    let file2Path = CodeGenLib + "/WorldDebtAndPopulation/XPLAT.json";
-    let file2 = fs.readFileSync(file2Path, "utf8");
-    let file2Data = JSON.parse(file2);
-    file2Data.sort((a, b) => a.Name < b.Name ? 1 : -1);
+    // let file2Path = CodeGenLib + "/WorldDebtAndPopulation/XPLAT.json";
+    // let file2 = fs.readFileSync(file2Path, "utf8");
+    // let file2Data = JSON.parse(file2);
+    // file2Data.sort((a, b) => a.Name < b.Name ? 1 : -1);
 
     var notFound = [];
-    for (let i = 0; i < file2Data.length; i++) {
-        var item2 = file2Data[i];  
+    // for (let i = 0; i < file1Data.length; i++) {
+        // var item2 = file1Data[i];  
 
         var missing = true;
-        for (let ii = 0; ii < file1Data.length; ii++) {
-            var item1 = file1Data[ii];
-            if (file1Data[ii].Name === item2.Name) {
+        // for (let ii = 0; ii < file1Data.length; ii++) {
+        //     var item1 = file1Data[ii];
+        //     if (file1Data[ii].Name === item2.Name) {
 
-                file1Data[ii].Unemployment = item2.Unemployment;
-                file1Data[ii].Televisions = item2.Televisions;
-                file1Data[ii].PublicDebt = item2.PublicDebt;
-                file1Data[ii].OilProduction = item2.OilProduction;
-                file1Data[ii].MedianAge = item2.MedianAge;
-                file1Data[ii].Internet = item2.InternetUsers;
-                file1Data[ii].Electricity = item2.ElectricityProduction;
-                file1Data[ii].BirthRate = item2.BirthRate; 
-                missing = false;
-                break; 
-            }
-        } 
+        //         file1Data[ii].Unemployment = item2.Unemployment;
+        //         file1Data[ii].Televisions = item2.Televisions;
+        //         file1Data[ii].PublicDebt = item2.PublicDebt;
+        //         file1Data[ii].OilProduction = item2.OilProduction;
+        //         file1Data[ii].MedianAge = item2.MedianAge;
+        //         file1Data[ii].Internet = item2.InternetUsers;
+        //         file1Data[ii].Electricity = item2.ElectricityProduction;
+        //         file1Data[ii].BirthRate = item2.BirthRate; 
+        //         missing = false;
+        //         break; 
+        //     }
+        // } 
         for (let ii = 0; ii < file1Data.length; ii++) {
-            if (!file1Data[ii].Unemployment) {
-                file1Data[ii].Unemployment = Math.round(utils.randomInteger(1, 15));
-                file1Data[ii].OilProduction = utils.randomInteger(0, 5);
-                file1Data[ii].BirthRate = utils.randomInteger(5, 25);
-                file1Data[ii].MedianAge = utils.randomInteger(30, 55);
-                file1Data[ii].Electricity = utils.randomInteger(3000, 95000);
-                file1Data[ii].InternetUsers = Math.round(utils.randomInteger(file1Data[ii].Population * 0.3, file1Data[ii].Population * 0.8));
-                file1Data[ii].Televisions = Math.round(utils.randomInteger(file1Data[ii].Population * 0.1, file1Data[ii].Population * 0.8));
-            }
+            // if (!file1Data[ii].Unemployment) {
+            //     file1Data[ii].Unemployment = Math.round(utils.randomInteger(1, 15));
+            //     file1Data[ii].OilProduction = utils.randomInteger(0, 5);
+            //     file1Data[ii].BirthRate = utils.randomInteger(5, 25);
+            //     file1Data[ii].MedianAge = utils.randomInteger(30, 55);
+            //     file1Data[ii].Electricity = utils.randomInteger(3000, 95000);
+            //     file1Data[ii].InternetUsers = Math.round(utils.randomInteger(file1Data[ii].Population * 0.3, file1Data[ii].Population * 0.8));
+            //     file1Data[ii].Televisions = Math.round(utils.randomInteger(file1Data[ii].Population * 0.1, file1Data[ii].Population * 0.8));
+            // }
 
-            file1Data[ii].InternetUsers = Math.round(file1Data[ii].InternetUsers);
-            file1Data[ii].Televisions = Math.round(file1Data[ii].Televisions);
-        }
+            if (!file1Data[ii].PublicDebt) {
+                 file1Data[ii].PublicDebt = Math.round(utils.randomInteger(5, 45));
+            }
+            if (!file1Data[ii].Internet) {
+                 file1Data[ii].Internet = Math.round(utils.randomInteger(1000, file1Data[ii].Population * 0.8));
+            }
+            file1Data[ii].InternetUsers = undefined; 
+            // file1Data[ii].InternetUsers = Math.round(file1Data[ii].InternetUsers);
+            // file1Data[ii].Televisions = Math.round(file1Data[ii].Televisions);
+        // }
 
         file1Data.sort((a, b) => a.Population < b.Population ? 1 : -1);
 
         if (missing) {
-            console.log("not found " + i + " " + item2.Name);
+            // console.log("not found " + i + " " + item2.Name);
         } 
     }
     // console.log(notFound);
@@ -1097,4 +1104,55 @@ exports.toCSV = function toCSV(cb) {
     var cvsPath = jsonPath.replace('.json', '.csv');
     saveFile(cvsPath, cvsContent);
     cb();
+}
+
+
+exports.verifyJSON = function verifyJSON(cb)
+{ 
+    // var CDN = './CDN';
+        var verified = true;
+    console.log("--------------------------------------------------------------------");   
+    console.log('verifying XPLAT.JSON files:');      
+    console.log("--------------------------------------------------------------------");   
+    // this function copied large data files to CDN 
+    gulp.src([
+        CodeGenLib + '/**/XPLAT.json',   
+        // CodeGenLib + '/WorldStats/XPLAT.json',   
+    ],  {base: CodeGenLib + '/'})
+    .pipe(es.map(function(file, fileCallback) { 
+        let jsonPath = file.dirname + '/' + file.basename;
+        let jsonContent = file.contents.toString();
+        let jsonArray = JSON.parse(jsonContent);
+        var verified = true;
+        var allColumns = [];
+
+        for (let i = 0; i < jsonArray.length; i++) {
+            var item = jsonArray[i];
+            var itemColumns = Object.keys(item);
+            for (let columnName of itemColumns) {
+                if (allColumns.indexOf(columnName) < 0) {
+                    allColumns.push(columnName);
+                }
+            }
+        }
+        for (let i = 0; i < jsonArray.length; i++) {
+            var item = jsonArray[i];
+            for (let columnName of allColumns) {
+                if (item[columnName] === undefined) {
+                    console.log("Item #" + i + " is missing '" + columnName + "' column in " + jsonPath)
+                    verified = false; break;    
+                } 
+            }
+            if (!verified) {
+                break;    
+            }
+        }
+
+        fileCallback(null, file);
+    })) 
+    .on("end", function() {
+        // gulp.src(['./CDN/_Readme.md',])
+        // .pipe(gulp.dest(CDN, {overwrite: true}))
+        cb();
+     });
 }
