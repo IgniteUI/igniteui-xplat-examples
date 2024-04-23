@@ -17,7 +17,7 @@
 { "Code": "PRI", "Name": "Puerto Rico", "Population": 3351827, "GDP": 131000, "X": -66.61, "Y": 18.235 },
 { "Code": "USA", "Name": "United States", "Population": 326625791, "GDP": 18560000, "X": -101.8, "Y": 39.818 },
 { "Code": "SGS", "Name": "South Sandwich Islands", "Population": 30, "GDP": 0, "X": -36.63, "Y": -54.36 },
-{ "Code": "IOT", "Name": "British Indian Teritory", "Population": 4000, "GDP": 160, "X": 72.424, "Y": -7.328 },
+{ "Code": "IOT", "Name": "British Indian Territory", "Population": 4000, "GDP": 160, "X": 72.424, "Y": -7.328 },
 { "Code": "SHN", "Name": "Saint Helena", "Population": 7828, "GDP": 31, "X": -10.03, "Y": -11.94 },
 { "Code": "PCN", "Name": "Pitcairn Island", "Population": 54, "GDP": 0, "X": -128.3, "Y": -24.36 },
 { "Code": "AIA", "Name": "Anguilla", "Population": 17087, "GDP": 175, "X": -63.07, "Y": 18.221 },
