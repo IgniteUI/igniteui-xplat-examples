@@ -153,16 +153,15 @@ exports.filterJSON = function filterJSON(cb) {
 
 exports.copyCDN = function copyCDN(cb)
 {
-
     var CDN = '//s0706dl2.igweb.local/download.infragistics.com/xplatform/library';
+    // var CDN = './CDN';
     console.log("--------------------------------------------------------------------");   
     console.log('uploading large data files from code-gen-library to CDN:');      
     console.log(CDN);   
     console.log("--------------------------------------------------------------------");   
     // this function copied large data files to CDN 
     gulp.src([
-        './CDN/_Readme.md',
-        CodeGenLib + '/CompanyData/XPLAT.json',
+        CodeGenLib + '/InvoicesWorldData/XPLAT.json',
         CodeGenLib + '/CompanyEmployees/XPLAT.json',
         CodeGenLib + '/EmployeesData/XPLAT.json',
         CodeGenLib + '/FinancialDataAll/XPLAT.json',
@@ -212,6 +211,8 @@ exports.copyCDN = function copyCDN(cb)
     }))
     .pipe(gulp.dest(CDN, {overwrite: true}))
     .on("end", function() {
+        // gulp.src(['./CDN/_Readme.md',])
+        // .pipe(gulp.dest(CDN, {overwrite: true}))
         cb();
      });
 }
@@ -219,12 +220,17 @@ exports.copyCDN = function copyCDN(cb)
 exports.compactJSON = function compactJSON(cb) {
     let filePaths = [
         // "/AnalyzeOrders/XPLAT.json",
-        // "/CompanyEmployees/XPLAT.json",
+        "/CompanyEmployees/XPLAT.json",
+        "/CompanyData/XPLAT.json",
+        "/InvoicesData/XPLAT.json",
+        "/PivotDataFlat/XPLAT.json",
+        "/PivotSalesData/XPLAT.json",
+        "/ProductSales/XPLAT.json",
         // "/NwindLocations/XPLAT.json",
         // "/ProductSales/XPLAT.json",
         // "/FinancialDataCurrencies/XPLAT.json",
-        "/FinancialDataFuel/XPLAT.json",
-        "/FinancialDataMetals/XPLAT.json",
+        // "/FinancialDataFuel/XPLAT.json",
+        // "/FinancialDataMetals/XPLAT.json",
     ];
     for (const filePath of filePaths) {
         let file = fs.readFileSync(CodeGenLib + filePath, "utf8");
