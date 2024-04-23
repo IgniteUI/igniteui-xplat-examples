@@ -366,7 +366,7 @@
 { "ID": 10364, "Name": "Jinjiang", "Country": "China", "Region": "Fujian", "Population": 1172827 },
 { "ID": 10365, "Name": "Goiania", "Country": "Brazil", "Region": "Goias", "Population": 1171195 },
 { "ID": 10366, "Name": "Guarulhos", "Country": "Brazil", "Region": "Sao Paulo", "Population": 1169577 },
-{ "ID": 10367, "Name": "Prague", "Country": "Czech Republic", "Region": "Hlavni mesto Praha", "Population": 1165581 },
+{ "ID": 10367, "Name": "Prague", "Country": "Czechia", "Region": "Hlavni mesto Praha", "Population": 1165581 },
 { "ID": 10368, "Name": "Varanasi", "Country": "India", "Region": "Uttar Pradesh", "Population": 1164404 },
 { "ID": 10369, "Name": "Batam", "Country": "Indonesia", "Region": "Riau", "Population": 1164352 },
 { "ID": 10370, "Name": "Jiujiang", "Country": "China", "Region": "Jiangxi", "Population": 1164268 },
