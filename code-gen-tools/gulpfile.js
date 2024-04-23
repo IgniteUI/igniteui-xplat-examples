@@ -95,8 +95,8 @@ exports.toJSON = toJSON;
 
 function sortJSON(cb) {
 
-    let filePath = CodeGenLib + "/WorldCitiesAbove500K/XPLAT.json";
-    // let filePath = CodeGenLib + "/WorldCities/XPLAT.json";
+    // let filePath = CodeGenLib + "/WorldCitiesAbove500K/XPLAT.json";
+    let filePath = CodeGenLib + "/WorldCountries/XPLAT.json";
     let file = fs.readFileSync(filePath, "utf8");
     let dataItems = JSON.parse(file);
 
@@ -104,17 +104,17 @@ function sortJSON(cb) {
     dataItems = dataItems.sort((a, b) => a.Population < b.Population ? 1 : -1);
 
     for (let i = 0; i < dataItems.length; i++) {
-        dataItems[i].ID = 10000 + i;
+        // dataItems[i].ID = 10000 + i;
     }
 
     let newDataItems = [];
     for (const item of dataItems) {
-        if (item.Population > 1000000) {
+        // if (item.Population > 1000000) {
             newDataItems.push(item);
-        }
+        // }
     }
 
-    let outputPath = CodeGenLib + "/WorldCitiesAbove1M/XPLAT.json";
+    let outputPath = filePath; // CodeGenLib + "/WorldCitiesAbove1M/XPLAT.json";
     saveJSON(outputPath, newDataItems,  "compact");
     cb();
 }
@@ -151,21 +151,69 @@ exports.filterJSON = function filterJSON(cb) {
     cb();
 }
 
-exports.copyCDN = function copyCDN(cb) {
-    let filePaths = [
-        "/FinancialDataAll/XPLAT.json",
-        "/FinancialDataMetals/XPLAT.json",
-        "/FinancialDataFuel/XPLAT.json",
-        "/FinancialDataCurrencies/XPLAT.json",
-        "/EmployeesData/XPLAT.json",
-        "/HierarchicalCustomersData/XPLAT.json",
-        "/InvoicesData/XPLAT.json",
-    ];
-    for (const filePath of filePaths) {
-        let file = fs.readFileSync(CodeGenLib + filePath, "utf8");
-        saveFile(CodeGenLib + "/_BK" + filePath, file); 
-    }
-    cb();
+exports.copyCDN = function copyCDN(cb)
+{
+
+    var CDN = '//s0706dl2.igweb.local/download.infragistics.com/xplatform/library';
+    console.log("--------------------------------------------------------------------");   
+    console.log('uploading large data files from code-gen-library to CDN:');      
+    console.log(CDN);   
+    console.log("--------------------------------------------------------------------");   
+    // this function copied large data files to CDN 
+    gulp.src([
+        './CDN/_Readme.md',
+        CodeGenLib + '/CompanyData/XPLAT.json',
+        CodeGenLib + '/CompanyEmployees/XPLAT.json',
+        CodeGenLib + '/EmployeesData/XPLAT.json',
+        CodeGenLib + '/FinancialDataAll/XPLAT.json',
+        CodeGenLib + '/FinancialDataCurrencies/XPLAT.json',
+        CodeGenLib + '/FinancialDataFuel/XPLAT.json',
+        CodeGenLib + '/FinancialDataMetals/XPLAT.json',
+        CodeGenLib + '/FinancialDataCurrencies/XPLAT.json',
+        CodeGenLib + '/HierarchicalCustomersData/XPLAT.json',
+        CodeGenLib + '/HierarchicalData/XPLAT.json',
+        CodeGenLib + '/WorldAustralianData/XPLAT.json',
+        CodeGenLib + '/InvoicesWorldData/XPLAT.json',
+        CodeGenLib + '/InvoicesData/XPLAT.json',
+        CodeGenLib + '/PivotData/XPLAT.json',
+        CodeGenLib + '/PivotDataFlat/XPLAT.json',
+        CodeGenLib + '/PivotSalesData/XPLAT.json',
+        CodeGenLib + '/PivotNestedData/XPLAT.json',
+        CodeGenLib + '/ProductSales/XPLAT.json',
+        CodeGenLib + '/SingersCustomers/XPLAT.json',
+        CodeGenLib + '/SingersData/XPLAT.json',
+        CodeGenLib + '/StockAmazon/XPLAT.json',
+        CodeGenLib + '/Stock2Years/XPLAT.json',
+        CodeGenLib + '/StockGoogle/XPLAT.json',
+        CodeGenLib + '/StockMarket100/XPLAT.json',
+        CodeGenLib + '/StockMarket10/XPLAT.json',
+        CodeGenLib + '/StockMarket1000/XPLAT.json',
+        CodeGenLib + '/StockMarket2000/XPLAT.json',
+        CodeGenLib + '/StockMarket500/XPLAT.json',
+        CodeGenLib + '/StockSP500Cap/XPLAT.json',
+        CodeGenLib + '/StockMicrosoft/XPLAT.json',
+        CodeGenLib + '/StockTesla/XPLAT.json',
+        CodeGenLib + '/WorldAustralianData/XPLAT.json',
+        CodeGenLib + '/WorldCapitals/XPLAT.json',
+        CodeGenLib + '/WorldCapitals1M/XPLAT.json',
+        CodeGenLib + '/WorldCapitals2M/XPLAT.json',
+        CodeGenLib + '/WorldCapitals5M/XPLAT.json',
+        CodeGenLib + '/WorldCitiesAbove100K/XPLAT.json',
+        CodeGenLib + '/WorldCities/XPLAT.json',
+        CodeGenLib + '/WorldCitiesAbove15K/XPLAT.json',
+        CodeGenLib + '/WorldCitiesAbove1M/XPLAT.json',
+        CodeGenLib + '/WorldCitiesAbove500K/XPLAT.json',
+        CodeGenLib + '/WorldCountries/XPLAT.json',
+        CodeGenLib + '/WorldStats/XPLAT.json',   
+    ],  {base: CodeGenLib + '/'})
+    .pipe(es.map(function(file, fileCallback) {
+        console.log(file.dirname + '/' + file.basename);        
+        fileCallback(null, file);
+    }))
+    .pipe(gulp.dest(CDN, {overwrite: true}))
+    .on("end", function() {
+        cb();
+     });
 }
 
 exports.compactJSON = function compactJSON(cb) {
