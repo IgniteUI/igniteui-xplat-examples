@@ -172,7 +172,7 @@
 { "ID": 10170, "Name": "Perth", "Country": "Australia", "Region": "Western Australia", "Population": 1896548 },
 { "ID": 10171, "Name": "Sapporo", "Country": "Japan", "Region": "Hokkaido", "Population": 1883027 },
 { "ID": 10172, "Name": "Jilin", "Country": "China", "Region": "Jilin", "Population": 1881977 },
-{ "ID": 10173, "Name": "Bucharest", "Country": "Romania", "Region": "Bucuresti", "Population": 1877155 },
+{ "ID": 10173, "Name": "Bucharest", "Country": "Romania", "Region": "Bucharest", "Population": 1877155 },
 { "ID": 10174, "Name": "Camayenne", "Country": "Guinea", "Region": "Conakry", "Population": 1871242 },
 { "ID": 10175, "Name": "Nanchong", "Country": "China", "Region": "Sichuan", "Population": 1858875 },
 { "ID": 10176, "Name": "Indore", "Country": "India", "Region": "Madhya Pradesh", "Population": 1837041 },
