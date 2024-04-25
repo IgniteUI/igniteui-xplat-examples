@@ -1,6 +1,6 @@
 {
   "strings": {
-    "legendTitle": "Electricity Production from Renewables"
+    "legendTitle": "Annual Birth Rates by World Region"
   },
   "skipAlterDataCasing": true,
   "descriptions": {
@@ -39,7 +39,8 @@
       "chartType": "Column",
       "isHorizontalZoomEnabled": false,
       "isVerticalZoomEnabled": false,
-      "crosshairsDisplayMode": "None"
+      "crosshairsDisplayMode": "None",
+      "yAxisLabelFormat": "{0}M"
     }
   },
   "modules": [
