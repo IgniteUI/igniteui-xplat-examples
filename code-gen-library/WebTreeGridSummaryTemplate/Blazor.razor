@@ -1,0 +1,64 @@
+﻿//begin template
+@using IgniteUI.Blazor.Controls
+
+@inject IIgniteUIBlazor IgniteUIBlazor;
+
+<!--begin styles-->
+<style>
+    .summary-temp {
+        display: flex;
+        flex-direction: column;
+        margin: 0 1px;
+        font-size: 14px;
+        line-height: 24px;
+        height: 100%;
+        overflow-y: auto;
+        overflow-x: hidden;
+        > * {
+            padding: 8px 0;
+            line-height: 18px;
+            border-bottom: 1px dashed hsla(var(--igx-gray-400));
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+    }
+    .summary-temp span {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 4px;
+        justify-content: space-between;
+        color: hsla(var(--ig-gray-900));
+    }
+    .summary-temp span span {
+        user-select: all;
+        max-width: 300px;
+        padding-right: 8px;
+    }
+    .summary-temp span strong {
+        font-size: 12px;
+        text-transform: uppercase;
+        min-width: 70px;
+        justify-self: flex-start;
+        text-align: left;
+        color: hsla(var(--ig-secondary-600));
+        user-select: none;
+    }
+</style>
+<!--end styles-->
+
+@code {
+    //begin content
+    public RenderFragment<IgbSummaryTemplateContext> WebTreeGridSummaryTemplate = (ctx) => {
+        var summaryResults = ctx.Implicit;
+        return @<div class="summary-temp">
+            <span><strong>@(summaryResults[0].Label)</strong><span>@(summaryResults[0].Result)</span></span>
+            <span><strong>@(summaryResults[1].Label)</strong><span>@(summaryResults[1].Result)</span></span>
+            <span><strong>@(summaryResults[2].Label)</strong><span>@(summaryResults[2].Result)</span></span>
+			<span><strong>@(summaryResults[3].Label)</strong><span>@(summaryResults[3].Result)</span></span>
+        </div>;
+    };
+    //end content
+}
+//end template
