@@ -15,8 +15,9 @@
       "highlightedValueMemberPath": "UrbanPopulation",
       "highlightedValuesDisplayMode": "Overlay",
       "fillBrushes": ["#FC4100", "#FFC55A", "#00215E", "#2C4E80"],
+      "isFillScaleLogarithmic": true,
       "rootTitle": "Continents",
-      "headerDisplayMode": "Overlay"
+      "headerDisplayMode": "Overlay"	  
     }
   },
   "modules": [
