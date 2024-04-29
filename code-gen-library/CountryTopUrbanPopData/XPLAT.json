@@ -7,7 +7,7 @@
   { "Code": "CAM", "Parent": null, "Name": "Central America", "Population": null, "UrbanPopulation": null, "UrbanPopPercent": null },
   { "Code": "SAM", "Parent": null, "Name": "South America", "Population": null, "UrbanPopulation": null, "UrbanPopPercent": null },
   { "Code": "OCE", "Parent": null, "Name": "Oceania", "Population": null, "UrbanPopulation": null, "UrbanPopPercent": null },
-  { "Code": "CHI", "Parent": "Asia", "Name": "China", "Population": 1425671352, "UrbanPopulation": 941865672, "UrbanPopPercent": "65%" },
+  { "Code": "CHI", "Parent": "Asia", "Name": "China", "Population": 1425178792, "UrbanPopulation": 941865672, "UrbanPopPercent": "65%" },
   { "Code": "IND", "Parent": "Asia", "Name": "India", "Population": 1428627663, "UrbanPopulation": 530387142, "UrbanPopPercent": "36%" },
   { "Code": "MEX", "Parent": "North America", "Name": "Mexico", "Population": 341814420, "UrbanPopulation": 284698234, "UrbanPopPercent": "83%" },
   { "Code": "USA", "Parent": "North America", "Name": "United States", "Population": 129388467, "UrbanPopulation": 114397383, "UrbanPopPercent": "88%" }
