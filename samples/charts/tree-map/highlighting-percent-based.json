@@ -1,5 +1,4 @@
 {
-  "export": false,
   "strings": {
     "legendTitle": "Comparing Top Urban Population Percentages between North America & Asia"
   },
@@ -20,7 +19,10 @@
       "isFillScaleLogarithmic": true,
       "labelVerticalAlignment": "Top",
       "parentNodeTopMargin": 10,
-      "fillScaleMode": "Value"
+      "fillScaleMode": "Value",
+      "textColor": "black",
+      "fontSize": 25,
+      "fontWeight": "Bold"
     }
   },
   "modules": [
