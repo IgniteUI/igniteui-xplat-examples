@@ -53,10 +53,10 @@ namespace Infragistics.Samples
                 item.ChangePercent = ((JsonElement)json["ChangePercent"]).GetDouble();
                 item.High = ((JsonElement)json["High"]).GetDouble();
                 item.Low = ((JsonElement)json["Low"]).GetDouble();
-                item.AnnualHigh = ((JsonElement)json["AnnualHigh"]).GetDouble();
-                item.AnnualLow = ((JsonElement)json["AnnualLow"]).GetDouble();
-                item.AnnualStart = ((JsonElement)json["AnnualStart"]).GetDouble();
-                item.AnnualChange = ((JsonElement)json["AnnualChange"]).GetDouble();
+                item.AnnualHigh = ((JsonElement)json["YearlyHigh"]).GetDouble();
+                item.AnnualLow = ((JsonElement)json["YearlyLow"]).GetDouble();
+                item.AnnualStart = ((JsonElement)json["YearlyStart"]).GetDouble();
+                item.AnnualChange = ((JsonElement)json["YearlyChange"]).GetDouble();
                 item.ZV_SPREAD = ((JsonElement)json["ZV_SPREAD"]).GetDouble();
                 item.KRD_3YR = ((JsonElement)json["KRD_3YR"]).GetDouble();
                 item.KRD_5YR = ((JsonElement)json["KRD_5YR"]).GetDouble();

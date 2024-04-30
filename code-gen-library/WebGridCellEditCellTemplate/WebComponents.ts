@@ -9,7 +9,7 @@ export class WebGridCellEditCellTemplate {
 public webGridCellEditCellTemplate = (ctx: IgcCellTemplateContext) => {
     let cellValues: any = [];
     let uniqueValues: any = [];
-    for(const i of (this.webGridCellEditSampleRoleplay as any)){
+    for(const i of (this.roleplayDataStats as any)){
         const field: string = ctx.cell.column.field;
         if(uniqueValues.indexOf(i[field]) === -1 )
         {

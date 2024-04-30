@@ -21,8 +21,8 @@
           "label": "Initial Groups",
           "valueType": "EnumValue",
           "shouldOverrideDefaultEditor": true,
-          "dropDownNames": ["Country", "Product", "MonthName", "Year"],
-          "dropDownValues": ["Country", "Product", "MonthName", "Year"],
+          "dropDownNames": ["Country", "Product", "Month", "Year"],
+          "dropDownValues": ["Country", "Product", "Month", "Year"],
           "primitiveValue": "Country",
           "changedRef": "EditorChangeUpdateInitialGroups"
         }

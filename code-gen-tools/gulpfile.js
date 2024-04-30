@@ -95,8 +95,8 @@ exports.toJSON = toJSON;
 
 function sortJSON(cb) {
 
-    let filePath = CodeGenLib + "/WorldCitiesAbove15K/XPLAT.json";
-    // let filePath = CodeGenLib + "/WorldCities/XPLAT.json";
+    // let filePath = CodeGenLib + "/WorldCitiesAbove500K/XPLAT.json";
+    let filePath = CodeGenLib + "/WorldCountries/XPLAT.json";
     let file = fs.readFileSync(filePath, "utf8");
     let dataItems = JSON.parse(file);
 
@@ -104,17 +104,18 @@ function sortJSON(cb) {
     dataItems = dataItems.sort((a, b) => a.Population < b.Population ? 1 : -1);
 
     for (let i = 0; i < dataItems.length; i++) {
-        dataItems[i].ID = 10000 + i;
+        // dataItems[i].ID = 10000 + i;
     }
 
     let newDataItems = [];
     for (const item of dataItems) {
-        if (item.Population > 15000) {
+        // if (item.Population > 1000000) {
             newDataItems.push(item);
-        }
+        // }
     }
 
-    saveJSON(filePath, newDataItems,  "compact");
+    let outputPath = filePath; // CodeGenLib + "/WorldCitiesAbove1M/XPLAT.json";
+    saveJSON(outputPath, newDataItems,  "compact");
     cb();
 }
 exports.sortJSON = sortJSON;
@@ -150,17 +151,91 @@ exports.filterJSON = function filterJSON(cb) {
     cb();
 }
 
+exports.copyCDN = function copyCDN(cb)
+{
+    var CDN = '//s0706dl2.igweb.local/download.infragistics.com/xplatform/library';
+    // var CDN = './CDN';
+    console.log("--------------------------------------------------------------------");   
+    console.log('uploading large data files from code-gen-library to CDN:');      
+    console.log(CDN);   
+    console.log("--------------------------------------------------------------------");   
+    // this function copied large data files to CDN 
+    gulp.src([
+        CodeGenLib + '/InvoicesWorldData/XPLAT.json',
+        CodeGenLib + '/CompanyEmployees/XPLAT.json',
+        CodeGenLib + '/EmployeesData/XPLAT.json',
+        CodeGenLib + '/FinancialDataAll/XPLAT.json',
+        CodeGenLib + '/FinancialDataCurrencies/XPLAT.json',
+        CodeGenLib + '/FinancialDataFuel/XPLAT.json',
+        CodeGenLib + '/FinancialDataMetals/XPLAT.json',
+        CodeGenLib + '/FinancialDataCurrencies/XPLAT.json',
+        CodeGenLib + '/HierarchicalCustomersData/XPLAT.json',
+        CodeGenLib + '/HierarchicalData/XPLAT.json',
+        CodeGenLib + '/WorldAustralianData/XPLAT.json',
+        CodeGenLib + '/InvoicesWorldData/XPLAT.json',
+        CodeGenLib + '/InvoicesData/XPLAT.json',
+        CodeGenLib + '/PivotData/XPLAT.json',
+        CodeGenLib + '/PivotDataFlat/XPLAT.json',
+        CodeGenLib + '/PivotSalesData/XPLAT.json',
+        CodeGenLib + '/PivotNestedData/XPLAT.json',
+        CodeGenLib + '/ProductSales/XPLAT.json',
+        CodeGenLib + '/SingersCustomers/XPLAT.json',
+        CodeGenLib + '/SingersData/XPLAT.json',
+        CodeGenLib + '/StockAmazon/XPLAT.json',
+        CodeGenLib + '/Stock2Years/XPLAT.json',
+        CodeGenLib + '/StockGoogle/XPLAT.json',
+        CodeGenLib + '/StockMarket100/XPLAT.json',
+        CodeGenLib + '/StockMarket10/XPLAT.json',
+        CodeGenLib + '/StockMarket1000/XPLAT.json',
+        CodeGenLib + '/StockMarket2000/XPLAT.json',
+        CodeGenLib + '/StockMarket500/XPLAT.json',
+        CodeGenLib + '/StockSP500Cap/XPLAT.json',
+        CodeGenLib + '/StockMicrosoft/XPLAT.json',
+        CodeGenLib + '/StockTesla/XPLAT.json',
+        CodeGenLib + '/WorldAustralianData/XPLAT.json',
+        CodeGenLib + '/WorldCapitals/XPLAT.json',
+        CodeGenLib + '/WorldCapitals1M/XPLAT.json',
+        CodeGenLib + '/WorldCapitals2M/XPLAT.json',
+        CodeGenLib + '/WorldCapitals5M/XPLAT.json',
+        CodeGenLib + '/WorldCitiesAbove100K/XPLAT.json',
+        CodeGenLib + '/WorldCities/XPLAT.json',
+        CodeGenLib + '/WorldCitiesAbove15K/XPLAT.json',
+        CodeGenLib + '/WorldCitiesAbove1M/XPLAT.json',
+        CodeGenLib + '/WorldCitiesAbove500K/XPLAT.json',
+        CodeGenLib + '/WorldCountries/XPLAT.json',
+        CodeGenLib + '/WorldStats/XPLAT.json',   
+    ],  {base: CodeGenLib + '/'})
+    .pipe(es.map(function(file, fileCallback) {
+        console.log(file.dirname + '/' + file.basename);        
+        fileCallback(null, file);
+    }))
+    .pipe(gulp.dest(CDN, {overwrite: true}))
+    .on("end", function() {
+        // gulp.src(['./CDN/_Readme.md',])
+        // .pipe(gulp.dest(CDN, {overwrite: true}))
+        cb();
+     });
+}
+
 exports.compactJSON = function compactJSON(cb) {
     let filePaths = [
-        "/AnalyzeOrders/XPLAT.json",
+        // "/AnalyzeOrders/XPLAT.json",
         "/CompanyEmployees/XPLAT.json",
-        "/NwindLocations/XPLAT.json",
+        "/CompanyData/XPLAT.json",
+        "/InvoicesData/XPLAT.json",
+        "/PivotDataFlat/XPLAT.json",
+        "/PivotSalesData/XPLAT.json",
         "/ProductSales/XPLAT.json",
+        // "/NwindLocations/XPLAT.json",
+        // "/ProductSales/XPLAT.json",
+        // "/FinancialDataCurrencies/XPLAT.json",
+        // "/FinancialDataFuel/XPLAT.json",
+        // "/FinancialDataMetals/XPLAT.json",
     ];
     for (const filePath of filePaths) {
         let file = fs.readFileSync(CodeGenLib + filePath, "utf8");
         let dataItems = JSON.parse(file);
-        saveJSON(filePath, dataItems,  "compact");
+        saveJSON(CodeGenLib + filePath, dataItems,  "compact");
     }
     cb();
 }
@@ -327,9 +402,11 @@ function convertColumnTypes(cb) {
     // var numericColumns = ["Product.UnitPrice", "NumberOfUnits", "Value"];
     // var numericColumns = ["UnitsSold", "Year"];
     var numericColumns = [
+        // "PostalCode",
+        //  "ShipPostalCode"
     //     "Open", "Close", "Low", "High", "Price", "Buy", "Sell",
     //  "ZV_SPREAD", "Change", "ChangePercent", "KRD_3YR",
-    // "AnnualStart", "AnnualChange", "AnnualLow", "AnnualHigh"
+    // "YearlyStart", "YearlyChange", "YearlyLow", "YearlyHigh"
     ];
 
     // let filePath = CodeGenLib + "/PivotSalesData/XPLAT.json";
@@ -344,11 +421,12 @@ function convertColumnTypes(cb) {
     // let filePath = CodeGenLib + "/FinancialDataCurrencies/XPLAT.json";
     // let filePath = CodeGenLib + "/HierarchicalCustomers/XPLAT.json";
     // let filePath = CodeGenLib + "/PivotData/XPLAT.json";
-    let filePath = CodeGenLib + "/PivotDataFlat/XPLAT.json";
+    // let filePath = CodeGenLib + "/PivotDataFlat/XPLAT.json";
     // let filePath = CodeGenLib + "/ProductInventory/XPLAT.json";
     // let filePath = CodeGenLib + "/ProductSales/XPLAT.json";
     // let filePath = CodeGenLib + "/SingersCustomers/XPLAT.json";
-
+    // let filePath = CodeGenLib + "/HierarchicalCustomers/XPLAT.json";
+    let filePath = CodeGenLib + "/HierarchicalCustomersData/XPLAT.json";
 
     console.log(filePath);
     let file = fs.readFileSync(filePath, "utf8");
@@ -356,7 +434,7 @@ function convertColumnTypes(cb) {
     let orgDataItems = JSON.parse(file);
     // console.log(orgDataItems[0]);
 
-    orgDataItems = utils.toNumberRecursive(orgDataItems, 2, numericColumns, true);
+    orgDataItems = utils.toNumberRecursive(orgDataItems, 3, numericColumns, true);
 
     // for (const item of orgDataItems) {
 
@@ -384,7 +462,7 @@ function convertColumnTypes(cb) {
     //     }
     // }
 
-    console.log(orgDataItems[0]);
+    // console.log(orgDataItems[0]);
     // console.log(orgDataItems[0].Orders[0]);
 
     // console.log(orgDataItems[0].Orders[0].OrderDetails);
@@ -432,7 +510,7 @@ exports.convertWorldStats = function convertWorldStats(cb) {
         }
 
         if (jsonItem.Population > 1000) {
-            jsonItem["GDPPerPerson"] = Math.round(jsonItem["GDPTotal"] * 1000000 / jsonItem["Population"]);
+            jsonItem["GdpPerPerson"] = Math.round(jsonItem["GdpTotal"] * 1000000 / jsonItem["Population"]);
             jsonData.push(jsonItem);
         }
 
@@ -445,6 +523,73 @@ exports.convertWorldStats = function convertWorldStats(cb) {
 
     let jsonPath = CodeGenLib + "/WorldStats/XPLAT.json";
     saveJSON(jsonPath, jsonData,  "compact");
+    cb();
+}
+
+exports.injectWorldStats = function injectWorldStats(cb) {   
+    let file1Path = CodeGenLib + "/WorldStats/XPLAT.json";
+    let file1 = fs.readFileSync(file1Path, "utf8");
+    let file1Data = JSON.parse(file1);
+    file1Data.sort((a, b) => a.Name < b.Name ? 1 : -1);
+    
+    // let file2Path = CodeGenLib + "/WorldDebtAndPopulation/XPLAT.json";
+    // let file2 = fs.readFileSync(file2Path, "utf8");
+    // let file2Data = JSON.parse(file2);
+    // file2Data.sort((a, b) => a.Name < b.Name ? 1 : -1);
+
+    var notFound = [];
+    // for (let i = 0; i < file1Data.length; i++) {
+        // var item2 = file1Data[i];  
+
+        var missing = true;
+        // for (let ii = 0; ii < file1Data.length; ii++) {
+        //     var item1 = file1Data[ii];
+        //     if (file1Data[ii].Name === item2.Name) {
+
+        //         file1Data[ii].Unemployment = item2.Unemployment;
+        //         file1Data[ii].Televisions = item2.Televisions;
+        //         file1Data[ii].PublicDebt = item2.PublicDebt;
+        //         file1Data[ii].OilProduction = item2.OilProduction;
+        //         file1Data[ii].MedianAge = item2.MedianAge;
+        //         file1Data[ii].Internet = item2.InternetUsers;
+        //         file1Data[ii].Electricity = item2.ElectricityProduction;
+        //         file1Data[ii].BirthRate = item2.BirthRate; 
+        //         missing = false;
+        //         break; 
+        //     }
+        // } 
+        for (let ii = 0; ii < file1Data.length; ii++) {
+            // if (!file1Data[ii].Unemployment) {
+            //     file1Data[ii].Unemployment = Math.round(utils.randomInteger(1, 15));
+            //     file1Data[ii].OilProduction = utils.randomInteger(0, 5);
+            //     file1Data[ii].BirthRate = utils.randomInteger(5, 25);
+            //     file1Data[ii].MedianAge = utils.randomInteger(30, 55);
+            //     file1Data[ii].Electricity = utils.randomInteger(3000, 95000);
+            //     file1Data[ii].InternetUsers = Math.round(utils.randomInteger(file1Data[ii].Population * 0.3, file1Data[ii].Population * 0.8));
+            //     file1Data[ii].Televisions = Math.round(utils.randomInteger(file1Data[ii].Population * 0.1, file1Data[ii].Population * 0.8));
+            // }
+
+            if (!file1Data[ii].PublicDebt) {
+                 file1Data[ii].PublicDebt = Math.round(utils.randomInteger(5, 45));
+            }
+            if (!file1Data[ii].Internet) {
+                 file1Data[ii].Internet = Math.round(utils.randomInteger(1000, file1Data[ii].Population * 0.8));
+            }
+            file1Data[ii].InternetUsers = undefined; 
+            // file1Data[ii].InternetUsers = Math.round(file1Data[ii].InternetUsers);
+            // file1Data[ii].Televisions = Math.round(file1Data[ii].Televisions);
+        // }
+
+        file1Data.sort((a, b) => a.Population < b.Population ? 1 : -1);
+
+        if (missing) {
+            // console.log("not found " + i + " " + item2.Name);
+        } 
+    }
+    // console.log(notFound);
+
+    saveJSON(file1Path, file1Data,  "compact");
+    // saveJSON(file2Path, file2Data,  "compact");
     cb();
 }
 
@@ -959,4 +1104,55 @@ exports.toCSV = function toCSV(cb) {
     var cvsPath = jsonPath.replace('.json', '.csv');
     saveFile(cvsPath, cvsContent);
     cb();
+}
+
+
+exports.verifyJSON = function verifyJSON(cb)
+{ 
+    // var CDN = './CDN';
+        var verified = true;
+    console.log("--------------------------------------------------------------------");   
+    console.log('verifying XPLAT.JSON files:');      
+    console.log("--------------------------------------------------------------------");   
+    // this function copied large data files to CDN 
+    gulp.src([
+        CodeGenLib + '/**/XPLAT.json',   
+        // CodeGenLib + '/WorldStats/XPLAT.json',   
+    ],  {base: CodeGenLib + '/'})
+    .pipe(es.map(function(file, fileCallback) { 
+        let jsonPath = file.dirname + '/' + file.basename;
+        let jsonContent = file.contents.toString();
+        let jsonArray = JSON.parse(jsonContent);
+        var verified = true;
+        var allColumns = [];
+
+        for (let i = 0; i < jsonArray.length; i++) {
+            var item = jsonArray[i];
+            var itemColumns = Object.keys(item);
+            for (let columnName of itemColumns) {
+                if (allColumns.indexOf(columnName) < 0) {
+                    allColumns.push(columnName);
+                }
+            }
+        }
+        for (let i = 0; i < jsonArray.length; i++) {
+            var item = jsonArray[i];
+            for (let columnName of allColumns) {
+                if (item[columnName] === undefined) {
+                    console.log("Item #" + i + " is missing '" + columnName + "' column in " + jsonPath)
+                    verified = false; break;    
+                } 
+            }
+            if (!verified) {
+                break;    
+            }
+        }
+
+        fileCallback(null, file);
+    })) 
+    .on("end", function() {
+        // gulp.src(['./CDN/_Readme.md',])
+        // .pipe(gulp.dest(CDN, {overwrite: true}))
+        cb();
+     });
 }

@@ -27,7 +27,7 @@
       "name": "chart",
       "chartType": "Column",
       "dataSourceRef": "SalesData",
-      "initialGroups": "MonthName",
+      "initialGroups": "Month",
       "initialHighlightFilter": "Country ne 'UK'",
       "highlightedValuesDisplayMode": "Hidden"
     }
