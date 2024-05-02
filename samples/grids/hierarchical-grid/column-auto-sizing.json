@@ -1,4 +1,6 @@
 {
+  "export": false,
+  "todo": "fix exporting to Blazor - https://github.com/IgniteUI/igniteui-xplat-examples/issues/603",
   "skipAlterDataCasing": true,
   "descriptions": {
     "content": {
