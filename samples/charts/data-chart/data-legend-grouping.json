@@ -1,5 +1,4 @@
 {
-  "export": false,
   "descriptions": {
     "legend": {
       "type": "DataLegend",
@@ -52,6 +51,12 @@
           "title": "Russia",
           "valueMemberPath": "Russia",
           "dataLegendGroup": "Medals by Country"
+        },
+        {
+          "type": "DataToolTipLayer",
+          "groupingMode": "Grouped",
+          "groupRowVisible": true
+
         }
       ]
     }
