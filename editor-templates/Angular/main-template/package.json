@@ -19,30 +19,30 @@
     "core-js": "3.21.0",
     "hammerjs": "2.0.8",
 //ifdef charts, maps
-    "igniteui-angular-charts": "17.3.0",
+    "@infragistics/igniteui-angular-charts": "23.2.202",
 //endifdef charts, maps
-    "igniteui-angular-core": "17.3.0",
+    "@infragistics/igniteui-angular-core": "23.2.202",
 //ifdef excel, spreadsheet
-    "igniteui-angular-excel": "17.3.0",
+    "@infragistics/igniteui-angular-excel": "23.2.202",
 //endifdef excel, spreadsheet
 //ifdef gauges
-    "igniteui-angular-gauges": "17.3.0",
+    "@infragistics/igniteui-angular-gauges": "23.2.202",
 //endifdef gauges
 //ifdef editor, layouts, inputs
-    "igniteui-angular-inputs": "17.3.0",
+    "@infragistics/igniteui-angular-inputs": "23.2.202",
 //endifdef editor, layouts, inputs
 //ifdef grid, editor, layouts
-    "igniteui-angular-layouts": "17.3.0",
+    "@infragistics/igniteui-angular-layouts": "23.2.202",
 //endifdef grid, editor, layouts
 //ifdef maps
-    "igniteui-angular-maps": "17.3.0",
+    "@infragistics/igniteui-angular-maps": "23.2.202",
 //endifdef maps
 //ifdef spreadsheet
-    "igniteui-angular-spreadsheet": "17.3.0",
-    "igniteui-angular-spreadsheet-chart-adapter": "17.3.0",
+    "@infragistics/igniteui-angular-spreadsheet": "23.2.202",
+    "@infragistics/igniteui-angular-spreadsheet-chart-adapter": "23.2.202",
 //endifdef spreadsheet
 //ifdef webcomponents, editor
-    "igniteui-webcomponents": "4.8.0",
+    "igniteui-webcomponents": "4.9.0",
 //endifdef webcomponents, editor
     "intl": "1.2.5",
     "jszip": "3.8.0",
