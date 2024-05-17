@@ -27,7 +27,6 @@
       "isVerticalZoomEnabled": false,
       "dataSourceRef": "TemperatureAnnotatedData",
       "highlightingMode": "BrightenSpecific",
-      "crosshairsAnnotationEnabled": false,
       "toolTipType": "None",
       "crosshairsDisplayMode": "None"
     }

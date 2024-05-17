@@ -35,14 +35,12 @@
       "computedPlotAreaMarginMode": "Series",
       "isHorizontalZoomEnabled": false,
       "isVerticalZoomEnabled": false,
-      "includedProperties": ["Month", "Temperature"],
       "dataSourceRef": "TemperatureAnnotatedData",
-      "isCategoryHighlightingEnabled": true,
       "highlightingMode": "FadeOthersSpecific",
       "highlightingBehavior": "NearestItemsAndSeries",
-      "crosshairsAnnotationYAxisPrecision": 0,
       "yAxisMaximumValue": 35,
-      "yAxisLabelLocation": "OutsideRight"
+      "yAxisLabelLocation": "OutsideRight",
+      "toolTipType": "None"
     }
   },
   "modules": [
