@@ -1,8 +1,6 @@
 //begin imports
-import { IgrGridComponent, IgrGridEditDoneEventArgs} from 'igniteui-react-grids';
+import { IgrGridEditDoneEventArgs} from 'igniteui-react-grids';
 //end imports
-
-import { CodeGenHelper } from 'igniteui-webcomponents-core';
 
 export class WebGridCellEditDone {
     //begin eventHandler
