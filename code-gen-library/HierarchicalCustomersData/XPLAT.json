@@ -1,7 +1,7 @@
 [
  {
   "CustomerID": "VINET",
-  "CompanyName": "Vins et alcools Chevalier",
+  "Company": "Vins et alcools Chevalier",
   "ContactName": "Paul Henriot",
   "ContactTitle": "Accounting Manager",
   "Address": "59 rue de l'Abbaye",
@@ -58,7 +58,7 @@
  },
  {
   "CustomerID": "TOMSP",
-  "CompanyName": "Toms Spezialitäten",
+  "Company": "Toms Spezialitäten",
   "ContactName": "Karin Josephs",
   "ContactTitle": "Marketing Manager",
   "Address": "Luisenstr. 48",
@@ -106,7 +106,7 @@
  },
  {
   "CustomerID": "HANAR",
-  "CompanyName": "Hanari Carnes",
+  "Company": "Hanari Carnes",
   "ContactName": "Mario Pontes",
   "ContactTitle": "Accounting Manager",
   "Address": "Rua do Paço, 67",
@@ -165,7 +165,7 @@
  },
  {
   "CustomerID": "VICTE",
-  "CompanyName": "Victuailles en stock",
+  "Company": "Victuailles en stock",
   "ContactName": "Mary Saveley",
   "ContactTitle": "Sales Agent",
   "Address": "2, rue du Commerce",
@@ -222,7 +222,7 @@
  },
  {
   "CustomerID": "SUPRD",
-  "CompanyName": "Suprêmes délices",
+  "Company": "Suprêmes délices",
   "ContactName": "Pascale Cartrain",
   "ContactTitle": "Accounting Manager",
   "Address": "Boulevard Tirou, 255",
@@ -270,7 +270,7 @@
  },
  {
   "CustomerID": "CHOPS",
-  "CompanyName": "Chop-suey Chinese",
+  "Company": "Chop-suey Chinese",
   "ContactName": "Yang Wang",
   "ContactTitle": "Owner",
   "Address": "Hauptstr. 29",
@@ -317,7 +317,7 @@
  },
  {
   "CustomerID": "RICSU",
-  "CompanyName": "Richter Supermarkt",
+  "Company": "Richter Supermarkt",
   "ContactName": "Michael Holz",
   "ContactTitle": "Sales Manager",
   "Address": "Grenzacherweg 237",
@@ -370,7 +370,7 @@
  },
  {
   "CustomerID": "WELLI",
-  "CompanyName": "Wellington Importadora",
+  "Company": "Wellington Importadora",
   "ContactName": "Paula Parente",
   "ContactTitle": "Sales Manager",
   "Address": "Rua do Mercado, 12",
@@ -413,7 +413,7 @@
  },
  {
   "CustomerID": "HILAA",
-  "CompanyName": "HILARION-Abastos",
+  "Company": "HILARION-Abastos",
   "ContactName": "Carlos Hernández",
   "ContactTitle": "Sales Representative",
   "Address": "Carrera 22 con Ave. Carlos Soublette #8-35",
@@ -463,7 +463,7 @@
  },
  {
   "CustomerID": "ERNSH",
-  "CompanyName": "Ernst Handel",
+  "Company": "Ernst Handel",
   "ContactName": "Roland Mendel",
   "ContactTitle": "Sales Manager",
   "Address": "Kirchgasse 6",
@@ -511,7 +511,7 @@
  },
  {
   "CustomerID": "CENTC",
-  "CompanyName": "Centro comercial Moctezuma",
+  "Company": "Centro comercial Moctezuma",
   "ContactName": "Francisco Chang",
   "ContactTitle": "Marketing Manager",
   "Address": "Sierras de Granada 9993",
@@ -553,7 +553,7 @@
  },
  {
   "CustomerID": "OTTIK",
-  "CompanyName": "Ottilies Käseladen",
+  "Company": "Ottilies Käseladen",
   "ContactName": "Henriette Pfalzheim",
   "ContactTitle": "Owner",
   "Address": "Mehrheimerstr. 369",
@@ -607,7 +607,7 @@
  },
  {
   "CustomerID": "QUEDE",
-  "CompanyName": "Que Delícia",
+  "Company": "Que Delícia",
   "ContactName": "Bernardo Batista",
   "ContactTitle": "Accounting Manager",
   "Address": "Rua da Panificadora, 12",
@@ -651,7 +651,7 @@
  },
  {
   "CustomerID": "RATTC",
-  "CompanyName": "Rattlesnake Canyon Grocery",
+  "Company": "Rattlesnake Canyon Grocery",
   "ContactName": "Paula Wilson",
   "ContactTitle": 40115,
   "Address": "2817 Milton Dr.",
@@ -701,7 +701,7 @@
  },
  {
   "CustomerID": "ERNSH",
-  "CompanyName": "Ernst Handel",
+  "Company": "Ernst Handel",
   "ContactName": "Roland Mendel",
   "ContactTitle": "Sales Manager",
   "Address": "Kirchgasse 6",
@@ -755,7 +755,7 @@
  },
  {
   "CustomerID": "FOLKO",
-  "CompanyName": "Folk och fä HB",
+  "Company": "Folk och fä HB",
   "ContactName": "Maria Larsson",
   "ContactTitle": "Owner",
   "Address": "Åkergatan 24",
@@ -796,7 +796,7 @@
  },
  {
   "CustomerID": "BLONP",
-  "CompanyName": "Blondesddsl père et fils",
+  "Company": "Blondesddsl père et fils",
   "ContactName": "Frédérique Citeaux",
   "ContactTitle": "Marketing Manager",
   "Address": "24, place Kléber",
@@ -838,7 +838,7 @@
  },
  {
   "CustomerID": "WARTH",
-  "CompanyName": "Wartian Herkku",
+  "Company": "Wartian Herkku",
   "ContactName": "Pirkko Koskitalo",
   "ContactTitle": "Accounting Manager",
   "Address": "Torikatu 38",
@@ -874,7 +874,7 @@
  },
  {
   "CustomerID": "FRANK",
-  "CompanyName": "Frankenversand",
+  "Company": "Frankenversand",
   "ContactName": "Peter Franken",
   "ContactTitle": "Marketing Manager",
   "Address": "Berliner Platz 43",
@@ -922,7 +922,7 @@
  },
  {
   "CustomerID": "GROSR",
-  "CompanyName": "GROSELLA-Restaurante",
+  "Company": "GROSELLA-Restaurante",
   "ContactName": "Manuel Pereira",
   "ContactTitle": "Owner",
   "Address": "5ª Ave. Los Palos Grandes",
@@ -966,7 +966,7 @@
  },
  {
   "CustomerID": "WHITC",
-  "CompanyName": "White Clover Markets",
+  "Company": "White Clover Markets",
   "ContactName": "Karl Jablonski",
   "ContactTitle": "Owner",
   "Address": "305 - 14th Ave. S. Suite 3B",
@@ -1010,7 +1010,7 @@
  },
  {
   "CustomerID": "WARTH",
-  "CompanyName": "Wartian Herkku",
+  "Company": "Wartian Herkku",
   "ContactName": "Pirkko Koskitalo",
   "ContactTitle": "Accounting Manager",
   "Address": "Torikatu 38",
@@ -1052,7 +1052,7 @@
  },
  {
   "CustomerID": "SPLIR",
-  "CompanyName": "Split Rail Beer & Ale",
+  "Company": "Split Rail Beer & Ale",
   "ContactName": "Art Braunschweiger",
   "ContactTitle": "Sales Manager",
   "Address": "P.O. Box 555",
@@ -1090,7 +1090,7 @@
  },
  {
   "CustomerID": "RATTC",
-  "CompanyName": "Rattlesnake Canyon Grocery",
+  "Company": "Rattlesnake Canyon Grocery",
   "ContactName": "Paula Wilson",
   "ContactTitle": 40417,
   "Address": "2817 Milton Dr.",
@@ -1140,7 +1140,7 @@
  },
  {
   "CustomerID": "QUICK",
-  "CompanyName": "QUICK-Stop",
+  "Company": "QUICK-Stop",
   "ContactName": "Horst Kloss",
   "ContactTitle": "Accounting Manager",
   "Address": "Taucherstraße 10",
@@ -1199,7 +1199,7 @@
  },
  {
   "CustomerID": "VINET",
-  "CompanyName": "Vins et alcools Chevalier",
+  "Company": "Vins et alcools Chevalier",
   "ContactName": "Paul Henriot",
   "ContactTitle": "Accounting Manager",
   "Address": "59 rue de l'Abbaye",
@@ -1241,7 +1241,7 @@
  },
  {
   "CustomerID": "MAGAA",
-  "CompanyName": "Magazzini Alimentari Riuniti",
+  "Company": "Magazzini Alimentari Riuniti",
   "ContactName": "Giovanni Rovelli",
   "ContactTitle": "Marketing Manager",
   "Address": "Via Ludovico il Moro 22",
@@ -1283,7 +1283,7 @@
  },
  {
   "CustomerID": "TORTU",
-  "CompanyName": "Tortuga Restaurante",
+  "Company": "Tortuga Restaurante",
   "ContactName": "Miguel Angel Paolino",
   "ContactTitle": "Owner",
   "Address": "Avda. Azteca 123",
@@ -1324,7 +1324,7 @@
  },
  {
   "CustomerID": "MORGK",
-  "CompanyName": "Morgenstern Gesundkost",
+  "Company": "Morgenstern Gesundkost",
   "ContactName": "Alexander Feuer",
   "ContactTitle": "Marketing Assistant",
   "Address": "Heerstr. 22",
@@ -1365,7 +1365,7 @@
  },
  {
   "CustomerID": "BERGS",
-  "CompanyName": "Berglunds snabbköp",
+  "Company": "Berglunds snabbköp",
   "ContactName": "Christina Berglund",
   "ContactTitle": "Order Administrator",
   "Address": "Berguvsvägen  8",
@@ -1419,7 +1419,7 @@
  },
  {
   "CustomerID": "LEHMS",
-  "CompanyName": "Lehmanns Marktstand",
+  "Company": "Lehmanns Marktstand",
   "ContactName": "Renate Messner",
   "ContactTitle": "Sales Representative",
   "Address": "Magazinweg 7",
@@ -1455,7 +1455,7 @@
  },
  {
   "CustomerID": "BERGS",
-  "CompanyName": "Berglunds snabbköp",
+  "Company": "Berglunds snabbköp",
   "ContactName": "Christina Berglund",
   "ContactTitle": "Order Administrator",
   "Address": "Berguvsvägen  8",
@@ -1503,7 +1503,7 @@
  },
  {
   "CustomerID": "ROMEY",
-  "CompanyName": "Romero y tomillo",
+  "Company": "Romero y tomillo",
   "ContactName": "Alejandra Camino",
   "ContactTitle": "Accounting Manager",
   "Address": "Gran Vía, 1",
@@ -1579,7 +1579,7 @@
  },
  {
   "CustomerID": "LILAS",
-  "CompanyName": "LILA-Supermercado",
+  "Company": "LILA-Supermercado",
   "ContactName": "Carlos González",
   "ContactTitle": "Accounting Manager",
   "Address": "Carrera 52 con Ave. Bolívar #65-98 Llano Largo",
@@ -1635,7 +1635,7 @@
  },
  {
   "CustomerID": "LEHMS",
-  "CompanyName": "Lehmanns Marktstand",
+  "Company": "Lehmanns Marktstand",
   "ContactName": "Renate Messner",
   "ContactTitle": "Sales Representative",
   "Address": "Magazinweg 7",
@@ -1689,7 +1689,7 @@
  },
  {
   "CustomerID": "QUICK",
-  "CompanyName": "QUICK-Stop",
+  "Company": "QUICK-Stop",
   "ContactName": "Horst Kloss",
   "ContactTitle": "Accounting Manager",
   "Address": "Taucherstraße 10",
@@ -1764,7 +1764,7 @@
  },
  {
   "CustomerID": "RICAR",
-  "CompanyName": "Ricardo Adocicados",
+  "Company": "Ricardo Adocicados",
   "ContactName": "Janete Limeira",
   "ContactTitle": 40801,
   "Address": "Av. Copacabana, 267",
@@ -1813,7 +1813,7 @@
  },
  {
   "CustomerID": "REGGC",
-  "CompanyName": "Reggiani Caseifici",
+  "Company": "Reggiani Caseifici",
   "ContactName": "Maurizio Moroni",
   "ContactTitle": "Sales Associate",
   "Address": "Strada Provinciale 124",
@@ -1855,7 +1855,7 @@
  },
  {
   "CustomerID": "BSBEV",
-  "CompanyName": "B's Beverages",
+  "Company": "B's Beverages",
   "ContactName": "Victoria Ashworth",
   "ContactTitle": "Sales Representative",
   "Address": "Fauntleroy Circus",
@@ -1896,7 +1896,7 @@
  },
  {
   "CustomerID": "COMMI",
-  "CompanyName": "Comércio Mineiro",
+  "Company": "Comércio Mineiro",
   "ContactName": "Pedro Afonso",
   "ContactTitle": "Sales Associate",
   "Address": "Av. dos Lusíadas, 23",
@@ -1951,7 +1951,7 @@
  },
  {
   "CustomerID": "QUEDE",
-  "CompanyName": "Que Delícia",
+  "Company": "Que Delícia",
   "ContactName": "Bernardo Batista",
   "ContactTitle": "Accounting Manager",
   "Address": "Rua da Panificadora, 12",
@@ -2001,7 +2001,7 @@
  },
  {
   "CustomerID": "TRADH",
-  "CompanyName": "Tradição Hipermercados",
+  "Company": "Tradição Hipermercados",
   "ContactName": "Anabela Domingues",
   "ContactTitle": "Sales Representative",
   "Address": "Av. Inês de Castro, 414",
@@ -2039,7 +2039,7 @@
  },
  {
   "CustomerID": "TORTU",
-  "CompanyName": "Tortuga Restaurante",
+  "Company": "Tortuga Restaurante",
   "ContactName": "Miguel Angel Paolino",
   "ContactTitle": "Owner",
   "Address": "Avda. Azteca 123",
@@ -2092,7 +2092,7 @@
  },
  {
   "CustomerID": "RATTC",
-  "CompanyName": "Rattlesnake Canyon Grocery",
+  "Company": "Rattlesnake Canyon Grocery",
   "ContactName": "Paula Wilson",
   "ContactTitle": 60306,
   "Address": "2817 Milton Dr.",
@@ -2154,7 +2154,7 @@
  },
  {
   "CustomerID": "VINET",
-  "CompanyName": "Vins et alcools Chevalier",
+  "Company": "Vins et alcools Chevalier",
   "ContactName": "Paul Henriot",
   "ContactTitle": "Accounting Manager",
   "Address": "59 rue de l'Abbaye",
@@ -2190,7 +2190,7 @@
  },
  {
   "CustomerID": "LILAS",
-  "CompanyName": "LILA-Supermercado",
+  "Company": "LILA-Supermercado",
   "ContactName": "Carlos González",
   "ContactTitle": "Accounting Manager",
   "Address": "Carrera 52 con Ave. Bolívar #65-98 Llano Largo",
@@ -2240,7 +2240,7 @@
  },
  {
   "CustomerID": "BLONP",
-  "CompanyName": "Blondesddsl père et fils",
+  "Company": "Blondesddsl père et fils",
   "ContactName": "Frédérique Citeaux",
   "ContactTitle": "Marketing Manager",
   "Address": "24, place Kléber",
@@ -2282,7 +2282,7 @@
  },
  {
   "CustomerID": "HUNGO",
-  "CompanyName": "Hungry Owl All-Night Grocers",
+  "Company": "Hungry Owl All-Night Grocers",
   "ContactName": "Patricia McKenna",
   "ContactTitle": "Sales Associate",
   "Address": "8 Johnstown Road",
@@ -2336,7 +2336,7 @@
  },
  {
   "CustomerID": "RICAR",
-  "CompanyName": "Ricardo Adocicados",
+  "Company": "Ricardo Adocicados",
   "ContactName": "Janete Limeira",
   "ContactTitle": 50615,
   "Address": "Av. Copacabana, 267",
@@ -2379,7 +2379,7 @@
  },
  {
   "CustomerID": "MAGAA",
-  "CompanyName": "Magazzini Alimentari Riuniti",
+  "Company": "Magazzini Alimentari Riuniti",
   "ContactName": "Giovanni Rovelli",
   "ContactTitle": "Marketing Manager",
   "Address": "Via Ludovico il Moro 22",
@@ -2421,7 +2421,7 @@
  },
  {
   "CustomerID": "WANDK",
-  "CompanyName": "Die Wandernde Kuh",
+  "Company": "Die Wandernde Kuh",
   "ContactName": "Rita Müller",
   "ContactTitle": "Sales Representative",
   "Address": "Adenauerallee 900",
@@ -2463,7 +2463,7 @@
  },
  {
   "CustomerID": "SUPRD",
-  "CompanyName": "Suprêmes délices",
+  "Company": "Suprêmes délices",
   "ContactName": "Pascale Cartrain",
   "ContactTitle": "Accounting Manager",
   "Address": "Boulevard Tirou, 255",
@@ -2511,7 +2511,7 @@
  },
  {
   "CustomerID": "GODOS",
-  "CompanyName": "Godos Cocina Típica",
+  "Company": "Godos Cocina Típica",
   "ContactName": "José Pedro Freyre",
   "ContactTitle": "Sales Manager",
   "Address": "C/ Romero, 33",
@@ -2558,7 +2558,7 @@
  },
  {
   "CustomerID": "TORTU",
-  "CompanyName": "Tortuga Restaurante",
+  "Company": "Tortuga Restaurante",
   "ContactName": "Miguel Angel Paolino",
   "ContactTitle": "Owner",
   "Address": "Avda. Azteca 123",
@@ -2605,7 +2605,7 @@
  },
  {
   "CustomerID": "OLDWO",
-  "CompanyName": "Old World Delicatessen",
+  "Company": "Old World Delicatessen",
   "ContactName": "Rene Phillips",
   "ContactTitle": "Sales Representative",
   "Address": "2743 Bering St.",
@@ -2655,7 +2655,7 @@
  },
  {
   "CustomerID": "ROMEY",
-  "CompanyName": "Romero y tomillo",
+  "Company": "Romero y tomillo",
   "ContactName": "Alejandra Camino",
   "ContactTitle": "Accounting Manager",
   "Address": "Gran Vía, 1",
@@ -2703,7 +2703,7 @@
  },
  {
   "CustomerID": "LONEP",
-  "CompanyName": "Lonesome Pine Restaurant",
+  "Company": "Lonesome Pine Restaurant",
   "ContactName": "Fran Wilson",
   "ContactTitle": "Sales Manager",
   "Address": "89 Chiaroscuro Rd.",
@@ -2747,7 +2747,7 @@
  },
  {
   "CustomerID": "ANATR",
-  "CompanyName": "Ana Trujillo Emparedados y helados",
+  "Company": "Ana Trujillo Emparedados y helados",
   "ContactName": "Ana Trujillo",
   "ContactTitle": "Owner",
   "Address": "Avda. de la Constitución 2222",
@@ -2789,7 +2789,7 @@
  },
  {
   "CustomerID": "HUNGO",
-  "CompanyName": "Hungry Owl All-Night Grocers",
+  "Company": "Hungry Owl All-Night Grocers",
   "ContactName": "Patricia McKenna",
   "ContactTitle": "Sales Associate",
   "Address": "8 Johnstown Road",
@@ -2849,7 +2849,7 @@
  },
  {
   "CustomerID": "THEBI",
-  "CompanyName": "The Big Cheese",
+  "Company": "The Big Cheese",
   "ContactName": "Liz Nixon",
   "ContactTitle": "Marketing Manager",
   "Address": "89 Jefferson Way Suite 2",
@@ -2892,7 +2892,7 @@
  },
  {
   "CustomerID": "DUMON",
-  "CompanyName": "Du monde entier",
+  "Company": "Du monde entier",
   "ContactName": "Janine Labrune",
   "ContactTitle": "Owner",
   "Address": "67, rue des Cinquante Otages",
@@ -2934,7 +2934,7 @@
  },
  {
   "CustomerID": "WANDK",
-  "CompanyName": "Die Wandernde Kuh",
+  "Company": "Die Wandernde Kuh",
   "ContactName": "Rita Müller",
   "ContactTitle": "Sales Representative",
   "Address": "Adenauerallee 900",
@@ -2988,7 +2988,7 @@
  },
  {
   "CustomerID": "QUICK",
-  "CompanyName": "QUICK-Stop",
+  "Company": "QUICK-Stop",
   "ContactName": "Horst Kloss",
   "ContactTitle": "Accounting Manager",
   "Address": "Taucherstraße 10",
@@ -3023,7 +3023,7 @@
  },
  {
   "CustomerID": "RATTC",
-  "CompanyName": "Rattlesnake Canyon Grocery",
+  "Company": "Rattlesnake Canyon Grocery",
   "ContactName": "Paula Wilson",
   "ContactTitle": 30375,
   "Address": "2817 Milton Dr.",
@@ -3073,7 +3073,7 @@
  },
  {
   "CustomerID": "ISLAT",
-  "CompanyName": "Island Trading",
+  "Company": "Island Trading",
   "ContactName": "Helen Bennett",
   "ContactTitle": "Marketing Manager",
   "Address": "Garden House Crowther Way",
@@ -3116,7 +3116,7 @@
  },
  {
   "CustomerID": "RATTC",
-  "CompanyName": "Rattlesnake Canyon Grocery",
+  "Company": "Rattlesnake Canyon Grocery",
   "ContactName": "Paula Wilson",
   "ContactTitle": 60144,
   "Address": "2817 Milton Dr.",
@@ -3160,7 +3160,7 @@
  },
  {
   "CustomerID": "LONEP",
-  "CompanyName": "Lonesome Pine Restaurant",
+  "Company": "Lonesome Pine Restaurant",
   "ContactName": "Fran Wilson",
   "ContactTitle": "Sales Manager",
   "Address": "89 Chiaroscuro Rd.",
@@ -3198,7 +3198,7 @@
  },
  {
   "CustomerID": "ISLAT",
-  "CompanyName": "Island Trading",
+  "Company": "Island Trading",
   "ContactName": "Helen Bennett",
   "ContactTitle": "Marketing Manager",
   "Address": "Garden House Crowther Way",
@@ -3241,7 +3241,7 @@
  },
  {
   "CustomerID": "TORTU",
-  "CompanyName": "Tortuga Restaurante",
+  "Company": "Tortuga Restaurante",
   "ContactName": "Miguel Angel Paolino",
   "ContactTitle": "Owner",
   "Address": "Avda. Azteca 123",
@@ -3288,7 +3288,7 @@
  },
  {
   "CustomerID": "WARTH",
-  "CompanyName": "Wartian Herkku",
+  "Company": "Wartian Herkku",
   "ContactName": "Pirkko Koskitalo",
   "ContactTitle": "Accounting Manager",
   "Address": "Torikatu 38",
@@ -3324,7 +3324,7 @@
  },
  {
   "CustomerID": "ISLAT",
-  "CompanyName": "Island Trading",
+  "Company": "Island Trading",
   "ContactName": "Helen Bennett",
   "ContactTitle": "Marketing Manager",
   "Address": "Garden House Crowther Way",
@@ -3361,7 +3361,7 @@
  },
  {
   "CustomerID": "PERIC",
-  "CompanyName": "Pericles Comidas clásicas",
+  "Company": "Pericles Comidas clásicas",
   "ContactName": "Guillermo Fernández",
   "ContactTitle": "Sales Representative",
   "Address": "Calle Dr. Jorge Cash 321",
@@ -3397,7 +3397,7 @@
  },
  {
   "CustomerID": "KOENE",
-  "CompanyName": "Königlich Essen",
+  "Company": "Königlich Essen",
   "ContactName": "Philip Cramer",
   "ContactTitle": "Sales Associate",
   "Address": "Maubelstr. 90",
@@ -3444,7 +3444,7 @@
  },
  {
   "CustomerID": "SAVEA",
-  "CompanyName": "Save-a-lot Markets",
+  "Company": "Save-a-lot Markets",
   "ContactName": "Jose Pavarotti",
   "ContactTitle": "Sales Representative",
   "Address": "187 Suffolk Ln.",
@@ -3505,7 +3505,7 @@
  },
  {
   "CustomerID": "KOENE",
-  "CompanyName": "Königlich Essen",
+  "Company": "Königlich Essen",
   "ContactName": "Philip Cramer",
   "ContactTitle": "Sales Associate",
   "Address": "Maubelstr. 90",
@@ -3564,7 +3564,7 @@
  },
  {
   "CustomerID": "BOLID",
-  "CompanyName": "Bólido Comidas preparadas",
+  "Company": "Bólido Comidas preparadas",
   "ContactName": "Martín Sommer",
   "ContactTitle": "Owner",
   "Address": "C/ Araquil, 67",
@@ -3612,7 +3612,7 @@
  },
  {
   "CustomerID": "FOLKO",
-  "CompanyName": "Folk och fä HB",
+  "Company": "Folk och fä HB",
   "ContactName": "Maria Larsson",
   "ContactTitle": "Owner",
   "Address": "Åkergatan 24",
@@ -3665,7 +3665,7 @@
  },
  {
   "CustomerID": "FURIB",
-  "CompanyName": "Furia Bacalhau e Frutos do Mar",
+  "Company": "Furia Bacalhau e Frutos do Mar",
   "ContactName": "Lino Rodriguez",
   "ContactTitle": "Sales Manager",
   "Address": "Jardim das rosas n. 32",
@@ -3713,7 +3713,7 @@
  },
  {
   "CustomerID": "SPLIR",
-  "CompanyName": "Split Rail Beer & Ale",
+  "Company": "Split Rail Beer & Ale",
   "ContactName": "Art Braunschweiger",
   "ContactTitle": "Sales Manager",
   "Address": "P.O. Box 555",
@@ -3769,7 +3769,7 @@
  },
  {
   "CustomerID": "LILAS",
-  "CompanyName": "LILA-Supermercado",
+  "Company": "LILA-Supermercado",
   "ContactName": "Carlos González",
   "ContactTitle": "Accounting Manager",
   "Address": "Carrera 52 con Ave. Bolívar #65-98 Llano Largo",
@@ -3813,7 +3813,7 @@
  },
  {
   "CustomerID": "BONAP",
-  "CompanyName": "Bon app'",
+  "Company": "Bon app'",
   "ContactName": "Laurence Lebihan",
   "ContactTitle": "Owner",
   "Address": "12, rue des Bouchers",
@@ -3849,7 +3849,7 @@
  },
  {
   "CustomerID": "MEREP",
-  "CompanyName": "Mère Paillarde",
+  "Company": "Mère Paillarde",
   "ContactName": "Jean Fresnière",
   "ContactTitle": "Marketing Assistant",
   "Address": "43 rue St. Laurent",
@@ -3899,7 +3899,7 @@
  },
  {
   "CustomerID": "WARTH",
-  "CompanyName": "Wartian Herkku",
+  "Company": "Wartian Herkku",
   "ContactName": "Pirkko Koskitalo",
   "ContactTitle": "Accounting Manager",
   "Address": "Torikatu 38",
@@ -3947,7 +3947,7 @@
  },
  {
   "CustomerID": "VICTE",
-  "CompanyName": "Victuailles en stock",
+  "Company": "Victuailles en stock",
   "ContactName": "Mary Saveley",
   "ContactTitle": "Sales Agent",
   "Address": "2, rue du Commerce",
@@ -3989,7 +3989,7 @@
  },
  {
   "CustomerID": "HUNGO",
-  "CompanyName": "Hungry Owl All-Night Grocers",
+  "Company": "Hungry Owl All-Night Grocers",
   "ContactName": "Patricia McKenna",
   "ContactTitle": "Sales Associate",
   "Address": "8 Johnstown Road",
@@ -4043,7 +4043,7 @@
  },
  {
   "CustomerID": "PRINI",
-  "CompanyName": "Princesa Isabel Vinhos",
+  "Company": "Princesa Isabel Vinhos",
   "ContactName": "Isabel de Castro",
   "ContactTitle": "Sales Representative",
   "Address": "Estrada da saúde n. 58",
@@ -4078,7 +4078,7 @@
  },
  {
   "CustomerID": "FRANK",
-  "CompanyName": "Frankenversand",
+  "Company": "Frankenversand",
   "ContactName": "Peter Franken",
   "ContactTitle": "Marketing Manager",
   "Address": "Berliner Platz 43",
@@ -4138,7 +4138,7 @@
  },
  {
   "CustomerID": "OLDWO",
-  "CompanyName": "Old World Delicatessen",
+  "Company": "Old World Delicatessen",
   "ContactName": "Rene Phillips",
   "ContactTitle": "Sales Representative",
   "Address": "2743 Bering St.",
@@ -4182,7 +4182,7 @@
  },
  {
   "CustomerID": "MEREP",
-  "CompanyName": "Mère Paillarde",
+  "Company": "Mère Paillarde",
   "ContactName": "Jean Fresnière",
   "ContactTitle": "Marketing Assistant",
   "Address": "43 rue St. Laurent",
@@ -4232,7 +4232,7 @@
  },
  {
   "CustomerID": "BONAP",
-  "CompanyName": "Bon app'",
+  "Company": "Bon app'",
   "ContactName": "Laurence Lebihan",
   "ContactTitle": "Owner",
   "Address": "12, rue des Bouchers",
@@ -4280,7 +4280,7 @@
  },
  {
   "CustomerID": "SIMOB",
-  "CompanyName": "Simons bistro",
+  "Company": "Simons bistro",
   "ContactName": "Jytte Petersen",
   "ContactTitle": "Owner",
   "Address": "Vinbæltet 34",
@@ -4322,7 +4322,7 @@
  },
  {
   "CustomerID": "FRANK",
-  "CompanyName": "Frankenversand",
+  "Company": "Frankenversand",
   "ContactName": "Peter Franken",
   "ContactTitle": "Marketing Manager",
   "Address": "Berliner Platz 43",
@@ -4376,7 +4376,7 @@
  },
  {
   "CustomerID": "LEHMS",
-  "CompanyName": "Lehmanns Marktstand",
+  "Company": "Lehmanns Marktstand",
   "ContactName": "Renate Messner",
   "ContactTitle": "Sales Representative",
   "Address": "Magazinweg 7",
@@ -4424,7 +4424,7 @@
  },
  {
   "CustomerID": "WHITC",
-  "CompanyName": "White Clover Markets",
+  "Company": "White Clover Markets",
   "ContactName": "Karl Jablonski",
   "ContactTitle": "Owner",
   "Address": "305 - 14th Ave. S. Suite 3B",
@@ -4468,7 +4468,7 @@
  },
  {
   "CustomerID": "QUICK",
-  "CompanyName": "QUICK-Stop",
+  "Company": "QUICK-Stop",
   "ContactName": "Horst Kloss",
   "ContactTitle": "Accounting Manager",
   "Address": "Taucherstraße 10",
@@ -4515,7 +4515,7 @@
  },
  {
   "CustomerID": "RATTC",
-  "CompanyName": "Rattlesnake Canyon Grocery",
+  "Company": "Rattlesnake Canyon Grocery",
   "ContactName": "Paula Wilson",
   "ContactTitle": 60318,
   "Address": "2817 Milton Dr.",
@@ -4559,7 +4559,7 @@
  },
  {
   "CustomerID": "FAMIA",
-  "CompanyName": "Familia Arquibaldo",
+  "Company": "Familia Arquibaldo",
   "ContactName": "Aria Cruz",
   "ContactTitle": "Marketing Assistant",
   "Address": "Rua Orós, 92",
@@ -4614,7 +4614,7 @@
  },
  {
   "CustomerID": "WANDK",
-  "CompanyName": "Die Wandernde Kuh",
+  "Company": "Die Wandernde Kuh",
   "ContactName": "Rita Müller",
   "ContactTitle": "Sales Representative",
   "Address": "Adenauerallee 900",
@@ -4656,7 +4656,7 @@
  },
  {
   "CustomerID": "SPLIR",
-  "CompanyName": "Split Rail Beer & Ale",
+  "Company": "Split Rail Beer & Ale",
   "ContactName": "Art Braunschweiger",
   "ContactTitle": "Sales Manager",
   "Address": "P.O. Box 555",
@@ -4694,7 +4694,7 @@
  },
  {
   "CustomerID": "LAMAI",
-  "CompanyName": "La maison d'Asie",
+  "Company": "La maison d'Asie",
   "ContactName": "Annette Roulet",
   "ContactTitle": "Sales Manager",
   "Address": "1 rue Alsace-Lorraine",
@@ -4736,7 +4736,7 @@
  },
  {
   "CustomerID": "ERNSH",
-  "CompanyName": "Ernst Handel",
+  "Company": "Ernst Handel",
   "ContactName": "Roland Mendel",
   "ContactTitle": "Sales Manager",
   "Address": "Kirchgasse 6",
@@ -4790,7 +4790,7 @@
  },
  {
   "CustomerID": "FURIB",
-  "CompanyName": "Furia Bacalhau e Frutos do Mar",
+  "Company": "Furia Bacalhau e Frutos do Mar",
   "ContactName": "Lino Rodriguez",
   "ContactTitle": "Sales Manager",
   "Address": "Jardim das rosas n. 32",
@@ -4832,7 +4832,7 @@
  },
  {
   "CustomerID": "PICCO",
-  "CompanyName": "Piccolo und mehr",
+  "Company": "Piccolo und mehr",
   "ContactName": "Georg Pipps",
   "ContactTitle": "Sales Manager",
   "Address": "Geislweg 14",
@@ -4874,7 +4874,7 @@
  },
  {
   "CustomerID": "PERIC",
-  "CompanyName": "Pericles Comidas clásicas",
+  "Company": "Pericles Comidas clásicas",
   "ContactName": "Guillermo Fernández",
   "ContactTitle": "Sales Representative",
   "Address": "Calle Dr. Jorge Cash 321",
@@ -4916,7 +4916,7 @@
  },
  {
   "CustomerID": "AROUT",
-  "CompanyName": "Around the Horn",
+  "Company": "Around the Horn",
   "ContactName": "Thomas Hardy",
   "ContactTitle": "Sales Representative",
   "Address": "120 Hanover Sq.",
@@ -4959,7 +4959,7 @@
  },
  {
   "CustomerID": "WANDK",
-  "CompanyName": "Die Wandernde Kuh",
+  "Company": "Die Wandernde Kuh",
   "ContactName": "Rita Müller",
   "ContactTitle": "Sales Representative",
   "Address": "Adenauerallee 900",
@@ -5007,7 +5007,7 @@
  },
  {
   "CustomerID": "LILAS",
-  "CompanyName": "LILA-Supermercado",
+  "Company": "LILA-Supermercado",
   "ContactName": "Carlos González",
   "ContactTitle": "Accounting Manager",
   "Address": "Carrera 52 con Ave. Bolívar #65-98 Llano Largo",
@@ -5057,7 +5057,7 @@
  },
  {
   "CustomerID": "LAMAI",
-  "CompanyName": "La maison d'Asie",
+  "Company": "La maison d'Asie",
   "ContactName": "Annette Roulet",
   "ContactTitle": "Sales Manager",
   "Address": "1 rue Alsace-Lorraine",
@@ -5105,7 +5105,7 @@
  },
  {
   "CustomerID": "SEVES",
-  "CompanyName": "Seven Seas Imports",
+  "Company": "Seven Seas Imports",
   "ContactName": "Hari Kumar",
   "ContactTitle": "Sales Manager",
   "Address": "90 Wadhurst Rd.",
@@ -5153,7 +5153,7 @@
  },
  {
   "CustomerID": "BLONP",
-  "CompanyName": "Blondesddsl père et fils",
+  "Company": "Blondesddsl père et fils",
   "ContactName": "Frédérique Citeaux",
   "ContactTitle": "Marketing Manager",
   "Address": "24, place Kléber",
@@ -5213,7 +5213,7 @@
  },
  {
   "CustomerID": "QUICK",
-  "CompanyName": "QUICK-Stop",
+  "Company": "QUICK-Stop",
   "ContactName": "Horst Kloss",
   "ContactTitle": "Accounting Manager",
   "Address": "Taucherstraße 10",
@@ -5254,7 +5254,7 @@
  },
  {
   "CustomerID": "BONAP",
-  "CompanyName": "Bon app'",
+  "Company": "Bon app'",
   "ContactName": "Laurence Lebihan",
   "ContactTitle": "Owner",
   "Address": "12, rue des Bouchers",
@@ -5302,7 +5302,7 @@
  },
  {
   "CustomerID": "DRACD",
-  "CompanyName": "Drachenblut Delikatessen",
+  "Company": "Drachenblut Delikatessen",
   "ContactName": "Sven Ottlieb",
   "ContactTitle": "Order Administrator",
   "Address": "Walserweg 21",
@@ -5350,7 +5350,7 @@
  },
  {
   "CustomerID": "EASTC",
-  "CompanyName": "Eastern Connection",
+  "Company": "Eastern Connection",
   "ContactName": "Ann Devon",
   "ContactTitle": "Sales Agent",
   "Address": "35 King George",
@@ -5392,7 +5392,7 @@
  },
  {
   "CustomerID": "ANTON",
-  "CompanyName": "Antonio Moreno Taquería",
+  "Company": "Antonio Moreno Taquería",
   "ContactName": "Antonio Moreno",
   "ContactTitle": "Owner",
   "Address": "Mataderos  2312",
@@ -5427,7 +5427,7 @@
  },
  {
   "CustomerID": "GALED",
-  "CompanyName": "Galería del gastrónomo",
+  "Company": "Galería del gastrónomo",
   "ContactName": "Eduardo Saavedra",
   "ContactTitle": "Marketing Manager",
   "Address": "Rambla de Cataluña, 23",
@@ -5469,7 +5469,7 @@
  },
  {
   "CustomerID": "VAFFE",
-  "CompanyName": "Vaffeljernet",
+  "Company": "Vaffeljernet",
   "ContactName": "Palle Ibsen",
   "ContactTitle": "Sales Manager",
   "Address": "Smagsloget 45",
@@ -5523,7 +5523,7 @@
  },
  {
   "CustomerID": "ERNSH",
-  "CompanyName": "Ernst Handel",
+  "Company": "Ernst Handel",
   "ContactName": "Roland Mendel",
   "ContactTitle": "Sales Manager",
   "Address": "Kirchgasse 6",
@@ -5577,7 +5577,7 @@
  },
  {
   "CustomerID": "SPLIR",
-  "CompanyName": "Split Rail Beer & Ale",
+  "Company": "Split Rail Beer & Ale",
   "ContactName": "Art Braunschweiger",
   "ContactTitle": "Sales Manager",
   "Address": "P.O. Box 555",
@@ -5621,7 +5621,7 @@
  },
  {
   "CustomerID": "CHOPS",
-  "CompanyName": "Chop-suey Chinese",
+  "Company": "Chop-suey Chinese",
   "ContactName": "Yang Wang",
   "ContactTitle": "Owner",
   "Address": "Hauptstr. 29",
@@ -5668,7 +5668,7 @@
  },
  {
   "CustomerID": "LAMAI",
-  "CompanyName": "La maison d'Asie",
+  "Company": "La maison d'Asie",
   "ContactName": "Annette Roulet",
   "ContactTitle": "Sales Manager",
   "Address": "1 rue Alsace-Lorraine",
@@ -5704,7 +5704,7 @@
  },
  {
   "CustomerID": "QUEEN",
-  "CompanyName": "Queen Cozinha",
+  "Company": "Queen Cozinha",
   "ContactName": "Lúcia Carvalho",
   "ContactTitle": "Marketing Assistant",
   "Address": "Alameda dos Canàrios, 891",
@@ -5759,7 +5759,7 @@
  },
  {
   "CustomerID": "HUNGO",
-  "CompanyName": "Hungry Owl All-Night Grocers",
+  "Company": "Hungry Owl All-Night Grocers",
   "ContactName": "Patricia McKenna",
   "ContactTitle": "Sales Associate",
   "Address": "8 Johnstown Road",
@@ -5801,7 +5801,7 @@
  },
  {
   "CustomerID": "WOLZA",
-  "CompanyName": "Wolski  Zajazd",
+  "Company": "Wolski  Zajazd",
   "ContactName": "Zbyszek Piestrzeniewicz",
   "ContactTitle": "Owner",
   "Address": "ul. Filtrowa 68",
@@ -5843,7 +5843,7 @@
  },
  {
   "CustomerID": "HUNGC",
-  "CompanyName": "Hungry Coyote Import Store",
+  "Company": "Hungry Coyote Import Store",
   "ContactName": "Yoshi Latimer",
   "ContactTitle": "Sales Representative",
   "Address": "City Center Plaza 516 Main St.",
@@ -5887,7 +5887,7 @@
  },
  {
   "CustomerID": "MEREP",
-  "CompanyName": "Mère Paillarde",
+  "Company": "Mère Paillarde",
   "ContactName": "Jean Fresnière",
   "ContactTitle": "Marketing Assistant",
   "Address": "43 rue St. Laurent",
@@ -5925,7 +5925,7 @@
  },
  {
   "CustomerID": "SEVES",
-  "CompanyName": "Seven Seas Imports",
+  "Company": "Seven Seas Imports",
   "ContactName": "Hari Kumar",
   "ContactTitle": "Sales Manager",
   "Address": "90 Wadhurst Rd.",
@@ -5967,7 +5967,7 @@
  },
  {
   "CustomerID": "FOLKO",
-  "CompanyName": "Folk och fä HB",
+  "Company": "Folk och fä HB",
   "ContactName": "Maria Larsson",
   "ContactTitle": "Owner",
   "Address": "Åkergatan 24",
@@ -6002,7 +6002,7 @@
  },
  {
   "CustomerID": "QUEDE",
-  "CompanyName": "Que Delícia",
+  "Company": "Que Delícia",
   "ContactName": "Bernardo Batista",
   "ContactTitle": "Accounting Manager",
   "Address": "Rua da Panificadora, 12",
@@ -6052,7 +6052,7 @@
  },
  {
   "CustomerID": "HUNGO",
-  "CompanyName": "Hungry Owl All-Night Grocers",
+  "Company": "Hungry Owl All-Night Grocers",
   "ContactName": "Patricia McKenna",
   "ContactTitle": "Sales Associate",
   "Address": "8 Johnstown Road",
@@ -6106,7 +6106,7 @@
  },
  {
   "CustomerID": "LILAS",
-  "CompanyName": "LILA-Supermercado",
+  "Company": "LILA-Supermercado",
   "ContactName": "Carlos González",
   "ContactTitle": "Accounting Manager",
   "Address": "Carrera 52 con Ave. Bolívar #65-98 Llano Largo",
@@ -6144,7 +6144,7 @@
  },
  {
   "CustomerID": "ERNSH",
-  "CompanyName": "Ernst Handel",
+  "Company": "Ernst Handel",
   "ContactName": "Roland Mendel",
   "ContactTitle": "Sales Manager",
   "Address": "Kirchgasse 6",
@@ -6204,7 +6204,7 @@
  },
  {
   "CustomerID": "AROUT",
-  "CompanyName": "Around the Horn",
+  "Company": "Around the Horn",
   "ContactName": "Thomas Hardy",
   "ContactTitle": "Sales Representative",
   "Address": "120 Hanover Sq.",
@@ -6253,7 +6253,7 @@
  },
  {
   "CustomerID": "BERGS",
-  "CompanyName": "Berglunds snabbköp",
+  "Company": "Berglunds snabbköp",
   "ContactName": "Christina Berglund",
   "ContactTitle": "Order Administrator",
   "Address": "Berguvsvägen  8",
@@ -6295,7 +6295,7 @@
  },
  {
   "CustomerID": "SPLIR",
-  "CompanyName": "Split Rail Beer & Ale",
+  "Company": "Split Rail Beer & Ale",
   "ContactName": "Art Braunschweiger",
   "ContactTitle": "Sales Manager",
   "Address": "P.O. Box 555",
@@ -6345,7 +6345,7 @@
  },
  {
   "CustomerID": "FAMIA",
-  "CompanyName": "Familia Arquibaldo",
+  "Company": "Familia Arquibaldo",
   "ContactName": "Aria Cruz",
   "ContactTitle": "Marketing Assistant",
   "Address": "Rua Orós, 92",
@@ -6388,7 +6388,7 @@
  },
  {
   "CustomerID": "SANTG",
-  "CompanyName": "Santé Gourmet",
+  "Company": "Santé Gourmet",
   "ContactName": "Jonas Bergulfsen",
   "ContactTitle": "Owner",
   "Address": "Erling Skakkes gate 78",
@@ -6442,7 +6442,7 @@
  },
  {
   "CustomerID": "SEVES",
-  "CompanyName": "Seven Seas Imports",
+  "Company": "Seven Seas Imports",
   "ContactName": "Hari Kumar",
   "ContactTitle": "Sales Manager",
   "Address": "90 Wadhurst Rd.",
@@ -6490,7 +6490,7 @@
  },
  {
   "CustomerID": "BOTTM",
-  "CompanyName": "Bottom-Dollar Markets",
+  "Company": "Bottom-Dollar Markets",
   "ContactName": "Elizabeth Lincoln",
   "ContactTitle": "Accounting Manager",
   "Address": "23 Tsawassen Blvd.",
@@ -6546,7 +6546,7 @@
  },
  {
   "CustomerID": "ERNSH",
-  "CompanyName": "Ernst Handel",
+  "Company": "Ernst Handel",
   "ContactName": "Roland Mendel",
   "ContactTitle": "Sales Manager",
   "Address": "Kirchgasse 6",
@@ -6600,7 +6600,7 @@
  },
  {
   "CustomerID": "DRACD",
-  "CompanyName": "Drachenblut Delikatessen",
+  "Company": "Drachenblut Delikatessen",
   "ContactName": "Sven Ottlieb",
   "ContactTitle": "Order Administrator",
   "Address": "Walserweg 21",
@@ -6636,7 +6636,7 @@
  },
  {
   "CustomerID": "PICCO",
-  "CompanyName": "Piccolo und mehr",
+  "Company": "Piccolo und mehr",
   "ContactName": "Georg Pipps",
   "ContactTitle": "Sales Manager",
   "Address": "Geislweg 14",
@@ -6672,7 +6672,7 @@
  },
  {
   "CustomerID": "SAVEA",
-  "CompanyName": "Save-a-lot Markets",
+  "Company": "Save-a-lot Markets",
   "ContactName": "Jose Pavarotti",
   "ContactTitle": "Sales Representative",
   "Address": "187 Suffolk Ln.",
@@ -6733,7 +6733,7 @@
  },
  {
   "CustomerID": "HUNGC",
-  "CompanyName": "Hungry Coyote Import Store",
+  "Company": "Hungry Coyote Import Store",
   "ContactName": "Yoshi Latimer",
   "ContactTitle": "Sales Representative",
   "Address": "City Center Plaza 516 Main St.",
@@ -6777,7 +6777,7 @@
  },
  {
   "CustomerID": "HILAA",
-  "CompanyName": "HILARION-Abastos",
+  "Company": "HILARION-Abastos",
   "ContactName": "Carlos Hernández",
   "ContactTitle": "Sales Representative",
   "Address": "Carrera 22 con Ave. Carlos Soublette #8-35",
@@ -6827,7 +6827,7 @@
  },
  {
   "CustomerID": "FRANK",
-  "CompanyName": "Frankenversand",
+  "Company": "Frankenversand",
   "ContactName": "Peter Franken",
   "ContactTitle": "Marketing Manager",
   "Address": "Berliner Platz 43",
@@ -6875,7 +6875,7 @@
  },
  {
   "CustomerID": "PRINI",
-  "CompanyName": "Princesa Isabel Vinhos",
+  "Company": "Princesa Isabel Vinhos",
   "ContactName": "Isabel de Castro",
   "ContactTitle": "Sales Representative",
   "Address": "Estrada da saúde n. 58",
@@ -6916,7 +6916,7 @@
  },
  {
   "CustomerID": "SAVEA",
-  "CompanyName": "Save-a-lot Markets",
+  "Company": "Save-a-lot Markets",
   "ContactName": "Jose Pavarotti",
   "ContactTitle": "Sales Representative",
   "Address": "187 Suffolk Ln.",
@@ -6959,7 +6959,7 @@
  },
  {
   "CustomerID": "VAFFE",
-  "CompanyName": "Vaffeljernet",
+  "Company": "Vaffeljernet",
   "ContactName": "Palle Ibsen",
   "ContactTitle": "Sales Manager",
   "Address": "Smagsloget 45",
@@ -7013,7 +7013,7 @@
  },
  {
   "CustomerID": "EASTC",
-  "CompanyName": "Eastern Connection",
+  "Company": "Eastern Connection",
   "ContactName": "Ann Devon",
   "ContactTitle": "Sales Agent",
   "Address": "35 King George",
@@ -7061,7 +7061,7 @@
  },
  {
   "CustomerID": "RATTC",
-  "CompanyName": "Rattlesnake Canyon Grocery",
+  "Company": "Rattlesnake Canyon Grocery",
   "ContactName": "Paula Wilson",
   "ContactTitle": 50373,
   "Address": "2817 Milton Dr.",
@@ -7117,7 +7117,7 @@
  },
  {
   "CustomerID": "ERNSH",
-  "CompanyName": "Ernst Handel",
+  "Company": "Ernst Handel",
   "ContactName": "Roland Mendel",
   "ContactTitle": "Sales Manager",
   "Address": "Kirchgasse 6",
@@ -7187,7 +7187,7 @@
  },
  {
   "CustomerID": "MAGAA",
-  "CompanyName": "Magazzini Alimentari Riuniti",
+  "Company": "Magazzini Alimentari Riuniti",
   "ContactName": "Giovanni Rovelli",
   "ContactTitle": "Marketing Manager",
   "Address": "Via Ludovico il Moro 22",
@@ -7235,7 +7235,7 @@
  },
  {
   "CustomerID": "LINOD",
-  "CompanyName": "LINO-Delicateses",
+  "Company": "LINO-Delicateses",
   "ContactName": "Felipe Izquierdo",
   "ContactTitle": "Owner",
   "Address": "Ave. 5 de Mayo Porlamar",
@@ -7273,7 +7273,7 @@
  },
  {
   "CustomerID": "QUEEN",
-  "CompanyName": "Queen Cozinha",
+  "Company": "Queen Cozinha",
   "ContactName": "Lúcia Carvalho",
   "ContactTitle": "Marketing Assistant",
   "Address": "Alameda dos Canàrios, 891",
@@ -7334,7 +7334,7 @@
  },
  {
   "CustomerID": "OTTIK",
-  "CompanyName": "Ottilies Käseladen",
+  "Company": "Ottilies Käseladen",
   "ContactName": "Henriette Pfalzheim",
   "ContactTitle": "Owner",
   "Address": "Mehrheimerstr. 369",
@@ -7382,7 +7382,7 @@
  },
  {
   "CustomerID": "FOLIG",
-  "CompanyName": "Folies gourmandes",
+  "Company": "Folies gourmandes",
   "ContactName": "Martine Rancé",
   "ContactTitle": 90178,
   "Address": "184, chaussée de Tournai",
@@ -7430,7 +7430,7 @@
  },
  {
   "CustomerID": "OCEAN",
-  "CompanyName": "Océano Atlántico Ltda.",
+  "Company": "Océano Atlántico Ltda.",
   "ContactName": "Yvonne Moncada",
   "ContactTitle": "Sales Agent",
   "Address": "Ing. Gustavo Moncada 8585 Piso 20-A",
@@ -7472,7 +7472,7 @@
  },
  {
   "CustomerID": "BOTTM",
-  "CompanyName": "Bottom-Dollar Markets",
+  "Company": "Bottom-Dollar Markets",
   "ContactName": "Elizabeth Lincoln",
   "ContactTitle": "Accounting Manager",
   "Address": "23 Tsawassen Blvd.",
@@ -7551,7 +7551,7 @@
  },
  {
   "CustomerID": "WARTH",
-  "CompanyName": "Wartian Herkku",
+  "Company": "Wartian Herkku",
   "ContactName": "Pirkko Koskitalo",
   "ContactTitle": "Accounting Manager",
   "Address": "Torikatu 38",
@@ -7587,7 +7587,7 @@
  },
  {
   "CustomerID": "LAMAI",
-  "CompanyName": "La maison d'Asie",
+  "Company": "La maison d'Asie",
   "ContactName": "Annette Roulet",
   "ContactTitle": "Sales Manager",
   "Address": "1 rue Alsace-Lorraine",
@@ -7635,7 +7635,7 @@
  },
  {
   "CustomerID": "FAMIA",
-  "CompanyName": "Familia Arquibaldo",
+  "Company": "Familia Arquibaldo",
   "ContactName": "Aria Cruz",
   "ContactTitle": "Marketing Assistant",
   "Address": "Rua Orós, 92",
@@ -7678,7 +7678,7 @@
  },
  {
   "CustomerID": "HUNGC",
-  "CompanyName": "Hungry Coyote Import Store",
+  "Company": "Hungry Coyote Import Store",
   "ContactName": "Yoshi Latimer",
   "ContactTitle": "Sales Representative",
   "Address": "City Center Plaza 516 Main St.",
@@ -7722,7 +7722,7 @@
  },
  {
   "CustomerID": "WARTH",
-  "CompanyName": "Wartian Herkku",
+  "Company": "Wartian Herkku",
   "ContactName": "Pirkko Koskitalo",
   "ContactTitle": "Accounting Manager",
   "Address": "Torikatu 38",
@@ -7770,7 +7770,7 @@
  },
  {
   "CustomerID": "SIMOB",
-  "CompanyName": "Simons bistro",
+  "Company": "Simons bistro",
   "ContactName": "Jytte Petersen",
   "ContactTitle": "Owner",
   "Address": "Vinbæltet 34",
@@ -7824,7 +7824,7 @@
  },
  {
   "CustomerID": "QUICK",
-  "CompanyName": "QUICK-Stop",
+  "Company": "QUICK-Stop",
   "ContactName": "Horst Kloss",
   "ContactTitle": "Accounting Manager",
   "Address": "Taucherstraße 10",
@@ -7877,7 +7877,7 @@
  },
  {
   "CustomerID": "RICSU",
-  "CompanyName": "Richter Supermarkt",
+  "Company": "Richter Supermarkt",
   "ContactName": "Michael Holz",
   "ContactTitle": "Sales Manager",
   "Address": "Grenzacherweg 237",
@@ -7918,7 +7918,7 @@
  },
  {
   "CustomerID": "WELLI",
-  "CompanyName": "Wellington Importadora",
+  "Company": "Wellington Importadora",
   "ContactName": "Paula Parente",
   "ContactTitle": "Sales Manager",
   "Address": "Rua do Mercado, 12",
@@ -7973,7 +7973,7 @@
  },
  {
   "CustomerID": "QUEDE",
-  "CompanyName": "Que Delícia",
+  "Company": "Que Delícia",
   "ContactName": "Bernardo Batista",
   "ContactTitle": "Accounting Manager",
   "Address": "Rua da Panificadora, 12",
@@ -8029,7 +8029,7 @@
  },
  {
   "CustomerID": "FRANS",
-  "CompanyName": "Franchi S.p.A.",
+  "Company": "Franchi S.p.A.",
   "ContactName": "Paolo Accorti",
   "ContactTitle": "Sales Representative",
   "Address": "Via Monte Bianco 34",
@@ -8065,7 +8065,7 @@
  },
  {
   "CustomerID": "GOURL",
-  "CompanyName": "Gourmet Lanchonetes",
+  "Company": "Gourmet Lanchonetes",
   "ContactName": "André Fonseca",
   "ContactTitle": "Sales Associate",
   "Address": "Av. Brasil, 442",
@@ -8108,7 +8108,7 @@
  },
  {
   "CustomerID": "MEREP",
-  "CompanyName": "Mère Paillarde",
+  "Company": "Mère Paillarde",
   "ContactName": "Jean Fresnière",
   "ContactTitle": "Marketing Assistant",
   "Address": "43 rue St. Laurent",
@@ -8158,7 +8158,7 @@
  },
  {
   "CustomerID": "LAMAI",
-  "CompanyName": "La maison d'Asie",
+  "Company": "La maison d'Asie",
   "ContactName": "Annette Roulet",
   "ContactTitle": "Sales Manager",
   "Address": "1 rue Alsace-Lorraine",
@@ -8200,7 +8200,7 @@
  },
  {
   "CustomerID": "GALED",
-  "CompanyName": "Galería del gastrónomo",
+  "Company": "Galería del gastrónomo",
   "ContactName": "Eduardo Saavedra",
   "ContactTitle": "Marketing Manager",
   "Address": "Rambla de Cataluña, 23",
@@ -8242,7 +8242,7 @@
  },
  {
   "CustomerID": "PICCO",
-  "CompanyName": "Piccolo und mehr",
+  "Company": "Piccolo und mehr",
   "ContactName": "Georg Pipps",
   "ContactTitle": "Sales Manager",
   "Address": "Geislweg 14",
@@ -8278,7 +8278,7 @@
  },
  {
   "CustomerID": "REGGC",
-  "CompanyName": "Reggiani Caseifici",
+  "Company": "Reggiani Caseifici",
   "ContactName": "Maurizio Moroni",
   "ContactTitle": "Sales Associate",
   "Address": "Strada Provinciale 124",
@@ -8314,7 +8314,7 @@
  },
  {
   "CustomerID": "HUNGO",
-  "CompanyName": "Hungry Owl All-Night Grocers",
+  "Company": "Hungry Owl All-Night Grocers",
   "ContactName": "Patricia McKenna",
   "ContactTitle": "Sales Associate",
   "Address": "8 Johnstown Road",
@@ -8356,7 +8356,7 @@
  },
  {
   "CustomerID": "ERNSH",
-  "CompanyName": "Ernst Handel",
+  "Company": "Ernst Handel",
   "ContactName": "Roland Mendel",
   "ContactTitle": "Sales Manager",
   "Address": "Kirchgasse 6",
@@ -8410,7 +8410,7 @@
  },
  {
   "CustomerID": "BOTTM",
-  "CompanyName": "Bottom-Dollar Markets",
+  "Company": "Bottom-Dollar Markets",
   "ContactName": "Elizabeth Lincoln",
   "ContactTitle": "Accounting Manager",
   "Address": "23 Tsawassen Blvd.",
@@ -8460,7 +8460,7 @@
  },
  {
   "CustomerID": "SPLIR",
-  "CompanyName": "Split Rail Beer & Ale",
+  "Company": "Split Rail Beer & Ale",
   "ContactName": "Art Braunschweiger",
   "ContactTitle": "Sales Manager",
   "Address": "P.O. Box 555",
@@ -8504,7 +8504,7 @@
  },
  {
   "CustomerID": "PRINI",
-  "CompanyName": "Princesa Isabel Vinhos",
+  "Company": "Princesa Isabel Vinhos",
   "ContactName": "Isabel de Castro",
   "ContactTitle": "Sales Representative",
   "Address": "Estrada da saúde n. 58",
@@ -8539,7 +8539,7 @@
  },
  {
   "CustomerID": "FOLKO",
-  "CompanyName": "Folk och fä HB",
+  "Company": "Folk och fä HB",
   "ContactName": "Maria Larsson",
   "ContactTitle": "Owner",
   "Address": "Åkergatan 24",
@@ -8580,7 +8580,7 @@
  },
  {
   "CustomerID": "CONSH",
-  "CompanyName": "Consolidated Holdings",
+  "Company": "Consolidated Holdings",
   "ContactName": "Elizabeth Brown",
   "ContactTitle": "Sales Representative",
   "Address": "Berkeley Gardens 12  Brewery",
@@ -8628,7 +8628,7 @@
  },
  {
   "CustomerID": "BLONP",
-  "CompanyName": "Blondesddsl père et fils",
+  "Company": "Blondesddsl père et fils",
   "ContactName": "Frédérique Citeaux",
   "ContactTitle": "Marketing Manager",
   "Address": "24, place Kléber",
@@ -8682,7 +8682,7 @@
  },
  {
   "CustomerID": "WARTH",
-  "CompanyName": "Wartian Herkku",
+  "Company": "Wartian Herkku",
   "ContactName": "Pirkko Koskitalo",
   "ContactTitle": "Accounting Manager",
   "Address": "Torikatu 38",
@@ -8718,7 +8718,7 @@
  },
  {
   "CustomerID": "TOMSP",
-  "CompanyName": "Toms Spezialitäten",
+  "Company": "Toms Spezialitäten",
   "ContactName": "Karin Josephs",
   "ContactTitle": "Marketing Manager",
   "Address": "Luisenstr. 48",
@@ -8766,7 +8766,7 @@
  },
  {
   "CustomerID": "MEREP",
-  "CompanyName": "Mère Paillarde",
+  "Company": "Mère Paillarde",
   "ContactName": "Jean Fresnière",
   "ContactTitle": "Marketing Assistant",
   "Address": "43 rue St. Laurent",
@@ -8822,7 +8822,7 @@
  },
  {
   "CustomerID": "SAVEA",
-  "CompanyName": "Save-a-lot Markets",
+  "Company": "Save-a-lot Markets",
   "ContactName": "Jose Pavarotti",
   "ContactTitle": "Sales Representative",
   "Address": "187 Suffolk Ln.",
@@ -8877,7 +8877,7 @@
  },
  {
   "CustomerID": "OLDWO",
-  "CompanyName": "Old World Delicatessen",
+  "Company": "Old World Delicatessen",
   "ContactName": "Rene Phillips",
   "ContactTitle": "Sales Representative",
   "Address": "2743 Bering St.",
@@ -8915,7 +8915,7 @@
  },
  {
   "CustomerID": "ERNSH",
-  "CompanyName": "Ernst Handel",
+  "Company": "Ernst Handel",
   "ContactName": "Roland Mendel",
   "ContactTitle": "Sales Manager",
   "Address": "Kirchgasse 6",
@@ -8963,7 +8963,7 @@
  },
  {
   "CustomerID": "REGGC",
-  "CompanyName": "Reggiani Caseifici",
+  "Company": "Reggiani Caseifici",
   "ContactName": "Maurizio Moroni",
   "ContactTitle": "Sales Associate",
   "Address": "Strada Provinciale 124",
@@ -9005,7 +9005,7 @@
  },
  {
   "CustomerID": "BERGS",
-  "CompanyName": "Berglunds snabbköp",
+  "Company": "Berglunds snabbköp",
   "ContactName": "Christina Berglund",
   "ContactTitle": "Order Administrator",
   "Address": "Berguvsvägen  8",
@@ -9087,7 +9087,7 @@
  },
  {
   "CustomerID": "TOMSP",
-  "CompanyName": "Toms Spezialitäten",
+  "Company": "Toms Spezialitäten",
   "ContactName": "Karin Josephs",
   "ContactTitle": "Marketing Manager",
   "Address": "Luisenstr. 48",
@@ -9141,7 +9141,7 @@
  },
  {
   "CustomerID": "RICAR",
-  "CompanyName": "Ricardo Adocicados",
+  "Company": "Ricardo Adocicados",
   "ContactName": "Janete Limeira",
   "ContactTitle": 60442,
   "Address": "Av. Copacabana, 267",
@@ -9190,7 +9190,7 @@
  },
  {
   "CustomerID": "RANCH",
-  "CompanyName": "Rancho grande",
+  "Company": "Rancho grande",
   "ContactName": "Sergio Gutiérrez",
   "ContactTitle": "Sales Representative",
   "Address": "Av. del Libertador 900",
@@ -9232,7 +9232,7 @@
  },
  {
   "CustomerID": "BLONP",
-  "CompanyName": "Blondesddsl père et fils",
+  "Company": "Blondesddsl père et fils",
   "ContactName": "Frédérique Citeaux",
   "ContactTitle": "Marketing Manager",
   "Address": "24, place Kléber",
@@ -9280,7 +9280,7 @@
  },
  {
   "CustomerID": "VICTE",
-  "CompanyName": "Victuailles en stock",
+  "Company": "Victuailles en stock",
   "ContactName": "Mary Saveley",
   "ContactTitle": "Sales Agent",
   "Address": "2, rue du Commerce",
@@ -9322,7 +9322,7 @@
  },
  {
   "CustomerID": "QUICK",
-  "CompanyName": "QUICK-Stop",
+  "Company": "QUICK-Stop",
   "ContactName": "Horst Kloss",
   "ContactTitle": "Accounting Manager",
   "Address": "Taucherstraße 10",
@@ -9375,7 +9375,7 @@
  },
  {
   "CustomerID": "SAVEA",
-  "CompanyName": "Save-a-lot Markets",
+  "Company": "Save-a-lot Markets",
   "ContactName": "Jose Pavarotti",
   "ContactTitle": "Sales Representative",
   "Address": "187 Suffolk Ln.",
@@ -9418,7 +9418,7 @@
  },
  {
   "CustomerID": "AROUT",
-  "CompanyName": "Around the Horn",
+  "Company": "Around the Horn",
   "ContactName": "Thomas Hardy",
   "ContactTitle": "Sales Representative",
   "Address": "120 Hanover Sq.",
@@ -9461,7 +9461,7 @@
  },
  {
   "CustomerID": "LAMAI",
-  "CompanyName": "La maison d'Asie",
+  "Company": "La maison d'Asie",
   "ContactName": "Annette Roulet",
   "ContactTitle": "Sales Manager",
   "Address": "1 rue Alsace-Lorraine",
@@ -9509,7 +9509,7 @@
  },
  {
   "CustomerID": "WARTH",
-  "CompanyName": "Wartian Herkku",
+  "Company": "Wartian Herkku",
   "ContactName": "Pirkko Koskitalo",
   "ContactTitle": "Accounting Manager",
   "Address": "Torikatu 38",
@@ -9563,7 +9563,7 @@
  },
  {
   "CustomerID": "KOENE",
-  "CompanyName": "Königlich Essen",
+  "Company": "Königlich Essen",
   "ContactName": "Philip Cramer",
   "ContactTitle": "Sales Associate",
   "Address": "Maubelstr. 90",
@@ -9626,7 +9626,7 @@
  },
  {
   "CustomerID": "SUPRD",
-  "CompanyName": "Suprêmes délices",
+  "Company": "Suprêmes délices",
   "ContactName": "Pascale Cartrain",
   "ContactTitle": "Accounting Manager",
   "Address": "Boulevard Tirou, 255",
@@ -9686,7 +9686,7 @@
  },
  {
   "CustomerID": "VICTE",
-  "CompanyName": "Victuailles en stock",
+  "Company": "Victuailles en stock",
   "ContactName": "Mary Saveley",
   "ContactTitle": "Sales Agent",
   "Address": "2, rue du Commerce",
@@ -9734,7 +9734,7 @@
  },
  {
   "CustomerID": "FOLKO",
-  "CompanyName": "Folk och fä HB",
+  "Company": "Folk och fä HB",
   "ContactName": "Maria Larsson",
   "ContactTitle": "Owner",
   "Address": "Åkergatan 24",
@@ -9775,7 +9775,7 @@
  },
  {
   "CustomerID": "LILAS",
-  "CompanyName": "LILA-Supermercado",
+  "Company": "LILA-Supermercado",
   "ContactName": "Carlos González",
   "ContactTitle": "Accounting Manager",
   "Address": "Carrera 52 con Ave. Bolívar #65-98 Llano Largo",
@@ -9825,7 +9825,7 @@
  },
  {
   "CustomerID": "CONSH",
-  "CompanyName": "Consolidated Holdings",
+  "Company": "Consolidated Holdings",
   "ContactName": "Elizabeth Brown",
   "ContactTitle": "Sales Representative",
   "Address": "Berkeley Gardens 12  Brewery",
@@ -9867,7 +9867,7 @@
  },
  {
   "CustomerID": "SUPRD",
-  "CompanyName": "Suprêmes délices",
+  "Company": "Suprêmes délices",
   "ContactName": "Pascale Cartrain",
   "ContactTitle": "Accounting Manager",
   "Address": "Boulevard Tirou, 255",
@@ -9909,7 +9909,7 @@
  },
  {
   "CustomerID": "FURIB",
-  "CompanyName": "Furia Bacalhau e Frutos do Mar",
+  "Company": "Furia Bacalhau e Frutos do Mar",
   "ContactName": "Lino Rodriguez",
   "ContactTitle": "Sales Manager",
   "Address": "Jardim das rosas n. 32",
@@ -9963,7 +9963,7 @@
  },
  {
   "CustomerID": "VAFFE",
-  "CompanyName": "Vaffeljernet",
+  "Company": "Vaffeljernet",
   "ContactName": "Palle Ibsen",
   "ContactTitle": "Sales Manager",
   "Address": "Smagsloget 45",
@@ -10023,7 +10023,7 @@
  },
  {
   "CustomerID": "COMMI",
-  "CompanyName": "Comércio Mineiro",
+  "Company": "Comércio Mineiro",
   "ContactName": "Pedro Afonso",
   "ContactTitle": "Sales Associate",
   "Address": "Av. dos Lusíadas, 23",
@@ -10066,7 +10066,7 @@
  },
  {
   "CustomerID": "MAGAA",
-  "CompanyName": "Magazzini Alimentari Riuniti",
+  "Company": "Magazzini Alimentari Riuniti",
   "ContactName": "Giovanni Rovelli",
   "ContactTitle": "Marketing Manager",
   "Address": "Via Ludovico il Moro 22",
@@ -10108,7 +10108,7 @@
  },
  {
   "CustomerID": "KOENE",
-  "CompanyName": "Königlich Essen",
+  "Company": "Königlich Essen",
   "ContactName": "Philip Cramer",
   "ContactTitle": "Sales Associate",
   "Address": "Maubelstr. 90",
@@ -10149,7 +10149,7 @@
  },
  {
   "CustomerID": "WHITC",
-  "CompanyName": "White Clover Markets",
+  "Company": "White Clover Markets",
   "ContactName": "Karl Jablonski",
   "ContactTitle": "Owner",
   "Address": "305 - 14th Ave. S. Suite 3B",
@@ -10199,7 +10199,7 @@
  },
  {
   "CustomerID": "BONAP",
-  "CompanyName": "Bon app'",
+  "Company": "Bon app'",
   "ContactName": "Laurence Lebihan",
   "ContactTitle": "Owner",
   "Address": "12, rue des Bouchers",
@@ -10247,7 +10247,7 @@
  },
  {
   "CustomerID": "BSBEV",
-  "CompanyName": "B's Beverages",
+  "Company": "B's Beverages",
   "ContactName": "Victoria Ashworth",
   "ContactTitle": "Sales Representative",
   "Address": "Fauntleroy Circus",
@@ -10288,7 +10288,7 @@
  },
  {
   "CustomerID": "SEVES",
-  "CompanyName": "Seven Seas Imports",
+  "Company": "Seven Seas Imports",
   "ContactName": "Hari Kumar",
   "ContactTitle": "Sales Manager",
   "Address": "90 Wadhurst Rd.",
@@ -10330,7 +10330,7 @@
  },
  {
   "CustomerID": "ISLAT",
-  "CompanyName": "Island Trading",
+  "Company": "Island Trading",
   "ContactName": "Helen Bennett",
   "ContactTitle": "Marketing Manager",
   "Address": "Garden House Crowther Way",
@@ -10373,7 +10373,7 @@
  },
  {
   "CustomerID": "PERIC",
-  "CompanyName": "Pericles Comidas clásicas",
+  "Company": "Pericles Comidas clásicas",
   "ContactName": "Guillermo Fernández",
   "ContactTitle": "Sales Representative",
   "Address": "Calle Dr. Jorge Cash 321",
@@ -10427,7 +10427,7 @@
  },
  {
   "CustomerID": "SUPRD",
-  "CompanyName": "Suprêmes délices",
+  "Company": "Suprêmes délices",
   "ContactName": "Pascale Cartrain",
   "ContactTitle": "Accounting Manager",
   "Address": "Boulevard Tirou, 255",
@@ -10475,7 +10475,7 @@
  },
  {
   "CustomerID": "HILAA",
-  "CompanyName": "HILARION-Abastos",
+  "Company": "HILARION-Abastos",
   "ContactName": "Carlos Hernández",
   "ContactTitle": "Sales Representative",
   "Address": "Carrera 22 con Ave. Carlos Soublette #8-35",
@@ -10519,7 +10519,7 @@
  },
  {
   "CustomerID": "PRINI",
-  "CompanyName": "Princesa Isabel Vinhos",
+  "Company": "Princesa Isabel Vinhos",
   "ContactName": "Isabel de Castro",
   "ContactTitle": "Sales Representative",
   "Address": "Estrada da saúde n. 58",
@@ -10566,7 +10566,7 @@
  },
  {
   "CustomerID": "VICTE",
-  "CompanyName": "Victuailles en stock",
+  "Company": "Victuailles en stock",
   "ContactName": "Mary Saveley",
   "ContactTitle": "Sales Agent",
   "Address": "2, rue du Commerce",
@@ -10602,7 +10602,7 @@
  },
  {
   "CustomerID": "RATTC",
-  "CompanyName": "Rattlesnake Canyon Grocery",
+  "Company": "Rattlesnake Canyon Grocery",
   "ContactName": "Paula Wilson",
   "ContactTitle": 50900,
   "Address": "2817 Milton Dr.",
@@ -10658,7 +10658,7 @@
  },
  {
   "CustomerID": "FOLIG",
-  "CompanyName": "Folies gourmandes",
+  "Company": "Folies gourmandes",
   "ContactName": "Martine Rancé",
   "ContactTitle": 90315,
   "Address": "184, chaussée de Tournai",
@@ -10700,7 +10700,7 @@
  },
  {
   "CustomerID": "RICAR",
-  "CompanyName": "Ricardo Adocicados",
+  "Company": "Ricardo Adocicados",
   "ContactName": "Janete Limeira",
   "ContactTitle": 30468,
   "Address": "Av. Copacabana, 267",
@@ -10743,7 +10743,7 @@
  },
  {
   "CustomerID": "LAZYK",
-  "CompanyName": "Lazy K Kountry Store",
+  "Company": "Lazy K Kountry Store",
   "ContactName": "John Steel",
   "ContactTitle": "Marketing Manager",
   "Address": "12 Orchestra Terrace",
@@ -10781,7 +10781,7 @@
  },
  {
   "CustomerID": "WHITC",
-  "CompanyName": "White Clover Markets",
+  "Company": "White Clover Markets",
   "ContactName": "Karl Jablonski",
   "ContactTitle": "Owner",
   "Address": "305 - 14th Ave. S. Suite 3B",
@@ -10825,7 +10825,7 @@
  },
  {
   "CustomerID": "BSBEV",
-  "CompanyName": "B's Beverages",
+  "Company": "B's Beverages",
   "ContactName": "Victoria Ashworth",
   "ContactTitle": "Sales Representative",
   "Address": "Fauntleroy Circus",
@@ -10872,7 +10872,7 @@
  },
  {
   "CustomerID": "LINOD",
-  "CompanyName": "LINO-Delicateses",
+  "Company": "LINO-Delicateses",
   "ContactName": "Felipe Izquierdo",
   "ContactTitle": "Owner",
   "Address": "Ave. 5 de Mayo Porlamar",
@@ -10928,7 +10928,7 @@
  },
  {
   "CustomerID": "HILAA",
-  "CompanyName": "HILARION-Abastos",
+  "Company": "HILARION-Abastos",
   "ContactName": "Carlos Hernández",
   "ContactTitle": "Sales Representative",
   "Address": "Carrera 22 con Ave. Carlos Soublette #8-35",
@@ -10978,7 +10978,7 @@
  },
  {
   "CustomerID": "QUEEN",
-  "CompanyName": "Queen Cozinha",
+  "Company": "Queen Cozinha",
   "ContactName": "Lúcia Carvalho",
   "ContactTitle": "Marketing Assistant",
   "Address": "Alameda dos Canàrios, 891",
@@ -11027,7 +11027,7 @@
  },
  {
   "CustomerID": "FRANK",
-  "CompanyName": "Frankenversand",
+  "Company": "Frankenversand",
   "ContactName": "Peter Franken",
   "ContactTitle": "Marketing Manager",
   "Address": "Berliner Platz 43",
@@ -11069,7 +11069,7 @@
  },
  {
   "CustomerID": "PICCO",
-  "CompanyName": "Piccolo und mehr",
+  "Company": "Piccolo und mehr",
   "ContactName": "Georg Pipps",
   "ContactTitle": "Sales Manager",
   "Address": "Geislweg 14",
@@ -11111,7 +11111,7 @@
  },
  {
   "CustomerID": "HILAA",
-  "CompanyName": "HILARION-Abastos",
+  "Company": "HILARION-Abastos",
   "ContactName": "Carlos Hernández",
   "ContactTitle": "Sales Representative",
   "Address": "Carrera 22 con Ave. Carlos Soublette #8-35",
@@ -11161,7 +11161,7 @@
  },
  {
   "CustomerID": "FURIB",
-  "CompanyName": "Furia Bacalhau e Frutos do Mar",
+  "Company": "Furia Bacalhau e Frutos do Mar",
   "ContactName": "Lino Rodriguez",
   "ContactTitle": "Sales Manager",
   "Address": "Jardim das rosas n. 32",
@@ -11203,7 +11203,7 @@
  },
  {
   "CustomerID": "BOTTM",
-  "CompanyName": "Bottom-Dollar Markets",
+  "Company": "Bottom-Dollar Markets",
   "ContactName": "Elizabeth Lincoln",
   "ContactTitle": "Accounting Manager",
   "Address": "23 Tsawassen Blvd.",
@@ -11247,7 +11247,7 @@
  },
  {
   "CustomerID": "LAMAI",
-  "CompanyName": "La maison d'Asie",
+  "Company": "La maison d'Asie",
   "ContactName": "Annette Roulet",
   "ContactTitle": "Sales Manager",
   "Address": "1 rue Alsace-Lorraine",
@@ -11295,7 +11295,7 @@
  },
  {
   "CustomerID": "COMMI",
-  "CompanyName": "Comércio Mineiro",
+  "Company": "Comércio Mineiro",
   "ContactName": "Pedro Afonso",
   "ContactTitle": "Sales Associate",
   "Address": "Av. dos Lusíadas, 23",
@@ -11332,7 +11332,7 @@
  },
  {
   "CustomerID": "LAUGB",
-  "CompanyName": "Laughing Bacchus Wine Cellars",
+  "Company": "Laughing Bacchus Wine Cellars",
   "ContactName": "Yoshi Tannamuri",
   "ContactTitle": "Marketing Assistant",
   "Address": "1900 Oak St.",
@@ -11382,7 +11382,7 @@
  },
  {
   "CustomerID": "TRADH",
-  "CompanyName": "Tradição Hipermercados",
+  "Company": "Tradição Hipermercados",
   "ContactName": "Anabela Domingues",
   "ContactTitle": "Sales Representative",
   "Address": "Av. Inês de Castro, 414",
@@ -11420,7 +11420,7 @@
  },
  {
   "CustomerID": "LEHMS",
-  "CompanyName": "Lehmanns Marktstand",
+  "Company": "Lehmanns Marktstand",
   "ContactName": "Renate Messner",
   "ContactTitle": "Sales Representative",
   "Address": "Magazinweg 7",
@@ -11468,7 +11468,7 @@
  },
  {
   "CustomerID": "HILAA",
-  "CompanyName": "HILARION-Abastos",
+  "Company": "HILARION-Abastos",
   "ContactName": "Carlos Hernández",
   "ContactTitle": "Sales Representative",
   "Address": "Carrera 22 con Ave. Carlos Soublette #8-35",
@@ -11518,7 +11518,7 @@
  },
  {
   "CustomerID": "LILAS",
-  "CompanyName": "LILA-Supermercado",
+  "Company": "LILA-Supermercado",
   "ContactName": "Carlos González",
   "ContactTitle": "Accounting Manager",
   "Address": "Carrera 52 con Ave. Bolívar #65-98 Llano Largo",
@@ -11562,7 +11562,7 @@
  },
  {
   "CustomerID": "LAMAI",
-  "CompanyName": "La maison d'Asie",
+  "Company": "La maison d'Asie",
   "ContactName": "Annette Roulet",
   "ContactTitle": "Sales Manager",
   "Address": "1 rue Alsace-Lorraine",
@@ -11604,7 +11604,7 @@
  },
  {
   "CustomerID": "BLAUS",
-  "CompanyName": "Blauer See Delikatessen",
+  "Company": "Blauer See Delikatessen",
   "ContactName": "Hanna Moos",
   "ContactTitle": "Sales Representative",
   "Address": "Forsterstr. 57",
@@ -11640,7 +11640,7 @@
  },
  {
   "CustomerID": "PERIC",
-  "CompanyName": "Pericles Comidas clásicas",
+  "Company": "Pericles Comidas clásicas",
   "ContactName": "Guillermo Fernández",
   "ContactTitle": "Sales Representative",
   "Address": "Calle Dr. Jorge Cash 321",
@@ -11688,7 +11688,7 @@
  },
  {
   "CustomerID": "HUNGO",
-  "CompanyName": "Hungry Owl All-Night Grocers",
+  "Company": "Hungry Owl All-Night Grocers",
   "ContactName": "Patricia McKenna",
   "ContactTitle": "Sales Associate",
   "Address": "8 Johnstown Road",
@@ -11730,7 +11730,7 @@
  },
  {
   "CustomerID": "WHITC",
-  "CompanyName": "White Clover Markets",
+  "Company": "White Clover Markets",
   "ContactName": "Karl Jablonski",
   "ContactTitle": "Owner",
   "Address": "305 - 14th Ave. S. Suite 3B",
@@ -11786,7 +11786,7 @@
  },
  {
   "CustomerID": "MEREP",
-  "CompanyName": "Mère Paillarde",
+  "Company": "Mère Paillarde",
   "ContactName": "Jean Fresnière",
   "ContactTitle": "Marketing Assistant",
   "Address": "43 rue St. Laurent",
@@ -11824,7 +11824,7 @@
  },
  {
   "CustomerID": "KOENE",
-  "CompanyName": "Königlich Essen",
+  "Company": "Königlich Essen",
   "ContactName": "Philip Cramer",
   "ContactTitle": "Sales Associate",
   "Address": "Maubelstr. 90",
@@ -11865,7 +11865,7 @@
  },
  {
   "CustomerID": "ANTON",
-  "CompanyName": "Antonio Moreno Taquería",
+  "Company": "Antonio Moreno Taquería",
   "ContactName": "Antonio Moreno",
   "ContactTitle": "Owner",
   "Address": "Mataderos  2312",
@@ -11906,7 +11906,7 @@
  },
  {
   "CustomerID": "OTTIK",
-  "CompanyName": "Ottilies Käseladen",
+  "Company": "Ottilies Käseladen",
   "ContactName": "Henriette Pfalzheim",
   "ContactTitle": "Owner",
   "Address": "Mehrheimerstr. 369",
@@ -11948,7 +11948,7 @@
  },
  {
   "CustomerID": "BLAUS",
-  "CompanyName": "Blauer See Delikatessen",
+  "Company": "Blauer See Delikatessen",
   "ContactName": "Hanna Moos",
   "ContactTitle": "Sales Representative",
   "Address": "Forsterstr. 57",
@@ -11984,7 +11984,7 @@
  },
  {
   "CustomerID": "SAVEA",
-  "CompanyName": "Save-a-lot Markets",
+  "Company": "Save-a-lot Markets",
   "ContactName": "Jose Pavarotti",
   "ContactTitle": "Sales Representative",
   "Address": "187 Suffolk Ln.",
@@ -12027,7 +12027,7 @@
  },
  {
   "CustomerID": "BONAP",
-  "CompanyName": "Bon app'",
+  "Company": "Bon app'",
   "ContactName": "Laurence Lebihan",
   "ContactTitle": "Owner",
   "Address": "12, rue des Bouchers",
@@ -12075,7 +12075,7 @@
  },
  {
   "CustomerID": "FAMIA",
-  "CompanyName": "Familia Arquibaldo",
+  "Company": "Familia Arquibaldo",
   "ContactName": "Aria Cruz",
   "ContactTitle": "Marketing Assistant",
   "Address": "Rua Orós, 92",
@@ -12130,7 +12130,7 @@
  },
  {
   "CustomerID": "WANDK",
-  "CompanyName": "Die Wandernde Kuh",
+  "Company": "Die Wandernde Kuh",
   "ContactName": "Rita Müller",
   "ContactTitle": "Sales Representative",
   "Address": "Adenauerallee 900",
@@ -12178,7 +12178,7 @@
  },
  {
   "CustomerID": "ERNSH",
-  "CompanyName": "Ernst Handel",
+  "Company": "Ernst Handel",
   "ContactName": "Roland Mendel",
   "ContactTitle": "Sales Manager",
   "Address": "Kirchgasse 6",
@@ -12238,7 +12238,7 @@
  },
  {
   "CustomerID": "QUICK",
-  "CompanyName": "QUICK-Stop",
+  "Company": "QUICK-Stop",
   "ContactName": "Horst Kloss",
   "ContactTitle": "Accounting Manager",
   "Address": "Taucherstraße 10",
@@ -12297,7 +12297,7 @@
  },
  {
   "CustomerID": "HUNGO",
-  "CompanyName": "Hungry Owl All-Night Grocers",
+  "Company": "Hungry Owl All-Night Grocers",
   "ContactName": "Patricia McKenna",
   "ContactTitle": "Sales Associate",
   "Address": "8 Johnstown Road",
@@ -12345,7 +12345,7 @@
  },
  {
   "CustomerID": "NORTS",
-  "CompanyName": "North/South",
+  "Company": "North/South",
   "ContactName": "Simon Crowther",
   "ContactTitle": "Sales Associate",
   "Address": "South House 300 Queensbridge",
@@ -12393,7 +12393,7 @@
  },
  {
   "CustomerID": "TORTU",
-  "CompanyName": "Tortuga Restaurante",
+  "Company": "Tortuga Restaurante",
   "ContactName": "Miguel Angel Paolino",
   "ContactTitle": "Owner",
   "Address": "Avda. Azteca 123",
@@ -12440,7 +12440,7 @@
  },
  {
   "CustomerID": "CHOPS",
-  "CompanyName": "Chop-suey Chinese",
+  "Company": "Chop-suey Chinese",
   "ContactName": "Yang Wang",
   "ContactTitle": "Owner",
   "Address": "Hauptstr. 29",
@@ -12487,7 +12487,7 @@
  },
  {
   "CustomerID": "SANTG",
-  "CompanyName": "Santé Gourmet",
+  "Company": "Santé Gourmet",
   "ContactName": "Jonas Bergulfsen",
   "ContactTitle": "Owner",
   "Address": "Erling Skakkes gate 78",
@@ -12529,7 +12529,7 @@
  },
  {
   "CustomerID": "CACTU",
-  "CompanyName": "Cactus Comidas para llevar",
+  "Company": "Cactus Comidas para llevar",
   "ContactName": "Patricio Simpson",
   "ContactTitle": "Sales Agent",
   "Address": "Cerrito 333",
@@ -12577,7 +12577,7 @@
  },
  {
   "CustomerID": "LEHMS",
-  "CompanyName": "Lehmanns Marktstand",
+  "Company": "Lehmanns Marktstand",
   "ContactName": "Renate Messner",
   "ContactTitle": "Sales Representative",
   "Address": "Magazinweg 7",
@@ -12631,7 +12631,7 @@
  },
  {
   "CustomerID": "SEVES",
-  "CompanyName": "Seven Seas Imports",
+  "Company": "Seven Seas Imports",
   "ContactName": "Hari Kumar",
   "ContactTitle": "Sales Manager",
   "Address": "90 Wadhurst Rd.",
@@ -12685,7 +12685,7 @@
  },
  {
   "CustomerID": "BERGS",
-  "CompanyName": "Berglunds snabbköp",
+  "Company": "Berglunds snabbköp",
   "ContactName": "Christina Berglund",
   "ContactTitle": "Order Administrator",
   "Address": "Berguvsvägen  8",
@@ -12739,7 +12739,7 @@
  },
  {
   "CustomerID": "BONAP",
-  "CompanyName": "Bon app'",
+  "Company": "Bon app'",
   "ContactName": "Laurence Lebihan",
   "ContactTitle": "Owner",
   "Address": "12, rue des Bouchers",
@@ -12781,7 +12781,7 @@
  },
  {
   "CustomerID": "WARTH",
-  "CompanyName": "Wartian Herkku",
+  "Company": "Wartian Herkku",
   "ContactName": "Pirkko Koskitalo",
   "ContactTitle": "Accounting Manager",
   "Address": "Torikatu 38",
@@ -12829,7 +12829,7 @@
  },
  {
   "CustomerID": "QUICK",
-  "CompanyName": "QUICK-Stop",
+  "Company": "QUICK-Stop",
   "ContactName": "Horst Kloss",
   "ContactTitle": "Accounting Manager",
   "Address": "Taucherstraße 10",
@@ -12870,7 +12870,7 @@
  },
  {
   "CustomerID": "GREAL",
-  "CompanyName": "Great Lakes Food Market",
+  "Company": "Great Lakes Food Market",
   "ContactName": "Howard Snyder",
   "ContactTitle": "Marketing Manager",
   "Address": "2732 Baker Blvd.",
@@ -12919,7 +12919,7 @@
  },
  {
   "CustomerID": "MAISD",
-  "CompanyName": "Maison Dewey",
+  "Company": "Maison Dewey",
   "ContactName": "Catherine Dewey",
   "ContactTitle": "Sales Agent",
   "Address": "Rue Joseph-Bens 532",
@@ -12967,7 +12967,7 @@
  },
  {
   "CustomerID": "PICCO",
-  "CompanyName": "Piccolo und mehr",
+  "Company": "Piccolo und mehr",
   "ContactName": "Georg Pipps",
   "ContactTitle": "Sales Manager",
   "Address": "Geislweg 14",
@@ -13021,7 +13021,7 @@
  },
  {
   "CustomerID": "OCEAN",
-  "CompanyName": "Océano Atlántico Ltda.",
+  "Company": "Océano Atlántico Ltda.",
   "ContactName": "Yvonne Moncada",
   "ContactTitle": "Sales Agent",
   "Address": "Ing. Gustavo Moncada 8585 Piso 20-A",
@@ -13057,7 +13057,7 @@
  },
  {
   "CustomerID": "EASTC",
-  "CompanyName": "Eastern Connection",
+  "Company": "Eastern Connection",
   "ContactName": "Ann Devon",
   "ContactTitle": "Sales Agent",
   "Address": "35 King George",
@@ -13099,7 +13099,7 @@
  },
  {
   "CustomerID": "FOLKO",
-  "CompanyName": "Folk och fä HB",
+  "Company": "Folk och fä HB",
   "ContactName": "Maria Larsson",
   "ContactTitle": "Owner",
   "Address": "Åkergatan 24",
@@ -13146,7 +13146,7 @@
  },
  {
   "CustomerID": "LEHMS",
-  "CompanyName": "Lehmanns Marktstand",
+  "Company": "Lehmanns Marktstand",
   "ContactName": "Renate Messner",
   "ContactTitle": "Sales Representative",
   "Address": "Magazinweg 7",
@@ -13194,7 +13194,7 @@
  },
  {
   "CustomerID": "ANTON",
-  "CompanyName": "Antonio Moreno Taquería",
+  "Company": "Antonio Moreno Taquería",
   "ContactName": "Antonio Moreno",
   "ContactTitle": "Owner",
   "Address": "Mataderos  2312",
@@ -13247,7 +13247,7 @@
  },
  {
   "CustomerID": "LEHMS",
-  "CompanyName": "Lehmanns Marktstand",
+  "Company": "Lehmanns Marktstand",
   "ContactName": "Renate Messner",
   "ContactTitle": "Sales Representative",
   "Address": "Magazinweg 7",
@@ -13301,7 +13301,7 @@
  },
  {
   "CustomerID": "RICSU",
-  "CompanyName": "Richter Supermarkt",
+  "Company": "Richter Supermarkt",
   "ContactName": "Michael Holz",
   "ContactTitle": "Sales Manager",
   "Address": "Grenzacherweg 237",
@@ -13360,7 +13360,7 @@
  },
  {
   "CustomerID": "BSBEV",
-  "CompanyName": "B's Beverages",
+  "Company": "B's Beverages",
   "ContactName": "Victoria Ashworth",
   "ContactTitle": "Sales Representative",
   "Address": "Fauntleroy Circus",
@@ -13441,7 +13441,7 @@
  },
  {
   "CustomerID": "QUICK",
-  "CompanyName": "QUICK-Stop",
+  "Company": "QUICK-Stop",
   "ContactName": "Horst Kloss",
   "ContactTitle": "Accounting Manager",
   "Address": "Taucherstraße 10",
@@ -13494,7 +13494,7 @@
  },
  {
   "CustomerID": "HANAR",
-  "CompanyName": "Hanari Carnes",
+  "Company": "Hanari Carnes",
   "ContactName": "Mario Pontes",
   "ContactTitle": "Accounting Manager",
   "Address": "Rua do Paço, 67",
@@ -13550,7 +13550,7 @@
  },
  {
   "CustomerID": "KOENE",
-  "CompanyName": "Königlich Essen",
+  "Company": "Königlich Essen",
   "ContactName": "Philip Cramer",
   "ContactTitle": "Sales Associate",
   "Address": "Maubelstr. 90",
@@ -13591,7 +13591,7 @@
  },
  {
   "CustomerID": "LILAS",
-  "CompanyName": "LILA-Supermercado",
+  "Company": "LILA-Supermercado",
   "ContactName": "Carlos González",
   "ContactTitle": "Accounting Manager",
   "Address": "Carrera 52 con Ave. Bolívar #65-98 Llano Largo",
@@ -13635,7 +13635,7 @@
  },
  {
   "CustomerID": "LONEP",
-  "CompanyName": "Lonesome Pine Restaurant",
+  "Company": "Lonesome Pine Restaurant",
   "ContactName": "Fran Wilson",
   "ContactTitle": "Sales Manager",
   "Address": "89 Chiaroscuro Rd.",
@@ -13679,7 +13679,7 @@
  },
  {
   "CustomerID": "LAZYK",
-  "CompanyName": "Lazy K Kountry Store",
+  "Company": "Lazy K Kountry Store",
   "ContactName": "John Steel",
   "ContactTitle": "Marketing Manager",
   "Address": "12 Orchestra Terrace",
@@ -13717,7 +13717,7 @@
  },
  {
   "CustomerID": "VICTE",
-  "CompanyName": "Victuailles en stock",
+  "Company": "Victuailles en stock",
   "ContactName": "Mary Saveley",
   "ContactTitle": "Sales Agent",
   "Address": "2, rue du Commerce",
@@ -13765,7 +13765,7 @@
  },
  {
   "CustomerID": "SEVES",
-  "CompanyName": "Seven Seas Imports",
+  "Company": "Seven Seas Imports",
   "ContactName": "Hari Kumar",
   "ContactTitle": "Sales Manager",
   "Address": "90 Wadhurst Rd.",
@@ -13807,7 +13807,7 @@
  },
  {
   "CustomerID": "TOMSP",
-  "CompanyName": "Toms Spezialitäten",
+  "Company": "Toms Spezialitäten",
   "ContactName": "Karin Josephs",
   "ContactTitle": "Marketing Manager",
   "Address": "Luisenstr. 48",
@@ -13849,7 +13849,7 @@
  },
  {
   "CustomerID": "QUICK",
-  "CompanyName": "QUICK-Stop",
+  "Company": "QUICK-Stop",
   "ContactName": "Horst Kloss",
   "ContactTitle": "Accounting Manager",
   "Address": "Taucherstraße 10",
@@ -13896,7 +13896,7 @@
  },
  {
   "CustomerID": "GODOS",
-  "CompanyName": "Godos Cocina Típica",
+  "Company": "Godos Cocina Típica",
   "ContactName": "José Pedro Freyre",
   "ContactTitle": "Sales Manager",
   "Address": "C/ Romero, 33",
@@ -13949,7 +13949,7 @@
  },
  {
   "CustomerID": "FURIB",
-  "CompanyName": "Furia Bacalhau e Frutos do Mar",
+  "Company": "Furia Bacalhau e Frutos do Mar",
   "ContactName": "Lino Rodriguez",
   "ContactTitle": "Sales Manager",
   "Address": "Jardim das rosas n. 32",
@@ -13997,7 +13997,7 @@
  },
  {
   "CustomerID": "HILAA",
-  "CompanyName": "HILARION-Abastos",
+  "Company": "HILARION-Abastos",
   "ContactName": "Carlos Hernández",
   "ContactTitle": "Sales Representative",
   "Address": "Carrera 22 con Ave. Carlos Soublette #8-35",
@@ -14041,7 +14041,7 @@
  },
  {
   "CustomerID": "WARTH",
-  "CompanyName": "Wartian Herkku",
+  "Company": "Wartian Herkku",
   "ContactName": "Pirkko Koskitalo",
   "ContactTitle": "Accounting Manager",
   "Address": "Torikatu 38",
@@ -14101,7 +14101,7 @@
  },
  {
   "CustomerID": "OTTIK",
-  "CompanyName": "Ottilies Käseladen",
+  "Company": "Ottilies Käseladen",
   "ContactName": "Henriette Pfalzheim",
   "ContactTitle": "Owner",
   "Address": "Mehrheimerstr. 369",
@@ -14155,7 +14155,7 @@
  },
  {
   "CustomerID": "SAVEA",
-  "CompanyName": "Save-a-lot Markets",
+  "Company": "Save-a-lot Markets",
   "ContactName": "Jose Pavarotti",
   "ContactTitle": "Sales Representative",
   "Address": "187 Suffolk Ln.",
@@ -14216,7 +14216,7 @@
  },
  {
   "CustomerID": "SIMOB",
-  "CompanyName": "Simons bistro",
+  "Company": "Simons bistro",
   "ContactName": "Jytte Petersen",
   "ContactTitle": "Owner",
   "Address": "Vinbæltet 34",
@@ -14252,7 +14252,7 @@
  },
  {
   "CustomerID": "LEHMS",
-  "CompanyName": "Lehmanns Marktstand",
+  "Company": "Lehmanns Marktstand",
   "ContactName": "Renate Messner",
   "ContactTitle": "Sales Representative",
   "Address": "Magazinweg 7",
@@ -14294,7 +14294,7 @@
  },
  {
   "CustomerID": "AROUT",
-  "CompanyName": "Around the Horn",
+  "Company": "Around the Horn",
   "ContactName": "Thomas Hardy",
   "ContactTitle": "Sales Representative",
   "Address": "120 Hanover Sq.",
@@ -14355,7 +14355,7 @@
  },
  {
   "CustomerID": "BLONP",
-  "CompanyName": "Blondesddsl père et fils",
+  "Company": "Blondesddsl père et fils",
   "ContactName": "Frédérique Citeaux",
   "ContactTitle": "Marketing Manager",
   "Address": "24, place Kléber",
@@ -14397,7 +14397,7 @@
  },
  {
   "CustomerID": "FRANK",
-  "CompanyName": "Frankenversand",
+  "Company": "Frankenversand",
   "ContactName": "Peter Franken",
   "ContactTitle": "Marketing Manager",
   "Address": "Berliner Platz 43",
@@ -14439,7 +14439,7 @@
  },
  {
   "CustomerID": "FOLKO",
-  "CompanyName": "Folk och fä HB",
+  "Company": "Folk och fä HB",
   "ContactName": "Maria Larsson",
   "ContactTitle": "Owner",
   "Address": "Åkergatan 24",
@@ -14480,7 +14480,7 @@
  },
  {
   "CustomerID": "REGGC",
-  "CompanyName": "Reggiani Caseifici",
+  "Company": "Reggiani Caseifici",
   "ContactName": "Maurizio Moroni",
   "ContactTitle": "Sales Associate",
   "Address": "Strada Provinciale 124",
@@ -14522,7 +14522,7 @@
  },
  {
   "CustomerID": "RICAR",
-  "CompanyName": "Ricardo Adocicados",
+  "Company": "Ricardo Adocicados",
   "ContactName": "Janete Limeira",
   "ContactTitle": 70777,
   "Address": "Av. Copacabana, 267",
@@ -14565,7 +14565,7 @@
  },
  {
   "CustomerID": "RATTC",
-  "CompanyName": "Rattlesnake Canyon Grocery",
+  "Company": "Rattlesnake Canyon Grocery",
   "ContactName": "Paula Wilson",
   "ContactTitle": 70180,
   "Address": "2817 Milton Dr.",
@@ -14615,7 +14615,7 @@
  },
  {
   "CustomerID": "MEREP",
-  "CompanyName": "Mère Paillarde",
+  "Company": "Mère Paillarde",
   "ContactName": "Jean Fresnière",
   "ContactTitle": "Marketing Assistant",
   "Address": "43 rue St. Laurent",
@@ -14659,7 +14659,7 @@
  },
  {
   "CustomerID": "BLONP",
-  "CompanyName": "Blondesddsl père et fils",
+  "Company": "Blondesddsl père et fils",
   "ContactName": "Frédérique Citeaux",
   "ContactTitle": "Marketing Manager",
   "Address": "24, place Kléber",
@@ -14707,7 +14707,7 @@
  },
  {
   "CustomerID": "HUNGO",
-  "CompanyName": "Hungry Owl All-Night Grocers",
+  "Company": "Hungry Owl All-Night Grocers",
   "ContactName": "Patricia McKenna",
   "ContactTitle": "Sales Associate",
   "Address": "8 Johnstown Road",
@@ -14755,7 +14755,7 @@
  },
  {
   "CustomerID": "GALED",
-  "CompanyName": "Galería del gastrónomo",
+  "Company": "Galería del gastrónomo",
   "ContactName": "Eduardo Saavedra",
   "ContactTitle": "Marketing Manager",
   "Address": "Rambla de Cataluña, 23",
@@ -14791,7 +14791,7 @@
  },
  {
   "CustomerID": "RATTC",
-  "CompanyName": "Rattlesnake Canyon Grocery",
+  "Company": "Rattlesnake Canyon Grocery",
   "ContactName": "Paula Wilson",
   "ContactTitle": 20139,
   "Address": "2817 Milton Dr.",
@@ -14835,7 +14835,7 @@
  },
  {
   "CustomerID": "MEREP",
-  "CompanyName": "Mère Paillarde",
+  "Company": "Mère Paillarde",
   "ContactName": "Jean Fresnière",
   "ContactTitle": "Marketing Assistant",
   "Address": "43 rue St. Laurent",
@@ -14879,7 +14879,7 @@
  },
  {
   "CustomerID": "ERNSH",
-  "CompanyName": "Ernst Handel",
+  "Company": "Ernst Handel",
   "ContactName": "Roland Mendel",
   "ContactTitle": "Sales Manager",
   "Address": "Kirchgasse 6",
@@ -14921,7 +14921,7 @@
  },
  {
   "CustomerID": "BERGS",
-  "CompanyName": "Berglunds snabbköp",
+  "Company": "Berglunds snabbköp",
   "ContactName": "Christina Berglund",
   "ContactTitle": "Order Administrator",
   "Address": "Berguvsvägen  8",
@@ -14975,7 +14975,7 @@
  },
  {
   "CustomerID": "ANTON",
-  "CompanyName": "Antonio Moreno Taquería",
+  "Company": "Antonio Moreno Taquería",
   "ContactName": "Antonio Moreno",
   "ContactTitle": "Owner",
   "Address": "Mataderos  2312",
@@ -15022,7 +15022,7 @@
  },
  {
   "CustomerID": "TRAIH",
-  "CompanyName": "Trail's Head Gourmet Provisioners",
+  "Company": "Trail's Head Gourmet Provisioners",
   "ContactName": "Helvetius Nagy",
   "ContactTitle": "Sales Associate",
   "Address": "722 DaVinci Blvd.",
@@ -15078,7 +15078,7 @@
  },
  {
   "CustomerID": "MORGK",
-  "CompanyName": "Morgenstern Gesundkost",
+  "Company": "Morgenstern Gesundkost",
   "ContactName": "Alexander Feuer",
   "ContactTitle": "Marketing Assistant",
   "Address": "Heerstr. 22",
@@ -15131,7 +15131,7 @@
  },
  {
   "CustomerID": "TORTU",
-  "CompanyName": "Tortuga Restaurante",
+  "Company": "Tortuga Restaurante",
   "ContactName": "Miguel Angel Paolino",
   "ContactTitle": "Owner",
   "Address": "Avda. Azteca 123",
@@ -15178,7 +15178,7 @@
  },
  {
   "CustomerID": "TRAIH",
-  "CompanyName": "Trail's Head Gourmet Provisioners",
+  "Company": "Trail's Head Gourmet Provisioners",
   "ContactName": "Helvetius Nagy",
   "ContactTitle": "Sales Associate",
   "Address": "722 DaVinci Blvd.",
@@ -15228,7 +15228,7 @@
  },
  {
   "CustomerID": "BSBEV",
-  "CompanyName": "B's Beverages",
+  "Company": "B's Beverages",
   "ContactName": "Victoria Ashworth",
   "ContactTitle": "Sales Representative",
   "Address": "Fauntleroy Circus",
@@ -15269,7 +15269,7 @@
  },
  {
   "CustomerID": "LETSS",
-  "CompanyName": "Let's Stop N Shop",
+  "Company": "Let's Stop N Shop",
   "ContactName": "Jaime Yorres",
   "ContactTitle": "Owner",
   "Address": "87 Polk St. Suite 5",
@@ -15312,7 +15312,7 @@
  },
  {
   "CustomerID": "OTTIK",
-  "CompanyName": "Ottilies Käseladen",
+  "Company": "Ottilies Käseladen",
   "ContactName": "Henriette Pfalzheim",
   "ContactTitle": "Owner",
   "Address": "Mehrheimerstr. 369",
@@ -15360,7 +15360,7 @@
  },
  {
   "CustomerID": "FAMIA",
-  "CompanyName": "Familia Arquibaldo",
+  "Company": "Familia Arquibaldo",
   "ContactName": "Aria Cruz",
   "ContactTitle": "Marketing Assistant",
   "Address": "Rua Orós, 92",
@@ -15397,7 +15397,7 @@
  },
  {
   "CustomerID": "BLAUS",
-  "CompanyName": "Blauer See Delikatessen",
+  "Company": "Blauer See Delikatessen",
   "ContactName": "Hanna Moos",
   "ContactTitle": "Sales Representative",
   "Address": "Forsterstr. 57",
@@ -15439,7 +15439,7 @@
  },
  {
   "CustomerID": "WARTH",
-  "CompanyName": "Wartian Herkku",
+  "Company": "Wartian Herkku",
   "ContactName": "Pirkko Koskitalo",
   "ContactTitle": "Accounting Manager",
   "Address": "Torikatu 38",
@@ -15487,7 +15487,7 @@
  },
  {
   "CustomerID": "BLONP",
-  "CompanyName": "Blondesddsl père et fils",
+  "Company": "Blondesddsl père et fils",
   "ContactName": "Frédérique Citeaux",
   "ContactTitle": "Marketing Manager",
   "Address": "24, place Kléber",
@@ -15523,7 +15523,7 @@
  },
  {
   "CustomerID": "WELLI",
-  "CompanyName": "Wellington Importadora",
+  "Company": "Wellington Importadora",
   "ContactName": "Paula Parente",
   "ContactTitle": "Sales Manager",
   "Address": "Rua do Mercado, 12",
@@ -15560,7 +15560,7 @@
  },
  {
   "CustomerID": "REGGC",
-  "CompanyName": "Reggiani Caseifici",
+  "Company": "Reggiani Caseifici",
   "ContactName": "Maurizio Moroni",
   "ContactTitle": "Sales Associate",
   "Address": "Strada Provinciale 124",
@@ -15596,7 +15596,7 @@
  },
  {
   "CustomerID": "QUEDE",
-  "CompanyName": "Que Delícia",
+  "Company": "Que Delícia",
   "ContactName": "Bernardo Batista",
   "ContactTitle": "Accounting Manager",
   "Address": "Rua da Panificadora, 12",
@@ -15646,7 +15646,7 @@
  },
  {
   "CustomerID": "QUICK",
-  "CompanyName": "QUICK-Stop",
+  "Company": "QUICK-Stop",
   "ContactName": "Horst Kloss",
   "ContactTitle": "Accounting Manager",
   "Address": "Taucherstraße 10",
@@ -15687,7 +15687,7 @@
  },
  {
   "CustomerID": "GREAL",
-  "CompanyName": "Great Lakes Food Market",
+  "Company": "Great Lakes Food Market",
   "ContactName": "Howard Snyder",
   "ContactTitle": "Marketing Manager",
   "Address": "2732 Baker Blvd.",
@@ -15724,7 +15724,7 @@
  },
  {
   "CustomerID": "MEREP",
-  "CompanyName": "Mère Paillarde",
+  "Company": "Mère Paillarde",
   "ContactName": "Jean Fresnière",
   "ContactTitle": "Marketing Assistant",
   "Address": "43 rue St. Laurent",
@@ -15768,7 +15768,7 @@
  },
  {
   "CustomerID": "VAFFE",
-  "CompanyName": "Vaffeljernet",
+  "Company": "Vaffeljernet",
   "ContactName": "Palle Ibsen",
   "ContactTitle": "Sales Manager",
   "Address": "Smagsloget 45",
@@ -15816,7 +15816,7 @@
  },
  {
   "CustomerID": "LEHMS",
-  "CompanyName": "Lehmanns Marktstand",
+  "Company": "Lehmanns Marktstand",
   "ContactName": "Renate Messner",
   "ContactTitle": "Sales Representative",
   "Address": "Magazinweg 7",
@@ -15892,7 +15892,7 @@
  },
  {
   "CustomerID": "OLDWO",
-  "CompanyName": "Old World Delicatessen",
+  "Company": "Old World Delicatessen",
   "ContactName": "Rene Phillips",
   "ContactTitle": "Sales Representative",
   "Address": "2743 Bering St.",
@@ -15936,7 +15936,7 @@
  },
  {
   "CustomerID": "ERNSH",
-  "CompanyName": "Ernst Handel",
+  "Company": "Ernst Handel",
   "ContactName": "Roland Mendel",
   "ContactTitle": "Sales Manager",
   "Address": "Kirchgasse 6",
@@ -15984,7 +15984,7 @@
  },
  {
   "CustomerID": "WHITC",
-  "CompanyName": "White Clover Markets",
+  "Company": "White Clover Markets",
   "ContactName": "Karl Jablonski",
   "ContactTitle": "Owner",
   "Address": "305 - 14th Ave. S. Suite 3B",
@@ -16034,7 +16034,7 @@
  },
  {
   "CustomerID": "PICCO",
-  "CompanyName": "Piccolo und mehr",
+  "Company": "Piccolo und mehr",
   "ContactName": "Georg Pipps",
   "ContactTitle": "Sales Manager",
   "Address": "Geislweg 14",
@@ -16082,7 +16082,7 @@
  },
  {
   "CustomerID": "RATTC",
-  "CompanyName": "Rattlesnake Canyon Grocery",
+  "Company": "Rattlesnake Canyon Grocery",
   "ContactName": "Paula Wilson",
   "ContactTitle": 40826,
   "Address": "2817 Milton Dr.",
@@ -16126,7 +16126,7 @@
  },
  {
   "CustomerID": "BSBEV",
-  "CompanyName": "B's Beverages",
+  "Company": "B's Beverages",
   "ContactName": "Victoria Ashworth",
   "ContactTitle": "Sales Representative",
   "Address": "Fauntleroy Circus",
@@ -16161,7 +16161,7 @@
  },
  {
   "CustomerID": "HUNGC",
-  "CompanyName": "Hungry Coyote Import Store",
+  "Company": "Hungry Coyote Import Store",
   "ContactName": "Yoshi Latimer",
   "ContactTitle": "Sales Representative",
   "Address": "City Center Plaza 516 Main St.",
@@ -16205,7 +16205,7 @@
  },
  {
   "CustomerID": "HILAA",
-  "CompanyName": "HILARION-Abastos",
+  "Company": "HILARION-Abastos",
   "ContactName": "Carlos Hernández",
   "ContactTitle": "Sales Representative",
   "Address": "Carrera 22 con Ave. Carlos Soublette #8-35",
@@ -16249,7 +16249,7 @@
  },
  {
   "CustomerID": "VAFFE",
-  "CompanyName": "Vaffeljernet",
+  "Company": "Vaffeljernet",
   "ContactName": "Palle Ibsen",
   "ContactTitle": "Sales Manager",
   "Address": "Smagsloget 45",
@@ -16285,7 +16285,7 @@
  },
  {
   "CustomerID": "SAVEA",
-  "CompanyName": "Save-a-lot Markets",
+  "Company": "Save-a-lot Markets",
   "ContactName": "Jose Pavarotti",
   "ContactTitle": "Sales Representative",
   "Address": "187 Suffolk Ln.",
@@ -16328,7 +16328,7 @@
  },
  {
   "CustomerID": "FURIB",
-  "CompanyName": "Furia Bacalhau e Frutos do Mar",
+  "Company": "Furia Bacalhau e Frutos do Mar",
   "ContactName": "Lino Rodriguez",
   "ContactTitle": "Sales Manager",
   "Address": "Jardim das rosas n. 32",
@@ -16370,7 +16370,7 @@
  },
  {
   "CustomerID": "MEREP",
-  "CompanyName": "Mère Paillarde",
+  "Company": "Mère Paillarde",
   "ContactName": "Jean Fresnière",
   "ContactTitle": "Marketing Assistant",
   "Address": "43 rue St. Laurent",
@@ -16426,7 +16426,7 @@
  },
  {
   "CustomerID": "TRADH",
-  "CompanyName": "Tradição Hipermercados",
+  "Company": "Tradição Hipermercados",
   "ContactName": "Anabela Domingues",
   "ContactTitle": "Sales Representative",
   "Address": "Av. Inês de Castro, 414",
@@ -16476,7 +16476,7 @@
  },
  {
   "CustomerID": "SAVEA",
-  "CompanyName": "Save-a-lot Markets",
+  "Company": "Save-a-lot Markets",
   "ContactName": "Jose Pavarotti",
   "ContactTitle": "Sales Representative",
   "Address": "187 Suffolk Ln.",
@@ -16537,7 +16537,7 @@
  },
  {
   "CustomerID": "TOMSP",
-  "CompanyName": "Toms Spezialitäten",
+  "Company": "Toms Spezialitäten",
   "ContactName": "Karin Josephs",
   "ContactTitle": "Marketing Manager",
   "Address": "Luisenstr. 48",
@@ -16573,7 +16573,7 @@
  },
  {
   "CustomerID": "DUMON",
-  "CompanyName": "Du monde entier",
+  "Company": "Du monde entier",
   "ContactName": "Janine Labrune",
   "ContactTitle": "Owner",
   "Address": "67, rue des Cinquante Otages",
@@ -16621,7 +16621,7 @@
  },
  {
   "CustomerID": "LAMAI",
-  "CompanyName": "La maison d'Asie",
+  "Company": "La maison d'Asie",
   "ContactName": "Annette Roulet",
   "ContactTitle": "Sales Manager",
   "Address": "1 rue Alsace-Lorraine",
@@ -16657,7 +16657,7 @@
  },
  {
   "CustomerID": "WOLZA",
-  "CompanyName": "Wolski  Zajazd",
+  "Company": "Wolski  Zajazd",
   "ContactName": "Zbyszek Piestrzeniewicz",
   "ContactTitle": "Owner",
   "Address": "ul. Filtrowa 68",
@@ -16705,7 +16705,7 @@
  },
  {
   "CustomerID": "SAVEA",
-  "CompanyName": "Save-a-lot Markets",
+  "Company": "Save-a-lot Markets",
   "ContactName": "Jose Pavarotti",
   "ContactTitle": "Sales Representative",
   "Address": "187 Suffolk Ln.",
@@ -16766,7 +16766,7 @@
  },
  {
   "CustomerID": "HILAA",
-  "CompanyName": "HILARION-Abastos",
+  "Company": "HILARION-Abastos",
   "ContactName": "Carlos Hernández",
   "ContactTitle": "Sales Representative",
   "Address": "Carrera 22 con Ave. Carlos Soublette #8-35",
@@ -16810,7 +16810,7 @@
  },
  {
   "CustomerID": "BLAUS",
-  "CompanyName": "Blauer See Delikatessen",
+  "Company": "Blauer See Delikatessen",
   "ContactName": "Hanna Moos",
   "ContactTitle": "Sales Representative",
   "Address": "Forsterstr. 57",
@@ -16858,7 +16858,7 @@
  },
  {
   "CustomerID": "WILMK",
-  "CompanyName": "Wilman Kala",
+  "Company": "Wilman Kala",
   "ContactName": "Matti Karttunen",
   "ContactTitle": "Owner/Marketing Assistant",
   "Address": "Keskuskatu 45",
@@ -16894,7 +16894,7 @@
  },
  {
   "CustomerID": "GREAL",
-  "CompanyName": "Great Lakes Food Market",
+  "Company": "Great Lakes Food Market",
   "ContactName": "Howard Snyder",
   "ContactTitle": "Marketing Manager",
   "Address": "2732 Baker Blvd.",
@@ -16972,7 +16972,7 @@
  },
  {
   "CustomerID": "MEREP",
-  "CompanyName": "Mère Paillarde",
+  "Company": "Mère Paillarde",
   "ContactName": "Jean Fresnière",
   "ContactTitle": "Marketing Assistant",
   "Address": "43 rue St. Laurent",
@@ -17051,7 +17051,7 @@
  },
  {
   "CustomerID": "LAUGB",
-  "CompanyName": "Laughing Bacchus Wine Cellars",
+  "Company": "Laughing Bacchus Wine Cellars",
   "ContactName": "Yoshi Tannamuri",
   "ContactTitle": "Marketing Assistant",
   "Address": "1900 Oak St.",
@@ -17095,7 +17095,7 @@
  },
  {
   "CustomerID": "ISLAT",
-  "CompanyName": "Island Trading",
+  "Company": "Island Trading",
   "ContactName": "Helen Bennett",
   "ContactTitle": "Marketing Manager",
   "Address": "Garden House Crowther Way",
@@ -17150,7 +17150,7 @@
  },
  {
   "CustomerID": "RICAR",
-  "CompanyName": "Ricardo Adocicados",
+  "Company": "Ricardo Adocicados",
   "ContactName": "Janete Limeira",
   "ContactTitle": 60362,
   "Address": "Av. Copacabana, 267",
@@ -17193,7 +17193,7 @@
  },
  {
   "CustomerID": "FRANK",
-  "CompanyName": "Frankenversand",
+  "Company": "Frankenversand",
   "ContactName": "Peter Franken",
   "ContactTitle": "Marketing Manager",
   "Address": "Berliner Platz 43",
@@ -17253,7 +17253,7 @@
  },
  {
   "CustomerID": "THECR",
-  "CompanyName": "The Cracker Box",
+  "Company": "The Cracker Box",
   "ContactName": "Liu Wong",
   "ContactTitle": "Marketing Assistant",
   "Address": "55 Grizzly Peak Rd.",
@@ -17303,7 +17303,7 @@
  },
  {
   "CustomerID": "ANATR",
-  "CompanyName": "Ana Trujillo Emparedados y helados",
+  "Company": "Ana Trujillo Emparedados y helados",
   "ContactName": "Ana Trujillo",
   "ContactTitle": "Owner",
   "Address": "Avda. de la Constitución 2222",
@@ -17351,7 +17351,7 @@
  },
  {
   "CustomerID": "BERGS",
-  "CompanyName": "Berglunds snabbköp",
+  "Company": "Berglunds snabbköp",
   "ContactName": "Christina Berglund",
   "ContactTitle": "Order Administrator",
   "Address": "Berguvsvägen  8",
@@ -17399,7 +17399,7 @@
  },
  {
   "CustomerID": "SAVEA",
-  "CompanyName": "Save-a-lot Markets",
+  "Company": "Save-a-lot Markets",
   "ContactName": "Jose Pavarotti",
   "ContactTitle": "Sales Representative",
   "Address": "187 Suffolk Ln.",
@@ -17442,7 +17442,7 @@
  },
  {
   "CustomerID": "BLONP",
-  "CompanyName": "Blondesddsl père et fils",
+  "Company": "Blondesddsl père et fils",
   "ContactName": "Frédérique Citeaux",
   "ContactTitle": "Marketing Manager",
   "Address": "24, place Kléber",
@@ -17478,7 +17478,7 @@
  },
  {
   "CustomerID": "GODOS",
-  "CompanyName": "Godos Cocina Típica",
+  "Company": "Godos Cocina Típica",
   "ContactName": "José Pedro Freyre",
   "ContactTitle": "Sales Manager",
   "Address": "C/ Romero, 33",
@@ -17519,7 +17519,7 @@
  },
  {
   "CustomerID": "KOENE",
-  "CompanyName": "Königlich Essen",
+  "Company": "Königlich Essen",
   "ContactName": "Philip Cramer",
   "ContactTitle": "Sales Associate",
   "Address": "Maubelstr. 90",
@@ -17560,7 +17560,7 @@
  },
  {
   "CustomerID": "LAMAI",
-  "CompanyName": "La maison d'Asie",
+  "Company": "La maison d'Asie",
   "ContactName": "Annette Roulet",
   "ContactTitle": "Sales Manager",
   "Address": "1 rue Alsace-Lorraine",
@@ -17596,7 +17596,7 @@
  },
  {
   "CustomerID": "WANDK",
-  "CompanyName": "Die Wandernde Kuh",
+  "Company": "Die Wandernde Kuh",
   "ContactName": "Rita Müller",
   "ContactTitle": "Sales Representative",
   "Address": "Adenauerallee 900",
@@ -17638,7 +17638,7 @@
  },
  {
   "CustomerID": "ERNSH",
-  "CompanyName": "Ernst Handel",
+  "Company": "Ernst Handel",
   "ContactName": "Roland Mendel",
   "ContactTitle": "Sales Manager",
   "Address": "Kirchgasse 6",
@@ -17692,7 +17692,7 @@
  },
  {
   "CustomerID": "FOLIG",
-  "CompanyName": "Folies gourmandes",
+  "Company": "Folies gourmandes",
   "ContactName": "Martine Rancé",
   "ContactTitle": 90530,
   "Address": "184, chaussée de Tournai",
@@ -17746,7 +17746,7 @@
  },
  {
   "CustomerID": "MAGAA",
-  "CompanyName": "Magazzini Alimentari Riuniti",
+  "Company": "Magazzini Alimentari Riuniti",
   "ContactName": "Giovanni Rovelli",
   "ContactTitle": "Marketing Manager",
   "Address": "Via Ludovico il Moro 22",
@@ -17794,7 +17794,7 @@
  },
  {
   "CustomerID": "WARTH",
-  "CompanyName": "Wartian Herkku",
+  "Company": "Wartian Herkku",
   "ContactName": "Pirkko Koskitalo",
   "ContactTitle": "Accounting Manager",
   "Address": "Torikatu 38",
@@ -17836,7 +17836,7 @@
  },
  {
   "CustomerID": "QUEEN",
-  "CompanyName": "Queen Cozinha",
+  "Company": "Queen Cozinha",
   "ContactName": "Lúcia Carvalho",
   "ContactTitle": "Marketing Assistant",
   "Address": "Alameda dos Canàrios, 891",
@@ -17885,7 +17885,7 @@
  },
  {
   "CustomerID": "LINOD",
-  "CompanyName": "LINO-Delicateses",
+  "Company": "LINO-Delicateses",
   "ContactName": "Felipe Izquierdo",
   "ContactTitle": "Owner",
   "Address": "Ave. 5 de Mayo Porlamar",
@@ -17935,7 +17935,7 @@
  },
  {
   "CustomerID": "SANTG",
-  "CompanyName": "Santé Gourmet",
+  "Company": "Santé Gourmet",
   "ContactName": "Jonas Bergulfsen",
   "ContactTitle": "Owner",
   "Address": "Erling Skakkes gate 78",
@@ -17971,7 +17971,7 @@
  },
  {
   "CustomerID": "WANDK",
-  "CompanyName": "Die Wandernde Kuh",
+  "Company": "Die Wandernde Kuh",
   "ContactName": "Rita Müller",
   "ContactTitle": "Sales Representative",
   "Address": "Adenauerallee 900",
@@ -18013,7 +18013,7 @@
  },
  {
   "CustomerID": "HILAA",
-  "CompanyName": "HILARION-Abastos",
+  "Company": "HILARION-Abastos",
   "ContactName": "Carlos Hernández",
   "ContactTitle": "Sales Representative",
   "Address": "Carrera 22 con Ave. Carlos Soublette #8-35",
@@ -18057,7 +18057,7 @@
  },
  {
   "CustomerID": "SIMOB",
-  "CompanyName": "Simons bistro",
+  "Company": "Simons bistro",
   "ContactName": "Jytte Petersen",
   "ContactTitle": "Owner",
   "Address": "Vinbæltet 34",
@@ -18099,7 +18099,7 @@
  },
  {
   "CustomerID": "ALFKI",
-  "CompanyName": "Alfreds Futterkiste",
+  "Company": "Alfreds Futterkiste",
   "ContactName": "Maria Anders",
   "ContactTitle": "Sales Representative",
   "Address": "Obere Str. 57",
@@ -18147,7 +18147,7 @@
  },
  {
   "CustomerID": "WELLI",
-  "CompanyName": "Wellington Importadora",
+  "Company": "Wellington Importadora",
   "ContactName": "Paula Parente",
   "ContactTitle": "Sales Manager",
   "Address": "Rua do Mercado, 12",
@@ -18196,7 +18196,7 @@
  },
  {
   "CustomerID": "HANAR",
-  "CompanyName": "Hanari Carnes",
+  "Company": "Hanari Carnes",
   "ContactName": "Mario Pontes",
   "ContactTitle": "Accounting Manager",
   "Address": "Rua do Paço, 67",
@@ -18240,7 +18240,7 @@
  },
  {
   "CustomerID": "HUNGO",
-  "CompanyName": "Hungry Owl All-Night Grocers",
+  "Company": "Hungry Owl All-Night Grocers",
   "ContactName": "Patricia McKenna",
   "ContactTitle": "Sales Associate",
   "Address": "8 Johnstown Road",
@@ -18294,7 +18294,7 @@
  },
  {
   "CustomerID": "QUEDE",
-  "CompanyName": "Que Delícia",
+  "Company": "Que Delícia",
   "ContactName": "Bernardo Batista",
   "ContactTitle": "Accounting Manager",
   "Address": "Rua da Panificadora, 12",
@@ -18338,7 +18338,7 @@
  },
  {
   "CustomerID": "RICAR",
-  "CompanyName": "Ricardo Adocicados",
+  "Company": "Ricardo Adocicados",
   "ContactName": "Janete Limeira",
   "ContactTitle": 60274,
   "Address": "Av. Copacabana, 267",
@@ -18381,7 +18381,7 @@
  },
  {
   "CustomerID": "MAISD",
-  "CompanyName": "Maison Dewey",
+  "Company": "Maison Dewey",
   "ContactName": "Catherine Dewey",
   "ContactTitle": "Sales Agent",
   "Address": "Rue Joseph-Bens 532",
@@ -18423,7 +18423,7 @@
  },
  {
   "CustomerID": "FAMIA",
-  "CompanyName": "Familia Arquibaldo",
+  "Company": "Familia Arquibaldo",
   "ContactName": "Aria Cruz",
   "ContactTitle": "Marketing Assistant",
   "Address": "Rua Orós, 92",
@@ -18472,7 +18472,7 @@
  },
  {
   "CustomerID": "WANDK",
-  "CompanyName": "Die Wandernde Kuh",
+  "Company": "Die Wandernde Kuh",
   "ContactName": "Rita Müller",
   "ContactTitle": "Sales Representative",
   "Address": "Adenauerallee 900",
@@ -18514,7 +18514,7 @@
  },
  {
   "CustomerID": "GOURL",
-  "CompanyName": "Gourmet Lanchonetes",
+  "Company": "Gourmet Lanchonetes",
   "ContactName": "André Fonseca",
   "ContactTitle": "Sales Associate",
   "Address": "Av. Brasil, 442",
@@ -18557,7 +18557,7 @@
  },
  {
   "CustomerID": "FRANK",
-  "CompanyName": "Frankenversand",
+  "Company": "Frankenversand",
   "ContactName": "Peter Franken",
   "ContactTitle": "Marketing Manager",
   "Address": "Berliner Platz 43",
@@ -18599,7 +18599,7 @@
  },
  {
   "CustomerID": "BERGS",
-  "CompanyName": "Berglunds snabbköp",
+  "Company": "Berglunds snabbköp",
   "ContactName": "Christina Berglund",
   "ContactTitle": "Order Administrator",
   "Address": "Berguvsvägen  8",
@@ -18647,7 +18647,7 @@
  },
  {
   "CustomerID": "REGGC",
-  "CompanyName": "Reggiani Caseifici",
+  "Company": "Reggiani Caseifici",
   "ContactName": "Maurizio Moroni",
   "ContactTitle": "Sales Associate",
   "Address": "Strada Provinciale 124",
@@ -18683,7 +18683,7 @@
  },
  {
   "CustomerID": "GREAL",
-  "CompanyName": "Great Lakes Food Market",
+  "Company": "Great Lakes Food Market",
   "ContactName": "Howard Snyder",
   "ContactTitle": "Marketing Manager",
   "Address": "2732 Baker Blvd.",
@@ -18732,7 +18732,7 @@
  },
  {
   "CustomerID": "SAVEA",
-  "CompanyName": "Save-a-lot Markets",
+  "Company": "Save-a-lot Markets",
   "ContactName": "Jose Pavarotti",
   "ContactTitle": "Sales Representative",
   "Address": "187 Suffolk Ln.",
@@ -18799,7 +18799,7 @@
  },
  {
   "CustomerID": "QUICK",
-  "CompanyName": "QUICK-Stop",
+  "Company": "QUICK-Stop",
   "ContactName": "Horst Kloss",
   "ContactTitle": "Accounting Manager",
   "Address": "Taucherstraße 10",
@@ -18852,7 +18852,7 @@
  },
  {
   "CustomerID": "QUEEN",
-  "CompanyName": "Queen Cozinha",
+  "Company": "Queen Cozinha",
   "ContactName": "Lúcia Carvalho",
   "ContactTitle": "Marketing Assistant",
   "Address": "Alameda dos Canàrios, 891",
@@ -18901,7 +18901,7 @@
  },
  {
   "CustomerID": "HUNGC",
-  "CompanyName": "Hungry Coyote Import Store",
+  "Company": "Hungry Coyote Import Store",
   "ContactName": "Yoshi Latimer",
   "ContactTitle": "Sales Representative",
   "Address": "City Center Plaza 516 Main St.",
@@ -18939,7 +18939,7 @@
  },
  {
   "CustomerID": "HUNGO",
-  "CompanyName": "Hungry Owl All-Night Grocers",
+  "Company": "Hungry Owl All-Night Grocers",
   "ContactName": "Patricia McKenna",
   "ContactTitle": "Sales Associate",
   "Address": "8 Johnstown Road",
@@ -18981,7 +18981,7 @@
  },
  {
   "CustomerID": "LONEP",
-  "CompanyName": "Lonesome Pine Restaurant",
+  "Company": "Lonesome Pine Restaurant",
   "ContactName": "Fran Wilson",
   "ContactTitle": "Sales Manager",
   "Address": "89 Chiaroscuro Rd.",
@@ -19019,7 +19019,7 @@
  },
  {
   "CustomerID": "BONAP",
-  "CompanyName": "Bon app'",
+  "Company": "Bon app'",
   "ContactName": "Laurence Lebihan",
   "ContactTitle": "Owner",
   "Address": "12, rue des Bouchers",
@@ -19067,7 +19067,7 @@
  },
  {
   "CustomerID": "FURIB",
-  "CompanyName": "Furia Bacalhau e Frutos do Mar",
+  "Company": "Furia Bacalhau e Frutos do Mar",
   "ContactName": "Lino Rodriguez",
   "ContactTitle": "Sales Manager",
   "Address": "Jardim das rosas n. 32",
@@ -19115,7 +19115,7 @@
  },
  {
   "CustomerID": "LONEP",
-  "CompanyName": "Lonesome Pine Restaurant",
+  "Company": "Lonesome Pine Restaurant",
   "ContactName": "Fran Wilson",
   "ContactTitle": "Sales Manager",
   "Address": "89 Chiaroscuro Rd.",
@@ -19165,7 +19165,7 @@
  },
  {
   "CustomerID": "RICSU",
-  "CompanyName": "Richter Supermarkt",
+  "Company": "Richter Supermarkt",
   "ContactName": "Michael Holz",
   "ContactTitle": "Sales Manager",
   "Address": "Grenzacherweg 237",
@@ -19206,7 +19206,7 @@
  },
  {
   "CustomerID": "ERNSH",
-  "CompanyName": "Ernst Handel",
+  "Company": "Ernst Handel",
   "ContactName": "Roland Mendel",
   "ContactTitle": "Sales Manager",
   "Address": "Kirchgasse 6",
@@ -19248,7 +19248,7 @@
  },
  {
   "CustomerID": "WANDK",
-  "CompanyName": "Die Wandernde Kuh",
+  "Company": "Die Wandernde Kuh",
   "ContactName": "Rita Müller",
   "ContactTitle": "Sales Representative",
   "Address": "Adenauerallee 900",
@@ -19296,7 +19296,7 @@
  },
  {
   "CustomerID": "SIMOB",
-  "CompanyName": "Simons bistro",
+  "Company": "Simons bistro",
   "ContactName": "Jytte Petersen",
   "ContactTitle": "Owner",
   "Address": "Vinbæltet 34",
@@ -19332,7 +19332,7 @@
  },
  {
   "CustomerID": "FRANK",
-  "CompanyName": "Frankenversand",
+  "Company": "Frankenversand",
   "ContactName": "Peter Franken",
   "ContactTitle": "Marketing Manager",
   "Address": "Berliner Platz 43",
@@ -19392,7 +19392,7 @@
  },
  {
   "CustomerID": "FRANR",
-  "CompanyName": "France restauration",
+  "Company": "France restauration",
   "ContactName": "Carine Schmitt",
   "ContactTitle": "Marketing Manager",
   "Address": "54, rue Royale",
@@ -19440,7 +19440,7 @@
  },
  {
   "CustomerID": "BERGS",
-  "CompanyName": "Berglunds snabbköp",
+  "Company": "Berglunds snabbköp",
   "ContactName": "Christina Berglund",
   "ContactTitle": "Order Administrator",
   "Address": "Berguvsvägen  8",
@@ -19482,7 +19482,7 @@
  },
  {
   "CustomerID": "WILMK",
-  "CompanyName": "Wilman Kala",
+  "Company": "Wilman Kala",
   "ContactName": "Matti Karttunen",
   "ContactTitle": "Owner/Marketing Assistant",
   "Address": "Keskuskatu 45",
@@ -19530,7 +19530,7 @@
  },
  {
   "CustomerID": "ISLAT",
-  "CompanyName": "Island Trading",
+  "Company": "Island Trading",
   "ContactName": "Helen Bennett",
   "ContactTitle": "Marketing Manager",
   "Address": "Garden House Crowther Way",
@@ -19567,7 +19567,7 @@
  },
  {
   "CustomerID": "FRANK",
-  "CompanyName": "Frankenversand",
+  "Company": "Frankenversand",
   "ContactName": "Peter Franken",
   "ContactTitle": "Marketing Manager",
   "Address": "Berliner Platz 43",
@@ -19615,7 +19615,7 @@
  },
  {
   "CustomerID": "TORTU",
-  "CompanyName": "Tortuga Restaurante",
+  "Company": "Tortuga Restaurante",
   "ContactName": "Miguel Angel Paolino",
   "ContactTitle": "Owner",
   "Address": "Avda. Azteca 123",
@@ -19662,7 +19662,7 @@
  },
  {
   "CustomerID": "ANTON",
-  "CompanyName": "Antonio Moreno Taquería",
+  "Company": "Antonio Moreno Taquería",
   "ContactName": "Antonio Moreno",
   "ContactTitle": "Owner",
   "Address": "Mataderos  2312",
@@ -19703,7 +19703,7 @@
  },
  {
   "CustomerID": "SAVEA",
-  "CompanyName": "Save-a-lot Markets",
+  "Company": "Save-a-lot Markets",
   "ContactName": "Jose Pavarotti",
   "ContactTitle": "Sales Representative",
   "Address": "187 Suffolk Ln.",
@@ -19758,7 +19758,7 @@
  },
  {
   "CustomerID": "BLONP",
-  "CompanyName": "Blondesddsl père et fils",
+  "Company": "Blondesddsl père et fils",
   "ContactName": "Frédérique Citeaux",
   "ContactTitle": "Marketing Manager",
   "Address": "24, place Kléber",
@@ -19794,7 +19794,7 @@
  },
  {
   "CustomerID": "OLDWO",
-  "CompanyName": "Old World Delicatessen",
+  "Company": "Old World Delicatessen",
   "ContactName": "Rene Phillips",
   "ContactTitle": "Sales Representative",
   "Address": "2743 Bering St.",
@@ -19844,7 +19844,7 @@
  },
  {
   "CustomerID": "GREAL",
-  "CompanyName": "Great Lakes Food Market",
+  "Company": "Great Lakes Food Market",
   "ContactName": "Howard Snyder",
   "ContactTitle": "Marketing Manager",
   "Address": "2732 Baker Blvd.",
@@ -19893,7 +19893,7 @@
  },
  {
   "CustomerID": "ANTON",
-  "CompanyName": "Antonio Moreno Taquería",
+  "Company": "Antonio Moreno Taquería",
   "ContactName": "Antonio Moreno",
   "ContactTitle": "Owner",
   "Address": "Mataderos  2312",
@@ -19940,7 +19940,7 @@
  },
  {
   "CustomerID": "DUMON",
-  "CompanyName": "Du monde entier",
+  "Company": "Du monde entier",
   "ContactName": "Janine Labrune",
   "ContactTitle": "Owner",
   "Address": "67, rue des Cinquante Otages",
@@ -19976,7 +19976,7 @@
  },
  {
   "CustomerID": "OTTIK",
-  "CompanyName": "Ottilies Käseladen",
+  "Company": "Ottilies Käseladen",
   "ContactName": "Henriette Pfalzheim",
   "ContactTitle": "Owner",
   "Address": "Mehrheimerstr. 369",
@@ -20024,7 +20024,7 @@
  },
  {
   "CustomerID": "GOURL",
-  "CompanyName": "Gourmet Lanchonetes",
+  "Company": "Gourmet Lanchonetes",
   "ContactName": "André Fonseca",
   "ContactTitle": "Sales Associate",
   "Address": "Av. Brasil, 442",
@@ -20073,7 +20073,7 @@
  },
  {
   "CustomerID": "PICCO",
-  "CompanyName": "Piccolo und mehr",
+  "Company": "Piccolo und mehr",
   "ContactName": "Georg Pipps",
   "ContactTitle": "Sales Manager",
   "Address": "Geislweg 14",
@@ -20115,7 +20115,7 @@
  },
  {
   "CustomerID": "HUNGO",
-  "CompanyName": "Hungry Owl All-Night Grocers",
+  "Company": "Hungry Owl All-Night Grocers",
   "ContactName": "Patricia McKenna",
   "ContactTitle": "Sales Associate",
   "Address": "8 Johnstown Road",
@@ -20163,7 +20163,7 @@
  },
  {
   "CustomerID": "VAFFE",
-  "CompanyName": "Vaffeljernet",
+  "Company": "Vaffeljernet",
   "ContactName": "Palle Ibsen",
   "ContactTitle": "Sales Manager",
   "Address": "Smagsloget 45",
@@ -20211,7 +20211,7 @@
  },
  {
   "CustomerID": "BERGS",
-  "CompanyName": "Berglunds snabbköp",
+  "Company": "Berglunds snabbköp",
   "ContactName": "Christina Berglund",
   "ContactTitle": "Order Administrator",
   "Address": "Berguvsvägen  8",
@@ -20247,7 +20247,7 @@
  },
  {
   "CustomerID": "HANAR",
-  "CompanyName": "Hanari Carnes",
+  "Company": "Hanari Carnes",
   "ContactName": "Mario Pontes",
   "ContactTitle": "Accounting Manager",
   "Address": "Rua do Paço, 67",
@@ -20291,7 +20291,7 @@
  },
  {
   "CustomerID": "QUICK",
-  "CompanyName": "QUICK-Stop",
+  "Company": "QUICK-Stop",
   "ContactName": "Horst Kloss",
   "ContactTitle": "Accounting Manager",
   "Address": "Taucherstraße 10",
@@ -20350,7 +20350,7 @@
  },
  {
   "CustomerID": "ALFKI",
-  "CompanyName": "Alfreds Futterkiste",
+  "Company": "Alfreds Futterkiste",
   "ContactName": "Maria Anders",
   "ContactTitle": "Sales Representative",
   "Address": "Obere Str. 57",
@@ -20386,7 +20386,7 @@
  },
  {
   "CustomerID": "WHITC",
-  "CompanyName": "White Clover Markets",
+  "Company": "White Clover Markets",
   "ContactName": "Karl Jablonski",
   "ContactTitle": "Owner",
   "Address": "305 - 14th Ave. S. Suite 3B",
@@ -20442,7 +20442,7 @@
  },
  {
   "CustomerID": "QUICK",
-  "CompanyName": "QUICK-Stop",
+  "Company": "QUICK-Stop",
   "ContactName": "Horst Kloss",
   "ContactTitle": "Accounting Manager",
   "Address": "Taucherstraße 10",
@@ -20489,7 +20489,7 @@
  },
  {
   "CustomerID": "WILMK",
-  "CompanyName": "Wilman Kala",
+  "Company": "Wilman Kala",
   "ContactName": "Matti Karttunen",
   "ContactTitle": "Owner/Marketing Assistant",
   "Address": "Keskuskatu 45",
@@ -20537,7 +20537,7 @@
  },
  {
   "CustomerID": "WHITC",
-  "CompanyName": "White Clover Markets",
+  "Company": "White Clover Markets",
   "ContactName": "Karl Jablonski",
   "ContactTitle": "Owner",
   "Address": "305 - 14th Ave. S. Suite 3B",
@@ -20581,7 +20581,7 @@
  },
  {
   "CustomerID": "LINOD",
-  "CompanyName": "LINO-Delicateses",
+  "Company": "LINO-Delicateses",
   "ContactName": "Felipe Izquierdo",
   "ContactTitle": "Owner",
   "Address": "Ave. 5 de Mayo Porlamar",
@@ -20637,7 +20637,7 @@
  },
  {
   "CustomerID": "ERNSH",
-  "CompanyName": "Ernst Handel",
+  "Company": "Ernst Handel",
   "ContactName": "Roland Mendel",
   "ContactTitle": "Sales Manager",
   "Address": "Kirchgasse 6",
@@ -20697,7 +20697,7 @@
  },
  {
   "CustomerID": "MORGK",
-  "CompanyName": "Morgenstern Gesundkost",
+  "Company": "Morgenstern Gesundkost",
   "ContactName": "Alexander Feuer",
   "ContactTitle": "Marketing Assistant",
   "Address": "Heerstr. 22",
@@ -20732,7 +20732,7 @@
  },
  {
   "CustomerID": "SAVEA",
-  "CompanyName": "Save-a-lot Markets",
+  "Company": "Save-a-lot Markets",
   "ContactName": "Jose Pavarotti",
   "ContactTitle": "Sales Representative",
   "Address": "187 Suffolk Ln.",
@@ -20787,7 +20787,7 @@
  },
  {
   "CustomerID": "HUNGO",
-  "CompanyName": "Hungry Owl All-Night Grocers",
+  "Company": "Hungry Owl All-Night Grocers",
   "ContactName": "Patricia McKenna",
   "ContactTitle": "Sales Associate",
   "Address": "8 Johnstown Road",
@@ -20835,7 +20835,7 @@
  },
  {
   "CustomerID": "ALFKI",
-  "CompanyName": "Alfreds Futterkiste",
+  "Company": "Alfreds Futterkiste",
   "ContactName": "Maria Anders",
   "ContactTitle": "Sales Representative",
   "Address": "Obere Str. 57",
@@ -20877,7 +20877,7 @@
  },
  {
   "CustomerID": "FOLKO",
-  "CompanyName": "Folk och fä HB",
+  "Company": "Folk och fä HB",
   "ContactName": "Maria Larsson",
   "ContactTitle": "Owner",
   "Address": "Åkergatan 24",
@@ -20924,7 +20924,7 @@
  },
  {
   "CustomerID": "QUEEN",
-  "CompanyName": "Queen Cozinha",
+  "Company": "Queen Cozinha",
   "ContactName": "Lúcia Carvalho",
   "ContactTitle": "Marketing Assistant",
   "Address": "Alameda dos Canàrios, 891",
@@ -20973,7 +20973,7 @@
  },
  {
   "CustomerID": "HILAA",
-  "CompanyName": "HILARION-Abastos",
+  "Company": "HILARION-Abastos",
   "ContactName": "Carlos Hernández",
   "ContactTitle": "Sales Representative",
   "Address": "Carrera 22 con Ave. Carlos Soublette #8-35",
@@ -21017,7 +21017,7 @@
  },
  {
   "CustomerID": "OLDWO",
-  "CompanyName": "Old World Delicatessen",
+  "Company": "Old World Delicatessen",
   "ContactName": "Rene Phillips",
   "ContactTitle": "Sales Representative",
   "Address": "2743 Bering St.",
@@ -21067,7 +21067,7 @@
  },
  {
   "CustomerID": "AROUT",
-  "CompanyName": "Around the Horn",
+  "Company": "Around the Horn",
   "ContactName": "Thomas Hardy",
   "ContactTitle": "Sales Representative",
   "Address": "120 Hanover Sq.",
@@ -21116,7 +21116,7 @@
  },
  {
   "CustomerID": "THEBI",
-  "CompanyName": "The Big Cheese",
+  "Company": "The Big Cheese",
   "ContactName": "Liz Nixon",
   "ContactTitle": "Marketing Manager",
   "Address": "89 Jefferson Way Suite 2",
@@ -21159,7 +21159,7 @@
  },
  {
   "CustomerID": "GOURL",
-  "CompanyName": "Gourmet Lanchonetes",
+  "Company": "Gourmet Lanchonetes",
   "ContactName": "André Fonseca",
   "ContactTitle": "Sales Associate",
   "Address": "Av. Brasil, 442",
@@ -21208,7 +21208,7 @@
  },
  {
   "CustomerID": "FRANS",
-  "CompanyName": "Franchi S.p.A.",
+  "Company": "Franchi S.p.A.",
   "ContactName": "Paolo Accorti",
   "ContactTitle": "Sales Representative",
   "Address": "Via Monte Bianco 34",
@@ -21250,7 +21250,7 @@
  },
  {
   "CustomerID": "SAVEA",
-  "CompanyName": "Save-a-lot Markets",
+  "Company": "Save-a-lot Markets",
   "ContactName": "Jose Pavarotti",
   "ContactTitle": "Sales Representative",
   "Address": "187 Suffolk Ln.",
@@ -21299,7 +21299,7 @@
  },
  {
   "CustomerID": "HUNGO",
-  "CompanyName": "Hungry Owl All-Night Grocers",
+  "Company": "Hungry Owl All-Night Grocers",
   "ContactName": "Patricia McKenna",
   "ContactTitle": "Sales Associate",
   "Address": "8 Johnstown Road",
@@ -21341,7 +21341,7 @@
  },
  {
   "CustomerID": "SAVEA",
-  "CompanyName": "Save-a-lot Markets",
+  "Company": "Save-a-lot Markets",
   "ContactName": "Jose Pavarotti",
   "ContactTitle": "Sales Representative",
   "Address": "187 Suffolk Ln.",
@@ -21443,7 +21443,7 @@
  },
  {
   "CustomerID": "BONAP",
-  "CompanyName": "Bon app'",
+  "Company": "Bon app'",
   "ContactName": "Laurence Lebihan",
   "ContactTitle": "Owner",
   "Address": "12, rue des Bouchers",
@@ -21485,7 +21485,7 @@
  },
  {
   "CustomerID": "RANCH",
-  "CompanyName": "Rancho grande",
+  "Company": "Rancho grande",
   "ContactName": "Sergio Gutiérrez",
   "ContactTitle": "Sales Representative",
   "Address": "Av. del Libertador 900",
@@ -21533,7 +21533,7 @@
  },
  {
   "CustomerID": "FRANK",
-  "CompanyName": "Frankenversand",
+  "Company": "Frankenversand",
   "ContactName": "Peter Franken",
   "ContactTitle": "Marketing Manager",
   "Address": "Berliner Platz 43",
@@ -21581,7 +21581,7 @@
  },
  {
   "CustomerID": "KOENE",
-  "CompanyName": "Königlich Essen",
+  "Company": "Königlich Essen",
   "ContactName": "Philip Cramer",
   "ContactTitle": "Sales Associate",
   "Address": "Maubelstr. 90",
@@ -21634,7 +21634,7 @@
  },
  {
   "CustomerID": "LETSS",
-  "CompanyName": "Let's Stop N Shop",
+  "Company": "Let's Stop N Shop",
   "ContactName": "Jaime Yorres",
   "ContactTitle": "Owner",
   "Address": "87 Polk St. Suite 5",
@@ -21683,7 +21683,7 @@
  },
  {
   "CustomerID": "QUEDE",
-  "CompanyName": "Que Delícia",
+  "Company": "Que Delícia",
   "ContactName": "Bernardo Batista",
   "ContactTitle": "Accounting Manager",
   "Address": "Rua da Panificadora, 12",
@@ -21727,7 +21727,7 @@
  },
  {
   "CustomerID": "QUICK",
-  "CompanyName": "QUICK-Stop",
+  "Company": "QUICK-Stop",
   "ContactName": "Horst Kloss",
   "ContactTitle": "Accounting Manager",
   "Address": "Taucherstraße 10",
@@ -21762,7 +21762,7 @@
  },
  {
   "CustomerID": "SAVEA",
-  "CompanyName": "Save-a-lot Markets",
+  "Company": "Save-a-lot Markets",
   "ContactName": "Jose Pavarotti",
   "ContactTitle": "Sales Representative",
   "Address": "187 Suffolk Ln.",
@@ -21817,7 +21817,7 @@
  },
  {
   "CustomerID": "WHITC",
-  "CompanyName": "White Clover Markets",
+  "Company": "White Clover Markets",
   "ContactName": "Karl Jablonski",
   "ContactTitle": "Owner",
   "Address": "305 - 14th Ave. S. Suite 3B",
@@ -21855,7 +21855,7 @@
  },
  {
   "CustomerID": "MEREP",
-  "CompanyName": "Mère Paillarde",
+  "Company": "Mère Paillarde",
   "ContactName": "Jean Fresnière",
   "ContactTitle": "Marketing Assistant",
   "Address": "43 rue St. Laurent",
@@ -21899,7 +21899,7 @@
  },
  {
   "CustomerID": "FAMIA",
-  "CompanyName": "Familia Arquibaldo",
+  "Company": "Familia Arquibaldo",
   "ContactName": "Aria Cruz",
   "ContactTitle": "Marketing Assistant",
   "Address": "Rua Orós, 92",
@@ -21948,7 +21948,7 @@
  },
  {
   "CustomerID": "EASTC",
-  "CompanyName": "Eastern Connection",
+  "Company": "Eastern Connection",
   "ContactName": "Ann Devon",
   "ContactTitle": "Sales Agent",
   "Address": "35 King George",
@@ -21990,7 +21990,7 @@
  },
  {
   "CustomerID": "REGGC",
-  "CompanyName": "Reggiani Caseifici",
+  "Company": "Reggiani Caseifici",
   "ContactName": "Maurizio Moroni",
   "ContactTitle": "Sales Associate",
   "Address": "Strada Provinciale 124",
@@ -22038,7 +22038,7 @@
  },
  {
   "CustomerID": "QUEEN",
-  "CompanyName": "Queen Cozinha",
+  "Company": "Queen Cozinha",
   "ContactName": "Lúcia Carvalho",
   "ContactTitle": "Marketing Assistant",
   "Address": "Alameda dos Canàrios, 891",
@@ -22093,7 +22093,7 @@
  },
  {
   "CustomerID": "LINOD",
-  "CompanyName": "LINO-Delicateses",
+  "Company": "LINO-Delicateses",
   "ContactName": "Felipe Izquierdo",
   "ContactTitle": "Owner",
   "Address": "Ave. 5 de Mayo Porlamar",
@@ -22143,7 +22143,7 @@
  },
  {
   "CustomerID": "BONAP",
-  "CompanyName": "Bon app'",
+  "Company": "Bon app'",
   "ContactName": "Laurence Lebihan",
   "ContactTitle": "Owner",
   "Address": "12, rue des Bouchers",
@@ -22191,7 +22191,7 @@
  },
  {
   "CustomerID": "CHOPS",
-  "CompanyName": "Chop-suey Chinese",
+  "Company": "Chop-suey Chinese",
   "ContactName": "Yang Wang",
   "ContactTitle": "Owner",
   "Address": "Hauptstr. 29",
@@ -22232,7 +22232,7 @@
  },
  {
   "CustomerID": "BONAP",
-  "CompanyName": "Bon app'",
+  "Company": "Bon app'",
   "ContactName": "Laurence Lebihan",
   "ContactTitle": "Owner",
   "Address": "12, rue des Bouchers",
@@ -22268,7 +22268,7 @@
  },
  {
   "CustomerID": "BERGS",
-  "CompanyName": "Berglunds snabbköp",
+  "Company": "Berglunds snabbköp",
   "ContactName": "Christina Berglund",
   "ContactTitle": "Order Administrator",
   "Address": "Berguvsvägen  8",
@@ -22316,7 +22316,7 @@
  },
  {
   "CustomerID": "GOURL",
-  "CompanyName": "Gourmet Lanchonetes",
+  "Company": "Gourmet Lanchonetes",
   "ContactName": "André Fonseca",
   "ContactTitle": "Sales Associate",
   "Address": "Av. Brasil, 442",
@@ -22365,7 +22365,7 @@
  },
  {
   "CustomerID": "LETSS",
-  "CompanyName": "Let's Stop N Shop",
+  "Company": "Let's Stop N Shop",
   "ContactName": "Jaime Yorres",
   "ContactTitle": "Owner",
   "Address": "87 Polk St. Suite 5",
@@ -22408,7 +22408,7 @@
  },
  {
   "CustomerID": "HUNGO",
-  "CompanyName": "Hungry Owl All-Night Grocers",
+  "Company": "Hungry Owl All-Night Grocers",
   "ContactName": "Patricia McKenna",
   "ContactTitle": "Sales Associate",
   "Address": "8 Johnstown Road",
@@ -22450,7 +22450,7 @@
  },
  {
   "CustomerID": "VINET",
-  "CompanyName": "Vins et alcools Chevalier",
+  "Company": "Vins et alcools Chevalier",
   "ContactName": "Paul Henriot",
   "ContactTitle": "Accounting Manager",
   "Address": "59 rue de l'Abbaye",
@@ -22492,7 +22492,7 @@
  },
  {
   "CustomerID": "SPECD",
-  "CompanyName": "Spécialités du monde",
+  "Company": "Spécialités du monde",
   "ContactName": "Dominique Perrier",
   "ContactTitle": "Marketing Manager",
   "Address": "25, rue Lauriston",
@@ -22528,7 +22528,7 @@
  },
  {
   "CustomerID": "VINET",
-  "CompanyName": "Vins et alcools Chevalier",
+  "Company": "Vins et alcools Chevalier",
   "ContactName": "Paul Henriot",
   "ContactTitle": "Accounting Manager",
   "Address": "59 rue de l'Abbaye",
@@ -22570,7 +22570,7 @@
  },
  {
   "CustomerID": "WHITC",
-  "CompanyName": "White Clover Markets",
+  "Company": "White Clover Markets",
   "ContactName": "Karl Jablonski",
   "ContactTitle": "Owner",
   "Address": "305 - 14th Ave. S. Suite 3B",
@@ -22626,7 +22626,7 @@
  },
  {
   "CustomerID": "AROUT",
-  "CompanyName": "Around the Horn",
+  "Company": "Around the Horn",
   "ContactName": "Thomas Hardy",
   "ContactTitle": "Sales Representative",
   "Address": "120 Hanover Sq.",
@@ -22663,7 +22663,7 @@
  },
  {
   "CustomerID": "BOTTM",
-  "CompanyName": "Bottom-Dollar Markets",
+  "Company": "Bottom-Dollar Markets",
   "ContactName": "Elizabeth Lincoln",
   "ContactTitle": "Accounting Manager",
   "Address": "23 Tsawassen Blvd.",
@@ -22713,7 +22713,7 @@
  },
  {
   "CustomerID": "AROUT",
-  "CompanyName": "Around the Horn",
+  "Company": "Around the Horn",
   "ContactName": "Thomas Hardy",
   "ContactTitle": "Sales Representative",
   "Address": "120 Hanover Sq.",
@@ -22750,7 +22750,7 @@
  },
  {
   "CustomerID": "VAFFE",
-  "CompanyName": "Vaffeljernet",
+  "Company": "Vaffeljernet",
   "ContactName": "Palle Ibsen",
   "ContactTitle": "Sales Manager",
   "Address": "Smagsloget 45",
@@ -22786,7 +22786,7 @@
  },
  {
   "CustomerID": "QUICK",
-  "CompanyName": "QUICK-Stop",
+  "Company": "QUICK-Stop",
   "ContactName": "Horst Kloss",
   "ContactTitle": "Accounting Manager",
   "Address": "Taucherstraße 10",
@@ -22839,7 +22839,7 @@
  },
  {
   "CustomerID": "CHOPS",
-  "CompanyName": "Chop-suey Chinese",
+  "Company": "Chop-suey Chinese",
   "ContactName": "Yang Wang",
   "ContactTitle": "Owner",
   "Address": "Hauptstr. 29",
@@ -22892,7 +22892,7 @@
  },
  {
   "CustomerID": "PICCO",
-  "CompanyName": "Piccolo und mehr",
+  "Company": "Piccolo und mehr",
   "ContactName": "Georg Pipps",
   "ContactTitle": "Sales Manager",
   "Address": "Geislweg 14",
@@ -22946,7 +22946,7 @@
  },
  {
   "CustomerID": "SAVEA",
-  "CompanyName": "Save-a-lot Markets",
+  "Company": "Save-a-lot Markets",
   "ContactName": "Jose Pavarotti",
   "ContactTitle": "Sales Representative",
   "Address": "187 Suffolk Ln.",
@@ -22995,7 +22995,7 @@
  },
  {
   "CustomerID": "ISLAT",
-  "CompanyName": "Island Trading",
+  "Company": "Island Trading",
   "ContactName": "Helen Bennett",
   "ContactTitle": "Marketing Manager",
   "Address": "Garden House Crowther Way",
@@ -23044,7 +23044,7 @@
  },
  {
   "CustomerID": "WARTH",
-  "CompanyName": "Wartian Herkku",
+  "Company": "Wartian Herkku",
   "ContactName": "Pirkko Koskitalo",
   "ContactTitle": "Accounting Manager",
   "Address": "Torikatu 38",
@@ -23092,7 +23092,7 @@
  },
  {
   "CustomerID": "RICSU",
-  "CompanyName": "Richter Supermarkt",
+  "Company": "Richter Supermarkt",
   "ContactName": "Michael Holz",
   "ContactTitle": "Sales Manager",
   "Address": "Grenzacherweg 237",
@@ -23145,7 +23145,7 @@
  },
  {
   "CustomerID": "NORTS",
-  "CompanyName": "North/South",
+  "Company": "North/South",
   "ContactName": "Simon Crowther",
   "ContactTitle": "Sales Associate",
   "Address": "South House 300 Queensbridge",
@@ -23187,7 +23187,7 @@
  },
  {
   "CustomerID": "FRANS",
-  "CompanyName": "Franchi S.p.A.",
+  "Company": "Franchi S.p.A.",
   "ContactName": "Paolo Accorti",
   "ContactTitle": "Sales Representative",
   "Address": "Via Monte Bianco 34",
@@ -23229,7 +23229,7 @@
  },
  {
   "CustomerID": "MAGAA",
-  "CompanyName": "Magazzini Alimentari Riuniti",
+  "Company": "Magazzini Alimentari Riuniti",
   "ContactName": "Giovanni Rovelli",
   "ContactTitle": "Marketing Manager",
   "Address": "Via Ludovico il Moro 22",
@@ -23265,7 +23265,7 @@
  },
  {
   "CustomerID": "BONAP",
-  "CompanyName": "Bon app'",
+  "Company": "Bon app'",
   "ContactName": "Laurence Lebihan",
   "ContactTitle": "Owner",
   "Address": "12, rue des Bouchers",
@@ -23319,7 +23319,7 @@
  },
  {
   "CustomerID": "SPLIR",
-  "CompanyName": "Split Rail Beer & Ale",
+  "Company": "Split Rail Beer & Ale",
   "ContactName": "Art Braunschweiger",
   "ContactTitle": "Sales Manager",
   "Address": "P.O. Box 555",
@@ -23375,7 +23375,7 @@
  },
  {
   "CustomerID": "SAVEA",
-  "CompanyName": "Save-a-lot Markets",
+  "Company": "Save-a-lot Markets",
   "ContactName": "Jose Pavarotti",
   "ContactTitle": "Sales Representative",
   "Address": "187 Suffolk Ln.",
@@ -23430,7 +23430,7 @@
  },
  {
   "CustomerID": "RICSU",
-  "CompanyName": "Richter Supermarkt",
+  "Company": "Richter Supermarkt",
   "ContactName": "Michael Holz",
   "ContactTitle": "Sales Manager",
   "Address": "Grenzacherweg 237",
@@ -23477,7 +23477,7 @@
  },
  {
   "CustomerID": "ANATR",
-  "CompanyName": "Ana Trujillo Emparedados y helados",
+  "Company": "Ana Trujillo Emparedados y helados",
   "ContactName": "Ana Trujillo",
   "ContactTitle": "Owner",
   "Address": "Avda. de la Constitución 2222",
@@ -23513,7 +23513,7 @@
  },
  {
   "CustomerID": "MAISD",
-  "CompanyName": "Maison Dewey",
+  "Company": "Maison Dewey",
   "ContactName": "Catherine Dewey",
   "ContactTitle": "Sales Agent",
   "Address": "Rue Joseph-Bens 532",
@@ -23561,7 +23561,7 @@
  },
  {
   "CustomerID": "RATTC",
-  "CompanyName": "Rattlesnake Canyon Grocery",
+  "Company": "Rattlesnake Canyon Grocery",
   "ContactName": "Paula Wilson",
   "ContactTitle": 40829,
   "Address": "2817 Milton Dr.",
@@ -23605,7 +23605,7 @@
  },
  {
   "CustomerID": "FOLKO",
-  "CompanyName": "Folk och fä HB",
+  "Company": "Folk och fä HB",
   "ContactName": "Maria Larsson",
   "ContactTitle": "Owner",
   "Address": "Åkergatan 24",
@@ -23658,7 +23658,7 @@
  },
  {
   "CustomerID": "FOLIG",
-  "CompanyName": "Folies gourmandes",
+  "Company": "Folies gourmandes",
   "ContactName": "Martine Rancé",
   "ContactTitle": 90269,
   "Address": "184, chaussée de Tournai",
@@ -23706,7 +23706,7 @@
  },
  {
   "CustomerID": "ERNSH",
-  "CompanyName": "Ernst Handel",
+  "Company": "Ernst Handel",
   "ContactName": "Roland Mendel",
   "ContactTitle": "Sales Manager",
   "Address": "Kirchgasse 6",
@@ -23748,7 +23748,7 @@
  },
  {
   "CustomerID": "QUICK",
-  "CompanyName": "QUICK-Stop",
+  "Company": "QUICK-Stop",
   "ContactName": "Horst Kloss",
   "ContactTitle": "Accounting Manager",
   "Address": "Taucherstraße 10",
@@ -23783,7 +23783,7 @@
  },
  {
   "CustomerID": "OTTIK",
-  "CompanyName": "Ottilies Käseladen",
+  "Company": "Ottilies Käseladen",
   "ContactName": "Henriette Pfalzheim",
   "ContactTitle": "Owner",
   "Address": "Mehrheimerstr. 369",
@@ -23831,7 +23831,7 @@
  },
  {
   "CustomerID": "SUPRD",
-  "CompanyName": "Suprêmes délices",
+  "Company": "Suprêmes délices",
   "ContactName": "Pascale Cartrain",
   "ContactTitle": "Accounting Manager",
   "Address": "Boulevard Tirou, 255",
@@ -23867,7 +23867,7 @@
  },
  {
   "CustomerID": "AROUT",
-  "CompanyName": "Around the Horn",
+  "Company": "Around the Horn",
   "ContactName": "Thomas Hardy",
   "ContactTitle": "Sales Representative",
   "Address": "120 Hanover Sq.",
@@ -23922,7 +23922,7 @@
  },
  {
   "CustomerID": "VAFFE",
-  "CompanyName": "Vaffeljernet",
+  "Company": "Vaffeljernet",
   "ContactName": "Palle Ibsen",
   "ContactTitle": "Sales Manager",
   "Address": "Smagsloget 45",
@@ -23976,7 +23976,7 @@
  },
  {
   "CustomerID": "HANAR",
-  "CompanyName": "Hanari Carnes",
+  "Company": "Hanari Carnes",
   "ContactName": "Mario Pontes",
   "ContactTitle": "Accounting Manager",
   "Address": "Rua do Paço, 67",
@@ -24014,7 +24014,7 @@
  },
  {
   "CustomerID": "ERNSH",
-  "CompanyName": "Ernst Handel",
+  "Company": "Ernst Handel",
   "ContactName": "Roland Mendel",
   "ContactTitle": "Sales Manager",
   "Address": "Kirchgasse 6",
@@ -24050,7 +24050,7 @@
  },
  {
   "CustomerID": "LEHMS",
-  "CompanyName": "Lehmanns Marktstand",
+  "Company": "Lehmanns Marktstand",
   "ContactName": "Renate Messner",
   "ContactTitle": "Sales Representative",
   "Address": "Magazinweg 7",
@@ -24092,7 +24092,7 @@
  },
  {
   "CustomerID": "ERNSH",
-  "CompanyName": "Ernst Handel",
+  "Company": "Ernst Handel",
   "ContactName": "Roland Mendel",
   "ContactTitle": "Sales Manager",
   "Address": "Kirchgasse 6",
@@ -24140,7 +24140,7 @@
  },
  {
   "CustomerID": "FOLKO",
-  "CompanyName": "Folk och fä HB",
+  "Company": "Folk och fä HB",
   "ContactName": "Maria Larsson",
   "ContactTitle": "Owner",
   "Address": "Åkergatan 24",
@@ -24181,7 +24181,7 @@
  },
  {
   "CustomerID": "THECR",
-  "CompanyName": "The Cracker Box",
+  "Company": "The Cracker Box",
   "ContactName": "Liu Wong",
   "ContactTitle": "Marketing Assistant",
   "Address": "55 Grizzly Peak Rd.",
@@ -24225,7 +24225,7 @@
  },
  {
   "CustomerID": "ERNSH",
-  "CompanyName": "Ernst Handel",
+  "Company": "Ernst Handel",
   "ContactName": "Roland Mendel",
   "ContactTitle": "Sales Manager",
   "Address": "Kirchgasse 6",
@@ -24279,7 +24279,7 @@
  },
  {
   "CustomerID": "GOURL",
-  "CompanyName": "Gourmet Lanchonetes",
+  "Company": "Gourmet Lanchonetes",
   "ContactName": "André Fonseca",
   "ContactTitle": "Sales Associate",
   "Address": "Av. Brasil, 442",
@@ -24316,7 +24316,7 @@
  },
  {
   "CustomerID": "BERGS",
-  "CompanyName": "Berglunds snabbköp",
+  "Company": "Berglunds snabbköp",
   "ContactName": "Christina Berglund",
   "ContactTitle": "Order Administrator",
   "Address": "Berguvsvägen  8",
@@ -24352,7 +24352,7 @@
  },
  {
   "CustomerID": "MORGK",
-  "CompanyName": "Morgenstern Gesundkost",
+  "Company": "Morgenstern Gesundkost",
   "ContactName": "Alexander Feuer",
   "ContactTitle": "Marketing Assistant",
   "Address": "Heerstr. 22",
@@ -24393,7 +24393,7 @@
  },
  {
   "CustomerID": "LILAS",
-  "CompanyName": "LILA-Supermercado",
+  "Company": "LILA-Supermercado",
   "ContactName": "Carlos González",
   "ContactTitle": "Accounting Manager",
   "Address": "Carrera 52 con Ave. Bolívar #65-98 Llano Largo",
@@ -24437,7 +24437,7 @@
  },
  {
   "CustomerID": "WARTH",
-  "CompanyName": "Wartian Herkku",
+  "Company": "Wartian Herkku",
   "ContactName": "Pirkko Koskitalo",
   "ContactTitle": "Accounting Manager",
   "Address": "Torikatu 38",
@@ -24485,7 +24485,7 @@
  },
  {
   "CustomerID": "CACTU",
-  "CompanyName": "Cactus Comidas para llevar",
+  "Company": "Cactus Comidas para llevar",
   "ContactName": "Patricio Simpson",
   "ContactTitle": "Sales Agent",
   "Address": "Cerrito 333",
@@ -24521,7 +24521,7 @@
  },
  {
   "CustomerID": "HANAR",
-  "CompanyName": "Hanari Carnes",
+  "Company": "Hanari Carnes",
   "ContactName": "Mario Pontes",
   "ContactTitle": "Accounting Manager",
   "Address": "Rua do Paço, 67",
@@ -24565,7 +24565,7 @@
  },
  {
   "CustomerID": "MAGAA",
-  "CompanyName": "Magazzini Alimentari Riuniti",
+  "Company": "Magazzini Alimentari Riuniti",
   "ContactName": "Giovanni Rovelli",
   "ContactTitle": "Marketing Manager",
   "Address": "Via Ludovico il Moro 22",
@@ -24613,7 +24613,7 @@
  },
  {
   "CustomerID": "GROSR",
-  "CompanyName": "GROSELLA-Restaurante",
+  "Company": "GROSELLA-Restaurante",
   "ContactName": "Manuel Pereira",
   "ContactTitle": "Owner",
   "Address": "5ª Ave. Los Palos Grandes",
@@ -24657,7 +24657,7 @@
  },
  {
   "CustomerID": "QUEEN",
-  "CompanyName": "Queen Cozinha",
+  "Company": "Queen Cozinha",
   "ContactName": "Lúcia Carvalho",
   "ContactTitle": "Marketing Assistant",
   "Address": "Alameda dos Canàrios, 891",
@@ -24706,7 +24706,7 @@
  },
  {
   "CustomerID": "LAMAI",
-  "CompanyName": "La maison d'Asie",
+  "Company": "La maison d'Asie",
   "ContactName": "Annette Roulet",
   "ContactTitle": "Sales Manager",
   "Address": "1 rue Alsace-Lorraine",
@@ -24748,7 +24748,7 @@
  },
  {
   "CustomerID": "QUICK",
-  "CompanyName": "QUICK-Stop",
+  "Company": "QUICK-Stop",
   "ContactName": "Horst Kloss",
   "ContactTitle": "Accounting Manager",
   "Address": "Taucherstraße 10",
@@ -24789,7 +24789,7 @@
  },
  {
   "CustomerID": "FOLIG",
-  "CompanyName": "Folies gourmandes",
+  "Company": "Folies gourmandes",
   "ContactName": "Martine Rancé",
   "ContactTitle": 90659,
   "Address": "184, chaussée de Tournai",
@@ -24843,7 +24843,7 @@
  },
  {
   "CustomerID": "GOURL",
-  "CompanyName": "Gourmet Lanchonetes",
+  "Company": "Gourmet Lanchonetes",
   "ContactName": "André Fonseca",
   "ContactTitle": "Sales Associate",
   "Address": "Av. Brasil, 442",
@@ -24886,7 +24886,7 @@
  },
  {
   "CustomerID": "FRANK",
-  "CompanyName": "Frankenversand",
+  "Company": "Frankenversand",
   "ContactName": "Peter Franken",
   "ContactTitle": "Marketing Manager",
   "Address": "Berliner Platz 43",
@@ -24928,7 +24928,7 @@
  },
  {
   "CustomerID": "WOLZA",
-  "CompanyName": "Wolski  Zajazd",
+  "Company": "Wolski  Zajazd",
   "ContactName": "Zbyszek Piestrzeniewicz",
   "ContactTitle": "Owner",
   "Address": "ul. Filtrowa 68",
@@ -24976,7 +24976,7 @@
  },
  {
   "CustomerID": "AROUT",
-  "CompanyName": "Around the Horn",
+  "Company": "Around the Horn",
   "ContactName": "Thomas Hardy",
   "ContactTitle": "Sales Representative",
   "Address": "120 Hanover Sq.",
@@ -25019,7 +25019,7 @@
  },
  {
   "CustomerID": "QUEDE",
-  "CompanyName": "Que Delícia",
+  "Company": "Que Delícia",
   "ContactName": "Bernardo Batista",
   "ContactTitle": "Accounting Manager",
   "Address": "Rua da Panificadora, 12",
@@ -25063,7 +25063,7 @@
  },
  {
   "CustomerID": "ERNSH",
-  "CompanyName": "Ernst Handel",
+  "Company": "Ernst Handel",
   "ContactName": "Roland Mendel",
   "ContactTitle": "Sales Manager",
   "Address": "Kirchgasse 6",
@@ -25105,7 +25105,7 @@
  },
  {
   "CustomerID": "HILAA",
-  "CompanyName": "HILARION-Abastos",
+  "Company": "HILARION-Abastos",
   "ContactName": "Carlos Hernández",
   "ContactTitle": "Sales Representative",
   "Address": "Carrera 22 con Ave. Carlos Soublette #8-35",
@@ -25161,7 +25161,7 @@
  },
  {
   "CustomerID": "DRACD",
-  "CompanyName": "Drachenblut Delikatessen",
+  "Company": "Drachenblut Delikatessen",
   "ContactName": "Sven Ottlieb",
   "ContactTitle": "Order Administrator",
   "Address": "Walserweg 21",
@@ -25197,7 +25197,7 @@
  },
  {
   "CustomerID": "ISLAT",
-  "CompanyName": "Island Trading",
+  "Company": "Island Trading",
   "ContactName": "Helen Bennett",
   "ContactTitle": "Marketing Manager",
   "Address": "Garden House Crowther Way",
@@ -25240,7 +25240,7 @@
  },
  {
   "CustomerID": "KOENE",
-  "CompanyName": "Königlich Essen",
+  "Company": "Königlich Essen",
   "ContactName": "Philip Cramer",
   "ContactTitle": "Sales Associate",
   "Address": "Maubelstr. 90",
@@ -25287,7 +25287,7 @@
  },
  {
   "CustomerID": "SEVES",
-  "CompanyName": "Seven Seas Imports",
+  "Company": "Seven Seas Imports",
   "ContactName": "Hari Kumar",
   "ContactTitle": "Sales Manager",
   "Address": "90 Wadhurst Rd.",
@@ -25335,7 +25335,7 @@
  },
  {
   "CustomerID": "BOLID",
-  "CompanyName": "Bólido Comidas preparadas",
+  "Company": "Bólido Comidas preparadas",
   "ContactName": "Martín Sommer",
   "ContactTitle": "Owner",
   "Address": "C/ Araquil, 67",
@@ -25377,7 +25377,7 @@
  },
  {
   "CustomerID": "SIMOB",
-  "CompanyName": "Simons bistro",
+  "Company": "Simons bistro",
   "ContactName": "Jytte Petersen",
   "ContactTitle": "Owner",
   "Address": "Vinbæltet 34",
@@ -25431,7 +25431,7 @@
  },
  {
   "CustomerID": "WELLI",
-  "CompanyName": "Wellington Importadora",
+  "Company": "Wellington Importadora",
   "ContactName": "Paula Parente",
   "ContactTitle": "Sales Manager",
   "Address": "Rua do Mercado, 12",
@@ -25480,7 +25480,7 @@
  },
  {
   "CustomerID": "SEVES",
-  "CompanyName": "Seven Seas Imports",
+  "Company": "Seven Seas Imports",
   "ContactName": "Hari Kumar",
   "ContactTitle": "Sales Manager",
   "Address": "90 Wadhurst Rd.",
@@ -25528,7 +25528,7 @@
  },
  {
   "CustomerID": "THEBI",
-  "CompanyName": "The Big Cheese",
+  "Company": "The Big Cheese",
   "ContactName": "Liz Nixon",
   "ContactTitle": "Marketing Manager",
   "Address": "89 Jefferson Way Suite 2",
@@ -25571,7 +25571,7 @@
  },
  {
   "CustomerID": "VICTE",
-  "CompanyName": "Victuailles en stock",
+  "Company": "Victuailles en stock",
   "ContactName": "Mary Saveley",
   "ContactTitle": "Sales Agent",
   "Address": "2, rue du Commerce",
@@ -25619,7 +25619,7 @@
  },
  {
   "CustomerID": "FRANS",
-  "CompanyName": "Franchi S.p.A.",
+  "Company": "Franchi S.p.A.",
   "ContactName": "Paolo Accorti",
   "ContactTitle": "Sales Representative",
   "Address": "Via Monte Bianco 34",
@@ -25655,7 +25655,7 @@
  },
  {
   "CustomerID": "OLDWO",
-  "CompanyName": "Old World Delicatessen",
+  "Company": "Old World Delicatessen",
   "ContactName": "Rene Phillips",
   "ContactTitle": "Sales Representative",
   "Address": "2743 Bering St.",
@@ -25699,7 +25699,7 @@
  },
  {
   "CustomerID": "WELLI",
-  "CompanyName": "Wellington Importadora",
+  "Company": "Wellington Importadora",
   "ContactName": "Paula Parente",
   "ContactTitle": "Sales Manager",
   "Address": "Rua do Mercado, 12",
@@ -25736,7 +25736,7 @@
  },
  {
   "CustomerID": "LAUGB",
-  "CompanyName": "Laughing Bacchus Wine Cellars",
+  "Company": "Laughing Bacchus Wine Cellars",
   "ContactName": "Yoshi Tannamuri",
   "ContactTitle": "Marketing Assistant",
   "Address": "1900 Oak St.",
@@ -25786,7 +25786,7 @@
  },
  {
   "CustomerID": "LINOD",
-  "CompanyName": "LINO-Delicateses",
+  "Company": "LINO-Delicateses",
   "ContactName": "Felipe Izquierdo",
   "ContactTitle": "Owner",
   "Address": "Ave. 5 de Mayo Porlamar",
@@ -25836,7 +25836,7 @@
  },
  {
   "CustomerID": "REGGC",
-  "CompanyName": "Reggiani Caseifici",
+  "Company": "Reggiani Caseifici",
   "ContactName": "Maurizio Moroni",
   "ContactTitle": "Sales Associate",
   "Address": "Strada Provinciale 124",
@@ -25884,7 +25884,7 @@
  },
  {
   "CustomerID": "RICAR",
-  "CompanyName": "Ricardo Adocicados",
+  "Company": "Ricardo Adocicados",
   "ContactName": "Janete Limeira",
   "ContactTitle": 50667,
   "Address": "Av. Copacabana, 267",
@@ -25927,7 +25927,7 @@
  },
  {
   "CustomerID": "VICTE",
-  "CompanyName": "Victuailles en stock",
+  "Company": "Victuailles en stock",
   "ContactName": "Mary Saveley",
   "ContactTitle": "Sales Agent",
   "Address": "2, rue du Commerce",
@@ -25981,7 +25981,7 @@
  },
  {
   "CustomerID": "SAVEA",
-  "CompanyName": "Save-a-lot Markets",
+  "Company": "Save-a-lot Markets",
   "ContactName": "Jose Pavarotti",
   "ContactTitle": "Sales Representative",
   "Address": "187 Suffolk Ln.",
@@ -26018,7 +26018,7 @@
  },
  {
   "CustomerID": "GREAL",
-  "CompanyName": "Great Lakes Food Market",
+  "Company": "Great Lakes Food Market",
   "ContactName": "Howard Snyder",
   "ContactTitle": "Marketing Manager",
   "Address": "2732 Baker Blvd.",
@@ -26061,7 +26061,7 @@
  },
  {
   "CustomerID": "KOENE",
-  "CompanyName": "Königlich Essen",
+  "Company": "Königlich Essen",
   "ContactName": "Philip Cramer",
   "ContactTitle": "Sales Associate",
   "Address": "Maubelstr. 90",
@@ -26114,7 +26114,7 @@
  },
  {
   "CustomerID": "MAGAA",
-  "CompanyName": "Magazzini Alimentari Riuniti",
+  "Company": "Magazzini Alimentari Riuniti",
   "ContactName": "Giovanni Rovelli",
   "ContactTitle": "Marketing Manager",
   "Address": "Via Ludovico il Moro 22",
@@ -26156,7 +26156,7 @@
  },
  {
   "CustomerID": "CACTU",
-  "CompanyName": "Cactus Comidas para llevar",
+  "Company": "Cactus Comidas para llevar",
   "ContactName": "Patricio Simpson",
   "ContactTitle": "Sales Agent",
   "Address": "Cerrito 333",
@@ -26198,7 +26198,7 @@
  },
  {
   "CustomerID": "RATTC",
-  "CompanyName": "Rattlesnake Canyon Grocery",
+  "Company": "Rattlesnake Canyon Grocery",
   "ContactName": "Paula Wilson",
   "ContactTitle": 40771,
   "Address": "2817 Milton Dr.",
@@ -26236,7 +26236,7 @@
  },
  {
   "CustomerID": "SPLIR",
-  "CompanyName": "Split Rail Beer & Ale",
+  "Company": "Split Rail Beer & Ale",
   "ContactName": "Art Braunschweiger",
   "ContactTitle": "Sales Manager",
   "Address": "P.O. Box 555",
@@ -26280,7 +26280,7 @@
  },
  {
   "CustomerID": "TRAIH",
-  "CompanyName": "Trail's Head Gourmet Provisioners",
+  "Company": "Trail's Head Gourmet Provisioners",
   "ContactName": "Helvetius Nagy",
   "ContactTitle": "Sales Associate",
   "Address": "722 DaVinci Blvd.",
@@ -26324,7 +26324,7 @@
  },
  {
   "CustomerID": "LILAS",
-  "CompanyName": "LILA-Supermercado",
+  "Company": "LILA-Supermercado",
   "ContactName": "Carlos González",
   "ContactTitle": "Accounting Manager",
   "Address": "Carrera 52 con Ave. Bolívar #65-98 Llano Largo",
@@ -26380,7 +26380,7 @@
  },
  {
   "CustomerID": "FOLKO",
-  "CompanyName": "Folk och fä HB",
+  "Company": "Folk och fä HB",
   "ContactName": "Maria Larsson",
   "ContactTitle": "Owner",
   "Address": "Åkergatan 24",
@@ -26421,7 +26421,7 @@
  },
  {
   "CustomerID": "DRACD",
-  "CompanyName": "Drachenblut Delikatessen",
+  "Company": "Drachenblut Delikatessen",
   "ContactName": "Sven Ottlieb",
   "ContactTitle": "Order Administrator",
   "Address": "Walserweg 21",
@@ -26463,7 +26463,7 @@
  },
  {
   "CustomerID": "BLONP",
-  "CompanyName": "Blondesddsl père et fils",
+  "Company": "Blondesddsl père et fils",
   "ContactName": "Frédérique Citeaux",
   "ContactTitle": "Marketing Manager",
   "Address": "24, place Kléber",
@@ -26505,7 +26505,7 @@
  },
  {
   "CustomerID": "BONAP",
-  "CompanyName": "Bon app'",
+  "Company": "Bon app'",
   "ContactName": "Laurence Lebihan",
   "ContactTitle": "Owner",
   "Address": "12, rue des Bouchers",
@@ -26547,7 +26547,7 @@
  },
  {
   "CustomerID": "RANCH",
-  "CompanyName": "Rancho grande",
+  "Company": "Rancho grande",
   "ContactName": "Sergio Gutiérrez",
   "ContactTitle": "Sales Representative",
   "Address": "Av. del Libertador 900",
@@ -26589,7 +26589,7 @@
  },
  {
   "CustomerID": "ISLAT",
-  "CompanyName": "Island Trading",
+  "Company": "Island Trading",
   "ContactName": "Helen Bennett",
   "ContactTitle": "Marketing Manager",
   "Address": "Garden House Crowther Way",
@@ -26644,7 +26644,7 @@
  },
  {
   "CustomerID": "TRADH",
-  "CompanyName": "Tradição Hipermercados",
+  "Company": "Tradição Hipermercados",
   "ContactName": "Anabela Domingues",
   "ContactTitle": "Sales Representative",
   "Address": "Av. Inês de Castro, 414",
@@ -26700,7 +26700,7 @@
  },
  {
   "CustomerID": "SANTG",
-  "CompanyName": "Santé Gourmet",
+  "Company": "Santé Gourmet",
   "ContactName": "Jonas Bergulfsen",
   "ContactTitle": "Owner",
   "Address": "Erling Skakkes gate 78",
@@ -26754,7 +26754,7 @@
  },
  {
   "CustomerID": "LAMAI",
-  "CompanyName": "La maison d'Asie",
+  "Company": "La maison d'Asie",
   "ContactName": "Annette Roulet",
   "ContactTitle": "Sales Manager",
   "Address": "1 rue Alsace-Lorraine",
@@ -26808,7 +26808,7 @@
  },
  {
   "CustomerID": "OTTIK",
-  "CompanyName": "Ottilies Käseladen",
+  "Company": "Ottilies Käseladen",
   "ContactName": "Henriette Pfalzheim",
   "ContactTitle": "Owner",
   "Address": "Mehrheimerstr. 369",
@@ -26856,7 +26856,7 @@
  },
  {
   "CustomerID": "TRADH",
-  "CompanyName": "Tradição Hipermercados",
+  "Company": "Tradição Hipermercados",
   "ContactName": "Anabela Domingues",
   "ContactTitle": "Sales Representative",
   "Address": "Av. Inês de Castro, 414",
@@ -26900,7 +26900,7 @@
  },
  {
   "CustomerID": "ALFKI",
-  "CompanyName": "Alfreds Futterkiste",
+  "Company": "Alfreds Futterkiste",
   "ContactName": "Maria Anders",
   "ContactTitle": "Sales Representative",
   "Address": "Obere Str. 57",
@@ -26942,7 +26942,7 @@
  },
  {
   "CustomerID": "ERNSH",
-  "CompanyName": "Ernst Handel",
+  "Company": "Ernst Handel",
   "ContactName": "Roland Mendel",
   "ContactTitle": "Sales Manager",
   "Address": "Kirchgasse 6",
@@ -27002,7 +27002,7 @@
  },
  {
   "CustomerID": "BERGS",
-  "CompanyName": "Berglunds snabbköp",
+  "Company": "Berglunds snabbköp",
   "ContactName": "Christina Berglund",
   "ContactTitle": "Order Administrator",
   "Address": "Berguvsvägen  8",
@@ -27056,7 +27056,7 @@
  },
  {
   "CustomerID": "LINOD",
-  "CompanyName": "LINO-Delicateses",
+  "Company": "LINO-Delicateses",
   "ContactName": "Felipe Izquierdo",
   "ContactTitle": "Owner",
   "Address": "Ave. 5 de Mayo Porlamar",
@@ -27106,7 +27106,7 @@
  },
  {
   "CustomerID": "TRADH",
-  "CompanyName": "Tradição Hipermercados",
+  "Company": "Tradição Hipermercados",
   "ContactName": "Anabela Domingues",
   "ContactTitle": "Sales Representative",
   "Address": "Av. Inês de Castro, 414",
@@ -27150,7 +27150,7 @@
  },
  {
   "CustomerID": "LINOD",
-  "CompanyName": "LINO-Delicateses",
+  "Company": "LINO-Delicateses",
   "ContactName": "Felipe Izquierdo",
   "ContactTitle": "Owner",
   "Address": "Ave. 5 de Mayo Porlamar",
@@ -27194,7 +27194,7 @@
  },
  {
   "CustomerID": "SUPRD",
-  "CompanyName": "Suprêmes délices",
+  "Company": "Suprêmes délices",
   "ContactName": "Pascale Cartrain",
   "ContactTitle": "Accounting Manager",
   "Address": "Boulevard Tirou, 255",
@@ -27248,7 +27248,7 @@
  },
  {
   "CustomerID": "TORTU",
-  "CompanyName": "Tortuga Restaurante",
+  "Company": "Tortuga Restaurante",
   "ContactName": "Miguel Angel Paolino",
   "ContactTitle": "Owner",
   "Address": "Avda. Azteca 123",
@@ -27301,7 +27301,7 @@
  },
  {
   "CustomerID": "VICTE",
-  "CompanyName": "Victuailles en stock",
+  "Company": "Victuailles en stock",
   "ContactName": "Mary Saveley",
   "ContactTitle": "Sales Agent",
   "Address": "2, rue du Commerce",
@@ -27337,7 +27337,7 @@
  },
  {
   "CustomerID": "PICCO",
-  "CompanyName": "Piccolo und mehr",
+  "Company": "Piccolo und mehr",
   "ContactName": "Georg Pipps",
   "ContactTitle": "Sales Manager",
   "Address": "Geislweg 14",
@@ -27373,7 +27373,7 @@
  },
  {
   "CustomerID": "QUICK",
-  "CompanyName": "QUICK-Stop",
+  "Company": "QUICK-Stop",
   "ContactName": "Horst Kloss",
   "ContactTitle": "Accounting Manager",
   "Address": "Taucherstraße 10",
@@ -27432,7 +27432,7 @@
  },
  {
   "CustomerID": "SUPRD",
-  "CompanyName": "Suprêmes délices",
+  "Company": "Suprêmes délices",
   "ContactName": "Pascale Cartrain",
   "ContactTitle": "Accounting Manager",
   "Address": "Boulevard Tirou, 255",
@@ -27480,7 +27480,7 @@
  },
  {
   "CustomerID": "SAVEA",
-  "CompanyName": "Save-a-lot Markets",
+  "Company": "Save-a-lot Markets",
   "ContactName": "Jose Pavarotti",
   "ContactTitle": "Sales Representative",
   "Address": "187 Suffolk Ln.",
@@ -27547,7 +27547,7 @@
  },
  {
   "CustomerID": "CONSH",
-  "CompanyName": "Consolidated Holdings",
+  "Company": "Consolidated Holdings",
   "ContactName": "Elizabeth Brown",
   "ContactTitle": "Sales Representative",
   "Address": "Berkeley Gardens 12  Brewery",
@@ -27589,7 +27589,7 @@
  },
  {
   "CustomerID": "KOENE",
-  "CompanyName": "Königlich Essen",
+  "Company": "Königlich Essen",
   "ContactName": "Philip Cramer",
   "ContactTitle": "Sales Associate",
   "Address": "Maubelstr. 90",
@@ -27630,7 +27630,7 @@
  },
  {
   "CustomerID": "VICTE",
-  "CompanyName": "Victuailles en stock",
+  "Company": "Victuailles en stock",
   "ContactName": "Mary Saveley",
   "ContactTitle": "Sales Agent",
   "Address": "2, rue du Commerce",
@@ -27678,7 +27678,7 @@
  },
  {
   "CustomerID": "RICAR",
-  "CompanyName": "Ricardo Adocicados",
+  "Company": "Ricardo Adocicados",
   "ContactName": "Janete Limeira",
   "ContactTitle": 70871,
   "Address": "Av. Copacabana, 267",
@@ -27733,7 +27733,7 @@
  },
  {
   "CustomerID": "RATTC",
-  "CompanyName": "Rattlesnake Canyon Grocery",
+  "Company": "Rattlesnake Canyon Grocery",
   "ContactName": "Paula Wilson",
   "ContactTitle": 30653,
   "Address": "2817 Milton Dr.",
@@ -27783,7 +27783,7 @@
  },
  {
   "CustomerID": "BLAUS",
-  "CompanyName": "Blauer See Delikatessen",
+  "Company": "Blauer See Delikatessen",
   "ContactName": "Hanna Moos",
   "ContactTitle": "Sales Representative",
   "Address": "Forsterstr. 57",
@@ -27819,7 +27819,7 @@
  },
  {
   "CustomerID": "ERNSH",
-  "CompanyName": "Ernst Handel",
+  "Company": "Ernst Handel",
   "ContactName": "Roland Mendel",
   "ContactTitle": "Sales Manager",
   "Address": "Kirchgasse 6",
@@ -27861,7 +27861,7 @@
  },
  {
   "CustomerID": "OLDWO",
-  "CompanyName": "Old World Delicatessen",
+  "Company": "Old World Delicatessen",
   "ContactName": "Rene Phillips",
   "ContactTitle": "Sales Representative",
   "Address": "2743 Bering St.",
@@ -27917,7 +27917,7 @@
  },
  {
   "CustomerID": "ANTON",
-  "CompanyName": "Antonio Moreno Taquería",
+  "Company": "Antonio Moreno Taquería",
   "ContactName": "Antonio Moreno",
   "ContactTitle": "Owner",
   "Address": "Mataderos  2312",
@@ -27958,7 +27958,7 @@
  },
  {
   "CustomerID": "BERGS",
-  "CompanyName": "Berglunds snabbköp",
+  "Company": "Berglunds snabbköp",
   "ContactName": "Christina Berglund",
   "ContactTitle": "Order Administrator",
   "Address": "Berguvsvägen  8",
@@ -28006,7 +28006,7 @@
  },
  {
   "CustomerID": "LACOR",
-  "CompanyName": "La corne d'abondance",
+  "Company": "La corne d'abondance",
   "ContactName": "Daniel Tonini",
   "ContactTitle": "Sales Representative",
   "Address": "67, avenue de l'Europe",
@@ -28054,7 +28054,7 @@
  },
  {
   "CustomerID": "FRANK",
-  "CompanyName": "Frankenversand",
+  "Company": "Frankenversand",
   "ContactName": "Peter Franken",
   "ContactTitle": "Marketing Manager",
   "Address": "Berliner Platz 43",
@@ -28102,7 +28102,7 @@
  },
  {
   "CustomerID": "FRANR",
-  "CompanyName": "France restauration",
+  "Company": "France restauration",
   "ContactName": "Carine Schmitt",
   "ContactTitle": "Marketing Manager",
   "Address": "54, rue Royale",
@@ -28144,7 +28144,7 @@
  },
  {
   "CustomerID": "WHITC",
-  "CompanyName": "White Clover Markets",
+  "Company": "White Clover Markets",
   "ContactName": "Karl Jablonski",
   "ContactTitle": "Owner",
   "Address": "305 - 14th Ave. S. Suite 3B",
@@ -28206,7 +28206,7 @@
  },
  {
   "CustomerID": "LEHMS",
-  "CompanyName": "Lehmanns Marktstand",
+  "Company": "Lehmanns Marktstand",
   "ContactName": "Renate Messner",
   "ContactTitle": "Sales Representative",
   "Address": "Magazinweg 7",
@@ -28248,7 +28248,7 @@
  },
  {
   "CustomerID": "HILAA",
-  "CompanyName": "HILARION-Abastos",
+  "Company": "HILARION-Abastos",
   "ContactName": "Carlos Hernández",
   "ContactTitle": "Sales Representative",
   "Address": "Carrera 22 con Ave. Carlos Soublette #8-35",
@@ -28292,7 +28292,7 @@
  },
  {
   "CustomerID": "AROUT",
-  "CompanyName": "Around the Horn",
+  "Company": "Around the Horn",
   "ContactName": "Thomas Hardy",
   "ContactTitle": "Sales Representative",
   "Address": "120 Hanover Sq.",
@@ -28335,7 +28335,7 @@
  },
  {
   "CustomerID": "QUICK",
-  "CompanyName": "QUICK-Stop",
+  "Company": "QUICK-Stop",
   "ContactName": "Horst Kloss",
   "ContactTitle": "Accounting Manager",
   "Address": "Taucherstraße 10",
@@ -28376,7 +28376,7 @@
  },
  {
   "CustomerID": "BERGS",
-  "CompanyName": "Berglunds snabbköp",
+  "Company": "Berglunds snabbköp",
   "ContactName": "Christina Berglund",
   "ContactTitle": "Order Administrator",
   "Address": "Berguvsvägen  8",
@@ -28424,7 +28424,7 @@
  },
  {
   "CustomerID": "LONEP",
-  "CompanyName": "Lonesome Pine Restaurant",
+  "Company": "Lonesome Pine Restaurant",
   "ContactName": "Fran Wilson",
   "ContactTitle": "Sales Manager",
   "Address": "89 Chiaroscuro Rd.",
@@ -28462,7 +28462,7 @@
  },
  {
   "CustomerID": "QUEEN",
-  "CompanyName": "Queen Cozinha",
+  "Company": "Queen Cozinha",
   "ContactName": "Lúcia Carvalho",
   "ContactTitle": "Marketing Assistant",
   "Address": "Alameda dos Canàrios, 891",
@@ -28511,7 +28511,7 @@
  },
  {
   "CustomerID": "SEVES",
-  "CompanyName": "Seven Seas Imports",
+  "Company": "Seven Seas Imports",
   "ContactName": "Hari Kumar",
   "ContactTitle": "Sales Manager",
   "Address": "90 Wadhurst Rd.",
@@ -28565,7 +28565,7 @@
  },
  {
   "CustomerID": "WOLZA",
-  "CompanyName": "Wolski  Zajazd",
+  "Company": "Wolski  Zajazd",
   "ContactName": "Zbyszek Piestrzeniewicz",
   "ContactTitle": "Owner",
   "Address": "ul. Filtrowa 68",
@@ -28607,7 +28607,7 @@
  },
  {
   "CustomerID": "BONAP",
-  "CompanyName": "Bon app'",
+  "Company": "Bon app'",
   "ContactName": "Laurence Lebihan",
   "ContactTitle": "Owner",
   "Address": "12, rue des Bouchers",
@@ -28655,7 +28655,7 @@
  },
  {
   "CustomerID": "GODOS",
-  "CompanyName": "Godos Cocina Típica",
+  "Company": "Godos Cocina Típica",
   "ContactName": "José Pedro Freyre",
   "ContactTitle": "Sales Manager",
   "Address": "C/ Romero, 33",
@@ -28708,7 +28708,7 @@
  },
  {
   "CustomerID": "WILMK",
-  "CompanyName": "Wilman Kala",
+  "Company": "Wilman Kala",
   "ContactName": "Matti Karttunen",
   "ContactTitle": "Owner/Marketing Assistant",
   "Address": "Keskuskatu 45",
@@ -28750,7 +28750,7 @@
  },
  {
   "CustomerID": "GODOS",
-  "CompanyName": "Godos Cocina Típica",
+  "Company": "Godos Cocina Típica",
   "ContactName": "José Pedro Freyre",
   "ContactTitle": "Sales Manager",
   "Address": "C/ Romero, 33",
@@ -28785,7 +28785,7 @@
  },
  {
   "CustomerID": "BERGS",
-  "CompanyName": "Berglunds snabbköp",
+  "Company": "Berglunds snabbköp",
   "ContactName": "Christina Berglund",
   "ContactTitle": "Order Administrator",
   "Address": "Berguvsvägen  8",
@@ -28833,7 +28833,7 @@
  },
  {
   "CustomerID": "BONAP",
-  "CompanyName": "Bon app'",
+  "Company": "Bon app'",
   "ContactName": "Laurence Lebihan",
   "ContactTitle": "Owner",
   "Address": "12, rue des Bouchers",
@@ -28875,7 +28875,7 @@
  },
  {
   "CustomerID": "RICAR",
-  "CompanyName": "Ricardo Adocicados",
+  "Company": "Ricardo Adocicados",
   "ContactName": "Janete Limeira",
   "ContactTitle": 20790,
   "Address": "Av. Copacabana, 267",
@@ -28918,7 +28918,7 @@
  },
  {
   "CustomerID": "QUICK",
-  "CompanyName": "QUICK-Stop",
+  "Company": "QUICK-Stop",
   "ContactName": "Horst Kloss",
   "ContactTitle": "Accounting Manager",
   "Address": "Taucherstraße 10",
@@ -28953,7 +28953,7 @@
  },
  {
   "CustomerID": "WILMK",
-  "CompanyName": "Wilman Kala",
+  "Company": "Wilman Kala",
   "ContactName": "Matti Karttunen",
   "ContactTitle": "Owner/Marketing Assistant",
   "Address": "Keskuskatu 45",
@@ -29001,7 +29001,7 @@
  },
  {
   "CustomerID": "FOLKO",
-  "CompanyName": "Folk och fä HB",
+  "Company": "Folk och fä HB",
   "ContactName": "Maria Larsson",
   "ContactTitle": "Owner",
   "Address": "Åkergatan 24",
@@ -29048,7 +29048,7 @@
  },
  {
   "CustomerID": "CACTU",
-  "CompanyName": "Cactus Comidas para llevar",
+  "Company": "Cactus Comidas para llevar",
   "ContactName": "Patricio Simpson",
   "ContactTitle": "Sales Agent",
   "Address": "Cerrito 333",
@@ -29084,7 +29084,7 @@
  },
  {
   "CustomerID": "SAVEA",
-  "CompanyName": "Save-a-lot Markets",
+  "Company": "Save-a-lot Markets",
   "ContactName": "Jose Pavarotti",
   "ContactTitle": "Sales Representative",
   "Address": "187 Suffolk Ln.",
@@ -29133,7 +29133,7 @@
  },
  {
   "CustomerID": "LONEP",
-  "CompanyName": "Lonesome Pine Restaurant",
+  "Company": "Lonesome Pine Restaurant",
   "ContactName": "Fran Wilson",
   "ContactTitle": "Sales Manager",
   "Address": "89 Chiaroscuro Rd.",
@@ -29171,7 +29171,7 @@
  },
  {
   "CustomerID": "LETSS",
-  "CompanyName": "Let's Stop N Shop",
+  "Company": "Let's Stop N Shop",
   "ContactName": "Jaime Yorres",
   "ContactTitle": "Owner",
   "Address": "87 Polk St. Suite 5",
@@ -29220,7 +29220,7 @@
  },
  {
   "CustomerID": "SUPRD",
-  "CompanyName": "Suprêmes délices",
+  "Company": "Suprêmes délices",
   "ContactName": "Pascale Cartrain",
   "ContactTitle": "Accounting Manager",
   "Address": "Boulevard Tirou, 255",
@@ -29274,7 +29274,7 @@
  },
  {
   "CustomerID": "HANAR",
-  "CompanyName": "Hanari Carnes",
+  "Company": "Hanari Carnes",
   "ContactName": "Mario Pontes",
   "ContactTitle": "Accounting Manager",
   "Address": "Rua do Paço, 67",
@@ -29324,7 +29324,7 @@
  },
  {
   "CustomerID": "GALED",
-  "CompanyName": "Galería del gastrónomo",
+  "Company": "Galería del gastrónomo",
   "ContactName": "Eduardo Saavedra",
   "ContactTitle": "Marketing Manager",
   "Address": "Rambla de Cataluña, 23",
@@ -29360,7 +29360,7 @@
  },
  {
   "CustomerID": "GODOS",
-  "CompanyName": "Godos Cocina Típica",
+  "Company": "Godos Cocina Típica",
   "ContactName": "José Pedro Freyre",
   "ContactTitle": "Sales Manager",
   "Address": "C/ Romero, 33",
@@ -29401,7 +29401,7 @@
  },
  {
   "CustomerID": "RATTC",
-  "CompanyName": "Rattlesnake Canyon Grocery",
+  "Company": "Rattlesnake Canyon Grocery",
   "ContactName": "Paula Wilson",
   "ContactTitle": 80605,
   "Address": "2817 Milton Dr.",
@@ -29445,7 +29445,7 @@
  },
  {
   "CustomerID": "DUMON",
-  "CompanyName": "Du monde entier",
+  "Company": "Du monde entier",
   "ContactName": "Janine Labrune",
   "ContactTitle": "Owner",
   "Address": "67, rue des Cinquante Otages",
@@ -29493,7 +29493,7 @@
  },
  {
   "CustomerID": "LEHMS",
-  "CompanyName": "Lehmanns Marktstand",
+  "Company": "Lehmanns Marktstand",
   "ContactName": "Renate Messner",
   "ContactTitle": "Sales Representative",
   "Address": "Magazinweg 7",
@@ -29529,7 +29529,7 @@
  },
  {
   "CustomerID": "MAISD",
-  "CompanyName": "Maison Dewey",
+  "Company": "Maison Dewey",
   "ContactName": "Catherine Dewey",
   "ContactTitle": "Sales Agent",
   "Address": "Rue Joseph-Bens 532",
@@ -29565,7 +29565,7 @@
  },
  {
   "CustomerID": "KOENE",
-  "CompanyName": "Königlich Essen",
+  "Company": "Königlich Essen",
   "ContactName": "Philip Cramer",
   "ContactTitle": "Sales Associate",
   "Address": "Maubelstr. 90",
@@ -29624,7 +29624,7 @@
  },
  {
   "CustomerID": "SAVEA",
-  "CompanyName": "Save-a-lot Markets",
+  "Company": "Save-a-lot Markets",
   "ContactName": "Jose Pavarotti",
   "ContactTitle": "Sales Representative",
   "Address": "187 Suffolk Ln.",
@@ -29673,7 +29673,7 @@
  },
  {
   "CustomerID": "ERNSH",
-  "CompanyName": "Ernst Handel",
+  "Company": "Ernst Handel",
   "ContactName": "Roland Mendel",
   "ContactTitle": "Sales Manager",
   "Address": "Kirchgasse 6",
@@ -29727,7 +29727,7 @@
  },
  {
   "CustomerID": "MAISD",
-  "CompanyName": "Maison Dewey",
+  "Company": "Maison Dewey",
   "ContactName": "Catherine Dewey",
   "ContactTitle": "Sales Agent",
   "Address": "Rue Joseph-Bens 532",
@@ -29769,7 +29769,7 @@
  },
  {
   "CustomerID": "HUNGO",
-  "CompanyName": "Hungry Owl All-Night Grocers",
+  "Company": "Hungry Owl All-Night Grocers",
   "ContactName": "Patricia McKenna",
   "ContactTitle": "Sales Associate",
   "Address": "8 Johnstown Road",
@@ -29811,7 +29811,7 @@
  },
  {
   "CustomerID": "OCEAN",
-  "CompanyName": "Océano Atlántico Ltda.",
+  "Company": "Océano Atlántico Ltda.",
   "ContactName": "Yvonne Moncada",
   "ContactTitle": "Sales Agent",
   "Address": "Ing. Gustavo Moncada 8585 Piso 20-A",
@@ -29847,7 +29847,7 @@
  },
  {
   "CustomerID": "LILAS",
-  "CompanyName": "LILA-Supermercado",
+  "Company": "LILA-Supermercado",
   "ContactName": "Carlos González",
   "ContactTitle": "Accounting Manager",
   "Address": "Carrera 52 con Ave. Bolívar #65-98 Llano Largo",
@@ -29885,7 +29885,7 @@
  },
  {
   "CustomerID": "WELLI",
-  "CompanyName": "Wellington Importadora",
+  "Company": "Wellington Importadora",
   "ContactName": "Paula Parente",
   "ContactTitle": "Sales Manager",
   "Address": "Rua do Mercado, 12",
@@ -29922,7 +29922,7 @@
  },
  {
   "CustomerID": "HILAA",
-  "CompanyName": "HILARION-Abastos",
+  "Company": "HILARION-Abastos",
   "ContactName": "Carlos Hernández",
   "ContactTitle": "Sales Representative",
   "Address": "Carrera 22 con Ave. Carlos Soublette #8-35",
@@ -29966,7 +29966,7 @@
  },
  {
   "CustomerID": "FOLKO",
-  "CompanyName": "Folk och fä HB",
+  "Company": "Folk och fä HB",
   "ContactName": "Maria Larsson",
   "ContactTitle": "Owner",
   "Address": "Åkergatan 24",
@@ -30007,7 +30007,7 @@
  },
  {
   "CustomerID": "HANAR",
-  "CompanyName": "Hanari Carnes",
+  "Company": "Hanari Carnes",
   "ContactName": "Mario Pontes",
   "ContactTitle": "Accounting Manager",
   "Address": "Rua do Paço, 67",
@@ -30057,7 +30057,7 @@
  },
  {
   "CustomerID": "WHITC",
-  "CompanyName": "White Clover Markets",
+  "Company": "White Clover Markets",
   "ContactName": "Karl Jablonski",
   "ContactTitle": "Owner",
   "Address": "305 - 14th Ave. S. Suite 3B",
@@ -30101,7 +30101,7 @@
  },
  {
   "CustomerID": "WELLI",
-  "CompanyName": "Wellington Importadora",
+  "Company": "Wellington Importadora",
   "ContactName": "Paula Parente",
   "ContactTitle": "Sales Manager",
   "Address": "Rua do Mercado, 12",
@@ -30138,7 +30138,7 @@
  },
  {
   "CustomerID": "WOLZA",
-  "CompanyName": "Wolski  Zajazd",
+  "Company": "Wolski  Zajazd",
   "ContactName": "Zbyszek Piestrzeniewicz",
   "ContactTitle": "Owner",
   "Address": "ul. Filtrowa 68",
@@ -30174,7 +30174,7 @@
  },
  {
   "CustomerID": "SPECD",
-  "CompanyName": "Spécialités du monde",
+  "Company": "Spécialités du monde",
   "ContactName": "Dominique Perrier",
   "ContactTitle": "Marketing Manager",
   "Address": "25, rue Lauriston",
@@ -30210,7 +30210,7 @@
  },
  {
   "CustomerID": "REGGC",
-  "CompanyName": "Reggiani Caseifici",
+  "Company": "Reggiani Caseifici",
   "ContactName": "Maurizio Moroni",
   "ContactTitle": "Sales Associate",
   "Address": "Strada Provinciale 124",
@@ -30252,7 +30252,7 @@
  },
  {
   "CustomerID": "SANTG",
-  "CompanyName": "Santé Gourmet",
+  "Company": "Santé Gourmet",
   "ContactName": "Jonas Bergulfsen",
   "ContactTitle": "Owner",
   "Address": "Erling Skakkes gate 78",
@@ -30300,7 +30300,7 @@
  },
  {
   "CustomerID": "WILMK",
-  "CompanyName": "Wilman Kala",
+  "Company": "Wilman Kala",
   "ContactName": "Matti Karttunen",
   "ContactTitle": "Owner/Marketing Assistant",
   "Address": "Keskuskatu 45",
@@ -30348,7 +30348,7 @@
  },
  {
   "CustomerID": "GODOS",
-  "CompanyName": "Godos Cocina Típica",
+  "Company": "Godos Cocina Típica",
   "ContactName": "José Pedro Freyre",
   "ContactTitle": "Sales Manager",
   "Address": "C/ Romero, 33",
@@ -30395,7 +30395,7 @@
  },
  {
   "CustomerID": "HUNGO",
-  "CompanyName": "Hungry Owl All-Night Grocers",
+  "Company": "Hungry Owl All-Night Grocers",
   "ContactName": "Patricia McKenna",
   "ContactTitle": "Sales Associate",
   "Address": "8 Johnstown Road",
@@ -30437,7 +30437,7 @@
  },
  {
   "CustomerID": "QUEEN",
-  "CompanyName": "Queen Cozinha",
+  "Company": "Queen Cozinha",
   "ContactName": "Lúcia Carvalho",
   "ContactTitle": "Marketing Assistant",
   "Address": "Alameda dos Canàrios, 891",
@@ -30509,7 +30509,7 @@
  },
  {
   "CustomerID": "TORTU",
-  "CompanyName": "Tortuga Restaurante",
+  "Company": "Tortuga Restaurante",
   "ContactName": "Miguel Angel Paolino",
   "ContactTitle": "Owner",
   "Address": "Avda. Azteca 123",
@@ -30556,7 +30556,7 @@
  },
  {
   "CustomerID": "RANCH",
-  "CompanyName": "Rancho grande",
+  "Company": "Rancho grande",
   "ContactName": "Sergio Gutiérrez",
   "ContactTitle": "Sales Representative",
   "Address": "Av. del Libertador 900",
@@ -30604,7 +30604,7 @@
  },
  {
   "CustomerID": "ROMEY",
-  "CompanyName": "Romero y tomillo",
+  "Company": "Romero y tomillo",
   "ContactName": "Alejandra Camino",
   "ContactTitle": "Accounting Manager",
   "Address": "Gran Vía, 1",
@@ -30646,7 +30646,7 @@
  },
  {
   "CustomerID": "BOTTM",
-  "CompanyName": "Bottom-Dollar Markets",
+  "Company": "Bottom-Dollar Markets",
   "ContactName": "Elizabeth Lincoln",
   "ContactTitle": "Accounting Manager",
   "Address": "23 Tsawassen Blvd.",
@@ -30690,7 +30690,7 @@
  },
  {
   "CustomerID": "LINOD",
-  "CompanyName": "LINO-Delicateses",
+  "Company": "LINO-Delicateses",
   "ContactName": "Felipe Izquierdo",
   "ContactTitle": "Owner",
   "Address": "Ave. 5 de Mayo Porlamar",
@@ -30740,7 +30740,7 @@
  },
  {
   "CustomerID": "AROUT",
-  "CompanyName": "Around the Horn",
+  "Company": "Around the Horn",
   "ContactName": "Thomas Hardy",
   "ContactTitle": "Sales Representative",
   "Address": "120 Hanover Sq.",
@@ -30777,7 +30777,7 @@
  },
  {
   "CustomerID": "VAFFE",
-  "CompanyName": "Vaffeljernet",
+  "Company": "Vaffeljernet",
   "ContactName": "Palle Ibsen",
   "ContactTitle": "Sales Manager",
   "Address": "Smagsloget 45",
@@ -30819,7 +30819,7 @@
  },
  {
   "CustomerID": "HANAR",
-  "CompanyName": "Hanari Carnes",
+  "Company": "Hanari Carnes",
   "ContactName": "Mario Pontes",
   "ContactTitle": "Accounting Manager",
   "Address": "Rua do Paço, 67",
@@ -30863,7 +30863,7 @@
  },
  {
   "CustomerID": "LAMAI",
-  "CompanyName": "La maison d'Asie",
+  "Company": "La maison d'Asie",
   "ContactName": "Annette Roulet",
   "ContactTitle": "Sales Manager",
   "Address": "1 rue Alsace-Lorraine",
@@ -30911,7 +30911,7 @@
  },
  {
   "CustomerID": "BERGS",
-  "CompanyName": "Berglunds snabbköp",
+  "Company": "Berglunds snabbköp",
   "ContactName": "Christina Berglund",
   "ContactTitle": "Order Administrator",
   "Address": "Berguvsvägen  8",
@@ -30959,7 +30959,7 @@
  },
  {
   "CustomerID": "HANAR",
-  "CompanyName": "Hanari Carnes",
+  "Company": "Hanari Carnes",
   "ContactName": "Mario Pontes",
   "ContactTitle": "Accounting Manager",
   "Address": "Rua do Paço, 67",
@@ -31003,7 +31003,7 @@
  },
  {
   "CustomerID": "ANATR",
-  "CompanyName": "Ana Trujillo Emparedados y helados",
+  "Company": "Ana Trujillo Emparedados y helados",
   "ContactName": "Ana Trujillo",
   "ContactTitle": "Owner",
   "Address": "Avda. de la Constitución 2222",
@@ -31057,7 +31057,7 @@
  },
  {
   "CustomerID": "LACOR",
-  "CompanyName": "La corne d'abondance",
+  "Company": "La corne d'abondance",
   "ContactName": "Daniel Tonini",
   "ContactTitle": "Sales Representative",
   "Address": "67, avenue de l'Europe",
@@ -31105,7 +31105,7 @@
  },
  {
   "CustomerID": "GALED",
-  "CompanyName": "Galería del gastrónomo",
+  "Company": "Galería del gastrónomo",
   "ContactName": "Eduardo Saavedra",
   "ContactTitle": "Marketing Manager",
   "Address": "Rambla de Cataluña, 23",
@@ -31147,7 +31147,7 @@
  },
  {
   "CustomerID": "FRANK",
-  "CompanyName": "Frankenversand",
+  "Company": "Frankenversand",
   "ContactName": "Peter Franken",
   "ContactTitle": "Marketing Manager",
   "Address": "Berliner Platz 43",
@@ -31195,7 +31195,7 @@
  },
  {
   "CustomerID": "SUPRD",
-  "CompanyName": "Suprêmes délices",
+  "Company": "Suprêmes délices",
   "ContactName": "Pascale Cartrain",
   "ContactTitle": "Accounting Manager",
   "Address": "Boulevard Tirou, 255",
@@ -31249,7 +31249,7 @@
  },
  {
   "CustomerID": "RICSU",
-  "CompanyName": "Richter Supermarkt",
+  "Company": "Richter Supermarkt",
   "ContactName": "Michael Holz",
   "ContactTitle": "Sales Manager",
   "Address": "Grenzacherweg 237",
@@ -31290,7 +31290,7 @@
  },
  {
   "CustomerID": "BONAP",
-  "CompanyName": "Bon app'",
+  "Company": "Bon app'",
   "ContactName": "Laurence Lebihan",
   "ContactTitle": "Owner",
   "Address": "12, rue des Bouchers",
@@ -31344,7 +31344,7 @@
  },
  {
   "CustomerID": "ISLAT",
-  "CompanyName": "Island Trading",
+  "Company": "Island Trading",
   "ContactName": "Helen Bennett",
   "ContactTitle": "Marketing Manager",
   "Address": "Garden House Crowther Way",
@@ -31387,7 +31387,7 @@
  },
  {
   "CustomerID": "LEHMS",
-  "CompanyName": "Lehmanns Marktstand",
+  "Company": "Lehmanns Marktstand",
   "ContactName": "Renate Messner",
   "ContactTitle": "Sales Representative",
   "Address": "Magazinweg 7",
@@ -31423,7 +31423,7 @@
  },
  {
   "CustomerID": "WELLI",
-  "CompanyName": "Wellington Importadora",
+  "Company": "Wellington Importadora",
   "ContactName": "Paula Parente",
   "ContactTitle": "Sales Manager",
   "Address": "Rua do Mercado, 12",
@@ -31472,7 +31472,7 @@
  },
  {
   "CustomerID": "GREAL",
-  "CompanyName": "Great Lakes Food Market",
+  "Company": "Great Lakes Food Market",
   "ContactName": "Howard Snyder",
   "ContactTitle": "Marketing Manager",
   "Address": "2732 Baker Blvd.",
@@ -31509,7 +31509,7 @@
  },
  {
   "CustomerID": "CACTU",
-  "CompanyName": "Cactus Comidas para llevar",
+  "Company": "Cactus Comidas para llevar",
   "ContactName": "Patricio Simpson",
   "ContactTitle": "Sales Agent",
   "Address": "Cerrito 333",
@@ -31551,7 +31551,7 @@
  },
  {
   "CustomerID": "QUICK",
-  "CompanyName": "QUICK-Stop",
+  "Company": "QUICK-Stop",
   "ContactName": "Horst Kloss",
   "ContactTitle": "Accounting Manager",
   "Address": "Taucherstraße 10",
@@ -31604,7 +31604,7 @@
  },
  {
   "CustomerID": "MAGAA",
-  "CompanyName": "Magazzini Alimentari Riuniti",
+  "Company": "Magazzini Alimentari Riuniti",
   "ContactName": "Giovanni Rovelli",
   "ContactTitle": "Marketing Manager",
   "Address": "Via Ludovico il Moro 22",
@@ -31646,7 +31646,7 @@
  },
  {
   "CustomerID": "BONAP",
-  "CompanyName": "Bon app'",
+  "Company": "Bon app'",
   "ContactName": "Laurence Lebihan",
   "ContactTitle": "Owner",
   "Address": "12, rue des Bouchers",
@@ -31688,7 +31688,7 @@
  },
  {
   "CustomerID": "SAVEA",
-  "CompanyName": "Save-a-lot Markets",
+  "Company": "Save-a-lot Markets",
   "ContactName": "Jose Pavarotti",
   "ContactTitle": "Sales Representative",
   "Address": "187 Suffolk Ln.",
@@ -31743,7 +31743,7 @@
  },
  {
   "CustomerID": "REGGC",
-  "CompanyName": "Reggiani Caseifici",
+  "Company": "Reggiani Caseifici",
   "ContactName": "Maurizio Moroni",
   "ContactTitle": "Sales Associate",
   "Address": "Strada Provinciale 124",
@@ -31779,7 +31779,7 @@
  },
  {
   "CustomerID": "BSBEV",
-  "CompanyName": "B's Beverages",
+  "Company": "B's Beverages",
   "ContactName": "Victoria Ashworth",
   "ContactTitle": "Sales Representative",
   "Address": "Fauntleroy Circus",
@@ -31826,7 +31826,7 @@
  },
  {
   "CustomerID": "BOTTM",
-  "CompanyName": "Bottom-Dollar Markets",
+  "Company": "Bottom-Dollar Markets",
   "ContactName": "Elizabeth Lincoln",
   "ContactTitle": "Accounting Manager",
   "Address": "23 Tsawassen Blvd.",
@@ -31876,7 +31876,7 @@
  },
  {
   "CustomerID": "MORGK",
-  "CompanyName": "Morgenstern Gesundkost",
+  "Company": "Morgenstern Gesundkost",
   "ContactName": "Alexander Feuer",
   "ContactTitle": "Marketing Assistant",
   "Address": "Heerstr. 22",
@@ -31917,7 +31917,7 @@
  },
  {
   "CustomerID": "VAFFE",
-  "CompanyName": "Vaffeljernet",
+  "Company": "Vaffeljernet",
   "ContactName": "Palle Ibsen",
   "ContactTitle": "Sales Manager",
   "Address": "Smagsloget 45",
@@ -31965,7 +31965,7 @@
  },
  {
   "CustomerID": "BSBEV",
-  "CompanyName": "B's Beverages",
+  "Company": "B's Beverages",
   "ContactName": "Victoria Ashworth",
   "ContactTitle": "Sales Representative",
   "Address": "Fauntleroy Circus",
@@ -32000,7 +32000,7 @@
  },
  {
   "CustomerID": "GODOS",
-  "CompanyName": "Godos Cocina Típica",
+  "Company": "Godos Cocina Típica",
   "ContactName": "José Pedro Freyre",
   "ContactTitle": "Sales Manager",
   "Address": "C/ Romero, 33",
@@ -32047,7 +32047,7 @@
  },
  {
   "CustomerID": "BOTTM",
-  "CompanyName": "Bottom-Dollar Markets",
+  "Company": "Bottom-Dollar Markets",
   "ContactName": "Elizabeth Lincoln",
   "ContactTitle": "Accounting Manager",
   "Address": "23 Tsawassen Blvd.",
@@ -32103,7 +32103,7 @@
  },
  {
   "CustomerID": "MAGAA",
-  "CompanyName": "Magazzini Alimentari Riuniti",
+  "Company": "Magazzini Alimentari Riuniti",
   "ContactName": "Giovanni Rovelli",
   "ContactTitle": "Marketing Manager",
   "Address": "Via Ludovico il Moro 22",
@@ -32139,7 +32139,7 @@
  },
  {
   "CustomerID": "RICSU",
-  "CompanyName": "Richter Supermarkt",
+  "Company": "Richter Supermarkt",
   "ContactName": "Michael Holz",
   "ContactTitle": "Sales Manager",
   "Address": "Grenzacherweg 237",
@@ -32186,7 +32186,7 @@
  },
  {
   "CustomerID": "ALFKI",
-  "CompanyName": "Alfreds Futterkiste",
+  "Company": "Alfreds Futterkiste",
   "ContactName": "Maria Anders",
   "ContactTitle": "Sales Representative",
   "Address": "Obere Str. 57",
@@ -32228,7 +32228,7 @@
  },
  {
   "CustomerID": "AROUT",
-  "CompanyName": "Around the Horn",
+  "Company": "Around the Horn",
   "ContactName": "Thomas Hardy",
   "ContactTitle": "Sales Representative",
   "Address": "120 Hanover Sq.",
@@ -32271,7 +32271,7 @@
  },
  {
   "CustomerID": "LINOD",
-  "CompanyName": "LINO-Delicateses",
+  "Company": "LINO-Delicateses",
   "ContactName": "Felipe Izquierdo",
   "ContactTitle": "Owner",
   "Address": "Ave. 5 de Mayo Porlamar",
@@ -32327,7 +32327,7 @@
  },
  {
   "CustomerID": "FOLKO",
-  "CompanyName": "Folk och fä HB",
+  "Company": "Folk och fä HB",
   "ContactName": "Maria Larsson",
   "ContactTitle": "Owner",
   "Address": "Åkergatan 24",
@@ -32362,7 +32362,7 @@
  },
  {
   "CustomerID": "BLAUS",
-  "CompanyName": "Blauer See Delikatessen",
+  "Company": "Blauer See Delikatessen",
   "ContactName": "Hanna Moos",
   "ContactTitle": "Sales Representative",
   "Address": "Forsterstr. 57",
@@ -32410,7 +32410,7 @@
  },
  {
   "CustomerID": "HILAA",
-  "CompanyName": "HILARION-Abastos",
+  "Company": "HILARION-Abastos",
   "ContactName": "Carlos Hernández",
   "ContactTitle": "Sales Representative",
   "Address": "Carrera 22 con Ave. Carlos Soublette #8-35",
@@ -32460,7 +32460,7 @@
  },
  {
   "CustomerID": "OCEAN",
-  "CompanyName": "Océano Atlántico Ltda.",
+  "Company": "Océano Atlántico Ltda.",
   "ContactName": "Yvonne Moncada",
   "ContactTitle": "Sales Agent",
   "Address": "Ing. Gustavo Moncada 8585 Piso 20-A",
@@ -32508,7 +32508,7 @@
  },
  {
   "CustomerID": "GOURL",
-  "CompanyName": "Gourmet Lanchonetes",
+  "Company": "Gourmet Lanchonetes",
   "ContactName": "André Fonseca",
   "ContactTitle": "Sales Associate",
   "Address": "Av. Brasil, 442",
@@ -32545,7 +32545,7 @@
  },
  {
   "CustomerID": "HILAA",
-  "CompanyName": "HILARION-Abastos",
+  "Company": "HILARION-Abastos",
   "ContactName": "Carlos Hernández",
   "ContactTitle": "Sales Representative",
   "Address": "Carrera 22 con Ave. Carlos Soublette #8-35",
@@ -32589,7 +32589,7 @@
  },
  {
   "CustomerID": "QUEEN",
-  "CompanyName": "Queen Cozinha",
+  "Company": "Queen Cozinha",
   "ContactName": "Lúcia Carvalho",
   "ContactTitle": "Marketing Assistant",
   "Address": "Alameda dos Canàrios, 891",
@@ -32632,7 +32632,7 @@
  },
  {
   "CustomerID": "QUICK",
-  "CompanyName": "QUICK-Stop",
+  "Company": "QUICK-Stop",
   "ContactName": "Horst Kloss",
   "ContactTitle": "Accounting Manager",
   "Address": "Taucherstraße 10",
@@ -32691,7 +32691,7 @@
  },
  {
   "CustomerID": "FURIB",
-  "CompanyName": "Furia Bacalhau e Frutos do Mar",
+  "Company": "Furia Bacalhau e Frutos do Mar",
   "ContactName": "Lino Rodriguez",
   "ContactTitle": "Sales Manager",
   "Address": "Jardim das rosas n. 32",
@@ -32727,7 +32727,7 @@
  },
  {
   "CustomerID": "SPECD",
-  "CompanyName": "Spécialités du monde",
+  "Company": "Spécialités du monde",
   "ContactName": "Dominique Perrier",
   "ContactTitle": "Marketing Manager",
   "Address": "25, rue Lauriston",
@@ -32775,7 +32775,7 @@
  },
  {
   "CustomerID": "OLDWO",
-  "CompanyName": "Old World Delicatessen",
+  "Company": "Old World Delicatessen",
   "ContactName": "Rene Phillips",
   "ContactTitle": "Sales Representative",
   "Address": "2743 Bering St.",
@@ -32813,7 +32813,7 @@
  },
  {
   "CustomerID": "CHOPS",
-  "CompanyName": "Chop-suey Chinese",
+  "Company": "Chop-suey Chinese",
   "ContactName": "Yang Wang",
   "ContactTitle": "Owner",
   "Address": "Hauptstr. 29",
@@ -32860,7 +32860,7 @@
  },
  {
   "CustomerID": "TOMSP",
-  "CompanyName": "Toms Spezialitäten",
+  "Company": "Toms Spezialitäten",
   "ContactName": "Karin Josephs",
   "ContactTitle": "Marketing Manager",
   "Address": "Luisenstr. 48",
@@ -32902,7 +32902,7 @@
  },
  {
   "CustomerID": "ERNSH",
-  "CompanyName": "Ernst Handel",
+  "Company": "Ernst Handel",
   "ContactName": "Roland Mendel",
   "ContactTitle": "Sales Manager",
   "Address": "Kirchgasse 6",
@@ -32950,7 +32950,7 @@
  },
  {
   "CustomerID": "COMMI",
-  "CompanyName": "Comércio Mineiro",
+  "Company": "Comércio Mineiro",
   "ContactName": "Pedro Afonso",
   "ContactTitle": "Sales Associate",
   "Address": "Av. dos Lusíadas, 23",
@@ -32987,7 +32987,7 @@
  },
  {
   "CustomerID": "BOLID",
-  "CompanyName": "Bólido Comidas preparadas",
+  "Company": "Bólido Comidas preparadas",
   "ContactName": "Martín Sommer",
   "ContactTitle": "Owner",
   "Address": "C/ Araquil, 67",
@@ -33023,7 +33023,7 @@
  },
  {
   "CustomerID": "FRANR",
-  "CompanyName": "France restauration",
+  "Company": "France restauration",
   "ContactName": "Carine Schmitt",
   "ContactTitle": "Marketing Manager",
   "Address": "54, rue Royale",
@@ -33059,7 +33059,7 @@
  },
  {
   "CustomerID": "LACOR",
-  "CompanyName": "La corne d'abondance",
+  "Company": "La corne d'abondance",
   "ContactName": "Daniel Tonini",
   "ContactTitle": "Sales Representative",
   "Address": "67, avenue de l'Europe",
@@ -33135,7 +33135,7 @@
  },
  {
   "CustomerID": "SPLIR",
-  "CompanyName": "Split Rail Beer & Ale",
+  "Company": "Split Rail Beer & Ale",
   "ContactName": "Art Braunschweiger",
   "ContactTitle": "Sales Manager",
   "Address": "P.O. Box 555",
@@ -33173,7 +33173,7 @@
  },
  {
   "CustomerID": "BOTTM",
-  "CompanyName": "Bottom-Dollar Markets",
+  "Company": "Bottom-Dollar Markets",
   "ContactName": "Elizabeth Lincoln",
   "ContactTitle": "Accounting Manager",
   "Address": "23 Tsawassen Blvd.",
@@ -33217,7 +33217,7 @@
  },
  {
   "CustomerID": "HILAA",
-  "CompanyName": "HILARION-Abastos",
+  "Company": "HILARION-Abastos",
   "ContactName": "Carlos Hernández",
   "ContactTitle": "Sales Representative",
   "Address": "Carrera 22 con Ave. Carlos Soublette #8-35",
@@ -33255,7 +33255,7 @@
  },
  {
   "CustomerID": "FOLKO",
-  "CompanyName": "Folk och fä HB",
+  "Company": "Folk och fä HB",
   "ContactName": "Maria Larsson",
   "ContactTitle": "Owner",
   "Address": "Åkergatan 24",
@@ -33308,7 +33308,7 @@
  },
  {
   "CustomerID": "MAISD",
-  "CompanyName": "Maison Dewey",
+  "Company": "Maison Dewey",
   "ContactName": "Catherine Dewey",
   "ContactTitle": "Sales Agent",
   "Address": "Rue Joseph-Bens 532",
@@ -33362,7 +33362,7 @@
  },
  {
   "CustomerID": "ERNSH",
-  "CompanyName": "Ernst Handel",
+  "Company": "Ernst Handel",
   "ContactName": "Roland Mendel",
   "ContactTitle": "Sales Manager",
   "Address": "Kirchgasse 6",
@@ -33428,7 +33428,7 @@
  },
  {
   "CustomerID": "FOLKO",
-  "CompanyName": "Folk och fä HB",
+  "Company": "Folk och fä HB",
   "ContactName": "Maria Larsson",
   "ContactTitle": "Owner",
   "Address": "Åkergatan 24",
@@ -33463,7 +33463,7 @@
  },
  {
   "CustomerID": "HANAR",
-  "CompanyName": "Hanari Carnes",
+  "Company": "Hanari Carnes",
   "ContactName": "Mario Pontes",
   "ContactTitle": "Accounting Manager",
   "Address": "Rua do Paço, 67",
@@ -33501,7 +33501,7 @@
  },
  {
   "CustomerID": "BOTTM",
-  "CompanyName": "Bottom-Dollar Markets",
+  "Company": "Bottom-Dollar Markets",
   "ContactName": "Elizabeth Lincoln",
   "ContactTitle": "Accounting Manager",
   "Address": "23 Tsawassen Blvd.",
@@ -33545,7 +33545,7 @@
  },
  {
   "CustomerID": "SAVEA",
-  "CompanyName": "Save-a-lot Markets",
+  "Company": "Save-a-lot Markets",
   "ContactName": "Jose Pavarotti",
   "ContactTitle": "Sales Representative",
   "Address": "187 Suffolk Ln.",
@@ -33623,7 +33623,7 @@
  },
  {
   "CustomerID": "HUNGO",
-  "CompanyName": "Hungry Owl All-Night Grocers",
+  "Company": "Hungry Owl All-Night Grocers",
   "ContactName": "Patricia McKenna",
   "ContactTitle": "Sales Associate",
   "Address": "8 Johnstown Road",
@@ -33671,7 +33671,7 @@
  },
  {
   "CustomerID": "OCEAN",
-  "CompanyName": "Océano Atlántico Ltda.",
+  "Company": "Océano Atlántico Ltda.",
   "ContactName": "Yvonne Moncada",
   "ContactTitle": "Sales Agent",
   "Address": "Ing. Gustavo Moncada 8585 Piso 20-A",
@@ -33725,7 +33725,7 @@
  },
  {
   "CustomerID": "EASTC",
-  "CompanyName": "Eastern Connection",
+  "Company": "Eastern Connection",
   "ContactName": "Ann Devon",
   "ContactTitle": "Sales Agent",
   "Address": "35 King George",
@@ -33773,7 +33773,7 @@
  },
  {
   "CustomerID": "RATTC",
-  "CompanyName": "Rattlesnake Canyon Grocery",
+  "Company": "Rattlesnake Canyon Grocery",
   "ContactName": "Paula Wilson",
   "ContactTitle": 70321,
   "Address": "2817 Milton Dr.",
@@ -33817,7 +33817,7 @@
  },
  {
   "CustomerID": "QUEDE",
-  "CompanyName": "Que Delícia",
+  "Company": "Que Delícia",
   "ContactName": "Bernardo Batista",
   "ContactTitle": "Accounting Manager",
   "Address": "Rua da Panificadora, 12",
@@ -33867,7 +33867,7 @@
  },
  {
   "CustomerID": "ERNSH",
-  "CompanyName": "Ernst Handel",
+  "Company": "Ernst Handel",
   "ContactName": "Roland Mendel",
   "ContactTitle": "Sales Manager",
   "Address": "Kirchgasse 6",
@@ -33921,7 +33921,7 @@
  },
  {
   "CustomerID": "QUICK",
-  "CompanyName": "QUICK-Stop",
+  "Company": "QUICK-Stop",
   "ContactName": "Horst Kloss",
   "ContactTitle": "Accounting Manager",
   "Address": "Taucherstraße 10",
@@ -33968,7 +33968,7 @@
  },
  {
   "CustomerID": "THEBI",
-  "CompanyName": "The Big Cheese",
+  "Company": "The Big Cheese",
   "ContactName": "Liz Nixon",
   "ContactTitle": "Marketing Manager",
   "Address": "89 Jefferson Way Suite 2",
@@ -34005,7 +34005,7 @@
  },
  {
   "CustomerID": "FOLKO",
-  "CompanyName": "Folk och fä HB",
+  "Company": "Folk och fä HB",
   "ContactName": "Maria Larsson",
   "ContactTitle": "Owner",
   "Address": "Åkergatan 24",
@@ -34046,7 +34046,7 @@
  },
  {
   "CustomerID": "VAFFE",
-  "CompanyName": "Vaffeljernet",
+  "Company": "Vaffeljernet",
   "ContactName": "Palle Ibsen",
   "ContactTitle": "Sales Manager",
   "Address": "Smagsloget 45",
@@ -34082,7 +34082,7 @@
  },
  {
   "CustomerID": "PERIC",
-  "CompanyName": "Pericles Comidas clásicas",
+  "Company": "Pericles Comidas clásicas",
   "ContactName": "Guillermo Fernández",
   "ContactTitle": "Sales Representative",
   "Address": "Calle Dr. Jorge Cash 321",
@@ -34124,7 +34124,7 @@
  },
  {
   "CustomerID": "QUICK",
-  "CompanyName": "QUICK-Stop",
+  "Company": "QUICK-Stop",
   "ContactName": "Horst Kloss",
   "ContactTitle": "Accounting Manager",
   "Address": "Taucherstraße 10",
@@ -34159,7 +34159,7 @@
  },
  {
   "CustomerID": "LILAS",
-  "CompanyName": "LILA-Supermercado",
+  "Company": "LILA-Supermercado",
   "ContactName": "Carlos González",
   "ContactTitle": "Accounting Manager",
   "Address": "Carrera 52 con Ave. Bolívar #65-98 Llano Largo",
@@ -34209,7 +34209,7 @@
  },
  {
   "CustomerID": "WOLZA",
-  "CompanyName": "Wolski  Zajazd",
+  "Company": "Wolski  Zajazd",
   "ContactName": "Zbyszek Piestrzeniewicz",
   "ContactTitle": "Owner",
   "Address": "ul. Filtrowa 68",
@@ -34263,7 +34263,7 @@
  },
  {
   "CustomerID": "OTTIK",
-  "CompanyName": "Ottilies Käseladen",
+  "Company": "Ottilies Käseladen",
   "ContactName": "Henriette Pfalzheim",
   "ContactTitle": "Owner",
   "Address": "Mehrheimerstr. 369",
@@ -34311,7 +34311,7 @@
  },
  {
   "CustomerID": "RATTC",
-  "CompanyName": "Rattlesnake Canyon Grocery",
+  "Company": "Rattlesnake Canyon Grocery",
   "ContactName": "Paula Wilson",
   "ContactTitle": 50399,
   "Address": "2817 Milton Dr.",
@@ -34361,7 +34361,7 @@
  },
  {
   "CustomerID": "FOLKO",
-  "CompanyName": "Folk och fä HB",
+  "Company": "Folk och fä HB",
   "ContactName": "Maria Larsson",
   "ContactTitle": "Owner",
   "Address": "Åkergatan 24",
@@ -34414,7 +34414,7 @@
  },
  {
   "CustomerID": "SAVEA",
-  "CompanyName": "Save-a-lot Markets",
+  "Company": "Save-a-lot Markets",
   "ContactName": "Jose Pavarotti",
   "ContactTitle": "Sales Representative",
   "Address": "187 Suffolk Ln.",
@@ -34469,7 +34469,7 @@
  },
  {
   "CustomerID": "THECR",
-  "CompanyName": "The Cracker Box",
+  "Company": "The Cracker Box",
   "ContactName": "Liu Wong",
   "ContactTitle": "Marketing Assistant",
   "Address": "55 Grizzly Peak Rd.",
@@ -34519,7 +34519,7 @@
  },
  {
   "CustomerID": "MAISD",
-  "CompanyName": "Maison Dewey",
+  "Company": "Maison Dewey",
   "ContactName": "Catherine Dewey",
   "ContactTitle": "Sales Agent",
   "Address": "Rue Joseph-Bens 532",
@@ -34561,7 +34561,7 @@
  },
  {
   "CustomerID": "WILMK",
-  "CompanyName": "Wilman Kala",
+  "Company": "Wilman Kala",
   "ContactName": "Matti Karttunen",
   "ContactTitle": "Owner/Marketing Assistant",
   "Address": "Keskuskatu 45",
@@ -34603,7 +34603,7 @@
  },
  {
   "CustomerID": "GREAL",
-  "CompanyName": "Great Lakes Food Market",
+  "Company": "Great Lakes Food Market",
   "ContactName": "Howard Snyder",
   "ContactTitle": "Marketing Manager",
   "Address": "2732 Baker Blvd.",
@@ -34646,7 +34646,7 @@
  },
  {
   "CustomerID": "PRINI",
-  "CompanyName": "Princesa Isabel Vinhos",
+  "Company": "Princesa Isabel Vinhos",
   "ContactName": "Isabel de Castro",
   "ContactTitle": "Sales Representative",
   "Address": "Estrada da saúde n. 58",
@@ -34693,7 +34693,7 @@
  },
  {
   "CustomerID": "ERNSH",
-  "CompanyName": "Ernst Handel",
+  "Company": "Ernst Handel",
   "ContactName": "Roland Mendel",
   "ContactTitle": "Sales Manager",
   "Address": "Kirchgasse 6",
@@ -34740,7 +34740,7 @@
  },
  {
   "CustomerID": "GODOS",
-  "CompanyName": "Godos Cocina Típica",
+  "Company": "Godos Cocina Típica",
   "ContactName": "José Pedro Freyre",
   "ContactTitle": "Sales Manager",
   "Address": "C/ Romero, 33",
@@ -34787,7 +34787,7 @@
  },
  {
   "CustomerID": "REGGC",
-  "CompanyName": "Reggiani Caseifici",
+  "Company": "Reggiani Caseifici",
   "ContactName": "Maurizio Moroni",
   "ContactTitle": "Sales Associate",
   "Address": "Strada Provinciale 124",
@@ -34829,7 +34829,7 @@
  },
  {
   "CustomerID": "ALFKI",
-  "CompanyName": "Alfreds Futterkiste",
+  "Company": "Alfreds Futterkiste",
   "ContactName": "Maria Anders",
   "ContactTitle": "Sales Representative",
   "Address": "Obere Str. 57",
@@ -34871,7 +34871,7 @@
  },
  {
   "CustomerID": "FRANK",
-  "CompanyName": "Frankenversand",
+  "Company": "Frankenversand",
   "ContactName": "Peter Franken",
   "ContactTitle": "Marketing Manager",
   "Address": "Berliner Platz 43",
@@ -34919,7 +34919,7 @@
  },
  {
   "CustomerID": "ROMEY",
-  "CompanyName": "Romero y tomillo",
+  "Company": "Romero y tomillo",
   "ContactName": "Alejandra Camino",
   "ContactTitle": "Accounting Manager",
   "Address": "Gran Vía, 1",
@@ -34973,7 +34973,7 @@
  },
  {
   "CustomerID": "LINOD",
-  "CompanyName": "LINO-Delicateses",
+  "Company": "LINO-Delicateses",
   "ContactName": "Felipe Izquierdo",
   "ContactTitle": "Owner",
   "Address": "Ave. 5 de Mayo Porlamar",
@@ -35011,7 +35011,7 @@
  },
  {
   "CustomerID": "SANTG",
-  "CompanyName": "Santé Gourmet",
+  "Company": "Santé Gourmet",
   "ContactName": "Jonas Bergulfsen",
   "ContactTitle": "Owner",
   "Address": "Erling Skakkes gate 78",
@@ -35053,7 +35053,7 @@
  },
  {
   "CustomerID": "AROUT",
-  "CompanyName": "Around the Horn",
+  "Company": "Around the Horn",
   "ContactName": "Thomas Hardy",
   "ContactTitle": "Sales Representative",
   "Address": "120 Hanover Sq.",
@@ -35096,7 +35096,7 @@
  },
  {
   "CustomerID": "ERNSH",
-  "CompanyName": "Ernst Handel",
+  "Company": "Ernst Handel",
   "ContactName": "Roland Mendel",
   "ContactTitle": "Sales Manager",
   "Address": "Kirchgasse 6",
@@ -35144,7 +35144,7 @@
  },
  {
   "CustomerID": "LONEP",
-  "CompanyName": "Lonesome Pine Restaurant",
+  "Company": "Lonesome Pine Restaurant",
   "ContactName": "Fran Wilson",
   "ContactTitle": "Sales Manager",
   "Address": "89 Chiaroscuro Rd.",
@@ -35194,7 +35194,7 @@
  },
  {
   "CustomerID": "RANCH",
-  "CompanyName": "Rancho grande",
+  "Company": "Rancho grande",
   "ContactName": "Sergio Gutiérrez",
   "ContactTitle": "Sales Representative",
   "Address": "Av. del Libertador 900",
@@ -35235,7 +35235,7 @@
  },
  {
   "CustomerID": "OTTIK",
-  "CompanyName": "Ottilies Käseladen",
+  "Company": "Ottilies Käseladen",
   "ContactName": "Henriette Pfalzheim",
   "ContactTitle": "Owner",
   "Address": "Mehrheimerstr. 369",
@@ -35271,7 +35271,7 @@
  },
  {
   "CustomerID": "QUICK",
-  "CompanyName": "QUICK-Stop",
+  "Company": "QUICK-Stop",
   "ContactName": "Horst Kloss",
   "ContactTitle": "Accounting Manager",
   "Address": "Taucherstraße 10",
@@ -35330,7 +35330,7 @@
  },
  {
   "CustomerID": "HANAR",
-  "CompanyName": "Hanari Carnes",
+  "Company": "Hanari Carnes",
   "ContactName": "Mario Pontes",
   "ContactTitle": "Accounting Manager",
   "Address": "Rua do Paço, 67",
@@ -35374,7 +35374,7 @@
  },
  {
   "CustomerID": "BSBEV",
-  "CompanyName": "B's Beverages",
+  "Company": "B's Beverages",
   "ContactName": "Victoria Ashworth",
   "ContactTitle": "Sales Representative",
   "Address": "Fauntleroy Circus",
@@ -35415,7 +35415,7 @@
  },
  {
   "CustomerID": "EASTC",
-  "CompanyName": "Eastern Connection",
+  "Company": "Eastern Connection",
   "ContactName": "Ann Devon",
   "ContactTitle": "Sales Agent",
   "Address": "35 King George",
@@ -35469,7 +35469,7 @@
  },
  {
   "CustomerID": "WARTH",
-  "CompanyName": "Wartian Herkku",
+  "Company": "Wartian Herkku",
   "ContactName": "Pirkko Koskitalo",
   "ContactTitle": "Accounting Manager",
   "Address": "Torikatu 38",
@@ -35511,7 +35511,7 @@
  },
  {
   "CustomerID": "FRANS",
-  "CompanyName": "Franchi S.p.A.",
+  "Company": "Franchi S.p.A.",
   "ContactName": "Paolo Accorti",
   "ContactTitle": "Sales Representative",
   "Address": "Via Monte Bianco 34",
@@ -35553,7 +35553,7 @@
  },
  {
   "CustomerID": "BOTTM",
-  "CompanyName": "Bottom-Dollar Markets",
+  "Company": "Bottom-Dollar Markets",
   "ContactName": "Elizabeth Lincoln",
   "ContactTitle": "Accounting Manager",
   "Address": "23 Tsawassen Blvd.",
@@ -35597,7 +35597,7 @@
  },
  {
   "CustomerID": "KOENE",
-  "CompanyName": "Königlich Essen",
+  "Company": "Königlich Essen",
   "ContactName": "Philip Cramer",
   "ContactTitle": "Sales Associate",
   "Address": "Maubelstr. 90",
@@ -35638,7 +35638,7 @@
  },
  {
   "CustomerID": "CHOPS",
-  "CompanyName": "Chop-suey Chinese",
+  "Company": "Chop-suey Chinese",
   "ContactName": "Yang Wang",
   "ContactTitle": "Owner",
   "Address": "Hauptstr. 29",
@@ -35679,7 +35679,7 @@
  },
  {
   "CustomerID": "SAVEA",
-  "CompanyName": "Save-a-lot Markets",
+  "Company": "Save-a-lot Markets",
   "ContactName": "Jose Pavarotti",
   "ContactTitle": "Sales Representative",
   "Address": "187 Suffolk Ln.",
@@ -35781,7 +35781,7 @@
  },
  {
   "CustomerID": "WHITC",
-  "CompanyName": "White Clover Markets",
+  "Company": "White Clover Markets",
   "ContactName": "Karl Jablonski",
   "ContactTitle": "Owner",
   "Address": "305 - 14th Ave. S. Suite 3B",
@@ -35831,7 +35831,7 @@
  },
  {
   "CustomerID": "RICSU",
-  "CompanyName": "Richter Supermarkt",
+  "Company": "Richter Supermarkt",
   "ContactName": "Michael Holz",
   "ContactTitle": "Sales Manager",
   "Address": "Grenzacherweg 237",
@@ -35872,7 +35872,7 @@
  },
  {
   "CustomerID": "OLDWO",
-  "CompanyName": "Old World Delicatessen",
+  "Company": "Old World Delicatessen",
   "ContactName": "Rene Phillips",
   "ContactTitle": "Sales Representative",
   "Address": "2743 Bering St.",
@@ -35922,7 +35922,7 @@
  },
  {
   "CustomerID": "SUPRD",
-  "CompanyName": "Suprêmes délices",
+  "Company": "Suprêmes délices",
   "ContactName": "Pascale Cartrain",
   "ContactTitle": "Accounting Manager",
   "Address": "Boulevard Tirou, 255",
@@ -35976,7 +35976,7 @@
  },
  {
   "CustomerID": "DRACD",
-  "CompanyName": "Drachenblut Delikatessen",
+  "Company": "Drachenblut Delikatessen",
   "ContactName": "Sven Ottlieb",
   "ContactTitle": "Order Administrator",
   "Address": "Walserweg 21",
@@ -36018,7 +36018,7 @@
  },
  {
   "CustomerID": "GODOS",
-  "CompanyName": "Godos Cocina Típica",
+  "Company": "Godos Cocina Típica",
   "ContactName": "José Pedro Freyre",
   "ContactTitle": "Sales Manager",
   "Address": "C/ Romero, 33",
@@ -36053,7 +36053,7 @@
  },
  {
   "CustomerID": "SUPRD",
-  "CompanyName": "Suprêmes délices",
+  "Company": "Suprêmes délices",
   "ContactName": "Pascale Cartrain",
   "ContactTitle": "Accounting Manager",
   "Address": "Boulevard Tirou, 255",
@@ -36101,7 +36101,7 @@
  },
  {
   "CustomerID": "LINOD",
-  "CompanyName": "LINO-Delicateses",
+  "Company": "LINO-Delicateses",
   "ContactName": "Felipe Izquierdo",
   "ContactTitle": "Owner",
   "Address": "Ave. 5 de Mayo Porlamar",
@@ -36156,7 +36156,7 @@
  },
  {
   "CustomerID": "GREAL",
-  "CompanyName": "Great Lakes Food Market",
+  "Company": "Great Lakes Food Market",
   "ContactName": "Howard Snyder",
   "ContactTitle": "Marketing Manager",
   "Address": "2732 Baker Blvd.",
@@ -36192,7 +36192,7 @@
  },
  {
   "CustomerID": "CHOPS",
-  "CompanyName": "Chop-suey Chinese",
+  "Company": "Chop-suey Chinese",
   "ContactName": "Yang Wang",
   "ContactTitle": "Owner",
   "Address": "Hauptstr. 29",
@@ -36233,7 +36233,7 @@
  },
  {
   "CustomerID": "COMMI",
-  "CompanyName": "Comércio Mineiro",
+  "Company": "Comércio Mineiro",
   "ContactName": "Pedro Afonso",
   "ContactTitle": "Sales Associate",
   "Address": "Av. dos Lusíadas, 23",
@@ -36276,7 +36276,7 @@
  },
  {
   "CustomerID": "SPECD",
-  "CompanyName": "Spécialités du monde",
+  "Company": "Spécialités du monde",
   "ContactName": "Dominique Perrier",
   "ContactTitle": "Marketing Manager",
   "Address": "25, rue Lauriston",
@@ -36312,7 +36312,7 @@
  },
  {
   "CustomerID": "WOLZA",
-  "CompanyName": "Wolski  Zajazd",
+  "Company": "Wolski  Zajazd",
   "ContactName": "Zbyszek Piestrzeniewicz",
   "ContactTitle": "Owner",
   "Address": "ul. Filtrowa 68",
@@ -36348,7 +36348,7 @@
  },
  {
   "CustomerID": "BOTTM",
-  "CompanyName": "Bottom-Dollar Markets",
+  "Company": "Bottom-Dollar Markets",
   "ContactName": "Elizabeth Lincoln",
   "ContactTitle": "Accounting Manager",
   "Address": "23 Tsawassen Blvd.",
@@ -36391,7 +36391,7 @@
  },
  {
   "CustomerID": "WANDK",
-  "CompanyName": "Die Wandernde Kuh",
+  "Company": "Die Wandernde Kuh",
   "ContactName": "Rita Müller",
   "ContactTitle": "Sales Representative",
   "Address": "Adenauerallee 900",
@@ -36439,7 +36439,7 @@
  },
  {
   "CustomerID": "EASTC",
-  "CompanyName": "Eastern Connection",
+  "Company": "Eastern Connection",
   "ContactName": "Ann Devon",
   "ContactTitle": "Sales Agent",
   "Address": "35 King George",
@@ -36481,7 +36481,7 @@
  },
  {
   "CustomerID": "BOTTM",
-  "CompanyName": "Bottom-Dollar Markets",
+  "Company": "Bottom-Dollar Markets",
   "ContactName": "Elizabeth Lincoln",
   "ContactTitle": "Accounting Manager",
   "Address": "23 Tsawassen Blvd.",
@@ -36519,7 +36519,7 @@
  },
  {
   "CustomerID": "GOURL",
-  "CompanyName": "Gourmet Lanchonetes",
+  "Company": "Gourmet Lanchonetes",
   "ContactName": "André Fonseca",
   "ContactTitle": "Sales Associate",
   "Address": "Av. Brasil, 442",
@@ -36562,7 +36562,7 @@
  },
  {
   "CustomerID": "FOLKO",
-  "CompanyName": "Folk och fä HB",
+  "Company": "Folk och fä HB",
   "ContactName": "Maria Larsson",
   "ContactTitle": "Owner",
   "Address": "Åkergatan 24",
@@ -36597,7 +36597,7 @@
  },
  {
   "CustomerID": "LAMAI",
-  "CompanyName": "La maison d'Asie",
+  "Company": "La maison d'Asie",
   "ContactName": "Annette Roulet",
   "ContactTitle": "Sales Manager",
   "Address": "1 rue Alsace-Lorraine",
@@ -36632,7 +36632,7 @@
  },
  {
   "CustomerID": "HANAR",
-  "CompanyName": "Hanari Carnes",
+  "Company": "Hanari Carnes",
   "ContactName": "Mario Pontes",
   "ContactTitle": "Accounting Manager",
   "Address": "Rua do Paço, 67",
@@ -36676,7 +36676,7 @@
  },
  {
   "CustomerID": "PICCO",
-  "CompanyName": "Piccolo und mehr",
+  "Company": "Piccolo und mehr",
   "ContactName": "Georg Pipps",
   "ContactTitle": "Sales Manager",
   "Address": "Geislweg 14",
@@ -36724,7 +36724,7 @@
  },
  {
   "CustomerID": "CACTU",
-  "CompanyName": "Cactus Comidas para llevar",
+  "Company": "Cactus Comidas para llevar",
   "ContactName": "Patricio Simpson",
   "ContactTitle": "Sales Agent",
   "Address": "Cerrito 333",
@@ -36765,7 +36765,7 @@
  },
  {
   "CustomerID": "HILAA",
-  "CompanyName": "HILARION-Abastos",
+  "Company": "HILARION-Abastos",
   "ContactName": "Carlos Hernández",
   "ContactTitle": "Sales Representative",
   "Address": "Carrera 22 con Ave. Carlos Soublette #8-35",
@@ -36821,7 +36821,7 @@
  },
  {
   "CustomerID": "EASTC",
-  "CompanyName": "Eastern Connection",
+  "Company": "Eastern Connection",
   "ContactName": "Ann Devon",
   "ContactTitle": "Sales Agent",
   "Address": "35 King George",
@@ -36869,7 +36869,7 @@
  },
  {
   "CustomerID": "NORTS",
-  "CompanyName": "North/South",
+  "Company": "North/South",
   "ContactName": "Simon Crowther",
   "ContactTitle": "Sales Associate",
   "Address": "South House 300 Queensbridge",
@@ -36905,7 +36905,7 @@
  },
  {
   "CustomerID": "BLAUS",
-  "CompanyName": "Blauer See Delikatessen",
+  "Company": "Blauer See Delikatessen",
   "ContactName": "Hanna Moos",
   "ContactTitle": "Sales Representative",
   "Address": "Forsterstr. 57",
@@ -36952,7 +36952,7 @@
  },
  {
   "CustomerID": "RICAR",
-  "CompanyName": "Ricardo Adocicados",
+  "Company": "Ricardo Adocicados",
   "ContactName": "Janete Limeira",
   "ContactTitle": 30732,
   "Address": "Av. Copacabana, 267",
@@ -37000,7 +37000,7 @@
  },
  {
   "CustomerID": "FRANS",
-  "CompanyName": "Franchi S.p.A.",
+  "Company": "Franchi S.p.A.",
   "ContactName": "Paolo Accorti",
   "ContactTitle": "Sales Representative",
   "Address": "Via Monte Bianco 34",
@@ -37042,7 +37042,7 @@
  },
  {
   "CustomerID": "GREAL",
-  "CompanyName": "Great Lakes Food Market",
+  "Company": "Great Lakes Food Market",
   "ContactName": "Howard Snyder",
   "ContactTitle": "Marketing Manager",
   "Address": "2732 Baker Blvd.",
@@ -37078,7 +37078,7 @@
  },
  {
   "CustomerID": "REGGC",
-  "CompanyName": "Reggiani Caseifici",
+  "Company": "Reggiani Caseifici",
   "ContactName": "Maurizio Moroni",
   "ContactTitle": "Sales Associate",
   "Address": "Strada Provinciale 124",
@@ -37119,7 +37119,7 @@
  },
  {
   "CustomerID": "HUNGO",
-  "CompanyName": "Hungry Owl All-Night Grocers",
+  "Company": "Hungry Owl All-Night Grocers",
   "ContactName": "Patricia McKenna",
   "ContactTitle": "Sales Associate",
   "Address": "8 Johnstown Road",
@@ -37167,7 +37167,7 @@
  },
  {
   "CustomerID": "SAVEA",
-  "CompanyName": "Save-a-lot Markets",
+  "Company": "Save-a-lot Markets",
   "ContactName": "Jose Pavarotti",
   "ContactTitle": "Sales Representative",
   "Address": "187 Suffolk Ln.",
@@ -37228,7 +37228,7 @@
  },
  {
   "CustomerID": "LILAS",
-  "CompanyName": "LILA-Supermercado",
+  "Company": "LILA-Supermercado",
   "ContactName": "Carlos González",
   "ContactTitle": "Accounting Manager",
   "Address": "Carrera 52 con Ave. Bolívar #65-98 Llano Largo",
@@ -37271,7 +37271,7 @@
  },
  {
   "CustomerID": "WHITC",
-  "CompanyName": "White Clover Markets",
+  "Company": "White Clover Markets",
   "ContactName": "Karl Jablonski",
   "ContactTitle": "Owner",
   "Address": "305 - 14th Ave. S. Suite 3B",
@@ -37321,7 +37321,7 @@
  },
  {
   "CustomerID": "DRACD",
-  "CompanyName": "Drachenblut Delikatessen",
+  "Company": "Drachenblut Delikatessen",
   "ContactName": "Sven Ottlieb",
   "ContactTitle": "Order Administrator",
   "Address": "Walserweg 21",
@@ -37357,7 +37357,7 @@
  },
  {
   "CustomerID": "QUEEN",
-  "CompanyName": "Queen Cozinha",
+  "Company": "Queen Cozinha",
   "ContactName": "Lúcia Carvalho",
   "ContactTitle": "Marketing Assistant",
   "Address": "Alameda dos Canàrios, 891",
@@ -37405,7 +37405,7 @@
  },
  {
   "CustomerID": "TORTU",
-  "CompanyName": "Tortuga Restaurante",
+  "Company": "Tortuga Restaurante",
   "ContactName": "Miguel Angel Paolino",
   "ContactTitle": "Owner",
   "Address": "Avda. Azteca 123",
@@ -37440,7 +37440,7 @@
  },
  {
   "CustomerID": "LEHMS",
-  "CompanyName": "Lehmanns Marktstand",
+  "Company": "Lehmanns Marktstand",
   "ContactName": "Renate Messner",
   "ContactTitle": "Sales Representative",
   "Address": "Magazinweg 7",
@@ -37493,7 +37493,7 @@
  },
  {
   "CustomerID": "LILAS",
-  "CompanyName": "LILA-Supermercado",
+  "Company": "LILA-Supermercado",
   "ContactName": "Carlos González",
   "ContactTitle": "Accounting Manager",
   "Address": "Carrera 52 con Ave. Bolívar #65-98 Llano Largo",
@@ -37536,7 +37536,7 @@
  },
  {
   "CustomerID": "ERNSH",
-  "CompanyName": "Ernst Handel",
+  "Company": "Ernst Handel",
   "ContactName": "Roland Mendel",
   "ContactTitle": "Sales Manager",
   "Address": "Kirchgasse 6",
@@ -37589,7 +37589,7 @@
  },
  {
   "CustomerID": "PERIC",
-  "CompanyName": "Pericles Comidas clásicas",
+  "Company": "Pericles Comidas clásicas",
   "ContactName": "Guillermo Fernández",
   "ContactTitle": "Sales Representative",
   "Address": "Calle Dr. Jorge Cash 321",
@@ -37630,7 +37630,7 @@
  },
  {
   "CustomerID": "SIMOB",
-  "CompanyName": "Simons bistro",
+  "Company": "Simons bistro",
   "ContactName": "Jytte Petersen",
   "ContactTitle": "Owner",
   "Address": "Vinbæltet 34",
@@ -37665,7 +37665,7 @@
  },
  {
   "CustomerID": "RICSU",
-  "CompanyName": "Richter Supermarkt",
+  "Company": "Richter Supermarkt",
   "ContactName": "Michael Holz",
   "ContactTitle": "Sales Manager",
   "Address": "Grenzacherweg 237",
@@ -37711,7 +37711,7 @@
  },
  {
   "CustomerID": "BONAP",
-  "CompanyName": "Bon app'",
+  "Company": "Bon app'",
   "ContactName": "Laurence Lebihan",
   "ContactTitle": "Owner",
   "Address": "12, rue des Bouchers",
@@ -37758,7 +37758,7 @@
  },
  {
   "CustomerID": "RATTC",
-  "CompanyName": "Rattlesnake Canyon Grocery",
+  "Company": "Rattlesnake Canyon Grocery",
   "ContactName": "Paula Wilson",
   "ContactTitle": 20211,
   "Address": "2817 Milton Dr.",

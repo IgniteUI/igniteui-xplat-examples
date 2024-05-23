@@ -33,7 +33,7 @@
         },
         {
           "type": "WebColumn",
-          "field": "CompanyName",
+          "field": "Company",
           "header": "Company Name",
           "width": "300px"
         },

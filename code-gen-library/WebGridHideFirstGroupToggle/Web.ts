@@ -9,7 +9,7 @@ export class WebGridHideFirstGroupToggle {
     //begin eventHandler
     public webGridHideFirstGroupToggle(sender: any, args: IgcPropertyEditorPropertyDescriptionButtonClickEventArgs): void {
         const grid: IgcGridComponent = CodeGenHelper.getDescription<IgcGridComponent>("content");
-        const firstColumnGroup = grid.getColumnByName("CompanyName").parent;
+        const firstColumnGroup = grid.getColumnByName("Company").parent;
         firstColumnGroup.hidden = !firstColumnGroup.hidden;
         grid.markForCheck();
     }
