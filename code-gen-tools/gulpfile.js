@@ -162,29 +162,77 @@ exports.copyCDN = function copyCDN(cb)
     var cdnOutput = './CDN';
     // del(cdnOutput);
     console.log('--------------------------------------------------------------------');   
-    console.log('uploading large data files from code-gen-library to: ' + cdnOutput);      
+    console.log('copying large data files from code-gen-library to: ' + cdnOutput);      
     console.log('--------------------------------------------------------------------');   
     
     gulp.src([
-        // CodeGenLib + '/**/XPLAT.json',
-        CodeGenLib + '/ProductSales/XPLAT.json',
-        CodeGenLib + '/WorldStats/XPLAT.json',   
+        // process all files and determine large files based on number of data items and data columns
+        CodeGenLib + '/**/XPLAT.json',
+        // process only known large data files:
+        // CodeGenLib + '/**/SingersData/XPLAT.json',
+        // CodeGenLib + "/AirplaneSeats/XPLAT.json",
+        // CodeGenLib + "/AnalyzeSales/XPLAT.json",
+        // CodeGenLib + "/AthletesData/XPLAT.json",
+        // CodeGenLib + "/AthletesDataExtended/XPLAT.json",
+        // CodeGenLib + "/CountryStats/XPLAT.json",
+        // CodeGenLib + "/CountyHierarchicalData/XPLAT.json",
+        // CodeGenLib + "/EmployeesData/XPLAT.json",
+        // CodeGenLib + "/FinancialDataAll/XPLAT.json",
+        // CodeGenLib + "/FinancialDataCurrencies/XPLAT.json",
+        // CodeGenLib + "/FinancialDataFuel/XPLAT.json",
+        // CodeGenLib + "/FinancialDataMetals/XPLAT.json",
+        // CodeGenLib + "/HierarchicalCustomers/XPLAT.json",
+        // CodeGenLib + "/HierarchicalCustomersData/XPLAT.json",
+        // CodeGenLib + "/InvoicesData/XPLAT.json",
+        // CodeGenLib + "/InvoicesWorldData/XPLAT.json",
+        // CodeGenLib + "/PivotData/XPLAT.json",
+        // CodeGenLib + "/PivotDataFlat/XPLAT.json",
+        // CodeGenLib + "/PivotSalesData/XPLAT.json",
+        // CodeGenLib + "/SalesData/XPLAT.json",
+        // CodeGenLib + "/SingersCustomers/XPLAT.json",
+        // CodeGenLib + "/StockAmazon/XPLAT.json",
+        // CodeGenLib + "/StockGoogle/XPLAT.json",
+        // CodeGenLib + "/StockMarket100/XPLAT.json",
+        // CodeGenLib + "/StockMarket1000/XPLAT.json",
+        // CodeGenLib + "/StockMarket2000/XPLAT.json",
+        // CodeGenLib + "/StockMarket500/XPLAT.json",
+        // CodeGenLib + "/StockSP500Cap/XPLAT.json",
+        // CodeGenLib + "/StockMicrosoft/XPLAT.json",
+        // CodeGenLib + "/StockTesla/XPLAT.json",
+        // CodeGenLib + "/WorldAustralianData/XPLAT.json",
+        // CodeGenLib + "/WorldCapitals/XPLAT.json",
+        // CodeGenLib + "/WorldCities/XPLAT.json",
+        // CodeGenLib + "/WorldCitiesAbove100K/XPLAT.json",
+        // CodeGenLib + "/WorldCitiesAbove15K/XPLAT.json",
+        // CodeGenLib + "/WorldCitiesAbove1M/XPLAT.json",
+        // CodeGenLib + "/WorldCitiesAbove500K/XPLAT.json",
+        // CodeGenLib + "/WorldCountries/XPLAT.json",
+        // CodeGenLib + "/WorldStats/XPLAT.json",
     ],  
     // {base: CodeGenLib + '/'}
     )
     .pipe(es.map(function(file, fileCallback) {
-        console.log(file.dirname + '/' + file.basename);    
+        // console.log(file.dirname + '/' + file.basename);    
         let content = file.contents.toString();
         let items = JSON.parse(content);        
         var columns = Object.keys(items[0]);
         let dirname = file.dirname.split('code-gen-library\\')[1];
-        var itemsCount     = items.length.toString();
-        var columnsCount = columns.length.toString();
-        var row = "| " + itemsCount.padStart(Math.max(12, itemsCount.length), ' ') + " " +
-                  "| " + columnsCount.padStart(Math.max(12, columnsCount.length), ' ') + " " +
-                  "| " + "[" + dirname + "](" + cdnWebsite + dirname + '/' + file.basename + ")\n"; 
-        cdnTable += row;
-        saveFile(cdnOutput + "/" + dirname + ".json", content, true);
+        
+        // copy only files that have many items and/or many data columns
+        if (items.length >= 100 || (items.length * columns.length >= 500)) {
+            console.log(CodeGenLib + '/' + dirname + '/XPLAT.json copied with ' + items.length  + ' items');    
+            // console.log('CodeGenLib + "/' + dirname + '/XPLAT.json",');  
+            var itemsCount = items.length.toString();
+            var columnsCount = columns.length.toString();
+            var row = "| " + itemsCount.padStart(Math.max(10, itemsCount.length), ' ') + " " +
+                      "| " + columnsCount.padStart(Math.max(12, columnsCount.length), ' ') + " " +
+                      "| " + "[" + dirname + "](" + cdnWebsite + dirname + ".json)\n"; 
+            cdnTable += row;  
+            // copy to cdn output
+            saveFile(cdnOutput + "/" + dirname + ".json", content, true); 
+            // create config file that enables remote location for data file
+            saveFile(CodeGenLib + '/' + dirname + '/XPLAT-CONFIG.json', '{\r\n' + '\t"location": "CDN"\r\n' + '}\r\n', true); 
+        } 
         fileCallback(null, file);
     }))
     // .pipe(gulp.dest(cdnOutput, {overwrite: true}))
@@ -195,10 +243,11 @@ exports.copyCDN = function copyCDN(cb)
         'Use [copyCDN script](' + repo + '/code-gen-tools) to upload files to this [CDN](https://static.infragistics.com/xplatform/library) instead of manually uploading files. This way, files on CDN stay in-sync with files in [code-gen-library](' + repo + '/code-gen-library).\r\n\r\n' +
         '## Code-Gen-Library Location\r\n\r\n' +  
         'The code-gen-library is located on [github](' + repo + '/code-gen-library) and CDN has a copy of these files:\r\n\r\n' + 
-        '| data items  | data columns | data link\r\n' + 
-        '|        ---: |         ---: | :---  \r\n' +
+        '| data items | data columns | data link\r\n' + 
+        '|       ---: |         ---: | :---  \r\n' +
         cdnTable;
-        saveFile(cdnOutput + "/_Readme.md", readme);
+        saveFile(cdnOutput + "/_Readme.md", readme, true);
+
         if (cdnOutput.indexOf('download.infragistics.com') < 0) {
             console.log("\n WARNING: You must copy content of the this CDN folder to:\n" + cdnServer + "\n")
         }        
