@@ -22,7 +22,7 @@
         },
         {
           "type": "WebColumn",
-          "field": "CompanyName",
+          "field": "Company",
           "dataType": "String",
           "width": "150px",
           "headerTemplateRef": "HierarchicalGridPinHeaderTemplate"

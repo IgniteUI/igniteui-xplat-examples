@@ -757,7 +757,7 @@ exports.convertStockMarket = function convertStockMarket(cb) {
         let missingSector = []
         for (const item of data) {
              if (item.Sector === undefined)
-                missingSector.push('500,CompanyName,' + item.Symbol + ',$0.0 M,United States,');
+                missingSector.push('500,Company,' + item.Symbol + ',$0.0 M,United States,');
                 // missingSector.push(item.Symbol);
         }
 

@@ -12,7 +12,7 @@
       "rowEditable": true,
       "allowFiltering": true,
       "filterMode": "ExcelStyleFilter",
-      "primaryKey": "CompanyName",
+      "primaryKey": "Company",
       "groupingExpressions": [
         {
           "type": "WebGroupingExpression",
@@ -65,7 +65,7 @@
           "children": [
             {
               "type": "WebColumn",
-              "field": "CompanyName",
+              "field": "Company",
               "header": "Company",
               "rowStart": 1,
               "colStart": 1,

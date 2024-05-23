@@ -42,7 +42,7 @@
           "children": [
             {
               "type": "WebColumn",
-              "field": "CompanyName",
+              "field": "Company",
               "sortable": true,
               "resizable": true
             },

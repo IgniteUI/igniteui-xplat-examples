@@ -34,7 +34,7 @@
         },
         {
           "type": "WebColumn",
-          "field": "CompanyName",
+          "field": "Company",
           "header": "Company",
           "dataType": "String",
           "sortable": true

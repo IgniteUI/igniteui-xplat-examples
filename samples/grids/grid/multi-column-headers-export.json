@@ -55,8 +55,8 @@
           "children": [
             {
               "type": "WebColumn",
-              "name": "CompanyName",
-              "field": "CompanyName",
+              "name": "Company",
+              "field": "Company",
               "visibleWhenCollapsed": true
             },
             {

@@ -6,7 +6,7 @@ igRegisterScript("WebGridCompositeContactCellTemplate", (ctx) => {
     <br />
     <span><strong>Title:</strong> ${ctx.cell.row.data.ContactTitle}</span>
     <br />
-    <span><strong>Company:</strong> ${ctx.cell.row.data.CompanyName}</span>
+    <span><strong>Company:</strong> ${ctx.cell.row.data.Company}</span>
     <br />
 </div>`;
 }, false);

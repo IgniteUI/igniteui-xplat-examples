@@ -36,7 +36,7 @@
           },
           {
             "type": "WebColumn",
-            "field": "CompanyName",
+            "field": "Company",
             "header": "Company Name",
             "pinned": true
           },

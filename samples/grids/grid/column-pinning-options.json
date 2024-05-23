@@ -15,7 +15,7 @@
         },
         {
           "type": "WebColumn",
-          "field": "CompanyName",
+          "field": "Company",
           "header": "Company",
           "width": "300px",
           "headerTemplateRef": "WebGridPinHeaderTemplate"

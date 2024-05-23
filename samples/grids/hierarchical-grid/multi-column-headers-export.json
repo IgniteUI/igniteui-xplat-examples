@@ -35,7 +35,7 @@
           "children": [
             {
               "type": "WebColumn",
-              "field": "CompanyName",
+              "field": "Company",
               "dataType": "String",
               "sortable": true,
               "resizable": true
@@ -136,7 +136,7 @@
               "children": [
                 {
                   "type": "WebColumn",
-                  "field": "CompanyName",
+                  "field": "Company",
                   "dataType": "String",
                   "sortable": true,
                   "resizable": true
@@ -237,7 +237,7 @@
                   "children": [
                     {
                       "type": "WebColumn",
-                      "field": "CompanyName",
+                      "field": "Company",
                       "dataType": "String",
                       "sortable": true,
                       "resizable": true

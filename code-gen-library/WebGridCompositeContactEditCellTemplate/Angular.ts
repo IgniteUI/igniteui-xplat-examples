@@ -27,9 +27,9 @@ import {
                             </div>
                         </div>
                         <div style="margin-top: 10px">
-                            <strong>Company:</strong> {{cell.row.data.CompanyName}}
+                            <strong>Company:</strong> {{cell.row.data.Company}}
                             <igx-input-group width="100%">
-                                <input igxInput [(ngModel)]="cell.row.data.CompanyName" />
+                                <input igxInput [(ngModel)]="cell.row.data.Company" />
                             </igx-input-group>
                         </div>
                     </div>

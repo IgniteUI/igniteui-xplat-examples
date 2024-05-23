@@ -26,7 +26,7 @@
           "children": [
             {
               "type": "WebColumn",
-              "field": "CompanyName",
+              "field": "Company",
               "dataType": "String",
               "sortable": true,
               "resizable": true
