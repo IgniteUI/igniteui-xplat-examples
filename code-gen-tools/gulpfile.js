@@ -248,9 +248,9 @@ exports.copyCDN = function copyCDN(cb)
         cdnTable;
         saveFile(cdnOutput + "/_Readme.md", readme, true);
 
-        if (cdnOutput.indexOf('download.infragistics.com') < 0) {
+        // if (cdnOutput.indexOf('igweb.local/download.infragistics.com') < 0) {
             console.log("\n WARNING: You must copy content of the this CDN folder to:\n" + cdnServer + "\n")
-        }        
+        // }        
         cb();
      });
 }
