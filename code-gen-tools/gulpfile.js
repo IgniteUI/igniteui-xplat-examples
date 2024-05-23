@@ -5,6 +5,7 @@ let fs = require('fs.extra');
 let path = require('path');
 let utils = require('./utils.js')
 let request = require('request');
+const { read } = require('fs');
 
 function log(msg) {
     console.log('>> ' + msg);
@@ -20,12 +21,14 @@ gulp.task('testCodeGenLib', function(cb) {
     cb();
 });
 
-function saveFile(filePath, fileContent) {
+function saveFile(filePath, fileContent, skipLog) {
     var dirname = path.dirname(filePath);
     if (!fs.existsSync(dirname)) {
         fs.mkdirSync(dirname); // ensure directory exists
     }
-    console.log("saving " + filePath);
+    if (!skipLog) {
+        console.log("saving " + filePath);
+    }
     fs.writeFileSync(filePath, fileContent);
 }
 
@@ -153,66 +156,52 @@ exports.filterJSON = function filterJSON(cb) {
 
 exports.copyCDN = function copyCDN(cb)
 {
-    var CDN = '//s0706dl2.igweb.local/download.infragistics.com/xplatform/library';
-    // var CDN = './CDN';
-    console.log("--------------------------------------------------------------------");   
-    console.log('uploading large data files from code-gen-library to CDN:');      
-    console.log(CDN);   
-    console.log("--------------------------------------------------------------------");   
-    // this function copied large data files to CDN 
+    var cdnTable = [];
+    var cdnWebsite = 'https://static.infragistics.com/xplatform/library/';
+    var cdnServer = '//s0706dl2.igweb.local/download.infragistics.com/xplatform/library';
+    var cdnOutput = './CDN';
+    // del(cdnOutput);
+    console.log('--------------------------------------------------------------------');   
+    console.log('uploading large data files from code-gen-library to: ' + cdnOutput);      
+    console.log('--------------------------------------------------------------------');   
+    
     gulp.src([
-        CodeGenLib + '/InvoicesWorldData/XPLAT.json',
-        CodeGenLib + '/CompanyEmployees/XPLAT.json',
-        CodeGenLib + '/EmployeesData/XPLAT.json',
-        CodeGenLib + '/FinancialDataAll/XPLAT.json',
-        CodeGenLib + '/FinancialDataCurrencies/XPLAT.json',
-        CodeGenLib + '/FinancialDataFuel/XPLAT.json',
-        CodeGenLib + '/FinancialDataMetals/XPLAT.json',
-        CodeGenLib + '/FinancialDataCurrencies/XPLAT.json',
-        CodeGenLib + '/HierarchicalCustomersData/XPLAT.json',
-        CodeGenLib + '/HierarchicalData/XPLAT.json',
-        CodeGenLib + '/WorldAustralianData/XPLAT.json',
-        CodeGenLib + '/InvoicesWorldData/XPLAT.json',
-        CodeGenLib + '/InvoicesData/XPLAT.json',
-        CodeGenLib + '/PivotData/XPLAT.json',
-        CodeGenLib + '/PivotDataFlat/XPLAT.json',
-        CodeGenLib + '/PivotSalesData/XPLAT.json',
-        CodeGenLib + '/PivotNestedData/XPLAT.json',
+        // CodeGenLib + '/**/XPLAT.json',
         CodeGenLib + '/ProductSales/XPLAT.json',
-        CodeGenLib + '/SingersCustomers/XPLAT.json',
-        CodeGenLib + '/SingersData/XPLAT.json',
-        CodeGenLib + '/StockAmazon/XPLAT.json',
-        CodeGenLib + '/Stock2Years/XPLAT.json',
-        CodeGenLib + '/StockGoogle/XPLAT.json',
-        CodeGenLib + '/StockMarket100/XPLAT.json',
-        CodeGenLib + '/StockMarket10/XPLAT.json',
-        CodeGenLib + '/StockMarket1000/XPLAT.json',
-        CodeGenLib + '/StockMarket2000/XPLAT.json',
-        CodeGenLib + '/StockMarket500/XPLAT.json',
-        CodeGenLib + '/StockSP500Cap/XPLAT.json',
-        CodeGenLib + '/StockMicrosoft/XPLAT.json',
-        CodeGenLib + '/StockTesla/XPLAT.json',
-        CodeGenLib + '/WorldAustralianData/XPLAT.json',
-        CodeGenLib + '/WorldCapitals/XPLAT.json',
-        CodeGenLib + '/WorldCapitals1M/XPLAT.json',
-        CodeGenLib + '/WorldCapitals2M/XPLAT.json',
-        CodeGenLib + '/WorldCapitals5M/XPLAT.json',
-        CodeGenLib + '/WorldCitiesAbove100K/XPLAT.json',
-        CodeGenLib + '/WorldCities/XPLAT.json',
-        CodeGenLib + '/WorldCitiesAbove15K/XPLAT.json',
-        CodeGenLib + '/WorldCitiesAbove1M/XPLAT.json',
-        CodeGenLib + '/WorldCitiesAbove500K/XPLAT.json',
-        CodeGenLib + '/WorldCountries/XPLAT.json',
         CodeGenLib + '/WorldStats/XPLAT.json',   
-    ],  {base: CodeGenLib + '/'})
+    ],  
+    // {base: CodeGenLib + '/'}
+    )
     .pipe(es.map(function(file, fileCallback) {
-        console.log(file.dirname + '/' + file.basename);        
+        console.log(file.dirname + '/' + file.basename);    
+        let content = file.contents.toString();
+        let items = JSON.parse(content);        
+        var columns = Object.keys(items[0]);
+        let dirname = file.dirname.split('code-gen-library\\')[1];
+        var itemsCount     = items.length.toString();
+        var columnsCount = columns.length.toString();
+        var row = "| " + itemsCount.padStart(Math.max(12, itemsCount.length), ' ') + " " +
+                  "| " + columnsCount.padStart(Math.max(12, columnsCount.length), ' ') + " " +
+                  "| " + "[" + dirname + "](" + cdnWebsite + dirname + '/' + file.basename + ")\n"; 
+        cdnTable += row;
+        saveFile(cdnOutput + "/" + dirname + ".json", content, true);
         fileCallback(null, file);
     }))
-    .pipe(gulp.dest(CDN, {overwrite: true}))
+    // .pipe(gulp.dest(cdnOutput, {overwrite: true}))
     .on("end", function() {
-        // gulp.src(['./CDN/_Readme.md',])
-        // .pipe(gulp.dest(CDN, {overwrite: true}))
+        var repo = 'https://github.com/IgniteUI/igniteui-xplat-examples/tree/23.2.x';
+        var readme = '# Data2 Library for XPLAT Samples\r\n\r\n' +
+        'This CDN folder contains data files used by [XPLAT samples](' + repo + '/samples).\r\n\r\n' +
+        'Use [copyCDN script](' + repo + '/code-gen-tools) to upload files to this [CDN](https://static.infragistics.com/xplatform/library) instead of manually uploading files. This way, files on CDN stay in-sync with files in [code-gen-library](' + repo + '/code-gen-library).\r\n\r\n' +
+        '## Code-Gen-Library Location\r\n\r\n' +  
+        'The code-gen-library is located on [github](' + repo + '/code-gen-library) and CDN has a copy of these files:\r\n\r\n' + 
+        '| data items  | data columns | data link\r\n' + 
+        '|        ---: |         ---: | :---  \r\n' +
+        cdnTable;
+        saveFile(cdnOutput + "/_Readme.md", readme);
+        if (cdnOutput.indexOf('download.infragistics.com') < 0) {
+            console.log("\n WARNING: You must copy content of the this CDN folder to:\n" + cdnServer + "\n")
+        }        
         cb();
      });
 }
@@ -1151,8 +1140,6 @@ exports.verifyJSON = function verifyJSON(cb)
         fileCallback(null, file);
     })) 
     .on("end", function() {
-        // gulp.src(['./CDN/_Readme.md',])
-        // .pipe(gulp.dest(CDN, {overwrite: true}))
         cb();
      });
 }
