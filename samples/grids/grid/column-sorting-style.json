@@ -13,7 +13,7 @@
       "sortingExpressions": [
         {
           "type": "WebSortingExpression",
-          "fieldName": "CategoryName",
+          "fieldName": "Category",
           "dir": "Asc",
           "ignoreCase": true
         }
@@ -27,7 +27,7 @@
         },
         {
           "type": "WebColumn",
-          "field": "CategoryName",
+          "field": "Category",
           "header": "Category Name",
           "dataType": "String",
           "sortable": true
