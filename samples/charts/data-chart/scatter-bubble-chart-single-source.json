@@ -1,4 +1,5 @@
 {  
+  "skipAlterDataCasing": true,
   "strings": {
     "legendTitle": "Total Population of Selected Countries"
   },
