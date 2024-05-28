@@ -154,6 +154,77 @@ exports.filterJSON = function filterJSON(cb) {
     cb();
 }
 
+exports.findDataFiles = function findDataFiles(cb)
+{
+    var largeDataSources = [ 'SingersData',
+    "AirplaneSeats",
+    "AnalyzeSales",
+    "AthletesData",
+    "AthletesDataExtended",
+    "CountryStats",
+    "CountyHierarchicalData",
+    "EmployeesData",
+    "FinancialDataAll",
+    "FinancialDataCurrencies",
+    "FinancialDataFuel",
+    "FinancialDataMetals",
+    "HierarchicalCustomers",
+    "HierarchicalCustomersData",
+    "InvoicesData",
+    "InvoicesWorldData",
+    "PivotData",
+    "PivotDataFlat",
+    "PivotSalesData",
+    "SalesData",
+    "SingersCustomers",
+    "StockAmazon",
+    "StockGoogle",
+    "StockMarket100",
+    "StockMarket1000",
+    "StockMarket2000",
+    "StockMarket500",
+    "StockSP500Cap",
+    "StockMicrosoft",
+    "StockTesla",
+    "WorldAustralianData",
+    "WorldCapitals",
+    "WorldCities",
+    "WorldCitiesAbove100K",
+    "WorldCitiesAbove15K",
+    "WorldCitiesAbove1M",
+    "WorldCitiesAbove500K",
+    "WorldCountries",
+    "WorldStats"];
+    gulp.src([ '../samples/**/*.json'])
+    .pipe(es.map(function(file, fileCallback) {  
+        let content = file.contents.toString();
+        if (content.indexOf("skipAlterDataCasing") <= 0) {
+
+            for (let i = 0; i < largeDataSources.length; i++) {
+                const ds = largeDataSources[i];
+                if (content.indexOf(ds) >= 0) { 
+                    console.log(file.dirname + '/' + file.basename + " \t" + ds); 
+                    break;
+                }
+            }
+
+            // let lines = content.split('\n'); 
+            // var dataSource = "";
+            // for (let i = 0; i < lines.length; i++) {
+            //     const item = lines[i];
+            //     if (item.indexOf("dataSource") >= 0) {
+            //         dataSource = item;
+            //     }
+            // }
+            // console.log(file.dirname + '/' + file.basename + " \t" + dataSource);  
+        }
+        fileCallback(null, file);
+    }))
+    .on("end", function() {
+        cb();
+     });
+}
+
 exports.copyCDN = function copyCDN(cb)
 {
     var cdnTable = [];
