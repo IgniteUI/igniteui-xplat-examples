@@ -5806,7 +5806,7 @@
   "ContactTitle": "Owner",
   "Address": "ul. Filtrowa 68",
   "City": "Warszawa",
-  "PostalCode": 1,
+  "PostalCode": 12000,
   "Country": "Poland",
   "Phone": "(26) 642-7012",
   "Fax": "(26) 642-7012",
@@ -5822,7 +5822,7 @@
     "ShipName": "Wolski Zajazd",
     "ShipAddress": "ul. Filtrowa 68",
     "ShipCity": "Warszawa",
-    "ShipPostalCode": 1,
+    "ShipPostalCode": 12000,
     "ShipCountry": "Poland",
     "OrderDetails": [
      {
@@ -16678,7 +16678,7 @@
     "ShipName": "Wolski Zajazd",
     "ShipAddress": "ul. Filtrowa 68",
     "ShipCity": "Warszawa",
-    "ShipPostalCode": 1,
+    "ShipPostalCode": 12000,
     "ShipCountry": "Poland",
     "OrderDetails": [
      {
@@ -24949,7 +24949,7 @@
     "ShipName": "Wolski Zajazd",
     "ShipAddress": "ul. Filtrowa 68",
     "ShipCity": "Warszawa",
-    "ShipPostalCode": 1,
+    "ShipPostalCode": 12000,
     "ShipCountry": "Poland",
     "OrderDetails": [
      {
@@ -28570,7 +28570,7 @@
   "ContactTitle": "Owner",
   "Address": "ul. Filtrowa 68",
   "City": "Warszawa",
-  "PostalCode": 1,
+  "PostalCode": 12000,
   "Country": "Poland",
   "Phone": "(26) 642-7012",
   "Fax": "(26) 642-7012",
@@ -28586,7 +28586,7 @@
     "ShipName": "Wolski Zajazd",
     "ShipAddress": "ul. Filtrowa 68",
     "ShipCity": "Warszawa",
-    "ShipPostalCode": 1,
+    "ShipPostalCode": 12000,
     "ShipCountry": "Poland",
     "OrderDetails": [
      {
@@ -30159,7 +30159,7 @@
     "ShipName": "Wolski Zajazd",
     "ShipAddress": "ul. Filtrowa 68",
     "ShipCity": "Warszawa",
-    "ShipPostalCode": 1,
+    "ShipPostalCode": 12000,
     "ShipCountry": "Poland",
     "OrderDetails": [
      {
@@ -34230,7 +34230,7 @@
     "ShipName": "Wolski Zajazd",
     "ShipAddress": "ul. Filtrowa 68",
     "ShipCity": "Warszawa",
-    "ShipPostalCode": 1,
+    "ShipPostalCode": 12000,
     "ShipCountry": "Poland",
     "OrderDetails": [
      {
@@ -36333,7 +36333,7 @@
     "ShipName": "Wolski Zajazd",
     "ShipAddress": "ul. Filtrowa 68",
     "ShipCity": "Warszawa",
-    "ShipPostalCode": 1,
+    "ShipPostalCode": 12000,
     "ShipCountry": "Poland",
     "OrderDetails": [
      {
