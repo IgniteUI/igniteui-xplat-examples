@@ -97,7 +97,7 @@
   "Address": "Rua do Paço, 67",
   "City": "Rio de Janeiro",
   "Region": "RJ",
-  "PostalCode": "05454-876",
+  "PostalCode": "24000",
   "Country": "Brazil",
   "Phone": "(21) 555-0091",
   "Fax": "(21) 555-8765",
@@ -114,7 +114,7 @@
     "ShipAddress": "Rua do Paço, 67",
     "ShipCity": "Rio de Janeiro",
     "ShipRegion": "RJ",
-    "ShipPostalCode": "05454-876",
+    "ShipPostalCode": "50000",
     "ShipCountry": "Brazil",
     "OrderDetails": [
      {
@@ -243,7 +243,7 @@
   "Address": "Rua do Paço, 67",
   "City": "Rio de Janeiro",
   "Region": "RJ",
-  "PostalCode": "05454-876",
+  "PostalCode": "44000",
   "Country": "Brazil",
   "Phone": "(21) 555-0091",
   "Fax": "(21) 555-8765",
@@ -260,7 +260,7 @@
     "ShipAddress": "Rua do Paço, 67",
     "ShipCity": "Rio de Janeiro",
     "ShipRegion": "RJ",
-    "ShipPostalCode": "05454-876",
+    "ShipPostalCode": "50000",
     "ShipCountry": "Brazil",
     "OrderDetails": [
      {
@@ -393,7 +393,7 @@
   "Address": "Rua do Mercado, 12",
   "City": "Resende",
   "Region": "SP",
-  "PostalCode": "08737-363",
+  "PostalCode": "17000",
   "Country": "Brazil",
   "Phone": "(14) 555-8122",
   "Orders": [
@@ -409,7 +409,7 @@
     "ShipAddress": "Rua do Mercado, 12",
     "ShipCity": "Resende",
     "ShipRegion": "SP",
-    "ShipPostalCode": "08737-363",
+    "ShipPostalCode": "50000",
     "ShipCountry": "Brazil",
     "OrderDetails": [
      {
@@ -630,7 +630,7 @@
   "Address": "Rua da Panificadora, 12",
   "City": "Rio de Janeiro",
   "Region": "RJ",
-  "PostalCode": "02389-673",
+  "PostalCode": "26000",
   "Country": "Brazil",
   "Phone": "(21) 555-4252",
   "Fax": "(21) 555-4545",
@@ -647,7 +647,7 @@
     "ShipAddress": "Rua da Panificadora, 12",
     "ShipCity": "Rio de Janeiro",
     "ShipRegion": "RJ",
-    "ShipPostalCode": "02389-673",
+    "ShipPostalCode": "46000",
     "ShipCountry": "Brazil",
     "OrderDetails": [
      {
@@ -777,7 +777,7 @@
   "ContactTitle": "Owner",
   "Address": "Åkergatan 24",
   "City": "Bräcke",
-  "PostalCode": "S-844 67",
+  "PostalCode": "47000",
   "Country": "Sweden",
   "Phone": "0695-34 67 21",
   "Orders": [
@@ -792,7 +792,7 @@
     "ShipName": "Folk och fä HB",
     "ShipAddress": "Åkergatan 24",
     "ShipCity": "Bräcke",
-    "ShipPostalCode": "S-844 67",
+    "ShipPostalCode": "42000",
     "ShipCountry": "Sweden",
     "OrderDetails": [
      {
@@ -1387,7 +1387,7 @@
   "ContactTitle": "Order Administrator",
   "Address": "Berguvsvägen  8",
   "City": "Luleå",
-  "PostalCode": "S-958 22",
+  "PostalCode": "38000",
   "Country": "Sweden",
   "Phone": "0921-12 34 65",
   "Fax": "0921-12 34 67",
@@ -1403,7 +1403,7 @@
     "ShipName": "Berglunds snabbköp",
     "ShipAddress": "Berguvsvägen  8",
     "ShipCity": "Luleå",
-    "ShipPostalCode": "S-958 22",
+    "ShipPostalCode": "30000",
     "ShipCountry": "Sweden",
     "OrderDetails": [
      {
@@ -1477,7 +1477,7 @@
   "ContactTitle": "Order Administrator",
   "Address": "Berguvsvägen  8",
   "City": "Luleå",
-  "PostalCode": "S-958 22",
+  "PostalCode": "50000",
   "Country": "Sweden",
   "Phone": "0921-12 34 65",
   "Fax": "0921-12 34 67",
@@ -1493,7 +1493,7 @@
     "ShipName": "Berglunds snabbköp",
     "ShipAddress": "Berguvsvägen  8",
     "ShipCity": "Luleå",
-    "ShipPostalCode": "S-958 22",
+    "ShipPostalCode": "30000",
     "ShipCountry": "Sweden",
     "OrderDetails": [
      {
@@ -1787,7 +1787,7 @@
   "Address": "Av. Copacabana, 267",
   "City": "Rio de Janeiro",
   "Region": "RJ",
-  "PostalCode": "02389-890",
+  "PostalCode": "19000",
   "Country": "Brazil",
   "Phone": "(21) 555-3412",
   "Orders": [
@@ -1803,7 +1803,7 @@
     "ShipAddress": "Av. Copacabana, 267",
     "ShipCity": "Rio de Janeiro",
     "ShipRegion": "RJ",
-    "ShipPostalCode": "02389-890",
+    "ShipPostalCode": "20000",
     "ShipCountry": "Brazil",
     "OrderDetails": [
      {
@@ -1877,7 +1877,7 @@
   "ContactTitle": "Sales Representative",
   "Address": "Fauntleroy Circus",
   "City": "London",
-  "PostalCode": "EC2 5NT",
+  "PostalCode": "25000",
   "Country": "UK",
   "Phone": "(171) 555-1212",
   "Orders": [
@@ -1892,7 +1892,7 @@
     "ShipName": "B's Beverages",
     "ShipAddress": "Fauntleroy Circus",
     "ShipCity": "London",
-    "ShipPostalCode": "EC2 5NT",
+    "ShipPostalCode": "17000",
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -1919,7 +1919,7 @@
   "Address": "Av. dos Lusíadas, 23",
   "City": "Sao Paulo",
   "Region": "SP",
-  "PostalCode": "05432-043",
+  "PostalCode": "13000",
   "Country": "Brazil",
   "Phone": "(11) 555-7647",
   "Orders": [
@@ -1935,7 +1935,7 @@
     "ShipAddress": "Av. dos Lusíadas, 23",
     "ShipCity": "Sao Paulo",
     "ShipRegion": "SP",
-    "ShipPostalCode": "05432-043",
+    "ShipPostalCode": "35000",
     "ShipCountry": "Brazil",
     "OrderDetails": [
      {
@@ -1974,7 +1974,7 @@
   "Address": "Rua da Panificadora, 12",
   "City": "Rio de Janeiro",
   "Region": "RJ",
-  "PostalCode": "02389-673",
+  "PostalCode": "10000",
   "Country": "Brazil",
   "Phone": "(21) 555-4252",
   "Fax": "(21) 555-4545",
@@ -1991,7 +1991,7 @@
     "ShipAddress": "Rua da Panificadora, 12",
     "ShipCity": "Rio de Janeiro",
     "ShipRegion": "RJ",
-    "ShipPostalCode": "02389-673",
+    "ShipPostalCode": "29000",
     "ShipCountry": "Brazil",
     "OrderDetails": [
      {
@@ -2024,7 +2024,7 @@
   "Address": "Av. Inês de Castro, 414",
   "City": "Sao Paulo",
   "Region": "SP",
-  "PostalCode": "05634-030",
+  "PostalCode": "13000",
   "Country": "Brazil",
   "Phone": "(11) 555-2167",
   "Fax": "(11) 555-2168",
@@ -2041,7 +2041,7 @@
     "ShipAddress": "Av. Inês de Castro, 414",
     "ShipCity": "Sao Paulo",
     "ShipRegion": "SP",
-    "ShipPostalCode": "05634-030",
+    "ShipPostalCode": "47000",
     "ShipCountry": "Brazil",
     "OrderDetails": [
      {
@@ -2359,7 +2359,7 @@
   "Address": "Av. Copacabana, 267",
   "City": "Rio de Janeiro",
   "Region": "RJ",
-  "PostalCode": "02389-890",
+  "PostalCode": "12000",
   "Country": "Brazil",
   "Phone": "(21) 555-3412",
   "Orders": [
@@ -2375,7 +2375,7 @@
     "ShipAddress": "Av. Copacabana, 267",
     "ShipCity": "Rio de Janeiro",
     "ShipRegion": "RJ",
-    "ShipPostalCode": "02389-890",
+    "ShipPostalCode": "33000",
     "ShipCountry": "Brazil",
     "OrderDetails": [
      {
@@ -3096,7 +3096,7 @@
   "Address": "Garden House Crowther Way",
   "City": "Cowes",
   "Region": "Isle of Wight",
-  "PostalCode": "PO31 7PJ",
+  "PostalCode": "17000",
   "Country": "UK",
   "Phone": "(198) 555-8888",
   "Orders": [
@@ -3112,7 +3112,7 @@
     "ShipAddress": "Garden House Crowther Way",
     "ShipCity": "Cowes",
     "ShipRegion": "Isle of Wight",
-    "ShipPostalCode": "PO31 7PJ",
+    "ShipPostalCode": "26000",
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -3221,7 +3221,7 @@
   "Address": "Garden House Crowther Way",
   "City": "Cowes",
   "Region": "Isle of Wight",
-  "PostalCode": "PO31 7PJ",
+  "PostalCode": "35000",
   "Country": "UK",
   "Phone": "(198) 555-8888",
   "Orders": [
@@ -3237,7 +3237,7 @@
     "ShipAddress": "Garden House Crowther Way",
     "ShipCity": "Cowes",
     "ShipRegion": "Isle of Wight",
-    "ShipPostalCode": "PO31 7PJ",
+    "ShipPostalCode": "14000",
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -3347,7 +3347,7 @@
   "Address": "Garden House Crowther Way",
   "City": "Cowes",
   "Region": "Isle of Wight",
-  "PostalCode": "PO31 7PJ",
+  "PostalCode": "44000",
   "Country": "UK",
   "Phone": "(198) 555-8888",
   "Orders": [
@@ -3363,7 +3363,7 @@
     "ShipAddress": "Garden House Crowther Way",
     "ShipCity": "Cowes",
     "ShipRegion": "Isle of Wight",
-    "ShipPostalCode": "PO31 7PJ",
+    "ShipPostalCode": "16000",
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -3634,7 +3634,7 @@
   "ContactTitle": "Owner",
   "Address": "Åkergatan 24",
   "City": "Bräcke",
-  "PostalCode": "S-844 67",
+  "PostalCode": "25000",
   "Country": "Sweden",
   "Phone": "0695-34 67 21",
   "Orders": [
@@ -3649,7 +3649,7 @@
     "ShipName": "Folk och fä HB",
     "ShipAddress": "Åkergatan 24",
     "ShipCity": "Bräcke",
-    "ShipPostalCode": "S-844 67",
+    "ShipPostalCode": "38000",
     "ShipCountry": "Sweden",
     "OrderDetails": [
      {
@@ -3872,7 +3872,7 @@
   "Address": "43 rue St. Laurent",
   "City": "Montréal",
   "Region": "Québec",
-  "PostalCode": "H1J 1C3",
+  "PostalCode": "32000",
   "Country": "Canada",
   "Phone": "(514) 555-8054",
   "Fax": "(514) 555-8055",
@@ -3889,7 +3889,7 @@
     "ShipAddress": "43 rue St. Laurent",
     "ShipCity": "Montréal",
     "ShipRegion": "Québec",
-    "ShipPostalCode": "H1J 1C3",
+    "ShipPostalCode": "19000",
     "ShipCountry": "Canada",
     "OrderDetails": [
      {
@@ -4205,7 +4205,7 @@
   "Address": "43 rue St. Laurent",
   "City": "Montréal",
   "Region": "Québec",
-  "PostalCode": "H1J 1C3",
+  "PostalCode": "14000",
   "Country": "Canada",
   "Phone": "(514) 555-8054",
   "Fax": "(514) 555-8055",
@@ -4222,7 +4222,7 @@
     "ShipAddress": "43 rue St. Laurent",
     "ShipCity": "Montréal",
     "ShipRegion": "Québec",
-    "ShipPostalCode": "H1J 1C3",
+    "ShipPostalCode": "27000",
     "ShipCountry": "Canada",
     "OrderDetails": [
      {
@@ -4582,7 +4582,7 @@
   "Address": "Rua Orós, 92",
   "City": "Sao Paulo",
   "Region": "SP",
-  "PostalCode": "05442-030",
+  "PostalCode": "14000",
   "Country": "Brazil",
   "Phone": "(11) 555-9857",
   "Orders": [
@@ -4598,7 +4598,7 @@
     "ShipAddress": "Rua Orós, 92",
     "ShipCity": "Sao Paulo",
     "ShipRegion": "SP",
-    "ShipPostalCode": "05442-030",
+    "ShipPostalCode": "14000",
     "ShipCountry": "Brazil",
     "OrderDetails": [
      {
@@ -4938,7 +4938,7 @@
   "ContactTitle": "Sales Representative",
   "Address": "120 Hanover Sq.",
   "City": "London",
-  "PostalCode": "WA1 1DP",
+  "PostalCode": "44000",
   "Country": "UK",
   "Phone": "(171) 555-7788",
   "Fax": "(171) 555-6750",
@@ -4955,7 +4955,7 @@
     "ShipAddress": "Brook Farm Stratford St. Mary",
     "ShipCity": "Colchester",
     "ShipRegion": "Essex",
-    "ShipPostalCode": "CO7 6JX",
+    "ShipPostalCode": "48000",
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -5127,7 +5127,7 @@
   "ContactTitle": "Sales Manager",
   "Address": "90 Wadhurst Rd.",
   "City": "London",
-  "PostalCode": "OX15 4NB",
+  "PostalCode": "38000",
   "Country": "UK",
   "Phone": "(171) 555-1717",
   "Fax": "(171) 555-5646",
@@ -5143,7 +5143,7 @@
     "ShipName": "Seven Seas Imports",
     "ShipAddress": "90 Wadhurst Rd.",
     "ShipCity": "London",
-    "ShipPostalCode": "OX15 4NB",
+    "ShipPostalCode": "12000",
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -5372,7 +5372,7 @@
   "ContactTitle": "Sales Agent",
   "Address": "35 King George",
   "City": "London",
-  "PostalCode": "WX3 6FW",
+  "PostalCode": "21000",
   "Country": "UK",
   "Phone": "(171) 555-0297",
   "Fax": "(171) 555-3373",
@@ -5388,7 +5388,7 @@
     "ShipName": "Eastern Connection",
     "ShipAddress": "35 King George",
     "ShipCity": "London",
-    "ShipPostalCode": "WX3 6FW",
+    "ShipPostalCode": "11000",
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -5727,7 +5727,7 @@
   "Address": "Alameda dos Canàrios, 891",
   "City": "Sao Paulo",
   "Region": "SP",
-  "PostalCode": "05487-020",
+  "PostalCode": "20000",
   "Country": "Brazil",
   "Phone": "(11) 555-1189",
   "Orders": [
@@ -5743,7 +5743,7 @@
     "ShipAddress": "Alameda dos Canàrios, 891",
     "ShipCity": "Sao Paulo",
     "ShipRegion": "SP",
-    "ShipPostalCode": "05487-020",
+    "ShipPostalCode": "21000",
     "ShipCountry": "Brazil",
     "OrderDetails": [
      {
@@ -5823,7 +5823,7 @@
   "ContactTitle": "Owner",
   "Address": "ul. Filtrowa 68",
   "City": "Warszawa",
-  "PostalCode": "01-012",
+  "PostalCode": "48000",
   "Country": "Poland",
   "Phone": "(26) 642-7012",
   "Fax": "(26) 642-7012",
@@ -5839,7 +5839,7 @@
     "ShipName": "Wolski Zajazd",
     "ShipAddress": "ul. Filtrowa 68",
     "ShipCity": "Warszawa",
-    "ShipPostalCode": "01-012",
+    "ShipPostalCode": "23000",
     "ShipCountry": "Poland",
     "OrderDetails": [
      {
@@ -5910,7 +5910,7 @@
   "Address": "43 rue St. Laurent",
   "City": "Montréal",
   "Region": "Québec",
-  "PostalCode": "H1J 1C3",
+  "PostalCode": "21000",
   "Country": "Canada",
   "Phone": "(514) 555-8054",
   "Fax": "(514) 555-8055",
@@ -5927,7 +5927,7 @@
     "ShipAddress": "43 rue St. Laurent",
     "ShipCity": "Montréal",
     "ShipRegion": "Québec",
-    "ShipPostalCode": "H1J 1C3",
+    "ShipPostalCode": "33000",
     "ShipCountry": "Canada",
     "OrderDetails": [
      {
@@ -5947,7 +5947,7 @@
   "ContactTitle": "Sales Manager",
   "Address": "90 Wadhurst Rd.",
   "City": "London",
-  "PostalCode": "OX15 4NB",
+  "PostalCode": "12000",
   "Country": "UK",
   "Phone": "(171) 555-1717",
   "Fax": "(171) 555-5646",
@@ -5963,7 +5963,7 @@
     "ShipName": "Seven Seas Imports",
     "ShipAddress": "90 Wadhurst Rd.",
     "ShipCity": "London",
-    "ShipPostalCode": "OX15 4NB",
+    "ShipPostalCode": "40000",
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -5989,7 +5989,7 @@
   "ContactTitle": "Owner",
   "Address": "Åkergatan 24",
   "City": "Bräcke",
-  "PostalCode": "S-844 67",
+  "PostalCode": "32000",
   "Country": "Sweden",
   "Phone": "0695-34 67 21",
   "Orders": [
@@ -6004,7 +6004,7 @@
     "ShipName": "Folk och fä HB",
     "ShipAddress": "Åkergatan 24",
     "ShipCity": "Bräcke",
-    "ShipPostalCode": "S-844 67",
+    "ShipPostalCode": "32000",
     "ShipCountry": "Sweden",
     "OrderDetails": [
      {
@@ -6025,7 +6025,7 @@
   "Address": "Rua da Panificadora, 12",
   "City": "Rio de Janeiro",
   "Region": "RJ",
-  "PostalCode": "02389-673",
+  "PostalCode": "19000",
   "Country": "Brazil",
   "Phone": "(21) 555-4252",
   "Fax": "(21) 555-4545",
@@ -6042,7 +6042,7 @@
     "ShipAddress": "Rua da Panificadora, 12",
     "ShipCity": "Rio de Janeiro",
     "ShipRegion": "RJ",
-    "ShipPostalCode": "02389-673",
+    "ShipPostalCode": "18000",
     "ShipCountry": "Brazil",
     "OrderDetails": [
      {
@@ -6226,7 +6226,7 @@
   "ContactTitle": "Sales Representative",
   "Address": "120 Hanover Sq.",
   "City": "London",
-  "PostalCode": "WA1 1DP",
+  "PostalCode": "38000",
   "Country": "UK",
   "Phone": "(171) 555-7788",
   "Fax": "(171) 555-6750",
@@ -6243,7 +6243,7 @@
     "ShipAddress": "Brook Farm Stratford St. Mary",
     "ShipCity": "Colchester",
     "ShipRegion": "Essex",
-    "ShipPostalCode": "CO7 6JX",
+    "ShipPostalCode": "16000",
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -6275,7 +6275,7 @@
   "ContactTitle": "Order Administrator",
   "Address": "Berguvsvägen  8",
   "City": "Luleå",
-  "PostalCode": "S-958 22",
+  "PostalCode": "24000",
   "Country": "Sweden",
   "Phone": "0921-12 34 65",
   "Fax": "0921-12 34 67",
@@ -6291,7 +6291,7 @@
     "ShipName": "Berglunds snabbköp",
     "ShipAddress": "Berguvsvägen  8",
     "ShipCity": "Luleå",
-    "ShipPostalCode": "S-958 22",
+    "ShipPostalCode": "36000",
     "ShipCountry": "Sweden",
     "OrderDetails": [
      {
@@ -6368,7 +6368,7 @@
   "Address": "Rua Orós, 92",
   "City": "Sao Paulo",
   "Region": "SP",
-  "PostalCode": "05442-030",
+  "PostalCode": "47000",
   "Country": "Brazil",
   "Phone": "(11) 555-9857",
   "Orders": [
@@ -6384,7 +6384,7 @@
     "ShipAddress": "Rua Orós, 92",
     "ShipCity": "Sao Paulo",
     "ShipRegion": "SP",
-    "ShipPostalCode": "05442-030",
+    "ShipPostalCode": "39000",
     "ShipCountry": "Brazil",
     "OrderDetails": [
      {
@@ -6464,7 +6464,7 @@
   "ContactTitle": "Sales Manager",
   "Address": "90 Wadhurst Rd.",
   "City": "London",
-  "PostalCode": "OX15 4NB",
+  "PostalCode": "39000",
   "Country": "UK",
   "Phone": "(171) 555-1717",
   "Fax": "(171) 555-5646",
@@ -6480,7 +6480,7 @@
     "ShipName": "Seven Seas Imports",
     "ShipAddress": "90 Wadhurst Rd.",
     "ShipCity": "London",
-    "ShipPostalCode": "OX15 4NB",
+    "ShipPostalCode": "21000",
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -6513,7 +6513,7 @@
   "Address": "23 Tsawassen Blvd.",
   "City": "Tsawassen",
   "Region": "BC",
-  "PostalCode": "T2F 8M4",
+  "PostalCode": "31000",
   "Country": "Canada",
   "Phone": "(604) 555-4729",
   "Fax": "(604) 555-3745",
@@ -6530,7 +6530,7 @@
     "ShipAddress": "23 Tsawassen Blvd.",
     "ShipCity": "Tsawassen",
     "ShipRegion": "BC",
-    "ShipPostalCode": "T2F 8M4",
+    "ShipPostalCode": "22000",
     "ShipCountry": "Canada",
     "OrderDetails": [
      {
@@ -7035,7 +7035,7 @@
   "ContactTitle": "Sales Agent",
   "Address": "35 King George",
   "City": "London",
-  "PostalCode": "WX3 6FW",
+  "PostalCode": "31000",
   "Country": "UK",
   "Phone": "(171) 555-0297",
   "Fax": "(171) 555-3373",
@@ -7051,7 +7051,7 @@
     "ShipName": "Eastern Connection",
     "ShipAddress": "35 King George",
     "ShipCity": "London",
-    "ShipPostalCode": "WX3 6FW",
+    "ShipPostalCode": "44000",
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -7296,7 +7296,7 @@
   "Address": "Alameda dos Canàrios, 891",
   "City": "Sao Paulo",
   "Region": "SP",
-  "PostalCode": "05487-020",
+  "PostalCode": "36000",
   "Country": "Brazil",
   "Phone": "(11) 555-1189",
   "Orders": [
@@ -7312,7 +7312,7 @@
     "ShipAddress": "Alameda dos Canàrios, 891",
     "ShipCity": "Sao Paulo",
     "ShipRegion": "SP",
-    "ShipPostalCode": "05487-020",
+    "ShipPostalCode": "31000",
     "ShipCountry": "Brazil",
     "OrderDetails": [
      {
@@ -7495,7 +7495,7 @@
   "Address": "23 Tsawassen Blvd.",
   "City": "Tsawassen",
   "Region": "BC",
-  "PostalCode": "T2F 8M4",
+  "PostalCode": "48000",
   "Country": "Canada",
   "Phone": "(604) 555-4729",
   "Fax": "(604) 555-3745",
@@ -7512,7 +7512,7 @@
     "ShipAddress": "23 Tsawassen Blvd.",
     "ShipCity": "Tsawassen",
     "ShipRegion": "BC",
-    "ShipPostalCode": "T2F 8M4",
+    "ShipPostalCode": "13000",
     "ShipCountry": "Canada",
     "OrderDetails": [
      {
@@ -7541,7 +7541,7 @@
     "ShipAddress": "23 Tsawassen Blvd.",
     "ShipCity": "Tsawassen",
     "ShipRegion": "BC",
-    "ShipPostalCode": "T2F 8M4",
+    "ShipPostalCode": "34000",
     "ShipCountry": "Canada",
     "OrderDetails": [
      {
@@ -7658,7 +7658,7 @@
   "Address": "Rua Orós, 92",
   "City": "Sao Paulo",
   "Region": "SP",
-  "PostalCode": "05442-030",
+  "PostalCode": "48000",
   "Country": "Brazil",
   "Phone": "(11) 555-9857",
   "Orders": [
@@ -7674,7 +7674,7 @@
     "ShipAddress": "Rua Orós, 92",
     "ShipCity": "Sao Paulo",
     "ShipRegion": "SP",
-    "ShipPostalCode": "05442-030",
+    "ShipPostalCode": "13000",
     "ShipCountry": "Brazil",
     "OrderDetails": [
      {
@@ -7941,7 +7941,7 @@
   "Address": "Rua do Mercado, 12",
   "City": "Resende",
   "Region": "SP",
-  "PostalCode": "08737-363",
+  "PostalCode": "41000",
   "Country": "Brazil",
   "Phone": "(14) 555-8122",
   "Orders": [
@@ -7957,7 +7957,7 @@
     "ShipAddress": "Rua do Mercado, 12",
     "ShipCity": "Resende",
     "ShipRegion": "SP",
-    "ShipPostalCode": "08737-363",
+    "ShipPostalCode": "42000",
     "ShipCountry": "Brazil",
     "OrderDetails": [
      {
@@ -7996,7 +7996,7 @@
   "Address": "Rua da Panificadora, 12",
   "City": "Rio de Janeiro",
   "Region": "RJ",
-  "PostalCode": "02389-673",
+  "PostalCode": "16000",
   "Country": "Brazil",
   "Phone": "(21) 555-4252",
   "Fax": "(21) 555-4545",
@@ -8013,7 +8013,7 @@
     "ShipAddress": "Rua da Panificadora, 12",
     "ShipCity": "Rio de Janeiro",
     "ShipRegion": "RJ",
-    "ShipPostalCode": "02389-673",
+    "ShipPostalCode": "12000",
     "ShipCountry": "Brazil",
     "OrderDetails": [
      {
@@ -8088,7 +8088,7 @@
   "Address": "Av. Brasil, 442",
   "City": "Campinas",
   "Region": "SP",
-  "PostalCode": "04876-786",
+  "PostalCode": "34000",
   "Country": "Brazil",
   "Phone": "(11) 555-9482",
   "Orders": [
@@ -8104,7 +8104,7 @@
     "ShipAddress": "Av. Brasil, 442",
     "ShipCity": "Campinas",
     "ShipRegion": "SP",
-    "ShipPostalCode": "04876-786",
+    "ShipPostalCode": "46000",
     "ShipCountry": "Brazil",
     "OrderDetails": [
      {
@@ -8131,7 +8131,7 @@
   "Address": "43 rue St. Laurent",
   "City": "Montréal",
   "Region": "Québec",
-  "PostalCode": "H1J 1C3",
+  "PostalCode": "33000",
   "Country": "Canada",
   "Phone": "(514) 555-8054",
   "Fax": "(514) 555-8055",
@@ -8148,7 +8148,7 @@
     "ShipAddress": "43 rue St. Laurent",
     "ShipCity": "Montréal",
     "ShipRegion": "Québec",
-    "ShipPostalCode": "H1J 1C3",
+    "ShipPostalCode": "13000",
     "ShipCountry": "Canada",
     "OrderDetails": [
      {
@@ -8433,7 +8433,7 @@
   "Address": "23 Tsawassen Blvd.",
   "City": "Tsawassen",
   "Region": "BC",
-  "PostalCode": "T2F 8M4",
+  "PostalCode": "33000",
   "Country": "Canada",
   "Phone": "(604) 555-4729",
   "Fax": "(604) 555-3745",
@@ -8450,7 +8450,7 @@
     "ShipAddress": "23 Tsawassen Blvd.",
     "ShipCity": "Tsawassen",
     "ShipRegion": "BC",
-    "ShipPostalCode": "T2F 8M4",
+    "ShipPostalCode": "40000",
     "ShipCountry": "Canada",
     "OrderDetails": [
      {
@@ -8561,7 +8561,7 @@
   "ContactTitle": "Owner",
   "Address": "Åkergatan 24",
   "City": "Bräcke",
-  "PostalCode": "S-844 67",
+  "PostalCode": "16000",
   "Country": "Sweden",
   "Phone": "0695-34 67 21",
   "Orders": [
@@ -8576,7 +8576,7 @@
     "ShipName": "Folk och fä HB",
     "ShipAddress": "Åkergatan 24",
     "ShipCity": "Bräcke",
-    "ShipPostalCode": "S-844 67",
+    "ShipPostalCode": "10000",
     "ShipCountry": "Sweden",
     "OrderDetails": [
      {
@@ -8602,7 +8602,7 @@
   "ContactTitle": "Sales Representative",
   "Address": "Berkeley Gardens 12  Brewery",
   "City": "London",
-  "PostalCode": "WX1 6LT",
+  "PostalCode": "46000",
   "Country": "UK",
   "Phone": "(171) 555-2282",
   "Fax": "(171) 555-9199",
@@ -8618,7 +8618,7 @@
     "ShipName": "Consolidated Holdings",
     "ShipAddress": "Berkeley Gardens 12  Brewery",
     "ShipCity": "London",
-    "ShipPostalCode": "WX1 6LT",
+    "ShipPostalCode": "21000",
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -8789,7 +8789,7 @@
   "Address": "43 rue St. Laurent",
   "City": "Montréal",
   "Region": "Québec",
-  "PostalCode": "H1J 1C3",
+  "PostalCode": "32000",
   "Country": "Canada",
   "Phone": "(514) 555-8054",
   "Fax": "(514) 555-8055",
@@ -8806,7 +8806,7 @@
     "ShipAddress": "43 rue St. Laurent",
     "ShipCity": "Montréal",
     "ShipRegion": "Québec",
-    "ShipPostalCode": "H1J 1C3",
+    "ShipPostalCode": "44000",
     "ShipCountry": "Canada",
     "OrderDetails": [
      {
@@ -9027,7 +9027,7 @@
   "ContactTitle": "Order Administrator",
   "Address": "Berguvsvägen  8",
   "City": "Luleå",
-  "PostalCode": "S-958 22",
+  "PostalCode": "13000",
   "Country": "Sweden",
   "Phone": "0921-12 34 65",
   "Fax": "0921-12 34 67",
@@ -9043,7 +9043,7 @@
     "ShipName": "Berglunds snabbköp",
     "ShipAddress": "Berguvsvägen  8",
     "ShipCity": "Luleå",
-    "ShipPostalCode": "S-958 22",
+    "ShipPostalCode": "14000",
     "ShipCountry": "Sweden",
     "OrderDetails": [
      {
@@ -9083,7 +9083,7 @@
     "ShipName": "Berglunds snabbköp",
     "ShipAddress": "Berguvsvägen  8",
     "ShipCity": "Luleå",
-    "ShipPostalCode": "S-958 22",
+    "ShipPostalCode": "19000",
     "ShipCountry": "Sweden",
     "OrderDetails": [
      {
@@ -9164,7 +9164,7 @@
   "Address": "Av. Copacabana, 267",
   "City": "Rio de Janeiro",
   "Region": "RJ",
-  "PostalCode": "02389-890",
+  "PostalCode": "15000",
   "Country": "Brazil",
   "Phone": "(21) 555-3412",
   "Orders": [
@@ -9180,7 +9180,7 @@
     "ShipAddress": "Av. Copacabana, 267",
     "ShipCity": "Rio de Janeiro",
     "ShipRegion": "RJ",
-    "ShipPostalCode": "02389-890",
+    "ShipPostalCode": "43000",
     "ShipCountry": "Brazil",
     "OrderDetails": [
      {
@@ -9440,7 +9440,7 @@
   "ContactTitle": "Sales Representative",
   "Address": "120 Hanover Sq.",
   "City": "London",
-  "PostalCode": "WA1 1DP",
+  "PostalCode": "25000",
   "Country": "UK",
   "Phone": "(171) 555-7788",
   "Fax": "(171) 555-6750",
@@ -9457,7 +9457,7 @@
     "ShipAddress": "Brook Farm Stratford St. Mary",
     "ShipCity": "Colchester",
     "ShipRegion": "Essex",
-    "ShipPostalCode": "CO7 6JX",
+    "ShipPostalCode": "16000",
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -9756,7 +9756,7 @@
   "ContactTitle": "Owner",
   "Address": "Åkergatan 24",
   "City": "Bräcke",
-  "PostalCode": "S-844 67",
+  "PostalCode": "28000",
   "Country": "Sweden",
   "Phone": "0695-34 67 21",
   "Orders": [
@@ -9771,7 +9771,7 @@
     "ShipName": "Folk och fä HB",
     "ShipAddress": "Åkergatan 24",
     "ShipCity": "Bräcke",
-    "ShipPostalCode": "S-844 67",
+    "ShipPostalCode": "21000",
     "ShipCountry": "Sweden",
     "OrderDetails": [
      {
@@ -9847,7 +9847,7 @@
   "ContactTitle": "Sales Representative",
   "Address": "Berkeley Gardens 12  Brewery",
   "City": "London",
-  "PostalCode": "WX1 6LT",
+  "PostalCode": "19000",
   "Country": "UK",
   "Phone": "(171) 555-2282",
   "Fax": "(171) 555-9199",
@@ -9863,7 +9863,7 @@
     "ShipName": "Consolidated Holdings",
     "ShipAddress": "Berkeley Gardens 12  Brewery",
     "ShipCity": "London",
-    "ShipPostalCode": "WX1 6LT",
+    "ShipPostalCode": "13000",
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -10046,7 +10046,7 @@
   "Address": "Av. dos Lusíadas, 23",
   "City": "Sao Paulo",
   "Region": "SP",
-  "PostalCode": "05432-043",
+  "PostalCode": "33000",
   "Country": "Brazil",
   "Phone": "(11) 555-7647",
   "Orders": [
@@ -10062,7 +10062,7 @@
     "ShipAddress": "Av. dos Lusíadas, 23",
     "ShipCity": "Sao Paulo",
     "ShipRegion": "SP",
-    "ShipPostalCode": "05432-043",
+    "ShipPostalCode": "41000",
     "ShipCountry": "Brazil",
     "OrderDetails": [
      {
@@ -10269,7 +10269,7 @@
   "ContactTitle": "Sales Representative",
   "Address": "Fauntleroy Circus",
   "City": "London",
-  "PostalCode": "EC2 5NT",
+  "PostalCode": "24000",
   "Country": "UK",
   "Phone": "(171) 555-1212",
   "Orders": [
@@ -10284,7 +10284,7 @@
     "ShipName": "B's Beverages",
     "ShipAddress": "Fauntleroy Circus",
     "ShipCity": "London",
-    "ShipPostalCode": "EC2 5NT",
+    "ShipPostalCode": "10000",
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -10310,7 +10310,7 @@
   "ContactTitle": "Sales Manager",
   "Address": "90 Wadhurst Rd.",
   "City": "London",
-  "PostalCode": "OX15 4NB",
+  "PostalCode": "34000",
   "Country": "UK",
   "Phone": "(171) 555-1717",
   "Fax": "(171) 555-5646",
@@ -10326,7 +10326,7 @@
     "ShipName": "Seven Seas Imports",
     "ShipAddress": "90 Wadhurst Rd.",
     "ShipCity": "London",
-    "ShipPostalCode": "OX15 4NB",
+    "ShipPostalCode": "34000",
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -10353,7 +10353,7 @@
   "Address": "Garden House Crowther Way",
   "City": "Cowes",
   "Region": "Isle of Wight",
-  "PostalCode": "PO31 7PJ",
+  "PostalCode": "21000",
   "Country": "UK",
   "Phone": "(198) 555-8888",
   "Orders": [
@@ -10369,7 +10369,7 @@
     "ShipAddress": "Garden House Crowther Way",
     "ShipCity": "Cowes",
     "ShipRegion": "Isle of Wight",
-    "ShipPostalCode": "PO31 7PJ",
+    "ShipPostalCode": "46000",
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -10723,7 +10723,7 @@
   "Address": "Av. Copacabana, 267",
   "City": "Rio de Janeiro",
   "Region": "RJ",
-  "PostalCode": "02389-890",
+  "PostalCode": "45000",
   "Country": "Brazil",
   "Phone": "(21) 555-3412",
   "Orders": [
@@ -10739,7 +10739,7 @@
     "ShipAddress": "Av. Copacabana, 267",
     "ShipCity": "Rio de Janeiro",
     "ShipRegion": "RJ",
-    "ShipPostalCode": "02389-890",
+    "ShipPostalCode": "18000",
     "ShipCountry": "Brazil",
     "OrderDetails": [
      {
@@ -10847,7 +10847,7 @@
   "ContactTitle": "Sales Representative",
   "Address": "Fauntleroy Circus",
   "City": "London",
-  "PostalCode": "EC2 5NT",
+  "PostalCode": "41000",
   "Country": "UK",
   "Phone": "(171) 555-1212",
   "Orders": [
@@ -10862,7 +10862,7 @@
     "ShipName": "B's Beverages",
     "ShipAddress": "Fauntleroy Circus",
     "ShipCity": "London",
-    "ShipPostalCode": "EC2 5NT",
+    "ShipPostalCode": "33000",
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -11001,7 +11001,7 @@
   "Address": "Alameda dos Canàrios, 891",
   "City": "Sao Paulo",
   "Region": "SP",
-  "PostalCode": "05487-020",
+  "PostalCode": "29000",
   "Country": "Brazil",
   "Phone": "(11) 555-1189",
   "Orders": [
@@ -11017,7 +11017,7 @@
     "ShipAddress": "Alameda dos Canàrios, 891",
     "ShipCity": "Sao Paulo",
     "ShipRegion": "SP",
-    "ShipPostalCode": "05487-020",
+    "ShipPostalCode": "37000",
     "ShipCountry": "Brazil",
     "OrderDetails": [
      {
@@ -11226,7 +11226,7 @@
   "Address": "23 Tsawassen Blvd.",
   "City": "Tsawassen",
   "Region": "BC",
-  "PostalCode": "T2F 8M4",
+  "PostalCode": "12000",
   "Country": "Canada",
   "Phone": "(604) 555-4729",
   "Fax": "(604) 555-3745",
@@ -11243,7 +11243,7 @@
     "ShipAddress": "23 Tsawassen Blvd.",
     "ShipCity": "Tsawassen",
     "ShipRegion": "BC",
-    "ShipPostalCode": "T2F 8M4",
+    "ShipPostalCode": "39000",
     "ShipCountry": "Canada",
     "OrderDetails": [
      {
@@ -11318,7 +11318,7 @@
   "Address": "Av. dos Lusíadas, 23",
   "City": "Sao Paulo",
   "Region": "SP",
-  "PostalCode": "05432-043",
+  "PostalCode": "44000",
   "Country": "Brazil",
   "Phone": "(11) 555-7647",
   "Orders": [
@@ -11334,7 +11334,7 @@
     "ShipAddress": "Av. dos Lusíadas, 23",
     "ShipCity": "Sao Paulo",
     "ShipRegion": "SP",
-    "ShipPostalCode": "05432-043",
+    "ShipPostalCode": "36000",
     "ShipCountry": "Brazil",
     "OrderDetails": [
      {
@@ -11355,7 +11355,7 @@
   "Address": "1900 Oak St.",
   "City": "Vancouver",
   "Region": "BC",
-  "PostalCode": "V3F 2K1",
+  "PostalCode": "28000",
   "Country": "Canada",
   "Phone": "(604) 555-3392",
   "Fax": "(604) 555-7293",
@@ -11372,7 +11372,7 @@
     "ShipAddress": "2319 Elm St.",
     "ShipCity": "Vancouver",
     "ShipRegion": "BC",
-    "ShipPostalCode": "V3F 2K1",
+    "ShipPostalCode": "34000",
     "ShipCountry": "Canada",
     "OrderDetails": [
      {
@@ -11405,7 +11405,7 @@
   "Address": "Av. Inês de Castro, 414",
   "City": "Sao Paulo",
   "Region": "SP",
-  "PostalCode": "05634-030",
+  "PostalCode": "50000",
   "Country": "Brazil",
   "Phone": "(11) 555-2167",
   "Fax": "(11) 555-2168",
@@ -11422,7 +11422,7 @@
     "ShipAddress": "Av. Inês de Castro, 414",
     "ShipCity": "Sao Paulo",
     "ShipRegion": "SP",
-    "ShipPostalCode": "05634-030",
+    "ShipPostalCode": "18000",
     "ShipCountry": "Brazil",
     "OrderDetails": [
      {
@@ -11809,7 +11809,7 @@
   "Address": "43 rue St. Laurent",
   "City": "Montréal",
   "Region": "Québec",
-  "PostalCode": "H1J 1C3",
+  "PostalCode": "27000",
   "Country": "Canada",
   "Phone": "(514) 555-8054",
   "Fax": "(514) 555-8055",
@@ -11826,7 +11826,7 @@
     "ShipAddress": "43 rue St. Laurent",
     "ShipCity": "Montréal",
     "ShipRegion": "Québec",
-    "ShipPostalCode": "H1J 1C3",
+    "ShipPostalCode": "10000",
     "ShipCountry": "Canada",
     "OrderDetails": [
      {
@@ -12098,7 +12098,7 @@
   "Address": "Rua Orós, 92",
   "City": "Sao Paulo",
   "Region": "SP",
-  "PostalCode": "05442-030",
+  "PostalCode": "15000",
   "Country": "Brazil",
   "Phone": "(11) 555-9857",
   "Orders": [
@@ -12114,7 +12114,7 @@
     "ShipAddress": "Rua Orós, 92",
     "ShipCity": "Sao Paulo",
     "ShipRegion": "SP",
-    "ShipPostalCode": "05442-030",
+    "ShipPostalCode": "14000",
     "ShipCountry": "Brazil",
     "OrderDetails": [
      {
@@ -12367,7 +12367,7 @@
   "ContactTitle": "Sales Associate",
   "Address": "South House 300 Queensbridge",
   "City": "London",
-  "PostalCode": "SW7 1RZ",
+  "PostalCode": "14000",
   "Country": "UK",
   "Phone": "(171) 555-7733",
   "Fax": "(171) 555-2530",
@@ -12383,7 +12383,7 @@
     "ShipName": "North/South",
     "ShipAddress": "South House 300 Queensbridge",
     "ShipCity": "London",
-    "ShipPostalCode": "SW7 1RZ",
+    "ShipPostalCode": "30000",
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -12653,7 +12653,7 @@
   "ContactTitle": "Sales Manager",
   "Address": "90 Wadhurst Rd.",
   "City": "London",
-  "PostalCode": "OX15 4NB",
+  "PostalCode": "43000",
   "Country": "UK",
   "Phone": "(171) 555-1717",
   "Fax": "(171) 555-5646",
@@ -12669,7 +12669,7 @@
     "ShipName": "Seven Seas Imports",
     "ShipAddress": "90 Wadhurst Rd.",
     "ShipCity": "London",
-    "ShipPostalCode": "OX15 4NB",
+    "ShipPostalCode": "27000",
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -12707,7 +12707,7 @@
   "ContactTitle": "Order Administrator",
   "Address": "Berguvsvägen  8",
   "City": "Luleå",
-  "PostalCode": "S-958 22",
+  "PostalCode": "30000",
   "Country": "Sweden",
   "Phone": "0921-12 34 65",
   "Fax": "0921-12 34 67",
@@ -12723,7 +12723,7 @@
     "ShipName": "Berglunds snabbköp",
     "ShipAddress": "Berguvsvägen  8",
     "ShipCity": "Luleå",
-    "ShipPostalCode": "S-958 22",
+    "ShipPostalCode": "20000",
     "ShipCountry": "Sweden",
     "OrderDetails": [
      {
@@ -12941,7 +12941,7 @@
   "ContactTitle": "Sales Agent",
   "Address": "Rue Joseph-Bens 532",
   "City": "Bruxelles",
-  "PostalCode": "B-1180",
+  "PostalCode": "45000",
   "Country": "Belgium",
   "Phone": "(02) 201 24 67",
   "Fax": "(02) 201 24 68",
@@ -12957,7 +12957,7 @@
     "ShipName": "Maison Dewey",
     "ShipAddress": "Rue Joseph-Bens 532",
     "ShipCity": "Bruxelles",
-    "ShipPostalCode": "B-1180",
+    "ShipPostalCode": "14000",
     "ShipCountry": "Belgium",
     "OrderDetails": [
      {
@@ -13079,7 +13079,7 @@
   "ContactTitle": "Sales Agent",
   "Address": "35 King George",
   "City": "London",
-  "PostalCode": "WX3 6FW",
+  "PostalCode": "32000",
   "Country": "UK",
   "Phone": "(171) 555-0297",
   "Fax": "(171) 555-3373",
@@ -13095,7 +13095,7 @@
     "ShipName": "Eastern Connection",
     "ShipAddress": "35 King George",
     "ShipCity": "London",
-    "ShipPostalCode": "WX3 6FW",
+    "ShipPostalCode": "27000",
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -13121,7 +13121,7 @@
   "ContactTitle": "Owner",
   "Address": "Åkergatan 24",
   "City": "Bräcke",
-  "PostalCode": "S-844 67",
+  "PostalCode": "46000",
   "Country": "Sweden",
   "Phone": "0695-34 67 21",
   "Orders": [
@@ -13136,7 +13136,7 @@
     "ShipName": "Folk och fä HB",
     "ShipAddress": "Åkergatan 24",
     "ShipCity": "Bräcke",
-    "ShipPostalCode": "S-844 67",
+    "ShipPostalCode": "38000",
     "ShipCountry": "Sweden",
     "OrderDetails": [
      {
@@ -13382,7 +13382,7 @@
   "ContactTitle": "Sales Representative",
   "Address": "Fauntleroy Circus",
   "City": "London",
-  "PostalCode": "EC2 5NT",
+  "PostalCode": "17000",
   "Country": "UK",
   "Phone": "(171) 555-1212",
   "Orders": [
@@ -13397,7 +13397,7 @@
     "ShipName": "B's Beverages",
     "ShipAddress": "Fauntleroy Circus",
     "ShipCity": "London",
-    "ShipPostalCode": "EC2 5NT",
+    "ShipPostalCode": "19000",
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -13425,7 +13425,7 @@
     "ShipName": "B's Beverages",
     "ShipAddress": "Fauntleroy Circus",
     "ShipCity": "London",
-    "ShipPostalCode": "EC2 5NT",
+    "ShipPostalCode": "34000",
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -13517,7 +13517,7 @@
   "Address": "Rua do Paço, 67",
   "City": "Rio de Janeiro",
   "Region": "RJ",
-  "PostalCode": "05454-876",
+  "PostalCode": "21000",
   "Country": "Brazil",
   "Phone": "(21) 555-0091",
   "Fax": "(21) 555-8765",
@@ -13534,7 +13534,7 @@
     "ShipAddress": "Rua do Paço, 67",
     "ShipCity": "Rio de Janeiro",
     "ShipRegion": "RJ",
-    "ShipPostalCode": "05454-876",
+    "ShipPostalCode": "31000",
     "ShipCountry": "Brazil",
     "OrderDetails": [
      {
@@ -13787,7 +13787,7 @@
   "ContactTitle": "Sales Manager",
   "Address": "90 Wadhurst Rd.",
   "City": "London",
-  "PostalCode": "OX15 4NB",
+  "PostalCode": "26000",
   "Country": "UK",
   "Phone": "(171) 555-1717",
   "Fax": "(171) 555-5646",
@@ -13803,7 +13803,7 @@
     "ShipName": "Seven Seas Imports",
     "ShipAddress": "90 Wadhurst Rd.",
     "ShipCity": "London",
-    "ShipPostalCode": "OX15 4NB",
+    "ShipPostalCode": "11000",
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -14316,7 +14316,7 @@
   "ContactTitle": "Sales Representative",
   "Address": "120 Hanover Sq.",
   "City": "London",
-  "PostalCode": "WA1 1DP",
+  "PostalCode": "50000",
   "Country": "UK",
   "Phone": "(171) 555-7788",
   "Fax": "(171) 555-6750",
@@ -14333,7 +14333,7 @@
     "ShipAddress": "Brook Farm Stratford St. Mary",
     "ShipCity": "Colchester",
     "ShipRegion": "Essex",
-    "ShipPostalCode": "CO7 6JX",
+    "ShipPostalCode": "29000",
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -14461,7 +14461,7 @@
   "ContactTitle": "Owner",
   "Address": "Åkergatan 24",
   "City": "Bräcke",
-  "PostalCode": "S-844 67",
+  "PostalCode": "33000",
   "Country": "Sweden",
   "Phone": "0695-34 67 21",
   "Orders": [
@@ -14476,7 +14476,7 @@
     "ShipName": "Folk och fä HB",
     "ShipAddress": "Åkergatan 24",
     "ShipCity": "Bräcke",
-    "ShipPostalCode": "S-844 67",
+    "ShipPostalCode": "23000",
     "ShipCountry": "Sweden",
     "OrderDetails": [
      {
@@ -14545,7 +14545,7 @@
   "Address": "Av. Copacabana, 267",
   "City": "Rio de Janeiro",
   "Region": "RJ",
-  "PostalCode": "02389-890",
+  "PostalCode": "35000",
   "Country": "Brazil",
   "Phone": "(21) 555-3412",
   "Orders": [
@@ -14561,7 +14561,7 @@
     "ShipAddress": "Av. Copacabana, 267",
     "ShipCity": "Rio de Janeiro",
     "ShipRegion": "RJ",
-    "ShipPostalCode": "02389-890",
+    "ShipPostalCode": "19000",
     "ShipCountry": "Brazil",
     "OrderDetails": [
      {
@@ -14638,7 +14638,7 @@
   "Address": "43 rue St. Laurent",
   "City": "Montréal",
   "Region": "Québec",
-  "PostalCode": "H1J 1C3",
+  "PostalCode": "39000",
   "Country": "Canada",
   "Phone": "(514) 555-8054",
   "Fax": "(514) 555-8055",
@@ -14655,7 +14655,7 @@
     "ShipAddress": "43 rue St. Laurent",
     "ShipCity": "Montréal",
     "ShipRegion": "Québec",
-    "ShipPostalCode": "H1J 1C3",
+    "ShipPostalCode": "48000",
     "ShipCountry": "Canada",
     "OrderDetails": [
      {
@@ -14858,7 +14858,7 @@
   "Address": "43 rue St. Laurent",
   "City": "Montréal",
   "Region": "Québec",
-  "PostalCode": "H1J 1C3",
+  "PostalCode": "47000",
   "Country": "Canada",
   "Phone": "(514) 555-8054",
   "Fax": "(514) 555-8055",
@@ -14875,7 +14875,7 @@
     "ShipAddress": "43 rue St. Laurent",
     "ShipCity": "Montréal",
     "ShipRegion": "Québec",
-    "ShipPostalCode": "H1J 1C3",
+    "ShipPostalCode": "49000",
     "ShipCountry": "Canada",
     "OrderDetails": [
      {
@@ -14943,7 +14943,7 @@
   "ContactTitle": "Order Administrator",
   "Address": "Berguvsvägen  8",
   "City": "Luleå",
-  "PostalCode": "S-958 22",
+  "PostalCode": "50000",
   "Country": "Sweden",
   "Phone": "0921-12 34 65",
   "Fax": "0921-12 34 67",
@@ -14959,7 +14959,7 @@
     "ShipName": "Berglunds snabbköp",
     "ShipAddress": "Berguvsvägen  8",
     "ShipCity": "Luleå",
-    "ShipPostalCode": "S-958 22",
+    "ShipPostalCode": "36000",
     "ShipCountry": "Sweden",
     "OrderDetails": [
      {
@@ -15250,7 +15250,7 @@
   "ContactTitle": "Sales Representative",
   "Address": "Fauntleroy Circus",
   "City": "London",
-  "PostalCode": "EC2 5NT",
+  "PostalCode": "18000",
   "Country": "UK",
   "Phone": "(171) 555-1212",
   "Orders": [
@@ -15265,7 +15265,7 @@
     "ShipName": "B's Beverages",
     "ShipAddress": "Fauntleroy Circus",
     "ShipCity": "London",
-    "ShipPostalCode": "EC2 5NT",
+    "ShipPostalCode": "29000",
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -15383,7 +15383,7 @@
   "Address": "Rua Orós, 92",
   "City": "Sao Paulo",
   "Region": "SP",
-  "PostalCode": "05442-030",
+  "PostalCode": "13000",
   "Country": "Brazil",
   "Phone": "(11) 555-9857",
   "Orders": [
@@ -15399,7 +15399,7 @@
     "ShipAddress": "Rua Orós, 92",
     "ShipCity": "Sao Paulo",
     "ShipRegion": "SP",
-    "ShipPostalCode": "05442-030",
+    "ShipPostalCode": "34000",
     "ShipCountry": "Brazil",
     "OrderDetails": [
      {
@@ -15546,7 +15546,7 @@
   "Address": "Rua do Mercado, 12",
   "City": "Resende",
   "Region": "SP",
-  "PostalCode": "08737-363",
+  "PostalCode": "30000",
   "Country": "Brazil",
   "Phone": "(14) 555-8122",
   "Orders": [
@@ -15562,7 +15562,7 @@
     "ShipAddress": "Rua do Mercado, 12",
     "ShipCity": "Resende",
     "ShipRegion": "SP",
-    "ShipPostalCode": "08737-363",
+    "ShipPostalCode": "24000",
     "ShipCountry": "Brazil",
     "OrderDetails": [
      {
@@ -15619,7 +15619,7 @@
   "Address": "Rua da Panificadora, 12",
   "City": "Rio de Janeiro",
   "Region": "RJ",
-  "PostalCode": "02389-673",
+  "PostalCode": "29000",
   "Country": "Brazil",
   "Phone": "(21) 555-4252",
   "Fax": "(21) 555-4545",
@@ -15636,7 +15636,7 @@
     "ShipAddress": "Rua da Panificadora, 12",
     "ShipCity": "Rio de Janeiro",
     "ShipRegion": "RJ",
-    "ShipPostalCode": "02389-673",
+    "ShipPostalCode": "30000",
     "ShipCountry": "Brazil",
     "OrderDetails": [
      {
@@ -15747,7 +15747,7 @@
   "Address": "43 rue St. Laurent",
   "City": "Montréal",
   "Region": "Québec",
-  "PostalCode": "H1J 1C3",
+  "PostalCode": "15000",
   "Country": "Canada",
   "Phone": "(514) 555-8054",
   "Fax": "(514) 555-8055",
@@ -15764,7 +15764,7 @@
     "ShipAddress": "43 rue St. Laurent",
     "ShipCity": "Montréal",
     "ShipRegion": "Québec",
-    "ShipPostalCode": "H1J 1C3",
+    "ShipPostalCode": "49000",
     "ShipCountry": "Canada",
     "OrderDetails": [
      {
@@ -16148,7 +16148,7 @@
   "ContactTitle": "Sales Representative",
   "Address": "Fauntleroy Circus",
   "City": "London",
-  "PostalCode": "EC2 5NT",
+  "PostalCode": "49000",
   "Country": "UK",
   "Phone": "(171) 555-1212",
   "Orders": [
@@ -16163,7 +16163,7 @@
     "ShipName": "B's Beverages",
     "ShipAddress": "Fauntleroy Circus",
     "ShipCity": "London",
-    "ShipPostalCode": "EC2 5NT",
+    "ShipPostalCode": "50000",
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -16393,7 +16393,7 @@
   "Address": "43 rue St. Laurent",
   "City": "Montréal",
   "Region": "Québec",
-  "PostalCode": "H1J 1C3",
+  "PostalCode": "29000",
   "Country": "Canada",
   "Phone": "(514) 555-8054",
   "Fax": "(514) 555-8055",
@@ -16410,7 +16410,7 @@
     "ShipAddress": "43 rue St. Laurent",
     "ShipCity": "Montréal",
     "ShipRegion": "Québec",
-    "ShipPostalCode": "H1J 1C3",
+    "ShipPostalCode": "49000",
     "ShipCountry": "Canada",
     "OrderDetails": [
      {
@@ -16449,7 +16449,7 @@
   "Address": "Av. Inês de Castro, 414",
   "City": "Sao Paulo",
   "Region": "SP",
-  "PostalCode": "05634-030",
+  "PostalCode": "48000",
   "Country": "Brazil",
   "Phone": "(11) 555-2167",
   "Fax": "(11) 555-2168",
@@ -16466,7 +16466,7 @@
     "ShipAddress": "Av. Inês de Castro, 414",
     "ShipCity": "Sao Paulo",
     "ShipRegion": "SP",
-    "ShipPostalCode": "05634-030",
+    "ShipPostalCode": "22000",
     "ShipCountry": "Brazil",
     "OrderDetails": [
      {
@@ -16679,7 +16679,7 @@
   "ContactTitle": "Owner",
   "Address": "ul. Filtrowa 68",
   "City": "Warszawa",
-  "PostalCode": "01-012",
+  "PostalCode": "16000",
   "Country": "Poland",
   "Phone": "(26) 642-7012",
   "Fax": "(26) 642-7012",
@@ -16695,7 +16695,7 @@
     "ShipName": "Wolski Zajazd",
     "ShipAddress": "ul. Filtrowa 68",
     "ShipCity": "Warszawa",
-    "ShipPostalCode": "01-012",
+    "ShipPostalCode": "16000",
     "ShipCountry": "Poland",
     "OrderDetails": [
      {
@@ -16995,7 +16995,7 @@
   "Address": "43 rue St. Laurent",
   "City": "Montréal",
   "Region": "Québec",
-  "PostalCode": "H1J 1C3",
+  "PostalCode": "22000",
   "Country": "Canada",
   "Phone": "(514) 555-8054",
   "Fax": "(514) 555-8055",
@@ -17012,7 +17012,7 @@
     "ShipAddress": "43 rue St. Laurent",
     "ShipCity": "Montréal",
     "ShipRegion": "Québec",
-    "ShipPostalCode": "H1J 1C3",
+    "ShipPostalCode": "37000",
     "ShipCountry": "Canada",
     "OrderDetails": [
      {
@@ -17047,7 +17047,7 @@
     "ShipAddress": "43 rue St. Laurent",
     "ShipCity": "Montréal",
     "ShipRegion": "Québec",
-    "ShipPostalCode": "H1J 1C3",
+    "ShipPostalCode": "38000",
     "ShipCountry": "Canada",
     "OrderDetails": [
      {
@@ -17074,7 +17074,7 @@
   "Address": "1900 Oak St.",
   "City": "Vancouver",
   "Region": "BC",
-  "PostalCode": "V3F 2K1",
+  "PostalCode": "46000",
   "Country": "Canada",
   "Phone": "(604) 555-3392",
   "Fax": "(604) 555-7293",
@@ -17091,7 +17091,7 @@
     "ShipAddress": "2319 Elm St.",
     "ShipCity": "Vancouver",
     "ShipRegion": "BC",
-    "ShipPostalCode": "V3F 2K1",
+    "ShipPostalCode": "21000",
     "ShipCountry": "Canada",
     "OrderDetails": [
      {
@@ -17118,7 +17118,7 @@
   "Address": "Garden House Crowther Way",
   "City": "Cowes",
   "Region": "Isle of Wight",
-  "PostalCode": "PO31 7PJ",
+  "PostalCode": "28000",
   "Country": "UK",
   "Phone": "(198) 555-8888",
   "Orders": [
@@ -17134,7 +17134,7 @@
     "ShipAddress": "Garden House Crowther Way",
     "ShipCity": "Cowes",
     "ShipRegion": "Isle of Wight",
-    "ShipPostalCode": "PO31 7PJ",
+    "ShipPostalCode": "41000",
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -17173,7 +17173,7 @@
   "Address": "Av. Copacabana, 267",
   "City": "Rio de Janeiro",
   "Region": "RJ",
-  "PostalCode": "02389-890",
+  "PostalCode": "22000",
   "Country": "Brazil",
   "Phone": "(21) 555-3412",
   "Orders": [
@@ -17189,7 +17189,7 @@
     "ShipAddress": "Av. Copacabana, 267",
     "ShipCity": "Rio de Janeiro",
     "ShipRegion": "RJ",
-    "ShipPostalCode": "02389-890",
+    "ShipPostalCode": "25000",
     "ShipCountry": "Brazil",
     "OrderDetails": [
      {
@@ -17373,7 +17373,7 @@
   "ContactTitle": "Order Administrator",
   "Address": "Berguvsvägen  8",
   "City": "Luleå",
-  "PostalCode": "S-958 22",
+  "PostalCode": "38000",
   "Country": "Sweden",
   "Phone": "0921-12 34 65",
   "Fax": "0921-12 34 67",
@@ -17389,7 +17389,7 @@
     "ShipName": "Berglunds snabbköp",
     "ShipAddress": "Berguvsvägen  8",
     "ShipCity": "Luleå",
-    "ShipPostalCode": "S-958 22",
+    "ShipPostalCode": "19000",
     "ShipCountry": "Sweden",
     "OrderDetails": [
      {
@@ -17859,7 +17859,7 @@
   "Address": "Alameda dos Canàrios, 891",
   "City": "Sao Paulo",
   "Region": "SP",
-  "PostalCode": "05487-020",
+  "PostalCode": "46000",
   "Country": "Brazil",
   "Phone": "(11) 555-1189",
   "Orders": [
@@ -17875,7 +17875,7 @@
     "ShipAddress": "Alameda dos Canàrios, 891",
     "ShipCity": "Sao Paulo",
     "ShipRegion": "SP",
-    "ShipPostalCode": "05487-020",
+    "ShipPostalCode": "12000",
     "ShipCountry": "Brazil",
     "OrderDetails": [
      {
@@ -18170,7 +18170,7 @@
   "Address": "Rua do Mercado, 12",
   "City": "Resende",
   "Region": "SP",
-  "PostalCode": "08737-363",
+  "PostalCode": "29000",
   "Country": "Brazil",
   "Phone": "(14) 555-8122",
   "Orders": [
@@ -18186,7 +18186,7 @@
     "ShipAddress": "Rua do Mercado, 12",
     "ShipCity": "Resende",
     "ShipRegion": "SP",
-    "ShipPostalCode": "08737-363",
+    "ShipPostalCode": "16000",
     "ShipCountry": "Brazil",
     "OrderDetails": [
      {
@@ -18219,7 +18219,7 @@
   "Address": "Rua do Paço, 67",
   "City": "Rio de Janeiro",
   "Region": "RJ",
-  "PostalCode": "05454-876",
+  "PostalCode": "30000",
   "Country": "Brazil",
   "Phone": "(21) 555-0091",
   "Fax": "(21) 555-8765",
@@ -18236,7 +18236,7 @@
     "ShipAddress": "Rua do Paço, 67",
     "ShipCity": "Rio de Janeiro",
     "ShipRegion": "RJ",
-    "ShipPostalCode": "05454-876",
+    "ShipPostalCode": "28000",
     "ShipCountry": "Brazil",
     "OrderDetails": [
      {
@@ -18317,7 +18317,7 @@
   "Address": "Rua da Panificadora, 12",
   "City": "Rio de Janeiro",
   "Region": "RJ",
-  "PostalCode": "02389-673",
+  "PostalCode": "16000",
   "Country": "Brazil",
   "Phone": "(21) 555-4252",
   "Fax": "(21) 555-4545",
@@ -18334,7 +18334,7 @@
     "ShipAddress": "Rua da Panificadora, 12",
     "ShipCity": "Rio de Janeiro",
     "ShipRegion": "RJ",
-    "ShipPostalCode": "02389-673",
+    "ShipPostalCode": "31000",
     "ShipCountry": "Brazil",
     "OrderDetails": [
      {
@@ -18361,7 +18361,7 @@
   "Address": "Av. Copacabana, 267",
   "City": "Rio de Janeiro",
   "Region": "RJ",
-  "PostalCode": "02389-890",
+  "PostalCode": "29000",
   "Country": "Brazil",
   "Phone": "(21) 555-3412",
   "Orders": [
@@ -18377,7 +18377,7 @@
     "ShipAddress": "Av. Copacabana, 267",
     "ShipCity": "Rio de Janeiro",
     "ShipRegion": "RJ",
-    "ShipPostalCode": "02389-890",
+    "ShipPostalCode": "39000",
     "ShipCountry": "Brazil",
     "OrderDetails": [
      {
@@ -18403,7 +18403,7 @@
   "ContactTitle": "Sales Agent",
   "Address": "Rue Joseph-Bens 532",
   "City": "Bruxelles",
-  "PostalCode": "B-1180",
+  "PostalCode": "43000",
   "Country": "Belgium",
   "Phone": "(02) 201 24 67",
   "Fax": "(02) 201 24 68",
@@ -18419,7 +18419,7 @@
     "ShipName": "Maison Dewey",
     "ShipAddress": "Rue Joseph-Bens 532",
     "ShipCity": "Bruxelles",
-    "ShipPostalCode": "B-1180",
+    "ShipPostalCode": "48000",
     "ShipCountry": "Belgium",
     "OrderDetails": [
      {
@@ -18446,7 +18446,7 @@
   "Address": "Rua Orós, 92",
   "City": "Sao Paulo",
   "Region": "SP",
-  "PostalCode": "05442-030",
+  "PostalCode": "13000",
   "Country": "Brazil",
   "Phone": "(11) 555-9857",
   "Orders": [
@@ -18462,7 +18462,7 @@
     "ShipAddress": "Rua Orós, 92",
     "ShipCity": "Sao Paulo",
     "ShipRegion": "SP",
-    "ShipPostalCode": "05442-030",
+    "ShipPostalCode": "35000",
     "ShipCountry": "Brazil",
     "OrderDetails": [
      {
@@ -18537,7 +18537,7 @@
   "Address": "Av. Brasil, 442",
   "City": "Campinas",
   "Region": "SP",
-  "PostalCode": "04876-786",
+  "PostalCode": "27000",
   "Country": "Brazil",
   "Phone": "(11) 555-9482",
   "Orders": [
@@ -18553,7 +18553,7 @@
     "ShipAddress": "Av. Brasil, 442",
     "ShipCity": "Campinas",
     "ShipRegion": "SP",
-    "ShipPostalCode": "04876-786",
+    "ShipPostalCode": "25000",
     "ShipCountry": "Brazil",
     "OrderDetails": [
      {
@@ -18621,7 +18621,7 @@
   "ContactTitle": "Order Administrator",
   "Address": "Berguvsvägen  8",
   "City": "Luleå",
-  "PostalCode": "S-958 22",
+  "PostalCode": "38000",
   "Country": "Sweden",
   "Phone": "0921-12 34 65",
   "Fax": "0921-12 34 67",
@@ -18637,7 +18637,7 @@
     "ShipName": "Berglunds snabbköp",
     "ShipAddress": "Berguvsvägen  8",
     "ShipCity": "Luleå",
-    "ShipPostalCode": "S-958 22",
+    "ShipPostalCode": "14000",
     "ShipCountry": "Sweden",
     "OrderDetails": [
      {
@@ -18875,7 +18875,7 @@
   "Address": "Alameda dos Canàrios, 891",
   "City": "Sao Paulo",
   "Region": "SP",
-  "PostalCode": "05487-020",
+  "PostalCode": "27000",
   "Country": "Brazil",
   "Phone": "(11) 555-1189",
   "Orders": [
@@ -18891,7 +18891,7 @@
     "ShipAddress": "Alameda dos Canàrios, 891",
     "ShipCity": "Sao Paulo",
     "ShipRegion": "SP",
-    "ShipPostalCode": "05487-020",
+    "ShipPostalCode": "22000",
     "ShipCountry": "Brazil",
     "OrderDetails": [
      {
@@ -19462,7 +19462,7 @@
   "ContactTitle": "Order Administrator",
   "Address": "Berguvsvägen  8",
   "City": "Luleå",
-  "PostalCode": "S-958 22",
+  "PostalCode": "45000",
   "Country": "Sweden",
   "Phone": "0921-12 34 65",
   "Fax": "0921-12 34 67",
@@ -19478,7 +19478,7 @@
     "ShipName": "Berglunds snabbköp",
     "ShipAddress": "Berguvsvägen  8",
     "ShipCity": "Luleå",
-    "ShipPostalCode": "S-958 22",
+    "ShipPostalCode": "21000",
     "ShipCountry": "Sweden",
     "OrderDetails": [
      {
@@ -19553,7 +19553,7 @@
   "Address": "Garden House Crowther Way",
   "City": "Cowes",
   "Region": "Isle of Wight",
-  "PostalCode": "PO31 7PJ",
+  "PostalCode": "35000",
   "Country": "UK",
   "Phone": "(198) 555-8888",
   "Orders": [
@@ -19569,7 +19569,7 @@
     "ShipAddress": "Garden House Crowther Way",
     "ShipCity": "Cowes",
     "ShipRegion": "Isle of Wight",
-    "ShipPostalCode": "PO31 7PJ",
+    "ShipPostalCode": "36000",
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -20047,7 +20047,7 @@
   "Address": "Av. Brasil, 442",
   "City": "Campinas",
   "Region": "SP",
-  "PostalCode": "04876-786",
+  "PostalCode": "15000",
   "Country": "Brazil",
   "Phone": "(11) 555-9482",
   "Orders": [
@@ -20063,7 +20063,7 @@
     "ShipAddress": "Av. Brasil, 442",
     "ShipCity": "Campinas",
     "ShipRegion": "SP",
-    "ShipPostalCode": "04876-786",
+    "ShipPostalCode": "10000",
     "ShipCountry": "Brazil",
     "OrderDetails": [
      {
@@ -20233,7 +20233,7 @@
   "ContactTitle": "Order Administrator",
   "Address": "Berguvsvägen  8",
   "City": "Luleå",
-  "PostalCode": "S-958 22",
+  "PostalCode": "31000",
   "Country": "Sweden",
   "Phone": "0921-12 34 65",
   "Fax": "0921-12 34 67",
@@ -20249,7 +20249,7 @@
     "ShipName": "Berglunds snabbköp",
     "ShipAddress": "Berguvsvägen  8",
     "ShipCity": "Luleå",
-    "ShipPostalCode": "S-958 22",
+    "ShipPostalCode": "11000",
     "ShipCountry": "Sweden",
     "OrderDetails": [
      {
@@ -20270,7 +20270,7 @@
   "Address": "Rua do Paço, 67",
   "City": "Rio de Janeiro",
   "Region": "RJ",
-  "PostalCode": "05454-876",
+  "PostalCode": "30000",
   "Country": "Brazil",
   "Phone": "(21) 555-0091",
   "Fax": "(21) 555-8765",
@@ -20287,7 +20287,7 @@
     "ShipAddress": "Rua do Paço, 67",
     "ShipCity": "Rio de Janeiro",
     "ShipRegion": "RJ",
-    "ShipPostalCode": "05454-876",
+    "ShipPostalCode": "22000",
     "ShipCountry": "Brazil",
     "OrderDetails": [
      {
@@ -20899,7 +20899,7 @@
   "ContactTitle": "Owner",
   "Address": "Åkergatan 24",
   "City": "Bräcke",
-  "PostalCode": "S-844 67",
+  "PostalCode": "43000",
   "Country": "Sweden",
   "Phone": "0695-34 67 21",
   "Orders": [
@@ -20914,7 +20914,7 @@
     "ShipName": "Folk och fä HB",
     "ShipAddress": "Åkergatan 24",
     "ShipCity": "Bräcke",
-    "ShipPostalCode": "S-844 67",
+    "ShipPostalCode": "26000",
     "ShipCountry": "Sweden",
     "OrderDetails": [
      {
@@ -20947,7 +20947,7 @@
   "Address": "Alameda dos Canàrios, 891",
   "City": "Sao Paulo",
   "Region": "SP",
-  "PostalCode": "05487-020",
+  "PostalCode": "48000",
   "Country": "Brazil",
   "Phone": "(11) 555-1189",
   "Orders": [
@@ -20963,7 +20963,7 @@
     "ShipAddress": "Alameda dos Canàrios, 891",
     "ShipCity": "Sao Paulo",
     "ShipRegion": "SP",
-    "ShipPostalCode": "05487-020",
+    "ShipPostalCode": "20000",
     "ShipCountry": "Brazil",
     "OrderDetails": [
      {
@@ -21089,7 +21089,7 @@
   "ContactTitle": "Sales Representative",
   "Address": "120 Hanover Sq.",
   "City": "London",
-  "PostalCode": "WA1 1DP",
+  "PostalCode": "17000",
   "Country": "UK",
   "Phone": "(171) 555-7788",
   "Fax": "(171) 555-6750",
@@ -21106,7 +21106,7 @@
     "ShipAddress": "Brook Farm Stratford St. Mary",
     "ShipCity": "Colchester",
     "ShipRegion": "Essex",
-    "ShipPostalCode": "CO7 6JX",
+    "ShipPostalCode": "47000",
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -21182,7 +21182,7 @@
   "Address": "Av. Brasil, 442",
   "City": "Campinas",
   "Region": "SP",
-  "PostalCode": "04876-786",
+  "PostalCode": "12000",
   "Country": "Brazil",
   "Phone": "(11) 555-9482",
   "Orders": [
@@ -21198,7 +21198,7 @@
     "ShipAddress": "Av. Brasil, 442",
     "ShipCity": "Campinas",
     "ShipRegion": "SP",
-    "ShipPostalCode": "04876-786",
+    "ShipPostalCode": "48000",
     "ShipCountry": "Brazil",
     "OrderDetails": [
      {
@@ -21706,7 +21706,7 @@
   "Address": "Rua da Panificadora, 12",
   "City": "Rio de Janeiro",
   "Region": "RJ",
-  "PostalCode": "02389-673",
+  "PostalCode": "17000",
   "Country": "Brazil",
   "Phone": "(21) 555-4252",
   "Fax": "(21) 555-4545",
@@ -21723,7 +21723,7 @@
     "ShipAddress": "Rua da Panificadora, 12",
     "ShipCity": "Rio de Janeiro",
     "ShipRegion": "RJ",
-    "ShipPostalCode": "02389-673",
+    "ShipPostalCode": "15000",
     "ShipCountry": "Brazil",
     "OrderDetails": [
      {
@@ -21878,7 +21878,7 @@
   "Address": "43 rue St. Laurent",
   "City": "Montréal",
   "Region": "Québec",
-  "PostalCode": "H1J 1C3",
+  "PostalCode": "28000",
   "Country": "Canada",
   "Phone": "(514) 555-8054",
   "Fax": "(514) 555-8055",
@@ -21895,7 +21895,7 @@
     "ShipAddress": "43 rue St. Laurent",
     "ShipCity": "Montréal",
     "ShipRegion": "Québec",
-    "ShipPostalCode": "H1J 1C3",
+    "ShipPostalCode": "25000",
     "ShipCountry": "Canada",
     "OrderDetails": [
      {
@@ -21922,7 +21922,7 @@
   "Address": "Rua Orós, 92",
   "City": "Sao Paulo",
   "Region": "SP",
-  "PostalCode": "05442-030",
+  "PostalCode": "13000",
   "Country": "Brazil",
   "Phone": "(11) 555-9857",
   "Orders": [
@@ -21938,7 +21938,7 @@
     "ShipAddress": "Rua Orós, 92",
     "ShipCity": "Sao Paulo",
     "ShipRegion": "SP",
-    "ShipPostalCode": "05442-030",
+    "ShipPostalCode": "28000",
     "ShipCountry": "Brazil",
     "OrderDetails": [
      {
@@ -21970,7 +21970,7 @@
   "ContactTitle": "Sales Agent",
   "Address": "35 King George",
   "City": "London",
-  "PostalCode": "WX3 6FW",
+  "PostalCode": "14000",
   "Country": "UK",
   "Phone": "(171) 555-0297",
   "Fax": "(171) 555-3373",
@@ -21986,7 +21986,7 @@
     "ShipName": "Eastern Connection",
     "ShipAddress": "35 King George",
     "ShipCity": "London",
-    "ShipPostalCode": "WX3 6FW",
+    "ShipPostalCode": "21000",
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -22061,7 +22061,7 @@
   "Address": "Alameda dos Canàrios, 891",
   "City": "Sao Paulo",
   "Region": "SP",
-  "PostalCode": "05487-020",
+  "PostalCode": "41000",
   "Country": "Brazil",
   "Phone": "(11) 555-1189",
   "Orders": [
@@ -22077,7 +22077,7 @@
     "ShipAddress": "Alameda dos Canàrios, 891",
     "ShipCity": "Sao Paulo",
     "ShipRegion": "SP",
-    "ShipPostalCode": "05487-020",
+    "ShipPostalCode": "16000",
     "ShipCountry": "Brazil",
     "OrderDetails": [
      {
@@ -22290,7 +22290,7 @@
   "ContactTitle": "Order Administrator",
   "Address": "Berguvsvägen  8",
   "City": "Luleå",
-  "PostalCode": "S-958 22",
+  "PostalCode": "32000",
   "Country": "Sweden",
   "Phone": "0921-12 34 65",
   "Fax": "0921-12 34 67",
@@ -22306,7 +22306,7 @@
     "ShipName": "Berglunds snabbköp",
     "ShipAddress": "Berguvsvägen  8",
     "ShipCity": "Luleå",
-    "ShipPostalCode": "S-958 22",
+    "ShipPostalCode": "17000",
     "ShipCountry": "Sweden",
     "OrderDetails": [
      {
@@ -22339,7 +22339,7 @@
   "Address": "Av. Brasil, 442",
   "City": "Campinas",
   "Region": "SP",
-  "PostalCode": "04876-786",
+  "PostalCode": "43000",
   "Country": "Brazil",
   "Phone": "(11) 555-9482",
   "Orders": [
@@ -22355,7 +22355,7 @@
     "ShipAddress": "Av. Brasil, 442",
     "ShipCity": "Campinas",
     "ShipRegion": "SP",
-    "ShipPostalCode": "04876-786",
+    "ShipPostalCode": "12000",
     "ShipCountry": "Brazil",
     "OrderDetails": [
      {
@@ -22648,7 +22648,7 @@
   "ContactTitle": "Sales Representative",
   "Address": "120 Hanover Sq.",
   "City": "London",
-  "PostalCode": "WA1 1DP",
+  "PostalCode": "27000",
   "Country": "UK",
   "Phone": "(171) 555-7788",
   "Fax": "(171) 555-6750",
@@ -22665,7 +22665,7 @@
     "ShipAddress": "Brook Farm Stratford St. Mary",
     "ShipCity": "Colchester",
     "ShipRegion": "Essex",
-    "ShipPostalCode": "CO7 6JX",
+    "ShipPostalCode": "38000",
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -22686,7 +22686,7 @@
   "Address": "23 Tsawassen Blvd.",
   "City": "Tsawassen",
   "Region": "BC",
-  "PostalCode": "T2F 8M4",
+  "PostalCode": "27000",
   "Country": "Canada",
   "Phone": "(604) 555-4729",
   "Fax": "(604) 555-3745",
@@ -22703,7 +22703,7 @@
     "ShipAddress": "23 Tsawassen Blvd.",
     "ShipCity": "Tsawassen",
     "ShipRegion": "BC",
-    "ShipPostalCode": "T2F 8M4",
+    "ShipPostalCode": "44000",
     "ShipCountry": "Canada",
     "OrderDetails": [
      {
@@ -22735,7 +22735,7 @@
   "ContactTitle": "Sales Representative",
   "Address": "120 Hanover Sq.",
   "City": "London",
-  "PostalCode": "WA1 1DP",
+  "PostalCode": "40000",
   "Country": "UK",
   "Phone": "(171) 555-7788",
   "Fax": "(171) 555-6750",
@@ -22752,7 +22752,7 @@
     "ShipAddress": "Brook Farm Stratford St. Mary",
     "ShipCity": "Colchester",
     "ShipRegion": "Essex",
-    "ShipPostalCode": "CO7 6JX",
+    "ShipPostalCode": "40000",
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -23018,7 +23018,7 @@
   "Address": "Garden House Crowther Way",
   "City": "Cowes",
   "Region": "Isle of Wight",
-  "PostalCode": "PO31 7PJ",
+  "PostalCode": "21000",
   "Country": "UK",
   "Phone": "(198) 555-8888",
   "Orders": [
@@ -23034,7 +23034,7 @@
     "ShipAddress": "Garden House Crowther Way",
     "ShipCity": "Cowes",
     "ShipRegion": "Isle of Wight",
-    "ShipPostalCode": "PO31 7PJ",
+    "ShipPostalCode": "50000",
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -23167,7 +23167,7 @@
   "ContactTitle": "Sales Associate",
   "Address": "South House 300 Queensbridge",
   "City": "London",
-  "PostalCode": "SW7 1RZ",
+  "PostalCode": "20000",
   "Country": "UK",
   "Phone": "(171) 555-7733",
   "Fax": "(171) 555-2530",
@@ -23183,7 +23183,7 @@
     "ShipName": "North/South",
     "ShipAddress": "South House 300 Queensbridge",
     "ShipCity": "London",
-    "ShipPostalCode": "SW7 1RZ",
+    "ShipPostalCode": "15000",
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -23535,7 +23535,7 @@
   "ContactTitle": "Sales Agent",
   "Address": "Rue Joseph-Bens 532",
   "City": "Bruxelles",
-  "PostalCode": "B-1180",
+  "PostalCode": "43000",
   "Country": "Belgium",
   "Phone": "(02) 201 24 67",
   "Fax": "(02) 201 24 68",
@@ -23551,7 +23551,7 @@
     "ShipName": "Maison Dewey",
     "ShipAddress": "Rue Joseph-Bens 532",
     "ShipCity": "Bruxelles",
-    "ShipPostalCode": "B-1180",
+    "ShipPostalCode": "49000",
     "ShipCountry": "Belgium",
     "OrderDetails": [
      {
@@ -23627,7 +23627,7 @@
   "ContactTitle": "Owner",
   "Address": "Åkergatan 24",
   "City": "Bräcke",
-  "PostalCode": "S-844 67",
+  "PostalCode": "23000",
   "Country": "Sweden",
   "Phone": "0695-34 67 21",
   "Orders": [
@@ -23642,7 +23642,7 @@
     "ShipName": "Folk och fä HB",
     "ShipAddress": "Åkergatan 24",
     "ShipCity": "Bräcke",
-    "ShipPostalCode": "S-844 67",
+    "ShipPostalCode": "41000",
     "ShipCountry": "Sweden",
     "OrderDetails": [
      {
@@ -23889,7 +23889,7 @@
   "ContactTitle": "Sales Representative",
   "Address": "120 Hanover Sq.",
   "City": "London",
-  "PostalCode": "WA1 1DP",
+  "PostalCode": "35000",
   "Country": "UK",
   "Phone": "(171) 555-7788",
   "Fax": "(171) 555-6750",
@@ -23906,7 +23906,7 @@
     "ShipAddress": "Brook Farm Stratford St. Mary",
     "ShipCity": "Colchester",
     "ShipRegion": "Essex",
-    "ShipPostalCode": "CO7 6JX",
+    "ShipPostalCode": "36000",
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -23999,7 +23999,7 @@
   "Address": "Rua do Paço, 67",
   "City": "Rio de Janeiro",
   "Region": "RJ",
-  "PostalCode": "05454-876",
+  "PostalCode": "50000",
   "Country": "Brazil",
   "Phone": "(21) 555-0091",
   "Fax": "(21) 555-8765",
@@ -24016,7 +24016,7 @@
     "ShipAddress": "Rua do Paço, 67",
     "ShipCity": "Rio de Janeiro",
     "ShipRegion": "RJ",
-    "ShipPostalCode": "05454-876",
+    "ShipPostalCode": "12000",
     "ShipCountry": "Brazil",
     "OrderDetails": [
      {
@@ -24162,7 +24162,7 @@
   "ContactTitle": "Owner",
   "Address": "Åkergatan 24",
   "City": "Bräcke",
-  "PostalCode": "S-844 67",
+  "PostalCode": "18000",
   "Country": "Sweden",
   "Phone": "0695-34 67 21",
   "Orders": [
@@ -24177,7 +24177,7 @@
     "ShipName": "Folk och fä HB",
     "ShipAddress": "Åkergatan 24",
     "ShipCity": "Bräcke",
-    "ShipPostalCode": "S-844 67",
+    "ShipPostalCode": "21000",
     "ShipCountry": "Sweden",
     "OrderDetails": [
      {
@@ -24302,7 +24302,7 @@
   "Address": "Av. Brasil, 442",
   "City": "Campinas",
   "Region": "SP",
-  "PostalCode": "04876-786",
+  "PostalCode": "14000",
   "Country": "Brazil",
   "Phone": "(11) 555-9482",
   "Orders": [
@@ -24318,7 +24318,7 @@
     "ShipAddress": "Av. Brasil, 442",
     "ShipCity": "Campinas",
     "ShipRegion": "SP",
-    "ShipPostalCode": "04876-786",
+    "ShipPostalCode": "41000",
     "ShipCountry": "Brazil",
     "OrderDetails": [
      {
@@ -24338,7 +24338,7 @@
   "ContactTitle": "Order Administrator",
   "Address": "Berguvsvägen  8",
   "City": "Luleå",
-  "PostalCode": "S-958 22",
+  "PostalCode": "37000",
   "Country": "Sweden",
   "Phone": "0921-12 34 65",
   "Fax": "0921-12 34 67",
@@ -24354,7 +24354,7 @@
     "ShipName": "Berglunds snabbköp",
     "ShipAddress": "Berguvsvägen  8",
     "ShipCity": "Luleå",
-    "ShipPostalCode": "S-958 22",
+    "ShipPostalCode": "45000",
     "ShipCountry": "Sweden",
     "OrderDetails": [
      {
@@ -24544,7 +24544,7 @@
   "Address": "Rua do Paço, 67",
   "City": "Rio de Janeiro",
   "Region": "RJ",
-  "PostalCode": "05454-876",
+  "PostalCode": "16000",
   "Country": "Brazil",
   "Phone": "(21) 555-0091",
   "Fax": "(21) 555-8765",
@@ -24561,7 +24561,7 @@
     "ShipAddress": "Rua do Paço, 67",
     "ShipCity": "Rio de Janeiro",
     "ShipRegion": "RJ",
-    "ShipPostalCode": "05454-876",
+    "ShipPostalCode": "10000",
     "ShipCountry": "Brazil",
     "OrderDetails": [
      {
@@ -24680,7 +24680,7 @@
   "Address": "Alameda dos Canàrios, 891",
   "City": "Sao Paulo",
   "Region": "SP",
-  "PostalCode": "05487-020",
+  "PostalCode": "35000",
   "Country": "Brazil",
   "Phone": "(11) 555-1189",
   "Orders": [
@@ -24696,7 +24696,7 @@
     "ShipAddress": "Alameda dos Canàrios, 891",
     "ShipCity": "Sao Paulo",
     "ShipRegion": "SP",
-    "ShipPostalCode": "05487-020",
+    "ShipPostalCode": "22000",
     "ShipCountry": "Brazil",
     "OrderDetails": [
      {
@@ -24866,7 +24866,7 @@
   "Address": "Av. Brasil, 442",
   "City": "Campinas",
   "Region": "SP",
-  "PostalCode": "04876-786",
+  "PostalCode": "30000",
   "Country": "Brazil",
   "Phone": "(11) 555-9482",
   "Orders": [
@@ -24882,7 +24882,7 @@
     "ShipAddress": "Av. Brasil, 442",
     "ShipCity": "Campinas",
     "ShipRegion": "SP",
-    "ShipPostalCode": "04876-786",
+    "ShipPostalCode": "31000",
     "ShipCountry": "Brazil",
     "OrderDetails": [
      {
@@ -24950,7 +24950,7 @@
   "ContactTitle": "Owner",
   "Address": "ul. Filtrowa 68",
   "City": "Warszawa",
-  "PostalCode": "01-012",
+  "PostalCode": "20000",
   "Country": "Poland",
   "Phone": "(26) 642-7012",
   "Fax": "(26) 642-7012",
@@ -24966,7 +24966,7 @@
     "ShipName": "Wolski Zajazd",
     "ShipAddress": "ul. Filtrowa 68",
     "ShipCity": "Warszawa",
-    "ShipPostalCode": "01-012",
+    "ShipPostalCode": "31000",
     "ShipCountry": "Poland",
     "OrderDetails": [
      {
@@ -24998,7 +24998,7 @@
   "ContactTitle": "Sales Representative",
   "Address": "120 Hanover Sq.",
   "City": "London",
-  "PostalCode": "WA1 1DP",
+  "PostalCode": "45000",
   "Country": "UK",
   "Phone": "(171) 555-7788",
   "Fax": "(171) 555-6750",
@@ -25015,7 +25015,7 @@
     "ShipAddress": "Brook Farm Stratford St. Mary",
     "ShipCity": "Colchester",
     "ShipRegion": "Essex",
-    "ShipPostalCode": "CO7 6JX",
+    "ShipPostalCode": "35000",
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -25042,7 +25042,7 @@
   "Address": "Rua da Panificadora, 12",
   "City": "Rio de Janeiro",
   "Region": "RJ",
-  "PostalCode": "02389-673",
+  "PostalCode": "10000",
   "Country": "Brazil",
   "Phone": "(21) 555-4252",
   "Fax": "(21) 555-4545",
@@ -25059,7 +25059,7 @@
     "ShipAddress": "Rua da Panificadora, 12",
     "ShipCity": "Rio de Janeiro",
     "ShipRegion": "RJ",
-    "ShipPostalCode": "02389-673",
+    "ShipPostalCode": "42000",
     "ShipCountry": "Brazil",
     "OrderDetails": [
      {
@@ -25220,7 +25220,7 @@
   "Address": "Garden House Crowther Way",
   "City": "Cowes",
   "Region": "Isle of Wight",
-  "PostalCode": "PO31 7PJ",
+  "PostalCode": "36000",
   "Country": "UK",
   "Phone": "(198) 555-8888",
   "Orders": [
@@ -25236,7 +25236,7 @@
     "ShipAddress": "Garden House Crowther Way",
     "ShipCity": "Cowes",
     "ShipRegion": "Isle of Wight",
-    "ShipPostalCode": "PO31 7PJ",
+    "ShipPostalCode": "12000",
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -25309,7 +25309,7 @@
   "ContactTitle": "Sales Manager",
   "Address": "90 Wadhurst Rd.",
   "City": "London",
-  "PostalCode": "OX15 4NB",
+  "PostalCode": "14000",
   "Country": "UK",
   "Phone": "(171) 555-1717",
   "Fax": "(171) 555-5646",
@@ -25325,7 +25325,7 @@
     "ShipName": "Seven Seas Imports",
     "ShipAddress": "90 Wadhurst Rd.",
     "ShipCity": "London",
-    "ShipPostalCode": "OX15 4NB",
+    "ShipPostalCode": "39000",
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -25454,7 +25454,7 @@
   "Address": "Rua do Mercado, 12",
   "City": "Resende",
   "Region": "SP",
-  "PostalCode": "08737-363",
+  "PostalCode": "32000",
   "Country": "Brazil",
   "Phone": "(14) 555-8122",
   "Orders": [
@@ -25470,7 +25470,7 @@
     "ShipAddress": "Rua do Mercado, 12",
     "ShipCity": "Resende",
     "ShipRegion": "SP",
-    "ShipPostalCode": "08737-363",
+    "ShipPostalCode": "49000",
     "ShipCountry": "Brazil",
     "OrderDetails": [
      {
@@ -25502,7 +25502,7 @@
   "ContactTitle": "Sales Manager",
   "Address": "90 Wadhurst Rd.",
   "City": "London",
-  "PostalCode": "OX15 4NB",
+  "PostalCode": "25000",
   "Country": "UK",
   "Phone": "(171) 555-1717",
   "Fax": "(171) 555-5646",
@@ -25518,7 +25518,7 @@
     "ShipName": "Seven Seas Imports",
     "ShipAddress": "90 Wadhurst Rd.",
     "ShipCity": "London",
-    "ShipPostalCode": "OX15 4NB",
+    "ShipPostalCode": "11000",
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -25722,7 +25722,7 @@
   "Address": "Rua do Mercado, 12",
   "City": "Resende",
   "Region": "SP",
-  "PostalCode": "08737-363",
+  "PostalCode": "21000",
   "Country": "Brazil",
   "Phone": "(14) 555-8122",
   "Orders": [
@@ -25738,7 +25738,7 @@
     "ShipAddress": "Rua do Mercado, 12",
     "ShipCity": "Resende",
     "ShipRegion": "SP",
-    "ShipPostalCode": "08737-363",
+    "ShipPostalCode": "36000",
     "ShipCountry": "Brazil",
     "OrderDetails": [
      {
@@ -25759,7 +25759,7 @@
   "Address": "1900 Oak St.",
   "City": "Vancouver",
   "Region": "BC",
-  "PostalCode": "V3F 2K1",
+  "PostalCode": "26000",
   "Country": "Canada",
   "Phone": "(604) 555-3392",
   "Fax": "(604) 555-7293",
@@ -25776,7 +25776,7 @@
     "ShipAddress": "2319 Elm St.",
     "ShipCity": "Vancouver",
     "ShipRegion": "BC",
-    "ShipPostalCode": "V3F 2K1",
+    "ShipPostalCode": "19000",
     "ShipCountry": "Canada",
     "OrderDetails": [
      {
@@ -25907,7 +25907,7 @@
   "Address": "Av. Copacabana, 267",
   "City": "Rio de Janeiro",
   "Region": "RJ",
-  "PostalCode": "02389-890",
+  "PostalCode": "48000",
   "Country": "Brazil",
   "Phone": "(21) 555-3412",
   "Orders": [
@@ -25923,7 +25923,7 @@
     "ShipAddress": "Av. Copacabana, 267",
     "ShipCity": "Rio de Janeiro",
     "ShipRegion": "RJ",
-    "ShipPostalCode": "02389-890",
+    "ShipPostalCode": "16000",
     "ShipCountry": "Brazil",
     "OrderDetails": [
      {
@@ -26402,7 +26402,7 @@
   "ContactTitle": "Owner",
   "Address": "Åkergatan 24",
   "City": "Bräcke",
-  "PostalCode": "S-844 67",
+  "PostalCode": "36000",
   "Country": "Sweden",
   "Phone": "0695-34 67 21",
   "Orders": [
@@ -26417,7 +26417,7 @@
     "ShipName": "Folk och fä HB",
     "ShipAddress": "Åkergatan 24",
     "ShipCity": "Bräcke",
-    "ShipPostalCode": "S-844 67",
+    "ShipPostalCode": "33000",
     "ShipCountry": "Sweden",
     "OrderDetails": [
      {
@@ -26612,7 +26612,7 @@
   "Address": "Garden House Crowther Way",
   "City": "Cowes",
   "Region": "Isle of Wight",
-  "PostalCode": "PO31 7PJ",
+  "PostalCode": "41000",
   "Country": "UK",
   "Phone": "(198) 555-8888",
   "Orders": [
@@ -26628,7 +26628,7 @@
     "ShipAddress": "Garden House Crowther Way",
     "ShipCity": "Cowes",
     "ShipRegion": "Isle of Wight",
-    "ShipPostalCode": "PO31 7PJ",
+    "ShipPostalCode": "25000",
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -26667,7 +26667,7 @@
   "Address": "Av. Inês de Castro, 414",
   "City": "Sao Paulo",
   "Region": "SP",
-  "PostalCode": "05634-030",
+  "PostalCode": "10000",
   "Country": "Brazil",
   "Phone": "(11) 555-2167",
   "Fax": "(11) 555-2168",
@@ -26684,7 +26684,7 @@
     "ShipAddress": "Av. Inês de Castro, 414",
     "ShipCity": "Sao Paulo",
     "ShipRegion": "SP",
-    "ShipPostalCode": "05634-030",
+    "ShipPostalCode": "21000",
     "ShipCountry": "Brazil",
     "OrderDetails": [
      {
@@ -26879,7 +26879,7 @@
   "Address": "Av. Inês de Castro, 414",
   "City": "Sao Paulo",
   "Region": "SP",
-  "PostalCode": "05634-030",
+  "PostalCode": "14000",
   "Country": "Brazil",
   "Phone": "(11) 555-2167",
   "Fax": "(11) 555-2168",
@@ -26896,7 +26896,7 @@
     "ShipAddress": "Av. Inês de Castro, 414",
     "ShipCity": "Sao Paulo",
     "ShipRegion": "SP",
-    "ShipPostalCode": "05634-030",
+    "ShipPostalCode": "46000",
     "ShipCountry": "Brazil",
     "OrderDetails": [
      {
@@ -27024,7 +27024,7 @@
   "ContactTitle": "Order Administrator",
   "Address": "Berguvsvägen  8",
   "City": "Luleå",
-  "PostalCode": "S-958 22",
+  "PostalCode": "37000",
   "Country": "Sweden",
   "Phone": "0921-12 34 65",
   "Fax": "0921-12 34 67",
@@ -27040,7 +27040,7 @@
     "ShipName": "Berglunds snabbköp",
     "ShipAddress": "Berguvsvägen  8",
     "ShipCity": "Luleå",
-    "ShipPostalCode": "S-958 22",
+    "ShipPostalCode": "11000",
     "ShipCountry": "Sweden",
     "OrderDetails": [
      {
@@ -27129,7 +27129,7 @@
   "Address": "Av. Inês de Castro, 414",
   "City": "Sao Paulo",
   "Region": "SP",
-  "PostalCode": "05634-030",
+  "PostalCode": "16000",
   "Country": "Brazil",
   "Phone": "(11) 555-2167",
   "Fax": "(11) 555-2168",
@@ -27146,7 +27146,7 @@
     "ShipAddress": "Av. Inês de Castro, 414",
     "ShipCity": "Sao Paulo",
     "ShipRegion": "SP",
-    "ShipPostalCode": "05634-030",
+    "ShipPostalCode": "19000",
     "ShipCountry": "Brazil",
     "OrderDetails": [
      {
@@ -27569,7 +27569,7 @@
   "ContactTitle": "Sales Representative",
   "Address": "Berkeley Gardens 12  Brewery",
   "City": "London",
-  "PostalCode": "WX1 6LT",
+  "PostalCode": "46000",
   "Country": "UK",
   "Phone": "(171) 555-2282",
   "Fax": "(171) 555-9199",
@@ -27585,7 +27585,7 @@
     "ShipName": "Consolidated Holdings",
     "ShipAddress": "Berkeley Gardens 12  Brewery",
     "ShipCity": "London",
-    "ShipPostalCode": "WX1 6LT",
+    "ShipPostalCode": "45000",
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -27701,7 +27701,7 @@
   "Address": "Av. Copacabana, 267",
   "City": "Rio de Janeiro",
   "Region": "RJ",
-  "PostalCode": "02389-890",
+  "PostalCode": "12000",
   "Country": "Brazil",
   "Phone": "(21) 555-3412",
   "Orders": [
@@ -27717,7 +27717,7 @@
     "ShipAddress": "Av. Copacabana, 267",
     "ShipCity": "Rio de Janeiro",
     "ShipRegion": "RJ",
-    "ShipPostalCode": "02389-890",
+    "ShipPostalCode": "28000",
     "ShipCountry": "Brazil",
     "OrderDetails": [
      {
@@ -27980,7 +27980,7 @@
   "ContactTitle": "Order Administrator",
   "Address": "Berguvsvägen  8",
   "City": "Luleå",
-  "PostalCode": "S-958 22",
+  "PostalCode": "11000",
   "Country": "Sweden",
   "Phone": "0921-12 34 65",
   "Fax": "0921-12 34 67",
@@ -27996,7 +27996,7 @@
     "ShipName": "Berglunds snabbköp",
     "ShipAddress": "Berguvsvägen  8",
     "ShipCity": "Luleå",
-    "ShipPostalCode": "S-958 22",
+    "ShipPostalCode": "45000",
     "ShipCountry": "Sweden",
     "OrderDetails": [
      {
@@ -28314,7 +28314,7 @@
   "ContactTitle": "Sales Representative",
   "Address": "120 Hanover Sq.",
   "City": "London",
-  "PostalCode": "WA1 1DP",
+  "PostalCode": "34000",
   "Country": "UK",
   "Phone": "(171) 555-7788",
   "Fax": "(171) 555-6750",
@@ -28331,7 +28331,7 @@
     "ShipAddress": "Brook Farm Stratford St. Mary",
     "ShipCity": "Colchester",
     "ShipRegion": "Essex",
-    "ShipPostalCode": "CO7 6JX",
+    "ShipPostalCode": "47000",
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -28398,7 +28398,7 @@
   "ContactTitle": "Order Administrator",
   "Address": "Berguvsvägen  8",
   "City": "Luleå",
-  "PostalCode": "S-958 22",
+  "PostalCode": "30000",
   "Country": "Sweden",
   "Phone": "0921-12 34 65",
   "Fax": "0921-12 34 67",
@@ -28414,7 +28414,7 @@
     "ShipName": "Berglunds snabbköp",
     "ShipAddress": "Berguvsvägen  8",
     "ShipCity": "Luleå",
-    "ShipPostalCode": "S-958 22",
+    "ShipPostalCode": "35000",
     "ShipCountry": "Sweden",
     "OrderDetails": [
      {
@@ -28485,7 +28485,7 @@
   "Address": "Alameda dos Canàrios, 891",
   "City": "Sao Paulo",
   "Region": "SP",
-  "PostalCode": "05487-020",
+  "PostalCode": "12000",
   "Country": "Brazil",
   "Phone": "(11) 555-1189",
   "Orders": [
@@ -28501,7 +28501,7 @@
     "ShipAddress": "Alameda dos Canàrios, 891",
     "ShipCity": "Sao Paulo",
     "ShipRegion": "SP",
-    "ShipPostalCode": "05487-020",
+    "ShipPostalCode": "39000",
     "ShipCountry": "Brazil",
     "OrderDetails": [
      {
@@ -28533,7 +28533,7 @@
   "ContactTitle": "Sales Manager",
   "Address": "90 Wadhurst Rd.",
   "City": "London",
-  "PostalCode": "OX15 4NB",
+  "PostalCode": "44000",
   "Country": "UK",
   "Phone": "(171) 555-1717",
   "Fax": "(171) 555-5646",
@@ -28549,7 +28549,7 @@
     "ShipName": "Seven Seas Imports",
     "ShipAddress": "90 Wadhurst Rd.",
     "ShipCity": "London",
-    "ShipPostalCode": "OX15 4NB",
+    "ShipPostalCode": "17000",
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -28587,7 +28587,7 @@
   "ContactTitle": "Owner",
   "Address": "ul. Filtrowa 68",
   "City": "Warszawa",
-  "PostalCode": "01-012",
+  "PostalCode": "14000",
   "Country": "Poland",
   "Phone": "(26) 642-7012",
   "Fax": "(26) 642-7012",
@@ -28603,7 +28603,7 @@
     "ShipName": "Wolski Zajazd",
     "ShipAddress": "ul. Filtrowa 68",
     "ShipCity": "Warszawa",
-    "ShipPostalCode": "01-012",
+    "ShipPostalCode": "33000",
     "ShipCountry": "Poland",
     "OrderDetails": [
      {
@@ -28807,7 +28807,7 @@
   "ContactTitle": "Order Administrator",
   "Address": "Berguvsvägen  8",
   "City": "Luleå",
-  "PostalCode": "S-958 22",
+  "PostalCode": "37000",
   "Country": "Sweden",
   "Phone": "0921-12 34 65",
   "Fax": "0921-12 34 67",
@@ -28823,7 +28823,7 @@
     "ShipName": "Berglunds snabbköp",
     "ShipAddress": "Berguvsvägen  8",
     "ShipCity": "Luleå",
-    "ShipPostalCode": "S-958 22",
+    "ShipPostalCode": "31000",
     "ShipCountry": "Sweden",
     "OrderDetails": [
      {
@@ -28898,7 +28898,7 @@
   "Address": "Av. Copacabana, 267",
   "City": "Rio de Janeiro",
   "Region": "RJ",
-  "PostalCode": "02389-890",
+  "PostalCode": "23000",
   "Country": "Brazil",
   "Phone": "(21) 555-3412",
   "Orders": [
@@ -28914,7 +28914,7 @@
     "ShipAddress": "Av. Copacabana, 267",
     "ShipCity": "Rio de Janeiro",
     "ShipRegion": "RJ",
-    "ShipPostalCode": "02389-890",
+    "ShipPostalCode": "45000",
     "ShipCountry": "Brazil",
     "OrderDetails": [
      {
@@ -29023,7 +29023,7 @@
   "ContactTitle": "Owner",
   "Address": "Åkergatan 24",
   "City": "Bräcke",
-  "PostalCode": "S-844 67",
+  "PostalCode": "18000",
   "Country": "Sweden",
   "Phone": "0695-34 67 21",
   "Orders": [
@@ -29038,7 +29038,7 @@
     "ShipName": "Folk och fä HB",
     "ShipAddress": "Åkergatan 24",
     "ShipCity": "Bräcke",
-    "ShipPostalCode": "S-844 67",
+    "ShipPostalCode": "13000",
     "ShipCountry": "Sweden",
     "OrderDetails": [
      {
@@ -29297,7 +29297,7 @@
   "Address": "Rua do Paço, 67",
   "City": "Rio de Janeiro",
   "Region": "RJ",
-  "PostalCode": "05454-876",
+  "PostalCode": "23000",
   "Country": "Brazil",
   "Phone": "(21) 555-0091",
   "Fax": "(21) 555-8765",
@@ -29314,7 +29314,7 @@
     "ShipAddress": "Rua do Paço, 67",
     "ShipCity": "Rio de Janeiro",
     "ShipRegion": "RJ",
-    "ShipPostalCode": "05454-876",
+    "ShipPostalCode": "17000",
     "ShipCountry": "Brazil",
     "OrderDetails": [
      {
@@ -29551,7 +29551,7 @@
   "ContactTitle": "Sales Agent",
   "Address": "Rue Joseph-Bens 532",
   "City": "Bruxelles",
-  "PostalCode": "B-1180",
+  "PostalCode": "11000",
   "Country": "Belgium",
   "Phone": "(02) 201 24 67",
   "Fax": "(02) 201 24 68",
@@ -29567,7 +29567,7 @@
     "ShipName": "Maison Dewey",
     "ShipAddress": "Rue Joseph-Bens 532",
     "ShipCity": "Bruxelles",
-    "ShipPostalCode": "B-1180",
+    "ShipPostalCode": "49000",
     "ShipCountry": "Belgium",
     "OrderDetails": [
      {
@@ -29749,7 +29749,7 @@
   "ContactTitle": "Sales Agent",
   "Address": "Rue Joseph-Bens 532",
   "City": "Bruxelles",
-  "PostalCode": "B-1180",
+  "PostalCode": "32000",
   "Country": "Belgium",
   "Phone": "(02) 201 24 67",
   "Fax": "(02) 201 24 68",
@@ -29765,7 +29765,7 @@
     "ShipName": "Maison Dewey",
     "ShipAddress": "Rue Joseph-Bens 532",
     "ShipCity": "Bruxelles",
-    "ShipPostalCode": "B-1180",
+    "ShipPostalCode": "16000",
     "ShipCountry": "Belgium",
     "OrderDetails": [
      {
@@ -29908,7 +29908,7 @@
   "Address": "Rua do Mercado, 12",
   "City": "Resende",
   "Region": "SP",
-  "PostalCode": "08737-363",
+  "PostalCode": "10000",
   "Country": "Brazil",
   "Phone": "(14) 555-8122",
   "Orders": [
@@ -29924,7 +29924,7 @@
     "ShipAddress": "Rua do Mercado, 12",
     "ShipCity": "Resende",
     "ShipRegion": "SP",
-    "ShipPostalCode": "08737-363",
+    "ShipPostalCode": "42000",
     "ShipCountry": "Brazil",
     "OrderDetails": [
      {
@@ -29988,7 +29988,7 @@
   "ContactTitle": "Owner",
   "Address": "Åkergatan 24",
   "City": "Bräcke",
-  "PostalCode": "S-844 67",
+  "PostalCode": "21000",
   "Country": "Sweden",
   "Phone": "0695-34 67 21",
   "Orders": [
@@ -30003,7 +30003,7 @@
     "ShipName": "Folk och fä HB",
     "ShipAddress": "Åkergatan 24",
     "ShipCity": "Bräcke",
-    "ShipPostalCode": "S-844 67",
+    "ShipPostalCode": "50000",
     "ShipCountry": "Sweden",
     "OrderDetails": [
      {
@@ -30030,7 +30030,7 @@
   "Address": "Rua do Paço, 67",
   "City": "Rio de Janeiro",
   "Region": "RJ",
-  "PostalCode": "05454-876",
+  "PostalCode": "31000",
   "Country": "Brazil",
   "Phone": "(21) 555-0091",
   "Fax": "(21) 555-8765",
@@ -30047,7 +30047,7 @@
     "ShipAddress": "Rua do Paço, 67",
     "ShipCity": "Rio de Janeiro",
     "ShipRegion": "RJ",
-    "ShipPostalCode": "05454-876",
+    "ShipPostalCode": "31000",
     "ShipCountry": "Brazil",
     "OrderDetails": [
      {
@@ -30124,7 +30124,7 @@
   "Address": "Rua do Mercado, 12",
   "City": "Resende",
   "Region": "SP",
-  "PostalCode": "08737-363",
+  "PostalCode": "49000",
   "Country": "Brazil",
   "Phone": "(14) 555-8122",
   "Orders": [
@@ -30140,7 +30140,7 @@
     "ShipAddress": "Rua do Mercado, 12",
     "ShipCity": "Resende",
     "ShipRegion": "SP",
-    "ShipPostalCode": "08737-363",
+    "ShipPostalCode": "18000",
     "ShipCountry": "Brazil",
     "OrderDetails": [
      {
@@ -30160,7 +30160,7 @@
   "ContactTitle": "Owner",
   "Address": "ul. Filtrowa 68",
   "City": "Warszawa",
-  "PostalCode": "01-012",
+  "PostalCode": "13000",
   "Country": "Poland",
   "Phone": "(26) 642-7012",
   "Fax": "(26) 642-7012",
@@ -30176,7 +30176,7 @@
     "ShipName": "Wolski Zajazd",
     "ShipAddress": "ul. Filtrowa 68",
     "ShipCity": "Warszawa",
-    "ShipPostalCode": "01-012",
+    "ShipPostalCode": "35000",
     "ShipCountry": "Poland",
     "OrderDetails": [
      {
@@ -30460,7 +30460,7 @@
   "Address": "Alameda dos Canàrios, 891",
   "City": "Sao Paulo",
   "Region": "SP",
-  "PostalCode": "05487-020",
+  "PostalCode": "22000",
   "Country": "Brazil",
   "Phone": "(11) 555-1189",
   "Orders": [
@@ -30476,7 +30476,7 @@
     "ShipAddress": "Alameda dos Canàrios, 891",
     "ShipCity": "Sao Paulo",
     "ShipRegion": "SP",
-    "ShipPostalCode": "05487-020",
+    "ShipPostalCode": "42000",
     "ShipCountry": "Brazil",
     "OrderDetails": [
      {
@@ -30511,7 +30511,7 @@
     "ShipAddress": "Alameda dos Canàrios, 891",
     "ShipCity": "Sao Paulo",
     "ShipRegion": "SP",
-    "ShipPostalCode": "05487-020",
+    "ShipPostalCode": "39000",
     "ShipCountry": "Brazil",
     "OrderDetails": [
      {
@@ -30669,7 +30669,7 @@
   "Address": "23 Tsawassen Blvd.",
   "City": "Tsawassen",
   "Region": "BC",
-  "PostalCode": "T2F 8M4",
+  "PostalCode": "23000",
   "Country": "Canada",
   "Phone": "(604) 555-4729",
   "Fax": "(604) 555-3745",
@@ -30686,7 +30686,7 @@
     "ShipAddress": "23 Tsawassen Blvd.",
     "ShipCity": "Tsawassen",
     "ShipRegion": "BC",
-    "ShipPostalCode": "T2F 8M4",
+    "ShipPostalCode": "32000",
     "ShipCountry": "Canada",
     "OrderDetails": [
      {
@@ -30762,7 +30762,7 @@
   "ContactTitle": "Sales Representative",
   "Address": "120 Hanover Sq.",
   "City": "London",
-  "PostalCode": "WA1 1DP",
+  "PostalCode": "48000",
   "Country": "UK",
   "Phone": "(171) 555-7788",
   "Fax": "(171) 555-6750",
@@ -30779,7 +30779,7 @@
     "ShipAddress": "Brook Farm Stratford St. Mary",
     "ShipCity": "Colchester",
     "ShipRegion": "Essex",
-    "ShipPostalCode": "CO7 6JX",
+    "ShipPostalCode": "30000",
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -30842,7 +30842,7 @@
   "Address": "Rua do Paço, 67",
   "City": "Rio de Janeiro",
   "Region": "RJ",
-  "PostalCode": "05454-876",
+  "PostalCode": "39000",
   "Country": "Brazil",
   "Phone": "(21) 555-0091",
   "Fax": "(21) 555-8765",
@@ -30859,7 +30859,7 @@
     "ShipAddress": "Rua do Paço, 67",
     "ShipCity": "Rio de Janeiro",
     "ShipRegion": "RJ",
-    "ShipPostalCode": "05454-876",
+    "ShipPostalCode": "22000",
     "ShipCountry": "Brazil",
     "OrderDetails": [
      {
@@ -30933,7 +30933,7 @@
   "ContactTitle": "Order Administrator",
   "Address": "Berguvsvägen  8",
   "City": "Luleå",
-  "PostalCode": "S-958 22",
+  "PostalCode": "19000",
   "Country": "Sweden",
   "Phone": "0921-12 34 65",
   "Fax": "0921-12 34 67",
@@ -30949,7 +30949,7 @@
     "ShipName": "Berglunds snabbköp",
     "ShipAddress": "Berguvsvägen  8",
     "ShipCity": "Luleå",
-    "ShipPostalCode": "S-958 22",
+    "ShipPostalCode": "25000",
     "ShipCountry": "Sweden",
     "OrderDetails": [
      {
@@ -30982,7 +30982,7 @@
   "Address": "Rua do Paço, 67",
   "City": "Rio de Janeiro",
   "Region": "RJ",
-  "PostalCode": "05454-876",
+  "PostalCode": "38000",
   "Country": "Brazil",
   "Phone": "(21) 555-0091",
   "Fax": "(21) 555-8765",
@@ -30999,7 +30999,7 @@
     "ShipAddress": "Rua do Paço, 67",
     "ShipCity": "Rio de Janeiro",
     "ShipRegion": "RJ",
-    "ShipPostalCode": "05454-876",
+    "ShipPostalCode": "29000",
     "ShipCountry": "Brazil",
     "OrderDetails": [
      {
@@ -31367,7 +31367,7 @@
   "Address": "Garden House Crowther Way",
   "City": "Cowes",
   "Region": "Isle of Wight",
-  "PostalCode": "PO31 7PJ",
+  "PostalCode": "10000",
   "Country": "UK",
   "Phone": "(198) 555-8888",
   "Orders": [
@@ -31383,7 +31383,7 @@
     "ShipAddress": "Garden House Crowther Way",
     "ShipCity": "Cowes",
     "ShipRegion": "Isle of Wight",
-    "ShipPostalCode": "PO31 7PJ",
+    "ShipPostalCode": "46000",
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -31446,7 +31446,7 @@
   "Address": "Rua do Mercado, 12",
   "City": "Resende",
   "Region": "SP",
-  "PostalCode": "08737-363",
+  "PostalCode": "40000",
   "Country": "Brazil",
   "Phone": "(14) 555-8122",
   "Orders": [
@@ -31462,7 +31462,7 @@
     "ShipAddress": "Rua do Mercado, 12",
     "ShipCity": "Resende",
     "ShipRegion": "SP",
-    "ShipPostalCode": "08737-363",
+    "ShipPostalCode": "45000",
     "ShipCountry": "Brazil",
     "OrderDetails": [
      {
@@ -31801,7 +31801,7 @@
   "ContactTitle": "Sales Representative",
   "Address": "Fauntleroy Circus",
   "City": "London",
-  "PostalCode": "EC2 5NT",
+  "PostalCode": "25000",
   "Country": "UK",
   "Phone": "(171) 555-1212",
   "Orders": [
@@ -31816,7 +31816,7 @@
     "ShipName": "B's Beverages",
     "ShipAddress": "Fauntleroy Circus",
     "ShipCity": "London",
-    "ShipPostalCode": "EC2 5NT",
+    "ShipPostalCode": "39000",
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -31849,7 +31849,7 @@
   "Address": "23 Tsawassen Blvd.",
   "City": "Tsawassen",
   "Region": "BC",
-  "PostalCode": "T2F 8M4",
+  "PostalCode": "14000",
   "Country": "Canada",
   "Phone": "(604) 555-4729",
   "Fax": "(604) 555-3745",
@@ -31866,7 +31866,7 @@
     "ShipAddress": "23 Tsawassen Blvd.",
     "ShipCity": "Tsawassen",
     "ShipRegion": "BC",
-    "ShipPostalCode": "T2F 8M4",
+    "ShipPostalCode": "14000",
     "ShipCountry": "Canada",
     "OrderDetails": [
      {
@@ -31987,7 +31987,7 @@
   "ContactTitle": "Sales Representative",
   "Address": "Fauntleroy Circus",
   "City": "London",
-  "PostalCode": "EC2 5NT",
+  "PostalCode": "22000",
   "Country": "UK",
   "Phone": "(171) 555-1212",
   "Orders": [
@@ -32002,7 +32002,7 @@
     "ShipName": "B's Beverages",
     "ShipAddress": "Fauntleroy Circus",
     "ShipCity": "London",
-    "ShipPostalCode": "EC2 5NT",
+    "ShipPostalCode": "16000",
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -32070,7 +32070,7 @@
   "Address": "23 Tsawassen Blvd.",
   "City": "Tsawassen",
   "Region": "BC",
-  "PostalCode": "T2F 8M4",
+  "PostalCode": "21000",
   "Country": "Canada",
   "Phone": "(604) 555-4729",
   "Fax": "(604) 555-3745",
@@ -32087,7 +32087,7 @@
     "ShipAddress": "23 Tsawassen Blvd.",
     "ShipCity": "Tsawassen",
     "ShipRegion": "BC",
-    "ShipPostalCode": "T2F 8M4",
+    "ShipPostalCode": "24000",
     "ShipCountry": "Canada",
     "OrderDetails": [
      {
@@ -32250,7 +32250,7 @@
   "ContactTitle": "Sales Representative",
   "Address": "120 Hanover Sq.",
   "City": "London",
-  "PostalCode": "WA1 1DP",
+  "PostalCode": "39000",
   "Country": "UK",
   "Phone": "(171) 555-7788",
   "Fax": "(171) 555-6750",
@@ -32267,7 +32267,7 @@
     "ShipAddress": "Brook Farm Stratford St. Mary",
     "ShipCity": "Colchester",
     "ShipRegion": "Essex",
-    "ShipPostalCode": "CO7 6JX",
+    "ShipPostalCode": "46000",
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -32349,7 +32349,7 @@
   "ContactTitle": "Owner",
   "Address": "Åkergatan 24",
   "City": "Bräcke",
-  "PostalCode": "S-844 67",
+  "PostalCode": "23000",
   "Country": "Sweden",
   "Phone": "0695-34 67 21",
   "Orders": [
@@ -32364,7 +32364,7 @@
     "ShipName": "Folk och fä HB",
     "ShipAddress": "Åkergatan 24",
     "ShipCity": "Bräcke",
-    "ShipPostalCode": "S-844 67",
+    "ShipPostalCode": "18000",
     "ShipCountry": "Sweden",
     "OrderDetails": [
      {
@@ -32531,7 +32531,7 @@
   "Address": "Av. Brasil, 442",
   "City": "Campinas",
   "Region": "SP",
-  "PostalCode": "04876-786",
+  "PostalCode": "20000",
   "Country": "Brazil",
   "Phone": "(11) 555-9482",
   "Orders": [
@@ -32547,7 +32547,7 @@
     "ShipAddress": "Av. Brasil, 442",
     "ShipCity": "Campinas",
     "ShipRegion": "SP",
-    "ShipPostalCode": "04876-786",
+    "ShipPostalCode": "50000",
     "ShipCountry": "Brazil",
     "OrderDetails": [
      {
@@ -32612,7 +32612,7 @@
   "Address": "Alameda dos Canàrios, 891",
   "City": "Sao Paulo",
   "Region": "SP",
-  "PostalCode": "05487-020",
+  "PostalCode": "20000",
   "Country": "Brazil",
   "Phone": "(11) 555-1189",
   "Orders": [
@@ -32628,7 +32628,7 @@
     "ShipAddress": "Alameda dos Canàrios, 891",
     "ShipCity": "Sao Paulo",
     "ShipRegion": "SP",
-    "ShipPostalCode": "05487-020",
+    "ShipPostalCode": "16000",
     "ShipCountry": "Brazil",
     "OrderDetails": [
      {
@@ -32973,7 +32973,7 @@
   "Address": "Av. dos Lusíadas, 23",
   "City": "Sao Paulo",
   "Region": "SP",
-  "PostalCode": "05432-043",
+  "PostalCode": "49000",
   "Country": "Brazil",
   "Phone": "(11) 555-7647",
   "Orders": [
@@ -32989,7 +32989,7 @@
     "ShipAddress": "Av. dos Lusíadas, 23",
     "ShipCity": "Sao Paulo",
     "ShipRegion": "SP",
-    "ShipPostalCode": "05432-043",
+    "ShipPostalCode": "47000",
     "ShipCountry": "Brazil",
     "OrderDetails": [
      {
@@ -33196,7 +33196,7 @@
   "Address": "23 Tsawassen Blvd.",
   "City": "Tsawassen",
   "Region": "BC",
-  "PostalCode": "T2F 8M4",
+  "PostalCode": "50000",
   "Country": "Canada",
   "Phone": "(604) 555-4729",
   "Fax": "(604) 555-3745",
@@ -33213,7 +33213,7 @@
     "ShipAddress": "23 Tsawassen Blvd.",
     "ShipCity": "Tsawassen",
     "ShipRegion": "BC",
-    "ShipPostalCode": "T2F 8M4",
+    "ShipPostalCode": "37000",
     "ShipCountry": "Canada",
     "OrderDetails": [
      {
@@ -33277,7 +33277,7 @@
   "ContactTitle": "Owner",
   "Address": "Åkergatan 24",
   "City": "Bräcke",
-  "PostalCode": "S-844 67",
+  "PostalCode": "40000",
   "Country": "Sweden",
   "Phone": "0695-34 67 21",
   "Orders": [
@@ -33292,7 +33292,7 @@
     "ShipName": "Folk och fä HB",
     "ShipAddress": "Åkergatan 24",
     "ShipCity": "Bräcke",
-    "ShipPostalCode": "S-844 67",
+    "ShipPostalCode": "20000",
     "ShipCountry": "Sweden",
     "OrderDetails": [
      {
@@ -33330,7 +33330,7 @@
   "ContactTitle": "Sales Agent",
   "Address": "Rue Joseph-Bens 532",
   "City": "Bruxelles",
-  "PostalCode": "B-1180",
+  "PostalCode": "10000",
   "Country": "Belgium",
   "Phone": "(02) 201 24 67",
   "Fax": "(02) 201 24 68",
@@ -33346,7 +33346,7 @@
     "ShipName": "Maison Dewey",
     "ShipAddress": "Rue Joseph-Bens 532",
     "ShipCity": "Bruxelles",
-    "ShipPostalCode": "B-1180",
+    "ShipPostalCode": "23000",
     "ShipCountry": "Belgium",
     "OrderDetails": [
      {
@@ -33450,7 +33450,7 @@
   "ContactTitle": "Owner",
   "Address": "Åkergatan 24",
   "City": "Bräcke",
-  "PostalCode": "S-844 67",
+  "PostalCode": "35000",
   "Country": "Sweden",
   "Phone": "0695-34 67 21",
   "Orders": [
@@ -33465,7 +33465,7 @@
     "ShipName": "Folk och fä HB",
     "ShipAddress": "Åkergatan 24",
     "ShipCity": "Bräcke",
-    "ShipPostalCode": "S-844 67",
+    "ShipPostalCode": "40000",
     "ShipCountry": "Sweden",
     "OrderDetails": [
      {
@@ -33486,7 +33486,7 @@
   "Address": "Rua do Paço, 67",
   "City": "Rio de Janeiro",
   "Region": "RJ",
-  "PostalCode": "05454-876",
+  "PostalCode": "38000",
   "Country": "Brazil",
   "Phone": "(21) 555-0091",
   "Fax": "(21) 555-8765",
@@ -33503,7 +33503,7 @@
     "ShipAddress": "Rua do Paço, 67",
     "ShipCity": "Rio de Janeiro",
     "ShipRegion": "RJ",
-    "ShipPostalCode": "05454-876",
+    "ShipPostalCode": "15000",
     "ShipCountry": "Brazil",
     "OrderDetails": [
      {
@@ -33524,7 +33524,7 @@
   "Address": "23 Tsawassen Blvd.",
   "City": "Tsawassen",
   "Region": "BC",
-  "PostalCode": "T2F 8M4",
+  "PostalCode": "17000",
   "Country": "Canada",
   "Phone": "(604) 555-4729",
   "Fax": "(604) 555-3745",
@@ -33541,7 +33541,7 @@
     "ShipAddress": "23 Tsawassen Blvd.",
     "ShipCity": "Tsawassen",
     "ShipRegion": "BC",
-    "ShipPostalCode": "T2F 8M4",
+    "ShipPostalCode": "25000",
     "ShipCountry": "Canada",
     "OrderDetails": [
      {
@@ -33747,7 +33747,7 @@
   "ContactTitle": "Sales Agent",
   "Address": "35 King George",
   "City": "London",
-  "PostalCode": "WX3 6FW",
+  "PostalCode": "31000",
   "Country": "UK",
   "Phone": "(171) 555-0297",
   "Fax": "(171) 555-3373",
@@ -33763,7 +33763,7 @@
     "ShipName": "Eastern Connection",
     "ShipAddress": "35 King George",
     "ShipCity": "London",
-    "ShipPostalCode": "WX3 6FW",
+    "ShipPostalCode": "41000",
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -33840,7 +33840,7 @@
   "Address": "Rua da Panificadora, 12",
   "City": "Rio de Janeiro",
   "Region": "RJ",
-  "PostalCode": "02389-673",
+  "PostalCode": "11000",
   "Country": "Brazil",
   "Phone": "(21) 555-4252",
   "Fax": "(21) 555-4545",
@@ -33857,7 +33857,7 @@
     "ShipAddress": "Rua da Panificadora, 12",
     "ShipCity": "Rio de Janeiro",
     "ShipRegion": "RJ",
-    "ShipPostalCode": "02389-673",
+    "ShipPostalCode": "23000",
     "ShipCountry": "Brazil",
     "OrderDetails": [
      {
@@ -34027,7 +34027,7 @@
   "ContactTitle": "Owner",
   "Address": "Åkergatan 24",
   "City": "Bräcke",
-  "PostalCode": "S-844 67",
+  "PostalCode": "18000",
   "Country": "Sweden",
   "Phone": "0695-34 67 21",
   "Orders": [
@@ -34042,7 +34042,7 @@
     "ShipName": "Folk och fä HB",
     "ShipAddress": "Åkergatan 24",
     "ShipCity": "Bräcke",
-    "ShipPostalCode": "S-844 67",
+    "ShipPostalCode": "44000",
     "ShipCountry": "Sweden",
     "OrderDetails": [
      {
@@ -34231,7 +34231,7 @@
   "ContactTitle": "Owner",
   "Address": "ul. Filtrowa 68",
   "City": "Warszawa",
-  "PostalCode": "01-012",
+  "PostalCode": "49000",
   "Country": "Poland",
   "Phone": "(26) 642-7012",
   "Fax": "(26) 642-7012",
@@ -34247,7 +34247,7 @@
     "ShipName": "Wolski Zajazd",
     "ShipAddress": "ul. Filtrowa 68",
     "ShipCity": "Warszawa",
-    "ShipPostalCode": "01-012",
+    "ShipPostalCode": "30000",
     "ShipCountry": "Poland",
     "OrderDetails": [
      {
@@ -34383,7 +34383,7 @@
   "ContactTitle": "Owner",
   "Address": "Åkergatan 24",
   "City": "Bräcke",
-  "PostalCode": "S-844 67",
+  "PostalCode": "26000",
   "Country": "Sweden",
   "Phone": "0695-34 67 21",
   "Orders": [
@@ -34398,7 +34398,7 @@
     "ShipName": "Folk och fä HB",
     "ShipAddress": "Åkergatan 24",
     "ShipCity": "Bräcke",
-    "ShipPostalCode": "S-844 67",
+    "ShipPostalCode": "14000",
     "ShipCountry": "Sweden",
     "OrderDetails": [
      {
@@ -34541,7 +34541,7 @@
   "ContactTitle": "Sales Agent",
   "Address": "Rue Joseph-Bens 532",
   "City": "Bruxelles",
-  "PostalCode": "B-1180",
+  "PostalCode": "41000",
   "Country": "Belgium",
   "Phone": "(02) 201 24 67",
   "Fax": "(02) 201 24 68",
@@ -34557,7 +34557,7 @@
     "ShipName": "Maison Dewey",
     "ShipAddress": "Rue Joseph-Bens 532",
     "ShipCity": "Bruxelles",
-    "ShipPostalCode": "B-1180",
+    "ShipPostalCode": "33000",
     "ShipCountry": "Belgium",
     "OrderDetails": [
      {
@@ -35075,7 +35075,7 @@
   "ContactTitle": "Sales Representative",
   "Address": "120 Hanover Sq.",
   "City": "London",
-  "PostalCode": "WA1 1DP",
+  "PostalCode": "26000",
   "Country": "UK",
   "Phone": "(171) 555-7788",
   "Fax": "(171) 555-6750",
@@ -35092,7 +35092,7 @@
     "ShipAddress": "Brook Farm Stratford St. Mary",
     "ShipCity": "Colchester",
     "ShipRegion": "Essex",
-    "ShipPostalCode": "CO7 6JX",
+    "ShipPostalCode": "19000",
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -35353,7 +35353,7 @@
   "Address": "Rua do Paço, 67",
   "City": "Rio de Janeiro",
   "Region": "RJ",
-  "PostalCode": "05454-876",
+  "PostalCode": "32000",
   "Country": "Brazil",
   "Phone": "(21) 555-0091",
   "Fax": "(21) 555-8765",
@@ -35370,7 +35370,7 @@
     "ShipAddress": "Rua do Paço, 67",
     "ShipCity": "Rio de Janeiro",
     "ShipRegion": "RJ",
-    "ShipPostalCode": "05454-876",
+    "ShipPostalCode": "17000",
     "ShipCountry": "Brazil",
     "OrderDetails": [
      {
@@ -35396,7 +35396,7 @@
   "ContactTitle": "Sales Representative",
   "Address": "Fauntleroy Circus",
   "City": "London",
-  "PostalCode": "EC2 5NT",
+  "PostalCode": "49000",
   "Country": "UK",
   "Phone": "(171) 555-1212",
   "Orders": [
@@ -35411,7 +35411,7 @@
     "ShipName": "B's Beverages",
     "ShipAddress": "Fauntleroy Circus",
     "ShipCity": "London",
-    "ShipPostalCode": "EC2 5NT",
+    "ShipPostalCode": "12000",
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -35437,7 +35437,7 @@
   "ContactTitle": "Sales Agent",
   "Address": "35 King George",
   "City": "London",
-  "PostalCode": "WX3 6FW",
+  "PostalCode": "32000",
   "Country": "UK",
   "Phone": "(171) 555-0297",
   "Fax": "(171) 555-3373",
@@ -35453,7 +35453,7 @@
     "ShipName": "Eastern Connection",
     "ShipAddress": "35 King George",
     "ShipCity": "London",
-    "ShipPostalCode": "WX3 6FW",
+    "ShipPostalCode": "18000",
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -35576,7 +35576,7 @@
   "Address": "23 Tsawassen Blvd.",
   "City": "Tsawassen",
   "Region": "BC",
-  "PostalCode": "T2F 8M4",
+  "PostalCode": "45000",
   "Country": "Canada",
   "Phone": "(604) 555-4729",
   "Fax": "(604) 555-3745",
@@ -35593,7 +35593,7 @@
     "ShipAddress": "23 Tsawassen Blvd.",
     "ShipCity": "Tsawassen",
     "ShipRegion": "BC",
-    "ShipPostalCode": "T2F 8M4",
+    "ShipPostalCode": "21000",
     "ShipCountry": "Canada",
     "OrderDetails": [
      {
@@ -36256,7 +36256,7 @@
   "Address": "Av. dos Lusíadas, 23",
   "City": "Sao Paulo",
   "Region": "SP",
-  "PostalCode": "05432-043",
+  "PostalCode": "44000",
   "Country": "Brazil",
   "Phone": "(11) 555-7647",
   "Orders": [
@@ -36272,7 +36272,7 @@
     "ShipAddress": "Av. dos Lusíadas, 23",
     "ShipCity": "Sao Paulo",
     "ShipRegion": "SP",
-    "ShipPostalCode": "05432-043",
+    "ShipPostalCode": "12000",
     "ShipCountry": "Brazil",
     "OrderDetails": [
      {
@@ -36334,7 +36334,7 @@
   "ContactTitle": "Owner",
   "Address": "ul. Filtrowa 68",
   "City": "Warszawa",
-  "PostalCode": "01-012",
+  "PostalCode": "40000",
   "Country": "Poland",
   "Phone": "(26) 642-7012",
   "Fax": "(26) 642-7012",
@@ -36350,7 +36350,7 @@
     "ShipName": "Wolski Zajazd",
     "ShipAddress": "ul. Filtrowa 68",
     "ShipCity": "Warszawa",
-    "ShipPostalCode": "01-012",
+    "ShipPostalCode": "10000",
     "ShipCountry": "Poland",
     "OrderDetails": [
      {
@@ -36371,7 +36371,7 @@
   "Address": "23 Tsawassen Blvd.",
   "City": "Tsawassen",
   "Region": "BC",
-  "PostalCode": "T2F 8M4",
+  "PostalCode": "48000",
   "Country": "Canada",
   "Phone": "(604) 555-4729",
   "Fax": "(604) 555-3745",
@@ -36387,7 +36387,7 @@
     "ShipAddress": "23 Tsawassen Blvd.",
     "ShipCity": "Tsawassen",
     "ShipRegion": "BC",
-    "ShipPostalCode": "T2F 8M4",
+    "ShipPostalCode": "31000",
     "ShipCountry": "Canada",
     "OrderDetails": [
      {
@@ -36461,7 +36461,7 @@
   "ContactTitle": "Sales Agent",
   "Address": "35 King George",
   "City": "London",
-  "PostalCode": "WX3 6FW",
+  "PostalCode": "13000",
   "Country": "UK",
   "Phone": "(171) 555-0297",
   "Fax": "(171) 555-3373",
@@ -36477,7 +36477,7 @@
     "ShipName": "Eastern Connection",
     "ShipAddress": "35 King George",
     "ShipCity": "London",
-    "ShipPostalCode": "WX3 6FW",
+    "ShipPostalCode": "11000",
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -36504,7 +36504,7 @@
   "Address": "23 Tsawassen Blvd.",
   "City": "Tsawassen",
   "Region": "BC",
-  "PostalCode": "T2F 8M4",
+  "PostalCode": "38000",
   "Country": "Canada",
   "Phone": "(604) 555-4729",
   "Fax": "(604) 555-3745",
@@ -36521,7 +36521,7 @@
     "ShipAddress": "23 Tsawassen Blvd.",
     "ShipCity": "Tsawassen",
     "ShipRegion": "BC",
-    "ShipPostalCode": "T2F 8M4",
+    "ShipPostalCode": "20000",
     "ShipCountry": "Canada",
     "OrderDetails": [
      {
@@ -36542,7 +36542,7 @@
   "Address": "Av. Brasil, 442",
   "City": "Campinas",
   "Region": "SP",
-  "PostalCode": "04876-786",
+  "PostalCode": "13000",
   "Country": "Brazil",
   "Phone": "(11) 555-9482",
   "Orders": [
@@ -36558,7 +36558,7 @@
     "ShipAddress": "Av. Brasil, 442",
     "ShipCity": "Campinas",
     "ShipRegion": "SP",
-    "ShipPostalCode": "04876-786",
+    "ShipPostalCode": "31000",
     "ShipCountry": "Brazil",
     "OrderDetails": [
      {
@@ -36584,7 +36584,7 @@
   "ContactTitle": "Owner",
   "Address": "Åkergatan 24",
   "City": "Bräcke",
-  "PostalCode": "S-844 67",
+  "PostalCode": "41000",
   "Country": "Sweden",
   "Phone": "0695-34 67 21",
   "Orders": [
@@ -36599,7 +36599,7 @@
     "ShipName": "Folk och fä HB",
     "ShipAddress": "Åkergatan 24",
     "ShipCity": "Bräcke",
-    "ShipPostalCode": "S-844 67",
+    "ShipPostalCode": "25000",
     "ShipCountry": "Sweden",
     "OrderDetails": [
      {
@@ -36655,7 +36655,7 @@
   "Address": "Rua do Paço, 67",
   "City": "Rio de Janeiro",
   "Region": "RJ",
-  "PostalCode": "05454-876",
+  "PostalCode": "38000",
   "Country": "Brazil",
   "Phone": "(21) 555-0091",
   "Fax": "(21) 555-8765",
@@ -36672,7 +36672,7 @@
     "ShipAddress": "Rua do Paço, 67",
     "ShipCity": "Rio de Janeiro",
     "ShipRegion": "RJ",
-    "ShipPostalCode": "05454-876",
+    "ShipPostalCode": "22000",
     "ShipCountry": "Brazil",
     "OrderDetails": [
      {
@@ -36843,7 +36843,7 @@
   "ContactTitle": "Sales Agent",
   "Address": "35 King George",
   "City": "London",
-  "PostalCode": "WX3 6FW",
+  "PostalCode": "32000",
   "Country": "UK",
   "Phone": "(171) 555-0297",
   "Fax": "(171) 555-3373",
@@ -36859,7 +36859,7 @@
     "ShipName": "Eastern Connection",
     "ShipAddress": "35 King George",
     "ShipCity": "London",
-    "ShipPostalCode": "WX3 6FW",
+    "ShipPostalCode": "22000",
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -36891,7 +36891,7 @@
   "ContactTitle": "Sales Associate",
   "Address": "South House 300 Queensbridge",
   "City": "London",
-  "PostalCode": "SW7 1RZ",
+  "PostalCode": "33000",
   "Country": "UK",
   "Phone": "(171) 555-7733",
   "Fax": "(171) 555-2530",
@@ -36907,7 +36907,7 @@
     "ShipName": "North/South",
     "ShipAddress": "South House 300 Queensbridge",
     "ShipCity": "London",
-    "ShipPostalCode": "SW7 1RZ",
+    "ShipPostalCode": "26000",
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -36975,7 +36975,7 @@
   "Address": "Av. Copacabana, 267",
   "City": "Rio de Janeiro",
   "Region": "RJ",
-  "PostalCode": "02389-890",
+  "PostalCode": "10000",
   "Country": "Brazil",
   "Phone": "(21) 555-3412",
   "Orders": [
@@ -36990,7 +36990,7 @@
     "ShipAddress": "Av. Copacabana, 267",
     "ShipCity": "Rio de Janeiro",
     "ShipRegion": "RJ",
-    "ShipPostalCode": "02389-890",
+    "ShipPostalCode": "21000",
     "ShipCountry": "Brazil",
     "OrderDetails": [
      {
@@ -37380,7 +37380,7 @@
   "Address": "Alameda dos Canàrios, 891",
   "City": "Sao Paulo",
   "Region": "SP",
-  "PostalCode": "05487-020",
+  "PostalCode": "48000",
   "Country": "Brazil",
   "Phone": "(11) 555-1189",
   "Orders": [
@@ -37395,7 +37395,7 @@
     "ShipAddress": "Alameda dos Canàrios, 891",
     "ShipCity": "Sao Paulo",
     "ShipRegion": "SP",
-    "ShipPostalCode": "05487-020",
+    "ShipPostalCode": "14000",
     "ShipCountry": "Brazil",
     "OrderDetails": [
      {
