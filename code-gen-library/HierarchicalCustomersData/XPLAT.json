@@ -243,7 +243,7 @@
     "ShipName": "Suprêmes délices",
     "ShipAddress": "Boulevard Tirou, 255",
     "ShipCity": "Charleroi",
-    "ShipPostalCode": "6000",
+    "ShipPostalCode": 6000,
     "ShipCountry": "Belgium",
     "OrderDetails": [
      {
@@ -775,7 +775,7 @@
     "ShipName": "Folk och fä HB",
     "ShipAddress": "Åkergatan 24",
     "ShipCity": "Bräcke",
-    "ShipPostalCode": "S-844 67",
+    "ShipPostalCode": 15000,
     "ShipCountry": "Sweden",
     "OrderDetails": [
      {
@@ -1386,7 +1386,7 @@
     "ShipName": "Berglunds snabbköp",
     "ShipAddress": "Berguvsvägen  8",
     "ShipCity": "Luleå",
-    "ShipPostalCode": "S-958 22",
+    "ShipPostalCode": 26000,
     "ShipCountry": "Sweden",
     "OrderDetails": [
      {
@@ -1476,7 +1476,7 @@
     "ShipName": "Berglunds snabbköp",
     "ShipAddress": "Berguvsvägen  8",
     "ShipCity": "Luleå",
-    "ShipPostalCode": "S-958 22",
+    "ShipPostalCode": 50000,
     "ShipCountry": "Sweden",
     "OrderDetails": [
      {
@@ -1875,7 +1875,7 @@
     "ShipName": "B's Beverages",
     "ShipAddress": "Fauntleroy Circus",
     "ShipCity": "London",
-    "ShipPostalCode": "EC2 5NT",
+    "ShipPostalCode": 18000,
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -2484,7 +2484,7 @@
     "ShipName": "Suprêmes délices",
     "ShipAddress": "Boulevard Tirou, 255",
     "ShipCity": "Charleroi",
-    "ShipPostalCode": "6000",
+    "ShipPostalCode": 6000,
     "ShipCountry": "Belgium",
     "OrderDetails": [
      {
@@ -3095,7 +3095,7 @@
     "ShipAddress": "Garden House Crowther Way",
     "ShipCity": "Cowes",
     "ShipRegion": 40301,
-    "ShipPostalCode": "PO31 7PJ",
+    "ShipPostalCode": 32000,
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -3220,7 +3220,7 @@
     "ShipAddress": "Garden House Crowther Way",
     "ShipCity": "Cowes",
     "ShipRegion": 30575,
-    "ShipPostalCode": "PO31 7PJ",
+    "ShipPostalCode": 43000,
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -3346,7 +3346,7 @@
     "ShipAddress": "Garden House Crowther Way",
     "ShipCity": "Cowes",
     "ShipRegion": 80331,
-    "ShipPostalCode": "PO31 7PJ",
+    "ShipPostalCode": 24000,
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -3632,7 +3632,7 @@
     "ShipName": "Folk och fä HB",
     "ShipAddress": "Åkergatan 24",
     "ShipCity": "Bräcke",
-    "ShipPostalCode": "S-844 67",
+    "ShipPostalCode": 29000,
     "ShipCountry": "Sweden",
     "OrderDetails": [
      {
@@ -3872,7 +3872,7 @@
     "ShipAddress": "43 rue St. Laurent",
     "ShipCity": "Montréal",
     "ShipRegion": "Québec",
-    "ShipPostalCode": "H1J 1C3",
+    "ShipPostalCode": 36000,
     "ShipCountry": "Canada",
     "OrderDetails": [
      {
@@ -4205,7 +4205,7 @@
     "ShipAddress": "43 rue St. Laurent",
     "ShipCity": "Montréal",
     "ShipRegion": "Québec",
-    "ShipPostalCode": "H1J 1C3",
+    "ShipPostalCode": 40000,
     "ShipCountry": "Canada",
     "OrderDetails": [
      {
@@ -4938,7 +4938,7 @@
     "ShipAddress": "Brook Farm Stratford St. Mary",
     "ShipCity": "Colchester",
     "ShipRegion": "Essex",
-    "ShipPostalCode": "CO7 6JX",
+    "ShipPostalCode": 37000,
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -5126,7 +5126,7 @@
     "ShipName": "Seven Seas Imports",
     "ShipAddress": "90 Wadhurst Rd.",
     "ShipCity": "London",
-    "ShipPostalCode": "OX15 4NB",
+    "ShipPostalCode": 11000,
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -5371,7 +5371,7 @@
     "ShipName": "Eastern Connection",
     "ShipAddress": "35 King George",
     "ShipCity": "London",
-    "ShipPostalCode": "WX3 6FW",
+    "ShipPostalCode": 20000,
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -5910,7 +5910,7 @@
     "ShipAddress": "43 rue St. Laurent",
     "ShipCity": "Montréal",
     "ShipRegion": "Québec",
-    "ShipPostalCode": "H1J 1C3",
+    "ShipPostalCode": 11000,
     "ShipCountry": "Canada",
     "OrderDetails": [
      {
@@ -5946,7 +5946,7 @@
     "ShipName": "Seven Seas Imports",
     "ShipAddress": "90 Wadhurst Rd.",
     "ShipCity": "London",
-    "ShipPostalCode": "OX15 4NB",
+    "ShipPostalCode": 41000,
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -5987,7 +5987,7 @@
     "ShipName": "Folk och fä HB",
     "ShipAddress": "Åkergatan 24",
     "ShipCity": "Bräcke",
-    "ShipPostalCode": "S-844 67",
+    "ShipPostalCode": 19000,
     "ShipCountry": "Sweden",
     "OrderDetails": [
      {
@@ -6226,7 +6226,7 @@
     "ShipAddress": "Brook Farm Stratford St. Mary",
     "ShipCity": "Colchester",
     "ShipRegion": "Essex",
-    "ShipPostalCode": "CO7 6JX",
+    "ShipPostalCode": 36000,
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -6274,7 +6274,7 @@
     "ShipName": "Berglunds snabbköp",
     "ShipAddress": "Berguvsvägen  8",
     "ShipCity": "Luleå",
-    "ShipPostalCode": "S-958 22",
+    "ShipPostalCode": 33000,
     "ShipCountry": "Sweden",
     "OrderDetails": [
      {
@@ -6463,7 +6463,7 @@
     "ShipName": "Seven Seas Imports",
     "ShipAddress": "90 Wadhurst Rd.",
     "ShipCity": "London",
-    "ShipPostalCode": "OX15 4NB",
+    "ShipPostalCode": 45000,
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -6513,7 +6513,7 @@
     "ShipAddress": "23 Tsawassen Blvd.",
     "ShipCity": "Tsawassen",
     "ShipRegion": "BC",
-    "ShipPostalCode": "T2F 8M4",
+    "ShipPostalCode": 41000,
     "ShipCountry": "Canada",
     "OrderDetails": [
      {
@@ -7034,7 +7034,7 @@
     "ShipName": "Eastern Connection",
     "ShipAddress": "35 King George",
     "ShipCity": "London",
-    "ShipPostalCode": "WX3 6FW",
+    "ShipPostalCode": 40000,
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -7495,7 +7495,7 @@
     "ShipAddress": "23 Tsawassen Blvd.",
     "ShipCity": "Tsawassen",
     "ShipRegion": "BC",
-    "ShipPostalCode": "T2F 8M4",
+    "ShipPostalCode": 30000,
     "ShipCountry": "Canada",
     "OrderDetails": [
      {
@@ -7524,7 +7524,7 @@
     "ShipAddress": "23 Tsawassen Blvd.",
     "ShipCity": "Tsawassen",
     "ShipRegion": "BC",
-    "ShipPostalCode": "T2F 8M4",
+    "ShipPostalCode": 10000,
     "ShipCountry": "Canada",
     "OrderDetails": [
      {
@@ -8131,7 +8131,7 @@
     "ShipAddress": "43 rue St. Laurent",
     "ShipCity": "Montréal",
     "ShipRegion": "Québec",
-    "ShipPostalCode": "H1J 1C3",
+    "ShipPostalCode": 19000,
     "ShipCountry": "Canada",
     "OrderDetails": [
      {
@@ -8433,7 +8433,7 @@
     "ShipAddress": "23 Tsawassen Blvd.",
     "ShipCity": "Tsawassen",
     "ShipRegion": "BC",
-    "ShipPostalCode": "T2F 8M4",
+    "ShipPostalCode": 16000,
     "ShipCountry": "Canada",
     "OrderDetails": [
      {
@@ -8559,7 +8559,7 @@
     "ShipName": "Folk och fä HB",
     "ShipAddress": "Åkergatan 24",
     "ShipCity": "Bräcke",
-    "ShipPostalCode": "S-844 67",
+    "ShipPostalCode": 10000,
     "ShipCountry": "Sweden",
     "OrderDetails": [
      {
@@ -8601,7 +8601,7 @@
     "ShipName": "Consolidated Holdings",
     "ShipAddress": "Berkeley Gardens 12  Brewery",
     "ShipCity": "London",
-    "ShipPostalCode": "WX1 6LT",
+    "ShipPostalCode": 38000,
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -8789,7 +8789,7 @@
     "ShipAddress": "43 rue St. Laurent",
     "ShipCity": "Montréal",
     "ShipRegion": "Québec",
-    "ShipPostalCode": "H1J 1C3",
+    "ShipPostalCode": 19000,
     "ShipCountry": "Canada",
     "OrderDetails": [
      {
@@ -9026,7 +9026,7 @@
     "ShipName": "Berglunds snabbköp",
     "ShipAddress": "Berguvsvägen  8",
     "ShipCity": "Luleå",
-    "ShipPostalCode": "S-958 22",
+    "ShipPostalCode": 21000,
     "ShipCountry": "Sweden",
     "OrderDetails": [
      {
@@ -9066,7 +9066,7 @@
     "ShipName": "Berglunds snabbköp",
     "ShipAddress": "Berguvsvägen  8",
     "ShipCity": "Luleå",
-    "ShipPostalCode": "S-958 22",
+    "ShipPostalCode": 11000,
     "ShipCountry": "Sweden",
     "OrderDetails": [
      {
@@ -9440,7 +9440,7 @@
     "ShipAddress": "Brook Farm Stratford St. Mary",
     "ShipCity": "Colchester",
     "ShipRegion": "Essex",
-    "ShipPostalCode": "CO7 6JX",
+    "ShipPostalCode": 46000,
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -9647,7 +9647,7 @@
     "ShipName": "Suprêmes délices",
     "ShipAddress": "Boulevard Tirou, 255",
     "ShipCity": "Charleroi",
-    "ShipPostalCode": "6000",
+    "ShipPostalCode": 6000,
     "ShipCountry": "Belgium",
     "OrderDetails": [
      {
@@ -9754,7 +9754,7 @@
     "ShipName": "Folk och fä HB",
     "ShipAddress": "Åkergatan 24",
     "ShipCity": "Bräcke",
-    "ShipPostalCode": "S-844 67",
+    "ShipPostalCode": 44000,
     "ShipCountry": "Sweden",
     "OrderDetails": [
      {
@@ -9846,7 +9846,7 @@
     "ShipName": "Consolidated Holdings",
     "ShipAddress": "Berkeley Gardens 12  Brewery",
     "ShipCity": "London",
-    "ShipPostalCode": "WX1 6LT",
+    "ShipPostalCode": 12000,
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -9888,7 +9888,7 @@
     "ShipName": "Suprêmes délices",
     "ShipAddress": "Boulevard Tirou, 255",
     "ShipCity": "Charleroi",
-    "ShipPostalCode": "6000",
+    "ShipPostalCode": 6000,
     "ShipCountry": "Belgium",
     "OrderDetails": [
      {
@@ -10267,7 +10267,7 @@
     "ShipName": "B's Beverages",
     "ShipAddress": "Fauntleroy Circus",
     "ShipCity": "London",
-    "ShipPostalCode": "EC2 5NT",
+    "ShipPostalCode": 12000,
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -10309,7 +10309,7 @@
     "ShipName": "Seven Seas Imports",
     "ShipAddress": "90 Wadhurst Rd.",
     "ShipCity": "London",
-    "ShipPostalCode": "OX15 4NB",
+    "ShipPostalCode": 33000,
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -10352,7 +10352,7 @@
     "ShipAddress": "Garden House Crowther Way",
     "ShipCity": "Cowes",
     "ShipRegion": 60471,
-    "ShipPostalCode": "PO31 7PJ",
+    "ShipPostalCode": 37000,
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -10448,7 +10448,7 @@
     "ShipName": "Suprêmes délices",
     "ShipAddress": "Boulevard Tirou, 255",
     "ShipCity": "Charleroi",
-    "ShipPostalCode": "6000",
+    "ShipPostalCode": 6000,
     "ShipCountry": "Belgium",
     "OrderDetails": [
      {
@@ -10845,7 +10845,7 @@
     "ShipName": "B's Beverages",
     "ShipAddress": "Fauntleroy Circus",
     "ShipCity": "London",
-    "ShipPostalCode": "EC2 5NT",
+    "ShipPostalCode": 31000,
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -11226,7 +11226,7 @@
     "ShipAddress": "23 Tsawassen Blvd.",
     "ShipCity": "Tsawassen",
     "ShipRegion": "BC",
-    "ShipPostalCode": "T2F 8M4",
+    "ShipPostalCode": 16000,
     "ShipCountry": "Canada",
     "OrderDetails": [
      {
@@ -11355,7 +11355,7 @@
     "ShipAddress": "2319 Elm St.",
     "ShipCity": "Vancouver",
     "ShipRegion": "BC",
-    "ShipPostalCode": "V3F 2K1",
+    "ShipPostalCode": 33000,
     "ShipCountry": "Canada",
     "OrderDetails": [
      {
@@ -11809,7 +11809,7 @@
     "ShipAddress": "43 rue St. Laurent",
     "ShipCity": "Montréal",
     "ShipRegion": "Québec",
-    "ShipPostalCode": "H1J 1C3",
+    "ShipPostalCode": 11000,
     "ShipCountry": "Canada",
     "OrderDetails": [
      {
@@ -12366,7 +12366,7 @@
     "ShipName": "North/South",
     "ShipAddress": "South House 300 Queensbridge",
     "ShipCity": "London",
-    "ShipPostalCode": "SW7 1RZ",
+    "ShipPostalCode": 16000,
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -12652,7 +12652,7 @@
     "ShipName": "Seven Seas Imports",
     "ShipAddress": "90 Wadhurst Rd.",
     "ShipCity": "London",
-    "ShipPostalCode": "OX15 4NB",
+    "ShipPostalCode": 42000,
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -12706,7 +12706,7 @@
     "ShipName": "Berglunds snabbköp",
     "ShipAddress": "Berguvsvägen  8",
     "ShipCity": "Luleå",
-    "ShipPostalCode": "S-958 22",
+    "ShipPostalCode": 32000,
     "ShipCountry": "Sweden",
     "OrderDetails": [
      {
@@ -12940,7 +12940,7 @@
     "ShipName": "Maison Dewey",
     "ShipAddress": "Rue Joseph-Bens 532",
     "ShipCity": "Bruxelles",
-    "ShipPostalCode": "B-1180",
+    "ShipPostalCode": 43000,
     "ShipCountry": "Belgium",
     "OrderDetails": [
      {
@@ -13078,7 +13078,7 @@
     "ShipName": "Eastern Connection",
     "ShipAddress": "35 King George",
     "ShipCity": "London",
-    "ShipPostalCode": "WX3 6FW",
+    "ShipPostalCode": 45000,
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -13119,7 +13119,7 @@
     "ShipName": "Folk och fä HB",
     "ShipAddress": "Åkergatan 24",
     "ShipCity": "Bräcke",
-    "ShipPostalCode": "S-844 67",
+    "ShipPostalCode": 36000,
     "ShipCountry": "Sweden",
     "OrderDetails": [
      {
@@ -13380,7 +13380,7 @@
     "ShipName": "B's Beverages",
     "ShipAddress": "Fauntleroy Circus",
     "ShipCity": "London",
-    "ShipPostalCode": "EC2 5NT",
+    "ShipPostalCode": 45000,
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -13408,7 +13408,7 @@
     "ShipName": "B's Beverages",
     "ShipAddress": "Fauntleroy Circus",
     "ShipCity": "London",
-    "ShipPostalCode": "EC2 5NT",
+    "ShipPostalCode": 14000,
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -13786,7 +13786,7 @@
     "ShipName": "Seven Seas Imports",
     "ShipAddress": "90 Wadhurst Rd.",
     "ShipCity": "London",
-    "ShipPostalCode": "OX15 4NB",
+    "ShipPostalCode": 48000,
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -14316,7 +14316,7 @@
     "ShipAddress": "Brook Farm Stratford St. Mary",
     "ShipCity": "Colchester",
     "ShipRegion": "Essex",
-    "ShipPostalCode": "CO7 6JX",
+    "ShipPostalCode": 27000,
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -14459,7 +14459,7 @@
     "ShipName": "Folk och fä HB",
     "ShipAddress": "Åkergatan 24",
     "ShipCity": "Bräcke",
-    "ShipPostalCode": "S-844 67",
+    "ShipPostalCode": 18000,
     "ShipCountry": "Sweden",
     "OrderDetails": [
      {
@@ -14638,7 +14638,7 @@
     "ShipAddress": "43 rue St. Laurent",
     "ShipCity": "Montréal",
     "ShipRegion": "Québec",
-    "ShipPostalCode": "H1J 1C3",
+    "ShipPostalCode": 24000,
     "ShipCountry": "Canada",
     "OrderDetails": [
      {
@@ -14858,7 +14858,7 @@
     "ShipAddress": "43 rue St. Laurent",
     "ShipCity": "Montréal",
     "ShipRegion": "Québec",
-    "ShipPostalCode": "H1J 1C3",
+    "ShipPostalCode": 40000,
     "ShipCountry": "Canada",
     "OrderDetails": [
      {
@@ -14942,7 +14942,7 @@
     "ShipName": "Berglunds snabbköp",
     "ShipAddress": "Berguvsvägen  8",
     "ShipCity": "Luleå",
-    "ShipPostalCode": "S-958 22",
+    "ShipPostalCode": 25000,
     "ShipCountry": "Sweden",
     "OrderDetails": [
      {
@@ -15248,7 +15248,7 @@
     "ShipName": "B's Beverages",
     "ShipAddress": "Fauntleroy Circus",
     "ShipCity": "London",
-    "ShipPostalCode": "EC2 5NT",
+    "ShipPostalCode": 44000,
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -15747,7 +15747,7 @@
     "ShipAddress": "43 rue St. Laurent",
     "ShipCity": "Montréal",
     "ShipRegion": "Québec",
-    "ShipPostalCode": "H1J 1C3",
+    "ShipPostalCode": 47000,
     "ShipCountry": "Canada",
     "OrderDetails": [
      {
@@ -16146,7 +16146,7 @@
     "ShipName": "B's Beverages",
     "ShipAddress": "Fauntleroy Circus",
     "ShipCity": "London",
-    "ShipPostalCode": "EC2 5NT",
+    "ShipPostalCode": 21000,
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -16393,7 +16393,7 @@
     "ShipAddress": "43 rue St. Laurent",
     "ShipCity": "Montréal",
     "ShipRegion": "Québec",
-    "ShipPostalCode": "H1J 1C3",
+    "ShipPostalCode": 43000,
     "ShipCountry": "Canada",
     "OrderDetails": [
      {
@@ -16995,7 +16995,7 @@
     "ShipAddress": "43 rue St. Laurent",
     "ShipCity": "Montréal",
     "ShipRegion": "Québec",
-    "ShipPostalCode": "H1J 1C3",
+    "ShipPostalCode": 49000,
     "ShipCountry": "Canada",
     "OrderDetails": [
      {
@@ -17030,7 +17030,7 @@
     "ShipAddress": "43 rue St. Laurent",
     "ShipCity": "Montréal",
     "ShipRegion": "Québec",
-    "ShipPostalCode": "H1J 1C3",
+    "ShipPostalCode": 20000,
     "ShipCountry": "Canada",
     "OrderDetails": [
      {
@@ -17074,7 +17074,7 @@
     "ShipAddress": "2319 Elm St.",
     "ShipCity": "Vancouver",
     "ShipRegion": "BC",
-    "ShipPostalCode": "V3F 2K1",
+    "ShipPostalCode": 15000,
     "ShipCountry": "Canada",
     "OrderDetails": [
      {
@@ -17117,7 +17117,7 @@
     "ShipAddress": "Garden House Crowther Way",
     "ShipCity": "Cowes",
     "ShipRegion": 90304,
-    "ShipPostalCode": "PO31 7PJ",
+    "ShipPostalCode": 28000,
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -17372,7 +17372,7 @@
     "ShipName": "Berglunds snabbköp",
     "ShipAddress": "Berguvsvägen  8",
     "ShipCity": "Luleå",
-    "ShipPostalCode": "S-958 22",
+    "ShipPostalCode": 39000,
     "ShipCountry": "Sweden",
     "OrderDetails": [
      {
@@ -18402,7 +18402,7 @@
     "ShipName": "Maison Dewey",
     "ShipAddress": "Rue Joseph-Bens 532",
     "ShipCity": "Bruxelles",
-    "ShipPostalCode": "B-1180",
+    "ShipPostalCode": 21000,
     "ShipCountry": "Belgium",
     "OrderDetails": [
      {
@@ -18620,7 +18620,7 @@
     "ShipName": "Berglunds snabbköp",
     "ShipAddress": "Berguvsvägen  8",
     "ShipCity": "Luleå",
-    "ShipPostalCode": "S-958 22",
+    "ShipPostalCode": 36000,
     "ShipCountry": "Sweden",
     "OrderDetails": [
      {
@@ -19461,7 +19461,7 @@
     "ShipName": "Berglunds snabbköp",
     "ShipAddress": "Berguvsvägen  8",
     "ShipCity": "Luleå",
-    "ShipPostalCode": "S-958 22",
+    "ShipPostalCode": 16000,
     "ShipCountry": "Sweden",
     "OrderDetails": [
      {
@@ -19552,7 +19552,7 @@
     "ShipAddress": "Garden House Crowther Way",
     "ShipCity": "Cowes",
     "ShipRegion": 60688,
-    "ShipPostalCode": "PO31 7PJ",
+    "ShipPostalCode": 25000,
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -20232,7 +20232,7 @@
     "ShipName": "Berglunds snabbköp",
     "ShipAddress": "Berguvsvägen  8",
     "ShipCity": "Luleå",
-    "ShipPostalCode": "S-958 22",
+    "ShipPostalCode": 24000,
     "ShipCountry": "Sweden",
     "OrderDetails": [
      {
@@ -20897,7 +20897,7 @@
     "ShipName": "Folk och fä HB",
     "ShipAddress": "Åkergatan 24",
     "ShipCity": "Bräcke",
-    "ShipPostalCode": "S-844 67",
+    "ShipPostalCode": 22000,
     "ShipCountry": "Sweden",
     "OrderDetails": [
      {
@@ -21089,7 +21089,7 @@
     "ShipAddress": "Brook Farm Stratford St. Mary",
     "ShipCity": "Colchester",
     "ShipRegion": "Essex",
-    "ShipPostalCode": "CO7 6JX",
+    "ShipPostalCode": 29000,
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -21878,7 +21878,7 @@
     "ShipAddress": "43 rue St. Laurent",
     "ShipCity": "Montréal",
     "ShipRegion": "Québec",
-    "ShipPostalCode": "H1J 1C3",
+    "ShipPostalCode": 39000,
     "ShipCountry": "Canada",
     "OrderDetails": [
      {
@@ -21969,7 +21969,7 @@
     "ShipName": "Eastern Connection",
     "ShipAddress": "35 King George",
     "ShipCity": "London",
-    "ShipPostalCode": "WX3 6FW",
+    "ShipPostalCode": 21000,
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -22289,7 +22289,7 @@
     "ShipName": "Berglunds snabbköp",
     "ShipAddress": "Berguvsvägen  8",
     "ShipCity": "Luleå",
-    "ShipPostalCode": "S-958 22",
+    "ShipPostalCode": 27000,
     "ShipCountry": "Sweden",
     "OrderDetails": [
      {
@@ -22648,7 +22648,7 @@
     "ShipAddress": "Brook Farm Stratford St. Mary",
     "ShipCity": "Colchester",
     "ShipRegion": "Essex",
-    "ShipPostalCode": "CO7 6JX",
+    "ShipPostalCode": 13000,
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -22686,7 +22686,7 @@
     "ShipAddress": "23 Tsawassen Blvd.",
     "ShipCity": "Tsawassen",
     "ShipRegion": "BC",
-    "ShipPostalCode": "T2F 8M4",
+    "ShipPostalCode": 25000,
     "ShipCountry": "Canada",
     "OrderDetails": [
      {
@@ -22735,7 +22735,7 @@
     "ShipAddress": "Brook Farm Stratford St. Mary",
     "ShipCity": "Colchester",
     "ShipRegion": "Essex",
-    "ShipPostalCode": "CO7 6JX",
+    "ShipPostalCode": 48000,
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -23017,7 +23017,7 @@
     "ShipAddress": "Garden House Crowther Way",
     "ShipCity": "Cowes",
     "ShipRegion": 40198,
-    "ShipPostalCode": "PO31 7PJ",
+    "ShipPostalCode": 33000,
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -23166,7 +23166,7 @@
     "ShipName": "North/South",
     "ShipAddress": "South House 300 Queensbridge",
     "ShipCity": "London",
-    "ShipPostalCode": "SW7 1RZ",
+    "ShipPostalCode": 34000,
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -23534,7 +23534,7 @@
     "ShipName": "Maison Dewey",
     "ShipAddress": "Rue Joseph-Bens 532",
     "ShipCity": "Bruxelles",
-    "ShipPostalCode": "B-1180",
+    "ShipPostalCode": 12000,
     "ShipCountry": "Belgium",
     "OrderDetails": [
      {
@@ -23625,7 +23625,7 @@
     "ShipName": "Folk och fä HB",
     "ShipAddress": "Åkergatan 24",
     "ShipCity": "Bräcke",
-    "ShipPostalCode": "S-844 67",
+    "ShipPostalCode": 32000,
     "ShipCountry": "Sweden",
     "OrderDetails": [
      {
@@ -23852,7 +23852,7 @@
     "ShipName": "Suprêmes délices",
     "ShipAddress": "Boulevard Tirou, 255",
     "ShipCity": "Charleroi",
-    "ShipPostalCode": "6000",
+    "ShipPostalCode": 6000,
     "ShipCountry": "Belgium",
     "OrderDetails": [
      {
@@ -23889,7 +23889,7 @@
     "ShipAddress": "Brook Farm Stratford St. Mary",
     "ShipCity": "Colchester",
     "ShipRegion": "Essex",
-    "ShipPostalCode": "CO7 6JX",
+    "ShipPostalCode": 32000,
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -24160,7 +24160,7 @@
     "ShipName": "Folk och fä HB",
     "ShipAddress": "Åkergatan 24",
     "ShipCity": "Bräcke",
-    "ShipPostalCode": "S-844 67",
+    "ShipPostalCode": 20000,
     "ShipCountry": "Sweden",
     "OrderDetails": [
      {
@@ -24337,7 +24337,7 @@
     "ShipName": "Berglunds snabbköp",
     "ShipAddress": "Berguvsvägen  8",
     "ShipCity": "Luleå",
-    "ShipPostalCode": "S-958 22",
+    "ShipPostalCode": 13000,
     "ShipCountry": "Sweden",
     "OrderDetails": [
      {
@@ -24998,7 +24998,7 @@
     "ShipAddress": "Brook Farm Stratford St. Mary",
     "ShipCity": "Colchester",
     "ShipRegion": "Essex",
-    "ShipPostalCode": "CO7 6JX",
+    "ShipPostalCode": 11000,
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -25219,7 +25219,7 @@
     "ShipAddress": "Garden House Crowther Way",
     "ShipCity": "Cowes",
     "ShipRegion": 50129,
-    "ShipPostalCode": "PO31 7PJ",
+    "ShipPostalCode": 12000,
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -25308,7 +25308,7 @@
     "ShipName": "Seven Seas Imports",
     "ShipAddress": "90 Wadhurst Rd.",
     "ShipCity": "London",
-    "ShipPostalCode": "OX15 4NB",
+    "ShipPostalCode": 50000,
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -25501,7 +25501,7 @@
     "ShipName": "Seven Seas Imports",
     "ShipAddress": "90 Wadhurst Rd.",
     "ShipCity": "London",
-    "ShipPostalCode": "OX15 4NB",
+    "ShipPostalCode": 20000,
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -25759,7 +25759,7 @@
     "ShipAddress": "2319 Elm St.",
     "ShipCity": "Vancouver",
     "ShipRegion": "BC",
-    "ShipPostalCode": "V3F 2K1",
+    "ShipPostalCode": 41000,
     "ShipCountry": "Canada",
     "OrderDetails": [
      {
@@ -26400,7 +26400,7 @@
     "ShipName": "Folk och fä HB",
     "ShipAddress": "Åkergatan 24",
     "ShipCity": "Bräcke",
-    "ShipPostalCode": "S-844 67",
+    "ShipPostalCode": 23000,
     "ShipCountry": "Sweden",
     "OrderDetails": [
      {
@@ -26611,7 +26611,7 @@
     "ShipAddress": "Garden House Crowther Way",
     "ShipCity": "Cowes",
     "ShipRegion": 20759,
-    "ShipPostalCode": "PO31 7PJ",
+    "ShipPostalCode": 13000,
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -27023,7 +27023,7 @@
     "ShipName": "Berglunds snabbköp",
     "ShipAddress": "Berguvsvägen  8",
     "ShipCity": "Luleå",
-    "ShipPostalCode": "S-958 22",
+    "ShipPostalCode": 44000,
     "ShipCountry": "Sweden",
     "OrderDetails": [
      {
@@ -27215,7 +27215,7 @@
     "ShipName": "Suprêmes délices",
     "ShipAddress": "Boulevard Tirou, 255",
     "ShipCity": "Charleroi",
-    "ShipPostalCode": "6000",
+    "ShipPostalCode": 6000,
     "ShipCountry": "Belgium",
     "OrderDetails": [
      {
@@ -27453,7 +27453,7 @@
     "ShipName": "Suprêmes délices",
     "ShipAddress": "Boulevard Tirou, 255",
     "ShipCity": "Charleroi",
-    "ShipPostalCode": "6000",
+    "ShipPostalCode": 6000,
     "ShipCountry": "Belgium",
     "OrderDetails": [
      {
@@ -27568,7 +27568,7 @@
     "ShipName": "Consolidated Holdings",
     "ShipAddress": "Berkeley Gardens 12  Brewery",
     "ShipCity": "London",
-    "ShipPostalCode": "WX1 6LT",
+    "ShipPostalCode": 39000,
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -27979,7 +27979,7 @@
     "ShipName": "Berglunds snabbköp",
     "ShipAddress": "Berguvsvägen  8",
     "ShipCity": "Luleå",
-    "ShipPostalCode": "S-958 22",
+    "ShipPostalCode": 43000,
     "ShipCountry": "Sweden",
     "OrderDetails": [
      {
@@ -28314,7 +28314,7 @@
     "ShipAddress": "Brook Farm Stratford St. Mary",
     "ShipCity": "Colchester",
     "ShipRegion": "Essex",
-    "ShipPostalCode": "CO7 6JX",
+    "ShipPostalCode": 11000,
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -28397,7 +28397,7 @@
     "ShipName": "Berglunds snabbköp",
     "ShipAddress": "Berguvsvägen  8",
     "ShipCity": "Luleå",
-    "ShipPostalCode": "S-958 22",
+    "ShipPostalCode": 19000,
     "ShipCountry": "Sweden",
     "OrderDetails": [
      {
@@ -28532,7 +28532,7 @@
     "ShipName": "Seven Seas Imports",
     "ShipAddress": "90 Wadhurst Rd.",
     "ShipCity": "London",
-    "ShipPostalCode": "OX15 4NB",
+    "ShipPostalCode": 34000,
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -28806,7 +28806,7 @@
     "ShipName": "Berglunds snabbköp",
     "ShipAddress": "Berguvsvägen  8",
     "ShipCity": "Luleå",
-    "ShipPostalCode": "S-958 22",
+    "ShipPostalCode": 37000,
     "ShipCountry": "Sweden",
     "OrderDetails": [
      {
@@ -29021,7 +29021,7 @@
     "ShipName": "Folk och fä HB",
     "ShipAddress": "Åkergatan 24",
     "ShipCity": "Bräcke",
-    "ShipPostalCode": "S-844 67",
+    "ShipPostalCode": 26000,
     "ShipCountry": "Sweden",
     "OrderDetails": [
      {
@@ -29241,7 +29241,7 @@
     "ShipName": "Suprêmes délices",
     "ShipAddress": "Boulevard Tirou, 255",
     "ShipCity": "Charleroi",
-    "ShipPostalCode": "6000",
+    "ShipPostalCode": 6000,
     "ShipCountry": "Belgium",
     "OrderDetails": [
      {
@@ -29550,7 +29550,7 @@
     "ShipName": "Maison Dewey",
     "ShipAddress": "Rue Joseph-Bens 532",
     "ShipCity": "Bruxelles",
-    "ShipPostalCode": "B-1180",
+    "ShipPostalCode": 30000,
     "ShipCountry": "Belgium",
     "OrderDetails": [
      {
@@ -29748,7 +29748,7 @@
     "ShipName": "Maison Dewey",
     "ShipAddress": "Rue Joseph-Bens 532",
     "ShipCity": "Bruxelles",
-    "ShipPostalCode": "B-1180",
+    "ShipPostalCode": 15000,
     "ShipCountry": "Belgium",
     "OrderDetails": [
      {
@@ -29986,7 +29986,7 @@
     "ShipName": "Folk och fä HB",
     "ShipAddress": "Åkergatan 24",
     "ShipCity": "Bräcke",
-    "ShipPostalCode": "S-844 67",
+    "ShipPostalCode": 33000,
     "ShipCountry": "Sweden",
     "OrderDetails": [
      {
@@ -30669,7 +30669,7 @@
     "ShipAddress": "23 Tsawassen Blvd.",
     "ShipCity": "Tsawassen",
     "ShipRegion": "BC",
-    "ShipPostalCode": "T2F 8M4",
+    "ShipPostalCode": 41000,
     "ShipCountry": "Canada",
     "OrderDetails": [
      {
@@ -30762,7 +30762,7 @@
     "ShipAddress": "Brook Farm Stratford St. Mary",
     "ShipCity": "Colchester",
     "ShipRegion": "Essex",
-    "ShipPostalCode": "CO7 6JX",
+    "ShipPostalCode": 28000,
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -30932,7 +30932,7 @@
     "ShipName": "Berglunds snabbköp",
     "ShipAddress": "Berguvsvägen  8",
     "ShipCity": "Luleå",
-    "ShipPostalCode": "S-958 22",
+    "ShipPostalCode": 32000,
     "ShipCountry": "Sweden",
     "OrderDetails": [
      {
@@ -31216,7 +31216,7 @@
     "ShipName": "Suprêmes délices",
     "ShipAddress": "Boulevard Tirou, 255",
     "ShipCity": "Charleroi",
-    "ShipPostalCode": "6000",
+    "ShipPostalCode": 6000,
     "ShipCountry": "Belgium",
     "OrderDetails": [
      {
@@ -31366,7 +31366,7 @@
     "ShipAddress": "Garden House Crowther Way",
     "ShipCity": "Cowes",
     "ShipRegion": 40216,
-    "ShipPostalCode": "PO31 7PJ",
+    "ShipPostalCode": 24000,
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -31799,7 +31799,7 @@
     "ShipName": "B's Beverages",
     "ShipAddress": "Fauntleroy Circus",
     "ShipCity": "London",
-    "ShipPostalCode": "EC2 5NT",
+    "ShipPostalCode": 40000,
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -31849,7 +31849,7 @@
     "ShipAddress": "23 Tsawassen Blvd.",
     "ShipCity": "Tsawassen",
     "ShipRegion": "BC",
-    "ShipPostalCode": "T2F 8M4",
+    "ShipPostalCode": 36000,
     "ShipCountry": "Canada",
     "OrderDetails": [
      {
@@ -31985,7 +31985,7 @@
     "ShipName": "B's Beverages",
     "ShipAddress": "Fauntleroy Circus",
     "ShipCity": "London",
-    "ShipPostalCode": "EC2 5NT",
+    "ShipPostalCode": 13000,
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -32070,7 +32070,7 @@
     "ShipAddress": "23 Tsawassen Blvd.",
     "ShipCity": "Tsawassen",
     "ShipRegion": "BC",
-    "ShipPostalCode": "T2F 8M4",
+    "ShipPostalCode": 27000,
     "ShipCountry": "Canada",
     "OrderDetails": [
      {
@@ -32250,7 +32250,7 @@
     "ShipAddress": "Brook Farm Stratford St. Mary",
     "ShipCity": "Colchester",
     "ShipRegion": "Essex",
-    "ShipPostalCode": "CO7 6JX",
+    "ShipPostalCode": 35000,
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -32347,7 +32347,7 @@
     "ShipName": "Folk och fä HB",
     "ShipAddress": "Åkergatan 24",
     "ShipCity": "Bräcke",
-    "ShipPostalCode": "S-844 67",
+    "ShipPostalCode": 47000,
     "ShipCountry": "Sweden",
     "OrderDetails": [
      {
@@ -33196,7 +33196,7 @@
     "ShipAddress": "23 Tsawassen Blvd.",
     "ShipCity": "Tsawassen",
     "ShipRegion": "BC",
-    "ShipPostalCode": "T2F 8M4",
+    "ShipPostalCode": 40000,
     "ShipCountry": "Canada",
     "OrderDetails": [
      {
@@ -33275,7 +33275,7 @@
     "ShipName": "Folk och fä HB",
     "ShipAddress": "Åkergatan 24",
     "ShipCity": "Bräcke",
-    "ShipPostalCode": "S-844 67",
+    "ShipPostalCode": 29000,
     "ShipCountry": "Sweden",
     "OrderDetails": [
      {
@@ -33329,7 +33329,7 @@
     "ShipName": "Maison Dewey",
     "ShipAddress": "Rue Joseph-Bens 532",
     "ShipCity": "Bruxelles",
-    "ShipPostalCode": "B-1180",
+    "ShipPostalCode": 31000,
     "ShipCountry": "Belgium",
     "OrderDetails": [
      {
@@ -33448,7 +33448,7 @@
     "ShipName": "Folk och fä HB",
     "ShipAddress": "Åkergatan 24",
     "ShipCity": "Bräcke",
-    "ShipPostalCode": "S-844 67",
+    "ShipPostalCode": 19000,
     "ShipCountry": "Sweden",
     "OrderDetails": [
      {
@@ -33524,7 +33524,7 @@
     "ShipAddress": "23 Tsawassen Blvd.",
     "ShipCity": "Tsawassen",
     "ShipRegion": "BC",
-    "ShipPostalCode": "T2F 8M4",
+    "ShipPostalCode": 49000,
     "ShipCountry": "Canada",
     "OrderDetails": [
      {
@@ -33746,7 +33746,7 @@
     "ShipName": "Eastern Connection",
     "ShipAddress": "35 King George",
     "ShipCity": "London",
-    "ShipPostalCode": "WX3 6FW",
+    "ShipPostalCode": 30000,
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -34025,7 +34025,7 @@
     "ShipName": "Folk och fä HB",
     "ShipAddress": "Åkergatan 24",
     "ShipCity": "Bräcke",
-    "ShipPostalCode": "S-844 67",
+    "ShipPostalCode": 15000,
     "ShipCountry": "Sweden",
     "OrderDetails": [
      {
@@ -34381,7 +34381,7 @@
     "ShipName": "Folk och fä HB",
     "ShipAddress": "Åkergatan 24",
     "ShipCity": "Bräcke",
-    "ShipPostalCode": "S-844 67",
+    "ShipPostalCode": 14000,
     "ShipCountry": "Sweden",
     "OrderDetails": [
      {
@@ -34540,7 +34540,7 @@
     "ShipName": "Maison Dewey",
     "ShipAddress": "Rue Joseph-Bens 532",
     "ShipCity": "Bruxelles",
-    "ShipPostalCode": "B-1180",
+    "ShipPostalCode": 43000,
     "ShipCountry": "Belgium",
     "OrderDetails": [
      {
@@ -35075,7 +35075,7 @@
     "ShipAddress": "Brook Farm Stratford St. Mary",
     "ShipCity": "Colchester",
     "ShipRegion": "Essex",
-    "ShipPostalCode": "CO7 6JX",
+    "ShipPostalCode": 11000,
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -35394,7 +35394,7 @@
     "ShipName": "B's Beverages",
     "ShipAddress": "Fauntleroy Circus",
     "ShipCity": "London",
-    "ShipPostalCode": "EC2 5NT",
+    "ShipPostalCode": 12000,
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -35436,7 +35436,7 @@
     "ShipName": "Eastern Connection",
     "ShipAddress": "35 King George",
     "ShipCity": "London",
-    "ShipPostalCode": "WX3 6FW",
+    "ShipPostalCode": 28000,
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -35576,7 +35576,7 @@
     "ShipAddress": "23 Tsawassen Blvd.",
     "ShipCity": "Tsawassen",
     "ShipRegion": "BC",
-    "ShipPostalCode": "T2F 8M4",
+    "ShipPostalCode": 14000,
     "ShipCountry": "Canada",
     "OrderDetails": [
      {
@@ -35943,7 +35943,7 @@
     "ShipName": "Suprêmes délices",
     "ShipAddress": "Boulevard Tirou, 255",
     "ShipCity": "Charleroi",
-    "ShipPostalCode": "6000",
+    "ShipPostalCode": 6000,
     "ShipCountry": "Belgium",
     "OrderDetails": [
      {
@@ -36074,7 +36074,7 @@
     "ShipName": "Suprêmes délices",
     "ShipAddress": "Boulevard Tirou, 255",
     "ShipCity": "Charleroi",
-    "ShipPostalCode": "6000",
+    "ShipPostalCode": 6000,
     "ShipCountry": "Belgium",
     "OrderDetails": [
      {
@@ -36370,7 +36370,7 @@
     "ShipAddress": "23 Tsawassen Blvd.",
     "ShipCity": "Tsawassen",
     "ShipRegion": "BC",
-    "ShipPostalCode": "T2F 8M4",
+    "ShipPostalCode": 46000,
     "ShipCountry": "Canada",
     "OrderDetails": [
      {
@@ -36460,7 +36460,7 @@
     "ShipName": "Eastern Connection",
     "ShipAddress": "35 King George",
     "ShipCity": "London",
-    "ShipPostalCode": "WX3 6FW",
+    "ShipPostalCode": 42000,
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -36504,7 +36504,7 @@
     "ShipAddress": "23 Tsawassen Blvd.",
     "ShipCity": "Tsawassen",
     "ShipRegion": "BC",
-    "ShipPostalCode": "T2F 8M4",
+    "ShipPostalCode": 41000,
     "ShipCountry": "Canada",
     "OrderDetails": [
      {
@@ -36582,7 +36582,7 @@
     "ShipName": "Folk och fä HB",
     "ShipAddress": "Åkergatan 24",
     "ShipCity": "Bräcke",
-    "ShipPostalCode": "S-844 67",
+    "ShipPostalCode": 19000,
     "ShipCountry": "Sweden",
     "OrderDetails": [
      {
@@ -36842,7 +36842,7 @@
     "ShipName": "Eastern Connection",
     "ShipAddress": "35 King George",
     "ShipCity": "London",
-    "ShipPostalCode": "WX3 6FW",
+    "ShipPostalCode": 39000,
     "ShipCountry": "UK",
     "OrderDetails": [
      {
@@ -36890,7 +36890,7 @@
     "ShipName": "North/South",
     "ShipAddress": "South House 300 Queensbridge",
     "ShipCity": "London",
-    "ShipPostalCode": "SW7 1RZ",
+    "ShipPostalCode": 11000,
     "ShipCountry": "UK",
     "OrderDetails": [
      {
