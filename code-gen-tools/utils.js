@@ -44,6 +44,22 @@ function isObject(item) {
 }
 
 
+var digitChars = [ '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', ];
+
+exports.toNumber = toNumber = function toNumber(str, digitsCount) {
+  
+  var chars = str.toString().trim().split("");
+  var isNumber = true;
+  for (let i = 0; i < chars.length; i++) {
+    if (!digitChars.includes(chars[i])) {
+       isNumber = true;
+       return (randomInteger(10, 50) * 1000);
+    }
+  }
+   
+  return chars.join('');
+}
+
 var numericChars = [ '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '.', '-', '+', 'E', 'e', ];
 
 exports.strToNumber = strToNumber =

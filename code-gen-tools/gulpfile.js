@@ -361,6 +361,109 @@ exports.combineJSON = function combineJSON(cb) {
     cb();
 }
 
+function updateColumns(dataItems, columnName) {
+
+    for (let i = 0; i < dataItems.length; i++) {
+        
+        if (dataItems[i][columnName] !== undefined) {
+            var newVal = utils.toNumber(dataItems[i][columnName]);
+            // var newVal = utils.toNumber(dataItems[i][columnName]);
+            newVal = Math.round(parseFloat(newVal));
+            // dataItems[i][columnName] = newVal;
+            if (dataItems[i][columnName] !== newVal) {
+                // console.log(dataItems[i][columnName] + " >> " + newVal);
+                // dataItems[i][columnName] = newVal;
+            }
+            dataItems[i][columnName] = newVal;
+        }
+
+    }
+
+}
+
+exports.updatePostalCode = function updatePostalCode(cb) {
+    var targetColumn = '';
+    // let filePath = CodeGenLib + "/CustomersData/XPLAT.json";
+    // let filePath = CodeGenLib + "/CustomersDataLocal/XPLAT.json";
+    // let filePath = CodeGenLib + "/HierarchicalCustomers/XPLAT.json";
+    // let filePath = CodeGenLib + "/HierarchicalCustomersData/XPLAT.json";
+    // let filePath = CodeGenLib + "/HierarchicalData/XPLAT.json";
+    // let filePath = CodeGenLib + "/CompanyEmployees/XPLAT.json"; 
+    // let filePath = CodeGenLib + "/EmployeesFlatDetails/XPLAT.json"; 
+    // let filePath = CodeGenLib + "/SingersCustomers/XPLAT.json"; 
+    // let filePath = CodeGenLib + "/MultiColumnsExportData/XPLAT.json";
+    let filePath = CodeGenLib + "/InvoicesWorldData/XPLAT.json";
+    let file = fs.readFileSync(filePath, "utf8");
+    let orgDataItems = JSON.parse(file);
+    for (let i = 0; i < orgDataItems.length; i++) {
+        
+        // var item = orgDataItems[i];
+        if (orgDataItems[i].PostalCode !== undefined) {
+            var newVal = utils.toNumber(orgDataItems[i].PostalCode);
+            // var newVal = utils.toNumber(orgDataItems[i].PostalCode);
+            newVal = Math.round(parseFloat(newVal));
+            // orgDataItems[i].PostalCode = newVal;
+            if (orgDataItems[i].PostalCode !== newVal) {
+                // console.log(orgDataItems[i].PostalCode + " >> " + newVal);
+                // orgDataItems[i].PostalCode = newVal;
+            }
+            orgDataItems[i].PostalCode = newVal;
+        }
+        else
+        {
+            // var newVal = utils.toNumber("bBB B");
+            // newVal = Math.round(parseFloat(newVal));
+            // console.log(i + " add >> " + newVal);
+            // orgDataItems[i].PostalCode = newVal;          
+        }
+
+        if (orgDataItems[i].ChildCompanies !== undefined) { 
+            for (let c = 0; c < orgDataItems[i].ChildCompanies.length; c++) {
+                var child = orgDataItems[i].ChildCompanies[c];
+                if (child.PostalCode !== undefined) {
+                    var newChild = utils.toNumber(child.PostalCode).toString();
+                    // newChild = Math.round(parseFloat(newChild));
+                    orgDataItems[i].ChildCompanies[c].PostalCode = newChild;
+                }    
+                
+                if (child.ChildCompanies !== undefined) { 
+                    for (let w = 0; w < child.ChildCompanies.length; w++) {
+                        var wnuk = orgDataItems[i].ChildCompanies[c].ChildCompanies[w];
+                        if (wnuk.PostalCode !== undefined) {
+                            var newChild = utils.toNumber(wnuk.PostalCode).toString();
+                            // newChild = Math.round(parseFloat(newChild));
+                            orgDataItems[i].ChildCompanies[c].ChildCompanies[w].PostalCode = newChild;
+                        }                 
+                    }
+                }
+            }
+        }
+
+        if (orgDataItems[i].Orders !== undefined) {
+
+            for (let c = 0; c < orgDataItems[i].Orders.length; c++) {
+                var child = orgDataItems[i].Orders[c];
+                if (child.PostalCode !== undefined) {
+                    var newChild = utils.toNumber(child.PostalCode);
+                    newChild = Math.round(parseFloat(newChild));
+                    orgDataItems[i].Orders[c].PostalCode = newChild;
+                }
+                if (child.ShipPostalCode !== undefined) {
+                    var newChild = utils.toNumber(child.ShipPostalCode);
+                    newChild = Math.round(parseFloat(newChild));
+                    orgDataItems[i].Orders[c].ShipPostalCode = newChild;
+                }
+            }
+        }
+        // info.ID = "abc" + (id + i);
+    }
+    
+    // saveJSON(filePath, orgDataItems, "compact");
+    saveJSON(filePath, orgDataItems);
+
+    cb();
+}
+
 exports.updateJSON = function updateJSON(cb) {
 
     var firstNames = ["James", "Max", "Martin", "Pamela", "Mike", "Anna", "Ben", "Nancy"];
@@ -1185,6 +1288,87 @@ exports.verifyJSON = function verifyJSON(cb)
                 break;    
             }
         }
+
+        fileCallback(null, file);
+    })) 
+    .on("end", function() {
+        cb();
+     });
+}
+
+
+exports.correctJSON = function correctJSON(cb)
+{ 
+    console.log("typeof=" + typeof([]));
+
+    // var CDN = './CDN';
+        var verified = true;
+    console.log("--------------------------------------------------------------------");   
+    console.log('correcting XPLAT.JSON files:');      
+    console.log("--------------------------------------------------------------------");   
+    // this function copied large data files to CDN 
+    gulp.src([
+        CodeGenLib + '/**/XPLAT.json',   
+        // CodeGenLib + '/**/HierarchicalCustomers/XPLAT.json',   
+        // CodeGenLib + '/**/HierarchicalCustomersData/XPLAT.json',   
+        // CodeGenLib + '/WorldStats/XPLAT.json',   
+    ],  {base: CodeGenLib + '/'})
+    .pipe(es.map(function(file, fileCallback) { 
+        let jsonPath = file.dirname + '/' + file.basename;
+        let jsonContent = file.contents.toString();
+        let jsonArray = JSON.parse(jsonContent);
+        var verified = true;
+        var columNames = [];
+        var columnTypes = {};
+
+        for (let i = 0; i < jsonArray.length; i++) {
+            var item = jsonArray[i];
+            var itemColumns = Object.keys(item);
+            for (let columnName of itemColumns) {
+                if (columNames.indexOf(columnName) < 0) {
+                    columNames.push(columnName);
+
+                    var valType = typeof(item[columnName])
+                    if (valType !== 'object'){
+                        columnTypes[columnName] = valType;
+                    }
+                }
+            }
+        }
+        for (let i = 0; i < jsonArray.length; i++) {
+            var item = jsonArray[i];
+            for (let columnName of columNames) {
+                // if (item[columnName] === undefined) {
+                //     console.log("Item #" + i + " is missing '" + columnName + "' column in " + jsonPath)
+                //     // verified = false; break;    
+                // } 
+
+                if (item[columnName] !== undefined && columnTypes[columnName] !== undefined && item[columnName] !== null) {
+                    var extType = columnTypes[columnName];
+                    var actType = typeof(item[columnName]);
+                    if (actType !== extType) {
+                        console.log("Correcting item #" + i + " - '" + columnName + "' column (" + item[columnName] + ") is '" + actType + "' instead of '" + extType + "' in " + jsonPath)
+                        
+                        if (columnName === "City") {
+                            jsonArray[i][columnName] = "Sao Paulo";
+                        }
+                        if (columnName === "ContactTitle") {
+                            jsonArray[i][columnName] = "Sales Associate";
+                        } 
+                        if (columnName === "Region") {
+                            jsonArray[i][columnName] = "Northeast";
+                        } 
+                        // fileCallback(null, file);
+                        // verified = false; 
+                    }
+                    // verified = false; 
+                } 
+            }
+            if (!verified) {
+                break;    
+            }
+        }
+        // saveJSON(jsonPath, jsonArray);
 
         fileCallback(null, file);
     })) 
