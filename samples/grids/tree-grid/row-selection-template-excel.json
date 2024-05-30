@@ -1,6 +1,6 @@
 {
   "todo": [""],
-  "export": false,
+  "export": true,
   "skipAlterDataCasing": true,
   "descriptions": {
     "content": {
