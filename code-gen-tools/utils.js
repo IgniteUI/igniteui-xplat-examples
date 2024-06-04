@@ -44,6 +44,22 @@ function isObject(item) {
 }
 
 
+var digitChars = [ '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', ];
+
+exports.toNumber = toNumber = function toNumber(str, digitsCount) {
+  
+  var chars = str.toString().trim().split("");
+  var isNumber = true;
+  for (let i = 0; i < chars.length; i++) {
+    if (!digitChars.includes(chars[i])) {
+       isNumber = true;
+       return (randomInteger(10, 50) * 1000);
+    }
+  }
+   
+  return chars.join('');
+}
+
 var numericChars = [ '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '.', '-', '+', 'E', 'e', ];
 
 exports.strToNumber = strToNumber =
@@ -60,8 +76,11 @@ function strToNumber(str, precision, normalize) {
   // dates
   if (chars.includes('/')) return str;
   if (chars.includes('\\')) return str;
-  if (chars.split("-").length > 2) return str; // fax
-  if (chars.split(" ").length > 2) return str; // cell
+  // if (chars.split("-").length > 2) return str; // fax
+  // if (chars.split(" ").length > 2) return str; // cell
+
+  if (chars.split("-").length > 2) return (randomInteger(2, 9) * 10000) + (randomInteger(100, 900)) // fax
+  if (chars.split(" ").length > 2) return (randomInteger(2, 9) * 10000) + (randomInteger(100, 900)) // cell
 
   chars = strReplace(chars, '$', '');
   chars = strReplace(chars, '%', '');
@@ -110,10 +129,11 @@ function strToNumber(str, precision, normalize) {
     // console.log(chars)
 
   if (chars.includes('.') && precision > 1 && Math.abs(value) > 0.01) {
+      var digits = value.toString().split('.')[1].length;
       chars = value.toFixed(precision);
       value = parseFloat(chars);
-      if (normalize) {
-        value = roundEven(value * 10) / 10;
+      if (normalize && digits > 2) {
+        value = roundEven(value * 100) / 100;
       }
   }
   return value;
@@ -138,7 +158,10 @@ function toNumberRecursive(item, precision, targetColumns, normalize) {
   if (item === undefined) return undefined;
   if (item === null) return null;
 
+  // console.log("item " + precision);
+
   if (Array.isArray(item)) {
+    // console.log("item isArray " + precision);
     for (let i = 0; i < item.length; i++) {
        item[i] = toNumberRecursive(item[i], precision, targetColumns, normalize);
     }
@@ -147,12 +170,21 @@ function toNumberRecursive(item, precision, targetColumns, normalize) {
     if (targetColumns && targetColumns.length > 0) {
         columnNames = targetColumns;
     }
+    // console.log("item columnNames ");
+    // console.log(columnNames);
+
     for (const name of columnNames) {
       if (item[name]
-        // && !name.includes("Fax")
-        // && !name.includes("Cell")
-        && !name.includes("PostalCode")) {
+        && !name.includes("Fax")
+        && !name.includes("Cell")
+        && !name.includes("Phone")
+        && !name.includes("Date")
+        && !name.includes("Name") 
+        && !name.includes("Address") 
+        && !name.includes("Title") 
+        ) {
           // console.log("A=" + item[name]);
+    // console.log("item columnNames " + name);
           item[name] = toNumberRecursive(item[name], precision, targetColumns, normalize);
           // console.log("B=" + item[name]);
       }

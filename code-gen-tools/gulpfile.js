@@ -5,6 +5,7 @@ let fs = require('fs.extra');
 let path = require('path');
 let utils = require('./utils.js')
 let request = require('request');
+const { read } = require('fs');
 
 function log(msg) {
     console.log('>> ' + msg);
@@ -20,12 +21,14 @@ gulp.task('testCodeGenLib', function(cb) {
     cb();
 });
 
-function saveFile(filePath, fileContent) {
+function saveFile(filePath, fileContent, skipLog) {
     var dirname = path.dirname(filePath);
     if (!fs.existsSync(dirname)) {
         fs.mkdirSync(dirname); // ensure directory exists
     }
-    console.log("saving " + filePath);
+    if (!skipLog) {
+        console.log("saving " + filePath);
+    }
     fs.writeFileSync(filePath, fileContent);
 }
 
@@ -95,8 +98,8 @@ exports.toJSON = toJSON;
 
 function sortJSON(cb) {
 
-    let filePath = CodeGenLib + "/WorldCitiesAbove15K/XPLAT.json";
-    // let filePath = CodeGenLib + "/WorldCities/XPLAT.json";
+    // let filePath = CodeGenLib + "/WorldCitiesAbove500K/XPLAT.json";
+    let filePath = CodeGenLib + "/WorldCountries/XPLAT.json";
     let file = fs.readFileSync(filePath, "utf8");
     let dataItems = JSON.parse(file);
 
@@ -104,17 +107,18 @@ function sortJSON(cb) {
     dataItems = dataItems.sort((a, b) => a.Population < b.Population ? 1 : -1);
 
     for (let i = 0; i < dataItems.length; i++) {
-        dataItems[i].ID = 10000 + i;
+        // dataItems[i].ID = 10000 + i;
     }
 
     let newDataItems = [];
     for (const item of dataItems) {
-        if (item.Population > 15000) {
+        // if (item.Population > 1000000) {
             newDataItems.push(item);
-        }
+        // }
     }
 
-    saveJSON(filePath, newDataItems,  "compact");
+    let outputPath = filePath; // CodeGenLib + "/WorldCitiesAbove1M/XPLAT.json";
+    saveJSON(outputPath, newDataItems,  "compact");
     cb();
 }
 exports.sortJSON = sortJSON;
@@ -150,17 +154,126 @@ exports.filterJSON = function filterJSON(cb) {
     cb();
 }
 
+exports.copyCDN = function copyCDN(cb)
+{
+    var cdnTable = [];
+    var cdnWebsite = 'https://static.infragistics.com/xplatform/library/';
+    var cdnServer = '//s0706dl2.igweb.local/download.infragistics.com/xplatform/library';
+    var cdnOutput = './CDN';
+    // del(cdnOutput);
+    console.log('--------------------------------------------------------------------');   
+    console.log('copying large data files from code-gen-library to: ' + cdnOutput);      
+    console.log('--------------------------------------------------------------------');   
+    
+    gulp.src([
+        // process all files and determine large files based on number of data items and data columns
+        CodeGenLib + '/**/XPLAT.json',
+        // process only known large data files:
+        // CodeGenLib + '/**/SingersData/XPLAT.json',
+        // CodeGenLib + "/AirplaneSeats/XPLAT.json",
+        // CodeGenLib + "/AnalyzeSales/XPLAT.json",
+        // CodeGenLib + "/AthletesData/XPLAT.json",
+        // CodeGenLib + "/AthletesDataExtended/XPLAT.json",
+        // CodeGenLib + "/CountryStats/XPLAT.json",
+        // CodeGenLib + "/CountyHierarchicalData/XPLAT.json",
+        // CodeGenLib + "/EmployeesData/XPLAT.json",
+        // CodeGenLib + "/FinancialDataAll/XPLAT.json",
+        // CodeGenLib + "/FinancialDataCurrencies/XPLAT.json",
+        // CodeGenLib + "/FinancialDataFuel/XPLAT.json",
+        // CodeGenLib + "/FinancialDataMetals/XPLAT.json",
+        // CodeGenLib + "/HierarchicalCustomers/XPLAT.json",
+        // CodeGenLib + "/HierarchicalCustomersData/XPLAT.json",
+        // CodeGenLib + "/InvoicesData/XPLAT.json",
+        // CodeGenLib + "/InvoicesWorldData/XPLAT.json",
+        // CodeGenLib + "/PivotData/XPLAT.json",
+        // CodeGenLib + "/PivotDataFlat/XPLAT.json",
+        // CodeGenLib + "/PivotSalesData/XPLAT.json",
+        // CodeGenLib + "/SalesData/XPLAT.json",
+        // CodeGenLib + "/SingersCustomers/XPLAT.json",
+        // CodeGenLib + "/StockAmazon/XPLAT.json",
+        // CodeGenLib + "/StockGoogle/XPLAT.json",
+        // CodeGenLib + "/StockMarket100/XPLAT.json",
+        // CodeGenLib + "/StockMarket1000/XPLAT.json",
+        // CodeGenLib + "/StockMarket2000/XPLAT.json",
+        // CodeGenLib + "/StockMarket500/XPLAT.json",
+        // CodeGenLib + "/StockSP500Cap/XPLAT.json",
+        // CodeGenLib + "/StockMicrosoft/XPLAT.json",
+        // CodeGenLib + "/StockTesla/XPLAT.json",
+        // CodeGenLib + "/WorldAustralianData/XPLAT.json",
+        // CodeGenLib + "/WorldCapitals/XPLAT.json",
+        // CodeGenLib + "/WorldCities/XPLAT.json",
+        // CodeGenLib + "/WorldCitiesAbove100K/XPLAT.json",
+        // CodeGenLib + "/WorldCitiesAbove15K/XPLAT.json",
+        // CodeGenLib + "/WorldCitiesAbove1M/XPLAT.json",
+        // CodeGenLib + "/WorldCitiesAbove500K/XPLAT.json",
+        // CodeGenLib + "/WorldCountries/XPLAT.json",
+        // CodeGenLib + "/WorldStats/XPLAT.json",
+    ],  
+    // {base: CodeGenLib + '/'}
+    )
+    .pipe(es.map(function(file, fileCallback) {
+        // console.log(file.dirname + '/' + file.basename);    
+        let content = file.contents.toString();
+        let items = JSON.parse(content);        
+        var columns = Object.keys(items[0]);
+        let dirname = file.dirname.split('code-gen-library\\')[1];
+        
+        // copy only files that have many items and/or many data columns
+        if (items.length >= 100 || (items.length * columns.length >= 500)) {
+            console.log(CodeGenLib + '/' + dirname + '/XPLAT.json copied with ' + items.length  + ' items');    
+            // console.log('CodeGenLib + "/' + dirname + '/XPLAT.json",');  
+            var itemsCount = items.length.toString();
+            var columnsCount = columns.length.toString();
+            var row = "| " + itemsCount.padStart(Math.max(10, itemsCount.length), ' ') + " " +
+                      "| " + columnsCount.padStart(Math.max(12, columnsCount.length), ' ') + " " +
+                      "| " + "[" + dirname + "](" + cdnWebsite + dirname + ".json)\n"; 
+            cdnTable += row;  
+            // copy to cdn output
+            saveFile(cdnOutput + "/" + dirname + ".json", content, true); 
+            // create config file that enables remote location for data file
+            saveFile(CodeGenLib + '/' + dirname + '/XPLAT-CONFIG.json', '{\r\n' + '\t"location": "CDN"\r\n' + '}\r\n', true); 
+        } 
+        fileCallback(null, file);
+    }))
+    // .pipe(gulp.dest(cdnOutput, {overwrite: true}))
+    .on("end", function() {
+        var repo = 'https://github.com/IgniteUI/igniteui-xplat-examples/tree/23.2.x';
+        var readme = '# Data2 Library for XPLAT Samples\r\n\r\n' +
+        'This CDN folder contains data files used by [XPLAT samples](' + repo + '/samples).\r\n\r\n' +
+        'Use [copyCDN script](' + repo + '/code-gen-tools) to upload files to this [CDN](https://static.infragistics.com/xplatform/library) instead of manually uploading files. This way, files on CDN stay in-sync with files in [code-gen-library](' + repo + '/code-gen-library).\r\n\r\n' +
+        '## Code-Gen-Library Location\r\n\r\n' +  
+        'The code-gen-library is located on [github](' + repo + '/code-gen-library) and CDN has a copy of these files:\r\n\r\n' + 
+        '| data items | data columns | data link\r\n' + 
+        '|       ---: |         ---: | :---  \r\n' +
+        cdnTable;
+        saveFile(cdnOutput + "/_Readme.md", readme, true);
+
+        // if (cdnOutput.indexOf('igweb.local/download.infragistics.com') < 0) {
+            console.log("\n WARNING: You must copy content of the this CDN folder to:\n" + cdnServer + "\n")
+        // }        
+        cb();
+     });
+}
+
 exports.compactJSON = function compactJSON(cb) {
     let filePaths = [
-        "/AnalyzeOrders/XPLAT.json",
+        // "/AnalyzeOrders/XPLAT.json",
         "/CompanyEmployees/XPLAT.json",
-        "/NwindLocations/XPLAT.json",
+        "/CompanyData/XPLAT.json",
+        "/InvoicesData/XPLAT.json",
+        "/PivotDataFlat/XPLAT.json",
+        "/PivotSalesData/XPLAT.json",
         "/ProductSales/XPLAT.json",
+        // "/NwindLocations/XPLAT.json",
+        // "/ProductSales/XPLAT.json",
+        // "/FinancialDataCurrencies/XPLAT.json",
+        // "/FinancialDataFuel/XPLAT.json",
+        // "/FinancialDataMetals/XPLAT.json",
     ];
     for (const filePath of filePaths) {
         let file = fs.readFileSync(CodeGenLib + filePath, "utf8");
         let dataItems = JSON.parse(file);
-        saveJSON(filePath, dataItems,  "compact");
+        saveJSON(CodeGenLib + filePath, dataItems,  "compact");
     }
     cb();
 }
@@ -248,6 +361,109 @@ exports.combineJSON = function combineJSON(cb) {
     cb();
 }
 
+function updateColumns(dataItems, columnName) {
+
+    for (let i = 0; i < dataItems.length; i++) {
+        
+        if (dataItems[i][columnName] !== undefined) {
+            var newVal = utils.toNumber(dataItems[i][columnName]);
+            // var newVal = utils.toNumber(dataItems[i][columnName]);
+            newVal = Math.round(parseFloat(newVal));
+            // dataItems[i][columnName] = newVal;
+            if (dataItems[i][columnName] !== newVal) {
+                // console.log(dataItems[i][columnName] + " >> " + newVal);
+                // dataItems[i][columnName] = newVal;
+            }
+            dataItems[i][columnName] = newVal;
+        }
+
+    }
+
+}
+
+exports.updatePostalCode = function updatePostalCode(cb) {
+    var targetColumn = '';
+    // let filePath = CodeGenLib + "/CustomersData/XPLAT.json";
+    // let filePath = CodeGenLib + "/CustomersDataLocal/XPLAT.json";
+    // let filePath = CodeGenLib + "/HierarchicalCustomers/XPLAT.json";
+    // let filePath = CodeGenLib + "/HierarchicalCustomersData/XPLAT.json";
+    // let filePath = CodeGenLib + "/HierarchicalData/XPLAT.json";
+    // let filePath = CodeGenLib + "/CompanyEmployees/XPLAT.json"; 
+    // let filePath = CodeGenLib + "/EmployeesFlatDetails/XPLAT.json"; 
+    // let filePath = CodeGenLib + "/SingersCustomers/XPLAT.json"; 
+    // let filePath = CodeGenLib + "/MultiColumnsExportData/XPLAT.json";
+    let filePath = CodeGenLib + "/InvoicesWorldData/XPLAT.json";
+    let file = fs.readFileSync(filePath, "utf8");
+    let orgDataItems = JSON.parse(file);
+    for (let i = 0; i < orgDataItems.length; i++) {
+        
+        // var item = orgDataItems[i];
+        if (orgDataItems[i].PostalCode !== undefined) {
+            var newVal = utils.toNumber(orgDataItems[i].PostalCode);
+            // var newVal = utils.toNumber(orgDataItems[i].PostalCode);
+            newVal = Math.round(parseFloat(newVal));
+            // orgDataItems[i].PostalCode = newVal;
+            if (orgDataItems[i].PostalCode !== newVal) {
+                // console.log(orgDataItems[i].PostalCode + " >> " + newVal);
+                // orgDataItems[i].PostalCode = newVal;
+            }
+            orgDataItems[i].PostalCode = newVal;
+        }
+        else
+        {
+            // var newVal = utils.toNumber("bBB B");
+            // newVal = Math.round(parseFloat(newVal));
+            // console.log(i + " add >> " + newVal);
+            // orgDataItems[i].PostalCode = newVal;          
+        }
+
+        if (orgDataItems[i].ChildCompanies !== undefined) { 
+            for (let c = 0; c < orgDataItems[i].ChildCompanies.length; c++) {
+                var child = orgDataItems[i].ChildCompanies[c];
+                if (child.PostalCode !== undefined) {
+                    var newChild = utils.toNumber(child.PostalCode).toString();
+                    // newChild = Math.round(parseFloat(newChild));
+                    orgDataItems[i].ChildCompanies[c].PostalCode = newChild;
+                }    
+                
+                if (child.ChildCompanies !== undefined) { 
+                    for (let w = 0; w < child.ChildCompanies.length; w++) {
+                        var wnuk = orgDataItems[i].ChildCompanies[c].ChildCompanies[w];
+                        if (wnuk.PostalCode !== undefined) {
+                            var newChild = utils.toNumber(wnuk.PostalCode).toString();
+                            // newChild = Math.round(parseFloat(newChild));
+                            orgDataItems[i].ChildCompanies[c].ChildCompanies[w].PostalCode = newChild;
+                        }                 
+                    }
+                }
+            }
+        }
+
+        if (orgDataItems[i].Orders !== undefined) {
+
+            for (let c = 0; c < orgDataItems[i].Orders.length; c++) {
+                var child = orgDataItems[i].Orders[c];
+                if (child.PostalCode !== undefined) {
+                    var newChild = utils.toNumber(child.PostalCode);
+                    newChild = Math.round(parseFloat(newChild));
+                    orgDataItems[i].Orders[c].PostalCode = newChild;
+                }
+                if (child.ShipPostalCode !== undefined) {
+                    var newChild = utils.toNumber(child.ShipPostalCode);
+                    newChild = Math.round(parseFloat(newChild));
+                    orgDataItems[i].Orders[c].ShipPostalCode = newChild;
+                }
+            }
+        }
+        // info.ID = "abc" + (id + i);
+    }
+    
+    // saveJSON(filePath, orgDataItems, "compact");
+    saveJSON(filePath, orgDataItems);
+
+    cb();
+}
+
 exports.updateJSON = function updateJSON(cb) {
 
     var firstNames = ["James", "Max", "Martin", "Pamela", "Mike", "Anna", "Ben", "Nancy"];
@@ -327,9 +543,11 @@ function convertColumnTypes(cb) {
     // var numericColumns = ["Product.UnitPrice", "NumberOfUnits", "Value"];
     // var numericColumns = ["UnitsSold", "Year"];
     var numericColumns = [
+        // "PostalCode",
+        //  "ShipPostalCode"
     //     "Open", "Close", "Low", "High", "Price", "Buy", "Sell",
     //  "ZV_SPREAD", "Change", "ChangePercent", "KRD_3YR",
-    // "AnnualStart", "AnnualChange", "AnnualLow", "AnnualHigh"
+    // "YearlyStart", "YearlyChange", "YearlyLow", "YearlyHigh"
     ];
 
     // let filePath = CodeGenLib + "/PivotSalesData/XPLAT.json";
@@ -344,11 +562,12 @@ function convertColumnTypes(cb) {
     // let filePath = CodeGenLib + "/FinancialDataCurrencies/XPLAT.json";
     // let filePath = CodeGenLib + "/HierarchicalCustomers/XPLAT.json";
     // let filePath = CodeGenLib + "/PivotData/XPLAT.json";
-    let filePath = CodeGenLib + "/PivotDataFlat/XPLAT.json";
+    // let filePath = CodeGenLib + "/PivotDataFlat/XPLAT.json";
     // let filePath = CodeGenLib + "/ProductInventory/XPLAT.json";
     // let filePath = CodeGenLib + "/ProductSales/XPLAT.json";
     // let filePath = CodeGenLib + "/SingersCustomers/XPLAT.json";
-
+    // let filePath = CodeGenLib + "/HierarchicalCustomers/XPLAT.json";
+    let filePath = CodeGenLib + "/HierarchicalCustomersData/XPLAT.json";
 
     console.log(filePath);
     let file = fs.readFileSync(filePath, "utf8");
@@ -356,7 +575,7 @@ function convertColumnTypes(cb) {
     let orgDataItems = JSON.parse(file);
     // console.log(orgDataItems[0]);
 
-    orgDataItems = utils.toNumberRecursive(orgDataItems, 2, numericColumns, true);
+    orgDataItems = utils.toNumberRecursive(orgDataItems, 3, numericColumns, true);
 
     // for (const item of orgDataItems) {
 
@@ -384,7 +603,7 @@ function convertColumnTypes(cb) {
     //     }
     // }
 
-    console.log(orgDataItems[0]);
+    // console.log(orgDataItems[0]);
     // console.log(orgDataItems[0].Orders[0]);
 
     // console.log(orgDataItems[0].Orders[0].OrderDetails);
@@ -432,7 +651,7 @@ exports.convertWorldStats = function convertWorldStats(cb) {
         }
 
         if (jsonItem.Population > 1000) {
-            jsonItem["GDPPerPerson"] = Math.round(jsonItem["GDPTotal"] * 1000000 / jsonItem["Population"]);
+            jsonItem["GdpPerPerson"] = Math.round(jsonItem["GdpTotal"] * 1000000 / jsonItem["Population"]);
             jsonData.push(jsonItem);
         }
 
@@ -445,6 +664,73 @@ exports.convertWorldStats = function convertWorldStats(cb) {
 
     let jsonPath = CodeGenLib + "/WorldStats/XPLAT.json";
     saveJSON(jsonPath, jsonData,  "compact");
+    cb();
+}
+
+exports.injectWorldStats = function injectWorldStats(cb) {   
+    let file1Path = CodeGenLib + "/WorldStats/XPLAT.json";
+    let file1 = fs.readFileSync(file1Path, "utf8");
+    let file1Data = JSON.parse(file1);
+    file1Data.sort((a, b) => a.Name < b.Name ? 1 : -1);
+    
+    // let file2Path = CodeGenLib + "/WorldDebtAndPopulation/XPLAT.json";
+    // let file2 = fs.readFileSync(file2Path, "utf8");
+    // let file2Data = JSON.parse(file2);
+    // file2Data.sort((a, b) => a.Name < b.Name ? 1 : -1);
+
+    var notFound = [];
+    // for (let i = 0; i < file1Data.length; i++) {
+        // var item2 = file1Data[i];  
+
+        var missing = true;
+        // for (let ii = 0; ii < file1Data.length; ii++) {
+        //     var item1 = file1Data[ii];
+        //     if (file1Data[ii].Name === item2.Name) {
+
+        //         file1Data[ii].Unemployment = item2.Unemployment;
+        //         file1Data[ii].Televisions = item2.Televisions;
+        //         file1Data[ii].PublicDebt = item2.PublicDebt;
+        //         file1Data[ii].OilProduction = item2.OilProduction;
+        //         file1Data[ii].MedianAge = item2.MedianAge;
+        //         file1Data[ii].Internet = item2.InternetUsers;
+        //         file1Data[ii].Electricity = item2.ElectricityProduction;
+        //         file1Data[ii].BirthRate = item2.BirthRate; 
+        //         missing = false;
+        //         break; 
+        //     }
+        // } 
+        for (let ii = 0; ii < file1Data.length; ii++) {
+            // if (!file1Data[ii].Unemployment) {
+            //     file1Data[ii].Unemployment = Math.round(utils.randomInteger(1, 15));
+            //     file1Data[ii].OilProduction = utils.randomInteger(0, 5);
+            //     file1Data[ii].BirthRate = utils.randomInteger(5, 25);
+            //     file1Data[ii].MedianAge = utils.randomInteger(30, 55);
+            //     file1Data[ii].Electricity = utils.randomInteger(3000, 95000);
+            //     file1Data[ii].InternetUsers = Math.round(utils.randomInteger(file1Data[ii].Population * 0.3, file1Data[ii].Population * 0.8));
+            //     file1Data[ii].Televisions = Math.round(utils.randomInteger(file1Data[ii].Population * 0.1, file1Data[ii].Population * 0.8));
+            // }
+
+            if (!file1Data[ii].PublicDebt) {
+                 file1Data[ii].PublicDebt = Math.round(utils.randomInteger(5, 45));
+            }
+            if (!file1Data[ii].Internet) {
+                 file1Data[ii].Internet = Math.round(utils.randomInteger(1000, file1Data[ii].Population * 0.8));
+            }
+            file1Data[ii].InternetUsers = undefined; 
+            // file1Data[ii].InternetUsers = Math.round(file1Data[ii].InternetUsers);
+            // file1Data[ii].Televisions = Math.round(file1Data[ii].Televisions);
+        // }
+
+        file1Data.sort((a, b) => a.Population < b.Population ? 1 : -1);
+
+        if (missing) {
+            // console.log("not found " + i + " " + item2.Name);
+        } 
+    }
+    // console.log(notFound);
+
+    saveJSON(file1Path, file1Data,  "compact");
+    // saveJSON(file2Path, file2Data,  "compact");
     cb();
 }
 
@@ -623,7 +909,7 @@ exports.convertStockMarket = function convertStockMarket(cb) {
         let missingSector = []
         for (const item of data) {
              if (item.Sector === undefined)
-                missingSector.push('500,CompanyName,' + item.Symbol + ',$0.0 M,United States,');
+                missingSector.push('500,Company,' + item.Symbol + ',$0.0 M,United States,');
                 // missingSector.push(item.Symbol);
         }
 
@@ -959,4 +1245,134 @@ exports.toCSV = function toCSV(cb) {
     var cvsPath = jsonPath.replace('.json', '.csv');
     saveFile(cvsPath, cvsContent);
     cb();
+}
+
+
+exports.verifyJSON = function verifyJSON(cb)
+{ 
+    // var CDN = './CDN';
+        var verified = true;
+    console.log("--------------------------------------------------------------------");   
+    console.log('verifying XPLAT.JSON files:');      
+    console.log("--------------------------------------------------------------------");   
+    // this function copied large data files to CDN 
+    gulp.src([
+        CodeGenLib + '/**/XPLAT.json',   
+        // CodeGenLib + '/WorldStats/XPLAT.json',   
+    ],  {base: CodeGenLib + '/'})
+    .pipe(es.map(function(file, fileCallback) { 
+        let jsonPath = file.dirname + '/' + file.basename;
+        let jsonContent = file.contents.toString();
+        let jsonArray = JSON.parse(jsonContent);
+        var verified = true;
+        var allColumns = [];
+
+        for (let i = 0; i < jsonArray.length; i++) {
+            var item = jsonArray[i];
+            var itemColumns = Object.keys(item);
+            for (let columnName of itemColumns) {
+                if (allColumns.indexOf(columnName) < 0) {
+                    allColumns.push(columnName);
+                }
+            }
+        }
+        for (let i = 0; i < jsonArray.length; i++) {
+            var item = jsonArray[i];
+            for (let columnName of allColumns) {
+                if (item[columnName] === undefined) {
+                    console.log("Item #" + i + " is missing '" + columnName + "' column in " + jsonPath)
+                    verified = false; break;    
+                } 
+            }
+            if (!verified) {
+                break;    
+            }
+        }
+
+        fileCallback(null, file);
+    })) 
+    .on("end", function() {
+        cb();
+     });
+}
+
+
+exports.correctJSON = function correctJSON(cb)
+{ 
+    console.log("typeof=" + typeof([]));
+
+    // var CDN = './CDN';
+        var verified = true;
+    console.log("--------------------------------------------------------------------");   
+    console.log('correcting XPLAT.JSON files:');      
+    console.log("--------------------------------------------------------------------");   
+    // this function copied large data files to CDN 
+    gulp.src([
+        CodeGenLib + '/**/XPLAT.json',   
+        // CodeGenLib + '/**/HierarchicalCustomers/XPLAT.json',   
+        // CodeGenLib + '/**/HierarchicalCustomersData/XPLAT.json',   
+        // CodeGenLib + '/WorldStats/XPLAT.json',   
+    ],  {base: CodeGenLib + '/'})
+    .pipe(es.map(function(file, fileCallback) { 
+        let jsonPath = file.dirname + '/' + file.basename;
+        let jsonContent = file.contents.toString();
+        let jsonArray = JSON.parse(jsonContent);
+        var verified = true;
+        var columNames = [];
+        var columnTypes = {};
+
+        for (let i = 0; i < jsonArray.length; i++) {
+            var item = jsonArray[i];
+            var itemColumns = Object.keys(item);
+            for (let columnName of itemColumns) {
+                if (columNames.indexOf(columnName) < 0) {
+                    columNames.push(columnName);
+
+                    var valType = typeof(item[columnName])
+                    if (valType !== 'object'){
+                        columnTypes[columnName] = valType;
+                    }
+                }
+            }
+        }
+        for (let i = 0; i < jsonArray.length; i++) {
+            var item = jsonArray[i];
+            for (let columnName of columNames) {
+                // if (item[columnName] === undefined) {
+                //     console.log("Item #" + i + " is missing '" + columnName + "' column in " + jsonPath)
+                //     // verified = false; break;    
+                // } 
+
+                if (item[columnName] !== undefined && columnTypes[columnName] !== undefined && item[columnName] !== null) {
+                    var extType = columnTypes[columnName];
+                    var actType = typeof(item[columnName]);
+                    if (actType !== extType) {
+                        console.log("Correcting item #" + i + " - '" + columnName + "' column (" + item[columnName] + ") is '" + actType + "' instead of '" + extType + "' in " + jsonPath)
+                        
+                        if (columnName === "City") {
+                            jsonArray[i][columnName] = "Sao Paulo";
+                        }
+                        if (columnName === "ContactTitle") {
+                            jsonArray[i][columnName] = "Sales Associate";
+                        } 
+                        if (columnName === "Region") {
+                            jsonArray[i][columnName] = "Northeast";
+                        } 
+                        // fileCallback(null, file);
+                        // verified = false; 
+                    }
+                    // verified = false; 
+                } 
+            }
+            if (!verified) {
+                break;    
+            }
+        }
+        // saveJSON(jsonPath, jsonArray);
+
+        fileCallback(null, file);
+    })) 
+    .on("end", function() {
+        cb();
+     });
 }

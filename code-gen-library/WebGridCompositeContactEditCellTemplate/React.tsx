@@ -30,10 +30,10 @@ export class WebGridCompositeContactEditCellTemplate {
                         } value={cell.row.data.ContactTitle}></IgrInput>
                     <IgrInput label='Company' inputOcurred={(input: any, e: any) =>
                         {
-                            cell.row.data.CompanyName = e.detail;
+                            cell.row.data.Company = e.detail;
                             this.forceUpdate();
                         }
-                        } value={cell.row.data.CompanyName}></IgrInput>
+                        } value={cell.row.data.Company}></IgrInput>
                 </div>
             </>
         );

@@ -14,7 +14,7 @@ public webGridCellEditCellTemplate = (e: {dataContext: IgrCellTemplateContext}) 
     const field: string = this.grid1.getColumnByVisibleIndex(colIndex).field;
     const key = field + "_" + cell.id.rowID;
     let index = 0;
-    for(const i of (this.webGridCellEditSampleRoleplay as any)){
+    for(const i of (this.roleplayDataStats as any)){
         if(uniqueValues.indexOf(i[field]) === -1 )
         {
             cellValues.push(<><IgrSelectItem selected={e.dataContext.cell.value == i[field]}

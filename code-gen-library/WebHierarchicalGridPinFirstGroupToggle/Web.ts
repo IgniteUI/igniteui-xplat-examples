@@ -9,7 +9,7 @@ export class WebHierarchicalGridPinFirstGroupToggle {
     //begin eventHandler
     public webHierarchicalGridPinFirstGroupToggle(sender: any, args: IgcPropertyEditorPropertyDescriptionButtonClickEventArgs): void {
         const hgrid: IgcHierarchicalGridComponent = CodeGenHelper.getDescription<IgcHierarchicalGridComponent>("content");
-        const firstColumnGroup = hgrid.getColumnByName("CompanyName").parent;
+        const firstColumnGroup = hgrid.getColumnByName("Company").parent;
         firstColumnGroup.pinned = !firstColumnGroup.pinned;
         hgrid.markForCheck();
     }

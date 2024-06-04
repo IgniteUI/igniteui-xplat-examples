@@ -79,8 +79,8 @@
         },
         {
           "type": "WebColumn",
-          "field": "AnnualChange",
-          "header": "Annual Change",
+          "field": "YearlyChange",
+          "header": "Yearly Change",
           "dataType": "Number",
           "bodyTemplateRef": "WebGridCurrencyCellTemplate",
           "headerTemplateRef": "WebGridPinHeaderTemplate"

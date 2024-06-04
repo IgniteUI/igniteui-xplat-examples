@@ -28,7 +28,6 @@
       "dataSourceRef": "TemperatureAnnotatedData",
       "highlightingMode": "Brighten",
       "highlightingBehavior": "DirectlyOver",
-      "crosshairsAnnotationEnabled": false,
       "toolTipType": "None",
       "crosshairsDisplayMode": "None"
     }

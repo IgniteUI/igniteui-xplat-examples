@@ -30,7 +30,7 @@
         },
         {
           "type": "WebColumn",
-          "field": "CompanyName"
+          "field": "Company"
         }
       ]
     }

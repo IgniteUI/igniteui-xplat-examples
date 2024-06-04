@@ -9,7 +9,7 @@ export class WebGridPinFirstGroupToggle {
     //begin eventHandler
     public webGridPinFirstGroupToggle(sender: any, args: IgcPropertyEditorPropertyDescriptionButtonClickEventArgs): void {
         const grid: IgcGridComponent = CodeGenHelper.getDescription<IgcGridComponent>("content");
-        const firstColumnGroup = grid.getColumnByName("CompanyName").parent;
+        const firstColumnGroup = grid.getColumnByName("Company").parent;
         firstColumnGroup.pinned = !firstColumnGroup.pinned;
         grid.markForCheck();
     }

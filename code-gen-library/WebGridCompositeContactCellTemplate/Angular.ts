@@ -15,7 +15,7 @@ import {
                         <span><strong>Name:</strong> {{cell.row.data.ContactName}}</span>
                         <span><strong>Title:</strong> {{cell.row.data.ContactTitle}}</span>
                         <br />
-                        <span><strong>Company:</strong> {{cell.row.data.CompanyName}}</span>
+                        <span><strong>Company:</strong> {{cell.row.data.Company}}</span>
                         <br />
     </div>
     </ng-template>

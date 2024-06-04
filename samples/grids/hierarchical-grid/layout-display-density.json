@@ -33,7 +33,7 @@
           },
           {
             "type": "WebColumn",
-            "field": "CompanyName",
+            "field": "Company",
             "dataType": "String"
           },
           {

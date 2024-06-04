@@ -7,7 +7,7 @@
         "autoGenerate": false,
         "name": "grid",
         "id": "grid",
-        "primaryKey": "ID",
+        "primaryKey": "CustomerID",
         "columns": [
           {
             "type": "WebColumnGroup",
@@ -34,7 +34,7 @@
               },
               {
                 "type": "WebColumn",
-                "field": "CompanyName",
+                "field": "Company",
                 "header": "Company Name",
                 "visibleWhenCollapsed": false
               },

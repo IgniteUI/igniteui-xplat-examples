@@ -1,4 +1,6 @@
 {
+  "export": false,
+  "todo": "fix exporting to Blazor - https://github.com/IgniteUI/igniteui-xplat-examples/issues/603",
   "skipAlterDataCasing": true,
   "descriptions": {
     "content": {
@@ -14,7 +16,7 @@
         },
         {
           "type": "WebColumn",
-          "field": "CompanyName",
+          "field": "Company",
           "width": "auto",
           "resizable": true
         },

@@ -44,10 +44,10 @@ export class FinancialDataService extends Array<FinancialDataDetails> {
           ChangePercent: json.ChangePercent,
           High: json.High,
           Low: json.Low,
-          AnnualHigh: json.AnnualHigh,
-          AnnualLow: json.AnnualLow,
-          AnnualStart: json.AnnualStart,
-          AnnualChange: json.AnnualChange,
+          YearlyHigh: json.YearlyHigh,
+          YearlyLow: json.YearlyLow,
+          YearlyStart: json.YearlyStart,
+          YearlyChange: json.YearlyChange,
           ZV_SPREAD: json.ZV_SPREAD,
           KRD_3YR: json.KRD_3YR,
           KRD_5YR: json.KRD_5YR,
@@ -79,10 +79,10 @@ export class FinancialDataDetails {
     public Volume: number;
     public High: number;
     public Low: number;
-    public AnnualHigh: number;
-    public AnnualLow: number;
-    public AnnualStart: number;
-    public AnnualChange: number;
+    public YearlyHigh: number;
+    public YearlyLow: number;
+    public YearlyStart: number;
+    public YearlyChange: number;
     public Settlement: string;
     public Contract: string;
     public Region: string;

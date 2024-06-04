@@ -1,0 +1,32 @@
+{
+  "strings": {
+    "legendTitle": "Comparing Top Urban Population Percentages between North America & Asia"
+  },
+  "descriptions": {
+    "content": {
+      "type": "Treemap",
+      "name": "treemap",
+      "dataSourceRef": "CountryTopUrbanPopData",
+      "parentIdMemberPath": "Parent",
+      "idMemberPath": "Name",
+      "labelMemberPath": "Name",
+      "valueMemberPath": "Population",
+      "highlightedValueMemberPath": "UrbanPopulation",
+      "highlightedValuesDisplayMode": "Overlay",
+      "fillBrushes": ["#FC4100", "#FFC55A", "#00215E", "#2C4E80"],
+      "rootTitle": "Continents",
+      "headerDisplayMode": "Auto",
+      "isFillScaleLogarithmic": true,
+      "labelVerticalAlignment": "Top",
+      "parentNodeTopMargin": 10,
+      "fillScaleMode": "Value",
+      "textColor": "black",
+      "fontSize": 25,
+      "fontWeight": "Bold"
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "charts/TreemapModule"
+  ]
+}
