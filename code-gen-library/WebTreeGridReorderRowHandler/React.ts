@@ -1,5 +1,5 @@
 //begin imports
-import { IgrTreeGridComponent } from 'igniteui-react-grids';
+import { IgrTreeGridComponent, IgrRowDragEndEventArgs } from 'igniteui-react-grids';
 //end imports
 
 import { CodeGenHelper } from 'igniteui-webcomponents-core';
