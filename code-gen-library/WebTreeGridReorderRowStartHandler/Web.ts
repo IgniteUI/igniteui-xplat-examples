@@ -1,5 +1,5 @@
 //begin imports
-import { IgcTreeGridComponent, IgcRowDragEndEventArgs } from 'igniteui-webcomponents-grids/grids';
+import { IgcTreeGridComponent, IgcRowDragStartEventArgs } from 'igniteui-webcomponents-grids/grids';
 //end imports
 
 import { CodeGenHelper } from 'igniteui-webcomponents-core';
