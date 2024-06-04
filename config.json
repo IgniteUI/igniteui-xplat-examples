@@ -30,7 +30,8 @@
       "name": "Blazor",
       "exclusions": [
         { "reason": "toolbarTemplate isn't in Blazor product", "path": "grids\\hierarchical-grid\\toolbar-sample-1.json" },
-        { "reason": "toolbarTemplate isn't in Blazor product", "path": "grids\\hierarchical-grid\\toolbar-sample-2.json" }
+        { "reason": "toolbarTemplate isn't in Blazor product", "path": "grids\\hierarchical-grid\\toolbar-sample-2.json" },
+        { "reason": "summary formatter isn't working for Blazor product", "path": "grids\\tree-grid\\data-summary-formatter.json" }
       ]
     },
     {

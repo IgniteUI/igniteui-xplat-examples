@@ -12,15 +12,21 @@
       "properties": [
         {
           "type": "PropertyEditorPropertyDescription",
-          "propertyPath": "SummaryCalculationMode",
+          "name": "SummaryCalculationModeEditor",
           "label": "Summary Calculation Mode",
-          "name": "SummaryCalculationModeEditor"
+          "valueType": "EnumValue",
+          "dropDownNames": ["rootLevelOnly", "childLevelsOnly", "rootAndChildLevels"],
+          "dropDownValues": ["rootLevelOnly", "childLevelsOnly", "rootAndChildLevels"],
+          "changedRef": "WebTreeGridChangeSummaryCalculationMode"
         },
         {
           "type": "PropertyEditorPropertyDescription",
-          "propertyPath": "SummaryPosition",
+          "name": "SummaryPositionEditor",
           "label": "Summary Position",
-          "name": "SummaryPositionEditor"
+          "valueType": "EnumValue",
+          "dropDownNames": ["top", "bottom"],
+          "dropDownValues": ["top", "bottom"],
+          "changedRef": "WebTreeGridChangeSummaryPosition"
         },
         {
           "type": "PropertyEditorPropertyDescription",
