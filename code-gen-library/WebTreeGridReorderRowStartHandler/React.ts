@@ -1,5 +1,5 @@
 //begin imports
-import { IgrHierarchicalGridComponent } from 'igniteui-react-grids';
+import { IgrRowDragStartEventArgs } from 'igniteui-react-grids';
 //end imports
 
 import { CodeGenHelper } from 'igniteui-webcomponents-core';
