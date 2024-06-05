@@ -15,6 +15,7 @@
           "type": "PropertyEditorPropertyDescription",
           "propertyPath": "CellSelection",
           "name": "CellSelectionEditor",
+          "label": "Cell Selection",
           "valueType": "EnumValue",
           "dropDownNames": ["None", "Single", "Multiple"],
           "dropDownValues": ["None", "Single", "Multiple"]
