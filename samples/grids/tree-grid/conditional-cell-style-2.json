@@ -1,0 +1,46 @@
+{
+    "skipAlterDataCasing": true,
+    "descriptions": {
+      "content": {
+        "type": "WebTreeGrid",
+        "name": "treeGrid",
+        "id": "treeGrid",
+        "dataRef": "OrdersTreeData",
+        "primaryKey": "ID",
+        "foreignKey": "ParentID",
+        "columns": [
+          {
+            "type": "WebColumn",
+            "field": "ID",
+            "header": "Order ID",
+            "dataType": "String",
+            "cellStylesRef": "WebTreeGridCellStylesHandler"
+          },
+          {
+            "type": "WebColumn",
+            "field": "Name",
+            "header": "Order Product",
+            "dataType": "String",
+            "cellStylesRef": "WebTreeGridCellStylesHandler"
+          },
+          {
+            "type": "WebColumn",
+            "field": "UnitPrice",
+            "header": "Unit Price",
+            "dataType": "Currency",
+            "cellStylesRef": "WebTreeGridCellStylesHandler"
+          },
+          {
+            "type": "WebColumn",
+            "field": "OrderDate",
+            "header": "Order Date",
+            "cellStylesRef": "WebTreeGridCellStylesHandler"
+          }
+        ]
+      }
+    },
+    "modules": [
+      "grids/WebTreeGridModule"
+    ]
+  }
+  
