@@ -1,5 +1,5 @@
 {
-  "todo": [ "" ],
+  "todo": [""],
   "export": true,
   "skipAlterDataCasing": true,
   "descriptions": {
@@ -21,7 +21,8 @@
               "type": "WebGridToolbarActions",
               "actions": [
                 {
-                  "type": "WebGridToolbarHiding"
+                  "type": "WebGridToolbarHiding",
+                  "title": "Column Hiding"
                 }
               ]
             }
@@ -100,6 +101,7 @@
   },
   "modules": [
     "withDescriptions",
+    "grids/WebGridToolbarModule",
     "grids/WebTreeGridModule"
   ]
 }
