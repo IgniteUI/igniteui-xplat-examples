@@ -1,52 +1,49 @@
 {
-    "export": true,
-    "skipAlterDataCasing": true,
-    "descriptions": {
-      "content": {
-        "name": "treeGrid",
-        "type": "WebTreeGrid",
-        "dataRef": "EmployeesNestedTreeData",    
-        "rowEditable": true,
-        "autoGenerate": false,
-        "primaryKey": "ID",      
-        "foreignKey": "ParentID",
-        "cellSelection": "None",
-        "pinning": {
-          "type": "WebPinningConfig",
-          "rows": "Top"
+  "export": true,
+  "skipAlterDataCasing": true,
+  "descriptions": {
+    "content": {
+      "name": "treeGrid",
+      "type": "WebTreeGrid",
+      "dataRef": "EmployeesNestedTreeData",
+      "rowEditable": true,
+      "autoGenerate": false,
+      "primaryKey": "ID",
+      "foreignKey": "ParentID",
+      "cellSelection": "None",
+      "pinning": {
+        "type": "WebPinningConfig",
+        "rows": "Top"
+      },
+      "columns": [
+        {
+          "type": "WebColumn",
+          "width": "150px",
+          "filterable": false,
+          "pinned": true,
+          "bodyTemplateRef": "WebTreeGridRowPinCellTemplate"
         },
-        "columns": [
-          {
-            "type": "WebColumn",
-            "width": "150px",
-            "filterable": false,
-            "pinned": true,
-            "bodyTemplateRef": "WebTreeGridRowPinCellTemplate"
-          },
-          {
-            "type": "WebColumn",
-            "field": "Name",
-            "header": "Full Name"
-          },
-          {
-            "type": "WebColumn",
-            "field": "Age",
-            "dataType": "Number"
-          },
-          {
-            "type": "WebColumn",
-            "field": "Title"
-          },
-          {
-            "type": "WebColumn",
-            "field": "HireDate",
-            "dataType": "Date"
-          }
-        ]
-      }
-    },
-    "modules": [
-      "withDescriptions",
-      "grids/WebTreeGridModule"
-    ]
-  }
+        {
+          "type": "WebColumn",
+          "field": "Name",
+          "header": "Full Name"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Age",
+          "dataType": "Number"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Title"
+        },
+        {
+          "type": "WebColumn",
+          "field": "HireDate",
+          "dataType": "Date"
+        }
+      ]
+    }
+  },
+  "modules": ["withDescriptions", "grids/WebTreeGridModule"]
+}
