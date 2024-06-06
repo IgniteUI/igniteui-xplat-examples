@@ -54,7 +54,3 @@ igRegisterScript("WebTreeGridSummaryTemplate", (ctx) => {
     </div>`;
 }, false);
 //end template
-
-
-
-
