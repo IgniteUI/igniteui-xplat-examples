@@ -10,11 +10,11 @@
       "name": "treeGrid",
       "id": "treeGrid",
       "primaryKey": "ID",
-      "foreignKey": "ParentID",	
+      "foreignKey": "ParentID",
       "rowSelection": "Multiple",
       "rowSelectionChangingRef": "WebTreeGridRowSelectionConditional",
       "columns": [
-	{
+        {
           "type": "WebColumn",
           "field": "Name",
           "dataType": "String"
@@ -42,8 +42,5 @@
       ]
     }
   },
-  "modules": [
-    "withDescriptions",
-    "grids/WebTreeGridModule"
-  ]
+  "modules": ["withDescriptions", "grids/WebTreeGridModule"]
 }
