@@ -1,3 +1,4 @@
+//begin template
 igRegisterScript("WebTreeGridSummaryTemplate", (ctx) => {
     const style = document.createElement('style');
     style.innerHTML = `
@@ -52,7 +53,4 @@ igRegisterScript("WebTreeGridSummaryTemplate", (ctx) => {
         <span><strong>${summaryResults[3].label}</strong><span>${summaryResults[3].summaryResult}</span></span>
     </div>`;
 }, false);
-
-
-
-
+//end template
