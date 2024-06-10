@@ -5,7 +5,7 @@ import { html, nothing } from 'lit-html';
 
 import { CodeGenHelper } from 'igniteui-webcomponents-core';
 
-export class WebTreeGridPinHeaderTemplateComponent {
+export class WebTreeGridPinHeaderTemplate {
 //begin template
 //begin content
 public webTreeGridPinHeaderTemplate = (ctx: IgcColumnTemplateContext) => {
