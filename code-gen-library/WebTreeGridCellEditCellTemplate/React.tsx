@@ -11,10 +11,10 @@ public webTreeGridCellEditCellTemplate = (e: {dataContext: IgrCellTemplateContex
     let uniqueValues: any = [];
     const cell = e.dataContext.cell;
     const colIndex = cell.id.columnID;
-    const field: string = this.grid1.getColumnByVisibleIndex(colIndex).field;
+    const field: string = this.treeGrid1.getColumnByVisibleIndex(colIndex).field;
     const key = field + "_" + cell.id.rowID;
     let index = 0;
-    for(const i of (this.roleplayDataStats as any)){
+    for(const i of (this.roleplayTreeGridData as any)){
         if(uniqueValues.indexOf(i[field]) === -1 )
         {
             cellValues.push(<><IgrSelectItem selected={e.dataContext.cell.value == i[field]}

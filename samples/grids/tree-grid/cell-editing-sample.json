@@ -1,60 +1,57 @@
 {
-  "export": true,
   "skipAlterDataCasing": true,
   "descriptions": {
     "content": {
       "type": "WebTreeGrid",
-      "id": "treeGrid",
-      "name": "treeGrid",
-      "dataRef": "OrdersTreeData",
+      "dataRef": "RoleplayTreeGridData",
       "autoGenerate": false,
-      "primaryKey": "ID",
-      "foreignKey": "ParentID",
+      "childDataKey": "Party",
+      "primaryKey": "Name",
       "columns": [
         {
           "type": "WebColumn",
           "field": "Name",
+          "header": "Character Name",
           "dataType": "String"
         },
         {
           "type": "WebColumn",
-          "field": "Category",
+          "field": "Race",
+          "header": "Race",
           "dataType": "String",
+          "inlineEditorTemplateRef": "WebTreeGridCellEditCellTemplate",
+          "editable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "Class",
+          "header": "Class",
+          "inlineEditorTemplateRef": "WebTreeGridCellEditCellTemplate",
           "editable": true,
-          "inlineEditorTemplateRef": "WebTreeGridCellEditCellTemplate"
+          "dataType": "String"
         },
         {
           "type": "WebColumn",
-          "field": "Units",
-          "dataType": "Number",
+          "field": "Age",
+          "header": "Age",
+          "dataType": "String",
           "editable": true
         },
         {
           "type": "WebColumn",
-          "field": "UnitPrice",
-          "header": "Unit Price",
-          "dataType": "Number",
-          "editable": true
-        },
-        {
-          "type": "WebColumn",
-          "field": "OrderDate",
-          "header": "Order Date",
-          "dataType": "Date",
-          "editable": true
-        },
-        {
-          "type": "WebColumn",
-          "field": "Delivered",
-          "dataType": "Boolean",
-          "editable": true
+          "field": "Alignment",
+          "header": "Alignment",
+          "inlineEditorTemplateRef": "WebTreeGridCellEditCellTemplate",
+          "editable": true,
+          "dataType": "String"
+
         }
       ]
     }
   },
   "modules": [
     "withDescriptions",
-    "grids/WebTreeGridModule",
+    "grids/WebGridModule",
     "webinputs/WebSelectModule"
   ]
 }
