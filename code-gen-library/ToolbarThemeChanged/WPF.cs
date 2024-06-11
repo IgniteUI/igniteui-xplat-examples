@@ -10,22 +10,29 @@ using System.Windows.Media;
 public class ToolbarThemeChanged
 {
 	//begin eventHandler
-	//WPF: Infragistics.Controls.Layouts.PropertyEditorPropertyDescriptionChangedEventHandler
-	private void ToolbarThemeChanged(object sender, PropertyEditorPropertyDescriptionChangedEventArgs e)
+	//WPF: Infragistics.Controls.Layouts.ToolCommandEventHandler
+	public void ToolbarThemeChanged(object sender, ToolCommandEventArgs e)
 	{
 		var target = CodeGenHelper.GetDescription<XamDataChart>("content");
 		
-		 
-
 		switch (e.Command.CommandId)
 		{
-			case "Default":
-			case "DenaliLight":
-			case "MaterialLight":
-			case "SlinsghotLight":
-			case "SlingshotDark":
-			case "RevealLight":
-			case "RevealDark":
+			case "EnableTooltips":
+                Series toRemove = null;
+                foreach (var s in target.Series)
+                {
+                    if (s is DataToolTipLayer)
+                    {
+                        toRemove = s;
+                    }
+                }
+               
+                if (toRemove == null) {
+                    target.Series.Add(new DataToolTipLayer());
+                } else {
+                    target.Series.Remove(toRemove);
+                }
+				break;
 		}
 	}
 	//end eventHandler
