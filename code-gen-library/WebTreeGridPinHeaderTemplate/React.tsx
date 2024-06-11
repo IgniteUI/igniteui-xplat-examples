@@ -17,7 +17,7 @@ public webTreeGridPinHeaderTemplate = (props: {dataContext: IgrColumnTemplateCon
 //end content
 //begin supportingMethods
 public toggleColumnPin(field: string) {
-    var grid = this.grid;
+    var grid = this.treeGrid;
     var col = grid.getColumnByName(field);
     col.pinned = !col.pinned;
     grid.markForCheck();
