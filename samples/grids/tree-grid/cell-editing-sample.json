@@ -1,12 +1,15 @@
 {
+  "export": true,
   "skipAlterDataCasing": true,
   "descriptions": {
     "content": {
       "type": "WebTreeGrid",
+      "name": "treeGrid1",
+      "id": "treeGrid1",
       "dataRef": "RoleplayTreeGridData",
+      "primaryKey": "ID",
+      "foreignKey": "ParentID",
       "autoGenerate": false,
-      "childDataKey": "Party",
-      "primaryKey": "Name",
       "columns": [
         {
           "type": "WebColumn",
@@ -19,16 +22,16 @@
           "field": "Race",
           "header": "Race",
           "dataType": "String",
-          "inlineEditorTemplateRef": "WebTreeGridCellEditCellTemplate",
-          "editable": true
+          "editable": true,
+          "inlineEditorTemplateRef": "WebTreeGridCellEditCellTemplate"
         },
         {
           "type": "WebColumn",
           "field": "Class",
           "header": "Class",
           "inlineEditorTemplateRef": "WebTreeGridCellEditCellTemplate",
-          "editable": true,
-          "dataType": "String"
+          "dataType": "String",
+          "editable": true
         },
         {
           "type": "WebColumn",
@@ -42,16 +45,14 @@
           "field": "Alignment",
           "header": "Alignment",
           "inlineEditorTemplateRef": "WebTreeGridCellEditCellTemplate",
-          "editable": true,
-          "dataType": "String"
-
+          "dataType": "String",
+          "editable": true
         }
       ]
     }
   },
   "modules": [
     "withDescriptions",
-    "grids/WebGridModule",
-    "webinputs/WebSelectModule"
+    "grids/WebTreeGridModule"
   ]
 }
