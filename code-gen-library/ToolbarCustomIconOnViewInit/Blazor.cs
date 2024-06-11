@@ -3,11 +3,14 @@ using IgniteUI.Blazor.Controls;
 using System;
 //end imports
 
+import { CodeGenHelper } from 'igniteui-webcomponents-core';
+
 public class ToolbarCustomIconOnViewInit
 {
     //begin eventHandler
     public void ToolbarCustomIconOnViewInit()
 	{
+		var toolbar = CodeGenHelper.GetDescription<IgbToolbar>("content");
 		this.toolbar.EnsureReady().ContinueWith(new Action<Task>((e) =>
 		{
 			string icon =

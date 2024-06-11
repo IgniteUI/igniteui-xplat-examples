@@ -3,7 +3,7 @@
   "descriptions": {
     "content": {
       "type": "Toolbar",
-      "name": "Toolbar",
+      "name": "toolbar",
       "orientation": "Horizontal",
       "actions": [
         {
