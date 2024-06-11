@@ -18,6 +18,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 //end imports
+
 import { CodeGenHelper } from 'igniteui-webcomponents-core';
 	
 public class ToolbarCustomIconOnViewInit
