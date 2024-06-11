@@ -4,49 +4,48 @@
   "descriptions": {
     "content": {
       "type": "WebTreeGrid",
-      "id": "treeGrid",
-      "name": "treeGrid",
-      "dataRef": "OrdersTreeData",
-      "autoGenerate": false,
+      "name": "treeGrid1",
+      "id": "treeGrid1",
+      "dataRef": "RoleplayTreeGridData",
       "primaryKey": "ID",
       "foreignKey": "ParentID",
+      "autoGenerate": false,
       "columns": [
         {
           "type": "WebColumn",
           "field": "Name",
+          "header": "Character Name",
           "dataType": "String"
         },
         {
           "type": "WebColumn",
-          "field": "Category",
+          "field": "Race",
+          "header": "Race",
           "dataType": "String",
           "editable": true,
           "inlineEditorTemplateRef": "WebTreeGridCellEditCellTemplate"
         },
         {
           "type": "WebColumn",
-          "field": "Units",
-          "dataType": "Number",
+          "field": "Class",
+          "header": "Class",
+          "inlineEditorTemplateRef": "WebTreeGridCellEditCellTemplate",
+          "dataType": "String",
           "editable": true
         },
         {
           "type": "WebColumn",
-          "field": "UnitPrice",
-          "header": "Unit Price",
-          "dataType": "Number",
+          "field": "Age",
+          "header": "Age",
+          "dataType": "String",
           "editable": true
         },
         {
           "type": "WebColumn",
-          "field": "OrderDate",
-          "header": "Order Date",
-          "dataType": "Date",
-          "editable": true
-        },
-        {
-          "type": "WebColumn",
-          "field": "Delivered",
-          "dataType": "Boolean",
+          "field": "Alignment",
+          "header": "Alignment",
+          "inlineEditorTemplateRef": "WebTreeGridCellEditCellTemplate",
+          "dataType": "String",
           "editable": true
         }
       ]
@@ -54,7 +53,6 @@
   },
   "modules": [
     "withDescriptions",
-    "grids/WebTreeGridModule",
-    "webinputs/WebSelectModule"
+    "grids/WebTreeGridModule"
   ]
 }
