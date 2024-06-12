@@ -52,9 +52,10 @@
     }
 
     //begin supportingMethods
-    public formatCurrency(val: string)
+    public string FormatCurrency(string val)
     {
-        return parseInt(val, 10).toFixed(2);
+        var numberVal = Double.Parse(val);
+        return numberVal.ToString("C");
     }
     //end supportingMethods
 }

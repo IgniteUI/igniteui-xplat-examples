@@ -9,10 +9,10 @@ public class ToolbarThemeChanged
 {
 
     //begin eventHandler
-    public void ToolbarThemeChanged(IgbPropertyEditorPropertyDescriptionChangedEventArgs args)
+    public void ToolbarThemeChanged(IgbToolCommandEventArgs e)
     {
         var target = CodeGenHelper.GetDescription<IgbDataChart>("content");
-        switch (args.Command.CommandId)
+        switch (e.Command.CommandId)
 		{
 			case "EnableTooltips":
                 IgbSeries toRemove = null;

@@ -10,9 +10,10 @@ public class WebTreeGridHasSummariesChange
     {
         bool newValue = bool.Parse(args.NewValue.ToString());
 
-        var column1 = this.treeGrid.ActualColumns[1];
-        var column2 = this.treeGrid.ActualColumns[2];
-        var column3 = this.treeGrid.ActualColumns[4];
+        var treeGrid = CodeGenHelper.GetDescription<IgbTreeGrid>("content");
+        var column1 = treeGrid.ActualColumns[1];
+        var column2 = treeGrid.ActualColumns[2];
+        var column3 = treeGrid.ActualColumns[4];
 
         column1.HasSummary = newValue;
         column2.HasSummary = newValue;
