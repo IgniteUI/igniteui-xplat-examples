@@ -34,7 +34,7 @@ public class ToolbarCustomIconOnViewInit
 		";
 
 		SvgIconRegistry.Instance.AddSvgPathString("CustomCollection", "CustomIcon", Icon);
-		this.toolbar.RegisterIconFromText("CustomCollection", "CustomIcon", Icon);
+		toolbar.RegisterIconFromText("CustomCollection", "CustomIcon", Icon);
 	}
     //end eventHandler
 }
