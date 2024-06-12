@@ -1,6 +1,9 @@
 export class CategoryChartCustomSelectionPointerDown {
     //begin eventHandler
     public categoryChartCustomSelectionPointerDown(o: any, e: any): void {
+
+        var chart = CodeGenHelper.GetDescription<IgcCategoryChartComponent>("content");
+        var selectableData = (SelectableData)chart.datasource;
     	let oldItem = e.item as SelectableDataItem;
 
         if (oldItem === null) return;
@@ -12,8 +15,8 @@ export class CategoryChartCustomSelectionPointerDown {
         });
 
         var selectedIndex = -1;
-        for (var i = 0; i < this.selectableData.length; i++) {
-            if (oldItem.category === this.selectableData[i].category) {
+        for (var i = 0; i < selectableData.length; i++) {
+            if (oldItem.category === selectableData[i].category) {
                 selectedIndex = i;
                 break;
             }
@@ -24,7 +27,7 @@ export class CategoryChartCustomSelectionPointerDown {
         else
             newItem.selectedValue = newItem.dataValue;
 
-        this.chart.notifySetItem(this.selectableData, selectedIndex, oldItem, newItem);
+        chart.notifySetItem(selectableData, selectedIndex, oldItem, newItem);
     }
     //end eventHandler
 }

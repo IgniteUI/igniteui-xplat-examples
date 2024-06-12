@@ -9,7 +9,10 @@ import { CodeGenHelper } from 'igniteui-webcomponents-core';
 export class ScatterBubbleSeriesFillScaleSliderChanged {
     //begin eventHandler
     public scatterBubbleSeriesFillScaleSliderChanged(sender: any, args: IgcPropertyEditorPropertyDescriptionChangedEventArgs): void {
-        let series: IgcBubbleSeriesComponent = this.chart.actualSeries[0] as IgcBubbleSeriesComponent;
+
+        var chart = CodeGenHelper.GetDescription<IgcDataChartComponent>("content");
+
+        let series: IgcBubbleSeriesComponent = chart.actualSeries[0] as IgcBubbleSeriesComponent;
 
         let fillScale = (series.fillScale as any);
 
