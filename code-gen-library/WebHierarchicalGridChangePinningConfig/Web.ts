@@ -1,5 +1,6 @@
 //begin imports
 import { IgcPropertyEditorPropertyDescriptionChangedEventArgs } from 'igniteui-webcomponents-layouts';
+import { IgcHierarchicalGridComponent, IgcRowIslandComponent, RowPinningPosition } from 'igniteui-webcomponents-grids/grids';
 //end imports
 
 export class WebHierarchicalGridChangePinningConfig {

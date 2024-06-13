@@ -1,5 +1,5 @@
 //begin imports
-import { IgxPropertyEditorPanelComponent, PropertyEditorValueType } from 'igniteui-angular-layouts';
+import { IgxPropertyEditorPanelComponent, PropertyEditorValueType, IgxPropertyEditorPropertyDescriptionComponent } from 'igniteui-angular-layouts';
 //end imports
 
 
@@ -29,14 +29,14 @@ export class PropertyEditorInitAggregationsOnViewInit {
 
         initialSummariesDropdown.changed.subscribe((event: { sender: any, args: IgxPropertyEditorPropertyDescriptionChangedEventArgs }) => { 
 
-            var chart = this.chart;
+            var chart = CodeGenHelper.getDescription<IgcCategoryChart>("content");
             var intialSummaryVal = event.args.newValue.toString();
             chart.initialSummaries = intialSummaryVal;
         });
 
         sortGroupsDropdown.changed.subscribe((event: { sender: any, args: IgxPropertyEditorPropertyDescriptionChangedEventArgs }) => { 
         
-            var chart = this.chart;
+            var chart = CodeGenHelper.getDescription<IgcCategoryChart>("content");
             var groupSortsVal = event.args.newValue.toString();
             chart.groupSorts = groupSortsVal;
         });

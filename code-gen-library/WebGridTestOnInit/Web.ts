@@ -1,5 +1,5 @@
 //begin imports
-import { IgcGridComponent, FilteringMode } from 'igniteui-webcomponents-grids/grids';
+import { IgcGridComponent } from 'igniteui-webcomponents-grids/grids';
 //end imports
 
 import { CodeGenHelper } from 'igniteui-webcomponents-core';

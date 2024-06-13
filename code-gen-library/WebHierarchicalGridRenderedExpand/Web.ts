@@ -7,8 +7,10 @@ import { CodeGenHelper } from 'igniteui-webcomponents-core';
 export class WebHierarchicalGridRenderedExpand {
     //begin eventHandler
     public webHierarchicalGridRenderedExpand(args:any): void {
-        this.debutColumn.formatter = (value: number) => Math.floor(value / 10) * 10 + 's';
-        this.hierarchicalGrid.expandAll();
+        let debutColumn = CodeGenHelper.findByName<IgcColumnComponent>("debutColumn");
+        let hierarchicalGrid = CodeGenHelper.getDescription<IgcHierarchicalGridComponent>("content");
+        debutColumn.formatter = (value: number) => Math.floor(value / 10) * 10 + 's';
+        hierarchicalGrid.expandAll();
     }
     //end eventHandler
 }

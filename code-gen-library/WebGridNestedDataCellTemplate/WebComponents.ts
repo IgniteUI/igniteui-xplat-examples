@@ -21,6 +21,7 @@ public webGridNestedDataCellTemplate = (ctx: IgcCellTemplateContext) => {
     </igc-expansion-panel>
         `;
     }
+    return nothing;
 };
 //end content
 //end template

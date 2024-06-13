@@ -1,12 +1,13 @@
 //begin imports
+import { IgcHierarchicalGridComponent } from 'igniteui-webcomponents-grids/grids';
 //end imports
 
 export class WebHierarchicalGridPinRowOnRendered {
     //begin eventHandler
     public webHierarchicalGridPinRowOnRendered(): void {
-		var hierarchicalGrid = document.getElementById("grid") as IgcHierarchicalGridComponent;
-		hierarchicalGrid.pinRow(this.singersData[0].Photo);
-		hierarchicalGrid.pinRow(this.singersData[1].Photo);
+		var hierarchicalGrid = CodeGenHelper.getDescription<IgcHierarchicalGridComponent>("content");
+		hierarchicalGrid.pinRow(hierarchicalGrid.data[0].Photo);
+		hierarchicalGrid.pinRow(hierarchicalGrid.data[1].Photo);
     }
     //end eventHandler
 }

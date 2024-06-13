@@ -1,6 +1,6 @@
 //begin imports
 import { IgcPropertyEditorPropertyDescriptionChangedEventArgs, IgcPropertyEditorPropertyDescriptionComponent } from 'igniteui-webcomponents-layouts';
-import { IgcBubbleSeriesComponent } from 'igniteui-webcomponents-charts';
+import { IgcBubbleSeriesComponent, IgcDataChartComponent } from 'igniteui-webcomponents-charts';
 import { EnumUtil } from 'igniteui-webcomponents-core';
 //end imports
 
@@ -10,7 +10,7 @@ export class ScatterBubbleSeriesFillScaleSliderChanged {
     //begin eventHandler
     public scatterBubbleSeriesFillScaleSliderChanged(sender: any, args: IgcPropertyEditorPropertyDescriptionChangedEventArgs): void {
 
-        var chart = CodeGenHelper.GetDescription<IgcDataChartComponent>("content");
+        var chart = CodeGenHelper.getDescription<IgcDataChartComponent>("content");
 
         let series: IgcBubbleSeriesComponent = chart.actualSeries[0] as IgcBubbleSeriesComponent;
 

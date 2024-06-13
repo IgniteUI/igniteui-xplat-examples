@@ -1,10 +1,16 @@
+//begin imports
+import { IgcCategoryChartComponent } from 'igniteui-webcomponents-charts';
+import { IgcDomainChartSeriesPointerEventArgs } from 'igniteui-webcomponents-charts';
+import { SelectableData, SelectableDataItem } from './SelectableData';
+//end imports
+
 export class CategoryChartCustomSelectionPointerDown {
     //begin eventHandler
-    public categoryChartCustomSelectionPointerDown(o: any, e: any): void {
+    public categoryChartCustomSelectionPointerDown(sender: any, args: IgcDomainChartSeriesPointerEventArgs): void {
 
-        var chart = CodeGenHelper.GetDescription<IgcCategoryChartComponent>("content");
-        var selectableData = (SelectableData)chart.datasource;
-    	let oldItem = e.item as SelectableDataItem;
+        var chart = CodeGenHelper.getDescription<IgcCategoryChartComponent>("content");
+        var selectableData = chart.dataSource as SelectableData;
+    	let oldItem = args.item as SelectableDataItem;
 
         if (oldItem === null) return;
 

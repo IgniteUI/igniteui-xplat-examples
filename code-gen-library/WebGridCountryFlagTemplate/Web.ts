@@ -5,10 +5,12 @@ import { IgcGridComponent } from 'igniteui-webcomponents-grids/grids';
 import { CodeGenHelper } from 'igniteui-webcomponents-core';
 
 export class WebGridCountryFlagTemplate {
-    //begin eventHandler
+    //begin template
+    //begin content
     public webGridCountryFlagTemplate(args: any): void {
         console.log("TODO" + args);
 		//TODO
     }
-    //end eventHandler
+    //end content
+    //end template
 }

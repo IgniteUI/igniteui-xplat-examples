@@ -7,7 +7,7 @@ export class WebGridPasteModeChange {
     public webGridPasteModeChange(sender: any, args: IgcPropertyEditorPropertyDescriptionChangedEventArgs): void {
         var item = sender as IgcPropertyEditorPropertyDescriptionComponent;        
         var newVal = item.primitiveValue;
-        this["pasteMode"] = newVal === "NewRecords" ? "Paste data as new records" : "Paste starting from active cell";
+        (this as any)["pasteMode"] = newVal === "NewRecords" ? "Paste data as new records" : "Paste starting from active cell";
     }
     //end eventHandler
 }
