@@ -1,6 +1,7 @@
 {
   "todo": [ "add WebTreeGridIconCellTemplate to code-gen library" ],
-  "export": false,
+  "export": true,
+  "skipAlterDataCasing": true,
   "onInit": ["WebTreeGridCellEditingStyleTemplate"],
   "descriptions": {
     "content": {
@@ -50,8 +51,7 @@
           "field": "OnPTO",
           "dataType": "Boolean",
           "editable": true,
-          "width": "130px",
-          "bodyTemplateRef": "WebTreeGridIconCellTemplate"
+          "width": "130px"
         }
       ]
     }
