@@ -13,7 +13,9 @@
       "isNeedleDraggingEnabled": true,
       "isHighlightNeedleDraggingEnabled": true,
       "highlightValueDisplayMode": "Overlay",
-      "highlightValue": 25
+      "highlightValue": 25,
+      "highlightLabelDisplaysValue":false,
+      "highlightLabelText": "test"
     }
   },
   "modules": [
