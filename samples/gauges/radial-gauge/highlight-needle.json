@@ -6,16 +6,15 @@
       "name": "gauge",
       "minimumValue": 0,
       "maximumValue": 100,
-      "value": 75,
+      "value": 30,
       "interval": 10,
       "labelInterval": 10,
       "labelExtent": 0.65,
-      "isNeedleDraggingEnabled": true,
       "isHighlightNeedleDraggingEnabled": true,
       "highlightValueDisplayMode": "Overlay",
-      "highlightValue": 25,
-      "highlightLabelDisplaysValue":false,
-      "highlightLabelText": "test"
+      "highlightValue": 50,
+      "highlightLabelDisplaysValue": true,
+      "highlightLabelSnapsToNeedlePivot": true
     }
   },
   "modules": [
