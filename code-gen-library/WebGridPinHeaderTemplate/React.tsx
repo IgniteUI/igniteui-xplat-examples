@@ -1,5 +1,5 @@
 //begin imports
-import { IgrGridComponent, IgrColumnTemplateContext} from 'igniteui-react-grids';
+import { IgrGrid, IgrColumnTemplateContext} from 'igniteui-react-grids';
 //end imports
 
 export class WebGridPinHeaderTemplateComponent {
@@ -17,7 +17,7 @@ public webGridPinHeaderTemplate = (props: {dataContext: IgrColumnTemplateContext
 //end content
 //begin supportingMethods
 public toggleColumnPin(field: string) {
-    var grid = this.grid;
+    var grid = CodeGenHelper.getDescription<IgrGrid>("content");
     var col = grid.getColumnByName(field);
     col.pinned = !col.pinned;
     grid.markForCheck();

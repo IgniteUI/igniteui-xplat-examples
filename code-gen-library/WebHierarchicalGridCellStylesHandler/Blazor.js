@@ -1,4 +1,4 @@
-//begin template
+//begin eventHandler
 igRegisterScript("WebHierarchicalGridCellStylesHandler", () => {
     return {
         background: (rowData, columnKey, cellValue, rowIndex) => rowIndex % 2 === 0 ? "#EFF4FD" : null,
@@ -10,4 +10,4 @@ igRegisterScript("WebHierarchicalGridCellStylesHandler", () => {
         }
     };
 }, true);
-//end template
+//end eventHandler

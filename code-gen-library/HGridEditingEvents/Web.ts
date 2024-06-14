@@ -1,5 +1,5 @@
 //begin imports
-import { IgcGridEditEventArgs } from 'igniteui-webcomponents-grids/grids';
+import { IgcGridEditEventArgs, IgcHierarchicalGridComponent } from 'igniteui-webcomponents-grids/grids';
 //end imports
 
 export class HGridEditingEvents {

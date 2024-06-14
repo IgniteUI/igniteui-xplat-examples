@@ -6,12 +6,10 @@ import { IgcGridComponent, IgcRowType } from 'igniteui-webcomponents-grids/grids
 import { CodeGenHelper } from 'igniteui-webcomponents-core';
 
 export class WebHierarchicalGridRowStylesHandler {
-//begin template
-//begin content
+//begin eventHandler
     public webHierarchicalGridRowStylesHandler = {
         background:(row: IgcRowType) => row.data['HasGrammyAward'] ? '#eeddd3' : '#f0efeb',
         'border-left': (row: IgcRowType) => row.data['HasGrammyAward'] ? '2px solid #dda15e' : null
     };
-//end content
-//end template
+//end eventHandler
 }

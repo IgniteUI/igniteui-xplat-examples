@@ -10,6 +10,7 @@ import {
 //begin template
 @Component({
     template: `
+<!--begin content-->
      <ng-template #template igxGroupByRow let-groupRow>
         <div class="igx-group-label">
             <igx-icon family="material" class="igx-group-label__icon">group_work</igx-icon>
@@ -21,6 +22,7 @@ import {
             <span style ="color:#09f;"> Ordered in 2017:</span><span class="igx-badge__circle igx-badge__circle--default" >{{ calc2017(groupRow.records)}}</span>
         </div>
     </ng-template>
+<!--end content-->
     `,
     styles: [``]
 })
@@ -28,6 +30,7 @@ export class WebGridGroupByRowTemplateComponent {
     @ViewChild("template", { static: true})
     public template: TemplateRef<any>;
 
+//begin supportingMethods
     public formatDate(val: Date) {
         return new Intl.DateTimeFormat('en-US').format(val);
     }
@@ -45,6 +48,7 @@ export class WebGridGroupByRowTemplateComponent {
         const endDate = new Date('12/31/2017');
         return values.filter((x) => new Date(x.OrderDate) >= startDate && new Date(x.OrderDate) <= endDate).length;
     }
+//end supportingMethods
 }
 
 @NgModule({

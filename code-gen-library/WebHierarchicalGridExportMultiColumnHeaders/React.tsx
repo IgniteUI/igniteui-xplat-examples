@@ -1,5 +1,5 @@
 //begin imports
-import { IgrExporterEventArgs } from 'igniteui-react-grids';
+import { IgrExporterEventArgs, IgrHierarchicalGrid } from 'igniteui-react-grids';
 //end imports
 
 import { CodeGenHelper } from 'igniteui-webcomponents-core';

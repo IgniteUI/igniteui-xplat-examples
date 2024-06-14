@@ -1,5 +1,5 @@
 //begin imports
-import { IgcGridComponent } from 'igniteui-webcomponents-grids/grids';
+import { IgcGridComponent, FilterMode } from 'igniteui-webcomponents-grids/grids';
 //end imports
 
 import { CodeGenHelper } from 'igniteui-webcomponents-core';
@@ -10,7 +10,7 @@ export class WebGridTestOnInit {
     public webGridTestOnInit(): void {
         var grid = CodeGenHelper.getDescription<IgcGridComponent>("content");
         grid.allowFiltering = true;
-        grid.filterMode = "excelStyleFilter";
+        grid.filterMode = FilterMode.ExcelStyleFilter;
     }
     //end eventHandler
 

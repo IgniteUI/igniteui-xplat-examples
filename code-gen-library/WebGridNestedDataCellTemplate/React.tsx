@@ -1,5 +1,5 @@
 //begin imports
-import { IgrCellTemplateContext } from 'igniteui-react-grids';
+import { IgrCellTemplateContext, IgrGrid } from 'igniteui-react-grids';
 import { IgrExpansionPanel, IgrInput } from 'igniteui-react';
 //end imports
 

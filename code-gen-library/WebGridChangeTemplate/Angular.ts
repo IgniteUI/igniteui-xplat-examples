@@ -5,6 +5,8 @@ import {
     IgxGridModule,
     IgxBadgeModule
  } from "igniteui-angular";
+//begin imports
+//end imports
 
 //begin template
 @Component({

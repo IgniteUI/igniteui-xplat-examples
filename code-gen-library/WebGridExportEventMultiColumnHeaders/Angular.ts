@@ -1,10 +1,12 @@
 //begin imports
-import { IgrExporterEventArgs, IgrGrid } from 'igniteui-react-grids';
+import { IgcGridComponent, IgcExporterEvent } from 'igniteui-angular';
 //end imports
+
+import { CodeGenHelper } from 'igniteui-angular-core';
 
 export class WebGridExportEventMultiColumnHeaders {
     //begin eventHandler
-    public webGridExportEventMultiColumnHeaders(args: CustomEvent<IgrExporterEventArgs>): void {
+    public webGridExportEventMultiColumnHeaders(args: CustomEvent<IgcExporterEvent>): void {
         if (args.detail.options) {
             args.detail.options.ignoreMultiColumnHeaders = false;
         }

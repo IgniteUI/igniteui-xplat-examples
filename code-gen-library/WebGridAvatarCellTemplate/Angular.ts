@@ -1,6 +1,7 @@
 import { Component, ViewChild, NgModule, TemplateRef } from '@angular/core';
 import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+
 import {
     IgxGridModule,
     IgxBadgeModule,
@@ -8,12 +9,17 @@ import {
     IgxAvatarModule
  } from "igniteui-angular";
 
+//begin imports
+//end imports
+
 //begin template
 @Component({
     template: `
+<!-- begin content -->
     <ng-template igxCell let-val let-cell="cell" #template>
             <igx-avatar [src]="cell.row.data.Avatar" [roundShape]="true" size="small"></igx-avatar>
     </ng-template>
+<!-- end content -->
     `,
     styles: [``]
 })

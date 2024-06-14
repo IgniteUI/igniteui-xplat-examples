@@ -1,5 +1,5 @@
 //begin imports
-import { IgcExporterOptionsBase, IgcGridToolbarExportEventArgs } from 'igniteui-webcomponents-grids/grids';
+import { IgcExporterOptionsBase, IgcGridToolbarExportEventArgs, IgcGridComponent } from 'igniteui-webcomponents-grids/grids';
 //end imports
 
 import { CodeGenHelper } from 'igniteui-webcomponents-core';

@@ -10,7 +10,7 @@ export class WebHierarchicalGridHidingTemplate {
             <igc-grid-toolbar-actions>
                 <igc-grid-toolbar-hiding title="Column Hiding"></igc-grid-toolbar-hiding>
             </igc-grid-toolbar-actions>
-        </igc-grid-toolbar>`
+        </igc-grid-toolbar>`;
     }
     //end content
     //end template

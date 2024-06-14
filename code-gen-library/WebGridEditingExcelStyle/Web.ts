@@ -7,7 +7,7 @@ import { CodeGenHelper } from 'igniteui-webcomponents-core';
 export class WebGridEditingExcelStyle {
     //begin eventHandler
     public webGridEditingExcelStyle(args: CustomEvent<IgcGridKeydownEventArgs>): void {
-        var key = args.detail.event.keyCode;
+        var key = (args.detail.event as any).keyCode;
         var grid = args.detail.target.grid;
         var activeElem = grid.navigation.activeNode;
     
@@ -26,7 +26,7 @@ export class WebGridEditingExcelStyle {
             var column = activeElem.column;
             var rowInfo = grid.dataView;
 
-            var nextRow = this.getNextEditableRowIndex(thisRow, rowInfo, args.detail.event.shiftKey);
+            var nextRow = this.getNextEditableRowIndex(thisRow, rowInfo, (args.detail.event as any).shiftKey);
 
             grid.navigateTo(nextRow, column, (obj: any) => {
                 obj.target.activate();

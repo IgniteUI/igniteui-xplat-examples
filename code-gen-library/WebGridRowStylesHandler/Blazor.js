@@ -1,4 +1,4 @@
-//begin template
+//begin eventHandler
 igRegisterScript("WebGridRowStylesHandler", () => {
     return {
         'background': (row) => (+row.data['Change'] < 0 && +row.data['YearlyChange'] < 0) ? '#FF000088' : '#00000000',
@@ -6,4 +6,4 @@ igRegisterScript("WebGridRowStylesHandler", () => {
         'border-color': (row) => (+row.data['Change'] < 0 && +row.data['YearlyChange'] < 0) ? '#FF000099' : '#E9E9E9'
     };
 }, true);
-//end template
+//end eventHandler

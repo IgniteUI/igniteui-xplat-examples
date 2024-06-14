@@ -1,4 +1,4 @@
-//begin template
+//begin eventHandler
 igRegisterScript("WebTreeGridCellStylesHandler", () => {
     return {
         background: (rowData, columnKey, cellValue, rowIndex) => rowIndex % 2 === 0 ? "#EFF4FD" : null,
@@ -11,4 +11,4 @@ igRegisterScript("WebTreeGridCellStylesHandler", () => {
         }
     };
 }, true);
-//end template
+//end eventHandler

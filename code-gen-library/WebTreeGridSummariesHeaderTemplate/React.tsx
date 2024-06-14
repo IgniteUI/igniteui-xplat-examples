@@ -20,7 +20,7 @@ export class WebTreeGridSummariesHeaderTemplate {
     public toggleSummary(field: IgrColumn) {
         if (field) {
             field.hasSummary = !field.hasSummary;
-            this.setState({ summary: field.hasSummary });
+            (this as any).setState({ summary: field.hasSummary });
         }
     }
     //end supportingMethods

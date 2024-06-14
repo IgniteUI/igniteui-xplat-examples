@@ -1,11 +1,16 @@
 import { Component, ViewChild, NgModule, TemplateRef } from '@angular/core';
 import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+
 import {
-    IgxColumnGroupComponent,
     IgxGridModule,
     IgxIconModule
  } from "igniteui-angular";
+
+//begin imports
+import { IgxColumnGroupComponent } from "igniteui-angular";
+//end imports
+
 //begin template
 @Component({
     template: `

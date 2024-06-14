@@ -10,17 +10,20 @@ import {
 //begin template
 @Component({
     template: `
+<!--begin content-->
     <ng-template igxExcelStyleHeaderIcon>
         <igx-icon>filter_alt</igx-icon>
     </ng-template>
+<!--end content-->
     `,
     styles: [`
+<!--begin styles-->
 .grid__wrapper {
     margin: 16px;
 }
 
 .gridSample__filter {
-    width: rem(200px);
+    width: rem-convert(200px);
 }
 
 .cell__inner,
@@ -34,6 +37,7 @@ import {
   position: relative;
   justify-content: space-between;
 }
+<!--end styles-->
 `]
 })
 export class WebGridFilterAltIconTemplateComponent {
