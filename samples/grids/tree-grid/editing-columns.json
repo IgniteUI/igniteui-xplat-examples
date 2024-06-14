@@ -1,6 +1,7 @@
 {
   "todo": [ "wait for Graham to provide access to WC classes in WebTreeGridCustomNumberSummary event handler" ],
-  "export": false,
+  "export": true,
+  "skipAlterDataCasing": true,
   "descriptions": {
     "content": {
       "type": "WebTreeGrid",
@@ -39,8 +40,7 @@
           "field": "Age",
           "dataType": "Number",
           "editable": true,
-          "hasSummary": true,
-          "summaryTemplateRef": "WebTreeGridCustomNumberSummary"
+          "hasSummary": true
         },
         {
           "type": "WebColumn",
