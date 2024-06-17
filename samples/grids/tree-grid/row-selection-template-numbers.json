@@ -1,5 +1,6 @@
 {
   "todo": [],
+  "export": true,
   "skipAlterDataCasing": true,
   "descriptions": {
     "content": {
@@ -14,6 +15,7 @@
       "rowSelectorTemplateRef": "WebGridRowSelectorTemplate",
       "headSelectorTemplateRef": "WebGridHeaderRowSelectorTemplate",
       "cellSelection": "None",
+      "hideRowSelectors": false,
       "columns": [
         {
           "type": "WebColumn",

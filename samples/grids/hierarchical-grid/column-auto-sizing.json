@@ -16,7 +16,7 @@
         },
         {
           "type": "WebColumn",
-          "field": "CompanyName",
+          "field": "Company",
           "width": "auto",
           "resizable": true
         },

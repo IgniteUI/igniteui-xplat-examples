@@ -9,7 +9,7 @@
       "id": "grid",
       "type": "WebGrid",
       "dataRef": "CustomersData",
-      "primaryKey": "CompanyName",
+      "primaryKey": "Company",
       "columns": [
         {
           "type": "WebColumnLayout",
@@ -34,7 +34,7 @@
           "children": [
             {
               "type": "WebColumn",
-              "field": "CompanyName",
+              "field": "Company",
               "header": "Company",
               "rowStart": 1,
               "colStart": 1,

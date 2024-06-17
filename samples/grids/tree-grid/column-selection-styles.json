@@ -1,0 +1,114 @@
+{
+  "todo": [],
+  "export": true,
+  "skipAlterDataCasing": true,
+  "onInit": [ "WebTreeGridColumnSelectionStyleTemplate" ],
+  "descriptions": {
+    "content": {
+      "type": "WebTreeGrid",
+      "name": "treeGrid",
+      "id": "treeGrid",
+      "dataRef": "EmployeesFlatDetails",
+      "primaryKey": "ID",
+      "foreignKey": "ParentID",
+      "autoGenerate": false,
+      "columnSelection": "Multiple",
+      "columns": [
+        {
+          "type": "WebColumn",
+          "field": "Name",
+          "dataType": "String"
+        },
+        {
+          "type": "WebColumnGroup",
+          "header": "General Information",
+          "children": [
+            {
+              "type": "WebColumn",
+              "field": "HireDate",
+              "header": "Hire Date",
+              "dataType": "Date"
+            },
+            {
+              "type": "WebColumnGroup",
+              "header": "Personal Details",
+              "children": [
+                {
+                  "type": "WebColumn",
+                  "field": "ID",
+                  "dataType": "Number"
+                },
+                {
+                  "type": "WebColumn",
+                  "field": "Title",
+                  "dataType": "String"
+                },
+                {
+                  "type": "WebColumn",
+                  "field": "Age",
+                  "dataType": "Number",
+                  "selectable": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "WebColumnGroup",
+          "header": "Address Information",
+          "children": [
+            {
+              "type": "WebColumnGroup",
+              "header": "Location",
+              "children": [
+                {
+                  "type": "WebColumn",
+                  "field": "Country",
+                  "dataType": "String",
+                  "selectable": false
+                },
+                {
+                  "type": "WebColumn",
+                  "field": "City",
+                  "dataType": "String"
+                },
+                {
+                  "type": "WebColumn",
+                  "field": "Address",
+                  "dataType": "String"
+                }
+              ]
+            },
+            {
+              "type": "WebColumnGroup",
+              "header": "Contact Information",
+              "children": [
+                {
+                  "type": "WebColumn",
+                  "field": "Phone",
+                  "dataType": "String",
+                  "selectable": false
+                },
+                {
+                  "type": "WebColumn",
+                  "field": "Fax",
+                  "dataType": "String",
+                  "selectable": false
+                },
+                {
+                  "type": "WebColumn",
+                  "field": "PostalCode",
+                  "header": "Postal Code",
+                  "dataType": "String"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "modules": [
+    "grids/WebTreeGridModule"
+  ]
+}

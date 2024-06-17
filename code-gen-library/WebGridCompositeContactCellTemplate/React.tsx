@@ -18,7 +18,7 @@ export class WebGridCompositeContactCellTemplate {
                 <br />
                 <span><strong>Title:</strong> {cell.row.data.ContactTitle}</span>
                 <br />
-                <span><strong>Company:</strong> {cell.row.data.CompanyName}</span>
+                <span><strong>Company:</strong> {cell.row.data.Company}</span>
                 <br />
             </div>
         </>

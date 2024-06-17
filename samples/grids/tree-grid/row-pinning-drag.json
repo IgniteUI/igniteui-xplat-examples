@@ -10,17 +10,17 @@
       "name": "treeGrid",
       "type": "WebTreeGrid",
       "dataRef": "EmployeesNestedTreeData",
-      "rowDraggable": true,      
-	  "rowEditable": true,
+      "rowDraggable": true,
+      "rowEditable": true,
       "autoGenerate": false,
-	  "primaryKey": "ID",      
-	  "foreignKey": "ParentID",
-	  "cellSelection": "None",
+      "primaryKey": "ID",
+      "foreignKey": "ParentID",
+      "cellSelection": "None",
       "pinning": {
         "type": "WebPinningConfig",
         "rows": "Top"
       },
-      "columns": [ 
+      "columns": [
         {
           "type": "WebColumn",
           "field": "Name",
@@ -29,7 +29,7 @@
         {
           "type": "WebColumn",
           "field": "Age",
-		  "dataType": "Number"
+          "dataType": "Number"
         },
         {
           "type": "WebColumn",
@@ -38,18 +38,20 @@
         {
           "type": "WebColumn",
           "field": "HireDate",
-		  "dataType": "Date"
+          "dataType": "Date"
         }
       ],
-      "actionStripComponents": [{
-        "type": "WebActionStrip",
-        "name": "actionStrip",
-        "actionButtons": [
-          {
-            "type": "WebGridPinningActions"
-          }
-        ]
-      }]
+      "actionStripComponents": [
+        {
+          "type": "WebActionStrip",
+          "name": "actionStrip",
+          "actionButtons": [
+            {
+              "type": "WebGridPinningActions"
+            }
+          ]
+        }
+      ]
     }
   },
   "modules": [

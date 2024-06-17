@@ -2,6 +2,8 @@
   "strings": {
     "legendTitle": "Renewable Electricity Generated"
   },
+  "todo": "FIX: Attempted to access an element as a type incompatible with the array",
+  "export": false,
   "descriptions": {
     "legend": {
       "type": "Legend",

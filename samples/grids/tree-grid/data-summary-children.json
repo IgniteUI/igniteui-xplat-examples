@@ -1,0 +1,87 @@
+{
+  "export": true,
+  "skipAlterDataCasing": true,
+  "descriptions": {
+    "editor": {
+      "type": "PropertyEditorPanel",
+      "componentRendererRef": "renderer",
+      "targetRef": "treeGrid",
+      "descriptionType": "WebTreeGrid",
+      "isHorizontal": true,
+      "isWrappingEnabled": false,
+      "properties": [
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "name": "SummaryCalculationModeEditor",
+          "label": "Summary Calculation Mode",
+          "valueType": "EnumValue",
+          "dropDownNames": ["rootLevelOnly", "childLevelsOnly", "rootAndChildLevels"],
+          "dropDownValues": ["rootLevelOnly", "childLevelsOnly", "rootAndChildLevels"],
+          "changedRef": "WebTreeGridChangeSummaryCalculationMode"
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "name": "SummaryPositionEditor",
+          "label": "Summary Position",
+          "valueType": "EnumValue",
+          "dropDownNames": ["top", "bottom"],
+          "dropDownValues": ["top", "bottom"],
+          "changedRef": "WebTreeGridChangeSummaryPosition"
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "label": "Show summary row when group row is collapsed:",
+          "propertyPath": "ShowSummaryOnCollapse",
+          "name": "ShowSummaryOnCollapseEditor"
+        }
+      ]
+    },
+    "content": {
+      "type": "WebTreeGrid",
+      "dataRef": "OrdersTreeData",
+      "autoGenerate": false,
+      "name": "treeGrid",
+      "id": "treeGrid",
+      "primaryKey": "ID",
+      "foreignKey": "ParentID",
+      "columns": [
+        {
+          "type": "WebColumn",
+          "field": "ID",
+          "header": "Order ID",
+          "sortable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "Name",
+          "header": "Order Product",
+          "hasSummary": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "UnitPrice",
+          "header": "Price",
+          "dataType": "Number",
+          "hasSummary": true,
+          "editable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "Delivered",
+          "dataType": "Boolean"
+        },
+        {
+          "type": "WebColumn",
+          "field": "OrderDate",
+          "header": "Order Date",
+          "dataType": "Date"
+        }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
+    "grids/WebTreeGridModule"
+  ]
+}

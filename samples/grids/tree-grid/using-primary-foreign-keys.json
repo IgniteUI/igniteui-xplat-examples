@@ -1,5 +1,6 @@
 {
   "todo": [ "add Performance column with a template, MT test exporting" ],
+  "export": true,
   "skipAlterDataCasing": true,
   "descriptions": {
     "content": {
