@@ -9,8 +9,7 @@ export class WebTreeGridCellEditCellTemplate {
 public webTreeGridCellEditCellTemplate = (ctx: IgcCellTemplateContext) => {
     let cellValues: any = [];
     let uniqueValues: any = [];
-    let roleplayDataStats = CodeGenHelper.getDescription<IgcTreeGridComponent>("content").data;
-    for(const i of (roleplayDataStats as any)){
+    for(const i of (this.roleplayTreeGridData as any)){
         const field: string = ctx.cell.column.field;
         if(uniqueValues.indexOf(i[field]) === -1 )
         {
@@ -29,4 +28,3 @@ public webTreeGridCellEditCellTemplate = (ctx: IgcCellTemplateContext) => {
 //end content
 //end template
 }
-
