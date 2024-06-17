@@ -29,7 +29,7 @@ import {
     align-items: center;
     height: 100%;
 }
-<!--end style-->
+<!--end styles-->
     `]
 })
 export class WebGridImageCellTemplateComponent {
