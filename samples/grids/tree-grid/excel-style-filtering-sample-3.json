@@ -1,5 +1,6 @@
 {
   "todo": ["add excel style filtering customizations"],
+  "export": true,
   "skipAlterDataCasing": true,
   "descriptions": {
     "content": {
