@@ -53,6 +53,7 @@
   },
   "modules": [
     "withDescriptions",
-    "grids/WebTreeGridModule"
+    "grids/WebTreeGridModule",
+    "webinputs/WebSelectModule"
   ]
 }
