@@ -1,5 +1,6 @@
 {
   "todo": [],
+  "export": true,
   "skipAlterDataCasing": true,
   "onInit": "WebTreeGridFilteringStyle",
   "descriptions": {
