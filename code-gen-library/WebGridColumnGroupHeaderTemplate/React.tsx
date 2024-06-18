@@ -19,7 +19,7 @@ public webGridColumnGroupHeaderTemplate = (e: { dataContext: IgrColumnTemplateCo
 //begin supportingMethods
 public columnGroupStates = new Map<IgrColumn, boolean>();
 public toggleColumnGroup(column: IgrColumn) {
-    let grid = CodeGenHelper.getDescription<IgrGrid>("grid");
+    let grid = CodeGenHelper.getDescription<IgrGrid>("content");
     const columnGroup = grid.contentColumns.find((col) => col.name == column.name) as IgrColumnGroup;
     const columns = Array.from(columnGroup.actualChildren);
     if (columnGroup.header === 'General Information') {
