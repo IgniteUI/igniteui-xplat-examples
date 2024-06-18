@@ -3,6 +3,7 @@
   "descriptions": {
     "content": {
       "type": "WebGrid",
+      "name": "grid1",
       "dataRef": "RoleplayDataStats",
       "autoGenerate": false,
       "primaryKey": "Name",
