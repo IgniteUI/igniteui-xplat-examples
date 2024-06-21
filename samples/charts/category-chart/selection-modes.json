@@ -1,0 +1,29 @@
+{
+  "strings": {
+    "legendTitle": "Average Temperature Range in New York"
+  },
+  "descriptions": {
+    "content": {
+      "type": "CategoryChart",
+      "name": "chart",
+      "chartType": "Column",
+      "dataSourceRef": "TemperatureAverageData",
+      "yAxisTitle": "Temperature in Degrees Celsius",
+      "yAxisTitleLeftMargin": 10,
+      "yAxisTitleRightMargin": 5,
+      "yAxisLabelLeftMargin": 0,
+      "isHorizontalZoomEnabled": false,
+      "isVerticalZoomEnabled": false,
+      "crosshairsDisplayMode": "None",
+      "toolTipType": "None",
+      "selectionMode": "SelectionColorFill",
+      "selectionBehavior": "Auto",
+      "selectionBrush": "purple",
+      "focusBrush": "purple"
+    }
+  },
+  "modules": [
+    "charts/CategoryChartModule",
+    "charts/DataChartInteractivityModule"
+  ]
+}
