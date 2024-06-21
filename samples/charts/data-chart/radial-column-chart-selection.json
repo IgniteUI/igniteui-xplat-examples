@@ -1,0 +1,74 @@
+{
+  "strings": {
+    "legendTitle": "Ronaldo vs Messi Player Stats"
+  },
+  "descriptions": {
+    "legend": {
+      "type": "Legend",
+      "name": "Legend",
+      "orientation": "Horizontal"
+    },
+    "content": {
+      "type": "DataChart",
+      "name": "chart",
+      "legendRef": "Legend",
+      "isHorizontalZoomEnabled": false,
+      "isVerticalZoomEnabled": false,
+      "selectionMode": "SelectionColorFill",
+      "selectionBehavior": "PerSeriesMultiSelect",
+      "axes": [
+        {
+          "type": "CategoryAngleAxis",
+          "name": "angleAxis",
+          "dataSourceRef": "FootballPlayerStats",
+          "label": "Attribute"
+        },
+        {
+          "type": "NumericRadiusAxis",
+          "name": "radiusAxis",
+          "innerRadiusExtentScale": 0.1,
+          "interval": 2,
+          "minimumValue": 0,
+          "maximumValue": 10
+        }
+      ],
+      "series": [
+        {
+          "type": "RadialColumnSeries",
+          "name": "RadialColumnSeries1",
+          "dataSourceRef": "FootballPlayerStats",
+          "angleAxisRef": "angleAxis",
+          "valueAxisRef": "radiusAxis",
+          "valueMemberPath": "Ronaldo",
+          "showDefaultTooltip": false,
+          "areaFillOpacity": 0.8,
+          "thickness": 3,
+          "title": "Ronaldo",
+          "selectionBrush": "yellow"
+        },
+        {
+          "type": "RadialColumnSeries",
+          "name": "RadialColumnSeries2",
+          "dataSourceRef": "FootballPlayerStats",
+          "angleAxisRef": "angleAxis",
+          "valueAxisRef": "radiusAxis",
+          "valueMemberPath": "Messi",
+          "showDefaultTooltip": false,
+          "areaFillOpacity": 0.8,
+          "thickness": 3,
+          "title": "Messi",
+          "selectionBrush": "aqua"
+
+        }
+      ]
+    }
+  },
+  "modules": [
+    "charts/DataChartCoreModule",
+    "charts/DataChartRadialModule",
+    "charts/DataChartRadialCoreModule",
+    "charts/DataChartInteractivityModule",
+    "charts/DataChartAnnotationModule",
+    "charts/LegendModule"
+  ]
+}

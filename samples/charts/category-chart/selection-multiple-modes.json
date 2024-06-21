@@ -1,0 +1,60 @@
+{
+  "strings": {
+    "legendTitle": "Highest Grossing Movie Franchises"
+  },
+  "descriptions": {
+    "legend": {
+      "type": "Legend",
+      "name": "Legend",
+      "orientation": "Horizontal"
+    },
+    "editor": {
+      "type": "PropertyEditorPanel",
+      "name": "PropertyEditor",
+      "componentRendererRef": "renderer",
+      "targetRef": "chart",
+      "descriptionType": "CategoryChart",
+      "isHorizontal": true,
+      "isWrappingEnabled": true,
+      "properties": [
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "SelectionMode",
+          "name": "SelectionModeEditor",
+          "label": "Selection Mode: ",
+          "primitiveValue": "SelectionColorFill"
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "SelectionBehavior",
+          "name": "SelectionBehaviorEditor",
+          "label": "Selection Behavior: ",
+          "primitiveValue": "PerSeriesAndDataItemGlobalSingleSelect"
+        }
+      ]
+    },
+    "content": {
+      "type": "CategoryChart",
+      "name": "chart",
+      "chartType": "Column",
+      "dataSourceRef": "EnergyRenewableConsumption",
+      "legendRef": "Legend",
+      "yAxisTitleLeftMargin": 10,
+      "yAxisTitleRightMargin": 5,
+      "yAxisLabelLeftMargin": 0,
+      "isHorizontalZoomEnabled": false,
+      "isVerticalZoomEnabled": false,
+      "crosshairsDisplayMode": "None",
+      "selectionMode": "SelectionColorFill",
+      "selectionBehavior": "PerSeriesAndDataItemGlobalSingleSelect",
+      "selectionBrush": "orange",
+      "focusBrush": "orange"
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
+    "charts/LegendModule",
+    "charts/CategoryChartModule"
+  ]
+}
