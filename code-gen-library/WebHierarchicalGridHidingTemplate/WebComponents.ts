@@ -1,15 +1,17 @@
 //begin imports
-import { html } from "/lit-html.js";
+import { html } from "lit-html";
 //end imports
 
 export class WebHierarchicalGridHidingTemplate {
-    //begin eventHandler
-    public webHierarchicalGridHidingTemplate(): void {
+    //begin template
+    //begin content
+    public webHierarchicalGridHidingTemplate(): any {
         return html`<igc-grid-toolbar>
             <igc-grid-toolbar-actions>
                 <igc-grid-toolbar-hiding title="Column Hiding"></igc-grid-toolbar-hiding>
             </igc-grid-toolbar-actions>
-        </igc-grid-toolbar>`
-        //end eventHandler
+        </igc-grid-toolbar>`;
     }
+    //end content
+    //end template
 }

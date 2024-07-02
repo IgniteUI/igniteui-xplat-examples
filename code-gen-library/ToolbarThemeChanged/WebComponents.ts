@@ -9,7 +9,7 @@ import { CodeGenHelper } from 'igniteui-webcomponents-core';
 
 export class ToolbarThemeChanged {
     //begin eventHandler
-    public toolbarThemeChanged(sender: any, args: IgcPropertyEditorPropertyDescriptionChangedEventArgs): void {
+    public toolbarThemeChanged(sender: any, args: IgcToolCommandEventArgs): void {
         var target = CodeGenHelper.getDescription<IgcDataChartComponent>("content");
         switch (args.command.commandId)
 		{

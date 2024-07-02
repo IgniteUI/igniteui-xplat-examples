@@ -5,7 +5,7 @@ import { IgcSummaryResult, IgcSummaryOperand } from 'igniteui-webcomponents-grid
 import { CodeGenHelper } from 'igniteui-webcomponents-core';
 
 export class WebTreeGridSummaryFormatter {
-    //begin content
+    //begin eventHandler
     public webTreeGridSummaryFormatter(summary: IgcSummaryResult, summaryOperand: IgcSummaryOperand): string {
         const result = summary.summaryResult;
         if (summary.key !== "count" && result !== null && result !== undefined) {
@@ -14,5 +14,5 @@ export class WebTreeGridSummaryFormatter {
         }
         return result;
     }
-    //end content
+    //end eventHandler
 }

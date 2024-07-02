@@ -9,7 +9,7 @@ public class ToolbarToggleTooltip
 {
 	//begin eventHandler
 	//WPF: Infragistics.Controls.Layouts.ToolCommandEventHandler
-	private void ToolbarToggleTooltip(object sender, ToolCommandEventArgs e)
+	public void ToolbarToggleTooltip(object sender, ToolCommandEventArgs e)
 	{
 		var target = (XamDataChart)((XamToolbar)sender).Target;
 		

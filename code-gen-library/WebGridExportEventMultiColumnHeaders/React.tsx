@@ -1,5 +1,5 @@
 //begin imports
-import { IgrExporterEventArgs } from 'igniteui-react-grids';
+import { IgrExporterEventArgs, IgrGrid } from 'igniteui-react-grids';
 //end imports
 
 export class WebGridExportEventMultiColumnHeaders {

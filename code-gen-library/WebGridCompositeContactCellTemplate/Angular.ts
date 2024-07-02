@@ -10,6 +10,7 @@ import {
 //begin template
 @Component({
     template: `
+<!--begin content-->
     <ng-template igxCell let-cell='cell' #template>
     <div class="contact-container">
                         <span><strong>Name:</strong> {{cell.row.data.ContactName}}</span>
@@ -19,6 +20,7 @@ import {
                         <br />
     </div>
     </ng-template>
+<!--end content-->
     `,
     styles: [`
 .contact-container > span {

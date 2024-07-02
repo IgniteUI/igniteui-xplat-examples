@@ -1,6 +1,5 @@
 export class WebTreeGridCellStylesHandler {
-//begin template
-//begin content
+//begin eventHandler
     public webTreeGridCellStylesHandler = {
         background: (rowData: any, columnKey: any, cellValue: any, rowIndex: any) => rowIndex % 2 === 0 ? "#EFF4FD" : null,
         color: (rowData: any, columnKey: any, cellValue: any, rowIndex: any) => {
@@ -12,6 +11,5 @@ export class WebTreeGridCellStylesHandler {
             return undefined;
         }
     };
-//end content
-//end template
+//end eventHandler
 }

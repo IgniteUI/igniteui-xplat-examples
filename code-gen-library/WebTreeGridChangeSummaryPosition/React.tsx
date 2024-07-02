@@ -1,11 +1,13 @@
 //begin imports
-import { IgcPropertyEditorPropertyDescriptionChangedEventArgs } from 'igniteui-react-layouts';
+import { IgrPropertyEditorPropertyDescriptionChangedEventArgs } from 'igniteui-react-layouts';
+import { IgrTreeGrid } from 'igniteui-react-grids'; 
 //end imports
 
 export class WebTreeGridChangeSummaryPosition {
   //begin eventHandler
   public webTreeGridChangeSummaryPosition(sender: any, args: IgrPropertyEditorPropertyDescriptionChangedEventArgs): void {
-    this.treeGrid.summaryPosition = args.newValue;
+    var treeGrid = CodeGenHelper.getDescription<IgrTreeGrid>("content");
+    treeGrid.summaryPosition = args.newValue;
   }
   //end eventHandler
 }

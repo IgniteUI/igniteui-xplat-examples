@@ -11,7 +11,8 @@ public class ScatterBubbleSeriesFillScaleSliderChanged
     //begin eventHandler
     public void ScatterBubbleSeriesFillScaleSliderChanged(IgbPropertyEditorPropertyDescriptionChangedEventArgs args)
     {
-        var series = this.chart.ActualSeries[0] as IgbBubbleSeries;
+        var chart = CodeGenHelper.GetDescription<IgbDataChart>("content");
+        var series = chart.ActualSeries[0] as IgbBubbleSeries;
 		
 		var fillScale = series.FillScale as IgbValueBrushScale;
 		

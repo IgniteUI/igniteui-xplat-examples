@@ -1,5 +1,5 @@
 //begin imports
-import { IgrCellTemplateContext } from 'igniteui-react-grids';
+import { IgrCellTemplateContext, IgrTreeGrid } from 'igniteui-react-grids';
 import { IgrSelect, IgrSelectItem } from 'igniteui-react';
 //end imports
 
@@ -11,10 +11,12 @@ public webTreeGridCellEditCellTemplate = (e: {dataContext: IgrCellTemplateContex
     let uniqueValues: any = [];
     const cell = e.dataContext.cell;
     const colIndex = cell.id.columnID;
-    const field: string = this.treeGrid1.getColumnByVisibleIndex(colIndex).field;
+    var treeGrid1 = CodeGenHelper.getDescription<IgrTreeGrid>("content");
+    const field: string = treeGrid1.getColumnByVisibleIndex(colIndex).field;
+    let roleplayTreeGridData = treeGrid1.data;
     const key = field + "_" + cell.id.rowID;
     let index = 0;
-    for(const i of (this.roleplayTreeGridData as any)){
+    for(const i of (roleplayTreeGridData as any)){
         if(uniqueValues.indexOf(i[field]) === -1 )
         {
             cellValues.push(<><IgrSelectItem selected={e.dataContext.cell.value == i[field]}

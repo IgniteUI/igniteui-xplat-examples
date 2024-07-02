@@ -11,7 +11,7 @@ export class EditorChangeUpdateYAxisMinimumValue {
     public editorChangeUpdateYAxisMinimumValue(sender: any, args: IgcPropertyEditorPropertyDescriptionChangedEventArgs): void {
         
 		var yAxisMinimumVal = args.newValue;
-        this.chart.yAxisMinimumValue = parseInt(yAxisMinimumVal);      		
+        CodeGenHelper.getDescription<IgcCategoryChartComponent>("content").yAxisMinimumValue = parseInt(yAxisMinimumVal);      		
     }
     //end eventHandler
 }

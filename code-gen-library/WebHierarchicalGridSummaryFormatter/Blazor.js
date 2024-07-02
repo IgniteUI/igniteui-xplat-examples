@@ -1,4 +1,4 @@
-//begin template
+//begin eventHandler
 igRegisterScript("WebHierarchicalGridSummaryFormatter", (summary) => {
     const result = summary.summaryResult;
     if (summaryOperand instanceof IgcDateSummaryOperand && summary.key !== "count" && result !== null && result !== undefined) {
@@ -7,4 +7,4 @@ igRegisterScript("WebHierarchicalGridSummaryFormatter", (summary) => {
     }
     return result;
 }, true);
-//end template
+//end eventHandler

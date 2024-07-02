@@ -7,7 +7,7 @@
       "name": "Legend",
       "orientation": "Horizontal"
     },
-    "aboveContent": {
+    "aboveContentLeft": {
       "type": "Toolbar",
       "name": "Toolbar",
       "targetRef": "chart",

@@ -1,8 +1,13 @@
+//begin imports
+import { IgrHierarchicalGrid } from 'igniteui-react-grids';
+//end imports
+
 export class WebHierarchicalGridPinRowOnRendered {
     //begin eventHandler
     public webHierarchicalGridPinRowOnRendered(): void {
-        this.grid.pinRow(this.singersData[0].Photo);
-        this.grid.pinRow(this.singersData[1].Photo);
+        var hierarchicalGrid = CodeGenHelper.getDescription<IgrHierarchicalGrid>("content");
+        hierarchicalGrid.pinRow(hierarchicalGrid.data[0].Photo);
+        hierarchicalGrid.pinRow(hierarchicalGrid.data[1].Photo);
     }
     //end eventHandler
 }

@@ -1,6 +1,7 @@
 //begin imports
 import { IgcCellTemplateContext } from 'igniteui-webcomponents-grids/grids';
 import { html, nothing } from 'lit-html';
+import { IgcHierarchicalGridComponent } from 'igniteui-webcomponents-grids/grids';
 //end imports
 
 export class HGridCellEditCellTemplate {
@@ -9,7 +10,8 @@ export class HGridCellEditCellTemplate {
 public hGridCellEditCellTemplate = (ctx: IgcCellTemplateContext) => {
     let cellValues: any = [];
     let uniqueValues: any = [];
-    for(const i of (this.hGridDndData as any)){
+    let hGridDndData = CodeGenHelper.getDescription<IgcHierarchicalGridComponent>("content").data;
+    for(const i of (hGridDndData as any)){
         const field: string = ctx.cell.column.field;
         if(uniqueValues.indexOf(i[field]) === -1 )
         {

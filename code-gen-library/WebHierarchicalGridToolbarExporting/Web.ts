@@ -1,5 +1,5 @@
 //begin imports
-import { IgcExporterOptionsBase, IgcGridToolbarExportEventArgs } from 'igniteui-webcomponents-grids/grids';
+import { IgcExporterOptionsBase, IgcGridToolbarExportEventArgs, IgcHierarchicalGridComponent } from 'igniteui-webcomponents-grids/grids';
 //end imports
 
 export class WebHierarchicalGridToolbarExporting {

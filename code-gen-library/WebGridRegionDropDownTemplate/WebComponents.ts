@@ -24,7 +24,7 @@ public webGridRegionDropDownTemplate: IgcRenderFunction<IgcCellTemplateContext> 
                 display-key="Region" 
                 single-select 
                 disabled
-                @igcChange="${(e: CustomEvent) => this.onRegionChange(id, e)}"
+                @igcChange="${(e: CustomEvent) => (this as any).onRegionChange(id, e)}"
             ></igc-combo>
         </div>
     `;

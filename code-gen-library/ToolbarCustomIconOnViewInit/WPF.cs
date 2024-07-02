@@ -31,7 +31,8 @@ public class ToolbarCustomIconOnViewInit
 		";
 
 		SvgIconRegistry.Instance.AddSvgPathString("CustomCollection", "CustomIcon", Icon);
-		this.Toolbar.RegisterIconFromText("CustomCollection", "CustomIcon", Icon);
+		var toolbar = CodeGenHelper.GetDescription<XamToolbar>("aboveContentLeft");
+		toolbar.RegisterIconFromText("CustomCollection", "CustomIcon", Icon);
 	}
     //end eventHandler
 }

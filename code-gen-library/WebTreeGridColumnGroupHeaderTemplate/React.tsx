@@ -1,5 +1,5 @@
 //begin imports
-import { IgrColumn, IgrColumnGroup, IgrColumnTemplateContext } from 'igniteui-react-grids';
+import { IgrColumn, IgrColumnGroup, IgrColumnTemplateContext, IgrTreeGrid } from 'igniteui-react-grids';
 //end imports
 export class WebTreeGridColumnGroupHeaderTemplate {
 //begin template
@@ -19,7 +19,8 @@ public webTreeGridColumnGroupHeaderTemplate = (e: { dataContext: IgrColumnTempla
 //begin supportingMethods
 public columnGroupStates = new Map<IgrColumn, boolean>();
 public toggleColumnGroup(column: IgrColumn) {
-    const columnGroup = this.treeGrid.contentColumns.find((col) => col.name == column.name) as IgrColumnGroup;
+    var treeGrid = CodeGenHelper.getDescription<IgrTreeGrid>("content");
+    const columnGroup = treeGrid.contentColumns.find((col) => col.name == column.name) as IgrColumnGroup;
     const columns = Array.from(columnGroup.actualChildren);
     if (columnGroup.header === 'General Information') {
         const col = columns[1] as IgrColumn;
