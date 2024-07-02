@@ -11,7 +11,7 @@
     },
     "aboveContentLeft": {
       "type": "Toolbar",
-      "name": "Toolbar",
+      "name": "toolbar",
       "targetRef": "chart",
       "orientation": "Horizontal",
       "actions": [
