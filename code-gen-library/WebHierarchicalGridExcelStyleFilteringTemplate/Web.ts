@@ -1,15 +1,15 @@
 //begin imports
 //end imports
 
-export class WebGridExcelStyleFilteringTemplate {
+export class WebHierarchicalGridExcelStyleFilteringTemplate {
     //begin eventHandler
-    public webGridExcelStyleFilteringTemplate(): void {
+    public webHierarchicalGridExcelStyleFilteringTemplate(): void {
         //OMIT HANDLER
     }
     //end eventHandler
     public requiredStyles = `
     <!--begin styles-->
-    #grid {
+    #hierarchicalGrid1 {
         --ig-grid-filtering-row-background: #ffcd0f;
         --ig-button-background: #FFCD0F;
         --ig-button-foreground: #292826;
