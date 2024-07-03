@@ -2,7 +2,7 @@
   "descriptions": {
     "aboveContentLeft": {
       "type": "Toolbar",
-      "name": "Toolbar",
+      "name": "toolbar",
       "targetRef": "chart",
       "orientation": "Horizontal",
       "onCommandRef": "ToolbarToggleTooltip",
@@ -15,13 +15,13 @@
           "commandId": "EnableTooltips"
         },
         {
-          "name": "ZoomResetHidden",
+          "name": "zoomResetHidden",
           "type": "ToolActionLabel",
           "overlayId": "ZoomReset",
           "visibility": "Collapsed"
         },
         {
-          "name": "ZoomResetLabel",
+          "name": "zoomResetLabel",
           "type": "ToolActionLabel",
           "title": "Reset",
           "afterId": "ZoomOut",
@@ -60,7 +60,7 @@
       "series": [
         {
           "type": "LineSeries",
-          "name": "LineSeries1",
+          "name": "lineSeries1",
           "title": "Electricity",
           "xAxisRef": "xAxis",
           "yAxisRef": "yAxis",

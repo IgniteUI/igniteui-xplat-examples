@@ -16,7 +16,7 @@
         {
           "type": "PropertyEditorPropertyDescription",
           "propertyPath": "HighlightedValuesDisplayMode",
-          "name": "HighlightedValuesDisplayModeEditor",
+          "name": "highlightedValuesDisplayModeEditor",
           "label": "Highlight Display Mode: ",
           "primitiveValue": "Hidden"
         }

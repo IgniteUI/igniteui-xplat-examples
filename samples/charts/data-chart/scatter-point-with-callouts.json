@@ -3,7 +3,7 @@
   "descriptions": {
     "legend": {
       "type": "Legend",
-      "name": "Legend",
+      "name": "legend",
       "orientation": "Horizontal"
     },
     "content": {
@@ -33,7 +33,7 @@
       "series": [
         {
           "type": "ScatterSeries",
-          "name": "ScatterSeries1",
+          "name": "scatterSeries1",
           "title": "World Capitals Above 2 Million People",
           "xAxisRef": "xAxis",
           "yAxisRef": "yAxis",

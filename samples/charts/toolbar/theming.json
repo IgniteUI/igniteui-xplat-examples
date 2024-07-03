@@ -20,7 +20,7 @@
     },
     "aboveContent": {
       "type": "Toolbar",
-      "name": "Toolbar",
+      "name": "toolbar",
       "targetRef": "chart",
       "orientation": "Horizontal",
       "baseTheme": "Default"
@@ -48,7 +48,7 @@
       "series": [
         {
           "type": "LineSeries",
-          "name": "LineSeries1",
+          "name": "lineSeries1",
           "title": "Electricity",
           "xAxisRef": "xAxis",
           "yAxisRef": "yAxis",

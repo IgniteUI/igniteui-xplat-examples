@@ -23,7 +23,7 @@
     },
     "legend": {
       "type": "Legend",
-      "name": "Legend"
+      "name": "legend"
     },
     "content": {
       "type": "CategoryChart",
