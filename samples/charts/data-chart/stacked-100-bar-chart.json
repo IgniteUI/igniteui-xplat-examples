@@ -5,7 +5,7 @@
   "descriptions": {
     "legend": {
       "type": "Legend",
-      "name": "Legend",
+      "name": "legend",
       "orientation": "Horizontal"
     },
     "content": {
@@ -32,7 +32,7 @@
       "series": [
         {
           "type": "Stacked100BarSeries",
-          "name": "Stacked100BarSeries",
+          "name": "stacked100BarSeries",
           "dataSourceRef": "EnergyRenewableConsumption",
           "xAxisRef": "xAxis",
           "yAxisRef": "yAxis",
@@ -47,7 +47,7 @@
         },
         {
           "type": "DataToolTipLayer",
-          "name": "DataToolTipLayer"
+          "name": "dataToolTipLayer"
         }
       ]
     }

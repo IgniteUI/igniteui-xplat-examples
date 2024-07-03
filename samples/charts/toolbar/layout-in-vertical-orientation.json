@@ -3,7 +3,7 @@
   "descriptions": {
     "aboveContent": {
       "type": "Toolbar",
-      "name": "Toolbar",
+      "name": "toolbar",
       "targetRef": "chart",
       "orientation": "Vertical"
     },
@@ -28,7 +28,7 @@
       "series": [
         {
           "type": "LineSeries",
-          "name": "LineSeries1",
+          "name": "lineSeries1",
           "title": "Electricity",
           "xAxisRef": "xAxis",
           "yAxisRef": "yAxis",

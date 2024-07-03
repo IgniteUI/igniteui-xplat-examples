@@ -7,7 +7,7 @@
   "descriptions": {
     "legend": {
       "type": "Legend",
-      "name": "Legend",
+      "name": "legend",
       "orientation": "Horizontal"
     },
     "content": {
@@ -35,7 +35,7 @@
       "series": [
         {
           "type": "StackedBarSeries",
-          "name": "StackedBarSeries",
+          "name": "stackedBarSeries",
           "dataSourceRef": "CompanyMarketCapItemized",
           "xAxisRef": "xAxis",
           "yAxisRef": "yAxis",
@@ -51,7 +51,7 @@
         },
         {
           "type": "DataToolTipLayer",
-          "name": "DataToolTipLayer"
+          "name": "dataToolTipLayer"
         }
       ]
     }

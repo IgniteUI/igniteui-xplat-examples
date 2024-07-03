@@ -4,7 +4,7 @@
   },
   "descriptions": {
     "legend": {
-      "name": "Legend",
+      "name": "legend",
       "type": "DataLegend",
       "targetRef": "chart",
       "valueFormatString": "{0} Billion",

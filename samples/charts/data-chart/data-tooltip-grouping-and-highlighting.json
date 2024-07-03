@@ -60,7 +60,7 @@
         },
         {
           "type": "DataToolTipLayer",
-          "name": "DataToolTipLayer",
+          "name": "dataToolTipLayer",
           "groupRowVisible": true,
           "groupingMode": "Grouped"
         }

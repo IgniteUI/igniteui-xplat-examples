@@ -4,12 +4,12 @@
   "descriptions": {
     "legend": {
       "type": "Legend",
-      "name": "Legend",
+      "name": "legend",
       "orientation": "Horizontal"
     },
     "aboveContentLeft": {
       "type": "Toolbar",
-      "name": "Toolbar",
+      "name": "toolbar",
       "targetRef": "chart",
       "actions": [
         {
@@ -42,7 +42,7 @@
       "series": [
         {
           "type": "LineSeries",
-          "name": "LineSeries1",
+          "name": "lineSeries1",
           "title": "Electricity",
           "xAxisRef": "xAxis",
           "yAxisRef": "yAxis",

@@ -2,7 +2,7 @@
   "descriptions": {
     "legend": {
       "type": "DataLegend",
-      "name": "Legend",
+      "name": "legend",
       "targetRef": "chart",
       "groupRowVisible": true
     },

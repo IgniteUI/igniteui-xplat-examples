@@ -25,7 +25,7 @@
       "series": [
         {
           "type": "LineSeries",
-          "name": "LineSeries1",
+          "name": "lineSeries1",
           "xAxisRef": "xAxis",
           "yAxisRef": "yAxis",
           "dataSourceRef": "CountryRenewableElectricity",

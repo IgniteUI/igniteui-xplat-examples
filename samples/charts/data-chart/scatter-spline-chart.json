@@ -5,7 +5,7 @@
   "descriptions": {
     "legend": {
       "type": "Legend",
-      "name": "Legend",
+      "name": "legend",
       "orientation": "Horizontal"
     },
     "content": {
@@ -34,7 +34,7 @@
       "series": [
         {
           "type": "ScatterSplineSeries",
-          "name": "ScatterSplineSeries1",
+          "name": "scatterSplineSeries1",
           "title": "Germany",
           "xAxisRef": "xAxis",
           "yAxisRef": "yAxis",
@@ -46,7 +46,7 @@
         },
         {
           "type": "ScatterSplineSeries",
-          "name": "ScatterSplineSeries2",
+          "name": "scatterSplineSeries2",
           "title": "France",
           "xAxisRef": "xAxis",
           "yAxisRef": "yAxis",
@@ -58,7 +58,7 @@
         },
         {
           "type": "DataToolTipLayer",
-          "name": "DataToolTipLayer"
+          "name": "dataToolTipLayer"
         }
       ]
     }
