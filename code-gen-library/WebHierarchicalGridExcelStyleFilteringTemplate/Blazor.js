@@ -1,12 +1,12 @@
 //begin eventHandler
-igRegisterScript("WebGridExcelStyleFilteringTemplate", (args) => {
+igRegisterScript("WebHierarchicalGridExcelStyleFilteringTemplate", (args) => {
     //OMIT HANDLER
 }, false);
 //end eventHandler
 
 let requiredStyles = `
 <!--begin styles-->
-#grid {
+#hierarchicalGrid1 {
     --ig-grid-filtering-row-background: #ffcd0f;
     --ig-button-background: #FFCD0F;
     --ig-button-foreground: #292826;
