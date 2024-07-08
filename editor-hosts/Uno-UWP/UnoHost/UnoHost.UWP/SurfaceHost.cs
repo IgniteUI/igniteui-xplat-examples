@@ -554,21 +554,32 @@ namespace IgEditor
             var helperRegex = new Regex(@"CodeGenHelper.GetDescription<([^\]]+)>\(\""([^\""]*)""\)");
             handler = helperRegex.Replace(handler, @"GetDescription<$1>(""$2"")");
 
+            var findByNameRegex = new Regex(@"CodeGenHelper.FindByName<([^\]]+)>\(\""([^\""]*)""\)");
+            handler = findByNameRegex.Replace(handler, @"FindByName<$1>(""$2"")");
+
             var code = $@"
 {imports}
 
 public class HandlerHolder
 {{
-    public HandlerHolder(System.Func<string, object> getDescription)
+    public HandlerHolder(System.Func<string, object> getDescription,
+        System.Func<string, object> findByName)
     {{
         _getDescription = getDescription;
+        _findByName = findByName;
     }}
 
     private System.Func<string, object> _getDescription;
+    private System.Func<string, object> _findByName;
 
     private T GetDescription<T>(string descriptionName)
     {{
         return (T)_getDescription(descriptionName);
+    }}
+
+    private T FindByName<T>(string findByName)
+    {{
+        return (T)_findByName(findByName);
     }}
 
     {handler}   
@@ -608,7 +619,7 @@ public class HandlerHolder
                     Assembly dynamicAssymbly = Assembly.Load(ms.ToArray());
 
                     var handlerType = dynamicAssymbly.GetType("HandlerHolder");
-                    var holder = Activator.CreateInstance(handlerType, new object[] { (Func<string, object>)this.GetDescription });
+                    var holder = Activator.CreateInstance(handlerType, new object[] { (Func<string, object>)this.GetDescription, (Func<string, object>)this.FindByName });
                     var methInfo = handlerType.GetMethod(key);
                     Logger.Info("obtaining handler for {0}", key);
                     _dynamicHandlers[key] = Delegate.CreateDelegate(delegateType, holder, key);
@@ -642,6 +653,15 @@ public class HandlerHolder
         private object GetDescription(string descriptionName)
         {
             return GetContainer(descriptionName).Children.Count > 0 ? GetContainer(descriptionName).Children[0] : null;
+        }
+
+        private object FindByName(string name)
+        {
+            object value = null;
+            _cr.ResolveRefValue(_mainContent, name, (v) => {
+                value = v;
+            }
+            return value;
         }
 
         public string GenerateProject(string targetPath, string currentTemplate)

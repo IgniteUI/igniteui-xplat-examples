@@ -1,5 +1,5 @@
 //begin imports
-import { IgcCellTemplateContext } from 'igniteui-webcomponents-grids/grids';
+import { IgcCellTemplateContext, IgcTreeGridComponent } from 'igniteui-webcomponents-grids/grids';
 import { html, nothing } from 'lit-html';
 //end imports
 
@@ -9,7 +9,7 @@ export class WebTreeGridCellEditCellTemplate {
 public webTreeGridCellEditCellTemplate = (ctx: IgcCellTemplateContext) => {
     let cellValues: any = [];
     let uniqueValues: any = [];
-    for(const i of (this.roleplayDataStats as any)){
+    for(const i of (this.roleplayTreeGridData as any)){
         const field: string = ctx.cell.column.field;
         if(uniqueValues.indexOf(i[field]) === -1 )
         {
@@ -28,4 +28,3 @@ public webTreeGridCellEditCellTemplate = (ctx: IgcCellTemplateContext) => {
 //end content
 //end template
 }
-

@@ -11,13 +11,16 @@ import {
 //begin template
 @Component({
     template: `
+<!--begin content-->
    <ng-template #template igxCell let-val>
         <div class="linear-bar-container" style="width: 4rem">
             <igx-linear-bar [textVisibility]="false" class="cell__inner_2" [value]="val"></igx-linear-bar>
         </div>
     </ng-template>
+<!--end content-->
     `,
     styles: [`
+<!--begin styles-->
 .linear-bar-container {
     width: 100%;
 }
@@ -26,6 +29,7 @@ import {
     align-items: center;
     height: 100%;
 }
+<!--end styles-->
     `]
 })
 export class WebGridProgressCellTemplateComponent {

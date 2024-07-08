@@ -13,6 +13,7 @@ public class EditorChangeUpdateYAxisMaximumValue
     public void EditorChangeUpdateYAxisMaximumValue(object sender, PropertyEditorPropertyDescriptionChangedEventArgs args)
     {
         var yAxisMaximumVal = args.NewValue;
+        var chart = CodeGenHelper.GetDescription<XamCategoryChart>("content");
         chart.YAxisMaximumValue = Convert.ToDouble(yAxisMaximumVal);
     }
     //end eventHandler

@@ -28,7 +28,7 @@
       "series": [
         {
           "type": "FinancialPriceSeries",
-          "name": "Series1",
+          "name": "series1",
           "title": "Stock Price",
           "displayType": "Candlestick",
           "xAxisRef": "xAxis",

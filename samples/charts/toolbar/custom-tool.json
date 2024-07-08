@@ -1,9 +1,18 @@
 {
+  "strings": {
+    "legendTitle": "Renewable Electricity Generated"
+  },
   "onViewInit": [ "ToolbarCustomIconOnViewInit" ],
   "descriptions": {
-    "content": {
+    "aboveContentRight": {
+      "type": "Legend",
+      "name": "legend",
+      "orientation": "Horizontal"
+    },
+    "aboveContentLeft": {
       "type": "Toolbar",
       "name": "toolbar",
+      "targetRef": "chart",
       "orientation": "Horizontal",
       "actions": [
         {
@@ -13,9 +22,28 @@
           "iconCollectionName": "CustomCollection"
         }
       ]
+    },
+    "content": {
+      "type": "CategoryChart",
+      "name": "chart",
+      "chartType": "Line",
+      "isHorizontalZoomEnabled": true,
+      "isVerticalZoomEnabled": true,
+      "dataSourceRef": "CountryRenewableElectricity",
+      "includedProperties": ["Year", "Europe", "China", "America"],
+      "legendRef": "Legend",
+      "yAxisTitle": "TWh",
+      "yAxisTitleLeftMargin": 10,
+      "yAxisTitleRightMargin": 5,
+      "yAxisLabelLeftMargin": 0,
+      "yAxisLabelLocation": "OutsideRight",
+      "isTransitionInEnabled": true
     }
   },
   "modules": [
-    "layouts/ToolbarModule"
+    "charts/LegendModule",
+    "layouts/ToolbarModule",
+    "charts/CategoryChartModule",
+    "charts/CategoryChartToolbarModule"
   ]
 }

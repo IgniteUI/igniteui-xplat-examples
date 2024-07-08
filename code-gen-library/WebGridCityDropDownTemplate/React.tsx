@@ -13,11 +13,11 @@ export class WebGridCityDropDownTemplate {
         }
         const id = cell.id.rowID;
         const comboId = "city_" + id;
-        this.comboRefs = this.comboRefs.bind(this);
+        (this as any).comboRefs = (this as any).comboRefs.bind(this);
         return (
         <>
             <div style={{display: "flex", flexDirection: "column"}}>
-                <IgrCombo ref={this.comboRefs} placeholder="Choose City..." disabled="true" valueKey="Name"  displayKey="Name" name={comboId} singleSelect="true">
+                <IgrCombo ref={(this as any).comboRefs} placeholder="Choose City..." disabled="true" valueKey="Name"  displayKey="Name" name={comboId} singleSelect="true">
                 </IgrCombo>
             </div>
         </>

@@ -7,8 +7,9 @@ import { CodeGenHelper } from 'igniteui-webcomponents-core';
 export class WebTreeGridPinRowOnRendered {
     //begin eventHandler
     public webTreeGridPinRowOnRendered(args:any): void {
-        this.treeGrid.pinRow(1);
-        this.treeGrid.pinRow(11);
+        var treeGrid = CodeGenHelper.getDescription<IgrTreeGrid>("content");
+        treeGrid.pinRow(1);
+        treeGrid.pinRow(11);
     }
     //end eventHandler
 }

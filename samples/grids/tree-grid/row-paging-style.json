@@ -1,5 +1,6 @@
 {
   "todo": ["Approved Defer - until we support injecting CSS styles"],
+  "export": true,
   "skipAlterDataCasing": true,
   "descriptions": {
     "content": {

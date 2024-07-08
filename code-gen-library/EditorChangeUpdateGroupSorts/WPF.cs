@@ -14,8 +14,8 @@ public class EditorChangeUpdateGroupSorts
     {
         var chart = CodeGenHelper.GetDescription<XamCategoryChart>("content");
         var groupSortsVal = args.NewValue.ToString();
-        chart.groupSorts = null;
-        chart.groupSorts = groupSortsVal;
+        chart.GroupSorts = null;
+        chart.GroupSorts = groupSortsVal;
     }
     //end eventHandler
 }

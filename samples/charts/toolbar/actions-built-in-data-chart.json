@@ -2,7 +2,7 @@
   "descriptions": {
     "aboveContentLeft": {
       "type": "Toolbar",
-      "name": "Toolbar",
+      "name": "toolbar",
       "targetRef": "chart",
       "orientation": "Horizontal"
     },
@@ -29,7 +29,7 @@
       "series": [
         {
           "type": "LineSeries",
-          "name": "LineSeries1",
+          "name": "lineSeries1",
           "title": "Electricity",
           "xAxisRef": "xAxis",
           "yAxisRef": "yAxis",

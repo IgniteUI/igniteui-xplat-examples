@@ -1,5 +1,5 @@
 //begin imports
-import { IgcPropertyEditorPropertyDescriptionButtonClickEventArgs } from 'igniteui-webcomponents-layouts';
+import { IgcPropertyEditorPropertyDescriptionChangedEventArgs } from 'igniteui-webcomponents-layouts';
 import { IgcDataChartComponent } from 'igniteui-webcomponents-charts';
 //end imports
 

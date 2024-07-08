@@ -23,7 +23,7 @@
       "series": [
         {
           "type": "LineSeries",
-          "name": "LineSeries1",
+          "name": "lineSeries1",
           "title": "Europe",
           "xAxisRef": "xAxis",
           "yAxisRef": "yAxis",

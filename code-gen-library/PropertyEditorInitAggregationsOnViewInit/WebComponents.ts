@@ -1,5 +1,6 @@
 //begin imports
-import { IgcPropertyEditorPanelComponent, PropertyEditorValueType } from 'igniteui-webcomponents-layouts';
+import { IgcCategoryChartComponent } from 'igniteui-webcomponents-charts';
+import { IgcPropertyEditorPanelComponent, IgcPropertyEditorPropertyDescriptionChangedEventArgs, IgcPropertyEditorPropertyDescriptionComponent, PropertyEditorValueType } from 'igniteui-webcomponents-layouts';
 //end imports
 
 
@@ -35,13 +36,13 @@ export class PropertyEditorInitAggregationsOnViewInit {
 
 	public editorChangeUpdateInitialSummaries(sender: any, args: IgcPropertyEditorPropertyDescriptionChangedEventArgs): void {
 
-        var chart = this.chart;
+        var chart = CodeGenHelper.getDescription<IgcCategoryChartComponent>("content");
         var intialSummaryVal = args.newValue.toString();
         chart.initialSummaries = intialSummaryVal;
     }
 
     public editorChangeUpdateGroupSorts(sender: any, args: IgcPropertyEditorPropertyDescriptionChangedEventArgs): void {
-        var chart = this.chart;
+        var chart = CodeGenHelper.getDescription<IgcCategoryChartComponent>("content");
         var groupSortsVal = args.newValue.toString();
         chart.groupSorts = groupSortsVal;
     }	

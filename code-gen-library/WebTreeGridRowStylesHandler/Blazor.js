@@ -1,4 +1,4 @@
-//begin template
+//begin eventHandler
 igRegisterScript("WebTreeGridRowStylesHandler", () => {
     return {
         'background': (row) => row.data['Title'] === 'CEO' ? '#6c757d' : row.data['Title'].includes('President') ? '#adb5bd' :
@@ -9,4 +9,4 @@ igRegisterScript("WebTreeGridRowStylesHandler", () => {
         'color': (row) => row.data['Title'] === 'CEO' ? '#fff' : null
     };
 }, true);
-//end template
+//end eventHandler

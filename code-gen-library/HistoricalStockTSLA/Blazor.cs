@@ -13,7 +13,7 @@ namespace Infragistics.Samples
         public void Add(string month, string day, string year, double c, double v, double o, double h, double l)
         {
             var date = year + "-" + month + "-" + day;
-            var index = Length + 1;
+            var index = Count + 1;
          // Add(new HistoricalStockInfo { Index = 0, Label = "0", Value = 10, Date = new DateTime(2000, 1, 1) });
             Add(new HistoricalStockInfo { Index = index, Label = date, Open = o, High = h, Low = l, Close = c, Volume = v });
         }

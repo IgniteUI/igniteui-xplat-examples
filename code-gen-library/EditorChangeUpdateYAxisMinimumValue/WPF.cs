@@ -13,6 +13,7 @@ public class EditorChangeUpdateYAxisMinimumValue
     public void EditorChangeUpdateYAxisMinimumValue(object sender, PropertyEditorPropertyDescriptionChangedEventArgs args)
     {        
         var yAxisMinimumVal = args.NewValue;
+        var chart = CodeGenHelper.GetDescription<XamCategoryChart>("content");
         chart.YAxisMinimumValue = Convert.ToDouble(yAxisMinimumVal);
     }
     //end eventHandler

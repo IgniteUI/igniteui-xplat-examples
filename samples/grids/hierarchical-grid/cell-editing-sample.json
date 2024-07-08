@@ -6,6 +6,7 @@
         "dataRef": "HGridDndData",
         "autoGenerate": false,
         "primaryKey": "Name",
+        "name": "hierarchicalGrid1",
         "columns": [
           {
             "type": "WebColumn",

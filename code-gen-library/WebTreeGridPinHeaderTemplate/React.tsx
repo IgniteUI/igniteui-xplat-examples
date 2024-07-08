@@ -1,5 +1,5 @@
 //begin imports
-import { IgrGridComponent, IgrColumnTemplateContext} from 'igniteui-react-grids';
+import { IgrTreeGridComponent, IgrColumnTemplateContext} from 'igniteui-react-grids';
 //end imports
 
 export class WebTreeGridPinHeaderTemplate {
@@ -17,10 +17,10 @@ public webTreeGridPinHeaderTemplate = (props: {dataContext: IgrColumnTemplateCon
 //end content
 //begin supportingMethods
 public toggleColumnPin(field: string) {
-    var grid = this.treeGrid;
-    var col = grid.getColumnByName(field);
+    var treeGrid = CodeGenHelper.getDescription<IgrTreeGrid>("content");
+    var col = treeGrid.getColumnByName(field);
     col.pinned = !col.pinned;
-    grid.markForCheck();
+    treeGrid.markForCheck();
 }
 //end supportingMethods
 //end template

@@ -1,6 +1,7 @@
 {
   "todo": [ "" ],
   "export": true,
+  "skipAlterDataCasing": true,
   "descriptions": {
     "content": {
       "type": "WebTreeGrid",

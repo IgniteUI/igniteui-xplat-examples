@@ -5,7 +5,7 @@
   "descriptions": {
     "legend": {
       "type": "Legend",
-      "name": "Legend",
+      "name": "legend",
       "orientation": "Horizontal"
     },
     "content": {
@@ -32,7 +32,7 @@
       "series": [
         {
           "type": "Stacked100LineSeries",
-          "name": "Stacked100LineSeries",
+          "name": "stacked100LineSeries",
           "dataSourceRef": "ContinentsBirthRate",
           "xAxisRef": "xAxis",
           "yAxisRef": "yAxis",
@@ -48,7 +48,7 @@
         },
         {
           "type": "DataToolTipLayer",
-          "name": "DataToolTipLayer"
+          "name": "dataToolTipLayer"
         }
       ]
     }

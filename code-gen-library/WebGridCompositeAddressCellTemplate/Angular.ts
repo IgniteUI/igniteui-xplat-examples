@@ -10,6 +10,7 @@ import {
 //begin template
 @Component({
     template: `
+<!--begin content-->
     <ng-template igxCell let-cell='cell' #template>
     <div class="address-container">
                         <div class="country-city">
@@ -25,6 +26,7 @@ import {
                         <br />
     </div>
     </ng-template>
+<!--end content-->
     `,
     styles: [`
 .address-container{

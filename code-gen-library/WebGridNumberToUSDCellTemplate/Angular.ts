@@ -10,9 +10,11 @@ import {
 //begin template
 @Component({
     template: `
+<!--begin content-->
         <ng-template igxCell let-cell="cell" let-val let-row #template>
-            ${{val}}
+            {{val}}
         </ng-template>
+<!--end content-->
     `
 })
 export class WebGridNumberToUSDCellTemplateComponent {

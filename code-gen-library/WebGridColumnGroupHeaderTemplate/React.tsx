@@ -1,5 +1,5 @@
 //begin imports
-import { IgrColumn, IgrColumnGroup, IgrColumnTemplateContext } from 'igniteui-react-grids';
+import { IgrColumn, IgrGrid, IgrColumnGroup, IgrColumnTemplateContext } from 'igniteui-react-grids';
 //end imports
 export class WebGridColumnGroupHeaderTemplate {
 //begin template
@@ -19,7 +19,8 @@ public webGridColumnGroupHeaderTemplate = (e: { dataContext: IgrColumnTemplateCo
 //begin supportingMethods
 public columnGroupStates = new Map<IgrColumn, boolean>();
 public toggleColumnGroup(column: IgrColumn) {
-    const columnGroup = this.grid.contentColumns.find((col) => col.name == column.name) as IgrColumnGroup;
+    let grid = CodeGenHelper.getDescription<IgrGrid>("content");
+    const columnGroup = grid.contentColumns.find((col) => col.name == column.name) as IgrColumnGroup;
     const columns = Array.from(columnGroup.actualChildren);
     if (columnGroup.header === 'General Information') {
         const col = columns[1] as IgrColumn;

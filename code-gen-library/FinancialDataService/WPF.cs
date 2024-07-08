@@ -99,6 +99,7 @@ namespace Infragistics.Samples
         public string IndGroup { get; set; }
         public string IndSector { get; set; }
         public string IndCategory { get; set; }
+        public string CpnTyp { get; set; }
         public string Cpn { get; set; }
         public double KRD_3YR { get; set; }
         public double KRD_5YR { get; set; }

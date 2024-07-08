@@ -8,7 +8,7 @@ public class WebHierarchicalGridPinFirstGroupToggle
     //begin eventHandler
     public void WebHierarchicalGridPinFirstGroupToggle(IgbPropertyEditorPropertyDescriptionButtonClickEventArgs args)
     {
-        var columnGroup = this.hierarchicalGrid.ActualColumns[1];
+        var columnGroup = CodeGenHelper.GetDescription<IgbHierarchicalGrid>("content").ActualColumns[1];
         columnGroup.Pinned = !columnGroup.Pinned;
     }
     //end eventHandler

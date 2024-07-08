@@ -6,8 +6,7 @@ import { IgcTreeGridComponent, IgcRowType } from 'igniteui-webcomponents-grids/g
 import { CodeGenHelper } from 'igniteui-webcomponents-core';
 
 export class WebTreeGridRowStylesHandler {
-//begin template
-//begin content
+//begin eventHandler
     public webTreeGridRowStylesHandler = {
         'background': (row: IgcRowType) => row.data['Title'] === 'CEO' ? '#6c757d' : row.data['Title'].includes('President') ? '#adb5bd' :
             row.data['Title'].includes('Director') ? '#ced4da' : row.data['Title'].includes('Manager') ? '#dee2e6' :
@@ -16,6 +15,5 @@ export class WebTreeGridRowStylesHandler {
         'border-color': (row: IgcRowType) => row.data['Title'] === 'CEO' ? '#495057' : null,
         'color': (row: IgcRowType) => row.data['Title'] === 'CEO' ? '#fff' : null
     };
-//end content
-//end template
+//end eventHandler
 }

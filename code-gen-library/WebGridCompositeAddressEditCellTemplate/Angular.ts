@@ -10,6 +10,7 @@ import {
 //begin template
 @Component({
     template: `
+<!--begin content-->
     <ng-template #template igxCellEditor let-cell="cell">
                     <div class="address-container--edit">
                         <div>
@@ -37,6 +38,7 @@ import {
                         <br>
                     </div>
     </ng-template>
+<!--end content-->
     `,
     styles: [`
 .address-container--edit {

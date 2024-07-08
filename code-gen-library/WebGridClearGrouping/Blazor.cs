@@ -8,7 +8,7 @@ public class WebGridClearGrouping
     //begin eventHandler
     public void WebGridClearGrouping(IgbPropertyEditorPropertyDescriptionButtonClickEventArgs args)
     {
-        this.grid.ClearGrouping("");
+        CodeGenHelper.GetDescription<IgbGrid>("content").ClearGrouping("");
     }
     //end eventHandler
 }

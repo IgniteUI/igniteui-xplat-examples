@@ -1,5 +1,5 @@
 //begin imports
-import { IgrGridEditDoneEventArgs } from 'igniteui-react-grids';
+import { IgrGridEditDoneEventArgs, IgrGrid } from 'igniteui-react-grids';
 //end imports
 
 export class WebGridRowEditExit {

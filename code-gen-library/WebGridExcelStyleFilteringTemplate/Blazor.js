@@ -6,7 +6,7 @@ igRegisterScript("WebGridExcelStyleFilteringTemplate", (args) => {
 
 let requiredStyles = `
 <!--begin styles-->
-#hierarchicalGrid1 {
+#grid {
     --ig-grid-filtering-row-background: #ffcd0f;
     --ig-button-background: #FFCD0F;
     --ig-button-foreground: #292826;

@@ -1,6 +1,7 @@
 //begin imports
 using Infragistics.Controls;
 using Infragistics.Controls.Layouts;
+using Infragistics.Controls.Charts;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -27,8 +28,8 @@ public class PropertyEditorInitAggregationsOnViewInit
 	{
 		var editor = CodeGenHelper.GetDescription<XamPropertyEditorPanel>("editor");
         
-		var initialSummariesDropdown = new IgbPropertyEditorPropertyDescription();
-		var sortGroupsDropdown = new IgbPropertyEditorPropertyDescription();
+		var initialSummariesDropdown = new PropertyEditorPropertyDescription();
+		var sortGroupsDropdown = new PropertyEditorPropertyDescription();
 		initialSummariesDropdown.Label = "Initial Summaries";
 		initialSummariesDropdown.ValueType = PropertyEditorValueType.EnumValue;
 		initialSummariesDropdown.ShouldOverrideDefaultEditor = true;
@@ -48,16 +49,16 @@ public class PropertyEditorInitAggregationsOnViewInit
 		sortGroupsDropdown.Changed += this.EditorChangeUpdateGroupSorts;
 	}
 	
-	public void EditorChangeUpdateInitialSummaries(PropertyEditorPropertyDescriptionChangedEventArgs args)
+	public void EditorChangeUpdateInitialSummaries(object sender, PropertyEditorPropertyDescriptionChangedEventArgs args)
 	{
-		var chart = this.chart;
+		var chart = CodeGenHelper.GetDescription<XamCategoryChart>("content");
 		var intialSummaryVal = args.NewValue.ToString();
 		chart.InitialSummaries = intialSummaryVal;
 	}
 
-	public void EditorChangeUpdateGroupSorts(PropertyEditorPropertyDescriptionChangedEventArgs args)
+	public void EditorChangeUpdateGroupSorts(object sender, PropertyEditorPropertyDescriptionChangedEventArgs args)
 	{    
-		var chart = this.chart;
+		var chart = CodeGenHelper.GetDescription<XamCategoryChart>("content");
 		var groupSortsVal = args.NewValue.ToString();
 		chart.GroupSorts = groupSortsVal;
 	}
