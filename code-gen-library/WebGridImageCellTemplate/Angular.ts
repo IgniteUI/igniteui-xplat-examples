@@ -10,6 +10,7 @@ import {
 //begin template
 @Component({
     template: `
+<!--begin content-->
     <ng-template igxCell let-val #template>
         <div class="cell__inner_2">
                 <img [src]="val" class="flag"
@@ -19,13 +20,16 @@ import {
                 width: 3rem;"/>
         </div>
     </ng-template>
+<!--end content-->
     `,
     styles: [`
+<!--begin styles-->
 .cell__inner_2 {
     display: flex;
     align-items: center;
     height: 100%;
 }
+<!--end styles-->
     `]
 })
 export class WebGridImageCellTemplateComponent {

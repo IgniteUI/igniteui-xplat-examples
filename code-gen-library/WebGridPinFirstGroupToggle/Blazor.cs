@@ -8,7 +8,7 @@ public class WebGridPinFirstGroupToggle
     //begin eventHandler
     public void WebGridPinFirstGroupToggle(IgbPropertyEditorPropertyDescriptionButtonClickEventArgs args)
     {
-        var columnGroup = this.grid.ActualColumns[1];
+        var columnGroup = CodeGenHelper.GetDescription<IgbGrid>("content").ActualColumns[1];
         columnGroup.Pinned = !columnGroup.Pinned;
     }
     //end eventHandler

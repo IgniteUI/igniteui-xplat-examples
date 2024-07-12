@@ -10,9 +10,9 @@ export class WebGridDiscontinuedCellTemplate {
 //begin content
 public webGridDiscontinuedCellTemplate = (ctx: IgcCellTemplateContext) => {
     if (ctx.cell.value) {
-        return html`<img src="https://www.infragistics.com/angular-demos-lob/assets/images/grid/active.png" title="Continued" alt="Continued" />`
+        return html`<img src="https://static.infragistics.com/xplatform/images/grid/active.png" title="Continued" alt="Continued" />`
     } else {
-        return html`<img src="https://www.infragistics.com/angular-demos-lob/assets/images/grid/expired.png" title="Discontinued" alt="Discontinued" />`;
+        return html`<img src="https://static.infragistics.com/xplatform/images/grid/expired.png" title="Discontinued" alt="Discontinued" />`;
     }
 };
 //end content

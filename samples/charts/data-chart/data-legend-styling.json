@@ -1,9 +1,8 @@
 {
-  "export": false,
   "descriptions": {
     "legend": {
       "type": "DataLegend",
-      "name": "Legend",
+      "name": "legend",
       "targetRef": "chart",
       "groupRowVisible": true,
       "groupTextColor": "purple",
@@ -46,7 +45,7 @@
         },
         {
           "type": "DataToolTipLayer",
-          "name": "DataToolTipLayer",
+          "name": "dataToolTipLayer",
           "groupRowVisible": true,
           "groupingMode": "Grouped"
         }

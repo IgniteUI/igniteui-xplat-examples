@@ -8,13 +8,15 @@ public class CategoryChartCustomSelectionPointerDown
     //begin eventHandler
     public void CategoryChartCustomSelectionPointerDown(IgbDomainChartSeriesPointerEventArgs args)
     {
+        var chart = CodeGenHelper.GetDescription<IgbCategoryChart>("content");
+        var selectableData = (SelectableData)chart.DataSource;
         var selectedItem = args.Item as SelectableDataItem;
         if (selectedItem == null) return;
 
         var selectedIndex = -1;
-        for (var i = 0; i < this.SelectableData.Count; i++)
+        for (var i = 0; i < selectableData.Count; i++)
         {
-            if (selectedItem.Category == this.SelectableData[i].Category)
+            if (selectedItem.Category == selectableData[i].Category)
             {
                 selectedIndex = i; break;
             }
@@ -25,7 +27,7 @@ public class CategoryChartCustomSelectionPointerDown
         else
             selectedItem.SelectedValue = selectedItem.DataValue;
 
-        chart.NotifyUpdateItem(this.SelectableData, selectedIndex, selectedItem, false);
+        chart.NotifyUpdateItem(selectableData, selectedIndex, selectedItem, false);
     }
     //end eventHandler
 }

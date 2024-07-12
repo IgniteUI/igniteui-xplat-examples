@@ -14,7 +14,7 @@ public class EditorChangeUpdateValueLines
     {
         //var item = CodeGenHelper.GetDescription<IgbPropertyEditorPanel>("editor").Properties.Where((p) => p.PropertyPath == "MarkerType").First();
         //var value = (string)item.PrimitiveValue;
-        //var chart = CodeGenHelper.GetDescription<IgbCategoryChart>("content");
+        var chart = CodeGenHelper.GetDescription<IgbCategoryChart>("content");
 
         var valueLineType = (ValueLayerValueMode)Enum.Parse(typeof(ValueLayerValueMode), args.NewValue.ToString());
         chart.ValueLines.Clear();

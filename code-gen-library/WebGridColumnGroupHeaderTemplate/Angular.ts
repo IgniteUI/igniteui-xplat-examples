@@ -6,6 +6,10 @@ import {
     IgxGridModule,
     IgxIconModule
  } from "igniteui-angular";
+//begin imports
+import { IgxColumnGroupComponent } from 'igniteui-angular';
+//end imports
+
 //begin template
 @Component({
     template: `

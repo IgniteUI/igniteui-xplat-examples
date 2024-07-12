@@ -1,7 +1,7 @@
 //begin imports
 import { IgcDataChartComponent } from 'igniteui-webcomponents-charts';
-import { IgcCategoryStyle } from 'igniteui-webcomponents-charts';
 import { IgcSeriesComponent } from 'igniteui-webcomponents-charts';
+import { IgcAssigningCategoryStyleEventArgs } from 'igniteui-webcomponents-charts';}
 //end imports
 
 import { CodeGenHelper } from 'igniteui-webcomponents-core';

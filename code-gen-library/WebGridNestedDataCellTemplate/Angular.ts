@@ -11,6 +11,7 @@ import {
 //begin template
 @Component({
     template: `
+<!--begin content-->
     <ng-template #template igxCell let-people let-cell="cell">
         <div class='expand'>
                     <div class="employees-container">
@@ -36,8 +37,10 @@ import {
                     </div>
     </div>
     </ng-template>
+<!--end content-->
     `,
     styles: [`
+<!--begin styles-->
     igx-expansion-panel {
     display: flex;
     font-size: .75rem;
@@ -85,6 +88,7 @@ import {
     .expand > .igx-expansion-panel__header-description {
             font-weight: bold;
     }
+<!--end styles-->
     `]
 })
 export class WebGridNestedDataCellTemplateComponent {

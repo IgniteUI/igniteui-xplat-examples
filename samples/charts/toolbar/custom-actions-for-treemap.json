@@ -7,7 +7,7 @@
   "descriptions": {
     "aboveContent": {
       "type": "Toolbar",
-      "name": "Toolbar"
+      "name": "toolbar"
     },
     "content": {
       "type": "Treemap",

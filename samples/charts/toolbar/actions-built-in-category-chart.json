@@ -5,12 +5,12 @@
   "descriptions": {
     "aboveContentRight": {
       "type": "Legend",
-      "name": "Legend",
+      "name": "legend",
       "orientation": "Horizontal"
     },
     "aboveContentLeft": {
       "type": "Toolbar",
-      "name": "Toolbar",
+      "name": "toolbar",
       "targetRef": "chart",
       "orientation": "Horizontal"
     },

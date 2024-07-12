@@ -56,7 +56,7 @@
         },
         {
           "type": "DataToolTipLayer",
-          "name": "DataToolTipLayer"
+          "name": "dataToolTipLayer"
         }
       ]
     }

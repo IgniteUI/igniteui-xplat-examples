@@ -1,0 +1,86 @@
+{
+  "export": true,
+  "skipAlterDataCasing": true,
+  "onInit": [
+    "WebTreeGridSummaryStyle"
+  ],
+  "descriptions": {
+    "content": {
+      "type": "WebTreeGrid",
+      "dataRef": "OrdersTreeData",
+      "autoGenerate": false,
+      "name": "treeGrid",
+      "id": "treeGrid",
+      "primaryKey": "ID",
+      "foreignKey": "ParentID",
+      "columns": [
+        {
+          "type": "WebColumn",
+          "field": "ID",
+          "header": "Order ID"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Name",
+          "header": "Order Product",
+          "hasSummary": true,
+          "headerTemplateRef": "WebTreeGridSummariesHeaderTemplate"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Category",
+          "header": "Category",
+          "hasSummary": true,
+          "headerTemplateRef": "WebTreeGridSummariesHeaderTemplate"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Units",
+          "header": "Units",
+          "dataType": "Number",
+          "hasSummary": true,
+          "editable": true,
+          "headerTemplateRef": "WebTreeGridSummariesHeaderTemplate"
+        },
+        {
+          "type": "WebColumn",
+          "field": "UnitPrice",
+          "header": "Unit Price",
+          "dataType": "Number",
+          "hasSummary": true,
+          "editable": true,
+          "headerTemplateRef": "WebTreeGridSummariesHeaderTemplate"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Price",
+          "header": "Price",
+          "dataType": "Number",
+          "hasSummary": true,
+          "editable": true,
+          "headerTemplateRef": "WebTreeGridSummariesHeaderTemplate"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Delivered",
+          "header": "Delivered",
+          "dataType": "Boolean",
+          "hasSummary": true,
+          "headerTemplateRef": "WebTreeGridSummariesHeaderTemplate"
+        },
+        {
+          "type": "WebColumn",
+          "field": "OrderDate",
+          "header": "Order Date",
+          "dataType": "Date",
+          "hasSummary": true,
+          "headerTemplateRef": "WebTreeGridSummariesHeaderTemplate"
+        }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "grids/WebTreeGridModule"
+  ]
+}

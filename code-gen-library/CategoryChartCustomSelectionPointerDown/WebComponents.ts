@@ -1,7 +1,16 @@
+//begin imports
+import { IgcCategoryChartComponent } from 'igniteui-webcomponents-charts';
+import { IgcDomainChartSeriesPointerEventArgs } from 'igniteui-webcomponents-charts';
+import { SelectableData, SelectableDataItem } from './SelectableData';
+//end imports
+
 export class CategoryChartCustomSelectionPointerDown {
     //begin eventHandler
-    public categoryChartCustomSelectionPointerDown(o: any, e: any): void {
-    	let oldItem = e.item as SelectableDataItem;
+    public categoryChartCustomSelectionPointerDown(sender: any, args: IgcDomainChartSeriesPointerEventArgs): void {
+
+        var chart = CodeGenHelper.getDescription<IgcCategoryChartComponent>("content");
+        var selectableData = chart.dataSource as SelectableData;
+    	let oldItem = args.item as SelectableDataItem;
 
         if (oldItem === null) return;
 
@@ -12,8 +21,8 @@ export class CategoryChartCustomSelectionPointerDown {
         });
 
         var selectedIndex = -1;
-        for (var i = 0; i < this.selectableData.length; i++) {
-            if (oldItem.category === this.selectableData[i].category) {
+        for (var i = 0; i < selectableData.length; i++) {
+            if (oldItem.category === selectableData[i].category) {
                 selectedIndex = i;
                 break;
             }
@@ -24,7 +33,7 @@ export class CategoryChartCustomSelectionPointerDown {
         else
             newItem.selectedValue = newItem.dataValue;
 
-        this.chart.notifySetItem(this.selectableData, selectedIndex, oldItem, newItem);
+        chart.notifySetItem(selectableData, selectedIndex, oldItem, newItem);
     }
     //end eventHandler
 }

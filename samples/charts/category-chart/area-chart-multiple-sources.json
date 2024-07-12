@@ -5,7 +5,7 @@
   "descriptions": {
     "legend": {
       "type": "Legend",
-      "name": "Legend",
+      "name": "legend",
       "orientation": "Horizontal"
     },
     "content": {
@@ -14,7 +14,7 @@
       "chartType": "Area",
       "dataSourceRef": "CountryRenewableElectricity",
       "includedProperties": ["Year", "Europe", "China", "America"],
-      "legendRef": "Legend",
+      "legendRef": "legend",
       "yAxisTitle": "TWh",
       "yAxisTitleLeftMargin": 10,
       "yAxisTitleRightMargin": 5,

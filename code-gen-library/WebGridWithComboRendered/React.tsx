@@ -13,9 +13,9 @@ export class WebGridWithComboRendered {
         'Japan',
         'United Kingdom'
     ];
-    public countries = [...this.worldCitiesAbove500K].filter(x => this.countryNames.indexOf(x.Country) !== -1).filter((value, index, array) => array.findIndex(x => x.Country === value.Country) === index);
-    public regions = [...this.worldCitiesAbove500K].filter((value, index, array) => array.findIndex(x => x.Region === value.Region) === index);
-    public cities = [...this.worldCitiesAbove500K].filter((value, index, array) => array.findIndex(x => x.Name === value.Name) === index);
+    public countries = [...CodeGenHelper.findByName<any[]>("worldCitiesAbove500K")].filter(x => this.countryNames.indexOf(x.Country) !== -1).filter((value, index, array) => array.findIndex(x => x.Country === value.Country) === index); 
+    public regions = [...CodeGenHelper.findByName<any[]>("worldCitiesAbove500K")].filter((value, index, array) => array.findIndex(x => x.Region === value.Region) === index);
+    public cities = [...CodeGenHelper.findByName<any[]>("worldCitiesAbove500K")].filter((value, index, array) => array.findIndex(x => x.Name === value.Name) === index);
     private comboRefCollection = new Map<string, IgrCombo>();
     private comboRefs(r: IgrCombo) {
         if (this && r && !this.comboRefCollection.get((r as any).props.name)) {

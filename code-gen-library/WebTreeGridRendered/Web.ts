@@ -1,6 +1,6 @@
 //begin imports
 import { IgcRowSelectionEventArgs } from 'igniteui-webcomponents-grids/grids';
-import { IgcGridComponent } from 'igniteui-webcomponents-grids/grids';
+import { IgcTreeGridComponent } from 'igniteui-webcomponents-grids/grids';
 //end imports
 
 import { CodeGenHelper } from 'igniteui-webcomponents-core';

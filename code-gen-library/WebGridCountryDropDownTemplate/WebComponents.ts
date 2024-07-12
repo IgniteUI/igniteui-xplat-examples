@@ -21,8 +21,8 @@ public webGridCountryDropDownTemplate: IgcRenderFunction<IgcCellTemplateContext>
             value-key="Country" 
             display-key="Country" 
             single-select
-            .data="${this.countries}"
-            @igcChange="${(e: CustomEvent) => this.onCountryChange(id, e)}"
+            .data="${CodeGenHelper.findByName<any[]>("countries")}"
+            @igcChange="${(e: CustomEvent) => (this as any).onCountryChange(id, e)}"
         ></igc-combo> 
     `;
 }

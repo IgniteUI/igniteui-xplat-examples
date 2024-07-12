@@ -1,5 +1,4 @@
 {
-  "export": false,
   "descriptions": {
     "content": {
       "type": "DataChart",
@@ -61,7 +60,7 @@
         },
         {
           "type": "DataToolTipLayer",
-          "name": "DataToolTipLayer",
+          "name": "dataToolTipLayer",
           "groupRowVisible": true,
           "groupingMode": "Grouped"
         }

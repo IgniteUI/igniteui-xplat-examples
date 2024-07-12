@@ -8,7 +8,7 @@ public class WebGridClearSort
     //begin eventHandler
     public void WebGridClearSort(IgbPropertyEditorPropertyDescriptionButtonClickEventArgs args)
     {
-        this.grid.ClearSort("");
+        CodeGenHelper.GetDescription<IgbGrid>("content").ClearSort("");
     }
     //end eventHandler
 }

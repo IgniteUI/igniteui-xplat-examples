@@ -10,17 +10,20 @@ import {
 //begin template
 @Component({
     template: `
+<!--begin content-->
     <ng-template igxCell let-cell="cell" let-val let-row #template>
         {{+val | currency}}
     </ng-template>
+<!--end content-->
     `,
     styles: [`
+<!--begin styles-->
 .grid__wrapper {
     margin: 16px;
 }
 
 .gridSample__filter {
-    width: rem(200px);
+    width: rem-convert(200px);
 }
 
 .cell__inner,
@@ -42,15 +45,19 @@ import {
 igx-buttongroup{
     display: block;
     width: 500px;
-}`]
+}
+<!--end styles-->
+`]
 })
 export class WebGridUnitPriceCellTemplateComponent {
     @ViewChild("template", { static: true})
     public template: TemplateRef<any>;
 
+//begin supportingMethods
     public formatCurrency(val: string) {
         return parseInt(val, 10).toFixed(2);
     }
+//end supportingMethods
 }
 
 @NgModule({

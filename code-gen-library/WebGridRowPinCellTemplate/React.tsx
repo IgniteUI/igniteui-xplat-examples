@@ -1,5 +1,5 @@
 //begin imports
-import { IgrCellTemplateContext } from 'igniteui-react-grids';
+import { IgrCellTemplateContext, IgrGrid } from 'igniteui-react-grids';
 //end imports
 
 export class WebGridRowPinCellTemplate {
@@ -14,7 +14,8 @@ public webGridRowPinCellTemplate = (e: {dataContext: IgrCellTemplateContext}) =>
 //end content
 //begin supportingMethods
 public toggleRowPin(index: number) {
-    this.grid.getRowByIndex(index).pinned = !this.grid.getRowByIndex(index).pinned;
+    let grid = CodeGenHelper.getDescription<IgrGrid>("content");
+    grid.getRowByIndex(index).pinned = !grid.getRowByIndex(index).pinned;
 }
 //end supportingMethods
 //end template

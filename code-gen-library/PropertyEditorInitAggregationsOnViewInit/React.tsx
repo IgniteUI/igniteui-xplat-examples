@@ -1,5 +1,6 @@
 //begin imports
-import { IgrPropertyEditorPanelComponent, PropertyEditorValueType } from 'igniteui-webcomponents-layouts';
+import { IgrPropertyEditorPanelComponent, IgrPropertyEditorPropertyDescription, PropertyEditorValueType, IgrPropertyEditorPropertyDescriptionChangedEventArgs } from 'igniteui-webcomponents-layouts';
+import { IgrCategoryChart } from 'igniteui-react-charts';
 //end imports
 
 
@@ -9,8 +10,8 @@ export class PropertyEditorInitAggregationsOnViewInit {
     public propertyEditorInitAggregationsOnViewInit(): void {
 
         var editor = CodeGenHelper.getDescription<IgrPropertyEditorPanelComponent>("editor");
-        var initialSummariesDropdown = new IgrPropertyEditorPropertyDescriptionComponent({});
-        var sortGroupsDropdown = new IgrPropertyEditorPropertyDescriptionComponent({});
+        var initialSummariesDropdown = new IgrPropertyEditorPropertyDescription({});
+        var sortGroupsDropdown = new IgrPropertyEditorPropertyDescription({});
 
         initialSummariesDropdown.label = "Initial Summaries";
         initialSummariesDropdown.valueType = PropertyEditorValueType.EnumValue;
@@ -35,13 +36,13 @@ export class PropertyEditorInitAggregationsOnViewInit {
 
 	public editorChangeUpdateInitialSummaries(sender: any, args: IgrPropertyEditorPropertyDescriptionChangedEventArgs): void {
 
-        var chart = this.chart;
+        var chart = CodeGenHelper.getDescription<IgrCategoryChart>("content");
         var intialSummaryVal = args.newValue.toString();
         chart.initialSummaries = intialSummaryVal;
     }
 
     public editorChangeUpdateGroupSorts(sender: any, args: IgrPropertyEditorPropertyDescriptionChangedEventArgs): void {
-        var chart = this.chart;
+        var chart = CodeGenHelper.getDescription<IgrCategoryChart>("content");
         var groupSortsVal = args.newValue.toString();
         chart.groupSorts = groupSortsVal;
     }	

@@ -8,7 +8,7 @@
   "descriptions": {
     "legend": {
       "type": "Legend",
-      "name": "Legend",
+      "name": "legend",
       "orientation": "Horizontal"
     },
     "content": {
@@ -35,7 +35,7 @@
       "series": [
         {
           "type": "ScatterSeries",
-          "name": "ScatterSeries1",
+          "name": "scatterSeries1",
           "title": "Europe",
           "xAxisRef": "xAxis",
           "yAxisRef": "yAxis",
@@ -47,7 +47,7 @@
         },
         {
           "type": "ScatterSeries",
-          "name": "ScatterSeries2",
+          "name": "scatterSeries2",
           "title": "Africa",
           "xAxisRef": "xAxis",
           "yAxisRef": "yAxis",

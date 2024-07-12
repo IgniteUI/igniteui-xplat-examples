@@ -1,7 +1,7 @@
 {
   "export": true,
   "skipAlterDataCasing": true,
-  "onInit": ["WebGridMultiColumnHeadersStyling"],
+  "onInit": ["WebTreeGridMultiColumnHeadersStyling"],
   "descriptions": {
     "content": {
       "type": "WebTreeGrid",

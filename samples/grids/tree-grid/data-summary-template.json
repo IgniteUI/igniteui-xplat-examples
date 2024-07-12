@@ -1,0 +1,80 @@
+{
+  "export": true,
+  "skipAlterDataCasing": true,
+  "descriptions": {
+    "editor": {
+      "type": "PropertyEditorPanel",
+      "componentRendererRef": "renderer",
+      "targetRef": "treeGrid",
+      "descriptionType": "WebTreeGrid",
+      "isHorizontal": true,
+      "isWrappingEnabled": false,
+      "properties": [
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "SummaryRowHeight",
+          "label": "Summary Row Height",
+          "valueType": "Number",
+          "name": "SummaryRowHeightEditor"
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "label": "Toggle Summaries",
+          "valueType": "Boolean1",
+          "primitiveValue": true,
+          "changedRef": "WebTreeGridHasSummariesChange",
+          "name": "ToggleSummariesEditor"
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "DisplayDensity",
+          "name": "DisplayDensityEditor"
+        }
+      ]
+    },
+    "content": {
+      "type": "WebTreeGrid",
+      "dataRef": "EmployeesNestedTreeData",
+      "autoGenerate": false,
+      "name": "treeGrid",
+      "id": "treeGrid",
+      "primaryKey": "ID",
+      "foreignKey": "ParentID",
+      "columns": [
+        {
+          "type": "WebColumn",
+          "field": "Name"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Age",
+          "dataType": "Number",
+          "hasSummary": true,
+          "summaryTemplateRef": "WebTreeGridSummaryTemplate"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Title",
+          "hasSummary": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "HireDate",
+          "dataType": "Date"
+        },
+        {
+          "type": "WebColumn",
+          "field": "OnPTO",
+          "dataType": "Boolean",
+          "editable": true,
+          "hasSummary": true
+        }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
+    "grids/WebTreeGridModule"
+  ]
+}

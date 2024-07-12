@@ -5,7 +5,7 @@
   "descriptions": {
     "legend": {
       "type": "DataLegend",
-      "name": "Legend",
+      "name": "legend",
       "summaryType": "None",
       "valueFormatMaxFractions": 0,
       "targetRef": "chart"

@@ -1,19 +1,25 @@
 import { Component, ViewChild, NgModule, TemplateRef } from '@angular/core';
 import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+
 import {
     IgxGridModule,
        IgxBadgeModule,
        IgxIconModule
  } from "igniteui-angular";
 
+//begin imports
+//end imports
+
 //begin template
 @Component({
     template: `
+<!-- begin content -->
     <ng-template igxCell let-val #template>
-        <img *ngIf="val" src="https://www.infragistics.com/angular-demos-lob/assets/images/grid/active.png" title="Continued" alt="Continued" />
-        <img *ngIf="!val" src="https://www.infragistics.com/angular-demos-lob/assets/images/grid/expired.png" title="Discontinued" alt="Discontinued" />
+        <img *ngIf="val" src="https://static.infragistics.com/xplatform/images/grid/active.png" title="Continued" alt="Continued" />
+        <img *ngIf="!val" src="https://static.infragistics.com/xplatform/images/grid/expired.png" title="Discontinued" alt="Discontinued" />
     </ng-template>
+<!-- end content -->
     `,
     styles: [``]
 })

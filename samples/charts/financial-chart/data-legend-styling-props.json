@@ -3,7 +3,7 @@
   "descriptions": {
     "legend": {
       "type": "DataLegend",
-      "name": "Legend",
+      "name": "legend",
       "targetRef": "chart",
       "includedColumns": ["Open", "Close", "High", "Low", "Change"],
       "labelTextColor": "#4A4A4A",

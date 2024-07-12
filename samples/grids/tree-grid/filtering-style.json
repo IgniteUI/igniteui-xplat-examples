@@ -1,12 +1,13 @@
 {
   "todo": [],
+  "export": true,
   "skipAlterDataCasing": true,
-  "onInit": "WebGridFilteringStyle",
+  "onInit": "WebTreeGridFilteringStyle",
   "descriptions": {
     "content": {
       "type": "WebTreeGrid",
-      "name": "grid",
-      "id": "grid",
+      "name": "treeGrid",
+      "id": "treeGrid",
       "dataRef": "OrdersData",
       "filterMode": "QuickFilter",
       "primaryKey": "ID",
@@ -74,7 +75,5 @@
       ]
     }
   },
-  "modules": [
-    "grids/WebTreeGridModule"
-  ]
+  "modules": ["grids/WebTreeGridModule"]
 }

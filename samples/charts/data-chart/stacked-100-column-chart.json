@@ -5,7 +5,7 @@
   "descriptions": {
     "legend": {
       "type": "Legend",
-      "name": "Legend",
+      "name": "legend",
       "orientation": "Horizontal"
     },
     "content": {
@@ -31,7 +31,7 @@
       "series": [
         {
           "type": "Stacked100ColumnSeries",
-          "name": "Stacked100ColumnSeries",
+          "name": "stacked100ColumnSeries",
           "dataSourceRef": "OnlineTrafficByDevice",
           "xAxisRef": "xAxis",
           "yAxisRef": "yAxis",
@@ -45,7 +45,7 @@
         },
         {
           "type": "DataToolTipLayer",
-          "name": "DataToolTipLayer"
+          "name": "dataToolTipLayer"
         }
       ]
     }

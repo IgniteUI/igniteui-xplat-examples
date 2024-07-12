@@ -30,7 +30,7 @@
       "series": [
         {
           "type": "BubbleSeries",
-          "name": "BubbleSeries1",
+          "name": "bubbleSeries1",
           "xAxisRef": "xAxis",
           "yAxisRef": "yAxis",
           "dataSourceRef": "CountryDemographicAfrican",
@@ -45,7 +45,7 @@
         },
         {
           "type": "BubbleSeries",
-          "name": "BubbleSeries2",
+          "name": "bubbleSeries2",
           "xAxisRef": "xAxis",
           "yAxisRef": "yAxis",
           "dataSourceRef": "CountryDemographicEurope",
@@ -60,7 +60,7 @@
         },
         {
           "type": "DataToolTipLayer",
-          "name": "DataToolTipLayer"
+          "name": "dataToolTipLayer"
         }
       ]
     }

@@ -27,7 +27,7 @@
       "series": [
         {
           "type": "BubbleSeries",
-          "name": "BubbleSeries1",
+          "name": "bubbleSeries1",
           "xMemberPath": "Population",
           "yMemberPath": "PublicDebt",
           "radiusMemberPath": "GdpPerPerson",
@@ -46,7 +46,7 @@
         },
         {
           "type": "DataToolTipLayer",
-          "name": "DataToolTipLayer"
+          "name": "dataToolTipLayer"
         }
       ]
     }

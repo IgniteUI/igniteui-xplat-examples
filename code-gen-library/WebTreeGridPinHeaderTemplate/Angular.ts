@@ -10,14 +10,17 @@ import {
 //begin template
 @Component({
     template: `
+<!--begin content-->
     <ng-template igxHeader let-column #template>
     <div class="title-inner">
         <span style="float:left">{{column.field}}</span>
         <igx-icon class="pin-icon" family="fas" name="fa-thumbtack" [attr.draggable]="false" (click)="toggleColumnPinning(column)"></igx-icon>
     </div>
 </ng-template>
+<!--end content-->
     `,
     styles: [`
+<!--begin styles-->
 .pin-icon {
     margin-left: 8px;
     font-size: 14px;
@@ -34,15 +37,18 @@ import {
     justify-content: space-between;
     align-items: center;
 }
+<!--end styles-->
 `]
 })
 export class WebTreeGridPinHeaderTemplateComponent {
     @ViewChild("template", { static: true})
     public template: TemplateRef<any>;
 
+//begin supportingMethods
     public toggleColumnPinning(column: any) {
         column.pinned ? column.unpin() : column.pin();
     }
+//end supportingMethods
 }
 
 @NgModule({

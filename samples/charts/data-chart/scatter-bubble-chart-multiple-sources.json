@@ -6,7 +6,7 @@
   "descriptions": {
     "legend": {
       "type": "Legend",
-      "name": "Legend",
+      "name": "legend",
       "orientation": "Horizontal"
     },
     "content": {
@@ -32,7 +32,7 @@
       "series": [
         {
           "type": "BubbleSeries",
-          "name": "BubbleSeries1",
+          "name": "bubbleSeries1",
           "title": "African Countries",
           "xAxisRef": "xAxis",
           "yAxisRef": "yAxis",
@@ -51,7 +51,7 @@
         },
         {
           "type": "BubbleSeries",
-          "name": "BubbleSeries2",
+          "name": "bubbleSeries2",
           "title": "European Countries",
           "xAxisRef": "xAxis",
           "yAxisRef": "yAxis",
