@@ -239,14 +239,15 @@ exports.findDataFiles = function findDataFiles(cb)
 exports.copyCDN = function copyCDN(cb)
 {
     var cdnTable = [];
-    var cdnWebsite = 'https://static.infragistics.com/xplatform/library/';
-    var cdnServer = '//s0706dl2.igweb.local/download.infragistics.com/xplatform/library';
+    var cdnWebsite = 'https://static.infragistics.com/xplatform/cdn/';
+    var cdnServer = ' \\\\s0706dl2.igweb.local\\download.infragistics.com\\xplatform\\cdn';
     var cdnOutput = './CDN';
-    // del(cdnOutput);
     console.log('--------------------------------------------------------------------');   
     console.log('copying large data files from code-gen-library to: ' + cdnOutput);      
     console.log('--------------------------------------------------------------------');   
     
+    // del(cdnOutput);
+
     gulp.src([
         // process all files and determine large files based on number of data items and data columns
         CodeGenLib + '/**/XPLAT.json',
@@ -301,36 +302,53 @@ exports.copyCDN = function copyCDN(cb)
         let dirname = file.dirname.split('code-gen-library\\')[1];
         
         // copy only files that have many items and/or many data columns
-        if (items.length >= 100 || (items.length * columns.length >= 500)) {
+        if (items.length >= 100 || (items.length * columns.length >= 500) || dirname === "SingersData") {
             console.log(CodeGenLib + '/' + dirname + '/XPLAT.json copied with ' + items.length  + ' items');    
             // console.log('CodeGenLib + "/' + dirname + '/XPLAT.json",');  
             var itemsCount = items.length.toString();
             var columnsCount = columns.length.toString();
             var row = "<tr> <td align=\"center\"> " + itemsCount.padStart(Math.max(10, itemsCount.length), ' ') + " </td>" +
-                      " <td align=\"center\"> " + columnsCount.padStart(Math.max(12, columnsCount.length), ' ') + " </td>" +
-                      " <td align=\"left\">" + "<a href=\"" + cdnWebsite + dirname + ".json\">"  + dirname + "</a> </td> </tr>\r\n"; 
+                      " <td class=\"center\"> " + columnsCount.padStart(Math.max(12, columnsCount.length), ' ') + " </td>" +
+                      " <td class=\"left\">" + "<a href=\"" + cdnWebsite + dirname + ".json\">"  + dirname + "</a> </td> </tr>\r\n"; 
             cdnTable += row;  
             // copy to cdn output
             saveFile(cdnOutput + "/" + dirname + ".json", content, true); 
             // create config file that enables remote location for data file
             saveFile(CodeGenLib + '/' + dirname + '/XPLAT-CONFIG.json', '{\r\n' + '\t"location": "CDN"\r\n' + '}\r\n', true); 
         } 
+        // console.log(items.length + " " + (items.length * columns.length) + " " + dirname);
         fileCallback(null, file);
     }))
     // .pipe(gulp.dest(cdnOutput, {overwrite: true}))
     .on("end", function() {
         var repo = 'https://github.com/IgniteUI/igniteui-xplat-examples/tree/23.2.x';
-        var readme = '<h1> Data Library for XPLAT Samples</h1>\r\n\r\n' +
-        '<p>This CDN folder contains data files used by <a href=\"' + repo + '/samples\">XPLAT samples</a>.</p>\r\n\r\n' +
-        '<p>Use <a href=\"' + repo + '/code-gen-tools">copyCDN</a> script to prepare data files in <a href=\"' + repo + '/code-gen-library">CodeGen library</a> for manual upload to the <a href=\"https://static.infragistics.com/xplatform/library">CDN</a>. This way, files on CDN stay in-sync with files in <a href=\"' + repo + '/code-gen-library">CodeGen library</a>.</p>\r\n\r\n' +
+        var angular = 'https://github.com/IgniteUI/igniteui-angular-examples/tree/vnext';
+        var blazor  = 'https://github.com/IgniteUI/igniteui-blazor-examples/tree/vnext';
+        var react   = 'https://github.com/IgniteUI/igniteui-react-examples/tree/vnext';
+        var wc      = 'https://github.com/IgniteUI/igniteui-wc-examples/tree/vnext';
+        var readme = '<h1> Data Files for Cross-Platform Samples</h1>\r\n\r\n' +
+        '<p>This CDN folder contains data files used by ' +
+        '<a href=\"' + repo + '/samples\">xplat</a>, ' +
+        '<a href=\"' + angular + '/samples\">angular</a>, ' +
+        '<a href=\"' + blazor + '/samples\">blazor</a>, ' +
+        '<a href=\"' + react + '/samples\">react</a>, and ' +
+        '<a href=\"' + wc + '/samples\">web-component</a> samples' +
+        '</p>\r\n\r\n' +
+        '<p>Use the <a href=\"' + repo + '/code-gen-tools">copyCDN</a> gulp script to collect data files from <a href=\"' + repo + '/code-gen-library">CodeGen library</a> before manually uploading them to the <a href=\"' + cdnServer + '">CDN</a> network location. This way, files on CDN stay in-sync with files in <a href=\"' + repo + '/code-gen-library">CodeGen library</a>.</p>\r\n\r\n' +
         '<h2> CodeGen Library</h2>\r\n\r\n' +  
         '<p>The CodeGen library is located on <a href=\"' + repo + '/code-gen-library">GitHub</a> and CDN has a copy of these files:</p>\r\n\r\n' + 
         '<table>\r\n' +
-        '<tr> <th width="200px"> Data Items </th> <th width="300px"> Data Columns </th> <th width="50%" align=\"left\"> Data Link </th> </tr> \r\n' +  
+        '<tr> <th width="120px"> Data Items </th> <th width="120px"> Data Columns </th> <th width="50%" align=\"left\"> Data Link </th> </tr> \r\n' +  
         cdnTable + 
         '</table>';
+        var css = '<style>\r\n' +
+        '.center { text-align: center; }\r\n' +
+        '.left { text-align: left;  }\r\n' +
+        'tr:nth-child(even) { background-color: #e3e3e3; } \r\n' +
+        '</style> '
+
         // saveFile(cdnOutput + "/_Readme.md", readme, true);
-        saveFile(cdnOutput + "/_Readme.html", '<html><body>\r\n' + readme + '\r\n\r\n</body></html>', true);
+        saveFile(cdnOutput + "/.Readme.html", '<html> ' + css + '<body>\r\n' + readme + '\r\n\r\n</body></html>', true);
 
         // if (cdnOutput.indexOf('igweb.local/download.infragistics.com') < 0) {
             console.log("\n WARNING: You must copy content of the this CDN folder to:\n" + cdnServer + "\n")
@@ -342,12 +360,15 @@ exports.copyCDN = function copyCDN(cb)
 exports.compactJSON = function compactJSON(cb) {
     let filePaths = [
         // "/AnalyzeOrders/XPLAT.json",
-        "/CompanyEmployees/XPLAT.json",
-        "/CompanyData/XPLAT.json",
-        "/InvoicesData/XPLAT.json",
-        "/PivotDataFlat/XPLAT.json",
-        "/PivotSalesData/XPLAT.json",
-        "/ProductSales/XPLAT.json",
+        // "/AnalyzeSales/XPLAT.json",
+        "/InvoicesWorldData/XPLAT.json",
+        "/PivotData/XPLAT.json",
+        // "/CompanyEmployees/XPLAT.json",
+        // "/CompanyData/XPLAT.json",
+        // "/InvoicesData/XPLAT.json",
+        // "/PivotDataFlat/XPLAT.json",
+        // "/PivotSalesData/XPLAT.json",
+        // "/ProductSales/XPLAT.json",
         // "/NwindLocations/XPLAT.json",
         // "/ProductSales/XPLAT.json",
         // "/FinancialDataCurrencies/XPLAT.json",
