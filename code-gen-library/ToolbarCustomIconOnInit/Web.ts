@@ -2,6 +2,7 @@
 import { IgcToolbarComponent, IgcToolActionLabelComponent, IgcToolActionComponent, IgcToolCommandEventArgs } from 'igniteui-webcomponents-layouts';
 //end imports
 
+import { CodeGenHelper } from 'igniteui-webcomponents-core';
 
 export class ToolbarCustomIconOnInit {
 
