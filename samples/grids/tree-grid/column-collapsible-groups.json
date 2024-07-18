@@ -14,7 +14,7 @@
       "moving": true,
       "displayDensity": "Compact",
       "rowSelection": "None",
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumnGroup",
           "header": "General Information",

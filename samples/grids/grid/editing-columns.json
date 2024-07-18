@@ -14,7 +14,7 @@
           "perPage": 10
         }
       ],
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
           "field": "ProductName",

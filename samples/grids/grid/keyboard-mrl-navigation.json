@@ -10,7 +10,7 @@
       "autoGenerate": false,
       "displayDensity": "Cosy",
       "gridKeydownRef": "WebGridMRLCustomNavigationEvent",
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumnLayout",
           "name": "CompanyInfo",

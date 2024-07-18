@@ -27,7 +27,7 @@
         }
       ],
       "allowAdvancedFiltering": true,
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
           "field": "ProductName",

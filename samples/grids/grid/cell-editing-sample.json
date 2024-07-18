@@ -7,7 +7,7 @@
       "dataRef": "RoleplayDataStats",
       "autoGenerate": false,
       "primaryKey": "Name",
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
           "field": "Name",

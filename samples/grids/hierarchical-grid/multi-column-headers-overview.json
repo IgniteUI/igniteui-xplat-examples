@@ -34,7 +34,7 @@
       "primaryKey": "ID",
       "moving": true,
       "allowFiltering": true,
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
           "field": "CustomerID",
@@ -141,7 +141,7 @@
           "type": "WebRowIsland",
           "childDataKey": "Orders",
           "autoGenerate": false,
-          "columns": [
+          "columnList": [
             {
               "type": "WebColumnGroup",
               "header": "Order Information",
@@ -256,7 +256,7 @@
               "type": "WebRowIsland",
               "childDataKey": "OrderDetails",
               "autoGenerate": false,
-              "columns": [
+              "columnList": [
                 {
                   "type": "WebColumn",
                   "field": "ProductID",

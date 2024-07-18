@@ -14,7 +14,7 @@
       "foreignKey": "ParentID",
       "autoGenerate": false,
       "allowFiltering": true,
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
           "field": "ID",
