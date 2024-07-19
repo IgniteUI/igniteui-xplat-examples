@@ -48,11 +48,27 @@ function saveJSON(filePath, dataItems, mode) {
         }
 
         let jsonStr = "[\r\n" + lines.join('\r\n') + "\r\n]";
-        jsonStr = utils.strReplace(jsonStr, ":", ": ")
+        // jsonStr = utils.strReplace(jsonStr, ":", ": ")
+        // jsonStr = utils.strReplace(jsonStr, ":  ", ":")
+        // jsonStr = utils.strReplace(jsonStr, '":  ', '": ')
+        // jsonStr = utils.strReplace(jsonStr, '": ', '": ')
+        jsonStr = utils.strReplace(jsonStr, '":0', '": 0')
+        jsonStr = utils.strReplace(jsonStr, '":1', '": 1')
+        jsonStr = utils.strReplace(jsonStr, '":2', '": 2')
+        jsonStr = utils.strReplace(jsonStr, '":3', '": 3')
+        jsonStr = utils.strReplace(jsonStr, '":4', '": 4')
+        jsonStr = utils.strReplace(jsonStr, '":5', '": 5')
+        jsonStr = utils.strReplace(jsonStr, '":6', '": 6')
+        jsonStr = utils.strReplace(jsonStr, '":7', '": 7')
+        jsonStr = utils.strReplace(jsonStr, '":8', '": 8')
+        jsonStr = utils.strReplace(jsonStr, '":9', '": 9')
+        jsonStr = utils.strReplace(jsonStr, '":"', '": "')
+        jsonStr = utils.strReplace(jsonStr, '00: 00', '00:00')
+        // jsonStr = utils.strReplace(jsonStr, ' -1', '-1')
         jsonStr = utils.strReplace(jsonStr, ',"', ', "')
         jsonStr = utils.strReplace(jsonStr, '{', '{ ')
         jsonStr = utils.strReplace(jsonStr, '}', ' }')
-
+        
         saveFile(filePath, jsonStr);
     }
 }
@@ -110,12 +126,15 @@ exports.cleanJSON = function cleanJSON(input, cb) {
 function sortJSON(cb) {
 
     // let filePath = CodeGenLib + "/WorldCitiesAbove500K/XPLAT.json";
-    let filePath = CodeGenLib + "/WorldCountries/XPLAT.json";
+    let filePath = CodeGenLib + "/AthletesData/XPLAT.json";
+    // let filePath = CodeGenLib + "/AthletesDataExtended/XPLAT.json";
+    // let filePath = CodeGenLib + "/WorldCountries/XPLAT.json";
     let file = fs.readFileSync(filePath, "utf8");
     let dataItems = JSON.parse(file);
 
     // dataItems = dataItems.sort((a, b) => a.Pop < b.Pop ? 1 : -1);
-    dataItems = dataItems.sort((a, b) => a.Population < b.Population ? 1 : -1);
+    // dataItems = dataItems.sort((a, b) => a.Population < b.Population ? 1 : -1);
+    dataItems = dataItems.sort((a, b) => a.Id > b.Id ? 1 : -1);
 
     for (let i = 0; i < dataItems.length; i++) {
         // dataItems[i].ID = 10000 + i;
@@ -374,6 +393,19 @@ exports.compactJSON = function compactJSON(cb) {
         // "/FinancialDataCurrencies/XPLAT.json",
         // "/FinancialDataFuel/XPLAT.json",
         // "/FinancialDataMetals/XPLAT.json",
+        // "/InvoicesData/XPLAT.json",
+        // "/InvoicesWorldData/XPLAT.json",
+        // "/EmployeesData/XPLAT.json",
+        // "/EmployeesFlatAvatars/XPLAT.json",
+        // "/EmployeesFlatData/XPLAT.json",
+        // "/EmployeesFlatDetails/XPLAT.json",
+        // "/ProductSales/XPLAT.json",        
+        // "/ProductInventory/XPLAT.json",       
+        // "/RoleplayDataStats/XPLAT.json",        
+        // "/RoleplayTreeGridData/XPLAT.json", 
+        // "/NwindData/XPLAT.json",        
+        // "/AnalyzeSales/XPLAT.json",
+        "/AthletesData/XPLAT.json",
     ];
     for (const filePath of filePaths) {
         let file = fs.readFileSync(CodeGenLib + filePath, "utf8");
