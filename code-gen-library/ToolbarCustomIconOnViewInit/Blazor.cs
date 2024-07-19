@@ -3,6 +3,8 @@ using IgniteUI.Blazor.Controls;
 using System;
 //end imports
 
+import { CodeGenHelper } from 'igniteui-webcomponents-core';
+
 public class ToolbarCustomIconOnViewInit
 {
     //begin eventHandler
