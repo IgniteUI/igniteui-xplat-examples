@@ -1,6 +1,6 @@
 [
 { "Population": 23.62, "Y": 35.68, "X": 139.81, "Country": "Japan", "Name": "Tokyo" },
-{ "Population": 15.85, "Y": 37.54, "X": 126.94, "Country": "Korea Rep", "Name": "Seoul" },
+{ "Population": 15.85, "Y": 37.54, "X": 126.94, "Country": "South Korea", "Name": "Seoul" },
 { "Population": 14.1, "Y": 19.43, "X": -99.13, "Country": "Mexico", "Name": "Mexico City" },
 { "Population": 13.1, "Y": 55.75, "X": 37.7, "Country": "Russia", "Name": "Moscow" },
 { "Population": 11.1, "Y": 51.49, "X": -0.18, "Country": "UK", "Name": "London" },
@@ -48,8 +48,8 @@
 { "Population": 1.69, "Y": 55.72, "X": 12.55, "Country": "Denmark", "Name": "Kobenhavn" },
 { "Population": 1.68, "Y": 33.78, "X": 35.66, "Country": "Lebanon", "Name": "Beirut" },
 { "Population": 1.67, "Y": 31.92, "X": 34.86, "Country": "Israel", "Name": "Tel Aviv-Yafo" },
-{ "Population": 1.65, "Y": 53.9, "X": 27.58, "Country": "Byelarus", "Name": "Minsk" },
-{ "Population": 1.6, "Y": 39.03, "X": 125.76, "Country": "Korea D P Rp", "Name": "Pyongyang" },
+{ "Population": 1.65, "Y": 53.9, "X": 27.58, "Country": "Belarus", "Name": "Minsk" },
+{ "Population": 1.6, "Y": 39.03, "X": 125.76, "Country": "North Korea", "Name": "Pyongyang" },
 { "Population": 1.57, "Y": -15.79, "X": -47.9, "Country": "Brazil", "Name": "Brasilia" },
 { "Population": 1.55, "Y": -34.92, "X": -56.17, "Country": "Uruguay", "Name": "Montevideo" },
 { "Population": 1.5, "Y": 9.03, "X": 38.7, "Country": "Ethiopia", "Name": "Adis Abeba" },

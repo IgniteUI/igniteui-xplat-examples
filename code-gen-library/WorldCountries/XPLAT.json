@@ -127,7 +127,7 @@
 { "Code": "PSE", "Name": "Palestine", "Population": 4543126, "GDP": 21221, "X": 35.347, "Y": 32.031 },
 { "Code": "NZL", "Name": "New Zealand", "Population": 4510327, "GDP": 174800, "X": 169.42, "Y": -44.86 },
 { "Code": "HRV", "Name": "Croatia", "Population": 4292095, "GDP": 94240, "X": 16.741, "Y": 45.772 },
-{ "Code": "BIH", "Name": "Bosnia and Herz.", "Population": 3856181, "GDP": 42530, "X": 17.771, "Y": 44.272 },
+{ "Code": "BIH", "Name": "Bosnia", "Population": 3856181, "GDP": 42530, "X": 17.771, "Y": 44.272 },
 { "Code": "MRT", "Name": "Mauritania", "Population": 3758571, "GDP": 16710, "X": -10.263, "Y": 20.387 },
 { "Code": "PAN", "Name": "Panama", "Population": 3753142, "GDP": 93120, "X": -81.17, "Y": 8.457 },
 { "Code": "SOL", "Name": "Somaliland", "Population": 3500000, "GDP": 12250, "X": 45.798, "Y": 9.748 },
