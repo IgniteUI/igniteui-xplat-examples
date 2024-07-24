@@ -5,6 +5,7 @@
   ],
   "export": true,
   "skipAlterDataCasing": true,
+  "onInit": ["WebGridSizeMediumTemplate"],
   "descriptions": {
     "content": {
       "type": "WebGrid",
@@ -12,13 +13,11 @@
       "autoGenerate": false,
       "name": "grid",
       "id": "grid",
-      "displayDensity": "Cosy",
       "paginationComponents": [
         {
           "type": "WebPaginator",
           "name": "paginator",
           "perPage": 15,
-          "displayDensity": "Cosy",
           "resourceStrings": {
             "type": "WebPaginatorResourceStrings",
             "igx_paginator_label": "Records per page"
@@ -65,8 +64,12 @@
       "properties": [
         {
           "type": "PropertyEditorPropertyDescription",
-          "propertyPath": "DisplayDensity",
-          "name": "DisplayDensityEditor"
+          "name": "SizeEditor",
+          "label": "Grid Size:",
+          "valueType": "EnumValue",
+          "dropDownNames": ["Small", "Medium", "Large"],
+          "dropDownValues": ["Small", "Medium", "Large"],
+          "changedRef": "WebGridSetGridSize"
         }
       ]
     }

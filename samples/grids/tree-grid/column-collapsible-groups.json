@@ -2,6 +2,7 @@
   "todo": [ "" ],
   "export": true,
   "skipAlterDataCasing": true,
+  "onInit": ["WebTreeGridSizeSmallTemplate"],
   "descriptions": {
     "content": {
       "type": "WebTreeGrid",
@@ -12,7 +13,6 @@
       "primaryKey": "ID",
       "foreignKey": "ParentID",
       "moving": true,
-      "displayDensity": "Compact",
       "rowSelection": "None",
       "columns": [
         {

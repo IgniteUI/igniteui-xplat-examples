@@ -1,5 +1,6 @@
 {
   "skipAlterDataCasing": true,
+  "onInit": ["WebGridSizeMediumTemplate"],
   "descriptions": {
     "content": {
       "type": "WebHierarchicalGrid",
@@ -9,7 +10,6 @@
       "cellEditRef": "WebGridEditingEventsCellEdit",
       "autoGenerate": false,
       "primaryKey": "ProductID",
-      "displayDensity": "Cosy",
       "allowFiltering": true,
       "paginationComponents": [
         {

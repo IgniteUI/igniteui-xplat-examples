@@ -3,15 +3,16 @@
   ], 
   "export": true,
   "skipAlterDataCasing": true,
+  "onInit": ["WebGridSizeMediumTemplate"],
   "descriptions": {
     "content": {
+      "id": "grid",
       "name": "grid",
       "type": "WebGrid",
       "dataRef": "NwindData",
       "moving":true,
       "primaryKey": "ProductID",
       "autoGenerate": false,
-      "displayDensity": "Cosy",
       "rowEditable": true,
       "gridKeydownRef": "WebGridCustomKBNav",
       "columns": [

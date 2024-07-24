@@ -1,6 +1,7 @@
 {
   "todo": [ "" ],
   "skipAlterDataCasing": true,
+  "onInit": ["WebGridSizeMediumTemplate"],
   "descriptions": {
     "content": {
       "type": "WebGrid",
@@ -8,7 +9,6 @@
       "id": "grid",
       "dataRef": "CompanyData",
       "autoGenerate": false,
-      "displayDensity": "Cosy",
       "gridKeydownRef": "WebGridMRLCustomNavigationEvent",
       "columns": [
         {

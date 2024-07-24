@@ -1,12 +1,14 @@
 {
     "skipAlterDataCasing": true,
+    "onInit": ["WebGridSizeMediumTemplate"],
     "descriptions": {
       "content": {
         "type": "WebHierarchicalGrid",
+        "id": "grid",
+        "name": "grid",
         "dataRef": "NwindData",
         "autoGenerate": false,
         "primaryKey": "ProductID",
-        "displayDensity": "Cosy",
         "allowFiltering": true,
         "paginationComponents": [
           {
