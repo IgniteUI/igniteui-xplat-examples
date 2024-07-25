@@ -23,7 +23,7 @@
     "content": {
       "type": "DataChart",
       "isHorizontalZoomEnabled": true,
-      "legendRef": "Legend",
+      "legendRef": "legend",
       "name": "chart",
       "axes": [
         {

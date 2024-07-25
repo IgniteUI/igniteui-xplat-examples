@@ -58,7 +58,7 @@
       "dataSourceRef": "CountryRenewableElectricity",
       "includedProperties": ["Year", "Europe", "China", "America"],
       "chartType": "Line",
-      "legendRef": "Legend",
+      "legendRef": "legend",
       "isHorizontalZoomEnabled": false,
       "isVerticalZoomEnabled": false,
 

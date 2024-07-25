@@ -31,7 +31,7 @@
       "computedPlotAreaMarginMode": "Series",
       "dataSourceRef": "CountryRenewableElectricity",
       "includedProperties": ["Year", "Europe", "China", "America"],
-      "legendRef": "Legend",
+      "legendRef": "legend",
       "chartType": "Line",
       "yAxisTitle": "Labels Location",
       "isHorizontalZoomEnabled": false,

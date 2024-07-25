@@ -38,7 +38,7 @@
       "name": "chart",
       "chartType": "Column",
       "dataSourceRef": "EnergyRenewableConsumption",
-      "legendRef": "Legend",
+      "legendRef": "legend",
       "yAxisTitleLeftMargin": 10,
       "yAxisTitleRightMargin": 5,
       "yAxisLabelLeftMargin": 0,

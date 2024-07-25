@@ -11,7 +11,7 @@
     "content": {
       "type": "CategoryChart",
       "name": "chart",
-      "legendRef": "Legend",
+      "legendRef": "legend",
       "chartType": "StepLine",
       "dataSourceRef": "CountryRenewableElectricity",
       "includedProperties": ["Year", "Europe", "China", "America"],

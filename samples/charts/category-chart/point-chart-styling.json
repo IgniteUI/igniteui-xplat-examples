@@ -13,7 +13,7 @@
       "name": "chart",
       "dataSourceRef": "CountryRenewableElectricity",
       "chartType": "Point",
-      "legendRef": "Legend",
+      "legendRef": "legend",
       "markerOutlines": [ "#8ce7d9", "#ee5879", "#735656" ],
       "markerBrushes": [ "#ffffff" ],
       "markerTypes": [ "Triangle" ],

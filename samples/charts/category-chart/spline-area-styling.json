@@ -13,7 +13,7 @@
       "name": "chart",
       "chartType": "SplineArea",
       "dataSourceRef": "CountryRenewableElectricity",
-      "legendRef": "Legend",
+      "legendRef": "legend",
       "yAxisTitle": "TWh",
       "isTransitionInEnabled": true,
       "isVerticalZoomEnabled": false,
