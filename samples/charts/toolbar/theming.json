@@ -3,7 +3,7 @@
     "editor": {
       "type": "PropertyEditorPanel",
       "componentRendererRef": "renderer",
-      "targetRef": "Toolbar",
+      "targetRef": "toolbar",
       "descriptionType": "Toolbar",
       "isHorizontal": true,
       "isWrappingEnabled": true,
