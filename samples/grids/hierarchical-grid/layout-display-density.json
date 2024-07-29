@@ -18,7 +18,7 @@
             "valueType": "EnumValue",
             "dropDownNames": ["Small", "Medium", "Large"],
             "dropDownValues": ["Small", "Medium", "Large"],
-            "changedRef": "WebGridSetGridSize"
+            "changedRef": "WebHierarchicalGridSetGridSize"
           }
         ]
       },

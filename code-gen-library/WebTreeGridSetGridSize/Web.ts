@@ -4,11 +4,11 @@ import { IgcPropertyEditorPropertyDescriptionChangedEventArgs, IgcPropertyEditor
 
 import { CodeGenHelper } from 'igniteui-webcomponents-core';
 
-export class WebGridSetGridSize {
+export class WebTreeGridSetGridSize {
     //begin eventHandler
-    public webGridSetGridSize(sender: any, args: IgcPropertyEditorPropertyDescriptionChangedEventArgs): void {
+    public webTreeGridSetGridSize(sender: any, args: IgcPropertyEditorPropertyDescriptionChangedEventArgs): void {
         var newVal = (args.newValue as string).toLowerCase();
-        var grid = document.getElementById("grid");
+        var grid = document.getElementById("treeGrid");
         grid.style.setProperty('--ig-size', `var(--ig-size-${newVal})`);
     }
     //end eventHandler

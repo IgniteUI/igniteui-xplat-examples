@@ -4,11 +4,11 @@ import { IgcPropertyEditorPropertyDescriptionChangedEventArgs, IgcPropertyEditor
 
 import { CodeGenHelper } from 'igniteui-webcomponents-core';
 
-export class WebGridSetGridSize {
+export class WebHierarchicalGridSetGridSize {
     //begin eventHandler
-    public webGridSetGridSize(sender: any, args: IgcPropertyEditorPropertyDescriptionChangedEventArgs): void {
+    public webHierarchicalGridSetGridSize(sender: any, args: IgcPropertyEditorPropertyDescriptionChangedEventArgs): void {
         var newVal = (args.newValue as string).toLowerCase();
-        var grid = document.getElementById("grid");
+        var grid = document.getElementById("hierarchicalGrid");
         grid.style.setProperty('--ig-size', `var(--ig-size-${newVal})`);
     }
     //end eventHandler
