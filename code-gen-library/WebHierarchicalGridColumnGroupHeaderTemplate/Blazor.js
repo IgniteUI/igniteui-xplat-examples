@@ -3,7 +3,7 @@ const columnGroupStatesHGrid = new Map();
 function toggleColumnGroup(name) {
     const grid = document.getElementsByTagName("igc-hierarchical-grid")[0];
     var columnGroup = grid.columns.find((col) => col.header === name)
-    const columns = columnGroup.children.toArray();
+    const columns = columnGroup.childColumns;
     if (columnGroup.header === 'General Information') {
         const column = columns[1];
         column.hidden = !column.hidden;

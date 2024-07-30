@@ -18,7 +18,7 @@ public webHierarchicalGridColumnGroupHeaderTemplate = (ctx: IgcColumnTemplateCon
 //begin supportingMethods
 public columnGroupStates = new Map<IgcColumnGroupComponent, boolean>();
 public toggleColumnGroup(columnGroup: IgcColumnGroupComponent) {
-    const columns = Array.from(columnGroup.children);
+    const columns = columnGroup.childColumns;
     if (columnGroup.header === 'General Information') {
         const column = columns[1] as IgcColumnComponent;
         column.hidden = !column.hidden;
