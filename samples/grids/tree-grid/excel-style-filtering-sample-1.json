@@ -7,7 +7,7 @@
       "type": "PropertyEditorPanel",
       "name": "PropertyEditor",
       "componentRendererRef": "renderer",
-      "targetRef": "grid",
+      "targetRef": "treeGrid",
       "descriptionType": "WebGrid",
       "isHorizontal": true,
       "isWrappingEnabled": true,
@@ -25,7 +25,8 @@
     },
     "content": {
       "type": "WebTreeGrid",
-      "name": "grid",
+      "id": "treeGrid",
+      "name": "treeGrid",
       "dataRef": "FoodsData",
       "primaryKey": "ID",
       "foreignKey": "ParentID",

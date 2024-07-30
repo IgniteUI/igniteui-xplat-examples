@@ -24,6 +24,7 @@
     },
     "content": {
       "type": "WebGrid",
+      "id": "grid",
       "name": "grid",
       "dataRef": "NwindData",
       "moving": true,
