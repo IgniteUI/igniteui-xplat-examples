@@ -7,7 +7,7 @@
       "autoGenerate": false,
       "primaryKey": "ProductID",
       "gridKeydownRef": "WebGridEditingExcelStyle",
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
           "field": "ProductID",

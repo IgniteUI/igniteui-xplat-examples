@@ -37,7 +37,7 @@
       "name": "grid",
       "dataRef": "NwindData",
       "autoGenerate": false,
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
           "field": "ProductID",

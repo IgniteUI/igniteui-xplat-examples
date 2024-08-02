@@ -8,7 +8,7 @@
       "name": "grid",
       "autoGenerate": false,
       "columnResizedRef": "WebGridColumnResized",
-      "columns": [{
+      "columnList": [{
         "type": "WebColumn",
         "name": "ID",
         "field": "ID",

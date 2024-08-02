@@ -9,7 +9,7 @@
       "dataRef": "AthletesData",
       "autoGenerate": false,
       "primaryKey": "Id",
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
           "field": "Id",

@@ -24,7 +24,7 @@
       "dataRef": "InvoicesData",
       "autoGenerate": false,
       "allowFiltering": true,
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
           "field": "CustomerName",

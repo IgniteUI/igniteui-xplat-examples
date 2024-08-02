@@ -9,7 +9,7 @@
       "primaryKey": "ProductID",
       "moving": true,
       "name": "grid",
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
           "header": "Category",

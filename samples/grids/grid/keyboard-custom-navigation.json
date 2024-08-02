@@ -14,7 +14,7 @@
       "displayDensity": "Cosy",
       "rowEditable": true,
       "gridKeydownRef": "WebGridCustomKBNav",
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
           "name": "ProductID",

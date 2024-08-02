@@ -28,7 +28,7 @@
           }
         }
       ],
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
           "field": "Name",

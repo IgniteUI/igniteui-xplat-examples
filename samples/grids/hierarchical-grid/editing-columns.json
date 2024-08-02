@@ -14,7 +14,7 @@
             "perPage": 10
           }
         ],
-        "columns": [
+        "columnList": [
           {
             "type": "WebColumn",
             "field": "ProductName",
@@ -70,7 +70,7 @@
               "type": "WebRowIsland",
               "childDataKey": "Locations",
               "autoGenerate": false,
-              "columns": [
+              "columnList": [
                 {
                   "type": "WebColumn",
                   "field": "Shop",

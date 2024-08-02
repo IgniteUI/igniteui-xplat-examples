@@ -9,7 +9,7 @@
       "name": "grid",
       "id": "grid",
       "displayDensity": "Compact",
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
           "field": "ProductName",

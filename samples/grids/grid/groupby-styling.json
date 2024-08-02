@@ -23,7 +23,7 @@
           "ignoreCase": false
         }
       ],
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
           "name": "OrderID",

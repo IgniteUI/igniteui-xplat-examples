@@ -41,7 +41,7 @@
         }
       ],
       "hideGroupedColumns": true,
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
           "field": "ShipCountry",

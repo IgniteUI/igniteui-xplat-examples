@@ -11,7 +11,7 @@
       "filterMode": "ExcelStyleFilter",
       "displayDensity": "Compact",
       "locale": "EN",
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
           "field": "ProductName",

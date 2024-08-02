@@ -7,7 +7,7 @@
       "type": "WebHierarchicalGrid",
       "dataRef": "HierarchicalCustomers",
       "autoGenerate": false,
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
           "field": "CustomerID",
@@ -74,7 +74,7 @@
           "type": "WebRowIsland",
           "childDataKey": "Orders",
           "autoGenerate": false,
-          "columns": [
+          "columnList": [
             {
               "type": "WebColumn",
               "field": "OrderID",
@@ -156,7 +156,7 @@
               "type": "WebRowIsland",
               "childDataKey": "OrderDetails",
               "autoGenerate": false,
-              "columns": [
+              "columnList": [
                 {
                   "type": "WebColumn",
                   "field": "ProductID",

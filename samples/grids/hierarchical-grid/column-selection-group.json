@@ -6,7 +6,7 @@
             "type": "WebHierarchicalGrid",
             "dataRef": "HierarchicalCustomers",
             "columnSelection": "Multiple",
-            "columns": [
+            "columnList": [
                 {
                     "type": "WebColumnGroup",
                     "header": "General Information",
@@ -90,7 +90,7 @@
                     "childDataKey": "Orders",
                     "autoGenerate": false,
                     "columnSelection": "Multiple",
-                    "columns": [
+                    "columnList": [
                         {
                             "type": "WebColumnGroup",
                             "header": "Order Information",
@@ -175,7 +175,7 @@
                             "childDataKey": "OrderDetails",
                             "autoGenerate": false,
                             "columnSelection": "Single",
-                            "columns": [
+                            "columnList": [
                                 {
                                     "type": "WebColumn",
                                     "field": "ProductID"

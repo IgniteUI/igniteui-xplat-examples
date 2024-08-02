@@ -47,7 +47,7 @@
           ]
         }
       ],
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
           "field": "ID",
