@@ -1,0 +1,11 @@
+[
+  { "Label": "A", "Value": 100, Radius: 75, Radius2: 50}
+  { "Label": "B", "Value": 100, Radius: 100, Radius2: 75}
+  { "Label": "C", "Value": 100, Radius: 80, Radius2: 140}
+  { "Label": "D", "Value": 100, Radius: 60, Radius2: 220}
+  { "Label": "E", "Value": 100, Radius: 90, Radius2: 30}
+  { "Label": "F", "Value": 100, Radius: 95, Radius2: 120}
+  { "Label": "G", "Value": 100, Radius: 100, Radius2: 200}
+  { "Label": "H", "Value": 100, Radius: 80, Radius2: 120}
+
+]

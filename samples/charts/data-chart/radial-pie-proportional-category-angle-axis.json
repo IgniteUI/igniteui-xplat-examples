@@ -1,0 +1,53 @@
+{
+  "descriptions": {
+    "content": {
+      "type": "DataChart",
+      "name": "chart",
+      "legendRef": "legend",
+      "isHorizontalZoomEnabled": false,
+      "isVerticalZoomEnabled": false,
+      "axes": [
+        {
+          "type": "ProportionalCategoryAngleAxis",
+          "name": "angleAxis",
+          "dataSourceRef": "RadialProportionalData",
+          "label": "Label",
+          "valueMemberPath": "Value",
+          "gap": 0,
+          "othersCategoryText": "Others",
+          "othersCategoryThreshold": 55,
+          "othersCategoryType": "Number"
+        },
+        {
+          "type": "NumericRadiusAxis",
+          "name": "radiusAxis",
+          "minimumValue": 0,
+          "maximumValue": 100
+        }
+      ],
+      "series": [
+        {
+          "type": "RadialPieSeries",
+          "name": "RadialPieSeries1",
+          "dataSourceRef": "RadialProportionalData",
+          "angleAxisRef": "angleAxis",
+          "valueAxisRef": "radiusAxis",
+          "valueMemberPath": "Value",
+          "showDefaultTooltip": false,
+          "useItemWiseColors": true,
+          "legendRadialLabelMode": "LabelAndValueAndPercentage",
+          "markerType": "None",
+          "title": "Categories"
+        }
+      ]
+    }
+  },
+  "modules": [
+    "charts/DataPieChartCoreModule",
+    "charts/DataChartCoreModule",
+    "charts/DataChartRadialModule",
+    "charts/DataChartRadialCoreModule",
+    "charts/DataChartInteractivityModule",
+    "charts/DataChartAnnotationModule"
+  ]
+}
