@@ -18,9 +18,8 @@ public webHierarchicalGridColumnGroupHeaderTemplate = (e: { dataContext: IgrColu
 //end content
 //begin supportingMethods
 public columnGroupStates = new Map<IgrColumn, boolean>();
-public toggleColumnGroup(column: IgrColumn) {
-    const columnGroup = CodeGenHelper.getDescription<IgrHierarchicalGrid>("content").contentColumns.find((col) => col.name == column.name) as IgrColumnGroup;
-    const columns = Array.from(columnGroup.actualChildren);
+public toggleColumnGroup(columnGroup: IgrColumn) {
+    const columns = columnGroup.childColumns;
     if (columnGroup.header === 'General Information') {
         const column = columns[1] as IgrColumn;
         column.hidden = !column.hidden;
@@ -47,7 +46,7 @@ public toggleColumnGroup(column: IgrColumn) {
         }
     }
     columnGroup.forceUpdate();
-    this.columnGroupStates.set(column, !this.columnGroupStates.get(column));
+    this.columnGroupStates.set(columnGroup, !this.columnGroupStates.get(columnGroup));
 }
 //end supportingMethods
 //end template
