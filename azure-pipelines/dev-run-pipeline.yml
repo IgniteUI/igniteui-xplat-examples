@@ -1,7 +1,7 @@
 trigger:
   branches:
     include:
-    - '23.2.x'
+    - '24.1.x'
   paths:
     include:
       - 'samples/**/*.json'
@@ -9,6 +9,7 @@ trigger:
       - vnext
       - 'master'
       - '23.1.x'
+      - '23.2.x'
 
 parameters:
   - name: pathsToParse
@@ -22,7 +23,7 @@ pr: none
 name: $(BuildDefinitionName)_$(Year:yyyy).$(Month).$(DayOfMonth)$(Rev:.r)
 variables:
   - name: codeExporterAppBranch
-    value: '2023.2'
+    value: '2024.1'
 
 resources:
   repositories:

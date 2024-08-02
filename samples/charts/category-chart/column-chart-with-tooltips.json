@@ -29,7 +29,7 @@
       "type": "CategoryChart",
       "name": "chart",
       "chartType": "Column",
-      "legendRef": "Legend",
+      "legendRef": "legend",
       "dataSourceRef": "HighestGrossingMovies",
       "xAxisInterval": 1,
       "yAxisTitle": "Billions of U.S. Dollars",

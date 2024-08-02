@@ -7,8 +7,8 @@
         "type": "WebHierarchicalGrid",
         "dataRef": "SingersData",
         "autoGenerate": false,
-        "id": "hierarchicalGrid1",
-        "name": "hierarchicalGrid1",
+        "id": "grid",
+        "name": "grid",
         "primaryKey": "ID",
         "allowFiltering": true,
         "filterMode": "ExcelStyleFilter",
@@ -30,7 +30,7 @@
             ]
             }
         ],
-        "columns": [
+        "columnList": [
           {
             "type": "WebColumn",
             "field": "Artist",
@@ -78,7 +78,7 @@
             "autoGenerate": false,
             "allowFiltering": true,
             "filterMode": "ExcelStyleFilter",
-            "columns": [
+            "columnList": [
               {
                 "type": "WebColumn",
                 "field": "Album",
@@ -115,7 +115,7 @@
                 "autoGenerate": false,
                 "allowFiltering": true,
                 "filterMode": "ExcelStyleFilter",
-                "columns": [
+                "columnList": [
                   {
                     "type": "WebColumn",
                     "field": "Number",
@@ -154,7 +154,7 @@
             "autoGenerate": false,
             "allowFiltering": true,
             "filterMode": "ExcelStyleFilter",
-            "columns": [
+            "columnList": [
               {
                 "type": "WebColumn",
                 "field": "Tour",

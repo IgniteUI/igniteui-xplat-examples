@@ -38,7 +38,7 @@
           ]
         }
       ],
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
           "name": "ID",

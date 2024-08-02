@@ -1,0 +1,26 @@
+{
+  "export": false,
+  "strings": {
+    "legendTitle": "Global Electricity Demand by Energy Use"
+  },
+  "descriptions": {
+    "legend": {
+      "type": "ItemLegend",
+      "name": "legend",
+      "orientation": "Horizontal"
+    },
+    "content": {
+      "type": "DataPieChart",
+      "name": "chart",
+      "othersCategoryText": "Other Electricity Demand",
+      "dataSourceRef": "EnergyGlobalDemand",
+      "legendRef": "legend"
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
+    "charts/DataPieChartModule",
+    "charts/ItemLegendModule"
+  ]
+}

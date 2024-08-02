@@ -34,7 +34,7 @@
       "name": "chart",
       "dataSourceRef": "CountryRenewableElectricity",
       "includedProperties": ["Year", "Europe", "China", "America"],
-      "legendRef": "Legend",
+      "legendRef": "legend",
       "chartType": "Line",
       "computedPlotAreaMarginMode": "Series",
       "isHorizontalZoomEnabled": false,

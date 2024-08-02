@@ -58,7 +58,7 @@
       "includedProperties": ["Year", "Europe", "China", "America"],
       "chartType": "Line",
       "computedPlotAreaMarginMode": "Series",
-      "legendRef": "Legend",
+      "legendRef": "legend",
       "isHorizontalZoomEnabled": false,
       "isVerticalZoomEnabled": false,
       "topMargin": 20,

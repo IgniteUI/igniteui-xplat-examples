@@ -11,7 +11,7 @@
       "autoGenerate": false,
       "primaryKey": "ID",
       "foreignKey": "ParentID",
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
           "field": "Name",

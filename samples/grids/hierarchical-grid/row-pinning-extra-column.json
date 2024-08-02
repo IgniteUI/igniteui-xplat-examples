@@ -35,7 +35,7 @@
         "rows": "Top",
         "columns": "End"
       },
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
           "width": "70px",
@@ -86,7 +86,7 @@
             "columns": "End"
           },
           "autoGenerate": false,
-          "columns": [
+          "columnList": [
             {
               "type": "WebColumn",
               "width": "70px",
@@ -131,7 +131,7 @@
                 "columns": "End"
               },
               "autoGenerate": false,
-              "columns": [
+              "columnList": [
                 {
                   "type": "WebColumn",
                   "width": "70px",
@@ -178,7 +178,7 @@
             "columns": "End"
           },
           "autoGenerate": false,
-          "columns": [
+          "columnList": [
             {
               "type": "WebColumn",
               "width": "70px",

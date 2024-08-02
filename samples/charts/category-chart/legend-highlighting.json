@@ -10,7 +10,7 @@
     "content": {
       "type": "CategoryChart",
       "name": "chart",
-      "legendRef": "Legend",
+      "legendRef": "legend",
       "chartType": "Column",
       "dataSourceRef": "HighestGrossingMovies",
       "xAxisInterval": 1,

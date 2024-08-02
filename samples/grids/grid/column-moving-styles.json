@@ -11,7 +11,7 @@
       "moving": true,
       "name": "grid",
       "id": "grid",
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
           "field": "Category",

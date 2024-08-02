@@ -15,7 +15,7 @@
       "autoGenerate": false,
       "rowEditable": true,
       "gridKeydownRef": "WebGridCustomKBNav",
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
           "name": "ProductID",

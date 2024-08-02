@@ -8,7 +8,7 @@
       "rowDraggable": true,
       "primaryKey": "ID",
       "rowDragEndRef": "WebGridReorderRowHandler",
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
           "field": "ID",

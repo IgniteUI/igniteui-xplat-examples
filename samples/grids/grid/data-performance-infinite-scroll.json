@@ -12,7 +12,7 @@
       "rowEditable":true,
       "allowFiltering":true,
       "primaryKey": "ProductID",
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
           "name": "ProductID",

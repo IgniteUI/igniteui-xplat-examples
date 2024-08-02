@@ -28,7 +28,7 @@
           ]
         }
       ],
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumnGroup",
           "header": "General Information",
@@ -129,7 +129,7 @@
           "childDataKey": "ChildCompanies",
           "autoGenerate": false,
           "moving": true,
-          "columns": [
+          "columnList": [
             {
               "type": "WebColumnGroup",
               "header": "General Information",
@@ -230,7 +230,7 @@
               "childDataKey": "ChildCompanies",
               "autoGenerate": false,
               "moving": true,
-              "columns": [
+              "columnList": [
                 {
                   "type": "WebColumnGroup",
                   "header": "General Information",

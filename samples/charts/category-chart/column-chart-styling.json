@@ -13,7 +13,7 @@
       "name": "chart",
       "dataSourceRef": "EnergyRenewableConsumption",
       "chartType": "Column",
-      "legendRef": "Legend",
+      "legendRef": "legend",
       "isHorizontalZoomEnabled": false,
       "isVerticalZoomEnabled": false,
       "isSeriesHighlightingEnabled": true,

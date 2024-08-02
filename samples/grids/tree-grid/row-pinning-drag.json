@@ -20,7 +20,7 @@
         "type": "WebPinningConfig",
         "rows": "Top"
       },
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
           "field": "Name",

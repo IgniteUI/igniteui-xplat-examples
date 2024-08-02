@@ -36,7 +36,7 @@
       "cellSelection": "None",
       "allowFiltering": true,
       "hideRowSelectors": false,
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
           "field": "Name",

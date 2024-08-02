@@ -32,7 +32,7 @@
         ]
       }],
       "primaryKey": "ProductID",
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
           "name": "ProductName",

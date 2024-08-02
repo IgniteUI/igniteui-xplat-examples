@@ -11,7 +11,7 @@
       "allowFiltering": true,
       "filterMode": "ExcelStyleFilter",
       "locale": "EN",
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
           "field": "ProductName",

@@ -47,7 +47,7 @@
           ]
         }
       ],
-      "columns": [{
+      "columnList": [{
         "type": "WebColumn",
         "name": "ProductName",
         "field": "ProductName",

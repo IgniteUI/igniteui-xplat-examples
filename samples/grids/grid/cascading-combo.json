@@ -8,7 +8,7 @@
       "primaryKey": "ID",
       "name": "grid",
       "renderedRef": "WebGridWithComboRendered",
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
           "field": "ID",

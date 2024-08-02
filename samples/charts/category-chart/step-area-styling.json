@@ -11,7 +11,7 @@
     "content": {
       "dataSourceRef": "CountryRenewableElectricity",
       "includedProperties": ["Year", "Europe", "China", "America"],
-      "legendRef": "Legend",
+      "legendRef": "legend",
       "type": "CategoryChart",
       "name": "chart",
       "chartType": "StepArea",

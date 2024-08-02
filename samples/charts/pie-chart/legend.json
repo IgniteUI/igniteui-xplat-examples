@@ -19,7 +19,7 @@
       "radiusFactor": 0.7,
       "labelExtent": 30,
       "dataSourceRef": "EnergyGlobalDemand",
-      "legendRef": "Legend"
+      "legendRef": "legend"
     }
   },
   "modules": [

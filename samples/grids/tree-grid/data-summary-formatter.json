@@ -12,7 +12,7 @@
       "foreignKey": "ParentID",
       "allowFiltering": true,
       "filterMode": "ExcelStyleFilter",
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
           "field": "ID",

@@ -11,7 +11,7 @@
       "id": "grid",
       "primaryKey": "ProductID",
       "rowEditable": true,
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
           "field": "ProductID",

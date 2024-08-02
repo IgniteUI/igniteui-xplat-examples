@@ -11,7 +11,7 @@
         "name": "grid",
         "id": "grid",
         "allowFiltering": true,
-        "columns": [
+        "columnList": [
           {
               "type": "WebColumn",
               "field": "Category",

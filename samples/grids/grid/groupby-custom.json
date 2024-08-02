@@ -10,7 +10,7 @@
       "type": "WebGrid",
       "dataRef": "InvoicesData",
       "autoGenerate": false,
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
           "name": "OrderID",

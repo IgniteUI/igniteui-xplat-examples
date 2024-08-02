@@ -10,7 +10,7 @@
       "dataRef": "CompanyData",
       "autoGenerate": false,
       "gridKeydownRef": "WebGridMRLCustomNavigationEvent",
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumnLayout",
           "name": "CompanyInfo",

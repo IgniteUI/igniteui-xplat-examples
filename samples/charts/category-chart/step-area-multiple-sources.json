@@ -10,7 +10,7 @@
     },
     "content": {
       "dataSourceRef": "CountryRenewableElectricity",
-      "legendRef": "Legend",
+      "legendRef": "legend",
       "type": "CategoryChart",
       "name": "chart",
       "chartType": "StepArea",
