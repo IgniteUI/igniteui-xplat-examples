@@ -1,6 +1,7 @@
 {
   "export": true,
   "skipAlterDataCasing": true,
+  "onInit": ["WebGridSizeSmallTemplate"],
   "descriptions": {
     "content": {
       "type": "WebGrid",
@@ -8,7 +9,6 @@
       "autoGenerate": false,
       "name": "grid",
       "id": "grid",
-      "displayDensity": "Compact",
       "columnList": [
         {
           "type": "WebColumn",

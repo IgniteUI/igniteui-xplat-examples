@@ -7,21 +7,26 @@
       "type": "PropertyEditorPanel",
       "name": "PropertyEditor",
       "componentRendererRef": "renderer",
-      "targetRef": "grid",
+      "targetRef": "treeGrid",
       "descriptionType": "WebGrid",
       "isHorizontal": true,
       "isWrappingEnabled": true,
       "properties": [
         {
           "type": "PropertyEditorPropertyDescription",
-          "propertyPath": "DisplayDensity",
-          "name": "DisplayDensityEditor"
+          "name": "SizeEditor",
+          "label": "Grid Size:",
+          "valueType": "EnumValue",
+          "dropDownNames": ["Small", "Medium", "Large"],
+          "dropDownValues": ["Small", "Medium", "Large"],
+          "changedRef": "WebTreeGridSetGridSize"
         }
       ]
     },
     "content": {
       "type": "WebTreeGrid",
-      "name": "grid",
+      "id": "treeGrid",
+      "name": "treeGrid",
       "dataRef": "FoodsData",
       "primaryKey": "ID",
       "foreignKey": "ParentID",

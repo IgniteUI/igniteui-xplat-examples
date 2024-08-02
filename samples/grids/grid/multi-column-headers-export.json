@@ -4,14 +4,15 @@
   ],
   "export": true,
   "skipAlterDataCasing": true,
+  "onInit": ["WebGridSizeSmallTemplate"],
   "descriptions": {
     "content": {
       "type": "WebGrid",
+      "id": "grid",
       "name": "grid",
       "dataRef": "CustomersData",
       "autoGenerate": false,
       "moving": true,
-      "displayDensity": "Compact",
       "allowFiltering": true,
       "toolbar": [
         {
