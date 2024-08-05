@@ -1,5 +1,4 @@
-{
-  "export": false,
+{  
   "strings": {
     "legendTitle": "Global Electricity Demand by Energy Use"
   },
@@ -14,26 +13,24 @@
       "properties": [
         {
           "type": "PropertyEditorPropertyDescription",
-          "propertyPath": "highlightingMode",
-          "label": "Highlighting Mode: "
+          "propertyPath": "HighlightingMode",
+          "label": "Highlighting Mode: ",
+          "primitiveValue": "BrightenSpecific"
         },
         {
           "type": "PropertyEditorPropertyDescription",
-          "propertyPath": "highlightingBehavior",
-          "label": "Highlighting Behavior: "
+          "propertyPath": "HighlightingBehavior",
+          "label": "Highlighting Behavior: ",
+          "primitiveValue": "DirectlyOver"
         }
       ]
-    },
-    "legend": {
-      "type": "ItemLegend",
-      "name": "legend",
-      "orientation": "Horizontal"
     },
     "content": {
       "type": "DataPieChart",
       "name": "chart",
       "dataSourceRef": "EnergyGlobalDemand",
-      "legendRef": "legend"
+      "highlightingBehavior": "DirectlyOver",
+      "highlightingMode": "BrightenSpecific"
     }
   },
   "modules": [
