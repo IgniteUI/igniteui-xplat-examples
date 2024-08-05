@@ -1,0 +1,108 @@
+{
+  "strings": {
+    "legendTitle": "Ronaldo vs Messi Player Stats"
+  },
+  "descriptions": {
+    "editor": {
+      "type": "PropertyEditorPanel",
+      "componentRendererRef": "renderer",
+      "targetRef": "angleAxis",
+      "descriptionType": "CategoryAngleAxis",
+      "isHorizontal": true,
+      "isWrappingEnabled": true,
+      "properties": [
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "LabelExtent",
+          "name": "LabelExtent",
+          "label": "Label Extent",
+          "shouldOverrideDefaultEditor": true,
+          "valueType": "Slider",
+          "primitiveValue": 5,
+          "min": 0,
+          "max": 100,
+          "step": 1
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "LabelMode",
+          "name": "LabelMode",
+          "label": "LabelMode",
+          "shouldOverrideDefaultEditor": true,
+          "valueType": "EnumValue",
+          "dropDownNames": ["Auto", "Center", "ClosestPoint"],
+          "dropDownValues": ["Auto", "Center", "ClosestPoint"],
+          "primitiveValue": "Auto"
+        }
+      ]
+    },
+    "legend": {
+      "type": "Legend",
+      "name": "legend",
+      "orientation": "Horizontal"
+    },
+    "content": {
+      "type": "DataChart",
+      "name": "chart",
+      "legendRef": "legend",
+      "isHorizontalZoomEnabled": false,
+      "isVerticalZoomEnabled": false,
+      "axes": [
+        {
+          "type": "CategoryAngleAxis",
+          "name": "angleAxis",
+          "dataSourceRef": "FootballPlayerStats",
+          "label": "Attribute"
+        },
+        {
+          "type": "NumericRadiusAxis",
+          "name": "radiusAxis",
+          "innerRadiusExtentScale": 0.1,
+          "interval": 2,
+          "minimumValue": 0,
+          "maximumValue": 10
+        }
+      ],
+      "series": [
+        {
+          "type": "RadialColumnSeries",
+          "name": "RadialColumnSeries1",
+          "dataSourceRef": "FootballPlayerStats",
+          "angleAxisRef": "angleAxis",
+          "valueAxisRef": "radiusAxis",
+          "valueMemberPath": "Ronaldo",
+          "showDefaultTooltip": false,
+          "areaFillOpacity": 0.8,
+          "thickness": 3,
+          "title": "Ronaldo"
+        },
+        {
+          "type": "RadialColumnSeries",
+          "name": "RadialColumnSeries2",
+          "dataSourceRef": "FootballPlayerStats",
+          "angleAxisRef": "angleAxis",
+          "valueAxisRef": "radiusAxis",
+          "valueMemberPath": "Messi",
+          "showDefaultTooltip": false,
+          "areaFillOpacity": 0.8,
+          "thickness": 3,
+          "title": "Messi"
+        },
+        {
+          "type": "DataToolTipLayer",
+          "name": "dataToolTipLayer"
+        }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
+    "charts/DataChartCoreModule",
+    "charts/DataChartRadialModule",
+    "charts/DataChartRadialCoreModule",
+    "charts/DataChartInteractivityModule",
+    "charts/DataChartAnnotationModule",
+    "charts/LegendModule"
+  ]
+}
