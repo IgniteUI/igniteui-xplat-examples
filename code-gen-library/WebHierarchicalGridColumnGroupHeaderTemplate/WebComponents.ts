@@ -26,7 +26,7 @@ public toggleColumnGroup(columnGroup: IgcColumnGroupComponent) {
         for (const column of columns) {
             const col = column as IgcColumnComponent;
             if (col.header === "Location"){
-                for (const cl of col.columnChildren) {
+                for (const cl of col.childColumns) {
                     const c = cl as IgcColumnComponent;
                     if (c.field !== "Address"){
                         c.hidden = !c.hidden;
@@ -34,7 +34,7 @@ public toggleColumnGroup(columnGroup: IgcColumnGroupComponent) {
                 }
             }
             else if (col.header === "Contact Information"){
-                const c = col.columnChildren[1] as IgcColumnComponent;
+                const c = col.childColumns[1] as IgcColumnComponent;
                 c.hidden = !c.hidden;
             }
         }
