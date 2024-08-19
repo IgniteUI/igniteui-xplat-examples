@@ -16,7 +16,7 @@
       "headSelectorTemplateRef": "WebGridHeaderRowSelectorTemplate",
       "cellSelection": "None",
       "hideRowSelectors": false,
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
           "field": "Name",

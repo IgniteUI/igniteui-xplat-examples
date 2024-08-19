@@ -9,7 +9,7 @@
       "id": "grid",
       "name": "grid",
       "autoGenerate": false,
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
           "name": "Category",

@@ -13,13 +13,18 @@
       "properties": [
         {
           "type": "PropertyEditorPropertyDescription",
-          "propertyPath": "DisplayDensity",
-          "name": "DisplayDensityEditor"
+          "name": "SizeEditor",
+          "label": "Grid Size:",
+          "valueType": "EnumValue",
+          "dropDownNames": ["Small", "Medium", "Large"],
+          "dropDownValues": ["Small", "Medium", "Large"],
+          "changedRef": "WebGridSetGridSize"
         }
       ]
     },
     "content": {
       "type": "WebGrid",
+      "id": "grid",
       "name": "grid",
       "dataRef": "NwindData",
       "moving": true,
@@ -41,7 +46,7 @@
           ]
         }
       ],
-      "columns": [{
+      "columnList": [{
         "type": "WebColumn",
         "name": "ProductName",
         "field": "ProductName",

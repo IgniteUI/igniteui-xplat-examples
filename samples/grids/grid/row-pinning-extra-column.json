@@ -10,7 +10,7 @@
             "dataRef": "CustomersDataLocal",
             "primaryKey": "ID",
             "cellSelection": "None",
-            "columns": [
+            "columnList": [
                 {
                     "type": "WebColumn",
                     "width": "70px",

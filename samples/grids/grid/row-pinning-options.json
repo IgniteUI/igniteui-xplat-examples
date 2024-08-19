@@ -37,7 +37,7 @@
       "primaryKey": "ID",
       "cellSelection": "None",
       "rowEditable": true,
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
           "field": "Company",

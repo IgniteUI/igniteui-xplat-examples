@@ -1,9 +1,12 @@
 {
     "skipAlterDataCasing": true,
     "todo": [ "Enable paging for children once templates are available." ],
+    "onInit": ["WebGridSizeMediumTemplate"],
     "descriptions": {
       "content": {
         "type": "WebHierarchicalGrid",
+        "id": "grid",
+        "name": "grid",
         "dataRef": "SingersData",
         "autoGenerate": false,
         "primaryKey": "ID",
@@ -12,14 +15,13 @@
               "type": "WebPaginator",
               "name": "paginator",
               "perPage": 10,
-              "displayDensity": "Cosy",
               "resourceStrings": {
                 "type": "WebPaginatorResourceStrings",
                 "igx_paginator_label": "Records per page"
               }
             }
         ],
-        "columns": [
+        "columnList": [
           {
             "type": "WebColumn",
             "field": "Artist",
@@ -64,7 +66,7 @@
             "type": "WebRowIsland",
             "childDataKey": "Albums",
             "autoGenerate": false,
-            "columns": [
+            "columnList": [
               {
                 "type": "WebColumn",
                 "field": "Album",
@@ -99,7 +101,7 @@
                 "type": "WebRowIsland",
                 "childDataKey": "Songs",
                 "autoGenerate": false,
-                "columns": [
+                "columnList": [
                   {
                     "type": "WebColumn",
                     "field": "Number",
@@ -136,7 +138,7 @@
             "type": "WebRowIsland",
             "childDataKey": "Tours",
             "autoGenerate": false,
-            "columns": [
+            "columnList": [
               {
                 "type": "WebColumn",
                 "field": "Tour",

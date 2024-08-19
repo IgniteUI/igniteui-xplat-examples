@@ -1,5 +1,6 @@
 {
   "skipAlterDataCasing": true,
+  "onInit": ["WebGridSizeMediumTemplate"],
   "descriptions": {
     "content": {
       "type": "WebHierarchicalGrid",
@@ -9,7 +10,6 @@
       "cellEditRef": "WebGridEditingEventsCellEdit",
       "autoGenerate": false,
       "primaryKey": "ProductID",
-      "displayDensity": "Cosy",
       "allowFiltering": true,
       "paginationComponents": [
         {
@@ -17,7 +17,7 @@
           "perPage": 10
         }
       ],
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
           "field": "ProductName",
@@ -83,7 +83,7 @@
             "type": "WebRowIsland",
             "childDataKey": "Locations",
             "autoGenerate": false,
-            "columns": [
+            "columnList": [
               {
                 "type": "WebColumn",
                 "field": "Shop",

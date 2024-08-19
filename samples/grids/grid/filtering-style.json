@@ -14,8 +14,12 @@
       "properties": [
         {
           "type": "PropertyEditorPropertyDescription",
-          "propertyPath": "DisplayDensity",
-          "name": "DisplayDensityEditor"
+          "name": "SizeEditor",
+          "label": "Grid Size:",
+          "valueType": "EnumValue",
+          "dropDownNames": ["Small", "Medium", "Large"],
+          "dropDownValues": ["Small", "Medium", "Large"],
+          "changedRef": "WebGridSetGridSize"
         }
       ]
     },
@@ -43,7 +47,7 @@
           ]
         }
       ],
-      "columns": [{
+      "columnList": [{
         "type": "WebColumn",
         "name": "ProductName",
         "field": "ProductName",

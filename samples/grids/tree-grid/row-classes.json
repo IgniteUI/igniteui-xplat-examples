@@ -11,7 +11,7 @@
         "moving": true,
         "rowEditable": true,
         "rowClassesRef": "WebGridRowClassesHandler",
-        "columns": [
+        "columnList": [
           {
             "type": "WebColumn",
             "field": "Name",

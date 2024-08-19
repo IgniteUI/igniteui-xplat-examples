@@ -3,6 +3,7 @@
   ],
   "export": true,
   "skipAlterDataCasing": true,
+  "onInit": ["WebGridSizeMediumTemplate"],
   "descriptions": {
     "content": {
       "type": "WebGrid",
@@ -10,7 +11,6 @@
       "autoGenerate": false,
       "name": "grid",
       "id": "grid",
-      "displayDensity": "Cosy",
       "rowSelection": "Multiple",
       "rowSelectorTemplateRef": "WebGridRowSelectorExcelTemplate",
       "headSelectorTemplateRef": "WebGridHeaderRowSelectorExcelTemplate",
@@ -19,7 +19,6 @@
           "type": "WebPaginator",
           "name": "paginator",
           "perPage": 15,
-          "displayDensity": "Cosy",
           "selectOptions": [5, 10, 15, 25, 50],
           "resourceStrings": {
             "type": "WebPaginatorResourceStrings",
@@ -27,7 +26,7 @@
           }
         }
       ],
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
           "field": "ContactName",

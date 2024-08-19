@@ -1,0 +1,15 @@
+{
+  "descriptions": {
+    "content": {
+      "type": "DataPieChart",
+      "name": "chart",
+      "dataSourceRef": "OnlineTrafficHighlightTotals",
+      "highlightedDataSourceRef": "OnlineTrafficHighlightDesktopOnly",
+      "highlightedValuesDisplayMode": "Overlay"
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "charts/DataPieChartModule"
+  ]
+}

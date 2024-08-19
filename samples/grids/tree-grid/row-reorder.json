@@ -14,7 +14,7 @@
       "rowDragStartRef": "WebTreeGridReorderRowStartHandler",
       "rowDraggable": true,  
       "rowDragEndRef": "WebTreeGridReorderRowHandler",    
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
           "field": "Name",

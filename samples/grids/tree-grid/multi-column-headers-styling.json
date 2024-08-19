@@ -11,7 +11,7 @@
       "id": "treeGrid",
       "primaryKey": "ID",
       "foreignKey": "ParentID",
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
           "field": "Name",

@@ -30,7 +30,7 @@
       "moving": true,
       "id": "grid1",
       "name": "grid1",
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
           "field": "Category"

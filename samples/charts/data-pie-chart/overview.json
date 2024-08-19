@@ -1,19 +1,12 @@
-{
-  "export": false,
+{  
   "strings": {
     "legendTitle": "Global Electricity Demand by Energy Use"
   },
   "descriptions": {
-    "legend": {
-      "type": "ItemLegend",
-      "name": "legend",
-      "orientation": "Horizontal"
-    },
     "content": {
       "type": "DataPieChart",
       "name": "chart",
-      "dataSourceRef": "EnergyGlobalDemand",
-      "legendRef": "legend"
+      "dataSourceRef": "EnergyGlobalDemand"
     }
   },
   "modules": [

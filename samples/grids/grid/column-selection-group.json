@@ -10,7 +10,7 @@
       "id": "grid",
       "dataRef": "CustomersData",
       "columnSelection": "Multiple",
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumnGroup",
           "header": "General Information",

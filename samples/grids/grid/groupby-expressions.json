@@ -16,7 +16,7 @@
         { "type": "WebGroupingExpression", "fieldName": "ShipCity", "ignoreCase": false, "dir": "Asc"  }
       ],
       "groupRowTemplateRef": "WebGridGroupByRowTemplate",
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
           "field": "OrderID",
