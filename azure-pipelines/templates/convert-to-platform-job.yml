@@ -73,7 +73,9 @@ jobs:
         }
         else 
         {
-           @($changedExistingSamplesDirs) + @($brandNewSamplesDirs)  | Copy-Item -Recurse -Force -Destination $(Build.ArtifactStagingDirectory)
+           @($changedExistingSamplesDirs) + @($brandNewSamplesDirs)  | Foreach-Object {            
+            Copy-Item -Verbose -Path $_ -dest ($_.ToString().Replace($(Build.SourcesDirectory)\${{ parameters.destinationGitRepo }}\samples\, $(Build.ArtifactStagingDirectory))) 
+           }
            Write-Output "Identified changed existing and brand new copied to $(Build.ArtifactStagingDirectory) - to be exposed as pipeline artifacts"
         }
       failOnStderr: true
