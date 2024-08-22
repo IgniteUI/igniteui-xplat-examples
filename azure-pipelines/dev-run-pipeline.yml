@@ -52,8 +52,7 @@ resources:
       ref: vnext
 
 pool:
-  #name: BuildAgentOnPrem
-  vmImage: 'windows-latest'
+  name: BuildAgentOnPrem
 
 jobs:
 - template: templates/convert-to-platform-job.yml
