@@ -77,7 +77,7 @@ jobs:
           $changedExistingSamplesDirs + $brandNewSamplesDirs | ForEach-Object { 
               $destination = $_.Replace("$(Build.SourcesDirectory)\${{ parameters.destinationGitRepo }}\samples\", "$(Build.ArtifactStagingDirectory)\samples\")
               Write-Output $destination
-              Copy-Item -Path $_ -Destination (New-Item -Force -Type Directory -Path $destination) -Force -Verbose -Recurse
+              Copy-Item -Path "$_\*" -Destination (New-Item -Force -Type Directory -Path $destination) -Force -Verbose -Recurse
           }
           Write-Output "Identified changed existing and/or brand new samples' files copied to $(Build.ArtifactStagingDirectory) - to be exposed as a pipeline artifact"
         }
