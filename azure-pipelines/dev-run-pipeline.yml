@@ -53,7 +53,7 @@ resources:
 
 pool:
   #name: BuildAgentOnPrem
-  vm-image: windows-latest
+  vmImage: 'windows-latest'
 
 jobs:
 - template: templates/convert-to-platform-job.yml
