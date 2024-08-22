@@ -58,18 +58,18 @@ jobs:
       script: |
         $changedExistingSamplesFiles = $(git diff HEAD --name-only --dirstat=files)
         Write-Output "Changed samples identified: "
-        Write-Output $changedExistingSamplesDirs 
+        Write-Output $changedExistingSamplesFiles 
         
-        $brandNewSamplesFiles = $(git ls-files --others --exclude-standard )
+        $brandNewSamplesFiles = $(git ls-files --others --exclude-standard)
         Write-Output "Brand new samples identified: "
-        Write-Output $brandNewSamplesDirs
-        if (@($changedExistingSamplesDirs) + @($brandNewSamplesDirs) -eq $null) 
+        Write-Output $brandNewSamplesFiles
+        if (@($changedExistingSamplesFiles) + @($brandNewSamplesFiles) -eq $null) 
         { 
             Write-Output "No changed samples were identified - this run just executed the code-exporter app successfully"
         }
         else 
         {
-          $changedExistingSamplesDirs + $brandNewSamplesDirs | ForEach-Object { 
+          $changedExistingSamplesFiles + $brandNewSamplesFiles | ForEach-Object { 
               $originalFile = Join-Path '$(Build.SourcesDirectory)\${{ parameters.destinationGitRepo }}' -ChildPath $_
               $destinationFile = Join-Path '$(Build.ArtifactStagingDirectory)' -ChildPath $_
               Copy-Item -Path $originalFile -Destination (New-Item -Force -Type Directory -Path $(Split-Path $destinationFile)) -Force -Verbose
