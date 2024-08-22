@@ -70,17 +70,13 @@ jobs:
 
         if (@($changedExistingSamplesFiles) + @($brandNewSamplesFiles) -eq $null) 
         { 
-            Write-Output "No changed samples were identified - this run just executed the code-exporter app successfully"
+            Write-Output "No changed or new samples were identified - this run just executed the code-exporter app successfully"
         }
         else 
         {
-          $changedExistingSamplesFiles + $brandNewSamplesFiles | ForEach-Object { 
-              $originalFile = Join-Path '$(Build.SourcesDirectory)\${{ parameters.destinationGitRepo }}' -ChildPath $_
-              $destinationFile = Join-Path '$(Build.ArtifactStagingDirectory)' -ChildPath $_
-              Copy-Item -Path $originalFile -Destination (New-Item -Force -Type Directory -Path $(Split-Path $destinationFile)) -Force -Verbose
-          }
           $changedExistingSamplesDirs + $brandNewSamplesDirs | ForEach-Object { 
               $destination = $_.Replace("$(Build.SourcesDirectory)\${{ parameters.destinationGitRepo }}\samples\", "$(Build.ArtifactStagingDirectory)")
+              Write-Output $destination
               Copy-Item -Path $_ -Destination (New-Item -Force -Type Directory -Path $destination) -Force -Verbose -Recurse
           }
           Write-Output "Identified changed existing and/or brand new samples' files copied to $(Build.ArtifactStagingDirectory) - to be exposed as a pipeline artifact"
