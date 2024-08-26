@@ -67,14 +67,19 @@ jobs:
         Select-Object -Unique
         Write-Output "Brand new samples identified: "
         Write-Output $brandNewSamplesDirs
-        if (@($changedExistingSamplesDirs) + @($brandNewSamplesDirs) -eq $null) 
+
+        if (@($changedExistingSamplesDirs) + @($brandNewSamplesDirs) -eq $null)
         { 
-            Write-Output "No changed samples were identified - this run just executed the code-exporter app successfully"
+            Write-Output "No changed or new samples were identified - this run just executed the code-exporter app successfully"
         }
         else 
         {
-           @($changedExistingSamplesDirs) + @($brandNewSamplesDirs)  | Copy-Item -Recurse -Force -Destination $(Build.ArtifactStagingDirectory)
-           Write-Output "Identified changed existing and brand new copied to $(Build.ArtifactStagingDirectory) - to be exposed as pipeline artifacts"
+          $changedExistingSamplesDirs + $brandNewSamplesDirs | ForEach-Object { 
+              $destination = $_.Replace("$(Build.SourcesDirectory)\${{ parameters.destinationGitRepo }}\samples\", "$(Build.ArtifactStagingDirectory)\samples\")
+              Write-Output $destination
+              Copy-Item -Path "$_\*" -Destination (New-Item -Force -Type Directory -Path $destination) -Force -Verbose -Recurse
+          }
+          Write-Output "Identified changed existing and/or brand new samples' files copied to $(Build.ArtifactStagingDirectory) - to be exposed as a pipeline artifact"
         }
       failOnStderr: true
       showWarnings: true
