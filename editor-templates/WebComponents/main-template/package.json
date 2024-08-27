@@ -22,10 +22,7 @@
     "start:legacy": "npm run serve:dev:legacy"
   },
   "dependencies": {
-    "@webcomponents/custom-elements": "^1.4.1",
-    "@webcomponents/template": "^1.4.2",
     "babel-runtime": "^6.26.0",
-    "core-js": "^3.6.5",
 //ifdef editor, webinputs
     "igniteui-webcomponents": "5.0.0-rc.1",
 //endifdef editor, webinputs
@@ -58,7 +55,7 @@
     "igniteui-webcomponents-spreadsheet": "5.0.0-beta.0",
     "igniteui-webcomponents-spreadsheet-chart-adapter": "5.0.0-beta.0",
 //endifdef spreadsheet
-    "lit-html": "^2.2.0",
+    "lit-html": "^3.2.0",
     "tslib": "^2.0.0"
   },
   "devDependencies": {
