@@ -19,6 +19,7 @@
     {
       "name": "Angular",
       "exclusions": [
+        { "reason": "missing angular template", "path": "charts\\category-chart\\selection-matcher.json" },
         { "reason": "samples are in LOB angular repo", "path": "grids\\hierarchical-grid\\" },
         { "reason": "samples are in LOB angular repo", "path": "grids\\pivot-grid\\" },
         { "reason": "samples are in LOB angular repo", "path": "grids\\tree-grid\\" },
