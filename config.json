@@ -11,6 +11,7 @@
     {
       "name": "React",
       "exclusions": [
+        { "reason": "missing react template", "path": "charts\\category-chart\\selection-matcher.json" },
         { "reason": "component isn't in React product", "path": "grids\\pivot-grid\\" },
         { "reason": "toolbarTemplate isn't in React product", "path": "grids\\hierarchical-grid\\toolbar-sample-1.json" },
         { "reason": "toolbarTemplate isn't in React product", "path": "grids\\hierarchical-grid\\toolbar-sample-2.json" }
@@ -19,6 +20,7 @@
     {
       "name": "Angular",
       "exclusions": [
+        { "reason": "missing angular template", "path": "charts\\category-chart\\selection-matcher.json" },
         { "reason": "samples are in LOB angular repo", "path": "grids\\hierarchical-grid\\" },
         { "reason": "samples are in LOB angular repo", "path": "grids\\pivot-grid\\" },
         { "reason": "samples are in LOB angular repo", "path": "grids\\tree-grid\\" },
@@ -36,6 +38,7 @@
     {
       "name": "WebComponents",
       "exclusions": [
+        { "reason": "missing wc template", "path": "charts\\category-chart\\selection-matcher.json" }
       ]
     }
   ]

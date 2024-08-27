@@ -3,7 +3,6 @@
     "content": {
       "type": "DataChart",
       "name": "chart",
-      "legendRef": "legend",
       "isHorizontalZoomEnabled": false,
       "isVerticalZoomEnabled": false,
       "axes": [
