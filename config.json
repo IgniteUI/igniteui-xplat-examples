@@ -12,6 +12,7 @@
       "name": "React",
       "exclusions": [
         { "reason": "missing react template", "path": "charts\\category-chart\\selection-matcher.json" },
+        { "reason": "component isn't in React product", "path": "grids\\pivot-grid\\" },
         { "reason": "toolbarTemplate isn't in React product", "path": "grids\\hierarchical-grid\\toolbar-sample-1.json" },
         { "reason": "toolbarTemplate isn't in React product", "path": "grids\\hierarchical-grid\\toolbar-sample-2.json" }
       ]
