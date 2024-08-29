@@ -20,7 +20,7 @@ public webTreeGridCellEditCellTemplate = (ctx: IgcCellTemplateContext) => {
         }
     }
     return html`
-    <igc-select style="width:100%; height:100%" @igcChange=${(e: any) => ctx.cell.editValue = e.detail.value}>
+    <igc-select style="width:100%; height:100%; --ig-size: var(--ig-size-large);" @igcChange=${(e: any) => ctx.cell.editValue = e.detail.value}>
           ${cellValues}
     </igc-select>
 `;
