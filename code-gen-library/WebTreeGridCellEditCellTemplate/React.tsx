@@ -28,16 +28,24 @@ public webTreeGridCellEditCellTemplate = (e: {dataContext: IgrCellTemplateContex
         }
         index++;
     }
-    return <><IgrSelect key={key} change={(x: any) => {
-            setTimeout(() => {
-                cell.editValue = x.value;
-            });
-        }}>
-       {cellValues}
-    </IgrSelect>
-    </>;
+    return (
+        <IgrSelect className="size-large" key={key} change={(x: any) => {
+                setTimeout(() => {
+                    cell.editValue = x.value;
+                });
+            }}>
+            {cellValues}
+        </IgrSelect>
+    );
 }
 //end content
+public requiredStyles = `
+<!--begin styles-->
+.size-large {
+    --ig-size: var(--ig-size-large);
+}
+<!--end styles-->
+`;
 //end template
 }
 
