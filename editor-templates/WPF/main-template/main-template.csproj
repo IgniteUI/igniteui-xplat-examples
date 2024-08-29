@@ -39,29 +39,29 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="InfragisticsWPF4.Controls.Charts.XamDataChart.v23.2">
+    <Reference Include="InfragisticsWPF4.Controls.Charts.XamDataChart.v24.1">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Work\dev-tools\XAML\Main\Source\Build\InfragisticsWPF4.Controls.Charts.XamDataChart.v23.2.dll</HintPath>
+      <HintPath>C:\Work\dev-tools\XAML\Main\Source\Build\InfragisticsWPF4.Controls.Charts.XamDataChart.v24.1.dll</HintPath>
     </Reference>
-    <Reference Include="InfragisticsWPF4.Controls.Grids.XamPropertyEditor.v23.2">
+    <Reference Include="InfragisticsWPF4.Controls.Grids.XamPropertyEditor.v24.1">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Work\dev-tools\XAML\Main\Source\Build\InfragisticsWPF4.Controls.Grids.XamPropertyEditor.v23.2.dll</HintPath>
+      <HintPath>C:\Work\dev-tools\XAML\Main\Source\Build\InfragisticsWPF4.Controls.Grids.XamPropertyEditor.v24.1.dll</HintPath>
     </Reference>
-    <Reference Include="InfragisticsWPF4.Controls.Layouts.v23.2">
+    <Reference Include="InfragisticsWPF4.Controls.Layouts.v24.1">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Work\dev-tools\XAML\Main\Source\Build\InfragisticsWPF4.Controls.Layouts.v23.2.dll</HintPath>
+      <HintPath>C:\Work\dev-tools\XAML\Main\Source\Build\InfragisticsWPF4.Controls.Layouts.v24.1.dll</HintPath>
     </Reference>
-    <Reference Include="InfragisticsWPF4.Controls.Inputs.v23.2">
+    <Reference Include="InfragisticsWPF4.Controls.Inputs.v24.1">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Work\dev-tools\XAML\Main\Source\Build\InfragisticsWPF4.Controls.Inputs.v23.2.dll</HintPath>
+      <HintPath>C:\Work\dev-tools\XAML\Main\Source\Build\InfragisticsWPF4.Controls.Inputs.v24.1.dll</HintPath>
     </Reference>
-    <Reference Include="InfragisticsWPF4.DataVisualization.v23.2">
+    <Reference Include="InfragisticsWPF4.DataVisualization.v24.1">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Work\dev-tools\XAML\Main\Source\Build\InfragisticsWPF4.DataVisualization.v23.2.dll</HintPath>
+      <HintPath>C:\Work\dev-tools\XAML\Main\Source\Build\InfragisticsWPF4.DataVisualization.v24.1.dll</HintPath>
     </Reference>
-    <Reference Include="InfragisticsWPF4.v23.2">
+    <Reference Include="InfragisticsWPF4.v24.1">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Work\dev-tools\XAML\Main\Source\Build\InfragisticsWPF4.v23.2.dll</HintPath>
+      <HintPath>C:\Work\dev-tools\XAML\Main\Source\Build\InfragisticsWPF4.v24.1.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
