@@ -10,8 +10,8 @@ public class WebGridHasSummariesChange
     {
         bool newValue = bool.Parse(args.NewValue.ToString());
 
-        var column1 = CodeGenHelper.GetDescription<IgbGrid>("content").ActualColumns[3];
-        var column2 = CodeGenHelper.GetDescription<IgbGrid>("content").ActualColumns[5];
+        var column1 = CodeGenHelper.GetDescription<IgbGrid>("content").ActualColumnList[3];
+        var column2 = CodeGenHelper.GetDescription<IgbGrid>("content").ActualColumnList[5];
 
         column1.HasSummary = newValue;
         column2.HasSummary = newValue;

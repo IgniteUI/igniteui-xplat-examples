@@ -11,9 +11,9 @@ public class WebHierarchicalGridHasSummariesChange
         bool newValue = bool.Parse(args.NewValue.ToString());
 
         var hierarchicalGrid = CodeGenHelper.GetDescription<IgbHierarchicalGrid>("content");
-        var column1 = hierarchicalGrid.ActualColumns[1];
-        var column2 = hierarchicalGrid.ActualColumns[3];
-        var column3 = hierarchicalGrid.ActualColumns[4];
+        var column1 = hierarchicalGrid.ActualColumnList[1];
+        var column2 = hierarchicalGrid.ActualColumnList[3];
+        var column3 = hierarchicalGrid.ActualColumnList[4];
 
         column1.HasSummary = newValue;
         column2.HasSummary = newValue;
