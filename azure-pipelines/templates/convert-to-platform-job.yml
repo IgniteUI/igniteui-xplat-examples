@@ -68,7 +68,7 @@ jobs:
         Write-Output "Brand new samples identified: "
         Write-Output $brandNewSamplesDirs
 
-        if (@($changedExistingSamplesDirs) + @($brandNewSamplesDirs) -eq $null)
+        if ($($changedExistingSamplesDirs + $brandNewSamplesDirs) -eq $null)
         { 
             Write-Output "No changed or new samples were identified - this run just executed the code-exporter app successfully"
         }
