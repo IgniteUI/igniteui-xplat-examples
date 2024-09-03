@@ -1,0 +1,14 @@
+{
+  "descriptions": {
+    "content": {
+      "type": "FunnelChart",
+      "name": "chart",
+      "innerLabelMemberPath": "Summary",
+      "valueMemberPath": "Value",
+      "dataSourceRef": "EnergyGlobalDemand"
+    }
+  },
+  "modules": [
+    "charts/FunnelChartModule"
+  ]
+}
