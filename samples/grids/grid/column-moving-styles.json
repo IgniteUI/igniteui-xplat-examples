@@ -74,6 +74,7 @@
           "field": "ChangePercent",
           "header": "Change Percent",
           "dataType": "Number",
+          "minWidth": "150px",
           "bodyTemplateRef": "WebGridCurrencyCellTemplate",
           "headerTemplateRef": "WebGridPinHeaderTemplate"
         },
@@ -82,6 +83,7 @@
           "field": "YearlyChange",
           "header": "Yearly Change",
           "dataType": "Number",
+          "minWidth": "150px",
           "bodyTemplateRef": "WebGridCurrencyCellTemplate",
           "headerTemplateRef": "WebGridPinHeaderTemplate"
         }
