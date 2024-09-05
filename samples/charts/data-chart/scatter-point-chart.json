@@ -1,4 +1,5 @@
 {
+  "skipAlterDataCasing": true,
   "todo1": "replace CountryDemographicEurope with CountryStatsEurope",
   "todo2": "replace CountryDemographicAfrican with CountryStatsAfrica",
   "strings": {

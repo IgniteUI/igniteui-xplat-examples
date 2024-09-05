@@ -48,11 +48,27 @@ function saveJSON(filePath, dataItems, mode) {
         }
 
         let jsonStr = "[\r\n" + lines.join('\r\n') + "\r\n]";
-        jsonStr = utils.strReplace(jsonStr, ":", ": ")
+        // jsonStr = utils.strReplace(jsonStr, ":", ": ")
+        // jsonStr = utils.strReplace(jsonStr, ":  ", ":")
+        // jsonStr = utils.strReplace(jsonStr, '":  ', '": ')
+        // jsonStr = utils.strReplace(jsonStr, '": ', '": ')
+        jsonStr = utils.strReplace(jsonStr, '":0', '": 0')
+        jsonStr = utils.strReplace(jsonStr, '":1', '": 1')
+        jsonStr = utils.strReplace(jsonStr, '":2', '": 2')
+        jsonStr = utils.strReplace(jsonStr, '":3', '": 3')
+        jsonStr = utils.strReplace(jsonStr, '":4', '": 4')
+        jsonStr = utils.strReplace(jsonStr, '":5', '": 5')
+        jsonStr = utils.strReplace(jsonStr, '":6', '": 6')
+        jsonStr = utils.strReplace(jsonStr, '":7', '": 7')
+        jsonStr = utils.strReplace(jsonStr, '":8', '": 8')
+        jsonStr = utils.strReplace(jsonStr, '":9', '": 9')
+        jsonStr = utils.strReplace(jsonStr, '":"', '": "')
+        jsonStr = utils.strReplace(jsonStr, '00: 00', '00:00')
+        // jsonStr = utils.strReplace(jsonStr, ' -1', '-1')
         jsonStr = utils.strReplace(jsonStr, ',"', ', "')
         jsonStr = utils.strReplace(jsonStr, '{', '{ ')
         jsonStr = utils.strReplace(jsonStr, '}', ' }')
-
+        
         saveFile(filePath, jsonStr);
     }
 }
@@ -110,12 +126,15 @@ exports.cleanJSON = function cleanJSON(input, cb) {
 function sortJSON(cb) {
 
     // let filePath = CodeGenLib + "/WorldCitiesAbove500K/XPLAT.json";
-    let filePath = CodeGenLib + "/WorldCountries/XPLAT.json";
+    let filePath = CodeGenLib + "/AthletesData/XPLAT.json";
+    // let filePath = CodeGenLib + "/AthletesDataExtended/XPLAT.json";
+    // let filePath = CodeGenLib + "/WorldCountries/XPLAT.json";
     let file = fs.readFileSync(filePath, "utf8");
     let dataItems = JSON.parse(file);
 
     // dataItems = dataItems.sort((a, b) => a.Pop < b.Pop ? 1 : -1);
-    dataItems = dataItems.sort((a, b) => a.Population < b.Population ? 1 : -1);
+    // dataItems = dataItems.sort((a, b) => a.Population < b.Population ? 1 : -1);
+    dataItems = dataItems.sort((a, b) => a.Id > b.Id ? 1 : -1);
 
     for (let i = 0; i < dataItems.length; i++) {
         // dataItems[i].ID = 10000 + i;
@@ -165,17 +184,89 @@ exports.filterJSON = function filterJSON(cb) {
     cb();
 }
 
+exports.findDataFiles = function findDataFiles(cb)
+{
+    var largeDataSources = [ 'SingersData',
+    "AirplaneSeats",
+    "AnalyzeSales",
+    "AthletesData",
+    "AthletesDataExtended",
+    "CountryStats",
+    "CountyHierarchicalData",
+    "EmployeesData",
+    "FinancialDataAll",
+    "FinancialDataCurrencies",
+    "FinancialDataFuel",
+    "FinancialDataMetals",
+    "HierarchicalCustomers",
+    "HierarchicalCustomersData",
+    "InvoicesData",
+    "InvoicesWorldData",
+    "PivotData",
+    "PivotDataFlat",
+    "PivotSalesData",
+    "SalesData",
+    "SingersCustomers",
+    "StockAmazon",
+    "StockGoogle",
+    "StockMarket100",
+    "StockMarket1000",
+    "StockMarket2000",
+    "StockMarket500",
+    "StockSP500Cap",
+    "StockMicrosoft",
+    "StockTesla",
+    "WorldAustralianData",
+    "WorldCapitals",
+    "WorldCities",
+    "WorldCitiesAbove100K",
+    "WorldCitiesAbove15K",
+    "WorldCitiesAbove1M",
+    "WorldCitiesAbove500K",
+    "WorldCountries",
+    "WorldStats"];
+    gulp.src([ '../samples/**/*.json'])
+    .pipe(es.map(function(file, fileCallback) {  
+        let content = file.contents.toString();
+        if (content.indexOf("skipAlterDataCasing") <= 0) {
+
+            for (let i = 0; i < largeDataSources.length; i++) {
+                const ds = largeDataSources[i];
+                if (content.indexOf(ds) >= 0) { 
+                    console.log(file.dirname + '/' + file.basename + " \t" + ds); 
+                    break;
+                }
+            }
+
+            // let lines = content.split('\n'); 
+            // var dataSource = "";
+            // for (let i = 0; i < lines.length; i++) {
+            //     const item = lines[i];
+            //     if (item.indexOf("dataSource") >= 0) {
+            //         dataSource = item;
+            //     }
+            // }
+            // console.log(file.dirname + '/' + file.basename + " \t" + dataSource);  
+        }
+        fileCallback(null, file);
+    }))
+    .on("end", function() {
+        cb();
+     });
+}
+
 exports.copyCDN = function copyCDN(cb)
 {
     var cdnTable = [];
-    var cdnWebsite = 'https://static.infragistics.com/xplatform/library/';
-    var cdnServer = '//s0706dl2.igweb.local/download.infragistics.com/xplatform/library';
+    var cdnWebsite = 'https://static.infragistics.com/xplatform/cdn/';
+    var cdnServer = ' \\\\s0706dl2.igweb.local\\download.infragistics.com\\xplatform\\cdn';
     var cdnOutput = './CDN';
-    // del(cdnOutput);
     console.log('--------------------------------------------------------------------');   
     console.log('copying large data files from code-gen-library to: ' + cdnOutput);      
     console.log('--------------------------------------------------------------------');   
     
+    // del(cdnOutput);
+
     gulp.src([
         // process all files and determine large files based on number of data items and data columns
         CodeGenLib + '/**/XPLAT.json',
@@ -230,36 +321,53 @@ exports.copyCDN = function copyCDN(cb)
         let dirname = file.dirname.split('code-gen-library\\')[1];
         
         // copy only files that have many items and/or many data columns
-        if (items.length >= 100 || (items.length * columns.length >= 500)) {
+        if (items.length >= 100 || (items.length * columns.length >= 500) || dirname === "SingersData") {
             console.log(CodeGenLib + '/' + dirname + '/XPLAT.json copied with ' + items.length  + ' items');    
             // console.log('CodeGenLib + "/' + dirname + '/XPLAT.json",');  
             var itemsCount = items.length.toString();
             var columnsCount = columns.length.toString();
             var row = "<tr> <td align=\"center\"> " + itemsCount.padStart(Math.max(10, itemsCount.length), ' ') + " </td>" +
-                      " <td align=\"center\"> " + columnsCount.padStart(Math.max(12, columnsCount.length), ' ') + " </td>" +
-                      " <td align=\"left\">" + "<a href=\"" + cdnWebsite + dirname + ".json\">"  + dirname + "</a> </td> </tr>\r\n"; 
+                      " <td class=\"center\"> " + columnsCount.padStart(Math.max(12, columnsCount.length), ' ') + " </td>" +
+                      " <td class=\"left\">" + "<a href=\"" + cdnWebsite + dirname + ".json\">"  + dirname + "</a> </td> </tr>\r\n"; 
             cdnTable += row;  
             // copy to cdn output
             saveFile(cdnOutput + "/" + dirname + ".json", content, true); 
             // create config file that enables remote location for data file
             saveFile(CodeGenLib + '/' + dirname + '/XPLAT-CONFIG.json', '{\r\n' + '\t"location": "CDN"\r\n' + '}\r\n', true); 
         } 
+        // console.log(items.length + " " + (items.length * columns.length) + " " + dirname);
         fileCallback(null, file);
     }))
     // .pipe(gulp.dest(cdnOutput, {overwrite: true}))
     .on("end", function() {
         var repo = 'https://github.com/IgniteUI/igniteui-xplat-examples/tree/23.2.x';
-        var readme = '<h1> Data Library for XPLAT Samples</h1>\r\n\r\n' +
-        '<p>This CDN folder contains data files used by <a href=\"' + repo + '/samples\">XPLAT samples</a>.</p>\r\n\r\n' +
-        '<p>Use <a href=\"' + repo + '/code-gen-tools">copyCDN</a> script to prepare data files in <a href=\"' + repo + '/code-gen-library">CodeGen library</a> for manual upload to the <a href=\"https://static.infragistics.com/xplatform/library">CDN</a>. This way, files on CDN stay in-sync with files in <a href=\"' + repo + '/code-gen-library">CodeGen library</a>.</p>\r\n\r\n' +
+        var angular = 'https://github.com/IgniteUI/igniteui-angular-examples/tree/vnext';
+        var blazor  = 'https://github.com/IgniteUI/igniteui-blazor-examples/tree/vnext';
+        var react   = 'https://github.com/IgniteUI/igniteui-react-examples/tree/vnext';
+        var wc      = 'https://github.com/IgniteUI/igniteui-wc-examples/tree/vnext';
+        var readme = '<h1> Data Files for Cross-Platform Samples</h1>\r\n\r\n' +
+        '<p>This CDN folder contains data files used by ' +
+        '<a href=\"' + repo + '/samples\">xplat</a>, ' +
+        '<a href=\"' + angular + '/samples\">angular</a>, ' +
+        '<a href=\"' + blazor + '/samples\">blazor</a>, ' +
+        '<a href=\"' + react + '/samples\">react</a>, and ' +
+        '<a href=\"' + wc + '/samples\">web-component</a> samples' +
+        '</p>\r\n\r\n' +
+        '<p>Use the <a href=\"' + repo + '/code-gen-tools">copyCDN</a> gulp script to collect data files from <a href=\"' + repo + '/code-gen-library">CodeGen library</a> before manually uploading them to the <a href=\"' + cdnServer + '">CDN</a> network location. This way, files on CDN stay in-sync with files in <a href=\"' + repo + '/code-gen-library">CodeGen library</a>.</p>\r\n\r\n' +
         '<h2> CodeGen Library</h2>\r\n\r\n' +  
         '<p>The CodeGen library is located on <a href=\"' + repo + '/code-gen-library">GitHub</a> and CDN has a copy of these files:</p>\r\n\r\n' + 
         '<table>\r\n' +
-        '<tr> <th width="200px"> Data Items </th> <th width="300px"> Data Columns </th> <th width="50%" align=\"left\"> Data Link </th> </tr> \r\n' +  
+        '<tr> <th width="120px"> Data Items </th> <th width="120px"> Data Columns </th> <th width="50%" align=\"left\"> Data Link </th> </tr> \r\n' +  
         cdnTable + 
         '</table>';
+        var css = '<style>\r\n' +
+        '.center { text-align: center; }\r\n' +
+        '.left { text-align: left;  }\r\n' +
+        'tr:nth-child(even) { background-color: #e3e3e3; } \r\n' +
+        '</style> '
+
         // saveFile(cdnOutput + "/_Readme.md", readme, true);
-        saveFile(cdnOutput + "/_Readme.html", '<html><body>\r\n' + readme + '\r\n\r\n</body></html>', true);
+        saveFile(cdnOutput + "/.Readme.html", '<html> ' + css + '<body>\r\n' + readme + '\r\n\r\n</body></html>', true);
 
         // if (cdnOutput.indexOf('igweb.local/download.infragistics.com') < 0) {
             console.log("\n WARNING: You must copy content of the this CDN folder to:\n" + cdnServer + "\n")
@@ -271,17 +379,33 @@ exports.copyCDN = function copyCDN(cb)
 exports.compactJSON = function compactJSON(cb) {
     let filePaths = [
         // "/AnalyzeOrders/XPLAT.json",
-        "/CompanyEmployees/XPLAT.json",
-        "/CompanyData/XPLAT.json",
-        "/InvoicesData/XPLAT.json",
-        "/PivotDataFlat/XPLAT.json",
-        "/PivotSalesData/XPLAT.json",
-        "/ProductSales/XPLAT.json",
+        // "/AnalyzeSales/XPLAT.json",
+        "/InvoicesWorldData/XPLAT.json",
+        "/PivotData/XPLAT.json",
+        // "/CompanyEmployees/XPLAT.json",
+        // "/CompanyData/XPLAT.json",
+        // "/InvoicesData/XPLAT.json",
+        // "/PivotDataFlat/XPLAT.json",
+        // "/PivotSalesData/XPLAT.json",
+        // "/ProductSales/XPLAT.json",
         // "/NwindLocations/XPLAT.json",
         // "/ProductSales/XPLAT.json",
         // "/FinancialDataCurrencies/XPLAT.json",
         // "/FinancialDataFuel/XPLAT.json",
         // "/FinancialDataMetals/XPLAT.json",
+        // "/InvoicesData/XPLAT.json",
+        // "/InvoicesWorldData/XPLAT.json",
+        // "/EmployeesData/XPLAT.json",
+        // "/EmployeesFlatAvatars/XPLAT.json",
+        // "/EmployeesFlatData/XPLAT.json",
+        // "/EmployeesFlatDetails/XPLAT.json",
+        // "/ProductSales/XPLAT.json",        
+        // "/ProductInventory/XPLAT.json",       
+        // "/RoleplayDataStats/XPLAT.json",        
+        // "/RoleplayTreeGridData/XPLAT.json", 
+        // "/NwindData/XPLAT.json",        
+        // "/AnalyzeSales/XPLAT.json",
+        "/AthletesData/XPLAT.json",
     ];
     for (const filePath of filePaths) {
         let file = fs.readFileSync(CodeGenLib + filePath, "utf8");

@@ -1,4 +1,5 @@
 {
+  "skipAlterDataCasing": true,
   "export": false,
   "descriptions": {
     "legend": {
