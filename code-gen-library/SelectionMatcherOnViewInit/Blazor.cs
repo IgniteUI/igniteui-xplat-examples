@@ -37,7 +37,6 @@ public class SelectionMatcherOnViewInit
 		matcher = new IgbSeriesMatcher();
 		matcher.MemberPath = "Hydro";
 		matcher.MemberPathType = "ValueMemberPath";
-
 		selection.Matcher = matcher;
 
 		chart.SelectedSeriesItems.Add(selection);
