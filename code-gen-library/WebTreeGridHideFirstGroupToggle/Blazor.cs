@@ -8,7 +8,7 @@ public class WebTreeGridHideFirstGroupToggle
     //begin eventHandler
     public void WebTreeGridHideFirstGroupToggle(IgbPropertyEditorPropertyDescriptionButtonClickEventArgs args)
     {
-        var columnGroup = CodeGenHelper.GetDescription<IgbTreeGrid>("content").ActualColumnList[1];
+        var columnGroup = CodeGenHelper.GetDescription<IgbTreeGrid>("content").GetColumns().ElementAt(1);
         columnGroup.Hidden = !columnGroup.Hidden;
     }
     //end eventHandler
