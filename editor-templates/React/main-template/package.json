@@ -17,35 +17,35 @@
 //ifdef webgrids
     "igniteui-dockmanager": "1.14.3",
 //endifdef webgrids
-    "igniteui-react": "18.7.0-beta.2",
+    "igniteui-react": "18.7.3",
 //ifdef charts, maps
-    "igniteui-react-charts": "18.7.0-beta.2",
+    "igniteui-react-charts": "18.7.3",
 //endifdef charts, maps
-    "igniteui-react-core": "18.7.0-beta.2",
+    "igniteui-react-core": "18.7.3",
 //ifdef grid, webgrids
-    "igniteui-react-datasources": "18.7.0-beta.2",
+    "igniteui-react-datasources": "18.7.3",
 //endifdef grid, webgrids
 //ifdef excel, spreadsheet
-    "igniteui-react-excel": "18.7.0-beta.2",
+    "igniteui-react-excel": "18.7.3",
 //endifdef excel, spreadsheet
 //ifdef gauges
-    "igniteui-react-gauges": "18.7.0-beta.2",
+    "igniteui-react-gauges": "18.7.3",
 //endifdef gauges
 //ifdef grid, webgrids
-    "igniteui-react-grids": "18.7.0-beta.2",
+    "igniteui-react-grids": "18.7.3",
 //endifdef grid, webgrids
 //ifdef grid, webgrids, inputs, layouts, editor
-    "igniteui-react-inputs": "18.7.0-beta.2",
+    "igniteui-react-inputs": "18.7.3",
 //endifdef grid, webgrids, inputs, layouts, editor
 //ifdef grid, webgrids, editor, layouts
-    "igniteui-react-layouts": "18.7.0-beta.2",
+    "igniteui-react-layouts": "18.7.3",
 //endifdef grid, webgrids, editor, layouts
 //ifdef maps
-    "igniteui-react-maps": "18.7.0-beta.2",
+    "igniteui-react-maps": "18.7.3",
 //endifdef maps
 //ifdef spreadsheet
-    "igniteui-react-spreadsheet": "18.7.0-beta.2",
-    "igniteui-react-spreadsheet-chart-adapter": "18.7.0-beta.2",
+    "igniteui-react-spreadsheet": "18.7.3",
+    "igniteui-react-spreadsheet-chart-adapter": "18.7.3",
 //endifdef spreadsheet
     "igniteui-webcomponents": "5.0.0",
     "lit-html": "^2.2.0",

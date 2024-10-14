@@ -5,6 +5,7 @@ using Infragistics.Controls.Gauges;
 public class GaugeAlignLabelWithOffset
 {
     //begin eventHandler
+    //WPF: Infragistics.Controls.Gauges.AlignLinearGraphLabelHandler
     public void GaugeAlignLabelWithOffset(object sender, AlignLinearGraphLabelEventArgs args)
     {
         args.OffsetX += 15;
