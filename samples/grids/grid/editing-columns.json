@@ -63,6 +63,7 @@
           "dataType": "Number",
           "sortable": true,
           "hasSummary": true,
+          "inlineEditorTemplateRef": "WebGridNumericColEditCellTemplate",
           "editable": true,
           "filterable": false
         }
@@ -72,6 +73,7 @@
   "modules": [
     "withDescriptions",
     "grids/WebGridModule",
-    "grids/WebPaginatorModule"
+    "grids/WebPaginatorModule",
+    "webinputs/WebInputModule"
   ]
 }
