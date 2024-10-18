@@ -8,20 +8,14 @@
     "legend": {
       "type": "DataLegend",
       "name": "legend",
-      "targetRef": "chart"
+      "targetRef": "chart",
+      "unitsText": "%",
+      "includedColumns": ["BirthRate", "DeathRate"]
     },
     "content": {
       "type": "DataChart",
       "name": "chart",
       "axes": [
-        {
-          "type": "NumericXAxis",
-          "name": "xAxis",
-          "title": "Death Rate",
-          "interval": 1,
-          "minimumValue": 4,
-          "maximumValue": 16
-        },
         {
           "type": "NumericYAxis",
           "name": "yAxis",
@@ -29,6 +23,14 @@
           "interval": 10,
           "minimumValue": 0,
           "maximumValue": 60
+        },
+        {
+          "type": "NumericXAxis",
+          "name": "xAxis",
+          "title": "Death Rate",
+          "interval": 1,
+          "minimumValue": 4,
+          "maximumValue": 16
         }
       ],
       "series": [
