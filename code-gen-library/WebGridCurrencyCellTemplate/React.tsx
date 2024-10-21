@@ -7,22 +7,23 @@ export class WebGridCurrencyCellTemplate {
 //begin template
 //begin content
     public webGridCurrencyCellTemplate = (props: {dataContext: IgrCellTemplateContext}) => {
-	    var cell = props.dataContext.cell as any;
-        if (cell.value > 0) {
-            return(
+        var cell = props.dataContext.cell as any;
+        const isCellCurrencyUp = typeof cell.value === 'number' && cell.value > 0;
+        const isCellCurrencyDown = typeof cell.value === 'number' && cell.value <= 0;
+
+        return (
+
             <div style={{width: '80px', float: 'right'}}>
-                <IgrBadge variant="success" style={{float: 'left'}}><span>▲</span></IgrBadge>
-                 <span style={{color:'green',float: 'right'}}>${cell.value.toFixed(2)}</span>
+                {
+                    isCellCurrencyUp || isCellCurrencyDown ? 
+                    <span> 
+                        <IgrBadge variant={isCellCurrencyUp ? "success" : "danger"} style={{float: 'left'}}><span>{isCellCurrencyUp ? '▲' : '▼'}</span></IgrBadge>
+                        <span style={{color: isCellCurrencyUp ? 'green' : 'red', float: 'right'}}>${cell.value.toFixed(2)}</span>
+                    </span>
+                    : <span>${cell.value}</span>
+                }
             </div>
-            );
-        } else {
-            return(
-            <div style={{width: '80px', float: 'right'}}>
-                <IgrBadge variant="danger" style={{float: 'left'}}><span>▼</span></IgrBadge>
-                <span style={{color:'red',float: 'right'}}>${cell.value.toFixed(2)}</span>
-            </div>
-            );
-        }
+        );
     }
 //end content
 
