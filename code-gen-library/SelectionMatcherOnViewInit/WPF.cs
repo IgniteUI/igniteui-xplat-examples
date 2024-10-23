@@ -25,37 +25,42 @@ public class SelectionMatcherOnViewInit
 {
     //begin eventHandler
 	
-	private System.Threading.Timer _timer;
+	private DispatcherTimer _timer;
 
-    private void SelectionMatcherOnViewInit()
+	//WPF: System.Action
+    public void SelectionMatcherOnViewInit()
 	{
-		_timer = new System.Threading.Timer((_) =>
+		 _timer = new DispatcherTimer();
+		_timer.Interval = TimeSpan.FromMilliseconds(100);
+		_timer.Tick += (o, e) =>
 		{
-			addSelection();
-		}, null, 100, 0);
+			AddSelection();
+			_timer.Stop();
+		};
+		_timer.Start();
 	}
 	
-	private void addSelection()
+	private void AddSelection()
 	{
 		var chart = CodeGenHelper.GetDescription<XamCategoryChart>("content");
-
-		XamChartSelection selection = new XamChartSelection();
-		selection.Item = EnergyRenewableConsumption[1];
-		XamSeriesMatcher matcher = new XamSeriesMatcher();
+        
+		ChartSelection selection = new ChartSelection();
+		selection.Item = ((IList)chart.ItemsSource)[1];
+		SeriesMatcher matcher = new SeriesMatcher();
 		matcher.MemberPath = "Solar";
 		matcher.MemberPathType = "ValueMemberPath";
 		selection.Matcher = matcher;
-
+				
 		chart.SelectedSeriesItems.Add(selection);
-
-		selection = new XamChartSelection();
-		selection.Item = EnergyRenewableConsumption[1];
-		matcher = new XamSeriesMatcher();
+				
+		selection = new ChartSelection();
+		selection.Item = ((IList)chart.ItemsSource)[1];
+		matcher = new SeriesMatcher();
 		matcher.MemberPath = "Hydro";
 		matcher.MemberPathType = "ValueMemberPath";
-
+				
 		selection.Matcher = matcher;
-
+				
 		chart.SelectedSeriesItems.Add(selection);
 	}
     //end eventHandler
