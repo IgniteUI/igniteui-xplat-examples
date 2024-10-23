@@ -2,6 +2,7 @@
   "strings": {
     "legendTitle": "Highest Grossing Movie Franchises"
   },
+  "hasAnimations": true,
   "descriptions": {
     "legend": {
       "type": "Legend",
@@ -23,8 +24,8 @@
           "label": "Y Axis Minimum Value",
           "shouldOverrideDefaultEditor": true,
           "valueType": "EnumValue",
-          "dropDownNames": ["0", "10", "20", "30", "40", "50", "60", "70", "80", "90", "100"],
-          "dropDownValues": ["0", "10", "20", "30", "40", "50", "60", "70", "80", "90", "100"],
+          "dropDownNames": [ "0", "10", "20", "30", "40", "50", "60", "70", "80", "90", "100" ],
+          "dropDownValues": [ "0", "10", "20", "30", "40", "50", "60", "70", "80", "90", "100" ],
           "primitiveValue": 0,
           "changedRef": "EditorChangeUpdateYAxisMinimumValue"
         },
@@ -35,8 +36,8 @@
           "label": "Y Axis Maximum Value",
           "shouldOverrideDefaultEditor": true,
           "valueType": "EnumValue",
-          "dropDownNames": ["100", "110", "120", "130", "140", "150", "160", "170", "180", "190", "200"],
-          "dropDownValues": ["100", "110", "120", "130", "140", "150", "160", "170", "180", "190", "200"],
+          "dropDownNames": [ "100", "110", "120", "130", "140", "150", "160", "170", "180", "190", "200" ],
+          "dropDownValues": [ "100", "110", "120", "130", "140", "150", "160", "170", "180", "190", "200" ],
           "primitiveValue": 150,
           "changedRef": "EditorChangeUpdateYAxisMaximumValue"
         }
@@ -46,7 +47,7 @@
       "type": "CategoryChart",
       "name": "chart",
       "dataSourceRef": "CountryRenewableElectricity",
-      "includedProperties": ["Year", "Europe", "China", "America"],
+      "includedProperties": [ "Year", "Europe", "China", "America" ],
       "legendRef": "legend",
       "chartType": "Line",
       "computedPlotAreaMarginMode": "Series",

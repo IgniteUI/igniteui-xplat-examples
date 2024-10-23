@@ -2,6 +2,7 @@
   "strings": {
     "legendTitle": "Facebook Consolidated Statements of Income"
   },
+  "hasAnimations": true,
   "descriptions": {
     "content": {
       "type": "DataChart",

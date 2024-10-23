@@ -2,6 +2,7 @@
   "strings": {
     "legendTitle": "Average Temperature Range in New York"
   },
+  "hasAnimations": true,
   "descriptions": {
     "content": {
       "type": "CategoryChart",
