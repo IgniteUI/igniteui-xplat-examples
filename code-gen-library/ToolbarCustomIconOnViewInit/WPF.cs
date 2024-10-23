@@ -25,7 +25,6 @@ public class ToolbarCustomIconOnViewInit
 {
 	
 	//begin eventHandler
-	//WPF: System.Action
 	public void ToolbarCustomIconOnViewInit()
 	{
 		var toolbar = CodeGenHelper.GetDescription<XamToolbar>("content");

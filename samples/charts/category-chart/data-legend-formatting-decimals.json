@@ -2,6 +2,7 @@
   "strings": {
     "legendTitle": "Highest Grossing Movie Franchises"
   },
+  "hasAnimations": true,
   "descriptions": {
     "legend": {
       "type": "DataLegend",

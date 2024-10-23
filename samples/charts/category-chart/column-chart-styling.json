@@ -2,6 +2,7 @@
   "strings": {
     "legendTitle": "Percentage Change in Energy Generation"
   },
+  "hasAnimations": true,
   "descriptions": {
     "legend": {
       "type": "Legend",
@@ -18,8 +19,8 @@
       "isVerticalZoomEnabled": false,
       "isSeriesHighlightingEnabled": true,
 
-      "brushes": ["#9de772", "#8b5bb1", "#6db1ff", "#ee5879", "#f8a15f"],
-      "outlines": ["white"],
+      "brushes": [ "#9de772", "#8b5bb1", "#6db1ff", "#ee5879", "#f8a15f" ],
+      "outlines": [ "white" ],
 
       "xAxisMajorStroke": "lightgrey",
       "xAxisGap": 0.5,

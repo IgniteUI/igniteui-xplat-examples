@@ -4,7 +4,6 @@
 public class ChartStyleTest
 {
     //begin eventHandler
-    //WPF: System.Action
     public void ChartStyleTest()
     {
         //OMIT HANLDER

@@ -2,13 +2,14 @@
   "strings": {
     "legendTitle": "Renewable Electricity Generated"
   },
+  "hasAnimations": true,
   "descriptions": {
     "content": {
       "type": "CategoryChart",
       "name": "chart",
       "chartType": "Spline",
       "dataSourceRef": "CountryRenewableElectricity",
-      "includedProperties": ["Year", "Europe"],
+      "includedProperties": [ "Year", "Europe" ],
       "yAxisTitle": "TWh",
       "yAxisTitleLeftMargin": 10,
       "yAxisTitleRightMargin": 5,

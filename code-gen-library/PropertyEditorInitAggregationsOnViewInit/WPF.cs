@@ -24,7 +24,6 @@ public class PropertyEditorInitAggregationsOnViewInit
 {
 	
 	//begin eventHandler
-	//WPF: System.Action
 	public void PropertyEditorInitAggregationsOnViewInit()
 	{
 		var editor = CodeGenHelper.GetDescription<XamPropertyEditorPanel>("editor");
