@@ -5,6 +5,7 @@ using Infragistics.Controls.Gauges;
 public class GaugeAttachPrependFormatter
 {
     //begin eventHandler
+    //WPF: Infragistics.Controls.Gauges.FormatLinearGraphLabelHandler
     public void GaugeAttachPrependFormatter(object sender, FormatLinearGraphLabelEventArgs args)
     {
         args.Label = "$" + args.Label;
