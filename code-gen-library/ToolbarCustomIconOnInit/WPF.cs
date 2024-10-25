@@ -23,6 +23,7 @@ public class ToolbarCustomIconOnInit
 {
 	
 	//begin eventHandler
+	//WPF: System.Action
 	public void ToolbarCustomIconOnInit()
 	{
 		string Icon =
