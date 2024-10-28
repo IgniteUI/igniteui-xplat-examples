@@ -15,8 +15,9 @@ export class SelectionMatcherOnViewInit
 		var chart = CodeGenHelper.getDescription<IgcCategoryChartComponent>("content");
 
 		this._timer = setInterval(() => {
+			var data = CodeGenHelper.findByName<any[]>("energyRenewableConsumption");
 			let selection: IgcChartSelection = new IgcChartSelection();
-			selection.item = this.energyRenewableConsumption[1];
+			selection.item = data[1];
 
 			let matcher: IgcSeriesMatcher = new IgcSeriesMatcher();
 			matcher.memberPath = "solar";
@@ -25,7 +26,7 @@ export class SelectionMatcherOnViewInit
 
 			chart.selectedSeriesItems.add(selection);
 
-			selection.item = this.energyRenewableConsumption[1];
+			selection.item = data[1];
 			matcher.memberPath = "hydro";
 			matcher.memberPathType = "ValueMemberPath";
 			selection.matcher = matcher;
