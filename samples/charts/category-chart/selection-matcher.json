@@ -20,7 +20,7 @@
       "isHorizontalZoomEnabled": false,
       "isVerticalZoomEnabled": false,
       "selectionMode": "SelectionColorFill",
-      "selectionBehavior": "PerSeriesAndDataItemMultiSelect",
+      "selectionBehavior": "Auto",
       "selectionBrush": "orange"
     }
   },
