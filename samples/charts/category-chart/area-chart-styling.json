@@ -2,6 +2,7 @@
   "strings": {
     "legendTitle": "Renewable Electricity Generated"
   },
+  "hasAnimations": true,
   "descriptions": {
     "legend": {
       "type": "Legend",
@@ -12,17 +13,17 @@
       "type": "CategoryChart",
       "name": "chart",
       "dataSourceRef": "CountryRenewableElectricity",
-      "includedProperties": ["Year", "Europe", "China", "America"],
+      "includedProperties": [ "Year", "Europe", "China", "America" ],
       "chartType": "Area",
       "legendRef": "legend",
       "isHorizontalZoomEnabled": false,
       "isVerticalZoomEnabled": false,
-      "markerTypes": ["Triangle"],
+      "markerTypes": [ "Triangle" ],
 
-      "markerBrushes": ["white"],
-      "markerOutlines": ["#8ce7d9", "#ee5879", "#735656"],
-      "brushes": ["#8ce7d9", "#ee5879", "#735656"],
-      "outlines": ["#8ce7d9", "#ee5879", "#735656"],
+      "markerBrushes": [ "white" ],
+      "markerOutlines": [ "#8ce7d9", "#ee5879", "#735656" ],
+      "brushes": [ "#8ce7d9", "#ee5879", "#735656" ],
+      "outlines": [ "#8ce7d9", "#ee5879", "#735656" ],
 
       "yAxisTitle": "TWh",
       "yAxisTitleLeftMargin": 10,

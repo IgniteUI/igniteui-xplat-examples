@@ -2,6 +2,7 @@
   "strings": {
     "legendTitle": "Renewable Electricity Generated"
   },
+  "hasAnimations": true,
   "onViewInit": [ "ToolbarCustomIconOnViewInit" ],
   "descriptions": {
     "aboveContentRight": {
@@ -30,7 +31,7 @@
       "isHorizontalZoomEnabled": true,
       "isVerticalZoomEnabled": true,
       "dataSourceRef": "CountryRenewableElectricity",
-      "includedProperties": ["Year", "Europe", "China", "America"],
+      "includedProperties": [ "Year", "Europe", "China", "America" ],
       "legendRef": "legend",
       "yAxisTitle": "TWh",
       "yAxisTitleLeftMargin": 10,

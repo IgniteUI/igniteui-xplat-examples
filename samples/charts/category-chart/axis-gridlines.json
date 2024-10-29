@@ -2,6 +2,7 @@
   "strings": {
     "legendTitle": "Renewable Electricity Generated"
   },
+  "hasAnimations": true,
   "descriptions": {
     "legend": {
       "type": "Legend",
@@ -23,8 +24,8 @@
           "label": "Y Axis Stroke",
           "shouldOverrideDefaultEditor": true,
           "valueType": "EnumValue",
-          "dropDownNames": ["gray", "darkslategray", "salmon", "cornflowerblue", "darkgreen"],
-          "dropDownValues": ["gray", "darkslategray", "salmon", "cornflowerblue", "darkgreen"],
+          "dropDownNames": [ "gray", "darkslategray", "salmon", "cornflowerblue", "darkgreen" ],
+          "dropDownValues": [ "gray", "darkslategray", "salmon", "cornflowerblue", "darkgreen" ],
           "primitiveValue": "gray"
         },
         {
@@ -34,8 +35,8 @@
           "label": "Y Axis Major Stroke",
           "shouldOverrideDefaultEditor": true,
           "valueType": "EnumValue",
-          "dropDownNames": ["gray", "darkslategray", "salmon", "cornflowerblue", "darkgreen"],
-          "dropDownValues": ["gray", "darkslategray", "salmon", "cornflowerblue", "darkgreen"],
+          "dropDownNames": [ "gray", "darkslategray", "salmon", "cornflowerblue", "darkgreen" ],
+          "dropDownValues": [ "gray", "darkslategray", "salmon", "cornflowerblue", "darkgreen" ],
           "primitiveValue": "darkslategray"
         },
         {
@@ -45,8 +46,8 @@
           "label": "Y Axis Minor Stroke",
           "shouldOverrideDefaultEditor": true,
           "valueType": "EnumValue",
-          "dropDownNames": ["gray", "darkslategray", "salmon", "cornflowerblue", "darkgreen"],
-          "dropDownValues": ["gray", "darkslategray", "salmon", "cornflowerblue", "darkgreen"],
+          "dropDownNames": [ "gray", "darkslategray", "salmon", "cornflowerblue", "darkgreen" ],
+          "dropDownValues": [ "gray", "darkslategray", "salmon", "cornflowerblue", "darkgreen" ],
           "primitiveValue": "gray"
         }
       ]
@@ -56,7 +57,7 @@
       "name": "chart",
       "computedPlotAreaMarginMode": "Series",
       "dataSourceRef": "CountryRenewableElectricity",
-      "includedProperties": ["Year", "Europe", "China", "America"],
+      "includedProperties": [ "Year", "Europe", "China", "America" ],
       "chartType": "Line",
       "legendRef": "legend",
       "isHorizontalZoomEnabled": false,

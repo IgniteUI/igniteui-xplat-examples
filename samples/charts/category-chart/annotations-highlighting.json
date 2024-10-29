@@ -2,6 +2,7 @@
   "strings": {
     "legendTitle": "Average Temperature in Sydney"
   },
+  "hasAnimations":  true,
   "descriptions": {
     "editor": {
       "type": "PropertyEditorPanel",

@@ -2,6 +2,7 @@
   "strings": {
     "legendTitle": "Renewable Electricity Generated"
   },
+  "hasAnimations": true,
   "onViewInit": [ "SelectionMatcherOnViewInit" ],
   "descriptions": {
     "legend": {

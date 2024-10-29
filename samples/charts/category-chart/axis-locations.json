@@ -2,6 +2,7 @@
   "strings": {
     "legendTitle": "Renewable Electricity Generated"
   },
+  "hasAnimations": true,
   "descriptions": {
     "legend": {
       "type": "Legend",
@@ -30,7 +31,7 @@
       "name": "chart",
       "computedPlotAreaMarginMode": "Series",
       "dataSourceRef": "CountryRenewableElectricity",
-      "includedProperties": ["Year", "Europe", "China", "America"],
+      "includedProperties": [ "Year", "Europe", "China", "America" ],
       "legendRef": "legend",
       "chartType": "Line",
       "yAxisTitle": "Labels Location",
