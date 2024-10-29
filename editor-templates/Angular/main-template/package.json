@@ -41,7 +41,7 @@
     "igniteui-angular-spreadsheet-chart-adapter": "18.1.0",
 //endifdef spreadsheet
 //ifdef webcomponents, editor
-    "igniteui-webcomponents": "4.11.1",
+    "igniteui-webcomponents": "5.1.1",
 //endifdef webcomponents, editor
     "intl": "1.2.5",
     "jszip": "3.8.0",
