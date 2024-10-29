@@ -1,5 +1,5 @@
-{
-  
+{  
+  "todo": [ "" ],
   "export": true,
   "skipAlterDataCasing": true,
   "descriptions": {
@@ -36,7 +36,7 @@
         {
           "type": "WebColumn",
           "field": "Title",
-          "dataType": "String",
+          "dataType": "String"
         },
         {
           "type": "WebColumn",
