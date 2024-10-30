@@ -2,7 +2,7 @@
 using IgniteUI.Blazor.Controls;
 using System;
 using System.Collections.Generic;
-using System.Collections
+using System.Collections;
 //end imports
 
 import { CodeGenHelper } from 'igniteui-webcomponents-core';
