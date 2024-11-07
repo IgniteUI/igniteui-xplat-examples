@@ -39,13 +39,13 @@
         return @<div class="change-container">
             @if (Convert.ToDouble(ctx.Cell.Value) > 0)
             {
-                <IgbBadge Variant="BadgeVariant.Success" Shape="BadgeShape.Rounded" Position="bottom-right" Icon="arrow_upward" class="badge-left">
+                <IgbBadge Variant="@StyleVariant.Success" Shape="@BadgeShape.Rounded" Position="bottom-right" Icon="arrow_upward" class="badge-left">
                     ▲
                 </IgbBadge>
             }
             @if (Convert.ToDouble(ctx.Cell.Value) < 0)
             {
-                <IgbBadge Variant="BadgeVariant.Danger" Shape="BadgeShape.Rounded" Position="bottom-right" Icon="arrow_downward" class="error badge-left">
+                <IgbBadge Variant="@StyleVariant.Danger" Shape="@BadgeShape.Rounded" Position="bottom-right" Icon="arrow_downward" class="error badge-left">
                     ▼
                 </IgbBadge>
             }
