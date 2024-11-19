@@ -1,5 +1,5 @@
 {
-  "hasAnimations": true,
+  "hasAnimations": false,
   "descriptions": {
     "editor": {
       "type": "PropertyEditorPanel",
@@ -29,7 +29,8 @@
       "dataSourceRef": "TemperatureAnnotatedData",
       "highlightingMode": "BrightenSpecific",
       "toolTipType": "None",
-      "crosshairsDisplayMode": "None"
+      "crosshairsDisplayMode": "None",
+      "isTransitionInEnabled": false
     }
   },
   "modules": [

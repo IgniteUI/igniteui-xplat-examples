@@ -1,5 +1,5 @@
 {
-  "hasAnimations": true,
+  "hasAnimations": false,
   "descriptions": {
     "editor": {
       "type": "PropertyEditorPanel",
@@ -30,7 +30,8 @@
       "highlightingMode": "Brighten",
       "highlightingBehavior": "DirectlyOver",
       "toolTipType": "None",
-      "crosshairsDisplayMode": "None"
+      "crosshairsDisplayMode": "None",
+      "isTransitionInEnabled": false
     }
   },
   "modules": [

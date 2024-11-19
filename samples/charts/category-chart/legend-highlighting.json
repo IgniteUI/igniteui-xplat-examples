@@ -1,5 +1,5 @@
 {
-  "hasAnimations": true,
+  "hasAnimations": false,
   "strings": {
     "legendTitle": "Highest Grossing Movie Franchises"
   },
@@ -22,7 +22,8 @@
       "isHorizontalZoomEnabled": false,
       "isVerticalZoomEnabled": false,
       "highlightingMode": "Brighten",
-      "legendHighlightingMode": "MatchSeries"
+      "legendHighlightingMode": "MatchSeries",
+      "isTransitionInEnabled": false
     }
   },
   "modules": [

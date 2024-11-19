@@ -2,7 +2,7 @@
   "strings": {
     "legendTitle": "Average Temperature in Sydney"
   },
-  "hasAnimations": true,
+  "hasAnimations": false,
   "descriptions": {
     "editor": {
       "type": "PropertyEditorPanel",
@@ -36,7 +36,8 @@
       "crosshairsAnnotationYAxisPrecision": 0,
       "yAxisMaximumValue": 35,
       "yAxisTitle": "Degrees Celsius",
-      "yAxisLabelLocation": "OutsideRight"
+      "yAxisLabelLocation": "OutsideRight",
+      "isTransitionInEnabled": false
     }
   },
   "modules": [
