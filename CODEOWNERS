@@ -1,7 +1,6 @@
 # code owners must approve PRs
 
-# /editor-templates/WPF/main-template/*.csproj @xsharp-reviewers-usa
-# /editor-templates/React/main-template/package.json @HUSSAR-mtrela
+/editor-templates/React/main-template/package.json @mddifilippo89
 
 # *.md @HUSSAR-mtrela
 # *.js @HUSSAR-mtrela
