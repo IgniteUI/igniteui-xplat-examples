@@ -1,0 +1,15 @@
+# code owners must approve PRs
+
+/editor-templates/WPF/main-template/*.csproj @HUSSAR-mtrela
+/editor-templates/WPF/React/main-template/package.json @xsharp-reviewers-usa
+
+# /code-gen-library ANYBODY
+# /code-gen-tools/**/*.*   @HUSSAR-mtrela
+# /editor-hosts/**/*.*     @xsharp-reviewers-usa
+# /editor-templates/**/*.* @xsharp-reviewers-usa
+
+
+# *.md @HUSSAR-mtrela
+# *.js @HUSSAR-mtrela
+# *.ts @HUSSAR-mtrela
+# *.json @HUSSAR-mtrela
