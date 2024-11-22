@@ -1,8 +1,0 @@
-# code owners must approve PRs
-
-/editor-templates/React/main-template/package.json @mddifilippo89
-
-# *.md @HUSSAR-mtrela
-# *.js @HUSSAR-mtrela
-# *.ts @HUSSAR-mtrela
-# *.json @HUSSAR-mtrela
