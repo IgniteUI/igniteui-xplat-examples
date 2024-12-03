@@ -1,7 +1,7 @@
 trigger:
   branches:
     include:
-    - '24.1.x'
+    - '24.2.x'
   paths:
     include:
       - 'samples/**/*.json'
@@ -10,6 +10,7 @@ trigger:
       - 'master'
       - '23.1.x'
       - '23.2.x'
+      - '24.1.x'
 
 parameters:
   - name: pathsToParse
