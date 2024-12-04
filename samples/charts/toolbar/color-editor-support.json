@@ -15,7 +15,6 @@
         {
           "type": "ToolActionColorEditor",
           "title": "Series Brush Color",
-          "value": "red",
           "commandId": "ToggleSeriesBrush"
         }
       ]
@@ -48,7 +47,7 @@
           "yAxisRef": "yAxis",
           "dataSourceRef": "CountryRenewableElectricity",
           "valueMemberPath": "America",
-          "brush": "red"
+          "legendItemBadgeMode": "MatchSeries"
         }
       ]
     }
