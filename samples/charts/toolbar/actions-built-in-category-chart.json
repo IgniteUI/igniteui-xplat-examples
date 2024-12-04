@@ -36,6 +36,7 @@
     "charts/LegendModule",
     "layouts/ToolbarModule",
     "charts/CategoryChartModule",
-    "charts/CategoryChartToolbarModule"
+    "charts/CategoryChartToolbarModule",
+    "grids/CheckboxListModule"
   ]
 }
