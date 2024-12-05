@@ -15,7 +15,7 @@
   },
   "modules": [
     "inputs/ColorEditorModule",
-    "inputs/IconModule",
+    "inputs/XIconModule",
     "layouts/ToolbarModule",
     "charts/DataChartToolbarModule",
     "charts/ToolActionComboModule",
