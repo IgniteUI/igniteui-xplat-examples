@@ -15,6 +15,7 @@
         {
           "type": "ToolActionColorEditor",
           "title": "Series Brush Color",
+          "name": "colorEditorTool",
           "commandId": "ToggleSeriesBrush"
         }
       ]
@@ -53,11 +54,11 @@
     }
   },
   "modules": [
-    "inputs/IconModule",
+    "inputs/XIconModule",
     "layouts/ToolbarModule",
+    "layouts/ToolActionComboModule",
+    "layouts/ToolActionColorEditorModule",
     "charts/DataChartToolbarModule",
-    "charts/ToolActionComboModule",
-    "charts/ToolActionColorEditorModule",
     "charts/LegendModule",
     "charts/DataLegendModule",
     "charts/NumberAbbreviatorModule",
