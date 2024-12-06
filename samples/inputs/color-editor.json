@@ -1,12 +1,6 @@
 {
   "export": false,
   "descriptions": {
-
-    "aboveContentLeft": {
-      "type": "ColorEditor",
-      "name": "color"
-
-    },
     "content": {
       "type": "ColorEditor",
       "name": "colorEditor"
@@ -14,20 +8,6 @@
     }
   },
   "modules": [
-    "inputs/ColorEditorModule",
-    "inputs/XIconModule",
-    "layouts/ToolbarModule",
-    "charts/DataChartToolbarModule",
-    "charts/ToolActionComboModule",
-    "charts/ToolActionColorEditorModule",
-    "charts/LegendModule",
-    "charts/DataLegendModule",
-    "charts/NumberAbbreviatorModule",
-    "charts/DataChartCategoryModule",
-    "charts/DataChartCoreModule",
-    "charts/DataChartCategoryModule",
-    "charts/DataChartAnnotationModule",
-    "charts/DataChartInteractivityModule",
-    "charts/DataChartAnnotationModule"
+    "inputs/ColorEditorModule"
   ]
 }

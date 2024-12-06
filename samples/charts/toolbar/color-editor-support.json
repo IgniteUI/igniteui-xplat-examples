@@ -1,11 +1,6 @@
 {
   "export": false,
   "descriptions": {
-    "legend": {
-      "type": "Legend",
-      "name": "legend",
-      "orientation": "Horizontal"
-    },
     "aboveContentLeft": {
       "type": "Toolbar",
       "name": "toolbar",
@@ -14,7 +9,7 @@
       "actions": [
         {
           "type": "ToolActionColorEditor",
-          "title": "Series Brush Color",
+          "title": "Series Brush",
           "name": "colorEditorTool",
           "commandId": "ToggleSeriesBrush"
         }
@@ -23,7 +18,6 @@
     "content": {
       "type": "DataChart",
       "isHorizontalZoomEnabled": true,
-      "legendRef": "legend",
       "name": "chart",
       "axes": [
         {
@@ -48,7 +42,7 @@
           "yAxisRef": "yAxis",
           "dataSourceRef": "CountryRenewableElectricity",
           "valueMemberPath": "America",
-          "legendItemBadgeMode": "MatchSeries"
+          "markerType": "None"
         }
       ]
     }
@@ -59,7 +53,6 @@
     "layouts/ToolActionComboModule",
     "layouts/ToolActionColorEditorModule",
     "charts/DataChartToolbarModule",
-    "charts/LegendModule",
     "charts/DataLegendModule",
     "charts/NumberAbbreviatorModule",
     "charts/DataChartCategoryModule",

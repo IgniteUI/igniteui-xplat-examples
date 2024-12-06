@@ -9,12 +9,12 @@ export class ColorEditorToggleSeriesBrush {
     //begin eventHandler
     public colorEditorToggleSeriesBrush(sender: any, args: IgxToolCommandEventArgs): void {
         var target = CodeGenHelper.getDescription<IgxDataChartComponent>("content");
-        
+		var color = args.command.argumentsList[0].value;
+
 		switch (args.command.commandId)
 		{
 			case "ToggleSeriesBrush":
-				var color = args.command.argumentsList[0].value
-				let series = target.series.item(0) as IgxSeriesComponent;
+				let series = target.contentSeries.first as IgxSeriesComponent;
 				series.brush = color;
 			break;
 		}
