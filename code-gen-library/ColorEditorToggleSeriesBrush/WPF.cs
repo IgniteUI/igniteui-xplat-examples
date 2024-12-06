@@ -12,12 +12,11 @@ public class ColorEditorToggleSeriesBrush
 	public void ColorEditorToggleSeriesBrush(object sender, ToolCommandEventArgs e)
 	{
 		var target = (XamDataChart)((XamToolbar)sender).Target;
-		var colorEditorTool = ((XamToolbar)sender).Actions[0];
 		var color = ((ToolActionColorEditor)colorEditorTool).Value;
 		if (e.Command.CommandId == "ToggleSeriesBrush" && target.Series.Count != 0)
 		{
 			Series series = target.Series[0];
-			series.Brush = color;
+			series.Brush = color.   ;
 		}
 	}
 	//end eventHandler
