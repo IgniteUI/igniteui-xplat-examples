@@ -16,7 +16,7 @@ public class ColorEditorToggleSeriesBrush
 		if (e.Command.CommandId == "ToggleSeriesBrush" && target.Series.Count != 0)
 		{
 			Series series = target.Series[0];
-			series.Brush = color;
+			series.Brush = color.ToString();
 		}
 	}
 	//end eventHandler
