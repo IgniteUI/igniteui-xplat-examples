@@ -1,0 +1,20 @@
+{
+  "export": false,
+  "descriptions": {
+    "content": {
+      "type": "DashboardTile",
+      "name": "dashboard",
+      "dataSourceRef": "EnergyRenewableConsumption",
+	  "includedProperties": ["location", "hydro", "solar", "wind", "other"],
+	  "visualizationType": "ColumnChart"
+    }
+  },
+  "modules": [
+    "dashboards/DashboardTileModule",
+    "dashboards/DataChartDashboardTileModule",
+    "dashboards/GeographicMapDashboardTileModule",
+    "dashboards/LinearGaugeDashboardTileModule",
+    "dashboards/PieChartDashboardTileModule",
+    "dashboards/RadialGaugeDashboardTileModule"
+  ]
+}
