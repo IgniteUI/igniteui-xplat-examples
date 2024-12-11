@@ -1,29 +1,23 @@
 {
   "export": false,
-  "onInit": [ "ToolbarCustomIconOnViewInit" ],
   "descriptions": {
-    "legend": {
-      "type": "Legend",
-      "name": "legend",
-      "orientation": "Horizontal"
-    },
     "aboveContentLeft": {
       "type": "Toolbar",
       "name": "toolbar",
       "targetRef": "chart",
+      "onCommandRef": "ColorEditorToggleSeriesBrush",
       "actions": [
         {
-          "type": "ToolActionLabel",
-          "title": "Custom Icon",
-          "iconName": "CustomIcon",
-          "iconCollectionName": "CustomCollection"
+          "type": "ToolActionColorEditor",
+          "title": "Series Brush",
+          "name": "colorEditorTool",
+          "commandId": "ToggleSeriesBrush"
         }
       ]
     },
     "content": {
       "type": "DataChart",
       "isHorizontalZoomEnabled": true,
-      "legendRef": "legend",
       "name": "chart",
       "axes": [
         {
@@ -47,25 +41,8 @@
           "xAxisRef": "xAxis",
           "yAxisRef": "yAxis",
           "dataSourceRef": "CountryRenewableElectricity",
-          "valueMemberPath": "America"
-        },
-        {
-          "type": "LineSeries",
-          "name": "LineSeries2",
-          "title": "Electricity",
-          "xAxisRef": "xAxis",
-          "yAxisRef": "yAxis",
-          "dataSourceRef": "CountryRenewableElectricity",
-          "valueMemberPath": "Europe"
-        },
-        {
-          "type": "LineSeries",
-          "name": "LineSeries3",
-          "title": "Electricity",
-          "xAxisRef": "xAxis",
-          "yAxisRef": "yAxis",
-          "dataSourceRef": "CountryRenewableElectricity",
-          "valueMemberPath": "China"
+          "valueMemberPath": "America",
+          "markerType": "None"
         }
       ]
     }
@@ -73,8 +50,9 @@
   "modules": [
     "inputs/XIconModule",
     "layouts/ToolbarModule",
+    "layouts/ToolActionComboModule",
+    "layouts/ToolActionColorEditorModule",
     "charts/DataChartToolbarModule",
-    "charts/LegendModule",
     "charts/DataLegendModule",
     "charts/NumberAbbreviatorModule",
     "charts/DataChartCategoryModule",

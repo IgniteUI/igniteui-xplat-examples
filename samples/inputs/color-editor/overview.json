@@ -1,0 +1,12 @@
+{
+  "export": false,
+  "descriptions": {
+    "content": {
+      "type": "ColorEditor",
+      "name": "colorEditor"
+    }
+  },
+  "modules": [
+    "inputs/ColorEditorModule"
+  ]
+}
