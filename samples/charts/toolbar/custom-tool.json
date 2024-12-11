@@ -20,7 +20,8 @@
           "type": "ToolActionLabel",
           "title": "Custom Icon",
           "iconName": "CustomIcon",
-          "iconCollectionName": "CustomCollection"
+          "iconCollectionName": "CustomCollection",
+          "name": "CustomIconName"
         }
       ]
     },
