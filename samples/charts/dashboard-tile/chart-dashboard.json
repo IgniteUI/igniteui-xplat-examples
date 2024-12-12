@@ -1,12 +1,10 @@
 {
-  "export": false,
+  "export": true,
   "descriptions": {
     "content": {
       "type": "DashboardTile",
       "name": "dashboard",
-      "dataSourceRef": "EnergyRenewableConsumption",
-	  "includedProperties": ["location", "hydro", "solar", "wind", "other"],
-	  "visualizationType": "ColumnChart"
+      "dataSourceRef": "OlympicMedalsTopCountries"
     }
   },
   "modules": [

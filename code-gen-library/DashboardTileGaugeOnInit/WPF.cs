@@ -1,6 +1,5 @@
 //begin imports
-using IgniteUI.Blazor.Controls;
-using System;
+using Infragistics.Controls.Dashboards;
 //end imports
 
 public class DashboardTileGaugeOnInit
@@ -8,7 +7,7 @@ public class DashboardTileGaugeOnInit
     //begin eventHandler
     public void DashboardTileGaugeOnInit()
 	{
-		CodeGenHelper.GetDescription<IgbDashboardTile>("content").dataSource = 40;
+		CodeGenHelper.GetDescription<XamDashboardTile>("content").ItemsSource = 40;
 	}
     //end eventHandler
 }

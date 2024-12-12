@@ -4,7 +4,8 @@
     "content": {
       "type": "DashboardTile",
       "name": "dashboard",
-      "dataSourceRef": "EnergyGlobalDemand"
+      "tileTitle": "World Cities",
+      "dataSourceRef": "WorldCities"
     }
   },
   "modules": [

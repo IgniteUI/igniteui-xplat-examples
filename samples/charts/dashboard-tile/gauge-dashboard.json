@@ -1,8 +1,9 @@
 {
-  "export": false,
+  "export": true,
   "onInit": ["DashboardTileGaugeOnInit"],
   "descriptions": {
     "content": {
+      "tileTitle": "Sample Gauge",
       "type": "DashboardTile",
       "name": "dashboard"
     }
