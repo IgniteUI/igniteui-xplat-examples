@@ -23,12 +23,12 @@
   },
   "dependencies": {
     "babel-runtime": "^6.26.0",
+    "igniteui-webcomponents-core": "5.1.1-beta.1",
 //ifdef editor, webinputs
     "igniteui-webcomponents": "5.1.2",
 //endifdef editor, webinputs
 //ifdef charts, maps, dashboards
     "igniteui-webcomponents-charts": "5.1.1-beta.1",
-    "igniteui-webcomponents-core": "5.1.1-beta.1",
 //endifdef charts, maps, dashboards
 //ifdef dashboards
     "igniteui-webcomponents-dashboards": "5.1.1-beta.1",
