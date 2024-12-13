@@ -1,6 +1,6 @@
 {
   "export": true,
-  "onInit": ["DashboardTileGaugeOnInit"],
+  "onViewInit": ["DashboardTileGaugeOnInit"],
   "descriptions": {
     "content": {
       "tileTitle": "Sample Gauge",
