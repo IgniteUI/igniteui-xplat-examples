@@ -22,6 +22,7 @@
 	"igniteui-angular-core": "18.2.0-beta.0",
 //endifdef charts, maps, dashboards
 //ifdef dashboards
+    "igniteui-angular-dashboards": "18.2.0-beta.0",
     "igniteui-angular-grids": "18.2.0-beta.0",
 //endifdef dashboards
 //ifdef excel, spreadsheet

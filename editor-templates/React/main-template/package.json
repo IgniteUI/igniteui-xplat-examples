@@ -22,9 +22,12 @@
     "igniteui-react-core": "18.7.5-beta.1",
     "igniteui-react-charts": "18.7.5-beta.1",
 //endifdef charts, maps, dashboards
-//ifdef grid, webgrids
+//ifdef dashboards
+    "igniteui-react-dashboards": "18.7.5-beta.1",
+//endifdef dashboards
+//ifdef grid, webgrids, dashboards
     "igniteui-react-datasources": "18.7.5-beta.1",
-//endifdef grid, webgrids
+//endifdef grid, webgrids, dashboards
 //ifdef excel, spreadsheet
     "igniteui-react-excel": "18.7.5-beta.1",
 //endifdef excel, spreadsheet
