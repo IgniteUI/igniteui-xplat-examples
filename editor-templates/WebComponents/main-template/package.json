@@ -29,6 +29,9 @@
 //ifdef charts, maps
     "igniteui-webcomponents-charts": "5.1.1-beta.0",
 //endifdef charts, maps
+//ifdef dashboards
+    "igniteui-webcomponents-dashboards": "5.1.1-beta.0",
+//endifdef dashboards
     "igniteui-webcomponents-core": "5.1.1-beta.0",
 //ifdef grid
     "igniteui-webcomponents-datasources": "5.1.1-beta.0",
