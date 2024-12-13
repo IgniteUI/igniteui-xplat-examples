@@ -23,6 +23,13 @@
 //endifdef charts, maps
 //ifdef dashboards
     "igniteui-react-dashboards": "18.7.5-beta.0",
+    "igniteui-react-core": "18.7.5-beta.0",
+    "igniteui-react-grids": "18.7.5-beta.0",
+    "igniteui-react-inputs": "18.7.5-beta.0",
+    "igniteui-react-layouts": "18.7.5-beta.0",
+    "igniteui-react-charts": "18.7.5-beta.0",
+    "igniteui-react-gauges": "18.7.5-beta.0",
+    "igniteui-react-maps": "18.7.5-beta.0",
 //endifdef dashboards
     "igniteui-react-core": "18.7.5-beta.0",
 //ifdef grid, webgrids
