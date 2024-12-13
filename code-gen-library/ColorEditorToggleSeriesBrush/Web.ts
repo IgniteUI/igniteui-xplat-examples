@@ -14,7 +14,7 @@ export class ColorEditorToggleSeriesBrush {
 		switch (args.command.commandId)
 		{
             case "ToggleSeriesBrush":
-                let series = target.contentSeries.item(0) as IgcSeriesComponent;
+                let series = target.contentSeries[0] as IgcSeriesComponent;
                 series.brush = color as any;
             break;
         }
