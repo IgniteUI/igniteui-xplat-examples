@@ -34,7 +34,7 @@
 //ifdef editor, layouts, inputs, dashboards
     "igniteui-angular-inputs": "18.2.0-beta.1",
 //endifdef editor, layouts, inputs, dashboards
-//ifdef grid, editor, layouts
+//ifdef grid, editor, layouts, dashboards
     "igniteui-angular-layouts": "18.2.0-beta.1",
 //endifdef grid, editor, layouts, dashboards
 //ifdef maps, dashboards
