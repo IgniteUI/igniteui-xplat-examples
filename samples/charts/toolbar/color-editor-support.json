@@ -48,7 +48,6 @@
     }
   },
   "modules": [
-    "inputs/XIconModule",
     "layouts/ToolbarModule",
     "layouts/ToolActionComboModule",
     "layouts/ToolActionColorEditorModule",
