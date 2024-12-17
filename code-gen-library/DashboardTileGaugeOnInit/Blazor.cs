@@ -8,7 +8,7 @@ public class DashboardTileGaugeOnInit
     //begin eventHandler
     public void DashboardTileGaugeOnInit()
 	{
-		CodeGenHelper.GetDescription<IgbDashboardTile>("content").dataSource = 40;
+		CodeGenHelper.GetDescription<IgbDashboardTile>("content").DataSource = 40;
 	}
     //end eventHandler
 }
