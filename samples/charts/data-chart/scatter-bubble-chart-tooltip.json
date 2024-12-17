@@ -1,0 +1,71 @@
+{
+  "export": false,
+  "todo": "FIX exporting seriesMouseEnterScript",
+  "descriptions": {
+    "content": {
+      "type": "DataChart",
+      "name": "chart",
+      "isHorizontalZoomEnabled": true,
+      "isVerticalZoomEnabled": true,
+      "seriesMouseEnterScript": ["WorldStatsDataChartTooltip"],
+      "chartTitle": "Population vs Country Debt per GDP",
+      "titleTopMargin": 15,
+      "axes": [
+        {
+          "type": "NumericXAxis",
+          "name": "xAxis",
+          "minimumValue": 100,
+          "maximumValue": 10000000000,
+          "isLogarithmic": true,
+          "abbreviateLargeNumbers": true,
+          "title": "Population"
+        },
+        {
+          "type": "NumericYAxis",
+          "name": "yAxis",
+          "isLogarithmic": true,
+          "logarithmBase": 10,
+          "title": "Country Debt per GDP"
+        }
+      ],
+      "series": [
+        {
+          "type": "BubbleSeries",
+          "name": "bubbleSeries1",
+          "xMemberPath": "Population",
+          "yMemberPath": "PublicDebt",
+          "radiusMemberPath": "GdpPerPerson",
+          "radiusScale": {
+            "type": "SizeScale",
+            "isLogarithmic": false,
+            "minimumValue": 10,
+            "maximumValue": 120
+          },
+          "fillMemberPath": "GdpPerPerson",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "dataSourceRef": "WorldStats",
+          "markerType": "Circle",
+          "markerOutline": "black",
+          "showDefaultTooltip": true,
+          "fillScale": {
+            "type": "ValueBrushScale",
+            "isLogarithmic": false,
+            "minimumValue": 1,
+            "maximumValue": 260000,
+            "brushes": ["#89b5fa", "#146cf7", "#5290f2"]
+          }
+        }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "charts/NumberAbbreviatorModule",
+    "charts/DataChartCoreModule",
+    "charts/DataChartScatterModule",
+    "charts/DataChartScatterCoreModule",
+    "charts/DataChartInteractivityModule",
+    "charts/DataChartAnnotationModule"
+  ]
+}
