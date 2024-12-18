@@ -39,7 +39,7 @@
             "type": "SizeScale",
             "isLogarithmic": false,
             "minimumValue": 10,
-            "maximumValue": 120
+            "maximumValue": 80
           },
           "fillMemberPath": "GdpPerPerson",
           "xAxisRef": "xAxis",
@@ -51,9 +51,9 @@
           "fillScale": {
             "type": "ValueBrushScale",
             "isLogarithmic": false,
-            "minimumValue": 1,
+            "minimumValue": 500,
             "maximumValue": 260000,
-            "brushes": ["#89b5fa", "#146cf7", "#5290f2"]
+            "brushes": ["#96bdfa", "#6fa4f7", "#5290f2", "#135ed4"]
           }
         }
       ]

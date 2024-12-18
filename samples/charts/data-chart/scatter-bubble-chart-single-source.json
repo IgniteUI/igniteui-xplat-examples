@@ -37,7 +37,7 @@
             "type": "SizeScale",
             "isLogarithmic": false,
             "minimumValue": 10,
-            "maximumValue": 50
+            "maximumValue": 80
           },
           "title": "Country",
           "yMemberAsLegendUnit": "%",
