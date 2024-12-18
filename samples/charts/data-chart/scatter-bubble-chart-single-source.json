@@ -17,9 +17,9 @@
         {
           "type": "NumericYAxis",
           "name": "yAxis",
-          "title": "Public Debt",
+          "title": "Public Debt per GDP (%)",
+          "titleLeftMargin": 5,
           "isLogarithmic": false,
-          "abbreviateLargeNumbers": true,
           "maximumValue": 120
         }
       ],
@@ -37,6 +37,9 @@
             "maximumValue": 50
           },
           "fillMemberPath": "GdpPerPerson",
+          "xMemberAsLegendLabel": "Population",
+          "yMemberAsLegendLabel": "Debt",
+          "radiusMemberAsLegendLabel": "GDP",
           "xAxisRef": "xAxis",
           "yAxisRef": "yAxis",
           "dataSourceRef": "WorldStats",

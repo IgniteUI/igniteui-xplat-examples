@@ -23,9 +23,10 @@
         {
           "type": "NumericYAxis",
           "name": "yAxis",
-          "title": "GDP per Capita",
-          "isLogarithmic": true,
-          "abbreviateLargeNumbers": true
+          "title": "Public Debt per GDP (%)",
+          "titleLeftMargin": 5,
+          "isLogarithmic": false,
+          "maximumValue": 120
         }
       ],
       "series": [
@@ -36,8 +37,11 @@
           "xAxisRef": "xAxis",
           "yAxisRef": "yAxis",
           "xMemberPath": "Population",
-          "yMemberPath": "GDP",
-          "radiusMemberPath": "Population",
+          "yMemberPath": "PublicDebt",
+          "radiusMemberPath": "GdpPerPerson",
+          "xMemberAsLegendLabel": "Population",
+          "yMemberAsLegendLabel": "Debt",
+          "radiusMemberAsLegendLabel": "GDP",
           "dataSourceRef": "CountryStatsAfrica",
           "markerType": "Circle",
           "showDefaultTooltip": true,
@@ -55,8 +59,11 @@
           "xAxisRef": "xAxis",
           "yAxisRef": "yAxis",
           "xMemberPath": "Population",
-          "yMemberPath": "GDP",
-          "radiusMemberPath": "Population",
+          "yMemberPath": "PublicDebt",
+          "radiusMemberPath": "GdpPerPerson",
+          "xMemberAsLegendLabel": "Population",
+          "yMemberAsLegendLabel": "Debt",
+          "radiusMemberAsLegendLabel": "GDP",
           "dataSourceRef": "CountryStatsEurope",
           "markerType": "Circle",
           "showDefaultTooltip": true,

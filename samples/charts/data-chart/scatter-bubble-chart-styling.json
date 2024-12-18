@@ -24,6 +24,7 @@
           "type": "NumericYAxis",
           "name": "yAxis",
           "title": "GDP per Capita",
+          "titleLeftMargin": 5,
           "isLogarithmic": true,
           "abbreviateLargeNumbers": true
         }
@@ -37,13 +38,16 @@
           "yAxisRef": "yAxis",
           "xMemberPath": "Population",
           "yMemberPath": "GDP",
-          "radiusMemberPath": "Population",
+          "radiusMemberPath": "WorkedHours",
+          "xMemberAsLegendLabel": "Population",
+          "yMemberAsLegendLabel": "GDP",
+          "radiusMemberAsLegendLabel": "Worked Hours",
           "dataSourceRef": "CountryStatsAfrica",
           "markerType": "Circle",
-          "markerOutline": "rgb(62, 202, 62)",
-          "markerBrush": "rgb(69, 179, 224)",
+          "markerOutline": "rgb(2, 158, 30)",
+          "markerBrush": "rgb(2, 158, 30)",
           "markerFillOpacity": 0.5,
-          "markerThickness": 2,
+          "markerThickness": 1,
           "showDefaultTooltip": true,
           "radiusScale": {
             "type": "SizeScale",
@@ -60,13 +64,16 @@
           "yAxisRef": "yAxis",
           "xMemberPath": "Population",
           "yMemberPath": "GDP",
-          "radiusMemberPath": "Population",
+          "radiusMemberPath": "WorkedHours",
+          "xMemberAsLegendLabel": "Population",
+          "yMemberAsLegendLabel": "GDP",
+          "radiusMemberAsLegendLabel": "Worked Hours",
           "dataSourceRef": "CountryStatsEurope",
           "markerType": "Circle",
-          "markerOutline": "rgb(171, 6, 221)",
-          "markerBrush": "rgb(135, 156, 235)",
+          "markerOutline": "rgb(95, 2, 171)",
+          "markerBrush": "rgb(95, 2, 171)",
           "markerFillOpacity": 0.5,
-          "markerThickness": 2,
+          "markerThickness": 1,
           "showDefaultTooltip": true,
           "radiusScale": {
             "type": "SizeScale",
@@ -77,7 +84,20 @@
         },
         {
           "type": "DataToolTipLayer",
-          "name": "dataToolTipLayer"
+          "name": "dataToolTipLayer",
+          "valueRowMarginTop": 1,
+          "labelTextMarginTop": 1,
+          "titleTextMarginTop": 1,
+          "unitsTextMarginTop": 1,
+          "valueRowMarginBottom": 1,
+          "labelTextMarginBottom": 1,
+          "titleTextMarginBottom": 1,
+          "unitsTextMarginBottom": 1,
+          "unitsTextMarginRight": 5,
+          "valueTextMarginLeft": 10,
+          "labelTextMarginLeft": 5,
+          "groupingMode": "Grouped",
+          "LayoutMode": "Vertical"
         }
       ]
     }

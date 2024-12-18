@@ -25,7 +25,7 @@
           "name": "yAxis",
           "isLogarithmic": true,
           "logarithmBase": 10,
-          "title": "Country Debt per GDP"
+          "title": "Country Debt per GDP (%)"
         }
       ],
       "series": [
