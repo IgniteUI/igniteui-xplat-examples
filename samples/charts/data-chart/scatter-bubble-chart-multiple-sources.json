@@ -23,10 +23,11 @@
         {
           "type": "NumericYAxis",
           "name": "yAxis",
-          "title": "Public Debt per GDP (%)",
-          "titleLeftMargin": 5,
-          "isLogarithmic": false,
-          "maximumValue": 120
+          "title": "GDP per Capita",
+          "maximumValue": 1000000,
+          "titleLeftMargin": 10,
+          "isLogarithmic": true,
+          "abbreviateLargeNumbers": true
         }
       ],
       "series": [
@@ -37,11 +38,11 @@
           "xAxisRef": "xAxis",
           "yAxisRef": "yAxis",
           "xMemberPath": "Population",
-          "yMemberPath": "PublicDebt",
-          "radiusMemberPath": "GdpPerPerson",
+          "yMemberPath": "GDP",
+          "radiusMemberPath": "WorkedHours",
           "xMemberAsLegendLabel": "Population",
-          "yMemberAsLegendLabel": "Debt",
-          "radiusMemberAsLegendLabel": "GDP",
+          "yMemberAsLegendLabel": "GDP",
+          "radiusMemberAsLegendLabel": "Work Hours",
           "dataSourceRef": "CountryStatsAfrica",
           "markerType": "Circle",
           "showDefaultTooltip": true,
@@ -59,11 +60,11 @@
           "xAxisRef": "xAxis",
           "yAxisRef": "yAxis",
           "xMemberPath": "Population",
-          "yMemberPath": "PublicDebt",
-          "radiusMemberPath": "GdpPerPerson",
+          "yMemberPath": "GDP",
+          "radiusMemberPath": "WorkedHours",
           "xMemberAsLegendLabel": "Population",
-          "yMemberAsLegendLabel": "Debt",
-          "radiusMemberAsLegendLabel": "GDP",
+          "yMemberAsLegendLabel": "GDP",
+          "radiusMemberAsLegendLabel": "Work Hours",
           "dataSourceRef": "CountryStatsEurope",
           "markerType": "Circle",
           "showDefaultTooltip": true,
@@ -73,6 +74,23 @@
             "minimumValue": 10,
             "maximumValue": 50
           }
+        },
+        {
+          "type": "DataToolTipLayer",
+          "name": "dataToolTipLayer",
+          "valueRowMarginTop": 1,
+          "labelTextMarginTop": 1,
+          "titleTextMarginTop": 1,
+          "unitsTextMarginTop": 1,
+          "valueRowMarginBottom": 1,
+          "labelTextMarginBottom": 1,
+          "titleTextMarginBottom": 1,
+          "unitsTextMarginBottom": 1,
+          "unitsTextMarginRight": 5,
+          "valueTextMarginLeft": 10,
+          "labelTextMarginLeft": 1,
+          "groupingMode": "Grouped",
+          "layoutMode": "Vertical"
         }
       ]
     }
