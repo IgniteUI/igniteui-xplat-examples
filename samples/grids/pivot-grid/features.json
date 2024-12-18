@@ -54,30 +54,30 @@
             "member": "AmountofSale",
             "displayName": "Amount of Sale",
             "enabled": true,
+            "aggregate": {
+              "type": "WebPivotAggregator",
+              "key": "SUM",
+              "label": "Sum of Sale",
+              "aggregatorRef": "PivotDataFlatAggregateSumSale"
+            },
             "aggregateList": [
               {
                 "type": "WebPivotAggregator",
                 "key": "SUM",
                 "label": "Sum of Sale",
-                "aggregatorRef": "PivotDataFlatAggregateSumSale",
-                "aggregatorName": "SUM",
-                "name": "SumOfSale"
+                "aggregatorRef": "PivotDataFlatAggregateSumSale"
               },
               {
                 "type": "WebPivotAggregator",
                 "key": "MIN",
                 "label": "Minimum of Sale",
-                "aggregatorRef": "PivotDataFlatAggregateMinSale",
-                "aggregatorName": "MIN",
-                "name": "MinOfSale"
+                "aggregatorRef": "PivotDataFlatAggregateMinSale"
               },
               {
                 "type": "WebPivotAggregator",
                 "key": "MAX",
                 "label": "Maximum of Sale",
-                "aggregatorName": "MAX",
-                "aggregatorRef": "PivotDataFlatAggregateMaxSale",
-                "name": "MaxOfSale"
+                "aggregatorRef": "PivotDataFlatAggregateMaxSale"
               }
             ]
           }
