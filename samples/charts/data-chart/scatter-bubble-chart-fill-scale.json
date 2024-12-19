@@ -76,7 +76,6 @@
           "unitsTextMarginRight": 5,
           "valueTextMarginLeft": 10,
           "labelTextMarginLeft": 1,
-          "groupingMode": "Grouped",
           "layoutMode": "Vertical",
           "badgeShape": "Hidden",
           "includedColumns": ["X", "Y", "Radius"],
