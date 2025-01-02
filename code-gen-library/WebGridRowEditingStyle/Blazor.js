@@ -7,8 +7,12 @@ igRegisterScript("WebGridRowEditingStyle", (args) => {
 let requiredStyles = `
 <!--begin styles-->
 #grid {
-    --ig-banner-banner-background: #e3e3e3;
-    --ig-banner-banner-message-color: #423589;
+    --ig-banner-banner-background: #292826;
+    --ig-banner-banner-message-color: #ffcd0f;
+    --ig-button-foreground: #ffcd0f; 
+    --ig-button-hover-foreground: white;
+    --ig-button-font-weight: 600;
 }
+    
 <!--end styles-->
 `;

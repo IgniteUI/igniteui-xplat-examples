@@ -19,6 +19,28 @@
       "properties": [
         {
           "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "XAxisStroke",
+          "name": "XAxisStroke",
+          "label": "X Axis Stroke",
+          "shouldOverrideDefaultEditor": true,
+          "valueType": "EnumValue",
+          "dropDownNames": ["gray", "darkslategray", "salmon", "cornflowerblue", "darkgreen"],
+          "dropDownValues": ["gray", "darkslategray", "salmon", "cornflowerblue", "darkgreen"],
+          "primitiveValue": "gray"
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "XAxisMajorStroke",
+          "name": "XAxisMajorStroke",
+          "label": "X Axis Major Stroke",
+          "shouldOverrideDefaultEditor": true,
+          "valueType": "EnumValue",
+          "dropDownNames": ["gray", "darkslategray", "salmon", "cornflowerblue", "darkgreen"],
+          "dropDownValues": ["gray", "darkslategray", "salmon", "cornflowerblue", "darkgreen"],
+          "primitiveValue": "darkslategray"
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
           "propertyPath": "YAxisStroke",
           "name": "YAxisStroke",
           "label": "Y Axis Stroke",

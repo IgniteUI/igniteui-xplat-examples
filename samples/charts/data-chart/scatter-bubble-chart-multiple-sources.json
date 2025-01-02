@@ -24,6 +24,8 @@
           "type": "NumericYAxis",
           "name": "yAxis",
           "title": "GDP per Capita",
+          "maximumValue": 1000000,
+          "titleLeftMargin": 10,
           "isLogarithmic": true,
           "abbreviateLargeNumbers": true
         }
@@ -37,7 +39,10 @@
           "yAxisRef": "yAxis",
           "xMemberPath": "Population",
           "yMemberPath": "GDP",
-          "radiusMemberPath": "Population",
+          "radiusMemberPath": "WorkedHours",
+          "xMemberAsLegendLabel": "Population",
+          "yMemberAsLegendLabel": "GDP",
+          "radiusMemberAsLegendLabel": "Work Hours",
           "dataSourceRef": "CountryStatsAfrica",
           "markerType": "Circle",
           "showDefaultTooltip": true,
@@ -45,7 +50,7 @@
             "type": "SizeScale",
             "isLogarithmic": false,
             "minimumValue": 10,
-            "maximumValue": 50
+            "maximumValue": 80
           }
         },
         {
@@ -56,7 +61,10 @@
           "yAxisRef": "yAxis",
           "xMemberPath": "Population",
           "yMemberPath": "GDP",
-          "radiusMemberPath": "Population",
+          "radiusMemberPath": "WorkedHours",
+          "xMemberAsLegendLabel": "Population",
+          "yMemberAsLegendLabel": "GDP",
+          "radiusMemberAsLegendLabel": "Work Hours",
           "dataSourceRef": "CountryStatsEurope",
           "markerType": "Circle",
           "showDefaultTooltip": true,
@@ -64,8 +72,24 @@
             "type": "SizeScale",
             "isLogarithmic": false,
             "minimumValue": 10,
-            "maximumValue": 50
+            "maximumValue": 80
           }
+        },
+        {
+          "type": "DataToolTipLayer",
+          "name": "dataToolTipLayer",
+          "valueRowMarginTop": 1,
+          "labelTextMarginTop": 1,
+          "titleTextMarginTop": 1,
+          "unitsTextMarginTop": 1,
+          "valueRowMarginBottom": 1,
+          "labelTextMarginBottom": 1,
+          "titleTextMarginBottom": 1,
+          "unitsTextMarginBottom": 1,
+          "unitsTextMarginRight": 5,
+          "valueTextMarginLeft": 10,
+          "labelTextMarginLeft": 1,
+          "layoutMode": "Vertical"
         }
       ]
     }
