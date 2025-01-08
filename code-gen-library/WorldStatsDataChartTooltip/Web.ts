@@ -7,4 +7,8 @@ export class WorldStatsDataChartTooltip {
         //OMIT HANDLER
     }
     //end eventHandler
+	public requiredStyles = `
+<!--begin styles-->
+<!--end styles-->
+    `;
 }
