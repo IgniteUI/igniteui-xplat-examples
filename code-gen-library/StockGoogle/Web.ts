@@ -1,8 +1,11 @@
+//begin imports
+//end imports
+
+//begin data 
 export class StockGoogle extends Array<StockItem> {
 
  
-	   constructor(){
-		  constructor() {
+	constructor(){
     super();
     let jsonData = [
       { "Date": "2014-03-01", "Open": 559.6, "High": 568.2, "Low": 558.4, "Close": 566.9, "Volume": 2182626 },
@@ -998,3 +1001,4 @@ export class StockItem {
     public date?: Date;
 
   }
+  //end data
