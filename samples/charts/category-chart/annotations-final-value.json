@@ -2,6 +2,7 @@
   "strings": {
     "legendTitle": "Average Temperature in Sydney"
   },
+  "hasAnimations": false,
   "descriptions": {
     "editor": {
       "type": "PropertyEditorPanel",
@@ -29,7 +30,7 @@
       "computedPlotAreaMarginMode": "Series",
       "isHorizontalZoomEnabled": false,
       "isVerticalZoomEnabled": false,
-      "includedProperties": ["Month", "Temperature"],
+      "includedProperties": [ "Month", "Temperature" ],
       "dataSourceRef": "TemperatureAnnotatedData",
       "finalValueAnnotationsVisible": true,
       "finalValueAnnotationsBackground": "dodgerblue",
@@ -37,7 +38,8 @@
       "finalValueAnnotationsPrecision": 0,
       "crosshairsAnnotationYAxisPrecision": 0,
       "yAxisMaximumValue": 35,
-      "yAxisLabelLocation": "OutsideRight"
+      "yAxisLabelLocation": "OutsideRight",
+      "isTransitionInEnabled": false
     }
   },
   "modules": [

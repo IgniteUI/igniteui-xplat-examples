@@ -71,7 +71,7 @@
     }
   },
   "modules": [
-    "inputs/IconModule",
+    "inputs/XIconModule",
     "layouts/ToolbarModule",
     "charts/DataChartToolbarModule",
     "charts/LegendModule",

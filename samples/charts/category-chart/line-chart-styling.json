@@ -2,6 +2,7 @@
   "strings": {
     "legendTitle": "Renewable Electricity Generated"
   },
+  "hasAnimations": true,
   "descriptions": {
     "legend": {
       "type": "Legend",
@@ -16,12 +17,12 @@
       "legendRef": "legend",
       "isHorizontalZoomEnabled": false,
       "isVerticalZoomEnabled": false,
-      "markerTypes": ["Circle"],
+      "markerTypes": [ "Circle" ],
 
-      "markerBrushes": ["#ee5879", "#c4c4c4", "#9af2e4"],
-      "markerOutlines": ["#FFFFFF"],
-      "brushes": ["#ee5879", "#c4c4c4", "#9af2e4"],
-      "outlines": ["#ee5879", "#c4c4c4", "#9af2e4"],
+      "markerBrushes": [ "#ee5879", "#c4c4c4", "#9af2e4" ],
+      "markerOutlines": [ "#FFFFFF" ],
+      "brushes": [ "#ee5879", "#c4c4c4", "#9af2e4" ],
+      "outlines": [ "#ee5879", "#c4c4c4", "#9af2e4" ],
 
       "yAxisTitle": "TWh",
       "yAxisTitleLeftMargin": 10,

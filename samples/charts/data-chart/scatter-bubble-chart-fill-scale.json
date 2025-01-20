@@ -5,24 +5,27 @@
       "name": "chart",
       "isHorizontalZoomEnabled": true,
       "isVerticalZoomEnabled": true,
-      "chartTitle": "Public Debt vs. Population",
-      "subtitle": "GDP per Capita",
+      "chartTitle": "Population vs. Public Debt vs. GDP",
+      "titleTopMargin": 10,
+      "titleBottomMargin": 0,
       "axes": [
         {
           "type": "NumericXAxis",
           "name": "xAxis",
-          "minimumValue": 10000,
+          "title": "Population",
+          "minimumValue": 100,
           "maximumValue": 10000000000,
           "isLogarithmic": true,
-          "abbreviateLargeNumbers": true,
-          "title": "Population"
+          "abbreviateLargeNumbers": true
         },
         {
           "type": "NumericYAxis",
           "name": "yAxis",
+          "title": "Public Debt per GDP (%)",
+          "titleLeftMargin": 10,
           "isLogarithmic": true,
-          "logarithmBase": 10,
-          "title": "Public Debt per GDP"
+          "abbreviateLargeNumbers": true,
+          "maximumValue": 1000
         }
       ],
       "series": [
@@ -36,22 +39,47 @@
             "type": "SizeScale",
             "isLogarithmic": false,
             "minimumValue": 10,
-            "maximumValue": 120
+            "maximumValue": 80
           },
           "fillMemberPath": "GdpPerPerson",
+          "yMemberAsLegendUnit": "%",
+          "yMemberAsLegendLabel": "Debt",
+          "xMemberAsLegendLabel": "Population",
+          "radiusMemberAsLegendLabel": "GDP",
+          "title": "Country",
           "xAxisRef": "xAxis",
           "yAxisRef": "yAxis",
           "dataSourceRef": "WorldStats",
           "markerType": "Circle",
           "markerOutline": "black",
+          "markerThickness": 1,
           "showDefaultTooltip": true,
           "fillScale": {
             "type": "ValueBrushScale",
             "isLogarithmic": false,
-            "minimumValue": 0,
-            "maximumValue": 100000,
-            "brushes": ["#1AA1E2", "#189AD9", "#1692CE", "#1385BC", "#0F79AB", "#0C6B99", "#095E88", "#055277", "#024669", "#003F5E"]
+            "minimumValue": 500,
+            "maximumValue": 260000,
+            "brushes": ["#96bdfa", "#6fa4f7", "#5290f2", "#135ed4"]
           }
+        },
+        {
+          "type": "DataToolTipLayer",
+          "name": "dataToolTipLayer",
+          "valueRowMarginTop": 1,
+          "labelTextMarginTop": 1,
+          "titleTextMarginTop": 1,
+          "unitsTextMarginTop": 1,
+          "valueRowMarginBottom": 1,
+          "labelTextMarginBottom": 1,
+          "titleTextMarginBottom": 1,
+          "unitsTextMarginBottom": 1,
+          "unitsTextMarginRight": 5,
+          "valueTextMarginLeft": 10,
+          "labelTextMarginLeft": 1,
+          "layoutMode": "Vertical",
+          "badgeShape": "Hidden",
+          "includedColumns": ["X", "Y", "Radius"],
+          "headerRowVisible": false
         }
       ]
     }

@@ -2,6 +2,7 @@
   "strings": {
     "legendTitle": "Olympic Medals By Country"
   },
+  "hasAnimations": true,
   "descriptions": {
     "content": {
       "type": "CategoryChart",
