@@ -14,41 +14,41 @@
     "lint": "eslint ./src/**/*.{ts,tsx}"
   },
   "dependencies": {
-    "igniteui-react-core": "18.7.6",
+    "igniteui-react-core": "18.7.7-beta.0",
 //ifdef webgrids
     "igniteui-dockmanager": "1.15.2",
 //endifdef webgrids
-    "igniteui-react": "18.7.6",
+    "igniteui-react": "18.7.7-beta.0",
 //ifdef charts, maps, dashboards
-    "igniteui-react-charts": "18.7.6",
+    "igniteui-react-charts": "18.7.7-beta.0",
 //endifdef charts, maps, dashboards
 //ifdef dashboards
-    "igniteui-react-dashboards": "18.7.6",
+    "igniteui-react-dashboards": "18.7.7-beta.0",
 //endifdef dashboards
 //ifdef grid, webgrids, dashboards
-    "igniteui-react-datasources": "18.7.6",
+    "igniteui-react-datasources": "18.7.7-beta.0",
 //endifdef grid, webgrids, dashboards
 //ifdef excel, spreadsheet
-    "igniteui-react-excel": "18.7.6",
+    "igniteui-react-excel": "18.7.7-beta.0",
 //endifdef excel, spreadsheet
 //ifdef gauges, dashboards
-    "igniteui-react-gauges": "18.7.6",
+    "igniteui-react-gauges": "18.7.7-beta.0",
 //endifdef gauges, dashboards
 //ifdef grid, webgrids, dashboards
-    "igniteui-react-grids": "18.7.6",
+    "igniteui-react-grids": "18.7.7-beta.0",
 //endifdef grid, webgrids, dashboards
 //ifdef grid, webgrids, inputs, layouts, editor, dashboards
-    "igniteui-react-inputs": "18.7.6",
+    "igniteui-react-inputs": "18.7.7-beta.0",
 //endifdef grid, webgrids, inputs, layouts, editor, dashboards
 //ifdef grid, webgrids, editor, layouts, dashboards
-    "igniteui-react-layouts": "18.7.6",
+    "igniteui-react-layouts": "18.7.7-beta.0",
 //endifdef grid, webgrids, editor, layouts, dashboards
 //ifdef maps, dashboards
-    "igniteui-react-maps": "18.7.6",
+    "igniteui-react-maps": "18.7.7-beta.0",
 //endifdef maps, dashboards
 //ifdef spreadsheet
-    "igniteui-react-spreadsheet": "18.7.6",
-    "igniteui-react-spreadsheet-chart-adapter": "18.7.6",
+    "igniteui-react-spreadsheet": "18.7.7-beta.0",
+    "igniteui-react-spreadsheet-chart-adapter": "18.7.7-beta.0",
 //endifdef spreadsheet
     "igniteui-webcomponents": "5.1.2",
     "lit-html": "^3.2.0",
