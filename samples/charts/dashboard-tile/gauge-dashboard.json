@@ -1,11 +1,11 @@
 {
   "export": true,
-  "onViewInit": ["DashboardTileGaugeOnInit"],
   "descriptions": {
     "content": {
       "tileTitle": "Sample Gauge",
       "type": "DashboardTile",
-      "name": "dashboard"
+      "name": "dashboard",
+      "dataSourceRef": "DashboardGaugeDataSource"
     }
   },
   "modules": [
