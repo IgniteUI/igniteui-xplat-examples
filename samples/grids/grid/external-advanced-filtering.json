@@ -10,7 +10,7 @@
       "type": "WebGrid",
       "dataRef": "NwindData",
       "autoGenerate": false,
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
           "name": "ProductName",

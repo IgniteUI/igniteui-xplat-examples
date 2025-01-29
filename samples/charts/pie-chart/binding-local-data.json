@@ -17,7 +17,7 @@
       "valueMemberPath": "MarketShare",
       "radiusFactor": 0.7,
       "dataSourceRef": "LocalData",
-      "legendRef": "Legend"
+      "legendRef": "legend"
     }
   },
   "refs": {

@@ -1,13 +1,16 @@
 //begin imports
-import { IgrCombo } from 'igniteui-react';
+import { IgrCombo, IgrVoidEventArgs } from 'igniteui-react';
+import { IgrGrid } from 'igniteui-react-grids';
 //end imports
 
 
 export class WebGridWithComboRendered {
     //begin eventHandler
-    public webGridWithComboRendered(args: any) {
-        console.log(args);
-    }
+    public gridData = [
+        { ID: 1, Country: '', Region: '', City: '' },
+        { ID: 2, Country: '', Region: '', City: '' },
+        { ID: 3, Country: '', Region: '', City: '' }
+    ];
     public countryNames = [
         'United States',
         'Japan',
@@ -23,6 +26,9 @@ export class WebGridWithComboRendered {
         }
     }
 
+    public webGridWithComboRendered(gridRef: IgrGrid, args: IgrVoidEventArgs) {
+        gridRef.data = this.gridData;
+    }
 
     public onCountryChange( rowId: string, cmp: any, args:any) {
         // find next combo

@@ -9,7 +9,7 @@
       "id": "grid",
       "dataRef": "CustomersData",
       "columnSelection": "Single",
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
           "field": "ID"

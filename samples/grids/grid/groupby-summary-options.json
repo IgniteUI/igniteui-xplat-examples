@@ -45,7 +45,7 @@
           "dir": "Asc"
         }
       ],
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
           "field": "ShipCountry",

@@ -6,7 +6,7 @@
       "dataRef": "NwindData",
       "autoGenerate": false,
       "rowClassesRef": "WebGridRowClassesHandler",
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
           "name": "ProductID",

@@ -14,7 +14,7 @@
       "type": "DataChart",
       "name": "chart",
       "chartTitle": "Market Capitalization of Technology Companies",
-      "legendRef": "Legend",
+      "legendRef": "legend",
       "isHorizontalZoomEnabled": false,
       "isVerticalZoomEnabled": false,
       "axes": [

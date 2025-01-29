@@ -15,7 +15,7 @@
         "type": "WebPinningConfig",
         "rows": "Top"
       },
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
           "width": "150px",

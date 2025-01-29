@@ -8,7 +8,7 @@
         "autoGenerate": false,
         "detailTemplateRef": "WebGridMasterDetailTemplate",
         "name": "grid",
-        "columns": [
+        "columnList": [
           {
             "type": "WebColumn",
             "field": "ContactName",

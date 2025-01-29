@@ -10,7 +10,7 @@
       "type": "WebGrid",
       "dataRef": "CustomersData",
       "primaryKey": "Company",
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumnLayout",
           "hidden": true,

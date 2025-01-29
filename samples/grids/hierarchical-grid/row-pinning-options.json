@@ -36,7 +36,7 @@
         "rows": "Top",
         "columns": "End"
       },
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
           "field": "Artist",
@@ -92,7 +92,7 @@
             "rows": "Top",
             "columns": "End"
           },
-          "columns": [
+          "columnList": [
             {
               "type": "WebColumn",
               "field": "Album",

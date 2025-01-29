@@ -2,6 +2,7 @@
   "strings": {
     "legendTitle": "Chart with Multiple Selectable Data Columns"
   },
+  "hasAnimations": true,
   "descriptions": {
     "legend": {
       "type": "DataLegend",

@@ -13,7 +13,7 @@
       "foreignKey": "ParentID",
       "rowSelection": "Multiple",
       "rowSelectionChangingRef": "WebTreeGridRowSelectionConditional",
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
           "field": "Name",

@@ -13,8 +13,12 @@
         "properties": [
           {
             "type": "PropertyEditorPropertyDescription",
-            "propertyPath": "DisplayDensity",
-            "name": "DisplayDensityEditor"
+            "name": "SizeEditor",
+            "label": "Grid Size:",
+            "valueType": "EnumValue",
+            "dropDownNames": ["Small", "Medium", "Large"],
+            "dropDownValues": ["Small", "Medium", "Large"],
+            "changedRef": "WebHierarchicalGridSetGridSize"
           }
         ]
       },
@@ -25,7 +29,7 @@
         "id": "hierarchicalGrid",
         "autoGenerate": false,
         "allowFiltering": true,
-        "columns": [
+        "columnList": [
           {
             "type": "WebColumn",
             "field": "CustomerID",
@@ -77,7 +81,7 @@
             "type": "WebRowIsland",
             "childDataKey": "Orders",
             "autoGenerate": false,
-            "columns": [
+            "columnList": [
               {
                 "type": "WebColumn",
                 "field": "OrderID",
@@ -144,7 +148,7 @@
                 "type": "WebRowIsland",
                 "childDataKey": "OrderDetails",
                 "autoGenerate": false,
-                "columns": [
+                "columnList": [
                   {
                     "type": "WebColumn",
                     "field": "ProductID",

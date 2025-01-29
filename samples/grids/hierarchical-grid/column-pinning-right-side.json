@@ -28,7 +28,7 @@
             ]
           }
         ],
-        "columns": [
+        "columnList": [
           {
             "type": "WebColumn",
             "field": "CustomerID",
@@ -84,7 +84,7 @@
             "type": "WebRowIsland",
             "childDataKey": "Orders",
             "autoGenerate": false,
-            "columns": [
+            "columnList": [
               {
                 "type": "WebColumn",
                 "field": "OrderDate",
@@ -134,7 +134,7 @@
                 "type": "WebRowIsland",
                 "childDataKey": "OrderDetails",
                 "autoGenerate": false,
-                "columns": [
+                "columnList": [
                   {
                     "type": "WebColumn",
                     "field": "UnitPrice",

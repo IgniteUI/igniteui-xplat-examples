@@ -34,7 +34,7 @@
       "name": "grid1",
       "dataRef": "CustomersData",
       "primaryKey": "ID",
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
           "name": "ContactName",

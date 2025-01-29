@@ -30,7 +30,7 @@
       "autoGenerate": false,
       "name": "grid",
       "id": "grid",
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
           "field": "ID",

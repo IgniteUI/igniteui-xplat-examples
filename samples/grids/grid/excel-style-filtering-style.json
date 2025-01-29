@@ -11,7 +11,7 @@
       "autoGenerate": false,
       "allowFiltering": true,
       "filterMode": "ExcelStyleFilter",
-      "columns": [{
+      "columnList": [{
         "type": "WebColumn",
         "name": "ProductName",
         "field": "ProductName",

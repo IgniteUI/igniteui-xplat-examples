@@ -11,7 +11,7 @@
       "rowSelection": "Multiple",
       "rowSelectorTemplateRef": "WebGridRowSelectorTemplate",
       "headSelectorTemplateRef": "WebGridHeaderRowSelectorTemplate",
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
           "field": "ContactName"

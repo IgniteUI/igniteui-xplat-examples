@@ -10,7 +10,8 @@ export class WebGridTestOnInit {
     public webGridTestOnInit(): void {
         var grid = CodeGenHelper.getDescription<IgcGridComponent>("content");
         grid.allowFiltering = true;
-        grid.filterMode = FilterMode.ExcelStyleFilter;
+        // grid.filterMode = FilterMode.ExcelStyleFilter;
+        grid.filterMode = "excelStyleFilter";
     }
     //end eventHandler
 

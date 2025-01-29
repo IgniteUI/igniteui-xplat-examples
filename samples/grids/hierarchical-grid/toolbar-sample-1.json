@@ -30,7 +30,7 @@
           ]
         }
       ],
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
           "field": "Artist",
@@ -71,7 +71,7 @@
           "childDataKey": "Albums",
           "autoGenerate": false,
           "toolbarTemplateRef": "WebHierarchicalGridToolbarTemplate",
-          "columns": [
+          "columnList": [
             {
               "type": "WebColumn",
               "field": "Album",
@@ -103,7 +103,7 @@
               "childDataKey": "Songs",
               "autoGenerate": false,
               "toolbarTemplateRef": "WebHierarchicalGridToolbarTemplate",
-              "columns": [
+              "columnList": [
                 {
                   "type": "WebColumn",
                   "field": "Number",
@@ -137,7 +137,7 @@
           "childDataKey": "Tours",
           "autoGenerate": false,
           "toolbarTemplateRef": "WebHierarchicalGridToolbarTemplate",
-          "columns": [
+          "columnList": [
             {
               "type": "WebColumn",
               "field": "Tour",

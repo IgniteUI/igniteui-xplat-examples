@@ -1,0 +1,19 @@
+{
+  "export": true,
+  "onViewInit": ["DashboardTileGaugeOnInit"],
+  "descriptions": {
+    "content": {
+      "tileTitle": "Sample Gauge",
+      "type": "DashboardTile",
+      "name": "dashboard"
+    }
+  },
+  "modules": [
+    "dashboards/DashboardTileModule",
+    "dashboards/DataChartDashboardTileModule",
+    "dashboards/GeographicMapDashboardTileModule",
+    "dashboards/LinearGaugeDashboardTileModule",
+    "dashboards/PieChartDashboardTileModule",
+    "dashboards/RadialGaugeDashboardTileModule"
+  ]
+}

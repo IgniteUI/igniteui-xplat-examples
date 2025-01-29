@@ -16,7 +16,7 @@
           "perPage": 15
         }
       ],
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
           "field": "CustomerID",
@@ -87,7 +87,7 @@
           "childDataKey": "Orders",
           "autoGenerate": false,
           "moving": true,
-          "columns": [
+          "columnList": [
             {
               "type": "WebColumn",
               "field": "OrderID",
@@ -155,7 +155,7 @@
               "childDataKey": "OrderDetails",
               "autoGenerate": false,
               "moving": true,
-              "columns": [
+              "columnList": [
                 {
                   "type": "WebColumn",
                   "field": "ProductID",

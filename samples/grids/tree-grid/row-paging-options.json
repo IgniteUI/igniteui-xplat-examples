@@ -5,6 +5,7 @@
   ],
   "export": true,
   "skipAlterDataCasing": true,
+  "onInit": ["WebTreeGridSizeMediumTemplate"],
   "descriptions": {
     "editor": {
       "type": "PropertyEditorPanel",
@@ -17,9 +18,12 @@
       "properties": [
         {
           "type": "PropertyEditorPropertyDescription",
-          "propertyPath": "DisplayDensity",
-          "name": "DisplayDensityEditor",
-          "label": "Display Density"
+          "name": "SizeEditor",
+          "label": "Grid Size:",
+          "valueType": "EnumValue",
+          "dropDownNames": ["Small", "Medium", "Large"],
+          "dropDownValues": ["Small", "Medium", "Large"],
+          "changedRef": "WebTreeGridSetGridSize"
         }
       ]
     },
@@ -31,20 +35,18 @@
       "id": "treeGrid",
       "primaryKey": "ID",
       "foreignKey": "ParentID",
-      "displayDensity": "Cosy",
       "paginationComponents": [
         {
           "type": "WebPaginator",
           "name": "paginator",
           "perPage": 10,
-          "displayDensity": "Cosy",
           "resourceStrings": {
             "type": "WebPaginatorResourceStrings",
             "igx_paginator_label": "Records per page"
           }
         }
       ],
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
           "field": "ID",

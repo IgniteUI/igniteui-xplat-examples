@@ -2,6 +2,7 @@
   "strings": {
     "legendTitle": "Where Online Shoppers Start Their Search"
   },
+  "hasAnimations": true,
   "descriptions": {
     "content": {
       "type": "DataChart",
@@ -51,7 +52,7 @@
           "type": "CalloutLayer",
           "name": "CalloutLayer1",
           "isAutoCalloutBehaviorEnabled": true,
-          "allowedPositions": ["Right"],
+          "allowedPositions": [ "Right" ],
           "calloutTextColor": "rgb(133, 6, 138)",
           "calloutBackground": "transparent",
           "calloutLeaderBrush": "transparent",

@@ -1,12 +1,14 @@
 {
   "skipAlterDataCasing": true,
+  "onInit": ["WebGridSizeMediumTemplate"],
   "descriptions": {
     "content": {
       "type": "WebGrid",
+      "id": "grid",
+      "name": "grid",
       "dataRef": "NwindData",
       "autoGenerate": false,
       "primaryKey": "ProductID",
-      "displayDensity": "Cosy",
       "allowFiltering": true,
       "paginationComponents": [
         {
@@ -14,7 +16,7 @@
           "perPage": 10
         }
       ],
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
           "field": "ProductName",

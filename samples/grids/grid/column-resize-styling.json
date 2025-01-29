@@ -9,7 +9,7 @@
       "id": "grid",
       "dataRef": "AthletesData",
       "autoGenerate": false,
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
           "field": "Id",

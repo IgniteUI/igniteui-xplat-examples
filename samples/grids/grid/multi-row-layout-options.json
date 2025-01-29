@@ -42,7 +42,7 @@
           ]
         }
       ],
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumnLayout",
           "header": "ID",

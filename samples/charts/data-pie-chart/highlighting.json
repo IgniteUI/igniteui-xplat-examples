@@ -1,0 +1,43 @@
+{
+  "strings": {
+    "legendTitle": "Global Electricity Demand by Energy Use"
+  },
+  "hasAnimations": true,
+  "descriptions": {
+    "editor": {
+      "type": "PropertyEditorPanel",
+      "componentRendererRef": "renderer",
+      "targetRef": "chart",
+      "descriptionType": "DataPieChart",
+      "isHorizontal": true,
+      "isWrappingEnabled": true,
+      "properties": [
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "HighlightingMode",
+          "label": "Highlighting Mode: ",
+          "primitiveValue": "BrightenSpecific"
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "HighlightingBehavior",
+          "label": "Highlighting Behavior: ",
+          "primitiveValue": "DirectlyOver"
+        }
+      ]
+    },
+    "content": {
+      "type": "DataPieChart",
+      "name": "chart",
+      "dataSourceRef": "EnergyGlobalDemand",
+      "highlightingBehavior": "DirectlyOver",
+      "highlightingMode": "BrightenSpecific"
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
+    "charts/DataPieChartModule",
+    "charts/ItemLegendModule"
+  ]
+}

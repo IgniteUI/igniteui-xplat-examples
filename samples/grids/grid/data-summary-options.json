@@ -9,7 +9,7 @@
       "autoGenerate": false,
       "primaryKey": "ProductID",
       "columnInitRef": "WebGridCustomSummary",
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
           "name": "ProductID",

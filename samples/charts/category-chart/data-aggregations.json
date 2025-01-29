@@ -2,7 +2,8 @@
   "strings": {
     "legendTitle": "Sales Aggregated by Country and Product"
   },
-  "onViewInit": ["PropertyEditorInitAggregationsOnViewInit"],
+  "hasAnimations": true,
+  "onViewInit": [ "PropertyEditorInitAggregationsOnViewInit" ],
   "skipAlterDataCasing": true,
   "descriptions": {
     "editor": {
@@ -21,8 +22,8 @@
           "label": "Initial Groups",
           "valueType": "EnumValue",
           "shouldOverrideDefaultEditor": true,
-          "dropDownNames": ["Country", "Product", "Month", "Year"],
-          "dropDownValues": ["Country", "Product", "Month", "Year"],
+          "dropDownNames": [ "Country", "Product", "Month", "Year" ],
+          "dropDownValues": [ "Country", "Product", "Month", "Year" ],
           "primitiveValue": "Country",
           "changedRef": "EditorChangeUpdateInitialGroups"
         }

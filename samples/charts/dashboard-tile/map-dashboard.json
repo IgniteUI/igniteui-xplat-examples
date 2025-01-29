@@ -1,0 +1,19 @@
+{
+  "export": true,
+  "descriptions": {
+    "content": {
+      "type": "DashboardTile",
+      "name": "dashboard",
+      "tileTitle": "World Cities",
+      "dataSourceRef": "WorldCities"
+    }
+  },
+  "modules": [
+    "dashboards/DashboardTileModule",
+    "dashboards/DataChartDashboardTileModule",
+    "dashboards/GeographicMapDashboardTileModule",
+    "dashboards/LinearGaugeDashboardTileModule",
+    "dashboards/PieChartDashboardTileModule",
+    "dashboards/RadialGaugeDashboardTileModule"
+  ]
+}

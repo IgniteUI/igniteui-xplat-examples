@@ -31,7 +31,7 @@
       "autoGenerate": false,
       "rowEditable": true,
       "primaryKey": "ID",
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
           "name": "Avatar",

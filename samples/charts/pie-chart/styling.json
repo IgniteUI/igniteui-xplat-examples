@@ -21,7 +21,7 @@
       "radiusFactor": 0.7,
       "startAngle": 0,
       "dataSourceRef": "EnergyGlobalDemand",
-      "legendRef": "Legend"
+      "legendRef": "legend"
     }
   },
   "modules": [
