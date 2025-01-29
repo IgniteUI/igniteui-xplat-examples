@@ -19,7 +19,7 @@ export class SelectionMatcherOnViewInit
 			
 			var selection = new IgrChartSelection();
 			selection.item = this.energyRenewableConsumption[1];
-			matcher.memberPath = "year";
+			matcher.memberPath = "hydro";
 			matcher.memberPathType = "ValueMemberPath";
 			selection.matcher = matcher;
 
@@ -27,7 +27,7 @@ export class SelectionMatcherOnViewInit
 
 			var selection2 = new IgrChartSelection();
 			selection2.item = this.energyRenewableConsumption[2];
-			matcher.memberPath = "hydro";
+			matcher.memberPath = "wind";
 			matcher.memberPathType = "ValueMemberPath";
 			selection2.matcher = matcher;
 

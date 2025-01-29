@@ -47,7 +47,7 @@ public class SelectionMatcherOnViewInit
 		ChartSelection selection = new ChartSelection();
 		selection.Item = ((IList)chart.ItemsSource)[1];
 		SeriesMatcher matcher = new SeriesMatcher();
-		matcher.MemberPath = "Solar";
+		matcher.MemberPath = "Hydro";
 		matcher.MemberPathType = "ValueMemberPath";
 		selection.Matcher = matcher;
 				
@@ -56,7 +56,7 @@ public class SelectionMatcherOnViewInit
 		selection = new ChartSelection();
 		selection.Item = ((IList)chart.ItemsSource)[1];
 		matcher = new SeriesMatcher();
-		matcher.MemberPath = "Hydro";
+		matcher.MemberPath = "Wind";
 		matcher.MemberPathType = "ValueMemberPath";
 				
 		selection.Matcher = matcher;

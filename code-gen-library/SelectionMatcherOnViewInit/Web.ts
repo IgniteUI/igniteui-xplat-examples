@@ -20,14 +20,14 @@ export class SelectionMatcherOnViewInit
 
 			let selection: IgcChartSelection = new IgcChartSelection();
 			selection.item = data[1];
-			matcher.memberPath = "year";
+			matcher.memberPath = "hydro";
 			matcher.memberPathType = "ValueMemberPath";
 			selection.matcher = matcher;
 			chart.selectedSeriesItems.add(selection);
 
 			let selection2: IgcChartSelection = new IgcChartSelection();
 			selection2.item = data[2];
-			matcher.memberPath = "hydro";
+			matcher.memberPath = "wind";
 			matcher.memberPathType = "ValueMemberPath";
 			selection2.matcher = matcher;
 

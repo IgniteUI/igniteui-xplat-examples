@@ -1,0 +1,69 @@
+{
+  "strings": {
+    "legendTitle": "Renewable Energy Consumption"
+  },
+  "onViewInit": "SelectionMatcherOnViewInit",
+  "descriptions": {
+    "legend": {
+      "type": "Legend",
+      "name": "legend",
+      "orientation": "Horizontal"
+    },
+    "content": {
+      "type": "DataChart",
+      "name": "chart",
+      "legendRef": "legend",
+      "isHorizontalZoomEnabled": false,
+      "isVerticalZoomEnabled": false,
+      "selectionMode": "SelectionColorFill",
+      "selectionBehavior": "Auto",
+      "selectionBrush": "orange",
+      "axes": [
+        {
+          "type": "CategoryYAxis",
+          "name": "yAxis",
+          "dataSourceRef": "EnergyRenewableConsumption",
+          "label": "Location",
+          "isInverted": true
+        },
+        {
+          "type": "NumericXAxis",
+          "name": "xAxis",
+          "minimumValue": 0,
+          "title": "TWh"
+        }
+      ],
+      "series": [
+        {
+          "type": "Stacked100BarSeries",
+          "name": "stacked100BarSeries",
+          "dataSourceRef": "EnergyRenewableConsumption",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "showDefaultTooltip": true,
+          "areaFillOpacity": 1,
+          "series": [
+            { "type": "StackedFragmentSeries", "name": "s1", "valueMemberPath": "Hydro", "title": "Hydro" },
+            { "type": "StackedFragmentSeries", "name": "s2", "valueMemberPath": "Wind", "title": "Wind" },
+            { "type": "StackedFragmentSeries", "name": "s3", "valueMemberPath": "Solar", "title": "Solar" },
+            { "type": "StackedFragmentSeries", "name": "s4", "valueMemberPath": "Other", "title": "Other" }
+          ]
+        },
+        {
+          "type": "DataToolTipLayer",
+          "name": "dataToolTipLayer"
+        }
+      ]
+    }
+  },
+  "modules": [
+    "charts/LegendModule",
+    "charts/DataChartCoreModule",
+    "charts/DataChartCategoryModule",
+    "charts/DataChartCategoryCoreModule",
+    "charts/DataChartInteractivityModule",
+    "charts/DataChartAnnotationModule",
+    "charts/DataChartStackedModule",
+    "charts/StackedFragmentSeriesModule"
+  ]
+}

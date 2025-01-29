@@ -27,7 +27,7 @@ public class SelectionMatcherOnViewInit
 		IgbChartSelection selection = new IgbChartSelection();
 		selection.Item = EnergyRenewableConsumption[1];
 		IgbSeriesMatcher matcher = new IgbSeriesMatcher();
-		matcher.MemberPath = "Year";
+		matcher.MemberPath = "Hydro";
 		matcher.MemberPathType = "ValueMemberPath";
 		selection.Matcher = matcher;
 
@@ -37,7 +37,7 @@ public class SelectionMatcherOnViewInit
 		selection2 = new IgbChartSelection();
 		selection2.Item = EnergyRenewableConsumption[2];
 		matcher = new IgbSeriesMatcher();
-		matcher.MemberPath = "Hydro";
+		matcher.MemberPath = "Wind";
 		matcher.MemberPathType = "ValueMemberPath";
 		selection2.Matcher = matcher;
 
