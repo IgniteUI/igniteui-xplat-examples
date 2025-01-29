@@ -5,8 +5,44 @@
   "export": true,
   "skipAlterDataCasing": true,
   "descriptions": {
+    "editor": {
+      "type": "PropertyEditorPanel",
+      "name": "PropertyEditor",
+      "componentRendererRef": "renderer",
+      "targetRef": "grid",
+      "descriptionType": "WebGrid",
+      "isHorizontal": true,
+      "isWrappingEnabled": true,
+      "properties": [
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "valueType": "Button",
+          "primitiveValue": "Advanced Filtering",
+          "buttonClickedRef": "WebGridAdvancedFilteringToggle"
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "valueType": "Button",
+          "primitiveValue": "Column Hiding",
+          "buttonClickedRef": "WebGridColumnHidingToggle"
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "valueType": "Button",
+          "primitiveValue": "Column Pinning",
+          "buttonClickedRef": "WebGridColumnPinningToggle"
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "valueType": "Button",
+          "primitiveValue": "Exporting",
+          "buttonClickedRef": "WebGridExportingToggle"
+        }
+      ]
+    },
     "content": {
       "type": "WebGrid",
+      "name": "grid",
       "dataRef": "AthletesData",
       "autoGenerate": false,
       "toolbar": [
