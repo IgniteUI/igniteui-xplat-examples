@@ -16,22 +16,22 @@ export class SelectionMatcherOnViewInit
 
 		this._timer = setInterval(() => {
 			var data = CodeGenHelper.findByName<any[]>("energyRenewableConsumption");
+			let matcher: IgcSeriesMatcher = new IgcSeriesMatcher();
+
 			let selection: IgcChartSelection = new IgcChartSelection();
 			selection.item = data[1];
-
-			let matcher: IgcSeriesMatcher = new IgcSeriesMatcher();
-			matcher.memberPath = "solar";
+			matcher.memberPath = "year";
 			matcher.memberPathType = "ValueMemberPath";
 			selection.matcher = matcher;
-
 			chart.selectedSeriesItems.add(selection);
 
-			selection.item = data[1];
+			let selection2: IgcChartSelection = new IgcChartSelection();
+			selection2.item = data[2];
 			matcher.memberPath = "hydro";
 			matcher.memberPathType = "ValueMemberPath";
-			selection.matcher = matcher;
+			selection2.matcher = matcher;
 
-			chart.selectedSeriesItems.add(selection);
+			chart.selectedSeriesItems.add(selection2);
 
         }, 100);
     }
