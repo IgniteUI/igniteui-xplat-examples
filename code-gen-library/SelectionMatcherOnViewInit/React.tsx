@@ -15,22 +15,23 @@ export class SelectionMatcherOnViewInit
 		var chart = CodeGenHelper.getDescription<IgrCategoryChart>("content");
 
 		this._timer = setInterval(() => {
-			var selection = new IgrChartSelection();
-			selection.item = this.energyRenewableConsumption[1];
-
 			var matcher = new IgrSeriesMatcher();
-			matcher.memberPath = "solar";
-			matcher.memberPathType = "ValueMemberPath";
-			selection.matcher = matcher;
-
-			chart.selectedSeriesItems.add(selection);
-
+			
+			var selection = new IgrChartSelection();
 			selection.item = this.energyRenewableConsumption[1];
 			matcher.memberPath = "hydro";
 			matcher.memberPathType = "ValueMemberPath";
 			selection.matcher = matcher;
 
 			chart.selectedSeriesItems.add(selection);
+
+			var selection2 = new IgrChartSelection();
+			selection2.item = this.energyRenewableConsumption[2];
+			matcher.memberPath = "wind";
+			matcher.memberPathType = "ValueMemberPath";
+			selection2.matcher = matcher;
+
+			chart.selectedSeriesItems.add(selection2);
 
 		}, 100);
     }
