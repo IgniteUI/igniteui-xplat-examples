@@ -5,7 +5,7 @@ public class WorldStatsDataChartTooltip
 {
     //begin eventHandler
     //WPF: System.Action
-    public void worldStatsDataChartTooltip()
+    public void WorldStatsDataChartTooltip()
     {
         //OMIT HANLDER
     }
