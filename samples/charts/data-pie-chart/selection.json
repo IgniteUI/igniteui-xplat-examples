@@ -14,8 +14,13 @@
       "properties": [
         {
           "type": "PropertyEditorPropertyDescription",
-          "propertyPath": "SelectionBehavior",
           "label": "Selection Behavior: ",
+          "valueType": "EnumValue",
+          "propertyPath": "SelectionBehavior",
+          "name": "SelectionBehavior",
+          "shouldOverrideDefaultEditor": true,
+          "dropDownNames": ["PerDataItemSingleSelect", "PerDataItemMultiSelect"],
+          "dropDownValues": ["PerDataItemSingleSelect", "PerDataItemMultiSelect"],
           "primitiveValue": "PerDataItemSingleSelect"
         },
         {
