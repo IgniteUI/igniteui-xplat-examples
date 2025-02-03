@@ -29,7 +29,7 @@
       "dataSourceRef": "EnergyGlobalDemand",
       "transitionInMode": "Auto",
       "transitionInDuration": 1000,
-      "transitionInSpeedType": "IndexScaled",
+      "transitionInSpeedType": "Random",
       "highlightingMode": "None"
     }
   },
