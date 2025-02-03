@@ -5,12 +5,14 @@ import { IgcPropertyEditorPropertyDescriptionButtonClickEventArgs } from 'ignite
 
 import { CodeGenHelper } from 'igniteui-webcomponents-core';
 
-export class WebGridAdvancedFilteringToggle {
+export class WebGridColumnPinningToggle {
     //begin eventHandler
-    public advancedFilteringToggle(sender: any, args: IgcPropertyEditorPropertyDescriptionButtonClickEventArgs): void {
-        const grid: IgcGridComponent = CodeGenHelper.getDescription<IgcGridComponent>("content");
-        grid.allowFiltering = !grid.allowFiltering;
-        grid.markForCheck();
+    public webGridColumnPinningToggle(sender: any, args: IgcPropertyEditorPropertyDescriptionButtonClickEventArgs): void {
+        const toolbar = this.gridToolbar;
+        const toolbarPinning = toolbar.querySelector('igc-grid-toolbar-pinning') as HTMLElement;
+        if (toolbarPinning) {
+            toolbarPinning.style.display = toolbarPinning.style.display === 'none' ? '' : 'none';
+        }
     }
     //end eventHandler
 }

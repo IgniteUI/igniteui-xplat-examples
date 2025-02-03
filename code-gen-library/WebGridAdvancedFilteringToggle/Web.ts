@@ -7,10 +7,12 @@ import { CodeGenHelper } from 'igniteui-webcomponents-core';
 
 export class WebGridAdvancedFilteringToggle {
     //begin eventHandler
-    public advancedFilteringToggle(sender: any, args: IgcPropertyEditorPropertyDescriptionButtonClickEventArgs): void {
-        const grid: IgcGridComponent = CodeGenHelper.getDescription<IgcGridComponent>("content");
-        grid.allowFiltering = !grid.allowFiltering;
-        grid.markForCheck();
+    public webGridAdvancedFilteringToggle(): void {
+        const toolbar = this.gridToolbar;
+        const advancedFiltering = toolbar.querySelector('igc-grid-toolbar-advanced-filtering') as HTMLElement;
+        if (advancedFiltering) {
+            advancedFiltering.style.display = advancedFiltering.style.display === 'none' ? '' : 'none';
+        }
     }
     //end eventHandler
 }

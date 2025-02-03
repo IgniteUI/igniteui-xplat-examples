@@ -5,12 +5,14 @@ import { IgcPropertyEditorPropertyDescriptionButtonClickEventArgs } from 'ignite
 
 import { CodeGenHelper } from 'igniteui-webcomponents-core';
 
-export class WebGridAdvancedFilteringToggle {
+export class WebGridColumnHidingToggle {
     //begin eventHandler
-    public advancedFilteringToggle(sender: any, args: IgcPropertyEditorPropertyDescriptionButtonClickEventArgs): void {
-        const grid: IgcGridComponent = CodeGenHelper.getDescription<IgcGridComponent>("content");
-        
-        grid.markForCheck();
+    public webGridColumnHidingToggle(sender: any, args: IgcPropertyEditorPropertyDescriptionButtonClickEventArgs): void {
+        const toolbar = this.gridToolbar;
+        const toolbarHiding = toolbar.querySelector('igc-grid-toolbar-hiding') as HTMLElement;
+        if (toolbarHiding) {
+            toolbarHiding.style.display = toolbarHiding.style.display === 'none' ? '' : 'none';
+        }
     }
     //end eventHandler
 }
