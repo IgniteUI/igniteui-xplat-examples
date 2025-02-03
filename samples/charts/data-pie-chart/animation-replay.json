@@ -1,0 +1,42 @@
+{
+  "strings": {
+    "legendTitle": "Global Electricity Demand by Energy Use"
+  },
+  "hasAnimations": true,
+  "OnViewInit": "ReplayAnimationOnViewInit",
+  "descriptions": {
+    "editor": {
+      "type": "PropertyEditorPanel",
+      "componentRendererRef": "renderer",
+      "targetRef": "chart",
+      "descriptionType": "DataPieChart",
+      "isHorizontal": true,
+      "isWrappingEnabled": true,
+      "properties": [
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "ReplayTransitionIn",
+          "label": "Replay Animation",
+          "primitiveValue": "Replay Animation",
+          "valueType": "Button",
+          "buttonClickedRef": "EditorButtonReplayTransitionInDomain"
+        }
+      ]
+    },
+    "content": {
+      "type": "DataPieChart",
+      "name": "chart",
+      "dataSourceRef": "EnergyGlobalDemand",
+      "transitionInMode": "Auto",
+      "transitionInDuration": 1000,
+      "transitionInSpeedType": "Random",
+      "highlightingMode": "None"
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
+    "charts/DataPieChartModule",
+    "charts/ItemLegendModule"
+  ]
+}
