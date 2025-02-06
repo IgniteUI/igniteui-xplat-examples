@@ -16,32 +16,42 @@
           "type": "PropertyEditorPropertyDescription",
           "propertyPath": "OthersCategoryType",
           "label": "Others Type: ",
-          "primitiveValue": "Number"
+          "primitiveValue": "Number",
+          "valueType": "EnumValue"
         },
         {
           "type": "PropertyEditorPropertyDescription",
           "propertyPath": "OthersCategoryThreshold",
           "label": "Others Threshold: ",
-          "shouldOverrideDefaultEditor": true,
           "valueType": "Slider",
           "min": 0,
-          "max": 40
+          "max": 40,
+          "primitiveValue": 15
         },
         {
           "type": "PropertyEditorPropertyDescription",
           "propertyPath": "OthersCategoryText",
-          "label": "Others Text: "
+          "label": "Others Text: ",
+          "valueType": "StringValue"
         }
       ]
     },
     "content": {
       "type": "DataPieChart",
       "name": "chart",
-      "dataSourceRef": "EnergyGlobalDemand",
-      "othersCategoryText": "Others",
+      "dataSourceRef": "LocalData",
       "othersCategoryType": "Number",
-      "othersCategoryThreshold": 5
+      "othersCategoryThreshold": 15
     }
+  },
+  "refs": {
+    "LocalData": [
+      { "MarketShare": 37, "Category": "Cooling", "Summary": "Cooling 37%" },
+      { "MarketShare": 25, "Category": "Residential", "Summary": "Residential 25%" },
+      { "MarketShare": 12, "Category": "Heating", "Summary": "Heating 12%" },
+      { "MarketShare": 11, "Category": "Lighting", "Summary": "Lighting 11%" },
+      { "MarketShare": 50, "Category": "Electric", "Summary": "Electric 50%" }
+    ]
   },
   "modules": [
     "withDescriptions",
