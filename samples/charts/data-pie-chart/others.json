@@ -25,7 +25,7 @@
           "label": "Others Threshold: ",
           "valueType": "Slider",
           "min": 0,
-          "max": 40,
+          "max": 35,
           "primitiveValue": 15
         },
         {
@@ -46,11 +46,14 @@
   },
   "refs": {
     "LocalData": [
-      { "MarketShare": 37, "Category": "Cooling", "Summary": "Cooling 37%" },
-      { "MarketShare": 25, "Category": "Residential", "Summary": "Residential 25%" },
-      { "MarketShare": 12, "Category": "Heating", "Summary": "Heating 12%" },
-      { "MarketShare": 11, "Category": "Lighting", "Summary": "Lighting 11%" },
-      { "MarketShare": 50, "Category": "Electric", "Summary": "Electric 50%" }
+      { "V1": 50, "Category": "Maintenance" },
+      { "V1": 40, "Category": "Cooling" },
+      { "V1": 20, "Category": "Residential"},
+      { "V1": 15, "Category": "Utilities"},
+      { "V1": 10, "Category": "Heating"},
+      { "V1": 5, "Category": "Lighting"},
+      { "V1": 4, "Category": "Electric"},
+      { "V1": 3, "Category": "Misc"}
     ]
   },
   "modules": [
