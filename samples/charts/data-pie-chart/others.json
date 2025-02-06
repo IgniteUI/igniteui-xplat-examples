@@ -16,32 +16,45 @@
           "type": "PropertyEditorPropertyDescription",
           "propertyPath": "OthersCategoryType",
           "label": "Others Type: ",
-          "primitiveValue": "Number"
+          "primitiveValue": "Number",
+          "valueType": "EnumValue"
         },
         {
           "type": "PropertyEditorPropertyDescription",
           "propertyPath": "OthersCategoryThreshold",
           "label": "Others Threshold: ",
-          "shouldOverrideDefaultEditor": true,
           "valueType": "Slider",
           "min": 0,
-          "max": 40
+          "max": 50,
+          "primitiveValue": 15
         },
         {
           "type": "PropertyEditorPropertyDescription",
           "propertyPath": "OthersCategoryText",
-          "label": "Others Text: "
+          "label": "Others Text: ",
+          "valueType": "StringValue"
         }
       ]
     },
     "content": {
       "type": "DataPieChart",
       "name": "chart",
-      "dataSourceRef": "EnergyGlobalDemand",
-      "othersCategoryText": "Others",
+      "dataSourceRef": "LocalData",
       "othersCategoryType": "Number",
-      "othersCategoryThreshold": 5
+      "othersCategoryThreshold": 15
     }
+  },
+  "refs": {
+    "LocalData": [
+      { "V1": 100, "Category": "Maintenance" },
+      { "V1": 40, "Category": "Cooling" },
+      { "V1": 20, "Category": "Residential"},
+      { "V1": 15, "Category": "Utilities"},
+      { "V1": 10, "Category": "Heating"},
+      { "V1": 5, "Category": "Lighting"},
+      { "V1": 4, "Category": "Electric"},
+      { "V1": 3, "Category": "Misc"}
+    ]
   },
   "modules": [
     "withDescriptions",
