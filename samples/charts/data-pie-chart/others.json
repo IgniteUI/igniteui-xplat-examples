@@ -25,7 +25,7 @@
           "label": "Others Threshold: ",
           "valueType": "Slider",
           "min": 0,
-          "max": 35,
+          "max": 50,
           "primitiveValue": 15
         },
         {
@@ -46,7 +46,7 @@
   },
   "refs": {
     "LocalData": [
-      { "V1": 50, "Category": "Maintenance" },
+      { "V1": 100, "Category": "Maintenance" },
       { "V1": 40, "Category": "Cooling" },
       { "V1": 20, "Category": "Residential"},
       { "V1": 15, "Category": "Utilities"},
