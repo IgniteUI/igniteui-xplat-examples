@@ -39,22 +39,10 @@
     "content": {
       "type": "DataPieChart",
       "name": "chart",
-      "dataSourceRef": "LocalData",
+      "dataSourceRef": "DataPieData",
       "othersCategoryType": "Number",
       "othersCategoryThreshold": 15
     }
-  },
-  "refs": {
-    "LocalData": [
-      { "V1": 100, "Category": "Maintenance" },
-      { "V1": 40, "Category": "Cooling" },
-      { "V1": 20, "Category": "Residential"},
-      { "V1": 15, "Category": "Utilities"},
-      { "V1": 10, "Category": "Heating"},
-      { "V1": 5, "Category": "Lighting"},
-      { "V1": 4, "Category": "Electric"},
-      { "V1": 3, "Category": "Misc"}
-    ]
   },
   "modules": [
     "withDescriptions",
