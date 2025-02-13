@@ -5,7 +5,7 @@ public webGridExportingToggle = () => {
   toolbars.forEach((toolbar) => {
     const exporting = toolbar.querySelector(
       "igc-grid-toolbar-exporter"
-    );
+    ) as HTMLElement;
 
     if (exporting) {
       exporting.style.display = exporting.style.display === "none" ? "" : "none";

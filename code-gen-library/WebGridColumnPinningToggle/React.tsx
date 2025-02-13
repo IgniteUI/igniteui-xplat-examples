@@ -5,7 +5,7 @@ public webGridColumnPinningToggle = () => {
   toolbars.forEach((toolbar) => {
     const pinning = toolbar.querySelector(
       "igc-grid-toolbar-pinning"
-    );
+    ) as HTMLElement;
 
     if (pinning) {
        pinning.style.display = pinning.style.display === "none" ? "" : "none";
