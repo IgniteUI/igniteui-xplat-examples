@@ -3,7 +3,7 @@ using IgniteUI.Blazor.Controls;
 //begin imports
 //end imports
 
-public class webGridAdvancedFilteringToggle
+public class WebGridAdvancedFilteringToggle
 {
     //begin eventHandler
     public async void WebGridAdvancedFilteringToggle(IgbPropertyEditorPropertyDescriptionButtonClickEventArgs args)

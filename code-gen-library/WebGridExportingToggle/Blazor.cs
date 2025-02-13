@@ -3,10 +3,10 @@ using IgniteUI.Blazor.Controls;
 //begin imports
 //end imports
 
-public class webGridExportingToggle
+public class WebGridExportingToggle
 {
     //begin eventHandler
-    public async void webGridExportingToggle(IgbPropertyEditorPropertyDescriptionButtonClickEventArgs args)
+    public async void WebGridExportingToggle(IgbPropertyEditorPropertyDescriptionButtonClickEventArgs args)
 {
     var script = @"
     let toolbars = document.querySelectorAll('.igx-grid-toolbar');

@@ -3,10 +3,10 @@ using IgniteUI.Blazor.Controls;
 //begin imports
 //end imports
 
-public class webGridColumnPinningToggle
+public class WebGridColumnPinningToggle
 {
     //begin eventHandler
-    public async void webGridColumnPinningToggle(IgbPropertyEditorPropertyDescriptionButtonClickEventArgs args)
+    public async void WebGridColumnPinningToggle(IgbPropertyEditorPropertyDescriptionButtonClickEventArgs args)
 {
     var script = @"
     let toolbars = document.querySelectorAll('.igx-grid-toolbar');
