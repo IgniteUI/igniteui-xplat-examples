@@ -7,7 +7,7 @@ public webGridColumnHidingToggle = () => {
     );
 
     if (hiding) {
-      hiding.style.display === "none" ? "" : "none";
+      hiding.style.display = hiding.style.display === "none" ? "" : "none";
     }
 
   });

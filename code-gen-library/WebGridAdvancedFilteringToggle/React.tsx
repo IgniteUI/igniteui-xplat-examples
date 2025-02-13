@@ -8,7 +8,7 @@ public webGridAdvancedFilteringToggle = () => {
     );
 
     if (advancedFiltering) {
-        advancedFiltering.style.display === "none" ? "" : "none";
+        advancedFiltering.style.display = advancedFiltering.style.display === "none" ? "" : "none";
     }
 
   });

@@ -8,7 +8,7 @@ public webGridExportingToggle = () => {
     );
 
     if (exporting) {
-      exporting.style.display === "none" ? "" : "none";
+      exporting.style.display = exporting.style.display === "none" ? "" : "none";
     }
 
   });

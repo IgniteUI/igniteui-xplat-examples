@@ -8,7 +8,7 @@ public webGridColumnPinningToggle = () => {
     );
 
     if (pinning) {
-      pinning.style.display === "none" ? "" : "none";
+       pinning.style.display = pinning.style.display === "none" ? "" : "none";
     }
 
   });
