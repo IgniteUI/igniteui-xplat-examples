@@ -1,7 +1,7 @@
 using IgniteUI.Blazor.Controls;
-@inject IJSRuntime IJS
 
 //begin imports
+@inject IJSRuntime IJS
 //end imports
 
 public class WebGridColumnHidingToggle
