@@ -1,12 +1,13 @@
 using IgniteUI.Blazor.Controls;
+@inject IJSRuntime IJS
 
 //begin imports
 //end imports
 
-public class webGridColumnHidingToggle
+public class WebGridColumnHidingToggle
 {
     //begin eventHandler
-    public async void webGridColumnHidingToggle(IgbPropertyEditorPropertyDescriptionButtonClickEventArgs args)
+    public async void WebGridColumnHidingToggle(IgbPropertyEditorPropertyDescriptionButtonClickEventArgs args)
 {
     var script = @"
     let toolbars = document.querySelectorAll('.igx-grid-toolbar');
