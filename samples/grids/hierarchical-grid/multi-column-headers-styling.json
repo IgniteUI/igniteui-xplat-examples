@@ -9,7 +9,7 @@
       "autoGenerate": false,
       "name": "hierarchicalGrid",
       "id": "hierarchicalGrid",
-      "primaryKey": "ID",
+      "primaryKey": "CustomerID",
       "moving": true,
       "allowFiltering": true,
       "columnList": [
