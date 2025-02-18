@@ -37,6 +37,9 @@ public class ToolbarCustomIconOnViewInit
 		SvgIconRegistry.Instance.AddSvgPathString("CustomCollection", "CustomIcon", Icon);
 		var toolbar = CodeGenHelper.GetDescription<XamToolbar>("aboveContentLeft");
 		toolbar.RegisterIconFromText("CustomCollection", "CustomIcon", Icon);
+
+		toolbar.RegisterIconFromDataURL("CustomCollection2", "CustomIcon2", "https://www.svgrepo.com/show/678/calculator.svg");
+
 	}
     //end eventHandler
 }
