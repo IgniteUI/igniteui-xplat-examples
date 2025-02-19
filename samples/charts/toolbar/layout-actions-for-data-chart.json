@@ -5,20 +5,47 @@
       "name": "toolbar",
       "targetRef": "chart",
       "orientation": "Horizontal",
-      "onCommandRef": "ToolbarToggleTooltip",
+      "onCommandRef": "ToolbarToggleAnnotations",
       "actions": [
         {
-          "name": "EnableTooltipsLabel",
-          "type": "ToolActionCheckbox",
-          "title": "Enable Tooltips",
-          "beforeId": "ZoomReset",
-          "commandId": "EnableTooltips"
-        },
-        {
-          "name": "zoomResetHidden",
-          "type": "ToolActionLabel",
-          "overlayId": "ZoomReset",
-          "visibility": "Collapsed"
+          "name": "MenuForSubPanelTool",
+          "type": "ToolActionIconMenu",
+          "iconCollectionName": "ChartToolbarIcons",
+          "iconName": "analyze",
+          "actions": [
+            {
+              "name": "SubPanelGroup",
+              "type": "ToolActionGroupHeader",
+              "closeOnExecute": true,
+              "title": "Visualizations",
+              "subtitle": "Layers"
+            },
+            {
+              "name": "CustomSubPanelTools",
+              "type": "ToolActionSubPanel",
+              "actions": [
+                {
+                  "name": "EnableTooltipsLabel",
+                  "type": "ToolActionCheckbox",
+                  "title": "Enable Tooltips",
+                  "commandId": "EnableTooltips"
+                },
+                {
+                  "name": "EnableCrosshairsLabel",
+                  "type": "ToolActionCheckbox",
+                  "title": "Enable Crosshairs",
+                  "commandId": "EnableCrosshairs"
+                },
+                {
+                  "name": "EnableFinalValuesLabel",
+                  "type": "ToolActionCheckbox",
+                  "title": "Enable Final Values",
+                  "commandId": "EnableFinalValues"
+                }
+              ]
+
+            }
+          ]
         },
         {
           "name": "zoomResetLabel",
@@ -27,12 +54,25 @@
           "afterId": "ZoomOut",
           "iconName": "reset",
           "iconCollectionName": "ChartToolbarIcons",
-          "commandId": "ZoomReset"
+          "commandId": "ZoomReset",
+          "isHighlighted": true
+        },
+        {
+          "name": "zoomResetHidden",
+          "type": "ToolActionLabel",
+          "overlayId": "ZoomReset",
+          "visibility": "Collapsed"
         },
         {
           "name": "AnalyzeMenu",
           "type": "ToolActionIconMenu",
           "overlayId": "AnalyzeMenu",
+          "visibility": "Collapsed"
+        },
+        {
+          "name": "CopyMenu",
+          "type": "ToolActionLabel",
+          "overlayId": "CopyMenu",
           "visibility": "Collapsed"
         }
       ]
