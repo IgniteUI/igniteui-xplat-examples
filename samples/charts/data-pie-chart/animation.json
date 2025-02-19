@@ -15,12 +15,14 @@
         {
           "type": "PropertyEditorPropertyDescription",
           "propertyPath": "TransitionInMode",
+          "name": "TransitionInModeEditor",
           "label": "Transition In Animation: ",
           "primitiveValue": "Auto"
         },
         {
           "type": "PropertyEditorPropertyDescription",
           "propertyPath": "TransitionInSpeedType",
+          "name": "TransitionInSpeedTypeEditor",
           "label": "Transition In Speed Type: ",
           "primitiveValue": "Random"
         }

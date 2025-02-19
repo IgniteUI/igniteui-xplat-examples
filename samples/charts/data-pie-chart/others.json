@@ -15,6 +15,7 @@
         {
           "type": "PropertyEditorPropertyDescription",
           "propertyPath": "OthersCategoryType",
+          "name": "OthersCategoryTypeEditor",
           "label": "Others Type: ",
           "primitiveValue": "Number",
           "valueType": "EnumValue"
@@ -22,6 +23,7 @@
         {
           "type": "PropertyEditorPropertyDescription",
           "propertyPath": "OthersCategoryThreshold",
+          "name": "OthersCategoryThresholdEditor",
           "label": "Others Threshold: ",
           "valueType": "Slider",
           "min": 0,
@@ -31,6 +33,7 @@
         {
           "type": "PropertyEditorPropertyDescription",
           "propertyPath": "OthersCategoryText",
+          "name": "OthersCategoryTextEditor",
           "label": "Others Text: ",
           "valueType": "StringValue"
         }
