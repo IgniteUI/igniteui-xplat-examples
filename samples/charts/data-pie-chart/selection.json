@@ -16,8 +16,8 @@
           "type": "PropertyEditorPropertyDescription",
           "label": "Selection Behavior: ",
           "valueType": "EnumValue",
-          "propertyPath": "SelectionBehavior",
-          "name": "SelectionBehavior",
+          "propertyPath": "SelectionBehavior",   
+          "name": "SelectionBehaviorEditor",
           "shouldOverrideDefaultEditor": true,
           "dropDownNames": ["PerDataItemSingleSelect", "PerDataItemMultiSelect"],
           "dropDownValues": ["PerDataItemSingleSelect", "PerDataItemMultiSelect"],
@@ -26,6 +26,7 @@
         {
           "type": "PropertyEditorPropertyDescription",
           "propertyPath": "SelectionMode",
+          "name": "SelectionModeEditor",
           "label": "Selection Mode: ",
           "primitiveValue": "Brighten"
         }

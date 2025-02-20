@@ -15,12 +15,14 @@
         {
           "type": "PropertyEditorPropertyDescription",
           "propertyPath": "HighlightingMode",
+          "name": "HighlightingModeEditor",
           "label": "Highlighting Mode: ",
           "primitiveValue": "BrightenSpecific"
         },
         {
           "type": "PropertyEditorPropertyDescription",
           "propertyPath": "HighlightingBehavior",
+          "name": "HighlightingBehaviorEditor",
           "label": "Highlighting Behavior: ",
           "primitiveValue": "DirectlyOver"
         }
