@@ -28,7 +28,7 @@
       "primaryKey": "ID",
       "foreignKey": "ParentID",
       "autoGenerate": false,
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
           "field": "ID"

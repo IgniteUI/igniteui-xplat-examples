@@ -11,7 +11,7 @@
       "dataRef": "NwindData",
       "autoGenerate": false,
       "allowFiltering":true,
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
           "name": "ProductID",

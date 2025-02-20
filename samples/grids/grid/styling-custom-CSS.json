@@ -12,7 +12,7 @@
       "cellSelection": "Multiple",
       "columnSelection": "Multiple",
       "autoGenerate": false,
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
           "name": "Category",

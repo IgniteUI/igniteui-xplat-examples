@@ -10,7 +10,7 @@
       "id": "hierarchicalGrid",
       "primaryKey": "ID",
       "rowEditable": true,
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
           "field": "Artist",
@@ -50,7 +50,7 @@
           "autoGenerate": false,
           "primaryKey": "Album",
           "rowEditable": true,
-          "columns": [
+          "columnList": [
             {
               "type": "WebColumn",
               "field": "Album",
@@ -83,7 +83,7 @@
               "autoGenerate": false,
               "primaryKey": "Number",
               "rowEditable": true,
-              "columns": [
+              "columnList": [
                 {
                   "type": "WebColumn",
                   "field": "Number",
@@ -118,7 +118,7 @@
           "autoGenerate": false,
           "primaryKey": "Tour",
           "rowEditable": true,
-          "columns": [
+          "columnList": [
             {
               "type": "WebColumn",
               "field": "Tour",

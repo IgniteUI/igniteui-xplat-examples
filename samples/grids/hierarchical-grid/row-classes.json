@@ -7,7 +7,7 @@
         "autoGenerate": false,
         "primaryKey": "ID",
         "rowClassesRef": "WebGridRowClassesHandler",
-        "columns": [
+        "columnList": [
           {
             "type": "WebColumn",
             "field": "Artist",
@@ -53,7 +53,7 @@
             "childDataKey": "Albums",
             "autoGenerate": false,
             "rowClassesRef": "WebGridRowClassesHandler",
-            "columns": [
+            "columnList": [
               {
                 "type": "WebColumn",
                 "field": "Album",
@@ -89,7 +89,7 @@
                 "childDataKey": "Songs",
                 "autoGenerate": false,
                 "rowClassesRef": "WebGridRowClassesHandler",
-                "columns": [
+                "columnList": [
                   {
                     "type": "WebColumn",
                     "field": "Number",
@@ -127,7 +127,7 @@
             "childDataKey": "Tours",
             "autoGenerate": false,
             "rowClassesRef": "WebGridRowClassesHandler",
-            "columns": [
+            "columnList": [
               {
                 "type": "WebColumn",
                 "field": "Tour",

@@ -20,7 +20,7 @@
           "totalRecords": 20
         }
       ],
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
           "field": "Name",

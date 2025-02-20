@@ -2,6 +2,7 @@
   "strings": {
     "legendTitle": "Average Temperature in Sydney"
   },
+  "hasAnimations": false,
   "descriptions": {
     "editor": {
       "type": "PropertyEditorPanel",
@@ -40,7 +41,8 @@
       "highlightingBehavior": "NearestItemsAndSeries",
       "yAxisMaximumValue": 35,
       "yAxisLabelLocation": "OutsideRight",
-      "toolTipType": "None"
+      "toolTipType": "None",
+      "isTransitionInEnabled": false
     }
   },
   "modules": [

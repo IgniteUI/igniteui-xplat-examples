@@ -10,7 +10,7 @@
       "dataRef": "EmployeesNestedData",
       "childDataKey": "Employees",
       "autoGenerate": false,
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
           "field": "Name",

@@ -27,8 +27,12 @@
         },
         {
           "type": "PropertyEditorPropertyDescription",
-          "propertyPath": "DisplayDensity",
-          "name": "DisplayDensityEditor"
+          "name": "SizeEditor",
+          "label": "Grid Size:",
+          "valueType": "EnumValue",
+          "dropDownNames": ["Small", "Medium", "Large"],
+          "dropDownValues": ["Small", "Medium", "Large"],
+          "changedRef": "WebHierarchicalGridSetGridSize"
         }
       ]
     },
@@ -39,7 +43,7 @@
       "name": "hierarchicalGrid",
       "id": "hierarchicalGrid",
       "primaryKey": "ID",
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
           "field": "Artist",
@@ -81,7 +85,7 @@
           "type": "WebRowIsland",
           "childDataKey": "Albums",
           "autoGenerate": false,
-          "columns": [
+          "columnList": [
             {
               "type": "WebColumn",
               "field": "Album",
@@ -117,7 +121,7 @@
               "type": "WebRowIsland",
               "childDataKey": "Songs",
               "autoGenerate": false,
-              "columns": [
+              "columnList": [
                 {
                   "type": "WebColumn",
                   "field": "Number",

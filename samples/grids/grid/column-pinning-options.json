@@ -6,7 +6,7 @@
       "dataRef": "CustomersData",
       "autoGenerate": false,
       "name": "grid",
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
           "field": "ID",

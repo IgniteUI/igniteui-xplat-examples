@@ -18,9 +18,8 @@ public webHierarchicalGridColumnGroupHeaderTemplate = (e: { dataContext: IgrColu
 //end content
 //begin supportingMethods
 public columnGroupStates = new Map<IgrColumn, boolean>();
-public toggleColumnGroup(column: IgrColumn) {
-    const columnGroup = CodeGenHelper.getDescription<IgrHierarchicalGrid>("content").contentColumns.find((col) => col.name == column.name) as IgrColumnGroup;
-    const columns = Array.from(columnGroup.actualChildren);
+public toggleColumnGroup(columnGroup: IgrColumn) {
+    const columns = columnGroup.childColumns;
     if (columnGroup.header === 'General Information') {
         const column = columns[1] as IgrColumn;
         column.hidden = !column.hidden;
@@ -28,7 +27,7 @@ public toggleColumnGroup(column: IgrColumn) {
         for (const column of columns) {
             const col = column as IgrColumn;
             if (col.header === "Location"){
-                for (const cl of col.columnChildren) {
+                for (const cl of col.childColumns) {
                     const c = cl as IgrColumn;
                     if (c.field !== "Address"){
                         c.hidden = !c.hidden;
@@ -36,7 +35,7 @@ public toggleColumnGroup(column: IgrColumn) {
                 }
             }
             else if (col.header === "Contact Information"){
-                const c = col.columnChildren[1] as IgrColumn;
+                const c = col.childColumns[1] as IgrColumn;
                 c.hidden = !c.hidden;
             }
         }
@@ -47,7 +46,7 @@ public toggleColumnGroup(column: IgrColumn) {
         }
     }
     columnGroup.forceUpdate();
-    this.columnGroupStates.set(column, !this.columnGroupStates.get(column));
+    this.columnGroupStates.set(columnGroup, !this.columnGroupStates.get(columnGroup));
 }
 //end supportingMethods
 //end template

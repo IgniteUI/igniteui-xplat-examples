@@ -28,7 +28,7 @@
             "primaryKey": "ID",
             "allowFiltering": true,
             "columnSelection": "Single",
-            "columns": [
+            "columnList": [
                 {
                     "type": "WebColumn",
                     "field": "Artist",
@@ -65,7 +65,7 @@
                     "childDataKey": "Albums",
                     "autoGenerate": false,
                     "columnSelection": "Single",
-                    "columns": [
+                    "columnList": [
                         {
                             "type": "WebColumn",
                             "field": "Album",
@@ -95,7 +95,7 @@
                             "childDataKey": "Songs",
                             "autoGenerate": false,
                             "columnSelection": "Single",
-                            "columns": [
+                            "columnList": [
                                 {
                                     "type": "WebColumn",
                                     "field": "Number",
@@ -127,7 +127,7 @@
                     "childDataKey": "Tours",
                     "autoGenerate": false,
                     "columnSelection": "Single",
-                    "columns": [
+                    "columnList": [
                         {
                             "type": "WebColumn",
                             "field": "Tour",

@@ -14,7 +14,7 @@
       "moving": true,
       "autoGenerate": false,
       "filterMode": "QuickFilter",
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
           "name": "ProductName",

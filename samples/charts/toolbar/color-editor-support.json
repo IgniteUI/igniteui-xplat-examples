@@ -1,0 +1,64 @@
+{
+  "export": true,
+  "descriptions": {
+    "aboveContentLeft": {
+      "type": "Toolbar",
+      "name": "toolbar",
+      "targetRef": "chart",
+      "onCommandRef": "ColorEditorToggleSeriesBrush",
+      "actions": [
+        {
+          "type": "ToolActionColorEditor",
+          "title": "Series Brush",
+          "name": "colorEditorTool",
+          "commandId": "ToggleSeriesBrush"
+        }
+      ]
+    },
+    "content": {
+      "type": "DataChart",
+      "isHorizontalZoomEnabled": true,
+      "name": "chart",
+      "axes": [
+        {
+          "type": "CategoryXAxis",
+          "name": "xAxis",
+          "dataSourceRef": "CountryRenewableElectricity",
+          "label": "Year"
+        },
+        {
+          "type": "NumericYAxis",
+          "name": "yAxis",
+          "title": "TWh",
+          "labelLocation": "OutsideRight"
+        }
+      ],
+      "series": [
+        {
+          "type": "LineSeries",
+          "name": "lineSeries1",
+          "title": "Electricity",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "dataSourceRef": "CountryRenewableElectricity",
+          "valueMemberPath": "America",
+          "markerType": "None"
+        }
+      ]
+    }
+  },
+  "modules": [
+    "layouts/ToolbarModule",
+    "layouts/ToolActionComboModule",
+    "layouts/ToolActionColorEditorModule",
+    "charts/DataChartToolbarModule",
+    "charts/DataLegendModule",
+    "charts/NumberAbbreviatorModule",
+    "charts/DataChartCategoryModule",
+    "charts/DataChartCoreModule",
+    "charts/DataChartCategoryModule",
+    "charts/DataChartAnnotationModule",
+    "charts/DataChartInteractivityModule",
+    "charts/DataChartAnnotationModule"
+  ]
+}

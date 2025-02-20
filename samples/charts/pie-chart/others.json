@@ -22,7 +22,7 @@
       "radiusFactor": 0.7,
       "legendLabelMemberPath": "Category",
       "dataSourceRef": "EnergyGlobalDemand",
-      "legendRef": "Legend"
+      "legendRef": "legend"
     }
   },
   "modules": [

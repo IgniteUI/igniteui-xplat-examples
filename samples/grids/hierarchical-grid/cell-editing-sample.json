@@ -7,7 +7,7 @@
         "autoGenerate": false,
         "primaryKey": "Name",
         "name": "hierarchicalGrid1",
-        "columns": [
+        "columnList": [
           {
             "type": "WebColumn",
             "field": "Name",
@@ -44,7 +44,7 @@
             "inlineEditorTemplateRef": "HGridCellEditCellTemplate",
             "editable": true,
             "dataType": "String"
-  
+
           }
         ],
         "childLayoutList": [
@@ -52,7 +52,7 @@
             "type": "WebRowIsland",
             "childDataKey": "Skills",
             "autoGenerate": false,
-            "columns": [
+            "columnList": [
               {
                 "type": "WebColumn",
                 "field": "Skill",
@@ -69,9 +69,9 @@
                 "editable": true,
                 "resizable": true
               }
-          ]
-        }
-      ]
+            ]
+          }
+        ]
       }
     },
     "modules": [

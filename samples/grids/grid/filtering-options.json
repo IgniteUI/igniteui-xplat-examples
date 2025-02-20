@@ -10,7 +10,7 @@
       "autoGenerate": false,
       "allowFiltering": true,
       "filterMode": "QuickFilter",
-      "columns": [{
+      "columnList": [{
         "type": "WebColumn",
         "name": "ProductName",
         "field": "ProductName",

@@ -16,7 +16,7 @@
                     "totalRecords": 20
                 }
             ],
-            "columns": [
+            "columnList": [
                 {
                     "type": "WebColumn",
                     "name": "ID",

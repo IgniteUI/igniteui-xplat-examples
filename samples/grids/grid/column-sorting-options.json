@@ -44,7 +44,7 @@
           "ignoreCase": true
         }
       ],
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
           "field": "OrderID",

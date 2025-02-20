@@ -16,7 +16,7 @@
       "pagingMode": "Remote",
       "rowEditable":true,
       "autoGenerate": false,
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
           "name": "ProductName",

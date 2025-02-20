@@ -21,7 +21,7 @@
       "cellEditRef": "WebGridCellEdit",
       "cellEditDoneRef": "WebGridCellEditDone",
       "cellEditExitRef": "WebGridCellEditExit",
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
           "field": "Name",

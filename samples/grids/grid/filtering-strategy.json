@@ -14,7 +14,7 @@
             "id": "grid",
             "allowFiltering": true,
             "filterMode": "ExcelStyleFilter",
-            "columns": [
+            "columnList": [
                 {
                     "type": "WebColumn",
                     "field": "ProductName",

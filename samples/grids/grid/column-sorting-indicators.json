@@ -47,7 +47,7 @@
         }
       ],
       "id": "grid",
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
           "field": "Settlement",

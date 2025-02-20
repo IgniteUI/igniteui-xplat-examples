@@ -17,7 +17,7 @@
       },
       "cellSelection": "None",
       "primaryKey": "ID",
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
           "field": "Company",

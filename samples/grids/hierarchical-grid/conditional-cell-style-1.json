@@ -6,7 +6,7 @@
       "dataRef": "SingersData",
       "autoGenerate": false,
       "primaryKey": "ID",
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
           "field": "Artist",
@@ -52,7 +52,7 @@
           "type": "WebRowIsland",
           "childDataKey": "Albums",
           "autoGenerate": false,
-          "columns": [
+          "columnList": [
             {
               "type": "WebColumn",
               "field": "Album",
@@ -87,7 +87,7 @@
               "type": "WebRowIsland",
               "childDataKey": "Songs",
               "autoGenerate": false,
-              "columns": [
+              "columnList": [
                 {
                   "type": "WebColumn",
                   "field": "Number",
@@ -124,7 +124,7 @@
           "type": "WebRowIsland",
           "childDataKey": "Tours",
           "autoGenerate": false,
-          "columns": [
+          "columnList": [
             {
               "type": "WebColumn",
               "field": "Tour",

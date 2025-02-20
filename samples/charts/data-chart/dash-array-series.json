@@ -14,7 +14,7 @@
       "type": "DataChart",
       "name": "chart",
       "computedPlotAreaMarginMode": "Series",
-      "legendRef": "Legend",
+      "legendRef": "legend",
       "axes": [
         {
           "type": "CategoryXAxis",

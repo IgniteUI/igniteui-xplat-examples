@@ -1,83 +1,77 @@
 {  
-  "strings": {
-    "legendTitle": "Total Population of Selected Countries"
-  },
   "descriptions": {
-    "legend": {
-      "type": "Legend",
-      "name": "legend",
-      "orientation": "Horizontal"
-    },
     "content": {
       "type": "DataChart",
       "name": "chart",
-      "legendRef": "Legend",
+      "chartTitle": "Population vs. Public Debt vs. GDP",
+      "titleTopMargin": 10,
+      "titleBottomMargin": 0,
       "axes": [
         {
           "type": "NumericXAxis",
           "name": "xAxis",
           "title": "Population",
+          "minimumValue": 100,
+          "maximumValue": 10000000000,
           "isLogarithmic": true,
           "abbreviateLargeNumbers": true
         },
         {
           "type": "NumericYAxis",
           "name": "yAxis",
-          "title": "GDP per Capita",
+          "title": "Public Debt per GDP (%)",
+          "titleLeftMargin": 10,
           "isLogarithmic": true,
-          "abbreviateLargeNumbers": true
+          "abbreviateLargeNumbers": true,
+          "maximumValue": 1000
         }
       ],
       "series": [
         {
           "type": "BubbleSeries",
           "name": "bubbleSeries1",
-          "title": "African Countries",
+          "title": "Country",
           "xAxisRef": "xAxis",
           "yAxisRef": "yAxis",
           "xMemberPath": "Population",
-          "yMemberPath": "GDP",
-          "radiusMemberPath": "Population",
-          "dataSourceRef": "CountryStatsAfrica",
+          "yMemberPath": "PublicDebt",
+          "radiusMemberPath": "GdpPerPerson",
+          "yMemberAsLegendUnit": "%",
+          "yMemberAsLegendLabel": "Debt",
+          "xMemberAsLegendLabel": "Population",
+          "radiusMemberAsLegendLabel": "GDP",
+          "dataSourceRef": "WorldStats",
           "markerType": "Circle",
-          "markerOutline": "rgb(62, 202, 62)",
-          "markerBrush": "rgb(69, 179, 224)",
+          "markerOutline": "rgb(0, 0, 0)",
+          "markerBrush": "rgb(67, 162, 250)",
           "markerFillOpacity": 0.5,
-          "markerThickness": 2,
+          "markerThickness": 1,
           "showDefaultTooltip": true,
           "radiusScale": {
             "type": "SizeScale",
             "isLogarithmic": false,
             "minimumValue": 10,
-            "maximumValue": 50
-          }
-        },
-        {
-          "type": "BubbleSeries",
-          "name": "bubbleSeries2",
-          "title": "European Countries",
-          "xAxisRef": "xAxis",
-          "yAxisRef": "yAxis",
-          "xMemberPath": "Population",
-          "yMemberPath": "GDP",
-          "radiusMemberPath": "Population",
-          "dataSourceRef": "CountryStatsEurope",
-          "markerType": "Circle",
-          "markerOutline": "rgb(171, 6, 221)",
-          "markerBrush": "rgb(135, 156, 235)",
-          "markerFillOpacity": 0.5,
-          "markerThickness": 2,
-          "showDefaultTooltip": true,
-          "radiusScale": {
-            "type": "SizeScale",
-            "isLogarithmic": false,
-            "minimumValue": 10,
-            "maximumValue": 50
+            "maximumValue": 80
           }
         },
         {
           "type": "DataToolTipLayer",
-          "name": "dataToolTipLayer"
+          "name": "dataToolTipLayer",
+          "valueRowMarginTop": 1,
+          "labelTextMarginTop": 1,
+          "titleTextMarginTop": 1,
+          "unitsTextMarginTop": 1,
+          "valueRowMarginBottom": 1,
+          "labelTextMarginBottom": 1,
+          "titleTextMarginBottom": 1,
+          "unitsTextMarginBottom": 1,
+          "unitsTextMarginRight": 5,
+          "valueTextMarginLeft": 10,
+          "labelTextMarginLeft": 1,
+          "layoutMode": "Vertical",
+          "badgeShape": "Hidden",
+          "includedColumns": ["X", "Y", "Radius"],
+          "headerRowVisible": false
         }
       ]
     }

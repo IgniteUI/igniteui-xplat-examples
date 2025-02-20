@@ -11,7 +11,7 @@
       "name": "chart",
       "isHorizontalZoomEnabled": true,
       "isVerticalZoomEnabled": true,
-      "legendRef": "Legend",
+      "legendRef": "legend",
       "axes": [
         {
           "type": "NumericXAxis",
