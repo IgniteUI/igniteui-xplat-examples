@@ -11,7 +11,7 @@ public class ColorEditorToggleSeriesBrush
     //begin eventHandler
     public void ColorEditorToggleSeriesBrush(IgbToolCommandEventArgs args)
     {
-        var target = this.chart;
+		var target = CodeGenHelper.GetDescription<IgbDataChart>("content");
         var color = args.Command.ArgumentsList[0].Value;
         switch (args.Command.CommandId)
         {

@@ -11,7 +11,7 @@ public class EditorButtonReplayTransitionInDomain
     //begin eventHandler
     public void EditorButtonReplayTransitionInDomain(IgbPropertyEditorPropertyDescriptionButtonClickEventArgs args)
     {
-        var chart = CodeGenHelper.GetDescription<XamDomainChart>("content");
+        var chart = CodeGenHelper.GetDescription<IgbDomainChart>("content");
         chart.ReplayTransitionIn();
         
     }
