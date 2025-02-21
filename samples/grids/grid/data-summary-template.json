@@ -1,6 +1,7 @@
 {
   "export": true,
   "skipAlterDataCasing": true,
+  "hasAnimations": true,
   "descriptions": {
     "editor": {
       "type": "PropertyEditorPanel",

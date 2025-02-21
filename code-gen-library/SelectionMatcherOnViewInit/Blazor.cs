@@ -1,6 +1,8 @@
 //begin imports
 using IgniteUI.Blazor.Controls;
 using System;
+using System.Collections.Generic;
+using System.Collections;
 //end imports
 
 import { CodeGenHelper } from 'igniteui-webcomponents-core';
@@ -11,7 +13,7 @@ public class SelectionMatcherOnViewInit
 	
 	private System.Threading.Timer _timer;
 
-    private void SelectionMatcherOnViewInit()
+    public void SelectionMatcherOnViewInit()
 	{
 		_timer = new System.Threading.Timer((_) =>
 		{
@@ -23,9 +25,9 @@ public class SelectionMatcherOnViewInit
 	private void addSelection()
 	{
 		var chart = CodeGenHelper.GetDescription<IgbCategoryChart>("content");
-
+		var data = CodeGenHelper.FindByName<IList>("EnergyRenewableConsumption");    	
 		IgbChartSelection selection = new IgbChartSelection();
-		selection.Item = EnergyRenewableConsumption[1];
+		selection.Item = data[1];
 		IgbSeriesMatcher matcher = new IgbSeriesMatcher();
 		matcher.MemberPath = "Hydro";
 		matcher.MemberPathType = "ValueMemberPath";
@@ -33,9 +35,11 @@ public class SelectionMatcherOnViewInit
 
 		chart.SelectedSeriesItems.Add(selection);
 
+
 		IgbChartSelection selection2 = new IgbChartSelection();
 		selection2 = new IgbChartSelection();
-		selection2.Item = EnergyRenewableConsumption[2];
+		selection2.Item = data[2];
+
 		matcher = new IgbSeriesMatcher();
 		matcher.MemberPath = "Wind";
 		matcher.MemberPathType = "ValueMemberPath";

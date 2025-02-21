@@ -32,9 +32,9 @@
       "type": "DataPieChart",
       "name": "chart",
       "dataSourceRef": "EnergyGlobalDemand",
-      "transitionInMode": "Auto",
+      "transitionInMode": "FromZero",
       "transitionInDuration": 1000,
-      "transitionInSpeedType": "Random"
+      "transitionInSpeedType": "IndexScaled"
     }
   },
   "modules": [

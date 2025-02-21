@@ -17,6 +17,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
+using Infragistics.Controls.Charts;
+using System.Collections;
 //end imports
 
 import { CodeGenHelper } from 'igniteui-webcomponents-core';

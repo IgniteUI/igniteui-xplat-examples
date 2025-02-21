@@ -80,7 +80,7 @@ namespace Infragistics.Samples
                 var date = json.Value<string>("date");
                 var parts = date.Split('-'); // "2020-01-01"
                 var item = new MultipleStocksItem();
-                item.Date = new DateTime(int.Parse(parts[0]), int.Parse(parts[1]) + 1, int.Parse(parts[2]));
+                item.Date = new DateTime(int.Parse(parts[0]), int.Parse(parts[1]) + 1, int.Parse(parts[2]),12,0,0);
                 item.Open = json.Value<double>("open");
                 item.High = json.Value<double>("high");
                 item.Low = json.Value<double>("low");

@@ -14,7 +14,7 @@ export class SelectionMatcherOnViewInit
         
 		var chart = CodeGenHelper.getDescription<IgcCategoryChartComponent>("content");
 
-		this._timer = setInterval(() => {
+		this._timer = setTimeout(() => {
 			var data = CodeGenHelper.findByName<any[]>("energyRenewableConsumption");
 			let matcher: IgcSeriesMatcher = new IgcSeriesMatcher();
 
