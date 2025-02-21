@@ -14,13 +14,19 @@
       "properties": [
         {
           "type": "PropertyEditorPropertyDescription",
-          "propertyPath": "SelectionBehavior",
           "label": "Selection Behavior: ",
+          "valueType": "EnumValue",
+          "propertyPath": "SelectionBehavior",   
+          "name": "SelectionBehaviorEditor",
+          "shouldOverrideDefaultEditor": true,
+          "dropDownNames": ["PerDataItemSingleSelect", "PerDataItemMultiSelect"],
+          "dropDownValues": ["PerDataItemSingleSelect", "PerDataItemMultiSelect"],
           "primitiveValue": "PerDataItemSingleSelect"
         },
         {
           "type": "PropertyEditorPropertyDescription",
           "propertyPath": "SelectionMode",
+          "name": "SelectionModeEditor",
           "label": "Selection Mode: ",
           "primitiveValue": "Brighten"
         }

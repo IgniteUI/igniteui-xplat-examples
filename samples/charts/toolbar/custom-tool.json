@@ -22,6 +22,13 @@
           "iconName": "CustomIcon",
           "iconCollectionName": "CustomCollection",
           "name": "CustomIconName"
+        },
+        {
+          "type": "ToolActionLabel",
+          "title": "Custom Icon 2",
+          "iconName": "CustomIcon2",
+          "iconCollectionName": "CustomCollection2",
+          "name": "CustomIconName2"
         }
       ]
     },

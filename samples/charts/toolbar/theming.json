@@ -11,6 +11,7 @@
         {
           "type": "PropertyEditorPropertyDescription",
           "propertyPath": "BaseTheme",
+          "name": "BaseThemeEditor",
           "label": "Theme",
           "shouldOverrideDefaultEditor": true,
           "valueType": "EnumValue",

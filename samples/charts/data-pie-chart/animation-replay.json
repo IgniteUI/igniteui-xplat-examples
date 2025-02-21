@@ -14,17 +14,11 @@
       "properties": [
         {
           "type": "PropertyEditorPropertyDescription",
-          "propertyPath": "HighlightingMode",
-          "name": "HighlightingModeEditor",
-          "label": "Highlighting Mode: ",
-          "primitiveValue": "BrightenSpecific"
-        },
-        {
-          "type": "PropertyEditorPropertyDescription",
-          "propertyPath": "HighlightingBehavior",
-          "name": "HighlightingBehaviorEditor",
-          "label": "Highlighting Behavior: ",
-          "primitiveValue": "DirectlyOver"
+          "propertyPath": "ReplayTransitionIn",
+          "label": "Replay Animation",
+          "primitiveValue": "Replay Animation",
+          "valueType": "Button",
+          "buttonClickedRef": "EditorButtonReplayTransitionInDomain"
         }
       ]
     },
@@ -32,8 +26,10 @@
       "type": "DataPieChart",
       "name": "chart",
       "dataSourceRef": "EnergyGlobalDemand",
-      "highlightingBehavior": "DirectlyOver",
-      "highlightingMode": "BrightenSpecific"
+      "transitionInMode": "Auto",
+      "transitionInDuration": 1000,
+      "transitionInSpeedType": "Random",
+      "highlightingMode": "None"
     }
   },
   "modules": [

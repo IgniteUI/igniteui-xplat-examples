@@ -15,32 +15,36 @@
         {
           "type": "PropertyEditorPropertyDescription",
           "propertyPath": "OthersCategoryType",
+          "name": "OthersCategoryTypeEditor",
           "label": "Others Type: ",
-          "primitiveValue": "Number"
+          "primitiveValue": "Number",
+          "valueType": "EnumValue"
         },
         {
           "type": "PropertyEditorPropertyDescription",
           "propertyPath": "OthersCategoryThreshold",
+          "name": "OthersCategoryThresholdEditor",
           "label": "Others Threshold: ",
-          "shouldOverrideDefaultEditor": true,
           "valueType": "Slider",
           "min": 0,
-          "max": 40
+          "max": 50,
+          "primitiveValue": 15
         },
         {
           "type": "PropertyEditorPropertyDescription",
           "propertyPath": "OthersCategoryText",
-          "label": "Others Text: "
+          "name": "OthersCategoryTextEditor",
+          "label": "Others Text: ",
+          "valueType": "StringValue"
         }
       ]
     },
     "content": {
       "type": "DataPieChart",
       "name": "chart",
-      "dataSourceRef": "EnergyGlobalDemand",
-      "othersCategoryText": "Others",
+      "dataSourceRef": "DataPieData",
       "othersCategoryType": "Number",
-      "othersCategoryThreshold": 5
+      "othersCategoryThreshold": 15
     }
   },
   "modules": [
