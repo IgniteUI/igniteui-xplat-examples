@@ -26,7 +26,7 @@ public class SelectionMatcherOnViewInit
 	{
 		var chart = CodeGenHelper.GetDescription<IgbCategoryChart>("content");
 		//var data = (IList)chart.DataSource;	
-		var data = CodeGenHelper.FindByName<IList>("energyRenewableConsumption"); 
+		var data = CodeGenHelper.FindByName<IList>("EnergyRenewableConsumption"); 
 		IgbChartSelection selection = new IgbChartSelection();
 		selection.Item = data[1];
 		IgbSeriesMatcher matcher = new IgbSeriesMatcher();
