@@ -36,15 +36,14 @@ public class SelectionMatcherOnViewInit
 
 		chart.SelectedSeriesItems.Add(selection);
 
-
 		IgbChartSelection selection2 = new IgbChartSelection();
 		selection2 = new IgbChartSelection();
 		selection2.Item = data[2];
-
-		matcher = new IgbSeriesMatcher();
-		matcher.MemberPath = "Wind";
-		matcher.MemberPathType = "ValueMemberPath";
-		selection2.Matcher = matcher;
+		IgbSeriesMatcher matcher2 = new IgbSeriesMatcher();
+		matcher2 = new IgbSeriesMatcher();
+		matcher2.MemberPath = "Wind";
+		matcher2.MemberPathType = "ValueMemberPath";
+		selection2.Matcher = matcher2;
 
 		chart.SelectedSeriesItems.Add(selection2);
 	}

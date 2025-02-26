@@ -55,16 +55,17 @@ public class SelectionMatcherOnViewInit
 		selection.Matcher = matcher;
 				
 		chart.SelectedSeriesItems.Add(selection);
+
+		SeriesMatcher matcher2 = new SeriesMatcher();
+		ChartSelection selection2 = new ChartSelection();
+		selection2 = new ChartSelection();
+		selection2.Item = ((IList)chart.ItemsSource)[1];
+		matcher2.MemberPath = "Wind";
+		matcher2.MemberPathType = "ValueMemberPath";
 				
-		selection = new ChartSelection();
-		selection.Item = ((IList)chart.ItemsSource)[1];
-		matcher = new SeriesMatcher();
-		matcher.MemberPath = "Wind";
-		matcher.MemberPathType = "ValueMemberPath";
+		selection.Matcher = matcher2;
 				
-		selection.Matcher = matcher;
-				
-		chart.SelectedSeriesItems.Add(selection);
+		chart.SelectedSeriesItems.Add(selection2);
 	}
     //end eventHandler
 }
