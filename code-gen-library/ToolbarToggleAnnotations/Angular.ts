@@ -7,7 +7,7 @@ import { CodeGenHelper } from 'igniteui-webcomponents-core';
 
 export class ToolbarToggleAnnotations {
     //begin eventHandler
-    public ToolbarToggleAnnotations(sender: any, args: IgxToolCommandEventArgs): void {
+    public toolbarToggleAnnotations(sender: any, args: IgxToolCommandEventArgs): void {
         var target = CodeGenHelper.getDescription<IgxDataChartComponent>("content");
         switch (args.command.commandId)
 		{
