@@ -135,6 +135,100 @@ function sortJSON(cb) {
 exports.sortJSON = sortJSON;
 
 
+exports.groupJSON = function groupJSON(cb) {
+
+
+    let groupColumn = "Continent";
+    // let groupColumn = "Region";
+    // let groupColumn = "Economy";
+    let groups = {};
+
+    let jsonPath = CodeGenLib + "/PopulationBirthsByCountry/XPLAT.json";
+    // let jsonPath = "C:\\WORK\\_SAMPLES\\DATA\\births-and-deaths\\PopulationBirthsByCountries\\XPLAT.json";
+    let jsonFile = fs.readFileSync(jsonPath, "utf8");
+    let jsonData = JSON.parse(jsonFile);
+
+    let numericColumns = [];
+    var columns = Object.keys(jsonData[0]);
+    for (const c of columns) {
+        
+        if (c === "Year") continue;
+
+        let val = jsonData[0][c];
+        if (typeof(val) === "number" || val === null)
+            numericColumns.push(c);
+    }
+
+    // console.log("numericColumns");
+    // console.log(numericColumns);
+
+    let missing = [];
+    // for (let i = 0; i <= 153; i++) {
+    for (const item of jsonData) {
+
+        // let item = jsonData[i];
+        let groupInfo = item.Code + " " + item.Name;
+        let groupName = item[groupColumn];
+        if (groupName === undefined && !missing.includes(groupInfo)) {
+            // console.log("groupName undefined");
+            missing.push(groupInfo)
+            // console.log(item.Code + " " + item.Name);
+            // break;
+        }
+
+        if (groups[groupName] === undefined) {
+            groups[groupName] = {};
+            // for (let y = 1950; y <= 1952; y++) {
+            for (let y = 1950; y <= 2100; y++) {
+                groups[groupName][y] = {};
+                for (const c of numericColumns) {
+                    groups[groupName][y][c] = 0;
+                }
+            }
+        }
+
+        for (const c of numericColumns) {
+            if (item[c] !== null) {
+                groups[groupName][item.Year][c] = groups[groupName][item.Year][c] + item[c];
+            } 
+        }
+ 
+    }
+
+    var groupJson = [];
+    var groupNames = Object.keys(groups);
+    console.log("groupNames");
+    console.log(groupNames);
+    
+    for (const groupName of groupNames) {
+        let group = groups[groupName];
+        
+        var years = Object.keys(group);
+        for (const y of years) {
+            let item = {}; //group[y];
+            item.Year = utils.strToNumber(y);
+            item.Name = groupName;
+            for (const c of numericColumns) {
+                let val = group[y][c];
+                if (val === 0) 
+                    item[c] = null;
+                else
+                    item[c] = val; 
+            }
+            groupJson.push(item);
+        }
+    }
+    // console.log("groupJson");
+    // console.log(groupJson);
+
+    // console.log("groups");
+    // console.log(groups);
+    let outputPath = CodeGenLib + "/PopulationBirthsBy" + groupColumn + "/XPLAT.json"
+    // let outputPath = "C:\\WORK\\_SAMPLES\\DATA\\births-and-deaths\\Data_by_" + groupColumn + ".json"
+    saveJSON(outputPath, groupJson,  "compact");
+    cb();
+}
+
 exports.filterJSON = function filterJSON(cb) {
 
     let fileDir = "CountryStats";
@@ -626,6 +720,189 @@ function convertColumnTypes(cb) {
     cb();
 }
 exports.convertColumnTypes = convertColumnTypes;
+
+exports.convertDAB = function convertDAB(cb) {
+    let csvName = 'births-and-deaths';
+    let csvPath = 'C:\\WORK\\_SAMPLES\\DATA\\births-and-deaths\\';
+    csvData = fs.readFileSync(csvPath + 'births-and-deaths.csv', "utf8");
+
+    let jsonData = [];
+    let csvLines = csvData.split('\r\n');
+    let csvColumns = csvLines[0].split(',');
+
+    let worldFile = fs.readFileSync(CodeGenLib + "/WorldStats/XPLAT.json", "utf8");
+    let worldStats = JSON.parse(worldFile);
+    let worldLookup = {};
+    
+    for (const item of worldStats) {
+        worldLookup[item.Code] = item;
+    }
+
+    // console.log("csvColumns");
+    // console.log(csvColumns);
+    // console.log(csvPath + '.csv');
+
+    let jsonLookup = [];
+
+    var linesPasses = 0;
+    for (let i = 1; i < csvLines.length; i++) {
+    // for (let i = 600; i < 610; i++) {
+    // for (let i = 70; i < 80; i++) {
+        
+        const csvRow = csvLines[i].split(',');
+        if (csvRow === undefined || csvRow.length <= 1) {
+            continue;
+        }
+
+        let code = csvRow[1];
+        if (code === "" || code === null || code.includes("-")) continue;
+
+        if (jsonLookup[code] === undefined){
+            jsonLookup[code] = [];
+        } 
+        let jsonItem = {};
+
+        for (let c = 0; c < csvColumns.length; c++) {
+            const column = csvColumns[c];
+            if (column === "") continue;
+
+            let value = csvRow[c];
+            if (value === undefined) {
+                console.log("ERROR: undefined value at " + i + " row and col: " + column )
+                continue;
+            }
+            value = value.trim();
+
+            let num = utils.strToNumber(value);
+            // let num = utils.strToNumber(value);
+            if (typeof(num) === "number") {
+                num = Math.round(num);
+                jsonItem[column] = num;
+                // jsonItem[column] = num;
+            } else {
+                jsonItem[column] = value;
+                // jsonItem[column] = value;
+            }
+
+            // console.log("linesPass " + linesPasses + " " + column + " " + num + " " + typeof(num));
+            // console.log("linesPass " + linesPasses + " " + column + " " + num);
+
+            // if (num !== null) {
+            //     jsonItem[column] = num;
+            // } else {
+            //     jsonItem[column] = value;
+            // }
+        }
+
+        // if (jsonItem.Population > 1000) {
+        //     jsonItem["GdpPerPerson"] = Math.round(jsonItem["GdpTotal"] * 1000000 / jsonItem["Population"]);
+        jsonLookup[code].push(jsonItem);
+        // jsonData.push(jsonItem);
+        // }
+    }
+
+    var years = [2024, 2025];
+ 
+    var worldData = [];
+    var codeSkip = [];
+    var codes = Object.keys(jsonLookup);
+    for (const code of codes) {
+ 
+        let name = jsonLookup[code][0].Name;
+        
+        // console.log("code " + code + " name=" + name);
+        if (name === undefined || name === null) {
+            console.log("MISSING Name " + code);
+            continue;
+        }
+
+        for (const item of jsonLookup[code]) {
+            if (years.indexOf(item.Year) >= 0) {
+                item["DeathsRate"] = item["DeathsProjection"];
+                item["BirthsRate"] = item["BirthsProjection"];
+                item["DeathsProjection"] = null;
+                item["BirthsProjection"] = null;
+            }
+
+            if (item["BirthsRate"] !== null) {
+                item["GrowthRate"] = item["BirthsRate"] - item["DeathsRate"];
+                item["GrowthProjection"] = null;
+            } 
+            if (item["BirthsProjection"] !== null && item["DeathsProjection"] !== null) {
+                item["GrowthProjection"] = item["BirthsProjection"] - item["DeathsProjection"];
+                // item["GrowthRate"] = null;
+            } 
+
+            if (code.indexOf('_') < 0) {
+
+                let info = worldLookup[code];
+                if (code === "BES" || code === "GLP" || code === "MTQ") {
+                    item.Continent = "North America";
+                    item.Region = "Central America";
+                    item.Economy = "Emerging";
+
+                } else if (code === "MYT") {
+                    item.Continent = "Asia";
+                    item.Region = "South Asia";
+                    item.Economy = "Emerging"; 
+
+                } else if (code === "TUV" || code === "TKL" || code === "REU") {
+                    item.Continent = "Oceania";
+                    item.Region = "Polynesia";
+                    item.Economy = "Emerging"; 
+
+                } else if (code === "GUF") {
+                    item.Continent = "South America";
+                    item.Region = "South America";
+                    item.Economy = "Emerging"; 
+
+                } else if (code === "GIB" || code === "VAT") {
+                    item.Continent = "Europe";
+                    item.Region = "Southern Europe";
+                    item.Economy = "Developed";
+
+
+                } else if (info === undefined) {
+                    // console.log("MISSING worldLookup " + code);
+                } else {
+                    item.Continent = worldLookup[code].Continent;
+                    item.Region = worldLookup[code].Region;
+                    item.Economy = worldLookup[code].Economy;
+
+                    
+                }
+
+                let worldItem = JSON.parse(JSON.stringify(item));
+                worldData.push(worldItem);
+            }
+
+            item.Name = undefined;
+            item.Code = undefined;
+        }
+
+        if (code.includes("_")) {
+            // let jsonPath = csvPath + "PopulationBirths" + name.split(' ').join('') +  '/XPLAT.json'; 
+            let jsonPath = CodeGenLib + "/PopulationBirths" + name.split(' ').join('') +  '/XPLAT.json'; 
+            saveJSON(jsonPath, jsonLookup[code],  "compact"); 
+        }
+        // let jsonPath = csvPath + code + "_" + name.split(' ').join('_') +  '.json'; 
+        // saveJSON(jsonPath, jsonLookup[code],  "compact"); 
+      
+    }
+
+     
+    let worldPath = CodeGenLib + "/PopulationBirthsByCountry" +  '/XPLAT.json'; 
+    saveJSON(worldPath, worldData,  "compact"); 
+      
+
+    
+
+    // let jsonPath = CodeGenLib + "/BirthsAndDeaths/XPLAT.json";
+    // let jsonPath = csvPath + '.json';
+    // saveJSON(jsonPath, jsonData,  "compact");
+    // saveJSON(jsonPath, jsonLookup,  "compact");
+    cb();
+}
 
 exports.convertWorldStats = function convertWorldStats(cb) {
 
