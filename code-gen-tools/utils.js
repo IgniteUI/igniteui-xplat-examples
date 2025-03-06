@@ -79,8 +79,8 @@ function strToNumber(str, precision, normalize) {
   // if (chars.split("-").length > 2) return str; // fax
   // if (chars.split(" ").length > 2) return str; // cell
 
-  if (chars.split("-").length > 2) return (randomInteger(2, 9) * 10000) + (randomInteger(100, 900)) // fax
-  if (chars.split(" ").length > 2) return (randomInteger(2, 9) * 10000) + (randomInteger(100, 900)) // cell
+  // if (chars.split("-").length > 2) return (randomInteger(2, 9) * 10000) + (randomInteger(100, 900)) // fax
+  // if (chars.split(" ").length > 2) return (randomInteger(2, 9) * 10000) + (randomInteger(100, 900)) // cell
 
   chars = strReplace(chars, '$', '');
   chars = strReplace(chars, '%', '');
