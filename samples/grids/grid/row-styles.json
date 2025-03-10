@@ -6,7 +6,7 @@
   "descriptions": {
     "content": {
       "type": "WebGrid",
-      "dataRef": "FinancialDataAll",
+      "dataRef": "FinancialDataService",
       "autoGenerate": false,
       "name": "grid",
       "id": "grid",
