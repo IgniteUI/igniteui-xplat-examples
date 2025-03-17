@@ -16,6 +16,7 @@ public webGridNumericColEditCellTemplate = (ctx: IgcCellTemplateContext) => {
             type="number"
             name="${cell.id.rowID}"
             style="width: 100%;"
+            id='mimi1'
             value="${cellValue}"
             @igcChange=${(e: any) => {
                 cell.editValue = e.detail;
