@@ -13,6 +13,7 @@ export class WebGridNumericColEditCellTemplate {
         return (
             <IgrInput 
                 type="number" 
+                id="mimi1"
                 name={cell.id.rowID} 
                 value={cell.editValue} 
                 inputOcurred={(s:any, e: any) => {
