@@ -1,11 +1,10 @@
 //begin imports
-import { IgcGridBaseDirective, IgcGridEditEventArgs } from 'igniteui-webcomponents-grids/grids';
 
 //end imports
 
 export class WebGridOnEditEnter {
     //begin eventHandler
-    public webGridOnEditEnter(args: IgcGridEditEventArgs): void {
+    public webGridOnEditEnter(args: any): void {
         const column = args.detail.column;
         if(column.field === 'ReorderLevel') {
             setTimeout(() => {
