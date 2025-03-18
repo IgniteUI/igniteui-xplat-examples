@@ -4,7 +4,7 @@
 
 export class WebGridOnEditEnter {
     //begin eventHandler
-    public webGridOnEditEnter(args: any): void {
+    public webGridOnEditEnter(args: any, misc: any): void {
         const column = args.detail.column;
         if(column.field === 'ReorderLevel') {
             setTimeout(() => {
