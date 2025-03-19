@@ -9,10 +9,14 @@ export class WebGridNumericColEditCellTemplate {
     public webGridNumericColEditCellTemplate = (e: { dataContext: IgrCellTemplateContext }) => {
 
         const cell = e.dataContext.cell;
+        const rowId = cell.id.rowID;
+        const columnId = cell.id.columnID;
+        const inputTemplateId = `edit-cell-${rowId}-${columnId}`;
 
         return (
             <IgrInput 
-                type="number" 
+                type="number"
+                id={inputTemplateId} 
                 name={cell.id.rowID} 
                 value={cell.editValue} 
                 inputOcurred={(s:any, e: any) => {

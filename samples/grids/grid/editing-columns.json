@@ -16,6 +16,7 @@
           "perPage": 10
         }
       ],
+      "cellEditEnterRef": "WebGridOnEditEnter",
       "columnList": [
         {
           "type": "WebColumn",
