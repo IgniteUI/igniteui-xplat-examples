@@ -1,5 +1,4 @@
 //begin imports
-import { IgcGridBaseDirective, IgcGridEditEventArgs } from 'igniteui-webcomponents-grids/grids';
 
 //end imports
 
@@ -12,8 +11,8 @@ export class WebGridOnEditEnter {
                 const rowId = args.detail.cellID.rowID;
                 const columnId = args.detail.cellID.columnID;
                 const inputTemplateId = `edit-cell-${rowId}-${columnId}`;
-                const x = document.getElementById(inputTemplateId);
-                x?.focus();
+                const element = document.getElementById(inputTemplateId);
+                element?.focus();
             });
         }
     }

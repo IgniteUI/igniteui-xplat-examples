@@ -13,8 +13,8 @@ export class WebGridOnEditEnter {
                 const rowId = e.detail.cellID.rowID;
                 const columnId = e.detail.cellID.columnID;
                 const inputTemplateId = `edit-cell-${rowId}-${columnId}`;
-                const x = document.getElementById(inputTemplateId);
-                x?.focus();
+                const element = document.getElementById(inputTemplateId);
+                element?.focus();
             });
         }
     }
