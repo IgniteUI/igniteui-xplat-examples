@@ -12,11 +12,11 @@ public class ToolbarToggleAnnotations
 	public void ToolbarToggleAnnotations(object sender, ToolCommandEventArgs e)
 	{
 		var target = (XamDataChart)((XamToolbar)sender).Target;
-		
-		switch (e.Command.CommandId)
+		bool enable = false;
+        switch (e.Command.CommandId)
 		{
 			case "EnableTooltips":
-				var enable = (bool)e.Command.ArgumentsList[0].Value;
+				enable = (bool)e.Command.ArgumentsList[0].Value;
 				if (enable)
 				{
 					target.Series.Add(new DataToolTipLayer());
@@ -38,7 +38,7 @@ public class ToolbarToggleAnnotations
 				}
 				break;
 			case "EnableCrosshairs":
-				var enable = (bool)e.Command.ArgumentsList[0].Value;
+				enable = (bool)e.Command.ArgumentsList[0].Value;
 				if (enable)
 				{
 					target.Series.Add(new CrosshairLayer());
@@ -60,7 +60,7 @@ public class ToolbarToggleAnnotations
 				}
 				break;
 			case "EnableFinalValues":
-				var enable = (bool)e.Command.ArgumentsList[0].Value;
+				enable = (bool)e.Command.ArgumentsList[0].Value;
 				if (enable)
 				{
 					target.Series.Add(new FinalValueLayer());
