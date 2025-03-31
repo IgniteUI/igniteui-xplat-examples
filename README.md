@@ -93,3 +93,5 @@ Above order of creating and merging pull requests is important to avoid stale sa
 - change the default branch to the **new volume branch** in github setting of the [xplat-examples](https://github.com/IgniteUI/igniteui-xplat-examples) repo
 
 - add branch protection rules for the **new volume branch** in github setting of the [xplat-examples](https://github.com/IgniteUI/igniteui-xplat-examples) repo
+
+- update existing pull requests to target the **new volume branch** in github setting of the [xplat-examples](https://github.com/IgniteUI/igniteui-xplat-examples) repo
