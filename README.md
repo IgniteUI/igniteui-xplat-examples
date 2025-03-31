@@ -3,7 +3,7 @@
     <img style="border-radius: 0.25rem" alt="ignite-ui" src="https://raw.githubusercontent.com/IgniteUI/igniteui-xplat-docs/vnext/doc/en/images/readme/ig-banner.png"/>
 </div>
 
-# Cross-Platform Examples for Ignite UI Components
+## Cross-Platform Examples for Ignite UI Components
 
 This repository provides source code for:
 - [cross-platform samples](./samples) of Ignite UI components for Angular, Blazor, React, WebComponents, and WPF platforms. Currently, we support the following components: [Category Chart](./samples/charts/category-chart), [Data Chart](./samples/charts/data-chart), [Financial Chart](./samples/charts/financial-chart), [Pie Chart](./samples/charts/pie-chart), [Radial Gauge](./samples/gauges/radial-gauge), [Data Grid](./samples/grids/grid), [Hierarchical Grid](./samples/grids/hierarchical-grid), [Pivot Grid](./samples/grids/pivot-grid), [Tree Grid](./samples/grids/tree-grid)
