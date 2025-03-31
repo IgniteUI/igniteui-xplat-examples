@@ -61,9 +61,14 @@ Above order of creating and merging pull requests is important to avoid stale sa
 
 - update the included branches in [build-pipeline.yml](https://infragistics.visualstudio.com/NetAdvantage/_git/code-exporter-app?path=/azure-pipelines/build-pipeline.yml)
 
+
 - move the old volume branch (e.g. 24.2) to excluded branches in [build-pipeline.yml](https://infragistics.visualstudio.com/NetAdvantage/_git/code-exporter-app?path=/azure-pipelines/build-pipeline.yml)
 
 - update the definition ID for WPF product in [build-pipeline.yml](https://infragistics.visualstudio.com/NetAdvantage/_git/code-exporter-app?path=/azure-pipelines/build-pipeline.yml&version=GB2024.2&line=46&lineEnd=47&lineStartColumn=1&lineEndColumn=1&lineStyle=plain&_a=contents)
+
+- update version of code-exporter-app (e.g. 25.1.0.1000) in [CodeExporter.App.csproj](https://infragistics.visualstudio.com/NetAdvantage/_git/code-exporter-app?path=/CodeExporter.App.csproj)
+
+- update version of WPF package references (e.g. 25.1.*) in [CodeExporter.App.csproj](https://infragistics.visualstudio.com/NetAdvantage/_git/code-exporter-app?path=/CodeExporter.App.csproj)
 
 - publish the new branch
 
