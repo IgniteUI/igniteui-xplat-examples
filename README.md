@@ -54,3 +54,42 @@ The [Editor-Templates](editor-templates) folder contains templates for convertin
 2. Create AND merge a pull request with updated packages in the [Editor-Templates](editor-templates) folder in this repository.
 
 Above order of creating and merging pull requests is important to avoid stale samples and prevent building issues in platform specifc sample browsers.
+
+## Creating Volume Branch in Code Exporter App Repo
+
+- create **new volume branch** (e.g. 2025.1) in [code exporter app](https://infragistics.visualstudio.com/NetAdvantage/_git/code-exporter-app) repo
+
+- update the included branches in [build-pipeline.yml](https://infragistics.visualstudio.com/NetAdvantage/_git/code-exporter-app?path=/azure-pipelines/build-pipeline.yml)
+
+- move the old volume branch (e.g. 24.2) to excluded branches in [build-pipeline.yml](https://infragistics.visualstudio.com/NetAdvantage/_git/code-exporter-app?path=/azure-pipelines/build-pipeline.yml)
+
+- update the definition ID for WPF product in [build-pipeline.yml](https://infragistics.visualstudio.com/NetAdvantage/_git/code-exporter-app?path=/azure-pipelines/build-pipeline.yml&version=GB2024.2&line=46&lineEnd=47&lineStartColumn=1&lineEndColumn=1&lineStyle=plain&_a=contents)
+
+- publish the new branch
+
+- wait for a successful build of code-exporter-app on this [website](https://infragistics.visualstudio.com/NetAdvantage/_build?definitionId=261)
+
+
+## Creating Volume Branch in XPLAT-examples Repo
+
+- complete steps in previous section
+
+- create **new volume branch** (e.g. 25.1) in [xplat-examples](https://github.com/IgniteUI/igniteui-xplat-examples) repo
+
+- update the included branches in [build-pipeline.yml](https://github.com/IgniteUI/igniteui-xplat-examples/blob/24.2.x/azure-pipelines/build-pipeline.yml)
+
+- move the old volume branch (e.g. 24.2) to excluded branches in [build-pipeline.yml](https://github.com/IgniteUI/igniteui-xplat-examples/blob/24.2.x/azure-pipelines/build-pipeline.yml)
+
+- update codeExporterAppBranch to the **new volume branch** (e.g. 2025.1) [build-pipeline.yml](https://github.com/IgniteUI/igniteui-xplat-examples/blob/24.2.x/azure-pipelines/build-pipeline.yml)
+
+- update the included branches in [dev-run-pipeline.yml](https://github.com/IgniteUI/igniteui-xplat-examples/blob/24.2.x/azure-pipelines/dev-run-pipeline.yml)
+
+- move the old volume branch (e.g. 24.2) to excluded branches in [dev-run-pipeline.yml](https://github.com/IgniteUI/igniteui-xplat-examples/blob/24.2.x/azure-pipelines/dev-run-pipeline.yml)
+
+- update codeExporterAppBranch to the **new volume branch** (e.g. 2025.1) [dev-run-pipeline.yml](https://github.com/IgniteUI/igniteui-xplat-examples/blob/24.2.x/azure-pipelines/dev-run-pipeline.yml)
+
+- publish the **new volume branch** in the [xplat-examples](https://github.com/IgniteUI/igniteui-xplat-examples) repo
+ 
+- change the default branch to the **new volume branch** in github setting of the [xplat-examples](https://github.com/IgniteUI/igniteui-xplat-examples) repo
+
+- add branch protection rules for the **new volume branch** in github setting of the [xplat-examples](https://github.com/IgniteUI/igniteui-xplat-examples) repo
