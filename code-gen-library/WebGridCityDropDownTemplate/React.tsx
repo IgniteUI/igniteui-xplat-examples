@@ -17,7 +17,7 @@ export class WebGridCityDropDownTemplate {
         return (
         <>
             <div style={{display: "flex", flexDirection: "column"}}>
-                <IgrCombo ref={(this as any).comboRefs} placeholder="Choose City..." disabled="true" valueKey="Name"  displayKey="Name" name={comboId} singleSelect="true">
+                <IgrCombo ref={(this as any).comboRefs} placeholder="Choose City..." disabled={true} valueKey="Name"  displayKey="Name" name={comboId} singleSelect={true}>
                 </IgrCombo>
             </div>
         </>
