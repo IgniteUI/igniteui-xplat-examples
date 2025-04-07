@@ -37,6 +37,6 @@
     "layouts/ToolbarModule",
     "charts/CategoryChartModule",
     "charts/CategoryChartToolbarModule",
-    "grids/CheckboxListModule"
+    "data-grids/CheckboxListModule"
   ]
 }
