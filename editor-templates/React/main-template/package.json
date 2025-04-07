@@ -25,24 +25,27 @@
 //ifdef dashboards
     "igniteui-react-dashboards": "18.8.1",
 //endifdef dashboards
-//ifdef grid, webgrids, dashboards
+//ifdef grid, dashboards
     "igniteui-react-datasources": "18.8.1",
-//endifdef grid, webgrids, dashboards
+//endifdef grid, dashboards
 //ifdef excel, spreadsheet
     "igniteui-react-excel": "18.8.1",
 //endifdef excel, spreadsheet
 //ifdef gauges, dashboards
     "igniteui-react-gauges": "18.8.1",
 //endifdef gauges, dashboards
-//ifdef grid, webgrids, dashboards
+//ifdef webgrids
     "igniteui-react-grids": "18.8.1",
-//endifdef grid, webgrids, dashboards
-//ifdef grid, webgrids, inputs, layouts, editor, dashboards
+//endifdef webgrids
+//ifdef grid, dashboards
+    "igniteui-react-data-grids": "18.8.1",
+//endifdef grid, dashboards
+//ifdef grid, inputs, layouts, editor, dashboards
     "igniteui-react-inputs": "18.8.1",
-//endifdef grid, webgrids, inputs, layouts, editor, dashboards
-//ifdef grid, webgrids, editor, layouts, dashboards
+//endifdef grid, inputs, layouts, editor, dashboards
+//ifdef grid, editor, layouts, dashboards
     "igniteui-react-layouts": "18.8.1",
-//endifdef grid, webgrids, editor, layouts, dashboards
+//endifdef grid, editor, layouts, dashboards
 //ifdef maps, dashboards
     "igniteui-react-maps": "18.8.1",
 //endifdef maps, dashboards
