@@ -7,8 +7,8 @@ export class WebGridToolbarExporting {
     //begin eventHandler
     public webGridToolbarExporting(evt: IgrGridToolbarExportEventArgs): void {
         const args = evt.detail;
-        const options: IgrExporterOptionsBase = (args.nativeElement as any).options;
-        const exporter = (args.nativeElement as any).exporter;
+        const options: IgrExporterOptionsBase = args.options;
+        const exporter = args.exporter as any;
         if (options) {
             options.fileName = `Report_${new Date().toDateString()}`;
             exporter.columnExporting.subscribe((columnArgs: any) => {
