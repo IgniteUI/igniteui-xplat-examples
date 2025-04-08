@@ -5,11 +5,12 @@ import { IgrGridComponent, IgrGridKeydownEventArgs, GridKeydownTargetType } from
 
 export class WebGridCustomKBNav {
     //begin eventHandler
-    public webGridCustomKBNav(grid: IgrGridComponent, eventArgs: IgrGridKeydownEventArgs): void {
+    public webGridCustomKBNav(eventArgs: IgrGridKeydownEventArgs): void {
         const args = eventArgs.detail;
         const target = args.target;
         const evt = args.event;
         const type = args.targetType;
+        const grid = eventArgs.target as IgrGridComponent;
 
         if (type === GridKeydownTargetType.DataCell && target.editMode && evt.key.toLowerCase() === 'tab') {
             // Value validation for number column.
