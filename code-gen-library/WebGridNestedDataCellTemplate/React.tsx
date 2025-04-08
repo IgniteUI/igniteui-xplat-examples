@@ -24,8 +24,8 @@ export class WebGridNestedDataCellTemplate {
                             props.dataContext.cell.value[0][e.target.label] = e.detail;
                             grid.markForCheck();
                         }} style={{textOverflow: "ellipsis"}} />
-                    <IgrInput type="number" label="Age" name="title" value={value.Age} inputOcurred={(s:any, e: any) => {
-                            props.dataContext.cell.value[0][s.label] = e.detail;
+                    <IgrInput type="number" label="Age" name="title" value={value.Age} onInput={(e: any) => {
+                            props.dataContext.cell.value[0][e.target.label] = e.detail;
                             grid.markForCheck();
                         }} style={{textOverflow: "ellipsis"}} />
                 </div>
