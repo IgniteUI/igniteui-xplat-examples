@@ -6,7 +6,7 @@
       "type": "WebHierarchicalGrid",
       "dataRef": "MultiColumnsExportData",
       "autoGenerate": false,
-      "primaryKey": "CustomerID",
+      "primaryKey": "ID",
       "moving": true,
       "allowFiltering": true,
       "toolbar": [
