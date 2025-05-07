@@ -17,30 +17,26 @@ export class WebGridCompositeAddressEditCellTemplate {
         return (
             <>
                 <div className="contact-container--edit" style={{padding: "1rem"}}>
-                    <IgrInput label='Country' onInput={(e: any) =>
-                        {
-                            cell.row.data.Country = e.detail;
-                            grid.forceUpdate();
-                        }
-                        } value={cell.row.data.Country}></IgrInput>
-                    <IgrInput label='City' onInput={(e: any) =>
-                        {
-                            cell.row.data.City = e.detail;
-                            grid.forceUpdate();
-                        }
-                        } value={cell.row.data.City}></IgrInput>
-                    <IgrInput label='Postal Code' onInput={(e: any) =>
-                        {
-                            cell.row.data.PostalCode = e.detail;
-                            grid.forceUpdate();
-                        }
-                        } value={cell.row.data.PostalCode}></IgrInput>
-                    <IgrInput label='Phone' onInput={(e: any) =>
-                        {
-                            cell.row.data.Phone = e.detail;
-                            grid.forceUpdate();
-                        }
-                        } value={cell.row.data.Phone}></IgrInput>
+                    <IgrInput
+                        label='Country'
+                        onInput={(e: any) => cell.row.data.Country = e.detail}
+                        value={cell.row.data.Country}
+                    ></IgrInput>
+                    <IgrInput
+                        label='City'
+                        onInput={(e: any) => cell.row.data.City = e.detail}
+                        value={cell.row.data.City}
+                    ></IgrInput>
+                    <IgrInput
+                        label='Postal Code'
+                        onInput={(e: any) => cell.row.data.PostalCode = e.detail}
+                        value={cell.row.data.PostalCode}
+                    ></IgrInput>
+                    <IgrInput
+                        label='Phone'
+                        onInput={(e: any) => cell.row.data.Phone = e.detail}
+                        value={cell.row.data.Phone}
+                    ></IgrInput>
                 </div>
             </>
         );
