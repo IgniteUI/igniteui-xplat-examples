@@ -95,7 +95,7 @@
         {
           "type": "DataAnnotationBandLayer",
           "name": "BandLayer",
-          "dataSourceRef": "LocalData",
+          "dataSourceRef": "AnnotationData",
           "centerLabelXDisplayMode": "Hidden",
           "startLabelXDisplayMode": "DataLabel",
           "endLabelXDisplayMode": "DataLabel",
@@ -119,7 +119,7 @@
     }
   },
   "refs": {
-    "LocalData": [
+    "AnnotationData": [
       { "StartLabel": "Growth Start", "EndLabel": "Growth Stop", "StartX": 48, "StartY": 110, "EndX": 105, "EndY": 335, "Value": 170, "Label": "Rapid Growth" }
     ]
   },
