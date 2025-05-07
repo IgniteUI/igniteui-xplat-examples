@@ -5,8 +5,20 @@
       "name": "chart",
       "shouldAutoExpandMarginForInitialLabels": true,
       "computedPlotAreaMarginMode": "Series",
-      "isVerticalZoomEnabled": true,
+      "isVerticalZoomEnabled": false,
       "isHorizontalZoomEnabled": true,
+      "brushes": ["green", "red"],
+      "outlines": ["green", "red"],
+      "plotAreaMarginLeft": 10,
+      "plotAreaMarginTop": 0,
+      "plotAreaMarginRight": 20,
+      "plotAreaMarginBottom": 0,
+      "leftMargin": 10,
+      "topMargin": 0,
+      "rightMargin": 20,
+      "bottomMargin": 0,
+      "isWindowSyncedToVisibleRange": false,
+      "chartTitle": "Data Chart with DataAnnotationBandLayer bound to data that annotates stock rapid growth",
       "axes": [
         {
           "type": "CategoryXAxis",
@@ -18,7 +30,7 @@
           "type": "CategoryXAxis",
           "name": "xAxisBottom",
           "dataSourceRef": "StockTesla",
-          "label": "Date",
+          "label": "Index",
           "tickLength": 0,
           "labelLocation": "OutsideBottom",
           "labelFontSize": 12,
@@ -28,19 +40,6 @@
           "labelRightMargin": 8,
           "labelBottomMargin": 5,
           "labelAngle": 90
-        },
-        {
-          "type": "CategoryXAxis",
-          "name": "xAxisTop",
-          "dataSourceRef": "StockTesla",
-          "label": "Date",
-          "labelLocation": "OutsideTop",
-          "labelFontSize": 12,
-          "labelExtent": 40,
-          "labelLeftMargin": 8,
-          "labelTopMargin": 3,
-          "labelRightMargin": 8,
-          "labelBottomMargin": 5
         },
         {
           "type": "NumericYAxis",
@@ -96,6 +95,7 @@
           "type": "DataAnnotationBandLayer",
           "name": "BandLayer",
           "dataSourceRef": "AnnotationData",
+          "targetAxisRef": "xAxisBottom",
           "centerLabelXDisplayMode": "Hidden",
           "startLabelXDisplayMode": "DataLabel",
           "endLabelXDisplayMode": "DataLabel",
@@ -112,8 +112,7 @@
           "startValueYMemberPath": "StartY",
           "endValueXMemberPath": "EndX",
           "endValueYMemberPath": "EndY",
-          "annotationBreadthMemberPath": "Value",
-          "targetAxisRef": "xAxisBottom"
+          "annotationBreadthMemberPath": "Value"
         }
       ]
     }
