@@ -91,9 +91,37 @@
           "name": "Tooltip",
           "includedColumns": ["High", "Low", "Open", "Close"],
           "layoutMode": "Vertical"
+        },
+        {
+          "type": "DataAnnotationBandLayer",
+          "name": "BandLayer",
+          "dataSourceRef": "LocalData",
+          "centerLabelXDisplayMode": "Hidden",
+          "startLabelXDisplayMode": "DataLabel",
+          "endLabelXDisplayMode": "DataLabel",
+          "brush": "purple",
+          "outline": "purple",
+          "overlayTextColor": "purple",
+          "overlayTextVerticalMargin": 20,
+          "overlayTextHorizontalMargin": -50,
+          "overlayTextLocation": "InsideTopCenter",
+          "overlayTextMemberPath": "Label",
+          "startLabelXMemberPath": "StartLabel",
+          "endLabelXMemberPath": "EndLabel",
+          "startValueXMemberPath": "StartX",
+          "startValueYMemberPath": "StartY",
+          "endValueXMemberPath": "EndX",
+          "endValueYMemberPath": "EndY",
+          "annotationBreadthMemberPath": "Value",
+          "targetAxisRef": "xAxisBottom"
         }
       ]
     }
+  },
+  "refs": {
+    "LocalData": [
+      { "StartLabel": "Growth Start", "EndLabel": "Growth Stop", "StartX": 48, "StartY": 110, "EndX": 105, "EndY": 335, "Value": 170, "Label": "Rapid Growth" }
+    ]
   },
   "modules": [
     "charts/DataChartCoreModule",
@@ -103,6 +131,9 @@
     "charts/DataChartFinancialModule",
     "charts/DataChartFinancialOverlaysModule",
     "charts/DataChartInteractivityModule",
-    "charts/DataChartAnnotationModule"
+    "charts/DataChartAnnotationModule",
+    "charts/DataAnnotationBandLayerModule",
+    "charts/NumberAbbreviatorModule",
+    "charts/AnnotationLayerProxyModule"
   ]
 }
