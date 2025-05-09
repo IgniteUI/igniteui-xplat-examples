@@ -45,7 +45,6 @@ public toggleColumnGroup(columnGroup: IgrColumn) {
             c.hidden = !c.hidden;
         }
     }
-    columnGroup.forceUpdate();
     this.columnGroupStates.set(columnGroup, !this.columnGroupStates.get(columnGroup));
 }
 //end supportingMethods
