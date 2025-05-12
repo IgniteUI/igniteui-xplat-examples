@@ -571,6 +571,86 @@ exports.updatePostalCode = function updatePostalCode(cb) {
     cb();
 }
 
+exports.convertJSON2CS = function convertJSON2CS(cb) {
+
+    let fileName = "WorldStats";
+    let filePath = CodeGenLib + "/" + fileName + "/XPLAT.json";
+    let fileData = fs.readFileSync(filePath, "utf8");
+    let jsonData = JSON.parse(fileData);
+
+    // let csPath = "C:\\WORK\\igniteui-xplat-examples\\code-gen-tools\\CS\\" + fileName + ".cs";
+    let csPath = "C:\\WORK\\dev-tools-research\\WPF\\CHARTS\\DC_Annotations\\Model\\" + fileName + ".cs";
+
+    let dataItem = fileName + 'Item';
+    let dataList = 'List<' + dataItem + '>';
+    let dataSource = fileName + 'Data';
+    let dataNamespace = "TestApp"; // Infragistics
+     
+    let cs = `
+using System;
+using System.Windows;
+using System.Collections.Generic;
+
+namespace `+ dataNamespace + ` 
+{
+    public class ` + dataItem + ` 
+    {
+        DATA_PROPS
+    }
+
+    public class ` + dataSource + ` : ` + dataList + ` 
+    {
+        public ` + dataSource + `() 
+        {
+            DATA_ITEMS
+        }
+    }
+}
+`
+    var dataProps = [];
+    var dataItems = [];
+    var columns = Object.keys(jsonData[0]);
+
+    for (const name of columns) {
+        
+        let val = jsonData[0][name];
+        let type = typeof(val);
+        if (type === "number")
+            type = "double";
+
+        dataProps.push("public " + type + " " + name + " { get; set; }");
+
+    }
+
+    for (let i = 0; i < jsonData.length; i++) {
+        const item = jsonData[i];
+        
+        var props = [];
+        for (const name of columns) {
+            
+            let val = jsonData[i][name];
+
+            let type = typeof(val);
+            if (type === "number")
+                type = "double";
+
+            if (type === "string")
+                val = '"' + val + '"';
+
+            props.push(name + " = " + val);
+        }
+
+        dataItems.push("Add(new " + dataItem + " { " + props.join(', ') + " });");
+    }
+
+    cs = cs.replace("DATA_PROPS", dataProps.join('\n        '));
+    cs = cs.replace("DATA_ITEMS", dataItems.join('\n            '));
+
+
+    saveFile(csPath, cs, true);
+    cb();
+}
+
 exports.updateJSON = function updateJSON(cb) {
 
     var firstNames = ["James", "Max", "Martin", "Pamela", "Mike", "Anna", "Ben", "Nancy"];
