@@ -8,7 +8,7 @@ namespace Infragistics.Samples
     using System.Collections.ObjectModel;
     using IgniteUI.Blazor.Controls;
 
-    public class HistoricalStockTSLA : List<HistoricalStockInfo>
+    public class RetailSalesPerformanceLocalDataSource : IgbLocalDataSource
     {
         
         public RetailSalesPerformanceLocalDataSource(){
