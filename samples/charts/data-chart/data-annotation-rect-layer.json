@@ -1,0 +1,108 @@
+{
+  "descriptions": {
+    "content": {
+      "type": "DataChart",
+      "name": "chart",
+      "shouldAutoExpandMarginForInitialLabels": true,
+      "computedPlotAreaMarginMode": "Series",
+      "isVerticalZoomEnabled": false,
+      "isHorizontalZoomEnabled": true,
+      "brushes": ["green", "red"],
+      "outlines": ["green", "red"],
+      "plotAreaMarginLeft": 10,
+      "plotAreaMarginTop": 0,
+      "plotAreaMarginRight": 20,
+      "plotAreaMarginBottom": 0,
+      "leftMargin": 10,
+      "topMargin": 0,
+      "rightMargin": 20,
+      "bottomMargin": 0,
+      "isWindowSyncedToVisibleRange": false,
+      "chartTitle": "This Data Chart demonstrates the DataAnnotationRectLayer bound to data that annotates bearish patterns in stock prices.",
+      "axes": [
+        {
+          "type": "CategoryXAxis",
+          "name": "xAxis",
+          "dataSourceRef": "StockTesla",
+          "label": "Date",
+          "labelLeftMargin": 0,
+          "labelTopMargin": 10,
+          "labelRightMargin": 0,
+          "labelBottomMargin": 10
+        },
+        {
+          "type": "NumericYAxis",
+          "name": "yAxis",
+          "minimumValue": 0,
+          "maximumValue": 550
+        }
+      ],
+      "series": [
+        {
+          "type": "FinancialPriceSeries",
+          "name": "series1",
+          "title": "Stock Price",
+          "displayType": "Candlestick",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "dataSourceRef": "StockTesla",
+          "openMemberPath": "Open",
+          "highMemberPath": "High",
+          "lowMemberPath": "Low",
+          "closeMemberPath": "Close",
+          "showDefaultTooltip": false
+        },
+        {
+          "type": "DataToolTipLayer",
+          "name": "Tooltip",
+          "includedColumns": ["High", "Low", "Open", "Close"],
+          "layoutMode": "Vertical"
+        },
+        {
+          "type": "DataAnnotationRectLayer",
+          "name": "RectLayer",
+          "dataSourceRef": "AnnotationData",
+          "targetAxisRef": "xAxis",
+          "centerLabelXDisplayMode": "Hidden",
+          "startLabelXDisplayMode": "Hidden",
+          "endLabelXDisplayMode": "Hidden",
+          "startLabelYDisplayMode": "Hidden",
+          "endLabelYDisplayMode": "Hidden",
+          "actualAreaFillOpacity": 0.1,
+          "brush": "purple",
+          "outline": "purple",
+          "overlayTextColor": "purple",
+          "overlayTextVerticalMargin": 20,
+          "overlayTextHorizontalMargin": -50,
+          "overlayTextLocation": "OutsideBottomCenter",
+          "overlayTextMemberPath": "Label",
+          "startLabelXMemberPath": "StartLabel",
+          "endLabelXMemberPath": "EndLabel",
+          "startValueXMemberPath": "StartX",
+          "startValueYMemberPath": "StartY",
+          "endValueXMemberPath": "EndX",
+          "endValueYMemberPath": "EndY"
+        }
+      ]
+    }
+  },
+  "refs": {
+    "AnnotationData": [
+      { "StartX": 85, "StartY": 190, "EndX": 140, "EndY": 415, "Label": "Head & Shoulders Pattern \n  (Bearish Downtrend)" },
+      { "StartX": 53, "StartY": 75, "EndX": 230, "EndY": 80, "Label": "Price Gap (Bearish Target)" }
+    ]
+  },
+  "modules": [
+    "charts/DataChartCoreModule",
+    "charts/DataChartCategoryModule",
+    "charts/DataChartCategoryCoreModule",
+    "charts/DataChartFinancialCoreModule",
+    "charts/DataChartFinancialModule",
+    "charts/DataChartFinancialOverlaysModule",
+    "charts/DataChartInteractivityModule",
+    "charts/DataChartAnnotationModule",
+    "charts/DataAnnotationRectLayerModule",
+    "charts/NumberAbbreviatorModule",
+    "charts/AnnotationLayerProxyModule"
+  ]
+}
