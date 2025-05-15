@@ -22,18 +22,12 @@
       "axes": [
         {
           "type": "CategoryXAxis",
-          "name": "xAxisTop",
-          "dataSourceRef": "StockTesla",
-          "label": "Date",
-          "labelLocation": "OutsideBottom"
-        },
-        {
-          "type": "CategoryXAxis",
           "name": "xAxisBottom",
           "dataSourceRef": "StockTesla",
           "label": "Index",
           "tickLength": 0,
           "labelLocation": "OutsideBottom",
+          "labelTextColor": "transparent",
           "labelFontSize": 12,
           "labelExtent": 140,
           "labelLeftMargin": 8,
@@ -41,6 +35,13 @@
           "labelRightMargin": 8,
           "labelBottomMargin": 5,
           "labelAngle": 90
+        },
+        {
+          "type": "CategoryXAxis",
+          "name": "xAxisTop",
+          "dataSourceRef": "StockTesla",
+          "label": "Date",
+          "labelLocation": "OutsideBottom"
         },
         {
           "type": "NumericYAxis",

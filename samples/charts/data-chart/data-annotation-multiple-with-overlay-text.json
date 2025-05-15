@@ -39,6 +39,7 @@
           "dataSourceRef": "StockTesla",
           "valueMemberPath": "Open",
           "showDefaultTooltip": true,
+          "markerType": "None",
           "brush": "blue"
         },
         {
