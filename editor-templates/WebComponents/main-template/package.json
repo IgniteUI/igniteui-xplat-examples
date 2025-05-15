@@ -43,7 +43,7 @@
     "igniteui-webcomponents-gauges": "5.5.0-beta.0",
 //endifdef gauges, dashboards
 //ifdef grid, webgrids, dashboards
-    "igniteui-webcomponents-grids": "5.5.0-beta.0",
+    "igniteui-webcomponents-grids": "6.0.2",
 //endifdef grid, webgrids, dashboards
 //ifdef grid, inputs, webgrids, editor, layouts, dashboards
     "igniteui-webcomponents-inputs": "5.5.0-beta.0",
