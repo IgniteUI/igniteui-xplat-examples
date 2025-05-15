@@ -23,40 +23,40 @@
   },
   "dependencies": {
     "babel-runtime": "^6.26.0",
-    "igniteui-webcomponents-core": "5.4.0",
+    "igniteui-webcomponents-core": "5.5.0-beta.0",
 //ifdef editor, webinputs
     "igniteui-webcomponents": "6.0.0",
 //endifdef editor, webinputs
 //ifdef charts, maps, dashboards
-    "igniteui-webcomponents-charts": "5.4.0",
+    "igniteui-webcomponents-charts": "5.5.0-beta.0",
 //endifdef charts, maps, dashboards
 //ifdef dashboards
-    "igniteui-webcomponents-dashboards": "5.4.0",
+    "igniteui-webcomponents-dashboards": "5.5.0-beta.0",
 //endifdef dashboards
 //ifdef grid
-    "igniteui-webcomponents-datasources": "5.4.0",
+    "igniteui-webcomponents-datasources": "5.5.0-beta.0",
 //endifdef grid
 //ifdef excel, spreadsheet
-    "igniteui-webcomponents-excel": "5.4.0",
+    "igniteui-webcomponents-excel": "5.5.0-beta.0",
 //endifdef excel, spreadsheet
 //ifdef gauges, dashboards
-    "igniteui-webcomponents-gauges": "5.4.0",
+    "igniteui-webcomponents-gauges": "5.5.0-beta.0",
 //endifdef gauges, dashboards
 //ifdef grid, webgrids, dashboards
-    "igniteui-webcomponents-grids": "5.4.0",
+    "igniteui-webcomponents-grids": "5.5.0-beta.0",
 //endifdef grid, webgrids, dashboards
 //ifdef grid, inputs, webgrids, editor, layouts, dashboards
-    "igniteui-webcomponents-inputs": "5.4.0",
+    "igniteui-webcomponents-inputs": "5.5.0-beta.0",
 //endifdef grid, inputs, webgrids, editor, layouts, dashboards
 //ifdef grid, editor, layouts, webgrids, dashboards
-    "igniteui-webcomponents-layouts": "5.4.0",
+    "igniteui-webcomponents-layouts": "5.5.0-beta.0",
 //endifdef grid, editor, layouts, webgrids, dashboards
 //ifdef maps, dashboards
-    "igniteui-webcomponents-maps": "5.4.0",
+    "igniteui-webcomponents-maps": "5.5.0-beta.0",
 //endifdef maps, dashboards
 //ifdef spreadsheet
-    "igniteui-webcomponents-spreadsheet": "5.4.0",
-    "igniteui-webcomponents-spreadsheet-chart-adapter": "5.4.0",
+    "igniteui-webcomponents-spreadsheet": "5.5.0-beta.0",
+    "igniteui-webcomponents-spreadsheet-chart-adapter": "5.5.0-beta.0",
 //endifdef spreadsheet
     "lit-html": "^3.2.0",
     "tslib": "^2.0.0"

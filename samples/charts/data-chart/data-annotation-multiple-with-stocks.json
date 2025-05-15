@@ -1,0 +1,268 @@
+{
+  "descriptions": {
+    "content": {
+      "type": "DataChart",
+      "name": "chart",
+      "shouldAutoExpandMarginForInitialLabels": true,
+      "computedPlotAreaMarginMode": "Series",
+      "isVerticalZoomEnabled": false,
+      "isHorizontalZoomEnabled": true,
+      "brushes": ["green", "red"],
+      "outlines": ["green", "red"],
+      "plotAreaMarginLeft": 10,
+      "plotAreaMarginTop": 0,
+      "plotAreaMarginRight": 20,
+      "plotAreaMarginBottom": 0,
+      "leftMargin": 10,
+      "topMargin": 0,
+      "rightMargin": 20,
+      "bottomMargin": 0,
+      "isWindowSyncedToVisibleRange": false,
+      "chartTitle": "This Data Chart has multiple Data Annotation Layers bound to data that annotates important events and patterns in stock prices.",
+      "axes": [
+        {
+          "type": "CategoryXAxis",
+          "name": "xAxisBottom",
+          "dataSourceRef": "StockTesla",
+          "label": "Index",
+          "tickLength": 0,
+          "labelLocation": "OutsideBottom",
+          "labelTextColor": "transparent",
+          "labelFontSize": 12,
+          "labelExtent": 140,
+          "labelLeftMargin": 0,
+          "labelTopMargin": 15,
+          "labelRightMargin": 0,
+          "labelBottomMargin": 15,
+          "labelAngle": 90
+        },
+        {
+          "type": "CategoryXAxis",
+          "name": "xAxis",
+          "dataSourceRef": "StockTesla",
+          "label": "Date",
+          "labelLeftMargin": 0,
+          "labelTopMargin": 5,
+          "labelRightMargin": 0,
+          "labelBottomMargin": 5
+        },
+        {
+          "type": "CategoryXAxis",
+          "name": "xAxisTop",
+          "dataSourceRef": "StockTesla",
+          "label": "Date",
+          "tickLength": 0,
+          "labelLocation": "OutsideTop",
+          "labelFontSize": 12,
+          "labelExtent": 40,
+          "labelTextColor": "transparent",
+          "labelLeftMargin": 8,
+          "labelTopMargin": 3,
+          "labelRightMargin": 8,
+          "labelBottomMargin": 5
+        },
+        {
+          "type": "NumericYAxis",
+          "name": "yAxisLeft",
+          "labelLocation": "OutsideLeft",
+          "labelFontSize": 12,
+          "labelExtent": 80,
+          "labelHorizontalAlignment": "Right",
+          "labelLeftMargin": 8,
+          "labelTopMargin": 3,
+          "labelRightMargin": 8,
+          "labelBottomMargin": 5,
+          "minimumValue": 0,
+          "maximumValue": 550
+        },
+        {
+          "type": "NumericYAxis",
+          "name": "yAxisRight",
+          "labelLocation": "OutsideRight",
+          "labelFontSize": 12,
+          "labelExtent": 80,
+          "labelHorizontalAlignment": "Left",
+          "labelLeftMargin": 8,
+          "labelTopMargin": 3,
+          "labelRightMargin": 8,
+          "labelBottomMargin": 5,
+          "minimumValue": 0,
+          "maximumValue": 550
+        }
+      ],
+      "series": [
+        {
+          "type": "FinancialPriceSeries",
+          "name": "series1",
+          "title": "Stock Price",
+          "displayType": "Candlestick",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxisLeft",
+          "dataSourceRef": "StockTesla",
+          "openMemberPath": "Open",
+          "highMemberPath": "High",
+          "lowMemberPath": "Low",
+          "closeMemberPath": "Close",
+          "showDefaultTooltip": false
+        },
+        {
+          "type": "DataToolTipLayer",
+          "name": "Tooltip",
+          "includedColumns": ["High", "Low", "Open", "Close"],
+          "layoutMode": "Vertical"
+        },
+        {
+          "type": "DataAnnotationStripLayer",
+          "name": "StripLayer",
+          "dataSourceRef": "StripAnnotationData",
+          "targetAxisRef": "xAxisTop",
+          "centerLabelMemberPath": "Label",
+          "startValueMemberPath": "Start",
+          "endValueMemberPath": "End",
+          "endLabelDisplayMode": "Hidden",
+          "startLabelDisplayMode": "Hidden",
+          "brush": "black",
+          "outline": "black",
+          "overlayTextColor": "purple",
+          "overlayTextLocation": "Hidden",
+          "overlayTextMemberPath": "Label"
+        },
+        {
+          "type": "DataAnnotationLineLayer",
+          "name": "LineLayer52WeekRange",
+          "dataSourceRef": "LineAnnotationData1",
+          "targetAxisRef": "yAxisRight",
+          "centerLabelXDisplayMode": "Hidden",
+          "startLabelXDisplayMode": "Hidden",
+          "startLabelYDisplayMode": "DataValue",
+          "endLabelXDisplayMode": "Hidden",
+          "endLabelYDisplayMode": "DataValue",
+          "brush": "purple",
+          "outline": "purple",
+          "overlayTextColor": "purple",
+          "overlayTextVerticalMargin": 20,
+          "overlayTextHorizontalMargin": -50,
+          "overlayTextLocation": "OutsideBottomLeft",
+          "overlayTextMemberPath": "Label",
+          "startLabelXMemberPath": "StartLabel",
+          "endLabelXMemberPath": "EndLabel",
+          "startValueXMemberPath": "StartX",
+          "startValueYMemberPath": "StartY",
+          "endValueXMemberPath": "EndX",
+          "endValueYMemberPath": "EndY"
+        },
+        {
+          "type": "DataAnnotationLineLayer",
+          "name": "LineLayerGrowthAndDecline",
+          "dataSourceRef": "LineAnnotationData2",
+          "targetAxisRef": "xAxis",
+          "centerLabelXDisplayMode": "Hidden",
+          "startLabelXDisplayMode": "Hidden",
+          "endLabelXDisplayMode": "Hidden",
+          "annotationBackgroundMode": "BrightnessShift",
+          "brush": "purple",
+          "outline": "purple",
+          "overlayTextColor": "purple",
+          "overlayTextVerticalMargin": -10,
+          "overlayTextHorizontalMargin": 60,
+          "overlayTextMemberPath": "Label",
+          "startLabelXMemberPath": "StartLabel",
+          "endLabelXMemberPath": "EndLabel",
+          "startValueXMemberPath": "StartX",
+          "startValueYMemberPath": "StartY",
+          "endValueXMemberPath": "EndX",
+          "endValueYMemberPath": "EndY"
+        },
+        {
+          "type": "DataAnnotationSliceLayer",
+          "name": "SliceLayerStockSplit",
+          "dataSourceRef": "SliceAnnotationData1",
+          "targetAxisRef": "xAxisBottom",
+          "brush": "dodgerblue",
+          "annotationTextColor": "white",
+          "annotationLabelMemberPath": "Label",
+          "annotationValueMemberPath": "Value",
+          "overlayTextMemberPath": "Label",
+          "overlayTextAngle": 90,
+          "overlayTextVerticalMargin": 20,
+          "overlayTextHorizontalMargin": 0,
+          "overlayTextLocation": "OutsideTopRight"
+        },
+        {
+          "type": "DataAnnotationSliceLayer",
+          "name": "SliceLayerEarningsMissAnnotations",
+          "dataSourceRef": "SliceAnnotationData2",
+          "targetAxisRef": "xAxisBottom",
+          "brush": "red",
+          "annotationTextColor": "white",
+          "annotationLabelMemberPath": "Label",
+          "annotationValueMemberPath": "Value",
+          "overlayTextMemberPath": "Label",
+          "overlayTextAngle": 90,
+          "overlayTextVerticalMargin": 20,
+          "overlayTextHorizontalMargin": 0,
+          "overlayTextLocation": "OutsideTopRight"
+        },
+        {
+          "type": "DataAnnotationSliceLayer",
+          "name": "SliceLayerEarningsBeatAnnotations",
+          "dataSourceRef": "SliceAnnotationData3",
+          "targetAxisRef": "xAxisBottom",
+          "brush": "green",
+          "annotationTextColor": "white",
+          "annotationLabelMemberPath": "Label",
+          "annotationValueMemberPath": "Value",
+          "overlayTextMemberPath": "Label",
+          "overlayTextAngle": 90,
+          "overlayTextVerticalMargin": 20,
+          "overlayTextHorizontalMargin": 0,
+          "overlayTextLocation": "OutsideTopRight"
+        }
+      ]
+    }
+  },
+  "refs": {
+    "StripAnnotationData": [
+      { "Start": 40, "End": 45, "Label": "Covid - Market Crash" },
+      { "Start": 100, "End": 144, "Label": "Fed Rate Up  0.25 - 5.25%" },
+      { "Start": 190, "End": 205, "Label": "Fed Rate Down 5.25% to 4.45%" }
+    ],
+    "LineAnnotationData1": [
+      { "StartX": 190, "StartY": 138, "EndX": 230, "EndY": 138, "Label": "52-Week Low" },
+      { "StartX": 190, "StartY": 481, "EndX": 230, "EndY": 481, "Label": "52-Week High" }
+    ],
+    "LineAnnotationData2": [
+      { "StartX": 48, "StartY": 25, "EndX": 105, "EndY": 250, "Label": "Growth &\nSupport" },
+      { "StartX": 108, "StartY": 440, "EndX": 155, "EndY": 210, "Label": "Decline &\nResistance" }
+    ],
+    "SliceAnnotationData1": [
+      { "Value": 126, "Label": "Stock Split 3-1" },
+      { "Value": 61, "Label": "Stock Split 5-1" }
+    ],
+    "SliceAnnotationData2": [
+      { "Value": 9, "Label": "Earnings Miss" },
+      { "Value": 179, "Label": "Earnings Miss" },
+      { "Value": 215, "Label": "Earnings Miss" }
+    ],
+    "SliceAnnotationData3": [
+      { "Value": 155, "Label": "Earnings Beat" },
+      { "Value": 86, "Label": "Earnings Beat" },
+      { "Value": 28, "Label": "Earnings Miss" }
+    ]
+  },
+  "modules": [
+    "charts/DataChartCoreModule",
+    "charts/DataChartCategoryModule",
+    "charts/DataChartCategoryCoreModule",
+    "charts/DataChartFinancialCoreModule",
+    "charts/DataChartFinancialModule",
+    "charts/DataChartFinancialOverlaysModule",
+    "charts/DataChartInteractivityModule",
+    "charts/DataChartAnnotationModule",
+    "charts/DataAnnotationStripLayerModule",
+    "charts/DataAnnotationSliceLayerModule",
+    "charts/DataAnnotationLineLayerModule",
+    "charts/NumberAbbreviatorModule",
+    "charts/AnnotationLayerProxyModule"
+  ]
+}

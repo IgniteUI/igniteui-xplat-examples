@@ -1,0 +1,105 @@
+{
+  "descriptions": {
+    "content": {
+      "type": "DataChart",
+      "name": "chart",
+      "plotAreaMarginBottom": 50,
+      "chartTitle": "This sample demonstrates the DataAnnotationSliceLayer with overlay text compared against the value layers in the DataChart.",
+      "axes": [
+        {
+          "type": "CategoryXAxis",
+          "name": "xAxis",
+          "dataSourceRef": "StockTesla",
+          "label": "Date",
+          "labelLeftMargin": 0,
+          "labelTopMargin": 5,
+          "labelRightMargin": 0,
+          "labelBottomMargin": 15
+        },
+        {
+          "type": "NumericYAxis",
+          "name": "yAxis",
+          "labelExtent": 60,
+          "labelHorizontalAlignment": "Center",
+          "labelLeftMargin": 0,
+          "labelTopMargin": 0,
+          "labelRightMargin": 5,
+          "labelBottomMargin": 0,
+          "minimumValue": 0,
+          "maximumValue": 550
+        }
+      ],
+      "series": [
+        {
+          "type": "LineSeries",
+          "name": "series1",
+          "title": "Stock Price",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "dataSourceRef": "StockTesla",
+          "valueMemberPath": "Open",
+          "showDefaultTooltip": true,
+          "markerType": "None",
+          "brush": "blue"
+        },
+        {
+          "type": "ValueOverlay",
+          "name": "valueOverlay",
+          "value": 435,
+          "brush": "green",
+          "isAxisAnnotationEnabled": true,
+          "thickness": 2,
+          "dashArray": [2, 4 ],
+          "axisRef": "yAxis",
+          "overlayText": "OverlayText on ValueOverlay",
+          "overlayTextLocation": "OutsideBottomCenter"
+        },
+        {
+          "type": "ValueLayer",
+          "name": "valueLayer",
+          "valueMode": "Average",
+          "brush": "purple",
+          "thickness": 2,
+          "dashArray": [2, 4 ],
+          "targetAxisRef": "yAxis",
+          "isAxisAnnotationEnabled": true,
+          "overlayText": "OverlayText on ValueLayer (Average)",
+          "overlayTextLocation": "OutsideBottomCenter"
+        },
+        {
+          "type": "DataAnnotationSliceLayer",
+          "name": "AnnoLayer",
+          "dataSourceRef": "AnnotationData",
+          "targetAxisRef": "yAxis",
+          "brush": "green",
+          "annotationTextColor": "white",
+          "annotationLabelMemberPath": "Label",
+          "annotationValueMemberPath": "Value",
+          "overlayTextMemberPath": "Label",
+          "overlayTextVerticalMargin": 20,
+          "overlayTextHorizontalMargin": 0,
+          "overlayTextLocation": "OutsideBottomCenter",
+          "overlayText": "OverlayText on DataAnnotationSliceLayer",
+          "thickness": 2
+        }
+      ]
+    }
+  },
+  "refs": {
+    "AnnotationData": [
+      { "Value": 50 }
+    ]
+  },
+  "modules": [
+    "charts/DataChartCoreModule",
+    "charts/DataChartCategoryModule",
+    "charts/DataChartCategoryCoreModule",
+    "charts/DataChartInteractivityModule",
+    "charts/AnnotationLayerProxyModule",
+    "charts/DataChartAnnotationModule",
+    "charts/DataAnnotationSliceLayerModule",
+    "charts/NumberAbbreviatorModule",
+    "charts/AnnotationLayerProxyModule",
+    "charts/ValueOverlayModule"
+  ]
+}
