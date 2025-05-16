@@ -93,7 +93,7 @@
           "brush": "purple",
           "outline": "purple",
           "overlayTextColor": "purple",
-          "overlayTextVerticalMargin": 20,
+          "overlayTextVerticalMargin": 5,
           "overlayTextHorizontalMargin": 0,
           "overlayTextLocation": "OutsideBottomLeft",
           "overlayTextMemberPath": "Label",
