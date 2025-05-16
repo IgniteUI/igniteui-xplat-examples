@@ -37,9 +37,6 @@
 //ifdef grid, webgrids, dashboards
     "igniteui-react-grids": "19.0.2",
 //endifdef grid, webgrids, dashboards
-//ifdef grid, webgrids, dashboards
-    "igniteui-react-data-grids": "19.0.0-alpha.1",
-//endifdef grid, webgrids, dashboards
 //ifdef grid, webgrids, inputs, layouts, editor, dashboards
     "igniteui-react-inputs": "19.0.0-alpha.1",
 //endifdef grid, webgrids, inputs, layouts, editor, dashboards
