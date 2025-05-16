@@ -106,7 +106,7 @@
           "overlayTextAngle": 90,
           "overlayTextVerticalMargin": 20,
           "overlayTextHorizontalMargin": 0,
-          "overlayTextLocation": "OutsideTopRight"
+          "overlayTextLocation": "Hidden"
         },
         {
           "type": "DataAnnotationSliceLayer",
@@ -121,7 +121,7 @@
           "overlayTextAngle": 90,
           "overlayTextVerticalMargin": 20,
           "overlayTextHorizontalMargin": 0,
-          "overlayTextLocation": "OutsideTopRight"
+          "overlayTextLocation": "Hidden"
         },
         {
           "type": "DataAnnotationSliceLayer",
@@ -136,7 +136,7 @@
           "overlayTextAngle": 90,
           "overlayTextVerticalMargin": 20,
           "overlayTextHorizontalMargin": 0,
-          "overlayTextLocation": "OutsideTopRight"
+          "overlayTextLocation": "Hidden"
         }
       ]
     }
