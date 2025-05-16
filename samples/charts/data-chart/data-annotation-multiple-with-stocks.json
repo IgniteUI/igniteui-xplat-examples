@@ -140,8 +140,8 @@
           "brush": "purple",
           "outline": "purple",
           "overlayTextColor": "purple",
-          "overlayTextVerticalMargin": 20,
-          "overlayTextHorizontalMargin": -50,
+          "overlayTextVerticalMargin": 5,
+          "overlayTextHorizontalMargin": 5,
           "overlayTextLocation": "OutsideBottomLeft",
           "overlayTextMemberPath": "Label",
           "startLabelXMemberPath": "StartLabel",
@@ -164,7 +164,7 @@
           "outline": "purple",
           "overlayTextColor": "purple",
           "overlayTextVerticalMargin": -10,
-          "overlayTextHorizontalMargin": 60,
+          "overlayTextHorizontalMargin": 70,
           "overlayTextMemberPath": "Label",
           "startLabelXMemberPath": "StartLabel",
           "endLabelXMemberPath": "EndLabel",
@@ -186,7 +186,7 @@
           "overlayTextAngle": 90,
           "overlayTextVerticalMargin": 20,
           "overlayTextHorizontalMargin": 0,
-          "overlayTextLocation": "OutsideTopRight"
+          "overlayTextLocation": "Hidden"
         },
         {
           "type": "DataAnnotationSliceLayer",
@@ -201,7 +201,7 @@
           "overlayTextAngle": 90,
           "overlayTextVerticalMargin": 20,
           "overlayTextHorizontalMargin": 0,
-          "overlayTextLocation": "OutsideTopRight"
+          "overlayTextLocation": "Hidden"
         },
         {
           "type": "DataAnnotationSliceLayer",
@@ -216,7 +216,7 @@
           "overlayTextAngle": 90,
           "overlayTextVerticalMargin": 20,
           "overlayTextHorizontalMargin": 0,
-          "overlayTextLocation": "OutsideTopRight"
+          "overlayTextLocation": "Hidden"
         }
       ]
     }

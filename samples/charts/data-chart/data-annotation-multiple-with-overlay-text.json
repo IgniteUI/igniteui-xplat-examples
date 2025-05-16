@@ -40,7 +40,7 @@
           "valueMemberPath": "Open",
           "showDefaultTooltip": true,
           "markerType": "None",
-          "brush": "blue"
+          "brush": "black"
         },
         {
           "type": "ValueOverlay",
