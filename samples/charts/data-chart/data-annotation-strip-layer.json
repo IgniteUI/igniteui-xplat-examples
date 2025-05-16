@@ -103,6 +103,8 @@
           "centerLabelMemberPath": "Label",
           "startValueMemberPath": "Start",
           "endValueMemberPath": "End",
+          "startLabelDisplayMode": "Hidden",
+          "endLabelDisplayMode": "Hidden",
           "brush": "black",
           "outline": "black",
           "overlayTextColor": "purple",
