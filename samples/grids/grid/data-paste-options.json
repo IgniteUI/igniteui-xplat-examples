@@ -37,25 +37,21 @@
       "columnList": [
         {
           "type": "WebColumn",
-          "name": "ContactName",
           "field": "ContactName",
           "header": "Name"
         },
         {
           "type": "WebColumn",
-          "name": "ContactTitle",
           "field": "ContactTitle",
           "header": "Title"
         },
         {
           "type": "WebColumn",
-          "name": "Phone",
           "field": "Phone",
           "header": "Phone"
         },
         {
           "type": "WebColumn",
-          "name": "Country",
           "field": "Country",
           "header": "Country"
         }
