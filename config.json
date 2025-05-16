@@ -12,7 +12,8 @@
       "name": "React",
       "exclusions": [
         { "reason": "toolbarTemplate isn't in React product", "path": "grids\\hierarchical-grid\\toolbar-sample-1.json" },
-        { "reason": "toolbarTemplate isn't in React product", "path": "grids\\hierarchical-grid\\toolbar-sample-2.json" }
+        { "reason": "toolbarTemplate isn't in React product", "path": "grids\\hierarchical-grid\\toolbar-sample-2.json" },
+        { "reason": "tmp exclude", "path": "grids\\" }
       ]
     },
     {
