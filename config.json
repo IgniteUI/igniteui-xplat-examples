@@ -10,10 +10,14 @@
     },
     {
       "name": "React",
-      "exclusions": [
+      "exclusions": [        
+	{ "reason": "tmp exclude", "path": "grids\\grid\\" },
+        { "reason": "tmp exclude", "path": "grids\\hierarchical-grid\\" },
+        { "reason": "tmp exclude", "path": "grids\\pivot-grid\\" },
+        { "reason": "tmp exclude", "path": "grids\\tree-grid\\" },
         { "reason": "toolbarTemplate isn't in React product", "path": "grids\\hierarchical-grid\\toolbar-sample-1.json" },
-        { "reason": "toolbarTemplate isn't in React product", "path": "grids\\hierarchical-grid\\toolbar-sample-2.json" },
-        { "reason": "tmp exclude", "path": "grids\\" }
+        { "reason": "toolbarTemplate isn't in React product", "path": "grids\\hierarchical-grid\\toolbar-sample-2.json" }
+
       ]
     },
     {
