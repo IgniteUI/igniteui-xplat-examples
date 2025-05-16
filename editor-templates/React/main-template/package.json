@@ -14,41 +14,44 @@
     "lint": "eslint ./src/**/*.{ts,tsx}"
   },
   "dependencies": {
-    "igniteui-react-core": "18.9.0",
+    "igniteui-react-core": "19.0.0-alpha.1",
 //ifdef webgrids
     "igniteui-dockmanager": "1.16.1",
 //endifdef webgrids
-    "igniteui-react": "18.9.0",
+    "igniteui-react": "19.0.2",
 //ifdef charts, maps, dashboards
-    "igniteui-react-charts": "18.9.0",
+    "igniteui-react-charts": "19.0.0-alpha.1",
 //endifdef charts, maps, dashboards
 //ifdef dashboards
-    "igniteui-react-dashboards": "18.9.0",
+    "igniteui-react-dashboards": "19.0.0-alpha.1",
 //endifdef dashboards
 //ifdef grid, webgrids, dashboards
-    "igniteui-react-datasources": "18.9.0",
+    "igniteui-react-datasources": "19.0.0-alpha.1",
 //endifdef grid, webgrids, dashboards
 //ifdef excel, spreadsheet
-    "igniteui-react-excel": "18.9.0",
+    "igniteui-react-excel": "19.0.0-alpha.1",
 //endifdef excel, spreadsheet
 //ifdef gauges, dashboards
-    "igniteui-react-gauges": "18.9.0",
+    "igniteui-react-gauges": "19.0.0-alpha.1",
 //endifdef gauges, dashboards
 //ifdef grid, webgrids, dashboards
-    "igniteui-react-grids": "18.9.0",
+    "igniteui-react-grids": "19.0.2",
+//endifdef grid, webgrids, dashboards
+//ifdef grid, webgrids, dashboards
+    "igniteui-react-data-grids": "19.0.0-alpha.1",
 //endifdef grid, webgrids, dashboards
 //ifdef grid, webgrids, inputs, layouts, editor, dashboards
-    "igniteui-react-inputs": "18.9.0",
+    "igniteui-react-inputs": "19.0.0-alpha.1",
 //endifdef grid, webgrids, inputs, layouts, editor, dashboards
 //ifdef grid, webgrids, editor, layouts, dashboards
-    "igniteui-react-layouts": "18.9.0",
+    "igniteui-react-layouts": "19.0.0-alpha.1",
 //endifdef grid, webgrids, editor, layouts, dashboards
 //ifdef maps, dashboards
-    "igniteui-react-maps": "18.9.0",
+    "igniteui-react-maps": "19.0.0-alpha.1",
 //endifdef maps, dashboards
 //ifdef spreadsheet
-    "igniteui-react-spreadsheet": "18.9.0",
-    "igniteui-react-spreadsheet-chart-adapter": "18.9.0",
+    "igniteui-react-spreadsheet": "19.0.0-alpha.1",
+    "igniteui-react-spreadsheet-chart-adapter": "19.0.0-alpha.1",
 //endifdef spreadsheet
     "igniteui-webcomponents": "6.0.0",
     "lit-html": "^3.2.0",
