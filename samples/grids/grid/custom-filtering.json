@@ -17,19 +17,16 @@
       "columnList": [
         {
           "type": "WebColumn",
-          "name": "ProductName",
           "field": "ProductName",
           "header": "Product Name"
         },
         {
           "type": "WebColumn",
-          "name": "QuantityPerUnit",
           "field": "QuantityPerUnit",
           "header": "Quantity Per Unit"
         },
         {
           "type": "WebColumn",
-          "name": "UnitPrice",
           "field": "UnitPrice",
           "header": "Unit Price",
           "dataType": "Currency",
@@ -41,14 +38,12 @@
         },
         {
           "type": "WebColumn",
-          "name": "OrderDate",
           "field": "OrderDate",
           "header": "Order Date",
           "dataType": "Date"
         },
         {
           "type": "WebColumn",
-          "name": "Discontinued",
           "field": "Discontinued",
           "header": "Discontinued",
           "dataType": "Boolean",

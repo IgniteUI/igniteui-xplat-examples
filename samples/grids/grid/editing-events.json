@@ -23,7 +23,6 @@
         },
         {
           "type": "WebColumn",
-          "name": "UnitsInStock",
           "field": "UnitsInStock",
           "header": "Units In Stock",
           "dataType": "Number",
@@ -31,7 +30,6 @@
         },
         {
           "type": "WebColumn",
-          "name": "UnitsOnOrder",
           "field": "UnitsOnOrder",
           "header": "Units on Order",
           "dataType": "Number",
