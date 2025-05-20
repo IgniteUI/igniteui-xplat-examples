@@ -4,7 +4,7 @@ import { CodeGenHelper } from 'igniteui-webcomponents-core';
 
 //begin data
 
-import { LocalDataSource } from "igniteui-webcomponents-core";
+import { LocalDataSource } from "igniteui-angular-core";
 
 export class RetailSalesPerformanceLocalDataSource extends LocalDataSource {
 
