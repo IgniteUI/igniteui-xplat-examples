@@ -1,6 +1,5 @@
-{
-  "note": "example fails to build in WC repo - https://github.com/IgniteUI/igniteui-wc-examples/actions/runs/15052579768/job/42310742762",
-  "export": false,
+{  
+  "export": true,
   "hasAnimations": true,
   "descriptions": {
     "content": {
