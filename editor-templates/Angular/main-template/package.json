@@ -23,7 +23,7 @@
 //endifdef charts, maps, dashboards
 //ifdef dashboards
     "igniteui-angular-dashboards": "19.1.0-beta.0",
-    "igniteui-angular-grids": "19.1.0-beta.0",
+    "igniteui-angular-data-grids": "19.1.0-beta.0",
 //endifdef dashboards
 //ifdef excel, spreadsheet
     "igniteui-angular-excel": "19.1.0-beta.0",
@@ -40,9 +40,6 @@
 //ifdef maps, dashboards
     "igniteui-angular-maps": "19.1.0-beta.0",
 //endifdef maps, dashboards
-//ifdef grid, dashboards
-    "igniteui-angular-data-grids": "19.1.0-beta.0",
-//endifdef grid, dashboards
 //ifdef spreadsheet
     "igniteui-angular-spreadsheet": "19.1.0-beta.0",
     "igniteui-angular-spreadsheet-chart-adapter": "19.1.0-beta.0",
