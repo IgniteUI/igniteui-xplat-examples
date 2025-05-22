@@ -25,6 +25,9 @@
     "igniteui-angular-dashboards": "19.1.0-beta.0",
     "igniteui-angular-data-grids": "19.1.0-beta.0",
 //endifdef dashboards
+//ifdef data-grids
+    "igniteui-angular-data-grids": "19.1.0-beta.0",
+//endifdef data-grids
 //ifdef excel, spreadsheet
     "igniteui-angular-excel": "19.1.0-beta.0",
 //endifdef excel, spreadsheet
