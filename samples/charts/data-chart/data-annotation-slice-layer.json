@@ -96,7 +96,7 @@
         {
           "type": "DataAnnotationSliceLayer",
           "name": "SliceLayerStockSplit",
-          "dataSourceRef": "AnnotationData1",
+          "dataSourceRef": "AnnotationSliceStockSplitData",
           "targetAxisRef": "xAxisBottom",
           "brush": "dodgerblue",
           "annotationTextColor": "white",
@@ -111,7 +111,7 @@
         {
           "type": "DataAnnotationSliceLayer",
           "name": "SliceLayerEarningsMissAnnotations",
-          "dataSourceRef": "AnnotationData2",
+          "dataSourceRef": "AnnotationSliceEarningsMissData",
           "targetAxisRef": "xAxisBottom",
           "brush": "red",
           "annotationTextColor": "white",
@@ -126,7 +126,7 @@
         {
           "type": "DataAnnotationSliceLayer",
           "name": "SliceLayerEarningsBeatAnnotations",
-          "dataSourceRef": "AnnotationData3",
+          "dataSourceRef": "AnnotationSliceEarningsBeatData",
           "targetAxisRef": "xAxisBottom",
           "brush": "green",
           "annotationTextColor": "white",
@@ -140,22 +140,6 @@
         }
       ]
     }
-  },
-  "refs": {
-    "AnnotationData1": [
-      { "Value": 126, "Label": "Stock Split 3-1" },
-      { "Value": 61, "Label": "Stock Split 5-1" }
-    ],
-    "AnnotationData2": [
-      { "Value": 9, "Label": "Earnings Miss" },
-      { "Value": 179, "Label": "Earnings Miss" },
-      { "Value": 215, "Label": "Earnings Miss" }
-    ],
-    "AnnotationData3": [
-      { "Value": 155, "Label": "Earnings Beat" },
-      { "Value": 86, "Label": "Earnings Beat" },
-      { "Value": 28, "Label": "Earnings Miss" }
-    ]
   },
   "modules": [
     "charts/DataChartCoreModule",

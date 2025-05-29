@@ -95,7 +95,7 @@
         {
           "type": "DataAnnotationBandLayer",
           "name": "BandLayer",
-          "dataSourceRef": "AnnotationData",
+          "dataSourceRef": "AnnotationBandData",
           "targetAxisRef": "xAxisBottom",
           "centerLabelXDisplayMode": "Hidden",
           "startLabelXDisplayMode": "DataLabel",
@@ -117,11 +117,6 @@
         }
       ]
     }
-  },
-  "refs": {
-    "AnnotationData": [
-      { "StartLabel": "Growth Start", "EndLabel": "Growth Stop", "StartX": 48, "StartY": 110, "EndX": 105, "EndY": 335, "Value": 170, "Label": "Rapid Growth" }
-    ]
   },
   "modules": [
     "charts/DataChartCoreModule",
