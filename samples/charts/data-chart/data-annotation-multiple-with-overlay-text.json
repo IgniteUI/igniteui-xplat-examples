@@ -69,7 +69,7 @@
         {
           "type": "DataAnnotationSliceLayer",
           "name": "AnnoLayer",
-          "dataSourceRef": "AnnotationData",
+          "dataSourceRef": "AnnotationSliceMultiOverlayData",
           "targetAxisRef": "yAxis",
           "brush": "green",
           "annotationTextColor": "white",
@@ -84,11 +84,6 @@
         }
       ]
     }
-  },
-  "refs": {
-    "AnnotationData": [
-      { "Value": 50 }
-    ]
   },
   "modules": [
     "charts/DataChartCoreModule",

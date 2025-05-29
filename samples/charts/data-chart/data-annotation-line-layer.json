@@ -83,7 +83,7 @@
         {
           "type": "DataAnnotationLineLayer",
           "name": "LineLayer52WeekRange",
-          "dataSourceRef": "AnnotationData1",
+          "dataSourceRef": "AnnotationLineData1",
           "targetAxisRef": "yAxisRight",
           "centerLabelXDisplayMode": "Hidden",
           "startLabelXDisplayMode": "Hidden",
@@ -107,7 +107,7 @@
         {
           "type": "DataAnnotationLineLayer",
           "name": "LineLayerGrowthAndDecline",
-          "dataSourceRef": "AnnotationData2",
+          "dataSourceRef": "AnnotationLineData2",
           "targetAxisRef": "xAxis",
           "centerLabelXDisplayMode": "Hidden",
           "startLabelXDisplayMode": "Hidden",
@@ -128,16 +128,6 @@
         }
       ]
     }
-  },
-  "refs": {
-    "AnnotationData1": [
-      { "StartX": 190, "StartY": 138, "EndX": 230, "EndY": 138, "Label": "52-Week Low" },
-      { "StartX": 190, "StartY": 481, "EndX": 230, "EndY": 481, "Label": "52-Week High" }
-    ],
-    "AnnotationData2": [
-      { "StartX": 48, "StartY": 25, "EndX": 105, "EndY": 250, "Label": "Growth &\nSupport" },
-      { "StartX": 108, "StartY": 440, "EndX": 155, "EndY": 210, "Label": "Decline &\nResistance" }
-    ]
   },
   "modules": [
     "charts/DataChartCoreModule",
