@@ -32,7 +32,11 @@
 //endifdef charts, maps, dashboards
 //ifdef dashboards
     "igniteui-webcomponents-dashboards": "5.5.0-beta.1",
+	"igniteui-webcomponents-data-grids": "5.5.0-beta.1",
 //endifdef dashboards
+//ifdef data-grids
+    "igniteui-webcomponents-data-grids": "5.5.0-beta.1",
+//endifdef data-grids
 //ifdef grid
     "igniteui-webcomponents-datasources": "5.5.0-beta.1",
 //endifdef grid

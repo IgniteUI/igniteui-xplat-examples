@@ -24,7 +24,11 @@
 //endifdef charts, maps, dashboards
 //ifdef dashboards
     "igniteui-react-dashboards": "19.0.0-alpha.1",
+	"igniteui-react-data-grids": "19.0.0-alpha.1",
 //endifdef dashboards
+//ifdef data-grids
+    "igniteui-react-data-grids": "19.0.0-alpha.1",
+//endifdef data-grids
 //ifdef grid, dashboards
     "igniteui-react-datasources": "19.0.0-alpha.1",
 //endifdef grid, dashboards
