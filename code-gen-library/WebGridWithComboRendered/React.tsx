@@ -26,7 +26,7 @@ export class WebGridWithComboRendered {
         }
     }
 
-    public webGridWithComboRendered(args:IgrComponentBoolValueChangedEventArgs ): void {
+    public webGridWithComboRendered(args: IgrComponentBoolValueChangedEventArgs): void {
         const grid = args.target as IgrGrid;
         grid.data = this.gridData;
     }
