@@ -26,7 +26,7 @@ export class WebGridWithComboRendered {
         }
     }
 
-    public webGridWithComboRendered(args: IgrVoidEventArgs) {
+    public webGridWithComboRendered(args:any) {
         const grid = args.target as IgrGrid;
         grid.data = this.gridData;
     }
