@@ -1,6 +1,6 @@
 //begin imports
-import { IgrRowSelectionEventArgs } from 'igniteui-react-grids';
-import { IgrGridComponent, IgrComponentBoolValueChangedEventArgs } from 'igniteui-react-grids';
+import { IgrRowSelectionEventArgs, IgrComponentBoolValueChangedEventArgs } from 'igniteui-react-grids';
+import { IgrGridComponent } from 'igniteui-react-grids';
 //end imports
 
 import { CodeGenHelper } from 'igniteui-webcomponents-core';

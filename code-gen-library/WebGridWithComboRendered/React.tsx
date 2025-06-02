@@ -1,6 +1,6 @@
 //begin imports
-import { IgrCombo, IgrVoidEventArgs } from 'igniteui-react';
-import { IgrGrid, IgrComponentBoolValueChangedEventArgs } from 'igniteui-react-grids';
+import { IgrCombo, IgrComponentBoolValueChangedEventArgs } from 'igniteui-react';
+import { IgrGrid } from 'igniteui-react-grids';
 //end imports
 
 
