@@ -12,16 +12,14 @@
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "downlevelIteration": true,
-    "target": "es2015",
+    "target": "es2022",
     "typeRoots": [
       "node_modules/@types"
     ],
     "lib": [
-      "es2018",
+      "es2022",
       "dom"
     ]
-  },
-  "angularCompilerOptions": {
-    "enableIvy": true
   }
+ 
 }
