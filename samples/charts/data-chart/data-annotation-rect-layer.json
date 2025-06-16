@@ -61,7 +61,7 @@
         {
           "type": "DataAnnotationRectLayer",
           "name": "RectLayer",
-          "dataSourceRef": "AnnotationRectData",
+          "dataSourceRef": "ARD",
           "targetAxisRef": "xAxis",
           "centerLabelXDisplayMode": "Hidden",
           "startLabelXDisplayMode": "Hidden",

@@ -96,7 +96,7 @@
         {
           "type": "DataAnnotationSliceLayer",
           "name": "SliceLayerStockSplit",
-          "dataSourceRef": "AnnotationSliceStockSplitData",
+          "dataSourceRef": "ASSSD",
           "targetAxisRef": "xAxisBottom",
           "brush": "dodgerblue",
           "annotationTextColor": "white",
@@ -111,7 +111,7 @@
         {
           "type": "DataAnnotationSliceLayer",
           "name": "SliceLayerEarningsMissAnnotations",
-          "dataSourceRef": "AnnotationSliceEarningsMissData",
+          "dataSourceRef": "ASEMD",
           "targetAxisRef": "xAxisBottom",
           "brush": "red",
           "annotationTextColor": "white",
@@ -126,7 +126,7 @@
         {
           "type": "DataAnnotationSliceLayer",
           "name": "SliceLayerEarningsBeatAnnotations",
-          "dataSourceRef": "AnnotationSliceEarningsBeatData",
+          "dataSourceRef": "ASEBD",
           "targetAxisRef": "xAxisBottom",
           "brush": "green",
           "annotationTextColor": "white",

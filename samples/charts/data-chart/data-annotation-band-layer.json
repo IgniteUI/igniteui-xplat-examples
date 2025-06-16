@@ -95,7 +95,7 @@
         {
           "type": "DataAnnotationBandLayer",
           "name": "BandLayer",
-          "dataSourceRef": "AnnotationBandData",
+          "dataSourceRef": "ABD",
           "targetAxisRef": "xAxisBottom",
           "centerLabelXDisplayMode": "Hidden",
           "startLabelXDisplayMode": "DataLabel",

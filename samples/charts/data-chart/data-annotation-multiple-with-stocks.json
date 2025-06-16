@@ -114,7 +114,7 @@
         {
           "type": "DataAnnotationStripLayer",
           "name": "StripLayer",
-          "dataSourceRef": "AnnotationStripData",
+          "dataSourceRef": "ASD",
           "targetAxisRef": "xAxisTop",
           "centerLabelMemberPath": "Label",
           "startValueMemberPath": "Start",
@@ -130,7 +130,7 @@
         {
           "type": "DataAnnotationLineLayer",
           "name": "LineLayer52WeekRange",
-          "dataSourceRef": "AnnotationLineData1",
+          "dataSourceRef": "ALD1",
           "targetAxisRef": "yAxisRight",
           "centerLabelXDisplayMode": "Hidden",
           "startLabelXDisplayMode": "Hidden",
@@ -154,7 +154,7 @@
         {
           "type": "DataAnnotationLineLayer",
           "name": "LineLayerGrowthAndDecline",
-          "dataSourceRef": "AnnotationLineData2",
+          "dataSourceRef": "ALD2",
           "targetAxisRef": "xAxis",
           "centerLabelXDisplayMode": "Hidden",
           "startLabelXDisplayMode": "Hidden",
@@ -176,7 +176,7 @@
         {
           "type": "DataAnnotationSliceLayer",
           "name": "SliceLayerStockSplit",
-          "dataSourceRef": "AnnotationSliceStockSplitData",
+          "dataSourceRef": "ASSSD",
           "targetAxisRef": "xAxisBottom",
           "brush": "dodgerblue",
           "annotationTextColor": "white",
@@ -191,7 +191,7 @@
         {
           "type": "DataAnnotationSliceLayer",
           "name": "SliceLayerEarningsMissAnnotations",
-          "dataSourceRef": "AnnotationSliceEarningsMissData",
+          "dataSourceRef": "ASEMD",
           "targetAxisRef": "xAxisBottom",
           "brush": "red",
           "annotationTextColor": "white",
@@ -206,7 +206,7 @@
         {
           "type": "DataAnnotationSliceLayer",
           "name": "SliceLayerEarningsBeatAnnotations",
-          "dataSourceRef": "AnnotationSliceEarningsBeatData",
+          "dataSourceRef": "ASEBD",
           "targetAxisRef": "xAxisBottom",
           "brush": "green",
           "annotationTextColor": "white",

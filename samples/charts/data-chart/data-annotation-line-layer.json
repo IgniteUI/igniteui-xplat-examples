@@ -83,7 +83,7 @@
         {
           "type": "DataAnnotationLineLayer",
           "name": "LineLayer52WeekRange",
-          "dataSourceRef": "AnnotationLineData1",
+          "dataSourceRef": "ALD1",
           "targetAxisRef": "yAxisRight",
           "centerLabelXDisplayMode": "Hidden",
           "startLabelXDisplayMode": "Hidden",
@@ -107,7 +107,7 @@
         {
           "type": "DataAnnotationLineLayer",
           "name": "LineLayerGrowthAndDecline",
-          "dataSourceRef": "AnnotationLineData2",
+          "dataSourceRef": "ALD2",
           "targetAxisRef": "xAxis",
           "centerLabelXDisplayMode": "Hidden",
           "startLabelXDisplayMode": "Hidden",

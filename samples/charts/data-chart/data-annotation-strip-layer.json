@@ -98,7 +98,7 @@
         {
           "type": "DataAnnotationStripLayer",
           "name": "StripLayer",
-          "dataSourceRef": "AnnotationStripData",
+          "dataSourceRef": "ASD",
           "targetAxisRef": "xAxisTop",
           "centerLabelMemberPath": "Label",
           "startValueMemberPath": "Start",
