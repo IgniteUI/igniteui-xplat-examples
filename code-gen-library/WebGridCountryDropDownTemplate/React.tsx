@@ -14,7 +14,7 @@ export class WebGridCountryDropDownTemplate {
         return (
             <>
                 <IgrCombo
-                    data={this.countries}
+                    data={CodeGenHelper.findByName<any[]>("countries")}
                     ref={this.getComboRef(comboId)}
                     onChange={(event: CustomEvent) => { (this as any).onCountryChange(rowId, event) }}
                     placeholder="Choose Country..."
