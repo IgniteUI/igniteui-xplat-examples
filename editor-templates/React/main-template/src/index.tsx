@@ -18,7 +18,6 @@ import './index.css';
 //end templateImports
 
 //ifdef webgrids
-import 'igniteui-react-grids/grids/combined';
 import 'igniteui-react-grids/grids/themes/light/bootstrap.css';
 //endifdef webgrids
 //ifdef editor

@@ -16,6 +16,7 @@
           "perPage": 10
         }
       ],
+      "cellEditEnterRef": "WebGridOnEditEnter",
       "columnList": [
         {
           "type": "WebColumn",
@@ -63,6 +64,7 @@
           "dataType": "Number",
           "sortable": true,
           "hasSummary": true,
+          "inlineEditorTemplateRef": "WebGridNumericColEditCellTemplate",
           "editable": true,
           "filterable": false
         }
@@ -72,6 +74,7 @@
   "modules": [
     "withDescriptions",
     "grids/WebGridModule",
-    "grids/WebPaginatorModule"
+    "grids/WebPaginatorModule",
+    "webinputs/WebInputModule"
   ]
 }

@@ -1,6 +1,6 @@
 //begin imports
 import { createRef, RefObject } from 'react';
-import { IgrCombo, IgrVoidEventArgs } from 'igniteui-react';
+import { IgrCombo, IgrComponentBoolValueChangedEventArgs } from 'igniteui-react';
 import { IgrGrid } from 'igniteui-react-grids';
 //end imports
 
@@ -28,7 +28,7 @@ export class WebGridWithComboRendered {
         return this.combos[key];
     }
 
-    public webGridWithComboRendered(args: IgrVoidEventArgs) {
+    public webGridWithComboRendered(args: IgrComponentBoolValueChangedEventArgs): void {
         const grid = args.target as IgrGrid;
         grid.data = this.gridData;
     }
