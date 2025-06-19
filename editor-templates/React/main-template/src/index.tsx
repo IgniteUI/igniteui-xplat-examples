@@ -24,11 +24,13 @@ import 'igniteui-react-grids/grids/themes/light/bootstrap.css';
 import 'igniteui-webcomponents/themes/light/bootstrap.css';
 //endifdef editor
 
+//ifdef modulesRegister
 const mods: any[] = [
     //insert modulesRegister
     //end modulesRegister
 ];
 mods.forEach((m) => m.register());
+//endifdef modulesRegister
 
 export default class Sample extends React.Component<any, any> {
     //insert bindingFields
