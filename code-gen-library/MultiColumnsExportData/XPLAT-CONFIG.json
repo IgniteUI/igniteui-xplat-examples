@@ -6,5 +6,8 @@
   {
     "platform": "React",
     "location": "jsonFile"
+  },{
+    "platform": "Kotlin",
+    "location": "jsonFile"
   }
 ]
