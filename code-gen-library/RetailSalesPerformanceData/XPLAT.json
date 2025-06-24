@@ -3,289 +3,289 @@
     "Category": "Home Appliances",
     "Subcategory": "Cleaning",
     "Product": "Vacuum A",
-    "Sales (Units)": 694,
-    "Revenue ($)": 528828,
-    "Profit ($)": 105765.6
+    "Sales": 694,
+    "Revenue": 528828,
+    "Profit": 105765.6
   },
   {
     "Category": "Home Appliances",
     "Subcategory": "Cleaning",
     "Product": "Mop B",
-    "Sales (Units)": 675,
-    "Revenue ($)": 382050,
-    "Profit ($)": 76410.0
+    "Sales": 675,
+    "Revenue": 382050,
+    "Profit": 76410.0
   },
   {
     "Category": "Electronics",
     "Subcategory": "Laptops",
     "Product": "Laptop C",
-    "Sales (Units)": 671,
-    "Revenue ($)": 504592,
-    "Profit ($)": 100918.40000000001
+    "Sales": 671,
+    "Revenue": 504592,
+    "Profit": 100918.40000000001
   },
   {
     "Category": "Furniture",
     "Subcategory": "Bedroom",
     "Product": "Wardrobe B",
-    "Sales (Units)": 212,
-    "Revenue ($)": 54060,
-    "Profit ($)": 10812.0
+    "Sales": 212,
+    "Revenue": 54060,
+    "Profit": 10812.0
   },
   {
     "Category": "Home Appliances",
     "Subcategory": "Kitchen",
     "Product": "Blender A",
-    "Sales (Units)": 181,
-    "Revenue ($)": 79821,
-    "Profit ($)": 15964.2
+    "Sales": 181,
+    "Revenue": 79821,
+    "Profit": 15964.2
   },
   {
     "Category": "Furniture",
     "Subcategory": "Bedroom",
     "Product": "Dresser C",
-    "Sales (Units)": 434,
-    "Revenue ($)": 148428,
-    "Profit ($)": 29685.600000000002
+    "Sales": 434,
+    "Revenue": 148428,
+    "Profit": 29685.600000000002
   },
   {
     "Category": "Furniture",
     "Subcategory": "Office",
     "Product": "Desk A",
-    "Sales (Units)": 441,
-    "Revenue ($)": 244314,
-    "Profit ($)": 48862.8
+    "Sales": 441,
+    "Revenue": 244314,
+    "Profit": 48862.8
   },
   {
     "Category": "Furniture",
     "Subcategory": "Bedroom",
     "Product": "Dresser C",
-    "Sales (Units)": 429,
-    "Revenue ($)": 167739,
-    "Profit ($)": 33547.8
+    "Sales": 429,
+    "Revenue": 167739,
+    "Profit": 33547.8
   },
   {
     "Category": "Furniture",
     "Subcategory": "Office",
     "Product": "Desk A",
-    "Sales (Units)": 537,
-    "Revenue ($)": 516594,
-    "Profit ($)": 103318.8
+    "Sales": 537,
+    "Revenue": 516594,
+    "Profit": 103318.8
   },
   {
     "Category": "Home Appliances",
     "Subcategory": "Cleaning",
     "Product": "Broom C",
-    "Sales (Units)": 439,
-    "Revenue ($)": 340225,
-    "Profit ($)": 68045.0
+    "Sales": 439,
+    "Revenue": 340225,
+    "Profit": 68045.0
   },
   {
     "Category": "Home Appliances",
     "Subcategory": "Laundry",
     "Product": "Dryer B",
-    "Sales (Units)": 338,
-    "Revenue ($)": 176774,
-    "Profit ($)": 35354.8
+    "Sales": 338,
+    "Revenue": 176774,
+    "Profit": 35354.8
   },
   {
     "Category": "Home Appliances",
     "Subcategory": "Laundry",
     "Product": "Iron C",
-    "Sales (Units)": 510,
-    "Revenue ($)": 380460,
-    "Profit ($)": 76092.0
+    "Sales": 510,
+    "Revenue": 380460,
+    "Profit": 76092.0
   },
   {
     "Category": "Electronics",
     "Subcategory": "Mobile Phones",
     "Product": "Smartphone A",
-    "Sales (Units)": 882,
-    "Revenue ($)": 480690,
-    "Profit ($)": 96138.0
+    "Sales": 882,
+    "Revenue": 480690,
+    "Profit": 96138.0
   },
   {
     "Category": "Home Appliances",
     "Subcategory": "Kitchen",
     "Product": "Microwave B",
-    "Sales (Units)": 504,
-    "Revenue ($)": 195048,
-    "Profit ($)": 39009.6
+    "Sales": 504,
+    "Revenue": 195048,
+    "Profit": 39009.6
   },
   {
     "Category": "Furniture",
     "Subcategory": "Office",
     "Product": "Desk A",
-    "Sales (Units)": 633,
-    "Revenue ($)": 243072,
-    "Profit ($)": 48614.4
+    "Sales": 633,
+    "Revenue": 243072,
+    "Profit": 48614.4
   },
   {
     "Category": "Home Appliances",
     "Subcategory": "Cleaning",
     "Product": "Broom C",
-    "Sales (Units)": 772,
-    "Revenue ($)": 470148,
-    "Profit ($)": 94029.6
+    "Sales": 772,
+    "Revenue": 470148,
+    "Profit": 94029.6
   },
   {
     "Category": "Electronics",
     "Subcategory": "Tablets",
     "Product": "Tablet B",
-    "Sales (Units)": 910,
-    "Revenue ($)": 413140,
-    "Profit ($)": 82628.0
+    "Sales": 910,
+    "Revenue": 413140,
+    "Profit": 82628.0
   },
   {
     "Category": "Furniture",
     "Subcategory": "Bedroom",
     "Product": "Dresser C",
-    "Sales (Units)": 53,
-    "Revenue ($)": 48813,
-    "Profit ($)": 9762.6
+    "Sales": 53,
+    "Revenue": 48813,
+    "Profit": 9762.6
   },
   {
     "Category": "Electronics",
     "Subcategory": "Mobile Phones",
     "Product": "Smartphone C",
-    "Sales (Units)": 741,
-    "Revenue ($)": 259350,
-    "Profit ($)": 51870.0
+    "Sales": 741,
+    "Revenue": 259350,
+    "Profit": 51870.0
   },
   {
     "Category": "Home Appliances",
     "Subcategory": "Cleaning",
     "Product": "Vacuum A",
-    "Sales (Units)": 944,
-    "Revenue ($)": 607936,
-    "Profit ($)": 121587.20000000001
+    "Sales": 944,
+    "Revenue": 607936,
+    "Profit": 121587.20000000001
   },
   {
     "Category": "Home Appliances",
     "Subcategory": "Kitchen",
     "Product": "Toaster C",
-    "Sales (Units)": 644,
-    "Revenue ($)": 293020,
-    "Profit ($)": 58604.0
+    "Sales": 644,
+    "Revenue": 293020,
+    "Profit": 58604.0
   },
   {
     "Category": "Electronics",
     "Subcategory": "Tablets",
     "Product": "Tablet B",
-    "Sales (Units)": 692,
-    "Revenue ($)": 405512,
-    "Profit ($)": 81102.40000000001
+    "Sales": 692,
+    "Revenue": 405512,
+    "Profit": 81102.40000000001
   },
   {
     "Category": "Furniture",
     "Subcategory": "Living Room",
     "Product": "Coffee Table B",
-    "Sales (Units)": 378,
-    "Revenue ($)": 300888,
-    "Profit ($)": 60177.600000000006
+    "Sales": 378,
+    "Revenue": 300888,
+    "Profit": 60177.600000000006
   },
   {
     "Category": "Furniture",
     "Subcategory": "Bedroom",
     "Product": "Bed A",
-    "Sales (Units)": 717,
-    "Revenue ($)": 205779,
-    "Profit ($)": 41155.8
+    "Sales": 717,
+    "Revenue": 205779,
+    "Profit": 41155.8
   },
   {
     "Category": "Home Appliances",
     "Subcategory": "Laundry",
     "Product": "Washing Machine",
-    "Sales (Units)": 399,
-    "Revenue ($)": 83391,
-    "Profit ($)": 16678.2
+    "Sales": 399,
+    "Revenue": 83391,
+    "Profit": 16678.2
   },
   {
     "Category": "Home Appliances",
     "Subcategory": "Laundry",
     "Product": "Dryer B",
-    "Sales (Units)": 107,
-    "Revenue ($)": 55533,
-    "Profit ($)": 11106.6
+    "Sales": 107,
+    "Revenue": 55533,
+    "Profit": 11106.6
   },
   {
     "Category": "Electronics",
     "Subcategory": "Mobile Phones",
     "Product": "Smartphone A",
-    "Sales (Units)": 853,
-    "Revenue ($)": 512653,
-    "Profit ($)": 102530.6
+    "Sales": 853,
+    "Revenue": 512653,
+    "Profit": 102530.6
   },
   {
     "Category": "Home Appliances",
     "Subcategory": "Kitchen",
     "Product": "Toaster C",
-    "Sales (Units)": 830,
-    "Revenue ($)": 392590,
-    "Profit ($)": 78518.0
+    "Sales": 830,
+    "Revenue": 392590,
+    "Profit": 78518.0
   },
   {
     "Category": "Electronics",
     "Subcategory": "Mobile Phones",
     "Product": "Smartphone C",
-    "Sales (Units)": 527,
-    "Revenue ($)": 463760,
-    "Profit ($)": 92752.0
+    "Sales": 527,
+    "Revenue": 463760,
+    "Profit": 92752.0
   },
   {
     "Category": "Home Appliances",
     "Subcategory": "Kitchen",
     "Product": "Toaster C",
-    "Sales (Units)": 847,
-    "Revenue ($)": 579348,
-    "Profit ($)": 115869.6
+    "Sales": 847,
+    "Revenue": 579348,
+    "Profit": 115869.6
   },
   {
     "Category": "Furniture",
     "Subcategory": "Living Room",
     "Product": "TV Stand C",
-    "Sales (Units)": 692,
-    "Revenue ($)": 382676,
-    "Profit ($)": 76535.2
+    "Sales": 692,
+    "Revenue": 382676,
+    "Profit": 76535.2
   },
   {
     "Category": "Electronics",
     "Subcategory": "Laptops",
     "Product": "Laptop A",
-    "Sales (Units)": 799,
-    "Revenue ($)": 288439,
-    "Profit ($)": 57687.8
+    "Sales": 799,
+    "Revenue": 288439,
+    "Profit": 57687.8
   },
   {
     "Category": "Furniture",
     "Subcategory": "Living Room",
     "Product": "Coffee Table B",
-    "Sales (Units)": 764,
-    "Revenue ($)": 374360,
-    "Profit ($)": 74872.0
+    "Sales": 764,
+    "Revenue": 374360,
+    "Profit": 74872.0
   },
   {
     "Category": "Furniture",
     "Subcategory": "Living Room",
     "Product": "TV Stand C",
-    "Sales (Units)": 263,
-    "Revenue ($)": 88894,
-    "Profit ($)": 17778.8
+    "Sales": 263,
+    "Revenue": 88894,
+    "Profit": 17778.8
   },
   {
     "Category": "Furniture",
     "Subcategory": "Bedroom",
     "Product": "Bed A",
-    "Sales (Units)": 784,
-    "Revenue ($)": 254800,
-    "Profit ($)": 50960.0
+    "Sales": 784,
+    "Revenue": 254800,
+    "Profit": 50960.0
   },
   {
     "Category": "Home Appliances",
     "Subcategory": "Laundry",
     "Product": "Dryer B",
-    "Sales (Units)": 958,
-    "Revenue ($)": 695508,
-    "Profit ($)": 139101.6
+    "Sales": 958,
+    "Revenue": 695508,
+    "Profit": 139101.6
   },
   {
     "Category": "Electronics",
