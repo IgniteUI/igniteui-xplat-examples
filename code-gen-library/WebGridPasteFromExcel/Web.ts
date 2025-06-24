@@ -1,5 +1,5 @@
 //begin imports
-import { IgcGridComponent, IgcGridKeydownEventArgs, GridKeydownTargetType } from 'igniteui-webcomponents-grids/grids';
+import { IgcGridComponent } from 'igniteui-webcomponents-grids/grids';
 //end imports
 
 import { CodeGenHelper } from 'igniteui-webcomponents-core';
@@ -7,8 +7,8 @@ import { CodeGenHelper } from 'igniteui-webcomponents-core';
 export class WebGridPasteFromExcel {
 
     //begin eventHandler
-    public webGridPasteFromExcel() {
-        const grid = document.getElementById("grid") as any;
+    public webGridPasteFromExcel(e: CustomEvent<any>) {
+        const grid = e.target as IgcGridComponent;
         this.onKeyDown = this.onKeyDown.bind(this);
         grid.addEventListener("keydown", this.onKeyDown);
     }

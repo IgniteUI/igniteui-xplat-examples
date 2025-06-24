@@ -1,0 +1,5 @@
+[
+  { "Start": 40, "End": 45, "Label": "Covid - Market Crash" },
+  { "Start": 100, "End": 144, "Label": "Fed Rate Up  0.25 - 5.25%" },
+  { "Start": 190, "End": 205, "Label": "Fed Rate Down 5.25% to 4.45%" }
+]

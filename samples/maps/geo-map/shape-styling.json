@@ -1,0 +1,24 @@
+{
+  "export": false,
+  "onViewInit": [ "ShapeFileOnViewInit"],
+  "descriptions": {
+    "content": {
+      "type": "GeographicMap",
+      "name": "geoMap",
+      "zoomable": true,
+      "series": [
+        {
+          "type": "GeographicShapeSeries",
+          "name": "GeographicShapeSeries1",
+          "styleShapeRef": "ShapeFileStyling"
+        }
+      ]
+    }
+  },
+  "modules": [
+    "maps/GeographicMapModule",
+    "charts/LegendModule",
+    "charts/DataChartAnnotationModule",
+    "charts/DataChartInteractivityModule"
+  ]
+}

@@ -12,21 +12,18 @@
       "columnList": [
         {
           "type": "WebColumn",
-          "name": "Category",
           "field": "Category",
           "header": "Category",
           "resizable": true
         },
         {
           "type": "WebColumn",
-          "name": "MarketShare",
           "field": "MarketShare",
           "header": "Market Share",
           "resizable": true
         },
         {
           "type": "WebColumn",
-          "name": "Summary",
           "field": "Summary",
           "header": "Summary",
           "resizable": true
