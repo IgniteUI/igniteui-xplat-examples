@@ -9,11 +9,15 @@ export class TestsUpdateGrpupsInSeriesAddedEvent
     groupIndex: number = 0;
     public testsUpdateGroupsInSeriesAddedEvent(sender: any,args: IgcChartSeriesEventArgs): void
     {         
-         const o = CodeGenHelper.findByName<object>("SeriesAddedGroups");
-         const obj = JSON.parse(o.toString());
+         const o = CodeGenHelper.findByName<any>("SeriesAddedGroups");
+         const obj = JSON.parse(o.value.toString());
          const updateAnnotations: boolean = obj.includeAnnotations;
 		 const groups: string[] = obj.names;
-						
+		
+     if (args.series.isAnnotationLayer) {
+      return;
+     }
+
 		if (this.groupIndex >= groups.length)
 				this.groupIndex = 0;
 		if (groups.includes(args.series.dataLegendGroup))

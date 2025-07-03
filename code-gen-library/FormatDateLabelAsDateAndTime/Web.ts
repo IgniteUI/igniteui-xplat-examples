@@ -6,7 +6,7 @@ using System.Collections;
 export class FormatDateLabelAsDateAndTime
 {
     //begin eventHandler
-    public formatDateLabelAsDateAndTime( sender:any, item:any):string
+    public formatDateLabelAsDateAndTime(item:any):string
     {
 
         let d: Date;

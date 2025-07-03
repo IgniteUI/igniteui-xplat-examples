@@ -8,8 +8,8 @@ export class TestsUpdateValueLayerPrecisionInSeriesAddedEvent
     //begin eventHandler
     public testsUpdateValueLayerPrecisionInSeriesAddedEvent(sender: any,args: IgcChartSeriesEventArgs): void
     {	
-        const o: any = CodeGenHelper.findByName("SeriesAddedValueLayerPrecision");
-        const obj = JSON.parse(o.toString());
+        const o: any = CodeGenHelper.findByName<any>("SeriesAddedValueLayerPrecision");
+        const obj = JSON.parse(o.value.toString());
 
         const precision: number = obj.precision;
 

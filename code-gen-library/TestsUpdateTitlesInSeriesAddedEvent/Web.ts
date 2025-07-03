@@ -8,7 +8,7 @@ export class TestsUpdateTitlesInSeriesAddedEvent {
     titleIndex:number = 0;
 	public testsUpdateTitlesInSeriesAddedEvent(sender: any,args: IgcChartSeriesEventArgs): void {
         const o = CodeGenHelper.findByName<any>("SeriesAddedTitles");
-        const obj = JSON.parse(o.toString());
+        const obj = JSON.parse(o.value.toString());
 
         const updateAnnotations: boolean = obj.includeAnnotations;
         const names: string[] = obj.names;

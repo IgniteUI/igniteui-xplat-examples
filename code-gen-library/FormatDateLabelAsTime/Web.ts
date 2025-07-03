@@ -5,8 +5,7 @@
 export class FormatDateLabelAsTime
 {
     //begin eventHandler
-    //WPF: Infragistics.Controls.Charts.AxisFormatLabelEventHandler
-    public formatDateLabelAsTime(sender: any, item: any): string
+    public formatDateLabelAsTime(item: any): string
     {
 
         let d: Date;

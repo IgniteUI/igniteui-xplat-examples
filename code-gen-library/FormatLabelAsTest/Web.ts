@@ -5,7 +5,7 @@ export class FormatLabelAsTest
 {
     //begin eventHandler
     //WPF: Infragistics.Controls.Charts.AxisFormatLabelEventHandler
-    public formatLabelAsTest(sender:any,item: any): string
+    public formatLabelAsTest(item: any): string
     {       
         return "TEST";
     }
