@@ -7,22 +7,26 @@ export class TestsUpdateGrpupsInSeriesAddedEvent
 {
     //begin eventHandler
     groupIndex: number = 0;
-    public testsUpdateGroupsInSeriesAddedEvent(sender: any,args: IgcChartSeriesEventArgs): void
-    {         
-         const o = CodeGenHelper.findByName<any>("SeriesAddedGroups");
-         const obj = JSON.parse(o.value.toString());
-         const updateAnnotations: boolean = obj.includeAnnotations;
-		 const groups: string[] = obj.names;
-		
-     if (args.series.isAnnotationLayer) {
-      return;
-     }
+    updateAnnotations: boolean = false;
+    groups: string[] = null;
+    public testsUpdateGroupsInSeriesAddedEvent(sender: any,args: IgrChartSeriesEventArgs): void
+    {  
+        if (this.groups == null){       
+         const o = CodeGenHelper.findByName<object>("SeriesAddedGroups");
+         const obj = JSON.parse(o["value"]);
+         this.updateAnnotations = obj.includeAnnotations;
+    	 this.groups = obj.names;
+        }
 
-		if (this.groupIndex >= groups.length)
-				this.groupIndex = 0;
-		if (groups.includes(args.series.dataLegendGroup))
-			return; // already set
-		args.series.dataLegendGroup = groups[this.groupIndex++];
+        if (args.series.isAnnotationLayer && !this.updateAnnotations) {
+            return;
+        }
+    						
+    	if (this.groupIndex >= this.groups.length)
+    			this.groupIndex = 0;
+    	if (this.groups.includes(args.series.dataLegendGroup))
+    		return; // already set
+    	args.series.dataLegendGroup = this.groups[this.groupIndex++];
     }
     //end eventHandler
 }
