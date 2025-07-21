@@ -23,44 +23,44 @@
   },
   "dependencies": {
     "babel-runtime": "^6.26.0",
-    "igniteui-webcomponents-core": "6.0.0",
+    "igniteui-webcomponents-core": "6.0.1-beta.1",
 //ifdef editor, webinputs
-    "igniteui-webcomponents": "6.1.0",
+    "igniteui-webcomponents": "6.1.2",
 //endifdef editor, webinputs
 //ifdef charts, maps, dashboards
-    "igniteui-webcomponents-charts": "6.0.0",
+    "igniteui-webcomponents-charts": "6.0.1-beta.1",
 //endifdef charts, maps, dashboards
 //ifdef dashboards
-    "igniteui-webcomponents-dashboards": "6.0.0",
-	"igniteui-webcomponents-data-grids": "6.0.0",
+    "igniteui-webcomponents-dashboards": "6.0.1-beta.1",
+	"igniteui-webcomponents-data-grids": "6.0.1-beta.1",
 //endifdef dashboards
 //ifdef data-grids
-    "igniteui-webcomponents-data-grids": "6.0.0",
+    "igniteui-webcomponents-data-grids": "6.0.1-beta.1",
 //endifdef data-grids
 //ifdef grid
-    "igniteui-webcomponents-datasources": "6.0.0",
+    "igniteui-webcomponents-datasources": "6.0.1-beta.1",
 //endifdef grid
 //ifdef excel, spreadsheet
-    "igniteui-webcomponents-excel": "6.0.0",
+    "igniteui-webcomponents-excel": "6.0.1-beta.1",
 //endifdef excel, spreadsheet
 //ifdef gauges, dashboards
-    "igniteui-webcomponents-gauges": "6.0.0",
+    "igniteui-webcomponents-gauges": "6.0.1-beta.1",
 //endifdef gauges, dashboards
 //ifdef grid, webgrids, dashboards
     "igniteui-webcomponents-grids": "6.0.3",
 //endifdef grid, webgrids, dashboards
 //ifdef grid, inputs, webgrids, editor, layouts, dashboards
-    "igniteui-webcomponents-inputs": "6.0.0",
+    "igniteui-webcomponents-inputs": "6.0.1-beta.1",
 //endifdef grid, inputs, webgrids, editor, layouts, dashboards
 //ifdef grid, editor, layouts, webgrids, dashboards
-    "igniteui-webcomponents-layouts": "6.0.0",
+    "igniteui-webcomponents-layouts": "6.0.1-beta.1",
 //endifdef grid, editor, layouts, webgrids, dashboards
 //ifdef maps, dashboards
-    "igniteui-webcomponents-maps": "6.0.0",
+    "igniteui-webcomponents-maps": "6.0.1-beta.1",
 //endifdef maps, dashboards
 //ifdef spreadsheet
-    "igniteui-webcomponents-spreadsheet": "6.0.0",
-    "igniteui-webcomponents-spreadsheet-chart-adapter": "6.0.0",
+    "igniteui-webcomponents-spreadsheet": "6.0.1-beta.1",
+    "igniteui-webcomponents-spreadsheet-chart-adapter": "6.0.1-beta.1",
 //endifdef spreadsheet
     "lit-html": "^3.2.0",
     "tslib": "^2.0.0"
