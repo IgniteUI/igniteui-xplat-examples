@@ -26,6 +26,18 @@ class FormatDateLabelAsShortDate {
                 }
             }
 
+            is Dictionary<*, *> -> {
+                val dateValue = item["Date"]
+                if (dateValue is Date) {
+                    Calendar.getInstance().apply { time = dateValue }
+                }
+                else if (dateValue is Calendar) {
+                    dateValue as Calendar
+                } else {
+                    return item.toString()
+                }
+            }
+
             is Double -> {
                 try {
                     val millis = item.toLong()

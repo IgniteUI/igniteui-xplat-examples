@@ -23,6 +23,10 @@ public class TestsUpdateGroupsInSeriesAddedEvent {
             groups.add((seriesGroups.items!![i] as JsonDictionaryValue).value as String)
         }
 
+        if (args.series!!.isAnnotationLayer && !updateAnnotations) {
+            return;
+        }
+
         if (groupIndex >= groups.size) groupIndex = 0
         if (groups.contains(args.series!!.dataLegendGroup)) return
         args.series!!.dataLegendGroup = groups[groupIndex++]

@@ -22,12 +22,12 @@ public class TestsAddDataLegendValueFormatSpecifier {
 
         for (key in formatterInfo.getKeys()!!) {
             when (key) {
-                "MaximumFractionDigits" -> numSpec.maximumFractionDigits = (formatterInfo[key] as JsonDictionaryValue).value as Int;
-                "MinimumFractionDigits" -> numSpec.minimumFractionDigits = (formatterInfo[key] as JsonDictionaryValue).value as Int;
-                "MinimumIntegerDigits" -> numSpec.minimumIntegerDigits = (formatterInfo[key] as JsonDictionaryValue).value as Int;
-                "Locale" -> numSpec.locale = (formatterInfo[key] as JsonDictionaryValue).value as String;
+                "MaximumFractionDigits" -> numSpec.maximumFractionDigits = ((formatterInfo[key] as JsonDictionaryValue).value as Double).toInt();
+                "MinimumFractionDigits" -> numSpec.minimumFractionDigits = ((formatterInfo[key] as JsonDictionaryValue).value as Double).toInt();
+                "MinimumIntegerDigits" -> numSpec.minimumIntegerDigits = ((formatterInfo[key] as JsonDictionaryValue).value as Double).toInt();
+                "Locale" -> numSpec.locale = (formatterInfo[key] as JsonDictionaryValue).value as String?;
                 "UseGrouping" -> numSpec.useGrouping = (formatterInfo[key] as JsonDictionaryValue).value as Boolean;
-                "Style" -> numSpec.style = (formatterInfo[key] as JsonDictionaryValue).value as String;
+                "Style" -> numSpec.style = (formatterInfo[key] as JsonDictionaryValue).value as String?;
             }
         }
 
