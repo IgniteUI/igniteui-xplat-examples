@@ -10,7 +10,7 @@
       "name": "legend",
       "targetRef": "chart",
       "unitsText": "%",
-      "includedColumns": ["BirthRate", "DeathRate"]
+      "includedColumns": ["birthRate", "deathRate"]
     },
     "content": {
       "type": "DataChart",
