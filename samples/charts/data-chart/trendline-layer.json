@@ -1,0 +1,75 @@
+{
+  "descriptions": {
+    "legend": {
+      "type": "Legend",
+      "name": "legend",
+      "orientation": "Horizontal"
+    },
+    "content": {
+      "type": "DataChart",
+      "name": "chart",
+      "computedPlotAreaMarginMode": "Series",
+      "legendRef": "legend",
+      "axes": [
+        {
+          "type": "CategoryXAxis",
+          "name": "xAxis",
+          "dataSourceRef": "CountryRenewableElectricity",
+          "labelLocation": "OutsideBottom",
+          "label": "Year"
+        },
+        {
+          "type": "NumericYAxis",
+          "name": "yAxis",
+          "labelLocation": "OutsideLeft"
+        }
+      ],
+      "plotAreaBackground": "rgba(255,255,255,1)",
+      "series": [
+        {
+          "type": "LineSeries",
+          "name": "lineSeries1",
+          "title": "Europe",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "markerType": "Circle",
+          "dataSourceRef": "CountryRenewableElectricity",
+          "valueMemberPath": "Europe",
+          "showDefaultTooltip": true
+        },
+        {
+          "type": "TrendLineLayer",
+          "name": "trendLine1",
+          "title": "EU Logarithmic Trend",
+          "targetSeriesName": "lineSeries1",
+          "useIndex": true,
+          "trendLineType": "LogarithmicFit",
+          "trendLinePeriod": 10,
+          "useLegend": true,
+          "legendItemBadgeShape": "Bar"
+        },
+        {
+          "type": "TrendLineLayer",
+          "name": "trendLine2",
+          "title": "EU Cubic Trend",
+          "targetSeriesName": "lineSeries1",
+          "useIndex": true,
+          "trendLineType": "CubicFit",
+          "trendLinePeriod": 10,
+          "useLegend": true,
+          "legendItemBadgeShape": "Bar"
+        }
+      ],
+      "background": "rgba(0, 0, 0, 0)"
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "charts/DataChartCategoryModule",
+    "charts/DataChartInteractivityModule",
+    "charts/DataChartAnnotationModule",
+    "charts/DataChartCategoryTrendLineModule",
+    "charts/TrendLineLayerModule",
+    "charts/LegendModule"
+  ]
+}
