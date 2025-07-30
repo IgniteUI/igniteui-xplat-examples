@@ -40,7 +40,8 @@ class FormatDateLabelAsShortDate {
 
             is Double -> {
                 try {
-                    val millis = item.toLong()
+                    val ticks = item
+                    var millis = (ticks / 10000.0).toLong();
                     Calendar.getInstance().apply { timeInMillis = millis }
                 } catch (e: Exception) {
                     return item.toString()
@@ -67,10 +68,10 @@ class FormatDateLabelAsShortDate {
         }
 
         return String.format(
-            "%02d/%02d/%02d %02d:%02d:%02d",
+            "%02d/%02d/%02d",
             calendar.get(Calendar.MONTH) + 1,
-            calendar.get(Calendar.DAY_OF_MONTH) + 1,
-            calendar.get(Calendar.YEAR)
+            calendar.get(Calendar.DAY_OF_MONTH),
+            calendar.get(Calendar.YEAR) % 100
         )
     }
     //end eventHandler

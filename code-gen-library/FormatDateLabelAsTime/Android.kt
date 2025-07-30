@@ -40,7 +40,8 @@ class FormatDateLabelAsTime {
 
             is Double -> {
                 try {
-                    val millis = item.toLong()
+                    val ticks = item
+                    var millis = (ticks / 10000.0).toLong();
                     Calendar.getInstance().apply { timeInMillis = millis }
                 } catch (e: Exception) {
                     return item.toString()
