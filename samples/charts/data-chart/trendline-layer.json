@@ -1,9 +1,14 @@
 {
   "descriptions": {
     "legend": {
-      "type": "Legend",
+      "type": "DataLegend",
       "name": "legend",
-      "orientation": "Horizontal"
+      "targetRef": "chart",
+      "headerRowVisible": true,
+      "summaryType": "None",
+      "valueRowVisible": true,
+      "valueTextColor": "transparent",
+      "headerText": "European Renewable Energy (2009-2018)"
     },
     "content": {
       "type": "DataChart",
@@ -24,12 +29,11 @@
           "labelLocation": "OutsideLeft"
         }
       ],
-      "plotAreaBackground": "rgba(255,255,255,1)",
       "series": [
         {
           "type": "LineSeries",
           "name": "lineSeries1",
-          "title": "Europe",
+          "title": "EU Energy",
           "xAxisRef": "xAxis",
           "yAxisRef": "yAxis",
           "markerType": "Circle",
@@ -40,27 +44,26 @@
         {
           "type": "TrendLineLayer",
           "name": "trendLine1",
-          "title": "EU Logarithmic Trend",
+          "title": "Logarithmic Trend",
           "targetSeriesName": "lineSeries1",
           "useIndex": true,
           "trendLineType": "LogarithmicFit",
           "trendLinePeriod": 10,
           "useLegend": true,
-          "legendItemBadgeShape": "Bar"
+          "legendItemBadgeMode": "MatchSeries"
         },
         {
           "type": "TrendLineLayer",
           "name": "trendLine2",
-          "title": "EU Cubic Trend",
+          "title": "Cubic Trend",
           "targetSeriesName": "lineSeries1",
           "useIndex": true,
           "trendLineType": "CubicFit",
           "trendLinePeriod": 10,
           "useLegend": true,
-          "legendItemBadgeShape": "Bar"
+          "legendItemBadgeMode": "MatchSeries"
         }
-      ],
-      "background": "rgba(0, 0, 0, 0)"
+      ]
     }
   },
   "modules": [
@@ -70,6 +73,6 @@
     "charts/DataChartAnnotationModule",
     "charts/DataChartCategoryTrendLineModule",
     "charts/TrendLineLayerModule",
-    "charts/LegendModule"
+    "charts/DataLegendModule"
   ]
 }
