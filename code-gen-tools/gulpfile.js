@@ -21,11 +21,16 @@ let xplatPath = xplatRepo + '/blob/' + xplatBranch + '/' + xplatLib + '/';
 
 function getFileSize(filePath) {
     const stats = fs.statSync(filePath);
-     if (stats.isFile()) {
+    if (stats.isFile()) {
       return Math.round(stats.size / 1024);
     } else {
       return -1;
     }
+}
+
+function getFileParentDir(filePath) {
+    let parts = filePath.split('\\');
+    return parts[parts.length - 2]
 }
 
 function saveFile(filePath, fileContent, skipLog) {
@@ -266,24 +271,26 @@ exports.filterJSON = function filterJSON(cb) {
     cb();
 }
 
+let cdnWebsite = 'https://static.infragistics.com/xplatform/cdn/';
+let cdnServer = '\\\\s0706dl2.igweb.local\\download.infragistics.com\\xplatform\\cdn';
+let cdnOutput = './CDN/';
+
 let cdnFiles = [];
 
-exports.copyCDN = function copyCDN(cb)
+// sync CDN by extracting large */XPLAT.json files from the code-gen-library to a local folder that needs to be manually uploaded to CDN network location
+function cdnSyncData(cb)
 {
+    del.sync(cdnOutput, {force:true});
+    // del.sync(cdnOutput + "*.json", {force:true});
+
+    console.log('--------------------------------------------------------------------');
+    console.log('extracting large */XPLAT.json data files from code-gen-library to: ' + cdnOutput);      
+    console.log('--------------------------------------------------------------------');
+
     let cdnTable = [];
-    let cdnWebsite = 'https://static.infragistics.com/xplatform/cdn/';
-    let cdnServer = '\\\\s0706dl2.igweb.local\\download.infragistics.com\\xplatform\\cdn';
-    let cdnOutput = './CDN';
-
-    // del(cdnOutput);
-    console.log('--------------------------------------------------------------------');   
-    console.log('copying large data files from code-gen-library to: ' + cdnOutput);      
-    console.log('--------------------------------------------------------------------');   
-    
-
-    let fileIndex = 1;
+    let fileID = 1;
     gulp.src([
-        // process all files and determine large files based on number of data items and data columns
+        // process data files
         CodeGenLib + '/**/XPLAT.json', 
         //     // CodeGenLib + "/StockGoogle/XPLAT.json", 
     ],  
@@ -291,46 +298,49 @@ exports.copyCDN = function copyCDN(cb)
     )
     .pipe(es.map(function(file, fileCallback) {
 
-        let filePath = file.dirname + '\\' + file.basename;
-        // console.log("process=" + filePath);   
-        let fileSize = getFileSize(filePath);
- 
-        let content = file.contents.toString();
-        let dataItems = JSON.parse(content);
-        let dataColumns = Object.keys(dataItems[0]);
-        let dirname = file.dirname.split('code-gen-library\\')[1];
-        let xplatFile = xplatPath + dirname + '/' + file.basename;
-        let xplatName = 'XPLAT'; //'&#9741; XPLAT'; // file.basename
-        let cdnLink = cdnWebsite + dirname + ".json";
-        let cdnName = dirname + ".json";
-        let cdnPath = cdnOutput + "/" + dirname + ".json";
+        let json = {};
+        json.filePath = file.dirname + '\\' + file.basename;
+        json.fileDir = file.dirname;
+        json.fileName = file.basename;
+        // console.log("process=" + json.filePath);
 
-        let fileItems = dataItems.length;
-        let fileGrid = dataItems.length * dataColumns.length;
-        let fileColumns = dataColumns.length;
+        let dataContent = file.contents.toString(); 
+        let dataItems = JSON.parse(dataContent); 
+ 
+        json.dataSize = getFileSize(json.filePath);
+        json.dataName = getFileParentDir(json.filePath);
+        json.dataItems = dataItems.length; 
+        json.dataColumns = Object.keys(dataItems[0]).length;
+        json.dataGrid = json.dataItems * json.dataColumns;
 
         // copy only large files or files with many items and/or many data columns
-        if (fileSize >= 10 || fileItems >= 100 || fileGrid >= 500) {
-            // console.log("CDN=" + filePath);   
-            cdnFiles.push(dirname);
+        if (json.dataSize >= 10 || json.dataItems >= 100 || json.dataGrid >= 500) {
+            // console.log("CDN=" + json.filePath);   
+            // cdnFiles.push(json.directory);
+            
+            let cdnName = json.dataName + ".json";
+            let cdnPath = cdnOutput + cdnName ;
+            let cdnLink = cdnWebsite + cdnName;
+            let xplatLink = xplatPath + json.dataName + '/' + json.fileName;
+            let xplatName = 'XPLAT'; //'&#9741; XPLAT'; // file.basename
+            cdnFiles.push(json);
 
-            // console.log(CodeGenLib + '/' + dirname + '/XPLAT.json copied with ' + dataItems.length  + ' items');    
-            console.log(CodeGenLib + '/' + dirname + '/XPLAT.json');   
+            console.log(CodeGenLib + '/' + json.dataName + '/XPLAT.json');   
             // let col =
             let row = "<tr>" +
-            " <td align=\"center\"> " + fileIndex.toString().padStart(3) + " </td>" +
-            " <td align=\"center\"> " + fileColumns.toString().padStart(2) + " </td>" +
-            " <td align=\"right\"> " + fileItems.toString().padStart(5) + " </td>" +
-            " <td align=\"right\"> " + fileSize.toString().padStart(5) + " KB </td>" +
-            " <td align=\"center\">" + "<a href=\"" + xplatFile + "\">"  + xplatName + "</a> </td>" +
+            " <td align=\"center\"> " + fileID.toString().padStart(3) + " </td>" +
+            " <td align=\"center\"> " + json.dataColumns.toString().padStart(2) + " </td>" +
+            " <td align=\"right\"> " + json.dataItems.toString().padStart(5) + " </td>" +
+            " <td align=\"right\"> " + json.dataSize.toString().padStart(5) + " KB </td>" +
+            " <td align=\"center\">" + "<a href=\"" + xplatLink + "\">"  + xplatName + "</a> </td>" +
             " <td align=\"left\">" + "<a href=\"" + cdnLink + "\">"  + cdnName + "</a> </td>" +
             " </tr>\r\n"; 
             cdnTable += row;  
             // copy to cdn output
-            saveFile(cdnPath, content, true); 
+            saveFile(cdnPath, dataContent, true); 
             // create config file that enables remote location for data file
-            // saveFile(CodeGenLib + '/' + dirname + '/XPLAT-CONFIG.json', '{\r\n' + '\t"location": "CDN"\r\n' + '}\r\n', true); 
-            fileIndex++;
+            saveFile(CodeGenLib + '/' + json.dataName + '/XPLAT-CONFIG.json', '{\r\n' + '    "location": "CDN"\r\n' + '}\r\n', true); 
+            fileID++;
         } 
         else {
             // console.log("fileSize=" + fileSize + " fileItems=" + fileItems + " fileGrid=" + fileGrid + " skipped: " + filePath);   
@@ -338,7 +348,6 @@ exports.copyCDN = function copyCDN(cb)
         fileCallback(null, file);
  
     }))
-    // .pipe(gulp.dest(cdnOutput, {overwrite: true}))
     .on("end", function() {
         let repoXPLAT = 'https://github.com/IgniteUI/igniteui-xplat-examples/tree/' + xplatBranch;
         let repoAngular = 'https://github.com/IgniteUI/igniteui-angular-examples/tree/vnext';
@@ -383,85 +392,53 @@ exports.copyCDN = function copyCDN(cb)
         saveFile(cdnOutput + "/_Readme.html", readme, true);
       
         // console.log(cdnFiles);
-        // saveFile("./cdnMatch.txt", cdnFiles.join('\n'), true); 
-
-        // cb();
-        let updateSamples = [];
-        gulp.src([ '../samples/**/*.json'])
-        .pipe(es.map(function(file, fileCallback) {  
-            let content = file.contents.toString();
-            if (content.indexOf("skipAlterDataCasing") <= 0) {
-
-                for (let i = 0; i < cdnFiles.length; i++) {
-                    const dataSource = cdnFiles[i];
-                    if (content.indexOf(dataSource) >= 0) { 
-                        // let samplePath = file.dirname + '/' + file.basename + " \t" + dataSource;
-                        let samplePath = file.dirname + '/' + file.basename;
-                        updateSamples.push(samplePath);
-                        break;
-                    }
-                }
-
-                // let lines = content.split('\n'); 
-                // var dataSource = "";
-                // for (let i = 0; i < lines.length; i++) {
-                //     const item = lines[i];
-                //     if (item.indexOf("dataSource") >= 0) {
-                //         dataSource = item;
-                //     }
-                // }
-                // console.log(file.dirname + '/' + file.basename + " \t" + dataSource);  
-            }
-            fileCallback(null, file);
-        }))
-        .on("end", function() {
-            console.log("");
-            console.log("TODO add '\"skipAlterDataCasing\": true' to these samples:");
-            console.log(updateSamples);
-
-            console.log("\n WARNING: complete above TODO and then copy content of the the ./CDN folder to:\n" + cdnServer + "\n")
-
-            cb();
-        });
-     });
-}
-
-exports.findDataFiles = function findDataFiles(cb)
-{    
-    let updateSamples = [];
-    gulp.src([ '../samples/**/*.json'])
-    .pipe(es.map(function(file, fileCallback) {  
-        let content = file.contents.toString();
-        if (content.indexOf("skipAlterDataCasing") <= 0) {
-
-            for (let i = 0; i < cdnFiles.length; i++) {
-                const dataSource = cdnFiles[i];
-                if (content.indexOf(dataSource) >= 0) { 
-                    let samplePath = file.dirname + '/' + file.basename + " \t" + dataSource;
-                    // console.log(file.dirname + '/' + file.basename + " \t" + dataSource); 
-                    updateSamples.push(samplePath);
-                    break;
-                }
-            }
-
-            // let lines = content.split('\n'); 
-            // var dataSource = "";
-            // for (let i = 0; i < lines.length; i++) {
-            //     const item = lines[i];
-            //     if (item.indexOf("dataSource") >= 0) {
-            //         dataSource = item;
-            //     }
-            // }
-            // console.log(file.dirname + '/' + file.basename + " \t" + dataSource);  
-        }
-        fileCallback(null, file);
-    }))
-    .on("end", function() {
-        console.log("add '\"skipAlterDataCasing\": true' to these samples:");
-        console.log(updateSamples);
         cb();
      });
 }
+
+function cdnSyncSamples(cb) {
+    
+    console.log('checking if samples with CDN files have "skipAlterDataCasing" flag ... ');
+    let updateSamples = [];
+    gulp.src([ '../samples/**/*.json'])
+    .pipe(es.map(function(sample, fileCallback) {  
+        let content = sample.contents.toString();
+        if (content.indexOf("skipAlterDataCasing") <= 0) {
+
+            for (let i = 0; i < cdnFiles.length; i++) {
+                const dataSource = cdnFiles[i].dataName;
+                if (content.indexOf(dataSource) >= 0) { 
+                    // let samplePath = sample.dirname + '/' + sample.basename;
+                    let samplePath = sample.dirname + '\\' + sample.basename;
+                    updateSamples.push(samplePath);
+
+                    let lines = content.split('\n'); 
+                    lines.splice(1, 0, '  \"skipAlterDataCasing\": true,');
+                    
+                    console.log('adding skipAlterDataCasing to: ' + samplePath);
+                    saveFile(samplePath, lines.join('\n'), true); 
+                    break;
+                }
+            }
+        }
+        fileCallback(null, sample);
+    }))
+    .on("end", function() {
+        // console.log("TODO add '\"skipAlterDataCasing\": true' to these samples:");
+        // console.log(updateSamples);
+        // console.log("\n WARNING: complete above TODO and then copy content of the the ./CDN folder to:\n" + cdnServer + "\n")
+        console.log('');
+        console.log('--------------------------------------------------------------------');
+        console.log(">>> WARNING <<< TODO copy content of the the ./CDN folder to:\n" + cdnServer)
+        console.log('--------------------------------------------------------------------');
+        cb();
+    });
+}
+
+exports.copyCDN = gulp.series(
+    cdnSyncData,
+    cdnSyncSamples,
+);
 
 exports.compactJSON = function compactJSON(cb) {
     let filePaths = [
@@ -1645,8 +1622,7 @@ exports.toCSV = function toCSV(cb) {
 
 
 exports.verifyJSON = function verifyJSON(cb)
-{  
-        
+{
     let verified = true;
     console.log("--------------------------------------------------------------------");   
     console.log('verifying XPLAT.JSON files:');      
@@ -1661,7 +1637,7 @@ exports.verifyJSON = function verifyJSON(cb)
         let jsonContent = file.contents.toString();
         let jsonArray = JSON.parse(jsonContent);
         let verified = true; 
-        let columNames = [];
+        let columnNames = [];
         let columnTypes = {};
         let issues = [];
     
@@ -1669,8 +1645,8 @@ exports.verifyJSON = function verifyJSON(cb)
             let item = jsonArray[i];
             let itemColumns = Object.keys(item);
             for (let columnName of itemColumns) {
-                if (columNames.indexOf(columnName) < 0) {
-                    columNames.push(columnName);
+                if (columnNames.indexOf(columnName) < 0) {
+                    columnNames.push(columnName);
                 }
                 let valType = typeof(item[columnName])
                 if (valType !== 'object'){
@@ -1680,7 +1656,7 @@ exports.verifyJSON = function verifyJSON(cb)
         }
         for (let i = 0; i < jsonArray.length; i++) {
             let item = jsonArray[i];
-            for (let columnName of columNames) {
+            for (let columnName of columnNames) {
                 if (item[columnName] === undefined) {
                     issues.push("Item #" + i + " is missing '" + columnName + "' column");
                     verified = false; break;    
@@ -1719,7 +1695,7 @@ exports.verifyJSON = function verifyJSON(cb)
 
 function correctDATA(jsonArray, fileCallback, file)
 { 
-    let columNames = [];
+    let columnNames = [];
     let columnTypes = {};
 
     for (let i = 0; i < jsonArray.length; i++) {
@@ -1728,8 +1704,8 @@ function correctDATA(jsonArray, fileCallback, file)
         let itemColumns = Object.keys(item);
 
         for (let columnName of itemColumns) {
-            if (columNames.indexOf(columnName) < 0) {
-                columNames.push(columnName);
+            if (columnNames.indexOf(columnName) < 0) {
+                columnNames.push(columnName);
 
                 let valType = typeof(item[columnName])
 
@@ -1772,7 +1748,7 @@ exports.correctJSON = function correctJSON(cb)
         let jsonContent = file.contents.toString();
         let jsonArray = JSON.parse(jsonContent);
         let verified = true;
-        let columNames = [];
+        let columnNames = [];
         let columnTypes = {};
 
         correctDATA(jsonArray, fileCallback, file);
@@ -1781,8 +1757,8 @@ exports.correctJSON = function correctJSON(cb)
         //     let item = jsonArray[i];
         //     let itemColumns = Object.keys(item);
         //     for (let columnName of itemColumns) {
-        //         if (columNames.indexOf(columnName) < 0) {
-        //             columNames.push(columnName);
+        //         if (columnNames.indexOf(columnName) < 0) {
+        //             columnNames.push(columnName);
 
         //             let valType = typeof(item[columnName])
         //             if (valType !== 'object'){
@@ -1793,7 +1769,7 @@ exports.correctJSON = function correctJSON(cb)
         // }
         // for (let i = 0; i < jsonArray.length; i++) {
         //     let item = jsonArray[i];
-        //     for (let columnName of columNames) {
+        //     for (let columnName of columnNames) {
         //         // if (item[columnName] === undefined) {
         //         //     console.log("Item #" + i + " is missing '" + columnName + "' column in " + jsonPath)
         //         //     // verified = false; break;    
