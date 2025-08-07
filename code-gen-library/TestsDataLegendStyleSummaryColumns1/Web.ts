@@ -1,15 +1,13 @@
 //begin imports
-import { DataLegendStylingColumnEventArgs } from 'igniteui-webcomponents-charts';
-import { Brush } from 'igniteui-webcomponents-core';
+import { IgcDataLegendStylingColumnEventArgs } from 'igniteui-webcomponents-charts';
 //end imports
 
 export class TestsDataLegendStyleSummaryColumns1
 {
     //begin eventHandler
-    public testsDataLegendStyleSummaryColumns1(sender: any,args: DataLegendStylingColumnEventArgs)
+    public testsDataLegendStyleSummaryColumns1(sender: any,args: IgcDataLegendStylingColumnEventArgs)
     {  
-        let redBrush = new Brush(); redBrush.fill = "Red";
-        args.valueTextColor = redBrush;
+        args.valueTextColor = "red";
     }
     //end eventHandler
 }

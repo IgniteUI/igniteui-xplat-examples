@@ -1,6 +1,6 @@
 //begin imports
 import { IgcDataLegendComponent } from 'igniteui-webcomponents-charts';
-import { DateTimeFormatSpecifier } from 'igniteui-webcomponents-core';
+import { IgcDateTimeFormatSpecifier } from 'igniteui-webcomponents-core';
 //end imports
 
 export class TestsAddDataLegendHeaderSimpleFormatSpecfier
@@ -9,13 +9,10 @@ export class TestsAddDataLegendHeaderSimpleFormatSpecfier
     //begin eventHandler
     public  testsAddDataLegendHeaderSimpleFormatSpecfier(){
         var legend = CodeGenHelper.getDescription<IgcDataLegendComponent>("secondary");
-
-        var specifiers: any[];
-        const spec: DateTimeFormatSpecifier = new DateTimeFormatSpecifier();
+        const spec: IgcDateTimeFormatSpecifier = new IgcDateTimeFormatSpecifier();
         spec.locale = "en-US";
         spec.dateStyle = "long";
-        specifiers.push(spec);
-        legend.headerFormatSpecifiers = specifiers;
+        legend.headerFormatSpecifiers = [spec];
     }
     //end eventHandler
 

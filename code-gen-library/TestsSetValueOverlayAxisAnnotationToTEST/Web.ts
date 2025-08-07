@@ -4,7 +4,7 @@
 export class TestsSetValueOverlayAxisAnnotationToTEST
 {
     //begin eventHandler
-    public TestsSetValueOverlayAxisAnnotationToTEST(sender: any, item: any): string
+    public testsSetValueOverlayAxisAnnotationToTEST(sender: any, item: any): string
     {
 		return "TEST";
     }

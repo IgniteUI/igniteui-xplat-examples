@@ -1,21 +1,13 @@
 //begin imports
-import { DataLegendStylingColumnEventArgs } from 'igniteui-webcomponents-charts';
-import { Brush } from 'igniteui-webcomponents-core';
+import { IgcDataLegendStylingColumnEventArgs } from 'igniteui-webcomponents-charts';
+
 //end imports
 
 export class TestsDataLegendStyleSeriesColumns2
 {
     //begin eventHandler
-    public testsDataLegendStyleSeriesColumns2(sender:any,args: DataLegendStylingColumnEventArgs)
+    public testsDataLegendStyleSeriesColumns2(sender:any,args: IgcDataLegendStylingColumnEventArgs)
     { 
-        let g = new Brush(); g.fill = "Green";
-        let b = new Brush(); b.fill = "Blue";
-        let r = new Brush(); r.fill = "Red";
-        let c = new Brush(); c.fill = "Cyan";
-        let bl = new Brush(); bl.fill = "Black"; 
-        let br = new Brush(); br.fill = "Brown"; 
-        let p = new Brush(); p.fill = "Purple"; 
-        let o = new Brush(); o.fill = "Orange"; 
         switch (args.seriesTitle)
         {
  		 case "Financial1":
@@ -25,27 +17,27 @@ export class TestsDataLegendStyleSeriesColumns2
                    case "Open":  
                    case "[Open]":
                        args.labelText = "Open";
-                       args.labelTextColor = c;
+                       args.labelTextColor = "cyan";
                        args.unitsText = "$";
-                       args.unitsTextColor = bl;
-                       args.valueTextColor = g;
+                       args.unitsTextColor =  "black";
+                       args.valueTextColor = "green";
                        break;
                    case "Close":
 		            case "[Close]":
                        args.labelText = "Close";
-                       args.labelTextColor = g;
+                       args.labelTextColor = "green";
                        args.unitsText = "$";
-                       args.unitsTextColor = r;
-                       args.valueTextColor = c;
+                       args.unitsTextColor = "red";
+                       args.valueTextColor = "cyan";
                        break;
                    case "TypicalPrice":
 		           case "[TypicalPrice]":
 		           case "TP":
                        args.labelText = "Typical";
-                       args.labelTextColor = b;
+                       args.labelTextColor = "blue";
                        args.unitsText = "$";
-                       args.unitsTextColor = g;
-                       args.valueTextColor = b;
+                       args.unitsTextColor = "green";
+                       args.valueTextColor = "blue";
                        break;
                }
     			 break;
@@ -56,27 +48,27 @@ export class TestsDataLegendStyleSeriesColumns2
                    case "Open":
 		           case "[Open]":
                        args.labelText = "Open";
-                       args.labelTextColor = g;
+                       args.labelTextColor = "green";
                        args.unitsText = "$";
-                       args.unitsTextColor = br;
-                       args.valueTextColor = c;
+                       args.unitsTextColor = "brown"; 
+                       args.valueTextColor = "cyan";
                        break;
                    case "Close":
 		           case "[Close]":
                        args.labelText = "Close";
-                       args.labelTextColor = c;
+                       args.labelTextColor = "cyan";
                        args.unitsText = "$";
-                       args.unitsTextColor = r;
-                       args.valueTextColor = g;
+                       args.unitsTextColor = "red";
+                       args.valueTextColor = "green";
                        break;
                    case "TypicalPrice":
 		            case "[TypicalPrice]":
 			        case "TP":
                        args.labelText = "Typical";
-                       args.labelTextColor = b;
+                       args.labelTextColor = "blue";
                        args.unitsText = "$";
-                       args.unitsTextColor = p;
-                       args.valueTextColor = o;
+                       args.unitsTextColor = "purple";
+                       args.valueTextColor = "orange";
                        break;
                }
        break;

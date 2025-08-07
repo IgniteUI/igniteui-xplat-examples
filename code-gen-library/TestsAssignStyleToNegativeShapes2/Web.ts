@@ -1,18 +1,16 @@
 //begin imports
-import { AssigningCategoryStyleEventArgs } from 'igniteui-webcomponents-charts';
+import { IgcAssigningCategoryStyleEventArgs } from 'igniteui-webcomponents-charts';
 import { Brush } from 'igniteui-webcomponents-core';
 //end imports
 
 export class TestsAssignStyleToNegativeShapes2
 {
     //begin eventHandler
-    public testsAssignStyleToNegativeShapes2(sender: any,args: AssigningCategoryStyleEventArgs)
+    public testsAssignStyleToNegativeShapes2(sender: any,args: IgcAssigningCategoryStyleEventArgs)
     {
 		if (args.selectionHighlightingInfo != null && args.isNegativeShape){
-			let b1 = new Brush(); b1.fill ="Blue";
-            let b2 = new Brush(); b1.fill ="Black";
-    		args.fill  = b1;
-    		args.stroke = b2;
+			args.fill  = "blue";
+    		args.stroke = "black";
     		args.strokeThickness = 2;
     		args.highlightingHandled = true;
 		}
