@@ -26,7 +26,9 @@ export class TestsAddDataLegendValueFormatSpecifier
                         numSpec.minimumFractionDigits = parseInt(v.toString());
                         break;
                     case "MinimumIntegerDigits":
-                        numSpec.minimumIntegerDigits = parseInt(v.toString());
+                        let v2 = parseInt(v.toString());
+                        if (v2 != 0)
+                            numSpec.minimumIntegerDigits = v2;
                         break;
                     case "Locale":                    
                         numSpec.locale = v;
