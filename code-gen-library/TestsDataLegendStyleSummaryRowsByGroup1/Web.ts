@@ -1,6 +1,6 @@
 //begin imports
 import { IgcDataLegendStylingRowEventArgs } from 'igniteui-webcomponents-charts';
-import { Brush } from 'igniteui-webcomponents-core';
+
 //end imports
 
 export class TestsDataLegendStyleSummaryRowsByGroup1
