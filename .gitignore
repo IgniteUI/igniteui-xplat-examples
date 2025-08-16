@@ -357,4 +357,5 @@ MigrationBackup/
 .ionide/
 code-gen-tools/package-lock.json
 code-gen-tools/CDN/
+code-gen-tools/FLAGS/
 convert/*
