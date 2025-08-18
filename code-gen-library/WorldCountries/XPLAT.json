@@ -239,5 +239,6 @@
 { "Code": "IOT", "Name": "British Indian Territory", "Population": 4000, "GDP": 160, "X": 72.424, "Y": -7.328 },
 { "Code": "FLK", "Name": "Falkland Island", "Population": 2931, "GDP": 282, "X": -59.46, "Y": -51.78 },
 { "Code": "NFK", "Name": "Norfolk Island", "Population": 2210, "GDP": 33, "X": 167.94, "Y": -29.05 },
-{ "Code": "NIU", "Name": "Niue", "Population": 1626, "GDP": 10, "X": -169.8, "Y": -19.05 }
+{ "Code": "NIU", "Name": "Niue", "Population": 1626, "GDP": 10, "X": -169.8, "Y": -19.05 },
+{ "Code": "VAT", "Name": "Vatican", "Population": 771, "GDP": 15, "X": 12.433, "Y": 41.902 }
 ]
