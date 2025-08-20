@@ -1,35 +1,35 @@
 //begin imports
-import { DataLegendStylingColumnEventArgs } from 'igniteui-webcomponents-charts';
-import { Brush } from 'igniteui-webcomponents-core';
+import { IgcDataLegendStylingColumnEventArgs } from 'igniteui-webcomponents-charts';
+
 //end imports
 
 export class TestsDataLegendStyleSummaryColumns3
 {
     //begin eventHandler
 	//WPF: Infragistics.Controls.Charts.DataLegendStyleColumnHandler
-    public testsDataLegendStyleSummaryColumns3(sender:any,args: DataLegendStylingColumnEventArgs)
+    public testsDataLegendStyleSummaryColumns3(sender:any,args: IgcDataLegendStylingColumnEventArgs)
     {    
 		switch(args.valueMemberPath)
 		{
 			case "Open":
 			case "[Open]":
-				let g = new Brush(); g.fill = "Green";
-				args.valueTextColor = g;
+				
+				args.valueTextColor = "green";
 				break;	
 			case "High":
 			case "[High]":
-				let b = new Brush(); b.fill = "Blue";
-				args.valueTextColor = b;
+				
+				args.valueTextColor = "blue";
 				break;	
 			case "Low":
 			case "[Low]":
-				let o = new Brush(); o.fill = "Orange";
-				args.valueTextColor = o;
+				
+				args.valueTextColor = "orange";
 				break;	
 			case "Close":
 			case "[Close]":
-				let r = new Brush(); r.fill = "Red";
-				args.valueTextColor = r;
+				
+				args.valueTextColor = "red";
 				break;	
 		}
        

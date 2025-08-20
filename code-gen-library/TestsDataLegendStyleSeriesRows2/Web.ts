@@ -1,24 +1,22 @@
 //begin imports
-import { DataLegendStylingRowEventArgs } from 'igniteui-webcomponents-charts';
-import { Brush } from 'igniteui-webcomponents-core';
+import { IgcDataLegendStylingRowEventArgs } from 'igniteui-webcomponents-charts';
+
 //end imports
 
 export class TestsDataLegendStyleSeriesRows2
 {
     //begin eventHandler
-    public testsDataLegendStyleSeriesRows2(sender:any,args:DataLegendStylingRowEventArgs)
+    public testsDataLegendStyleSeriesRows2(sender:any,args:IgcDataLegendStylingRowEventArgs)
     {  																	
 		 switch (args.seriesTitle)
 		 {
 			 case "Financial1":
 				 args.titleText = "F1";
-				 let b= new Brush(); b.fill = "Blue";
-				 args.titleTextColor = b;
+				 args.titleTextColor = "blue";
 				 break;
 			 case "Financial2":
-				 let o = new Brush(); o.fill = "Orange";
 				 args.titleText = "F2";
-				 args.titleTextColor = o;
+				 args.titleTextColor = "orange";
 				 break;
 		 }
     }

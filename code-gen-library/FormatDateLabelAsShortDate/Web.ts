@@ -5,7 +5,7 @@ export class FormatDateLabelAsShortDate
 {
     //begin eventHandler
     //WPF: Infragistics.Controls.Charts.AxisFormatLabelEventHandler
-    public FormatDateLabelAsShortDate(item: any): string
+    public formatDateLabelAsShortDate(item: any): string
     {
 
         let d: Date;

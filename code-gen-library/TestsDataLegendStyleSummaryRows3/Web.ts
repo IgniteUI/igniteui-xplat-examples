@@ -1,17 +1,15 @@
 //begin imports
-import { DataLegendStylingRowEventArgs } from 'igniteui-webcomponents-charts';
-import { Brush } from 'igniteui-webcomponents-core';
+import { IgcDataLegendStylingRowEventArgs } from 'igniteui-webcomponents-charts';
 //end imports
 
 export class TestsDataLegendStyleSummaryRows3
 {
     //begin eventHandler
 	//WPF: Infragistics.Controls.Charts.DataLegendStyleRowHandler
-    public testsDataLegendStyleSummaryRows3(sender:any,args: DataLegendStylingRowEventArgs)
+    public testsDataLegendStyleSummaryRows3(sender:any,args: IgcDataLegendStylingRowEventArgs)
     {															
 		 args.titleText = "TOTAL";
-         let b = new Brush(); b.fill = "Blue";
-		 args.titleTextColor = b;
+		 args.titleTextColor = "blue";
 			
     }
     //end eventHandler

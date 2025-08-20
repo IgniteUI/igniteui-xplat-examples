@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Collections;
+using Infragistics.Controls.DataSource;
 //end imports
 
 public class RetailSalesPerformanceLocalDataSource : LocalDataSource
@@ -914,7 +915,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
             });
 		
 		
-		this.DataSource = data;
+		this.ItemsSource = data;
 	}
 }
 

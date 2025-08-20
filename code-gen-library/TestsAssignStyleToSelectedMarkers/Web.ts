@@ -1,20 +1,19 @@
 //begin imports
-import { AssigningCategoryMarkerStyleEventArgs } from "igniteui-webcomponents-charts"; 
+import { IgcAssigningCategoryMarkerStyleEventArgs } from "igniteui-webcomponents-charts"; 
 import { Brush } from 'igniteui-webcomponents-core';
 //end imports
 
 export class TestsAssignStyleToSelectedMarkers
 {
     //begin eventHandler
-    public testsAssignStyleToSelectedMarkers(sender: any,args: AssigningCategoryMarkerStyleEventArgs)
+    public testsAssignStyleToSelectedMarkers(sender: any,args: IgcAssigningCategoryMarkerStyleEventArgs)
     {
 		
             if (args.selectionHighlightingInfo != null)
             {
-                let b1 = new Brush(); b1.fill ="Blue";
-                args.fill = b1;
-                let b2 = new Brush(); b1.fill ="Black";
-                args.stroke = b2;
+                
+                args.fill = "blue";
+                args.stroke = "black";
                 args.highlightingHandled = true;
             }
     }
