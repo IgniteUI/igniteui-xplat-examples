@@ -11,7 +11,7 @@ class TestsDataLegendStyleSeriesColumns1 {
         when (args.seriesTitle) {
             "One" -> {
                 args.labelText = "Value"
-                args.labelTextColor = IgaSolidColorBrush(Color.GREEN)
+                args.labelTextColor = IgaSolidColorBrush(Color.rgb(0, 128, 0))
                 args.valueText = "+25.000"
                 args.valueTextColor = IgaSolidColorBrush(Color.RED)
             }
@@ -19,7 +19,7 @@ class TestsDataLegendStyleSeriesColumns1 {
                 args.labelText = "Value"
                 args.labelTextColor = IgaSolidColorBrush(Color.BLUE)
                 args.valueText = "+10.000"
-                args.valueTextColor = IgaSolidColorBrush(Color.GREEN)
+                args.valueTextColor = IgaSolidColorBrush(Color.rgb(0, 128, 0))
             }
             "Three" -> {
                 args.labelText = "Value"

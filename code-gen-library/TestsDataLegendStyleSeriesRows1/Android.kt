@@ -19,7 +19,7 @@ class TestsDataLegendStyleSeriesRows1 {
             }
             "Three" -> {
                 args.titleText = "Series3"
-                args.titleTextColor = IgaSolidColorBrush(Color.GREEN)
+                args.titleTextColor = IgaSolidColorBrush(Color.rgb(0, 128, 0))
             }
         }
     }

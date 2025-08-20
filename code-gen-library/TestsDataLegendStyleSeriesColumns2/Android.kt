@@ -16,11 +16,11 @@ class TestsDataLegendStyleSeriesColumns2 {
                         args.labelTextColor = IgaSolidColorBrush(Color.CYAN)
                         args.unitsText = "$"
                         args.unitsTextColor = IgaSolidColorBrush(Color.BLACK)
-                        args.valueTextColor = IgaSolidColorBrush(Color.GREEN)
+                        args.valueTextColor = IgaSolidColorBrush(Color.rgb(0, 128, 0))
                     }
                     "Close", "[Close]" -> {
                         args.labelText = "Close"
-                        args.labelTextColor = IgaSolidColorBrush(Color.GREEN)
+                        args.labelTextColor = IgaSolidColorBrush(Color.rgb(0, 128, 0))
                         args.unitsText = "$"
                         args.unitsTextColor = IgaSolidColorBrush(Color.RED)
                         args.valueTextColor = IgaSolidColorBrush(Color.CYAN)
@@ -29,7 +29,7 @@ class TestsDataLegendStyleSeriesColumns2 {
                         args.labelText = "Typical"
                         args.labelTextColor = IgaSolidColorBrush(Color.BLUE)
                         args.unitsText = "$"
-                        args.unitsTextColor = IgaSolidColorBrush(Color.GREEN)
+                        args.unitsTextColor = IgaSolidColorBrush(Color.rgb(0, 128, 0))
                         args.valueTextColor = IgaSolidColorBrush(Color.BLUE)
                     }
                 }
@@ -38,7 +38,7 @@ class TestsDataLegendStyleSeriesColumns2 {
                 when (args.valueMemberPath) {
                     "Open", "[Open]" -> {
                         args.labelText = "Open"
-                        args.labelTextColor = IgaSolidColorBrush(Color.GREEN)
+                        args.labelTextColor = IgaSolidColorBrush(Color.rgb(0, 128, 0))
                         args.unitsText = "$"
                         args.unitsTextColor = IgaSolidColorBrush(0xFFA52A2A.toInt()) // Brown
                         args.valueTextColor = IgaSolidColorBrush(Color.CYAN)
@@ -48,13 +48,13 @@ class TestsDataLegendStyleSeriesColumns2 {
                         args.labelTextColor = IgaSolidColorBrush(Color.CYAN)
                         args.unitsText = "$"
                         args.unitsTextColor = IgaSolidColorBrush(Color.RED)
-                        args.valueTextColor = IgaSolidColorBrush(Color.GREEN)
+                        args.valueTextColor = IgaSolidColorBrush(Color.rgb(0, 128, 0))
                     }
                     "TypicalPrice", "[TypicalPrice]", "TP" -> {
                         args.labelText = "Typical"
                         args.labelTextColor = IgaSolidColorBrush(Color.BLUE)
                         args.unitsText = "$"
-                        args.unitsTextColor = IgaSolidColorBrush(Color.MAGENTA) // Purple
+                        args.unitsTextColor = IgaSolidColorBrush(Color.rgb(128,0,128)) // Purple
                         args.valueTextColor = IgaSolidColorBrush(Color.rgb(255, 165, 0)) // Orange
                     }
                 }

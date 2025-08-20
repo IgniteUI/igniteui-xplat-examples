@@ -10,7 +10,7 @@ class TestsDataLegendStyleSummaryColumns3 {
     fun testsDataLegendStyleSummaryColumns3(sender: Any?, args: IgaDataLegendStylingColumnEventArgs) {
         when (args.valueMemberPath) {
             "Open", "[Open]" -> {
-                args.valueTextColor = IgaSolidColorBrush(Color.GREEN)
+                args.valueTextColor = IgaSolidColorBrush(Color.rgb(0, 128, 0)) // Green
             }
             "High", "[High]" -> {
                 args.valueTextColor = IgaSolidColorBrush(Color.BLUE)
