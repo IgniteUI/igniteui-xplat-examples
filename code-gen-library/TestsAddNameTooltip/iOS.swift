@@ -1,0 +1,29 @@
+//begin imports
+//end imports
+
+public class TestsAddNameTooltip {
+
+    //begin eventHandler
+    //Swift: Action
+    public func testsAddNameTooltip() {
+        let chart = CodeGenHelper.getDescription(IgsDataChart.self, "content")!
+        for series in chart.series ?? [] {
+            if !series.isLayer {
+                series.chartToolTipUpdating = { sender, args in
+                    guard let args = args else { return }
+                    var cv = args.currentView
+                    if cv == nil {
+                        let tv = UILabel()
+                        cv = tv
+                        args.currentView = cv
+                    }
+                    if let item = args.currentData?.item as? [String?: Any?],
+                       let name = item["Name"] as? String {
+                        (cv as? UILabel)?.text = name
+                    }
+                }
+            }
+        }
+    }
+    //end eventHandler
+}

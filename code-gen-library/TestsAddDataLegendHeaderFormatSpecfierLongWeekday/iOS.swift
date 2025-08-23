@@ -1,11 +1,13 @@
 //begin imports
 //end imports
 
-public class TestsAddDataLegendHeaderSimpleFormatSpecfierShort {
+public class TestsAddDataLegendHeaderFormatSpecfierLongWeekday {
 
     //begin eventHandler
-    //Kotlin: Action
-    public func testsAddDataLegendHeaderSimpleFormatSpecfierShort() {
+    //Swift: Action
+    public func testsAddDataLegendHeaderFormatSpecfierLongWeekday() {
+        // TODO: long weekday cannot currently be set in WPF
+
         let legend = CodeGenHelper.getDescription(IgsDataLegend.self, "secondary")!
         legend.headerFormatSpecifiers = [
             IgsDateTimeFormatSpecifier().apply {
