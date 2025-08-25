@@ -16,7 +16,7 @@
       "chartType": "StepLine",
       "dataSourceRef": "CountryRenewableElectricity",
       "includedProperties": [ "Year", "Europe", "China", "America" ],
-      "isCategoryHighlightingEnabled": true,
+      "isCategoryHighlightingEnabled": false,
       "isSeriesHighlightingEnabled": true,
       "isHorizontalZoomEnabled": false,
       "isVerticalZoomEnabled": false,
