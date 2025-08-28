@@ -35,7 +35,7 @@
         },
         {
           "type": "ColumnSeries",
-          "name": "LineSeries3",
+          "name": "ColumnSeries3",
           "title": "America",
           "xAxisRef": "xAxis",
           "yAxisRef": "yAxis",
