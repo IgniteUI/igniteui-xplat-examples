@@ -182,7 +182,6 @@
 { "Code": "ISL", "Name": "Iceland", "Population": 339747, "GDP": 16150, "X": -19.01, "Y": 64.966 },
 { "Code": "BHS", "Name": "Bahamas", "Population": 329988, "GDP": 9066, "X": -78.01, "Y": 24.761 },
 { "Code": "MYT", "Name": "Mayotte", "Population": 320901, "GDP": 2932, "X": 45.14, "Y": -12.84 },
-{ "Code": "FRG", "Name": "French Guiana", "Population": 296161, "GDP": 1299000, "X": -53.13, "Y": 3.893 },
 { "Code": "GUF", "Name": "French Guiana", "Population": 292354, "GDP": 4562, "X": -53, "Y": 4 },
 { "Code": "BRB", "Name": "Barbados", "Population": 292336, "GDP": 4804, "X": -59.53, "Y": 13.19 },
 { "Code": "PYF", "Name": "Fr. Polynesia", "Population": 287881, "GDP": 5490, "X": -143.9, "Y": -14.82 },
