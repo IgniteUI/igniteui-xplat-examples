@@ -1,0 +1,106 @@
+{
+  "skipAlterDataCasing": true,
+  "descriptions": {
+    "content": {
+      "type": "WebGrid",
+      "name": "grid",
+      "dataRef": "InvoicesData",
+      "autoGenerate": false,
+      "cellMergeMode": "cellMergeMode",
+      "rowSelection": "Single",
+      "columnList": [
+        {
+          "type": "WebColumn",
+          "field": "OrderID",
+          "header": "Order ID",
+          "dataType": "String",
+          "hidden": "true"
+        },
+        {
+          "type": "WebColumn",
+          "field": "ShipperName",
+          "header": "Shipper Name",
+          "dataType": "String",
+          "merge": "true",
+          "sortable": "true",
+          "width": "250px"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Salesperson",
+          "header": "Salesperson",
+          "dataType": "String",
+          "merge": "true",
+          "sortable": "true",
+          "width": "250px"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Discontinued",
+          "header": "Discontinued",
+          "merge": "true",
+          "sortable": "true",
+          "width": "200px",
+          "bodyTemplateRef": "WebGridDiscontinuedCellTemplate"
+
+        },
+        {
+          "type": "WebColumn",
+          "field": "UnitPrice",
+          "header": "Unit Price",
+          "dataType": "Currency",
+          "width": "150px"
+        },
+        {
+          "type": "WebColumn",
+          "field": "Quantity",
+          "header": "Quantity",
+          "dataType": "Number",
+          "width": "150px"
+        },
+        {
+          "type": "WebColumn",
+          "field": "ShipCountry",
+          "header": "Ship Country",
+          "dataType": "String",
+          "width": "200px",
+          "merge": "true"
+        },
+        {
+          "type": "WebColumn",
+          "field": "ShipCity",
+          "header": "Ship City",
+          "dataType": "String",
+          "width": "250px",
+          "merge": "true"
+        },
+        {
+          "type": "WebColumn",
+          "field": "ShipName",
+          "header": "Ship Name",
+          "dataType": "String",
+          "width": "250px"
+        },
+        {
+          "type": "WebColumn",
+          "field": "PostalCode",
+          "header": "Postal Code",
+          "dataType": "String",
+          "width": "200px"
+        },
+        {
+          "type": "WebColumn",
+          "field": "OrderDate",
+          "header": "Order Date",
+          "dataType": "Date",
+          "width": "200px",
+          "format": "mediumDate"
+        }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "grids/WebGridModule"
+  ]
+}
