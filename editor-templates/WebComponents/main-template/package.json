@@ -22,7 +22,7 @@
     "start:legacy": "npm run serve:dev:legacy"
   },
   "dependencies": {
-    "babel-runtime": "^7.27.1",
+    "babel-runtime": "^6.26.0",
     "igniteui-webcomponents-core": "6.0.2-beta.0",
 //ifdef editor, webinputs
     "igniteui-webcomponents": "6.2.1",
