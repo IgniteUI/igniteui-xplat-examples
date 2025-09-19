@@ -26,7 +26,7 @@ public class TestsAddNameTooltip
 		{
 			panel = new Panel();
 			panel.Tag = e.DataContext.Item; // Needed for the above check to work
-			panel.AutoSize = true;
+			
 			//panel.Size = new Size(300, 40);
 			var item = e.DataContext.Item;
 			string name = "";
@@ -36,6 +36,10 @@ public class TestsAddNameTooltip
 			}
 			Label l = new Label() { Text = name, AutoSize = true };
 			panel.Controls.Add(l);
+
+			panel.Size = new Size(0,0);
+			panel.AutoSize = true;
+			panel.AutoSizeMode = AutoSizeMode.GrowAndShrink;
 		}
 		return panel;
 	}
