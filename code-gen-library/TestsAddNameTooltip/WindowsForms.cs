@@ -26,8 +26,15 @@ public class TestsAddNameTooltip
 		{
 			panel = new Panel();
 			panel.Tag = e.DataContext.Item; // Needed for the above check to work
-			panel.Size = new Size(300, 40);
-			Label l = new Label() { Text = e.DataContext.Series.Name, Width = 290 };
+			panel.AutoSize = true;
+			//panel.Size = new Size(300, 40);
+			var item = e.DataContext.Item;
+			string name = "";
+			if (item is IDictionary)
+			{
+				name = (string)(item as IDictionary)["Name"];
+			}
+			Label l = new Label() { Text = name, AutoSize = true };
 			panel.Controls.Add(l);
 		}
 		return panel;

@@ -21,6 +21,10 @@ public class TestsUpdateGrpupsInSeriesAddedEvent
       groups.Add(((JsonDictionaryValue)item).Value as String);
     }
 
+    if (args.Series.IsAnnotationLayer && !updateAnnotations) {
+      return;
+    }
+
     if (groupIndex >= groups.Count)
       groupIndex = 0;
     if (groups.Contains(args.Series.DataLegendGroup))
