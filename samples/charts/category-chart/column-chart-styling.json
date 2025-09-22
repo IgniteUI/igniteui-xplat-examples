@@ -26,7 +26,7 @@
       "xAxisGap": 0.5,
 
       "crosshairsDisplayMode": "None",
-      "isCategoryHighlightingEnabled": true,
+      "isCategoryHighlightingEnabled": false,
       "highlightingMode": "FadeOthersSpecific",
       "highlightingBehavior": "NearestItemsAndSeries"
     }
