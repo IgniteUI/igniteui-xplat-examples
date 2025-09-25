@@ -63,7 +63,7 @@
     "igniteui-webcomponents-spreadsheet-chart-adapter": "6.0.2-beta.5",
 //endifdef spreadsheet
     "lit-html": "^3.3.1",
-    "tslib": "^2.0.0"
+    "tslib": "^2.8.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.28.3",
