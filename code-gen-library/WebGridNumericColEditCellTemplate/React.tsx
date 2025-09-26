@@ -19,7 +19,7 @@ export class WebGridNumericColEditCellTemplate {
                 id={inputTemplateId} 
                 name={cell.id.rowID} 
                 value={cell.editValue} 
-                inputOcurred={(s:any, e: any) => {
+                onInput={(e: CustomEvent<string>) => {
                     cell.editValue = e.detail;
                 }} 
                 style={{width: "100%"}}
