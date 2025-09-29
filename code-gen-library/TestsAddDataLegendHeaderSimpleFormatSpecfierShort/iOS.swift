@@ -1,6 +1,4 @@
 //begin imports
-import com.infragistics.mobile.controls.IgaDataLegend
-import com.infragistics.mobile.controls.DateTimeFormatSpecifier
 //end imports
 
 import com.infragistics.mobile.controls.CodeGenHelper
@@ -9,14 +7,15 @@ public class TestsAddDataLegendHeaderSimpleFormatSpecfierShort {
 
     //begin eventHandler
     //Swift: Action
-    public fun testsAddDataLegendHeaderSimpleFormatSpecfierShort() {
-        val legend = CodeGenHelper.getDescription<IgaDataLegend>("secondary")!!
-        legend.headerFormatSpecifiers = arrayOf(
-            DateTimeFormatSpecifier().apply {
-                locale = "en-US"
-                dateStyle = "short"
-            }
-        )
+    public func testsAddDataLegendHeaderSimpleFormatSpecfierShort() {
+        let legend = CodeGenHelper.getDescription(IgsDataLegend.self, "secondary")!
+        var spec1 = IgsDateTimeFormatSpecifier();
+        spec1.locale = "en-US"
+        spec1.dateStyle = "short"
+            
+        legend.headerFormatSpecifiers = [
+            spec1
+        ]
     }
     //end eventHandler
 

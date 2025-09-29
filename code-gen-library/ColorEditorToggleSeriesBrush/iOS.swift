@@ -3,7 +3,7 @@
 
 public class ColorEditorToggleSeriesBrush {
     //begin eventHandler
-    public func colorEditorToggleSeriesBrush(sender: Any?, args: IgsToolCommandEventArgs) {
+    public func colorEditorToggleSeriesBrush(sender: Any?, args: IgsToolCommandEventArgs?) {
         guard let target = CodeGenHelper.getDescription(IgsDataChart.self, "content") else { return }
         guard let color = args.command?.argumentsList?[0]?.value else { return }
 

@@ -4,7 +4,7 @@
 public class FormatLabelAsTest {
     //begin eventHandler
     //Swift: Any?___String?
-    public func formatLabelAsTest(sender: Any?, item: Any?) -> String? {
+    public func formatLabelAsTest(sender: Any?, args: Any?) -> String? {
         return "TEST"
     }
     //end eventHandler

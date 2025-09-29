@@ -7,11 +7,12 @@ public class TestsAddDataLegendHeaderSimpleFormatSpecfier {
     //Swift: Action
     public func testsAddDataLegendHeaderSimpleFormatSpecfier() {
         let legend = CodeGenHelper.getDescription(IgsDataLegend.self, "secondary")!
+        var spec1 = IgsDateTimeFormatSpecifier();
+        spec1.locale = "en-US"
+        spec1.dateStyle = "long"
+            
         legend.headerFormatSpecifiers = [
-            IgsDateTimeFormatSpecifier().apply {
-                $0.locale = "en-US"
-                $0.dateStyle = "long"
-            }
+            spec1
         ]
     }
     //end eventHandler

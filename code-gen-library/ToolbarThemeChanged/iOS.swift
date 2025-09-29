@@ -4,10 +4,10 @@
 class ToolbarThemeChanged {
 
     //begin eventHandler
-    func toolbarThemeChanged(sender: Any?, e: IgsToolCommandEventArgs) {
+    func toolbarThemeChanged(sender: Any?, e: IgsToolCommandEventArgs?) {
         let target = CodeGenHelper.getDescription(IgsDataChart.self, "content")
 
-        switch e.command.commandId {
+        switch e!.command!.commandId {
         case "EnableTooltips":
             var toRemove: IgsSeries? = nil
             for s in target.series {

@@ -3,7 +3,7 @@
 
 public class EditorChangeUpdateYAxisMinimumValue {
     //begin eventHandler
-    public func editorChangeUpdateYAxisMinimumValue(sender: Any?, args: IgsPropertyEditorPropertyDescriptionChangedEventArgs) {
+    public func editorChangeUpdateYAxisMinimumValue(sender: Any?, args: IgsPropertyEditorPropertyDescriptionChangedEventArgs?) {
         guard let yAxisMinimumVal = args.newValue as? String else { return }
         CodeGenHelper.getDescription(IgsCategoryChart.self, "content")?.yAxisMinimumValue = Double(yAxisMinimumVal) ?? Double.nan
     }

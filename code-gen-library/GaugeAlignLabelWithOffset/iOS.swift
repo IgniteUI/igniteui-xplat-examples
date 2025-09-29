@@ -3,9 +3,9 @@
 
 public class GaugeAlignLabelWithOffset {
     //begin eventHandler
-    public func gaugeAlignLabelWithOffset(sender: Any?, args: IgsAlignLinearGraphLabelEventArgs) {
-        args.offsetX += 15
-        args.offsetY += 12
+    public func gaugeAlignLabelWithOffset(sender: Any?, args: IgsAlignLinearGraphLabelEventArgs?) {
+        args!.offsetX += 15
+        args!.offsetY += 12
     }
     //end eventHandler
 }

@@ -6,27 +6,29 @@ public class TestsAddDataPieNumberFormatter {
     //begin eventHandler
     //Swift: Action
     public func testsAddDataPieNumberFormatter() {
-
+    
         let dataPie = CodeGenHelper.getDescription(IgsDataPieChart.self, "content")!
-
+    
+        var spec1 = IgsNumberFormatSpecifier();
+        spec1.locale = "en-US"
+        spec1.minimumIntegerDigits = 4
+        spec1.minimumFractionDigits = 2
+        spec1.maximumFractionDigits = 2
+        spec1.useGrouping = false
+            
         dataPie.sliceLabelFormatSpecifiers = [
-            IgsNumberFormatSpecifier().apply {
-                $0.locale = "en-US"
-                $0.minimumIntegerDigits = 4
-                $0.minimumFractionDigits = 2
-                $0.maximumFractionDigits = 2
-                $0.useGrouping = false
-            }
+            spec1
         ]
-
+        
+        var spec2 = IgsNumberFormatSpecifier();
+        spec2.locale = "en-US"
+        spec2.minimumIntegerDigits = 4
+        spec2.minimumFractionDigits = 2
+        spec2.maximumFractionDigits = 2
+        spec2.useGrouping = false
+    
         dataPie.othersSliceLabelFormatSpecifiers = [
-            IgsNumberFormatSpecifier().apply {
-                $0.locale = "en-US"
-                $0.minimumIntegerDigits = 4
-                $0.minimumFractionDigits = 2
-                $0.maximumFractionDigits = 2
-                $0.useGrouping = false
-            }
+            spec2
         ]
     }
     //end eventHandler

@@ -2,36 +2,41 @@
 //end imports
 
 //begin data
-public class MyTimelineData: [MyTimelineInfo] {
+public class MyTimelineData: ArrayList<MyTimelineInfo> {
     public init() {
-        self.append(MyTimelineInfo().apply {
+        super.init();
+        self.add(item: MyTimelineInfo().apply {
             $0.Index = 0
             $0.Label = "0"
             $0.Value = 10.0
             $0.Date = MyTimelineInfo.toDate("2000-01-11")
         })
-        self.append(MyTimelineInfo().apply {
+        self.add(item: MyTimelineInfo().apply {
             $0.Index = 1
             $0.Label = "1"
             $0.Value = 40.0
             $0.Date = MyTimelineInfo.toDate("2000-01-12")
         })
-        self.append(MyTimelineInfo().apply {
+        self.add(item: MyTimelineInfo().apply {
             $0.Index = 2
             $0.Label = "2"
             $0.Value = 20.0
             $0.Date = MyTimelineInfo.toDate("2000-01-13")
         })
-        self.append(MyTimelineInfo().apply {
+        self.add(item: MyTimelineInfo().apply {
             $0.Index = 3
             $0.Label = "3"
             $0.Value = 30.0
             $0.Date = MyTimelineInfo.toDate("2000-01-14")
         })
     }
+    
+    public required init(arrayLiteral: MyTimelineInfo...) {
+        super.init(array: arrayLiteral);
+    }
 }
 
-public class MyTimelineInfo {
+public class MyTimelineInfo: ISampleDataItem {
     public init() {}
 
     public var Index: Int = 0

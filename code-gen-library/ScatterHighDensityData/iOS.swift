@@ -7,14 +7,19 @@ public class ScatterHighDensityItem {
     public var y: Double = 0.0
 }
 
-public class ScatterHighDensityData: [ScatterHighDensityItem] {
+public class ScatterHighDensityData: ArrayList<ScatterHighDensityItem> {
 
     public init() {
+        super.init();
         let amount = 25000
         self.generate(count: amount / 2, centerX: 0.0, centerY: 0.0, spreadX: 75000.0, spreadY: 20000.0)
         self.generate(count: amount / 4, centerX: 0.0, centerY: 0.0, spreadX: 100000.0, spreadY: 25000.0)
         self.generate(count: amount / 8, centerX: 0.0, centerY: 0.0, spreadX: 150000.0, spreadY: 30000.0)
         self.generate(count: amount / 8, centerX: 0.0, centerY: 0.0, spreadX: 200000.0, spreadY: 75000.0)
+    }
+
+    public required init(arrayLiteral: ScatterHighDensityItem...) {
+        super.init(array: arrayLiteral);
     }
 
     public func generate(count: Int,
@@ -45,7 +50,7 @@ public class ScatterHighDensityData: [ScatterHighDensityItem] {
             item.x = centerX + (rangeX * dispersionX)
             item.y = centerY + (rangeY * dispersionY)
 
-            self.append(item)
+            self.add(item: item)
         }
     }
 }

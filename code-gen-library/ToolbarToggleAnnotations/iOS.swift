@@ -4,7 +4,7 @@
 class ToolbarToggleAnnotations {
 
     //begin eventHandler
-    func toolbarToggleAnnotations(sender: Any?, e: IgsToolCommandEventArgs) {
+    func toolbarToggleAnnotations(sender: Any?, e: IgsToolCommandEventArgs?) {
         let toolbar = sender as! IgsToolbar
         let target = toolbar.target as! IgsDataChart
         var enable = false

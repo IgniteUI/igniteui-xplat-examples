@@ -4,7 +4,7 @@
 //begin async data
 import Foundation
 
-public class StockItem {
+public class StockItem: ISampleDataItem {
     public var open: Double?
     public var close: Double?
     public var high: Double?
@@ -80,15 +80,15 @@ public class MultipleStocks {
             let dateString = json["date"] as? String ?? ""
             var date = dateFormatter.date(from: dateString)
             if let d = date {
-                var calendar = Calendar.current
+                var calendar = Foundation.Calendar.current
                 date = calendar.date(bySettingHour: 13, minute: 0, second: 0, of: d)
             }
 
             let item = StockItem(
                 open: json["open"] as? Double,
+                close: json["close"] as? Double,
                 high: json["high"] as? Double,
                 low: json["low"] as? Double,
-                close: json["close"] as? Double,
                 volume: json["volume"] as? Double,
                 date: date
             )

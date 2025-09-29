@@ -5,10 +5,10 @@ public class TestsUpdateTitlesInSeriesAddedEvent {
 
     //begin eventHandler
     var titleIndex = 0
-    public func testsUpdateTitlesInSeriesAddedEvent(sender: Any?, args: IgsChartSeriesEventArgs) {
+    public func testsUpdateTitlesInSeriesAddedEvent(sender: Any?, args: IgsChartSeriesEventArgs?) {
         let o = CodeGenHelper.findByName(Any.self, "SeriesAddedTitles")
         let parser = JsonDictionaryParser()
-        let obj = parser.parse((o as! JsonDictionaryValue).value as! String) as! JsonDictionaryObject
+        let obj = parser.parse(json_: (o as! JsonDictionaryValue).value as! String) as! JsonDictionaryObject
 
         let updateAnnotations = (obj["includeAnnotations"] as! JsonDictionaryValue).value as! Bool
         let seriesTitles = obj["names"] as! JsonDictionaryArray
@@ -17,10 +17,10 @@ public class TestsUpdateTitlesInSeriesAddedEvent {
             names.append((seriesTitles.items![i] as! JsonDictionaryValue).value as! String)
         }
 
-        if args.series!.isAnnotationLayer && !updateAnnotations { return }
+        if args!.series!.isAnnotationLayer && !updateAnnotations { return }
         if titleIndex >= names.count { titleIndex = 0 }
-        if names.contains(args.series!.title) { return }
-        args.series!.title = names[titleIndex]
+        if args!.series!.title != nil && names.contains(args!.series!.title as! String) { return }
+        args!.series!.title = names[titleIndex]
         titleIndex += 1
     }
     //end eventHandler

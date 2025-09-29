@@ -4,7 +4,7 @@
 public class GaugeAttachPrependFormatter {
     //begin eventHandler
     public func gaugeAttachPrependFormatter(sender: Any?, args: IgsFormatLinearGraphLabelEventArgs?) {
-        args!.label = "$" + args!.label
+        args!.label = "$" + args!.label!
     }
     //end eventHandler
 }

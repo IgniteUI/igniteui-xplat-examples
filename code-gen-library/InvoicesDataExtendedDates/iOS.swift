@@ -2,9 +2,10 @@
 //end imports
 
 //begin data
-public class InvoicesDataExtendedDates: [Invoice] {
+public class InvoicesDataExtendedDates: ArrayList<Invoice?> {
     public init() {
-        self.append(Invoice().apply {
+        super.init();
+        self.add(item: Invoice().apply {
             $0.ProductID = 1
             $0.ProductName = "Chai"
             $0.SupplierID = 1
@@ -19,7 +20,7 @@ public class InvoicesDataExtendedDates: [Invoice] {
             $0.OrderDateDelay = Invoice.toDate("2012-02-12")
             $0.OrderFullDate = Invoice.toDate("2012-02-12")
         })
-        self.append(Invoice().apply {
+        self.add(item: Invoice().apply {
             $0.ProductID = 2
             $0.ProductName = "Chang"
             $0.SupplierID = 1
@@ -34,7 +35,7 @@ public class InvoicesDataExtendedDates: [Invoice] {
             $0.OrderDateDelay = Invoice.toDate("2003-03-17")
             $0.OrderFullDate = Invoice.toDate("2003-03-17")
         })
-        self.append(Invoice().apply {
+        self.add(item: Invoice().apply {
             $0.ProductID = 3
             $0.ProductName = "Aniseed Syrup"
             $0.SupplierID = 1
@@ -49,7 +50,7 @@ public class InvoicesDataExtendedDates: [Invoice] {
             $0.OrderDateDelay = Invoice.toDate("2006-03-17")
             $0.OrderFullDate = Invoice.toDate("2006-03-17")
         })
-        self.append(Invoice().apply {
+        self.add(item: Invoice().apply {
             $0.ProductID = 4
             $0.ProductName = "Chef Antons Cajun Seasoning"
             $0.SupplierID = 2
@@ -64,7 +65,7 @@ public class InvoicesDataExtendedDates: [Invoice] {
             $0.OrderDateDelay = Invoice.toDate("2016-03-17")
             $0.OrderFullDate = Invoice.toDate("2016-03-17")
         })
-        self.append(Invoice().apply {
+        self.add(item: Invoice().apply {
             $0.ProductID = 5
             $0.ProductName = "Chef Antons Gumbo Mix"
             $0.SupplierID = 2
@@ -79,7 +80,7 @@ public class InvoicesDataExtendedDates: [Invoice] {
             $0.OrderDateDelay = Invoice.toDate("2011-11-11")
             $0.OrderFullDate = Invoice.toDate("2011-11-11")
         })
-        self.append(Invoice().apply {
+        self.add(item: Invoice().apply {
             $0.ProductID = 6
             $0.ProductName = "Grandmas Boysenberry Spread"
             $0.SupplierID = 3
@@ -94,7 +95,7 @@ public class InvoicesDataExtendedDates: [Invoice] {
             $0.OrderDateDelay = Invoice.toDate("2017-12-17")
             $0.OrderFullDate = Invoice.toDate("2017-12-17")
         })
-        self.append(Invoice().apply {
+        self.add(item: Invoice().apply {
             $0.ProductID = 7
             $0.ProductName = "Uncle Bobs Organic Dried Pears"
             $0.SupplierID = 3
@@ -109,7 +110,7 @@ public class InvoicesDataExtendedDates: [Invoice] {
             $0.OrderDateDelay = Invoice.toDate("2016-07-17")
             $0.OrderFullDate = Invoice.toDate("2016-07-17")
         })
-        self.append(Invoice().apply {
+        self.add(item: Invoice().apply {
             $0.ProductID = 8
             $0.ProductName = "Northwoods Cranberry Sauce"
             $0.SupplierID = 3
@@ -124,7 +125,7 @@ public class InvoicesDataExtendedDates: [Invoice] {
             $0.OrderDateDelay = Invoice.toDate("2018-01-17")
             $0.OrderFullDate = Invoice.toDate("2018-01-17")
         })
-        self.append(Invoice().apply {
+        self.add(item: Invoice().apply {
             $0.ProductID = 9
             $0.ProductName = "Mishi Kobe Niku"
             $0.SupplierID = 4
@@ -140,9 +141,13 @@ public class InvoicesDataExtendedDates: [Invoice] {
             $0.OrderFullDate = Invoice.toDate("2010-02-17")
         })
     }
+    
+    public required init(arrayLiteral: Invoice?...) {
+        super.init(array: arrayLiteral);
+    }
 }
 
-public class Invoice {
+public class Invoice: ISampleDataItem {
     public init() {}
 
     public var ProductID: Int = 0

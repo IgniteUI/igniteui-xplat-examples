@@ -7,4 +7,7 @@
 },{
     "platform": "Kotlin",
     "location": "jsonFile"
+},{
+    "platform": "Swift",
+    "location": "jsonFile"
 }]

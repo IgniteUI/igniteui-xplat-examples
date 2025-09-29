@@ -5,7 +5,7 @@
 import Foundation
 
 public class FinancialDataService {
-    public static func fetchData(completion: @escaping ([FinancialDataDetails]) -> Void) {
+    public static func fetchData(completion: @escaping (ArrayList<FinancialDataDetails>) -> Void) {
         let urlString = "https://static.infragistics.com/xplatform/data/stocks/FinancialData1000.json"
         guard let url = URL(string: urlString) else {
             completion([])
@@ -19,7 +19,7 @@ public class FinancialDataService {
                 return
             }
 
-            let stockItems = jsonArray.map { json in
+            let stockItems = jsonArray.map { json -> FinancialDataDetails in
                 let item = FinancialDataDetails()
                 item.category = json["Category"] as? String
                 item.type = json["Type"] as? String
@@ -59,14 +59,14 @@ public class FinancialDataService {
                 return item
             }
 
-            completion(stockItems)
+            completion(ArrayList<FinancialDataDetails>(array: stockItems))
         }
 
         task.resume()
     }
 }
 
-public class FinancialDataDetails {
+public class FinancialDataDetails: ISampleDataItem {
     public var category: String? = nil
     public var type: String? = nil
     public var spread: Double? = nil

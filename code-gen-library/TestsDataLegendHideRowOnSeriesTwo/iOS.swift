@@ -4,9 +4,9 @@
 public class TestsDataLegendHideRowOnSeriesTwo {
 
     //begin eventHandler
-    public func testsDataLegendHideRowOnSeriesTwo(sender: Any?, args: IgsDataLegendStylingRowEventArgs) {
-        if args.seriesTitle == "Two" {
-            args.isRowVisible = false
+    public func testsDataLegendHideRowOnSeriesTwo(sender: Any?, args: IgsDataLegendStylingRowEventArgs?) {
+        if args!.seriesTitle == "Two" {
+            args!.isRowVisible = false
         }
     }
     //end eventHandler

@@ -6,32 +6,29 @@ public class TestsAddDataLegendValueFormatSpecifier {
     //begin eventHandler
     //Swift: Action
     public func testsAddDataLegendValueFormatSpecifier() {
-        let legend = CodeGenHelper.getDescription(IgsDataLegend.self, "secondary")!
-        let jVal = CodeGenHelper.findByName(Any.self, "DataLegendValueFormatSpecifier")!
-        let parser = IgsJsonDictionaryParser()
-        let formatterInfo = parser.parse((jVal as! IgsJsonDictionaryValue).value as! String) as! IgsJsonDictionaryObject
-        let numSpec = IgsNumberFormatSpecifier()
-
-        for key in formatterInfo.getKeys() ?? [] {
-            switch key {
-            case "MaximumFractionDigits":
-                numSpec.maximumFractionDigits = Int((formatterInfo[key] as! IgsJsonDictionaryValue).value as! Double)
-            case "MinimumFractionDigits":
-                numSpec.minimumFractionDigits = Int((formatterInfo[key] as! IgsJsonDictionaryValue).value as! Double)
-            case "MinimumIntegerDigits":
-                numSpec.minimumIntegerDigits = Int((formatterInfo[key] as! IgsJsonDictionaryValue).value as! Double)
-            case "Locale":
-                numSpec.locale = (formatterInfo[key] as! IgsJsonDictionaryValue).value as? String
-            case "UseGrouping":
-                numSpec.useGrouping = (formatterInfo[key] as! IgsJsonDictionaryValue).value as! Bool
-            case "Style":
-                numSpec.style = (formatterInfo[key] as! IgsJsonDictionaryValue).value as? String
-            default:
-                break
-            }
-        }
-
-        legend.valueFormatSpecifiers = [numSpec]
+        let dataPie = CodeGenHelper.getDescription(IgsDataPieChart.self, "content")!
+    
+        var spec1 = IgsNumberFormatSpecifier();
+        spec1.locale = "en-US"
+        spec1.minimumIntegerDigits = 4
+        spec1.minimumFractionDigits = 2
+        spec1.maximumFractionDigits = 2
+        spec1.useGrouping = false
+        
+        dataPie.sliceLabelFormatSpecifiers = [
+            spec1
+        ]
+    
+        var spec2 = IgsNumberFormatSpecifier();
+        spec2.locale = "en-US"
+        spec2.minimumIntegerDigits = 4
+        spec2.minimumFractionDigits = 2
+        spec2.maximumFractionDigits = 2
+        spec2.useGrouping = false
+        
+        dataPie.othersSliceLabelFormatSpecifiers = [
+            spec2
+        ]
     }
     //end eventHandler
 }
