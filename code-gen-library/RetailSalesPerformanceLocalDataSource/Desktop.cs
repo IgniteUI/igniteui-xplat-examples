@@ -10,10 +10,10 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
 	public RetailSalesPerformanceLocalDataSource(){
 		
 		
-		            List<RetailSalesPerformanceDataItem> data = new List<RetailSalesPerformanceDataItem>();
+		            List<RetailSalesPerformanceDataLDSItem> data = new List<RetailSalesPerformanceDataLDSItem>();
 
 
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Home Appliances",
                 Subcategory = "Cleaning",
@@ -22,7 +22,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 528828,
                 Profit = 105765.6
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Home Appliances",
                 Subcategory = "Cleaning",
@@ -31,7 +31,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 382050,
                 Profit = 76410.0
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Electronics",
                 Subcategory = "Laptops",
@@ -40,7 +40,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 504592,
                 Profit = 100918.40000000001
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Furniture",
                 Subcategory = "Bedroom",
@@ -49,7 +49,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 54060,
                 Profit = 10812.0
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Home Appliances",
                 Subcategory = "Kitchen",
@@ -58,7 +58,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 79821,
                 Profit = 15964.2
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Furniture",
                 Subcategory = "Bedroom",
@@ -67,7 +67,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 148428,
                 Profit = 29685.600000000002
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Furniture",
                 Subcategory = "Office",
@@ -76,7 +76,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 244314,
                 Profit = 48862.8
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Furniture",
                 Subcategory = "Bedroom",
@@ -85,7 +85,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 167739,
                 Profit = 33547.8
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Furniture",
                 Subcategory = "Office",
@@ -94,7 +94,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 516594,
                 Profit = 103318.8
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Home Appliances",
                 Subcategory = "Cleaning",
@@ -103,7 +103,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 340225,
                 Profit = 68045.0
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Home Appliances",
                 Subcategory = "Laundry",
@@ -112,7 +112,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 176774,
                 Profit = 35354.8
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Home Appliances",
                 Subcategory = "Laundry",
@@ -121,7 +121,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 380460,
                 Profit = 76092.0
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Electronics",
                 Subcategory = "Mobile Phones",
@@ -130,7 +130,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 480690,
                 Profit = 96138.0
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Home Appliances",
                 Subcategory = "Kitchen",
@@ -139,7 +139,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 195048,
                 Profit = 39009.6
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Furniture",
                 Subcategory = "Office",
@@ -148,7 +148,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 243072,
                 Profit = 48614.4
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Home Appliances",
                 Subcategory = "Cleaning",
@@ -157,7 +157,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 470148,
                 Profit = 94029.6
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Electronics",
                 Subcategory = "Tablets",
@@ -166,7 +166,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 413140,
                 Profit = 82628.0
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Furniture",
                 Subcategory = "Bedroom",
@@ -175,7 +175,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 48813,
                 Profit = 9762.6
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Electronics",
                 Subcategory = "Mobile Phones",
@@ -184,7 +184,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 259350,
                 Profit = 51870.0
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Home Appliances",
                 Subcategory = "Cleaning",
@@ -193,7 +193,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 607936,
                 Profit = 121587.20000000001
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Home Appliances",
                 Subcategory = "Kitchen",
@@ -202,7 +202,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 293020,
                 Profit = 58604.0
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Electronics",
                 Subcategory = "Tablets",
@@ -211,7 +211,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 405512,
                 Profit = 81102.40000000001
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Furniture",
                 Subcategory = "Living Room",
@@ -220,7 +220,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 300888,
                 Profit = 60177.600000000006
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Furniture",
                 Subcategory = "Bedroom",
@@ -229,7 +229,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 205779,
                 Profit = 41155.8
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Home Appliances",
                 Subcategory = "Laundry",
@@ -238,7 +238,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 83391,
                 Profit = 16678.2
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Home Appliances",
                 Subcategory = "Laundry",
@@ -247,7 +247,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 55533,
                 Profit = 11106.6
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Electronics",
                 Subcategory = "Mobile Phones",
@@ -256,7 +256,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 512653,
                 Profit = 102530.6
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Home Appliances",
                 Subcategory = "Kitchen",
@@ -265,7 +265,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 392590,
                 Profit = 78518.0
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Electronics",
                 Subcategory = "Mobile Phones",
@@ -274,7 +274,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 463760,
                 Profit = 92752.0
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Home Appliances",
                 Subcategory = "Kitchen",
@@ -283,7 +283,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 579348,
                 Profit = 115869.6
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Furniture",
                 Subcategory = "Living Room",
@@ -292,7 +292,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 382676,
                 Profit = 76535.2
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Electronics",
                 Subcategory = "Laptops",
@@ -301,7 +301,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 288439,
                 Profit = 57687.8
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Furniture",
                 Subcategory = "Living Room",
@@ -310,7 +310,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 374360,
                 Profit = 74872.0
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Furniture",
                 Subcategory = "Living Room",
@@ -319,7 +319,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 88894,
                 Profit = 17778.8
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Furniture",
                 Subcategory = "Bedroom",
@@ -328,7 +328,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 254800,
                 Profit = 50960.0
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Home Appliances",
                 Subcategory = "Laundry",
@@ -337,7 +337,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 695508,
                 Profit = 139101.6
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Electronics",
                 Subcategory = "Laptops",
@@ -346,7 +346,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 209616,
                 Profit = 41923.200000000004
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Electronics",
                 Subcategory = "Laptops",
@@ -355,7 +355,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 257983,
                 Profit = 51596.600000000006
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Furniture",
                 Subcategory = "Office",
@@ -364,7 +364,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 346500,
                 Profit = 69300.0
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Electronics",
                 Subcategory = "Mobile Phones",
@@ -373,7 +373,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 84972,
                 Profit = 16994.4
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Home Appliances",
                 Subcategory = "Laundry",
@@ -382,7 +382,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 99936,
                 Profit = 19987.2
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Furniture",
                 Subcategory = "Office",
@@ -391,7 +391,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 252413,
                 Profit = 50482.600000000006
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Electronics",
                 Subcategory = "Laptops",
@@ -400,7 +400,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 246250,
                 Profit = 49250.0
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Furniture",
                 Subcategory = "Living Room",
@@ -409,7 +409,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 870428,
                 Profit = 174085.6
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Furniture",
                 Subcategory = "Bedroom",
@@ -418,7 +418,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 325628,
                 Profit = 65125.600000000006
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Furniture",
                 Subcategory = "Office",
@@ -427,7 +427,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 85347,
                 Profit = 17069.4
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Furniture",
                 Subcategory = "Bedroom",
@@ -436,7 +436,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 50740,
                 Profit = 10148.0
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Electronics",
                 Subcategory = "Laptops",
@@ -445,7 +445,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 320142,
                 Profit = 64028.4
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Home Appliances",
                 Subcategory = "Cleaning",
@@ -454,7 +454,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 12483,
                 Profit = 2496.6000000000004
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Electronics",
                 Subcategory = "Tablets",
@@ -463,7 +463,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 15860,
                 Profit = 3172.0
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Furniture",
                 Subcategory = "Living Room",
@@ -472,7 +472,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 39396,
                 Profit = 7879.200000000001
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Furniture",
                 Subcategory = "Living Room",
@@ -481,7 +481,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 617065,
                 Profit = 123413.0
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Furniture",
                 Subcategory = "Bedroom",
@@ -490,7 +490,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 115884,
                 Profit = 23176.800000000003
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Electronics",
                 Subcategory = "Laptops",
@@ -499,7 +499,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 737840,
                 Profit = 147568.0
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Furniture",
                 Subcategory = "Living Room",
@@ -508,7 +508,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 318780,
                 Profit = 63756.0
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Home Appliances",
                 Subcategory = "Cleaning",
@@ -517,7 +517,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 395550,
                 Profit = 79110.0
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Furniture",
                 Subcategory = "Living Room",
@@ -526,7 +526,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 208765,
                 Profit = 41753.0
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Furniture",
                 Subcategory = "Bedroom",
@@ -535,7 +535,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 409248,
                 Profit = 81849.6
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Electronics",
                 Subcategory = "Tablets",
@@ -544,7 +544,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 880752,
                 Profit = 176150.40000000002
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Home Appliances",
                 Subcategory = "Laundry",
@@ -553,7 +553,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 614684,
                 Profit = 122936.8
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Furniture",
                 Subcategory = "Living Room",
@@ -562,7 +562,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 398202,
                 Profit = 79640.40000000001
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Home Appliances",
                 Subcategory = "Laundry",
@@ -571,7 +571,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 344040,
                 Profit = 68808.0
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Electronics",
                 Subcategory = "Tablets",
@@ -580,7 +580,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 354384,
                 Profit = 70876.8
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Home Appliances",
                 Subcategory = "Cleaning",
@@ -589,7 +589,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 446831,
                 Profit = 89366.20000000001
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Furniture",
                 Subcategory = "Living Room",
@@ -598,7 +598,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 221328,
                 Profit = 44265.600000000006
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Electronics",
                 Subcategory = "Tablets",
@@ -607,7 +607,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 69856,
                 Profit = 13971.2
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Home Appliances",
                 Subcategory = "Laundry",
@@ -616,7 +616,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 315464,
                 Profit = 63092.8
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Home Appliances",
                 Subcategory = "Cleaning",
@@ -625,7 +625,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 42435,
                 Profit = 8487.0
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Furniture",
                 Subcategory = "Office",
@@ -634,7 +634,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 197508,
                 Profit = 39501.600000000006
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Furniture",
                 Subcategory = "Office",
@@ -643,7 +643,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 171479,
                 Profit = 34295.8
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Home Appliances",
                 Subcategory = "Cleaning",
@@ -652,7 +652,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 627465,
                 Profit = 125493.0
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Electronics",
                 Subcategory = "Mobile Phones",
@@ -661,7 +661,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 51811,
                 Profit = 10362.2
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Home Appliances",
                 Subcategory = "Cleaning",
@@ -670,7 +670,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 147356,
                 Profit = 29471.2
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Home Appliances",
                 Subcategory = "Cleaning",
@@ -679,7 +679,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 82280,
                 Profit = 16456.0
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Electronics",
                 Subcategory = "Mobile Phones",
@@ -688,7 +688,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 432014,
                 Profit = 86402.8
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Furniture",
                 Subcategory = "Bedroom",
@@ -697,7 +697,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 126900,
                 Profit = 25380.0
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Home Appliances",
                 Subcategory = "Cleaning",
@@ -706,7 +706,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 106743,
                 Profit = 21348.600000000002
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Home Appliances",
                 Subcategory = "Laundry",
@@ -715,7 +715,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 367724,
                 Profit = 73544.8
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Home Appliances",
                 Subcategory = "Kitchen",
@@ -724,7 +724,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 308975,
                 Profit = 61795.0
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Furniture",
                 Subcategory = "Office",
@@ -733,7 +733,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 37200,
                 Profit = 7440.0
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Furniture",
                 Subcategory = "Living Room",
@@ -742,7 +742,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 886000,
                 Profit = 177200.0
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Electronics",
                 Subcategory = "Mobile Phones",
@@ -751,7 +751,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 107464,
                 Profit = 21492.800000000003
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Home Appliances",
                 Subcategory = "Kitchen",
@@ -760,7 +760,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 182416,
                 Profit = 36483.200000000004
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Electronics",
                 Subcategory = "Tablets",
@@ -769,7 +769,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 247818,
                 Profit = 49563.600000000006
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Furniture",
                 Subcategory = "Bedroom",
@@ -778,7 +778,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 528710,
                 Profit = 105742.0
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Electronics",
                 Subcategory = "Tablets",
@@ -787,7 +787,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 136203,
                 Profit = 27240.600000000002
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Electronics",
                 Subcategory = "Laptops",
@@ -796,7 +796,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 343882,
                 Profit = 68776.40000000001
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Home Appliances",
                 Subcategory = "Kitchen",
@@ -805,7 +805,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 164996,
                 Profit = 32999.200000000004
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Furniture",
                 Subcategory = "Living Room",
@@ -814,7 +814,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 180960,
                 Profit = 36192.0
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Electronics",
                 Subcategory = "Tablets",
@@ -823,7 +823,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 351680,
                 Profit = 70336.0
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Electronics",
                 Subcategory = "Mobile Phones",
@@ -832,7 +832,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 279801,
                 Profit = 55960.200000000004
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Home Appliances",
                 Subcategory = "Cleaning",
@@ -841,7 +841,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 49473,
                 Profit = 9894.6
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Home Appliances",
                 Subcategory = "Kitchen",
@@ -850,7 +850,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 359921,
                 Profit = 71984.2
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Furniture",
                 Subcategory = "Office",
@@ -859,7 +859,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 112056,
                 Profit = 22411.2
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Electronics",
                 Subcategory = "Tablets",
@@ -868,7 +868,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 54912,
                 Profit = 10982.400000000001
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Electronics",
                 Subcategory = "Laptops",
@@ -877,7 +877,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 642284,
                 Profit = 128456.8
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Electronics",
                 Subcategory = "Laptops",
@@ -886,7 +886,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 386610,
                 Profit = 77322.0
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Electronics",
                 Subcategory = "Mobile Phones",
@@ -895,7 +895,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 125852,
                 Profit = 25170.4
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Furniture",
                 Subcategory = "Living Room",
@@ -904,7 +904,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
                 Revenue = 623198,
                 Profit = 124639.6
             });
-            data.Add(new RetailSalesPerformanceDataItem()
+            data.Add(new RetailSalesPerformanceDataLDSItem()
             {
                 Category = "Home Appliances",
                 Subcategory = "Cleaning",
@@ -919,7 +919,7 @@ public class RetailSalesPerformanceLocalDataSource : LocalDataSource
 	}
 }
 
- public class RetailSalesPerformanceDataItem
+ public class RetailSalesPerformanceDataLDSItem
  {
      public string Category { get; set; }
      public string Subcategory { get; set; }
