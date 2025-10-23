@@ -18,7 +18,7 @@
 //ifdef webgrids
     "igniteui-dockmanager": "^1.17.0",
 //endifdef webgrids
-    "igniteui-react": "^19.2.0",
+    "igniteui-react": "^19.3.0-rc.4",
 //ifdef charts, maps, dashboards
     "igniteui-react-charts": "19.2.2",
 //endifdef charts, maps, dashboards
@@ -39,7 +39,7 @@
     "igniteui-react-gauges": "19.2.2",
 //endifdef gauges, dashboards
 //ifdef webgrids
-    "igniteui-react-grids": "^19.2.0",
+    "igniteui-react-grids": "^19.3.0-rc.4",
 //endifdef webgrids
 //ifdef grid, dashboards
     "igniteui-react-data-grids": "19.2.2",
