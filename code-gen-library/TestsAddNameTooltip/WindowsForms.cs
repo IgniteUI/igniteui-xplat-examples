@@ -1,5 +1,6 @@
 //begin imports
 using Infragistics.Win.DataVisualization;
+using System.Collections;
 //end imports
 
 public class TestsAddNameTooltip
