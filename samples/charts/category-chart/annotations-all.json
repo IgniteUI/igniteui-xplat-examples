@@ -56,7 +56,6 @@
       "dataSourceRef": "TemperatureAnnotatedData",
       "autoCalloutsVisible": true,
       "calloutsAllowedPositions": ["Top", "Bottom"],
-      "isCategoryHighlightingEnabled": true,
       "highlightingMode": "BrightenSpecific",
       "highlightingBehavior": "NearestItemsAndSeries",
       "crosshairsDisplayMode": "Both",
