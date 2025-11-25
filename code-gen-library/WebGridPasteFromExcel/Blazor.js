@@ -16,6 +16,7 @@ function onWebGridPasteFromExcelKeyDown(eventArgs) {
 var txtArea;
 var textArea = getTextArea();
 var pasteMode = "Paste starting from active cell";
+var updatedRecsPK = [];
 
 function getTextArea() {
     if(!txtArea) {
@@ -61,7 +62,6 @@ function onPaste(eventArgs) {
         const grid = document.getElementById("grid");
         const columns = grid.visibleColumns;
         const pk = grid.primaryKey;
-        const addedData = [];
         for (const curentDataRow of processedData) {
             const rowData = {};
             for (const col of columns) {
@@ -71,21 +71,11 @@ function onPaste(eventArgs) {
             // generate PK
             rowData[pk] = grid.data.length + 1;
             grid.addRow(rowData);
-            addedData.push(rowData);
+            updatedRecsPK.push(rowData[pk]);
         }
         // scroll to last added row
         grid.navigateTo(grid.data.length - 1, 0, () => {
-            clearStyles();
-            for (const data of addedData) {
-                const row = grid.getRowByKey(data[pk]);
-                if (row) {
-                    const rowNative = getNative(row);
-                    if (rowNative) {
-                        rowNative.style["font-style"] = "italic";
-                        rowNative.style.color = "gray";
-                    }
-                }
-            }
+            grid.cdr.detectChanges();
         });
     }
     function updateRecords(processedData) {
@@ -97,7 +87,6 @@ function onPaste(eventArgs) {
         const columns = grid.visibleColumns;
         const cellIndex = grid.visibleColumns.indexOf(cell.column);
         let index = 0;
-        const updatedRecsPK = [];
         for (const curentDataRow of processedData) {
             const rowData = {};
             const dataRec = grid.data[rowIndex + index];
@@ -121,32 +110,6 @@ function onPaste(eventArgs) {
             updatedRecsPK.push(rowPkValue);
             index++;
         }
-
-        clearStyles();
-        for (const pkVal of updatedRecsPK) {
-            const row = grid.getRowByKey(pkVal);
-            if (row) {
-                const rowNative = getNative(row);
-                if (rowNative) {
-                    rowNative.style["font-style"] = "italic";
-                    rowNative.style.color = "gray";
-                }
-            }
-        }
-    }
-
-    function clearStyles() {
-        const rows = [...(document.getElementsByTagName("igx-grid-row"))];
-        for (const rowNative of rows) {
-            rowNative.style["font-style"] = "";
-            rowNative.style.color = "";
-        }
-    }
-
-    function getNative(row) {
-        const rows = [...document.getElementsByTagName("igx-grid-row")];
-        const dataInd = row.index.toString();
-        return rows.find(x => x.attributes["data-rowindex"] .value === dataInd);
     }
 
     function processData(data) {
