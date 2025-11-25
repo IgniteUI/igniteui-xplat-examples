@@ -8,6 +8,7 @@
       "autoGenerate": false,
       "name": "hierarchicalGrid",
       "id": "hierarchicalGrid",
+      "columnInitRef": "HGridCustomSummary",
       "primaryKey": "ID",
       "columnList": [
         {
