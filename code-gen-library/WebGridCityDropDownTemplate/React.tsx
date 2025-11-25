@@ -6,21 +6,23 @@ import { IgrCombo } from "igniteui-react";
 export class WebGridCityDropDownTemplate {
     //begin template
     //begin content
-    public webGridCityDropDownTemplate = (props: {dataContext: IgrCellTemplateContext}) => {
-        var cell = props.dataContext.cell as any;
-        if (cell === undefined) {
-            return <></>;
-        }
-        const id = cell.id.rowID;
-        const comboId = "city_" + id;
-        (this as any).comboRefs = (this as any).comboRefs.bind(this);
+    public webGridCityDropDownTemplate = (ctx: IgrCellTemplateContext) => {
+        const rowId = ctx.cell?.id.rowID;
+        if (!rowId) return <></>;
+        const comboId = `city_${rowId}`;
+
         return (
-        <>
-            <div style={{display: "flex", flexDirection: "column"}}>
-                <IgrCombo ref={(this as any).comboRefs} placeholder="Choose City..." disabled={true} valueKey="Name"  displayKey="Name" name={comboId} singleSelect={true}>
-                </IgrCombo>
-            </div>
-        </>
+            <>
+                <div style={{ display: "flex", flexDirection: "column" }}>
+                    <IgrCombo
+                        ref={this.getComboRef(comboId)}
+                        placeholder="Choose City..." disabled={true}
+                        valueKey="Name" displayKey="Name"
+                        name={comboId}
+                        singleSelect={true}>
+                    </IgrCombo>
+                </div>
+            </>
         );
     }
     //end content
