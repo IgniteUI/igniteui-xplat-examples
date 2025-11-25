@@ -10,7 +10,7 @@ export class WebGridEditedRowClassesHandler {
   public webGridEditedRowClassesHandler = {
     edited: (row: IgcRowType) => {
       const grid = CodeGenHelper.getDescription<IgcGridComponent>("content") as any;
-      return updatedRecsPK.indexOf(row.data[grid.primaryKey]) !== -1;
+      return this.updatedRecsPK.indexOf(row.data[grid.primaryKey]) !== -1;
     }
   };
   //end eventHandler
