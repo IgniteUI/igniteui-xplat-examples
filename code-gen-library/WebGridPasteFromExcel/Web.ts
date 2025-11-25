@@ -23,7 +23,7 @@ export class WebGridPasteFromExcel {
 
     private txtArea: any;
     public pasteMode = "Paste starting from active cell";
-    public updatedRecsPK = [];
+    public updatedRecsPK: any[] = [];
 
     public get textArea() {
         if(!this.txtArea) {
@@ -78,7 +78,7 @@ export class WebGridPasteFromExcel {
                 // generate PK
                 rowData[pk] = grid.data.length + 1;
                 grid.addRow(rowData);
-                updatedRecsPK.push(rowData[pk]);
+                this.updatedRecsPK.push(rowData[pk]);
             }
             // scroll to last added row
             grid.navigateTo(grid.data.length - 1, 0, () => {
@@ -114,7 +114,7 @@ export class WebGridPasteFromExcel {
                     continue;
                 }
                 grid.updateRow(rowData, rowPkValue);
-                updatedRecsPK.push(rowPkValue);
+                this.updatedRecsPK.push(rowPkValue);
                 index++;
             }
         }
