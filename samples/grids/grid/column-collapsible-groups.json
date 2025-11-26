@@ -94,14 +94,12 @@
             {
               "type": "WebColumn",
               "field": "ProductName",
-              "header": "Name",
-              "visibleWhenCollapsed": true
+              "header": "Name"
             },
             {
               "type": "WebColumn",
               "field": "UnitPrice",
-              "header": "Unit Price",
-              "visibleWhenCollapsed": true
+              "header": "Unit Price"
             },
             {
               "type": "WebColumn",
@@ -116,7 +114,7 @@
             },
             {
               "type": "WebColumn",
-              "field": "Quantity",
+              "field": "Discontinued",
               "visibleWhenCollapsed": false
             }
           ]
