@@ -11,7 +11,7 @@ export class HierarchicalGridPinHeaderTemplate {
         return (
             <div style={{display: 'flex'}}>
                 <span>{column.field}</span>
-                <span style={{marginLeft: 'auto'}} onPointerDown={(e: any) => this.toggleColumnPin(column)}>📌</span>
+                <span style={{marginLeft: 'auto'}} onClick={(e: any) => this.toggleColumnPin(column)}>📌</span>
             </div>
         );
     }
