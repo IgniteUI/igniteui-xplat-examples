@@ -27,6 +27,7 @@
         "type": "WebGrid",
         "dataRef": "InvoicesData",
         "renderedRef": "WebGridPasteFromExcel",
+        "rowClassesRef": "WebGridEditedRowClassesHandler",
         "autoGenerate": false,
         "name": "grid",
         "id": "grid",
