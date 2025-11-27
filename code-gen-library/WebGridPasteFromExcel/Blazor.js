@@ -70,8 +70,8 @@ function onPaste(eventArgs) {
             }
             // generate PK
             rowData[pk] = grid.data.length + 1;
-            grid.addRow(rowData);
             updatedRecsPK.push(rowData[pk]);
+            grid.addRow(rowData);
         }
         // scroll to last added row
         grid.navigateTo(grid.data.length - 1, 0, () => {
@@ -106,8 +106,8 @@ function onPaste(eventArgs) {
                 grid.addRow(rowData);
                 continue;
             }
-            grid.updateRow(rowData, rowPkValue);
             updatedRecsPK.push(rowPkValue);
+            grid.updateRow(rowData, rowPkValue);
             index++;
         }
     }

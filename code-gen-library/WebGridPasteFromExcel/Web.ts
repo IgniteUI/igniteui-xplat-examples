@@ -77,8 +77,8 @@ export class WebGridPasteFromExcel {
                 }
                 // generate PK
                 rowData[pk] = grid.data.length + 1;
-                grid.addRow(rowData);
                 this.updatedRecsPK.push(rowData[pk]);
+                grid.addRow(rowData);
             }
             // scroll to last added row
             grid.navigateTo(grid.data.length - 1, 0, () => {
@@ -113,8 +113,8 @@ export class WebGridPasteFromExcel {
                     grid.addRow(rowData);
                     continue;
                 }
-                grid.updateRow(rowData, rowPkValue);
                 this.updatedRecsPK.push(rowPkValue);
+                grid.updateRow(rowData, rowPkValue);
                 index++;
             }
         }
