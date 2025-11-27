@@ -9,9 +9,9 @@ export class HierarchicalGridPinHeaderTemplate {
     public hierarchicalGridPinHeaderTemplate = (props: {dataContext: IgrColumnTemplateContext}) => {
         const column = (props.dataContext as any).column;
         return (
-            <div>
-                <span style={{float: 'left'}}>{column.field}</span>
-                <span style={{float: 'right'}} onClick={(e: any) => this.toggleColumnPin(column)}>📌</span>
+            <div style={{display: 'flex'}}>
+                <span>{column.field}</span>
+                <span style={{marginLeft: 'auto'}} onClick={(e: any) => this.toggleColumnPin(column)}>📌</span>
             </div>
         );
     }
