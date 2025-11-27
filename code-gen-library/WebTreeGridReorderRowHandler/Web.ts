@@ -8,6 +8,9 @@ export class WebTreeGridReorderRowHandler {
     //begin eventHandler
     public webTreeGridReorderRowHandler(args: CustomEvent<IgcRowDragEndEventArgs>): void {
         const ghostElement = args.detail.dragDirective.ghostElement;
+        if (!ghostElement) {
+            return;
+        }
         const dragElementPos = ghostElement.getBoundingClientRect();
         const grid = CodeGenHelper.getDescription<IgcTreeGridComponent>("content");
         const rows = Array.prototype.slice.call(document.getElementsByTagName("igx-tree-grid-row"));

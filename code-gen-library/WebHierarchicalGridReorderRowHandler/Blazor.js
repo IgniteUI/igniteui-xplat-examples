@@ -1,6 +1,9 @@
 //begin eventHandler
 igRegisterScript("WebHierarchicalGridReorderRowHandler", (args) => {
     const ghostElement = args.detail.dragDirective.ghostElement;
+    if (!ghostElement) {
+        return;
+    }
     const dragElementPos = ghostElement.getBoundingClientRect();
     const grid = document.getElementsByTagName("igc-hierarchical-grid")[0];
     const rows = Array.prototype.slice.call(document.getElementsByTagName("igx-hierarchical-grid-row"));
