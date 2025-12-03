@@ -19,7 +19,7 @@ let xplatRepoName = 'IgniteUI/igniteui-xplat-examples/';
 let xplatBranch = '25.2';
 let xplatCodeGenLib = 'code-gen-library';
 let xplatCodeGenLibGit =                 'https://github.com/' + xplatRepoName + '/blob/' + xplatBranch + '/' + xplatCodeGenLib + '/';
-let xplatCodeGenLibRaw  = 'https://raw.githubusercontent.com/' + xplatRepoName + '/refs/head/' + xplatBranch + '/' + xplatCodeGenLib + '/';
+let xplatCodeGenLibRaw  = 'https://raw.githubusercontent.com/' + xplatRepoName + '/refs/heads/' + xplatBranch + '/' + xplatCodeGenLib + '/';
 //                https://github.com/IgniteUI/igniteui-xplat-examples//blob     /25.2/code-gen-library/AnalyzeSales/XPLAT.json
 // https://raw.githubusercontent.com/IgniteUI/igniteui-xplat-examples/refs/heads/25.2/code-gen-library/AnalyzeSales/XPLAT.json
 
