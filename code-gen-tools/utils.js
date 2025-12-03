@@ -48,7 +48,18 @@ exports.saveJSON = saveJSON = function saveJSON(filePath, dataItems, mode) {
         }
 
         let jsonStr = "[\r\n" + lines.join('\r\n') + "\r\n]";
+        jsonStr = utils.strReplace(jsonStr, '":0', '": 0')
+        jsonStr = utils.strReplace(jsonStr, '":1', '": 1')
+        jsonStr = utils.strReplace(jsonStr, '":2', '": 2')
+        jsonStr = utils.strReplace(jsonStr, '":3', '": 3')
+        jsonStr = utils.strReplace(jsonStr, '":4', '": 4')
+        jsonStr = utils.strReplace(jsonStr, '":5', '": 5')
+        jsonStr = utils.strReplace(jsonStr, '":6', '": 6')
+        jsonStr = utils.strReplace(jsonStr, '":7', '": 7')
+        jsonStr = utils.strReplace(jsonStr, '":8', '": 8')
+        jsonStr = utils.strReplace(jsonStr, '":9', '": 9')
         jsonStr = utils.strReplace(jsonStr, ":", ": ")
+        jsonStr = utils.strReplace(jsonStr, '00: 00', '00:00')
         jsonStr = utils.strReplace(jsonStr, ',"', ', "')
         jsonStr = utils.strReplace(jsonStr, '{', '{ ')
         jsonStr = utils.strReplace(jsonStr, '}', ' }')

@@ -1,4 +1,5 @@
 {
+  "skipAlterDataCasing": true,
   "descriptions": {
     "legend": {
       "type": "DataLegend",

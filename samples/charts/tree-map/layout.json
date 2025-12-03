@@ -1,4 +1,5 @@
 {
+  "skipAlterDataCasing": true,
   "strings": {
     "legendTitle": "Comparing Population of Countries"
   },

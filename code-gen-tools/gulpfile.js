@@ -81,11 +81,14 @@ function sortJSON(cb) {
 
     // let filePath = CodeGenLib + "/WorldCitiesAbove500K/XPLAT.json";
     let filePath = CodeGenLib + "/WorldCountries/XPLAT.json";
+    // let filePath = CodeGenLib + "/AthletesData/XPLAT.json";
     let file = fs.readFileSync(filePath, "utf8");
     let dataItems = JSON.parse(file);
 
     // dataItems = dataItems.sort((a, b) => a.Pop < b.Pop ? 1 : -1);
     dataItems = dataItems.sort((a, b) => a.Population < b.Population ? 1 : -1);
+    // dataItems = dataItems.sort((a, b) => a.Population < b.Population ? 1 : -1);
+    dataItems = dataItems.sort((a, b) => a.Id > b.Id ? 1 : -1);
 
     for (let i = 0; i < dataItems.length; i++) {
         // dataItems[i].ID = 10000 + i;
@@ -767,18 +770,33 @@ exports.copyCDN = gulp.series(
 
 exports.compactJSON = function compactJSON(cb) {
     let filePaths = [
-        // "/AnalyzeOrders/XPLAT.json",
-        "/CompanyEmployees/XPLAT.json",
-        "/CompanyData/XPLAT.json",
-        "/InvoicesData/XPLAT.json",
-        "/PivotDataFlat/XPLAT.json",
-        "/PivotSalesData/XPLAT.json",
-        "/ProductSales/XPLAT.json",
+        // "/AnalyzeOrders/XPLAT.json",   
+        // "/AnalyzeSales/XPLAT.json",
+        // "/AthletesData/XPLAT.json",
+        "/InvoicesWorldData/XPLAT.json",
+        "/PivotData/XPLAT.json",
+        // "/CompanyEmployees/XPLAT.json",
+        // "/CompanyData/XPLAT.json",
+        // "/InvoicesData/XPLAT.json",
+        // "/PivotDataFlat/XPLAT.json",
+        // "/PivotSalesData/XPLAT.json",
+        // "/ProductSales/XPLAT.json",
         // "/NwindLocations/XPLAT.json",
         // "/ProductSales/XPLAT.json",
         // "/FinancialDataCurrencies/XPLAT.json",
         // "/FinancialDataFuel/XPLAT.json",
         // "/FinancialDataMetals/XPLAT.json",
+        // "/InvoicesData/XPLAT.json",
+        // "/InvoicesWorldData/XPLAT.json",
+        // "/EmployeesData/XPLAT.json",
+        // "/EmployeesFlatAvatars/XPLAT.json",
+        // "/EmployeesFlatData/XPLAT.json",
+        // "/EmployeesFlatDetails/XPLAT.json",
+        // "/ProductSales/XPLAT.json",        
+        // "/ProductInventory/XPLAT.json",       
+        // "/RoleplayDataStats/XPLAT.json",        
+        // "/RoleplayTreeGridData/XPLAT.json", 
+        // "/NwindData/XPLAT.json",     
     ];
     for (const filePath of filePaths) {
         let file = fs.readFileSync(CodeGenLib + filePath, "utf8");
@@ -2183,6 +2201,77 @@ exports.correctJSON = function correctJSON(cb)
 
         // fileCallback(null, file);
     })) 
+    .on("end", function() {
+        cb();
+     });
+}
+
+exports.findDataFiles = function findDataFiles(cb)
+{
+    var largeDataSources = [ 'SingersData',
+    "AirplaneSeats",
+    "AnalyzeSales",
+    "AthletesData",
+    "AthletesDataExtended",
+    "CountryStats",
+    "CountyHierarchicalData",
+    "EmployeesData",
+    "FinancialDataAll",
+    "FinancialDataCurrencies",
+    "FinancialDataFuel",
+    "FinancialDataMetals",
+    "HierarchicalCustomers",
+    "HierarchicalCustomersData",
+    "InvoicesData",
+    "InvoicesWorldData",
+    "PivotData",
+    "PivotDataFlat",
+    "PivotSalesData",
+    "SalesData",
+    "SingersCustomers",
+    "StockAmazon",
+    "StockGoogle",
+    "StockMarket100",
+    "StockMarket1000",
+    "StockMarket2000",
+    "StockMarket500",
+    "StockSP500Cap",
+    "StockMicrosoft",
+    "StockTesla",
+    "WorldAustralianData",
+    "WorldCapitals",
+    "WorldCities",
+    "WorldCitiesAbove100K",
+    "WorldCitiesAbove15K",
+    "WorldCitiesAbove1M",
+    "WorldCitiesAbove500K",
+    "WorldCountries",
+    "WorldStats"];
+    gulp.src([ '../samples/**/*.json'])
+    .pipe(es.map(function(file, fileCallback) {  
+        let content = file.contents.toString();
+        if (content.indexOf("skipAlterDataCasing") <= 0) {
+
+            for (let i = 0; i < largeDataSources.length; i++) {
+                const ds = largeDataSources[i];
+                if (content.indexOf(ds) >= 0) { 
+                    console.log(file.dirname + '/' + file.basename + " \t" + ds); 
+                    break;
+                }
+            }
+
+            // let lines = content.split('\n'); 
+            // var dataSource = "";
+            // for (let i = 0; i < lines.length; i++) {
+            //     const item = lines[i];
+            //     if (item.indexOf("dataSource") >= 0) {
+            //         dataSource = item;
+            //     }
+            // }
+            // console.log(file.dirname + '/' + file.basename + " \t" + dataSource);  
+        }
+        fileCallback(null, file);
+    }))
     .on("end", function() {
         cb();
      });
