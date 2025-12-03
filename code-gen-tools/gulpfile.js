@@ -16,13 +16,12 @@ function log(msg) {
 let CodeGenLib = "../code-gen-library";
 
 let xplatRepoName = 'IgniteUI/igniteui-xplat-examples/';
-let xplatBranch = '25.1';
+let xplatBranch = '25.2';
 let xplatCodeGenLib = 'code-gen-library';
-let xplatCodeGenLibGit =        'https://github.com/' + xplatRepoName + '/blob/' + xplatBranch + '/' + xplatCodeGenLib + '/';
-let xplatCodeGenLibRaw  = 'raw.githubusercontent.com/' + xplatRepoName + '/refs/head/' + xplatBranch + '/' + xplatCodeGenLib + '/';
-//                https://github.com/IgniteUI/igniteui-xplat-examples//blob     /25.1/code-gen-library/AnalyzeSales/XPLAT.json
-// https://raw.githubusercontent.com/IgniteUI/igniteui-xplat-examples/refs/heads/25.1/code-gen-library/AnalyzeSales/XPLAT.json
-
+let xplatCodeGenLibGit =                 'https://github.com/' + xplatRepoName + '/blob/' + xplatBranch + '/' + xplatCodeGenLib + '/';
+let xplatCodeGenLibRaw  = 'https://raw.githubusercontent.com/' + xplatRepoName + '/refs/heads/' + xplatBranch + '/' + xplatCodeGenLib + '/';
+//                https://github.com/IgniteUI/igniteui-xplat-examples//blob     /25.2/code-gen-library/AnalyzeSales/XPLAT.json
+// https://raw.githubusercontent.com/IgniteUI/igniteui-xplat-examples/refs/heads/25.2/code-gen-library/AnalyzeSales/XPLAT.json
 
 // TODO replace following strings: where XPLAT-CDN = 'https://dl.infragistics.com/x/'
 // https://static.infragistics.com/xplatform/images/flags/iso2                  https:/XPLAT-CDN/img/flags/png//small/2
@@ -591,8 +590,8 @@ exports.jsonReplace = function jsonReplace(cb) {
 }
 
 // let cdnWebsite = 'https://dl.infragistics.com/xplatform/cdn/'; // OLD
-let cdnWebsite = 'https://dl.infragistics.com/xplat/data/'; 
-let cdnServer = '\\\\s0706dl2.igweb.local\\download.infragistics.com\\xplatform\\data';
+let cdnWebsite = 'https://dl.infragistics.com/x/'; 
+let cdnServer = '\\\\s0706dl2.igweb.local\\download.infragistics.com\\x\\';
 // let cdnServer = '\\\\s0706dl2.igweb.local\\download.infragistics.com\\xplatform\\cdn'; // OLD
 let cdnOutput = './CDN/data/';
 
@@ -641,22 +640,25 @@ function cdnSyncData(cb)
             
             let cdnName = json.dataName + ".json";
             let cdnPath = cdnOutput + cdnName ;
-            let cdnLink = cdnWebsite + cdnName;
+            let cdnLink = cdnWebsite + 'data/' + cdnName;
             let xplatGit = xplatCodeGenLibGit + json.dataName + '/' + json.fileName;
             let xplatRaw = xplatCodeGenLibRaw + json.dataName + '/' + json.fileName;
             let xplatName = 'XPLAT'; //'&#9741; XPLAT'; // file.basename
             cdnFiles.push(json);
 
-            console.log(CodeGenLib + '/' + json.dataName + '/XPLAT.json');   
+            if (dataContent.indexOf("  {")){
+                console.log(CodeGenLib + '/' + json.dataName + '/XPLAT.json');   
+            }
+            
             // let col =
             let row = "<tr>" +
             " <td class=\"center\"> " + fileID.toString().padStart(3) + " </td>" +
             " <td class=\"center\"> " + json.dataColumns.toString().padStart(2) + " </td>" +
             " <td class=\"right\"> " + json.dataItems.toString().padStart(5) + " </td>" +
             " <td class=\"right\"> " + json.dataSize.toString().padStart(5) + " KB </td>" +
-            " <td class=\"center\">" + "<a href=\"" + xplatGit + "\">GIT</a> </td>" +
-            " <td class=\"center\">" + "<a href=\"" + xplatRaw + "\">RAW</a> </td>" +
-            " <td class=\"left\">" + "<a href=\"" + cdnLink + "\">"  + cdnName + "</a> </td>" +
+            " <td class=\"center\">" + "<a href=\"" + xplatGit + "\">VIEW</a> | " + "<a href=\"" + xplatRaw + "\">RAW</a> </td>" +
+            // " <td class=\"center\">" + "<a href=\"" + xplatRaw + "\">RAW</a> </td>" +
+            " <td class=\"left\" >" + "<a href=\"" + cdnLink + "\" >"  + cdnName + "</a> </td>" +
             " </tr>\r\n"; 
             cdnTable += row;  
             // copy to cdn output
@@ -679,44 +681,54 @@ function cdnSyncData(cb)
         let repoWC      = 'https://github.com/IgniteUI/igniteui-wc-examples/tree/vnext';
         let linkCodeGen  = '<a href=\"' + repoXPLAT + '/code-gen-library">XPLAT code-gen-library</a>';
         let linkCopyCDN  = '<a href=\"' + repoXPLAT + '/code-gen-tools">copyCDN</a>';
-        let linkServerCDN  = '<a href=\"' + cdnServer + '">CDN</a>';
+        let linkServerCDN  = '<a href=\"' + cdnServer + 'data\\" >CDN</a>';
 
         let css = '<style>\r\n' +
         '.center { text-align: center; }\r\n' +
         '.right { text-align: right;  }\r\n' +
         '.left { text-align: left;  }\r\n' +
+        'a { text-decoration: none;  }\r\n' +
+        'th, td { padding: 0.25rem;  }\r\n' +
         'tr:nth-child(even) { background-color: #e3e3e3; } \r\n' +
+        'th { background: black; color: white; position: sticky; top: 0; box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.4); } \r\n' +
         '</style> '
 
         let readme = '<html> ' + css + '<body>\r\n' +
         '<h1> JSON Data Library</h1>\r\n\r\n' +
-        '<p>This data folder contains JSON files used by: ' +
-        '<a href=\"' + repoXPLAT + '/samples\">xplat samples</a>, ' +
-        '<a href=\"' + repoAngular + '/samples\">angular samples</a>, ' +
-        '<a href=\"' + repoBlazor + '/samples\">blazor samples</a>, ' +
-        '<a href=\"' + repoReact + '/samples\">react samples</a>, and ' +
-        '<a href=\"' + repoWC + '/samples\">web-component samples</a> samples' +
+        '<p>This folder contains JSON files used by: ' +
+        '<a href=\"' + repoXPLAT + '/samples\">XPLAT samples</a>, ' +
+        '<a href=\"' + repoAngular + '/samples\">Angular samples</a>, ' +
+        '<a href=\"' + repoBlazor + '/samples\">Blazor samples</a>, ' +
+        '<a href=\"' + repoReact + '/samples\">React samples</a>, and ' +
+        '<a href=\"' + repoWC + '/samples\">WC samples</a> samples' +
         '</p>\r\n\r\n' +
         '<p>Use the ' + linkCopyCDN + ' gulp script to collect data files from ' + linkCodeGen + ' and then manually upload them to the ' + linkServerCDN + ' network location. This way, files on CDN stay in-sync with files in ' + linkCodeGen + ' repo.</p>\r\n\r\n' +
         '<h2> Data Files </h2>\r\n\r\n' +
         '<p>This table provides statistics and list of files that were copied form ' + linkCodeGen + ' repo:</p>\r\n\r\n' + 
         '<table>\r\n' +
         '<tr> ' + 
-            '<th width="80px"  class=\"center\"> ID </th> ' +
-            '<th width="80px"  class=\"center\"> Columns </th> ' +
-            '<th width="60px"  class=\"right\"> Items </th> ' +
-            '<th width="120px" class=\"right\"> Size </th> ' +
-            '<th width="140px" class=\"center\"> GITHUB LINK </th> ' +
-            '<th width="140px" class=\"center\"> GITHUB RAW </th> ' +
-            '<th width="50%"   class=\"left\"> CDN LINK </th> ' +
+            '<th width="80px"  class=\"center\">ID</th> ' +
+            '<th width="100px" class=\"center\">COLUMNS </th> ' +
+            '<th width="100px" class=\"center\">ITEMS </th> ' +
+            '<th width="110px" class=\"center\">FILE SIZE </th> ' +
+            '<th width="140px" class=\"center\">GITHUB LINKS </th> ' +
+            // '<th width="140px" class=\"center\"> GITHUB RAW </th> ' +
+            '<th width="50%"   class=\"left\">CDN LINK </th> ' +
         '</tr> \r\n' +  
         cdnTable + 
         '</table>' +
         '\r\n\r\n</body></html>';
         
         utils.saveFile(cdnOutput + "/_Readme.html", readme, true);
+        utils.saveFile(cdnOutput + "/index.html", readme, true);
       
-        // console.log(cdnFiles);
+        console.log('');
+        console.log('--------------------------------------------------------------------');
+        console.log(">>> WARNING <<< TODO copy content of the ./CDN/data/ folder to:\n" + cdnServer + "data\\")
+        console.log('--------------------------------------------------------------------');
+        // console.log(cdnFiles); 
+        // file://s0706dl2.igweb.local/download.infragistics.com/x/
+        // file://s0706dl2.igweb.local/download.infragistics.com/x/
         cb();
      });
 }
@@ -751,11 +763,10 @@ function cdnSyncSamples(cb) {
     .on("end", function() {
         // console.log("TODO add '\"skipAlterDataCasing\": true' to these samples:");
         // console.log(updateSamples);
-        // console.log("\n WARNING: complete above TODO and then copy content of the the ./CDN folder to:\n" + cdnServer + "\n")
         console.log('');
-        console.log('--------------------------------------------------------------------');
-        console.log(">>> WARNING <<< TODO copy content of the the ./CDN folder to:\n" + cdnServer)
-        console.log('--------------------------------------------------------------------');
+        console.log('--------------------------------------------------------------------------------------------------');
+        console.log(">>> WARNING <<< TODO create PR with pending changes to files in the code-gen-library files")
+        console.log('--------------------------------------------------------------------------------------------------');
         cb();
     });
 }
