@@ -1,0 +1,53 @@
+{
+  "strings": {
+    "legendTitle": "Global Electricity Demand by Energy Use"
+  },
+  "hasAnimations": true,
+  "descriptions": {
+    "editor": {
+      "type": "PropertyEditorPanel",
+      "componentRendererRef": "renderer",
+      "targetRef": "chart",
+      "descriptionType": "DataPieChart",
+      "isHorizontal": true,
+      "isWrappingEnabled": true,
+      "properties": [
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "label": "Selection Behavior: ",
+          "valueType": "EnumValue",
+          "propertyPath": "SelectionBehavior",   
+          "name": "SelectionBehaviorEditor",
+          "shouldOverrideDefaultEditor": true,
+          "dropDownNames": ["PerDataItemSingleSelect", "PerDataItemMultiSelect"],
+          "dropDownValues": ["PerDataItemSingleSelect", "PerDataItemMultiSelect"],
+          "primitiveValue": "PerDataItemSingleSelect"
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "SelectionMode",
+          "name": "SelectionModeEditor",
+          "label": "Selection Mode: ",
+          "primitiveValue": "Brighten"
+        }
+      ]
+    },
+    "content": {
+      "type": "DataPieChart",
+      "name": "chart",
+      "dataSourceRef": "EnergyGlobalDemand",
+      "highlightingMode": "None",
+      "selectionMode": "Brighten",
+      "selectionBehavior": "PerDataItemSingleSelect",
+      "selectionBrush": "dodgerblue",
+      "focusBrush": "black",
+      "thickness": 3
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
+    "charts/DataPieChartModule",
+    "charts/ItemLegendModule"
+  ]
+}

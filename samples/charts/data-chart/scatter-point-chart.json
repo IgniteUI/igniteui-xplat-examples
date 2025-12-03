@@ -14,7 +14,7 @@
     "content": {
       "type": "DataChart",
       "name": "chart",
-      "legendRef": "Legend",
+      "legendRef": "legend",
       "axes": [
         {
           "type": "NumericXAxis",

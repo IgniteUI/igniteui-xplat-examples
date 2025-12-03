@@ -1,13 +1,15 @@
 //begin imports
 import { IgrRowSelectionEventArgs } from 'igniteui-react-grids';
 import { IgrGridComponent } from 'igniteui-react-grids';
+import { IgrComponentBoolValueChangedEventArgs } from 'igniteui-react';
+
 //end imports
 
 import { CodeGenHelper } from 'igniteui-webcomponents-core';
 
 export class WebGridRendered {
     //begin eventHandler
-    public webGridRendered(args:any): void {
+    public webGridRendered(args: IgrComponentBoolValueChangedEventArgs): void {
         const grid = document.getElementById("grid");
         grid.parentElement.className = "fill";
         grid.parentElement.style.display = "flex";

@@ -12,7 +12,7 @@
       "cellEditRef": "WebTreeGridCellEdit",
       "autoGenerate": false,
       "foreignKey": "ParentID",
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
           "field": "Name",

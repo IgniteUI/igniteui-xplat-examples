@@ -5,6 +5,7 @@ let fs = require('fs.extra');
 let path = require('path');
 let utils = require('./utils.js')
 let request = require('request');
+let rename = require('gulp-rename');
 // const { read } = require('fs');
 
 function log(msg) {
@@ -113,7 +114,7 @@ exports.cleanJSON = function cleanJSON(input, cb) {
     }
     let outputContent = outputLines.join('\r\n');
     let outputPath = CodeGenLib + "/TestData/XPLAT.json";
-    saveFile(outputPath, outputContent);
+    utils.saveFile(outputPath, outputContent);
 
     console.log('toJSON');
     console.log(outputContent)
@@ -148,16 +149,106 @@ function sortJSON(cb) {
     }
 
     let outputPath = filePath; // CodeGenLib + "/WorldCitiesAbove1M/XPLAT.json";
-    saveJSON(outputPath, newDataItems,  "compact");
+    utils.saveJSON(outputPath, newDataItems,  "compact");
     cb();
 }
 exports.sortJSON = sortJSON;
 
 
+exports.groupJSON = function groupJSON(cb) {
+
+
+    let groupColumn = "Continent";
+    // let groupColumn = "Region";
+    // let groupColumn = "Economy";
+    let groups = {};
+
+    let jsonPath = CodeGenLib + "/PopulationBirthsByCountry/XPLAT.json";
+    // let jsonPath = "C:\\WORK\\_SAMPLES\\DATA\\births-and-deaths\\PopulationBirthsByCountries\\XPLAT.json";
+    let jsonFile = fs.readFileSync(jsonPath, "utf8");
+    let jsonData = JSON.parse(jsonFile);
+
+    let numericColumns = [];
+    let columns = Object.keys(jsonData[0]);
+    for (const c of columns) {
+        if (c === "Year") continue;
+        let val = jsonData[0][c];
+        if (typeof(val) === "number" || val === null)
+            numericColumns.push(c);
+    }
+
+    // console.log("numericColumns");
+    // console.log(numericColumns);
+
+    let missing = [];
+    // for (let i = 0; i <= 153; i++) {
+    for (const item of jsonData) {
+        // let item = jsonData[i];
+        let groupInfo = item.Code + " " + item.Name;
+        let groupName = item[groupColumn];
+        if (groupName === undefined && !missing.includes(groupInfo)) {
+            // console.log("groupName undefined");
+            missing.push(groupInfo)
+            // console.log(item.Code + " " + item.Name);
+            // break;
+        }
+
+        if (groups[groupName] === undefined) {
+            groups[groupName] = {};
+            // for (let y = 1950; y <= 1952; y++) {
+            for (let y = 1950; y <= 2100; y++) {
+                groups[groupName][y] = {};
+                for (const c of numericColumns) {
+                    groups[groupName][y][c] = 0;
+                }
+            }
+        }
+
+        for (const c of numericColumns) {
+            if (item[c] !== null) {
+                groups[groupName][item.Year][c] = groups[groupName][item.Year][c] + item[c];
+            } 
+        }
+ 
+    }
+
+    let groupJson = [];
+    let groupNames = Object.keys(groups);
+    console.log("groupNames");
+    console.log(groupNames);
+    
+    for (const groupName of groupNames) {
+        let group = groups[groupName];
+        let years = Object.keys(group);
+        for (const y of years) {
+            let item = {}; //group[y];
+            item.Year = utils.strToNumber(y);
+            item.Name = groupName;
+            for (const c of numericColumns) {
+                let val = group[y][c];
+                if (val === 0) 
+                    item[c] = null;
+                else
+                    item[c] = val; 
+            }
+            groupJson.push(item);
+        }
+    }
+    // console.log("groupJson");
+    // console.log(groupJson);
+
+    // console.log("groups");
+    // console.log(groups);
+    let outputPath = CodeGenLib + "/PopulationBirthsBy" + groupColumn + "/XPLAT.json"
+    // let outputPath = "C:\\WORK\\_SAMPLES\\DATA\\births-and-deaths\\Data_by_" + groupColumn + ".json"
+    utils.saveJSON(outputPath, groupJson,  "compact");
+    cb();
+}
+
 exports.filterJSON = function filterJSON(cb) {
 
     let fileDir = "CountryStats";
-    let filePath = CodeGenLib + "/"+fileDir+"/XPLAT.json";
+    let filePath = CodeGenLib + "/" + fileDir + "/XPLAT.json";
     let fileData = fs.readFileSync(filePath, "utf8");
     console.log("loaded " + filePath);
 
@@ -180,7 +271,7 @@ exports.filterJSON = function filterJSON(cb) {
     // console.log(newDataItems)
 
     let outputPath = CodeGenLib + "/" + fileDir + filterValue + "/XPLAT.json"
-    saveJSON(outputPath, newDataItems,  "compact");
+    utils.saveJSON(outputPath, newDataItems,  "compact");
     cb();
 }
 
@@ -268,48 +359,9 @@ exports.copyCDN = function copyCDN(cb)
     // del(cdnOutput);
 
     gulp.src([
-        // process all files and determine large files based on number of data items and data columns
-        CodeGenLib + '/**/XPLAT.json',
-        // process only known large data files:
-        // CodeGenLib + '/**/SingersData/XPLAT.json',
-        // CodeGenLib + "/AirplaneSeats/XPLAT.json",
-        // CodeGenLib + "/AnalyzeSales/XPLAT.json",
-        // CodeGenLib + "/AthletesData/XPLAT.json",
-        // CodeGenLib + "/AthletesDataExtended/XPLAT.json",
-        // CodeGenLib + "/CountryStats/XPLAT.json",
-        // CodeGenLib + "/CountyHierarchicalData/XPLAT.json",
-        // CodeGenLib + "/EmployeesData/XPLAT.json",
-        // CodeGenLib + "/FinancialDataAll/XPLAT.json",
-        // CodeGenLib + "/FinancialDataCurrencies/XPLAT.json",
-        // CodeGenLib + "/FinancialDataFuel/XPLAT.json",
-        // CodeGenLib + "/FinancialDataMetals/XPLAT.json",
-        // CodeGenLib + "/HierarchicalCustomers/XPLAT.json",
-        // CodeGenLib + "/HierarchicalCustomersData/XPLAT.json",
-        // CodeGenLib + "/InvoicesData/XPLAT.json",
-        // CodeGenLib + "/InvoicesWorldData/XPLAT.json",
-        // CodeGenLib + "/PivotData/XPLAT.json",
-        // CodeGenLib + "/PivotDataFlat/XPLAT.json",
-        // CodeGenLib + "/PivotSalesData/XPLAT.json",
-        // CodeGenLib + "/SalesData/XPLAT.json",
-        // CodeGenLib + "/SingersCustomers/XPLAT.json",
-        // CodeGenLib + "/StockAmazon/XPLAT.json",
-        // CodeGenLib + "/StockGoogle/XPLAT.json",
-        // CodeGenLib + "/StockMarket100/XPLAT.json",
-        // CodeGenLib + "/StockMarket1000/XPLAT.json",
-        // CodeGenLib + "/StockMarket2000/XPLAT.json",
-        // CodeGenLib + "/StockMarket500/XPLAT.json",
-        // CodeGenLib + "/StockSP500Cap/XPLAT.json",
-        // CodeGenLib + "/StockMicrosoft/XPLAT.json",
-        // CodeGenLib + "/StockTesla/XPLAT.json",
-        // CodeGenLib + "/WorldAustralianData/XPLAT.json",
-        // CodeGenLib + "/WorldCapitals/XPLAT.json",
-        // CodeGenLib + "/WorldCities/XPLAT.json",
-        // CodeGenLib + "/WorldCitiesAbove100K/XPLAT.json",
-        // CodeGenLib + "/WorldCitiesAbove15K/XPLAT.json",
-        // CodeGenLib + "/WorldCitiesAbove1M/XPLAT.json",
-        // CodeGenLib + "/WorldCitiesAbove500K/XPLAT.json",
-        // CodeGenLib + "/WorldCountries/XPLAT.json",
-        // CodeGenLib + "/WorldStats/XPLAT.json",
+        // process data files
+        CodeGenLib + '/**/XPLAT.json', 
+        //     // CodeGenLib + "/StockGoogle/XPLAT.json", 
     ],  
     // {base: CodeGenLib + '/'}
     )
@@ -331,14 +383,15 @@ exports.copyCDN = function copyCDN(cb)
                       " <td class=\"left\">" + "<a href=\"" + cdnWebsite + dirname + ".json\">"  + dirname + "</a> </td> </tr>\r\n"; 
             cdnTable += row;  
             // copy to cdn output
-            saveFile(cdnOutput + "/" + dirname + ".json", content, true); 
+            utils.saveFile(cdnPath, dataContent, true); 
             // create config file that enables remote location for data file
-            saveFile(CodeGenLib + '/' + dirname + '/XPLAT-CONFIG.json', '{\r\n' + '\t"location": "CDN"\r\n' + '}\r\n', true); 
+            // utils.saveFile(CodeGenLib + '/' + json.dataName + '/XPLAT-CONFIG.json', '{\r\n' + '    "location": "CDN"\r\n' + '}\r\n', true); 
+            fileID++;
         } 
         // console.log(items.length + " " + (items.length * columns.length) + " " + dirname);
         fileCallback(null, file);
+ 
     }))
-    // .pipe(gulp.dest(cdnOutput, {overwrite: true}))
     .on("end", function() {
         var repo = 'https://github.com/IgniteUI/igniteui-xplat-examples/tree/23.2.x';
         var angular = 'https://github.com/IgniteUI/igniteui-angular-examples/tree/vnext';
@@ -376,6 +429,50 @@ exports.copyCDN = function copyCDN(cb)
      });
 }
 
+function cdnSyncSamples(cb) {
+    
+    console.log('checking if samples with CDN files have "skipAlterDataCasing" flag ... ');
+    let updateSamples = [];
+    gulp.src([ '../samples/**/*.json'])
+    .pipe(es.map(function(sample, fileCallback) {  
+        let content = sample.contents.toString();
+        if (content.indexOf("skipAlterDataCasing") <= 0) {
+
+            for (let i = 0; i < cdnFiles.length; i++) {
+                const dataSource = cdnFiles[i].dataName;
+                if (content.indexOf(dataSource) >= 0) { 
+                    // let samplePath = sample.dirname + '/' + sample.basename;
+                    let samplePath = sample.dirname + '\\' + sample.basename;
+                    updateSamples.push(samplePath);
+
+                    let lines = content.split('\n'); 
+                    lines.splice(1, 0, '  \"skipAlterDataCasing\": true,');
+                    
+                    console.log('adding skipAlterDataCasing to: ' + samplePath);
+                    utils.saveFile(samplePath, lines.join('\n'), true); 
+                    break;
+                }
+            }
+        }
+        fileCallback(null, sample);
+    }))
+    .on("end", function() {
+        // console.log("TODO add '\"skipAlterDataCasing\": true' to these samples:");
+        // console.log(updateSamples);
+        // console.log("\n WARNING: complete above TODO and then copy content of the the ./CDN folder to:\n" + cdnServer + "\n")
+        console.log('');
+        console.log('--------------------------------------------------------------------');
+        console.log(">>> WARNING <<< TODO copy content of the the ./CDN folder to:\n" + cdnServer)
+        console.log('--------------------------------------------------------------------');
+        cb();
+    });
+}
+
+exports.copyCDN = gulp.series(
+    cdnSyncData,
+    // cdnSyncSamples,
+);
+
 exports.compactJSON = function compactJSON(cb) {
     let filePaths = [
         // "/AnalyzeOrders/XPLAT.json",
@@ -410,7 +507,7 @@ exports.compactJSON = function compactJSON(cb) {
     for (const filePath of filePaths) {
         let file = fs.readFileSync(CodeGenLib + filePath, "utf8");
         let dataItems = JSON.parse(file);
-        saveJSON(CodeGenLib + filePath, dataItems,  "compact");
+        utils.saveJSON(CodeGenLib + filePath, dataItems,  "compact");
     }
     cb();
 }
@@ -426,14 +523,14 @@ function addFieldJSON(cb) {
 
     let outputDir = CodeGenLib + "/NwindData/"
     let outputPath = outputDir + "XPLAT.json";
-    saveJSON(outputPath, orgDataItems,  "compact");
+    utils.saveJSON(outputPath, orgDataItems,  "compact");
     cb();
 }
 exports.addFieldJSON = addFieldJSON;
 
 exports.combineJSON = function combineJSON(cb) {
 
-    var AllLocations = [
+    let AllLocations = [
         {
             Shop: "Local Market",
             LastInventory: "07/03/2018"
@@ -474,7 +571,7 @@ exports.combineJSON = function combineJSON(cb) {
     for (const item of orgDataItems) {
         let index = utils.randomInteger(0, maxLocations)
         let count = Math.floor(Math.random() * 3) + 1;
-        var locations = [...AllLocations].splice(index, count);
+        let locations = [...AllLocations].splice(index, count);
         item.Locations = locations;
         newDataItems.push(item);
 
@@ -489,11 +586,11 @@ exports.combineJSON = function combineJSON(cb) {
 
     let outputDir = CodeGenLib + "/NwindData/"
     let outputPath = outputDir + "XPLAT.json";
-    saveJSON(outputPath, newDataItems,  "compact");
+    utils.saveJSON(outputPath, newDataItems,  "compact");
 
     let locationsDir = CodeGenLib + "/NwindLocations/"
     let locationsPath = locationsDir + "XPLAT.json";
-    saveJSON(locationsPath, AllLocations,  "compact");
+    utils.saveJSON(locationsPath, AllLocations,  "compact");
 
     cb();
 }
@@ -503,8 +600,8 @@ function updateColumns(dataItems, columnName) {
     for (let i = 0; i < dataItems.length; i++) {
         
         if (dataItems[i][columnName] !== undefined) {
-            var newVal = utils.toNumber(dataItems[i][columnName]);
-            // var newVal = utils.toNumber(dataItems[i][columnName]);
+            let newVal = utils.toNumber(dataItems[i][columnName]);
+            // let newVal = utils.toNumber(dataItems[i][columnName]);
             newVal = Math.round(parseFloat(newVal));
             // dataItems[i][columnName] = newVal;
             if (dataItems[i][columnName] !== newVal) {
@@ -519,7 +616,7 @@ function updateColumns(dataItems, columnName) {
 }
 
 exports.updatePostalCode = function updatePostalCode(cb) {
-    var targetColumn = '';
+    let targetColumn = '';
     // let filePath = CodeGenLib + "/CustomersData/XPLAT.json";
     // let filePath = CodeGenLib + "/CustomersDataLocal/XPLAT.json";
     // let filePath = CodeGenLib + "/HierarchicalCustomers/XPLAT.json";
@@ -534,10 +631,10 @@ exports.updatePostalCode = function updatePostalCode(cb) {
     let orgDataItems = JSON.parse(file);
     for (let i = 0; i < orgDataItems.length; i++) {
         
-        // var item = orgDataItems[i];
+        // let item = orgDataItems[i];
         if (orgDataItems[i].PostalCode !== undefined) {
-            var newVal = utils.toNumber(orgDataItems[i].PostalCode);
-            // var newVal = utils.toNumber(orgDataItems[i].PostalCode);
+            let newVal = utils.toNumber(orgDataItems[i].PostalCode);
+            // let newVal = utils.toNumber(orgDataItems[i].PostalCode);
             newVal = Math.round(parseFloat(newVal));
             // orgDataItems[i].PostalCode = newVal;
             if (orgDataItems[i].PostalCode !== newVal) {
@@ -548,7 +645,7 @@ exports.updatePostalCode = function updatePostalCode(cb) {
         }
         else
         {
-            // var newVal = utils.toNumber("bBB B");
+            // let newVal = utils.toNumber("bBB B");
             // newVal = Math.round(parseFloat(newVal));
             // console.log(i + " add >> " + newVal);
             // orgDataItems[i].PostalCode = newVal;          
@@ -556,18 +653,18 @@ exports.updatePostalCode = function updatePostalCode(cb) {
 
         if (orgDataItems[i].ChildCompanies !== undefined) { 
             for (let c = 0; c < orgDataItems[i].ChildCompanies.length; c++) {
-                var child = orgDataItems[i].ChildCompanies[c];
+                let child = orgDataItems[i].ChildCompanies[c];
                 if (child.PostalCode !== undefined) {
-                    var newChild = utils.toNumber(child.PostalCode).toString();
+                    let newChild = utils.toNumber(child.PostalCode).toString();
                     // newChild = Math.round(parseFloat(newChild));
                     orgDataItems[i].ChildCompanies[c].PostalCode = newChild;
                 }    
                 
                 if (child.ChildCompanies !== undefined) { 
                     for (let w = 0; w < child.ChildCompanies.length; w++) {
-                        var wnuk = orgDataItems[i].ChildCompanies[c].ChildCompanies[w];
+                        let wnuk = orgDataItems[i].ChildCompanies[c].ChildCompanies[w];
                         if (wnuk.PostalCode !== undefined) {
-                            var newChild = utils.toNumber(wnuk.PostalCode).toString();
+                            let newChild = utils.toNumber(wnuk.PostalCode).toString();
                             // newChild = Math.round(parseFloat(newChild));
                             orgDataItems[i].ChildCompanies[c].ChildCompanies[w].PostalCode = newChild;
                         }                 
@@ -579,14 +676,14 @@ exports.updatePostalCode = function updatePostalCode(cb) {
         if (orgDataItems[i].Orders !== undefined) {
 
             for (let c = 0; c < orgDataItems[i].Orders.length; c++) {
-                var child = orgDataItems[i].Orders[c];
+                let child = orgDataItems[i].Orders[c];
                 if (child.PostalCode !== undefined) {
-                    var newChild = utils.toNumber(child.PostalCode);
+                    let newChild = utils.toNumber(child.PostalCode);
                     newChild = Math.round(parseFloat(newChild));
                     orgDataItems[i].Orders[c].PostalCode = newChild;
                 }
                 if (child.ShipPostalCode !== undefined) {
-                    var newChild = utils.toNumber(child.ShipPostalCode);
+                    let newChild = utils.toNumber(child.ShipPostalCode);
                     newChild = Math.round(parseFloat(newChild));
                     orgDataItems[i].Orders[c].ShipPostalCode = newChild;
                 }
@@ -595,23 +692,23 @@ exports.updatePostalCode = function updatePostalCode(cb) {
         // info.ID = "abc" + (id + i);
     }
     
-    // saveJSON(filePath, orgDataItems, "compact");
-    saveJSON(filePath, orgDataItems);
+    // utils.saveJSON(filePath, orgDataItems, "compact");
+    utils.saveJSON(filePath, orgDataItems);
 
     cb();
 }
 
 exports.updateJSON = function updateJSON(cb) {
 
-    var firstNames = ["James", "Max", "Martin", "Pamela", "Mike", "Anna", "Ben", "Nancy"];
-    var lastNames = ["Smith", "Black", "Madison", "Jefferson", "Jackson", "Watson"];
-    var streetNames = ["Main", "Wall", "Market"];
-    var regions = ["West", "North East", "South East"];
-    var shipNames = ["Market", "Home", "Estate", "Townhouse"];
-    var cityNames = ["New York", "Los Angeles", "Philadelphia", "Miami", "Huston"];
-    var products = ["IPad", "Mac Book Pro", "IPhone", "Mac Book Air", "Samsung Galaxy 22", "Samsung Note"];
+    let firstNames = ["James", "Max", "Martin", "Pamela", "Mike", "Anna", "Ben", "Nancy"];
+    let lastNames = ["Smith", "Black", "Madison", "Jefferson", "Jackson", "Watson"];
+    let streetNames = ["Main", "Wall", "Market"];
+    let regions = ["West", "North East", "South East"];
+    let shipNames = ["Market", "Home", "Estate", "Townhouse"];
+    let cityNames = ["New York", "Los Angeles", "Philadelphia", "Miami", "Huston"];
+    let products = ["IPad", "Mac Book Pro", "IPhone", "Mac Book Air", "Samsung Galaxy 22", "Samsung Note"];
 
-    var shippers = ["United Package", "Speedy Express", "Federal Shipping"];
+    let shippers = ["United Package", "Speedy Express", "Federal Shipping"];
     // let filePath = CodeGenLib + "/InvoicesData/XPLAT.json";
     let filePath = CodeGenLib + "/CompanyData/XPLAT.json";
     let file = fs.readFileSync(filePath, "utf8");
@@ -619,19 +716,19 @@ exports.updateJSON = function updateJSON(cb) {
     // let file = fs.readFileSync(filePath, "utf8");
 
     let newDataItems = [];
-    var id = 1000;
+    let id = 1000;
     for (let i = 0; i < orgDataItems.length; i++) {
         // item.CustomerFirstName = item.CustomerName.split(' ')[0];
         // item.CustomerLastName = item.CustomerName.split(' ')[0];
         // item.CustomerAddress = item.ShipAddress + ', ' + item.ShipCity + ', ' + item.ShipCountry;
-        // var city = utils.randomItem(cityNames);
-        // var street = utils.randomInteger(100, 200) + " " + utils.randomItem(streetNames) + " Street";
-        // var first = utils.randomItem(firstNames);
-        // var last = utils.randomItem(lastNames);
+        // let city = utils.randomItem(cityNames);
+        // let street = utils.randomInteger(100, 200) + " " + utils.randomItem(streetNames) + " Street";
+        // let first = utils.randomItem(firstNames);
+        // let last = utils.randomItem(lastNames);
 
-        var info = orgDataItems[i];
+        let info = orgDataItems[i];
         info.ID = "abc" + (id + i);
-        // var info = {};
+        // let info = {};
 
         // info.ShipName = last + " " + utils.randomItem(shipNames);
         // info.ShipAddress = street;
@@ -650,7 +747,7 @@ exports.updateJSON = function updateJSON(cb) {
         // info.OrderID = utils.randomInteger(1000, 2000);
         // info.OrderDate = utils.randomInteger(1, 12) + '/' + utils.randomInteger(1, 25) + '/2022';
 
-        // var fraction = utils.randomDouble(0.2, .9).toFixed(2);
+        // let fraction = utils.randomDouble(0.2, .9).toFixed(2);
         // info.ProductID = utils.randomInteger(100, 200);
         // info.ProductName = utils.randomItem(products);
         // info.UnitPrice = parseFloat(utils.randomInteger(500, 3000) + fraction);
@@ -669,17 +766,17 @@ exports.updateJSON = function updateJSON(cb) {
     }
 
     // filePath = CodeGenLib + "/InvoicesData/XPLAT.json";
-    // saveJSON(filePath, newDataItems,  "compact");
-    saveJSON(filePath, newDataItems);
+    // utils.saveJSON(filePath, newDataItems,  "compact");
+    utils.saveJSON(filePath, newDataItems);
     cb();
 }
 
 function convertColumnTypes(cb) {
 
-    // var numericColumns = ["ProductUnitPrice", "NumberOfUnits", "Value"];
-    // var numericColumns = ["Product.UnitPrice", "NumberOfUnits", "Value"];
-    // var numericColumns = ["UnitsSold", "Year"];
-    var numericColumns = [
+    // let numericColumns = ["ProductUnitPrice", "NumberOfUnits", "Value"];
+    // let numericColumns = ["Product.UnitPrice", "NumberOfUnits", "Value"];
+    // let numericColumns = ["UnitsSold", "Year"];
+    let numericColumns = [
         // "PostalCode",
         //  "ShipPostalCode"
     //     "Open", "Close", "Low", "High", "Price", "Buy", "Sell",
@@ -716,12 +813,12 @@ function convertColumnTypes(cb) {
 
     // for (const item of orgDataItems) {
 
-    //     var columnNames = Object.keys(item);
-    //     // var columnNames = numericColumns;
+    //     let columnNames = Object.keys(item);
+    //     // let columnNames = numericColumns;
     //     for (const column of columnNames) {
 
     //         if (item[column]) {
-    //             var val = utils.strToNumber(item[column], 2);
+    //             let val = utils.strToNumber(item[column], 2);
     //             if (val) {
     //                 item[column] = val;
     //                 if (!convertedColumns.includes(column)) {
@@ -730,9 +827,9 @@ function convertColumnTypes(cb) {
     //             }
     //         }
     //         // else if (column.indexOf(".") > 0) {
-    //         //     var parts = column.split(".");
-    //         //     var propObject = parts[0];
-    //         //     var propName = parts[1];
+    //         //     let parts = column.split(".");
+    //         //     let propObject = parts[0];
+    //         //     let propName = parts[1];
     //         //     if (item[propObject] && item[propObject][propName]) {
     //         //         item[propObject][propName] = parseFloat(item[propObject][propName]);
     //         //     }
@@ -746,10 +843,191 @@ function convertColumnTypes(cb) {
     // console.log(orgDataItems[0].Orders[0].OrderDetails);
     // console.log(orgDataItems[1]);
     // console.log(convertedColumns);
-    saveJSON(filePath, orgDataItems); //,  "compact");
+    utils.saveJSON(filePath, orgDataItems); //,  "compact");
     cb();
 }
 exports.convertColumnTypes = convertColumnTypes;
+
+exports.convertDAB = function convertDAB(cb) {
+    let csvName = 'births-and-deaths';
+    let csvPath = 'C:\\WORK\\_SAMPLES\\DATA\\births-and-deaths\\';
+    csvData = fs.readFileSync(csvPath + 'births-and-deaths.csv', "utf8");
+
+    let jsonData = [];
+    let csvLines = csvData.split('\r\n');
+    let csvColumns = csvLines[0].split(',');
+
+    let worldFile = fs.readFileSync(CodeGenLib + "/WorldStats/XPLAT.json", "utf8");
+    let worldStats = JSON.parse(worldFile);
+    let worldLookup = {};
+    
+    for (const item of worldStats) {
+        worldLookup[item.Code] = item;
+    }
+
+    // console.log("csvColumns");
+    // console.log(csvColumns);
+    // console.log(csvPath + '.csv');
+
+    let jsonLookup = [];
+
+    let linesPasses = 0;
+    for (let i = 1; i < csvLines.length; i++) {
+    // for (let i = 600; i < 610; i++) {
+    // for (let i = 70; i < 80; i++) {
+        
+        const csvRow = csvLines[i].split(',');
+        if (csvRow === undefined || csvRow.length <= 1) {
+            continue;
+        }
+
+        let code = csvRow[1];
+        if (code === "" || code === null || code.includes("-")) continue;
+
+        if (jsonLookup[code] === undefined){
+            jsonLookup[code] = [];
+        } 
+        let jsonItem = {};
+
+        for (let c = 0; c < csvColumns.length; c++) {
+            const column = csvColumns[c];
+            if (column === "") continue;
+
+            let value = csvRow[c];
+            if (value === undefined) {
+                console.log("ERROR: undefined value at " + i + " row and col: " + column )
+                continue;
+            }
+            value = value.trim();
+
+            let num = utils.strToNumber(value);
+            // let num = utils.strToNumber(value);
+            if (typeof(num) === "number") {
+                num = Math.round(num);
+                jsonItem[column] = num;
+                // jsonItem[column] = num;
+            } else {
+                jsonItem[column] = value;
+                // jsonItem[column] = value;
+            }
+
+            // console.log("linesPass " + linesPasses + " " + column + " " + num + " " + typeof(num));
+            // console.log("linesPass " + linesPasses + " " + column + " " + num);
+
+            // if (num !== null) {
+            //     jsonItem[column] = num;
+            // } else {
+            //     jsonItem[column] = value;
+            // }
+        }
+
+        // if (jsonItem.Population > 1000) {
+        //     jsonItem["GdpPerPerson"] = Math.round(jsonItem["GdpTotal"] * 1000000 / jsonItem["Population"]);
+        jsonLookup[code].push(jsonItem);
+        // jsonData.push(jsonItem);
+        // }
+    }
+
+    let years = [2024, 2025];
+ 
+    let worldData = [];
+    let codeSkip = [];
+    let codes = Object.keys(jsonLookup);
+    for (const code of codes) {
+ 
+        let name = jsonLookup[code][0].Name;
+        
+        // console.log("code " + code + " name=" + name);
+        if (name === undefined || name === null) {
+            console.log("MISSING Name " + code);
+            continue;
+        }
+
+        for (const item of jsonLookup[code]) {
+            if (years.indexOf(item.Year) >= 0) {
+                item["DeathsRate"] = item["DeathsProjection"];
+                item["BirthsRate"] = item["BirthsProjection"];
+                item["DeathsProjection"] = null;
+                item["BirthsProjection"] = null;
+            }
+
+            if (item["BirthsRate"] !== null) {
+                item["GrowthRate"] = item["BirthsRate"] - item["DeathsRate"];
+                item["GrowthProjection"] = null;
+            } 
+            if (item["BirthsProjection"] !== null && item["DeathsProjection"] !== null) {
+                item["GrowthProjection"] = item["BirthsProjection"] - item["DeathsProjection"];
+                // item["GrowthRate"] = null;
+            } 
+
+            if (code.indexOf('_') < 0) {
+
+                let info = worldLookup[code];
+                if (code === "BES" || code === "GLP" || code === "MTQ") {
+                    item.Continent = "North America";
+                    item.Region = "Central America";
+                    item.Economy = "Emerging";
+
+                } else if (code === "MYT") {
+                    item.Continent = "Asia";
+                    item.Region = "South Asia";
+                    item.Economy = "Emerging"; 
+
+                } else if (code === "TUV" || code === "TKL" || code === "REU") {
+                    item.Continent = "Oceania";
+                    item.Region = "Polynesia";
+                    item.Economy = "Emerging"; 
+
+                } else if (code === "GUF") {
+                    item.Continent = "South America";
+                    item.Region = "South America";
+                    item.Economy = "Emerging"; 
+
+                } else if (code === "GIB" || code === "VAT") {
+                    item.Continent = "Europe";
+                    item.Region = "Southern Europe";
+                    item.Economy = "Developed";
+
+
+                } else if (info === undefined) {
+                    // console.log("MISSING worldLookup " + code);
+                } else {
+                    item.Continent = worldLookup[code].Continent;
+                    item.Region = worldLookup[code].Region;
+                    item.Economy = worldLookup[code].Economy;
+                }
+
+                let worldItem = JSON.parse(JSON.stringify(item));
+                worldData.push(worldItem);
+            }
+
+            item.Name = undefined;
+            item.Code = undefined;
+        }
+
+        if (code.includes("_")) {
+            // let jsonPath = csvPath + "PopulationBirths" + name.split(' ').join('') +  '/XPLAT.json'; 
+            let jsonPath = CodeGenLib + "/PopulationBirths" + name.split(' ').join('') +  '/XPLAT.json'; 
+            utils.saveJSON(jsonPath, jsonLookup[code],  "compact"); 
+        }
+        // let jsonPath = csvPath + code + "_" + name.split(' ').join('_') +  '.json'; 
+        // utils.saveJSON(jsonPath, jsonLookup[code],  "compact"); 
+      
+    }
+
+     
+    let worldPath = CodeGenLib + "/PopulationBirthsByCountry" +  '/XPLAT.json'; 
+    utils.saveJSON(worldPath, worldData,  "compact"); 
+      
+
+    
+
+    // let jsonPath = CodeGenLib + "/BirthsAndDeaths/XPLAT.json";
+    // let jsonPath = csvPath + '.json';
+    // utils.saveJSON(jsonPath, jsonData,  "compact");
+    // utils.saveJSON(jsonPath, jsonLookup,  "compact");
+    cb();
+}
 
 exports.convertWorldStats = function convertWorldStats(cb) {
 
@@ -800,7 +1078,7 @@ exports.convertWorldStats = function convertWorldStats(cb) {
     }
 
     let jsonPath = CodeGenLib + "/WorldStats/XPLAT.json";
-    saveJSON(jsonPath, jsonData,  "compact");
+    utils.saveJSON(jsonPath, jsonData,  "compact");
     cb();
 }
 
@@ -815,13 +1093,13 @@ exports.injectWorldStats = function injectWorldStats(cb) {
     // let file2Data = JSON.parse(file2);
     // file2Data.sort((a, b) => a.Name < b.Name ? 1 : -1);
 
-    var notFound = [];
+    let notFound = [];
     // for (let i = 0; i < file1Data.length; i++) {
-        // var item2 = file1Data[i];  
+        // let item2 = file1Data[i];  
 
-        var missing = true;
+        let missing = true;
         // for (let ii = 0; ii < file1Data.length; ii++) {
-        //     var item1 = file1Data[ii];
+        //     let item1 = file1Data[ii];
         //     if (file1Data[ii].Name === item2.Name) {
 
         //         file1Data[ii].Unemployment = item2.Unemployment;
@@ -866,8 +1144,8 @@ exports.injectWorldStats = function injectWorldStats(cb) {
     }
     // console.log(notFound);
 
-    saveJSON(file1Path, file1Data,  "compact");
-    // saveJSON(file2Path, file2Data,  "compact");
+    utils.saveJSON(file1Path, file1Data,  "compact");
+    // utils.saveJSON(file2Path, file2Data,  "compact");
     cb();
 }
 
@@ -958,7 +1236,54 @@ exports.convertStockSP500 = function convertStockSP500(cb) {
     // console.log(newDataItems)
 
     let jsonPath = CodeGenLib + "/" + csvName + "/XPLAT.json";
-    saveJSON(jsonPath, jsonData,  "compact");
+    utils.saveJSON(jsonPath, jsonData,  "compact");
+    cb();
+}
+
+exports.convertReveal = function convertReveal(cb) {
+
+    var csvNames = [
+        'EmailMarketingCampaign',
+        'Healthcare', 
+        'LineBug',
+        'Management',
+        'Manufacturing',
+        'Marketing',
+        'RevenueAndProfitability',
+        'Sales', 
+    ];
+
+    for (const csvName of csvNames)
+    {
+        let cvsPath = 'C:/WORK/_DATA/Reveal/' + csvName + '.csv';
+        console.log('loading ' + cvsPath);
+        // let csv = utils.readCSV('C:/WORK/_DATA/Reveal/SalesTest.csv');
+        let csv = utils.readCSV(cvsPath);
+
+        var jsonData = [];
+        for (let i = 0; i < csv.data.length; i++) {
+            var item = csv.data[i];
+            item.Index = i;
+            jsonData.push(item);
+
+        
+            //   for (let c = 0; c < csv.columns.length; c++) {
+            //     // this.item[c] = strTitleCase(this.columns[c]);
+            // }
+        }
+
+        // console.log(JSON.stringify(jsonData));
+        jsonData = JSON.parse(JSON.stringify(jsonData));
+
+        let jsonPath = './CDN/TMP/' + csvName + 'Data.json';
+        utils.saveJSON(jsonPath, jsonData,  "compact");
+
+        let codePath = jsonPath.replace('.json','.cs');
+        utils.json2cs(csvName + 'Data', csvName + 'Item', jsonPath, codePath);
+
+    }
+ 
+    
     cb();
 }
 
@@ -1026,7 +1351,7 @@ exports.convertStockMarket = function convertStockMarket(cb) {
 
     companiesALL = companiesALL.sort((a, b) => a.MarketCap < b.MarketCap ? 1 : -1);
 
-    var missing = [];
+    let missing = [];
     let rank = 1;
     for (const company of companiesALL) {
         company.Rank = rank++;
@@ -1054,7 +1379,7 @@ exports.convertStockMarket = function convertStockMarket(cb) {
         console.log('missingSymbols=' + missingSector.length);
 
         let path = CodeGenLib + "/StockMarket" + number + "/XPLAT.json";
-        saveJSON(path, data,  "compact");
+        utils.saveJSON(path, data,  "compact");
 
     }
     saveCompanies( 2000);
@@ -1076,8 +1401,8 @@ function getStockSymbols(limit) {
     // let CSV = utils.readCSV('../convert/sp500.csv');
     let CSV = utils.readCSV('../convert/market-capitalization.csv');
 
-    // var stockSymbols = ['IBM', 'TSLA', 'MSFT', ];
-    var stockSymbols = [];
+    // let stockSymbols = ['IBM', 'TSLA', 'MSFT', ];
+    let stockSymbols = [];
     for (let i = 0; i < CSV.data.length; i++) {
         let company = CSV.data[i];
         let symbol = company.Symbol;
@@ -1100,13 +1425,13 @@ function wait(time) {
 exports.fetchYahooProfile = function fetchYahooProfile(cb)
 {
     let stocksFolder = '../convert/yahoo/'
-    var stockCounter = 0;
-    var allSymbols = getStockSymbols(4000);
-    var stockSymbols = [];
-    var lastSymbol = 0;
+    let stockCounter = 0;
+    let allSymbols = getStockSymbols(4000);
+    let stockSymbols = [];
+    let lastSymbol = 0;
     for (let i = 0; i < allSymbols.length; i++) {
-        var symbol = allSymbols[i];
-        var outputPath = '../convert/yahoo/' + symbol + '.json';
+        let symbol = allSymbols[i];
+        let outputPath = '../convert/yahoo/' + symbol + '.json';
         if (!fs.existsSync(outputPath)) {
             stockSymbols.push(symbol);
             lastSymbol = i;
@@ -1117,7 +1442,7 @@ exports.fetchYahooProfile = function fetchYahooProfile(cb)
     console.log('allSymbols=' + allSymbols.length);
     console.log('stockSymbols=' + stockSymbols.length);
     function parseStock(symbol, data, url) {
-        var stock = {};
+        let stock = {};
         stockCounter++;
         if (data !== null)
         {
@@ -1143,8 +1468,8 @@ exports.fetchYahooProfile = function fetchYahooProfile(cb)
             // console.log(columns);
             for (const col of columns) {
                 let info = col.split(':');
-                var name = info[0];
-                var value = info[1];
+                let name = info[0];
+                let value = info[1];
                 // console.log(info);
                 stock.Symbol = symbol;
                 if (value === undefined || value === ' ')
@@ -1155,13 +1480,13 @@ exports.fetchYahooProfile = function fetchYahooProfile(cb)
             // console.log(stock);
             if (stock.Sector !== undefined) {
                 let outputPath = stocksFolder + symbol + '.json';
-                saveJSON(outputPath, [stock],  "compact");
+                utils.saveJSON(outputPath, [stock],  "compact");
             }
         }
         // console.log(symbol + '  ' + data.MarketCapitalization);
         if (stockCounter >= stockSymbols.length) {
             // let jsonPath = CodeGenLib + "/StockMarketTMP/XPLAT.json";
-            // saveJSON('../convert/yahoo/sectors.json', stockSectors,  "compact");
+            // utils.saveJSON('../convert/yahoo/sectors.json', stockSectors,  "compact");
             console.log('lastSymbol=' + lastSymbol);
             cb();
         }
@@ -1205,7 +1530,7 @@ exports.fetchStock = function fetchStock(cb, symbol)
     let stocksFolder = '../convert/stocks/'
     let sp500 = utils.readCSV('../convert/sp500.csv');
 
-    var stockSymbols = [];
+    let stockSymbols = [];
     for (let i = 0; i < sp500.data.length; i++) {
         let company = sp500.data[i];
         let symbol = company.Symbol;
@@ -1218,20 +1543,20 @@ exports.fetchStock = function fetchStock(cb, symbol)
         if (stockSymbols.length >= 5) break;
     }
 
-    var columns = ['Symbol', 'Name', 'Country', 'Exchange','Sector', 'Industry', 'MarketCapitalization',
+    let columns = ['Symbol', 'Name', 'Country', 'Exchange','Sector', 'Industry', 'MarketCapitalization',
      'EBITDA', 'PERatio', 'TrailingPE', 'ForwardPE', 'DividendPerShare', 'DividendYield',  'EPS', 'ProfitMargin', 'OperatingMarginTTM',
     'RevenuePerShareTTM',
     'RevenueTTM', 'GrossProfitTTM', 'PriceToSalesRatioTTM', 'PriceToBookRatio',
     'Beta', '52WeekHigh', '52WeekLow', '50DayMovingAverage', '200DayMovingAverage', 'SharesOutstanding'];
 
-    var stockData = [];
-    var stockCounter = 0;
+    let stockData = [];
+    let stockCounter = 0;
 
     function parseStock(outputPath, data) {
-        var stock = {};
+        let stock = {};
         for (const column of columns) {
             // if (data.MarketCapitalization) {
-                var name = column.replace('TTM','').replace('PERatio','CurrentPE')
+                let name = column.replace('TTM','').replace('PERatio','CurrentPE')
                 .replace('Capitalization','Cap').replace('Ratio','').replace('MovingAverage','Average');
                 // stock[name] = data.column;
                 stock[name] = data[column];
@@ -1239,13 +1564,13 @@ exports.fetchStock = function fetchStock(cb, symbol)
         }
         // stockData.push(stock);
         if (stock.Sector !== undefined) {
-            saveJSON(outputPath, [stock], "compact");
+            utils.saveJSON(outputPath, [stock], "compact");
         }
 
         // console.log(symbol + '  ' + data.MarketCapitalization);
         if (stockCounter >= stockSymbols.length) {
             // let jsonPath = CodeGenLib + "/StockMarketTMP/XPLAT.json";
-            // saveJSON(outputPath, stockData,  "compact");
+            // utils.saveJSON(outputPath, stockData,  "compact");
             cb();
         }
     }
@@ -1259,13 +1584,13 @@ exports.fetchStock = function fetchStock(cb, symbol)
             stockCounter++;
             continue;
         }
-        // var url = 'https://www.alphavantage.co/query?function=OVERVIEW&symbol=' + symbol + '&apikey=demo';
-        // var url = 'https://www.alphavantage.co/query?function=OVERVIEW&symbol=' + symbol + '&apikey=AZ6V4V9MYY61IDL5';
-        // var url = 'https://www.alphavantage.co/query?function=OVERVIEW&symbol=' + symbol + '&apikey=MF509CVMN4P2ACMP';
-        var url = 'https://www.alphavantage.co/query?function=OVERVIEW&symbol=' + symbol + '&apikey=KLP643CXASZEMGZY';
-        // var url = 'https://www.alphavantage.co/query?function=OVERVIEW&symbol=' + symbol + '&apikey=B0KRIHH8G3ODPKGZ';
-        // var url = 'https://www.alphavantage.co/query?function=OVERVIEW&symbol=IMB&apikey=demo';
-        // var url = 'https://www.alphavantage.co/query?function=OVERVIEW&symbol=IMB&apikey=AZ6V4V9MYY61IDL5';
+        // let url = 'https://www.alphavantage.co/query?function=OVERVIEW&symbol=' + symbol + '&apikey=demo';
+        // let url = 'https://www.alphavantage.co/query?function=OVERVIEW&symbol=' + symbol + '&apikey=AZ6V4V9MYY61IDL5';
+        // let url = 'https://www.alphavantage.co/query?function=OVERVIEW&symbol=' + symbol + '&apikey=MF509CVMN4P2ACMP';
+        let url = 'https://www.alphavantage.co/query?function=OVERVIEW&symbol=' + symbol + '&apikey=KLP643CXASZEMGZY';
+        // let url = 'https://www.alphavantage.co/query?function=OVERVIEW&symbol=' + symbol + '&apikey=B0KRIHH8G3ODPKGZ';
+        // let url = 'https://www.alphavantage.co/query?function=OVERVIEW&symbol=IMB&apikey=demo';
+        // let url = 'https://www.alphavantage.co/query?function=OVERVIEW&symbol=IMB&apikey=AZ6V4V9MYY61IDL5';
 
         console.log('fetching ' + url)
         request.get({
@@ -1289,12 +1614,12 @@ exports.fetchStock = function fetchStock(cb, symbol)
 
 exports.combineYahooProfile = function combineYahooProfile(cb)
 {
-    var fileCounter = 0;
-    var jsonCounter = 0;
-    var jsonStocks = [];
-    var stockSectors = [];
-    var stockIndustry = [];
-    var stockIncomplete = [];
+    let fileCounter = 0;
+    let jsonCounter = 0;
+    let jsonStocks = [];
+    let stockSectors = [];
+    let stockIndustry = [];
+    let stockIncomplete = [];
 
     gulp.src([
         '../convert/yahoo/*.json',
@@ -1307,7 +1632,7 @@ exports.combineYahooProfile = function combineYahooProfile(cb)
         // console.log('load ' + file.dirname + '/' + file.basename)
         let jsonArray = JSON.parse(content);
         jsonCounter += jsonArray.length;
-        // var filePath = getPath(file);
+        // let filePath = getPath(file);
         for (let item of jsonArray) {
 
             item.Employees = item.Employees === '' ? 100 : utils.strToNumber(item.Employees);
@@ -1349,40 +1674,40 @@ exports.combineYahooProfile = function combineYahooProfile(cb)
         // console.log('stockIncomplete=')
         // console.log(stockIncomplete)
 
-        saveJSON("../convert/market-sectors-yahoo.json", jsonStocks,  "compact");
+        utils.saveJSON("../convert/market-sectors-yahoo.json", jsonStocks,  "compact");
 
         cb();
      });
 }
 
-exports.toCSV = function toCSV(cb) {
+exports.json2csv = function json2csv(cb) {
     let jsonPath = "../convert/market-sectors-yahoo.json";
-    // var jsonPath = "C:\\WORK\\igniteui-xplat-examples\\code-gen-library\\ArtistData\\XPLAT.json";
+    // let jsonPath = "C:\\WORK\\igniteui-xplat-examples\\code-gen-library\\ArtistData\\XPLAT.json";
 
     let jsonFile = fs.readFileSync(jsonPath, "utf8");
     let items = JSON.parse(jsonFile);
 
-    var lines = [];
+    let lines = [];
 
     for (let i = 0; i < items.length; i++) {
         const item = items[i];
 
-        var columns = Object.keys(item);
+        let columns = Object.keys(item);
         if (i === 0) {
-            var line = '"' + columns.join('","') + '"';
+            let line = '"' + columns.join('","') + '"';
             lines.push(line);
         }
 
-        var line = JSON.stringify(item, null, '');
+        let line = JSON.stringify(item, null, '');
         for (const column of columns) {
             line = line.replace('"' + column + '":', '').replace('{','').replace('}','');
         }
         lines.push(line);
     }
 
-    var csvContent = lines.join('\n');
-    var csvPath = jsonPath.replace('.json', '.csv');
-    saveFile(csvPath, csvContent);
+    let csvContent = lines.join('\n');
+    let csvPath = jsonPath.replace('.json', '.csv');
+    utils.saveFile(csvPath, csvContent);
 
     if (cb !== undefined) {
         cb();
@@ -1391,9 +1716,8 @@ exports.toCSV = function toCSV(cb) {
 
 
 exports.verifyJSON = function verifyJSON(cb)
-{  
-        
-    var verified = true;
+{
+    let verified = true;
     console.log("--------------------------------------------------------------------");   
     console.log('verifying XPLAT.JSON files:');      
     console.log("--------------------------------------------------------------------");   
@@ -1406,42 +1730,51 @@ exports.verifyJSON = function verifyJSON(cb)
         let jsonPath = file.dirname + '\\' + file.basename;
         let jsonContent = file.contents.toString();
         let jsonArray = JSON.parse(jsonContent);
-        var verified = true; 
-        var columNames = [];
-        var columnTypes = {};
-        var issues = [];
+        let verified = true; 
+        let initColumnTypes = {};
+        let initColumnNames = Object.keys(jsonArray[0]);
+        let extraColumnNames = [];
+        let issues = [];
     
         for (let i = 0; i < jsonArray.length; i++) {
-            var item = jsonArray[i];
-            var itemColumns = Object.keys(item);
+            let item = jsonArray[i];
+            let itemColumns = Object.keys(item);
             for (let columnName of itemColumns) {
-                if (columNames.indexOf(columnName) < 0) {
-                    columNames.push(columnName);
+                if (initColumnNames.indexOf(columnName) < 0) {
+                    // initColumnNames.push(columnName);
+                    extraColumnNames.push(columnName);
+                    issues.push("Item #" + i + " has extra '" + columnName + "' column");
+                    verified = false; break;    
                 }
-                var valType = typeof(item[columnName])
-                if (valType !== 'object'){
-                    columnTypes[columnName] = valType;
+                let valType = typeof(item[columnName])
+                if (valType !== 'object') {
+                    initColumnTypes[columnName] = valType;
                 }
+            }
+            if (!verified) {
+                break;    
             }
         }
         for (let i = 0; i < jsonArray.length; i++) {
-            var item = jsonArray[i];
-            for (let columnName of columNames) {
+            let item = jsonArray[i];
+            for (let columnName of initColumnNames) {
                 if (item[columnName] === undefined) {
-                    issues.push("Item #" + i + " is missing '" + columnName + "' column");
+                    var name = item.Name !== undefined ? ' in "' + item.Name + '"' : ''
+                    issues.push("Item #" + i + " is missing '" + columnName + "' column" + name);
                     verified = false; break;    
                 } 
 
-                if (item[columnName] !== undefined && columnTypes[columnName] !== undefined && 
+                if (item[columnName] !== undefined && initColumnTypes[columnName] !== undefined && 
                     item[columnName] !== null) {
-                    var expectType = columnTypes[columnName];
-                    var actualType = typeof(item[columnName]);
+                    let expectType = initColumnTypes[columnName];
+                    let actualType = typeof(item[columnName]);
                     if (actualType !== expectType) {
                         issues.push("Item #" + i + " - '" + columnName + "' column (" + item[columnName] + ") is '" + actualType + "' instead of '" + expectType + "' type");
                 
                     }
                 }
             }
+
             if (!verified) {
                 break;    
             }
@@ -1465,19 +1798,19 @@ exports.verifyJSON = function verifyJSON(cb)
 
 function correctDATA(jsonArray, fileCallback, file)
 { 
-    var columNames = [];
-    var columnTypes = {};
+    let columnNames = [];
+    let columnTypes = {};
 
     for (let i = 0; i < jsonArray.length; i++) {
         
-        var item = jsonArray[i];
-        var itemColumns = Object.keys(item);
+        let item = jsonArray[i];
+        let itemColumns = Object.keys(item);
 
         for (let columnName of itemColumns) {
-            if (columNames.indexOf(columnName) < 0) {
-                columNames.push(columnName);
+            if (columnNames.indexOf(columnName) < 0) {
+                columnNames.push(columnName);
 
-                var valType = typeof(item[columnName])
+                let valType = typeof(item[columnName])
 
                 
                 console.log(columnName + ' ' + valType);
@@ -1500,8 +1833,8 @@ exports.correctJSON = function correctJSON(cb)
 { 
     console.log("typeof=" + typeof([]));
 
-    // var CDN = './CDN';
-        var verified = true;
+    // let CDN = './CDN';
+        let verified = true;
     console.log("--------------------------------------------------------------------");   
     console.log('correcting XPLAT.JSON files:');      
     console.log("--------------------------------------------------------------------");   
@@ -1517,20 +1850,20 @@ exports.correctJSON = function correctJSON(cb)
         let jsonPath = file.dirname + '/' + file.basename;
         let jsonContent = file.contents.toString();
         let jsonArray = JSON.parse(jsonContent);
-        var verified = true;
-        var columNames = [];
-        var columnTypes = {};
+        let verified = true;
+        let columnNames = [];
+        let columnTypes = {};
 
         correctDATA(jsonArray, fileCallback, file);
 
         // for (let i = 0; i < jsonArray.length; i++) {
-        //     var item = jsonArray[i];
-        //     var itemColumns = Object.keys(item);
+        //     let item = jsonArray[i];
+        //     let itemColumns = Object.keys(item);
         //     for (let columnName of itemColumns) {
-        //         if (columNames.indexOf(columnName) < 0) {
-        //             columNames.push(columnName);
+        //         if (columnNames.indexOf(columnName) < 0) {
+        //             columnNames.push(columnName);
 
-        //             var valType = typeof(item[columnName])
+        //             let valType = typeof(item[columnName])
         //             if (valType !== 'object'){
         //                 columnTypes[columnName] = valType;
         //             }
@@ -1538,16 +1871,16 @@ exports.correctJSON = function correctJSON(cb)
         //     }
         // }
         // for (let i = 0; i < jsonArray.length; i++) {
-        //     var item = jsonArray[i];
-        //     for (let columnName of columNames) {
+        //     let item = jsonArray[i];
+        //     for (let columnName of columnNames) {
         //         // if (item[columnName] === undefined) {
         //         //     console.log("Item #" + i + " is missing '" + columnName + "' column in " + jsonPath)
         //         //     // verified = false; break;    
         //         // } 
 
         //         if (item[columnName] !== undefined && columnTypes[columnName] !== undefined && item[columnName] !== null) {
-        //             var extType = columnTypes[columnName];
-        //             var actType = typeof(item[columnName]);
+        //             let extType = columnTypes[columnName];
+        //             let actType = typeof(item[columnName]);
         //             if (actType !== extType) {
         //                 console.log("Correcting item #" + i + " - '" + columnName + "' column (" + item[columnName] + ") is '" + actType + "' instead of '" + extType + "' in " + jsonPath)
                         
@@ -1570,7 +1903,7 @@ exports.correctJSON = function correctJSON(cb)
         //         break;    
         //     }
         // }
-        // saveJSON(jsonPath, jsonArray);
+        // utils.saveJSON(jsonPath, jsonArray);
 
         // fileCallback(null, file);
     })) 

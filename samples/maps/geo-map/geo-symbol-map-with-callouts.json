@@ -11,7 +11,7 @@
       "type": "GeographicMap",
       "name": "GeoMap",
       "zoomable": true,
-      "legendRef": "Legend",
+      "legendRef": "legend",
       "series": [
         {
           "type": "GeographicSymbolSeries",

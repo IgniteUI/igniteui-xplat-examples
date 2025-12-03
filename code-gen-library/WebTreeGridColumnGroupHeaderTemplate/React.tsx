@@ -18,10 +18,8 @@ public webTreeGridColumnGroupHeaderTemplate = (e: { dataContext: IgrColumnTempla
 //end content
 //begin supportingMethods
 public columnGroupStates = new Map<IgrColumn, boolean>();
-public toggleColumnGroup(column: IgrColumn) {
-    var treeGrid = CodeGenHelper.getDescription<IgrTreeGrid>("content");
-    const columnGroup = treeGrid.contentColumns.find((col) => col.name == column.name) as IgrColumnGroup;
-    const columns = Array.from(columnGroup.actualChildren);
+public toggleColumnGroup(columnGroup: IgrColumn) {
+    const columns = columnGroup.childColumns;
     if (columnGroup.header === 'General Information') {
         const col = columns[1] as IgrColumn;
         col.hidden = !col.hidden;
@@ -31,8 +29,7 @@ public toggleColumnGroup(column: IgrColumn) {
             c.hidden = !c.hidden;
         }
     }
-    columnGroup.forceUpdate();
-    this.columnGroupStates.set(column, !this.columnGroupStates.get(column));
+    this.columnGroupStates.set(columnGroup, !this.columnGroupStates.get(columnGroup));
 }
 //end supportingMethods
 //end template

@@ -13,7 +13,7 @@
       "name": "chart",
       "isHorizontalZoomEnabled": false,
       "isVerticalZoomEnabled": false,
-      "legendRef": "Legend",
+      "legendRef": "legend",
       "axes": [
         {
           "type": "CategoryXAxis",

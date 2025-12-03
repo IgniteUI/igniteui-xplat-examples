@@ -16,34 +16,29 @@
       "pagingMode": "Remote",
       "rowEditable":true,
       "autoGenerate": false,
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
-          "name": "ProductName",
           "field": "ProductName",
           "header": "Product Name"
         },
         {
           "type": "WebColumn",
-          "name": "QuantityPerUnit",
           "field": "QuantityPerUnit",
           "header": "Quantity Per Unit"
         },
         {
           "type": "WebColumn",
-          "name": "UnitPrice",
           "field": "UnitPrice",
           "header": "Unit Price"
         },
         {
           "type": "WebColumn",
-          "name": "OrderDate",
           "field": "OrderDate",
           "header": "Order Date"
         },
         {
           "type": "WebColumn",
-          "name": "Discontinued",
           "field": "Discontinued",
           "header": "Discontinued"
         }

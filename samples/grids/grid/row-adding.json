@@ -20,10 +20,9 @@
           }
         ]
       }],
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
-          "name": "ID",
           "field": "ProductID",
           "header": "Product ID",
           "dataType": "Number",
@@ -31,28 +30,24 @@
         },
         {
           "type": "WebColumn",
-          "name": "ReorderLevel",
           "field": "ReorderLevel",
           "header": "Reorder Level",
           "dataType": "Number"
         },
         {
           "type": "WebColumn",
-          "name": "ProductName",
           "field": "ProductName",
           "header": "Product Name",
           "dataType": "String"
         },
         {
           "type": "WebColumn",
-          "name": "UnitsInStock",
           "field": "UnitsInStock",
           "header": "Units In Stock",
           "dataType": "Number"
         },
         {
           "type": "WebColumn",
-          "name": "UnitPrice",
           "field": "UnitPrice",
           "header": "Unit Price",
           "dataType": "Number",
@@ -60,14 +55,12 @@
         },
         {
           "type": "WebColumn",
-          "name": "OrderDate",
           "field": "OrderDate",
           "header": "Order Date",
           "dataType": "Date"
         },
         {
           "type": "WebColumn",
-          "name": "Discontinued",
           "field": "Discontinued",
           "header": "Discontinued",
           "dataType": "Boolean"

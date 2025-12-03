@@ -2,6 +2,7 @@
   "strings": {
     "legendTitle": "Highest Grossing Movie Franchises"
   },
+  "hasAnimations": true,
   "descriptions": {
     "content": {
       "type": "CategoryChart",
@@ -17,7 +18,7 @@
       "yAxisTitleLeftMargin": 10,
       "yAxisTitleRightMargin": 5,
       "yAxisLabelLeftMargin": 0,
-      "isCategoryHighlightingEnabled": true,
+      "isCategoryHighlightingEnabled": false,
       "crosshairsDisplayMode": "None",
       "highlightingMode": "FadeOthersSpecific",
       "highlightingBehavior": "NearestItemsAndSeries"

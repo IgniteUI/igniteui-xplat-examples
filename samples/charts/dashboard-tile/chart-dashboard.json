@@ -1,0 +1,20 @@
+{
+  "note": "example fails to build in WC repo - https://github.com/IgniteUI/igniteui-wc-examples/actions/runs/15052579768/job/42310742762",
+  "export": false,
+  "hasAnimations": true,
+  "descriptions": {
+    "content": {
+      "type": "DashboardTile",
+      "name": "dashboard",
+      "dataSourceRef": "RetailSalesPerformanceLocalDataSource"
+    }
+  },
+  "modules": [
+    "dashboards/DashboardTileModule",
+    "dashboards/DataChartDashboardTileModule",
+    "dashboards/GeographicMapDashboardTileModule",
+    "dashboards/LinearGaugeDashboardTileModule",
+    "dashboards/PieChartDashboardTileModule",
+    "dashboards/RadialGaugeDashboardTileModule"
+  ]
+}

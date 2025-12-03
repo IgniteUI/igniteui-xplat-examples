@@ -1,12 +1,14 @@
 {
   "skipAlterDataCasing": true,
+  "onInit": ["WebGridSizeMediumTemplate"],
   "descriptions": {
     "content": {
       "type": "WebGrid",
+      "id": "grid",
+      "name": "grid",
       "dataRef": "NwindData",
       "autoGenerate": false,
       "primaryKey": "ProductID",
-      "displayDensity": "Cosy",
       "allowFiltering": true,
       "paginationComponents": [
         {
@@ -14,7 +16,8 @@
           "perPage": 10
         }
       ],
-      "columns": [
+      "cellEditEnterRef": "WebGridOnEditEnter",
+      "columnList": [
         {
           "type": "WebColumn",
           "field": "ProductName",
@@ -61,6 +64,7 @@
           "dataType": "Number",
           "sortable": true,
           "hasSummary": true,
+          "inlineEditorTemplateRef": "WebGridNumericColEditCellTemplate",
           "editable": true,
           "filterable": false
         }
@@ -70,6 +74,7 @@
   "modules": [
     "withDescriptions",
     "grids/WebGridModule",
-    "grids/WebPaginatorModule"
+    "grids/WebPaginatorModule",
+    "webinputs/WebInputModule"
   ]
 }

@@ -2,6 +2,7 @@
   "strings": {
     "legendTitle": "Annual Birth Rates by World Region"
   },
+  "skipAlterDataCasing": true,
   "descriptions": {
     "legend": {
       "type": "Legend",
@@ -11,7 +12,7 @@
     "content": {
       "type": "DataChart",
       "name": "chart",
-      "legendRef": "Legend",
+      "legendRef": "legend",
       "isHorizontalZoomEnabled": false,
       "isVerticalZoomEnabled": false,
       "axes": [

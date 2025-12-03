@@ -14,7 +14,7 @@
       "allowFiltering": true,
       "moving": true,
       "rowSelection": "Multiple",
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
           "field": "Name",

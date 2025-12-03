@@ -2,6 +2,7 @@
   "strings": {
     "legendTitle": "Average Temperature Range in New York"
   },
+  "hasAnimations": true,
   "descriptions": {
     "content": {
       "type": "CategoryChart",
@@ -14,7 +15,7 @@
       "yAxisLabelLeftMargin": 0,
       "isHorizontalZoomEnabled": false,
       "isVerticalZoomEnabled": false,
-      "isCategoryHighlightingEnabled": true,
+      "isCategoryHighlightingEnabled": false,
       "highlightingMode": "FadeOthersSpecific",
       "highlightingBehavior": "NearestItemsAndSeries",
       "crosshairsDisplayMode": "None"

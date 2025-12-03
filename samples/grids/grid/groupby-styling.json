@@ -23,17 +23,15 @@
           "ignoreCase": false
         }
       ],
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
-          "name": "OrderID",
           "field": "OrderID",
           "header": "Order ID",
           "hidden": true
         },
         {
           "type": "WebColumn",
-          "name": "ShipCountry",
           "field": "ShipCountry",
           "header": "Ship Country",
           "width": "200px",
@@ -41,7 +39,6 @@
         },
         {
           "type": "WebColumn",
-          "name": "OrderDate",
           "field": "OrderDate",
           "header": "Order Date",
           "width": "200px",
@@ -49,7 +46,6 @@
         },
         {
           "type": "WebColumn",
-          "name": "PostalCode",
           "field": "PostalCode",
           "header": "Postal Code",
           "width": "200px",
@@ -57,7 +53,6 @@
         },
         {
           "type": "WebColumn",
-          "name": "Discontinued",
           "field": "Discontinued",
           "header": "Discontinued",
           "width": "200px",
@@ -66,7 +61,6 @@
         },
         {
           "type": "WebColumn",
-          "name": "ShipName",
           "field": "ShipName",
           "header": "Ship Name",
           "width": "250px",
@@ -74,7 +68,6 @@
         },
         {
           "type": "WebColumn",
-          "name": "ShipCity",
           "field": "ShipCity",
           "header": "Ship City",
           "width": "250px",
@@ -82,7 +75,6 @@
         },
         {
           "type": "WebColumn",
-          "name": "ShipperName",
           "field": "ShipperName",
           "header": "Shipper Name",
           "width": "250px",
@@ -90,7 +82,6 @@
         },
         {
           "type": "WebColumn",
-          "name": "Salesperson",
           "field": "Salesperson",
           "header": "Sales Person",
           "width": "250px",
@@ -98,7 +89,6 @@
         },
         {
           "type": "WebColumn",
-          "name": "UnitPrice",
           "field": "UnitPrice",
           "header": "Unit Price",
           "width": "150px",
@@ -111,7 +101,6 @@
         },
         {
           "type": "WebColumn",
-          "name": "Quantity",
           "field": "Quantity",
           "header": "Quantity",
           "width": "150px",

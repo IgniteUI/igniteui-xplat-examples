@@ -15,7 +15,7 @@
       "moving": true,
       "rowEditable": true,
       "rowSelection": "Multiple",
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
           "field": "Name",

@@ -8,9 +8,9 @@ export class WebTreeGridPinHeaderTemplate {
 public webTreeGridPinHeaderTemplate = (props: {dataContext: IgrColumnTemplateContext}) => {
     const column = (props.dataContext as any).column;
     return (
-        <div>
-            <span style={{float: 'left'}}>{column.field}</span>
-            <span style={{float: 'right'}} onPointerDown={(e: any) => this.toggleColumnPin(column.field)}>📌</span>
+        <div style={{display: 'flex'}}>
+            <span>{column.field}</span>
+            <span style={{marginLeft: 'auto'}} onPointerDown={(e: any) => this.toggleColumnPin(column.field)}>📌</span>
         </div>
     );
 }

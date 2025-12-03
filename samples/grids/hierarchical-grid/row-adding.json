@@ -18,7 +18,7 @@
           }
         ]
       }],
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
           "field": "Artist",
@@ -57,7 +57,7 @@
           "autoGenerate": false,
           "primaryKey": "Album",
           "rowEditable": true,
-          "columns": [
+          "columnList": [
             {
               "type": "WebColumn",
               "field": "Album",
@@ -103,7 +103,7 @@
                   }
                 ]
               }],
-              "columns": [
+              "columnList": [
                 {
                   "type": "WebColumn",
                   "field": "Number",
@@ -151,7 +151,7 @@
               }
             ]
           }],
-          "columns": [
+          "columnList": [
             {
               "type": "WebColumn",
               "field": "Tour",

@@ -37,7 +37,7 @@
       "primaryKey": "ID",
       "id": "hierarchicalGrid",
       "name": "hierarchicalGrid",
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
           "field": "Artist",
@@ -77,7 +77,7 @@
           "childDataKey": "Albums",
           "autoGenerate": false,
           "name": "rowIsland",
-          "columns": [
+          "columnList": [
             {
               "type": "WebColumn",
               "field": "Album",

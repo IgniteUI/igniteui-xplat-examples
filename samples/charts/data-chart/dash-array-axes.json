@@ -13,7 +13,7 @@
     "content": {
       "type": "DataChart",
       "name": "chart",
-      "legendRef": "Legend",
+      "legendRef": "legend",
       "computedPlotAreaMarginMode": "Series",
       "axes": [
         {

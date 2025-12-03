@@ -12,7 +12,7 @@
       "foreignKey": "ParentID",
       "autoGenerate": false,
       "columnSelection": "Multiple",
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
           "field": "Name",

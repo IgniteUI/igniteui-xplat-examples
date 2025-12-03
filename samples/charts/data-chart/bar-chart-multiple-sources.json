@@ -2,6 +2,7 @@
   "strings": {
     "legendTitle": "Highest Grossing Movie Franchises"
   },
+  "hasAnimations": true,
   "descriptions": {
     "legend": {
       "type": "Legend",
@@ -11,7 +12,7 @@
     "content": {
       "type": "DataChart",
       "name": "Chart",
-      "legendRef": "Legend",
+      "legendRef": "legend",
       "axes": [
         {
           "type": "CategoryYAxis",

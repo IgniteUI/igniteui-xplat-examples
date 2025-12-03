@@ -1,7 +1,8 @@
 {
   "strings": {
-    "legendTitle": "Olympic Medals By Country"
+    "legendTitle": "Olympic Medals by Country"
   },
+  "hasAnimations": true,
   "descriptions": {
     "legend": {
       "type": "Legend",
@@ -13,7 +14,7 @@
       "name": "Chart",
       "chartType": "Line",
       "dataSourceRef": "CountryRenewableElectricity",
-      "legendRef": "Legend",
+      "legendRef": "legend",
       "yAxisTitle": "TWh",
       "computedPlotAreaMarginMode": "Series"
     }

@@ -9,29 +9,25 @@
       "autoGenerate": false,
       "primaryKey": "ProductID",
       "columnInitRef": "WebGridCustomSummary",
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
-          "name": "ProductID",
           "field": "ProductID"
         },
         {
           "type": "WebColumn",
-          "name": "ProductName",
           "field": "ProductName",
           "header": "Product Name",
           "hasSummary": true
         },
         {
           "type": "WebColumn",
-          "name": "UnitPrice",
           "field": "UnitPrice",
           "header": "Unit Price",
           "hasSummary": true
         },
         {
           "type": "WebColumn",
-          "name": "UnitsInStock",
           "field": "UnitsInStock",
           "header": "Units In Stock",
           "hasSummary": true,
@@ -39,13 +35,11 @@
         },
         {
           "type": "WebColumn",
-          "name": "Discontinued",
           "field": "Discontinued",
           "header": "Discontinued"
         },
         {
           "type": "WebColumn",
-          "name": "OrderDate",
           "field": "OrderDate",
           "header": "Order Date",
           "hasSummary": true,

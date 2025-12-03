@@ -8,7 +8,7 @@
         "name": "grid",
         "id": "grid",
         "primaryKey": "CustomerID",
-        "columns": [
+        "columnList": [
           {
             "type": "WebColumnGroup",
             "header": "General Information",
@@ -85,7 +85,7 @@
                 "type": "WebRowIsland",
                 "childDataKey": "Orders",
                 "autoGenerate": false,
-                "columns": [
+                "columnList": [
                     {
                         "type": "WebColumnGroup",
                         "header": "Order Details",
@@ -185,7 +185,7 @@
                     "type": "WebRowIsland",
                     "childDataKey": "OrderDetails",
                     "autoGenerate": false,
-                    "columns": [
+                    "columnList": [
                       {
                         "type": "WebColumn",
                         "field": "ProductID",

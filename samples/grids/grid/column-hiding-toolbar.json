@@ -32,10 +32,9 @@
           ]
         }
       ],
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
-          "name": "ID",
           "field": "ID",
           "header": "ID",
           "dataType": "String",
@@ -43,7 +42,6 @@
         },
         {
           "type": "WebColumn",
-          "name": "ContactName",
           "field": "ContactName",
           "header": "Name",
           "dataType": "String",
@@ -51,7 +49,6 @@
         },
         {
           "type": "WebColumn",
-          "name": "ContactTitle",
           "field": "ContactTitle",
           "header": "Title",
           "dataType": "String",
@@ -59,7 +56,6 @@
         },
         {
           "type": "WebColumn",
-          "name": "City",
           "field": "City",
           "header": "City",
           "dataType": "String",
@@ -67,7 +63,6 @@
         },
         {
           "type": "WebColumn",
-          "name": "Company",
           "field": "Company",
           "header": "Company",
           "dataType": "String",
@@ -75,7 +70,6 @@
         },
         {
           "type": "WebColumn",
-          "name": "Fax",
           "field": "Fax",
           "header": "Fax",
           "dataType": "String",
@@ -83,7 +77,6 @@
         },
         {
           "type": "WebColumn",
-          "name": "Address",
           "field": "Address",
           "header": "Address",
           "dataType": "String",
@@ -91,7 +84,6 @@
         },
         {
           "type": "WebColumn",
-          "name": "PostalCode",
           "field": "PostalCode",
           "header": "Postal Code",
           "dataType": "String",
@@ -99,7 +91,6 @@
         },
         {
           "type": "WebColumn",
-          "name": "Country",
           "field": "Country",
           "header": "Country",
           "dataType": "String",
@@ -107,7 +98,6 @@
         },
         {
           "type": "WebColumn",
-          "name": "Phone",
           "field": "Phone",
           "header": "Phone",
           "dataType": "String",

@@ -12,7 +12,7 @@
       "id": "grid",
       "allowFiltering": true,
       "rowStylesRef": "WebGridRowStylesHandler",
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
           "field": "Category",

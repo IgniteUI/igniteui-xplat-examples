@@ -4,14 +4,15 @@
   ],
   "export": true,
   "skipAlterDataCasing": true,
+  "onInit": ["WebGridSizeSmallTemplate"],
   "descriptions": {
     "content": {
       "type": "WebGrid",
+      "id": "grid",
       "name": "grid",
       "dataRef": "CustomersData",
       "autoGenerate": false,
       "moving": true,
-      "displayDensity": "Compact",
       "allowFiltering": true,
       "toolbar": [
         {
@@ -37,10 +38,9 @@
           ]
         }
       ],
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
-          "name": "ID",
           "field": "ID",
           "header": "ID",
           "resizable": true,
@@ -55,7 +55,6 @@
           "children": [
             {
               "type": "WebColumn",
-              "name": "Company",
               "field": "Company",
               "visibleWhenCollapsed": true
             },
@@ -69,12 +68,10 @@
               "children": [
                 {
                   "type": "WebColumn",
-                  "name": "ContactName",
                   "field": "ContactName"
                 },
                 {
                   "type": "WebColumn",
-                  "name": "ContactTitle",
                   "field": "ContactTitle"
                 }
               ]
@@ -96,28 +93,24 @@
               "children": [
                 {
                   "type": "WebColumn",
-                  "name": "Country",
                   "field": "Country",
                   "visibleWhenCollapsed": true,
                   "hidden": true
                 },
                 {
                   "type": "WebColumn",
-                  "name": "Region",
                   "field": "Region",
                   "visibleWhenCollapsed": false,
                   "hidden": true
                 },
                 {
                   "type": "WebColumn",
-                  "name": "City",
                   "field": "City",
                   "visibleWhenCollapsed": false,
                   "hidden": true
                 },
                 {
                   "type": "WebColumn",
-                  "name": "Address",
                   "field": "Address",
                   "visibleWhenCollapsed": false,
                   "hidden": true
@@ -131,17 +124,14 @@
               "children": [
                 {
                   "type": "WebColumn",
-                  "name": "Phone",
                   "field": "Phone"
                 },
                 {
                   "type": "WebColumn",
-                  "name": "Fax",
                   "field": "Fax"
                 },
                 {
                   "type": "WebColumn",
-                  "name": "PostalCode",
                   "field": "PostalCode"
                 }
               ]

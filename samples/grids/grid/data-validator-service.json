@@ -31,10 +31,9 @@
       "autoGenerate": false,
       "rowEditable": true,
       "primaryKey": "ID",
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
-          "name": "Avatar",
           "field": "Avatar",
           "header": "Avatar",
           "dataType": "String",
@@ -44,21 +43,18 @@
         },
         {
           "type": "WebColumn",
-          "name": "Name",
           "field": "Name",
           "header": "Name",
           "editable": true
         },
         {
           "type": "WebColumn",
-          "name": "Company",
           "field": "Company",
           "header": "Company",
           "editable": true
         },
         {
           "type": "WebColumn",
-          "name": "Email",
           "field": "Email",
           "header": "Email",
           "width": "190px",
@@ -66,14 +62,12 @@
         },
         {
           "type": "WebColumn",
-          "name": "Fax",
           "field": "Fax",
           "header": "Phone",
           "editable": true
         },
         {
           "type": "WebColumn",
-          "name": "CreatedOn",
           "field": "CreatedOn",
           "header": "Date of Registration",
           "width": "170px",
@@ -86,7 +80,6 @@
         },
         {
           "type": "WebColumn",
-          "name": "LastActivity",
           "field": "LastActivity",
           "header": "Last Active",
           "width": "170px",
@@ -95,7 +88,6 @@
         },
         {
           "type": "WebColumn",
-          "name": "EstimatedSales",
           "field": "EstimatedSales",
           "header": "Estimated Sales",
           "dataType": "Number",
@@ -103,7 +95,6 @@
         },
         {
           "type": "WebColumn",
-          "name": "DealsLost",
           "field": "DealsLost",
           "header": "Deals Lost",
           "dataType": "Number",
@@ -111,7 +102,6 @@
         },
         {
           "type": "WebColumn",
-          "name": "DealsWon",
           "field": "DealsWon",
           "header": "Deals Won",
           "dataType": "Number",
@@ -119,7 +109,6 @@
         },
         {
           "type": "WebColumn",
-          "name": "DealsPending",
           "field": "DealsPending",
           "header": "Deals Pending",
           "dataType": "Number",

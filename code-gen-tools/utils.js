@@ -1,4 +1,148 @@
+let del = require('del');
 let fs = require('fs.extra');
+let path = require('path');
+let utils = require('./utils.js')
+let request = require('request');
+let rename = require('gulp-rename');
+
+let CodeGenLib = "../code-gen-library";
+
+exports.getFileSize = getFileSize = function getFileSize(filePath) {
+    const stats = fs.statSync(filePath);
+    if (stats.isFile()) {
+      return Math.round(stats.size / 1024);
+    } else {
+      return -1;
+    }
+}
+
+exports.getFileParentDir = getFileParentDir = function getFileParentDir(filePath) {
+    let parts = filePath.split('\\');
+    return parts[parts.length - 2]
+}
+
+exports.saveFile = saveFile = function saveFile(filePath, fileContent, skipLog) {
+    let dirname = path.dirname(filePath);
+    if (!fs.existsSync(dirname)) {
+         fs.mkdirSync(dirname); // ensure directory exists
+    }
+    if (!skipLog) {
+        console.log("saving " + filePath);
+    }
+    fs.writeFileSync(filePath, fileContent);
+}
+
+exports.saveJSON = saveJSON = function saveJSON(filePath, dataItems, mode) {
+    if (mode === undefined) {
+        let jsonStr = JSON.stringify(dataItems, null, ' ')
+        saveFile(filePath, jsonStr);
+    }
+
+    if (mode === "compact") {
+        let lines = [];
+        for (let i = 0; i < dataItems.length; i++) {
+            const item = dataItems[i];
+            let line = JSON.stringify(item);
+            if (i < dataItems.length - 1) line += ","
+            lines.push(line);
+        }
+
+        let jsonStr = "[\r\n" + lines.join('\r\n') + "\r\n]";
+        jsonStr = utils.strReplace(jsonStr, ":", ": ")
+        jsonStr = utils.strReplace(jsonStr, ',"', ', "')
+        jsonStr = utils.strReplace(jsonStr, '{', '{ ')
+        jsonStr = utils.strReplace(jsonStr, '}', ' }')
+
+        saveFile(filePath, jsonStr);
+    }
+}
+
+exports.json2cs = json2cs = function json2cs(dataSource, dataItem, jsonPath, csPath) {
+
+    if (jsonPath === undefined) {
+      if (dataSource === undefined) {
+        // jsonPath = CodeGenLib + '/WorldStats' + '/XPLAT.json';
+        // jsonPath = CodeGenLib + '/WorldCountries' + '/XPLAT.json';
+        jsonPath = CodeGenLib + '/AnnotationRectData' + '/XPLAT.json';
+      }
+      else {
+        jsonPath = CodeGenLib + '/' +  dataSource + '/XPLAT.json';
+      }
+    }
+    // "C:\WORK\igniteui-xplat-examples\code-gen-library\WorldStats \XPLAT.json"
+    // "C:\WORK\igniteui-xplat-examples\code-gen-library\WorldsStats\XPLAT.json"
+
+    // jsonPath = CodeGenLib + jsonPath + '/XPLAT.json';
+ 
+    let jsonFile = fs.readFileSync(jsonPath, "utf8");
+    let jsonData = JSON.parse(jsonFile);
+
+    if (dataSource === undefined) dataSource = 'DataSource';
+    if (dataItem === undefined) dataItem = 'DataItem';
+
+    var csCode = `
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace TestApp
+{
+    public class ` + dataItem + `
+    {
+// <DataItemProps>
+    }
+
+    public class ` + dataSource + ` : List<` + dataItem +`>
+    {
+        public ` + dataSource + `()
+        {
+            #region Data
+// <DataSourceValues> 
+            #endregion
+        }
+
+    }
+}
+    `;
+
+    // console.log(JSON.stringify(jsonData));
+    let columns = Object.keys(jsonData[0]);
+
+    var props = [];
+    for (let i = 0; i < columns.length; i++) {
+
+      var name = columns[i];
+      var type = typeof(jsonData[0][name]);
+
+      if (type === 'number') {
+          props.push('        public double ' + name + '  { get; set; }');
+      }
+      if (type === 'string') {
+          props.push('        public string ' + name + '  { get; set; }');
+      }
+    }
+
+    csCode = csCode.replace('// <DataItemProps>', props.join('\n'));
+
+    var str = JSON.stringify(jsonData);
+    str = str.replaceAll('[',''); //.replaceAll(']','');
+    str = str.replaceAll('{"','{');
+    str = str.replaceAll(',"',', ');
+    str = str.replaceAll('":',' = ');
+    
+    str = str.replaceAll('{','            Add(new ' + dataItem + ' { ');
+    str = str.replaceAll('},',' });\n');
+    str = str.replaceAll('}]',' });');
+
+    csCode = csCode.replace('// <DataSourceValues>',str);
+
+    if (csPath === undefined) 
+        csPath = csPath = './CDN/' + dataSource +  '.cs'
+
+    // csPath = './CDN/json2cs.cs';
+    saveFile(csPath, csCode, false); 
+}
 
 function randomInteger(start, end) {
   return Math.floor(Math.random() * (end - start + 1)) + start;
@@ -62,6 +206,38 @@ exports.toNumber = toNumber = function toNumber(str, digitsCount) {
 
 var numericChars = [ '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '.', '-', '+', 'E', 'e', ];
 
+var abbreviations = [ 
+  { letter: 'T', scaler: 1000000000000}, 
+  { letter: 'B', scaler: 1000000000}, 
+  { letter: 'M', scaler: 1000000},
+  { letter: 'K', scaler: 1000},
+];
+ 
+exports.strUnabbreviate = strUnabbreviate = function strUnabbreviate(str) {
+
+  for (const abbr of abbreviations)
+  {
+    if (str.endsWith(' ' + abbr.letter)) {
+      let value = str.replace(' ' + abbr.letter, '');
+      value = parseFloat(value);
+      if (value !== null && value !== undefined && !Number.isNaN(value)) {
+  // console.log('strUnabbreviate @@' + value);
+        return Math.round(value * abbr.scaler);
+      }
+    }
+    if (str.endsWith(abbr.letter)) {
+      let value = str.replace(abbr.letter, '');
+      value = parseFloat(value);
+      if (value !== null && value !== undefined && !Number.isNaN(value)) {
+  // console.log('strUnabbreviate @@' + value);
+        return Math.round(value * abbr.scaler);
+      }
+    }
+  }
+  // console.log('strUnabbreviate not ' + str);
+  return str;
+}
+
 exports.strToNumber = strToNumber =
 function strToNumber(str, precision, normalize) {
   if (str === undefined) return null;
@@ -73,35 +249,48 @@ function strToNumber(str, precision, normalize) {
   // console.log('chars')
   // console.log(chars)
 
+ if (typeof(chars) === 'number') {
+    parseFloat(chars);
+  }
+
   // dates
   if (chars.includes('/')) return str;
   if (chars.includes('\\')) return str;
+
   // if (chars.split("-").length > 2) return str; // fax
   // if (chars.split(" ").length > 2) return str; // cell
 
-  if (chars.split("-").length > 2) return (randomInteger(2, 9) * 10000) + (randomInteger(100, 900)) // fax
-  if (chars.split(" ").length > 2) return (randomInteger(2, 9) * 10000) + (randomInteger(100, 900)) // cell
+  // if (chars.split("-").length > 2) return (randomInteger(2, 9) * 10000) + (randomInteger(100, 900)) // fax
+  // if (chars.split(" ").length > 2) return (randomInteger(2, 9) * 10000) + (randomInteger(100, 900)) // cell
 
   chars = strReplace(chars, '$', '');
   chars = strReplace(chars, '%', '');
 
-  if (chars.endsWith(' T')) {
-    let value = chars.replace(' T', '');
-    // console.log('parse T ' + value)
-    value = parseFloat(value) * 1000000000000;
-    // console.log('parse T ' + value)
-    return Math.round(value);
+  var value = strUnabbreviate(chars)
+  if (typeof(value) === 'number') {
+    return value;
   }
-  else if (chars.endsWith(' B')) {
-    let value = chars.replace(' B', '');
-    value = parseFloat(value) * 1000000000;
-    return Math.round(value);
-  }
-  else if (chars.endsWith(' M')) {
-    let value = chars.replace(' M', '');
-    value = parseFloat(value) * 1000000;
-    return Math.round(value);
-  }
+
+  // if (chars.endsWith(' T')) {
+  //   let value = chars.replace(' T', '');
+  //   // console.log('parse T ' + value)
+  //   value = parseFloat(value) * 1000000000000;
+  //   // console.log('parse T ' + value)
+  //   return Math.round(value);
+  // }
+  // else if (chars.endsWith(' B')) {
+  //   let value = chars.replace(' B', '');
+  //   value = parseFloat(value) * 1000000000;
+  //   if (value === null) {
+  //     return str;
+  //   }
+  //   return Math.round(value);
+  // }
+  // else if (chars.endsWith(' M')) {
+  //   let value = chars.replace(' M', '');
+  //   value = parseFloat(value) * 1000000;
+  //   return Math.round(value);
+  // }
   // console.log('clean')
   // console.log(chars)
 
@@ -233,20 +422,36 @@ exports.splice = function splice(array, from, to) {
   return ret;
 }
 
-exports.hash = function hash(dataColumn, dataSource) {
+exports.hash = function hash(column, dataSource) {
   let lookup = {}
-  for (const dataItem of dataSource) {
-    if (dataItem === null) continue;
-    if (dataItem[dataColumn] === null) continue;
-    if (dataItem[dataColumn] === undefined) continue;
-    lookup[dataItem[dataColumn]] = dataItem;
+  for (const item of dataSource) {
+    if (item === null) continue;
+    if (item[column] === null) continue;
+    if (item[column] === undefined) continue;
+    lookup[item[column]] = item;
   }
   return lookup;
 }
 
+exports.extract = function extract(array, columns) {
+  let ret = []
+  for (const item of array) {
+    if (item === null) continue;
+    var extracted = {};
+    for (const name of columns) {
+      if (item[name] === null) continue;
+      if (item[name] === undefined) continue;
+
+      extracted[name] = item[name];
+    }
+    ret.push(extracted);
+  }
+  return ret;
+}
+
 class CSV {
   lines = [];
-  columns = [];
+  columns = []; 
   data = [];
   content = "";
   path = "";
@@ -263,17 +468,34 @@ class CSV {
 
     if (this.lines.length > 0) {
         this.columns = this.lines[0].split(',');
+        var  columnsCount = this.columns.length;
         for (let c = 0; c < this.columns.length; c++) {
             // this.columns[c] = strTitleCase(this.columns[c]);
+            this.columns[c] = this.columns[c].trim();
+            this.columns[c] = this.columns[c].replaceAll(' ' , '');
+            this.columns[c] = this.columns[c].replaceAll('.' , '_');
         }
 
         for (let i = 1; i < this.lines.length; i++) {
           let line = this.lines[i];
-          if (line === '') continue;
-          if (line.indexOf(',') < 1) continue;
+
+
+          if (line === '') continue; // { console.log('CSV ERROR LINE:' + i + ' ' + line); continue;}
+          if (line.indexOf(',') < 1) continue; // { console.log('CSV ERROR LINE:' + i + ' ' + line); continue;}
 
           let item = {};
           let values = this.lines[i].split(',');
+          let valuesCount = values.length;
+
+          if (columnsCount !== valuesCount) {
+            console.log('CSV ERROR  Columns=' + columnsCount + ' Values=' + valuesCount + '\n' + 'LINE:' + i + line);
+          }
+        
+          // for (const c of this.columns)
+          // {
+          //   item[c] = strToNumber(values[c]); 
+          // }
+        
           for (let c = 0; c < this.columns.length; c++) {
             let column = this.columns[c];
             item[column] = strToNumber(values[c]);
@@ -291,6 +513,7 @@ class CSV {
 
   }
 
+  
 
 }
 
@@ -298,3 +521,121 @@ exports.readCSV = function readCSV(csvPath) {
   let csv = new CSV(csvPath);
   return csv;
 }
+
+// class HTML {
+//   content = '';
+//   html = [];
+//   constructor()
+//   {
+
+//   }
+
+//   test() {
+//     this.content += "test\n";
+//     console.log('CSV test() ' + this.content);
+//   }
+
+//   output() {
+//     this.content += "html\n";
+//     console.log('CSV html() ' + this.content);
+//   }
+// }
+
+class HTML {
+  constructor()
+  { 
+  }
+
+  html(content) {
+    return '<html>\r\n' + content + '\r\n</html>';
+  }
+
+  head(content) {
+    return '<head>\r\n' + content + '\r\n</head>\r\n';
+  }
+
+  body(content) {
+    return '<body>\r\n' + content + '\r\n</body>';
+  }
+
+  style(content) {
+    return '<style>\r\n' + content + '</style>\r\n';
+  }
+
+     a(path, content) { return this.link(path, content); }
+  link(path, content) {
+    if (content === undefined) content = path;
+    return '<a href=' + this.qt(path) + '> ' + content + ' </a>';
+  }
+
+  qt(content) {
+    return '"' + content + '"';
+  }
+
+  p(content) {
+    return '<p>' + content + '</p>\r\n';
+  }
+  
+  h1(content) {
+    return '<h1>' + content + '</h1>\r\n';
+  }
+
+  lbl(content) {
+    return '<label>' + content + '</label>';
+  }
+
+  table(content) {
+    return '<table>\n' + content + '\n</table>';
+  }
+
+  horizontalStyle = 'display: flex; flex-direction: row; align-items: center; text-anchor: middle; gap: 10px;';
+  verticalStyle   = 'display: flex; flex-direction: column; align-items: center; text-anchor: middle; gap: 10px;';
+  div(elements, style) {
+    if (style === undefined) style = this.horizontalStyle;
+    var content = elements.join(" ");
+    return '<div style=' + this.qt(style) + '> ' + content + '</div>';
+  }
+
+  horizontal(elements) {
+    return div(elements, this.horizontalStyle);
+  }
+  vertical(elements) {
+    return div(elements, this.verticalStyle);
+  }
+
+   tr(content) { return this.row(content); }
+  row(content) {
+    return '<tr> ' + content + '</tr>\r\n';
+  }
+
+      th(name, style, width) { return this.column(name, style, width); }
+  column(name, style, width) {
+    if (style === undefined) style = 'center';
+    if (width === undefined) width = 80;
+
+    if (typeof(width) === 'number') width += 'px'
+
+    return '<th width=' + this.qt(width) + ' class=' + this.qt(style) + '> ' + name + ' </th>';
+    // return this;
+  }
+
+    td(content, style) { return this.cell(content, style); }
+  cell(content, style) {
+    if (style === undefined) style = 'center';
+    // if (width === undefined) width = '80';
+
+    return '<td class=' + this.qt(style) + '> ' + content + ' </td> ';
+  }
+
+    i(path, width, height, style) { return this.img(path, width, height, style); }
+  img(path, width, height, style) {
+    if (height === undefined) height = '20';
+    if (width === undefined) width = '30';
+    return '<img src=' + this.qt(path) + ' width=' + this.qt(width) + ' height=' + this.qt(height) + ' class=' + this.qt(style) + '>';
+  }
+}
+exports.createHTML = function createHTML() {
+  let html = new HTML();
+  return html;
+}
+

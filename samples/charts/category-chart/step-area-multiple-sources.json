@@ -2,6 +2,7 @@
   "strings": {
     "legendTitle": "Renewable Electricity Generated"
   },
+  "hasAnimations": true,
   "descriptions": {
     "legend": {
       "type": "Legend",
@@ -10,7 +11,7 @@
     },
     "content": {
       "dataSourceRef": "CountryRenewableElectricity",
-      "legendRef": "Legend",
+      "legendRef": "legend",
       "type": "CategoryChart",
       "name": "chart",
       "chartType": "StepArea",
@@ -18,7 +19,7 @@
       "titleLeftMargin": 25,
       "titleTopMargin": 10,
       "titleBottomMargin": 10,
-      "isCategoryHighlightingEnabled": true,
+      "isCategoryHighlightingEnabled": false,
       "isSeriesHighlightingEnabled": true,
       "isTransitionInEnabled": true,
       "isHorizontalZoomEnabled": false,

@@ -1,0 +1,61 @@
+{
+  "strings": {
+    "legendTitle": "Hydro Consumption in 2019"
+  },
+  "descriptions": {
+    "legend": {
+      "type": "Legend",
+      "name": "legend",
+      "orientation": "Horizontal"
+    },
+    "content": {
+      "type": "DataChart",
+      "name": "chart",
+      "legendRef": "legend",
+      "isHorizontalZoomEnabled": false,
+      "isVerticalZoomEnabled": false,
+      "axes": [
+        {
+          "type": "ProportionalCategoryAngleAxis",
+          "name": "angleAxis",
+          "dataSourceRef": "EnergyRenewableConsumption",
+          "label": "Location",
+          "valueMemberPath": "Hydro",
+          "gap": 0
+        },
+        {
+          "type": "NumericRadiusAxis",
+          "name": "radiusAxis",
+          "minimumValue": 0,
+          "maximumValue": 100
+        }
+      ],
+      "series": [
+        {
+          "type": "RadialPieSeries",
+          "name": "RadialPieSeries1",
+          "dataSourceRef": "EnergyRenewableConsumption",
+          "angleAxisRef": "angleAxis",
+          "valueAxisRef": "radiusAxis",
+          "valueMemberPath": "Hydro",
+          "showDefaultTooltip": false,
+          "useItemWiseColors": true,
+          "title": "Hydro Consumption"
+        },
+        {
+          "type": "DataToolTipLayer",
+          "name": "dataToolTipLayer"
+        }
+      ]
+    }
+  },
+  "modules": [
+    "charts/LegendModule",
+    "charts/DataPieChartModule",
+    "charts/DataChartCoreModule",
+    "charts/DataChartRadialModule",
+    "charts/DataChartRadialCoreModule",
+    "charts/DataChartInteractivityModule",
+    "charts/DataChartAnnotationModule"
+  ]
+}

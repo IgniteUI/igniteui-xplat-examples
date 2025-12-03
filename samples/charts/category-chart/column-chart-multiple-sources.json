@@ -2,6 +2,7 @@
   "strings": {
     "legendTitle": "Highest Grossing Movie Franchises"
   },
+  "hasAnimations": true,
   "descriptions": {
     "legend": {
       "type": "Legend",
@@ -13,7 +14,7 @@
       "name": "chart",
       "chartType": "Column",
       "dataSourceRef": "HighestGrossingMovies",
-      "legendRef": "Legend",
+      "legendRef": "legend",
       "xAxisInterval": 1,
       "yAxisTitle": "Billions of U.S. Dollars",
       "yAxisTitleLeftMargin": 10,
@@ -21,7 +22,7 @@
       "yAxisLabelLeftMargin": 0,
       "isHorizontalZoomEnabled": false,
       "isVerticalZoomEnabled": false,
-      "isCategoryHighlightingEnabled": true,
+      "isCategoryHighlightingEnabled": false,
       "crosshairsDisplayMode": "None"
     }
   },

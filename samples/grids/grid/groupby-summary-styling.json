@@ -38,7 +38,7 @@
           "ignoreCase": false
         }
       ],
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
           "field": "ShipCountry",

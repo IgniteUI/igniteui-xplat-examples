@@ -6,7 +6,9 @@ import { IgcRowIslandComponent } from 'igniteui-webcomponents-grids/grids';
 export class WebRowIslandCellSelectionChange {
     //begin eventHandler
     public webRowIslandCellSelectionChange(sender: any, args: IgcPropertyEditorPropertyDescriptionChangedEventArgs): void {
-        CodeGenHelper.findByName<IgcRowIslandComponent>("rowIsland").cellSelection = args.newValue.toLocaleLowerCase();
+        var rowIsland = CodeGenHelper.findByName<IgcRowIslandComponent>("rowIsland");
+        if (rowIsland)
+            rowIsland.cellSelection = args.newValue.toLocaleLowerCase();
     }
     //end eventHandler
 }

@@ -23,7 +23,7 @@
     "content": {
       "type": "DataChart",
       "isHorizontalZoomEnabled": true,
-      "legendRef": "Legend",
+      "legendRef": "legend",
       "name": "chart",
       "axes": [
         {
@@ -71,7 +71,7 @@
     }
   },
   "modules": [
-    "inputs/IconModule",
+    "inputs/XIconModule",
     "layouts/ToolbarModule",
     "charts/DataChartToolbarModule",
     "charts/LegendModule",

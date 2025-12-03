@@ -1,5 +1,5 @@
 //begin imports
-import { IgcGridComponent, IgcGridKeydownEventArgs, GridKeydownTargetType } from 'igniteui-webcomponents-grids/grids';
+import { IgcGridComponent } from 'igniteui-webcomponents-grids/grids';
 //end imports
 
 import { CodeGenHelper } from 'igniteui-webcomponents-core';
@@ -7,8 +7,8 @@ import { CodeGenHelper } from 'igniteui-webcomponents-core';
 export class WebGridPasteFromExcel {
 
     //begin eventHandler
-    public webGridPasteFromExcel() {
-        const grid = document.getElementById("grid") as any;
+    public webGridPasteFromExcel(e: CustomEvent<any>) {
+        const grid = e.target as IgcGridComponent;
         this.onKeyDown = this.onKeyDown.bind(this);
         grid.addEventListener("keydown", this.onKeyDown);
     }
@@ -23,6 +23,7 @@ export class WebGridPasteFromExcel {
 
     private txtArea: any;
     public pasteMode = "Paste starting from active cell";
+    public updatedRecsPK: any[] = [];
 
     public get textArea() {
         if(!this.txtArea) {
@@ -68,7 +69,6 @@ export class WebGridPasteFromExcel {
             const grid = CodeGenHelper.getDescription<IgcGridComponent>("content") as any;
             const columns = grid.visibleColumns;
             const pk = grid.primaryKey;
-            const addedData: any[] = [];
             for (const curentDataRow of processedData) {
                 const rowData = {} as any;
                 for (const col of columns) {
@@ -77,22 +77,12 @@ export class WebGridPasteFromExcel {
                 }
                 // generate PK
                 rowData[pk] = grid.data.length + 1;
+                this.updatedRecsPK.push(rowData[pk]);
                 grid.addRow(rowData);
-                addedData.push(rowData);
             }
             // scroll to last added row
             grid.navigateTo(grid.data.length - 1, 0, () => {
-                this.clearStyles();
-                for (const data of addedData) {
-                    const row = grid.getRowByKey(data[pk]);
-                    if (row) {
-                        const rowNative = this.getNative(row) as any;
-                        if (rowNative) {
-                            rowNative.style["font-style"] = "italic";
-                            rowNative.style.color = "gray";
-                        }
-                    }
-                }
+              grid.cdr.detectChanges();
             });
         }
         public updateRecords(processedData: any[]) {
@@ -104,7 +94,6 @@ export class WebGridPasteFromExcel {
             const columns = grid.visibleColumns;
             const cellIndex = grid.visibleColumns.indexOf(cell.column);
             let index = 0;
-            const updatedRecsPK: any[] = [];
             for (const curentDataRow of processedData) {
                 const rowData = {} as any;
                 const dataRec = grid.data[rowIndex + index];
@@ -124,36 +113,10 @@ export class WebGridPasteFromExcel {
                     grid.addRow(rowData);
                     continue;
                 }
+                this.updatedRecsPK.push(rowPkValue);
                 grid.updateRow(rowData, rowPkValue);
-                updatedRecsPK.push(rowPkValue);
                 index++;
             }
-    
-            this.clearStyles();
-            for (const pkVal of updatedRecsPK) {
-                const row = grid.getRowByKey(pkVal);
-                if (row) {
-                    const rowNative = this.getNative(row) as any;
-                    if (rowNative) {
-                        rowNative.style["font-style"] = "italic";
-                        rowNative.style.color = "gray";
-                    }
-                }
-            }
-        }
-    
-        protected clearStyles() {
-            const rows = [...(document.getElementsByTagName("igx-grid-row") as any)];
-            for (const rowNative of rows) {
-                rowNative.style["font-style"] = "";
-                rowNative.style.color = "";
-            }
-        }
-
-        protected getNative(row: any) {
-            const rows = [...(document.getElementsByTagName("igx-grid-row") as any)];
-            const dataInd = row.index.toString();
-            return rows.find(x => (x.attributes as any)["data-rowindex"] .value === dataInd);
         }
     
         public processData(data: any) {

@@ -7,55 +7,61 @@
     "lint": "ng lint"
   },
   "dependencies": {
-    "@angular/animations": "18.0.2",
-    "@angular/common": "18.0.2",
-    "@angular/compiler": "18.0.2",
-    "@angular/core": "18.0.2",
-    "@angular/forms": "18.0.2",
-    "@angular/platform-browser": "18.0.2",
-    "@angular/platform-browser-dynamic": "18.0.2",
+    "@angular/animations": "20.0.1",
+    "@angular/common": "20.0.1",
+    "@angular/compiler": "20.0.1",
+    "@angular/core": "20.0.1",
+    "@angular/forms": "20.0.1",
+    "@angular/platform-browser": "20.0.1",
+    "@angular/platform-browser-dynamic": "20.0.1",
     "@types/hammerjs": "2.0.40",
     "classlist.js": "1.1.20150312",
-    "core-js": "3.21.0",
     "hammerjs": "2.0.8",
-//ifdef charts, maps
-    "igniteui-angular-charts": "17.3.1-alpha.0",
-//endifdef charts, maps
-    "igniteui-angular-core": "17.3.1-alpha.0",
-//ifdef excel, spreadsheet
-    "igniteui-angular-excel": "17.3.1-alpha.0",
-//endifdef excel, spreadsheet
-//ifdef gauges
-    "igniteui-angular-gauges": "17.3.1-alpha.0",
-//endifdef gauges
-//ifdef editor, layouts, inputs
-    "igniteui-angular-inputs": "17.3.1-alpha.0",
-//endifdef editor, layouts, inputs
-//ifdef grid, editor, layouts
-    "igniteui-angular-layouts": "17.3.1-alpha.0",
-//endifdef grid, editor, layouts
-//ifdef maps
-    "igniteui-angular-maps": "17.3.1-alpha.0",
-//endifdef maps
-//ifdef spreadsheet
-    "igniteui-angular-spreadsheet": "17.3.1-alpha.0",
-    "igniteui-angular-spreadsheet-chart-adapter": "17.3.1-alpha.0",
-//endifdef spreadsheet
-//ifdef webcomponents, editor
-    "igniteui-webcomponents": "4.11.1",
-//endifdef webcomponents, editor
+    "igniteui-angular-core": "20.2.0",
+    //ifdef charts, maps, dashboards
+    "igniteui-angular-charts": "20.2.0",
+    //endifdef charts, maps, dashboards
+    //ifdef dashboards
+    "igniteui-angular-dashboards": "20.2.0",
+    "igniteui-angular-data-grids": "20.2.0",
+    //endifdef dashboards
+    //ifdef data-grids
+    "igniteui-angular-data-grids": "20.2.0",
+    //endifdef data-grids
+    //ifdef excel, spreadsheet
+    "igniteui-angular-excel": "20.2.0",
+    //endifdef excel, spreadsheet
+    //ifdef gauges, dashboards
+    "igniteui-angular-gauges": "20.2.0",
+    //endifdef gauges, dashboards
+    //ifdef editor, layouts, inputs, dashboards
+    "igniteui-angular-inputs": "20.2.0",
+    //endifdef editor, layouts, inputs, dashboards
+    //ifdef grid, editor, layouts, dashboards
+    "igniteui-angular-layouts": "20.2.0",
+    //endifdef grid, editor, layouts, dashboards
+    //ifdef maps, dashboards
+    "igniteui-angular-maps": "20.2.0",
+    //endifdef maps, dashboards
+    //ifdef spreadsheet
+    "igniteui-angular-spreadsheet": "20.2.0",
+    "igniteui-angular-spreadsheet-chart-adapter": "20.2.0",
+    //endifdef spreadsheet
+    //ifdef webcomponents, editor
+    "igniteui-webcomponents": "6.3.1",
+    //endifdef webcomponents, editor
     "intl": "1.2.5",
     "jszip": "3.8.0",
     "rxjs": "7.8.1",
     "tslib": "2.6.1",
     "web-animations-js": "2.3.2",
-    "zone.js": "~0.14.4"
+    "zone.js": "~0.15.0"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "18.0.3",
-    "@angular/cli": "18.0.3",
-    "@angular/compiler-cli": "18.0.2",
-    "@angular/language-service": "18.0.2",
+    "@angular-devkit/build-angular": "20.0.1",
+    "@angular/cli": "20.0.1",
+    "@angular/compiler-cli": "20.0.1",
+    "@angular/language-service": "20.0.1",
     "@types/node": "18.17.0",
     "codelyzer": "6.0.2",
     "jasmine-core": "5.1.1",
@@ -63,6 +69,6 @@
     "sass.js": "0.11.1",
     "ts-node": "10.9.1",
     "tslint": "~6.1.3",
-    "typescript": "5.4.5"
+    "typescript": "5.8.3"
   }
 }

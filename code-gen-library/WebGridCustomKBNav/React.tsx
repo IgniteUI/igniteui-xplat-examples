@@ -1,17 +1,18 @@
 //begin imports
-import { IgrGridComponent, IgrGridKeydownEventArgs, GridKeydownTargetType } from 'igniteui-react-grids';
+import { IgrGridComponent, IgrGridKeydownEventArgs } from 'igniteui-react-grids';
 
 //end imports
 
 export class WebGridCustomKBNav {
     //begin eventHandler
-    public webGridCustomKBNav(grid: IgrGridComponent, eventArgs: IgrGridKeydownEventArgs): void {
+    public webGridCustomKBNav(eventArgs: IgrGridKeydownEventArgs): void {
         const args = eventArgs.detail;
         const target = args.target;
         const evt = args.event;
         const type = args.targetType;
+        const grid = eventArgs.target as IgrGridComponent;
 
-        if (type === GridKeydownTargetType.DataCell && target.editMode && evt.key.toLowerCase() === 'tab') {
+        if (type === 'dataCell' && target.editMode && evt.key.toLowerCase() === 'tab') {
             // Value validation for number column.
             // This covers both 'tab' and 'shift+tab' key interactions.
             args.event.preventDefault();
@@ -26,7 +27,7 @@ export class WebGridCustomKBNav {
 
             grid.navigateTo(cell.rowIndex, cell.visibleColumnIndex,
                 (obj: any) => { obj.target.activate(); });
-        } else if (type === GridKeydownTargetType.DataCell && evt.key.toLowerCase() === 'enter') {
+        } else if (type === 'dataCell' && evt.key.toLowerCase() === 'enter') {
             // Perform column based kb navigation with 'enter' key press
             args.cancel = true;
             grid.navigateTo(target.row.index + 1, target.column.visibleIndex, (obj: any) => {

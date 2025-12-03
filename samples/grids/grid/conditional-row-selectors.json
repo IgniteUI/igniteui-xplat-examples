@@ -10,7 +10,7 @@
       "primaryKey": "ID",
       "rowSelection": "Multiple",
       "rowSelectionChangingRef": "WebGridRowSelectionConditional",
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
           "field": "ContactName",

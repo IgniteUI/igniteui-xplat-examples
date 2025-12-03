@@ -8,7 +8,7 @@
       "primaryKey": "ID",
       "autoGenerate": false,
       "name": "grid",
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
           "header": "ID",

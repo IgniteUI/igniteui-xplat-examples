@@ -11,9 +11,15 @@
     {
       "name": "React",
       "exclusions": [
-        { "reason": "component isn't in React product", "path": "grids\\pivot-grid\\" },
-        { "reason": "toolbarTemplate isn't in React product", "path": "grids\\hierarchical-grid\\toolbar-sample-1.json" },
-        { "reason": "toolbarTemplate isn't in React product", "path": "grids\\hierarchical-grid\\toolbar-sample-2.json" }
+        { "reason": "toolbarTemplate isn't in React product",            "path": "grids\\hierarchical-grid\\toolbar-sample-1.json" },
+        { "reason": "toolbarTemplate isn't in React product",            "path": "grids\\hierarchical-grid\\toolbar-sample-2.json" },
+        { "reason": "codegen is not working for sample see azure 39558", "path": "charts\\data-chart\\data-annotation-band-layer.json" },       
+        { "reason": "codegen is not working for sample see azure 39558", "path": "charts\\data-chart\\data-annotation-line-layer.json" },
+        { "reason": "codegen is not working for sample see azure 39558", "path": "charts\\data-chart\\data-annotation-multiple-with-overlay-text.json" },
+        { "reason": "codegen is not working for sample see azure 39558", "path": "charts\\data-chart\\data-annotation-multiple-with-stocks.json" },
+        { "reason": "codegen is not working for sample see azure 39558", "path": "charts\\data-chart\\data-annotation-rect-layer.json" },
+        { "reason": "codegen is not working for sample see azure 39558", "path": "charts\\data-chart\\data-annotation-slice-layer.json" },
+        { "reason": "codegen is not working for sample see azure 39558", "path": "charts\\data-chart\\data-annotation-strip-layer.json" }
       ]
     },
     {

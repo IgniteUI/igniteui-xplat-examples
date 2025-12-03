@@ -2,6 +2,7 @@
   "todo": [""],
   "export": true,
   "skipAlterDataCasing": true,
+  "onInit": ["WebTreeGridSizeMediumTemplate"],
   "descriptions": {
     "content": {
       "type": "WebTreeGrid",
@@ -12,7 +13,6 @@
       "primaryKey": "ID",
       "foreignKey": "ParentID",
       "rowSelection": "Multiple",
-      "displayDensity": "Cosy",
       "rowSelectorTemplateRef": "WebGridRowSelectorExcelTemplate",
       "headSelectorTemplateRef": "WebGridHeaderRowSelectorExcelTemplate",
       "paginationComponents": [
@@ -20,7 +20,6 @@
           "type": "WebPaginator",
           "name": "paginator",
           "perPage": 15,
-          "displayDensity": "Cosy",
           "selectOptions": [5, 10, 15, 25, 50],
           "resourceStrings": {
             "type": "WebPaginatorResourceStrings",
@@ -28,7 +27,7 @@
           }
         }
       ],
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
           "field": "Name",

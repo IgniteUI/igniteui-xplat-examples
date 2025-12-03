@@ -21,31 +21,21 @@
       ],
       "plotAreaBackground": "rgba(255,255,255,1)",
       "series": [
+
         {
-          "type": "LineSeries",
-          "name": "lineSeries1",
-          "title": "Europe",
-          "xAxisRef": "xAxis",
-          "yAxisRef": "yAxis",
-          "markerType": "Circle",
-          "dataSourceRef": "CountryRenewableElectricity",
-          "valueMemberPath": "Europe",
-          "showDefaultTooltip": true
-        },
-        {
-          "type": "LineSeries",
+          "type": "ColumnSeries",
           "name": "LineSeries2",
-          "title": "China",
+          "title": "Russia",
           "xAxisRef": "xAxis",
           "yAxisRef": "yAxis",
           "markerType": "Circle",
           "dataSourceRef": "CountryRenewableElectricity",
-          "valueMemberPath": "China",
+          "valueMemberPath": "Russia",
           "showDefaultTooltip": true
         },
         {
-          "type": "LineSeries",
-          "name": "LineSeries3",
+          "type": "ColumnSeries",
+          "name": "ColumnSeries3",
           "title": "America",
           "xAxisRef": "xAxis",
           "yAxisRef": "yAxis",

@@ -35,7 +35,7 @@ export class WebTreeGridColumnGroupHeaderTemplateComponent {
 //begin supportingMethods
     public columnGroupStates = new Map<IgxColumnGroupComponent, boolean>();
     public toggleColumnGroup(columnGroup: IgxColumnGroupComponent) {
-        const columns = columnGroup.children.toArray();
+        const columns = columnGroup.childColumns;
         if (columnGroup.header === 'General Information') {
             const col = columns[1];
             col.hidden = !col.hidden;

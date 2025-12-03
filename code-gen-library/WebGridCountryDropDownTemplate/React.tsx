@@ -16,7 +16,7 @@ export class WebGridCountryDropDownTemplate {
         const comboId = "country" + id;
         return (
         <>
-            <IgrCombo data={CodeGenHelper.findByName<any[]>("countries")} ref={(this as any).comboRefs} change={(x: any, args: any) => { (this as any).onCountryChange(id, x, args) }} placeholder="Choose Country..." valueKey="Country" displayKey="Country" singleSelect="true" name={comboId}></IgrCombo>
+            <IgrCombo data={CodeGenHelper.findByName<any[]>("countries")} ref={(this as any).comboRefs} onChange={(args: any) => { (this as any).onCountryChange(id, args) }} placeholder="Choose Country..." valueKey="Country" displayKey="Country" singleSelect={true} name={comboId}></IgrCombo>
         </>
         );
     }

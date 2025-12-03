@@ -3,7 +3,7 @@
     "editor": {
       "type": "PropertyEditorPanel",
       "componentRendererRef": "renderer",
-      "targetRef": "Toolbar",
+      "targetRef": "toolbar",
       "descriptionType": "Toolbar",
       "isHorizontal": true,
       "isWrappingEnabled": true,
@@ -11,6 +11,7 @@
         {
           "type": "PropertyEditorPropertyDescription",
           "propertyPath": "BaseTheme",
+          "name": "BaseThemeEditor",
           "label": "Theme",
           "shouldOverrideDefaultEditor": true,
           "valueType": "EnumValue",

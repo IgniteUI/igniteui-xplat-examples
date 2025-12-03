@@ -4,6 +4,7 @@
   "strings": {
     "legendTitle": "Comparing Population of Countries"
   },
+  "hasAnimations": true,
   "descriptions": {
     "editor": {
       "type": "PropertyEditorPanel",

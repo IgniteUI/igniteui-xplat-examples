@@ -17,24 +17,21 @@ export class WebGridCompositeContactEditCellTemplate {
         return (
             <>
                 <div className="contact-container--edit" style={{padding: "1rem"}}>
-                    <IgrInput label='Name' inputOcurred={(input: any, e: any) =>
-                        {
-                            cell.row.data.ContactName = e.detail;
-                            grid.forceUpdate();
-                        }
-                        } value={cell.row.data.ContactName}></IgrInput>
-                    <IgrInput label='Title' inputOcurred={(input: any, e: any) =>
-                        {
-                            cell.row.data.ContactTitle = e.detail;
-                            grid.forceUpdate();
-                        }
-                        } value={cell.row.data.ContactTitle}></IgrInput>
-                    <IgrInput label='Company' inputOcurred={(input: any, e: any) =>
-                        {
-                            cell.row.data.Company = e.detail;
-                            grid.forceUpdate();
-                        }
-                        } value={cell.row.data.Company}></IgrInput>
+                    <IgrInput
+                        label='Name'
+                        onInput={(e: any) => cell.row.data.ContactName = e.detail}
+                        value={cell.row.data.ContactName}
+                    ></IgrInput>
+                    <IgrInput
+                        label='Title'
+                        onInput={(e: any) => cell.row.data.ContactTitle = e.detail}
+                        value={cell.row.data.ContactTitle}
+                    ></IgrInput>
+                    <IgrInput
+                        label='Company'
+                        onInput={(e: any) => cell.row.data.Company = e.detail}
+                        value={cell.row.data.Company}
+                    ></IgrInput>
                 </div>
             </>
         );

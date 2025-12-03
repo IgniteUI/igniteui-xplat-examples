@@ -11,7 +11,6 @@
       "dataRef": "EmployeesNestedTreeData",
       "primaryKey": "ID",
       "autoGenerate": false,
-      "displayDensity": "Comfortable",
       "allowFiltering": true,
       "paging": true,
       "foreignKey": "ParentID",
@@ -21,7 +20,7 @@
           "perPage": 10
         }
       ],
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
           "field": "Name",

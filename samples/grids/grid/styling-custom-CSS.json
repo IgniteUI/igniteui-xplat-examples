@@ -12,24 +12,21 @@
       "cellSelection": "Multiple",
       "columnSelection": "Multiple",
       "autoGenerate": false,
-      "columns": [
+      "columnList": [
         {
           "type": "WebColumn",
-          "name": "Category",
           "field": "Category",
           "header": "Category",
           "selectable": true
         },
         {
           "type": "WebColumn",
-          "name": "MarketShare",
           "field": "MarketShare",
           "header": "Market Share",
           "selectable": true
         },
         {
           "type": "WebColumn",
-          "name": "Summary",
           "field": "Summary",
           "header": "Summary",
           "selectable": false

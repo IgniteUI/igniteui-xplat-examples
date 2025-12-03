@@ -1,27 +1,29 @@
-{  
-  "skipAlterDataCasing": true,
-  "strings": {
-    "legendTitle": "Total Population of Selected Countries"
-  },
+{
   "descriptions": {
     "content": {
       "type": "DataChart",
       "name": "chart",
+      "chartTitle": "Population vs. Public Debt vs. GDP",
+      "titleTopMargin": 10,
+      "titleBottomMargin": 0,
       "axes": [
         {
           "type": "NumericXAxis",
           "name": "xAxis",
           "title": "Population",
+          "minimumValue": 100,
+          "maximumValue": 10000000000,
           "isLogarithmic": true,
           "abbreviateLargeNumbers": true
         },
         {
           "type": "NumericYAxis",
           "name": "yAxis",
-          "title": "Public Debt",
-          "isLogarithmic": false,
+          "title": "Public Debt per GDP (%)",
+          "titleLeftMargin": 10,
+          "isLogarithmic": true,
           "abbreviateLargeNumbers": true,
-          "maximumValue": 120
+          "maximumValue": 1000
         }
       ],
       "series": [
@@ -35,9 +37,13 @@
             "type": "SizeScale",
             "isLogarithmic": false,
             "minimumValue": 10,
-            "maximumValue": 50
+            "maximumValue": 80
           },
-          "fillMemberPath": "GdpPerPerson",
+          "title": "Country",
+          "yMemberAsLegendUnit": "%",
+          "yMemberAsLegendLabel": "Debt",
+          "xMemberAsLegendLabel": "Population",
+          "radiusMemberAsLegendLabel": "GDP",
           "xAxisRef": "xAxis",
           "yAxisRef": "yAxis",
           "dataSourceRef": "WorldStats",
@@ -46,7 +52,21 @@
         },
         {
           "type": "DataToolTipLayer",
-          "name": "dataToolTipLayer"
+          "name": "dataToolTipLayer",
+          "valueRowMarginTop": 1,
+          "labelTextMarginTop": 1,
+          "titleTextMarginTop": 1,
+          "unitsTextMarginTop": 1,
+          "valueRowMarginBottom": 1,
+          "labelTextMarginBottom": 1,
+          "titleTextMarginBottom": 1,
+          "unitsTextMarginBottom": 1,
+          "unitsTextMarginRight": 5,
+          "valueTextMarginLeft": 10,
+          "labelTextMarginLeft": 1,
+          "layoutMode": "Vertical",
+          "badgeShape": "Hidden",
+          "headerRowVisible": false
         }
       ]
     }

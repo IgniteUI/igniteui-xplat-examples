@@ -37,7 +37,7 @@
       "dataSourceRef": "CountryRenewableElectricity",
       "includedProperties": ["Year", "America", "Europe"],
       "chartType": "Column",
-      "legendRef": "Legend",
+      "legendRef": "legend",
       "isHorizontalZoomEnabled": false,
       "isVerticalZoomEnabled": false,
       "crosshairsDisplayMode": "None",

@@ -1,0 +1,19 @@
+{
+  "export": true,
+  "hasAnimations": true,
+  "descriptions": {
+    "content": {
+      "type": "DashboardTile",
+      "name": "dashboard",
+      "dataSourceRef": "EnergyGlobalDemand"
+    }
+  },
+  "modules": [
+    "dashboards/DashboardTileModule",
+    "dashboards/DataChartDashboardTileModule",
+    "dashboards/GeographicMapDashboardTileModule",
+    "dashboards/LinearGaugeDashboardTileModule",
+    "dashboards/PieChartDashboardTileModule",
+    "dashboards/RadialGaugeDashboardTileModule"
+  ]
+}
