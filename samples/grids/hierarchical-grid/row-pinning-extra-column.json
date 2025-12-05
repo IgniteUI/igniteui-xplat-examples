@@ -41,6 +41,7 @@
           "width": "70px",
           "filterable": false,
           "pinned": true,
+          "pinningPosition": "End",
           "bodyTemplateRef": "WebHierarchicalGridRowPinCellTemplate"
         },
         {
@@ -92,6 +93,7 @@
               "width": "70px",
               "filterable": false,
               "pinned": true,
+              "PinningPosition": "End",
               "bodyTemplateRef": "WebHierarchicalGridRowPinCellTemplate"
             },
             {
@@ -137,6 +139,7 @@
                   "width": "70px",
                   "filterable": false,
                   "pinned": true,
+                  "pinningPosition": "End",
                   "bodyTemplateRef": "WebHierarchicalGridRowPinCellTemplate"
                 },
                 {
@@ -184,6 +187,7 @@
               "width": "70px",
               "filterable": false,
               "pinned": true,
+              "pinningPosition": "End",
               "bodyTemplateRef": "WebHierarchicalGridRowPinCellTemplate"
             },
             {
