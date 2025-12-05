@@ -7,7 +7,7 @@ export class WebGridFilterAltIconTemplate {
 //begin content
     public webGridFilterAltIconTemplate = (props: { dataContext: IgrGridHeaderTemplateContext }) => {        
         return (
-            <img height="15px" width="15px" src="http://static.infragistics.com/xplatform/images/grid/propeller-logo.svg" title="Continued" alt="Continued" />
+            <img height="15px" width="15px" src="http://dl.infragistics.com/x/img/grid/propeller-logo.sv" title="Continued" alt="Continued" />
         );       
     }
 //end content

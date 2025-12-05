@@ -23,15 +23,40 @@ let xplatCodeGenLibRaw  = 'https://raw.githubusercontent.com/' + xplatRepoName +
 //                https://github.com/IgniteUI/igniteui-xplat-examples//blob     /25.2/code-gen-library/AnalyzeSales/XPLAT.json
 // https://raw.githubusercontent.com/IgniteUI/igniteui-xplat-examples/refs/heads/25.2/code-gen-library/AnalyzeSales/XPLAT.json
 
-// TODO replace following strings: where XPLAT-CDN = 'https://dl.infragistics.com/x/'
-// https://static.infragistics.com/xplatform/images/flags/iso2                  https:/XPLAT-CDN/img/flags/png//small/2
-// https://static.infragistics.com/xplatform/images/people/women/               https:/XPLAT-CDN/img/people/women/
-// https://static.infragistics.com/xplatform/images/people/men/                 https:/XPLAT-CDN/img/people/men/
-// https://static.infragistics.com/xplatform/images/grid/                       https:/XPLAT-CDN/img/grid/
-// https://www.infragistics.com/angular-demos-lob/assets/images/women/          https:/XPLAT-CDN/img/people/women/
-// https://www.infragistics.com/angular-demos-lob/assets/images/men/            https:/XPLAT-CDN/img/people/men/
-// https://www.infragistics.com/angular-demos-lob/assets/images/card/avatars    https:/XPLAT-CDN/img/card/avatars/
-  
+// DONE replace following strings in .JSON file:  
+// https://static.infragistics.com/xplatform/images/browsers/                               https://dl.infragistics.com/x/img/browsers/
+// https://static.infragistics.com/xplatform/images/flags/iso2                              https://dl.infragistics.com/x/img/flags/
+// https://static.infragistics.com/xplatform/images/grid/flags/                             https://dl.infragistics.com/x/img/flags/
+// https://static.infragistics.com/xplatform/images/grid/active.png                         https://dl.infragistics.com/x/img/grid/active.png
+// https://static.infragistics.com/xplatform/images/grid/expired.png                        https://dl.infragistics.com/x/img/grid/expired.png
+// https://static.infragistics.com/xplatform/images/grid/propeller-logo.svg                 https://dl.infragistics.com/x/img/grid/propeller-logo.svg
+// https://static.infragistics.com/xplatform/images/people/names/*.JPG                      https://dl.infragistics.com/x/img/people/names/*.png
+// https://static.infragistics.com/xplatform/images/people/women/*.JPG                      https://dl.infragistics.com/x/img/people/women/*.png  - 1-3
+// https://static.infragistics.com/xplatform/images/people/men/*.JPG                        https://dl.infragistics.com/x/img/people/men/*.png    - 1-3
+// https://www.infragistics.com/angular-demos-lob/assets/images/men/                        https://dl.infragistics.com/x/img/people/men/*.png    - 1-3
+// https://www.infragistics.com/angular-demos-lob/assets/images/women/                      https://dl.infragistics.com/x/img/people/women/*.png  - 1-3
+// https://www.infragistics.com/angular-demos-lob/assets/images/card/avatars/igLogo.png     https://dl.infragistics.com/x/img/browser/ig.png
+// https://cdn.pixabay.com/photo/                                                           https://dl.infragistics.com/x/img/products/
+// https://static.infragistics.com/xplatform/css                                            https://dl.infragistics.com/x/css
+// https://static.infragistics.com/xplatform/excel                                          https://dl.infragistics.com/x/excel
+
+// TODO in down-stream repos
+// https://static.infragistics.com/xplatform/images/grid/trophy_gold.svg     https://dl.infragistics.com/x/img/trophy/gold.svg
+// https://static.infragistics.com/xplatform/images/grid/trophy_bronze.svg   https://dl.infragistics.com/x/img/trophy/bronze.svg
+// https://static.infragistics.com/xplatform/images/grid/trophy_silver.svg   https://dl.infragistics.com/x/img/trophy/silver.svg
+// https://static.infragistics.com/xplatform/images/genders/                 https://dl.infragistics.com/x/img/genders/male.png
+// https://static.infragistics.com/xplatform/images/company/NAME             https://dl.infragistics.com/x/img/logo/company  SYMBOL
+// https://static.infragistics.com/xplatform/images/browsers/azure-maps/     https://dl.infragistics.com/x/img/maps/
+
+
+// TODO
+// https://static.infragistics.com/xplatform/shapes                          https://dl.infragistics.com/x/shapes
+// https://static.infragistics.com/xplatform/data                            https://dl.infragistics.com/x/data
+// https://static.infragistics.com/xplatform/json                            https://dl.infragistics.com/x/data
+
+// North-Korea      Korea-North      
+// South-Korea      Korea-South      
+// Czechia          Czech, Czech Rep, Czechialic, Czech_Republic
 
 exports.cleanJSON = function cleanJSON(input, cb) {
 
@@ -602,6 +627,7 @@ function cdnSyncData(cb)
 {
     // del.sync(cdnOutput, {force:true});
     // del.sync(cdnOutput + "*.json", {force:true});
+    // del.sync(cdnOutput + "*.html", {force:true});
 
     console.log('--------------------------------------------------------------------');
     console.log('extracting large */XPLAT.json data files from code-gen-library to: ' + cdnOutput);      
@@ -719,7 +745,7 @@ function cdnSyncData(cb)
         '</table>' +
         '\r\n\r\n</body></html>';
         
-        utils.saveFile(cdnOutput + "/_Readme.html", readme, true);
+        utils.saveFile(cdnOutput + "/readme.html", readme, true);
         utils.saveFile(cdnOutput + "/index.html", readme, true);
       
         console.log('');
@@ -2198,3 +2224,64 @@ exports.correctJSON = function correctJSON(cb)
         cb();
      });
 }
+
+
+function replaceJSON(cb) {
+    // let filePath = CodeGenLib + "/AthletesData/XPLAT.json";
+    let filePath = CodeGenLib + "/AthletesDataExtended/XPLAT.json";
+    let file = fs.readFileSync(filePath, "utf8");
+
+    let lines = file.split('\r\n');
+    for (let i = 0; i < lines.length; i++) {
+
+        var line = lines[i];
+        if (line.indexOf('/flags/') < 0) continue;
+        // lines[i].ID = 10000 + i;
+        var start = "https://static.infragistics.com/xplatform/images/flags/iso2/";
+        var end = ".png";
+
+        var indexStart = line.indexOf(start);
+        var indexEnd = line.indexOf(end);
+        var iso = line.toString().substring(indexStart + start.length, indexEnd);
+        line = line.replace(start, "https://dl.infragistics.com/x/img/flags/");
+        line = line.replace(iso + ".png", iso.toUpperCase() + ".png");
+        lines[i] = line;
+        // console.log(iso + " " + lines[i].substring(indexStart));
+    }
+    file = lines.join('\r\n');
+
+    // filePath = CodeGenLib + "/AthletesData/XPLAT2.json";
+    utils.saveFile(filePath, file);
+ 
+    cb();
+}
+exports.replaceJSON = replaceJSON;
+
+
+function replaceFlags(cb) {
+    let filePath = "C:\\WORK\\igniteui-blazor-examples\\samples\\grids\\grid\\toolbar-sample-4\\PlayersData.cs";
+    let file = fs.readFileSync(filePath, "utf8");
+
+    let lines = file.split('\r\n');
+    for (let i = 0; i < lines.length; i++) {
+
+        var line = lines[i];
+        if (line.indexOf('/flags/') < 0) continue;
+
+        var start = "flags/";
+        var end = ".png";
+
+        var indexStart = line.indexOf(start);
+        var indexEnd = line.indexOf(end);
+        var iso = line.toString().substring(indexStart + start.length, indexEnd);
+        line = line.replace(start, "flags/");
+        line = line.replace(iso + ".png", iso.toUpperCase() + ".png");
+        lines[i] = line;
+        console.log(iso + " " + lines[i].substring(indexStart));
+    }
+    file = lines.join('\r\n');
+    utils.saveFile(filePath, file);
+ 
+    cb();
+}
+exports.replaceFlags = replaceFlags;
