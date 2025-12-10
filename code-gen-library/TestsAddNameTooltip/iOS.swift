@@ -18,7 +18,7 @@ public class TestsAddNameTooltip {
                         cv = tv
                         args.currentView = cv
                     }
-                    if let item = args.currentData?.item as? [String?: Any?],
+                    if let item = args.currentData?.item as? DictionaryDataItem$2<String?, Any?>,
                        let name = item["Name"] as? String {
                         (cv as? UILabel)?.text = name
                     }

@@ -33,6 +33,17 @@ class FormatDateLabelAsDate {
             } else {
                 date = Date() // Fallback
             }
+
+        case let dict as DictionaryDataItem$2<String?, Any?>:
+            if let dateValue = dict["Date"] {
+                if let d = dateValue as? Date {
+                    date = d
+                } else {
+                    date = Date() // Fallback
+                }
+            } else {
+                date = Date() // Fallback
+            }
     
         case let ticks as Double:
             let timeIntervalSince1970 = (ticks / 10_000_000.0) - 62_135_596_800.0
