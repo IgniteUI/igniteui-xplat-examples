@@ -17,7 +17,7 @@
       "name": "chart",
       "chartType": "StepArea",
       "yAxisTitle": "TWh",
-      "isCategoryHighlightingEnabled": true,
+      "isCategoryHighlightingEnabled": false,
       "isSeriesHighlightingEnabled": true,
       "isTransitionInEnabled": true,
       "isHorizontalZoomEnabled": false,

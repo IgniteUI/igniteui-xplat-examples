@@ -1,0 +1,77 @@
+{
+  "descriptions": {
+    "legend": {
+      "type": "DataLegend",
+      "name": "legend",
+      "targetRef": "chart",
+      "headerRowVisible": true,
+      "summaryType": "None",
+      "valueRowVisible": true,
+      "valueTextColor": "transparent",
+      "headerText": "European Renewable Energy (2009-2018)"
+    },
+    "content": {
+      "type": "DataChart",
+      "name": "chart",
+      "computedPlotAreaMarginMode": "Series",
+      "axes": [
+        {
+          "type": "CategoryXAxis",
+          "name": "xAxis",
+          "dataSourceRef": "CountryRenewableElectricity",
+          "labelLocation": "OutsideBottom",
+          "label": "Year"
+        },
+        {
+          "type": "NumericYAxis",
+          "name": "yAxis",
+          "labelLocation": "OutsideLeft"
+        }
+      ],
+      "series": [
+        {
+          "type": "LineSeries",
+          "name": "lineSeries1",
+          "title": "EU Energy",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "markerType": "Circle",
+          "dataSourceRef": "CountryRenewableElectricity",
+          "valueMemberPath": "Europe",
+          "showDefaultTooltip": true
+        },
+        {
+          "type": "TrendLineLayer",
+          "name": "trendLine1",
+          "title": "Logarithmic Trend",
+          "targetSeriesName": "lineSeries1",
+          "useIndex": true,
+          "trendLineType": "LogarithmicFit",
+          "trendLinePeriod": 10,
+          "useLegend": true,
+          "legendItemBadgeMode": "MatchSeries"
+        },
+        {
+          "type": "TrendLineLayer",
+          "name": "trendLine2",
+          "title": "Cubic Trend",
+          "targetSeriesName": "lineSeries1",
+          "useIndex": true,
+          "trendLineType": "CubicFit",
+          "trendLinePeriod": 10,
+          "useLegend": true,
+          "legendItemBadgeMode": "MatchSeries"
+        }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "charts/DataChartCategoryModule",
+    "charts/DataChartInteractivityModule",
+    "charts/DataChartAnnotationModule",
+    "charts/DataChartCategoryTrendLineModule",
+    "charts/TrendLineLayerModule",
+    "charts/DataLegendModule"
+  ]
+}

@@ -8,6 +8,9 @@ export class WebGridReorderRowHandler {
     //begin eventHandler
     public webGridReorderRowHandler(args: CustomEvent<IgcRowDragEndEventArgs>): void {
         const ghostElement = args.detail.dragDirective.ghostElement;
+        if (!ghostElement) {
+            return;
+        }
         const dragElementPos = ghostElement.getBoundingClientRect();
         const grid = CodeGenHelper.getDescription<IgcGridComponent>("content");
         const rows = Array.prototype.slice.call(document.getElementsByTagName("igx-grid-row"));

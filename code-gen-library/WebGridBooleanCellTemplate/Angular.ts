@@ -16,8 +16,8 @@ import {
     template: `
 <!-- begin content -->
     <ng-template igxCell let-val #template>
-        <img *ngIf="val" src="https://static.infragistics.com/xplatform/images/grid/active.png" title="Continued" alt="Continued" />
-        <img *ngIf="!val" src="https://static.infragistics.com/xplatform/images/grid/expired.png" title="Discontinued" alt="Discontinued" />
+        <img *ngIf="val" src="https://dl.infragistics.com/x/img/grid/active.png" title="Continued" alt="Continued" />
+        <img *ngIf="!val" src="https://dl.infragistics.com/x/img/grid/expired.png" title="Discontinued" alt="Discontinued" />
     </ng-template>
 <!-- end content -->
     `,

@@ -1,6 +1,6 @@
 
 <div style="display: flex; flex-flow: row; font-family: 'Titillium Web'">
-    <img style="border-radius: 0.25rem" alt="ignite-ui" src="https://raw.githubusercontent.com/IgniteUI/igniteui-xplat-docs/vnext/doc/en/images/readme/ig-banner.png"/>
+    <img style="border-radius: 0.25rem" alt="ignite-ui" src="https://dl.infragistics.com/x/img/browsers/ig-banner.png"/>
 </div>
 
 # Cross-Platform Examples for Ignite UI Components
@@ -62,9 +62,9 @@ Above order of creating and merging pull requests is important to avoid stale sa
 - update the included branches in [build-pipeline.yml](https://infragistics.visualstudio.com/NetAdvantage/_git/code-exporter-app?path=/azure-pipelines/build-pipeline.yml)
 
 
-- move the old volume branch (e.g. 24.2) to excluded branches in [build-pipeline.yml](https://infragistics.visualstudio.com/NetAdvantage/_git/code-exporter-app?path=/azure-pipelines/build-pipeline.yml)
+- move the old volume branch (e.g. 25.2) to excluded branches in [build-pipeline.yml](https://infragistics.visualstudio.com/NetAdvantage/_git/code-exporter-app?path=/azure-pipelines/build-pipeline.yml)
 
-- update the definition ID for WPF product in [build-pipeline.yml](https://infragistics.visualstudio.com/NetAdvantage/_git/code-exporter-app?path=/azure-pipelines/build-pipeline.yml&version=GB2024.2&line=46&lineEnd=47&lineStartColumn=1&lineEndColumn=1&lineStyle=plain&_a=contents)
+- update the definition ID for WPF product in [build-pipeline.yml](https://infragistics.visualstudio.com/NetAdvantage/_git/code-exporter-app?path=/azure-pipelines/build-pipeline.yml&version=GB2025.2&line=46&lineEnd=47&lineStartColumn=1&lineEndColumn=1&lineStyle=plain&_a=contents)
 
 - update version of code-exporter-app (e.g. 25.1.0.1000) in [CodeExporter.App.csproj](https://infragistics.visualstudio.com/NetAdvantage/_git/code-exporter-app?path=/CodeExporter.App.csproj)
 
@@ -81,17 +81,17 @@ Above order of creating and merging pull requests is important to avoid stale sa
 
 - create **new volume branch** (e.g. 25.1) in [xplat-examples](https://github.com/IgniteUI/igniteui-xplat-examples) repo
 
-- update the included branches in [build-pipeline.yml](https://github.com/IgniteUI/igniteui-xplat-examples/blob/24.2.x/azure-pipelines/build-pipeline.yml)
+- update the included branches in [build-pipeline.yml](https://github.com/IgniteUI/igniteui-xplat-examples/blob/25.2/azure-pipelines/build-pipeline.yml)
 
-- move the old volume branch (e.g. 24.2) to excluded branches in [build-pipeline.yml](https://github.com/IgniteUI/igniteui-xplat-examples/blob/24.2.x/azure-pipelines/build-pipeline.yml)
+- move the old volume branch (e.g. 25.2) to excluded branches in [build-pipeline.yml](https://github.com/IgniteUI/igniteui-xplat-examples/blob/25.2/azure-pipelines/build-pipeline.yml)
 
-- update codeExporterAppBranch to the **new volume branch** (e.g. 2025.1) [build-pipeline.yml](https://github.com/IgniteUI/igniteui-xplat-examples/blob/24.2.x/azure-pipelines/build-pipeline.yml)
+- update codeExporterAppBranch to the **new volume branch** (e.g. 2025.1) [build-pipeline.yml](https://github.com/IgniteUI/igniteui-xplat-examples/blob/25.2/azure-pipelines/build-pipeline.yml)
 
-- update the included branches in [dev-run-pipeline.yml](https://github.com/IgniteUI/igniteui-xplat-examples/blob/24.2.x/azure-pipelines/dev-run-pipeline.yml)
+- update the included branches in [dev-run-pipeline.yml](https://github.com/IgniteUI/igniteui-xplat-examples/blob/25.2/azure-pipelines/dev-run-pipeline.yml)
 
-- move the old volume branch (e.g. 24.2) to excluded branches in [dev-run-pipeline.yml](https://github.com/IgniteUI/igniteui-xplat-examples/blob/24.2.x/azure-pipelines/dev-run-pipeline.yml)
+- move the old volume branch (e.g. 25.2) to excluded branches in [dev-run-pipeline.yml](https://github.com/IgniteUI/igniteui-xplat-examples/blob/25.2/azure-pipelines/dev-run-pipeline.yml)
 
-- update codeExporterAppBranch to the **new volume branch** (e.g. 2025.1) [dev-run-pipeline.yml](https://github.com/IgniteUI/igniteui-xplat-examples/blob/24.2.x/azure-pipelines/dev-run-pipeline.yml)
+- update codeExporterAppBranch to the **new volume branch** (e.g. 2025.1) [dev-run-pipeline.yml](https://github.com/IgniteUI/igniteui-xplat-examples/blob/25.2/azure-pipelines/dev-run-pipeline.yml)
 
 - publish the **new volume branch** in the [xplat-examples](https://github.com/IgniteUI/igniteui-xplat-examples) repo
  
