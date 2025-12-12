@@ -6,5 +6,11 @@
   {
     "platform": "React",
     "location": "jsonFile"
-  }
+  },{
+    "platform": "Kotlin",
+    "location": "jsonFile"
+  },{
+    "platform": "Swift",
+    "location": "jsonFile"
+}
 ]
