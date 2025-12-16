@@ -213,7 +213,7 @@
 {"Code": "GRL", "Name": "Greenland", "Population": 57713, "GDP": 2173, "X": -42.12, "Y": 69.547},
 {"Code": "KNA", "Name": "St. Kitts and Nevis", "Population": 52715, "GDP": 1427, "X": -62.77, "Y": 17.351},
 {"Code": "TCA", "Name": "Turks and Caicos Island", "Population": 52570, "GDP": 632, "X": -71.96, "Y": 21.913},
-{"Code": "MNP", "Name": "N. Mariana Island", "Population": 52263, "GDP": 682, "X": 145.49, "Y": 16.459},
+{"Code": "MNP", "Name": "Northern Mariana Island", "Population": 52263, "GDP": 682, "X": 145.49, "Y": 16.459},
 {"Code": "ASM", "Name": "American Samoa", "Population": 51504, "GDP": 711, "X": -170.6, "Y": -14.3},
 {"Code": "FRO", "Name": "Faeroe Island", "Population": 50730, "GDP": 2001, "X": -6.857, "Y": 62.178},
 {"Code": "SXM", "Name": "Sint Maarten", "Population": 42083, "GDP": 366, "X": -63.06, "Y": 18.044},
