@@ -1813,6 +1813,83 @@ exports.convertWorldStats = function convertWorldStats(cb) {
     cb();
 }
 
+exports.convertCSV = function convertCSV(cb) {
+
+    let csvName = 'EmployeesByIndustry'
+    let csvPath = './CDN/' + csvName + '.csv';
+    csvData = fs.readFileSync(csvPath, "utf8");
+
+    let jsonData = [];
+    let csvLines = csvData.split('\r\n');
+    let csvColumns = csvLines[0].split(',');
+
+    // console.log(csvColumns);
+
+    let jobs = [];
+    for (let i = 1; i < csvLines.length; i++) {
+        const csvRow = csvLines[i].split(',');
+        if (csvRow === undefined || csvRow.length <= 1) {
+            continue;
+        }
+
+        // console.log(csvRow);
+//   if (c === 0) {
+                // jobs += csvRow[0] + ", ";
+        jobs.push(csvRow[0]);
+            // }
+
+        let jsonItem = {};
+        for (let c = 0; c < csvColumns.length; c++) {
+            let column = csvColumns[c];
+            if (column === "") continue;
+
+            column = column.split(' ').join('');
+            column = column.split('-').join('_20');
+
+            let value = csvRow[c];
+            if (value === undefined) {
+                console.log("ERROR: undefined value at " + i + " row and col: " + column )
+                continue;
+            }
+            value = value.trim();
+                
+          
+            
+            // jsonItem[column] = value;
+
+            let num = utils.strToNumber(value);
+            if (num !== null) {
+                jsonItem[column] = num;
+            } else {
+                jsonItem[column] = value;
+            }
+        }
+
+        jsonData.push(jsonItem);
+        // break;
+
+        // if (jsonItem.Population > 1000) {
+        //     jsonItem["GdpPerPerson"] = Math.round(jsonItem["GdpTotal"] * 1000000 / jsonItem["Population"]);
+        //     jsonData.push(jsonItem);
+        // }
+    }
+        console.log(jobs);
+        console.log(jobs.length);
+
+    // jsonData.sort((a, b) => a.Population < b.Population ? 1 : -1);
+
+    // console.log(jsonData);
+
+    // for (let i = 0; i < jsonData.length; i++) {
+    //     jsonData[i].Rank = i + 1;
+    // }
+
+    let jsonPath = './CDN/' + csvName + '.json';
+    // let jsonPath = CodeGenLib + "/" + csvName + "/XPLAT.json";
+    // utils.saveJSON(jsonPath, jsonData,  "compact");
+    cb();
+}
+
 exports.injectWorldStats = function injectWorldStats(cb) {   
     let file1Path = CodeGenLib + "/WorldStats/XPLAT.json";
     let file1 = fs.readFileSync(file1Path, "utf8");
