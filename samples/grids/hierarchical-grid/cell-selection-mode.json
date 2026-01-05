@@ -16,7 +16,9 @@
           "type": "PropertyEditorPropertyDescription",
           "propertyPath": "CellSelection",
           "name": "CellSelectionEditorHierarchicalGrid",
-          "valueType": "EnumValue"
+          "valueType": "EnumValue",
+          "dropDownNames": ["None", "Single", "Multiple"],
+          "dropDownValues": ["None", "Single", "Multiple"]
         },
         {
           "label": "Row Island Cell Selection",
