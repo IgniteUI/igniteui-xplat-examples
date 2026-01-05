@@ -5,9 +5,29 @@ igRegisterScript("WebGridRowPinCellTemplate", (ctx) => {
         var grid = document.getElementsByTagName("igc-grid")[0];
         grid.getRowByIndex(index).pinned = !grid.getRowByIndex(index).pinned;
     }
+    var grid = document.getElementsByTagName("igc-grid")[0];
     const index = ctx.cell.id.rowIndex;
-    return html`<div>
+    const row = grid.rowList.toArray().find(x => x.index === index);
+    if (row && row.pinned && row.disabled) {
+        return html``;
+    }
+    return html`<div class='customIcon'>
     <span onpointerdown='toggleRowPin("${index}")'>📌</span>
 </div>`;
 }, false);
+
+let requiredStyles = `
+<!--begin styles-->
+.customIcon {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.customIcon > span {
+    cursor: pointer;
+}
+<!--end styles-->
+`;
+
 //end template

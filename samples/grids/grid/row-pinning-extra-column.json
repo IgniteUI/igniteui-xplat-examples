@@ -13,7 +13,7 @@
             "columnList": [
                 {
                     "type": "WebColumn",
-                    "width": "70px",
+                    "width": "100px",
                     "filterable": false,
                     "pinned": true,
                     "bodyTemplateRef": "WebGridRowPinCellTemplate"
