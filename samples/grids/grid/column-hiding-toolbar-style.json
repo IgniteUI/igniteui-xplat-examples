@@ -39,7 +39,8 @@
           "field": "ID",
           "header": "ID",
           "dataType": "String",
-          "sortable": true
+          "hidden": true,
+          "disableHiding": true
         },
         {
           "type": "WebColumn",
