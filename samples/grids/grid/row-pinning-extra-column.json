@@ -3,6 +3,7 @@
         "TODO add event to handle row pinning"
     ],
   "skipAlterDataCasing": true,
+  "onInit": ["WebGridRowPinCellTemplateStyles"],
     "descriptions": {
         "content": {
             "name": "grid",
