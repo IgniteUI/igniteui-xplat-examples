@@ -10,7 +10,7 @@ export class WebGridRowPinCellTemplate {
 //begin content
     public webGridRowPinCellTemplate = (ctx: IgcCellTemplateContext) => {
         const index = ctx.cell.id.rowIndex;
-        return html`<span @pointerdown=${(e: any) => this.toggleRowPin(index)}>📌</span>`
+        return html`<div class='customIcon'><span class='customIconSpan' @pointerdown=${(e: any) => this.toggleRowPin(index)}>📌</span></div>`
 }
 //end content
 //begin supportingMethods

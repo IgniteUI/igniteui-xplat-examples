@@ -8,7 +8,9 @@ export class WebGridRowPinCellTemplate {
 public webGridRowPinCellTemplate = (e: {dataContext: IgrCellTemplateContext}) => {
     const index = e.dataContext.cell.row.index;
     return (
-        <span onPointerDown={(e: any) => this.toggleRowPin(index)} style={{ cursor: 'pointer'}}>📌</span>
+        <div class='customIcon'>
+        <span onPointerDown={(e: any) => this.toggleRowPin(index)} className='customIconSpan'>📌</span>
+        </div>
     );
 }
 //end content
