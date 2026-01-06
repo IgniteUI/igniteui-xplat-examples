@@ -1,6 +1,7 @@
 ﻿//begin template
 
-//begin eventHandler
+//begin content
+
 igRegisterScript("WebGridRowPinCellTemplate", (ctx) => {
     var html = window.igTemplating.html;
     window.toggleRowPin = function toggleRowPin(index) {
@@ -17,8 +18,7 @@ igRegisterScript("WebGridRowPinCellTemplate", (ctx) => {
     <span class='customIconSpan' onpointerdown='toggleRowPin("${index}")'>📌</span>
 </div>`;
 }, true);
-//end eventHandler
-
+//end content
 
 let requiredStyles = `
 <!--begin styles-->
