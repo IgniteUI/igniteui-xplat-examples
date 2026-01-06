@@ -14,5 +14,5 @@ igRegisterScript("WebGridRowPinCellTemplate", (ctx) => {
     return html`<div class='customIcon'>
     <span class='customIconSpan' onpointerdown='toggleRowPin("${index}")'>📌</span>
 </div>`;
-}, true);
+}, false);
 //end template
