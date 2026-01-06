@@ -15,7 +15,6 @@ igRegisterScript("WebGridRowPinCellTemplate", (ctx) => {
     <span class='customIconSpan' onpointerdown='toggleRowPin("${index}")'>📌</span>
 </div>`;
 }, true);
-//end template
 
 let requiredStyles = `
 <!--begin styles-->
@@ -30,3 +29,5 @@ let requiredStyles = `
 }
 <!--end styles-->
 `;
+
+//end template
