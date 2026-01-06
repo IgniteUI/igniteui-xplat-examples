@@ -12,9 +12,9 @@ igRegisterScript("WebGridRowPinCellTemplate", (ctx) => {
         return html``;
     }
     return html`<div class='customIcon'>
-    <span onpointerdown='toggleRowPin("${index}")'>📌</span>
+    <span class='customIconSpan' onpointerdown='toggleRowPin("${index}")'>📌</span>
 </div>`;
-}, false);
+}, true);
 //end eventHandler
 
 let requiredStyles = `
@@ -25,7 +25,7 @@ let requiredStyles = `
     justify-content: center;
 }
 
-.customIcon > span {
+.customIconSpan {
     cursor: pointer;
 }
 <!--end styles-->
