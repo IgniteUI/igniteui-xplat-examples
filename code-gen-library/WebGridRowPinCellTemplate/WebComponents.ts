@@ -11,7 +11,7 @@ export class WebGridRowPinCellTemplate {
     public webGridRowPinCellTemplate = (ctx: IgcCellTemplateContext) => {
         const index = ctx.cell.id.rowIndex;
         const grid = CodeGenHelper.getDescription<IgcGridComponent>("content");
-        const row = grid.rowList.toArray().find(x => x.index === index);
+        const row = grid.rowList.find((x:any) => x.index === index);
         if (row && row.pinned && row.disabled) {
             return html``;
         }
