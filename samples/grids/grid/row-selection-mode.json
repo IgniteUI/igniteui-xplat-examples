@@ -22,8 +22,7 @@
           "type": "PropertyEditorPropertyDescription",
           "name": "hideRowSelectors",
           "propertyPath": "HideRowSelectors",
-          "shouldOverrideDefaultEditor": true,
-          "primitiveValue": true
+          "valueType": "Boolean1"
         }
       ]
     },
