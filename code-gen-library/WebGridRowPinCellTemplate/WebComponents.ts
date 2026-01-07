@@ -10,6 +10,11 @@ export class WebGridRowPinCellTemplate {
 //begin content
     public webGridRowPinCellTemplate = (ctx: IgcCellTemplateContext) => {
         const index = ctx.cell.id.rowIndex;
+        const grid = CodeGenHelper.getDescription<IgcGridComponent>("content");
+        const row = grid.rowList.toArray().find(x => x.index === index);
+        if (row && row.pinned && row.disabled) {
+            return html``;
+        }
         return html`<div class='customIcon'><span class='customIconSpan' @pointerdown=${(e: any) => this.toggleRowPin(index)}>📌</span></div>`
 }
 //end content
