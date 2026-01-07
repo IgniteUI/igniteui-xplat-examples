@@ -14,6 +14,7 @@
           "type": "PropertyEditorPropertyDescription",
           "name": "RowSelectionType",
           "propertyPath": "RowSelection",
+          "label": "Row Selection",
           "valueType": "EnumValue",
           "dropDownNames": ["None", "Single", "Multiple", "MultipleCascade"],
           "dropDownValues": ["None", "Single", "Multiple", "MultipleCascade"]
@@ -22,6 +23,7 @@
           "type": "PropertyEditorPropertyDescription",
           "name": "hideRowSelectors",
           "propertyPath": "HideRowSelectors",
+          "label": "Hide Row Selectors",
           "valueType": "Boolean1"
         }
       ]
