@@ -12,13 +12,18 @@
       "properties": [
         {
           "type": "PropertyEditorPropertyDescription",
-          "name": "selectionType",
-          "propertyPath": "RowSelection"
+          "name": "RowSelectionType",
+          "propertyPath": "RowSelection",
+          "valueType": "EnumValue",
+          "dropDownNames": ["None", "Single", "Multiple", "MultipleCascade"],
+          "dropDownValues": ["None", "Single", "Multiple", "MultipleCascade"]
         },
         {
           "type": "PropertyEditorPropertyDescription",
           "name": "hideRowSelectors",
-          "propertyPath": "HideRowSelectors"
+          "propertyPath": "HideRowSelectors",
+          "shouldOverrideDefaultEditor": true,
+          "primitiveValue": true
         }
       ]
     },
