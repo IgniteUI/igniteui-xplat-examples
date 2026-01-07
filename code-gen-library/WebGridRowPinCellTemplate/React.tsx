@@ -6,23 +6,18 @@ export class WebGridRowPinCellTemplate {
 //begin template
 //begin content
 public webGridRowPinCellTemplate = (e: {dataContext: IgrCellTemplateContext}) => {
-    const grid = CodeGenHelper.getDescription<IgrGrid>("content");
-    const index = e.dataContext.cell.row.index;
-    const row = grid.rowList.toArray().find(x => x.index === index);
-    if (row && row.pinned && row.disabled) {
-        return ();
-    }
+    const key = e.dataContext.cell.row.key;
     return (
         <div className='customIcon'>
-        <span onPointerDown={(e: any) => this.toggleRowPin(index)} className='customIconSpan'>📌</span>
+        <span onPointerDown={(e: any) => this.toggleRowPin(key)} className='customIconSpan'>📌</span>
         </div>
     );
 }
 //end content
 //begin supportingMethods
-public toggleRowPin(index: number) {
+public toggleRowPin(key: string) {
     let grid = CodeGenHelper.getDescription<IgrGrid>("content");
-    grid.getRowByIndex(index).pinned = !grid.getRowByIndex(index).pinned;
+    grid.getRowByKey(key).pinned = !grid.getRowByKey(key).pinned;
 }
 //end supportingMethods
 //end template
