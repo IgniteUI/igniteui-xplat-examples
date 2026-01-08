@@ -22,6 +22,7 @@ export class WebGridRowPinCellTemplate {
 public toggleRowPin(index: number) {
     var grid = CodeGenHelper.getDescription<IgcGridComponent>("content");
     grid.getRowByIndex(index).pinned = !grid.getRowByIndex(index).pinned;
+    grid.markForCheck();
 }
 //end supportingMethods
 //end template
