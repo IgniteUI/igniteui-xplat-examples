@@ -1,0 +1,23 @@
+{
+  "strings": {
+    "legendTitle": "Global Electricity Demand by Energy Use"
+  },
+  "descriptions": {
+    "legend": {
+      "type": "ItemLegend",
+      "name": "legend",
+      "orientation": "Horizontal"
+    },
+    "content": {
+      "type": "FunnelChart",
+      "name": "chart",
+      "innerLabelMemberPath": "Summary",
+      "valueMemberPath": "Value",
+      "dataSourceRef": "EnergyGlobalDemand"
+    }
+  },
+  "modules": [
+    "charts/ItemLegendModule",
+    "charts/FunnelChartModule"
+  ]
+}
