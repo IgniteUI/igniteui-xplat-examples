@@ -7,6 +7,7 @@
       "autoGenerate": false,
       "primaryKey": "ID",
       "gridKeydownRef": "WebGridCustomKBNav",
+      "rowEditable": true,
       "columnList": [
         {
           "type": "WebColumn",
@@ -36,14 +37,14 @@
           "type": "WebColumn",
           "field": "GrammyNominations",
           "header": "Grammy Nominations",
-          "dataType": "String",
+          "dataType": "Number",
           "resizable": true
         },
         {
           "type": "WebColumn",
           "field": "GrammyAwards",
           "header": "Grammy Awards",
-          "dataType": "String",
+          "dataType": "Number",
           "resizable": true
         }
       ],
@@ -52,6 +53,7 @@
           "type": "WebRowIsland",
           "childDataKey": "Albums",
           "autoGenerate": false,
+          "rowEditable": true,
           "columnList": [
             {
               "type": "WebColumn",
@@ -71,7 +73,7 @@
               "type": "WebColumn",
               "field": "BillboardReview",
               "header": "Billboard Review",
-              "dataType": "String",
+              "dataType": "Number",
               "resizable": true
             },
             {
@@ -87,6 +89,7 @@
               "type": "WebRowIsland",
               "childDataKey": "Songs",
               "autoGenerate": false,
+              "rowEditable": true,
               "columnList": [
                 {
                   "type": "WebColumn",
@@ -124,6 +127,7 @@
           "type": "WebRowIsland",
           "childDataKey": "Tours",
           "autoGenerate": false,
+          "rowEditable": true,
           "columnList": [
             {
               "type": "WebColumn",
