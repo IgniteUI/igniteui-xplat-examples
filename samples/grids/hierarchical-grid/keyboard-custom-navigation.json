@@ -1,4 +1,5 @@
 {
+  "export": true,
   "skipAlterDataCasing": true,
   "descriptions": {
     "content": {
@@ -8,12 +9,15 @@
       "primaryKey": "ID",
       "gridKeydownRef": "WebGridCustomKBNav",
       "rowEditable": true,
+      "allowFiltering": true,
+      "filterMode": "ExcelStyleFilter",
       "columnList": [
         {
           "type": "WebColumn",
           "field": "Artist",
           "header": "Artist",
           "dataType": "String",
+          "sortable": true,
           "resizable": true
         },
         {
@@ -22,6 +26,7 @@
           "header": "Photo",
           "dataType": "Image",
           "minWidth": "115px",
+          "sortable": true,
           "resizable": true
         },
         {
@@ -31,6 +36,7 @@
           "dataType": "Number",
           "minWidth": "88px",
           "maxWidth": "230px",
+          "sortable": true,
           "resizable": true
         },
         {
@@ -38,6 +44,7 @@
           "field": "GrammyNominations",
           "header": "Grammy Nominations",
           "dataType": "Number",
+          "sortable": true,
           "resizable": true
         },
         {
@@ -45,6 +52,7 @@
           "field": "GrammyAwards",
           "header": "Grammy Awards",
           "dataType": "Number",
+          "sortable": true,
           "resizable": true
         }
       ],
@@ -54,12 +62,16 @@
           "childDataKey": "Albums",
           "autoGenerate": false,
           "rowEditable": true,
+          "allowFiltering": true,
+          "filterMode": "ExcelStyleFilter",
           "columnList": [
             {
               "type": "WebColumn",
               "field": "Album",
               "header": "Album",
               "dataType": "String",
+              "sortable": true,
+              "groupable": true,
               "resizable": true
             },
             {
@@ -67,6 +79,8 @@
               "field": "LaunchDate",
               "header": "Launch Date",
               "dataType": "Date",
+              "sortable": true,
+              "groupable": true,
               "resizable": true
             },
             {
@@ -74,6 +88,8 @@
               "field": "BillboardReview",
               "header": "Billboard Review",
               "dataType": "Number",
+              "sortable": true,
+              "groupable": true,
               "resizable": true
             },
             {
@@ -81,6 +97,8 @@
               "field": "USBillboard200",
               "header": "US Billboard 200",
               "dataType": "String",
+              "sortable": true,
+              "groupable": true,
               "resizable": true
             }
           ],
@@ -90,12 +108,16 @@
               "childDataKey": "Songs",
               "autoGenerate": false,
               "rowEditable": true,
+              "allowFiltering": true,
+              "filterMode": "ExcelStyleFilter",
               "columnList": [
                 {
                   "type": "WebColumn",
                   "field": "Number",
                   "header": "No.",
                   "dataType": "String",
+                  "sortable": true,
+                  "groupable": true,
                   "resizable": true
                 },
                 {
@@ -103,6 +125,8 @@
                   "field": "Title",
                   "header": "Title",
                   "dataType": "String",
+                  "sortable": true,
+                  "groupable": true,
                   "resizable": true
                 },
                 {
@@ -110,6 +134,8 @@
                   "field": "Released",
                   "header": "Released",
                   "dataType": "String",
+                  "sortable": true,
+                  "groupable": true,
                   "resizable": true
                 },
                 {
@@ -117,6 +143,8 @@
                   "field": "Genre",
                   "header": "Genre",
                   "dataType": "String",
+                  "sortable": true,
+                  "groupable": true,
                   "resizable": true
                 }
               ]
@@ -128,12 +156,16 @@
           "childDataKey": "Tours",
           "autoGenerate": false,
           "rowEditable": true,
+          "allowFiltering": true,
+          "filterMode": "ExcelStyleFilter",
           "columnList": [
             {
               "type": "WebColumn",
               "field": "Tour",
               "header": "Tour",
               "dataType": "String",
+              "sortable": true,
+              "groupable": true,
               "resizable": true
             },
             {
@@ -141,6 +173,8 @@
               "field": "StartedOn",
               "header": "Started on",
               "dataType": "String",
+              "sortable": true,
+              "groupable": true,
               "resizable": true
             },
             {
@@ -148,6 +182,8 @@
               "field": "Location",
               "header": "Location",
               "dataType": "String",
+              "sortable": true,
+              "groupable": true,
               "resizable": true
             },
             {
@@ -155,6 +191,8 @@
               "field": "Headliner",
               "header": "Headliner",
               "dataType": "String",
+              "sortable": true,
+              "groupable": true,
               "resizable": true
             }
           ]
