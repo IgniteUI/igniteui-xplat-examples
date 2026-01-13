@@ -15,6 +15,10 @@
       "legendRef": "legend",
       "isHorizontalZoomEnabled": false,
       "isVerticalZoomEnabled": false,
+      "plotAreaMarginLeft": 12,
+      "plotAreaMarginTop": 12,
+      "plotAreaMarginRight": 12,
+      "plotAreaMarginBottom": 12,
       "axes": [
         {
           "type": "CategoryXAxis",
