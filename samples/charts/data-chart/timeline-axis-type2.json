@@ -1,0 +1,80 @@
+{
+  "export": true,
+  "descriptions": {
+    "content": {
+      "type": "DataChart",
+      "name": "chart",
+      "plotAreaMarginLeft": 100,
+      "plotAreaMarginRight": 100,
+      "axes": [
+        {
+          "type": "CategoryXAxis",
+          "name": "xAxis1",
+          "dataSourceRef": "data",
+          "labelLocation": "OutsideBottom"
+        },
+        {
+          "type": "TimeXAxis",
+          "name": "xAxis2",
+          "dataSourceRef": "data",
+          "dateTimeMemberPath": "Year",
+          "labelLocation": "OutsideBottom"
+        },
+        {
+          "type": "NumericYAxis",
+          "name": "yAxis",
+          "labelLocation": "OutsideRight"
+        }
+      ],
+      "series": [
+        {
+          "type": "CalloutLayer",
+          "name": "CalloutLayer1",
+          "targetSeriesRef": "LineSeries1",
+          "dataSourceRef": "data",
+          "xMemberPath": "Index",
+          "yMemberPath": "Value",
+          "labelMemberPath": "Year",
+          "isAutoCalloutBehaviorEnabled": false,
+          "useValueForAutoCalloutLabels": false,
+          "isCalloutOffsettingEnabled": false,
+          "calloutPositionPadding": 50,
+          "calloutCollisionMode": "Greedy",
+          "showDefaultTooltip": false
+        },
+        {
+          "type": "LineSeries",
+          "name": "LineSeries1",
+          "xAxisRef": "xAxis1",
+          "yAxisRef": "yAxis",
+          "dataSourceRef": "data",
+          "valueMemberPath": "Value"
+        }
+      ]
+    }
+  },
+  "refs": {
+    "data": [
+      {"Index": 0, "Date": "2016, 6, 23", "Year": "23 JUN, 2016", "Value": 5, "Details": "UK votes to exit the EU"},
+      {"Index": 1, "Date": "2017, 3, 29", "Year": "29 MAR, 2017", "Value": 5, "Details": "The UK triggers Article 50"},
+      {"Index": 2, "Date": "2017, 6, 19", "Year": "19 JUN, 2017", "Value": 5, "Details": "Brexit negotiations begin"},
+      {"Index": 3, "Date": "2017, 3, 19", "Year": "19 MAR, 2018", "Value": 5, "Details": "The EU and the UK agree on a transition phase"},
+      {"Index": 4, "Date": "2018, 11, 25", "Year": "25 NOV, 2018", "Value": 5, "Details": "Draft withdrawl deal agreed"},
+      {"Index": 5, "Date": "2019, 10, 29", "Year": "29 OCT, 2019", "Value": 5, "Details": "EU heads of state and government approve postponing the Brexit date"},
+      {"Index": 6, "Date": "2020, 12, 31", "Year": "31 DEC, 2020", "Value": 5, "Details": "Transition period ends"}
+    ]
+  },
+  "modules": [
+    "withDescriptions",
+    "charts/DataChartCoreModule",
+    "charts/DataChartCategoryCoreModule",
+    "charts/DataChartCategoryModule",
+    "charts/DataChartVerticalCategoryModule",
+    "charts/TimeXAxisModule",
+    "charts/DataChartInteractivityModule",
+    "charts/DataChartExtendedAxesModule",
+    "charts/DataChartAnnotationModule",
+    "charts/AnnotationLayerProxyModule",
+    "charts/CalloutLayerModule"
+  ]
+}
