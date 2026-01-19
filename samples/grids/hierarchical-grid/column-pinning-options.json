@@ -9,21 +9,6 @@
         "dataRef": "HierarchicalCustomersData",
         "columnSelection": "Single",
         "primaryKey": "CustomerID",
-        "toolbar": [
-          {
-            "type": "WebGridToolbar",
-            "tools": [
-              {
-                "type": "WebGridToolbarActions",
-                "actions": [
-                  {
-                    "type": "WebGridToolbarPinning"
-                  }
-                ]
-              }
-            ]
-          }
-        ],
         "columnList": [
           {
             "type": "WebColumn",

@@ -15,7 +15,10 @@
           "type": "PropertyEditorPropertyDescription",
           "name": "selectionType",
           "propertyPath": "RowSelection",
-          "label":"Row Selection"
+          "valueType": "EnumValue",
+          "label":"Row Selection",
+          "dropDownNames": ["None", "Single", "Multiple"],
+          "dropDownValues": ["None", "Single", "Multiple"]
         },
         {
           "type": "PropertyEditorPropertyDescription",

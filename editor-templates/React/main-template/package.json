@@ -39,7 +39,7 @@
     "igniteui-react-gauges": "19.3.1",
 //endifdef gauges, dashboards
 //ifdef webgrids
-    "igniteui-react-grids": "^19.4.0",
+    "igniteui-react-grids": "^19.5.0-beta.0 ",
 //endifdef webgrids
 //ifdef grid, dashboards
     "igniteui-react-data-grids": "19.3.1",
