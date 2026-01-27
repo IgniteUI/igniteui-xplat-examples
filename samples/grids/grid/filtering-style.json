@@ -1,4 +1,5 @@
 {
+  "export": true,
   "todo": [ "" ],  
   "skipAlterDataCasing": true,
   "onInit": ["WebGridFilteringStyle"],
@@ -47,47 +48,48 @@
           ]
         }
       ],
-      "columnList": [{
-        "type": "WebColumn",
-        "field": "ProductName",
-        "header": "Product Name",
-        "sortable": true
-      },
-      {
-        "type": "WebColumn",
-        "field": "QuantityPerUnit",
-        "header": "Quantity Per Unit",
-        "sortable": true
-      },
-      {
-        "type": "WebColumn",
-        "field": "UnitPrice",
-        "header": "Unit Price",
-        "dataType": "Currency",
-        "sortable": true,
-        "pipeArgs": {
-          "type": "WebColumnPipeArgs",
-          "digitsInfo": "1.2-2"
+      "columnList": [
+        {
+          "type": "WebColumn",
+          "field": "ProductName",
+          "header": "Product Name",
+          "sortable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "QuantityPerUnit",
+          "header": "Quantity Per Unit",
+          "sortable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "UnitPrice",
+          "header": "Unit Price",
+          "dataType": "Currency",
+          "sortable": true,
+          "pipeArgs": {
+            "type": "WebColumnPipeArgs",
+            "digitsInfo": "1.2-2"
+          }
+        },
+        {
+          "type": "WebColumn",
+          "field": "OrderDate",
+          "header": "Order Date",
+          "dataType": "Date",
+          "sortable": true,
+          "pipeArgs": {
+            "type": "WebColumnPipeArgs",
+            "format": "MM/dd/YYYY"
+          }
+        },
+        {
+          "type": "WebColumn",
+          "field": "Discontinued",
+          "header": "Discontinued",
+          "sortable": true,
+          "bodyTemplateRef": "WebGridBooleanCellTemplate"
         }
-      },
-      {
-        "type": "WebColumn",
-        "field": "OrderDate",
-        "header": "Order Date",
-        "dataType": "Date",
-        "sortable": true,
-        "pipeArgs": {
-          "type": "WebColumnPipeArgs",
-          "format": "MM/dd/YYYY"
-        }
-      },
-      {
-        "type": "WebColumn",
-        "field": "Discontinued",
-        "header": "Discontinued",
-        "sortable": true,
-        "bodyTemplateRef": "WebGridBooleanCellTemplate"
-      }
     ]
   }
 },
