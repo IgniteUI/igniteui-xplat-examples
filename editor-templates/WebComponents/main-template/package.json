@@ -47,7 +47,7 @@
     "igniteui-webcomponents-gauges": "6.3.1",
 //endifdef gauges, dashboards
 //ifdef grid, webgrids, dashboards
-    "igniteui-webcomponents-grids": "^6.2.2",
+    "igniteui-webcomponents-grids": "6.3.0-rc.0",
 //endifdef grid, webgrids, dashboards
 //ifdef grid, inputs, webgrids, editor, layouts, dashboards
     "igniteui-webcomponents-inputs": "6.3.1",
