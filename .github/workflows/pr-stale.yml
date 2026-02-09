@@ -1,5 +1,6 @@
 name: "Mark stale pull requests and issues"
 on:
+  workflow_dispatch:  # Manual trigger
   schedule:
     # Run every day at midnight UTC
     - cron: '0 0 * * *'
