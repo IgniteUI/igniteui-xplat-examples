@@ -22,7 +22,7 @@ jobs:
           stale-pr-message:    'Auto-tagged as stale status because no activity in the last 30 days.' 
           # It will be closed in 7 days if no further activity occurs. Thank you for your contributions.'
           # close-pr-message: 'This pull request has been closed due to inactivity.'
-          stale-pr-label:    'status: stale'
+          stale-pr-label: stale
           # stale-issue-label: 'status: stale'
           # exempt-pr-labels: 'keep-open, awaiting-upstream' # Labels to exempt from being marked stale
           # https://github.com/actions/stale - arguments reference
