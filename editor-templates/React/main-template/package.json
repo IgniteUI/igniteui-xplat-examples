@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "igniteui-react-core": "19.3.2",
+    "igniteui-i18n-resources": "^1.0.2",
 //ifdef webgrids
     "igniteui-dockmanager": "^1.17.0",
 //endifdef webgrids
