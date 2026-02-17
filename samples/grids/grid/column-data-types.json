@@ -35,7 +35,6 @@
           "dataType": "Number",
           "pipeArgs": {
             "type": "WebColumnPipeArgs",
-            "currencyCode": "",
             "digitsInfo": "1.4-4"
           }
         },
@@ -111,7 +110,6 @@
           "dataType": "Percent",
           "pipeArgs": {
             "type": "WebColumnPipeArgs",
-            "currencyCode": "",
             "digitsInfo": "1.4-4"
           }
         },
