@@ -9,7 +9,7 @@ public class TestsUpdateCalloutLabelV
 {
     //begin eventHandler
     //WPF: Infragistics.Controls.Charts.CalloutLabelUpdatingEventHandler
-    public string TestsUpdateCalloutLabelV(object sender, CalloutLabelUpdatingEventArgs item)
+    public void TestsUpdateCalloutLabelV(object sender, CalloutLabelUpdatingEventArgs args)
     {
         var item = args.Item;
         if (item is IDictionary<string, object>) {
@@ -18,7 +18,6 @@ public class TestsUpdateCalloutLabelV
             var value = dict.ContainsKey("Value") ? dict["Value"].ToString() : "";
             args.Label = label + "-V-" + value;
         }
-
     }
     //end eventHandler
 }
