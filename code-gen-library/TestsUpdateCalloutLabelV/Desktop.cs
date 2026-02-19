@@ -15,7 +15,7 @@ public class TestsUpdateCalloutLabelV
             var dict = (IDictionary<string, object>)item;
             var label = dict.ContainsKey("Label") ? dict["Label"].ToString() : "";
             var value = dict.ContainsKey("Value") ? dict["Value"].ToString() : "";
-            args.Label = label + "-V-" + value
+            args.Label = label + "-V-" + value;
         }
 
     }
