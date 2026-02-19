@@ -1,6 +1,7 @@
 //begin imports
 using System;
 using System.Collections;
+using System.Collections.Generic;
 //end imports
 
 public class TestsUpdateCalloutLabelV
@@ -10,11 +11,11 @@ public class TestsUpdateCalloutLabelV
     public string TestsUpdateCalloutLabelV(object sender, CalloutLabelUpdatingEventArgs item)
     {
         val item = args.item
-        if (item is Map < *, *>) {
-                    val dict = item
-            val label = dict["Label"]?.toString().orEmpty()
-            val value = dict["Value"]?.toString().orEmpty()
-            args.label = "$label-V-$value"
+        if (item is IDictionary<string, object>) {
+            var dict = (IDictionary<string, object>)item
+            var label = dict.ContainsKey("Label") ? dict["Label"].ToString() : "";
+            var value = dict.ContainsKey("Value") ? dict["Value"].ToString() : "";
+            args.Label = label + "-V-" + value
         }
 
     }
