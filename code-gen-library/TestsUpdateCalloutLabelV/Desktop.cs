@@ -10,7 +10,7 @@ public class TestsUpdateCalloutLabelV
     //WPF: Infragistics.Controls.Charts.CalloutLabelUpdatingEventHandler
     public string TestsUpdateCalloutLabelV(object sender, CalloutLabelUpdatingEventArgs item)
     {
-        val item = args.item
+        var item = args.Item;
         if (item is IDictionary<string, object>) {
             var dict = (IDictionary<string, object>)item
             var label = dict.ContainsKey("Label") ? dict["Label"].ToString() : "";
