@@ -2,6 +2,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Infragistics.Controls.Charts;
 //end imports
 
 public class TestsUpdateCalloutLabelV
