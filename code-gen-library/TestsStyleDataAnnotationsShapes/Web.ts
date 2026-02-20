@@ -7,40 +7,33 @@ public class TestsStyleAxisAnnotationsLabels
 {
     //begin eventHandler
     //WPF: Infragistics.Controls.Charts.DataAnnotationShapeStyleEventHandler
-    int groupIndex = 0;
-    public void TestsStyleAxisAnnotationsLabels(sender: any, args: IgcDataAnnotationItem)
-    {         
-         object o = CodeGenHelper.findByName<object>("DataAnnotationShapeStylingOptions");
-		 if (o === undefined) return;
-         JArray array  =  JArray.Parse(o.ToString());	
-		 
-		 for (int i=0;i<array.Length;i++)
-		 {
-			 var item = array[i];
-			 var index = item.Index;
-			 if (index == -1)
-			 {
-				 StyleShape(item,args);
-				 return;
-			 }
-			 if (index = args.dataIndex)
-			 {
-				 StyleShape(item,args);
-				 return;
-			 }
-		 }
-    }
-	//private void StyleShape(DataAnnotationLabelStylingOptions options, IGDataAnnotationInfo args)
-	private StyleShape(options : any, args: IgcDataAnnotationInfo)
-	{
-		
-		if (options.Brush !== undefined && options.Brush != "")
-			args.shapeBrush = options.Brush;
-		if (options.OutlineBrush !== undefined && options.OutlineBrush != "")
-			args.shapeOutlineBrush = options.OutlineBrush;
-		if (options.Thickness != "NaN")
-			args.shapeThickness = options.Thickness;
-				
+    private groupIndex: number = 0;
+    public testsStyleAxisAnnotationsLabels(sender: any, args: IgcDataAnnotationItem): void {
+	    const o: any | undefined = CodeGenHelper.findByName<object>("DataAnnotationShapeStylingOptions");
+	    if (o === undefined) return;
+	    const array: any[] = JSON.parse(o.toString());
+	
+	    for (let i = 0; i < array.length; i++) {
+	        const item = array[i];
+	        const index = item.Index;
+	        if (index === -1) {
+	            this.styleShape(item, args);
+	            return;
+	        }
+	        if (index === args.dataIndex) {
+	            this.styleShape(item, args);
+	            return;
+	        }
+	    }
+	}
+	
+	private styleShape(options: any, args: IgcDataAnnotationInfo): void {
+	    if (options.Brush !== undefined && options.brush !== "")
+	        args.shapeBrush = options.brush;
+	    if (options.outlineBrush !== undefined && options.outlineBrush !== "")
+	        args.shapeOutlineBrush = options.outlineBrush;
+	    if (options.Thickness !== "NaN")
+	        args.shapeThickness = options.thickness;
 	}
     //end eventHandler
 }
