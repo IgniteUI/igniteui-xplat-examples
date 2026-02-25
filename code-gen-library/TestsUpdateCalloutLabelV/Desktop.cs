@@ -11,12 +11,11 @@ public class TestsUpdateCalloutLabelV
     //WPF: Infragistics.Controls.Charts.CalloutLabelUpdatingEventHandler
     public void TestsUpdateCalloutLabelV(object sender, CalloutLabelUpdatingEventArgs args)
     {
-        var item = args.Item;
-        if (item is IDictionary<string, object>) {
-            var dict = (IDictionary<string, object>)item;
-            var label = dict.ContainsKey("Label") ? dict["Label"].ToString() : "";
-            var value = dict.ContainsKey("Value") ? dict["Value"].ToString() : "";
-            args.Label = label + "-V-" + value;
+        var item = args.Item;        
+        if (item is IDictionary)
+        {
+            var dict = (IDictionary)item;
+            args.Label = dict["Label"] + "-V-" + dict["Value"];
         }
     }
     //end eventHandler
