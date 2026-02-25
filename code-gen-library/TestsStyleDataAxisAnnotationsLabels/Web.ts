@@ -23,7 +23,7 @@ public class TestsStyleAxisAnnotationsLabels
     			 this.StyleShape(item,args);
     			 return;
     		 }
-    		 if (index = args.dataIndex)
+    		 if (index == args.dataIndex)
     		 {
     			 this.StyleShape(item,args);
     			 return;
