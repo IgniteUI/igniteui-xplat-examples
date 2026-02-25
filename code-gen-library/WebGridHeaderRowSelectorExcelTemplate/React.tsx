@@ -8,9 +8,9 @@ export class WebGridHeaderRowSelectorExcelTemplate {
     public webGridHeaderRowSelectorExcelTemplate = (e: { dataContext: IgrHeadSelectorTemplateContext }) => {
         const ctx = e.dataContext;
         if (ctx.implicit.selectedCount > 0 && ctx.implicit.selectedCount === ctx.implicit.totalCount) {
-            return <><span style={{display: "block", width:"30px"}}><i style={{color: "rgb(239, 184, 209)"}}>◢</i></span></>;
+            return <><span style={{width:"30px", display: "flex", justifyContent: "center"}}><i style={{color: "rgb(239, 184, 209)", width:"18px", cursor: "pointer"}}>◢</i></span></>;
         } else {
-            return <><span style={{display: "block", width:"30px"}}><i>◢</i></span></>;
+            return <><span style={{width:"30px", display: "flex", justifyContent: "center"}}><i style={{width:"18px", cursor: "pointer"}}>◢</i></span></>;
         }
     };
     //end content
