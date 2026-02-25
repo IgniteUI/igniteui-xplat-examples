@@ -7,7 +7,7 @@ public class TestsStyleAxisAnnotationsLabels
 {
     //begin eventHandler
     //WPF: Infragistics.Controls.Charts.DataAnnotationShapeStyleEventHandler
-    private groupIndex: number = 0;
+    
     public testsStyleAxisAnnotationsLabels(sender: any, args: IgcDataAnnotationItem): void {
 	    const o: any | undefined = CodeGenHelper.findByName<object>("DataAnnotationShapeStylingOptions");
 	    if (o === undefined) return;
