@@ -6,9 +6,9 @@ export class TestsUpdateCalloutLabelV
 {
     //begin eventHandler
     //WPF: Infragistics.Controls.Charts.AxisFormatLabelEventHandler
-    public testsUpdateCalloutLabelV(IgcCalloutLabelUpdatingEventArgs: any): string
+    public testsUpdateCalloutLabelV(sender: any,args: IgcCalloutLabelUpdatingEventArgs)
     {       
-        args.label = args.label + "-V-" + args.value;
+       args.label = args.item["Label"] + "-V-" + args.item["Value"];
     }
     //end eventHandler
 }
