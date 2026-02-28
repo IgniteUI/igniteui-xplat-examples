@@ -3,20 +3,20 @@
 import { IgcDataAnnotationInfo } from "igniteui-webcomponents-charts";
 //end imports
 
-public class TestsStyleAxisAnnotationsLabels
+public class TestsStyleDataAxisAnnotationsLabels
 {
     //begin eventHandler
 
-    public TestsStyleAxisAnnotationsLabels(sender: any, args: IgcDataAnnotationInfo)
+    public testsStyleDataAxisAnnotationsLabels(sender: any, args: IgcDataAnnotationInfo)
     {         
-         let o = CodeGenHelper.findByName<object[]>("AxisAnnotationStlingOtions");
+         let o = CodeGenHelper.findByName<any>("AxisAnnotationStlingOtions");
     	 if (o === undefined)
     		return;
-        
+          const obj = JSON.parse(o.value.toString());
     		 
-    	 for (let i=0;i<o.length;i++)
+    	 for (let i=0;i<obj.length;i++)
     	 {
-    		 var item = o[i];
+    		 var item = obj[i];
     		 var index = item["Index"];
     		 if (index == -1)
     		 {
