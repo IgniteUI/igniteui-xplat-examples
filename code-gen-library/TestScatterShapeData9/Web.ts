@@ -18,7 +18,7 @@ export class TestScatterShapeData2 extends Array<object>
                      { x: 10, y: 90 },
                      { x: 40, y: 90 },
                      { x: 40, y: 60 }]]}
-                    ]}];
+                    ];
                  
             super(...newItems.slice(0));
         }
