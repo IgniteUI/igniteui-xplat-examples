@@ -14,10 +14,12 @@ export class WebGridRegionDropDownTemplate {
         const id = cell.id.rowID;
         const comboId = "region_" + id;
         (this as any).comboRefs = (this as any).comboRefs.bind(this);
+        const existingCombo = this.comboRefCollection.find(c => c.name === comboId);
+        const regionData = existingCombo?.data || [];
         return (
         <>
             <div style={{display: "flex", flexDirection: "column"}}>
-                <IgrCombo ref={(this as any).comboRefs} onChange={(args: any) => { (this as any).onRegionChange(id, args) }} placeholder="Choose Region..." disabled={true} valueKey="Region"  displayKey="Region" singleSelect={true} name={comboId}>
+                <IgrCombo ref={(this as any).comboRefs} data={regionData} disabled={regionData.length === 0} onChange={(args: any) => { (this as any).onRegionChange(id, args) }} placeholder="Choose Region..." valueKey="Region"  displayKey="Region" singleSelect={true} name={comboId}>
                 </IgrCombo>
             </div>
         </>
