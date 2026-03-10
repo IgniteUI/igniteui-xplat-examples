@@ -27,11 +27,11 @@ public class TestsStyleDataAnnotationsShapes
 	    }
 	}
 	
-	private styleShape(options: any, args: IgcDataAnnotationInfo): void {
+	private styleShape(options: any, args: IgcDataAnnotationItem): void {
 	    if (options.Brush !== undefined && options.Brush !== "")
 	        args.shapeBrush = options.Brush;
 	    if (options.OutlineBrush !== undefined && options.OutlineBrush !== "")
-	        args.shapeOutlineBrush = options.OutlineBrush;
+	        args.shapeOutline = options.OutlineBrush;
 	    if (options.Thickness !== "NaN")
 	        args.shapeThickness = options.Thickness;
 	}
