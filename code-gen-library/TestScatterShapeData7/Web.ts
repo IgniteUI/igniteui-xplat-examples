@@ -5,24 +5,24 @@
 export class TestScatterShapeData7 extends Array<object>
 {
    public constructor(){
-	   const newItems = [{ "Value": 10,"Points":[[
+	   const newItems = [{ "Value": 10,"Points":[
                      {"X":-40,"Y":20},
 					 {"X":-40,"Y":40},
 					 {"X":40,"Y":40},
 					 {"X":40,"Y":20},
-					 {"X":-40,"Y":20}]]},  
-					{ "Value": 20,"Points":[[
+					 {"X":-40,"Y":20}]},  
+					{ "Value": 20,"Points":[
                      {"X":-40,"Y":-10},
 					 {"X":-40,"Y":10},
 					 {"X":40,"Y":10},
 					 {"X":40,"Y":-10},
-					 {"X":-40,"Y":-10} ]]},
-					{ "Value": 30,"Points":[[
+					 {"X":-40,"Y":-10} ]},
+					{ "Value": 30,"Points":[
                      {"X":-40,"Y":-20},
 					 {"X":-40,"Y":-40},
 					 {"X":40,"Y":-40},
 					 {"X":40,"Y":-20},
-					 {"X":-40,"Y":-20}  ]]}];					 
+					 {"X":-40,"Y":-20}  ]}];					 
                      
                  
             super(...newItems.slice(0));
