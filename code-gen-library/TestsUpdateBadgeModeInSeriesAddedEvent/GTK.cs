@@ -10,7 +10,7 @@ public class TestsUpdateBadgeModeInSeriesAddedEvent
     //WPF: Infragistics.Controls.Charts.ChartSeriesEventHandler
     public void TestsUpdateBadgeModeInSeriesAddedEvent(object sender, ChartSeriesEventArgs args)
     {
-          args.Series.LegendItemBadgeMode = LegendItemBadgeMode.MatchSeries;
+          args.Series.LegendItemBadgeMode = Infragistics.Controls.LegendItemBadgeMode.MatchSeries;
 
     }
     //end eventHandler
