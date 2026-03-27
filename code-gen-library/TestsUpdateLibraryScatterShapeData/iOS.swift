@@ -6,11 +6,10 @@ import CoreGraphics
 public class TestsUpdateLibraryScatterShapeData {
 
     //begin eventHandler
-    //Swift: ([Any], JsonDictionaryObject) -> Any?
-    public init() {
-    }
-
-    public func testsUpdateLibraryScatterShapeData(_ origData: NSMutableArray, _ options: JsonDictionaryObject) -> Any? {
+    //Swift: Any?___Any?
+    public func testsUpdateLibraryScatterShapeData(sender: Any?, args: Any?) -> Any? {
+        guard let origData = sender as? NSMutableArray,
+              let options = args as? JsonDictionaryObject else { return nil }
         let updateType = (options["updateType"] as? JsonDictionaryValue)?.value as? String ?? ""
 
         switch updateType {
@@ -24,9 +23,9 @@ public class TestsUpdateLibraryScatterShapeData {
     }
 
     private func removeItems(_ origData: NSMutableArray, _ itemsToRemove: Any?) -> Any? {
-        if let jArray = itemsToRemove as? JsonDictionaryArray {
-            for item in jArray.items ?? [] {
-                if let index = intValue(item), index >= 0, index < origData.count {
+        if let jArray = itemsToRemove as? JsonDictionaryArray, let items = jArray.items {
+            for i in 0..<items.count {
+                if let index = intValue(items[i]), index >= 0, index < origData.count {
                     origData.removeObject(at: index)
                 }
             }
@@ -42,9 +41,9 @@ public class TestsUpdateLibraryScatterShapeData {
             return origData
         }
 
-        if let jArray = newData as? JsonDictionaryArray {
-            for item in jArray.items ?? [] {
-                if let jObject = item as? JsonDictionaryObject,
+        if let jArray = newData as? JsonDictionaryArray, let items = jArray.items {
+            for i in 0..<items.count {
+                if let jObject = items[i] as? JsonDictionaryObject,
                    let typedObject = getTypedObject(jObject, targetType: elementType) {
                     origData.add(typedObject)
                 }
@@ -76,14 +75,16 @@ public class TestsUpdateLibraryScatterShapeData {
             if key == "Points" {
                 var points: [CGPoint] = []
                 let pArr = jObject["Points"] as? JsonDictionaryArray
-                for pItem in pArr?.items ?? [] {
-                    guard let pObj = pItem as? JsonDictionaryObject else {
+                if let pItems = pArr?.items {
+                for i in 0..<pItems.count {
+                    guard let pObj = pItems[i] as? JsonDictionaryObject else {
                         continue
                     }
 
                     let x = numberValue(pObj["X"]) ?? 0
                     let y = numberValue(pObj["Y"]) ?? 0
                     points.append(CGPoint(x: x, y: y))
+                }
                 }
 
                 ret.setValue(points, forKey: key)
