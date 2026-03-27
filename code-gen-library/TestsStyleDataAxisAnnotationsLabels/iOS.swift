@@ -1,15 +1,15 @@
 //begin imports
 import Foundation
-import UIKit   // If using SwiftUI instead, see the note at the end.
+import UIKit
 import CoreGraphics
 //end imports
 
 public class TestsStyleDataAxisAnnotationsLabels {
-    
-    public func testsStyleDataAxisAnnotationsLabels(_ sender: Any?, _ args: DataAnnotationInfo) {
-        guard let value = CodeGenHelper.findByName(Any.self, "AxisAnnotationStlingOtions") else {
-            return
-        }
+    //begin eventHandler
+    //Swift: IgsDataAnnotationInfo
+    public func testsStyleDataAxisAnnotationsLabels(sender: Any?, args: IgsDataAnnotationInfo?) {
+        guard let args = args else { return }
+        guard let value = CodeGenHelper.findByName(Any.self, "AxisAnnotationStlingOtions") else { return }
 
         let parser = JsonDictionaryParser()
         let array = parser.parse(json_: (value as! JsonDictionaryValue).value as! String) as! JsonDictionaryArray
@@ -24,53 +24,41 @@ public class TestsStyleDataAxisAnnotationsLabels {
         }
     }
 
-    private func styleShape(_ options: JsonDictionaryObject, _ args: DataAnnotationInfo) {
+    private func styleShape(_ options: JsonDictionaryObject, _ args: IgsDataAnnotationInfo) {
         let background = stringValue(options["Background"])
-        if let background, !background.isEmpty {
-            args.background = brush(from: background)
+        if let background = background, !background.isEmpty {
+            args.background = IgsBrush.fromColorString(background)
         }
 
         let borderColor = stringValue(options["BorderColor"])
-        if let borderColor, !borderColor.isEmpty {
-            args.borderColor = brush(from: borderColor)
+        if let borderColor = borderColor, !borderColor.isEmpty {
+            args.borderColor = IgsBrush.fromColorString(borderColor)
         }
 
         let textColor = stringValue(options["TextColor"])
-        if let textColor, !textColor.isEmpty {
-            args.textColor = brush(from: textColor)
+        if let textColor = textColor, !textColor.isEmpty {
+            args.textColor = IgsBrush.fromColorString(textColor)
         }
 
         let borderThickness = stringValue(options["BorderThickness"])
-        if borderThickness != "NaN", let value = numberValue(options["BorderThickness"]) {
+        if let borderThickness = borderThickness, borderThickness != "NaN", let value = Double(borderThickness) {
             args.borderThickness = value
         }
 
         let borderRadius = stringValue(options["BorderRadius"])
-        if borderRadius != "NaN", let value = numberValue(options["BorderRadius"]) {
+        if let borderRadius = borderRadius, borderRadius != "NaN", let value = Double(borderRadius) {
             args.borderRadius = value
         }
 
         let xAxisLabel = stringValue(options["XAxisLabel"])
-        if let xAxisLabel, !xAxisLabel.isEmpty {
+        if let xAxisLabel = xAxisLabel, !xAxisLabel.isEmpty {
             args.xAxisLabel = xAxisLabel
         }
 
         let yAxisLabel = stringValue(options["YAxisLabel"])
-        if let yAxisLabel, !yAxisLabel.isEmpty {
+        if let yAxisLabel = yAxisLabel, !yAxisLabel.isEmpty {
             args.yAxisLabel = yAxisLabel
         }
-    }
-
-    private func brush(from color: String) -> Brush? {
-        guard !color.isEmpty else {
-            return nil
-        }
-
-        let brush = Brush()
-        let parsedColor = Color()
-        parsedColor.colorString = color
-        brush.color = parsedColor
-        return brush
     }
 
     private func stringValue(_ value: Any?) -> String? {
@@ -105,4 +93,5 @@ public class TestsStyleDataAxisAnnotationsLabels {
             return nil
         }
     }
+    //end eventHandler
 }
