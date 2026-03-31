@@ -2,7 +2,7 @@
 //end imports
 
 //begin data
-export class TestScatterShapeData2 extends Array<object>
+export class TestScatterShapeData9 extends Array<object>
 {
    public constructor(){
 	   const newItems = [{ "Value": 10,"Points":[[
