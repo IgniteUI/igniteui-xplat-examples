@@ -5,7 +5,7 @@ using Infragistics.Controls.Grids;
 public class OnBoundToValue
 {
     //begin eventHandler
-    //WPF: Infragistics.Controls.Grids.DataBound
+    //WPF: Infragistics.Controls.Grids.DataBindingEventHandler
     public void OnBoundToValue(object sender, DataBindingEventArgs args)
     {
         args.CellInfo.RenderValue = args.CellInfo.OriginalValue?.ToString() ?? "";

@@ -5,7 +5,7 @@ using Infragistics.Controls.Grids;
 public class OnBoundToRowIndex
 {
     //begin eventHandler
-    //WPF: Infragistics.Controls.Grids.DataBound
+    //WPF: Infragistics.Controls.Grids.DataBindingEventHandler
     public void OnBoundToRowIndex(object sender, DataBindingEventArgs args)
     {
         args.CellInfo.RenderValue = args.CellInfo.DataRow.ToString();
