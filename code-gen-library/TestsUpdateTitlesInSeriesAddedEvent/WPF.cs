@@ -1,5 +1,6 @@
 //begin imports
 using Infragistics.Controls.Charts;
+using Infragistics.Controls.Description;
 using Newtonsoft.Json.Linq;
 //end imports
 
@@ -10,11 +11,16 @@ public class TestsUpdateTitlesInSeriesAddedEvent
     int titleIndex = 0;
     public void TestsUpdateTitlesInSeriesAddedEvent(object sender, ChartSeriesEventArgs args)
     {
+		var parser = new JsonDictionaryParser();
 		object o = CodeGenHelper.FindByName<object>("SeriesAddedTitles");
-		JObject obj =  JObject.Parse(o.ToString());
-		 bool updateAnnotations = obj["includeAnnotations"].ToObject<bool>();
-		 var seriesTitles = (JArray) obj["names"];
-		 List<string> names = seriesTitles.ToObject<List<string>>();
+		var obj = (JsonDictionaryObject)parser.Parse((string)((JsonDictionaryValue)o).Value);
+		var updateAnnotations = (bool)(obj["includeAnnotations"] as JsonDictionaryValue).Value;
+      
+	  	var seriesTitles = (JsonDictionaryArray)obj["names"];
+		List<string> names = new List<string>();
+		foreach (var item in seriesTitles.Items) {
+          names.Add(((JsonDictionaryValue)item).Value as String);
+      	}
 
 		if (args.Series.IsAnnotationLayer && !updateAnnotations)
 			 return;
