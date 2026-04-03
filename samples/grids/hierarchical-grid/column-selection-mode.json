@@ -12,14 +12,12 @@
             "isWrappingEnabled": true,
             "properties": [
                 {
-                  "type": "PropertyEditorPropertyDescription",
-                  "propertyPath": "ColumnSelection",
-                  "name": "ColumnSelectionEditor",
-                  "valueType": "EnumValue",
-                  "dropDownNames": ["None", "Single", "Multiple", "MultipleCascade"],
-                  "dropDownValues": ["None", "Single", "Multiple", "MultipleCascade"]
+                    "type": "PropertyEditorPropertyDescription",
+                    "propertyPath": "ColumnSelection",
+                    "name": "columnSelectionEditor",
+                    "label": "Column Selection"
                 }
-              ]
+            ]
         },
         "content": {
             "type": "WebHierarchicalGrid",

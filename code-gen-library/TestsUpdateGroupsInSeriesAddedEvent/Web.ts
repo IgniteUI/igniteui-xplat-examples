@@ -3,7 +3,7 @@ import { IgcChartSeriesEventArgs } from 'igniteui-webcomponents-charts';
 
 //end imports
 
-export class TestsUpdateGroupsInSeriesAddedEvent
+export class TestsUpdateGrpupsInSeriesAddedEvent
 {
     //begin eventHandler
     groupIndex: number = 0;

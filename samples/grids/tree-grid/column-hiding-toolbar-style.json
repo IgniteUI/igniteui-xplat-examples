@@ -41,9 +41,7 @@
             "type": "WebColumn",
             "field": "ID",
             "dataType": "Number",
-            "sortable": true,
-            "hidden": true,
-            "disableHiding": true
+            "sortable": true
           },
           {
             "type": "WebColumn",
@@ -79,29 +77,25 @@
             "type": "WebColumn",
             "field": "Country",
             "dataType": "String",
-            "sortable": true,
-            "disableHiding": true
+            "sortable": true
           },
           {
             "type": "WebColumn",
             "field": "Fax",
             "dataType": "String",
-            "sortable": true,
-            "disableHiding": true
+            "sortable": true
           },
           {
             "type": "WebColumn",
             "field": "PostalCode",
             "dataType": "String",
-            "sortable": true,
-            "disableHiding": true
+            "sortable": true
           },
           {
             "type": "WebColumn",
             "field": "Phone",
             "dataType": "String",
-            "sortable": true,
-            "disableHiding": true
+            "sortable": true
           }
         ]
       }

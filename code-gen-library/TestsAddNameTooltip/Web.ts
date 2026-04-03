@@ -7,7 +7,7 @@ export class TestsAddNameTooltip
 {
 
     //begin eventHandler
-    public testsAddNameTooltip(){
+    public  testsAddNameTooltip(){
 		var chart = CodeGenHelper.getDescription<IgcDataChartComponent>("content");
         for(let i=0;i<chart.series.count;i++)
         {

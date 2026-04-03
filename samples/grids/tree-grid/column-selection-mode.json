@@ -15,10 +15,8 @@
         {
           "type": "PropertyEditorPropertyDescription",
           "propertyPath": "ColumnSelection",
-          "name": "ColumnSelectionEditor",
-          "valueType": "EnumValue",
-          "dropDownNames": ["None", "Single", "Multiple", "MultipleCascade"],
-          "dropDownValues": ["None", "Single", "Multiple", "MultipleCascade"]
+          "name": "columnSelectionEditor",
+          "label": "Column Selection"
         }
       ]
     },

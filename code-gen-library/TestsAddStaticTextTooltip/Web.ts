@@ -7,7 +7,7 @@ export class TestsAddStaticTextTooltip
 {
 
     //begin eventHandler
-    public testsAddStaticTextTooltip(){
+    public  testsAddStaticTextTooltip(){
 		var chart = CodeGenHelper.getDescription<IgcDataChartComponent>("content");
         for(let i=0;i<chart.series.count;i++)
         {

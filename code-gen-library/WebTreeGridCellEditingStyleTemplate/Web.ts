@@ -9,9 +9,9 @@ export class WebTreeGridCellEditingStyleTemplate {
     public requiredStyles = `
 <!--begin styles-->
 #treeGrid {
-    --ig-grid-edit-mode-color: #FFA500;
-    --ig-grid-cell-active-border-color: #AAFF00;
-    --ig-grid-cell-editing-background: #ADD8E6;
+	--cell-editing-background: #4567bb;
+    --cell-active-border-color: #4567bb;
+    --cell-edited-value-color: #fff;
 }
 <!--end styles-->
     `;

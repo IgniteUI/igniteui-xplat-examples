@@ -1,7 +1,7 @@
 //begin eventHandler
 igRegisterScript("WebGridEditedRowClassesHandler", () => {
     return {
-        edited: (row) => updatedRecsPK.indexOf(row.data[row.grid.primaryKey]) !== -1
+        edited: (row) => updatedRecsPK.indexOf(row.data[grid.primaryKey]) !== -1
     };
 }, true);
 //end eventHandler

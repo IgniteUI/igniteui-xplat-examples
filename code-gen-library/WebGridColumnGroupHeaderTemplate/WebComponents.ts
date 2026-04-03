@@ -8,7 +8,7 @@ export class WebGridColumnGroupHeaderTemplate {
 public webGridColumnGroupHeaderTemplate = (ctx: IgcColumnTemplateContext) => {
     const column = (ctx as any).column;
     return html`<div style="display:flex;align-items:center;gap:5px;">
-                <span draggable="false" style="cursor:pointer;" @click=${(e: any) => this.toggleColumnGroup(column)}>
+                <span draggable="false"  @click=${(e: any) => this.toggleColumnGroup(column)}>
             ${this.columnGroupStates.get(column) ? "🔽" : "🔼"}
                 </span>
                     <span>${column.header}</span>
