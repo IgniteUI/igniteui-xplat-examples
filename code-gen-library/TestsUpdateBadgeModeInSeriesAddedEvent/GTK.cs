@@ -14,3 +14,4 @@ public class TestsUpdateBadgeModeInSeriesAddedEvent
     }
     //end eventHandler
 }
+
