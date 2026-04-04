@@ -1,7 +1,7 @@
 //begin imports
 using Infragistics.Controls;
 using Infragistics.Controls.Gauges;
-using Infragistics.Controls.Description;
+using Infragistics.Poratble.Description;
 //end imports
 
 public class TestsAddBulletGraphLabelFormatSpecifier
