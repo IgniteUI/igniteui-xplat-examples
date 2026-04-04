@@ -3,7 +3,7 @@ using Infragistics.Controls;
 using Infragistics.Core;
 using System.Collections;
 using System.Collections.ObjectModel;
-using Infragistics.Controls.Description;
+using Infragistics.Portable.Description;
 using Infragistics.Portable;
 using System.Reflection;
 //end imports
