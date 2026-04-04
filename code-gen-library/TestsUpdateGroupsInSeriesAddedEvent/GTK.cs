@@ -1,7 +1,7 @@
 //begin imports
 using Infragistics.Controls;
 using Infragistics.Controls.Charts;
-using Infragistics.Controls.Description;
+using Infragistics.Portable.Description;
 //end imports
 
 public class TestsUpdateGrpupsInSeriesAddedEvent
