@@ -1,6 +1,6 @@
 //begin imports
 using Infragistics.Controls.Gauges;
-using Infragistics.Controls.Description;
+using Infragistics.Portable.Description;
 //end imports
 
 public class TestsRadialGaugeAlignLabels
