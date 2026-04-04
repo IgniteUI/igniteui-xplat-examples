@@ -1,7 +1,7 @@
 //begin imports
 using Infragistics.Controls.Charts;
 using Infragistics.Core.Graphics;
-using Infragistics.Controls.Description;
+using Infragistics.Portable.Description;
 using System;
 using System.Globalization;
 //end imports
