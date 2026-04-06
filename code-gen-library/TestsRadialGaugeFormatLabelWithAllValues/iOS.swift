@@ -6,22 +6,22 @@ import Foundation
 class TestsRadialGaugeFormatLabelWithAllValues {
 
     //begin eventHandler
-    func testsRadialGaugeFormatLabelWithAllValues(sender: Any?, args: AlignLinearGraphLabelEventArgs?) {
+    func testsRadialGaugeFormatLabelWithAllValues(sender: Any?, args: AlignRadialGaugeLabelEventArgs?) {
         
 		
 		let radToDeg = 180.0 / Double.pi
 
-		let angleDeg      = (args.angle * radToDeg).rounded(.toNearestOrEven)
-		let startAngleDeg = (args.startAngle * radToDeg).rounded(.toNearestOrEven)
-		let endAngleDeg   = (args.endAngle * radToDeg).rounded(.toNearestOrEven)
+		let angleDeg      = (args!.angle * radToDeg).rounded(.toNearestOrEven)
+		let startAngleDeg = (args!.startAngle * radToDeg).rounded(.toNearestOrEven)
+		let endAngleDeg   = (args!.endAngle * radToDeg).rounded(.toNearestOrEven)
 
-		args.label =
-		  "Value:\(args.value)," +
+		args!.label =
+		  "Value:\(args!.value)," +
 		  "Angle:\(Int(angleDeg))," +
 		  "StartAngle:\(Int(startAngleDeg))," +
 		  "EndAngle:\(Int(endAngleDeg))," +
-		  "ActualMinimumValue:\(args.actualMinimumValue)," +
-		  "ActualMaximumValue:\(args.actualMaximumValue)"
+		  "ActualMinimumValue:\(args!.actualMinimumValue)," +
+		  "ActualMaximumValue:\(args!.actualMaximumValue)"
 
 
     }
