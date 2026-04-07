@@ -1,41 +1,43 @@
 //begin imports
 using Infragistics.Controls;
 using Infragistics.Controls.Gauges;
-using Newtonsoft.Json.Linq;
+using Infragistics.Portable.Description;
 //end imports
 
 public class TestsAddGaugeLabelFormatSpecifier
 {
 
     //begin eventHandler
-	//WPF: System.Action
+	//GTK: System.Action
     public  void TestsAddGaugeLabelFormatSpecifier(){
-        var gauge = CodeGenHelper.GetDescription<XamLinearGauge>("content");
-		var jVal = CodeGenHelper.FindByName<JValue>("GaugeLabelFormatSpecifier");
-		var formatterInfo = JObject.Parse(jVal.ToString());
+        var parser = new JsonDictionaryParser();
+		var gauge = CodeGenHelper.GetDescription<XamLinearGauge>("content");
+		var jVal = CodeGenHelper.FindByName<JsonDictionaryValue>("GaugeLabelFormatSpecifier");
+		var formatterInfo = (JsonDictionaryObject)parser.Parse((string)((JsonDictionaryValue)jVal).Value);
+		
 		NumberFormatSpecifier numSpec = new NumberFormatSpecifier();
-		foreach (var prop in formatterInfo.Properties())
+		foreach (var prop in formatterInfo.GetKeys())
 		{
-			switch (prop.Name) {
+			switch (prop) {
 				case "MaximumFractionDigits":
-					numSpec.MaximumFractionDigits = (int)prop.Value;
-					break;
+						numSpec.MaximumFractionDigits = (int)(double)(((JsonDictionaryValue)(formatterInfo[prop])).Value);
+						break;
 				case "MinimumFractionDigits":
-					numSpec.MinimumFractionDigits = (int)prop.Value;
-					break;
+						numSpec.MinimumFractionDigits = (int)(double)(((JsonDictionaryValue)(formatterInfo[prop])).Value);
+						break;
 				case "MinimumIntegerDigits":
-					numSpec.MinimumIntegerDigits = (int)prop.Value;
-					break;
+						numSpec.MinimumIntegerDigits = (int)(double)(((JsonDictionaryValue)(formatterInfo[prop])).Value);
+						break;
 				case "Locale":
-					numSpec.Locale = prop.Value.ToString();
-					break;
+						numSpec.Locale = (string)(((JsonDictionaryValue)(formatterInfo[prop])).Value);
+						break;
 				case "UseGrouping":
-					numSpec.UseGrouping = (bool)prop.Value;
-					break;
+						numSpec.UseGrouping = (bool)(((JsonDictionaryValue)(formatterInfo[prop])).Value);
+						break;
 				case "Style":
-					numSpec.Style = prop.Value.ToString();
-					break;
-        
+						numSpec.Style = (string)(((JsonDictionaryValue)(formatterInfo[prop])).Value);
+						break;
+
 			}
 		}
 

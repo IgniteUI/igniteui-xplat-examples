@@ -1,7 +1,7 @@
 //begin imports
 using Infragistics.Controls.Charts;
 using Infragistics.Core.Graphics;
-using Newtonsoft.Json.Linq;
+using Infragistics.Portable.Description;
 using System;
 using System.Globalization;
 //end imports
@@ -9,19 +9,20 @@ using System.Globalization;
 public class TestsStyleDataAxisAnnotationsLabels
 {
     //begin eventHandler
-    //WPF: Infragistics.Controls.Charts.DataAnnotationLabelStyleEventHandler
+    //GTK: Infragistics.Controls.Charts.DataAnnotationLabelStyleEventHandler
 
     public void TestsStyleDataAxisAnnotationsLabels(object sender, DataAnnotationInfo args)
     {
          object o = CodeGenHelper.FindByName<object>("AxisAnnotationStlingOtions");
 		 if (o == null)
 			return;
-         JArray array  =  JArray.Parse(o.ToString());
+         var parser = new JsonDictionaryParser();
+         var array = (JsonDictionaryArray)parser.Parse((string)((JsonDictionaryValue)o).Value);
 
-		 for (int i=0;i<array.Count;i++)
+		 for (int i=0;i<array.Items.Length;i++)
 		 {
-			 var item = (JObject) array[i];
-			 var index = item["Index"].Value<int>();
+			 JsonDictionaryObject item = (JsonDictionaryObject)array.Items[i];
+			 var index = item.GetNumber("Index");
 			 if (index == -1)
 			 {
 				 StyleShape(item,args);
@@ -35,27 +36,27 @@ public class TestsStyleDataAxisAnnotationsLabels
 		 }
     }
 
-	private void StyleShape(JObject options, DataAnnotationInfo args)
+	private void StyleShape(JsonDictionaryObject options, DataAnnotationInfo args)
 	{
-		var background = options["Background"].Value<string>();
+		var background = options.GetString("Background");
 		if (background != "")
 			args.Background = GetBrush(background);
-		var borderColor = options["BorderColor"].Value<string>();
+		var borderColor = options.GetString("BorderColor");
 		if (borderColor != null)
 			args.BorderColor = GetBrush(borderColor);
-		var TextColor = options["TextColor"].Value<string>();
+		var TextColor = options.GetString("TextColor");
 		if (TextColor != null)
 			args.TextColor = GetBrush(TextColor);
-		var BorderThickness = options["BorderThickness"].Value<string>();
+		var BorderThickness = options.GetString("BorderThickness");
 		if (BorderThickness != "NaN")
-			args.BorderThickness = options["BorderThickness"].Value<double>();
-		var BorderRadius = options["BorderRadius"].Value<string>();
+			args.BorderThickness = options.GetNumber("BorderThickness");
+		var BorderRadius = options.GetString("BorderRadius");
 		if (BorderRadius != "NaN")
-			args.BorderRadius = options["BorderRadius"].Value<double>();
-		var XAxisLabel = options["XAxisLabel"].Value<string>();
+			args.BorderRadius = options.GetNumber("BorderRadius");
+		var XAxisLabel = options.GetString("XAxisLabel");
 		if (!string.IsNullOrEmpty(XAxisLabel))
 			args.XAxisLabel = XAxisLabel;
-		var YAxisLabel = options["YAxisLabel"].Value<string>();
+		var YAxisLabel = options.GetString("YAxisLabel");
 		if (!string.IsNullOrEmpty(YAxisLabel))
 			args.YAxisLabel = YAxisLabel;
 
