@@ -1,11 +1,11 @@
 //begin imports
-import com.infragistics.mobile.controls.AlignRadialGaugeLabelEventArgs
+import com.infragistics.mobile.controls.IgaAlignRadialGaugeLabelEventArgs
 //end imports
 
 class TestsRadialGaugeAlignLabels {
 
     //begin eventHandler
-    fun testsRadialGaugeAlignLabels(sender: Any?, args: AlignRadialGaugeLabelEventArgs) {
+    fun testsRadialGaugeAlignLabels(sender: Any?, args: IgaAlignRadialGaugeLabelEventArgs) {
 		val o = CodeGenHelper.findByName<Any>("LabelAlignValues")
         var parser = JsonDictionaryParser();
         val obj = parser.parse(((o as JsonDictionaryValue).value as String)) as JsonDictionaryObject;
