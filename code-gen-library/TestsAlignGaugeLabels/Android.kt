@@ -6,8 +6,8 @@ class TestsAlignGaugeLabels {
 
     //begin eventHandler
     fun testsAlignGaugeLabels(sender: Any?, args: IgaAlignRadialGaugeLabelEventArgs) {
-        args.offsetX = 15;
-		args.offsetY = 12;
+        args.offsetX = 15.0;
+		args.offsetY = 12.0;
     }
     //end eventHandler
 

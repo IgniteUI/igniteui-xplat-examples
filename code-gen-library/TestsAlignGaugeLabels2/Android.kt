@@ -6,8 +6,8 @@ class TestsAlignGaugeLabels2 {
 
     //begin eventHandler
     fun testsAlignGaugeLabels2(sender: Any?, args: IgaAlignLinearGraphLabelEventArgs) {
-        args.offsetX =  10;
-		args.offsetY =  10;
+        args.offsetX = 10.0;
+		args.offsetY = 10.0;
     }
     //end eventHandler
 
