@@ -5,7 +5,7 @@ import UIKit;
 class TestsRadialGaugeFormatLabelWithDecimals {
 
     //begin eventHandler
-    func testsRadialGaugeFormatLabelWithDecimals(sender: Any?, args: AlignLinearGraphLabelEventArgs?) {
+    func testsRadialGaugeFormatLabelWithDecimals(sender: Any?, args: IgsAlignLinearGraphLabelEventArgs?) {
         
 		args!.label = String(format: "%.3f", args!.value) 
 

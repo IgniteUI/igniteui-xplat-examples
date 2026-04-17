@@ -5,7 +5,7 @@ import UIKit;
 class TestsLinearGaugePrependLabels {
 
     //begin eventHandler
-    func testsLinearGaugePrependLabels(sender: Any?, args: FormatLinearGraphLabelEventArgs?) {
+    func testsLinearGaugePrependLabels(sender: Any?, args: IgsFormatLinearGraphLabelEventArgs?) {
         let o = CodeGenHelper.findByName(Any.self, "LabelPrependValue")
 		let parser = JsonDictionaryParser()
         let obj = parser.parse(json_: (o as! JsonDictionaryValue).value as! String) as! JsonDictionaryObject

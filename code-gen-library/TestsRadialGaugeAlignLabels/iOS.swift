@@ -5,7 +5,7 @@ import UIKit;
 class TestsRadialGaugeAlignLabels {
 
     //begin eventHandler
-    func testsRadialGaugeAlignLabels(sender: Any?, args: AlignRadialGaugeLabelEventArgs?) {
+    func testsRadialGaugeAlignLabels(sender: Any?, args: IgsAlignRadialGaugeLabelEventArgs?) {
         let o = CodeGenHelper.findByName(Any.self, "LabelAlignValues")
         let parser = JsonDictionaryParser()
         let obj = parser.parse(json_: (o as! JsonDictionaryValue).value as! String) as! JsonDictionaryObject

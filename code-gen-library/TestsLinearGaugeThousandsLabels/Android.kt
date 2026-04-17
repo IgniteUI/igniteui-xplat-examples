@@ -1,12 +1,12 @@
 //begin imports
-import com.infragistics.mobile.controls.FormatLinearGraphLabelEventArgs
+import com.infragistics.mobile.controls.IgaFormatLinearGraphLabelEventArgs
 
 //end imports
 
 class TestsLinearGaugeThousandsLabels {
 
     //begin eventHandler
-    fun testsLinearGaugeThousandsLabels(sender: Any?, args: FormatLinearGraphLabelEventArgs) {
+    fun testsLinearGaugeThousandsLabels(sender: Any?, args: IgaFormatLinearGraphLabelEventArgs) {
 	   
 		var value = args.value
 		if (args.value > 1000) {

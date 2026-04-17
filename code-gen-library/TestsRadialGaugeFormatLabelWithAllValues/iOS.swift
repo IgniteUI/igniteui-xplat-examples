@@ -6,7 +6,7 @@ import Foundation
 class TestsRadialGaugeFormatLabelWithAllValues {
 
     //begin eventHandler
-    func testsRadialGaugeFormatLabelWithAllValues(sender: Any?, args: AlignRadialGaugeLabelEventArgs?) {
+    func testsRadialGaugeFormatLabelWithAllValues(sender: Any?, args: IgsAlignRadialGaugeLabelEventArgs?) {
         
 		
 		let radToDeg = 180.0 / Double.pi
