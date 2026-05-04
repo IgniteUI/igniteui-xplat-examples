@@ -58,7 +58,7 @@ NOTE: Above order of steps is important and PRs made in step #1 must be merged b
 
 ## Creating Volume Branch in Code Exporter App Repo
 
-- create **new volume branch** (e.g. 2025.1) in [code exporter app](https://infragistics.visualstudio.com/NetAdvantage/_git/code-exporter-app) repo
+- create **new volume branch** (e.g. 2025.1) in [code exporter app](https://infragistics.visualstudio.com/NetAdvantage/_git/code-exporter-app) repo off of the main branch with name of last volume release
 
 - update the included branches in [build-pipeline.yml](https://infragistics.visualstudio.com/NetAdvantage/_git/code-exporter-app?path=/azure-pipelines/build-pipeline.yml)
 
@@ -80,13 +80,11 @@ NOTE: Above order of steps is important and PRs made in step #1 must be merged b
 
 - complete steps in previous section
 
-- create **new volume branch** (e.g. 25.1) in [xplat-examples](https://github.com/IgniteUI/igniteui-xplat-examples) repo
+- create **new volume branch** (e.g. 2025.1) in [code exporter app](https://infragistics.visualstudio.com/NetAdvantage/_git/code-exporter-app) repo off of the main branch with name of last volume release
 
 - update the included branches in [build-pipeline.yml](https://github.com/IgniteUI/igniteui-xplat-examples/blob/25.2/azure-pipelines/build-pipeline.yml)
 
 - move the old volume branch (e.g. 25.2) to excluded branches in [build-pipeline.yml](https://github.com/IgniteUI/igniteui-xplat-examples/blob/25.2/azure-pipelines/build-pipeline.yml)
-
-- update codeExporterAppBranch to the **new volume branch** (e.g. 2025.1) [build-pipeline.yml](https://github.com/IgniteUI/igniteui-xplat-examples/blob/25.2/azure-pipelines/build-pipeline.yml)
 
 - update the included branches in [dev-run-pipeline.yml](https://github.com/IgniteUI/igniteui-xplat-examples/blob/25.2/azure-pipelines/dev-run-pipeline.yml)
 
