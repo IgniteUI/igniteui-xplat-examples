@@ -10,7 +10,7 @@ public webTreeGridPinHeaderTemplate = (props: {dataContext: IgrColumnTemplateCon
     return (
         <div style={{display: 'flex'}}>
             <span>{column.field}</span>
-            <span style={{marginLeft: 'auto'}} onPointerDown={(e: any) => this.toggleColumnPin(column.field)}>📌</span>
+            <span style={{marginLeft: 'auto', cursor: 'pointer'}} onPointerDown={(e: any) => this.toggleColumnPin(column.field)}>📌</span>
         </div>
     );
 }

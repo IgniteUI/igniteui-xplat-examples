@@ -7,7 +7,7 @@ export class TestsAddDataLegendValueFormatSpecifier
 {
 
     //begin eventHandler
-    public  testsAddDataLegendValueFormatSpecifier(){
+    public testsAddDataLegendValueFormatSpecifier(){
         var legend = CodeGenHelper.getDescription<IgrDataLegend>("secondary");
         const jVal = CodeGenHelper.findByName<any>("DataLegendValueFormatSpecifier");
         var numSpec = new IgcNumberFormatSpecifier();
