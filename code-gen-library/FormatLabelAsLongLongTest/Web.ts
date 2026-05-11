@@ -7,7 +7,7 @@ export class FormatLabelAsLongLongTest
     //WPF: Infragistics.Controls.Charts.AxisFormatLabelEventHandler
     public formatLabelAsLongLongTest(item: any): string
     {       
-        return "TEST";
+        return "LONGLONGTEST";
     }
     //end eventHandler
 }
