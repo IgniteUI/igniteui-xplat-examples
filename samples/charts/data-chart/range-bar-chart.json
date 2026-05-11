@@ -25,7 +25,9 @@
         {
           "type": "NumericXAxis",
           "name": "xAxis",
-          "title": "Temperature (in Celsius)"
+          "title": "Temperature (in Celsius)",
+          "titleAngle": 0,
+          "titleTopMargin": 10
         }
       ],
       "series": [
@@ -63,7 +65,6 @@
     "charts/DataChartCategoryModule",
     "charts/DataChartInteractivityModule",
     "charts/DataChartAnnotationModule",
-    "charts/DataChartVerticalCategoryModule",
     "charts/LegendModule"
   ]
 }
