@@ -7,7 +7,7 @@ export class TestsAddGaugeLabelFormatSpecifier
 {
 
     //begin eventHandler
-    public  testsAddGaugeLabelFormatSpecifier(){
+    public testsAddGaugeLabelFormatSpecifier(){
         var gauge = CodeGenHelper.getDescription<IgcLinearGaugeComponent>("content");
         const jVal = CodeGenHelper.findByName<any>("GaugeLabelFormatSpecifier");
         var numSpec = new IgcNumberFormatSpecifier();
