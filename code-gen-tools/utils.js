@@ -563,44 +563,43 @@ class HTML {
   }
 
      a(path, content) { return this.link(path, content); }
-  link(path, content) {
+  link(path, content, _class) {
     if (content === undefined) content = path;
-    return '<a href=' + this.qt(path) + '> ' + content + ' </a>';
+    if (_class === undefined) _class = '';
+    return '<a href=' + this.qt(path) + ' class=' + this.qt(_class) + '> ' + content + ' </a>';
   }
 
   qt(content) {
     return '"' + content + '"';
   }
 
-  p(content) {
-    return '<p>' + content + '</p>\r\n';
-  }
-  
-  h1(content) {
-    return '<h1>' + content + '</h1>\r\n';
-  }
+  p(content) { return '<p>' + content + '</p>\r\n'; }
 
-  lbl(content) {
-    return '<label>' + content + '</label>';
-  }
+  h1(content) { return '<h1>' + content + '</h1>\r\n'; }
+  h2(content) { return '<h2>' + content + '</h2>\r\n'; }
+  h3(content) { return '<h3>' + content + '</h3>\r\n'; }
+
+  lbl(content) { return '<label>' + content + '</label>'; }
 
   table(content) {
     return '<table>\n' + content + '\n</table>';
   }
 
-  horizontalStyle = 'display: flex; flex-direction: row; align-items: center; text-anchor: middle; gap: 10px;';
-  verticalStyle   = 'display: flex; flex-direction: column; align-items: center; text-anchor: middle; gap: 10px;';
+  horizontalStyle = 'display: flex; flex-flow: wrap; flex-direction: row; align-items: center; text-anchor: middle; gap: 10px;';
+  verticalStyle   = 'display: flex; flex-flow: wrap; flex-direction: column; align-items: center; text-anchor: middle; gap: 10px;';
   div(elements, style) {
     if (style === undefined) style = this.horizontalStyle;
     var content = elements.join(" ");
     return '<div style=' + this.qt(style) + '> ' + content + '</div>';
   }
 
-  horizontal(elements) {
-    return div(elements, this.horizontalStyle);
+  horizontal(elements, style) {
+    if (style === undefined) style = 'width: 100%; ';
+    return this.div(elements, this.horizontalStyle + style);
   }
-  vertical(elements) {
-    return div(elements, this.verticalStyle);
+  vertical(elements, style) {
+    if (style === undefined) style = 'width: 100%; ';
+    return this.div(elements, this.verticalStyle + style);
   }
 
    tr(content) { return this.row(content); }
@@ -627,15 +626,25 @@ class HTML {
     return '<td class=' + this.qt(style) + '> ' + content + ' </td> ';
   }
 
-    i(path, width, height, style) { return this.img(path, width, height, style); }
-  img(path, width, height, style) {
+    i(path, width, height, _class) { return this.img(path, width, height, _class); }
+  img(path, width, height, _class) {
     if (height === undefined) height = '20';
     if (width === undefined) width = '30';
-    return '<img src=' + this.qt(path) + ' width=' + this.qt(width) + ' height=' + this.qt(height) + ' class=' + this.qt(style) + '>';
+
+    var title = path;
+    // if (path.indexOf('/') > 0) {
+    //   var parts = path.split('/');
+    //   title = parts[parts.length - 1];
+    // }
+
+    return '<img src=' + this.qt(path) + 
+    ' width=' + this.qt(width) + 
+    ' height=' + this.qt(height) + 
+    ' title=' + this.qt(title) + 
+    ' class=' + this.qt(_class) + '>';
   }
 }
 exports.createHTML = function createHTML() {
   let html = new HTML();
   return html;
 }
-
