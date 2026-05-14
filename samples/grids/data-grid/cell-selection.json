@@ -1,0 +1,52 @@
+{
+  "skipAlterDataCasing": true,
+  "descriptions": {
+    "editor": {
+      "type": "PropertyEditorPanel",
+      "name": "PropertyEditor",
+      "componentRendererRef": "renderer",
+      "targetRef": "grid",
+      "descriptionType": "DataGrid",
+      "isHorizontal": true,
+      "isWrappingEnabled": true,
+      "properties": [
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "SelectionMode",
+          "name": "SelectionModeEditor",
+          "label": "Selection Mode",
+          "shouldOverrideDefaultEditor": true,
+          "valueType": "EnumValue",
+          "dropDownNames": ["None", "SingleCell", "SingleRow", "MultipleRow", "MultipleCell", "RangeCell"],
+          "dropDownValues": ["None", "SingleCell", "SingleRow", "MultipleRow", "MultipleCell", "RangeCell"],
+          "primitiveValue": "MultipleRow"
+        }
+      ]
+    },
+    "content": {
+      "type": "DataGrid",
+      "id": "grid",
+      "name": "grid",
+      "dataSourceRef": "EmployeesSalesData",
+      "autoGenerateColumns": false,
+      "defaultColumnMinWidth": 100,
+      "isColumnOptionsEnabled": true,
+      "selectionMode": "MultipleRow",
+      "height": "100%",
+      "width": "100%",
+      "columns": [
+        { "type": "TextColumn",     "field": "Name",     "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 150 } },
+        { "type": "TextColumn",     "field": "Street",   "headerText": "Street",        "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 160 } },
+        { "type": "TextColumn",     "field": "City",     "headerText": "City",          "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 120 } },
+        { "type": "NumericColumn",  "field": "Salary",   "headerText": "Salary",        "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 120 }, "positivePrefix": "$", "showGroupingSeparator": true },
+        { "type": "ImageColumn",    "field": "Photo",    "headerText": "Photo",         "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 110 }, "isEditable": false, "contentOpacity": 1, "horizontalAlignment": "Center" },
+        { "type": "DateTimeColumn", "field": "Birthday", "headerText": "Date of Birth", "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 170 } }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
+    "grids/DataGridModule"
+  ]
+}

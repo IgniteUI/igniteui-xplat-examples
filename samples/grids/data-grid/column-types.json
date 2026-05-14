@@ -1,0 +1,98 @@
+{
+  "skipAlterDataCasing": true,
+  "descriptions": {
+    "content": {
+      "type": "DataGrid",
+      "id": "grid",
+      "name": "grid",
+      "dataSourceRef": "EmployeesSalesData",
+      "autoGenerateColumns": false,
+      "rowHeight": 50,
+      "activationMode": "Cell",
+      "height": "100%",
+      "width": "100%",
+      "columns": [
+        {
+          "type": "ImageColumn",
+          "field": "Photo",
+          "width": { "type": "ColumnWidth", "isStarSized": false, "value": 100 },
+          "isEditable": false,
+          "paddingTop": 5,
+          "paddingBottom": 5,
+          "paddingRight": 10,
+          "horizontalAlignment": "Stretch"
+        },
+        {
+          "type": "TextColumn",
+          "field": "Name",
+          "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 130 }
+        },
+        {
+          "type": "TemplateColumn",
+          "field": "Sales",
+          "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 160 },
+          "cellUpdatingRef": "DataGridSalesGaugeTemplate",
+          "horizontalAlignment": "Center"
+        },
+        {
+          "type": "NumericColumn",
+          "field": "Salary",
+          "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 130 },
+          "positivePrefix": "$",
+          "showGroupingSeparator": true,
+          "maxFractionDigits": 0,
+          "minFractionDigits": 0
+        },
+        {
+          "type": "DateTimeColumn",
+          "field": "Birthday",
+          "headerText": "Date of Birth",
+          "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 140 }
+        },
+        {
+          "type": "ComboBoxColumn",
+          "field": "Country",
+          "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 120 },
+          "dataSourceRef": "CountryNames",
+          "textField": "Name",
+          "valueField": "Name"
+        },
+        {
+          "type": "ImageColumn",
+          "field": "CountryFlag",
+          "headerText": "Flag",
+          "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 110 },
+          "isEditable": false,
+          "paddingTop": 5,
+          "paddingBottom": 5,
+          "paddingRight": 10,
+          "horizontalAlignment": "Stretch"
+        },
+        {
+          "type": "TemplateColumn",
+          "field": "Address",
+          "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 170 },
+          "cellUpdatingRef": "DataGridAddressLinesTemplate"
+        },
+        {
+          "type": "TemplateColumn",
+          "field": "Phone",
+          "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 130 },
+          "cellUpdatingRef": "DataGridPhoneLinkTemplate"
+        },
+        {
+          "type": "TextColumn",
+          "field": "Income",
+          "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 120 }
+        },
+        {
+          "type": "NumericColumn",
+          "field": "Age",
+          "width": { "type": "ColumnWidth", "isStarSized": false, "value": 100 },
+          "horizontalAlignment": "Left"
+        }
+      ]
+    }
+  },
+  "modules": ["grids/DataGridModule"]
+}

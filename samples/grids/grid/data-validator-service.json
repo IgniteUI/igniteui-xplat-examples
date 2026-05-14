@@ -19,7 +19,7 @@
           "type": "PropertyEditorPropertyDescription",
           "propertyPath": "RowEditable",
           "name": "RowEditableEditor",
-          "valueType": "Boolean1",
+          "valueType": "Boolean",
           "primitiveValue": true
         }
       ]

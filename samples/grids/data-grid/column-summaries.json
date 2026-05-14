@@ -1,0 +1,82 @@
+{
+  "skipAlterDataCasing": true,
+  "descriptions": {
+    "editor": {
+      "type": "PropertyEditorPanel",
+      "name": "PropertyEditor",
+      "componentRendererRef": "renderer",
+      "targetRef": "grid",
+      "descriptionType": "DataGrid",
+      "isHorizontal": true,
+      "isWrappingEnabled": true,
+      "properties": [
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "SummaryScope",
+          "name": "SummaryScopeEditor",
+          "label": "Summary Scope",
+          "shouldOverrideDefaultEditor": true,
+          "valueType": "EnumValue",
+          "dropDownNames": ["Root", "Groups", "Both", "None"],
+          "dropDownValues": ["Root", "Groups", "Both", "None"],
+          "primitiveValue": "Root"
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "GroupSummaryDisplayMode",
+          "name": "GroupSummaryDisplayModeEditor",
+          "label": "Group Summary Display Mode",
+          "shouldOverrideDefaultEditor": true,
+          "valueType": "EnumValue",
+          "dropDownNames": ["List", "Cells", "RowTop", "RowBottom", "None"],
+          "dropDownValues": ["List", "Cells", "RowTop", "RowBottom", "None"],
+          "primitiveValue": "RowBottom"
+        }
+      ]
+    },
+    "content": {
+      "type": "DataGrid",
+      "id": "grid",
+      "name": "grid",
+      "dataSourceRef": "ProductOrders",
+      "autoGenerateColumns": false,
+      "isColumnOptionsEnabled": true,
+      "isGroupCollapsable": true,
+      "groupHeaderDisplayMode": "Combined",
+      "summaryScope": "Root",
+      "groupSummaryDisplayMode": "RowBottom",
+      "height": "100%",
+      "width": "100%",
+      "groupDescriptions": [
+        { "type": "ColumnGroupDescription", "field": "ProductName", "displayName": "ProductName" }
+      ],
+      "summaryDescriptions": [
+        { "type": "ColumnSummaryDescription", "field": "ProductName",  "operand": "Count" },
+        { "type": "ColumnSummaryDescription", "field": "ProductPrice", "operand": "Min" },
+        { "type": "ColumnSummaryDescription", "field": "ProductPrice", "operand": "Max" },
+        { "type": "ColumnSummaryDescription", "field": "OrderItems",   "operand": "Sum" },
+        { "type": "ColumnSummaryDescription", "field": "OrderValue",   "operand": "Sum" },
+        { "type": "ColumnSummaryDescription", "field": "OrderValue",   "operand": "Average" },
+        { "type": "ColumnSummaryDescription", "field": "OrderDate",    "operand": "Min", "calculatorDisplayName": "First" },
+        { "type": "ColumnSummaryDescription", "field": "OrderDate",    "operand": "Max", "calculatorDisplayName": "Last"  },
+        { "type": "ColumnSummaryDescription", "field": "Profit",       "operand": "Sum" },
+        { "type": "ColumnSummaryDescription", "field": "Profit",       "operand": "Average" }
+      ],
+      "columns": [
+        { "type": "NumericColumn",  "field": "ProductID",    "headerText": "ID",          "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 120 }, "horizontalAlignment": "Center" },
+        { "type": "TextColumn",     "field": "ProductName",  "headerText": "Product",     "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 130 } },
+        { "type": "NumericColumn",  "field": "ProductPrice", "headerText": "Price",       "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 120 }, "positivePrefix": "$", "showGroupingSeparator": true },
+        { "type": "NumericColumn",  "field": "OrderItems",   "headerText": "Orders",      "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 140 } },
+        { "type": "NumericColumn",  "field": "OrderValue",   "headerText": "Order Totals","width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 160 }, "positivePrefix": "$", "showGroupingSeparator": true },
+        { "type": "DateTimeColumn", "field": "OrderDate",    "headerText": "Order Date",  "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 150 }, "horizontalAlignment": "Right" },
+        { "type": "NumericColumn",  "field": "Profit",       "headerText": "Profit",      "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 140 }, "positivePrefix": "$", "showGroupingSeparator": true },
+        { "type": "TextColumn",     "field": "Country",      "headerText": "Ship Country","width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 170 } }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
+    "grids/DataGridModule"
+  ]
+}

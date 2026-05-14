@@ -1,0 +1,25 @@
+{
+  "skipAlterDataCasing": true,
+  "descriptions": {
+    "content": {
+      "type": "DataGrid",
+      "id": "grid",
+      "name": "grid",
+      "dataSourceRef": "EmployeesSalesData",
+      "autoGenerateColumns": false,
+      "activationMode": "Cell",
+      "height": "100%",
+      "width": "100%",
+      "columns": [
+        { "type": "TextColumn",     "field": "ID" },
+        { "type": "TextColumn",     "field": "Name" },
+        { "type": "TextColumn",     "field": "Street" },
+        { "type": "TextColumn",     "field": "City" },
+        { "type": "ImageColumn",    "field": "Photo",    "isEditable": false },
+        { "type": "DateTimeColumn", "field": "Birthday" },
+        { "type": "NumericColumn",  "field": "Salary",   "positivePrefix": "$", "showGroupingSeparator": true, "maxFractionDigits": 0, "minFractionDigits": 0 }
+      ]
+    }
+  },
+  "modules": ["grids/DataGridModule"]
+}
