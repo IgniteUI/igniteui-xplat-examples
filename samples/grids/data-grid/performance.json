@@ -1,0 +1,107 @@
+{
+  "skipAlterDataCasing": true,
+  "onViewInit": ["DataGridPerformanceTickerOnViewInit"],
+  "descriptions": {
+    "content": {
+      "type": "DataGrid",
+      "id": "grid",
+      "name": "grid",
+      "dataSourceRef": "SalesPersonsData",
+      "autoGenerateColumns": false,
+      "rowHeight": 40,
+      "defaultColumnMinWidth": 80,
+      "isRowHoverEnabled": false,
+      "selectionMode": "MultipleRow",
+      "headerClickAction": "SortByMultipleColumnsTriState",
+      "columnShowingAnimationMode": "Auto",
+      "columnHidingAnimationMode": "Auto",
+      "height": "100%",
+      "width": "100%",
+      "groupDescriptions": [
+        { "type": "ColumnGroupDescription", "field": "Territory" }
+      ],
+      "columns": [
+        { "type": "TextColumn",    "field": "FirstName",       "headerText": "First Name", "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 125 } },
+        { "type": "TextColumn",    "field": "LastName",        "headerText": "Last Name",  "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 125 } },
+        { "type": "TextColumn",    "field": "Territory",       "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 115 } },
+        { "type": "NumericColumn", "field": "YearToDateSales", "headerText": "YTD Sales",  "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 120 }, "positivePrefix": "$", "showGroupingSeparator": true },
+        {
+          "type": "TemplateColumn",
+          "field": "AvgSale",
+          "headerText": "Avg. Sale",
+          "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 125 },
+          "horizontalAlignment": "Right",
+          "cellStyleKeyRequestedRef": "DataGridPerformanceAvgSaleStyleKey",
+          "cellUpdatingRef":          "DataGridPerformanceAvgSaleCellUpdating",
+          "dataBoundRef":             "DataGridPerformanceAvgSaleDataBound"
+        },
+        {
+          "type": "TemplateColumn",
+          "field": "Change",
+          "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 120 },
+          "horizontalAlignment": "Right",
+          "cellStyleKeyRequestedRef": "DataGridPerformanceChangeStyleKey",
+          "cellUpdatingRef":          "DataGridPerformanceChangeCellUpdating"
+        },
+        {
+          "type": "TemplateColumn",
+          "field": "PercentChange",
+          "headerText": "Change (%)",
+          "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 135 },
+          "horizontalAlignment": "Right",
+          "cellStyleKeyRequestedRef": "DataGridPerformancePercentStyleKey",
+          "cellUpdatingRef":          "DataGridPerformancePercentCellUpdating"
+        },
+        { "type": "DateTimeColumn", "field": "DateValue", "headerText": "Date", "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 120 } },
+
+        { "type": "NumericColumn", "field": "KPI_0",  "width": { "type": "ColumnWidth", "isStarSized": false, "value": 110, "minimumWidth": 110 }, "cellStyleKeyRequestedRef": "DataGridPerformanceKpiStyleKey", "dataBoundRef": "DataGridPerformanceKpiDataBound" },
+        { "type": "NumericColumn", "field": "KPI_1",  "width": { "type": "ColumnWidth", "isStarSized": false, "value": 110, "minimumWidth": 110 }, "cellStyleKeyRequestedRef": "DataGridPerformanceKpiStyleKey", "dataBoundRef": "DataGridPerformanceKpiDataBound" },
+        { "type": "NumericColumn", "field": "KPI_2",  "width": { "type": "ColumnWidth", "isStarSized": false, "value": 110, "minimumWidth": 110 }, "cellStyleKeyRequestedRef": "DataGridPerformanceKpiStyleKey", "dataBoundRef": "DataGridPerformanceKpiDataBound" },
+        { "type": "NumericColumn", "field": "KPI_3",  "width": { "type": "ColumnWidth", "isStarSized": false, "value": 110, "minimumWidth": 110 }, "cellStyleKeyRequestedRef": "DataGridPerformanceKpiStyleKey", "dataBoundRef": "DataGridPerformanceKpiDataBound" },
+        { "type": "NumericColumn", "field": "KPI_4",  "width": { "type": "ColumnWidth", "isStarSized": false, "value": 110, "minimumWidth": 110 }, "cellStyleKeyRequestedRef": "DataGridPerformanceKpiStyleKey", "dataBoundRef": "DataGridPerformanceKpiDataBound" },
+        { "type": "NumericColumn", "field": "KPI_5",  "width": { "type": "ColumnWidth", "isStarSized": false, "value": 110, "minimumWidth": 110 }, "cellStyleKeyRequestedRef": "DataGridPerformanceKpiStyleKey", "dataBoundRef": "DataGridPerformanceKpiDataBound" },
+        { "type": "NumericColumn", "field": "KPI_6",  "width": { "type": "ColumnWidth", "isStarSized": false, "value": 110, "minimumWidth": 110 }, "cellStyleKeyRequestedRef": "DataGridPerformanceKpiStyleKey", "dataBoundRef": "DataGridPerformanceKpiDataBound" },
+        { "type": "NumericColumn", "field": "KPI_7",  "width": { "type": "ColumnWidth", "isStarSized": false, "value": 110, "minimumWidth": 110 }, "cellStyleKeyRequestedRef": "DataGridPerformanceKpiStyleKey", "dataBoundRef": "DataGridPerformanceKpiDataBound" },
+        { "type": "NumericColumn", "field": "KPI_8",  "width": { "type": "ColumnWidth", "isStarSized": false, "value": 110, "minimumWidth": 110 }, "cellStyleKeyRequestedRef": "DataGridPerformanceKpiStyleKey", "dataBoundRef": "DataGridPerformanceKpiDataBound" },
+        { "type": "NumericColumn", "field": "KPI_9",  "width": { "type": "ColumnWidth", "isStarSized": false, "value": 110, "minimumWidth": 110 }, "cellStyleKeyRequestedRef": "DataGridPerformanceKpiStyleKey", "dataBoundRef": "DataGridPerformanceKpiDataBound" },
+        { "type": "NumericColumn", "field": "KPI_10", "width": { "type": "ColumnWidth", "isStarSized": false, "value": 110, "minimumWidth": 110 }, "cellStyleKeyRequestedRef": "DataGridPerformanceKpiStyleKey", "dataBoundRef": "DataGridPerformanceKpiDataBound" },
+        { "type": "NumericColumn", "field": "KPI_11", "width": { "type": "ColumnWidth", "isStarSized": false, "value": 110, "minimumWidth": 110 }, "cellStyleKeyRequestedRef": "DataGridPerformanceKpiStyleKey", "dataBoundRef": "DataGridPerformanceKpiDataBound" },
+        { "type": "NumericColumn", "field": "KPI_12", "width": { "type": "ColumnWidth", "isStarSized": false, "value": 110, "minimumWidth": 110 }, "cellStyleKeyRequestedRef": "DataGridPerformanceKpiStyleKey", "dataBoundRef": "DataGridPerformanceKpiDataBound" },
+        { "type": "NumericColumn", "field": "KPI_13", "width": { "type": "ColumnWidth", "isStarSized": false, "value": 110, "minimumWidth": 110 }, "cellStyleKeyRequestedRef": "DataGridPerformanceKpiStyleKey", "dataBoundRef": "DataGridPerformanceKpiDataBound" },
+        { "type": "NumericColumn", "field": "KPI_14", "width": { "type": "ColumnWidth", "isStarSized": false, "value": 110, "minimumWidth": 110 }, "cellStyleKeyRequestedRef": "DataGridPerformanceKpiStyleKey", "dataBoundRef": "DataGridPerformanceKpiDataBound" },
+        { "type": "NumericColumn", "field": "KPI_15", "width": { "type": "ColumnWidth", "isStarSized": false, "value": 110, "minimumWidth": 110 }, "cellStyleKeyRequestedRef": "DataGridPerformanceKpiStyleKey", "dataBoundRef": "DataGridPerformanceKpiDataBound" },
+        { "type": "NumericColumn", "field": "KPI_16", "width": { "type": "ColumnWidth", "isStarSized": false, "value": 110, "minimumWidth": 110 }, "cellStyleKeyRequestedRef": "DataGridPerformanceKpiStyleKey", "dataBoundRef": "DataGridPerformanceKpiDataBound" },
+        { "type": "NumericColumn", "field": "KPI_17", "width": { "type": "ColumnWidth", "isStarSized": false, "value": 110, "minimumWidth": 110 }, "cellStyleKeyRequestedRef": "DataGridPerformanceKpiStyleKey", "dataBoundRef": "DataGridPerformanceKpiDataBound" },
+        { "type": "NumericColumn", "field": "KPI_18", "width": { "type": "ColumnWidth", "isStarSized": false, "value": 110, "minimumWidth": 110 }, "cellStyleKeyRequestedRef": "DataGridPerformanceKpiStyleKey", "dataBoundRef": "DataGridPerformanceKpiDataBound" },
+        { "type": "NumericColumn", "field": "KPI_19", "width": { "type": "ColumnWidth", "isStarSized": false, "value": 110, "minimumWidth": 110 }, "cellStyleKeyRequestedRef": "DataGridPerformanceKpiStyleKey", "dataBoundRef": "DataGridPerformanceKpiDataBound" },
+        { "type": "NumericColumn", "field": "KPI_20", "width": { "type": "ColumnWidth", "isStarSized": false, "value": 110, "minimumWidth": 110 }, "cellStyleKeyRequestedRef": "DataGridPerformanceKpiStyleKey", "dataBoundRef": "DataGridPerformanceKpiDataBound" },
+        { "type": "NumericColumn", "field": "KPI_21", "width": { "type": "ColumnWidth", "isStarSized": false, "value": 110, "minimumWidth": 110 }, "cellStyleKeyRequestedRef": "DataGridPerformanceKpiStyleKey", "dataBoundRef": "DataGridPerformanceKpiDataBound" },
+        { "type": "NumericColumn", "field": "KPI_22", "width": { "type": "ColumnWidth", "isStarSized": false, "value": 110, "minimumWidth": 110 }, "cellStyleKeyRequestedRef": "DataGridPerformanceKpiStyleKey", "dataBoundRef": "DataGridPerformanceKpiDataBound" },
+        { "type": "NumericColumn", "field": "KPI_23", "width": { "type": "ColumnWidth", "isStarSized": false, "value": 110, "minimumWidth": 110 }, "cellStyleKeyRequestedRef": "DataGridPerformanceKpiStyleKey", "dataBoundRef": "DataGridPerformanceKpiDataBound" },
+        { "type": "NumericColumn", "field": "KPI_24", "width": { "type": "ColumnWidth", "isStarSized": false, "value": 110, "minimumWidth": 110 }, "cellStyleKeyRequestedRef": "DataGridPerformanceKpiStyleKey", "dataBoundRef": "DataGridPerformanceKpiDataBound" },
+        { "type": "NumericColumn", "field": "KPI_25", "width": { "type": "ColumnWidth", "isStarSized": false, "value": 110, "minimumWidth": 110 }, "cellStyleKeyRequestedRef": "DataGridPerformanceKpiStyleKey", "dataBoundRef": "DataGridPerformanceKpiDataBound" },
+        { "type": "NumericColumn", "field": "KPI_26", "width": { "type": "ColumnWidth", "isStarSized": false, "value": 110, "minimumWidth": 110 }, "cellStyleKeyRequestedRef": "DataGridPerformanceKpiStyleKey", "dataBoundRef": "DataGridPerformanceKpiDataBound" },
+        { "type": "NumericColumn", "field": "KPI_27", "width": { "type": "ColumnWidth", "isStarSized": false, "value": 110, "minimumWidth": 110 }, "cellStyleKeyRequestedRef": "DataGridPerformanceKpiStyleKey", "dataBoundRef": "DataGridPerformanceKpiDataBound" },
+        { "type": "NumericColumn", "field": "KPI_28", "width": { "type": "ColumnWidth", "isStarSized": false, "value": 110, "minimumWidth": 110 }, "cellStyleKeyRequestedRef": "DataGridPerformanceKpiStyleKey", "dataBoundRef": "DataGridPerformanceKpiDataBound" },
+        { "type": "NumericColumn", "field": "KPI_29", "width": { "type": "ColumnWidth", "isStarSized": false, "value": 110, "minimumWidth": 110 }, "cellStyleKeyRequestedRef": "DataGridPerformanceKpiStyleKey", "dataBoundRef": "DataGridPerformanceKpiDataBound" },
+        { "type": "NumericColumn", "field": "KPI_30", "width": { "type": "ColumnWidth", "isStarSized": false, "value": 110, "minimumWidth": 110 }, "cellStyleKeyRequestedRef": "DataGridPerformanceKpiStyleKey", "dataBoundRef": "DataGridPerformanceKpiDataBound" },
+        { "type": "NumericColumn", "field": "KPI_31", "width": { "type": "ColumnWidth", "isStarSized": false, "value": 110, "minimumWidth": 110 }, "cellStyleKeyRequestedRef": "DataGridPerformanceKpiStyleKey", "dataBoundRef": "DataGridPerformanceKpiDataBound" },
+        { "type": "NumericColumn", "field": "KPI_32", "width": { "type": "ColumnWidth", "isStarSized": false, "value": 110, "minimumWidth": 110 }, "cellStyleKeyRequestedRef": "DataGridPerformanceKpiStyleKey", "dataBoundRef": "DataGridPerformanceKpiDataBound" },
+        { "type": "NumericColumn", "field": "KPI_33", "width": { "type": "ColumnWidth", "isStarSized": false, "value": 110, "minimumWidth": 110 }, "cellStyleKeyRequestedRef": "DataGridPerformanceKpiStyleKey", "dataBoundRef": "DataGridPerformanceKpiDataBound" },
+        { "type": "NumericColumn", "field": "KPI_34", "width": { "type": "ColumnWidth", "isStarSized": false, "value": 110, "minimumWidth": 110 }, "cellStyleKeyRequestedRef": "DataGridPerformanceKpiStyleKey", "dataBoundRef": "DataGridPerformanceKpiDataBound" },
+        { "type": "NumericColumn", "field": "KPI_35", "width": { "type": "ColumnWidth", "isStarSized": false, "value": 110, "minimumWidth": 110 }, "cellStyleKeyRequestedRef": "DataGridPerformanceKpiStyleKey", "dataBoundRef": "DataGridPerformanceKpiDataBound" },
+        { "type": "NumericColumn", "field": "KPI_36", "width": { "type": "ColumnWidth", "isStarSized": false, "value": 110, "minimumWidth": 110 }, "cellStyleKeyRequestedRef": "DataGridPerformanceKpiStyleKey", "dataBoundRef": "DataGridPerformanceKpiDataBound" },
+        { "type": "NumericColumn", "field": "KPI_37", "width": { "type": "ColumnWidth", "isStarSized": false, "value": 110, "minimumWidth": 110 }, "cellStyleKeyRequestedRef": "DataGridPerformanceKpiStyleKey", "dataBoundRef": "DataGridPerformanceKpiDataBound" },
+        { "type": "NumericColumn", "field": "KPI_38", "width": { "type": "ColumnWidth", "isStarSized": false, "value": 110, "minimumWidth": 110 }, "cellStyleKeyRequestedRef": "DataGridPerformanceKpiStyleKey", "dataBoundRef": "DataGridPerformanceKpiDataBound" },
+        { "type": "NumericColumn", "field": "KPI_39", "width": { "type": "ColumnWidth", "isStarSized": false, "value": 110, "minimumWidth": 110 }, "cellStyleKeyRequestedRef": "DataGridPerformanceKpiStyleKey", "dataBoundRef": "DataGridPerformanceKpiDataBound" },
+        { "type": "NumericColumn", "field": "KPI_40", "width": { "type": "ColumnWidth", "isStarSized": false, "value": 110, "minimumWidth": 110 }, "cellStyleKeyRequestedRef": "DataGridPerformanceKpiStyleKey", "dataBoundRef": "DataGridPerformanceKpiDataBound" },
+        { "type": "NumericColumn", "field": "KPI_41", "width": { "type": "ColumnWidth", "isStarSized": false, "value": 110, "minimumWidth": 110 }, "cellStyleKeyRequestedRef": "DataGridPerformanceKpiStyleKey", "dataBoundRef": "DataGridPerformanceKpiDataBound" },
+        { "type": "NumericColumn", "field": "KPI_42", "width": { "type": "ColumnWidth", "isStarSized": false, "value": 110, "minimumWidth": 110 }, "cellStyleKeyRequestedRef": "DataGridPerformanceKpiStyleKey", "dataBoundRef": "DataGridPerformanceKpiDataBound" }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "grids/DataGridModule"
+  ]
+}

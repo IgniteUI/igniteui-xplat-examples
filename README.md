@@ -43,17 +43,18 @@ You can use the [Cross Platform Editor](https://infragistics.visualstudio.com/Ne
 
 ## Updating Editor Templates
 
-The [Editor-Templates](editor-templates) folder contains templates for converting XPLAT samples into platform specifc samples. You **must update** those templates in the following order:
+The [Editor-Templates](https://github.com/IgniteUI/igniteui-xplat-examples/tree/25.2/editor-templates) folder contains templates for converting XPLAT samples into platform specific samples. You **must update** those templates in the following order:
 
-1. Create AND merge a pull request with updated packages in `browser` AND `samples` folders of the following repositories:
-- [igniteui-angular-examples](https://github.com/IgniteUI/igniteui-angular-examples)
-- [igniteui-blazor-examples](https://github.com/IgniteUI/igniteui-blazor-examples)
-- [igniteui-react-examples](https://github.com/IgniteUI/igniteui-react-examples)
-- [igniteui-wc-examples](https://github.com/IgniteUI/igniteui-wc-examples)
+1. Follow the `Updating Packages in Samples` instructions in all the following repositories to **create AND merge a pull request** with updated packages:
 
-2. Create AND merge a pull request with updated packages in the [Editor-Templates](editor-templates) folder in this repository.
+- [igniteui-angular-examples](https://github.com/IgniteUI/igniteui-angular-examples/blob/vnext/README.md#updating-packages-in-samples)
+- [igniteui-blazor-examples](https://github.com/IgniteUI/igniteui-blazor-examples/blob/vnext/README.md#updating-packages-in-samples)
+- [igniteui-react-examples](https://github.com/IgniteUI/igniteui-react-examples/blob/vnext/README.md#updating-packages-in-samples)
+- [igniteui-wc-examples](https://github.com/IgniteUI/igniteui-wc-examples/blob/vnext/README.md#updating-packages-in-samples)
 
-Above order of creating and merging pull requests is important to avoid stale samples and prevent building issues in platform specifc sample browsers.
+2. Create AND merge a pull request with updated packages in the [Editor-Templates](https://github.com/IgniteUI/igniteui-xplat-examples/tree/25.2/editor-templates) folder in the [igniteui-xplat-examples](https://github.com/IgniteUI/igniteui-xplat-examples/) repository.
+
+NOTE: Above order of steps is important and PRs made in step #1 must be merged before merging PR in step #2 such that it prevents stale samples and building issues in platform specific sample browsers.
 
 ## Creating Volume Branch in Code Exporter App Repo
 

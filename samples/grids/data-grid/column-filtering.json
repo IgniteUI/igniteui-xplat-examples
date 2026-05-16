@@ -1,0 +1,27 @@
+{
+  "skipAlterDataCasing": true,
+  "descriptions": {
+    "content": {
+      "type": "DataGrid",
+      "id": "grid",
+      "name": "grid",
+      "dataSourceRef": "EmployeesSalesData",
+      "autoGenerateColumns": false,
+      "defaultColumnMinWidth": 100,
+      "isColumnOptionsEnabled": true,
+      "filterUIType": "FilterRow",
+      "height": "100%",
+      "width": "100%",
+      "columns": [
+        { "type": "TextColumn",     "field": "Name",        "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 170 } },
+        { "type": "NumericColumn",  "field": "Age",         "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 170 } },
+        { "type": "TextColumn",     "field": "Street",      "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 180 } },
+        { "type": "TextColumn",     "field": "City",        "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 120 } },
+        { "type": "ImageColumn",    "field": "CountryFlag", "headerText": "Country", "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 140 }, "isEditable": false, "paddingTop": 5, "paddingBottom": 5, "contentOpacity": 1, "horizontalAlignment": "Center" },
+        { "type": "NumericColumn",  "field": "Sales",       "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 120 }, "positivePrefix": "$", "showGroupingSeparator": true },
+        { "type": "DateTimeColumn", "field": "Birthday",    "headerText": "Birthday", "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 170 } }
+      ]
+    }
+  },
+  "modules": ["grids/DataGridModule"]
+}
