@@ -5,10 +5,18 @@ using Infragistics.Controls.Layouts;
 
 public class DataGridToggleLiveAllPrices
 {
+    //begin eventHandler
     public bool LiveAllPricesDisabled = false;
     public bool LiveSomePricesDisabled = false;
+    public bool IsUpdatingAllPrices = false;
+    public bool IsUpdatingSomePrices = false;
+    public bool IsTimerTicking = false;
 
-    //begin eventHandler
+    public void StartTicking()
+    {
+        if (!this.IsTimerTicking) this.IsTimerTicking = true;
+    }
+
     //WPF: Infragistics.Controls.Layouts.PropertyEditorPropertyDescriptionButtonClickEventHandler
     public void DataGridToggleLiveAllPrices(object sender, PropertyEditorPropertyDescriptionButtonClickEventArgs args)
     {

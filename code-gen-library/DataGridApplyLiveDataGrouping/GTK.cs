@@ -1,5 +1,5 @@
 //begin imports
-using System.ComponentModel;
+using Infragistics.Core.Controls.DataSource;
 using Infragistics.Controls.Description;
 using Infragistics.Controls.Layouts;
 using Infragistics.Controls.Grids;

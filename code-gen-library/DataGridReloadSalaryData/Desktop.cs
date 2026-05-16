@@ -8,14 +8,14 @@ using Infragistics.Controls.Grids;
 
 public class DataGridReloadSalaryData
 {
-    private static Random _random = new Random();
-
     //begin eventHandler
+    public Random _random = new Random();
+
     //WPF: Infragistics.Controls.Layouts.PropertyEditorPropertyDescriptionButtonClickEventHandler
     public void DataGridReloadSalaryData(object sender, PropertyEditorPropertyDescriptionButtonClickEventArgs args)
     {
         var grid = CodeGenHelper.GetDescription<XamDataGrid>("content");
-        var data = (List<EmployeesSalesDataItem>)grid.DataSource;
+        var data = (List<EmployeesSalesDataItem>)grid.ItemsSource;
         for (var i = 0; i < data.Count; i++)
         {
             var item = data[i];

@@ -1,7 +1,7 @@
 
 namespace Infragistics.Samples
 {
-    //begin async data
+    //begin data
     using System;
     using System.Collections;
     using System.Collections.Generic;
@@ -261,4 +261,5 @@ namespace Infragistics.Samples
             };
         }
     }
+    //end data
 }

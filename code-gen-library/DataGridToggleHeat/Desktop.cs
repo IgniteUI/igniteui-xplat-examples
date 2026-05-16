@@ -7,6 +7,8 @@ using Infragistics.Controls.Grids;
 public class DataGridToggleHeat
 {
     //begin eventHandler
+    public bool UseHeatBackground = true;
+
     //WPF: Infragistics.Controls.Layouts.PropertyEditorPropertyDescriptionChangedEventHandler
     public void DataGridToggleHeat(object sender, PropertyEditorPropertyDescriptionChangedEventArgs args)
     {

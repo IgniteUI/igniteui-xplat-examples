@@ -7,6 +7,8 @@ using Infragistics.Controls.Grids;
 public class DataGridLoadLayout
 {
     //begin eventHandler
+    public string SavedLayout = "";
+
     //WPF: Infragistics.Controls.Layouts.PropertyEditorPropertyDescriptionButtonClickEventHandler
     public void DataGridLoadLayout(object sender, PropertyEditorPropertyDescriptionButtonClickEventArgs args)
     {

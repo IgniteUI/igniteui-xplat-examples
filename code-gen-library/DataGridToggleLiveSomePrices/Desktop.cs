@@ -6,6 +6,17 @@ using Infragistics.Controls.Layouts;
 public class DataGridToggleLiveSomePrices
 {
     //begin eventHandler
+    public bool LiveSomePricesDisabled = false;
+    public bool LiveAllPricesDisabled = false;
+    public bool IsUpdatingAllPrices = false;
+    public bool IsUpdatingSomePrices = false;
+    public bool IsTimerTicking = false;
+
+    public void StartTicking()
+    {
+        if (!this.IsTimerTicking) this.IsTimerTicking = true;
+    }
+
     //WPF: Infragistics.Controls.Layouts.PropertyEditorPropertyDescriptionButtonClickEventHandler
     public void DataGridToggleLiveSomePrices(object sender, PropertyEditorPropertyDescriptionButtonClickEventArgs args)
     {

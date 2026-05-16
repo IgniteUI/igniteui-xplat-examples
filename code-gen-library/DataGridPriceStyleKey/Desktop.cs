@@ -5,7 +5,7 @@ using Infragistics.Controls.Grids;
 public class DataGridPriceStyleKey
 {
     //begin eventHandler
-    //WPF: Infragistics.Controls.Grids.CellStyleKeyRequestedEventHandler
+    //WPF: Infragistics.Controls.Grids.CellStyleRequestedEventHandler
     public void DataGridPriceStyleKey(object sender, CellStyleRequestedEventArgs args)
     {
         var grid = CodeGenHelper.GetDescription<XamDataGrid>("content");

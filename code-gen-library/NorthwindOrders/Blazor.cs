@@ -1,7 +1,7 @@
 
 namespace Infragistics.Samples
 {
-    //begin async data
+    //begin data
     using IgniteUI.Blazor.Controls;
     using IgniteUI.Blazor.Controls.Datasources;
 
@@ -16,4 +16,5 @@ namespace Infragistics.Samples
             return vds;
         }
     }
+    //end data
 }

@@ -5,7 +5,7 @@ using Infragistics.Controls.Grids;
 public class DataGridPerformanceAvgSaleStyleKey
 {
     //begin eventHandler
-    //WPF: Infragistics.Controls.Grids.CellStyleKeyRequestedEventHandler
+    //WPF: Infragistics.Controls.Grids.CellStyleRequestedEventHandler
     public void DataGridPerformanceAvgSaleStyleKey(object sender, CellStyleRequestedEventArgs args)
     {
         var grid = CodeGenHelper.GetDescription<XamDataGrid>("content");

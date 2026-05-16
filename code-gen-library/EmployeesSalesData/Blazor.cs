@@ -1,7 +1,7 @@
 
 namespace Infragistics.Samples
 {
-    //begin async data
+    //begin data
     using System;
     using System.Collections.Generic;
     using IgniteUI.Blazor.Controls;
@@ -228,4 +228,5 @@ namespace Infragistics.Samples
             return "High";
         }
     }
+    //end data
 }

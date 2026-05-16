@@ -7,12 +7,11 @@ using Infragistics.Core.Controls.DataSource;
 
 public class DataGridApplyFilterExpressions
 {
-    private static FilterFactory _factory = new FilterFactory();
-
     //begin eventHandler
     //WPF: Infragistics.Controls.Layouts.PropertyEditorPropertyDescriptionChangedEventHandler
     public void DataGridApplyFilterExpressions(object sender, PropertyEditorPropertyDescriptionChangedEventArgs args)
     {
+        var factory = new FilterFactory();
         var grid = CodeGenHelper.GetDescription<XamDataGrid>("content");
         var columnEditor = CodeGenHelper.FindByName<PropertyEditorPropertyDescription>("FilterColumnEditor");
         var modeEditor = CodeGenHelper.FindByName<PropertyEditorPropertyDescription>("FilterModeEditor");
@@ -29,7 +28,7 @@ public class DataGridApplyFilterExpressions
         }
 
         var expression = filterText.ToUpper();
-        var column = _factory.Property(filterColumn).ToUpper();
+        var column = factory.Property(filterColumn).ToUpper();
 
         FilterExpression filter;
         switch (filterMode)

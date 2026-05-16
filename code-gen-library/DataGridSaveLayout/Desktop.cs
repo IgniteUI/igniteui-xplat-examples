@@ -6,9 +6,9 @@ using Infragistics.Controls.Grids;
 
 public class DataGridSaveLayout
 {
+    //begin eventHandler
     public string SavedLayout = "";
 
-    //begin eventHandler
     //WPF: Infragistics.Controls.Layouts.PropertyEditorPropertyDescriptionButtonClickEventHandler
     public void DataGridSaveLayout(object sender, PropertyEditorPropertyDescriptionButtonClickEventArgs args)
     {

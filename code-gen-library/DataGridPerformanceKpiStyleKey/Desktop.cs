@@ -5,7 +5,7 @@ using Infragistics.Controls.Grids;
 public class DataGridPerformanceKpiStyleKey
 {
     //begin eventHandler
-    //WPF: Infragistics.Controls.Grids.CellStyleKeyRequestedEventHandler
+    //WPF: Infragistics.Controls.Grids.CellStyleRequestedEventHandler
     public void DataGridPerformanceKpiStyleKey(object sender, CellStyleRequestedEventArgs args)
     {
         var value = System.Convert.ToDouble(args.ResolvedValue);
