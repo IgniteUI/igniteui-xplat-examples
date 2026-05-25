@@ -1,0 +1,62 @@
+{
+  "descriptions": {
+    "editor": {
+      "type": "PropertyEditorPanel",
+      "name": "PropertyEditor",
+      "componentRendererRef": "renderer",
+      "targetRef": "gauge",
+      "descriptionType": "BulletGraph",
+      "isHorizontal": true,
+      "isWrappingEnabled": true,
+      "properties": [
+        { "type": "PropertyEditorPropertyDescription", "name": "AnimateToGauge1Button", "shouldOverrideDefaultEditor": true, "valueType": "Button", "primitiveValue": "Gauge Animation #1", "buttonClickedRef": "BulletGraphAnimateToGauge1" },
+        { "type": "PropertyEditorPropertyDescription", "name": "AnimateToGauge2Button", "shouldOverrideDefaultEditor": true, "valueType": "Button", "primitiveValue": "Gauge Animation #2", "buttonClickedRef": "BulletGraphAnimateToGauge2" },
+        { "type": "PropertyEditorPropertyDescription", "name": "AnimateToGauge3Button", "shouldOverrideDefaultEditor": true, "valueType": "Button", "primitiveValue": "Gauge Animation #3", "buttonClickedRef": "BulletGraphAnimateToGauge3" }
+      ]
+    },
+    "content": {
+      "type": "BulletGraph",
+      "name": "gauge",
+      "height": "80px",
+      "width": "100%",
+      "orientation": "Horizontal",
+      "transitionDuration": 1000,
+      "minimumValue": 0,
+      "maximumValue": 120,
+      "value": 70,
+      "interval": 10,
+      "labelInterval": 10,
+      "labelExtent": 0.02,
+      "valueInnerExtent": 0.5,
+      "valueOuterExtent": 0.7,
+      "valueBrush": "#000000",
+      "targetValueBrush": "#000000",
+      "targetValueBreadth": 10,
+      "targetValue": 90,
+      "minorTickCount": 5,
+      "minorTickEndExtent": 0.10,
+      "minorTickStartExtent": 0.20,
+      "tickStartExtent": 0.20,
+      "tickEndExtent": 0.05,
+      "tickStrokeThickness": 2,
+      "scaleBackgroundBrush": "#dbdbdb",
+      "scaleBackgroundOutline": "gray",
+      "scaleBackgroundThickness": 0,
+      "scaleStartExtent": 0.05,
+      "scaleEndExtent": 0.95,
+      "backingBrush": "#f7f7f7",
+      "backingOutline": "#d1d1d1",
+      "backingStrokeThickness": 0,
+      "ranges": [
+        { "type": "LinearGraphRange", "brush": "#FF9800", "outline": "#FF9800", "startValue": 0,  "endValue": 40,  "innerStartExtent": 0.2, "innerEndExtent": 0.2, "outerStartExtent": 0.95, "outerEndExtent": 0.95 },
+        { "type": "LinearGraphRange", "brush": "#F96232", "outline": "#F96232", "startValue": 40, "endValue": 80,  "innerStartExtent": 0.2, "innerEndExtent": 0.2, "outerStartExtent": 0.95, "outerEndExtent": 0.95 },
+        { "type": "LinearGraphRange", "brush": "#C62828", "outline": "#C62828", "startValue": 80, "endValue": 120, "innerStartExtent": 0.2, "innerEndExtent": 0.2, "outerStartExtent": 0.95, "outerEndExtent": 0.95 }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
+    "gauges/BulletGraphModule"
+  ]
+}

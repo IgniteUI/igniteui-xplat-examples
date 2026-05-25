@@ -1,0 +1,53 @@
+{
+  "descriptions": {
+    "aboveContent": {
+      "type": "BulletGraph",
+      "name": "graph1",
+      "height": "120px",
+      "width": "100%",
+      "orientation": "Horizontal",
+      "backingBrush": "transparent",
+      "backingOutline": "transparent",
+      "transitionDuration": 500,
+      "value": 70,
+      "targetValue": 80,
+      "minimumValue": 0,
+      "maximumValue": 100,
+      "interval": 10,
+      "labelInterval": 10,
+      "labelExtent": 0.0,
+      "ranges": [
+        { "type": "LinearGraphRange", "brush": "#008000", "outline": "#008000", "startValue": 0,  "endValue": 25,  "innerStartExtent": 0.25, "innerEndExtent": 0.25, "outerStartExtent": 0.8, "outerEndExtent": 0.8 },
+        { "type": "LinearGraphRange", "brush": "#10B401", "outline": "#10B401", "startValue": 25, "endValue": 50,  "innerStartExtent": 0.25, "innerEndExtent": 0.25, "outerStartExtent": 0.8, "outerEndExtent": 0.8 },
+        { "type": "LinearGraphRange", "brush": "#45EC03", "outline": "#45EC03", "startValue": 50, "endValue": 75,  "innerStartExtent": 0.25, "innerEndExtent": 0.25, "outerStartExtent": 0.8, "outerEndExtent": 0.8 },
+        { "type": "LinearGraphRange", "brush": "#2EFA2E", "outline": "#2EFA2E", "startValue": 75, "endValue": 100, "innerStartExtent": 0.25, "innerEndExtent": 0.25, "outerStartExtent": 0.8, "outerEndExtent": 0.8 }
+      ]
+    },
+    "content": {
+      "type": "BulletGraph",
+      "name": "graph2",
+      "height": "120px",
+      "width": "100%",
+      "orientation": "Horizontal",
+      "backingBrush": "transparent",
+      "backingOutline": "transparent",
+      "transitionDuration": 500,
+      "value": 30,
+      "targetValue": 20,
+      "minimumValue": 0,
+      "maximumValue": 100,
+      "interval": 10,
+      "labelInterval": 10,
+      "labelExtent": 0.0,
+      "ranges": [
+        { "type": "LinearGraphRange", "brush": "#CF0000", "outline": "#CF0000", "startValue": 0,  "endValue": 25,  "innerStartExtent": 0.25, "innerEndExtent": 0.25, "outerStartExtent": 0.8, "outerEndExtent": 0.8 },
+        { "type": "LinearGraphRange", "brush": "#FF0000", "outline": "#FF0000", "startValue": 25, "endValue": 50,  "innerStartExtent": 0.25, "innerEndExtent": 0.25, "outerStartExtent": 0.8, "outerEndExtent": 0.8 },
+        { "type": "LinearGraphRange", "brush": "#FD3939", "outline": "#FD3939", "startValue": 50, "endValue": 75,  "innerStartExtent": 0.25, "innerEndExtent": 0.25, "outerStartExtent": 0.8, "outerEndExtent": 0.8 },
+        { "type": "LinearGraphRange", "brush": "#FA6363", "outline": "#FA6363", "startValue": 75, "endValue": 100, "innerStartExtent": 0.25, "innerEndExtent": 0.25, "outerStartExtent": 0.8, "outerEndExtent": 0.8 }
+      ]
+    }
+  },
+  "modules": [
+    "gauges/BulletGraphModule"
+  ]
+}

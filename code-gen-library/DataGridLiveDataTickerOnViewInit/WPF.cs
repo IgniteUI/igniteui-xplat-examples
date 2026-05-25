@@ -40,7 +40,7 @@ public class DataGridLiveDataTickerOnViewInit
         if (!IsTimerTicking)
         {
             IsTimerTicking = true;
-            Task.Delay(Frequency).ContinueWith((t) => OnTimerTick());
+            Task.Delay(Frequency).ContinueWith((t) => OnTimerTick(), TaskScheduler.FromCurrentSynchronizationContext());
         }
     }
 
@@ -51,14 +51,14 @@ public class DataGridLiveDataTickerOnViewInit
         var grid = CodeGenHelper.GetDescription<XamDataGrid>("content");
         if (grid == null)
         {
-            Task.Delay(Frequency).ContinueWith((t) => OnTimerTick());
+            Task.Delay(Frequency).ContinueWith((t) => OnTimerTick(), TaskScheduler.FromCurrentSynchronizationContext());
             return;
         }
 
         var data = grid.DataSource as List<PortfolioDataItem>;
         if (data == null)
         {
-            Task.Delay(Frequency).ContinueWith((t) => OnTimerTick());
+            Task.Delay(Frequency).ContinueWith((t) => OnTimerTick(), TaskScheduler.FromCurrentSynchronizationContext());
             return;
         }
 
@@ -180,7 +180,7 @@ public class DataGridLiveDataTickerOnViewInit
             grid.InvalidateVisibleRows();
         }
 
-        Task.Delay(Frequency).ContinueWith((t) => OnTimerTick());
+        Task.Delay(Frequency).ContinueWith((t) => OnTimerTick(), TaskScheduler.FromCurrentSynchronizationContext());
     }
 
     public void OnGridGroupingRemove()

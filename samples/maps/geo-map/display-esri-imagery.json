@@ -1,0 +1,45 @@
+{
+  "descriptions": {
+    "leftContent": {
+      "type": "GeographicMap",
+      "name": "streetMap",
+      "height": "100%",
+      "width": "100%",
+      "zoomable": true,
+      "backgroundContent": {
+        "type": "ArcGISOnlineMapImagery",
+        "name": "streetMapImagery",
+        "mapServerUri": "WorldStreetMap"
+      }
+    },
+    "content": {
+      "type": "GeographicMap",
+      "name": "oceansMap",
+      "height": "100%",
+      "width": "100%",
+      "zoomable": true,
+      "backgroundContent": {
+        "type": "ArcGISOnlineMapImagery",
+        "name": "oceansMapImagery",
+        "mapServerUri": "WorldOceansMap"
+      }
+    },
+    "rightContent": {
+      "type": "GeographicMap",
+      "name": "topographicMap",
+      "height": "100%",
+      "width": "100%",
+      "zoomable": true,
+      "backgroundContent": {
+        "type": "ArcGISOnlineMapImagery",
+        "name": "topographicMapImagery",
+        "mapServerUri": "WorldTopographicMap"
+      }
+    }
+  },
+  "modules": [
+    "charts/DataChartInteractivityModule",
+    "maps/GeographicMapModule",
+    "maps/ArcGISOnlineMapImageryModule"
+  ]
+}

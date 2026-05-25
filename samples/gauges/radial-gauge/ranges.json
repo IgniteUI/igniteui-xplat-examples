@@ -1,0 +1,23 @@
+{
+  "descriptions": {
+    "content": {
+      "type": "RadialGauge",
+      "name": "gauge",
+      "height": "100%",
+      "width": "100%",
+      "minimumValue": 0,
+      "value": 80,
+      "maximumValue": 80,
+      "interval": 10,
+      "rangeBrushes":  [ "#A4BD29", "#F86232" ],
+      "rangeOutlines": [ "#A4BD29", "#F86232" ],
+      "ranges": [
+        { "type": "RadialGaugeRange", "startValue": 10, "endValue": 25, "innerStartExtent": 0.50, "innerEndExtent": 0.50, "outerStartExtent": 0.57, "outerEndExtent": 0.57 },
+        { "type": "RadialGaugeRange", "startValue": 25, "endValue": 40, "innerStartExtent": 0.50, "innerEndExtent": 0.50, "outerStartExtent": 0.57, "outerEndExtent": 0.57 }
+      ]
+    }
+  },
+  "modules": [
+    "gauges/RadialGaugeModule"
+  ]
+}

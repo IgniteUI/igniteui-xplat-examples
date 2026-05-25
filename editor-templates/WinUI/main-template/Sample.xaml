@@ -31,6 +31,7 @@
       <Grid.RowDefinitions>
         <RowDefinition Height="Auto" />
         <RowDefinition />
+        <RowDefinition Height="Auto" />
       </Grid.RowDefinitions>
       <StackPanel>
         <!-- ifdef editor -->
@@ -73,8 +74,33 @@
         <!-- endifdef aboveContentLeft, aboveContentRight -->
       </StackPanel>
       <Grid Grid.Row="1">
-        <!-- insert content -->
-        <!-- end content -->
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="Auto" />
+          <ColumnDefinition Width="*" />
+          <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+        <!-- ifdef leftContent -->
+        <Grid Grid.Column="0">
+          <!-- insert leftContent -->
+          <!-- end leftContent -->
+        </Grid>
+        <!-- endifdef leftContent -->
+        <Grid Grid.Column="1">
+          <!-- insert content -->
+          <!-- end content -->
+        </Grid>
+        <!-- ifdef rightContent -->
+        <Grid Grid.Column="2">
+          <!-- insert rightContent -->
+          <!-- end rightContent -->
+        </Grid>
+        <!-- endifdef rightContent -->
       </Grid>
+      <!-- ifdef belowContent -->
+      <Grid Grid.Row="2">
+        <!-- insert belowContent -->
+        <!-- end belowContent -->
+      </Grid>
+      <!-- endifdef belowContent -->
     </Grid>
 </UserControl>

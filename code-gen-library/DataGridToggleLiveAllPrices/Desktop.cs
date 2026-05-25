@@ -6,16 +6,11 @@ using Infragistics.Controls.Layouts;
 public class DataGridToggleLiveAllPrices
 {
     //begin eventHandler
+    // IsUpdatingAllPrices, IsUpdatingSomePrices, IsTimerTicking and StartTicking
+    // are owned by DataGridLiveDataTickerOnViewInit; these handlers are merged
+    // into one sample class and only ever used together.
     public bool LiveAllPricesDisabled = false;
     public bool LiveSomePricesDisabled = false;
-    public bool IsUpdatingAllPrices = false;
-    public bool IsUpdatingSomePrices = false;
-    public bool IsTimerTicking = false;
-
-    public void StartTicking()
-    {
-        if (!this.IsTimerTicking) this.IsTimerTicking = true;
-    }
 
     //WPF: Infragistics.Controls.Layouts.PropertyEditorPropertyDescriptionButtonClickEventHandler
     public void DataGridToggleLiveAllPrices(object sender, PropertyEditorPropertyDescriptionButtonClickEventArgs args)

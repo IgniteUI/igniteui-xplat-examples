@@ -4,8 +4,7 @@
     {
       "name": "All",
       "exclusions": [
-        { "reason": "TODO test exporting and sample template", "path": "maps\\" },
-        { "reason": "TODO test exporting and sample template", "path": "gauges\\" }
+        
       ]
     },
     {

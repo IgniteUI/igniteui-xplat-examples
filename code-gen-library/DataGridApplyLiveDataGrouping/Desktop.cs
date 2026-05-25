@@ -1,14 +1,13 @@
 //begin imports
-using System.ComponentModel;
-using Infragistics.Controls.Description;
 using Infragistics.Controls.Layouts;
-using Infragistics.Controls.Grids;
 //end imports
 
 public class DataGridApplyLiveDataGrouping
 {
     //begin eventHandler
-    public bool UseRowGrouping = true;
+    // UseRowGrouping, OnGridGroupingAdd and OnGridGroupingRemove are owned by
+    // DataGridLiveDataTickerOnViewInit; these handlers are merged into one
+    // sample class and only ever used together.
 
     //WPF: Infragistics.Controls.Layouts.PropertyEditorPropertyDescriptionChangedEventHandler
     public void DataGridApplyLiveDataGrouping(object sender, PropertyEditorPropertyDescriptionChangedEventArgs args)
@@ -18,22 +17,6 @@ public class DataGridApplyLiveDataGrouping
             this.OnGridGroupingAdd();
         else
             this.OnGridGroupingRemove();
-    }
-
-    public void OnGridGroupingRemove()
-    {
-        var grid = CodeGenHelper.GetDescription<XamDataGrid>("content");
-        if (grid == null) return;
-        grid.GroupDescriptions.Clear();
-    }
-
-    public void OnGridGroupingAdd()
-    {
-        var grid = CodeGenHelper.GetDescription<XamDataGrid>("content");
-        if (grid == null) return;
-        grid.GroupDescriptions.Add(new ColumnGroupDescription { Field = "Category", SortDirection = ListSortDirection.Descending });
-        grid.GroupDescriptions.Add(new ColumnGroupDescription { Field = "Type",     SortDirection = ListSortDirection.Descending });
-        grid.GroupDescriptions.Add(new ColumnGroupDescription { Field = "Contract", SortDirection = ListSortDirection.Descending });
     }
     //end eventHandler
 }

@@ -26,7 +26,7 @@ public class DataGridPerformanceTickerOnViewInit
         if (!IsTimerTicking)
         {
             IsTimerTicking = true;
-            Task.Delay(TimerStep).ContinueWith((t) => OnTimerTick());
+            Task.Delay(TimerStep).ContinueWith((t) => OnTimerTick(), TaskScheduler.FromCurrentSynchronizationContext());
         }
     }
 
@@ -37,14 +37,14 @@ public class DataGridPerformanceTickerOnViewInit
         var grid = CodeGenHelper.GetDescription<XamDataGrid>("content");
         if (grid == null)
         {
-            Task.Delay(TimerStep).ContinueWith((t) => OnTimerTick());
+            Task.Delay(TimerStep).ContinueWith((t) => OnTimerTick(), TaskScheduler.FromCurrentSynchronizationContext());
             return;
         }
 
         var data = grid.ItemsSource as List<SalesPerson>;
         if (data == null)
         {
-            Task.Delay(TimerStep).ContinueWith((t) => OnTimerTick());
+            Task.Delay(TimerStep).ContinueWith((t) => OnTimerTick(), TaskScheduler.FromCurrentSynchronizationContext());
             return;
         }
 
@@ -126,7 +126,7 @@ public class DataGridPerformanceTickerOnViewInit
             grid.InvalidateVisibleRows();
         }
 
-        Task.Delay(TimerStep).ContinueWith((t) => OnTimerTick());
+        Task.Delay(TimerStep).ContinueWith((t) => OnTimerTick(), TaskScheduler.FromCurrentSynchronizationContext());
     }
 
     public void RandomizeItem(SalesPerson item)

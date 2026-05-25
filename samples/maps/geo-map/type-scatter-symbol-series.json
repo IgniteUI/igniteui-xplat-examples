@@ -1,19 +1,31 @@
 {
-  "export": false,
   "descriptions": {
     "content": {
       "type": "GeographicMap",
       "name": "map",
+      "height": "100%",
+      "width": "100%",
+      "zoomable": true,
       "series": [
         {
           "type": "GeographicSymbolSeries",
-          "name": "GeographicSymbolSeries",
-          "title": "Geo Locations",
+          "name": "CitiesSeries",
+          "dataSourceRef": "WorldCities",
+          "markerType": "Circle",
           "latitudeMemberPath": "Y",
           "longitudeMemberPath": "X",
-          "dataSourceRef": "GeoSymbols",
+          "markerBrush": "White",
+          "markerOutline": "Gray"
+        },
+        {
+          "type": "GeographicSymbolSeries",
+          "name": "CapitalsSeries",
+          "dataSourceRef": "WorldCapitals",
           "markerType": "Circle",
-          "showDefaultTooltip": true
+          "latitudeMemberPath": "Y",
+          "longitudeMemberPath": "X",
+          "markerBrush": "White",
+          "markerOutline": "rgb(32, 146, 252)"
         }
       ]
     }

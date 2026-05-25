@@ -1,9 +1,11 @@
 {
-  "export": false,
   "descriptions": {
     "content": {
       "type": "GeographicMap",
-      "name": "map"
+      "name": "map",
+      "height": "100%",
+      "width": "100%",
+      "zoomable": true
     }
   },
   "modules": [
