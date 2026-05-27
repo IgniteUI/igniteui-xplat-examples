@@ -61,10 +61,12 @@
     }
   },
   "modules": [
-    "charts/DataChartCoreModule",
-    "charts/DataChartCategoryModule",
-    "charts/DataChartInteractivityModule",
     "charts/DataChartAnnotationModule",
-    "charts/LegendModule"
+    "charts/DataChartCategoryModule",
+    "charts/DataChartCoreModule",
+    "charts/DataChartInteractivityModule",
+    "charts/DataChartVerticalCategoryModule",
+    "charts/LegendModule",
+    "charts/RangeBarSeriesModule"
   ]
 }
