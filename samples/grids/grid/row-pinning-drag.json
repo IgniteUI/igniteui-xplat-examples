@@ -1,8 +1,4 @@
 {
-  "todo": [
-    "add event handlers for row dragging",
-    "add action strip"
-  ],
   "skipAlterDataCasing": true,
   "descriptions": {
     "content": {
@@ -11,6 +7,8 @@
       "dataRef": "CustomersDataLocal",
       "rowDraggable": true,
       "autoGenerate": false,
+      "renderedRef": "WebGridPinRowOnRendered",
+      "rowDragEndRef": "WebGridRowPinningDragEndHandler",
       "pinning": {
         "type": "WebPinningConfig",
         "rows": "Top"
@@ -52,6 +50,17 @@
         {
           "type": "WebColumn",
           "field": "Fax"
+        }
+      ],
+      "actionStripComponents": [
+        {
+          "type": "WebActionStrip",
+          "name": "actionStrip",
+          "actionButtons": [
+            {
+              "type": "WebGridPinningActions"
+            }
+          ]
         }
       ]
     }
