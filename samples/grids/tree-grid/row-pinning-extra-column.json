@@ -13,7 +13,8 @@
       "cellSelection": "None",
       "pinning": {
         "type": "WebPinningConfig",
-        "rows": "Top"
+        "rows": "Top",
+        "columns": "End"
       },
       "columnList": [
         {
