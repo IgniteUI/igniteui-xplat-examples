@@ -12,6 +12,7 @@
       "rowSelection": "Multiple",
       "moving": true,
       "allowFiltering": true,
+      "filterMode": "ExcelStyleFilter",
       "gridKeydownRef": "WebGridCustomKBNav",
       "paginationComponents": [
         {

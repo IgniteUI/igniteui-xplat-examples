@@ -14,39 +14,53 @@
       "primaryKey": "ProductID",
       "autoGenerate": false,
       "rowEditable": true,
+      "allowFiltering": true,
+      "filterMode": "ExcelStyleFilter",
       "gridKeydownRef": "WebGridCustomKBNav",
       "columnList": [
         {
           "type": "WebColumn",
           "field": "ProductID",
-          "header": "Product ID"
+          "header": "Product ID",
+          "sortable": true,
+          "groupable": true
         },
         {
           "type": "WebColumn",
           "field": "ReorderLevel",
           "header": "Reorder Level",
-          "dataType": "Number"
+          "dataType": "Number",
+          "sortable": true,
+          "groupable": true
         },
         {
           "type": "WebColumn",
           "field": "ProductName",
-          "header": "Product Name"
+          "header": "Product Name",
+          "sortable": true,
+          "groupable": true
         },
         {
           "type": "WebColumn",
           "field": "UnitsInStock",
           "header": "Units In Stock",
-          "dataType": "Number"
+          "dataType": "Number",
+          "sortable": true,
+          "groupable": true
         },
         {
           "type": "WebColumn",
           "field": "OrderDate",
-          "header": "Order Date"
+          "header": "Order Date",
+          "sortable": true,
+          "groupable": true
         },
         {
           "type": "WebColumn",
           "field": "Discontinued",
-          "header": "Discontinued"
+          "header": "Discontinued",
+          "sortable": true,
+          "groupable": true
         }
       ]
     }

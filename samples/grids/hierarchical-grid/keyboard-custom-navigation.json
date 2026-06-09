@@ -1,0 +1,204 @@
+{
+  "export": true,
+  "skipAlterDataCasing": true,
+  "descriptions": {
+    "content": {
+      "type": "WebHierarchicalGrid",
+      "dataRef": "SingersData",
+      "autoGenerate": false,
+      "primaryKey": "ID",
+      "gridKeydownRef": "WebGridCustomKBNav",
+      "rowEditable": true,
+      "allowFiltering": true,
+      "filterMode": "ExcelStyleFilter",
+      "columnList": [
+        {
+          "type": "WebColumn",
+          "field": "Artist",
+          "header": "Artist",
+          "dataType": "String",
+          "sortable": true,
+          "resizable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "Photo",
+          "header": "Photo",
+          "dataType": "Image",
+          "minWidth": "115px",
+          "sortable": true,
+          "resizable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "Debut",
+          "header": "Debut",
+          "dataType": "Number",
+          "minWidth": "88px",
+          "maxWidth": "230px",
+          "sortable": true,
+          "resizable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "GrammyNominations",
+          "header": "Grammy Nominations",
+          "dataType": "Number",
+          "sortable": true,
+          "resizable": true
+        },
+        {
+          "type": "WebColumn",
+          "field": "GrammyAwards",
+          "header": "Grammy Awards",
+          "dataType": "Number",
+          "sortable": true,
+          "resizable": true
+        }
+      ],
+      "childLayoutList": [
+        {
+          "type": "WebRowIsland",
+          "childDataKey": "Albums",
+          "autoGenerate": false,
+          "rowEditable": true,
+          "allowFiltering": true,
+          "filterMode": "ExcelStyleFilter",
+          "columnList": [
+            {
+              "type": "WebColumn",
+              "field": "Album",
+              "header": "Album",
+              "dataType": "String",
+              "sortable": true,
+              "groupable": true,
+              "resizable": true
+            },
+            {
+              "type": "WebColumn",
+              "field": "LaunchDate",
+              "header": "Launch Date",
+              "dataType": "Date",
+              "sortable": true,
+              "groupable": true,
+              "resizable": true
+            },
+            {
+              "type": "WebColumn",
+              "field": "BillboardReview",
+              "header": "Billboard Review",
+              "dataType": "Number",
+              "sortable": true,
+              "groupable": true,
+              "resizable": true
+            },
+            {
+              "type": "WebColumn",
+              "field": "USBillboard200",
+              "header": "US Billboard 200",
+              "dataType": "String",
+              "sortable": true,
+              "groupable": true,
+              "resizable": true
+            }
+          ],
+          "childLayoutList": [
+            {
+              "type": "WebRowIsland",
+              "childDataKey": "Songs",
+              "autoGenerate": false,
+              "rowEditable": true,
+              "allowFiltering": true,
+              "filterMode": "ExcelStyleFilter",
+              "columnList": [
+                {
+                  "type": "WebColumn",
+                  "field": "Number",
+                  "header": "No.",
+                  "dataType": "String",
+                  "sortable": true,
+                  "groupable": true,
+                  "resizable": true
+                },
+                {
+                  "type": "WebColumn",
+                  "field": "Title",
+                  "header": "Title",
+                  "dataType": "String",
+                  "sortable": true,
+                  "groupable": true,
+                  "resizable": true
+                },
+                {
+                  "type": "WebColumn",
+                  "field": "Released",
+                  "header": "Released",
+                  "dataType": "String",
+                  "sortable": true,
+                  "groupable": true,
+                  "resizable": true
+                },
+                {
+                  "type": "WebColumn",
+                  "field": "Genre",
+                  "header": "Genre",
+                  "dataType": "String",
+                  "sortable": true,
+                  "groupable": true,
+                  "resizable": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "WebRowIsland",
+          "childDataKey": "Tours",
+          "autoGenerate": false,
+          "rowEditable": true,
+          "allowFiltering": true,
+          "filterMode": "ExcelStyleFilter",
+          "columnList": [
+            {
+              "type": "WebColumn",
+              "field": "Tour",
+              "header": "Tour",
+              "dataType": "String",
+              "sortable": true,
+              "groupable": true,
+              "resizable": true
+            },
+            {
+              "type": "WebColumn",
+              "field": "StartedOn",
+              "header": "Started on",
+              "dataType": "String",
+              "sortable": true,
+              "groupable": true,
+              "resizable": true
+            },
+            {
+              "type": "WebColumn",
+              "field": "Location",
+              "header": "Location",
+              "dataType": "String",
+              "sortable": true,
+              "groupable": true,
+              "resizable": true
+            },
+            {
+              "type": "WebColumn",
+              "field": "Headliner",
+              "header": "Headliner",
+              "dataType": "String",
+              "sortable": true,
+              "groupable": true,
+              "resizable": true
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "modules": ["grids/WebHierarchicalGridModule"]
+}
