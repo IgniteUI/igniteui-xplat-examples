@@ -1,0 +1,53 @@
+{
+  "descriptions": {
+    "content": {
+      "type": "RadialGauge",
+      "name": "gauge",
+      "height": "100%",
+      "width": "100%",
+      "transitionDuration": 500,
+      "minimumValue": 0,
+      "maximumValue": 80,
+      "value": 10,
+      "interval": 10,
+      "labelExtent": 0.6,
+      "labelInterval": 10,
+      "font": "15px Verdana,Arial",
+      "scaleStartAngle": 135,
+      "scaleEndAngle": 45,
+      "scaleBrush": "#0B8FED",
+      "scaleOversweepShape": "Auto",
+      "scaleSweepDirection": "Clockwise",
+      "scaleEndExtent": 0.825,
+      "scaleStartExtent": 0.775,
+      "backingShape": "Fitted",
+      "backingBrush": "#FCFCFC",
+      "backingOutline": "#D6D6D6",
+      "backingOversweep": 5,
+      "backingCornerRadius": 10,
+      "backingOuterExtent": 0.9,
+      "backingStrokeThickness": 4,
+      "needleShape": "Needle",
+      "needlePivotShape": "CircleOverlay",
+      "needleEndExtent": 0.5,
+      "needlePointFeatureExtent": 0.2,
+      "needlePivotWidthRatio": 0.1,
+      "needleBrush": "#9F9FA0",
+      "needleOutline": "#9F9FA0",
+      "needlePivotBrush": "#9F9FA0",
+      "needlePivotOutline": "#9F9FA0",
+      "tickBrush": "rgba(51, 51, 51, 1)",
+      "tickStartExtent": 0.675,
+      "tickEndExtent": 0.75,
+      "tickStrokeThickness": 1,
+      "minorTickBrush": "rgba(73, 73, 73, 1)",
+      "minorTickCount": 4,
+      "minorTickStartExtent": 0.725,
+      "minorTickEndExtent": 0.75,
+      "minorTickStrokeThickness": 1
+    }
+  },
+  "modules": [
+    "gauges/RadialGaugeModule"
+  ]
+}

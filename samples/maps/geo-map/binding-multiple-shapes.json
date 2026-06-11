@@ -1,0 +1,53 @@
+{
+  "descriptions": {
+    "content": {
+      "type": "GeographicMap",
+      "name": "map",
+      "height": "100%",
+      "width": "100%",
+      "zoomable": true,
+      "series": [
+        {
+          "type": "GeographicShapeSeries",
+          "name": "AsiaShape",
+          "shapefileDataSource": {
+            "type": "ShapeDataSource",
+            "shapefileSource": "https://static.infragistics.com/xplatform/shapes/world_region_asia.shp",
+            "databaseSource":  "https://static.infragistics.com/xplatform/shapes/world_region_asia.dbf"
+          },
+          "outline": "Black",
+          "thickness": 1,
+          "brush": "#d10700"
+        },
+        {
+          "type": "GeographicShapeSeries",
+          "name": "EuropeShape",
+          "shapefileDataSource": {
+            "type": "ShapeDataSource",
+            "shapefileSource": "https://static.infragistics.com/xplatform/shapes/world_region_europe.shp",
+            "databaseSource":  "https://static.infragistics.com/xplatform/shapes/world_region_europe.dbf"
+          },
+          "outline": "Black",
+          "thickness": 1,
+          "brush": "#04b530"
+        },
+        {
+          "type": "GeographicShapeSeries",
+          "name": "AmericanShape",
+          "shapefileDataSource": {
+            "type": "ShapeDataSource",
+            "shapefileSource": "https://static.infragistics.com/xplatform/shapes/world_region_north_america.shp",
+            "databaseSource":  "https://static.infragistics.com/xplatform/shapes/world_region_north_america.dbf"
+          },
+          "outline": "Black",
+          "thickness": 1,
+          "brush": "#0073d1"
+        }
+      ]
+    }
+  },
+  "modules": [
+    "charts/DataChartInteractivityModule",
+    "maps/GeographicMapModule"
+  ]
+}

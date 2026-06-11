@@ -1,0 +1,79 @@
+{
+  "descriptions": {
+    "aboveContent": {
+      "type": "LinearGauge",
+      "name": "gauge1",
+      "height": "120px",
+      "width": "100%",
+      "orientation": "Horizontal",
+      "value": 80,
+      "minimumValue": 0,
+      "maximumValue": 100,
+      "interval": 10,
+      "labelInterval": 10,
+      "labelExtent": 0.0,
+      "transitionDuration": 500,
+      "scaleInnerExtent": 0.25,
+      "scaleOuterExtent": 0.8,
+      "scaleStartExtent": 0.05,
+      "scaleEndExtent": 0.95,
+      "ranges": [
+        { "type": "LinearGraphRange", "brush": "#008000", "outline": "#008000", "startValue": 0,  "endValue": 25,  "innerStartExtent": 0.25, "innerEndExtent": 0.25, "outerStartExtent": 0.8, "outerEndExtent": 0.8 },
+        { "type": "LinearGraphRange", "brush": "#10B401", "outline": "#10B401", "startValue": 25, "endValue": 50,  "innerStartExtent": 0.25, "innerEndExtent": 0.25, "outerStartExtent": 0.8, "outerEndExtent": 0.8 },
+        { "type": "LinearGraphRange", "brush": "#45EC03", "outline": "#45EC03", "startValue": 50, "endValue": 75,  "innerStartExtent": 0.25, "innerEndExtent": 0.25, "outerStartExtent": 0.8, "outerEndExtent": 0.8 },
+        { "type": "LinearGraphRange", "brush": "#2EFA2E", "outline": "#2EFA2E", "startValue": 75, "endValue": 100, "innerStartExtent": 0.25, "innerEndExtent": 0.25, "outerStartExtent": 0.8, "outerEndExtent": 0.8 }
+      ]
+    },
+    "content": {
+      "type": "LinearGauge",
+      "name": "gauge2",
+      "height": "120px",
+      "width": "100%",
+      "orientation": "Horizontal",
+      "value": 60,
+      "minimumValue": 0,
+      "maximumValue": 100,
+      "interval": 10,
+      "labelInterval": 10,
+      "labelExtent": 0.0,
+      "transitionDuration": 500,
+      "scaleInnerExtent": 0.25,
+      "scaleOuterExtent": 0.8,
+      "scaleStartExtent": 0.05,
+      "scaleEndExtent": 0.95,
+      "ranges": [
+        { "type": "LinearGraphRange", "brush": "#E29B03", "outline": "#E29B03", "startValue": 0,  "endValue": 25,  "innerStartExtent": 0.25, "innerEndExtent": 0.25, "outerStartExtent": 0.8, "outerEndExtent": 0.8 },
+        { "type": "LinearGraphRange", "brush": "#FDB417", "outline": "#FDB417", "startValue": 25, "endValue": 50,  "innerStartExtent": 0.25, "innerEndExtent": 0.25, "outerStartExtent": 0.8, "outerEndExtent": 0.8 },
+        { "type": "LinearGraphRange", "brush": "#FDC957", "outline": "#FDC957", "startValue": 50, "endValue": 75,  "innerStartExtent": 0.25, "innerEndExtent": 0.25, "outerStartExtent": 0.8, "outerEndExtent": 0.8 },
+        { "type": "LinearGraphRange", "brush": "#FDD682", "outline": "#FDD682", "startValue": 75, "endValue": 100, "innerStartExtent": 0.25, "innerEndExtent": 0.25, "outerStartExtent": 0.8, "outerEndExtent": 0.8 }
+      ]
+    },
+    "belowContent": {
+      "type": "LinearGauge",
+      "name": "gauge3",
+      "height": "120px",
+      "width": "100%",
+      "orientation": "Horizontal",
+      "value": 40,
+      "minimumValue": 0,
+      "maximumValue": 100,
+      "interval": 10,
+      "labelInterval": 10,
+      "labelExtent": 0.0,
+      "transitionDuration": 500,
+      "scaleInnerExtent": 0.25,
+      "scaleOuterExtent": 0.8,
+      "scaleStartExtent": 0.05,
+      "scaleEndExtent": 0.95,
+      "ranges": [
+        { "type": "LinearGraphRange", "brush": "#CF0000", "outline": "#CF0000", "startValue": 0,  "endValue": 25,  "innerStartExtent": 0.25, "innerEndExtent": 0.25, "outerStartExtent": 0.8, "outerEndExtent": 0.8 },
+        { "type": "LinearGraphRange", "brush": "#FF0000", "outline": "#FF0000", "startValue": 25, "endValue": 50,  "innerStartExtent": 0.25, "innerEndExtent": 0.25, "outerStartExtent": 0.8, "outerEndExtent": 0.8 },
+        { "type": "LinearGraphRange", "brush": "#FD3939", "outline": "#FD3939", "startValue": 50, "endValue": 75,  "innerStartExtent": 0.25, "innerEndExtent": 0.25, "outerStartExtent": 0.8, "outerEndExtent": 0.8 },
+        { "type": "LinearGraphRange", "brush": "#FA6363", "outline": "#FA6363", "startValue": 75, "endValue": 100, "innerStartExtent": 0.25, "innerEndExtent": 0.25, "outerStartExtent": 0.8, "outerEndExtent": 0.8 }
+      ]
+    }
+  },
+  "modules": [
+    "gauges/LinearGaugeModule"
+  ]
+}

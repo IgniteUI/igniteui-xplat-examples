@@ -1,0 +1,41 @@
+{
+  "descriptions": {
+    "editor": {
+      "name": "editor",
+      "type": "PropertyEditorPanel",
+      "componentRendererRef": "renderer",
+      "targetRef": "map",
+      "descriptionType": "GeographicMap",
+      "isHorizontal": true,
+      "isWrappingEnabled": true,
+      "properties": [
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "MapRegion",
+          "name": "MapRegion",
+          "label": "Map Region",
+          "valueType": "EnumValue",
+          "shouldOverrideDefaultEditor": true,
+          "dropDownNames": [ "Australia", "Caribbean", "Egypt", "European", "Hawaii", "Japan", "Poland", "SouthAfrica", "UnitedKingdom", "UnitedStates", "Uruguay" ],
+          "dropDownValues": [ "Australia", "Caribbean", "Egypt", "European", "Hawaii", "Japan", "Poland", "SouthAfrica", "UnitedKingdom", "UnitedStates", "Uruguay" ],
+          "primitiveValue": "UnitedStates",
+          "changedRef": "EditorChangeMapRegion"
+        }
+      ]
+    },
+    "content": {
+      "type": "GeographicMap",
+      "name": "map",
+      "height": "100%",
+      "width": "100%",
+      "zoomable": true
+    }
+  },
+  "onViewInit": [ "MapNavigationOnViewInit" ],
+  "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
+    "charts/DataChartInteractivityModule",
+    "maps/GeographicMapModule"
+  ]
+}

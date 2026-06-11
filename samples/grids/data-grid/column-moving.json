@@ -1,0 +1,76 @@
+{
+  "skipAlterDataCasing": true,
+  "descriptions": {
+    "editor": {
+      "type": "PropertyEditorPanel",
+      "name": "PropertyEditor",
+      "componentRendererRef": "renderer",
+      "targetRef": "grid",
+      "descriptionType": "DataGrid",
+      "isHorizontal": true,
+      "isWrappingEnabled": true,
+      "properties": [
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "ColumnMovingMode",
+          "name": "ColumnMovingModeEditor",
+          "label": "Column Moving Mode",
+          "shouldOverrideDefaultEditor": true,
+          "valueType": "EnumValue",
+          "dropDownNames": ["Deferred", "None"],
+          "dropDownValues": ["Deferred", "None"],
+          "primitiveValue": "Deferred"
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "ColumnMovingSeparatorWidth",
+          "name": "ColumnMovingSeparatorWidthEditor",
+          "label": "Separator Width",
+          "shouldOverrideDefaultEditor": true,
+          "valueType": "Slider",
+          "primitiveValue": 2,
+          "min": 1,
+          "max": 5,
+          "step": 1
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "ColumnMovingAnimationMode",
+          "name": "ColumnMovingAnimationModeEditor",
+          "label": "Column Moving Animation",
+          "shouldOverrideDefaultEditor": true,
+          "valueType": "EnumValue",
+          "dropDownNames": ["Auto", "SlideOver", "None"],
+          "dropDownValues": ["Auto", "SlideOver", "None"],
+          "primitiveValue": "Auto"
+        }
+      ]
+    },
+    "content": {
+      "type": "DataGrid",
+      "id": "grid",
+      "name": "grid",
+      "dataSourceRef": "EmployeesSalesData",
+      "autoGenerateColumns": false,
+      "isColumnOptionsEnabled": true,
+      "defaultColumnMinWidth": 100,
+      "columnMovingMode": "Deferred",
+      "columnMovingSeparatorWidth": 2,
+      "columnMovingAnimationMode": "Auto",
+      "height": "100%",
+      "width": "100%",
+      "columns": [
+        { "type": "TextColumn",     "field": "Name",     "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 170 } },
+        { "type": "TextColumn",     "field": "Street",   "headerText": "Address", "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 150 } },
+        { "type": "TextColumn",     "field": "City",     "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 120 } },
+        { "type": "NumericColumn",  "field": "Salary",   "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 120 }, "positivePrefix": "$", "showGroupingSeparator": true },
+        { "type": "DateTimeColumn", "field": "Birthday", "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 170 } }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
+    "grids/DataGridModule"
+  ]
+}

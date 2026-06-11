@@ -1,0 +1,83 @@
+{
+  "descriptions": {
+    "aboveContent": {
+      "type": "LinearGauge",
+      "name": "gauge1",
+      "height": "80px",
+      "width": "100%",
+      "minimumValue": -40,
+      "maximumValue": 100,
+      "value": 20,
+      "interval": 10,
+      "labelInterval": 10,
+      "labelExtent": 0.15,
+      "transitionDuration": 500,
+      "isNeedleDraggingEnabled": false,
+      "needleBrush": "transparent",
+      "needleOutline": "transparent",
+      "backingBrush": "transparent",
+      "backingOutline": "transparent",
+      "scaleStrokeThickness": 0,
+      "scaleBrush": "transparent",
+      "scaleOutline": "transparent",
+      "scaleInnerExtent": 0.35,
+      "scaleOuterExtent": 1.0,
+      "scaleStartExtent": 0.05,
+      "scaleEndExtent": 0.95,
+      "minorTickBrush": "Gray",
+      "minorTickStartExtent": -0.2,
+      "minorTickEndExtent": -0.1,
+      "minorTickStrokeThickness": 1,
+      "minorTickCount": 4,
+      "tickStartExtent": -0.2,
+      "tickEndExtent": 0.0,
+      "tickStrokeThickness": 1,
+      "tickBrush": "Gray",
+      "ranges": [
+        { "type": "LinearGraphRange", "brush": "linear-gradient(#FF0000, #C70101)", "outline": "transparent", "startValue": -40, "endValue": 20, "innerStartExtent": 0.35,  "innerEndExtent": 0.35,  "outerStartExtent": 0.675, "outerEndExtent": 0.675 },
+        { "type": "LinearGraphRange", "brush": "linear-gradient(#FA8F8F, #FA5151)", "outline": "transparent", "startValue": -40, "endValue": 20, "innerStartExtent": 0.675, "innerEndExtent": 0.675, "outerStartExtent": 1.0,   "outerEndExtent": 1.0   }
+      ]
+    },
+    "content": {
+      "type": "LinearGauge",
+      "name": "gauge2",
+      "height": "80px",
+      "width": "100%",
+      "minimumValue": -40,
+      "maximumValue": 100,
+      "value": 20,
+      "interval": 10,
+      "labelInterval": 10,
+      "labelExtent": 0.1,
+      "transitionDuration": 500,
+      "isNeedleDraggingEnabled": false,
+      "needleBrush": "transparent",
+      "needleOutline": "transparent",
+      "backingBrush": "transparent",
+      "backingOutline": "transparent",
+      "scaleStrokeThickness": 0,
+      "scaleBrush": "#E0DFDF",
+      "scaleOutline": "#E0DFDF",
+      "scaleInnerExtent": 0.35,
+      "scaleOuterExtent": 1.0,
+      "scaleStartExtent": 0.05,
+      "scaleEndExtent": 0.95,
+      "minorTickBrush": "Gray",
+      "minorTickStartExtent": 0.25,
+      "minorTickEndExtent": 0.35,
+      "minorTickStrokeThickness": 1,
+      "minorTickCount": 4,
+      "tickStartExtent": 0.15,
+      "tickEndExtent": 0.35,
+      "tickStrokeThickness": 1,
+      "tickBrush": "Gray",
+      "ranges": [
+        { "type": "LinearGraphRange", "brush": "linear-gradient(#FF0000, #C70101)", "outline": "transparent", "startValue": -40, "endValue": 20, "innerStartExtent": 0.35,  "innerEndExtent": 0.35,  "outerStartExtent": 0.675, "outerEndExtent": 0.675 },
+        { "type": "LinearGraphRange", "brush": "linear-gradient(#FA8F8F, #FA5151)", "outline": "transparent", "startValue": -40, "endValue": 20, "innerStartExtent": 0.675, "innerEndExtent": 0.675, "outerStartExtent": 1.0,   "outerEndExtent": 1.0   }
+      ]
+    }
+  },
+  "modules": [
+    "gauges/LinearGaugeModule"
+  ]
+}

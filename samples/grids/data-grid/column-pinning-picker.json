@@ -1,0 +1,69 @@
+{
+  "skipAlterDataCasing": true,
+  "descriptions": {
+    "editor": {
+      "type": "PropertyEditorPanel",
+      "name": "PropertyEditor",
+      "componentRendererRef": "renderer",
+      "targetRef": "grid",
+      "descriptionType": "DataGrid",
+      "isHorizontal": true,
+      "isWrappingEnabled": true,
+      "properties": [
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "name": "PinLeftButton",
+          "shouldOverrideDefaultEditor": true,
+          "valueType": "Button",
+          "primitiveValue": "Pin Left",
+          "buttonClickedRef": "DataGridPinIdAndNameColumnsLeft"
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "name": "PinRightButton",
+          "shouldOverrideDefaultEditor": true,
+          "valueType": "Button",
+          "primitiveValue": "Pin Right",
+          "buttonClickedRef": "DataGridPinAddressColumnsRight"
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "name": "UnpinButton",
+          "shouldOverrideDefaultEditor": true,
+          "valueType": "Button",
+          "primitiveValue": "Unpin Columns",
+          "buttonClickedRef": "DataGridUnpinNameAndAddressColumns"
+        }
+      ]
+    },
+    "content": {
+      "type": "DataGrid",
+      "id": "grid",
+      "name": "grid",
+      "dataSourceRef": "EmployeesSalesData",
+      "autoGenerateColumns": false,
+      "defaultColumnMinWidth": 120,
+      "height": "100%",
+      "width": "100%",
+      "columns": [
+        { "type": "TextColumn",     "field": "ID",          "pinned": "Left", "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 110 } },
+        { "type": "TextColumn",     "field": "FirstName",   "pinned": "Left", "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 190 } },
+        { "type": "TextColumn",     "field": "LastName",    "pinned": "Left", "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 190 } },
+        { "type": "DateTimeColumn", "field": "Birthday",    "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 170 } },
+        { "type": "NumericColumn",  "field": "Age",         "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 120 } },
+        { "type": "ImageColumn",    "field": "CountryFlag", "isEditable": false },
+        { "type": "TextColumn",     "field": "Street",      "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 160 } },
+        { "type": "TextColumn",     "field": "City",        "width": { "type": "ColumnWidth", "isStarSized": false, "value": 260 } },
+        { "type": "TextColumn",     "field": "Country",     "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 170 } },
+        { "type": "NumericColumn",  "field": "Salary",      "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 170 } },
+        { "type": "NumericColumn",  "field": "Sales",       "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 120 } },
+        { "type": "NumericColumn",  "field": "Salary",      "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 120 }, "positivePrefix": "$", "showGroupingSeparator": true, "maxFractionDigits": 0, "minFractionDigits": 0 }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
+    "grids/DataGridModule"
+  ]
+}

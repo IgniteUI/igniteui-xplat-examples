@@ -1,0 +1,26 @@
+{
+  "skipAlterDataCasing": true,
+  "descriptions": {
+    "content": {
+      "type": "DataGrid",
+      "id": "grid",
+      "name": "grid",
+      "dataSourceRef": "RealEstateData",
+      "autoGenerateColumns": false,
+      "activationMode": "Cell",
+      "height": "100%",
+      "width": "100%",
+      "columns": [
+        { "type": "TextColumn",    "field": "ID" },
+        { "type": "TextColumn",    "field": "Property" },
+        { "type": "TextColumn",    "field": "Rooms" },
+        { "type": "TextColumn",    "field": "Baths" },
+        { "type": "TextColumn",    "field": "Built" },
+        { "type": "NumericColumn", "field": "Price",   "positivePrefix": "$", "showGroupingSeparator": true, "maxFractionDigits": 0, "minFractionDigits": 0 },
+        { "type": "TextColumn",    "field": "City" },
+        { "type": "TextColumn",    "field": "Country" }
+      ]
+    }
+  },
+  "modules": ["grids/DataGridModule"]
+}

@@ -1,5 +1,4 @@
 {
-  "export": false,
   "onViewInit": [ "ShapeFileOnViewInit"],
   "descriptions": {
     "content": {

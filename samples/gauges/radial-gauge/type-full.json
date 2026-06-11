@@ -1,0 +1,57 @@
+{
+  "descriptions": {
+    "content": {
+      "type": "RadialGauge",
+      "name": "gauge",
+      "height": "100%",
+      "width": "100%",
+      "minimumValue": 0,
+      "maximumValue": 50,
+      "value": 25,
+      "interval": 5,
+      "labelInterval": 5,
+      "labelExtent": 0.71,
+      "font": "15px Verdana,Arial",
+      "isNeedleDraggingEnabled": true,
+      "needleEndExtent": 0.5,
+      "needleShape": "Triangle",
+      "needleEndWidthRatio": 0.03,
+      "needleStartWidthRatio": 0.05,
+      "needlePivotShape": "CircleOverlay",
+      "needlePivotWidthRatio": 0.15,
+      "needleBaseFeatureWidthRatio": 0.15,
+      "needleBrush": "#79797A",
+      "needleOutline": "#79797A",
+      "needlePivotBrush": "#79797A",
+      "needlePivotOutline": "#79797A",
+      "minorTickCount": 4,
+      "minorTickStartExtent": 0.6,
+      "minorTickEndExtent": 0.625,
+      "minorTickStrokeThickness": 1,
+      "minorTickBrush": "#79797A",
+      "tickStartExtent": 0.6,
+      "tickEndExtent": 0.65,
+      "tickStrokeThickness": 2,
+      "tickBrush": "#79797A",
+      "scaleStartAngle": 120,
+      "scaleEndAngle": 60,
+      "scaleBrush": "#D6D6D6",
+      "scaleOversweepShape": "Fitted",
+      "scaleSweepDirection": "Clockwise",
+      "scaleEndExtent": 0.57,
+      "scaleStartExtent": 0.5,
+      "backingShape": "Circular",
+      "backingBrush": "#FCFCFC",
+      "backingOutline": "#D6D6D6",
+      "backingStrokeThickness": 5,
+      "ranges": [
+        { "type": "RadialGaugeRange", "startValue": 5,  "endValue": 15, "innerStartExtent": 0.5, "innerEndExtent": 0.5, "outerStartExtent": 0.57, "outerEndExtent": 0.57 },
+        { "type": "RadialGaugeRange", "startValue": 15, "endValue": 35, "innerStartExtent": 0.5, "innerEndExtent": 0.5, "outerStartExtent": 0.57, "outerEndExtent": 0.57 },
+        { "type": "RadialGaugeRange", "startValue": 35, "endValue": 45, "innerStartExtent": 0.5, "innerEndExtent": 0.5, "outerStartExtent": 0.57, "outerEndExtent": 0.57 }
+      ]
+    }
+  },
+  "modules": [
+    "gauges/RadialGaugeModule"
+  ]
+}
