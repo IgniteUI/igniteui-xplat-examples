@@ -1,5 +1,5 @@
 //begin imports
-import { IgxDataChartComponent } from 'igniteui-webcomponents-charts';
+import { IgxDataChartComponent } from 'igniteui-angular-charts';
 //import { html } from 'lit';
 //end imports
 
