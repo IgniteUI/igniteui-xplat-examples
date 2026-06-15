@@ -1,6 +1,6 @@
 //begin imports
 import { IgxDataChartComponent } from 'igniteui-angular-charts';
-//import { html } from 'lit';
+import { TemplateRef } from '@angular/core';
 //end imports
 
 export class TestsAddStaticTextTooltip
@@ -13,11 +13,11 @@ export class TestsAddStaticTextTooltip
         {
 			var series = chart.series.item(i);
             if (!series.isLayer)
-    		{
-    			
-    			/*series.tooltipTemplate = ((context: any)=>{
-						return html`<div class="ui-chart-default-tooltip-content">text</div>`;
-				}); */
+    		{    			
+    			 var tmpl = CodeGenHelper.findByName<object>("staticTooltip") as TemplateRef<any>; // resolves the TemplateRef
+				 if (tmpl == undefined)
+                     console.log("Could not find template reference for staticTooltip");
+				 series.tooltipTemplate = tmpl ; 
     		}
         }
     }

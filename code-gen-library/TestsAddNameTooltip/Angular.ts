@@ -1,5 +1,6 @@
 //begin imports
 import { IgxDataChartComponent } from 'igniteui-angular-charts';
+import { TemplateRef } from '@angular/core';
 //import { html } from 'lit';
 //end imports
 
@@ -15,9 +16,10 @@ export class TestsAddNameTooltip
             if (!series.isLayer)
     		{
     			
-    			/*series.tooltipTemplate = ((context: any)=>{
-						return html`<div class="ui-chart-default-tooltip-content">${context.item.Name}</div>`;
-				}); */
+    			 var tmpl = CodeGenHelper.findByName<object>("nameTooltip") as TemplateRef<any>; // resolves the TemplateRef
+				 if (tmpl == undefined)
+					console.log("Could not find template reference for nameTooltip");
+				 series.tooltipTemplate = tmpl    ; 
     		}
         }
     }
