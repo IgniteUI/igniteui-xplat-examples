@@ -1,6 +1,7 @@
 //begin imports
 using System;
 using System.Collections;
+using System.Globalization;
 //end imports
 
 public class FormatDateLabelAsTime
@@ -36,7 +37,7 @@ public class FormatDateLabelAsTime
                 d = (DateTime)item.GetType().GetProperty("Date").GetValue(item);
 
         }
-        return d.ToString("HH:mm:ss");
+        return d.ToString("HH:mm:ss", CultureInfo.InvariantCulture);
     }
     //end eventHandler
 }

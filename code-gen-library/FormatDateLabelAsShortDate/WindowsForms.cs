@@ -1,6 +1,7 @@
 //begin imports
 using System;
 using System.Collections;
+using System.Globalization;
 using Infragistics.Win.DataVisualization;
 //end imports
 
@@ -36,7 +37,7 @@ public class FormatDateLabelAsShortDate
                 d = (DateTime)info.Item.GetType().GetProperty("Date").GetValue(info.Item);
 
         }
-        return d.ToString("MM/dd/yy");
+        return d.ToString("MM/dd/yy", CultureInfo.InvariantCulture);
     }
     //end eventHandler
 }
