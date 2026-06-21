@@ -7,7 +7,7 @@ export class WebGridRowSelectorExcelTemplate {
 //begin template
 //begin content
 public webGridRowSelectorExcelTemplate = (ctx: IgcRowSelectorTemplateContext) => {
-    return html`<span style='display: block;width:30px;'> ${ctx.implicit.index}</span>`;
+    return html`<span style='width:30px;display: flex;justify-content: center;'> ${ctx.implicit.index}</span>`;
 }
 //end content
 //end template
