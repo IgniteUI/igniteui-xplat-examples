@@ -1,0 +1,80 @@
+{
+  "name": "example-ignite-ui-react-native",
+  "description": "Example project for Ignite UI for React Native components. Scaffold cloned from the React editor-template; the web-shell (vite + react-dom) stays in place for editor previews. Native pipeline deps (react-native, @react-native-community/cli, Metro config) land in Phase 2 when RN sample apps actually run on-device.",
+  "author": "Infragistics",
+  "version": "1.4.0",
+  "license": "",
+  "homepage": ".",
+  "private": true,
+  "scripts": {
+    "start": "vite --port 4200",
+    "build": "tsc && node --max-old-space-size=4096 node_modules/vite/bin/vite build",
+    "preview": "vite preview",
+    "test": "vitest",
+    "lint": "eslint ./src/**/*.{ts,tsx}"
+  },
+  "dependencies": {
+    "igniteui-react-native-core": "19.3.3-beta.0",
+    "igniteui-react-native": "^19.6.2",
+//ifdef charts, maps, dashboards
+    "igniteui-react-native-charts": "19.3.3-beta.0",
+//endifdef charts, maps, dashboards
+//ifdef dashboards
+    "igniteui-react-native-dashboards": "19.3.3-beta.0",
+    "igniteui-react-native-data-grids": "19.3.3-beta.0",
+//endifdef dashboards
+//ifdef data-grids
+    "igniteui-react-native-data-grids": "19.3.3-beta.0",
+//endifdef data-grids
+//ifdef grid, dashboards
+    "igniteui-react-native-datasources": "19.3.3-beta.0",
+//endifdef grid, dashboards
+//ifdef excel, spreadsheet
+    "igniteui-react-native-excel": "19.3.3-beta.0",
+//endifdef excel, spreadsheet
+//ifdef gauges, dashboards
+    "igniteui-react-native-gauges": "19.3.3-beta.0",
+//endifdef gauges, dashboards
+//ifdef grid, dashboards
+    "igniteui-react-native-data-grids": "19.3.3-beta.0",
+//endifdef grid, dashboards
+//ifdef grid, inputs, layouts, editor, dashboards
+    "igniteui-react-native-inputs": "19.3.3-beta.0",
+//endifdef grid, inputs, layouts, editor, dashboards
+//ifdef grid, editor, layouts, dashboards
+    "igniteui-react-native-layouts": "19.3.3-beta.0",
+//endifdef grid, editor, layouts, dashboards
+//ifdef maps, dashboards
+    "igniteui-react-native-maps": "19.3.3-beta.0",
+//endifdef maps, dashboards
+//ifdef spreadsheet
+    "igniteui-react-native-spreadsheet": "19.3.3-beta.0",
+    "igniteui-react-native-spreadsheet-chart-adapter": "19.3.3-beta.0",
+//endifdef spreadsheet
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "tslib": "^2.4.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.2.0",
+    "@types/node": "^24.7.1",
+    "@types/react": "^18.0.24",
+    "@types/react-dom": "^18.0.8",
+    "@vitejs/plugin-react": "^5.0.4",
+    "@vitest/browser": "^3.2.4",
+    "eslint": "^8.33.0",
+    "eslint-config-react": "^1.1.7",
+    "eslint-plugin-react": "^7.20.0",
+    "typescript": "^4.8.4",
+    "vite": "^7.1.9",
+    "vitest": "^3.2.4",
+    "vitest-canvas-mock": "^0.3.3",
+    "worker-loader": "^3.0.8"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}

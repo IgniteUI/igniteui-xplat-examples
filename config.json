@@ -56,6 +56,22 @@
       "exclusions": [
         { "reason": "data-grid samples target WinUI only for now", "path": "grids\\data-grid\\" }
       ]
+    },
+    {
+      "name": "ReactNative",
+      "exclusions": [
+        { "reason": "RN ships data-grid only; no WebGrid in igniteui-react-native-*",  "path": "grids\\grid\\" },
+        { "reason": "RN ships data-grid only; no hierarchical-grid",                    "path": "grids\\hierarchical-grid\\" },
+        { "reason": "RN ships data-grid only; no pivot-grid",                           "path": "grids\\pivot-grid\\" },
+        { "reason": "RN ships data-grid only; no tree-grid",                            "path": "grids\\tree-grid\\" },
+        { "reason": "codegen is not working for sample see azure 39558", "path": "charts\\data-chart\\data-annotation-band-layer.json" },
+        { "reason": "codegen is not working for sample see azure 39558", "path": "charts\\data-chart\\data-annotation-line-layer.json" },
+        { "reason": "codegen is not working for sample see azure 39558", "path": "charts\\data-chart\\data-annotation-multiple-with-overlay-text.json" },
+        { "reason": "codegen is not working for sample see azure 39558", "path": "charts\\data-chart\\data-annotation-multiple-with-stocks.json" },
+        { "reason": "codegen is not working for sample see azure 39558", "path": "charts\\data-chart\\data-annotation-rect-layer.json" },
+        { "reason": "codegen is not working for sample see azure 39558", "path": "charts\\data-chart\\data-annotation-slice-layer.json" },
+        { "reason": "codegen is not working for sample see azure 39558", "path": "charts\\data-chart\\data-annotation-strip-layer.json" }
+      ]
     }
   ]
 }
