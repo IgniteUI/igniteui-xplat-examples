@@ -102,6 +102,6 @@
   },
   "modules": [
     "withDescriptions",
-    "grids/DataGridModule"
+    "data-grids/DataGridModule"
   ]
 }

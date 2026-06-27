@@ -59,6 +59,6 @@
   "modules": [
     "withDescriptions",
     "layouts/PropertyEditorPanelModule",
-    "grids/DataGridModule"
+    "data-grids/DataGridModule"
   ]
 }

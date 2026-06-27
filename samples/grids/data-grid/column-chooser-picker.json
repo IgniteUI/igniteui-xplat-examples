@@ -35,5 +35,5 @@
       ]
     }
   },
-  "modules": ["grids/DataGridModule", "grids/ColumnChooserModule"]
+  "modules": ["data-grids/DataGridModule", "data-grids/ColumnChooserModule"]
 }

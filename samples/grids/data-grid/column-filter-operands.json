@@ -48,5 +48,5 @@
       ]
     }
   },
-  "modules": ["grids/DataGridModule"]
+  "modules": ["data-grids/DataGridModule"]
 }

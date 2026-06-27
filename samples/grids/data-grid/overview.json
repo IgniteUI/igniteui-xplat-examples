@@ -124,5 +124,5 @@
       ]
     }
   },
-  "modules": ["grids/DataGridModule", "grids/DataGridToolbarModule"]
+  "modules": ["data-grids/DataGridModule", "data-grids/DataGridToolbarModule"]
 }
