@@ -1,5 +1,5 @@
 //begin imports
-import { IgcDataGridComponent, IgcColumnGroupDescription } from 'igniteui-webcomponents-grids';
+import { IgcDataGridComponent, IgcColumnGroupDescription } from 'igniteui-webcomponents-data-grids';
 import { ListSortDirection } from 'igniteui-webcomponents-core';
 //end imports
 
