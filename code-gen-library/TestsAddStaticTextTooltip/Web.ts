@@ -15,7 +15,7 @@ export class TestsAddStaticTextTooltip
             if (!series.isLayer)
     		{
     			
-    			series.tooltipTemplate = ((context)=>{
+    			series.tooltipTemplate = ((context: any)=>{
 						return html`<div class="ui-chart-default-tooltip-content">text</div>`;
 				}); 
     		}
