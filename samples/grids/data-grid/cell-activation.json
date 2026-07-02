@@ -1,0 +1,69 @@
+{
+  "skipAlterDataCasing": true,
+  "descriptions": {
+    "editor": {
+      "type": "PropertyEditorPanel",
+      "name": "PropertyEditor",
+      "componentRendererRef": "renderer",
+      "targetRef": "grid",
+      "descriptionType": "DataGrid",
+      "isHorizontal": true,
+      "isWrappingEnabled": true,
+      "properties": [
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "EnterBehavior",
+          "name": "EnterBehaviorEditor",
+          "label": "Enter Key Mode",
+          "shouldOverrideDefaultEditor": true,
+          "valueType": "EnumValue",
+          "dropDownNames": ["Edit", "MoveDown", "MoveLeft", "MoveRight", "MoveUp", "None"],
+          "dropDownValues": ["Edit", "MoveDown", "MoveLeft", "MoveRight", "MoveUp", "None"],
+          "primitiveValue": "Edit"
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "EnterBehaviorAfterEdit",
+          "name": "EnterBehaviorAfterEditEditor",
+          "label": "Enter Key After Edit Mode",
+          "shouldOverrideDefaultEditor": true,
+          "valueType": "EnumValue",
+          "dropDownNames": ["MoveDown", "MoveLeft", "MoveRight", "MoveUp", "None"],
+          "dropDownValues": ["MoveDown", "MoveLeft", "MoveRight", "MoveUp", "None"],
+          "primitiveValue": "MoveDown"
+        }
+      ]
+    },
+    "content": {
+      "type": "DataGrid",
+      "id": "grid",
+      "name": "grid",
+      "dataSourceRef": "EmployeesSalesData",
+      "autoGenerateColumns": false,
+      "selectionMode": "SingleRow",
+      "activationMode": "Cell",
+      "editMode": "Cell",
+      "enterBehavior": "Edit",
+      "enterBehaviorAfterEdit": "MoveDown",
+      "height": "100%",
+      "width": "100%",
+      "columns": [
+        { "type": "TextColumn",     "field": "Name",        "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 170 } },
+        { "type": "ImageColumn",    "field": "Photo",       "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 120 }, "isEditable": false, "paddingTop": 5, "paddingBottom": 5, "contentOpacity": 1, "horizontalAlignment": "Center" },
+        { "type": "NumericColumn",  "field": "Age",         "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 100 }, "horizontalAlignment": "Center" },
+        { "type": "TextColumn",     "field": "Street",      "headerText": "Address", "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 150 } },
+        { "type": "TextColumn",     "field": "City",        "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 130 } },
+        { "type": "ImageColumn",    "field": "CountryFlag", "headerText": "Country", "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 120 }, "isEditable": false, "paddingTop": 5, "paddingBottom": 5, "contentOpacity": 1 },
+        { "type": "TextColumn",     "field": "Phone",       "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 120 } },
+        { "type": "DateTimeColumn", "field": "Birthday",    "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 150 }, "horizontalAlignment": "Center" },
+        { "type": "NumericColumn",  "field": "Salary",      "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 170 }, "positivePrefix": "$", "showGroupingSeparator": true, "minFractionDigits": 2 },
+        { "type": "TextColumn",     "field": "Email",       "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 150 } }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
+    "grids/DataGridModule"
+  ]
+}

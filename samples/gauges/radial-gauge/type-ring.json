@@ -1,0 +1,48 @@
+{
+  "descriptions": {
+    "content": {
+      "type": "RadialGauge",
+      "name": "gauge",
+      "height": "100%",
+      "width": "100%",
+      "minimumValue": 0,
+      "maximumValue": 120,
+      "interval": 10,
+      "transitionDuration": 500,
+      "labelInterval": 10,
+      "labelExtent": 0.85,
+      "font": "15px Verdana,Arial",
+      "needleShape": "None",
+      "needlePivotShape": "None",
+      "scaleStartAngle": 0,
+      "scaleEndAngle": 360,
+      "scaleBrush": "transparent",
+      "scaleOversweepShape": "Circular",
+      "scaleSweepDirection": "Clockwise",
+      "scaleEndExtent": 0.725,
+      "scaleStartExtent": 0.6,
+      "minorTickCount": 4,
+      "minorTickStartExtent": 0.725,
+      "minorTickEndExtent": 0.7375,
+      "minorTickBrush": "transparent",
+      "tickStartExtent": 0.725,
+      "tickEndExtent": 0.75,
+      "tickStrokeThickness": 1,
+      "tickBrush": "#79797A",
+      "backingBrush": "transparent",
+      "backingOutline": "transparent",
+      "backingShape": "Circular",
+      "ranges": [
+        { "type": "RadialGaugeRange", "brush": "#E0DFDF", "outline": "#E0DFDF", "startValue": 0, "endValue": 120, "innerStartExtent": 0.635, "innerEndExtent": 0.635, "outerStartExtent": 0.725, "outerEndExtent": 0.725 },
+        { "type": "RadialGaugeRange", "brush": "#10B401", "outline": "#10B401", "startValue": 0, "endValue": 90,  "innerStartExtent": 0.635, "innerEndExtent": 0.635, "outerStartExtent": 0.725, "outerEndExtent": 0.725 },
+        { "type": "RadialGaugeRange", "brush": "#E0DFDF", "outline": "#E0DFDF", "startValue": 0, "endValue": 120, "innerStartExtent": 0.535, "innerEndExtent": 0.535, "outerStartExtent": 0.625, "outerEndExtent": 0.625 },
+        { "type": "RadialGaugeRange", "brush": "#FDB417", "outline": "#FDB417", "startValue": 0, "endValue": 80,  "innerStartExtent": 0.535, "innerEndExtent": 0.535, "outerStartExtent": 0.625, "outerEndExtent": 0.625 },
+        { "type": "RadialGaugeRange", "brush": "#E0DFDF", "outline": "#E0DFDF", "startValue": 0, "endValue": 120, "innerStartExtent": 0.435, "innerEndExtent": 0.435, "outerStartExtent": 0.525, "outerEndExtent": 0.525 },
+        { "type": "RadialGaugeRange", "brush": "#FF0000", "outline": "#FF0000", "startValue": 0, "endValue": 60,  "innerStartExtent": 0.435, "innerEndExtent": 0.435, "outerStartExtent": 0.525, "outerEndExtent": 0.525 }
+      ]
+    }
+  },
+  "modules": [
+    "gauges/RadialGaugeModule"
+  ]
+}

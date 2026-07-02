@@ -8,10 +8,57 @@ let request = require('request');
 let rename = require('gulp-rename');
 // const { read } = require('fs');
 
-function log(msg) {
-    console.log('>> ' + msg);
+var tap = require('gulp-tap'); 
+var svg2png = require('gulp-svg2png');
+ 
+exports.flagsExportPNG = function flagsExportPNG(cb) {
+// gulp.task('svg2png', function () {
+    console.log("flagsExportPNG ...");
+    // gulp.src('./CDN/img/flags/**/*.svg')
+    // gulp.src('./CDN/img/flag/svg/2/*.svg')
+
+    // let folderSVG = '/flag/svg/2'
+    // let folderSVG = '/flag/svg/3'
+    // let folderSVG = '/flag/svg/N'
+    let folderSVG = '/logo/forex'
+    // let folderSVG = '/medals'
+    gulp.src([
+        './CDN/img' + folderSVG + '/*.svg',
+        // './CDN/img/flags/AFG.svg',
+        // './CDN/img/flag/svg' + folderSVG + '/AF.svg',
+// './CDN/img/flag/svg/err/*.svg',
+// './CDN/img/flag/svg/err/GS.svg',
+// './CDN/img/flag/svg/err/GT.svg',
+// './CDN/img/flag/svg/err/GU.svg',
+// './CDN/img/flag/svg/err/GY.svg',
+// './CDN/img/flag/svg/err/XS.svg',
+        // './CDN/img/flag/svg/err/GX.svg',
+            // './CDN/img/flag/svg/err/GZ.svg',
+        // './CDN/img/flag/svg/err/VT.svg',
+        // './CDN/img/flag/svg/err/XC.svg',
+
+        // '!./CDN/img/flag/svg' + folderSVG + '/GU.svg',
+        // '!./CDN/img/flag/svg' + folderSVG + '/GX.svg',
+    ])
+        .pipe(svg2png())
+        // .pipe(svg2png({ // these option apply only if SVG has viewBox
+        //     width: 640, // Explicitly set the width of the output PNG
+        //     height: 480, // Explicitly set the height of the output PNG
+        //     // quality: 90, // Set the quality of the output PNG (0-100)
+        //     // ratio: 2, // Scale the image by a factor (e.g., for retina displays)
+        //     },
+        //     true, // verbose: Set to false to suppress progress logs
+        //     4 // concurrency: Limit the number of concurrent tasks
+        // ))
+        // .pipe(gulp.dest('./CDN/img/flag/png' + folderSVG))
+        .pipe(gulp.dest('./CDN/img' + folderSVG))
+        .on("end", function() {
+            // console.log(flagsSVG);
+            // console.log("flagsSVG " + Object.keys(flagsSVG).length);
+            console.log("flagsExportPNG ... done");
+            cb();
+        });
 }
-// console.log('loaded');
 
 let CodeGenLib = "../code-gen-library";
 
@@ -265,17 +312,324 @@ function flagsLoadSVG(cb) {
      });
 }
 
-let flagsPNG = {};
-function flagsLoadPNG(cb) {
-    gulp.src(['./img/flags/PNG/L/3/*.png', ])
+let flags = { };
+exports.flagsLoadPNG = function flagsLoadPNG(cb) {
+    var folder = '';
+    gulp.src(['./CDN/img/flag/png/3/*.png', ])
     .pipe(es.map(function(file, fileCallback) {
-        var iso3 = file.basename.replace('.png','');
-        flagsPNG[iso3] = file.dirname + '\\' + file.basename; 
+        var name = file.basename.replace('.png','');
+        console.log(name);
+        flags[name] = file.dirname + '\\' + file.basename; 
         fileCallback(null, file);
     }))
     .on("end", function() {
-        // console.log(flagsPNG);
+        console.log(flags);
         // console.log("flagsPNG " + Object.keys(flagsPNG).length);
+         cb();
+     });
+}
+
+exports.flagsMove = function flagsMove(cb) {
+
+    var directories = [
+        './CDN/img/flags/png',
+        './CDN/img/flags/png/2',
+        './CDN/img/flags/png/3',
+        './CDN/img/flags/png/N',
+        './CDN/img/flags/svg',
+        './CDN/img/flags/svg/2',
+        './CDN/img/flags/svg/3',
+        './CDN/img/flags/svg/N'
+    ];
+    for (const dir of directories) {
+        if (!fs.existsSync(dir)) {
+            fs.mkdirSync(dir); // ensure directory exists
+        }
+    }
+
+    gulp.src([
+        './FLAGS/png/2/*.png',
+        './FLAGS/png/3/*.png',
+        './FLAGS/png/N/*.png',
+        './FLAGS/svg/2/*.svg',
+        './FLAGS/svg/3/*.svg',
+        './FLAGS/svg/N/*.svg',
+    ])
+    .pipe(es.map(function(file, fileCallback) {
+        // var name = file.basename.replace('.png',''); 
+        let content = file.contents.toString();
+
+        var filePath = file.dirname + '\\';
+
+        filePath = filePath.replace('\\FLAGS\\','\\CDN\\img\\flags\\')
+        utils.saveFile(filePath + file.basename, content, true); 
+
+        filePath = filePath.replace('\\png\\2','')
+        filePath = filePath.replace('\\png\\3','')
+        filePath = filePath.replace('\\png\\N','')
+        filePath = filePath.replace('\\svg\\2','')
+        filePath = filePath.replace('\\svg\\3','')
+        filePath = filePath.replace('\\svg\\N','')
+    
+        utils.saveFile(filePath + file.basename, content, true); 
+  
+        fileCallback(null, file);
+    }))
+    .on("end", function() { 
+        // console.log("flagsPNG " + Object.keys(flagsPNG).length);
+         cb();
+     });
+}
+
+exports.indexIMG = function indexIMG(cb) {
+    var imgFolder = './CDN/img';
+    var index = {};
+    gulp.src([
+        imgFolder + '/activities/*.*', 
+        imgFolder + '/genders/*.*', 
+        imgFolder + '/trophy/*.*', 
+        imgFolder + '/medals/*.*', 
+        imgFolder + '/maps/*.*', 
+        imgFolder + '/flags/*.*',   
+        imgFolder + '/avatars/*.*', 
+        imgFolder + '/people/**/*.*',   
+        imgFolder + '/company/*.*',  
+        imgFolder + '/logo/**/*.*',   
+        imgFolder + '/browser/*.*', 
+        imgFolder + '/grid/*.*', 
+        imgFolder + '/music/*.*', 
+        imgFolder + '/overlay/*.*', 
+        imgFolder + '/products/*.*',
+        imgFolder + '/banner/*.*', 
+        imgFolder + '/card/**/*.*', 
+        imgFolder + '/carousel/*.*', 
+        imgFolder + '/conditions/*.*', 
+        imgFolder + '/list/*.*', 
+        imgFolder + '/stepper/*.*', 
+        imgFolder + '/toggle/*.*', 
+        imgFolder + '/drag-drop/*.*', 
+        imgFolder + '/sandbox/*.*', 
+
+        // imgFolder + '/**/*.png', 
+        // imgFolder + '/**/*.jpg', 
+        // imgFolder + '/**/*.svg', 
+    //    '!' + imgFolder + '/flags/**/*.*', 
+    //    '!' + imgFolder + '/logo/**/*.*', 
+    //    '!' + imgFolder + '/products/**/*.*', 
+       '!' + imgFolder + '/**/*.json', 
+       '!' + imgFolder + '/**/*.gif', 
+       '!' + imgFolder + '/**/*.ico', 
+       '!' + imgFolder + '/**/*.db', 
+       '!' + imgFolder + '/**/*.html', 
+    ])
+    .pipe(es.map(function(file, fileCallback) {
+        // var name = file.basename.replace('.png','');
+        // var filePath = file.dirname + '\\' + file.basename;
+        // var parts = file.dirname.split('\\');
+        // var dir = parts[parts.length - 1];
+        var name = file.basename;
+
+         var dir = file.dirname.split('img')[1].split('\\').join('/');
+        var path = '.' + dir + '/' + name;
+
+        if (index[dir] === undefined) {
+            index[dir] = []
+        }
+
+        var info = { path: path, name: name };
+        index[dir].push(info);
+        // index[dir][name] = path;
+
+        // console.log(dir + " " + filePath);
+        fileCallback(null, file);
+    }))
+    .on("end", function() {
+        // console.log(index);
+        // console.log("flagsPNG " + Object.keys(flagsPNG).length);
+        let H = utils.createHTML();
+ 
+        let body = '';
+        for (const name of Object.keys(index)) {
+            // console.log(name);
+            // body += H.h1('Directory ' + name);
+            body += H.h3('' + name + ' ');
+
+            // console.log(name + " = " + index[name].length);
+
+            let items = [];
+            for (const file of index[name]) {
+                // console.log(name);
+                // body += H.p('File ' + file.name + " " + file.path);
+
+                // items.push('' + file.path); 
+                if (file.path.indexOf('/flags/') > 0 ||
+                    file.path.indexOf('/logo/forex') > 0) {
+                   items.push(H.img(file.path, 32, 25, 'bgWhite'));
+                } else if (
+                    file.path.indexOf('/logo/crypto/') > 0 ||
+                    file.path.indexOf('/logo/company/') > 0) {
+                   items.push(H.img(file.path, 32, 32, 'bgGray border'));
+                } else if (
+                    file.path.indexOf('/company/') > 0 || 
+                    file.path.indexOf('/maps/') > 0) {
+                   items.push(H.img(file.path, 32, 32, 'bgWhite border'));
+                } else if (
+                    file.path.indexOf('/activities/') > 0 || 
+                    file.path.indexOf('/maps/') > 0 ||  
+                    file.path.indexOf('/people/') > 0 || 
+                    file.path.indexOf('/trophy/') > 0 || 
+                    file.path.indexOf('/avatars/') > 0 || 
+                    file.path.indexOf('/genders/') > 0 || 
+                    file.path.indexOf('/medals/') > 0) {
+                   items.push(H.img(file.path, 32, 32, 'bgWhite'));
+                } else {
+                    items.push(H.a(file.path));
+                }
+                // items.push(H.a(file.path));
+            }
+            // body += H.p(items.join('<br/>'));
+            // body += H.p(items.join(' '));
+
+            body += H.horizontal(items);
+        }
+        var code = H.html(
+            H.head(
+                H.style(
+                'body { font-family: sans-serif; }' +
+                'table { font-size: 0.75rem;  } \r\n'  +
+                'tr:nth-child(even) { background-color: #eeeded; } \r\n'+
+                'th { padding: 0.25rem;  }\r\n' +
+                'th { background: black; color: white; position: sticky; top: 0; box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.4); } \r\n' +
+                '.border { border-color: black; border-style: solid; border-width: 0.5px; } \r\n' +
+                '.bgBlack { background: black } \r\n' +
+                '.bgWhite { background: white } \r\n' +
+                '.bgGray { background: #d9d8d8  } \r\n' +
+                '.bgTrans { background: repeating-conic-gradient(#808080 0 25%, #0000 0 50%) 50% / 20px 20px } \r\n' +
+                '.center { vertical-align: middle; text-align: center; } \r\n' +
+                '.right  { vertical-align: middle; text-align: right; } \r\n' +
+                '.left   { vertical-align: middle; text-align: left; } \r\n'
+                )
+            ) +
+            H.body(body)
+        );
+
+    var flagOutput = './CDN/img/index.html';
+    utils.saveFile(flagOutput, code, true); 
+    
+    flagOutput = './CDN/img/readme.html';
+    utils.saveFile(flagOutput, code, true); 
+
+         cb();
+     });
+}
+
+exports.indexFolders = function indexFolders(cb) {
+    var imgFolder = './CDN/img';
+    var index = {};
+    gulp.src([
+        imgFolder + '/**/*.*', 
+        // imgFolder + '/**/*.png', 
+        // imgFolder + '/**/*.jpg', 
+        // imgFolder + '/**/*.svg', 
+    //    imgFolder + '/people/**/*.*', 
+        // imgFolder + '/activities/*.*', 
+        // imgFolder + '/jobs/*.*', 
+        // imgFolder + '/banking/*.*', 
+
+       '!' + imgFolder + '/banner/*.*', 
+       '!' + imgFolder + '/browsers/*.*', 
+       '!' + imgFolder + '/carousel/*.*', 
+       '!' + imgFolder + '/music/*.*', 
+       '!' + imgFolder + '/products/*.*', 
+       '!' + imgFolder + '/sandbox/*.*', 
+       '!' + imgFolder + '/stepper/*.*', 
+       '!' + imgFolder + '/toggle/*.*', 
+
+       '!' + imgFolder + '/card/**/*.*', 
+    //    '!' + imgFolder + '/logo/**/*.*', 
+    //    '!' + imgFolder + '/flags/**/*.*', 
+    //    '!' + imgFolder + '/people/**/*.*', 
+       '!' + imgFolder + '/NEW/**/*.*', 
+       '!' + imgFolder + '/NEW2/**/*.*', 
+       '!' + imgFolder + '/NEW3/**/*.*', 
+       '!' + imgFolder + '/NEW4/**/*.*', 
+       '!' + imgFolder + '/**/*.json', 
+       '!' + imgFolder + '/**/*.html', 
+       '!' + imgFolder + '/**/*.gif', 
+       '!' + imgFolder + '/**/*.ico', 
+       '!' + imgFolder + '/**/*.db', 
+       '!' + imgFolder + '/**/*.zip', 
+    ])
+    .pipe(es.map(function(file, fileCallback) {
+        // var name = file.basename.replace('.png','');
+        // var filePath = file.dirname + '\\' + file.basename;
+        // var parts = file.dirname.split('\\');
+        // var dir = parts[parts.length - 1];
+        var name = file.basename;
+
+        var dir = file.dirname.split('img')[1].split('\\').join('/').replace('/', '');
+        if (index[dir] === undefined) {
+            index[dir] = []
+        }
+        // console.log(dir);
+
+        var path = '.' + dir + '/' + name;
+        var info = { path: path, name: name };
+        index[dir].push(info);
+        // index[dir][name] = path;
+        // console.log(dir + " " + filePath);
+        fileCallback(null, file);
+    }))
+    .on("end", function() {
+        // console.log(index);
+        // console.log("flagsPNG " + Object.keys(flagsPNG).length);
+        let H = utils.createHTML();
+ 
+        // let body = '';
+        for (const name of Object.keys(index)) {
+            // console.log(index[name]);
+            // body += H.h1('Directory ' + name);
+            let body = H.h3('' + name.toUpperCase() + ' INDEX ');
+            // console.log(name + " = " + index[name].length);
+
+            let items = [];
+            for (let i = 0; i < index[name].length; i++) {
+                const file = index[name][i];
+                var img =  H.img('./' + file.name, 32, 32, 'bgWhite border item img');
+                var lbl = H.link('./' + file.name, file.name, 'item');
+                items.push(img);
+                items.push(lbl);
+            }
+
+            body += H.horizontal(items, 'width: 100%; gap: 0px');
+
+            var code = H.html(
+                H.head(
+                    H.style(
+                    'body { font-family: sans-serif; }' +
+                    'table { font-size: 0.75rem;  } \r\n'  +
+                    'tr:nth-child(even) { background-color: #eeeded; } \r\n'+
+                    'th { padding: 0.25rem;  }\r\n' +
+                    'th { background: black; color: white; position: sticky; top: 0; box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.4); } \r\n' +
+                    '.border { border-color: #9a9999; border-style: solid; border-width: 0.5px; padding: 0.25rem } \r\n' +
+                    '.bgBlack { background: black } \r\n' +
+                    '.bgWhite { background: white } \r\n' +
+                    '.bgGray { background: #9a9999  } \r\n' +
+                    '.item { flex: 1; text-align: left;  }  \r\n' +
+                    '.item:nth-child(odd) {flex-grow: 1; }  \r\n' +
+                    '.item:nth-child(even) { flex-grow: 2; flex: 0 0 calc(100% / 4 - 50px); padding-left: 5px; }  \r\n' +
+                    '.img { max-width: 32px; max-height: 32px; width: 32px; height: 32px; }  \r\n' +
+                    '.center { vertical-align: middle; text-align: center; } \r\n' +
+                    '.right  { vertical-align: middle; text-align: right; } \r\n' +
+                    '.left   { vertical-align: middle; text-align: left; } \r\n'
+                    )
+                ) +
+                H.body(body)
+            );
+            var flagOutput = './CDN/img/' + name + '/index.html';
+            utils.saveFile(flagOutput, code, false); 
+        }
+
          cb();
      });
 }
@@ -286,15 +640,36 @@ function flagsReadme(cb) {
 //<img src="https://static.infragistics.com/xplatform/images/flags/iso2/ad.png" width="40" height="30">
 //<img src="https://static.infragistics.com/xplatform/images/flags/abw.svg" width="40" height="30">
 
+// https://dl.infragistics.com/x/img/flags/PL.svg
+
     let H = utils.createHTML();
      
-    // let jsonPath = CodeGenLib + "/WorldCountries/XPLAT.json";
+    // let jsonPath = CodeGenLib + "/WorldCountries/XPLAT.json"; US-Minor-Outlying-Islands
     let jsonPath = CodeGenLib + "/WorldStats/XPLAT.json";
     let jsonFile = fs.readFileSync(jsonPath, "utf8");
     let jsonData = JSON.parse(jsonFile);
     let jsonLookup =  utils.hash('Code', jsonData)
 
     var countries = utils.extract(jsonData, ['Code', 'Short', 'Name', 'Continent', 'Region', 'Status'])
+   
+    countries.push({ Code: "ARAB", Short: "ARAB", Name: "ARAB", Continent: "Africa", Region: "Africa", Status: "Dependency"})
+    countries.push({ Code: "ASEAN", Short: "ASEAN", Name: "ASEAN", Continent: "Asia", Region: "Asia", Status: "Dependency"})
+    countries.push({ Code: "CEFTA", Short: "CEFTA", Name: "CEFTA", Continent: "Europe", Region: "Europe", Status: "Dependency"})
+    countries.push({ Code: "EUO", Short: "EU", Name: "European-Union", Continent: "Europe", Region: "Europe", Status: "Dependency"})
+    countries.push({ Code: "USI", Short: "US", Name: "US-Minor-Outlying-Islands", Continent: "Oceania", Region: "Polynesia", Status: "Dependency"})
+    countries.push({ Code: "USV", Short: "VI", Name: "US-Virgin-Islands", Continent: "Oceania", Region: "Polynesia", Status: "Dependency"})
+    countries.push({ Code: "USM", Short: "MP", Name: "Northern Mariana Islands", Continent: "Oceania", Region: "Polynesia", Status: "Dependency"})
+    
+    countries.push({ Code: "ENG", Short: "EN", Name: "England", Continent: "Europe", Region: "Western Europe", Status: "Dependency"})
+    countries.push({ Code: "SCT", Short: "XT", Name: "Scotland", Continent: "Europe", Region: "Western Europe", Status: "Dependency"})
+    countries.push({ Code: "NIR", Short: "XN", Name: "Northern-Ireland", Continent: "Europe", Region: "Western Europe", Status: "Dependency"})
+    countries.push({ Code: "WLS", Short: "WL", Name: "Wales", Continent: "Europe", Region: "Western Europe", Status: "Dependency"})
+    
+    countries.push({ Code: "EPV", Short: "PV", Name: "Basque", Continent: "Europe", Region: "Southern Europe", Status: "Dependency"})
+    countries.push({ Code: "ECI", Short: "IC", Name: "Canary-Islands", Continent: "Europe", Region: "Southern Europe", Status: "Dependency"})
+    countries.push({ Code: "ECT", Short: "CT", Name: "Catalonia", Continent: "Europe", Region: "Southern Europe", Status: "Dependency"})
+    countries.push({ Code: "EGA", Short: "GA", Name: "Galicia", Continent: "Europe", Region: "Southern Europe", Status: "Dependency"})
+  
     countries.sort((a, b) => a.Name > b.Name ? 1 : -1);
 
     var flagTable = ""; 
@@ -302,22 +677,15 @@ function flagsReadme(cb) {
     for (let i = 0; i < countries.length; i++) {
         const country = countries[i];
 
-        var pngPath2 = './png/S/2/' + country.Short + '.png';
-        var pngPath3 = './png/S/3/' + country.Code  + '.png';
-        var svgPath2 = './svg/2/'   + country.Short + '.svg';
-        var svgPath3 = './svg/3/'   + country.Code  + '.svg';
+        var pngPath3 = './' + country.Code  + '.png';
+        var svgPath3 = './' + country.Code  + '.svg';
         // var conPath = '../continents/png/' + country.Continent.replace(' ','-') + '.png';
 
-        var pngImage = H.img(pngPath3, 40, 25, 'border');
-        var svgImage = H.img(svgPath3, 40, 25, 'border');
+        var pngImage = H.img(pngPath3, 32, 25, 'border');
+        var svgImage = H.img(svgPath3, 32, 25, 'border');
         // var conImage = H.img(conPath, 40, 25, 'border');
 
-        // var pngLink2 = H.link(pngPath2, 'P');
-        // var pngLink3 = H.link(pngPath3, 'P');
-
-        // var svgLink2 = H.link(svgPath2, 'S');
-        // var svgLink3 = H.link(svgPath3, 'S');
-
+        let name = country.Name.split(' ').join('-')
         let row = H.tr(
             H.td(pngImage, 'center') +
             H.td(svgImage, 'center') +
@@ -325,7 +693,7 @@ function flagsReadme(cb) {
             // H.td(H.div([svgLink2, pngLink2, country.Short])) +
             H.td(country.Code) +
             H.td(country.Short) +
-            H.td(country.Name, 'left') +
+            H.td(name, 'left') +
             H.td(country.Continent, 'left') +
             // H.td(H.div([conImage, country.Continent]), 'left') +
             H.td(country.Region, 'left') +
@@ -334,15 +702,12 @@ function flagsReadme(cb) {
         flagTable += row;
     }
 
-    var pngSmall2 = './png/S/2/' + 'US'  + '.png';
-    var pngSmall3 = './png/S/3/' + 'USA' + '.png';
-    var pngSmallN = './png/S/N/' + 'United-States' + '.png';
-    var pngLarge2 = './png/L/2/' + 'US'  + '.png';
-    var pngLarge3 = './png/L/3/' + 'USA' + '.png';
-    var pngLargeN = './png/L/N/' + 'United-States' + '.png';
-    var svgLarge2 = './svg/2/'   + 'US'  + '.svg';
-    var svgLarge3 = './svg/3/'   + 'USA' + '.svg';
-    var svgLargeN = './svg/N/'   + 'United-States' + '.svg';
+    var pngExampleFlag2 = './' + 'US'  + '.png';
+    var svgExampleFlag2 = './' + 'US'  + '.svg';
+    var pngExampleFlag3 = './' + 'USA' + '.png';
+    var svgExampleFlag3 = './' + 'USA' + '.svg';
+    var pngExampleFlagN = './' + 'United-States' + '.png';
+    var svgExampleFlagN = './' + 'United-States' + '.svg';
 
     var code = H.html(
         H.head(
@@ -350,77 +715,55 @@ function flagsReadme(cb) {
             'body { font-family: sans-serif; }' +
             'table { font-size: 0.75rem;  } \r\n'  +
             'tr:nth-child(even) { background-color: #eeeded; } \r\n'+
-            '.border { border-color: black; border-style: solid; border-width: 0.5px; } \r\n' +
+            'th { padding: 0.25rem;  }\r\n' +
+            'th { background: black; color: white; position: sticky; top: 0; box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.4); } \r\n' +
+            '.border { border-color: black; border-style: solid; border-width: 0.0px; } \r\n' +
             '.center { vertical-align: middle; text-align: center; } \r\n' +
             '.right  { vertical-align: middle; text-align: right; } \r\n' +
             '.left   { vertical-align: middle; text-align: left; } \r\n'
             )
         ) +
         H.body(
-            H.h1('Flags of Countries') +
+            H.h1('Flags of Countries and Organizations') +
             H.p('Examples of links to country flags stored in various formats and sizes:') +
             H.table(
                 H.tr(
-                    H.th('Small PNG Flags', 'left', 240) +
+                    H.th('Flags Path', 'left', 240) +
                     H.th('Description', 'left', "60%")
                 ) + 
                 H.tr(
-                    H.td(H.a(pngSmall2), 'left') +
-                    H.td('Small flags in PNG format with ISO-2 naming convention', 'left')
+                    H.td(H.a(pngExampleFlag2), 'left') +
+                    H.td('Flags in PNG format with ISO-2 naming convention', 'left')
                 ) + 
                 H.tr(
-                    H.td(H.a(pngSmall3), 'left') +
-                    H.td('Small flags in PNG format with ISO-3 naming convention', 'left')
-                ) + 
-                H.tr(
-                    H.td(H.a(pngSmallN), 'left') +
-                    H.td('Small flags in PNG format with full country name', 'left')
-                ) 
-            ) +
-            H.table(
-                H.tr(
-                    H.th('Large PNG Flags', 'left', 240) +
-                    H.th('Description', 'left', "60%")
-                ) + 
-                H.tr(
-                    H.td(H.a(pngLarge2), 'left') +
-                    H.td('Large flags in PNG format with ISO-2 naming convention', 'left')
-                ) + 
-                H.tr(
-                    H.td(H.a(pngLarge3), 'left') +
-                    H.td('Large flags in PNG format with ISO-3 naming convention', 'left')
-                )+ 
-                H.tr(
-                    H.td(H.a(pngLargeN), 'left') +
-                    H.td('Large flags in PNG format with full country name', 'left')
-                ) 
-            ) +
-            H.table(
-                H.tr(
-                    H.th('Scalable SVG Flags', 'left', 240) +
-                    H.th('Description', 'left', "60%")
-                ) + 
-                H.tr(
-                    H.td(H.a(svgLarge2), 'left') +
+                    H.td(H.a(svgExampleFlag2), 'left') +
                     H.td('Flags in SVG format with ISO-2 naming convention', 'left')
                 ) + 
                 H.tr(
-                    H.td(H.a(svgLarge3), 'left') +
+                    H.td(H.a(pngExampleFlag3), 'left') +
+                    H.td('Flags in PNG format with ISO-3 naming convention', 'left')
+                ) + 
+                H.tr(
+                    H.td(H.a(svgExampleFlag3), 'left') +
                     H.td('Flags in SVG format with ISO-3 naming convention', 'left')
                 ) + 
                 H.tr(
-                    H.td(H.a(svgLargeN), 'left') +
-                    H.td('Flags in SVG format with with full country name', 'left')
+                    H.td(H.a(pngExampleFlagN), 'left') +
+                    H.td('Flags in PNG format with full country name separated by dashes', 'left')
+                ) + 
+                H.tr(
+                    H.td(H.a(svgExampleFlagN), 'left') +
+                    H.td('Flags in SVG format with with country name separated by dashes', 'left')
                 )
             ) +
-            H.p('List of flags contained in above folders:') +
+            H.p('List of flags contained in this CDN location:') +
             H.table(
                 H.tr(
                     H.th('PNG', 'center', 60) +
                     H.th('SVG', 'center', 60) +
-                    H.th('Code', 'center', 60) +
-                    H.th('Short', 'center', 60) +
-                    H.th('Name', 'center', 150) +
+                    H.th('ISO3', 'center', 60) +
+                    H.th('ISO2', 'center', 60) +
+                    H.th('Country', 'center', 150) +
                     H.th('Continent', 'left', 150) +
                     H.th('Region', 'left', 150) +
                     H.th('Status', 'left', 150) 
@@ -431,7 +774,10 @@ function flagsReadme(cb) {
     );
 
     var flagOutput = './CDN/img/flags/readme.html';
-    utils.saveFile(flagOutput, code, true); 
+    utils.saveFile(flagOutput, code, false); 
+        
+    flagOutput = './CDN/img/flags/index.html';
+    utils.saveFile(flagOutput, code, false); 
 
     cb();
 }
@@ -441,34 +787,106 @@ exports.flagsReadme = gulp.series(
     flagsReadme,
 );
 
-function renameFlags(cb) {
+exports.flagsToUpper = function flagsToUpper(cb) {
+    console.log("flagsToUpper");
 
-    let jp = CodeGenLib + "/WorldStats/XPLAT.json";
+    var sourcePath = './CDN/img/flag/source/*.svg';
+    var outputPath = './CDN/img/flag/svg/';
+
+    gulp.src([sourcePath],
+    ).pipe(rename(function (path) {
+        console.log(path.basename);
+        path.basename = path.basename.toUpperCase(); 
+    }))
+    .pipe(gulp.dest(outputPath))
+    .on("end", function() {
+        console.log("flagsToUpper end");
+        cb();
+    });
+}
+
+exports.svgFix = function svgFix(cb) {
+    console.log("svgFix");
+
+    var border = '<rect width="640" height="480" fill="none" stroke="black" stroke-width="2" />';
+    var xml1 = '<?xml version="1.0" encoding="UTF-8"?>'
+    var xml2 = '<?xml version="1.0" encoding="UTF-8" standalone="no"?>'
+    var viewbox = 'viewBox="0 0 640 480" width="640" height="480"'
+
+    gulp.src([
+        // './CDN/img/flag/svg/3/*.svg',
+        // './CDN/img/flag/svg/3/*.svg',
+        // './CDN/img/flag/svg/N/*.svg',
+        './CDN/img/NEW2/sales/*.svg',
+        // './CDN/img/NEW2/ui/*.svg',
+        // './CDN/img/NEW2/glyph/*.svg',
+        // './CDN/img/NEW2/minimal/*.svg',
+        // './CDN/img/NEW2/banking/*.svg',
+        // './CDN/img/NEW2/**/*.svg',
+    ])
+    .pipe(es.map(function(file, fileCallback) {  
+        let filePath = file.dirname + '\\' + file.basename;
+        let fileCode = file.basename.replace('.svg','');
+        let content = file.contents.toString();
+
+        var changed = false;
+        // if (content.indexOf(viewbox) < 0) { changed = true; content = content.replace('viewBox="0 0 640 480"', viewbox); }
+        // if (content.indexOf(border) < 0) { changed = true; content = content.replace("</svg>", border + "\r\n</svg>"); }
+        if (content.indexOf(xml1) < 0) { changed = true; content = content.replace(xml1, xml2); }
+        if (content.indexOf(xml2) < 0) { changed = true; content = content.replace("<svg", xml2 + "\r\n<svg"); }
+        
+        // if (content.indexOf('><') > 0) { changed = true; content = content.split("><").join(">\r\n<"); }
+
+        if (changed)
+        {
+            console.log("changed " + filePath);
+            utils.saveFile(filePath, content, true); 
+        }
+
+        fileCallback(null, file);
+    }))
+    .on("end", function() {
+        console.log("svgFix end");
+        cb();
+    });
+}
+
+exports.flagsRename = function flagsRename(cb) {
+
+    let jsonPath = CodeGenLib + "/WorldStats/XPLAT.json";
     // let jp = CodeGenLib + "/WorldCountries/XPLAT.json";
-    let jf = fs.readFileSync(jp, "utf8");
-    let jsonData = JSON.parse(jf);
-    let jsonLookup =  utils.hash('Code', jsonData)
+    let jsonFile = fs.readFileSync(jsonPath, "utf8");
+    let jsonData = JSON.parse(jsonFile);
+    let jsonLookup =  utils.hash('Short', jsonData)
 
+    console.log(jsonPath);
+    // cb();
     // var sourcePath = './CDN/img/flags/png/large/3/*.png'; var outputPath = './CDN/img/flags/png/large/2/';
     // var sourcePath = './CDN/img/flags/png/small/3/*.png'; var outputPath = './CDN/img/flags/png/small/2/';
     // var sourcePath = './CDN/img/flags/svg/3/*.svg';       var outputPath = './CDN/img/flags/svg/2/';
 
     // var sourcePath = './CDN/img/flags/png/large/3/*.png'; var outputPath = './CDN/img/flags/png/large/n/';
     // var sourcePath = './CDN/img/flags/png/small/3/*.png'; var outputPath = './CDN/img/flags/png/small/n/';
-    var sourcePath = './CDN/img/flags/svg/3/*.svg';       var outputPath = './CDN/img/flags/svg/n/';
+    // var sourcePath = './CDN/img/flags/svg/3/*.svg';       var outputPath = './CDN/img/flags/svg/n/';
+
+    var sourcePath = './CDN/img/flag/source/*.svg';  
+    // var outputPath = './CDN/img/flag/svg/2/';
+    var outputPath = './CDN/img/flag/svg/3/';
+    // var outputPath = './CDN/img/flag/svg/N/';
 
     gulp.src([sourcePath],
     ).pipe(rename(function (path) {
-        var code = path.basename;
+        var code = path.basename.toUpperCase();
 
         if (jsonLookup[code] === undefined) {
-            
-            if      (code === "UMI") { path.basename = "UM"; }
-            else if (code === "BVT") { path.basename = "BV"; }
-            else 
+            // if      (code === "UMI") { path.basename = "UM"; }
+            // else if (code === "BVT") { path.basename = "BV"; }
+            // else 
             // console.log(path.basename + " ISO3 missing");
-            // console.log(path)
-            path.basename = "SKIP";
+            // // console.log(path)
+                path.basename = "_SKIP";
+            // if (code.length === 2)
+                // console.log('./CDN/img/flag/source/' + code + ".svg" + " SKIP")
         }
         else {
             // var n = jsonLookup[code].Name;
@@ -477,27 +895,27 @@ function renameFlags(cb) {
             // if (n.indexOf('.-') > 0) {
             //     console.log(n);
             // }            
+            console.log("./CDN/img/flag/source/" + code + ".svg");
             // path.basename = n;
-
             // path.basename = jsonLookup[code].Short;
-            path.basename = jsonLookup[code].Name.replaceAll(' ', '-');
+            path.basename = jsonLookup[code].Code;
+            // path.basename = jsonLookup[code].Name.replaceAll(' ', '-');
         }
         // path.basename = path.basename.toUpperCase(); // Converts the filename (excluding extension) to uppercase
     }))
     .pipe(gulp.dest(outputPath))
     .on("end", function() {
-        del.sync(outputPath + 'SKIP.png', {force:true});
-        del.sync(outputPath + 'SKIP.svg', {force:true});
-        
+        // del.sync(outputPath + 'SKIP.png', {force:true});
+        // del.sync(outputPath + 'SKIP.svg', {force:true});
         // for (let i = 0; i < jsonData.length; i++) {
         //     del.sync(outputPath + jsonData[i].Short + '.png', {force:true});
         // }
         cb();
      });
 }
-exports.renameFlags = gulp.series(
-    renameFlags,
-);
+// exports.flagsRename = gulp.series(
+//     flagsRename,
+// );
 
 exports.jsonSort = function jsonSort(cb) {
     
@@ -714,8 +1132,8 @@ function cdnSyncData(cb)
         '.right { text-align: right;  }\r\n' +
         '.left { text-align: left;  }\r\n' +
         'a { text-decoration: none;  }\r\n' +
-        'th, td { padding: 0.25rem;  }\r\n' +
         'tr:nth-child(even) { background-color: #e3e3e3; } \r\n' +
+        'th, td { padding: 0.25rem;  }\r\n' +
         'th { background: black; color: white; position: sticky; top: 0; box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.4); } \r\n' +
         '</style> '
 
@@ -1392,6 +1810,83 @@ exports.convertWorldStats = function convertWorldStats(cb) {
 
     let jsonPath = CodeGenLib + "/WorldStats/XPLAT.json";
     utils.saveJSON(jsonPath, jsonData,  "compact");
+    cb();
+}
+
+exports.convertCSV = function convertCSV(cb) {
+
+    let csvName = 'EmployeesByIndustry'
+    let csvPath = './CDN/' + csvName + '.csv';
+    csvData = fs.readFileSync(csvPath, "utf8");
+
+    let jsonData = [];
+    let csvLines = csvData.split('\r\n');
+    let csvColumns = csvLines[0].split(',');
+
+    // console.log(csvColumns);
+
+    let jobs = [];
+    for (let i = 1; i < csvLines.length; i++) {
+        const csvRow = csvLines[i].split(',');
+        if (csvRow === undefined || csvRow.length <= 1) {
+            continue;
+        }
+
+        // console.log(csvRow);
+//   if (c === 0) {
+                // jobs += csvRow[0] + ", ";
+        jobs.push(csvRow[0]);
+            // }
+
+        let jsonItem = {};
+        for (let c = 0; c < csvColumns.length; c++) {
+            let column = csvColumns[c];
+            if (column === "") continue;
+
+            column = column.split(' ').join('');
+            column = column.split('-').join('_20');
+
+            let value = csvRow[c];
+            if (value === undefined) {
+                console.log("ERROR: undefined value at " + i + " row and col: " + column )
+                continue;
+            }
+            value = value.trim();
+                
+          
+            
+            // jsonItem[column] = value;
+
+            let num = utils.strToNumber(value);
+            if (num !== null) {
+                jsonItem[column] = num;
+            } else {
+                jsonItem[column] = value;
+            }
+        }
+
+        jsonData.push(jsonItem);
+        // break;
+
+        // if (jsonItem.Population > 1000) {
+        //     jsonItem["GdpPerPerson"] = Math.round(jsonItem["GdpTotal"] * 1000000 / jsonItem["Population"]);
+        //     jsonData.push(jsonItem);
+        // }
+    }
+        console.log(jobs);
+        console.log(jobs.length);
+
+    // jsonData.sort((a, b) => a.Population < b.Population ? 1 : -1);
+
+    // console.log(jsonData);
+
+    // for (let i = 0; i < jsonData.length; i++) {
+    //     jsonData[i].Rank = i + 1;
+    // }
+
+    let jsonPath = './CDN/' + csvName + '.json';
+    // let jsonPath = CodeGenLib + "/" + csvName + "/XPLAT.json";
+    // utils.saveJSON(jsonPath, jsonData,  "compact");
     cb();
 }
 
@@ -2258,7 +2753,7 @@ function replaceJSON(cb) {
 exports.replaceJSON = replaceJSON;
 
 
-function replaceFlags(cb) {
+function flagsReplace(cb) {
     let filePath = "C:\\WORK\\igniteui-blazor-examples\\samples\\grids\\grid\\toolbar-sample-4\\PlayersData.cs";
     let file = fs.readFileSync(filePath, "utf8");
 
@@ -2284,4 +2779,224 @@ function replaceFlags(cb) {
  
     cb();
 }
-exports.replaceFlags = replaceFlags;
+exports.flagsReplace = flagsReplace;
+
+
+exports.checkFiles = function checkFiles(cb)
+{
+    let sourceFiles = [];
+    let rootPaths = [
+      // "..\\..\\igniteui-angular-examples\\samples\\charts\\doughnut-chart\\animation",
+      //  "..\\..\\igniteui-blazor-examples\\samples\\charts\\doughnut-chart\\animation",
+      //   "..\\..\\igniteui-react-examples\\samples\\charts\\doughnut-chart\\animation",
+        //    "..\\..\\igniteui-wc-examples\\samples\\charts\\doughnut-chart\\animation",
+        //    "..\\..\\igniteui-wc-examples\\samples\\charts\\dashboard-tile\\gauge-dashboard",
+
+     "..\\..\\igniteui-angular-examples\\samples",
+      "..\\..\\igniteui-blazor-examples\\samples",
+       "..\\..\\igniteui-react-examples\\samples",
+          "..\\..\\igniteui-wc-examples\\samples",
+    ];
+    for (const rootPath of rootPaths) {
+        sourceFiles.push(rootPath + '\\**\\*.*');
+        sourceFiles.push('!' + rootPath + '\\**\\typings.d.ts'); 
+        sourceFiles.push('!' + rootPath + '\\**\\tsconfig.json'); 
+        sourceFiles.push('!' + rootPath + '\\**\\tsconfig.app.json'); 
+        sourceFiles.push('!' + rootPath + '\\**\\sandbox.config.json');  
+        sourceFiles.push('!' + rootPath + '\\**\\package.json'); 
+        sourceFiles.push('!' + rootPath + '\\**\\package-lock.json'); 
+        sourceFiles.push('!' + rootPath + '\\**\\angular.json'); 
+        sourceFiles.push('!' + rootPath + '\\**\\tslint.json');  
+        sourceFiles.push('!' + rootPath + '\\**\\polyfills.ts');  
+        sourceFiles.push('!' + rootPath + '\\**\\vite.config.js');  
+        sourceFiles.push('!' + rootPath + '\\**\\webpack.config.js');  
+        sourceFiles.push('!' + rootPath + '\\**\\odatajs-4.0.0.js');  
+        sourceFiles.push('!' + rootPath + '\\**\\environments\\*.*'); 
+        sourceFiles.push('!' + rootPath + '\\**\\Properties\\launchSettings.json');  
+        sourceFiles.push('!' + rootPath + '\\**\\BlazorClientApp.csproj');  
+        sourceFiles.push('!' + rootPath + '\\**\\BlazorClientApp.sln'); 
+        sourceFiles.push('!' + rootPath + '\\**\\Program.cs');   
+        sourceFiles.push('!' + rootPath + '\\**\\_Imports.razor');  
+        sourceFiles.push('!' + rootPath + '\\**\\node_modules\\**');   
+        sourceFiles.push('!' + rootPath + '\\**\\dist\\**');   
+        sourceFiles.push('!' + rootPath + '\\**\\build\\**');   
+        sourceFiles.push('!' + rootPath + '\\**\\bin\\**');   
+        sourceFiles.push('!' + rootPath + '\\**\\obj\\**');   
+        sourceFiles.push('!' + rootPath + '\\**\\packages\\**');   
+        sourceFiles.push('!' + rootPath + '\\**\\*.png'); 
+        sourceFiles.push('!' + rootPath + '\\**\\*.jpg'); 
+        sourceFiles.push('!' + rootPath + '\\**\\*.svg'); 
+        sourceFiles.push('!' + rootPath + '\\README.md');  
+    }
+
+    let foundLinks = 0; 
+
+    gulp.src(sourceFiles) //,  {base: rootPath + '/'})
+    .pipe(es.map(function(file, fileCallback) { 
+        let filePath = file.dirname + '\\' + file.basename;
+        // console.log(filePath);  
+        let fileContent = file.contents.toString();
+        let fileLines = fileContent.split('\r\n');
+ 
+        for (let i = 0; i < fileLines.length; i++) {
+            const line = fileLines[i];
+            if (line.indexOf('wwww.') >= 0 
+                  && line.indexOf('/xplatform/data/') < 0
+                  && line.indexOf('/xplatform/json/') < 0
+                  && line.indexOf('/xplatform/shapes/') < 0
+            && line.indexOf('dl.infragistics.com') < 0 
+            && line.indexOf('microsoft.com') < 0
+            && line.indexOf('googleapis.com') < 0
+            && line.indexOf('fontawesome.com') < 0 
+            && line.indexOf('svgrepo.com') < 0 
+            && line.indexOf('codemag.com') < 0
+            && line.indexOf('unsplash.com') < 0
+            && line.indexOf('arcgisonline.com') < 0
+            && line.indexOf('indigo.design') < 0  
+            && line.indexOf('meziantou.net') < 0  
+            && line.indexOf('picsum.photos') < 0 
+            && line.indexOf('ibb.co') < 0   
+            && line.indexOf('npmjs.org') < 0  
+            && line.indexOf('w3.org') < 0  
+            && line.indexOf('mozilla.org') < 0  
+            && line.indexOf('amazonaws.com') < 0  
+            && line.indexOf('istockphoto.com') < 0  
+            && line.indexOf('mapbox.com') < 0  
+            && line.indexOf('noaa.gov') < 0
+            && line.indexOf('abcotvs.net') < 0
+            && line.indexOf('abcnews.com') < 0
+            && line.indexOf('geonames.org') < 0
+            && line.indexOf('wikipedia.org') < 0 
+            && line.indexOf('apache.org') < 0 
+            && line.indexOf('odata.org') < 0 
+            && line.indexOf('igniteui.com/api') < 0
+            && line.indexOf('unpkg.com') < 0 
+            && line.indexOf('infragistics.com/"') < 0 
+            && line.indexOf('infragistics.com/products/') < 0 
+            && line.indexOf('infragistics.com/blazor-apps/') < 0
+            && line.indexOf('ReadMe.md') < 0
+            && line.indexOf('.git') < 0 
+            && line.indexOf('.replace') < 0
+            && line.indexOf('localhost') < 0
+            && line.indexOf('iframe') < 0
+            && line.indexOf('url.indexOf') < 0
+            && line.indexOf('window.location') < 0
+            && line.indexOf('location.protocol') < 0 
+            && line.indexOf('consult https') < 0
+            && line.indexOf('/tree/master') < 0
+            && line.indexOf('/tree/vnext') < 0
+            && line.indexOf('noopener noreferrer') < 0
+            && line.indexOf('general-getting-started.html') < 0) {
+                console.log(filePath + ":" + (i+1) + "         " + line);
+                foundLinks++;
+                break;
+            }
+        }
+        fileCallback(null, file);
+    })) 
+    .on("end", function() {
+        console.log("--------------------------------------------------------------------");  
+        console.log("foundLinks=" + foundLinks)
+        cb();
+     });
+}
+
+
+exports.svgRename = function svgRename(cb) {
+    console.log("svgRename");
+
+    let names = {};
+    gulp.src('./CDN/img/NEW/**/*.svg', { base: './CDN/img/NEW/' })
+    // .pipe(es.map(function(file, fileCallback) {
+    //     var parts = file.basename.split('-');
+    //     var name = parts[2] + ".svg";
+    //     if (names[name] === undefined) {
+    //         // console.log("renamed: " + name);
+    //         names[name] = true;
+    //         let content = file.contents.toString();
+    //         var filePath = file.dirname + '\\';
+    //         utils.saveFile(filePath + name, content, false); 
+    //     } else {
+    //         console.log("fail renamed: " + path.basename);
+    //     }
+    //     fileCallback(null, file);
+    // }))
+    .pipe(rename(function (path) {
+        if (path.basename.indexOf('-') > 0) {
+            var parts = path.basename.split('-');
+            var name = parts[2]; // + ".svg";
+            // if (names[name] === undefined) {
+                path.basename = name;
+        }
+    }))
+    .pipe(gulp.dest('./CDN/img/NEW2/'))
+    .on("end", function() {
+        console.log("svgRename end");
+        cb();
+    });
+}
+
+exports.svgExport = function svgExport(cb) {
+    console.log("svgExport");
+    let folder = ''
+
+    // folder = 'jobs';
+    // folder = 'banking';
+    // folder = 'books';
+    // folder = 'currency';
+    // folder = 'elections';
+    // folder = 'estates';
+    // folder = 'nav';
+    folder = 'rockets';
+    // folder = 'shop';
+    // folder = 'simple';
+    // folder = 'sports';
+    // folder = 'stars';
+        // folder = 'sales';
+    // folder = 'ui';
+    // folder = 'glyph';
+    // folder = 'minimal';
+        // folder = '**';
+ 
+    var sourceFiles = [
+        './CDN/img/NEW2/' + folder + '/*.svg',
+        // './CDN/img/NEW2/' + folder + '/add.svg',
+        // './CDN/img/NEW2/' + folder + '/airplay.svg',
+        // './CDN/img/NEW2/' + folder + '/copy.svg'
+    ];
+    gulp.src(sourceFiles, { base: './CDN/img/NEW2/' + folder })
+    // gulp.src('./CDN/img/NEW2/' + folder + '/add.svg', { base: './CDN/img/NEW2/' + folder })
+    // .pipe(es.map(function(file, fileCallback) {
+    //     var sourcePath = file.dirname + '\\' + file.basename;
+    //     var outputPath = file.dirname + '\\' + file.basename;
+    //     outputPath = outputPath.replace('NEW2','NEW3');
+    //     console.log("converting: " + sourcePath);
+    //     try {
+    //         const inputBuffer = fs.readFileSync(sourcePath);
+    //         // const inputBuffer = file.contents.toString();;
+    //         // const outputBuffer = svg2png.execute(inputBuffer, { filename: sourcePath }); // Pass filename option if needed for relative paths
+    //         const outputBuffer = svg2png.execute(file, fileCallback); // Pass filename option if needed for relative paths
+    //         // fs.writeFileSync(outputPath, outputBuffer);
+    //         // utils.saveFile(outputPath, outputBuffer.toString(), true); 
+    //         console.log("converting: " + sourcePath + ' successful!');
+    //     } catch (error) {
+    //         console.log("converting: " + sourcePath + ' failed!');
+    //         console.error('Conversion failed:', error);
+    //     }
+
+    //    fileCallback(null, file);
+    // }))
+    // .pipe(svg2png(1.0, false, null))
+    .pipe(svg2png())
+    // .pipe(tap(function (file) {
+    //   console.log('Converted: ' + file.path);
+    // }))
+    .pipe(gulp.dest('./CDN/img/NEW4/' + folder))
+    .on("end", function() {
+        console.log("svgExport end");
+        cb();
+    });
+}
+
+
+// https://dl.infragistics.com/x/img/index.html

@@ -1,0 +1,39 @@
+{
+  "descriptions": {
+    "content": {
+      "type": "GeographicMap",
+      "name": "map",
+      "height": "100%",
+      "width": "100%",
+      "zoomable": true,
+      "series": [
+        {
+          "type": "GeographicProportionalSymbolSeries",
+          "name": "WorldCitiesSeries",
+          "dataSourceRef": "WorldCities",
+          "markerType": "Circle",
+          "radiusScale": {
+            "type": "SizeScale",
+            "minimumValue": 4,
+            "maximumValue": 60
+          },
+          "fillScale": {
+            "type": "ValueBrushScale",
+            "brushes": [ "rgba(14, 194, 14, 0.4)", "rgba(252, 170, 32, 0.4)", "rgba(252, 32, 32, 0.4)" ],
+            "minimumValue": 0,
+            "maximumValue": 30
+          },
+          "fillMemberPath": "Population",
+          "radiusMemberPath": "Population",
+          "latitudeMemberPath": "Y",
+          "longitudeMemberPath": "X",
+          "markerOutline": "rgba(0,0,0,0.3)"
+        }
+      ]
+    }
+  },
+  "modules": [
+    "charts/DataChartInteractivityModule",
+    "maps/GeographicMapModule"
+  ]
+}

@@ -35,9 +35,10 @@ public class TestsStyleDataAnnotationsShapes {
         if let outlineBrush = outlineBrush, !outlineBrush.isEmpty {
             args.shapeOutline = IgsBrush.fromColorString(outlineBrush)
         }
-        let thickness = (options["Thickness"] as? JsonDictionaryValue)?.value as? String
-        if let thickness = thickness, thickness != "NaN" {
-            if let t = Double(thickness) {
+        if let rawThickness = (options["Thickness"] as? JsonDictionaryValue)?.value {
+            if let t = rawThickness as? Double, !t.isNaN {
+                args.shapeThickness = t
+            } else if let s = rawThickness as? String, s != "NaN", let t = Double(s) {
                 args.shapeThickness = t
             }
         }

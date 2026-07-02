@@ -1,0 +1,65 @@
+{
+  "descriptions": {
+    "editor": {
+      "type": "PropertyEditorPanel",
+      "name": "PropertyEditor",
+      "componentRendererRef": "renderer",
+      "targetRef": "gauge",
+      "descriptionType": "LinearGauge",
+      "isHorizontal": true,
+      "isWrappingEnabled": true,
+      "properties": [
+        { "type": "PropertyEditorPropertyDescription", "name": "AnimateToGauge1Button", "shouldOverrideDefaultEditor": true, "valueType": "Button", "primitiveValue": "Gauge Animation #1", "buttonClickedRef": "LinearGaugeAnimateToGauge1" },
+        { "type": "PropertyEditorPropertyDescription", "name": "AnimateToGauge2Button", "shouldOverrideDefaultEditor": true, "valueType": "Button", "primitiveValue": "Gauge Animation #2", "buttonClickedRef": "LinearGaugeAnimateToGauge2" },
+        { "type": "PropertyEditorPropertyDescription", "name": "AnimateToGauge3Button", "shouldOverrideDefaultEditor": true, "valueType": "Button", "primitiveValue": "Gauge Animation #3", "buttonClickedRef": "LinearGaugeAnimateToGauge3" }
+      ]
+    },
+    "content": {
+      "type": "LinearGauge",
+      "name": "gauge",
+      "height": "80px",
+      "width": "100%",
+      "transitionDuration": 1000,
+      "minimumValue": 0,
+      "maximumValue": 100,
+      "value": 50,
+      "interval": 10,
+      "labelInterval": 10,
+      "labelExtent": 0.0,
+      "isNeedleDraggingEnabled": true,
+      "needleShape": "Needle",
+      "needleBrush": "#79797a",
+      "needleOutline": "#ffffffff",
+      "needleStrokeThickness": 1,
+      "needleOuterExtent": 0.9,
+      "needleInnerExtent": 0.3,
+      "minorTickCount": 5,
+      "minorTickEndExtent": 0.10,
+      "minorTickStartExtent": 0.20,
+      "minorTickStrokeThickness": 1,
+      "tickStartExtent": 0.25,
+      "tickEndExtent": 0.05,
+      "tickStrokeThickness": 2,
+      "scaleStrokeThickness": 0,
+      "scaleBrush": "#ffffff",
+      "scaleOutline": "#dbdbdb",
+      "scaleInnerExtent": 0.075,
+      "scaleOuterExtent": 0.85,
+      "scaleStartExtent": 0.05,
+      "scaleEndExtent": 0.95,
+      "backingBrush": "#ffffff",
+      "backingOutline": "#d1d1d1",
+      "backingStrokeThickness": 0,
+      "ranges": [
+        { "type": "LinearGraphRange", "brush": "#9FB328", "outline": "#9FB328", "startValue": 0,  "endValue": 30,  "innerStartExtent": 0.075, "innerEndExtent": 0.075, "outerStartExtent": 0.95, "outerEndExtent": 0.95 },
+        { "type": "LinearGraphRange", "brush": "#438C47", "outline": "#438C47", "startValue": 30, "endValue": 70,  "innerStartExtent": 0.075, "innerEndExtent": 0.075, "outerStartExtent": 0.95, "outerEndExtent": 0.95 },
+        { "type": "LinearGraphRange", "brush": "#3F51B5", "outline": "#3F51B5", "startValue": 70, "endValue": 100, "innerStartExtent": 0.075, "innerEndExtent": 0.075, "outerStartExtent": 0.95, "outerEndExtent": 0.95 }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
+    "gauges/LinearGaugeModule"
+  ]
+}

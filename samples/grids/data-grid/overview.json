@@ -1,0 +1,128 @@
+{
+  "skipAlterDataCasing": true,
+  "descriptions": {
+    "aboveContent": {
+      "type": "DataGridToolbar",
+      "name": "toolbar",
+      "id": "toolbar",
+      "targetGridRef": "grid",
+      "toolbarTitle": "Sales Team",
+      "columnChooser": true,
+      "columnPinning": true
+    },
+    "content": {
+      "type": "DataGrid",
+      "id": "grid",
+      "name": "grid",
+      "dataSourceRef": "EmployeesSalesData",
+      "autoGenerateColumns": false,
+      "rowHeight": 50,
+      "isColumnOptionsEnabled": true,
+      "isGroupCollapsable": true,
+      "activationMode": "Cell",
+      "summaryScope": "Root",
+      "groupSummaryDisplayMode": "RowBottom",
+      "groupHeaderDisplayMode": "Combined",
+      "cornerRadiusTopLeft": 0,
+      "cornerRadiusTopRight": 0,
+      "columnMovingSeparatorWidth": 2,
+      "columnMovingMode": "Deferred",
+      "columnMovingAnimationMode": "SlideOver",
+      "columnShowingAnimationMode": "SlideFromRightAndFadeIn",
+      "columnHidingAnimationMode": "SlideToRightAndFadeOut",
+      "selectionMode": "SingleRow",
+      "height": "100%",
+      "width": "100%",
+      "groupDescriptions": [
+        { "type": "ColumnGroupDescription", "field": "Country", "displayName": "Country" },
+        { "type": "ColumnGroupDescription", "field": "Income",  "displayName": "Income"  }
+      ],
+      "summaryDescriptions": [
+        { "type": "ColumnSummaryDescription", "field": "Age",    "operand": "Average" },
+        { "type": "ColumnSummaryDescription", "field": "Photo",  "operand": "Count"   },
+        { "type": "ColumnSummaryDescription", "field": "Salary", "operand": "Sum"     },
+        { "type": "ColumnSummaryDescription", "field": "Sales",  "operand": "Max"     }
+      ],
+      "columns": [
+        {
+          "type": "ImageColumn",
+          "field": "Photo",
+          "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 120 },
+          "isEditable": false,
+          "paddingTop": 5,
+          "paddingBottom": 5,
+          "paddingRight": 10,
+          "horizontalAlignment": "Stretch"
+        },
+        {
+          "type": "TextColumn",
+          "field": "Name",
+          "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 130 }
+        },
+        {
+          "type": "TemplateColumn",
+          "field": "Sales",
+          "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 160 },
+          "cellUpdatingRef": "DataGridSalesGaugeTemplate",
+          "horizontalAlignment": "Center"
+        },
+        {
+          "type": "NumericColumn",
+          "field": "Salary",
+          "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 130 },
+          "positivePrefix": "$",
+          "showGroupingSeparator": true,
+          "maxFractionDigits": 0,
+          "minFractionDigits": 0
+        },
+        {
+          "type": "NumericColumn",
+          "field": "Age",
+          "width": { "type": "ColumnWidth", "isStarSized": false, "value": 100 },
+          "horizontalAlignment": "Center"
+        },
+        {
+          "type": "DateTimeColumn",
+          "field": "Birthday",
+          "headerText": "Date of Birth",
+          "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 140 }
+        },
+        {
+          "type": "ImageColumn",
+          "field": "CountryFlag",
+          "headerText": "Country",
+          "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 110 },
+          "isEditable": false,
+          "paddingTop": 5,
+          "paddingBottom": 5,
+          "paddingRight": 10,
+          "horizontalAlignment": "Stretch"
+        },
+        {
+          "type": "TemplateColumn",
+          "field": "Address",
+          "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 170 },
+          "cellUpdatingRef": "DataGridAddressLinesTemplate"
+        },
+        {
+          "type": "TemplateColumn",
+          "field": "Phone",
+          "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 130 },
+          "cellUpdatingRef": "DataGridPhoneLinkTemplate"
+        },
+        {
+          "type": "TextColumn",
+          "field": "Income",
+          "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 120 }
+        },
+        {
+          "type": "TextColumn",
+          "field": "Email",
+          "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 120 },
+          "isEditable": false
+        }
+      ]
+    }
+  },
+  "modules": ["grids/DataGridModule", "grids/DataGridToolbarModule"]
+}

@@ -1,0 +1,42 @@
+{
+  "descriptions": {
+    "content": {
+      "type": "RadialGauge",
+      "name": "gauge",
+      "height": "100%",
+      "width": "100%",
+      "minimumValue": 0,
+      "maximumValue": 360,
+      "value": 270,
+      "interval": 30,
+      "transitionDuration": 500,
+      "labelInterval": 30,
+      "labelExtent": 0.85,
+      "font": "15px Verdana,Arial",
+      "scaleStartAngle": 0,
+      "scaleEndAngle": 360,
+      "scaleBrush": "#E0DFDF",
+      "scaleOversweepShape": "Circular",
+      "scaleSweepDirection": "Clockwise",
+      "scaleEndExtent": 0.7,
+      "scaleStartExtent": 0.6,
+      "minorTickCount": 4,
+      "minorTickStartExtent": 0.6,
+      "minorTickEndExtent": 0.65,
+      "minorTickStrokeThickness": 1,
+      "minorTickBrush": "transparent",
+      "tickStartExtent": 0.6,
+      "tickEndExtent": 0.65,
+      "tickStrokeThickness": 1,
+      "tickBrush": "#79797A",
+      "backingShape": "Circular",
+      "backingBrush": "transparent",
+      "backingOutline": "transparent",
+      "needleShape": "None",
+      "needlePivotShape": "None"
+    }
+  },
+  "modules": [
+    "gauges/RadialGaugeModule"
+  ]
+}

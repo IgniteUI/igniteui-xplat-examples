@@ -1,0 +1,128 @@
+{
+  "skipAlterDataCasing": true,
+  "descriptions": {
+    "editor": {
+      "type": "PropertyEditorPanel",
+      "name": "PropertyEditor",
+      "componentRendererRef": "renderer",
+      "targetRef": "grid",
+      "descriptionType": "DataGrid",
+      "isHorizontal": true,
+      "isWrappingEnabled": true,
+      "properties": [
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "ColumnShowingAnimationMode",
+          "name": "ColumnShowingAnimationModeEditor",
+          "label": "Adding Animation",
+          "shouldOverrideDefaultEditor": true,
+          "valueType": "EnumValue",
+          "dropDownNames": ["Auto", "None", "SlideFromLeft", "SlideFromRight", "SlideFromTop", "SlideFromBottom", "FadeIn", "SlideFromLeftAndFadeIn", "SlideFromRightAndFadeIn", "SlideFromTopAndFadeIn", "SlideFromBottomAndFadeIn"],
+          "dropDownValues": ["Auto", "None", "SlideFromLeft", "SlideFromRight", "SlideFromTop", "SlideFromBottom", "FadeIn", "SlideFromLeftAndFadeIn", "SlideFromRightAndFadeIn", "SlideFromTopAndFadeIn", "SlideFromBottomAndFadeIn"],
+          "primitiveValue": "SlideFromLeft"
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "ColumnExchangingAnimationMode",
+          "name": "ColumnExchangingAnimationModeEditor",
+          "label": "Exchange Animation",
+          "shouldOverrideDefaultEditor": true,
+          "valueType": "EnumValue",
+          "dropDownNames": ["Auto", "None", "SlideToLeft", "SlideToRight", "SlideToTop", "SlideToBottom", "Crossfade", "SlideToLeftAndCrossfade", "SlideToRightAndCrossfade", "SlideToTopAndCrossfade", "SlideToBottomAndCrossfade"],
+          "dropDownValues": ["Auto", "None", "SlideToLeft", "SlideToRight", "SlideToTop", "SlideToBottom", "Crossfade", "SlideToLeftAndCrossfade", "SlideToRightAndCrossfade", "SlideToTopAndCrossfade", "SlideToBottomAndCrossfade"],
+          "primitiveValue": "Crossfade"
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "ColumnHidingAnimationMode",
+          "name": "ColumnHidingAnimationModeEditor",
+          "label": "Hiding Animation",
+          "shouldOverrideDefaultEditor": true,
+          "valueType": "EnumValue",
+          "dropDownNames": ["Auto", "None", "SlideToLeft", "SlideToRight", "SlideToTop", "SlideToBottom", "FadeOut", "SlideToLeftAndFadeOut", "SlideToRightAndFadeOut", "SlideToTopAndFadeOut", "SlideToBottomAndFadeOut"],
+          "dropDownValues": ["Auto", "None", "SlideToLeft", "SlideToRight", "SlideToTop", "SlideToBottom", "FadeOut", "SlideToLeftAndFadeOut", "SlideToRightAndFadeOut", "SlideToTopAndFadeOut", "SlideToBottomAndFadeOut"],
+          "primitiveValue": "FadeOut"
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "ColumnPropertyUpdatingAnimationMode",
+          "name": "ColumnPropertyUpdatingAnimationModeEditor",
+          "label": "Updating Animation",
+          "shouldOverrideDefaultEditor": true,
+          "valueType": "EnumValue",
+          "dropDownNames": ["Auto", "None", "Interpolate", "InterpolateDeep"],
+          "dropDownValues": ["Auto", "None", "Interpolate", "InterpolateDeep"],
+          "primitiveValue": "Interpolate"
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "ColumnMovingAnimationMode",
+          "name": "ColumnMovingAnimationModeEditor",
+          "label": "Moving Animation",
+          "shouldOverrideDefaultEditor": true,
+          "valueType": "EnumValue",
+          "dropDownNames": ["Auto", "None", "SlideOver"],
+          "dropDownValues": ["Auto", "None", "SlideOver"],
+          "primitiveValue": "SlideOver"
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "name": "HideColumnButton",
+          "shouldOverrideDefaultEditor": true,
+          "valueType": "Button",
+          "primitiveValue": "Hide Column",
+          "buttonClickedRef": "DataGridHideFirstVisibleColumn"
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "name": "ShowColumnButton",
+          "shouldOverrideDefaultEditor": true,
+          "valueType": "Button",
+          "primitiveValue": "Show Column",
+          "buttonClickedRef": "DataGridShowLastHiddenColumn"
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "name": "ReloadGridButton",
+          "shouldOverrideDefaultEditor": true,
+          "valueType": "Button",
+          "primitiveValue": "Reload Grid",
+          "buttonClickedRef": "DataGridReloadSalaryData"
+        }
+      ]
+    },
+    "content": {
+      "type": "DataGrid",
+      "id": "grid",
+      "name": "grid",
+      "dataSourceRef": "EmployeesSalesData",
+      "autoGenerateColumns": false,
+      "isColumnOptionsEnabled": true,
+      "defaultColumnMinWidth": 100,
+      "columnAddingAnimationMode": "SlideFromLeft",
+      "columnShowingAnimationMode": "SlideFromLeft",
+      "columnExchangingAnimationMode": "Crossfade",
+      "columnHidingAnimationMode": "FadeOut",
+      "columnMovingAnimationMode": "SlideOver",
+      "columnPropertyUpdatingAnimationMode": "Interpolate",
+      "height": "100%",
+      "width": "100%",
+      "columns": [
+        { "type": "TextColumn",     "field": "Name",     "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 170 } },
+        { "type": "TextColumn",     "field": "Street",   "headerText": "Address", "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 150 } },
+        { "type": "TextColumn",     "field": "City",     "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 120 } },
+        { "type": "NumericColumn",  "field": "Salary",   "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 120 }, "positivePrefix": "$", "showGroupingSeparator": true },
+        { "type": "DateTimeColumn", "field": "Birthday", "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 170 } },
+        { "type": "TextColumn",     "field": "Country",  "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 120 } },
+        { "type": "NumericColumn",  "field": "Sales",    "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 120 }, "positivePrefix": "$", "showGroupingSeparator": true },
+        { "type": "NumericColumn",  "field": "Age",      "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 120 } },
+        { "type": "TextColumn",     "field": "Email",    "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 120 } }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
+    "grids/DataGridModule"
+  ]
+}
