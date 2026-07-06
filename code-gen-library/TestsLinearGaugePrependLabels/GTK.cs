@@ -3,18 +3,18 @@ using Infragistics.Controls.Gauges;
 using Infragistics.Portable.Description;
 //end imports
 
-public class TestsRadialGaugePrependLabels
+public class TestsLinearGaugePrependLabels
 {
     //begin eventHandler
-	//WPF: Infragistics.Controls.Gauges.FormatRadialGaugeLabelHandler
-    public void TestsRadialGaugePrependLabels(object sender, FormatRadialGaugeLabelEventArgs args)
-    {													
+	//WPF: Infragistics.Controls.Gauges.FormatLinearGraphLabelHandler
+    public void TestsLinearGaugePrependLabels(object sender, FormatLinearGraphLabelEventArgs args)
+    {
 		object o = CodeGenHelper.FindByName<object>("LabelPrependValue");
 		var parser = new JsonDictionaryParser();
 		var obj = (JsonDictionaryObject)parser.Parse((string)((JsonDictionaryValue)o).Value);
 		var v = (string)(obj["Text"] as JsonDictionaryValue).Value;
 		args.Label = v + args.Value;
-			
+
     }
     //end eventHandler
 }
