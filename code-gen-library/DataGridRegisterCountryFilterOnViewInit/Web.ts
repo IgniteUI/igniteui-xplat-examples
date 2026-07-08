@@ -1,5 +1,5 @@
 //begin imports
-import { IgcDataGridComponent, IgcFilterOperand, IgcGridCustomFilterRequestedEventArgs, EditorType } from 'igniteui-webcomponents-grids';
+import { IgcDataGridComponent, IgcFilterOperand, IgcGridCustomFilterRequestedEventArgs, EditorType } from 'igniteui-webcomponents-data-grids';
 //end imports
 
 import { CodeGenHelper } from 'igniteui-webcomponents-core';

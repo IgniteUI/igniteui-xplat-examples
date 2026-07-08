@@ -1,6 +1,6 @@
 //begin imports
 import { IgcPropertyEditorPropertyDescriptionButtonClickEventArgs } from 'igniteui-webcomponents-layouts';
-import { IgcDataGridComponent, PinnedPositions } from 'igniteui-webcomponents-grids';
+import { IgcDataGridComponent, PinnedPositions } from 'igniteui-webcomponents-data-grids';
 //end imports
 
 import { CodeGenHelper } from 'igniteui-webcomponents-core';
