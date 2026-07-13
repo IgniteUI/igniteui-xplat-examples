@@ -10,7 +10,7 @@ class TestsLinearGaugePrependLabels {
 		let parser = JsonDictionaryParser()
         let obj = parser.parse(json_: (o as! JsonDictionaryValue).value as! String) as! JsonDictionaryObject
         let v = (obj["Text"] as! JsonDictionaryValue).value as! String		
-		args!.label = v + String(describing: args!.value)
+		args!.label = v + (NumberUtil.doubleToMinDecimalsString(value: args!.value) ?? "")
     }
     //end eventHandler
 
