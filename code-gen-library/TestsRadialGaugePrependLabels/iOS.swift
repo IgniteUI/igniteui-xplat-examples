@@ -5,12 +5,12 @@ import UIKit;
 class TestsRadialGaugePrependLabels {
 
     //begin eventHandler
-    func testsRadialGaugePrependLabels(sender: Any?, args: IgsAlignLinearGraphLabelEventArgs?) {
+    func testsRadialGaugePrependLabels(sender: Any?, args: IgsFormatRadialGaugeLabelEventArgs?) {
         let o = CodeGenHelper.findByName(Any.self, "LabelPrependValue")
 		let parser = JsonDictionaryParser()
         let obj = parser.parse(json_: (o as! JsonDictionaryValue).value as! String) as! JsonDictionaryObject
         let v = (obj["Text"] as! JsonDictionaryValue).value as! String		
-		args!.label = v + String(describing: args!.value)
+		args!.label = v + (NumberUtil.doubleToMinDecimalsString(value: args!.value) ?? "")
     }
     //end eventHandler
 
