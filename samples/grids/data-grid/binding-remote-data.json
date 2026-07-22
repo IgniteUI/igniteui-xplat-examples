@@ -1,0 +1,27 @@
+{
+  "todo": "Uses ODataVirtualDataSource from Infragistics.DataSource-Reference-Implementations. The data-class file at code-gen-library/NorthwindOrders/ constructs the VDS with the canonical Northwind URL/entitySet. Some platforms ship a prebuilt ODataVirtualDataSource; for the others the reference-implementation file gets ingested.",
+  "skipAlterDataCasing": true,
+  "descriptions": {
+    "content": {
+      "type": "DataGrid",
+      "id": "grid",
+      "name": "grid",
+      "dataSourceRef": "NorthwindOrders",
+      "autoGenerateColumns": false,
+      "isColumnOptionsEnabled": true,
+      "height": "100%",
+      "width": "100%",
+      "columns": [
+        { "type": "TextColumn",     "field": "OrderID",     "headerText": "ID",               "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 90 },  "horizontalAlignment": "Center" },
+        { "type": "DateTimeColumn", "field": "OrderDate",   "headerText": "Order Date",       "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 130 } },
+        { "type": "TextColumn",     "field": "ShipName",    "headerText": "Name",             "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 185 } },
+        { "type": "NumericColumn",  "field": "Freight",     "headerText": "Freight",          "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 115 }, "positivePrefix": "$", "minFractionDigits": 2 },
+        { "type": "DateTimeColumn", "field": "ShippedDate", "headerText": "Ship Date",        "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 125 }, "horizontalAlignment": "Right" },
+        { "type": "TextColumn",     "field": "ShipAddress", "headerText": "Shipping Address", "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 250 } },
+        { "type": "TextColumn",     "field": "ShipCity",    "headerText": "City",             "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 130 } },
+        { "type": "TextColumn",     "field": "ShipCountry", "headerText": "Country",          "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 110 } }
+      ]
+    }
+  },
+  "modules": ["grids/DataGridModule"]
+}

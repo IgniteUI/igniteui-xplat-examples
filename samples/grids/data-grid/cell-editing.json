@@ -1,0 +1,93 @@
+{
+  "todo": "Blazor source toggles button enabled state via RowEditStarted/RowEditEnded handlers + a ButtonsDisabled bool. Not yet ported — buttons stay enabled all the time. The CommitEdits/Undo/Redo functionality still works.",
+  "skipAlterDataCasing": true,
+  "descriptions": {
+    "editor": {
+      "type": "PropertyEditorPanel",
+      "name": "PropertyEditor",
+      "componentRendererRef": "renderer",
+      "targetRef": "grid",
+      "descriptionType": "DataGrid",
+      "isHorizontal": true,
+      "isWrappingEnabled": true,
+      "properties": [
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "name": "CommitButton",
+          "shouldOverrideDefaultEditor": true,
+          "valueType": "Button",
+          "primitiveValue": "Commit",
+          "buttonClickedRef": "DataGridCommitEdits"
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "name": "UndoButton",
+          "shouldOverrideDefaultEditor": true,
+          "valueType": "Button",
+          "primitiveValue": "Undo",
+          "buttonClickedRef": "DataGridUndoEdit"
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "name": "RedoButton",
+          "shouldOverrideDefaultEditor": true,
+          "valueType": "Button",
+          "primitiveValue": "Redo",
+          "buttonClickedRef": "DataGridRedoEdit"
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "EditMode",
+          "name": "EditModeEditor",
+          "label": "Edit Mode",
+          "shouldOverrideDefaultEditor": true,
+          "valueType": "EnumValue",
+          "dropDownNames": ["None", "Cell", "CellBatch", "Row"],
+          "dropDownValues": ["None", "Cell", "CellBatch", "Row"],
+          "primitiveValue": "Cell"
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "EditModeClickAction",
+          "name": "EditModeClickActionEditor",
+          "label": "Excel-style Editing",
+          "shouldOverrideDefaultEditor": true,
+          "valueType": "EnumValue",
+          "dropDownNames": ["SingleClick", "DoubleClick"],
+          "dropDownValues": ["SingleClick", "DoubleClick"],
+          "primitiveValue": "SingleClick"
+        }
+      ]
+    },
+    "content": {
+      "type": "DataGrid",
+      "id": "grid",
+      "name": "grid",
+      "dataSourceRef": "EmployeesSalesData",
+      "autoGenerateColumns": false,
+      "defaultColumnMinWidth": 120,
+      "editMode": "Cell",
+      "editModeClickAction": "SingleClick",
+      "activationMode": "Cell",
+      "selectionMode": "SingleRow",
+      "selectionBehavior": "ModifierBased",
+      "isColumnOptionsEnabled": true,
+      "height": "100%",
+      "width": "100%",
+      "columns": [
+        { "type": "TextColumn",     "field": "Name",     "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 150 } },
+        { "type": "TextColumn",     "field": "Street",   "headerText": "Street", "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 160 } },
+        { "type": "TextColumn",     "field": "City",     "headerText": "City",   "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 120 } },
+        { "type": "NumericColumn",  "field": "Salary",   "headerText": "Salary", "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 120 }, "positivePrefix": "$", "showGroupingSeparator": true },
+        { "type": "ImageColumn",    "field": "Photo",    "headerText": "Photo",  "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 110 }, "isEditable": false, "contentOpacity": 1, "horizontalAlignment": "Center" },
+        { "type": "DateTimeColumn", "field": "Birthday", "headerText": "Date of Birth", "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 170 } },
+        { "type": "TemplateColumn", "field": "ButtonColumn", "headerText": "Delete Row", "cellUpdatingRef": "DataGridDeleteRowButtonTemplate" }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
+    "grids/DataGridModule"
+  ]
+}

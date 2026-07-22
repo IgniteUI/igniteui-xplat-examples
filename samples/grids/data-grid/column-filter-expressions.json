@@ -1,0 +1,73 @@
+{
+  "skipAlterDataCasing": true,
+  "descriptions": {
+    "editor": {
+      "type": "PropertyEditorPanel",
+      "name": "PropertyEditor",
+      "componentRendererRef": "renderer",
+      "targetRef": "grid",
+      "descriptionType": "DataGrid",
+      "isHorizontal": true,
+      "isWrappingEnabled": true,
+      "properties": [
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "name": "FilterColumnEditor",
+          "label": "Column",
+          "shouldOverrideDefaultEditor": true,
+          "valueType": "EnumValue",
+          "dropDownNames": ["Name", "Street", "City", "Country"],
+          "dropDownValues": ["Name", "Street", "City", "Country"],
+          "primitiveValue": "Name",
+          "changedRef": "DataGridApplyFilterExpressions"
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "name": "FilterModeEditor",
+          "label": "Mode",
+          "shouldOverrideDefaultEditor": true,
+          "valueType": "EnumValue",
+          "dropDownNames": ["Contains", "StartsWith", "EndsWith"],
+          "dropDownValues": ["Contains", "StartsWith", "EndsWith"],
+          "primitiveValue": "Contains",
+          "changedRef": "DataGridApplyFilterExpressions"
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "name": "FilterTextEditor",
+          "label": "Expression",
+          "shouldOverrideDefaultEditor": true,
+          "valueType": "StringValue",
+          "primitiveValue": "",
+          "changedRef": "DataGridApplyFilterExpressions"
+        }
+      ]
+    },
+    "content": {
+      "type": "DataGrid",
+      "id": "grid",
+      "name": "grid",
+      "dataSourceRef": "EmployeesSalesData",
+      "autoGenerateColumns": false,
+      "defaultColumnMinWidth": 100,
+      "isColumnOptionsEnabled": true,
+      "filterUIType": "ColumnOptions",
+      "height": "100%",
+      "width": "100%",
+      "columns": [
+        { "type": "TextColumn",     "field": "Name",        "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 170 } },
+        { "type": "NumericColumn",  "field": "Age",         "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 170 } },
+        { "type": "TextColumn",     "field": "Street",      "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 180 } },
+        { "type": "TextColumn",     "field": "City",        "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 120 } },
+        { "type": "ImageColumn",    "field": "CountryFlag", "headerText": "Country", "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 140 }, "isEditable": false, "paddingTop": 5, "paddingBottom": 5, "contentOpacity": 1, "horizontalAlignment": "Center" },
+        { "type": "NumericColumn",  "field": "Sales",       "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 120 }, "positivePrefix": "$", "showGroupingSeparator": true },
+        { "type": "DateTimeColumn", "field": "Birthday",    "headerText": "Birthday", "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 170 } }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
+    "grids/DataGridModule"
+  ]
+}

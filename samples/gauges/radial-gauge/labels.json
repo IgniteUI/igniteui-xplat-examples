@@ -1,0 +1,22 @@
+{
+  "descriptions": {
+    "content": {
+      "type": "RadialGauge",
+      "name": "gauge",
+      "height": "100%",
+      "width": "100%",
+      "scaleStartAngle": 135,
+      "scaleEndAngle": 45,
+      "scaleBrush": "#DDDDDD",
+      "titleDisplaysValue": true,
+      "subtitleText": "MPH",
+      "minimumValue": 0,
+      "maximumValue": 80,
+      "value": 50,
+      "interval": 10
+    }
+  },
+  "modules": [
+    "gauges/RadialGaugeModule"
+  ]
+}

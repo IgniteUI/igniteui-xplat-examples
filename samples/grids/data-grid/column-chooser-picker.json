@@ -1,0 +1,39 @@
+{
+  "todo": "Blazor source lays chooser+grid out side-by-side; xplat slot model puts chooser ABOVE the grid via aboveContent. Functionally equivalent demo.",
+  "skipAlterDataCasing": true,
+  "descriptions": {
+    "aboveContent": {
+      "type": "ColumnChooser",
+      "name": "chooser",
+      "id": "chooser",
+      "targetGridRef": "grid",
+      "title": "Column Chooser",
+      "height": "100%",
+      "width": "100%"
+    },
+    "content": {
+      "type": "DataGrid",
+      "id": "grid",
+      "name": "grid",
+      "dataSourceRef": "ProductOrders",
+      "autoGenerateColumns": false,
+      "defaultColumnMinWidth": 120,
+      "isColumnOptionsEnabled": true,
+      "height": "100%",
+      "width": "100%",
+      "columns": [
+        { "type": "TextColumn",     "field": "ProductID",    "headerText": "ID",          "width": { "type": "ColumnWidth", "isStarSized": false, "value": 90 },    "isHidden": true,  "horizontalAlignment": "Center" },
+        { "type": "TextColumn",     "field": "ProductName",  "headerText": "Product",     "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 120 }, "isHidden": true },
+        { "type": "ImageColumn",    "field": "CountryFlag",  "headerText": "Country",     "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 120 }, "isEditable": false, "paddingTop": 5, "paddingBottom": 5, "contentOpacity": 1, "horizontalAlignment": "Center" },
+        { "type": "NumericColumn",  "field": "ProductPrice", "headerText": "Price",       "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 110 }, "isHidden": true,  "positivePrefix": "$", "showGroupingSeparator": true, "minFractionDigits": 2 },
+        { "type": "NumericColumn",  "field": "OrderItems",   "headerText": "Orders",      "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 110 } },
+        { "type": "NumericColumn",  "field": "OrderValue",   "headerText": "Order Value", "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 150 }, "positivePrefix": "$", "showGroupingSeparator": true },
+        { "type": "DateTimeColumn", "field": "OrderDate",    "headerText": "Order Date",  "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 150 }, "horizontalAlignment": "Right", "dateTimeFormat": "DateShort" },
+        { "type": "NumericColumn",  "field": "Margin",       "headerText": "Margin",      "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 120 }, "positiveSuffix": "%", "horizontalAlignment": "Center" },
+        { "type": "NumericColumn",  "field": "Profit",       "headerText": "Profit",      "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 120 }, "positivePrefix": "$", "showGroupingSeparator": true },
+        { "type": "TextColumn",     "field": "Status",       "headerText": "Status",      "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 110 }, "horizontalAlignment": "Center" }
+      ]
+    }
+  },
+  "modules": ["grids/DataGridModule", "grids/ColumnChooserModule"]
+}

@@ -1,0 +1,43 @@
+{
+  "descriptions": {
+    "content": {
+      "type": "RadialGauge",
+      "name": "gauge",
+      "height": "100%",
+      "width": "100%",
+      "transitionDuration": 500,
+      "minimumValue": 100,
+      "maximumValue": 200,
+      "value": 125,
+      "scaleStartAngle": 180,
+      "scaleEndAngle": 0,
+      "scaleBrush": "transparent",
+      "scaleSweepDirection": "Clockwise",
+      "backingOutline": "white",
+      "backingBrush": "white",
+      "backingShape": "Fitted",
+      "needleEndExtent": 0.8,
+      "needleShape": "Triangle",
+      "needlePivotShape": "CircleOverlay",
+      "needlePivotWidthRatio": 0.1,
+      "needleBrush": "#79797A",
+      "needleOutline": "#79797A",
+      "needlePivotBrush": "#79797A",
+      "needlePivotOutline": "#79797A",
+      "tickBrush": "transparent",
+      "minorTickBrush": "transparent",
+      "labelInterval": 20,
+      "labelExtent": 0.935,
+      "font": "13px Verdana,Arial",
+      "rangeBrushes":  [ "#32F845", "#BF32F8" ],
+      "rangeOutlines": [ "#32F845", "#BF32F8" ],
+      "ranges": [
+        { "type": "RadialGaugeRange", "startValue": 100, "endValue": 150, "innerStartExtent": 0.3, "innerEndExtent": 0.3, "outerStartExtent": 0.875, "outerEndExtent": 0.875 },
+        { "type": "RadialGaugeRange", "startValue": 100, "endValue": 150, "innerStartExtent": 0.3, "innerEndExtent": 0.3, "outerStartExtent": 0.875, "outerEndExtent": 0.875 }
+      ]
+    }
+  },
+  "modules": [
+    "gauges/RadialGaugeModule"
+  ]
+}

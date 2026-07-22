@@ -1,0 +1,37 @@
+{
+  "skipAlterDataCasing": true,
+  "descriptions": {
+    "aboveContent": {
+      "type": "DataGridToolbar",
+      "name": "toolbar",
+      "id": "toolbar",
+      "targetGridRef": "grid",
+      "toolbarTitle": "Global Sales",
+      "columnPinning": true
+    },
+    "content": {
+      "type": "DataGrid",
+      "id": "grid",
+      "name": "grid",
+      "dataSourceRef": "EmployeesSalesData",
+      "autoGenerateColumns": false,
+      "height": "100%",
+      "width": "100%",
+      "columns": [
+        { "type": "TextColumn",     "field": "ID",          "pinned": "Left", "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 110 } },
+        { "type": "TextColumn",     "field": "FirstName",   "pinned": "Left", "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 190 } },
+        { "type": "TextColumn",     "field": "LastName",    "pinned": "Left", "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 190 } },
+        { "type": "DateTimeColumn", "field": "Birthday",    "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 170 } },
+        { "type": "NumericColumn",  "field": "Age",         "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 120 } },
+        { "type": "ImageColumn",    "field": "CountryFlag", "isEditable": false },
+        { "type": "TextColumn",     "field": "Street",      "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 160 } },
+        { "type": "TextColumn",     "field": "City",        "width": { "type": "ColumnWidth", "isStarSized": false, "value": 260 } },
+        { "type": "TextColumn",     "field": "Country",     "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 170 } },
+        { "type": "NumericColumn",  "field": "Salary",      "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 170 } },
+        { "type": "NumericColumn",  "field": "Sales",       "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 120 } },
+        { "type": "NumericColumn",  "field": "Salary",      "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 120 }, "positivePrefix": "$", "showGroupingSeparator": true, "maxFractionDigits": 0, "minFractionDigits": 0 }
+      ]
+    }
+  },
+  "modules": ["grids/DataGridModule", "grids/DataGridToolbarModule"]
+}

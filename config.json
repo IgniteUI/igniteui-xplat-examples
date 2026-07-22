@@ -4,16 +4,26 @@
     {
       "name": "All",
       "exclusions": [
-        { "reason": "TODO test exporting and sample template", "path": "maps\\" },
-        { "reason": "TODO test exporting and sample template", "path": "gauges\\" }
+        
+      ]
+    },
+    {
+      "name": "WinUI",
+      "exclusions": [
+        { "reason": "excluding web grids",            "path": "grids\\hierarchical-grid\\" },
+        { "reason": "excluding web grids",            "path": "grids\\pivot-grid\\" },
+        { "reason": "excluding web grids", "path": "grids\\tree-grid\\" },       
+        { "reason": "excluding web grids", "path": "grids\\grid\\" },
+        { "reason": "excluding web grids", "path": "charts\\financial-chart\\" }
       ]
     },
     {
       "name": "React",
       "exclusions": [
+        { "reason": "data-grid samples target WinUI only for now",      "path": "grids\\data-grid\\" },
         { "reason": "toolbarTemplate isn't in React product",            "path": "grids\\hierarchical-grid\\toolbar-sample-1.json" },
         { "reason": "toolbarTemplate isn't in React product",            "path": "grids\\hierarchical-grid\\toolbar-sample-2.json" },
-        { "reason": "codegen is not working for sample see azure 39558", "path": "charts\\data-chart\\data-annotation-band-layer.json" },       
+        { "reason": "codegen is not working for sample see azure 39558", "path": "charts\\data-chart\\data-annotation-band-layer.json" },
         { "reason": "codegen is not working for sample see azure 39558", "path": "charts\\data-chart\\data-annotation-line-layer.json" },
         { "reason": "codegen is not working for sample see azure 39558", "path": "charts\\data-chart\\data-annotation-multiple-with-overlay-text.json" },
         { "reason": "codegen is not working for sample see azure 39558", "path": "charts\\data-chart\\data-annotation-multiple-with-stocks.json" },
@@ -25,6 +35,7 @@
     {
       "name": "Angular",
       "exclusions": [
+        { "reason": "data-grid samples target WinUI only for now", "path": "grids\\data-grid\\" },
         { "reason": "samples are in LOB angular repo", "path": "grids\\hierarchical-grid\\" },
         { "reason": "samples are in LOB angular repo", "path": "grids\\pivot-grid\\" },
         { "reason": "samples are in LOB angular repo", "path": "grids\\tree-grid\\" },
@@ -34,6 +45,7 @@
     {
       "name": "Blazor",
       "exclusions": [
+        { "reason": "data-grid samples target WinUI only for now", "path": "grids\\data-grid\\" },
         { "reason": "toolbarTemplate isn't in Blazor product", "path": "grids\\hierarchical-grid\\toolbar-sample-1.json" },
         { "reason": "toolbarTemplate isn't in Blazor product", "path": "grids\\hierarchical-grid\\toolbar-sample-2.json" },
         { "reason": "summary formatter isn't working for Blazor product", "path": "grids\\tree-grid\\data-summary-formatter.json" }
@@ -42,6 +54,7 @@
     {
       "name": "WebComponents",
       "exclusions": [
+        { "reason": "data-grid samples target WinUI only for now", "path": "grids\\data-grid\\" }
       ]
     }
   ]
