@@ -1,13 +1,13 @@
 [
-{ "Source": "income",    "Target": "housing",    "Value": 2000, "Highlighted": 1300 },
-{ "Source": "income",    "Target": "food",       "Value": 800,  "Highlighted": 550  },
-{ "Source": "income",    "Target": "transport",  "Value": 500,  "Highlighted": 350  },
-{ "Source": "income",    "Target": "savings",    "Value": 1200, "Highlighted": 700  },
-{ "Source": "housing",   "Target": "rent",       "Value": 1500, "Highlighted": 1050 },
-{ "Source": "housing",   "Target": "utilities",  "Value": 500,  "Highlighted": 300  },
-{ "Source": "food",      "Target": "groceries",  "Value": 500,  "Highlighted": 380  },
-{ "Source": "food",      "Target": "dining",     "Value": 300,  "Highlighted": 170  },
-{ "Source": "transport", "Target": "car",        "Value": 500,  "Highlighted": 350  },
-{ "Source": "savings",   "Target": "retirement", "Value": 800,  "Highlighted": 500  },
-{ "Source": "savings",   "Target": "emergency",  "Value": 400,  "Highlighted": 200  }
+{ "Source": "income",    "Target": "housing",    "Value": 2137, "Highlighted": 1461 },
+{ "Source": "income",    "Target": "food",       "Value": 812,  "Highlighted": 548  },
+{ "Source": "income",    "Target": "transport",  "Value": 468,  "Highlighted": 302  },
+{ "Source": "income",    "Target": "savings",    "Value": 1243, "Highlighted": 726  },
+{ "Source": "housing",   "Target": "rent",       "Value": 1592, "Highlighted": 1118 },
+{ "Source": "housing",   "Target": "utilities",  "Value": 545,  "Highlighted": 358  },
+{ "Source": "food",      "Target": "groceries",  "Value": 517,  "Highlighted": 372  },
+{ "Source": "food",      "Target": "dining",     "Value": 295,  "Highlighted": 166  },
+{ "Source": "transport", "Target": "car",        "Value": 468,  "Highlighted": 305  },
+{ "Source": "savings",   "Target": "retirement", "Value": 831,  "Highlighted": 523  },
+{ "Source": "savings",   "Target": "emergency",  "Value": 412,  "Highlighted": 234  }
 ]
