@@ -1,0 +1,13 @@
+[
+{ "Source": "income",    "Target": "housing",    "Value": 2000, "Highlighted": 1300 },
+{ "Source": "income",    "Target": "food",       "Value": 800,  "Highlighted": 550  },
+{ "Source": "income",    "Target": "transport",  "Value": 500,  "Highlighted": 350  },
+{ "Source": "income",    "Target": "savings",    "Value": 1200, "Highlighted": 700  },
+{ "Source": "housing",   "Target": "rent",       "Value": 1500, "Highlighted": 1050 },
+{ "Source": "housing",   "Target": "utilities",  "Value": 500,  "Highlighted": 300  },
+{ "Source": "food",      "Target": "groceries",  "Value": 500,  "Highlighted": 380  },
+{ "Source": "food",      "Target": "dining",     "Value": 300,  "Highlighted": 170  },
+{ "Source": "transport", "Target": "car",        "Value": 500,  "Highlighted": 350  },
+{ "Source": "savings",   "Target": "retirement", "Value": 800,  "Highlighted": 500  },
+{ "Source": "savings",   "Target": "emergency",  "Value": 400,  "Highlighted": 200  }
+]
