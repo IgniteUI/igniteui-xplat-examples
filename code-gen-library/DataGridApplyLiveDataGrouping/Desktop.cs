@@ -4,11 +4,17 @@ using Infragistics.Controls.Layouts;
 
 public class DataGridApplyLiveDataGrouping
 {
-    //begin eventHandler
-    // UseRowGrouping, OnGridGroupingAdd and OnGridGroupingRemove are owned by
-    // DataGridLiveDataTickerOnViewInit; these handlers are merged into one
-    // sample class and only ever used together.
+    //begin emitterOnly
+    // UseRowGrouping/OnGridGroupingAdd/OnGridGroupingRemove are owned by
+    // DataGridLiveDataTickerOnViewInit. The handlers merge into one sample class
+    // at sample-emission time; these stubs keep the per-handler library Holder
+    // compilable in isolation.
+    public bool UseRowGrouping = true;
+    public void OnGridGroupingAdd() { }
+    public void OnGridGroupingRemove() { }
+    //end emitterOnly
 
+    //begin eventHandler
     //WPF: Infragistics.Controls.Layouts.PropertyEditorPropertyDescriptionChangedEventHandler
     public void DataGridApplyLiveDataGrouping(object sender, PropertyEditorPropertyDescriptionChangedEventArgs args)
     {

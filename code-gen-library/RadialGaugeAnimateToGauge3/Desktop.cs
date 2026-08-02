@@ -22,7 +22,7 @@ public class RadialGaugeAnimateToGauge3
 
         gauge.LabelExtent = 0.6;
         gauge.LabelInterval = 10;
-        gauge.Font = "15px Verdana,Arial";
+        gauge.FontSize = 15;
 
         gauge.ScaleStartAngle = 135;
         gauge.ScaleEndAngle = 45;

@@ -6,10 +6,14 @@ using Infragistics.Controls.Grids;
 
 public class DataGridToggleHeat
 {
-    //begin eventHandler
-    // UseHeatBackground is owned by DataGridLiveDataTickerOnViewInit; these
-    // handlers are merged into one sample class and only ever used together.
+    //begin emitterOnly
+    // UseHeatBackground is owned by DataGridLiveDataTickerOnViewInit. The handlers
+    // merge into one sample class at sample-emission time; this stub keeps the
+    // per-handler library Holder compilable in isolation.
+    public bool UseHeatBackground = true;
+    //end emitterOnly
 
+    //begin eventHandler
     //WPF: Infragistics.Controls.Layouts.PropertyEditorPropertyDescriptionChangedEventHandler
     public void DataGridToggleHeat(object sender, PropertyEditorPropertyDescriptionChangedEventArgs args)
     {

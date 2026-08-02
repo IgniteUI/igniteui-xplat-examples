@@ -22,7 +22,7 @@ public class RadialGaugeAnimateToGauge4
 
         gauge.LabelInterval = 5;
         gauge.LabelExtent = 0.71;
-        gauge.Font = "15px Verdana,Arial";
+        gauge.FontSize = 15;
 
         gauge.IsNeedleDraggingEnabled = true;
         gauge.NeedleEndExtent = 0.5;

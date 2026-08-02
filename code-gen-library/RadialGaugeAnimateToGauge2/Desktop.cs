@@ -40,7 +40,7 @@ public class RadialGaugeAnimateToGauge2
 
         gauge.LabelInterval = 50;
         gauge.LabelExtent = 0.935;
-        gauge.Font = "13px Verdana,Arial";
+        gauge.FontSize = 13;
 
         gauge.Ranges.Clear();
         gauge.Ranges.Add(new RadialGaugeRange { StartValue = 100, EndValue = 150, Brush = new SolidColorBrush(Color.FromArgb(0xFF, 0x32, 0xF8, 0x45)), Outline = new SolidColorBrush(Color.FromArgb(0xFF, 0x32, 0xF8, 0x45)), InnerStartExtent = 0.3, InnerEndExtent = 0.3, OuterStartExtent = 0.9, OuterEndExtent = 0.9 });

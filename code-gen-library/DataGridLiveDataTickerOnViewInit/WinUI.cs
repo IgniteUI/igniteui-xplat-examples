@@ -55,7 +55,7 @@ public class DataGridLiveDataTickerOnViewInit
             return;
         }
 
-        var data = grid.DataSource as List<PortfolioDataItem>;
+        var data = grid.ItemsSource as List<PortfolioDataItem>;
         if (data == null)
         {
             Task.Delay(Frequency).ContinueWith((t) => OnTimerTick(), TaskScheduler.FromCurrentSynchronizationContext());
