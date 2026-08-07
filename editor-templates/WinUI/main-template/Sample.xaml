@@ -1,4 +1,4 @@
-<UserControl
+﻿<UserControl
     x:Class="Sample.Sample"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -85,7 +85,7 @@
           <!-- end leftContent -->
         </Grid>
         <!-- endifdef leftContent -->
-        <Grid Grid.Column="1">
+        <Grid Grid.Column="1" x:Name="ContentRoot">
           <!-- insert content -->
           <!-- end content -->
         </Grid>

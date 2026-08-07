@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 
@@ -43,6 +43,10 @@ export default class Sample extends React.Component<any, any> {
         //end onInit
         //insert bindingInit
         //end bindingInit
+//ifdef contentCode
+        //insert contentCode
+        //end contentCode
+//endifdef contentCode
         //insert bindingCode
         //end bindingCode
     }

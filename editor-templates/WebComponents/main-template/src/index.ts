@@ -1,4 +1,4 @@
-//insert vmImports
+﻿//insert vmImports
 //end vmImports
 //insert modulesImports
 //end modulesImports
@@ -47,6 +47,11 @@ export class Sample {
     constructor() {
         //insert bindingInit
         //end bindingInit
+//ifdef contentCode
+        //insert contentCode
+        //end contentCode
+        document.getElementById('contentRoot').appendChild($$contentRootName);
+//endifdef contentCode
 
 //ifdef bindingCode
         this._bind = () => {

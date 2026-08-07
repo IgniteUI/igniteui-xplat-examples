@@ -43,8 +43,13 @@ export class AppComponent implements AfterViewInit
 		//end onInit
 	}
 	
-	public ngAfterViewInit(): void 
-	{	
+	public ngAfterViewInit(): void
+	{
+//ifdef contentCode
+		//insert contentCode
+		//end contentCode
+//endifdef contentCode
+
 		//insert onViewInit
 		//end onViewInit
 	}

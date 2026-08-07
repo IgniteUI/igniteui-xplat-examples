@@ -56,7 +56,7 @@
           <!-- end leftContent -->
         </Grid>
         <!-- endifdef leftContent -->
-        <Grid Grid.Column="1">
+        <Grid Grid.Column="1" x:Name="ContentRoot">
           <!-- insert content -->
           <!-- end content -->
         </Grid>
