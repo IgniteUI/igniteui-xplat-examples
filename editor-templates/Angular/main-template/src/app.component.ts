@@ -18,6 +18,9 @@ import { defineAllComponents } from 'igniteui-webcomponents';
 defineAllComponents();
 //endifdef editor
 
+//insert supportingTypes
+//end supportingTypes
+
 @Component({
     standalone: false,
     selector: "app-root",

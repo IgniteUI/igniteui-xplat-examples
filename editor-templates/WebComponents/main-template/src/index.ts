@@ -36,6 +36,9 @@ ModuleManager.register(
 );
 //endifdef modulesRegister
 
+//insert supportingTypes
+//end supportingTypes
+
 export class Sample {
 
     //insert bindingFields

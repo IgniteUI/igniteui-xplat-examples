@@ -32,6 +32,9 @@ const mods: any[] = [
 mods.forEach((m) => m.register());
 //endifdef modulesRegister
 
+//insert supportingTypes
+//end supportingTypes
+
 export default class Sample extends React.Component<any, any> {
     //insert bindingFields
     //end bindingFields

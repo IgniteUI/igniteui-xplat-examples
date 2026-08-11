@@ -75,3 +75,6 @@ public sealed partial class Sample : UserControl, INotifyPropertyChanged
         }
     }
 }
+
+//insert supportingTypes
+//end supportingTypes
