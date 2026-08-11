@@ -2,17 +2,18 @@
   "descriptions": {
     "content": {
       "type": "GeographicMap",
-      "name": "map",
+      "name": "geoMap",
       "height": "100%",
       "width": "100%",
       "zoomable": true
     }
   },
+  "onViewInit": [
+    "MapGeodesicsOnViewInit",
+    "MapBindingDataModelOnViewInit"
+  ],
   "modules": [
     "charts/DataChartInteractivityModule",
     "maps/GeographicMapModule"
-  ],
-  "onViewInit": [
-    "MapDisplayHeatImageryOnViewInit"
   ]
 }
