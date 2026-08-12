@@ -1,4 +1,5 @@
 {
+  "hasAnimations": true,
   "descriptions": {
     "aboveContent": {
       "type": "RadialGauge",
