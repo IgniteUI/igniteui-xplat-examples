@@ -1,0 +1,29 @@
+{
+  "descriptions": {
+    "content": {
+      "type": "GeographicMap",
+      "name": "map",
+      "height": "100%",
+      "width": "100%",
+      "zoomable": true,
+      "series": [
+        {
+          "type": "GeographicPolylineSeries",
+          "name": "lineSeries",
+          "shapeMemberPath": "points",
+          "shapeFilterResolution": 0.0,
+          "shapeStrokeThickness": 3,
+          "shapeStroke": "rgb(82, 82, 82, 0.4)"
+        }
+      ]
+    }
+  },
+  "onViewInit": [
+    "MapBindingShpFileRoutes",
+    "MapBindingShpFileLoad"
+  ],
+  "modules": [
+    "maps/GeographicMapModule",
+    "charts/DataChartInteractivityModule"
+  ]
+}
