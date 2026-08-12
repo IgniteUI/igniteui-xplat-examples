@@ -1,5 +1,5 @@
 {
-  "todo": "Blazor source toggles button enabled state via RowEditStarted/RowEditEnded handlers + a ButtonsDisabled bool. Not yet ported — buttons stay enabled all the time. The CommitEdits/Undo/Redo functionality still works.",
+  "todo": "Blazor source toggles button enabled state via RowEditStarted/RowEditEnded handlers + a ButtonsDisabled bool. Not yet ported \u2014 buttons stay enabled all the time. The CommitEdits/Undo/Redo functionality still works.",
   "skipAlterDataCasing": true,
   "descriptions": {
     "editor": {
@@ -42,8 +42,18 @@
           "label": "Edit Mode",
           "shouldOverrideDefaultEditor": true,
           "valueType": "EnumValue",
-          "dropDownNames": ["None", "Cell", "CellBatch", "Row"],
-          "dropDownValues": ["None", "Cell", "CellBatch", "Row"],
+          "dropDownNames": [
+            "None",
+            "Cell",
+            "CellBatch",
+            "Row"
+          ],
+          "dropDownValues": [
+            "None",
+            "Cell",
+            "CellBatch",
+            "Row"
+          ],
           "primitiveValue": "Cell"
         },
         {
@@ -53,8 +63,14 @@
           "label": "Excel-style Editing",
           "shouldOverrideDefaultEditor": true,
           "valueType": "EnumValue",
-          "dropDownNames": ["SingleClick", "DoubleClick"],
-          "dropDownValues": ["SingleClick", "DoubleClick"],
+          "dropDownNames": [
+            "SingleClick",
+            "DoubleClick"
+          ],
+          "dropDownValues": [
+            "SingleClick",
+            "DoubleClick"
+          ],
           "primitiveValue": "SingleClick"
         }
       ]
@@ -75,14 +91,85 @@
       "height": "100%",
       "width": "100%",
       "columns": [
-        { "type": "TextColumn",     "field": "Name",     "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 150 } },
-        { "type": "TextColumn",     "field": "Street",   "headerText": "Street", "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 160 } },
-        { "type": "TextColumn",     "field": "City",     "headerText": "City",   "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 120 } },
-        { "type": "NumericColumn",  "field": "Salary",   "headerText": "Salary", "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 120 }, "positivePrefix": "$", "showGroupingSeparator": true },
-        { "type": "ImageColumn",    "field": "Photo",    "headerText": "Photo",  "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 110 }, "isEditable": false, "contentOpacity": 1, "horizontalAlignment": "Center" },
-        { "type": "DateTimeColumn", "field": "Birthday", "headerText": "Date of Birth", "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 170 } },
-        { "type": "TemplateColumn", "field": "ButtonColumn", "headerText": "Delete Row", "cellUpdatingRef": "DataGridDeleteRowButtonTemplate" }
-      ]
+        {
+          "type": "TextColumn",
+          "field": "Name",
+          "width": {
+            "type": "ColumnWidth",
+            "isStarSized": true,
+            "value": 1,
+            "minimumWidth": 150
+          }
+        },
+        {
+          "type": "TextColumn",
+          "field": "Street",
+          "headerText": "Street",
+          "width": {
+            "type": "ColumnWidth",
+            "isStarSized": true,
+            "value": 1,
+            "minimumWidth": 160
+          }
+        },
+        {
+          "type": "TextColumn",
+          "field": "City",
+          "headerText": "City",
+          "width": {
+            "type": "ColumnWidth",
+            "isStarSized": true,
+            "value": 1,
+            "minimumWidth": 120
+          }
+        },
+        {
+          "type": "NumericColumn",
+          "field": "Salary",
+          "headerText": "Salary",
+          "width": {
+            "type": "ColumnWidth",
+            "isStarSized": true,
+            "value": 1,
+            "minimumWidth": 120
+          },
+          "positivePrefix": "$",
+          "showGroupingSeparator": true
+        },
+        {
+          "type": "ImageColumn",
+          "field": "Photo",
+          "headerText": "Photo",
+          "width": {
+            "type": "ColumnWidth",
+            "isStarSized": true,
+            "value": 1,
+            "minimumWidth": 110
+          },
+          "isEditable": false,
+          "contentOpacity": 1,
+          "horizontalAlignment": "Center"
+        },
+        {
+          "type": "DateTimeColumn",
+          "field": "Birthday",
+          "headerText": "Date of Birth",
+          "width": {
+            "type": "ColumnWidth",
+            "isStarSized": true,
+            "value": 1,
+            "minimumWidth": 170
+          }
+        },
+        {
+          "type": "TemplateColumn",
+          "field": "ButtonColumn",
+          "headerText": "Delete Row",
+          "cellUpdatingRef": "DataGridDeleteRowButtonTemplate"
+        }
+      ],
+      "cellValueChangingRef": "DataGridValidateCellEdit",
+      "dataCommittingRef": "DataGridCommitUpdatesOnly"
     }
   },
   "modules": [
