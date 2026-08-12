@@ -1,9 +1,8 @@
 //begin imports
 //end imports
 
-import { WorldConnections } from './WorldFlights';
-
 //begin data
+import { WorldConnections } from './WorldFlights';
 /**
  * The cities the flights land at.
  *

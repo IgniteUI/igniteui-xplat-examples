@@ -1,9 +1,8 @@
 //begin imports
 //end imports
 
-import { WorldConnections } from './WorldFlights';
-
 //begin data
+import { WorldConnections } from './WorldFlights';
 /** Meridians and parallels every thirty degrees, as polylines. */
 export class WorldGridlines extends Array<any> {
 
