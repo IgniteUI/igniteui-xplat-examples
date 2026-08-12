@@ -23,6 +23,7 @@ namespace Infragistics.Samples
         public bool Cap { get; set; }
     }
 
+    //begin WorldLocations
     public static class WorldLocations
     {
         public static List<WorldCity> GetAll()
@@ -657,7 +658,9 @@ namespace Infragistics.Samples
             return cities;
         }
     }
+    //end WorldLocations
 
+    //begin WorldUtils
     public static class WorldUtils
     {
         public static List<List<Point>> CalcPaths(GeoLocation origin, GeoLocation dest)
@@ -872,7 +875,9 @@ namespace Infragistics.Samples
             return line;
         }
     }
+    //end WorldUtils
 
+    //begin WorldConnections
     public static class WorldConnections
     {
         public static List<FlightInfo> Flights { get; set; }
@@ -887,7 +892,7 @@ namespace Infragistics.Samples
         }
 
         public static List<FlightInfo> GetFlights()
-        {;
+        {
             return Flights;
         }
 
@@ -1067,6 +1072,7 @@ namespace Infragistics.Samples
     {
         public List<List<Point>> Points { get; set; }
     }
+    //end WorldConnections
 
     /// <summary>Flights between the world's larger cities, as great circle paths.</summary>
     public class WorldFlights : List<FlightInfo>

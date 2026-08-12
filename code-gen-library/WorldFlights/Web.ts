@@ -2,6 +2,7 @@
 //end imports
 
 //begin data
+//begin WorldLocations
 export class WorldLocations {
 
     public static locations: any[] = [];
@@ -641,7 +642,9 @@ export class WorldLocations {
         return this.locations
     }
 }
+//end WorldLocations
 
+//begin WorldUtils
 export class WorldUtils {
 
     // calculate geo-paths between two locations using great circle formula
@@ -865,7 +868,9 @@ export class WorldUtils {
     }
 
 }
+//end WorldUtils
 
+//begin WorldConnections
 export class WorldConnections {
 
     public static airports: any[] = [];
@@ -987,6 +992,7 @@ export class WorldConnections {
         return gridlines;
     }
 }
+//end WorldConnections
 
 /** Flights between the world's larger cities, as great circle paths. */
 export class WorldFlights extends Array<any> {
