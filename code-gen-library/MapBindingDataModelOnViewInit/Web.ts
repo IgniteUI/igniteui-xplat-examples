@@ -4,6 +4,9 @@ import { MarkerType } from 'igniteui-webcomponents-charts';
 //end imports
 
 import { CodeGenHelper } from 'igniteui-webcomponents-core';
+// Declared by the MapGeodesics supporting item, which this item requires: in a generated sample those
+// declarations are written beside the component, so there is no import of them there.
+import { MapGeodesics } from '../MapGeodesics/Web';
 
 export class MapBindingDataModelOnViewInit {
 
@@ -46,8 +49,11 @@ export class MapBindingDataModelOnViewInit {
 
     /** the flight itself, as a great circle path between its two cities */
     public addFlightRoute(geoMap: any, flight: any): void {
-        var geoPath = this.calcPaths(flight.origin, flight.dest);
-        var geoDistance = this.calcDistance(flight.origin, flight.dest);
+        // Asked for rather than assumed: the maths belongs to a supporting item, and there is one of
+        // it for everything using it here.
+        var geodesics = CodeGenHelper.getSharedSupporting<MapGeodesics>("MapGeodesics");
+        var geoPath = geodesics.calcPaths(flight.origin, flight.dest);
+        var geoDistance = geodesics.calcDistance(flight.origin, flight.dest);
         var geoRoutes = [{
             points: geoPath,
             origin: flight.origin,

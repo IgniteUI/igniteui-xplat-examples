@@ -35,9 +35,6 @@
     }
   },
   "onViewInit": [
-    "MapMultipleShapesPolygons",
-    "MapMultipleShapesPolylines",
-    "MapMultipleShapesPoints",
     "MapMultipleShapesLoad"
   ],
   "modules": [

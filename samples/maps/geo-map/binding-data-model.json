@@ -9,7 +9,6 @@
     }
   },
   "onViewInit": [
-    "MapGeodesicsOnViewInit",
     "MapBindingDataModelOnViewInit"
   ],
   "modules": [

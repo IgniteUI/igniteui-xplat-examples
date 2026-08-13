@@ -51,7 +51,11 @@ export class MapDisplayHeatImageryOnViewInit {
                 ];
                 // Generating the tiles on a worker keeps them off the thread the map draws on, which
                 // is worth doing for a heat map of any size. Wiring one up is not the same on every
-                // bundler, so the topic shows it separately and it is left out here.
+                // bundler, so the topic shows it separately — and workers are turned off here to
+                // match, since the generator asks for one by default and throws when neither a script
+                // path nor an instance was given.
+                gen.useWebWorkers = false;
+
 
                 var tileImagery = new IgcTileGeneratorMapImagery();
                 tileImagery.tileGenerator = gen;

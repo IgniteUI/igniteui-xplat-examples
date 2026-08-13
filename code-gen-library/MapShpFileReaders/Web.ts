@@ -5,11 +5,20 @@ import { IgcShapeDataSource } from 'igniteui-webcomponents-core';
 
 import { CodeGenHelper } from 'igniteui-webcomponents-core';
 
-export class MapBindingShpFileRoutes {
+//begin supportingTypes
+/**
+ * What the shapefile becomes once it has loaded: records turned into routes, bound to the series that
+ * draws them.
+ *
+ * A handler for the shape data source's importCompleted, and the source is created in code by the item
+ * that requires this one — so there is nothing in a description to bind it to, and it is not an
+ * initializer either.
+ */
+export class MapShpFileReaders {
 
-    //begin eventHandler
+    //begin readRoutes
     /** Each record is one cable route, with the fields the shapefile's database holds beside it. */
-    public mapBindingShpFileRoutes(sds: IgcShapeDataSource, e: any): void {
+    public readRoutes(sds: IgcShapeDataSource, e: any): void {
         var geoRoutes: any[] = [];
         var pointData = sds.getPointData();
         for (var i = 0; i < pointData.length; i++) {
@@ -26,5 +35,6 @@ export class MapBindingShpFileRoutes {
         var lineSeries = map.series.item(0) as IgcGeographicPolylineSeriesComponent;
         lineSeries.dataSource = geoRoutes;
     }
-    //end eventHandler
+    //end readRoutes
 }
+//end supportingTypes

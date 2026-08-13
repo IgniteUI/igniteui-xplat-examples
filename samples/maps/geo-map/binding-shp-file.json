@@ -19,7 +19,6 @@
     }
   },
   "onViewInit": [
-    "MapBindingShpFileRoutes",
     "MapBindingShpFileLoad"
   ],
   "modules": [
