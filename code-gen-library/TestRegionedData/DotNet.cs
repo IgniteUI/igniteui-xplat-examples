@@ -1,4 +1,9 @@
-//begin data
+﻿//begin data
+public class TestRegionedDataItem
+{
+    public string Name { get; set; }
+}
+
 //begin TestRegionedLookup
 public class TestRegionedLookup
 {

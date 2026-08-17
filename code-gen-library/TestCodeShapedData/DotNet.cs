@@ -1,4 +1,10 @@
-//begin data
+﻿//begin data
+public class TestCodeShapedDataItem
+{
+    public string Name { get; set; }
+    public double Value { get; set; }
+}
+
 public class TestCodeShapedData : List<TestCodeShapedDataItem>
 {
     public TestCodeShapedData()

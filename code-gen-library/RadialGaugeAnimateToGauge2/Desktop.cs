@@ -1,4 +1,4 @@
-//begin imports
+﻿//begin imports
 using System.Windows.Media;
 using Infragistics.Controls.Description;
 using Infragistics.Controls.Layouts;
@@ -43,8 +43,8 @@ public class RadialGaugeAnimateToGauge2
         gauge.FontSize = 13;
 
         gauge.Ranges.Clear();
-        gauge.Ranges.Add(new RadialGaugeRange { StartValue = 100, EndValue = 150, Brush = new SolidColorBrush(Color.FromArgb(0xFF, 0x32, 0xF8, 0x45)), Outline = new SolidColorBrush(Color.FromArgb(0xFF, 0x32, 0xF8, 0x45)), InnerStartExtent = 0.3, InnerEndExtent = 0.3, OuterStartExtent = 0.9, OuterEndExtent = 0.9 });
-        gauge.Ranges.Add(new RadialGaugeRange { StartValue = 150, EndValue = 200, Brush = new SolidColorBrush(Color.FromArgb(0xFF, 0xBF, 0x32, 0xF8)), Outline = new SolidColorBrush(Color.FromArgb(0xFF, 0xBF, 0x32, 0xF8)), InnerStartExtent = 0.3, InnerEndExtent = 0.3, OuterStartExtent = 0.9, OuterEndExtent = 0.9 });
+        gauge.Ranges.Add(new XamRadialGaugeRange { StartValue = 100, EndValue = 150, Brush = new SolidColorBrush(Color.FromArgb(0xFF, 0x32, 0xF8, 0x45)), Outline = new SolidColorBrush(Color.FromArgb(0xFF, 0x32, 0xF8, 0x45)), InnerStartExtent = 0.3, InnerEndExtent = 0.3, OuterStartExtent = 0.9, OuterEndExtent = 0.9 });
+        gauge.Ranges.Add(new XamRadialGaugeRange { StartValue = 150, EndValue = 200, Brush = new SolidColorBrush(Color.FromArgb(0xFF, 0xBF, 0x32, 0xF8)), Outline = new SolidColorBrush(Color.FromArgb(0xFF, 0xBF, 0x32, 0xF8)), InnerStartExtent = 0.3, InnerEndExtent = 0.3, OuterStartExtent = 0.9, OuterEndExtent = 0.9 });
     }
     //end eventHandler
 }
