@@ -29,8 +29,8 @@ public class MapShpFileReaders
             {
                 Points = record.Points,
                 Name = record.Fields["Name"],
-                Capacity = record.Fields["CAPACITY"],
-                Distance = record.Fields["DISTANCE"]
+                Capacity = record.Fields["CapacityG"],
+                Distance = record.Fields["DistanceKM"]
             });
         }
 

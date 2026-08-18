@@ -26,8 +26,8 @@ export class MapShpFileReaders {
             geoRoutes.push({
                 points: record.points,
                 name: record.fieldValues.Name,
-                capacity: record.fieldValues.CAPACITY,
-                distance: record.fieldValues.DISTANCE
+                capacity: record.fieldValues.CapacityG,
+                distance: record.fieldValues.DistanceKM
             });
         }
 
