@@ -4,11 +4,6 @@
 //begin supportingTypes
 /**
  * Great circle maths for a map: the path between two locations, and how far apart they are.
- *
- * A supporting item, so an item that needs it asks CodeGenHelper for it by name. It used to be an
- * init list entry whose methods the items listed after it called through this — which only worked
- * because a generated sample writes every listed item into the one component. Emitted apart, each
- * item is its own, and a call to a neighbour's method had nothing to reach.
  */
 export class MapGeodesics {
 
