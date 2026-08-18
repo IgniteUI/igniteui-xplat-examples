@@ -49,8 +49,6 @@ export class MapBindingDataModelOnViewInit {
 
     /** the flight itself, as a great circle path between its two cities */
     public addFlightRoute(geoMap: any, flight: any): void {
-        // Asked for rather than assumed: the maths belongs to a supporting item, and there is one of
-        // it for everything using it here.
         var geodesics = CodeGenHelper.getSharedSupporting<MapGeodesics>("MapGeodesics");
         var geoPath = geodesics.calcPaths(flight.origin, flight.dest);
         var geoDistance = geodesics.calcDistance(flight.origin, flight.dest);

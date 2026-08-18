@@ -11,10 +11,6 @@ using System.Windows.Media;
 /// Data driven styling for a geographic shape series: four ways of turning a shapefile record into
 /// a style, behind one method the series' AssigningShapeStyle handler reads.
 ///
-/// A supporting item rather than part of a handler, because these are types rather than members:
-/// every one of the four styling topics needs them, and each carries the handler that configures
-/// one of them.
-/// </summary>
 public class ShapeStyle
 {
     public Brush Fill { get; set; }
