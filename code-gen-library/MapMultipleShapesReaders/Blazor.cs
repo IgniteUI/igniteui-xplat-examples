@@ -20,8 +20,10 @@ public class MapMultipleShapesReaders
     {
         var sds = sender as IgbShapeDataSource;
         var geoPolygons = new List<object>();
+        // parsing shapefile data and creating geo-polygons
         foreach (var record in sds.GetPointData())
         {
+            // using field/column names from .DBF file
             geoPolygons.Add(new
             {
                 points = record.Points,
@@ -42,8 +44,10 @@ public class MapMultipleShapesReaders
     {
         var sds = sender as IgbShapeDataSource;
         var geoPolylines = new List<object>();
+        // parsing shapefile data and creating geo-polylines
         foreach (var record in sds.GetPointData())
         {
+            // using field/column names from .DBF file
             geoPolylines.Add(new
             {
                 points = record.Points,
@@ -65,10 +69,12 @@ public class MapMultipleShapesReaders
     {
         var sds = sender as IgbShapeDataSource;
         var geoLocations = new List<object>();
+        // parsing shapefile data and creating geo-locations
         foreach (var record in sds.GetPointData())
         {
             if ((string)record.FieldValues["CAPITAL"] == "N") continue;
             // each of these records holds a single point
+            // using field/column names from .DBF file
             geoLocations.Add(new
             {
                 latitude = record.Points[0][0].Y,

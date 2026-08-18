@@ -22,6 +22,7 @@ public class MapDisplayHeatImageryOnViewInit
         var latitudes = new List<double>();
         var longitudes = new List<double>();
         var populations = new List<double>();
+        // parsing CSV data and creating geographic locations
         for (int i = 1; i < csvLines.Length; i++)
         {
             var columns = csvLines[i].Split(',');
@@ -33,6 +34,7 @@ public class MapDisplayHeatImageryOnViewInit
 
         // the heat map's tiles are generated from the three parallel arrays: where each reading is,
         // and how large it is
+        // generating heat map imagery tiles
         var gen = new IgbHeatTileGenerator();
         gen.XValues = longitudes.ToArray();
         gen.YValues = latitudes.ToArray();
@@ -63,6 +65,7 @@ public class MapDisplayHeatImageryOnViewInit
         var tileImagery = new IgbTileGeneratorMapImagery();
         tileImagery.TileGenerator = gen;
 
+        // generating heat map series
         var series = new IgbGeographicTileSeries();
         series.TileImagery = tileImagery;
         await map.Series.AddAsync(series);

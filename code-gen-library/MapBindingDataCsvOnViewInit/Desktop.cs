@@ -29,6 +29,7 @@ public class MapBindingDataCsvOnViewInit
         var csv = await client.GetStringAsync(url);
         var csvLines = csv.Split('\n');
         var geoLocations = new List<WorldPlaceCsv>();
+        // parsing CSV data and creating geographic locations
         for (int i = 1; i < csvLines.Length; i++)
         {
             var columns = csvLines[i].Split(',');
@@ -42,6 +43,7 @@ public class MapBindingDataCsvOnViewInit
             });
         }
 #if !TESTING
+        // creating the series with the loaded data
         var series = new GeographicHighDensityScatterSeries
         {
             Name = "hdSeries",
@@ -55,10 +57,12 @@ public class MapBindingDataCsvOnViewInit
             PointExtent = 1,
             MouseOverEnabled = true
         };
+        // adding the series to the geographic map
         map.Series.Add(series);
 #endif
 
         var geoBounds = new Rect(-130, 15, Math.Abs(-130 + 65), Math.Abs(50 - 15));
+        // zooming to the bounds of the lower 48 states
         map.ZoomToGeographic(geoBounds);
     }
     //end eventHandler

@@ -21,8 +21,10 @@ export class MapShpFileReaders {
     public readRoutes(sds: IgcShapeDataSource, e: any): void {
         var geoRoutes: any[] = [];
         var pointData = sds.getPointData();
+        // parsing shapefile data and creating geo-locations
         for (var i = 0; i < pointData.length; i++) {
             var record = pointData[i];
+            // using field/column names from .DBF file
             geoRoutes.push({
                 points: record.points,
                 name: record.fieldValues.Name,

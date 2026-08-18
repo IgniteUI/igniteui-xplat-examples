@@ -27,6 +27,7 @@ public class MapTypeScatterDensitySeriesOnViewInit
         var csv = await client.GetStringAsync(url);
         var csvLines = csv.Split('\n');
         var geoLocations = new List<AusPlace>();
+        // parsing CSV data and creating geographic locations
         for (int i = 1; i < csvLines.Length; i++)
         {
             var columns = csvLines[i].Split(',');
@@ -39,6 +40,7 @@ public class MapTypeScatterDensitySeriesOnViewInit
             });
         }
 #if !TESTING
+        // creating the high density series with the loaded data
         var series = new GeographicHighDensityScatterSeries
         {
             ItemsSource = geoLocations,
@@ -51,6 +53,7 @@ public class MapTypeScatterDensitySeriesOnViewInit
             PointExtent = 1,
             MouseOverEnabled = true
         };
+        // adding the series to the geographic map
         map.Series.Add(series);
 #endif
 

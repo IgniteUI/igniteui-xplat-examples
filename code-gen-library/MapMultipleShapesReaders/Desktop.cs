@@ -25,8 +25,10 @@ public class MapMultipleShapesReaders
     {
         var sds = sender as ShapefileConverter;
         var geoPolygons = new List<object>();
+        // parsing shapefile data and creating geo-polygons
         foreach (var record in sds)
         {
+            // using field/column names from .DBF file
             geoPolygons.Add(new
             {
                 Points = record.Points,
@@ -47,8 +49,10 @@ public class MapMultipleShapesReaders
     {
         var sds = sender as ShapefileConverter;
         var geoPolylines = new List<object>();
+        // parsing shapefile data and creating geo-polylines
         foreach (var record in sds)
         {
+            // using field/column names from .DBF file
             geoPolylines.Add(new
             {
                 Points = record.Points,
@@ -70,10 +74,12 @@ public class MapMultipleShapesReaders
     {
         var sds = sender as ShapefileConverter;
         var geoLocations = new List<object>();
+        // parsing shapefile data and creating geo-locations
         foreach (var record in sds)
         {
             if ((string)record.Fields["CAPITAL"] == "N") continue;
             // each of these records holds a single point
+            // using field/column names from .DBF file
             geoLocations.Add(new
             {
                 Latitude = record.Points[0][0].Y,

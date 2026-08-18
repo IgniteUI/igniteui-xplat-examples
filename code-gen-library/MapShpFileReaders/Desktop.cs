@@ -23,8 +23,10 @@ public class MapShpFileReaders
     {
         var sds = sender as ShapefileConverter;
         var geoRoutes = new List<object>();
+        // parsing shapefile data and creating geo-locations
         foreach (var record in sds)
         {
+            // using field/column names from .DBF file
             geoRoutes.Add(new
             {
                 Points = record.Points,

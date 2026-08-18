@@ -21,8 +21,10 @@ public class MapShpFileReaders
     {
         var sds = sender as IgbShapeDataSource;
         var geoRoutes = new List<object>();
+        // parsing shapefile data and creating geo-locations
         foreach (var record in sds.GetPointData())
         {
+            // using field/column names from .DBF file
             geoRoutes.Add(new
             {
                 points = record.Points,

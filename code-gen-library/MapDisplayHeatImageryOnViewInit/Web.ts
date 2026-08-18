@@ -20,6 +20,7 @@ export class MapDisplayHeatImageryOnViewInit {
                 var latitudes: number[] = [];
                 var longitudes: number[] = [];
                 var populations: number[] = [];
+                // parsing CSV data and creating geographic locations
                 for (var i = 1; i < csvLines.length; i++) {
                     var columns = csvLines[i].split(",");
                     if (columns.length < 4) continue;
@@ -30,6 +31,7 @@ export class MapDisplayHeatImageryOnViewInit {
 
                 // the heat map's tiles are generated from the three parallel arrays: where each
                 // reading is, and how large it is
+                // generating heat map imagery tiles
                 var gen = new IgcHeatTileGenerator();
                 gen.xValues = longitudes;
                 gen.yValues = latitudes;
@@ -60,8 +62,10 @@ export class MapDisplayHeatImageryOnViewInit {
                 var tileImagery = new IgcTileGeneratorMapImagery();
                 tileImagery.tileGenerator = gen;
 
+                // generating heat map series
                 var series = new IgcGeographicTileSeriesComponent();
                 series.tileImagery = tileImagery;
+                // adding the heat map series to the map
                 map.series.add(series);
             });
     }

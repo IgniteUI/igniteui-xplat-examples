@@ -22,8 +22,10 @@ export class MapMultipleShapesReaders {
     public readPolygons(sds: IgcShapeDataSource, e: any): void {
         var geoPolygons: any[] = [];
         var pointData = sds.getPointData();
+        // parsing shapefile data and creating geo-polygons
         for (var i = 0; i < pointData.length; i++) {
             var record = pointData[i];
+            // using field/column names from .DBF file
             geoPolygons.push({
                 points: record.points,
                 name: record.fieldValues.NAME,
@@ -43,8 +45,10 @@ export class MapMultipleShapesReaders {
     public readPolylines(sds: IgcShapeDataSource, e: any): void {
         var geoPolylines: any[] = [];
         var pointData = sds.getPointData();
+        // parsing shapefile data and creating geo-polylines
         for (var i = 0; i < pointData.length; i++) {
             var record = pointData[i];
+            // using field/column names from .DBF file
             geoPolylines.push({
                 points: record.points,
                 name: record.fieldValues.Name,
@@ -64,10 +68,12 @@ export class MapMultipleShapesReaders {
     public readPoints(sds: IgcShapeDataSource, e: any): void {
         var geoLocations: any[] = [];
         var pointData = sds.getPointData();
+        // parsing shapefile data and creating geo-locations
         for (var i = 0; i < pointData.length; i++) {
             var record = pointData[i];
             if (record.fieldValues.CAPITAL === "N") continue;
             // each of these records holds a single point
+            // using field/column names from .DBF file
             geoLocations.push({
                 latitude: record.points[0][0].y,
                 longitude: record.points[0][0].x,
