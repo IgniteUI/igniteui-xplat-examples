@@ -1,4 +1,12 @@
 //begin data
+using System;
+using System.Collections.Generic;
+
+public class TestRegionedDataItem
+{
+    public string Name { get; set; }
+}
+
 //begin TestRegionedLookup
 public class TestRegionedLookup
 {
