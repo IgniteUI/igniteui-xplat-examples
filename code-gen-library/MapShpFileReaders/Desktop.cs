@@ -17,7 +17,6 @@ using System.Windows;
 /// </summary>
 public class MapShpFileReaders
 {
-    //begin readRoutes
     /// <summary>Each record is one cable route, with the fields the database holds beside it.</summary>
     public void ReadRoutes(object sender, AsyncCompletedEventArgs e)
     {
@@ -40,6 +39,5 @@ public class MapShpFileReaders
         var lineSeries = map.Series[0] as GeographicPolylineSeries;
         lineSeries.ItemsSource = geoRoutes;
     }
-    //end readRoutes
 }
 //end supportingTypes

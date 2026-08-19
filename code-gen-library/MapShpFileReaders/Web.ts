@@ -16,7 +16,6 @@ import { CodeGenHelper } from 'igniteui-webcomponents-core';
  */
 export class MapShpFileReaders {
 
-    //begin readRoutes
     /** Each record is one cable route, with the fields the shapefile's database holds beside it. */
     public readRoutes(sds: IgcShapeDataSource, e: any): void {
         var geoRoutes: any[] = [];
@@ -37,6 +36,5 @@ export class MapShpFileReaders {
         var lineSeries = map.series.item(0) as IgcGeographicPolylineSeriesComponent;
         lineSeries.dataSource = geoRoutes;
     }
-    //end readRoutes
 }
 //end supportingTypes
