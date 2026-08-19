@@ -4,8 +4,6 @@ using IgniteUI.Blazor.Controls;
 
 public class DataGridToggleLiveAllPrices
 {
-    public bool LiveAllPricesDisabled = false;
-    public bool LiveSomePricesDisabled = false;
     //begin emitterOnly
     // IsUpdatingAllPrices/IsUpdatingSomePrices/IsTimerTicking/StartTicking are owned by
     // DataGridLiveDataTickerOnViewInit. The handlers merge into one sample class at
@@ -19,6 +17,8 @@ public class DataGridToggleLiveAllPrices
 
 
     //begin eventHandler
+    public bool LiveAllPricesDisabled = false;
+    public bool LiveSomePricesDisabled = false;
     public void DataGridToggleLiveAllPrices(IgbPropertyEditorPropertyDescriptionButtonClickEventArgs args)
     {
         if (LiveAllPricesDisabled) return;
