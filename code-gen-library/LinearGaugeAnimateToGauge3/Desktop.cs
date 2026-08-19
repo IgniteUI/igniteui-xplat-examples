@@ -51,9 +51,9 @@ public class LinearGaugeAnimateToGauge3
         gauge.BackingStrokeThickness = 0;
 
         gauge.Ranges.Clear();
-        gauge.Ranges.Add(new LinearGraphRange { StartValue = 0,  EndValue = 30,  Brush = new SolidColorBrush(Color.FromArgb(0xFF, 0x9F, 0xB3, 0x28)), Outline = new SolidColorBrush(Color.FromArgb(0xFF, 0x9F, 0xB3, 0x28)), InnerStartExtent = 0.075, InnerEndExtent = 0.075, OuterStartExtent = 0.95, OuterEndExtent = 0.95 });
-        gauge.Ranges.Add(new LinearGraphRange { StartValue = 30, EndValue = 70,  Brush = new SolidColorBrush(Color.FromArgb(0xFF, 0x43, 0x8C, 0x47)), Outline = new SolidColorBrush(Color.FromArgb(0xFF, 0x43, 0x8C, 0x47)), InnerStartExtent = 0.075, InnerEndExtent = 0.075, OuterStartExtent = 0.95, OuterEndExtent = 0.95 });
-        gauge.Ranges.Add(new LinearGraphRange { StartValue = 70, EndValue = 100, Brush = new SolidColorBrush(Color.FromArgb(0xFF, 0x3F, 0x51, 0xB5)), Outline = new SolidColorBrush(Color.FromArgb(0xFF, 0x3F, 0x51, 0xB5)), InnerStartExtent = 0.075, InnerEndExtent = 0.075, OuterStartExtent = 0.95, OuterEndExtent = 0.95 });
+        gauge.Ranges.Add(new XamLinearGraphRange { StartValue = 0,  EndValue = 30,  Brush = new SolidColorBrush(Color.FromArgb(0xFF, 0x9F, 0xB3, 0x28)), Outline = new SolidColorBrush(Color.FromArgb(0xFF, 0x9F, 0xB3, 0x28)), InnerStartExtent = 0.075, InnerEndExtent = 0.075, OuterStartExtent = 0.95, OuterEndExtent = 0.95 });
+        gauge.Ranges.Add(new XamLinearGraphRange { StartValue = 30, EndValue = 70,  Brush = new SolidColorBrush(Color.FromArgb(0xFF, 0x43, 0x8C, 0x47)), Outline = new SolidColorBrush(Color.FromArgb(0xFF, 0x43, 0x8C, 0x47)), InnerStartExtent = 0.075, InnerEndExtent = 0.075, OuterStartExtent = 0.95, OuterEndExtent = 0.95 });
+        gauge.Ranges.Add(new XamLinearGraphRange { StartValue = 70, EndValue = 100, Brush = new SolidColorBrush(Color.FromArgb(0xFF, 0x3F, 0x51, 0xB5)), Outline = new SolidColorBrush(Color.FromArgb(0xFF, 0x3F, 0x51, 0xB5)), InnerStartExtent = 0.075, InnerEndExtent = 0.075, OuterStartExtent = 0.95, OuterEndExtent = 0.95 });
     }
     //end eventHandler
 }

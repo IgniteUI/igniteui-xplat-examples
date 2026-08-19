@@ -61,9 +61,9 @@ public class RadialGaugeAnimateToGauge4
         gauge.BackingShape = RadialGaugeBackingShape.Circular;
 
         gauge.Ranges.Clear();
-        gauge.Ranges.Add(new RadialGaugeRange { StartValue = 5,  EndValue = 15, Brush = new SolidColorBrush(Color.FromArgb(0xFF, 0xF8, 0x62, 0x32)), Outline = new SolidColorBrush(Color.FromArgb(0xFF, 0xF8, 0x62, 0x32)), InnerStartExtent = 0.5, InnerEndExtent = 0.5, OuterStartExtent = 0.57, OuterEndExtent = 0.57 });
-        gauge.Ranges.Add(new RadialGaugeRange { StartValue = 15, EndValue = 35, Brush = new SolidColorBrush(Color.FromArgb(0xFF, 0xDC, 0x3F, 0x76)), Outline = new SolidColorBrush(Color.FromArgb(0xFF, 0xDC, 0x3F, 0x76)), InnerStartExtent = 0.5, InnerEndExtent = 0.5, OuterStartExtent = 0.57, OuterEndExtent = 0.57 });
-        gauge.Ranges.Add(new RadialGaugeRange { StartValue = 35, EndValue = 45, Brush = new SolidColorBrush(Color.FromArgb(0xFF, 0x74, 0x46, 0xB9)), Outline = new SolidColorBrush(Color.FromArgb(0xFF, 0x74, 0x46, 0xB9)), InnerStartExtent = 0.5, InnerEndExtent = 0.5, OuterStartExtent = 0.57, OuterEndExtent = 0.57 });
+        gauge.Ranges.Add(new XamRadialGaugeRange { StartValue = 5,  EndValue = 15, Brush = new SolidColorBrush(Color.FromArgb(0xFF, 0xF8, 0x62, 0x32)), Outline = new SolidColorBrush(Color.FromArgb(0xFF, 0xF8, 0x62, 0x32)), InnerStartExtent = 0.5, InnerEndExtent = 0.5, OuterStartExtent = 0.57, OuterEndExtent = 0.57 });
+        gauge.Ranges.Add(new XamRadialGaugeRange { StartValue = 15, EndValue = 35, Brush = new SolidColorBrush(Color.FromArgb(0xFF, 0xDC, 0x3F, 0x76)), Outline = new SolidColorBrush(Color.FromArgb(0xFF, 0xDC, 0x3F, 0x76)), InnerStartExtent = 0.5, InnerEndExtent = 0.5, OuterStartExtent = 0.57, OuterEndExtent = 0.57 });
+        gauge.Ranges.Add(new XamRadialGaugeRange { StartValue = 35, EndValue = 45, Brush = new SolidColorBrush(Color.FromArgb(0xFF, 0x74, 0x46, 0xB9)), Outline = new SolidColorBrush(Color.FromArgb(0xFF, 0x74, 0x46, 0xB9)), InnerStartExtent = 0.5, InnerEndExtent = 0.5, OuterStartExtent = 0.57, OuterEndExtent = 0.57 });
     }
     //end eventHandler
 }

@@ -1,4 +1,5 @@
 //begin imports
+using Infragistics.Controls;
 using Infragistics.Controls.Charts;
 using Infragistics.Controls.Maps;
 using System;

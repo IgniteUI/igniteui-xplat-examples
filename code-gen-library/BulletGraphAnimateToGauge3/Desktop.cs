@@ -43,9 +43,9 @@ public class BulletGraphAnimateToGauge3
         gauge.BackingStrokeThickness = 0;
 
         gauge.Ranges.Clear();
-        gauge.Ranges.Add(new LinearGraphRange { StartValue = 0,  EndValue = 40,  Brush = new SolidColorBrush(Color.FromArgb(0xFF, 0xFF, 0x98, 0x00)), Outline = new SolidColorBrush(Color.FromArgb(0xFF, 0xFF, 0x98, 0x00)), InnerStartExtent = 0.2, InnerEndExtent = 0.2, OuterStartExtent = 0.95, OuterEndExtent = 0.95 });
-        gauge.Ranges.Add(new LinearGraphRange { StartValue = 40, EndValue = 80,  Brush = new SolidColorBrush(Color.FromArgb(0xFF, 0xF9, 0x62, 0x32)), Outline = new SolidColorBrush(Color.FromArgb(0xFF, 0xF9, 0x62, 0x32)), InnerStartExtent = 0.2, InnerEndExtent = 0.2, OuterStartExtent = 0.95, OuterEndExtent = 0.95 });
-        gauge.Ranges.Add(new LinearGraphRange { StartValue = 80, EndValue = 120, Brush = new SolidColorBrush(Color.FromArgb(0xFF, 0xC6, 0x28, 0x28)), Outline = new SolidColorBrush(Color.FromArgb(0xFF, 0xC6, 0x28, 0x28)), InnerStartExtent = 0.2, InnerEndExtent = 0.2, OuterStartExtent = 0.95, OuterEndExtent = 0.95 });
+        gauge.Ranges.Add(new XamLinearGraphRange { StartValue = 0,  EndValue = 40,  Brush = new SolidColorBrush(Color.FromArgb(0xFF, 0xFF, 0x98, 0x00)), Outline = new SolidColorBrush(Color.FromArgb(0xFF, 0xFF, 0x98, 0x00)), InnerStartExtent = 0.2, InnerEndExtent = 0.2, OuterStartExtent = 0.95, OuterEndExtent = 0.95 });
+        gauge.Ranges.Add(new XamLinearGraphRange { StartValue = 40, EndValue = 80,  Brush = new SolidColorBrush(Color.FromArgb(0xFF, 0xF9, 0x62, 0x32)), Outline = new SolidColorBrush(Color.FromArgb(0xFF, 0xF9, 0x62, 0x32)), InnerStartExtent = 0.2, InnerEndExtent = 0.2, OuterStartExtent = 0.95, OuterEndExtent = 0.95 });
+        gauge.Ranges.Add(new XamLinearGraphRange { StartValue = 80, EndValue = 120, Brush = new SolidColorBrush(Color.FromArgb(0xFF, 0xC6, 0x28, 0x28)), Outline = new SolidColorBrush(Color.FromArgb(0xFF, 0xC6, 0x28, 0x28)), InnerStartExtent = 0.2, InnerEndExtent = 0.2, OuterStartExtent = 0.95, OuterEndExtent = 0.95 });
     }
     //end eventHandler
 }
