@@ -27,6 +27,12 @@
     xmlns:igDashboards="using:Infragistics.Controls.Dashboards"
     <!-- endifdef dashboards -->
     mc:Ignorable="d">
+    <!-- ifdef templateContents -->
+    <UserControl.Resources>
+      <!-- insert templateContents -->
+      <!-- end templateContents -->
+    </UserControl.Resources>
+    <!-- endifdef templateContents -->
     <Grid>
       <Grid.RowDefinitions>
         <RowDefinition Height="Auto" />

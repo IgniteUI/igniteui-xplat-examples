@@ -7,6 +7,12 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="500" Width="700"
         xmlns:ig="http://schemas.infragistics.com/xaml">
+    <!-- ifdef templateContents -->
+    <Window.Resources>
+      <!-- insert templateContents -->
+      <!-- end templateContents -->
+    </Window.Resources>
+    <!-- endifdef templateContents -->
     <Grid>
       <Grid.RowDefinitions>
         <RowDefinition Height="Auto" />
