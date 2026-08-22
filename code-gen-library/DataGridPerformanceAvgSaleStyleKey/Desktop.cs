@@ -8,7 +8,7 @@ public class DataGridPerformanceAvgSaleStyleKey
     //WPF: Infragistics.Controls.Grids.CellStyleRequestedEventHandler
     public void DataGridPerformanceAvgSaleStyleKey(object sender, CellStyleRequestedEventArgs args)
     {
-        var grid = CodeGenHelper.GetDescription<XamDataGrid>("content");
+        var grid = CodeGenHelper.GetDescription<XamXGrid>("content");
         var row = grid.ActualDataSource.GetItemAtIndex(args.RowNumber) as SalesPerson;
         if (row != null && row.Change >= 0)
         {

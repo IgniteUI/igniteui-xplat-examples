@@ -9,7 +9,7 @@ public class DataGridValidateCellEdit
     //WPF: Infragistics.Controls.Grids.GridCellValueChanging
     public void DataGridValidateCellEdit(object sender, GridCellValueChangingEventArgs args)
     {
-        var grid = CodeGenHelper.GetDescription<XamDataGrid>("content");
+        var grid = CodeGenHelper.GetDescription<XamXGrid>("content");
         // NewValue is typed as object here, where the web platforms hand back the edited text
         if (args.NewValue as string == "")
         {

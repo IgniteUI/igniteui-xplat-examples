@@ -8,7 +8,7 @@ public class DataGridPriceStyleKey
     //WPF: Infragistics.Controls.Grids.CellStyleRequestedEventHandler
     public void DataGridPriceStyleKey(object sender, CellStyleRequestedEventArgs args)
     {
-        var grid = CodeGenHelper.GetDescription<XamDataGrid>("content");
+        var grid = CodeGenHelper.GetDescription<XamXGrid>("content");
         var row = grid.ActualDataSource.GetItemAtIndex(args.RowNumber) as PortfolioDataItem;
         if (row != null && row.Change >= 0)
         {

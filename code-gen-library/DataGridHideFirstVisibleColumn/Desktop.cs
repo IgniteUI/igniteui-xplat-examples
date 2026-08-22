@@ -10,7 +10,7 @@ public class DataGridHideFirstVisibleColumn
     //WPF: Infragistics.Controls.Layouts.PropertyEditorPropertyDescriptionButtonClickEventHandler
     public void DataGridHideFirstVisibleColumn(object sender, PropertyEditorPropertyDescriptionButtonClickEventArgs args)
     {
-        var grid = CodeGenHelper.GetDescription<XamDataGrid>("content");
+        var grid = CodeGenHelper.GetDescription<XamXGrid>("content");
         for (var i = 0; i < grid.ActualColumns.Count; i++)
         {
             var col = grid.ActualColumns[i];

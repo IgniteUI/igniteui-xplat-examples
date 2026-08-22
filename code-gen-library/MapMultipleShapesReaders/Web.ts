@@ -53,7 +53,10 @@ export class MapMultipleShapesReaders {
                 points: record.points,
                 name: record.fieldValues.Name,
                 capacity: record.fieldValues.CapacityG,
-                distance: record.fieldValues.DistanceKM
+                distance: record.fieldValues.DistanceKM,
+                isOverLand: record.fieldValues.OverLand === 0,
+                isActive: record.fieldValues.NotLive !== 0,
+                service: record.fieldValues.InService
             });
         }
 
@@ -64,22 +67,24 @@ export class MapMultipleShapesReaders {
     //end readPolylines
 
     //begin readPoints
-    /** Capital cities only, one point per record. */
+    /** Cities with a known population, one point per record. */
     public readPoints(sds: IgcShapeDataSource, e: any): void {
         var geoLocations: any[] = [];
         var pointData = sds.getPointData();
         // parsing shapefile data and creating geo-locations
         for (var i = 0; i < pointData.length; i++) {
             var record = pointData[i];
-            if (record.fieldValues.CAPITAL === "N") continue;
-            // each of these records holds a single point
-            // using field/column names from .DBF file
-            geoLocations.push({
-                latitude: record.points[0][0].y,
-                longitude: record.points[0][0].x,
-                city: record.fieldValues.NAME,
-                population: record.fieldValues.POPULATION
-            });
+            var pop = record.fieldValues.POPULATION;
+            if (pop > 0) {
+                // each of these records holds a single point
+                // using field/column names from .DBF file
+                geoLocations.push({
+                    latitude: record.points[0][0].y,
+                    longitude: record.points[0][0].x,
+                    city: record.fieldValues.NAME,
+                    population: pop
+                });
+            }
         }
 
         var map = CodeGenHelper.getDescription<IgcGeographicMapComponent>("content");

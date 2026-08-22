@@ -11,7 +11,7 @@ public class DataGridCommitUpdatesOnly
     //WPF: Infragistics.Controls.Grids.GridDataCommittingEventHandler
     public void DataGridCommitUpdatesOnly(object sender, GridDataCommittingEventArgs args)
     {
-        var grid = CodeGenHelper.GetDescription<XamDataGrid>("content");
+        var grid = CodeGenHelper.GetDescription<XamXGrid>("content");
         if (args.Changes[0].TransactionType == TransactionType.Update)
         {
             grid.AcceptCommit(args.CommitID);

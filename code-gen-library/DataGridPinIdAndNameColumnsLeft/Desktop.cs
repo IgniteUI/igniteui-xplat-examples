@@ -10,7 +10,7 @@ public class DataGridPinIdAndNameColumnsLeft
     //WPF: Infragistics.Controls.Layouts.PropertyEditorPropertyDescriptionButtonClickEventHandler
     public void DataGridPinIdAndNameColumnsLeft(object sender, PropertyEditorPropertyDescriptionButtonClickEventArgs args)
     {
-        var grid = CodeGenHelper.GetDescription<XamDataGrid>("content");
+        var grid = CodeGenHelper.GetDescription<XamXGrid>("content");
         grid.PinColumn(grid.ActualColumns[0], PinnedPositions.Left);
         grid.PinColumn(grid.ActualColumns[1], PinnedPositions.Left);
         grid.PinColumn(grid.ActualColumns[2], PinnedPositions.Left);

@@ -14,7 +14,7 @@ public class DataGridReloadSalaryData
     //WPF: Infragistics.Controls.Layouts.PropertyEditorPropertyDescriptionButtonClickEventHandler
     public void DataGridReloadSalaryData(object sender, PropertyEditorPropertyDescriptionButtonClickEventArgs args)
     {
-        var grid = CodeGenHelper.GetDescription<XamDataGrid>("content");
+        var grid = CodeGenHelper.GetDescription<XamXGrid>("content");
         var data = (List<EmployeesSalesDataItem>)grid.ItemsSource;
         for (var i = 0; i < data.Count; i++)
         {

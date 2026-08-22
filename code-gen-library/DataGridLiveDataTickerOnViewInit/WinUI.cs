@@ -48,7 +48,7 @@ public class DataGridLiveDataTickerOnViewInit
     {
         if (!IsTimerTicking) return;
 
-        var grid = CodeGenHelper.GetDescription<XamDataGrid>("content");
+        var grid = CodeGenHelper.GetDescription<XamXGrid>("content");
         if (grid == null)
         {
             Task.Delay(Frequency).ContinueWith((t) => OnTimerTick(), TaskScheduler.FromCurrentSynchronizationContext());
@@ -185,14 +185,14 @@ public class DataGridLiveDataTickerOnViewInit
 
     public void OnGridGroupingRemove()
     {
-        var grid = CodeGenHelper.GetDescription<XamDataGrid>("content");
+        var grid = CodeGenHelper.GetDescription<XamXGrid>("content");
         if (grid == null) return;
         grid.GroupDescriptions.Clear();
     }
 
     public void OnGridGroupingAdd()
     {
-        var grid = CodeGenHelper.GetDescription<XamDataGrid>("content");
+        var grid = CodeGenHelper.GetDescription<XamXGrid>("content");
         if (grid == null) return;
 
         grid.GroupDescriptions.Add(new ColumnGroupDescription { Field = "Category", SortDirection = Infragistics.Core.Controls.DataSource.ListSortDirection.Descending });

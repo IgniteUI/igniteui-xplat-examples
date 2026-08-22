@@ -10,7 +10,7 @@ public class DataGridShowLastHiddenColumn
     //WPF: Infragistics.Controls.Layouts.PropertyEditorPropertyDescriptionButtonClickEventHandler
     public void DataGridShowLastHiddenColumn(object sender, PropertyEditorPropertyDescriptionButtonClickEventArgs args)
     {
-        var grid = CodeGenHelper.GetDescription<XamDataGrid>("content");
+        var grid = CodeGenHelper.GetDescription<XamXGrid>("content");
         for (var i = grid.ActualColumns.Count - 1; i >= 0; i--)
         {
             var col = grid.ActualColumns[i];

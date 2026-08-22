@@ -23,7 +23,7 @@ public class DataGridPinSampleEmployeesOnViewInit
 
     private void PinRows()
     {
-        var grid = CodeGenHelper.GetDescription<XamDataGrid>("content");
+        var grid = CodeGenHelper.GetDescription<XamXGrid>("content");
         var data = CodeGenHelper.FindByName<IList>("EmployeesSalesData");
         grid.PinnedItems.Add(data[2]);
         grid.PinnedItems.Add(data[4]);

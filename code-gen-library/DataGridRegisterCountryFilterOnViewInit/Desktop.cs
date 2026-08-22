@@ -8,7 +8,7 @@ public class DataGridRegisterCountryFilterOnViewInit
     //WPF: System.Action
     public void DataGridRegisterCountryFilterOnViewInit()
     {
-        var grid = CodeGenHelper.GetDescription<XamDataGrid>("content");
+        var grid = CodeGenHelper.GetDescription<XamXGrid>("content");
         var operand = new FilterOperand
         {
             EditorType = EditorType.Text,

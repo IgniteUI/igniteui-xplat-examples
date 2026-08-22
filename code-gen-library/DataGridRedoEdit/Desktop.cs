@@ -10,7 +10,7 @@ public class DataGridRedoEdit
     //WPF: Infragistics.Controls.Layouts.PropertyEditorPropertyDescriptionButtonClickEventHandler
     public void DataGridRedoEdit(object sender, PropertyEditorPropertyDescriptionButtonClickEventArgs args)
     {
-        var grid = CodeGenHelper.GetDescription<XamDataGrid>("content");
+        var grid = CodeGenHelper.GetDescription<XamXGrid>("content");
         grid.Redo();
     }
     //end eventHandler
