@@ -52,7 +52,7 @@ public class MapBindingDataCsvOnViewInit
             PointExtent = 1,
             MouseOverEnabled = true
         };
-        await map.Series.AddAsync(series);
+        map.Series.Add(series);
 
         var geoBounds = new Rect() { Left = -130, Top = 15, Width = Math.Abs(-130 + 65), Height = Math.Abs(50 - 15) };
         // zooming to the bounds of the lower 48 states

@@ -49,7 +49,7 @@ public class MapTypeScatterDensitySeriesOnViewInit
             PointExtent = 1,
             MouseOverEnabled = true
         };
-        await map.Series.AddAsync(series);
+        map.Series.Add(series);
 
         var bounds = new Rect() { Left = 110, Top = -10, Width = 45, Height = -35 };
         map.ZoomToGeographic(bounds);

@@ -51,7 +51,7 @@ public class MapBindingDataJsonPointsOnViewInit
             MarkerThickness = 1,
             MarkerType = MarkerType.Circle
         };
-        await map.Series.AddAsync(series);
+        map.Series.Add(series);
     }
     //end eventHandler
 }
