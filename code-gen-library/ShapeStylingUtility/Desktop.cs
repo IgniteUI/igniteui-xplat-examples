@@ -13,8 +13,8 @@ using System.Windows.Media;
 ///
 public class ShapeStyle
 {
-    public Brush Fill { get; set; }
-    public Brush Stroke { get; set; }
+    public SolidColorBrush Fill { get; set; }
+    public SolidColorBrush Stroke { get; set; }
     public double Opacity { get; set; } = 1.0;
     public double StrokeThickness { get; set; } = 0.5;
 }
@@ -58,7 +58,7 @@ public abstract class ShapeStyling
     /// Written out rather than taken from a converter, because the converters differ between the
     /// desktop frameworks this one item is emitted for.
     /// </summary>
-    public static Brush ToBrush(string color)
+    public static SolidColorBrush ToBrush(string color)
     {
         if (string.IsNullOrEmpty(color))
         {
