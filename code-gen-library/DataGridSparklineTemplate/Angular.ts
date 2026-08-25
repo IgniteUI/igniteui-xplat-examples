@@ -2,9 +2,8 @@ import { Component, ViewChild, NgModule, TemplateRef } from '@angular/core';
 import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
-import { IgxSparklineCoreModule } from "igniteui-angular-charts";
-
 //begin imports
+import { IgxSparklineCoreModule } from "igniteui-angular-charts";
 //end imports
 
 //begin template
