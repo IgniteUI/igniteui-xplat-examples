@@ -35,7 +35,15 @@ igRegisterScript("ExtractDomainChartState", (container) => {
                 var displayName = name;
                 if (displayName.charAt(0) === "[") { displayName = displayName.substring(1, displayName.length - 1); }
                 var val = lds.getItemPropertyAtIndex(i, name);
-                if (val instanceof Date) { val = +val; }
+                // Emit dates as a LOCAL-time round-trip string (YYYY-MM-DDTHH:mm:ss), matching the WC host's
+                // DataHelper.toRoundTripFormat, so the extracted state carries dates as strings like the
+                // other web platforms (the analyzer parses these to DateTime). The prior "+val" emitted a
+                // numeric ms timestamp, which the label analyzer rejects ("labelKey is not a string").
+                if (val instanceof Date) {
+                    val = val.getFullYear() + '-' + String(val.getMonth() + 1).padStart(2, '0') + '-' +
+                        String(val.getDate()).padStart(2, '0') + 'T' + String(val.getHours()).padStart(2, '0') +
+                        ':' + String(val.getMinutes()).padStart(2, '0') + ':' + String(val.getSeconds()).padStart(2, '0');
+                }
                 obj[displayName] = val;
             }
             ret.push(obj);
