@@ -15,7 +15,7 @@ export class TestsAddNameTooltip
             if (!series.isLayer)
     		{
     			
-    			series.tooltipTemplate = ((context)=>{
+    			series.tooltipTemplate = ((context: any)=>{
 						return html`<div class="ui-chart-default-tooltip-content">${context.item.Name}</div>`;
 				}); 
     		}

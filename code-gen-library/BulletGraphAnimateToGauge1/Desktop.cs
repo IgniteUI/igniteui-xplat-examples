@@ -1,4 +1,4 @@
-//begin imports
+﻿//begin imports
 using System.Windows.Media;
 using Infragistics.Controls.Description;
 using Infragistics.Controls.Layouts;

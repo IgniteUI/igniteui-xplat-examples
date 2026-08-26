@@ -1,0 +1,72 @@
+{
+  "strings": {
+    "legendTitle": "Monthly Temperature Range in LA and NYC"
+  },
+  "descriptions": {
+    "legend": {
+      "type": "Legend",
+      "name": "legend",
+      "orientation": "Horizontal"
+    },
+    "content": {
+      "type": "DataChart",
+      "name": "chart",
+      "isHorizontalZoomEnabled": false,
+      "isVerticalZoomEnabled": false,
+      "legendRef": "legend",
+      "axes": [
+        {
+          "type": "CategoryYAxis",
+          "name": "yAxis",
+          "label": "Month",
+          "interval": 1,
+          "dataSourceRef": "TemperatureRangeData"
+        },
+        {
+          "type": "NumericXAxis",
+          "name": "xAxis",
+          "title": "Temperature (in Celsius)",
+          "titleAngle": 0,
+          "titleTopMargin": 10
+        }
+      ],
+      "series": [
+        {
+          "type": "RangeBarSeries",
+          "name": "RangeBarSeries1",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "title": "Los Angeles",
+          "lowMemberPath": "LowLA",
+          "highMemberPath": "HighLA",
+          "showDefaultTooltip": false,
+          "dataSourceRef": "TemperatureRangeData"
+        },
+        {
+          "type": "RangeBarSeries",
+          "name": "RangeBarSeries2",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "title": "New York",
+          "lowMemberPath": "LowNY",
+          "highMemberPath": "HighNY",
+          "showDefaultTooltip": false,
+          "dataSourceRef": "TemperatureRangeData"
+        },
+        {
+          "type": "DataToolTipLayer",
+          "name": "dataToolTipLayer"
+        }
+      ]
+    }
+  },
+  "modules": [
+    "charts/DataChartAnnotationModule",
+    "charts/DataChartCategoryModule",
+    "charts/DataChartCoreModule",
+    "charts/DataChartInteractivityModule",
+    "charts/DataChartVerticalCategoryModule",
+    "charts/LegendModule",
+    "charts/RangeBarSeriesModule"
+  ]
+}
