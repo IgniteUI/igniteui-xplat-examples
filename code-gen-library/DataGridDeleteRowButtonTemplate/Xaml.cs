@@ -20,7 +20,7 @@ public class DataGridDeleteRowButtonTemplate
             button = new Button { Content = "Delete" };
             button.Click += (s, e) =>
             {
-                var grid = CodeGenHelper.GetDescription<XamDataGrid>("content");
+                var grid = CodeGenHelper.GetDescription<XamXGrid>("content");
                 var btn = (Button)s;
                 if (btn.Tag != null)
                 {

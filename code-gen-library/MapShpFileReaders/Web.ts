@@ -16,18 +16,19 @@ import { CodeGenHelper } from 'igniteui-webcomponents-core';
  */
 export class MapShpFileReaders {
 
-    //begin readRoutes
     /** Each record is one cable route, with the fields the shapefile's database holds beside it. */
     public readRoutes(sds: IgcShapeDataSource, e: any): void {
         var geoRoutes: any[] = [];
         var pointData = sds.getPointData();
+        // parsing shapefile data and creating geo-locations
         for (var i = 0; i < pointData.length; i++) {
             var record = pointData[i];
+            // using field/column names from .DBF file
             geoRoutes.push({
                 points: record.points,
                 name: record.fieldValues.Name,
-                capacity: record.fieldValues.CAPACITY,
-                distance: record.fieldValues.DISTANCE
+                capacity: record.fieldValues.CapacityG,
+                distance: record.fieldValues.DistanceKM
             });
         }
 
@@ -35,6 +36,5 @@ export class MapShpFileReaders {
         var lineSeries = map.series.item(0) as IgcGeographicPolylineSeriesComponent;
         lineSeries.dataSource = geoRoutes;
     }
-    //end readRoutes
 }
 //end supportingTypes

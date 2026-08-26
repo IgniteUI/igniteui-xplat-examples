@@ -15,6 +15,7 @@ export class MapTypeScatterDensitySeriesOnViewInit {
             .then((csvData: string) => {
                 var csvLines = csvData.split("\n");
                 var geoLocations: any[] = [];
+                // parsing CSV data and creating geographic locations
                 for (var i = 1; i < csvLines.length; i++) {
                     var columns = csvLines[i].split(",");
                     if (columns.length < 3) continue;
@@ -24,6 +25,7 @@ export class MapTypeScatterDensitySeriesOnViewInit {
                         latitude: Number(columns[2])
                     });
                 }
+                // creating the high density series with the loaded data
                 var series = new IgcGeographicHighDensityScatterSeriesComponent();
                 series.dataSource = geoLocations;
                 series.longitudeMemberPath = "longitude";
@@ -34,6 +36,7 @@ export class MapTypeScatterDensitySeriesOnViewInit {
                 series.heatMaximum = 5;
                 series.pointExtent = 1;
                 series.mouseOverEnabled = true;
+                // adding the series to the geographic map
                 map.series.add(series);
 
                 map.zoomToGeographic({ left: 110, top: -10, width: 45, height: -35 });

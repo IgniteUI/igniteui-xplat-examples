@@ -17,20 +17,21 @@ using System.Windows;
 /// </summary>
 public class MapShpFileReaders
 {
-    //begin readRoutes
     /// <summary>Each record is one cable route, with the fields the database holds beside it.</summary>
     public void ReadRoutes(object sender, AsyncCompletedEventArgs e)
     {
         var sds = sender as ShapefileConverter;
         var geoRoutes = new List<object>();
+        // parsing shapefile data and creating geo-locations
         foreach (var record in sds)
         {
+            // using field/column names from .DBF file
             geoRoutes.Add(new
             {
                 Points = record.Points,
                 Name = record.Fields["Name"],
-                Capacity = record.Fields["CAPACITY"],
-                Distance = record.Fields["DISTANCE"]
+                Capacity = record.Fields["CapacityG"],
+                Distance = record.Fields["DistanceKM"]
             });
         }
 
@@ -38,6 +39,5 @@ public class MapShpFileReaders
         var lineSeries = map.Series[0] as GeographicPolylineSeries;
         lineSeries.ItemsSource = geoRoutes;
     }
-    //end readRoutes
 }
 //end supportingTypes

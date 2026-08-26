@@ -8,7 +8,7 @@ public class DataGridRegisterCustomAgeFilterOnViewInit
     //WPF: System.Action
     public void DataGridRegisterCustomAgeFilterOnViewInit()
     {
-        var grid = CodeGenHelper.GetDescription<XamDataGrid>("content");
+        var grid = CodeGenHelper.GetDescription<XamXGrid>("content");
         grid.ActualColumns[1].FilterOperands.Add(new CustomAgeFilter());
     }
 

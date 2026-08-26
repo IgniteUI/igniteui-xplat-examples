@@ -10,7 +10,7 @@ public class DataGridUnpinNameAndAddressColumns
     //WPF: Infragistics.Controls.Layouts.PropertyEditorPropertyDescriptionButtonClickEventHandler
     public void DataGridUnpinNameAndAddressColumns(object sender, PropertyEditorPropertyDescriptionButtonClickEventArgs args)
     {
-        var grid = CodeGenHelper.GetDescription<XamDataGrid>("content");
+        var grid = CodeGenHelper.GetDescription<XamXGrid>("content");
         grid.PinColumn(grid.ActualColumns[0], PinnedPositions.None);
         grid.PinColumn(grid.ActualColumns[1], PinnedPositions.None);
         grid.PinColumn(grid.ActualColumns[2], PinnedPositions.None);

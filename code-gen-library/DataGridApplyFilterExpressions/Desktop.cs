@@ -12,7 +12,7 @@ public class DataGridApplyFilterExpressions
     public void DataGridApplyFilterExpressions(object sender, PropertyEditorPropertyDescriptionChangedEventArgs args)
     {
         var factory = new FilterFactory();
-        var grid = CodeGenHelper.GetDescription<XamDataGrid>("content");
+        var grid = CodeGenHelper.GetDescription<XamXGrid>("content");
         var columnEditor = CodeGenHelper.FindByName<PropertyEditorPropertyDescription>("FilterColumnEditor");
         var modeEditor = CodeGenHelper.FindByName<PropertyEditorPropertyDescription>("FilterModeEditor");
         var textEditor = CodeGenHelper.FindByName<PropertyEditorPropertyDescription>("FilterTextEditor");

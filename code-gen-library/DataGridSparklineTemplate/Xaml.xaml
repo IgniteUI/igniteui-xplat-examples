@@ -1,0 +1,14 @@
+<!--begin template-->
+<!--begin content-->
+<DataTemplate x:Key="DataGridSparklineTemplate">
+    <Border Height="70" Background="Transparent">
+        <ig:XamSparkline
+            DisplayType="Line"
+            ItemsSource="{Binding RowItem.OrderHistory}"
+            ValueMemberPath="Sold"
+            LabelMemberPath="Week"
+            Brush="#FF15BE06" />
+    </Border>
+</DataTemplate>
+<!--end content-->
+<!--end template-->

@@ -11,14 +11,10 @@ using System.Windows.Media;
 /// Data driven styling for a geographic shape series: four ways of turning a shapefile record into
 /// a style, behind one method the series' AssigningShapeStyle handler reads.
 ///
-/// A supporting item rather than part of a handler, because these are types rather than members:
-/// every one of the four styling topics needs them, and each carries the handler that configures
-/// one of them.
-/// </summary>
 public class ShapeStyle
 {
-    public Brush Fill { get; set; }
-    public Brush Stroke { get; set; }
+    public SolidColorBrush Fill { get; set; }
+    public SolidColorBrush Stroke { get; set; }
     public double Opacity { get; set; } = 1.0;
     public double StrokeThickness { get; set; } = 0.5;
 }
@@ -62,7 +58,7 @@ public abstract class ShapeStyling
     /// Written out rather than taken from a converter, because the converters differ between the
     /// desktop frameworks this one item is emitted for.
     /// </summary>
-    public static Brush ToBrush(string color)
+    public static SolidColorBrush ToBrush(string color)
     {
         if (string.IsNullOrEmpty(color))
         {

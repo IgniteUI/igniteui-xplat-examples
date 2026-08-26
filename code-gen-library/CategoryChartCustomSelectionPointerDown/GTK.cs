@@ -1,4 +1,4 @@
-﻿//begin imports
+//begin imports
 using Infragistics.Controls.Charts;
 using System.Collections;
 //end imports

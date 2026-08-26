@@ -5,6 +5,19 @@ import { IgcPropertyEditorPropertyDescriptionButtonClickEventArgs, IgcPropertyEd
 import { CodeGenHelper } from 'igniteui-webcomponents-core';
 
 export class DataGridToggleLiveSomePrices {
+    //begin emitterOnly
+    // liveSomePricesDisabled / liveAllPricesDisabled owned by DataGridToggleLiveAllPrices.
+    // isUpdatingAllPrices/isUpdatingSomePrices/isTimerTicking/startTicking owned by
+    // DataGridLiveDataTickerOnViewInit. The handlers merge into one sample class at
+    // sample-emission time; these stubs keep the per-handler library Holder compilable.
+    public liveSomePricesDisabled: boolean = false;
+    public liveAllPricesDisabled: boolean = false;
+    public isUpdatingAllPrices: boolean = false;
+    public isUpdatingSomePrices: boolean = false;
+    public isTimerTicking: boolean = false;
+    public startTicking(): void { }
+    //end emitterOnly
+
     //begin eventHandler
     public dataGridToggleLiveSomePrices(sender: any, args: IgcPropertyEditorPropertyDescriptionButtonClickEventArgs): void {
         if (this.liveSomePricesDisabled) return;

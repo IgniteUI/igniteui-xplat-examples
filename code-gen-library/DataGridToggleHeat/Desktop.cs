@@ -18,7 +18,7 @@ public class DataGridToggleHeat
     public void DataGridToggleHeat(object sender, PropertyEditorPropertyDescriptionChangedEventArgs args)
     {
         this.UseHeatBackground = args.NewValue is bool b && b;
-        var grid = CodeGenHelper.GetDescription<XamDataGrid>("content");
+        var grid = CodeGenHelper.GetDescription<XamXGrid>("content");
         if (grid != null) grid.InvalidateVisibleRows();
     }
     //end eventHandler

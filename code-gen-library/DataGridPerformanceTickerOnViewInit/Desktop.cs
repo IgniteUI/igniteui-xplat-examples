@@ -34,7 +34,7 @@ public class DataGridPerformanceTickerOnViewInit
     {
         if (!IsTimerTicking) return;
 
-        var grid = CodeGenHelper.GetDescription<XamDataGrid>("content");
+        var grid = CodeGenHelper.GetDescription<XamXGrid>("content");
         if (grid == null)
         {
             Task.Delay(TimerStep).ContinueWith((t) => OnTimerTick(), TaskScheduler.FromCurrentSynchronizationContext());

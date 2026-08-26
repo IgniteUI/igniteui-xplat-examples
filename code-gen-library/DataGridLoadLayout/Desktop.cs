@@ -13,7 +13,7 @@ public class DataGridLoadLayout
     public void DataGridLoadLayout(object sender, PropertyEditorPropertyDescriptionButtonClickEventArgs args)
     {
         if (string.IsNullOrEmpty(this.SavedLayout)) return;
-        var grid = CodeGenHelper.GetDescription<XamDataGrid>("content");
+        var grid = CodeGenHelper.GetDescription<XamXGrid>("content");
         if (grid == null) return;
         grid.LoadLayout(this.SavedLayout);
     }

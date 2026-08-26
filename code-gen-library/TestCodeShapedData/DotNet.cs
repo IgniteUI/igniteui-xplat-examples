@@ -1,4 +1,7 @@
-﻿//begin data
+//begin data
+using System;
+using System.Collections.Generic;
+
 public class TestCodeShapedDataItem
 {
     public string Name { get; set; }

@@ -25,8 +25,10 @@ public class MapMultipleShapesReaders
     {
         var sds = sender as ShapefileConverter;
         var geoPolygons = new List<object>();
+        // parsing shapefile data and creating geo-polygons
         foreach (var record in sds)
         {
+            // using field/column names from .DBF file
             geoPolygons.Add(new
             {
                 Points = record.Points,
@@ -47,14 +49,19 @@ public class MapMultipleShapesReaders
     {
         var sds = sender as ShapefileConverter;
         var geoPolylines = new List<object>();
+        // parsing shapefile data and creating geo-polylines
         foreach (var record in sds)
         {
+            // using field/column names from .DBF file
             geoPolylines.Add(new
             {
                 Points = record.Points,
                 Name = record.Fields["Name"],
-                Capacity = record.Fields["CAPACITY"],
-                Distance = record.Fields["DISTANCE"]
+                Capacity = record.Fields["CapacityG"],
+                Distance = record.Fields["DistanceKM"],
+                IsOverLand = (double)record.Fields["OverLand"] == 0,
+                IsActive = (double)record.Fields["NotLive"] != 0,
+                Service = record.Fields["InService"]
             });
         }
 
@@ -65,22 +72,27 @@ public class MapMultipleShapesReaders
     //end readPolylines
 
     //begin readPoints
-    /// <summary>Capital cities only, one point per record.</summary>
+    /// <summary>Cities with a known population, one point per record.</summary>
     public void ReadPoints(object sender, AsyncCompletedEventArgs e)
     {
         var sds = sender as ShapefileConverter;
         var geoLocations = new List<object>();
+        // parsing shapefile data and creating geo-locations
         foreach (var record in sds)
         {
-            if ((string)record.Fields["CAPITAL"] == "N") continue;
-            // each of these records holds a single point
-            geoLocations.Add(new
+            var pop = (double)record.Fields["POPULATION"];
+            if (pop > 0)
             {
-                Latitude = record.Points[0][0].Y,
-                Longitude = record.Points[0][0].X,
-                City = record.Fields["NAME"],
-                Population = record.Fields["POPULATION"]
-            });
+                // each of these records holds a single point
+                // using field/column names from .DBF file
+                geoLocations.Add(new
+                {
+                    Latitude = record.Points[0][0].Y,
+                    Longitude = record.Points[0][0].X,
+                    City = record.Fields["NAME"],
+                    Population = pop
+                });
+            }
         }
 
         var map = CodeGenHelper.GetDescription<XamGeographicMap>("content");
