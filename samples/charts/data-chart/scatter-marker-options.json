@@ -1,0 +1,107 @@
+{
+  "strings": {
+    "legendTitle": "Population Statistics for Selected Continents"
+  },
+  "descriptions": {
+    "editor": {
+      "type": "PropertyEditorPanel",
+      "name": "PropertyEditor",
+      "componentRendererRef": "renderer",
+      "targetRef": "chart",
+      "descriptionType": "DataChart",
+      "isHorizontal": true,
+      "isWrappingEnabled": true,
+      "properties": [
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "MarkerSizeHandler",
+          "name": "MarkerSizeEditor",
+          "label": "Marker Size",
+          "shouldOverrideDefaultEditor": true,
+          "valueType": "EnumValue",
+          "dropDownNames": [ "3", "5", "7", "10", "12", "15", "20", "25", "30" ],
+          "dropDownValues": [ "3", "5", "7", "10", "12", "15", "20", "25", "30" ],
+          "primitiveValue": "10",
+          "changedRef": "EditorChangeUpdateDataChartMarkerSize"
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "MarkerTypeHandler",
+          "name": "MarkerTypeEditor",
+          "label": "Marker Type",
+          "shouldOverrideDefaultEditor": true,
+          "valueType": "EnumValue",
+          "dropDownValues": [ "Circle", "Checkmark", "Triangle", "Pyramid", "Square", "Diamond", "Pentagon", "Hexagon", "Tetragram", "Pentagram", "Hexagram", "Hidden", "Automatic", "None" ],
+          "dropDownNames": [ "Circle", "Checkmark", "Triangle", "Pyramid", "Square", "Diamond", "Pentagon", "Hexagon", "Tetragram", "Pentagram", "Hexagram", "Hidden", "Automatic", "None" ],
+          "primitiveValue": "Circle",
+          "changedRef": "EditorChangeUpdateDataChartMarkerType"
+        }
+      ]
+    },
+    "legend": {
+      "type": "Legend",
+      "name": "legend",
+      "orientation": "Horizontal"
+    },
+    "content": {
+      "type": "DataChart",
+      "name": "chart",
+      "legendRef": "legend",
+      "axes": [
+        {
+          "type": "NumericXAxis",
+          "name": "xAxis",
+          "title": "Death Rate (per 1,000 people)",
+          "minimumValue": 5,
+          "maximumValue": 15
+        },
+        {
+          "type": "NumericYAxis",
+          "name": "yAxis",
+          "title": "Birth Rate (per 1,000 people)",
+          "minimumValue": 0,
+          "maximumValue": 50,
+          "interval": 10
+        }
+      ],
+      "series": [
+        {
+          "type": "ScatterSeries",
+          "name": "scatterSeries1",
+          "title": "Europe",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "xMemberPath": "DeathRate",
+          "yMemberPath": "BirthRate",
+          "dataSourceRef": "CountryDemographicEurope",
+          "markerType": "Circle",
+          "markerSize": 10,
+          "showDefaultTooltip": true
+        },
+        {
+          "type": "ScatterSeries",
+          "name": "scatterSeries2",
+          "title": "Africa",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "xMemberPath": "DeathRate",
+          "yMemberPath": "BirthRate",
+          "dataSourceRef": "CountryDemographicAfrican",
+          "markerType": "Circle",
+          "markerSize": 10,
+          "showDefaultTooltip": true
+        }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
+    "charts/LegendModule",
+    "charts/DataChartCoreModule",
+    "charts/DataChartScatterModule",
+    "charts/DataChartScatterCoreModule",
+    "charts/DataChartInteractivityModule",
+    "charts/DataChartAnnotationModule"
+  ]
+}

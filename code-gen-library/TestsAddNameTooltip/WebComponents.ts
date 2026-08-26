@@ -3,11 +3,11 @@ import { IgcDataChartComponent } from 'igniteui-webcomponents-charts';
 import { html } from 'lit';
 //end imports
 
-export class TestsAddStaticTextTooltip
+export class TestsAddNameTooltip
 {
 
     //begin eventHandler
-    public testsAddStaticTextTooltip(){
+    public testsAddNameTooltip(){
 		var chart = CodeGenHelper.getDescription<IgcDataChartComponent>("content");
         for(let i=0;i<chart.series.count;i++)
         {
@@ -15,8 +15,8 @@ export class TestsAddStaticTextTooltip
             if (!series.isLayer)
     		{
     			
-    			series.tooltipTemplate = ((context)=>{
-						return html`<div class="ui-chart-default-tooltip-content">text</div>`;
+    			series.tooltipTemplate = ((context: any)=>{
+						return html`<div class="ui-chart-default-tooltip-content">${context.item.Name}</div>`;
 				}); 
     		}
         }
