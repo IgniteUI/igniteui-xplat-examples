@@ -1,0 +1,29 @@
+{
+  "descriptions": {
+    "content": {
+      "type": "GeographicMap",
+      "name": "map",
+      "height": "100%",
+      "width": "100%",
+      "zoomable": true,
+      "series": [
+        {
+          "type": "GeographicPolylineSeries",
+          "name": "GeographicPolylineSeries1",
+          "shapefileDataSource": {
+            "type": "ShapeDataSource",
+            "shapefileSource": "https://static.infragistics.com/xplatform/shapes/WorldCableRoutes.shp",
+            "databaseSource":  "https://static.infragistics.com/xplatform/shapes/WorldCableRoutes.dbf"
+          },
+          "shapeFilterResolution": 0.0,
+          "shapeStrokeThickness": 3,
+          "shapeStroke": "rgb(82, 82, 82, 0.4)"
+        }
+      ]
+    }
+  },
+  "modules": [
+    "charts/DataChartInteractivityModule",
+    "maps/GeographicMapModule"
+  ]
+}

@@ -2,6 +2,7 @@
   "strings": {
     "legendTitle": "Comparing Top Urban Population Percentages between North America & Asia"
   },
+  "hasAnimations": true,
   "descriptions": {
     "content": {
       "type": "Treemap",

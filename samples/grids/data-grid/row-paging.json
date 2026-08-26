@@ -1,0 +1,35 @@
+{
+  "skipAlterDataCasing": true,
+  "descriptions": {
+    "content": {
+      "type": "DataGrid",
+      "id": "grid",
+      "name": "grid",
+      "dataSourceRef": "EmployeesSalesData",
+      "autoGenerateColumns": false,
+      "rowHeight": 50,
+      "isColumnOptionsEnabled": true,
+      "defaultColumnMinWidth": 100,
+      "isGroupCollapsable": true,
+      "groupHeaderDisplayMode": "Combined",
+      "selectionMode": "SingleRow",
+      "cornerRadiusTopLeft": 0,
+      "cornerRadiusTopRight": 0,
+      "isPagerVisible": true,
+      "pageSize": 10,
+      "height": "100%",
+      "width": "100%",
+      "columns": [
+        { "type": "ImageColumn",    "field": "Photo",       "headerText": "Photo",         "width": { "type": "ColumnWidth", "isStarSized": false, "value": 110 },   "isEditable": false, "contentOpacity": 1, "horizontalAlignment": "Center" },
+        { "type": "TextColumn",     "field": "Name",        "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 130 } },
+        { "type": "NumericColumn",  "field": "Sales",       "headerText": "Sales",         "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 160 }, "horizontalAlignment": "Center" },
+        { "type": "NumericColumn",  "field": "Salary",      "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 160 }, "positivePrefix": "$", "showGroupingSeparator": true },
+        { "type": "TextColumn",     "field": "Address",     "headerText": "Address",       "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 160 }, "horizontalAlignment": "Left" },
+        { "type": "ImageColumn",    "field": "CountryFlag", "headerText": "Country",       "width": { "type": "ColumnWidth", "isStarSized": false, "value": 130 },   "isEditable": false, "contentOpacity": 1, "horizontalAlignment": "Stretch", "paddingTop": 7.5, "paddingBottom": 7.5 },
+        { "type": "DateTimeColumn", "field": "Birthday",    "headerText": "Date of Birth", "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 160 }, "horizontalAlignment": "Right" },
+        { "type": "TextColumn",     "field": "Income",      "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 120 }, "horizontalAlignment": "Center" }
+      ]
+    }
+  },
+  "modules": ["grids/DataGridModule"]
+}

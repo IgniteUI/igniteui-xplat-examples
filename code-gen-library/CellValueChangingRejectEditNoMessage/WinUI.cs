@@ -8,7 +8,7 @@ public class CellValueChangingRejectEditNoMessage
     //WPF: Infragistics.Controls.Grids.GridCellValueChanging
     public void CellValueChangingRejectEditNoMessage(object sender, GridCellValueChangingEventArgs args)
     {
-        var grid = CodeGenHelper.GetDescription<XamDataGrid>("content");
+        var grid = CodeGenHelper.GetDescription<XamXGrid>("content");
         grid.RejectEdit(args.EditID);
     }
     //end eventHandler

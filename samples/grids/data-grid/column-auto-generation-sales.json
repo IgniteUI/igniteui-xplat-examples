@@ -1,0 +1,26 @@
+{
+  "skipAlterDataCasing": true,
+  "descriptions": {
+    "content": {
+      "type": "DataGrid",
+      "id": "grid",
+      "name": "grid",
+      "dataSourceRef": "ProductOrders",
+      "autoGenerateColumns": false,
+      "activationMode": "Cell",
+      "height": "100%",
+      "width": "100%",
+      "columns": [
+        { "type": "TextColumn",     "field": "ProductID" },
+        { "type": "TextColumn",     "field": "ProductName" },
+        { "type": "NumericColumn",  "field": "ProductPrice" },
+        { "type": "TextColumn",     "field": "City" },
+        { "type": "TextColumn",     "field": "Country" },
+        { "type": "ImageColumn",    "field": "CountryFlag", "isEditable": false },
+        { "type": "DateTimeColumn", "field": "OrderDate" },
+        { "type": "NumericColumn",  "field": "Profit",      "positivePrefix": "$", "showGroupingSeparator": true, "maxFractionDigits": 0, "minFractionDigits": 0 }
+      ]
+    }
+  },
+  "modules": ["grids/DataGridModule"]
+}

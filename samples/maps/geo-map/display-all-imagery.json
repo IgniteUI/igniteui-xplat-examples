@@ -1,0 +1,67 @@
+{
+  "descriptions": {
+    "editor": {
+      "name": "editor",
+      "type": "PropertyEditorPanel",
+      "componentRendererRef": "renderer",
+      "targetRef": "map",
+      "descriptionType": "GeographicMap",
+      "isHorizontal": true,
+      "isWrappingEnabled": true,
+      "properties": [
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "ImagerySource",
+          "name": "ImagerySource",
+          "label": "Imagery Source",
+          "valueType": "EnumValue",
+          "shouldOverrideDefaultEditor": true,
+          "dropDownNames": [
+            "OpenStreetMaps",
+            "WorldStreetMap (ESRI)",
+            "WorldTopographicMap (ESRI)",
+            "WorldImageryMap (ESRI)",
+            "WorldOceansMap (ESRI)",
+            "WorldNationalGeoMap (ESRI)",
+            "WorldTerrainMap (ESRI)",
+            "WorldLightGrayMap (ESRI)",
+            "WorldShadedReliefMap (ESRI)",
+            "WorldPhysicalMap (ESRI)"
+          ],
+          "dropDownValues": [
+            "OpenStreetMaps",
+            "WorldStreetMap",
+            "WorldTopographicMap",
+            "WorldImageryMap",
+            "WorldOceansMap",
+            "WorldNationalGeoMap",
+            "WorldTerrainMap",
+            "WorldLightGrayMap",
+            "WorldShadedReliefMap",
+            "WorldPhysicalMap"
+          ],
+          "primitiveValue": "OpenStreetMaps",
+          "changedRef": "EditorChangeImagerySource"
+        }
+      ]
+    },
+    "content": {
+      "type": "GeographicMap",
+      "name": "map",
+      "height": "100%",
+      "width": "100%",
+      "zoomable": true,
+      "backgroundContent": {
+        "type": "OpenStreetMapImagery",
+        "name": "osmImagery"
+      }
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
+    "charts/DataChartInteractivityModule",
+    "maps/GeographicMapModule",
+    "maps/ArcGISOnlineMapImageryModule"
+  ]
+}

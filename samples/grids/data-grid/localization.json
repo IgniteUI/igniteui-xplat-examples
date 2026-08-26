@@ -1,0 +1,47 @@
+{
+  "todo": [
+    "Blazor source also calls DataGridRef.SetCustomizedStringAsync('en', resourceStrings) to customize internal grid strings at runtime; that wiring is not yet ported (would need an onViewInit handler).",
+    "Data values are English; only column headers and group displays are localized. A localized data class (EmployeesSalesDataJA) could be added if the demo should also localize the data."
+  ],
+  "skipAlterDataCasing": true,
+  "descriptions": {
+    "content": {
+      "type": "DataGrid",
+      "id": "grid",
+      "name": "grid",
+      "dataSourceRef": "EmployeesSalesData",
+      "autoGenerateColumns": false,
+      "rowHeight": 50,
+      "isColumnOptionsEnabled": true,
+      "isGroupCollapsable": true,
+      "activationMode": "Cell",
+      "summaryScope": "Root",
+      "selectionMode": "SingleRow",
+      "height": "100%",
+      "width": "100%",
+      "groupDescriptions": [
+        { "type": "ColumnGroupDescription", "field": "Country", "displayName": "国" },
+        { "type": "ColumnGroupDescription", "field": "Income",  "displayName": "所得" }
+      ],
+      "summaryDescriptions": [
+        { "type": "ColumnSummaryDescription", "field": "Age",    "operand": "Average" },
+        { "type": "ColumnSummaryDescription", "field": "Photo",  "operand": "Count" },
+        { "type": "ColumnSummaryDescription", "field": "Salary", "operand": "Sum" },
+        { "type": "ColumnSummaryDescription", "field": "Sales",  "operand": "Max" }
+      ],
+      "columns": [
+        { "type": "ImageColumn",    "field": "Photo",       "headerText": "写真",     "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 120 }, "isEditable": false, "paddingTop": 5, "paddingBottom": 5, "paddingRight": 10, "horizontalAlignment": "Stretch" },
+        { "type": "TextColumn",     "field": "Name",        "headerText": "名前",     "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 130 } },
+        { "type": "NumericColumn",  "field": "Sales",       "headerText": "売上高",   "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 130 }, "horizontalAlignment": "Center" },
+        { "type": "NumericColumn",  "field": "Salary",      "headerText": "給料",     "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 130 }, "positivePrefix": "$", "showGroupingSeparator": true, "maxFractionDigits": 0, "minFractionDigits": 0 },
+        { "type": "NumericColumn",  "field": "Age",         "headerText": "年齢",     "width": { "type": "ColumnWidth", "isStarSized": false, "value": 100 },   "horizontalAlignment": "Center" },
+        { "type": "DateTimeColumn", "field": "Birthday",    "headerText": "生年月日", "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 140 } },
+        { "type": "ImageColumn",    "field": "CountryFlag", "headerText": "国旗",     "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 110 }, "isEditable": false, "paddingTop": 5, "paddingBottom": 5, "paddingRight": 10, "horizontalAlignment": "Stretch" },
+        { "type": "TextColumn",     "field": "Address",     "headerText": "住所",     "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 170 } },
+        { "type": "TextColumn",     "field": "Phone",       "headerText": "電話",     "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 130 } },
+        { "type": "TextColumn",     "field": "Income",      "headerText": "所得",     "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 120 } }
+      ]
+    }
+  },
+  "modules": ["grids/DataGridModule"]
+}

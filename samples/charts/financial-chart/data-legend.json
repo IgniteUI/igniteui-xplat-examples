@@ -1,4 +1,5 @@
 {
+  "hasAnimations": true,
   "descriptions": {
     "legend": {
       "type": "DataLegend",

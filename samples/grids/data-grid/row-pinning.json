@@ -1,0 +1,29 @@
+{
+  "skipAlterDataCasing": true,
+  "onViewInit": ["DataGridPinSampleEmployeesOnViewInit"],
+  "descriptions": {
+    "content": {
+      "type": "DataGrid",
+      "id": "grid",
+      "name": "grid",
+      "dataSourceRef": "EmployeesSalesData",
+      "autoGenerateColumns": false,
+      "activationMode": "Cell",
+      "height": "100%",
+      "width": "100%",
+      "columns": [
+        { "type": "ImageColumn",    "field": "Photo",       "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 140 }, "isEditable": false, "contentOpacity": 1, "horizontalAlignment": "Center" },
+        { "type": "TextColumn",     "field": "FirstName",   "headerText": "First Name", "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 150 } },
+        { "type": "TextColumn",     "field": "LastName",    "headerText": "Last Name",  "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 140 } },
+        { "type": "TextColumn",     "field": "City",        "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 120 } },
+        { "type": "TextColumn",     "field": "Country",     "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 150 } },
+        { "type": "NumericColumn",  "field": "Sales",       "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 140 }, "positivePrefix": "$", "showGroupingSeparator": true },
+        { "type": "NumericColumn",  "field": "Age",         "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 110 } },
+        { "type": "DateTimeColumn", "field": "Birthday",    "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 170 }, "horizontalAlignment": "Right" },
+        { "type": "NumericColumn",  "field": "Salary",      "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 130 }, "positivePrefix": "$", "showGroupingSeparator": true },
+        { "type": "TextColumn",     "field": "Email",       "headerText": "Email", "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 150 } }
+      ]
+    }
+  },
+  "modules": ["grids/DataGridModule"]
+}

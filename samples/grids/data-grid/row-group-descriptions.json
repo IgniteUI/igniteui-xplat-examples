@@ -1,0 +1,56 @@
+{
+  "skipAlterDataCasing": true,
+  "descriptions": {
+    "editor": {
+      "type": "PropertyEditorPanel",
+      "name": "PropertyEditor",
+      "componentRendererRef": "renderer",
+      "targetRef": "grid",
+      "descriptionType": "DataGrid",
+      "isHorizontal": true,
+      "isWrappingEnabled": true,
+      "properties": [
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "GroupHeaderDisplayMode",
+          "name": "GroupHeaderDisplayModeEditor",
+          "label": "Group Header Display Mode",
+          "shouldOverrideDefaultEditor": true,
+          "valueType": "EnumValue",
+          "dropDownNames": ["Combined", "Split"],
+          "dropDownValues": ["Combined", "Split"],
+          "primitiveValue": "Combined"
+        }
+      ]
+    },
+    "content": {
+      "type": "DataGrid",
+      "id": "grid",
+      "name": "grid",
+      "dataSourceRef": "EmployeesSalesData",
+      "autoGenerateColumns": false,
+      "isGroupCollapsable": true,
+      "groupHeaderDisplayMode": "Combined",
+      "height": "100%",
+      "width": "100%",
+      "groupDescriptions": [
+        { "type": "ColumnGroupDescription", "field": "Country", "displayName": "Country" }
+      ],
+      "columns": [
+        { "type": "TextColumn",     "field": "Name",     "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 120 } },
+        { "type": "NumericColumn",  "field": "Age",      "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 110 } },
+        { "type": "DateTimeColumn", "field": "Birthday", "horizontalAlignment": "Center", "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 160 } },
+        { "type": "TextColumn",     "field": "Country",  "headerText": "Country", "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 160 }, "isEditable": false, "paddingTop": 5, "paddingBottom": 5, "contentOpacity": 1, "horizontalAlignment": "Center" },
+        { "type": "TextColumn",     "field": "Street" },
+        { "type": "NumericColumn",  "field": "Salary",   "headerText": "Salary", "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 130 }, "positivePrefix": "$", "showGroupingSeparator": true },
+        { "type": "TextColumn",     "field": "City" },
+        { "type": "NumericColumn",  "field": "Salary",   "positivePrefix": "$", "showGroupingSeparator": true, "maxFractionDigits": 0, "minFractionDigits": 0 }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
+    "grids/DataGridModule"
+  ]
+}

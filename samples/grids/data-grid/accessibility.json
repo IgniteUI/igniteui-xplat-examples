@@ -1,0 +1,28 @@
+{
+  "skipAlterDataCasing": true,
+  "descriptions": {
+    "content": {
+      "type": "DataGrid",
+      "export": false,
+      "id": "grid",
+      "name": "grid",
+      "dataSourceRef": "ProductOrders",
+      "autoGenerateColumns": false,
+      "height": "100%",
+      "width": "100%",
+      "columns": [
+        { "type": "TextColumn",     "field": "ProductID",    "headerText": "ID",          "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 110 }, "horizontalAlignment": "Center" },
+        { "type": "TextColumn",     "field": "ProductName",  "headerText": "Product",     "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 120 } },
+        { "type": "ImageColumn",    "field": "CountryFlag",  "headerText": "Country",     "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 130 }, "isEditable": false },
+        { "type": "NumericColumn",  "field": "ProductPrice", "headerText": "Price",       "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 110 }, "positivePrefix": "$", "showGroupingSeparator": true, "maxFractionDigits": 0, "minFractionDigits": 0 },
+        { "type": "NumericColumn",  "field": "OrderItems",   "headerText": "Orders",      "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 140 }, "showGroupingSeparator": true, "maxFractionDigits": 0, "minFractionDigits": 0 },
+        { "type": "NumericColumn",  "field": "OrderValue",   "headerText": "Order Value", "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 160 }, "positivePrefix": "$", "showGroupingSeparator": true, "maxFractionDigits": 0, "minFractionDigits": 0 },
+        { "type": "DateTimeColumn", "field": "OrderDate",    "headerText": "Order Date",  "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 150 }, "dateTimeFormat": "DateShort" },
+        { "type": "NumericColumn",  "field": "Margin",                                    "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 140 }, "positivePrefix": "$" },
+        { "type": "NumericColumn",  "field": "Profit",                                    "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 140 }, "positivePrefix": "$", "showGroupingSeparator": true, "maxFractionDigits": 0, "minFractionDigits": 0 },
+        { "type": "TextColumn",     "field": "Status",                                    "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 140 } }
+      ]
+    }
+  },
+  "modules": ["grids/DataGridModule"]
+}

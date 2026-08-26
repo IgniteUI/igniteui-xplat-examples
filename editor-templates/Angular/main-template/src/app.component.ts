@@ -18,6 +18,9 @@ import { defineAllComponents } from 'igniteui-webcomponents';
 defineAllComponents();
 //endifdef editor
 
+//insert supportingTypes
+//end supportingTypes
+
 @Component({
     standalone: false,
     selector: "app-root",
@@ -43,8 +46,13 @@ export class AppComponent implements AfterViewInit
 		//end onInit
 	}
 	
-	public ngAfterViewInit(): void 
-	{	
+	public ngAfterViewInit(): void
+	{
+//ifdef contentCode
+		//insert contentCode
+		//end contentCode
+//endifdef contentCode
+
 		//insert onViewInit
 		//end onViewInit
 	}

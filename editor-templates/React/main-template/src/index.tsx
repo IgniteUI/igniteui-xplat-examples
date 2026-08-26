@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 
@@ -32,6 +32,9 @@ const mods: any[] = [
 mods.forEach((m) => m.register());
 //endifdef modulesRegister
 
+//insert supportingTypes
+//end supportingTypes
+
 export default class Sample extends React.Component<any, any> {
     //insert bindingFields
     //end bindingFields
@@ -43,6 +46,10 @@ export default class Sample extends React.Component<any, any> {
         //end onInit
         //insert bindingInit
         //end bindingInit
+//ifdef contentCode
+        //insert contentCode
+        //end contentCode
+//endifdef contentCode
         //insert bindingCode
         //end bindingCode
     }
@@ -109,10 +116,34 @@ export default class Sample extends React.Component<any, any> {
             </div>
 //endifdef aboveContentLeft, aboveContentRight
 
+//ifdef leftContent, rightContent
+            <div className="contentSplit">
+//endifdef leftContent, rightContent
+//ifdef leftContent
+                <div className="leftContentContainer">
+                    //insert leftContent
+                    //end leftContent
+                </div>
+//endifdef leftContent
             <div className="container fill">
                 //insert content
                 //end content
             </div>
+//ifdef rightContent
+                <div className="rightContentContainer">
+                    //insert rightContent
+                    //end rightContent
+                </div>
+//endifdef rightContent
+//ifdef leftContent, rightContent
+            </div>
+//endifdef leftContent, rightContent
+//ifdef belowContent
+            <div className="belowContent">
+                //insert belowContent
+                //end belowContent
+            </div>
+//endifdef belowContent
         </div>
         );
     }

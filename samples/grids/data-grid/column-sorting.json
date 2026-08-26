@@ -1,0 +1,55 @@
+{
+  "skipAlterDataCasing": true,
+  "descriptions": {
+    "editor": {
+      "type": "PropertyEditorPanel",
+      "name": "PropertyEditor",
+      "componentRendererRef": "renderer",
+      "targetRef": "grid",
+      "descriptionType": "DataGrid",
+      "isHorizontal": true,
+      "isWrappingEnabled": true,
+      "properties": [
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "HeaderClickAction",
+          "name": "HeaderClickActionEditor",
+          "label": "Header Click Action",
+          "shouldOverrideDefaultEditor": true,
+          "valueType": "EnumValue",
+          "dropDownNames": ["SortByMultipleColumns", "SortByMultipleColumnsTriState", "SortByOneColumnOnly", "SortByOneColumnOnlyTriState"],
+          "dropDownValues": ["SortByMultipleColumns", "SortByMultipleColumnsTriState", "SortByOneColumnOnly", "SortByOneColumnOnlyTriState"],
+          "primitiveValue": "SortByMultipleColumnsTriState"
+        }
+      ]
+    },
+    "content": {
+      "type": "DataGrid",
+      "id": "grid",
+      "name": "grid",
+      "dataSourceRef": "RealEstateData",
+      "autoGenerateColumns": false,
+      "defaultColumnMinWidth": 100,
+      "isColumnOptionsEnabled": true,
+      "headerClickAction": "SortByMultipleColumnsTriState",
+      "height": "100%",
+      "width": "100%",
+      "sortDescriptions": [
+        { "type": "ColumnSortDescription", "field": "Property", "sortDirection": "Descending" }
+      ],
+      "columns": [
+        { "type": "TextColumn",    "field": "ID",          "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 110 }, "horizontalAlignment": "Center" },
+        { "type": "TextColumn",    "field": "Property",    "headerText": "Property", "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 150 } },
+        { "type": "ImageColumn",   "field": "CountryFlag", "headerText": "Country",  "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 160 }, "isEditable": false, "contentOpacity": 1, "horizontalAlignment": "Center", "paddingTop": 5, "paddingBottom": 5 },
+        { "type": "TextColumn",    "field": "City",        "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 150 } },
+        { "type": "NumericColumn", "field": "Price",       "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 130 }, "positivePrefix": "$", "showGroupingSeparator": true },
+        { "type": "NumericColumn", "field": "Rooms",       "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 110 } }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
+    "grids/DataGridModule"
+  ]
+}

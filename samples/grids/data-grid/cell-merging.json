@@ -1,0 +1,71 @@
+{
+  "skipAlterDataCasing": true,
+  "descriptions": {
+    "editor": {
+      "type": "PropertyEditorPanel",
+      "name": "PropertyEditor",
+      "componentRendererRef": "renderer",
+      "targetRef": "grid",
+      "descriptionType": "DataGrid",
+      "isHorizontal": true,
+      "isWrappingEnabled": true,
+      "properties": [
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "MergedCellMode",
+          "name": "MergedCellModeEditor",
+          "label": "Merged Cell Mode",
+          "shouldOverrideDefaultEditor": true,
+          "valueType": "EnumValue",
+          "dropDownNames": ["Always", "Never", "OnlyWhenSorted"],
+          "dropDownValues": ["Always", "Never", "OnlyWhenSorted"],
+          "primitiveValue": "Always"
+        }
+      ]
+    },
+    "content": {
+      "type": "DataGrid",
+      "id": "grid",
+      "name": "grid",
+      "dataSourceRef": "FinancialDataService",
+      "autoGenerateColumns": false,
+      "activationMode": "Cell",
+      "headerClickAction": "SortByMultipleColumnsTriState",
+      "mergedCellMode": "Always",
+      "height": "100%",
+      "width": "100%",
+      "columns": [
+        { "type": "TextColumn",    "field": "Category",      "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 140 } },
+        { "type": "TextColumn",    "field": "Type",          "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 160 } },
+        { "type": "TextColumn",    "field": "Contract",      "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 140 } },
+        { "type": "TextColumn",    "field": "Settlement",    "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 150 } },
+        { "type": "TextColumn",    "field": "Region",        "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 150 } },
+        { "type": "TextColumn",    "field": "Country",       "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 160 } },
+        { "type": "NumericColumn", "field": "Open",          "headerText": "Open",  "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 140 }, "showGroupingSeparator": true, "positivePrefix": "$", "minFractionDigits": 2, "maxFractionDigits": 2 },
+        { "type": "NumericColumn", "field": "Price",         "headerText": "Close", "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 140 }, "showGroupingSeparator": true, "positivePrefix": "$", "minFractionDigits": 2, "maxFractionDigits": 2 },
+        { "type": "NumericColumn", "field": "Change",        "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 130 }, "minFractionDigits": 2, "maxFractionDigits": 2 },
+        { "type": "NumericColumn", "field": "ChangePercent", "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 150 }, "negativeSuffix": "%", "positiveSuffix": "%", "minFractionDigits": 2, "maxFractionDigits": 2 },
+        { "type": "NumericColumn", "field": "Buy",           "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 110 }, "showGroupingSeparator": true, "positivePrefix": "$", "minFractionDigits": 2, "maxFractionDigits": 2 },
+        { "type": "NumericColumn", "field": "Sell",          "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 110 }, "showGroupingSeparator": true, "positivePrefix": "$", "minFractionDigits": 2, "maxFractionDigits": 2 },
+        { "type": "NumericColumn", "field": "Spread",        "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 130 }, "showGroupingSeparator": true, "minFractionDigits": 2, "maxFractionDigits": 2 },
+        { "type": "NumericColumn", "field": "Volume",        "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 130 }, "showGroupingSeparator": true, "minFractionDigits": 0, "maxFractionDigits": 0 },
+        { "type": "NumericColumn", "field": "High",          "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 130 }, "showGroupingSeparator": true, "minFractionDigits": 2, "maxFractionDigits": 2, "positivePrefix": "$" },
+        { "type": "NumericColumn", "field": "Low",           "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 130 }, "showGroupingSeparator": true, "minFractionDigits": 2, "maxFractionDigits": 2, "positivePrefix": "$" },
+        { "type": "NumericColumn", "field": "YearlyHigh",    "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 130 }, "showGroupingSeparator": true, "minFractionDigits": 2, "maxFractionDigits": 2, "positivePrefix": "$" },
+        { "type": "NumericColumn", "field": "YearlyLow",     "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 130 }, "showGroupingSeparator": true, "minFractionDigits": 2, "maxFractionDigits": 2, "positivePrefix": "$" },
+        { "type": "NumericColumn", "field": "YearlyStart",   "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 130 }, "showGroupingSeparator": true, "minFractionDigits": 2, "maxFractionDigits": 2, "positivePrefix": "$" },
+        { "type": "DateTimeColumn","field": "Maturity",      "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 140 }, "horizontalAlignment": "Right" },
+        { "type": "TextColumn",    "field": "Currency",      "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 120 } },
+        { "type": "TextColumn",    "field": "Risk",          "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 110 } },
+        { "type": "TextColumn",    "field": "Sector",        "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 130 } },
+        { "type": "TextColumn",    "field": "Security",      "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 130 } },
+        { "type": "TextColumn",    "field": "Issuer",        "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 170 } }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
+    "grids/DataGridModule"
+  ]
+}

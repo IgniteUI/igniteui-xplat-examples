@@ -17,6 +17,8 @@ using System.Windows.Shapes;
 //insert handlersImports
 
 //end handlersImports
+//insert bindingImports
+//end bindingImports
 
 namespace Sample
 {
@@ -25,14 +27,28 @@ namespace Sample
     /// </summary>
     public partial class MainWindow : Window
     {
+        //insert bindingFields
+        //end bindingFields
+
         public MainWindow()
         {
             InitializeComponent();
 
-            DataContext = new SampleViewModel();					
+            DataContext = new SampleViewModel();
 
 			this.Loaded += (s,e) => {
-//ifdef onInit				
+//ifdef bindingInit
+				//insert bindingInit
+				//end bindingInit
+//endifdef bindingInit
+
+//ifdef contentCode
+				//insert contentCode
+				//end contentCode
+				this.ContentRoot.Children.Add($$contentRootName);
+//endifdef contentCode
+
+//ifdef onInit
 				//insert onInit
 				//end onInit
 //endifdef onInit
@@ -50,6 +66,9 @@ namespace Sample
         //end eventHandlers
 		
     }
+
+    //insert supportingTypes
+    //end supportingTypes
 
     
 }

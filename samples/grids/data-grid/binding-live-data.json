@@ -1,0 +1,108 @@
+{
+  "skipAlterDataCasing": true,
+  "onViewInit": ["DataGridLiveDataTickerOnViewInit"],
+  "descriptions": {
+    "editor": {
+      "type": "PropertyEditorPanel",
+      "name": "PropertyEditor",
+      "componentRendererRef": "renderer",
+      "targetRef": "grid",
+      "descriptionType": "DataGrid",
+      "isHorizontal": true,
+      "isWrappingEnabled": true,
+      "properties": [
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "name": "LiveSomePricesEditor",
+          "shouldOverrideDefaultEditor": true,
+          "valueType": "Button",
+          "primitiveValue": "Live Prices",
+          "buttonClickedRef": "DataGridToggleLiveSomePrices"
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "name": "LiveAllPricesEditor",
+          "shouldOverrideDefaultEditor": true,
+          "valueType": "Button",
+          "primitiveValue": "Live All Prices",
+          "buttonClickedRef": "DataGridToggleLiveAllPrices"
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "name": "GroupingEditor",
+          "label": "Grouping",
+          "shouldOverrideDefaultEditor": true,
+          "valueType": "Boolean",
+          "primitiveValue": true,
+          "changedRef": "DataGridApplyLiveDataGrouping"
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "name": "HeatEditor",
+          "label": "Heat",
+          "shouldOverrideDefaultEditor": true,
+          "valueType": "Boolean",
+          "primitiveValue": true,
+          "changedRef": "DataGridToggleHeat"
+        }
+      ]
+    },
+    "content": {
+      "type": "DataGrid",
+      "id": "grid",
+      "name": "grid",
+      "dataSourceRef": "PortfolioData",
+      "autoGenerateColumns": false,
+      "selectionMode": "MultipleRow",
+      "isGroupCollapsable": true,
+      "rowHeight": 32,
+      "headerClickAction": "SortByMultipleColumnsTriState",
+      "activationMode": "Cell",
+      "defaultColumnMinWidth": 100,
+      "isRowHoverEnabled": false,
+      "height": "100%",
+      "width": "100%",
+      "columns": [
+        { "type": "TextColumn",    "field": "ID",            "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 140 }, "isHidden": true },
+        { "type": "TextColumn",    "field": "Category",      "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 120 } },
+        { "type": "TextColumn",    "field": "Type",          "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 110 } },
+        { "type": "TextColumn",    "field": "Risk",          "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 110 } },
+        { "type": "NumericColumn", "field": "Open",          "headerText": "Open",  "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 120 }, "showGroupingSeparator": true, "positivePrefix": "$", "minFractionDigits": 2, "maxFractionDigits": 2 },
+        {
+          "type": "TemplateColumn",
+          "field": "Price",
+          "headerText": "Close",
+          "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 120 },
+          "cellStyleKeyRequestedRef": "DataGridPriceStyleKey",
+          "cellUpdatingRef": "DataGridPriceCellUpdating",
+          "dataBoundRef": "DataGridPriceDataBound"
+        },
+        { "type": "NumericColumn", "field": "Change",        "headerText": "Change ($)", "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 120 }, "minFractionDigits": 2, "maxFractionDigits": 2 },
+        { "type": "NumericColumn", "field": "ChangePercent", "headerText": "Change (%)", "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 180 }, "negativeSuffix": "%", "positiveSuffix": "%", "minFractionDigits": 2, "maxFractionDigits": 2 },
+        { "type": "TextColumn",    "field": "Contract",      "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 120 } },
+        { "type": "TextColumn",    "field": "Settlement",    "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 130 } },
+        { "type": "TextColumn",    "field": "Region",        "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 130 } },
+        { "type": "TextColumn",    "field": "Country",       "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 120 } },
+        { "type": "NumericColumn", "field": "Buy",           "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 110 }, "showGroupingSeparator": true, "positivePrefix": "$", "minFractionDigits": 2, "maxFractionDigits": 2 },
+        { "type": "NumericColumn", "field": "Sell",          "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 110 }, "showGroupingSeparator": true, "positivePrefix": "$", "minFractionDigits": 2, "maxFractionDigits": 2 },
+        { "type": "NumericColumn", "field": "Spread",        "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 130 }, "showGroupingSeparator": true, "minFractionDigits": 2, "maxFractionDigits": 2 },
+        { "type": "NumericColumn", "field": "Volume",        "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 130 }, "showGroupingSeparator": true, "minFractionDigits": 0, "maxFractionDigits": 0 },
+        { "type": "NumericColumn", "field": "DailyHigh",     "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 130 }, "showGroupingSeparator": true, "minFractionDigits": 2, "maxFractionDigits": 2, "positivePrefix": "$" },
+        { "type": "NumericColumn", "field": "DailyLow",      "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 130 }, "showGroupingSeparator": true, "minFractionDigits": 2, "maxFractionDigits": 2, "positivePrefix": "$" },
+        { "type": "NumericColumn", "field": "YearlyHigh",    "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 130 }, "showGroupingSeparator": true, "minFractionDigits": 2, "maxFractionDigits": 2, "positivePrefix": "$" },
+        { "type": "NumericColumn", "field": "YearlyLow",     "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 130 }, "showGroupingSeparator": true, "minFractionDigits": 2, "maxFractionDigits": 2, "positivePrefix": "$" },
+        { "type": "NumericColumn", "field": "YearlyStart",   "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 130 }, "showGroupingSeparator": true, "minFractionDigits": 2, "maxFractionDigits": 2, "positivePrefix": "$" },
+        { "type": "DateTimeColumn","field": "Maturity",      "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 140 }, "horizontalAlignment": "Right" },
+        { "type": "TextColumn",    "field": "Currency",      "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 120 } },
+        { "type": "TextColumn",    "field": "Sector",        "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 130 } },
+        { "type": "TextColumn",    "field": "Security",      "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 130 } },
+        { "type": "TextColumn",    "field": "Issuer",        "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 170 } }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
+    "grids/DataGridModule"
+  ]
+}

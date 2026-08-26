@@ -1,0 +1,44 @@
+{
+  "descriptions": {
+    "content": {
+      "type": "GeographicMap",
+      "name": "geoMap",
+      "height": "100%",
+      "width": "100%",
+      "zoomable": true,
+      "series": [
+        {
+          "type": "GeographicPolylineSeries",
+          "name": "lineSeries",
+          "dataSourceRef": "WorldFlights",
+          "shapeMemberPath": "Points",
+          "shapeStroke": "rgba(196, 14, 14, 0.05)",
+          "shapeStrokeThickness": 4
+        },
+        {
+          "type": "GeographicPolylineSeries",
+          "name": "gridSeries",
+          "dataSourceRef": "WorldGridlines",
+          "shapeMemberPath": "Points",
+          "shapeStroke": "Gray",
+          "shapeStrokeThickness": 1
+        },
+        {
+          "type": "GeographicSymbolSeries",
+          "name": "symbolSeries",
+          "dataSourceRef": "WorldAirports",
+          "latitudeMemberPath": "Lat",
+          "longitudeMemberPath": "Lon",
+          "markerType": "Circle",
+          "markerBrush": "#aad3df",
+          "markerOutline": "rgb(73, 73, 73)",
+          "thickness": 1
+        }
+      ]
+    }
+  },
+  "modules": [
+    "charts/DataChartInteractivityModule",
+    "maps/GeographicMapModule"
+  ]
+}

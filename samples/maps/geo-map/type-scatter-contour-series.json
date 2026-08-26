@@ -1,0 +1,37 @@
+{
+  "descriptions": {
+    "content": {
+      "type": "GeographicMap",
+      "name": "geoMap",
+      "height": "100%",
+      "width": "100%",
+      "zoomable": true,
+      "series": [
+        {
+          "type": "GeographicContourLineSeries",
+          "name": "contourSeries",
+          "dataSourceRef": "WorldTemperatures",
+          "longitudeMemberPath": "Lon",
+          "latitudeMemberPath": "Lat",
+          "valueMemberPath": "Value",
+          "thickness": 4,
+          "fillScale": {
+            "type": "ValueBrushScale",
+            "brushes": [
+              "rgba(32, 146, 252, 0.5)",
+              "rgba(14, 194, 14, 0.5)",
+              "rgba(252, 120, 32, 0.5)",
+              "rgba(252, 32, 32, 0.5)"
+            ],
+            "minimumValue": 0,
+            "maximumValue": 30
+          }
+        }
+      ]
+    }
+  },
+  "modules": [
+    "charts/DataChartInteractivityModule",
+    "maps/GeographicMapModule"
+  ]
+}

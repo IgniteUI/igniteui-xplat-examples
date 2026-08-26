@@ -7,6 +7,12 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="500" Width="700"
         xmlns:ig="http://schemas.infragistics.com/xaml">
+    <!-- ifdef templateContents -->
+    <Window.Resources>
+      <!-- insert templateContents -->
+      <!-- end templateContents -->
+    </Window.Resources>
+    <!-- endifdef templateContents -->
     <Grid>
       <Grid.RowDefinitions>
         <RowDefinition Height="Auto" />
@@ -14,6 +20,9 @@
         <RowDefinition Height="Auto" />
         <RowDefinition Height="Auto" />
         <RowDefinition />
+        <!-- ifdef belowContent -->
+        <RowDefinition Height="Auto" />
+        <!-- endifdef belowContent -->
       </Grid.RowDefinitions>
       <Grid Grid.Row="0">
         <!-- insert editor -->
@@ -42,8 +51,33 @@
         </Grid>
       </Grid>
       <Grid Grid.Row="4">
-        <!-- insert content -->
-        <!-- end content -->
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="Auto" />
+          <ColumnDefinition Width="*" />
+          <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+        <!-- ifdef leftContent -->
+        <Grid Grid.Column="0">
+          <!-- insert leftContent -->
+          <!-- end leftContent -->
+        </Grid>
+        <!-- endifdef leftContent -->
+        <Grid Grid.Column="1" x:Name="ContentRoot">
+          <!-- insert content -->
+          <!-- end content -->
+        </Grid>
+        <!-- ifdef rightContent -->
+        <Grid Grid.Column="2">
+          <!-- insert rightContent -->
+          <!-- end rightContent -->
+        </Grid>
+        <!-- endifdef rightContent -->
       </Grid>
+      <!-- ifdef belowContent -->
+      <Grid Grid.Row="5">
+        <!-- insert belowContent -->
+        <!-- end belowContent -->
+      </Grid>
+      <!-- endifdef belowContent -->
     </Grid>
 </Window>

@@ -10,6 +10,7 @@ public class CellValueChangingRejectEdit
     {
         var grid = CodeGenHelper.GetDescription<XamXGrid>("content");
         grid.SetEditError(args.EditID, "Edit canceled");
+        grid.RejectEdit(args.EditID);
     }
     //end eventHandler
 }
