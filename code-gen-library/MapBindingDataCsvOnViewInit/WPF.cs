@@ -42,7 +42,6 @@ public class MapBindingDataCsvOnViewInit
                 Population = double.Parse(columns[3])
             });
         }
-#if !TESTING
         // creating the series with the loaded data
         var series = new GeographicHighDensityScatterSeries
         {
@@ -59,7 +58,6 @@ public class MapBindingDataCsvOnViewInit
         };
         // adding the series to the geographic map
         map.Series.Add(series);
-#endif
 
         var geoBounds = new Rect(-130, 15, Math.Abs(-130 + 65), Math.Abs(50 - 15));
         // zooming to the bounds of the lower 48 states
