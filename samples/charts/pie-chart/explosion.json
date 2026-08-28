@@ -12,8 +12,6 @@
     "content": {
       "type": "PieChart",
       "name": "chart",
-      "width": "100%",
-      "height": "100%",
       "labelMemberPath": "Summary",
       "valueMemberPath": "MarketShare",
       "explodedRadius": 0.2,

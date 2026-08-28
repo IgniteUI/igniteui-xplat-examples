@@ -12,8 +12,6 @@
     "content": {
       "type": "PieChart",
       "name": "chart",
-      "width": "100%",
-      "height": "calc(100% - 2.5rem)",
       "labelMemberPath": "Summary",
       "valueMemberPath": "MarketShare",
       "selectionMode": "Multiple",
