@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ViewChild, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
+import { AfterViewInit, Component, ViewChild, TemplateRef, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
 //insert vmImports
 //end vmImports
 //insert descriptionImports
@@ -59,6 +59,8 @@ export class AppComponent implements AfterViewInit
 	
 	//insert eventHandlers
     //end eventHandlers
+	//insert templateSupportingMethods
+    //end templateSupportingMethods
 
 }
 
