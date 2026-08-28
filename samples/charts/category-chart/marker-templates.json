@@ -1,0 +1,34 @@
+{
+  "strings": {
+    "legendTitle": "Percentage Change in Energy Generation in 2019"
+  },
+  "requiredItems": [ "CategoryChartValueMarkerTemplate" ],
+  "descriptions": {
+    "legend": {
+      "type": "Legend",
+      "name": "legend",
+      "orientation": "Horizontal"
+    },
+    "content": {
+      "type": "CategoryChart",
+      "name": "chart",
+      "dataSourceRef": "EnergyGenerationChange",
+      "legendRef": "legend",
+      "chartType": "Column",
+      "thickness": 2,
+      "isHorizontalZoomEnabled": false,
+      "isVerticalZoomEnabled": false,
+      "isSeriesHighlightingEnabled": true,
+      "xAxisMajorStrokeThickness": 1,
+      "xAxisMajorStroke": "LightGray",
+      "yAxisMinimumValue": -20,
+      "yAxisMaximumValue": 30,
+      "yAxisInterval": 10,
+      "seriesAddedRef": "CategoryChartMarkerTemplateSeriesAdded"
+    }
+  },
+  "modules": [
+    "charts/LegendModule",
+    "charts/CategoryChartModule"
+  ]
+}
