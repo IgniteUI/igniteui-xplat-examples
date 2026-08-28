@@ -1,4 +1,6 @@
 //begin imports
+using Infragistics.Controls.Description;
+using Infragistics.Controls.Layouts;
 using Infragistics.Controls.Charts;
 //end imports
 
@@ -8,7 +10,12 @@ public class DataChartUserAnnotationRequested
     //WPF: Infragistics.Controls.Charts.UserAnnotationInformationEventHandler
     public void DataChartUserAnnotationRequested(object sender, UserAnnotationInformationEventArgs args)
     {
-        UserAnnotationFlow.Begin(args.AnnotationInfo);
+        var fields = new UserAnnotationFlowFields();
+        fields.Label = CodeGenHelper.GetDescription<PropertyEditorPropertyDescription>("AnnotationLabel");
+        fields.Details = CodeGenHelper.GetDescription<PropertyEditorPropertyDescription>("AnnotationDetails");
+        fields.MainColor = CodeGenHelper.GetDescription<PropertyEditorPropertyDescription>("AnnotationMainColor");
+        fields.BadgeColor = CodeGenHelper.GetDescription<PropertyEditorPropertyDescription>("AnnotationBadgeColor");
+        UserAnnotationFlow.Begin(args.AnnotationInfo, fields);
     }
     //end eventHandler
 }

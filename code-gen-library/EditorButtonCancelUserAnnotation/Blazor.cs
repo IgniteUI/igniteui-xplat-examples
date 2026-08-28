@@ -7,7 +7,7 @@ public class EditorButtonCancelUserAnnotation
     //begin eventHandler
     public void EditorButtonCancelUserAnnotation(IgbPropertyEditorPropertyDescriptionButtonClickEventArgs args)
     {
-        UserAnnotationFlow.Cancel();
+        UserAnnotationFlow.Cancel(CodeGenHelper.GetDescription<IgbDataChart>("content"));
     }
     //end eventHandler
 }

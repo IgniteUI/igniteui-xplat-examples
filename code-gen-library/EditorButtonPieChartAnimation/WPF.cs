@@ -1,5 +1,7 @@
 //begin imports
+using Infragistics.Controls.Description;
 using Infragistics.Controls.Layouts;
+using Infragistics.Controls.Charts;
 //end imports
 
 public class EditorButtonPieChartAnimation
@@ -8,7 +10,7 @@ public class EditorButtonPieChartAnimation
     //WPF: Infragistics.Controls.Layouts.PropertyEditorPropertyDescriptionButtonClickEventHandler
     public void EditorButtonPieChartAnimation(object sender, PropertyEditorPropertyDescriptionButtonClickEventArgs args)
     {
-        PieChartAnimation.Toggle();
+        PieChartAnimation.Toggle(CodeGenHelper.GetDescription<XamPieChart>("content"));
     }
     //end eventHandler
 }

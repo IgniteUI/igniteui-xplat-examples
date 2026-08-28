@@ -8,7 +8,10 @@ public class DoughnutChartSelectionSliceClick
     public void DoughnutChartSelectionSliceClick(IgbSliceClickEventArgs args)
     {
         // A click that selects reports which slice; a click that clears the selection reports that.
-        DoughnutChartSelectionReadout.Show(args.IsSelected ? args.Index : -1);
+        DoughnutChartSelectionReadout.Show(
+            CodeGenHelper.GetDescription<IgbRingSeries>("ringSeries"),
+            CodeGenHelper.GetDescription<IgbPropertyEditorPropertyDescription>("SelectedSlice"),
+            args.IsSelected ? args.Index : -1);
     }
     //end eventHandler
 }

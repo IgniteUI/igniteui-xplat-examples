@@ -1,5 +1,4 @@
 //begin imports
-using Infragistics.Controls.Description;
 using Infragistics.Controls.Charts;
 using System;
 using System.Collections.Generic;
@@ -16,6 +15,10 @@ using System.Windows.Threading;
 // All of it lives here because five controls drive one running chart between them: start and stop,
 // how often it ticks, how many points it holds, and generating a fresh set. Each of those is a
 // separate entry point, and they have to be talking about the same data and the same timer.
+//
+// The chart is handed in rather than looked up here. Asking for a description resolves, where the
+// sample is generated, to the field the component was assigned to -- which only means anything
+// inside the component's own instance, so the entry points do the asking and pass the answer on.
 public class CategoryChartFrequencyItem
 {
     public string Label { get; set; }
@@ -28,13 +31,15 @@ public static class CategoryChartFrequency
     public static int RefreshMilliseconds = 10;
     public static bool Running = false;
 
+    private static XamCategoryChart chart;
     private static List<CategoryChartFrequencyItem> data = new List<CategoryChartFrequencyItem>();
     private static int index = 0;
     private static DispatcherTimer timer;
     private static Random random = new Random();
 
-    public static void Generate()
+    public static void Generate(XamCategoryChart target)
     {
+        chart = target;
         data = new List<CategoryChartFrequencyItem>();
         var value = 100.0;
         for (var i = 0; i <= Points; i++)
@@ -46,7 +51,7 @@ public static class CategoryChartFrequency
             data.Add(item);
         }
         index = data.Count;
-        Chart().ItemsSource = data;
+        chart.ItemsSource = data;
     }
 
     public static void Toggle()
@@ -55,8 +60,9 @@ public static class CategoryChartFrequency
     }
 
     // Restarted rather than adjusted, because the interval is fixed when the timer is created.
-    public static void RestartTimer()
+    public static void RestartTimer(XamCategoryChart target)
     {
+        chart = target;
         if (timer != null)
         {
             timer.Stop();
@@ -67,10 +73,6 @@ public static class CategoryChartFrequency
         timer.Start();
     }
 
-    private static XamCategoryChart Chart()
-    {
-        return CodeGenHelper.GetDescription<XamCategoryChart>("content");
-    }
 
     private static void Tick()
     {
@@ -78,7 +80,10 @@ public static class CategoryChartFrequency
         {
             return;
         }
-        var chart = Chart();
+        if (chart == null)
+        {
+            return;
+        }
 
         var previous = data[data.Count - 1];
         var arrived = new CategoryChartFrequencyItem();

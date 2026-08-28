@@ -1,5 +1,4 @@
 //begin imports
-using Infragistics.Controls.Description;
 using Infragistics.Controls.Charts;
 using System;
 using System.Windows.Threading;
@@ -11,8 +10,13 @@ using System.Windows.Threading;
 // animation: the sample starts it once when the view is ready, and the button stops and restarts
 // it. Two items each holding their own timer would leave the button unable to stop the one that
 // started on load.
+//
+// The chart is handed in rather than looked up here. Asking for a description resolves, where the
+// sample is generated, to the field the component was assigned to -- which only means anything
+// inside the component's own instance, so the entry points do the asking and pass the answer on.
 public static class PieChartAnimation
 {
+    private static XamPieChart chart;
     private static DispatcherTimer timer;
 
     public static bool Running
@@ -20,7 +24,7 @@ public static class PieChartAnimation
         get { return timer != null; }
     }
 
-    public static void Toggle()
+    public static void Toggle(XamPieChart target)
     {
         if (Running)
         {
@@ -28,14 +32,14 @@ public static class PieChartAnimation
         }
         else
         {
-            Start();
+            Start(target);
         }
     }
 
-    public static void Start()
+    public static void Start(XamPieChart target)
     {
         Stop();
-        var chart = CodeGenHelper.GetDescription<XamPieChart>("content");
+        chart = target;
         chart.StartAngle = 0;
         chart.RadiusFactor = 0.1;
         timer = new DispatcherTimer();
@@ -55,7 +59,10 @@ public static class PieChartAnimation
 
     private static void Tick()
     {
-        var chart = CodeGenHelper.GetDescription<XamPieChart>("content");
+        if (chart == null)
+        {
+            return;
+        }
         if (chart.RadiusFactor < 1.0)
         {
             chart.RadiusFactor += 0.0025;

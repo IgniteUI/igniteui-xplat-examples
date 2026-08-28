@@ -1,5 +1,6 @@
 //begin imports
 using Infragistics.Controls.Description;
+using Infragistics.Controls.Layouts;
 using Infragistics.Controls.Charts;
 //end imports
 
@@ -13,7 +14,10 @@ public class DoughnutChartSelectionOnViewInit
         // selection styling is visible without the reader having to click first.
         var series = CodeGenHelper.GetDescription<RingSeries>("ringSeries");
         series.SelectedSlices.Add(0);
-        DoughnutChartSelectionReadout.Show(0);
+        DoughnutChartSelectionReadout.Show(
+            series,
+            CodeGenHelper.GetDescription<PropertyEditorPropertyDescription>("SelectedSlice"),
+            0);
     }
     //end eventHandler
 }

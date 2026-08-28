@@ -1,7 +1,7 @@
 //begin imports
-using IgniteUI.Blazor.Controls;
+using Infragistics.Controls.Charts;
 using System;
-using System.Timers;
+using System.Windows.Threading;
 //end imports
 
 //begin supportingTypes
@@ -17,7 +17,7 @@ using System.Timers;
 public static class PieChartAnimation
 {
     private static XamPieChart chart;
-    private static Timer timer;
+    private static DispatcherTimer timer;
 
     public static bool Running
     {
@@ -42,9 +42,9 @@ public static class PieChartAnimation
         chart = target;
         chart.StartAngle = 0;
         chart.RadiusFactor = 0.1;
-        timer = new Timer(15);
-        timer.Elapsed += (s, e) => Tick();
-        timer.AutoReset = true;
+        timer = new DispatcherTimer();
+        timer.Interval = TimeSpan.FromMilliseconds(15);
+        timer.Tick += (s, e) => Tick();
         timer.Start();
     }
 

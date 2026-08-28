@@ -1,5 +1,7 @@
 //begin imports
+using Infragistics.Controls.Description;
 using Infragistics.Controls.Layouts;
+using Infragistics.Controls.Charts;
 //end imports
 
 public class EditorButtonFinishUserAnnotation
@@ -8,7 +10,12 @@ public class EditorButtonFinishUserAnnotation
     //WPF: Infragistics.Controls.Layouts.PropertyEditorPropertyDescriptionButtonClickEventHandler
     public void EditorButtonFinishUserAnnotation(object sender, PropertyEditorPropertyDescriptionButtonClickEventArgs args)
     {
-        UserAnnotationFlow.Finish();
+        var fields = new UserAnnotationFlowFields();
+        fields.Label = CodeGenHelper.GetDescription<PropertyEditorPropertyDescription>("AnnotationLabel");
+        fields.Details = CodeGenHelper.GetDescription<PropertyEditorPropertyDescription>("AnnotationDetails");
+        fields.MainColor = CodeGenHelper.GetDescription<PropertyEditorPropertyDescription>("AnnotationMainColor");
+        fields.BadgeColor = CodeGenHelper.GetDescription<PropertyEditorPropertyDescription>("AnnotationBadgeColor");
+        UserAnnotationFlow.Finish(CodeGenHelper.GetDescription<XamDataChart>("content"), fields);
     }
     //end eventHandler
 }

@@ -4,13 +4,13 @@ using Infragistics.Controls.Layouts;
 using Infragistics.Controls.Charts;
 //end imports
 
-public class EditorButtonCancelUserAnnotation
+public class EditorButtonPieChartAnimation
 {
     //begin eventHandler
     //WPF: Infragistics.Controls.Layouts.PropertyEditorPropertyDescriptionButtonClickEventHandler
-    public void EditorButtonCancelUserAnnotation(object sender, PropertyEditorPropertyDescriptionButtonClickEventArgs args)
+    public void EditorButtonPieChartAnimation(object sender, PropertyEditorPropertyDescriptionButtonClickEventArgs args)
     {
-        UserAnnotationFlow.Cancel(CodeGenHelper.GetDescription<XamDataChart>("content"));
+        PieChartAnimation.Toggle(CodeGenHelper.GetDescription<XamPieChart>("content"));
     }
     //end eventHandler
 }

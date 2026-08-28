@@ -14,7 +14,7 @@ export class DoughnutChartSelectionOnViewInit {
         // selection styling is visible without the reader having to click first.
         var series = CodeGenHelper.getDescription<IgcRingSeriesComponent>("ringSeries");
         series.selectedSlices.add(0);
-        DoughnutChartSelectionReadout.show(0);
+        DoughnutChartSelectionReadout.show(series, CodeGenHelper.getDescription<any>("SelectedSlice"), 0);
     }
     //end eventHandler
 }

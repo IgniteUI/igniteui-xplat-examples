@@ -7,7 +7,7 @@ public class EditorButtonGenerateHighFrequencyData
     //begin eventHandler
     public void EditorButtonGenerateHighFrequencyData(IgbPropertyEditorPropertyDescriptionButtonClickEventArgs args)
     {
-        CategoryChartFrequency.Generate();
+        CategoryChartFrequency.Generate(CodeGenHelper.GetDescription<IgbCategoryChart>("content"));
     }
     //end eventHandler
 }

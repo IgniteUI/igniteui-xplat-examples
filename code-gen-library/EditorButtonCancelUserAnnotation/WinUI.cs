@@ -1,5 +1,7 @@
 //begin imports
+using Infragistics.Controls.Description;
 using Infragistics.Controls.Layouts;
+using Infragistics.Controls.Charts;
 //end imports
 
 public class EditorButtonCancelUserAnnotation
@@ -8,7 +10,7 @@ public class EditorButtonCancelUserAnnotation
     //WPF: Infragistics.Controls.Layouts.PropertyEditorPropertyDescriptionButtonClickEventHandler
     public void EditorButtonCancelUserAnnotation(object sender, PropertyEditorPropertyDescriptionButtonClickEventArgs args)
     {
-        UserAnnotationFlow.Cancel();
+        UserAnnotationFlow.Cancel(CodeGenHelper.GetDescription<XamDataChart>("content"));
     }
     //end eventHandler
 }

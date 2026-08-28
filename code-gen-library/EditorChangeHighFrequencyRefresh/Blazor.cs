@@ -8,7 +8,7 @@ public class EditorChangeHighFrequencyRefresh
     public void EditorChangeHighFrequencyRefresh(IgbPropertyEditorPropertyDescriptionChangedEventArgs args)
     {
         CategoryChartFrequency.RefreshMilliseconds = System.Convert.ToInt32(args.NewValue);
-        CategoryChartFrequency.RestartTimer();
+        CategoryChartFrequency.RestartTimer(CodeGenHelper.GetDescription<IgbCategoryChart>("content"));
     }
     //end eventHandler
 }

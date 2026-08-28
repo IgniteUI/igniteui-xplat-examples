@@ -11,7 +11,10 @@ public class DoughnutChartSelectionOnViewInit
         // selection styling is visible without the reader having to click first.
         var series = CodeGenHelper.GetDescription<IgbRingSeries>("ringSeries");
         series.SelectedSlices.Add(0);
-        DoughnutChartSelectionReadout.Show(0);
+        DoughnutChartSelectionReadout.Show(
+            series,
+            CodeGenHelper.GetDescription<IgbPropertyEditorPropertyDescription>("SelectedSlice"),
+            0);
     }
     //end eventHandler
 }
