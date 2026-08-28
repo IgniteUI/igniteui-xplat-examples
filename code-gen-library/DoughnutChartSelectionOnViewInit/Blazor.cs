@@ -1,0 +1,17 @@
+//begin imports
+using IgniteUI.Blazor.Controls;
+//end imports
+
+public class DoughnutChartSelectionOnViewInit
+{
+    //begin eventHandler
+    public void DoughnutChartSelectionOnViewInit()
+    {
+        // The sample opens with a slice already chosen, so the readout has something to say and the
+        // selection styling is visible without the reader having to click first.
+        var series = CodeGenHelper.GetDescription<IgbRingSeries>("ringSeries");
+        series.SelectedSlices.Add(0);
+        DoughnutChartSelectionReadout.Show(0);
+    }
+    //end eventHandler
+}
