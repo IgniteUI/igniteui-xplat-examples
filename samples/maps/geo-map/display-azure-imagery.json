@@ -65,6 +65,7 @@
       "type": "GeographicMap",
       "name": "map",
       "zoomable": true,
+      "$setInCode": { "backgroundContent": ["webComponents", "react", "angular", "blazor"] },
       "backgroundContent": {
         "type": "AzureMapsImagery",
         "name": "azureImagery",
@@ -75,6 +76,7 @@
         {
           "type": "GeographicTileSeries",
           "name": "imagerySeries",
+          "$setInCode": { "tileImagery": ["webComponents", "react", "angular", "blazor"] },
           "tileImagery": {
             "type": "AzureMapsImagery",
             "name": "azureOverlay",
