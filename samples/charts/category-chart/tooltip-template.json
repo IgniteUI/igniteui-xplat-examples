@@ -1,0 +1,21 @@
+{
+  "strings": {
+    "legendTitle": "Highest Grossing Movie Franchises"
+  },
+  "descriptions": {
+    "content": {
+      "type": "CategoryChart",
+      "name": "chart",
+      "dataSourceRef": "MovieFranchiseRevenue",
+      "isTransitionInEnabled": true,
+      "chartType": "Column",
+      "toolTipType": "None",
+      "xAxisInterval": 1,
+      "tooltipTemplateRef": "CategoryChartTooltipTemplate"
+    }
+  },
+  "modules": [
+    "charts/CategoryChartModule",
+    "charts/DataChartInteractivityModule"
+  ]
+}
