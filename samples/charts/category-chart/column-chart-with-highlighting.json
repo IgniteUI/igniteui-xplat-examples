@@ -27,7 +27,7 @@
           "label": "Highlight Category",
           "shouldOverrideDefaultEditor": true,
           "valueType": "Boolean",
-          "primitiveValue": true
+          "primitiveValue": false
         },
         {
           "type": "PropertyEditorPropertyDescription",
@@ -36,7 +36,7 @@
           "label": "Highlight Item",
           "shouldOverrideDefaultEditor": true,
           "valueType": "Boolean",
-          "primitiveValue": true
+          "primitiveValue": false
         },
         {
           "type": "PropertyEditorPropertyDescription",
@@ -88,8 +88,8 @@
       "yAxisMinimumValue": 0,
       "yAxisTitle": "Temperatures in Celsius",
       "isSeriesHighlightingEnabled": true,
-      "isCategoryHighlightingEnabled": true,
-      "isItemHighlightingEnabled": true
+      "isCategoryHighlightingEnabled": false,
+      "isItemHighlightingEnabled": false
     }
   },
   "modules": [
