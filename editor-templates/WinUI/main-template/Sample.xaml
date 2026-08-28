@@ -92,8 +92,20 @@
         </Grid>
         <!-- endifdef leftContent -->
         <Grid Grid.Column="1" x:Name="ContentRoot">
+          <!-- ifdef contentBottom -->
+          <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+          </Grid.RowDefinitions>
+          <!-- endifdef contentBottom -->
           <!-- insert content -->
           <!-- end content -->
+          <!-- ifdef contentBottom -->
+          <Grid Grid.Row="1">
+            <!-- insert contentBottom -->
+            <!-- end contentBottom -->
+          </Grid>
+          <!-- endifdef contentBottom -->
         </Grid>
         <!-- ifdef rightContent -->
         <Grid Grid.Column="2">
