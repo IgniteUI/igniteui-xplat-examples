@@ -1,0 +1,123 @@
+{
+  "strings": {
+    "legendTitle": "Distribution of Magnetic Field"
+  },
+  "descriptions": {
+    "editor": {
+      "type": "PropertyEditorPanel",
+      "componentRendererRef": "renderer",
+      "targetRef": "chart",
+      "descriptionType": "DataChart",
+      "isHorizontal": true,
+      "isWrappingEnabled": true,
+      "properties": [
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "Series[0 as ScatterContourSeries].Thickness",
+          "name": "Thickness",
+          "label": "Thickness",
+          "shouldOverrideDefaultEditor": true,
+          "valueType": "Slider",
+          "primitiveValue": 5,
+          "min": 1,
+          "max": 10,
+          "step": 1
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "Series[0 as ScatterContourSeries].ValueResolver.ValueCount",
+          "name": "Contours",
+          "label": "Contours",
+          "shouldOverrideDefaultEditor": true,
+          "valueType": "Slider",
+          "primitiveValue": 10,
+          "min": 1,
+          "max": 15,
+          "step": 1
+        }
+      ]
+    },
+    "content": {
+      "type": "DataChart",
+      "name": "chart",
+      "isHorizontalZoomEnabled": true,
+      "isVerticalZoomEnabled": true,
+      "gridMode": "BeforeSeries",
+      "axes": [
+        {
+          "type": "NumericXAxis",
+          "name": "xAxis1",
+          "labelLocation": "OutsideLeft",
+          "minimumValue": -180,
+          "maximumValue": 180,
+          "interval": 30,
+          "title": "Longitude"
+        },
+        {
+          "type": "NumericYAxis",
+          "name": "yAxis1",
+          "labelLocation": "OutsideBottom",
+          "minimumValue": -90,
+          "maximumValue": 90,
+          "interval": 30,
+          "title": "Latitude"
+        },
+        {
+          "type": "NumericXAxis",
+          "name": "xAxis2",
+          "labelLocation": "OutsideTop",
+          "minimumValue": -180,
+          "maximumValue": 180,
+          "interval": 30
+        },
+        {
+          "type": "NumericYAxis",
+          "name": "yAxis2",
+          "labelLocation": "OutsideRight",
+          "minimumValue": -90,
+          "maximumValue": 90,
+          "interval": 30,
+          "title": "Latitude"
+        }
+      ],
+      "series": [
+        {
+          "type": "ScatterContourSeries",
+          "name": "series",
+          "xAxisRef": "xAxis1",
+          "yAxisRef": "yAxis1",
+          "dataSourceRef": "ScatterMagneticFieldData",
+          "thickness": 5,
+          "xMemberPath": "X",
+          "yMemberPath": "Y",
+          "valueMemberPath": "Z",
+          "valueResolver": {
+            "type": "LinearContourValueResolver",
+            "valueCount": 10
+          },
+          "fillScale": {
+            "type": "ValueBrushScale",
+            "minimumValue": -2,
+            "maximumValue": 2,
+            "brushes": [
+              "#8670CB", "#513E8C", "#003F5E",
+              "#0C6B99", "#4AC4FF", "#B5CC2E",
+              "#FFD034", "#FC8612", "#ED4840"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
+    "charts/DataChartCoreModule",
+    "charts/DataChartScatterCoreModule",
+    "charts/DataChartScatterModule",
+    "charts/DataChartInteractivityModule",
+    "charts/ScatterContourSeriesModule",
+    "charts/ValueBrushScaleModule",
+    "charts/LinearContourValueResolverModule"
+  ]
+}
