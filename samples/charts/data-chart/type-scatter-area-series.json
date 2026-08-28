@@ -57,6 +57,7 @@
           "yMemberPath": "Y",
           "colorMemberPath": "Z",
           "showDefaultTooltip": true,
+          "$setInCode": { "colorScale": ["webComponents", "react", "angular", "blazor"] },
           "colorScale": {
             "type": "CustomPaletteColorScale",
             "interpolationMode": "InterpolateHSV",

@@ -18,7 +18,7 @@
           "label": "Thickness",
           "shouldOverrideDefaultEditor": true,
           "valueType": "Slider",
-          "primitiveValue": 5,
+          "primitiveValue": 3,
           "min": 1,
           "max": 10,
           "step": 1
@@ -87,10 +87,14 @@
           "xAxisRef": "xAxis1",
           "yAxisRef": "yAxis1",
           "dataSourceRef": "ScatterMagneticFieldData",
-          "thickness": 5,
+          "thickness": 3,
           "xMemberPath": "X",
           "yMemberPath": "Y",
           "valueMemberPath": "Z",
+          "$setInCode": {
+            "valueResolver": ["webComponents", "react", "angular", "blazor"],
+            "fillScale": ["webComponents", "react", "angular", "blazor"]
+          },
           "valueResolver": {
             "type": "LinearContourValueResolver",
             "valueCount": 10
