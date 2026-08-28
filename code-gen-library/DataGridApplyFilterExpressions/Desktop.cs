@@ -2,7 +2,9 @@
 using Infragistics.Controls.Description;
 using Infragistics.Controls.Layouts;
 using Infragistics.Controls.Grids;
+#if !TESTING
 using Infragistics.Core.Controls.DataSource;
+#endif
 //end imports
 
 public class DataGridApplyFilterExpressions
@@ -11,6 +13,7 @@ public class DataGridApplyFilterExpressions
     //WPF: Infragistics.Controls.Layouts.PropertyEditorPropertyDescriptionChangedEventHandler
     public void DataGridApplyFilterExpressions(object sender, PropertyEditorPropertyDescriptionChangedEventArgs args)
     {
+#if !TESTING
         var factory = new FilterFactory();
         var grid = CodeGenHelper.GetDescription<XamXGrid>("content");
         var columnEditor = CodeGenHelper.FindByName<PropertyEditorPropertyDescription>("FilterColumnEditor");
@@ -40,6 +43,7 @@ public class DataGridApplyFilterExpressions
         }
 
         grid.FilterExpressions.Add(filter);
+#endif
     }
     //end eventHandler
 }
