@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ViewChild, TemplateRef, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
+﻿import { AfterViewInit, Component, ViewChild, TemplateRef, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
 //insert vmImports
 //end vmImports
 //insert descriptionImports
@@ -7,6 +7,8 @@ import { AfterViewInit, Component, ViewChild, TemplateRef, ChangeDetectionStrate
 //end vmLibraryImports
 //insert handlersImports
 //end handlersImports
+//insert templateImports
+//end templateImports
 //insert bindingImports
 //end bindingImports
 

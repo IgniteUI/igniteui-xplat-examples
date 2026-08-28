@@ -12,8 +12,8 @@ export class DoughnutChartSelectionSliceClick {
     public doughnutChartSelectionSliceClick(sender: any, args: IgcSliceClickEventArgs): void {
         // A click that selects reports which slice; a click that clears the selection reports that.
         DoughnutChartSelectionReadout.show(
-            CodeGenHelper.getDescription<IgcRingSeriesComponent>("ringSeries"),
-            CodeGenHelper.getDescription<any>("SelectedSlice"),
+            CodeGenHelper.findByName<IgcRingSeriesComponent>("ringSeries"),
+            CodeGenHelper.findByName<any>("SelectedSlice"),
             args.isSelected ? args.index : -1);
     }
     //end eventHandler

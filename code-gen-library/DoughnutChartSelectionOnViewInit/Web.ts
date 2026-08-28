@@ -12,9 +12,9 @@ export class DoughnutChartSelectionOnViewInit {
     public doughnutChartSelectionOnViewInit(): void {
         // The sample opens with a slice already chosen, so the readout has something to say and the
         // selection styling is visible without the reader having to click first.
-        var series = CodeGenHelper.getDescription<IgcRingSeriesComponent>("ringSeries");
+        var series = CodeGenHelper.findByName<IgcRingSeriesComponent>("ringSeries");
         series.selectedSlices.add(0);
-        DoughnutChartSelectionReadout.show(series, CodeGenHelper.getDescription<any>("SelectedSlice"), 0);
+        DoughnutChartSelectionReadout.show(series, CodeGenHelper.findByName<any>("SelectedSlice"), 0);
     }
     //end eventHandler
 }

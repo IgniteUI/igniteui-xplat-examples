@@ -1,5 +1,5 @@
 //begin imports
-import { DataTemplateMeasureInfo, DataTemplateRenderInfo } from 'igniteui-angular-core';
+import { DataTemplateMeasureInfo, DataTemplatePassInfo, DataTemplateRenderInfo } from 'igniteui-angular-core';
 //end imports
 
 export class CategoryChartValueMarkerTemplate {
@@ -10,6 +10,8 @@ export class CategoryChartValueMarkerTemplate {
     // every web platform, and a member of the component rather than markup -- which is why this is a
     // supportingMethods region and not a content one, where an Angular template's markup goes.
     public categoryChartValueMarkerTemplate = {
+        passStarting: (passInfo: DataTemplatePassInfo) => { },
+        passCompleted: (passInfo: DataTemplatePassInfo) => { },
         measure: (measureInfo: DataTemplateMeasureInfo) => {
             const context = measureInfo.context;
             measureInfo.width = context.measureText("0.00").width;

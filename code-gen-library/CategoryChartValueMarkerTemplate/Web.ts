@@ -1,5 +1,5 @@
 //begin imports
-import { DataTemplateMeasureInfo, DataTemplateRenderInfo } from 'igniteui-webcomponents-core';
+import { DataTemplateMeasureInfo, DataTemplatePassInfo, DataTemplateRenderInfo } from 'igniteui-webcomponents-core';
 //end imports
 
 export class CategoryChartValueMarkerTemplate {
@@ -10,6 +10,8 @@ export class CategoryChartValueMarkerTemplate {
     // and a render, not markup -- the XAML side of this item is the DataTemplate that says the same
     // thing declaratively.
     public categoryChartValueMarkerTemplate = {
+        passStarting: (passInfo: DataTemplatePassInfo) => { },
+        passCompleted: (passInfo: DataTemplatePassInfo) => { },
         measure: (measureInfo: DataTemplateMeasureInfo) => {
             const context = measureInfo.context;
             measureInfo.width = context.measureText("0.00").width;

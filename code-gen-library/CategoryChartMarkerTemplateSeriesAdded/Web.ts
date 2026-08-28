@@ -1,5 +1,5 @@
 //begin imports
-import { IgcChartSeriesEventArgs } from 'igniteui-webcomponents-charts';
+import { IgcChartSeriesEventArgs, IgcMarkerSeriesComponent } from 'igniteui-webcomponents-charts';
 //end imports
 
 import { CodeGenHelper } from 'igniteui-webcomponents-core';
@@ -12,7 +12,10 @@ export class CategoryChartMarkerTemplateSeriesAdded {
         // definition to hang a marker template on. The chart says when it has made one, and this is
         // where each gets the template.
         if (args.series != null) {
-            args.series.markerTemplate = CodeGenHelper.findByName<any>("categoryChartValueMarkerTemplate");
+            // A marker template belongs to the series that draw markers, which is narrower than
+            // what the event carries.
+            (args.series as IgcMarkerSeriesComponent).markerTemplate =
+                CodeGenHelper.findByName<any>("categoryChartValueMarkerTemplate");
         }
     }
     //end eventHandler

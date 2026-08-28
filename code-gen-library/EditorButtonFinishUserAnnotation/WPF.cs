@@ -11,10 +11,10 @@ public class EditorButtonFinishUserAnnotation
     public void EditorButtonFinishUserAnnotation(object sender, PropertyEditorPropertyDescriptionButtonClickEventArgs args)
     {
         var fields = new UserAnnotationFlowFields();
-        fields.Label = CodeGenHelper.GetDescription<PropertyEditorPropertyDescription>("AnnotationLabel");
-        fields.Details = CodeGenHelper.GetDescription<PropertyEditorPropertyDescription>("AnnotationDetails");
-        fields.MainColor = CodeGenHelper.GetDescription<PropertyEditorPropertyDescription>("AnnotationMainColor");
-        fields.BadgeColor = CodeGenHelper.GetDescription<PropertyEditorPropertyDescription>("AnnotationBadgeColor");
+        fields.Label = CodeGenHelper.FindByName<PropertyEditorPropertyDescription>("AnnotationLabel");
+        fields.Details = CodeGenHelper.FindByName<PropertyEditorPropertyDescription>("AnnotationDetails");
+        fields.MainColor = CodeGenHelper.FindByName<PropertyEditorPropertyDescription>("AnnotationMainColor");
+        fields.BadgeColor = CodeGenHelper.FindByName<PropertyEditorPropertyDescription>("AnnotationBadgeColor");
         UserAnnotationFlow.Finish(CodeGenHelper.GetDescription<XamDataChart>("content"), fields);
     }
     //end eventHandler

@@ -12,10 +12,10 @@ export class EditorButtonFinishUserAnnotation {
     //begin eventHandler
     public editorButtonFinishUserAnnotation(sender: any, args: IgcPropertyEditorPropertyDescriptionButtonClickEventArgs): void {
         var fields = new UserAnnotationFlowFields();
-        fields.label = CodeGenHelper.getDescription<any>("AnnotationLabel");
-        fields.details = CodeGenHelper.getDescription<any>("AnnotationDetails");
-        fields.mainColor = CodeGenHelper.getDescription<any>("AnnotationMainColor");
-        fields.badgeColor = CodeGenHelper.getDescription<any>("AnnotationBadgeColor");
+        fields.label = CodeGenHelper.findByName<any>("AnnotationLabel");
+        fields.details = CodeGenHelper.findByName<any>("AnnotationDetails");
+        fields.mainColor = CodeGenHelper.findByName<any>("AnnotationMainColor");
+        fields.badgeColor = CodeGenHelper.findByName<any>("AnnotationBadgeColor");
         UserAnnotationFlow.finish(CodeGenHelper.getDescription<IgcDataChartComponent>("content"), fields);
     }
     //end eventHandler

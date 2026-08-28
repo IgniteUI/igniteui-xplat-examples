@@ -6,7 +6,7 @@ namespace Infragistics.Samples
     using System.Collections.Generic;
     using System.Net.Http;
     using System.Threading.Tasks;
-    using Newtonsoft.Json.Linq;
+    using System.Text.Json;
 
     // Every seat on the aircraft: its polygon, and what the sample colours it by -- which cabin class
     // it belongs to and whether it is sold.
@@ -33,34 +33,39 @@ namespace Infragistics.Samples
             using (var client = new HttpClient())
             {
                 var text = await client.GetStringAsync(url);
-                return Convert(JArray.Parse(text));
+                using (var json = JsonDocument.Parse(text))
+                {
+                    return Convert(json.RootElement);
+                }
             }
         }
 
         // The points arrive as objects with an x and a y, which is what the JSON says; a shape series
         // wants them as points, so they are read across here rather than left for it to interpret.
-        private static AirplaneSeats Convert(JArray records)
+        private static AirplaneSeats Convert(JsonElement records)
         {
             var data = new AirplaneSeats();
-            foreach (var record in records)
+            foreach (var record in records.EnumerateArray())
             {
                 var item = new AirplaneSeatsItem();
-                item.Seat = (string)record["seat"];
-                item.Price = (string)record["price"];
-                item.Class = (string)record["class"];
-                item.Status = (string)record["status"];
-                item.Row = (string)record["row"];
-                item.Column = (string)record["column"];
+                item.Seat = Text(record, "seat");
+                item.Price = Text(record, "price");
+                item.Class = Text(record, "class");
+                item.Status = Text(record, "status");
+                item.Row = Text(record, "row");
+                item.Column = Text(record, "column");
                 item.Points = new List<List<AirplanePoint>>();
-                var rings = record["points"] as JArray;
-                if (rings != null)
+                JsonElement rings;
+                if (record.TryGetProperty("points", out rings))
                 {
-                    foreach (var ring in rings)
+                    foreach (var ring in rings.EnumerateArray())
                     {
                         var points = new List<AirplanePoint>();
-                        foreach (var point in (JArray)ring)
+                        foreach (var point in ring.EnumerateArray())
                         {
-                            points.Add(new AirplanePoint() { X = (double)point["x"], Y = (double)point["y"] });
+                            points.Add(new AirplanePoint() {
+                                X = point.GetProperty("x").GetDouble(),
+                                Y = point.GetProperty("y").GetDouble() });
                         }
                         item.Points.Add(points);
                     }
@@ -69,6 +74,17 @@ namespace Infragistics.Samples
             }
             return data;
         }
+
+        private static string Text(JsonElement record, string name)
+        {
+            JsonElement value;
+            if (!record.TryGetProperty(name, out value))
+            {
+                return null;
+            }
+            return value.ValueKind == JsonValueKind.String ? value.GetString() : value.ToString();
+        }
+
     }
     //end async data
 }

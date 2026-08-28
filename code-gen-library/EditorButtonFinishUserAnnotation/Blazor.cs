@@ -8,10 +8,10 @@ public class EditorButtonFinishUserAnnotation
     public void EditorButtonFinishUserAnnotation(IgbPropertyEditorPropertyDescriptionButtonClickEventArgs args)
     {
         var fields = new UserAnnotationFlowFields();
-        fields.Label = CodeGenHelper.GetDescription<IgbPropertyEditorPropertyDescription>("AnnotationLabel");
-        fields.Details = CodeGenHelper.GetDescription<IgbPropertyEditorPropertyDescription>("AnnotationDetails");
-        fields.MainColor = CodeGenHelper.GetDescription<IgbPropertyEditorPropertyDescription>("AnnotationMainColor");
-        fields.BadgeColor = CodeGenHelper.GetDescription<IgbPropertyEditorPropertyDescription>("AnnotationBadgeColor");
+        fields.Label = CodeGenHelper.FindByName<IgbPropertyEditorPropertyDescription>("AnnotationLabel");
+        fields.Details = CodeGenHelper.FindByName<IgbPropertyEditorPropertyDescription>("AnnotationDetails");
+        fields.MainColor = CodeGenHelper.FindByName<IgbPropertyEditorPropertyDescription>("AnnotationMainColor");
+        fields.BadgeColor = CodeGenHelper.FindByName<IgbPropertyEditorPropertyDescription>("AnnotationBadgeColor");
         UserAnnotationFlow.Finish(CodeGenHelper.GetDescription<IgbDataChart>("content"), fields);
     }
     //end eventHandler

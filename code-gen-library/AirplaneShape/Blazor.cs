@@ -6,7 +6,7 @@ namespace Infragistics.Samples
     using System.Collections.Generic;
     using System.Net.Http;
     using System.Threading.Tasks;
-    using Newtonsoft.Json.Linq;
+    using System.Text.Json;
 
     // The outline of the aircraft, as one polygon: a list of rings, each a list of points, which is
     // what a shape series reads through its shape member path.
@@ -33,28 +33,33 @@ namespace Infragistics.Samples
             using (var client = new HttpClient())
             {
                 var text = await client.GetStringAsync(url);
-                return Convert(JArray.Parse(text));
+                using (var json = JsonDocument.Parse(text))
+                {
+                    return Convert(json.RootElement);
+                }
             }
         }
 
         // The points arrive as objects with an x and a y, which is what the JSON says; a shape series
         // wants them as points, so they are read across here rather than left for it to interpret.
-        private static AirplaneShape Convert(JArray records)
+        private static AirplaneShape Convert(JsonElement records)
         {
             var data = new AirplaneShape();
-            foreach (var record in records)
+            foreach (var record in records.EnumerateArray())
             {
                 var item = new AirplaneShapeItem();
                 item.Points = new List<List<AirplanePoint>>();
-                var rings = record["points"] as JArray;
-                if (rings != null)
+                JsonElement rings;
+                if (record.TryGetProperty("points", out rings))
                 {
-                    foreach (var ring in rings)
+                    foreach (var ring in rings.EnumerateArray())
                     {
                         var points = new List<AirplanePoint>();
-                        foreach (var point in (JArray)ring)
+                        foreach (var point in ring.EnumerateArray())
                         {
-                            points.Add(new AirplanePoint() { X = (double)point["x"], Y = (double)point["y"] });
+                            points.Add(new AirplanePoint() {
+                                X = point.GetProperty("x").GetDouble(),
+                                Y = point.GetProperty("y").GetDouble() });
                         }
                         item.Points.Add(points);
                     }

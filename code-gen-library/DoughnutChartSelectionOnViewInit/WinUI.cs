@@ -12,11 +12,11 @@ public class DoughnutChartSelectionOnViewInit
     {
         // The sample opens with a slice already chosen, so the readout has something to say and the
         // selection styling is visible without the reader having to click first.
-        var series = CodeGenHelper.GetDescription<RingSeries>("ringSeries");
+        var series = CodeGenHelper.FindByName<RingSeries>("ringSeries");
         series.SelectedSlices.Add(0);
         DoughnutChartSelectionReadout.Show(
             series,
-            CodeGenHelper.GetDescription<PropertyEditorPropertyDescription>("SelectedSlice"),
+            CodeGenHelper.FindByName<PropertyEditorPropertyDescription>("SelectedSlice"),
             0);
     }
     //end eventHandler

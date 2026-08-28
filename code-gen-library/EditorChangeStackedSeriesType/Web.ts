@@ -1,14 +1,6 @@
 //begin imports
 import { IgcPropertyEditorPropertyDescriptionChangedEventArgs } from 'igniteui-webcomponents-layouts';
-import { IgcDataChartComponent, IgcStackedFragmentSeriesComponent,
-         IgcStackedSeriesBaseComponent,
-         IgcStackedAreaSeriesComponent, IgcStacked100AreaSeriesComponent,
-         IgcStackedBarSeriesComponent, IgcStacked100BarSeriesComponent,
-         IgcStackedColumnSeriesComponent, IgcStacked100ColumnSeriesComponent,
-         IgcStackedLineSeriesComponent, IgcStacked100LineSeriesComponent,
-         IgcStackedSplineSeriesComponent, IgcStacked100SplineSeriesComponent,
-         IgcCategoryXAxisComponent, IgcCategoryYAxisComponent,
-         IgcNumericXAxisComponent, IgcNumericYAxisComponent } from 'igniteui-webcomponents-charts';
+import { IgcDataChartComponent, IgcStackedFragmentSeriesComponent, IgcStackedSeriesBaseComponent, IgcHorizontalStackedSeriesBaseComponent, IgcVerticalStackedSeriesBaseComponent, IgcStackedAreaSeriesComponent, IgcStacked100AreaSeriesComponent, IgcStackedBarSeriesComponent, IgcStacked100BarSeriesComponent, IgcStackedColumnSeriesComponent, IgcStacked100ColumnSeriesComponent, IgcStackedLineSeriesComponent, IgcStacked100LineSeriesComponent, IgcStackedSplineSeriesComponent, IgcStacked100SplineSeriesComponent, IgcCategoryXAxisComponent, IgcCategoryYAxisComponent, IgcNumericXAxisComponent, IgcNumericYAxisComponent } from 'igniteui-webcomponents-charts';
 //end imports
 
 import { CodeGenHelper } from 'igniteui-webcomponents-core';
@@ -54,12 +46,17 @@ export class EditorChangeStackedSeriesType {
         // are declared on the chart, and the swap is which pair this stack is given.
         var bar = name.indexOf("Bar") >= 0;
         var stack = this.make(name);
-        stack.xAxis = bar
-            ? CodeGenHelper.getDescription<IgcNumericXAxisComponent>("numXAxis")
-            : CodeGenHelper.getDescription<IgcCategoryXAxisComponent>("catXAxis");
-        stack.yAxis = bar
-            ? CodeGenHelper.getDescription<IgcCategoryYAxisComponent>("catYAxis")
-            : CodeGenHelper.getDescription<IgcNumericYAxisComponent>("numYAxis");
+        // Which axis is the category one is what separates the two stacked bases, so each is reached
+        // through the base that declares the pair it has rather than through the one they share.
+        if (bar) {
+            var vertical = stack as IgcVerticalStackedSeriesBaseComponent;
+            vertical.xAxis = CodeGenHelper.findByName<IgcNumericXAxisComponent>("numXAxis");
+            vertical.yAxis = CodeGenHelper.findByName<IgcCategoryYAxisComponent>("catYAxis");
+        } else {
+            var horizontal = stack as IgcHorizontalStackedSeriesBaseComponent;
+            horizontal.xAxis = CodeGenHelper.findByName<IgcCategoryXAxisComponent>("catXAxis");
+            horizontal.yAxis = CodeGenHelper.findByName<IgcNumericYAxisComponent>("numYAxis");
+        }
 
         var made = this.fragments();
         for (var i = 0; i < made.length; i++) {

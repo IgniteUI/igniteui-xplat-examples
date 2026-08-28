@@ -52,11 +52,11 @@ public class EditorChangeStackedSeriesType
         var bar = name.IndexOf("Bar") >= 0;
         var stack = Make(name);
         stack.XAxis = bar
-            ? (Axis)CodeGenHelper.GetDescription<NumericXAxis>("numXAxis")
-            : (Axis)CodeGenHelper.GetDescription<CategoryXAxis>("catXAxis");
+            ? (Axis)CodeGenHelper.FindByName<NumericXAxis>("numXAxis")
+            : (Axis)CodeGenHelper.FindByName<CategoryXAxis>("catXAxis");
         stack.YAxis = bar
-            ? (Axis)CodeGenHelper.GetDescription<CategoryYAxis>("catYAxis")
-            : (Axis)CodeGenHelper.GetDescription<NumericYAxis>("numYAxis");
+            ? (Axis)CodeGenHelper.FindByName<CategoryYAxis>("catYAxis")
+            : (Axis)CodeGenHelper.FindByName<NumericYAxis>("numYAxis");
 
         foreach (var fragment in Fragments())
         {

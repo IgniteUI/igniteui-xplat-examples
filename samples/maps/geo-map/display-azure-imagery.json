@@ -50,14 +50,6 @@
             "TrafficReducedOverlay"
           ],
           "primitiveValue": "Satellite"
-        },
-        {
-          "type": "PropertyEditorPropertyDescription",
-          "propertyPath": "BackgroundContent.ApiKey",
-          "name": "ApiKey",
-          "label": "Azure Maps API Key",
-          "valueType": "StringValue",
-          "changedRef": "EditorChangeAzureMapsApiKey"
         }
       ]
     },
@@ -69,7 +61,7 @@
       "backgroundContent": {
         "type": "AzureMapsImagery",
         "name": "azureImagery",
-        "apiKey": "REPLACE_WITH_AZURE_MAPS_KEY",
+        "apiKey": "REPLACE_WITH_AZURE_KEY",
         "imageryStyle": "Satellite"
       },
       "series": [
@@ -80,7 +72,7 @@
           "tileImagery": {
             "type": "AzureMapsImagery",
             "name": "azureOverlay",
-            "apiKey": "REPLACE_WITH_AZURE_MAPS_KEY",
+            "apiKey": "REPLACE_WITH_AZURE_KEY",
             "imageryStyle": "Satellite"
           }
         }

@@ -11,10 +11,10 @@ export class DataChartUserAnnotationRequested {
     //begin eventHandler
     public dataChartUserAnnotationRequested(sender: any, args: IgcUserAnnotationInformationEventArgs): void {
         var fields = new UserAnnotationFlowFields();
-        fields.label = CodeGenHelper.getDescription<any>("AnnotationLabel");
-        fields.details = CodeGenHelper.getDescription<any>("AnnotationDetails");
-        fields.mainColor = CodeGenHelper.getDescription<any>("AnnotationMainColor");
-        fields.badgeColor = CodeGenHelper.getDescription<any>("AnnotationBadgeColor");
+        fields.label = CodeGenHelper.findByName<any>("AnnotationLabel");
+        fields.details = CodeGenHelper.findByName<any>("AnnotationDetails");
+        fields.mainColor = CodeGenHelper.findByName<any>("AnnotationMainColor");
+        fields.badgeColor = CodeGenHelper.findByName<any>("AnnotationBadgeColor");
         UserAnnotationFlow.begin(args.annotationInfo, fields);
     }
     //end eventHandler
