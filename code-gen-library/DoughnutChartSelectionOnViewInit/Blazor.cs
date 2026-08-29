@@ -7,10 +7,11 @@ public class DoughnutChartSelectionOnViewInit
     //begin eventHandler
     public void DoughnutChartSelectionOnViewInit()
     {
-        // The sample opens with a slice already chosen, so the readout has something to say and the
-        // selection styling is visible without the reader having to click first.
+        // The readout opens with the first slice's figures, so it has something to say before the
+        // reader clicks. It is not selected as well, the way Web Components select it: a ring series
+        // has no slice selection to ask for here either -- it carries its ring and nothing else -- so
+        // what the topic teaches, the click and the styling it applies, is what this shows.
         var series = CodeGenHelper.FindByName<IgbRingSeries>("ringSeries");
-        series.SelectedSlices.Add(0);
         DoughnutChartSelectionReadout.Show(
             series,
             CodeGenHelper.FindByName<IgbPropertyEditorPropertyDescription>("SelectedSlice"),

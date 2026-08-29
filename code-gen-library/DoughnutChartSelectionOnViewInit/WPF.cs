@@ -10,10 +10,12 @@ public class DoughnutChartSelectionOnViewInit
     //WPF: System.Action
     public void DoughnutChartSelectionOnViewInit()
     {
-        // The sample opens with a slice already chosen, so the readout has something to say and the
-        // selection styling is visible without the reader having to click first.
+        // The readout opens with the first slice's figures, so it has something to say before the
+        // reader clicks. It is not selected as well, the way the web platforms select it: a ring
+        // series has no slice selection to ask for here -- the collection is on the chart and holds
+        // slices rather than their indexes -- so what the topic teaches, the click and the styling
+        // it applies, is what this shows. The rest waits for the API to match.
         var series = CodeGenHelper.FindByName<RingSeries>("ringSeries");
-        series.SelectedSlices.Add(0);
         DoughnutChartSelectionReadout.Show(
             series,
             CodeGenHelper.FindByName<PropertyEditorPropertyDescription>("SelectedSlice"),
