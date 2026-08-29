@@ -2,6 +2,7 @@
 using Infragistics.Controls.Charts;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Globalization;
 using System.Windows.Threading;
 //end imports
@@ -32,7 +33,9 @@ public static class CategoryChartFrequency
     public static bool Running = false;
 
     private static XamCategoryChart chart;
-    private static List<CategoryChartFrequencyItem> data = new List<CategoryChartFrequencyItem>();
+    // Observable, because the chart is not told about a mutation on this platform -- the collection
+    // is what says so.
+    private static ObservableCollection<CategoryChartFrequencyItem> data = new ObservableCollection<CategoryChartFrequencyItem>();
     private static int index = 0;
     private static DispatcherTimer timer;
     private static Random random = new Random();
@@ -40,7 +43,7 @@ public static class CategoryChartFrequency
     public static void Generate(XamCategoryChart target)
     {
         chart = target;
-        data = new List<CategoryChartFrequencyItem>();
+        var seed = new List<CategoryChartFrequencyItem>();
         var value = 100.0;
         for (var i = 0; i <= Points; i++)
         {
@@ -48,8 +51,9 @@ public static class CategoryChartFrequency
             var item = new CategoryChartFrequencyItem();
             item.Label = i.ToString(CultureInfo.InvariantCulture);
             item.Value = Math.Round(value);
-            data.Add(item);
+            seed.Add(item);
         }
+        data = new ObservableCollection<CategoryChartFrequencyItem>(seed);
         index = data.Count;
         chart.ItemsSource = data;
     }
@@ -90,11 +94,8 @@ public static class CategoryChartFrequency
         arrived.Label = (++index).ToString(CultureInfo.InvariantCulture);
         arrived.Value = previous.Value + random.NextDouble() * 4.0 - 2.0;
 
-        var leaving = data[0];
         data.Add(arrived);
-        chart.NotifyInsertItem(data, data.Count - 1, arrived);
         data.RemoveAt(0);
-        chart.NotifyRemoveItem(data, 0, leaving);
     }
 }
 //end supportingTypes
