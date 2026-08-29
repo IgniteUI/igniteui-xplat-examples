@@ -16,7 +16,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
         <div class="ui-tooltip-content" *ngIf="dataContext.item">
             <div>Class: {{dataContext.item.class}}</div>
             <div>Seat: {{dataContext.item.seat}}</div>
-            <div>Price: ${{dataContext.item.price}}</div>
+            <div>Price: {{'$' + dataContext.item.price}}</div>
             <div>Status: {{dataContext.item.status}}</div>
         </div>
     </ng-template>
