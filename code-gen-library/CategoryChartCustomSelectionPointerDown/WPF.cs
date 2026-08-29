@@ -9,26 +9,16 @@ public class CategoryChartCustomSelectionPointerDown
     //WPF: Infragistics.Controls.Charts.DomainChartSeriesPointerEventHandler
     public void CategoryChartCustomSelectionPointerDown(object sender, DomainChartSeriesPointerEventArgs args)
     {
-        var chart = CodeGenHelper.GetDescription<XamCategoryChart>("content");
-        var selectableData = (SelectableData)chart.ItemsSource;
         var selectedItem = args.Item as SelectableDataItem;
         if (selectedItem == null) return;
-
-        var selectedIndex = -1;
-        for (var i = 0; i < selectableData.Count; i++)
-        {
-            if (selectedItem.Category == selectableData[i].Category)
-            {
-                selectedIndex = i; break;
-            }
-        }
 
         if (selectedItem.SelectedValue == selectedItem.DataValue)
             selectedItem.SelectedValue = double.NaN;
         else
             selectedItem.SelectedValue = selectedItem.DataValue;
 
-        chart.NotifySetItem(selectableData, selectedIndex, selectedItem, selectedItem);
+        // Nothing tells the chart on this platform: the data it was given is observable and its items
+        // raise the change themselves, which is what setting the value above has just done.
     }
     //end eventHandler
 }
