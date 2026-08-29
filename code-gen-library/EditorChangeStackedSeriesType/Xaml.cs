@@ -51,12 +51,20 @@ public class EditorChangeStackedSeriesType
         // are declared on the chart, and the swap is which pair this stack is given.
         var bar = name.IndexOf("Bar") >= 0;
         var stack = Make(name);
-        stack.XAxis = bar
-            ? (Axis)CodeGenHelper.FindByName<NumericXAxis>("numXAxis")
-            : (Axis)CodeGenHelper.FindByName<CategoryXAxis>("catXAxis");
-        stack.YAxis = bar
-            ? (Axis)CodeGenHelper.FindByName<CategoryYAxis>("catYAxis")
-            : (Axis)CodeGenHelper.FindByName<NumericYAxis>("numYAxis");
+        // Which axis is the category one separates the two stacked bases, so each is reached through
+        // the base that declares the pair it has rather than through the one they share.
+        if (bar)
+        {
+            var vertical = (VerticalStackedSeriesBase)stack;
+            vertical.XAxis = CodeGenHelper.FindByName<NumericXAxis>("numXAxis");
+            vertical.YAxis = CodeGenHelper.FindByName<CategoryYAxis>("catYAxis");
+        }
+        else
+        {
+            var horizontal = (HorizontalStackedSeriesBase)stack;
+            horizontal.XAxis = CodeGenHelper.FindByName<CategoryXAxis>("catXAxis");
+            horizontal.YAxis = CodeGenHelper.FindByName<NumericYAxis>("numYAxis");
+        }
 
         foreach (var fragment in Fragments())
         {

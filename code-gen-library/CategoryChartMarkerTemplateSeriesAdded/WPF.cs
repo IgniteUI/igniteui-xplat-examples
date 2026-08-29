@@ -11,12 +11,14 @@ public class CategoryChartMarkerTemplateSeriesAdded
     {
         // A category chart makes a series per column it is given, so there is no series in the
         // definition to hang a marker template on. The chart says when it has made one, and this is
-        // where each gets the template -- taken from the resources the template item was written into,
-        // since a keyed DataTemplate is what it is on this platform.
+        // where each gets the template. It is a keyed DataTemplate on this platform, so it is looked
+        // up from the chart, which finds it wherever it was written -- rather than from the handler,
+        // which is not part of the tree and has no resources of its own.
         var series = args.Series as MarkerSeries;
-        if (series != null)
+        var chart = sender as FrameworkElement;
+        if (series != null && chart != null)
         {
-            series.MarkerTemplate = (DataTemplate)this.Resources["CategoryChartValueMarkerTemplate"];
+            series.MarkerTemplate = (DataTemplate)chart.FindResource("CategoryChartValueMarkerTemplate");
         }
     }
     //end eventHandler

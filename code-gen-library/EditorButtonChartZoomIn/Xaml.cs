@@ -11,22 +11,9 @@ public class EditorButtonChartZoomIn
     public void EditorButtonChartZoomIn(object sender, PropertyEditorPropertyDescriptionButtonClickEventArgs args)
     {
         var chart = CodeGenHelper.GetDescription<XamDataChart>("content");
-        if (chart.ActualWindowPositionHorizontal < 1.0)
-        {
-            chart.ActualWindowPositionHorizontal += 0.025;
-        }
-        if (chart.ActualWindowPositionVertical < 1.0)
-        {
-            chart.ActualWindowPositionVertical += 0.025;
-        }
-        if (chart.ActualWindowScaleHorizontal > 0.05)
-        {
-            chart.ActualWindowScaleHorizontal -= 0.05;
-        }
-        if (chart.ActualWindowScaleVertical > 0.05)
-        {
-            chart.ActualWindowScaleVertical -= 0.05;
-        }
+        // The window's position and scale are read-only here, unlike on the web platforms: the chart
+        // has a method that moves both together, by the same fraction the web handler applies.
+        chart.ZoomIn(0.05);
     }
     //end eventHandler
 }

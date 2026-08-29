@@ -7,7 +7,7 @@ using Infragistics.Controls.Charts;
 public class DataChartUserAnnotationRequested
 {
     //begin eventHandler
-    //WPF: Infragistics.Controls.Charts.UserAnnotationInformationEventHandler
+    //WPF: Infragistics.Controls.Charts.UserAnnotationInformationRequestedEventHandler
     public void DataChartUserAnnotationRequested(object sender, UserAnnotationInformationEventArgs args)
     {
         var fields = new UserAnnotationFlowFields();

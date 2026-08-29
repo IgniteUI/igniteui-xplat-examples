@@ -1,4 +1,5 @@
 //begin imports
+using System.Windows.Media;
 using Infragistics.Controls.Layouts;
 using Infragistics.Controls.Charts;
 //end imports
@@ -31,8 +32,8 @@ public static class UserAnnotationFlow
         pending = info;
         fields.Label.PrimitiveValue = info.Label == null ? "" : info.Label;
         fields.Details.PrimitiveValue = info.AnnotationData == null ? "" : info.AnnotationData;
-        fields.MainColor.PrimitiveValue = info.MainColor == null ? "black" : info.MainColor;
-        fields.BadgeColor.PrimitiveValue = info.BadgeColor == null ? "black" : info.BadgeColor;
+        fields.MainColor.PrimitiveValue = info.MainColor == null ? "black" : System.Convert.ToString(info.MainColor);
+        fields.BadgeColor.PrimitiveValue = info.BadgeColor == null ? "black" : System.Convert.ToString(info.BadgeColor);
     }
 
     public static void Finish(XamDataChart chart, UserAnnotationFlowFields fields)
@@ -43,10 +44,21 @@ public static class UserAnnotationFlow
         }
         pending.Label = System.Convert.ToString(fields.Label.PrimitiveValue);
         pending.AnnotationData = System.Convert.ToString(fields.Details.PrimitiveValue);
-        pending.MainColor = System.Convert.ToString(fields.MainColor.PrimitiveValue);
-        pending.BadgeColor = System.Convert.ToString(fields.BadgeColor.PrimitiveValue);
+        pending.MainColor = ToBrush(fields.MainColor.PrimitiveValue);
+        pending.BadgeColor = ToBrush(fields.BadgeColor.PrimitiveValue);
         chart.FinishAnnotationFlow(pending);
         pending = null;
+    }
+
+    /// <summary>The colour the editor holds as text, as the brush an annotation is drawn with.</summary>
+    private static Brush ToBrush(object value)
+    {
+        var text = System.Convert.ToString(value);
+        if (string.IsNullOrEmpty(text))
+        {
+            return null;
+        }
+        return (Brush)new BrushConverter().ConvertFromString(text);
     }
 
     public static void Cancel(XamDataChart chart)

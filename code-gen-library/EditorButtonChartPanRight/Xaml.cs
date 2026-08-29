@@ -11,7 +11,11 @@ public class EditorButtonChartPanRight
     public void EditorButtonChartPanRight(object sender, PropertyEditorPropertyDescriptionButtonClickEventArgs args)
     {
         var chart = CodeGenHelper.GetDescription<XamDataChart>("content");
-        chart.ActualWindowPositionHorizontal += 0.05;
+        // The window's position is read-only here, so the window rectangle it is a shortcut to is
+        // what moves. Taken as it stands rather than named, since the type it is differs by platform.
+        var rect = chart.ActualWindowRect;
+        rect.X += 0.05;
+        chart.WindowRect = rect;
     }
     //end eventHandler
 }
