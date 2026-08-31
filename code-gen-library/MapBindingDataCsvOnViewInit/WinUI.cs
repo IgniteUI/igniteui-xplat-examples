@@ -41,7 +41,6 @@ public class MapBindingDataCsvOnViewInit
                 Population = double.Parse(columns[3])
             });
         }
-#if !TESTING
         var series = new GeographicHighDensityScatterSeries
         {
             Name = "hdSeries",
@@ -56,7 +55,6 @@ public class MapBindingDataCsvOnViewInit
             MouseOverEnabled = true
         };
         map.Series.Add(series);
-#endif
 
         var geoBounds = new Infragistics.Controls.IGRect(-130, 15, Math.Abs(-130 + 65), Math.Abs(50 - 15));
         map.ZoomToGeographic(geoBounds);

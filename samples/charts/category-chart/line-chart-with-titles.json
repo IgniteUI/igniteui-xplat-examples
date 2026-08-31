@@ -1,0 +1,32 @@
+{
+  "descriptions": {
+    "content": {
+      "type": "CategoryChart",
+      "name": "chart",
+      "dataSourceRef": "EnergyRenewableGeneration",
+      "includedProperties": [ "Year", "Europe", "China", "America" ],
+      "chartType": "Line",
+      "isHorizontalZoomEnabled": false,
+      "isVerticalZoomEnabled": false,
+      "computedPlotAreaMarginMode": "Series",
+      "chartTitle": "Renewable Electricity Generated",
+      "titleAlignment": "Left",
+      "titleTextColor": "gray",
+      "titleTextStyle": "16pt 'Titillium Web'",
+      "titleTopMargin": 10,
+      "titleLeftMargin": 10,
+      "titleBottomMargin": 5,
+      "subtitle": "Trillions of Watt-hours by region, 2009 to 2019",
+      "subtitleAlignment": "Left",
+      "subtitleTextColor": "gray",
+      "subtitleTextStyle": "10pt 'Titillium Web'",
+      "subtitleLeftMargin": 10,
+      "subtitleBottomMargin": 10,
+      "xAxisTitle": "Year",
+      "yAxisTitle": "Trillions of Watt-hours (TWh)"
+    }
+  },
+  "modules": [
+    "charts/CategoryChartModule"
+  ]
+}

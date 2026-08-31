@@ -1,0 +1,63 @@
+{
+  "descriptions": {
+    "content": {
+      "type": "DataChart",
+      "name": "chart",
+      "isHorizontalZoomEnabled": true,
+      "isVerticalZoomEnabled": true,
+      "axes": [
+        {
+          "type": "CategoryXAxis",
+          "name": "xAxisShared",
+          "dataSourceRef": "StockTesla",
+          "label": "Date"
+        },
+        {
+          "type": "NumericYAxis",
+          "name": "yAxisRight",
+          "labelLocation": "OutsideRight",
+          "title": "Stock Price ($)"
+        },
+        {
+          "type": "NumericYAxis",
+          "name": "yAxisLeft",
+          "labelLocation": "OutsideLeft",
+          "title": "Trade Volume",
+          "majorStrokeThickness": 0,
+          "abbreviateLargeNumbers": true
+        }
+      ],
+      "series": [
+        {
+          "type": "ColumnSeries",
+          "name": "volumeSeries",
+          "xAxisRef": "xAxisShared",
+          "yAxisRef": "yAxisLeft",
+          "dataSourceRef": "StockTesla",
+          "valueMemberPath": "Volume"
+        },
+        {
+          "type": "FinancialPriceSeries",
+          "name": "stockSeries",
+          "xAxisRef": "xAxisShared",
+          "yAxisRef": "yAxisRight",
+          "dataSourceRef": "StockTesla",
+          "displayType": "Candlestick",
+          "highMemberPath": "High",
+          "lowMemberPath": "Low",
+          "closeMemberPath": "Close",
+          "openMemberPath": "Open"
+        }
+      ]
+    }
+  },
+  "modules": [
+    "charts/DataChartCoreModule",
+    "charts/DataChartCategoryModule",
+    "charts/DataChartCategoryCoreModule",
+    "charts/DataChartFinancialCoreModule",
+    "charts/DataChartFinancialModule",
+    "charts/DataChartInteractivityModule",
+    "charts/NumberAbbreviatorModule"
+  ]
+}
