@@ -1,6 +1,6 @@
 //begin imports
 import { IgcPropertyEditorPropertyDescriptionChangedEventArgs } from 'igniteui-webcomponents-layouts';
-import { IgcDataGridComponent } from 'igniteui-webcomponents-grids';
+import { IgcDataGridComponent } from 'igniteui-webcomponents-data-grids';
 //end imports
 
 import { CodeGenHelper } from 'igniteui-webcomponents-core';

@@ -1,0 +1,55 @@
+name: Web Components sample runtime
+
+on:
+  pull_request:
+  schedule:
+    - cron: '0 4 * * *'
+  workflow_dispatch:
+    inputs:
+      filter:
+        description: Only samples whose path contains this value
+        required: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: sample-runtime-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  load:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Build the product adapter
+        working-directory: tooling
+        run: |
+          npm ci
+          npm run build
+      - name: Install the runtime harness and Chromium
+        working-directory: tooling/runtime
+        run: |
+          npm ci
+          npx playwright install --with-deps chromium
+      - name: Load emitted samples in Chromium
+        working-directory: tooling/runtime
+        run: >-
+          node run.mjs --samples --skip-browser-install
+          ${{ inputs.filter && format('--filter={0}', inputs.filter) || '' }}
+      - name: Keep emitted runtime library and blank screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: sample-runtime-output
+          path: |
+            tooling/runtime/generated
+            tooling/runtime/blank-shots
+          if-no-files-found: ignore
+          retention-days: 7

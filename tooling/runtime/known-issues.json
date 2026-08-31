@@ -1,0 +1,6 @@
+[
+  {
+    "sample": "maps/geo-map/geo-symbol-map-with-callouts.json",
+    "reason": "The published beta faults while constructing the callout layer."
+  }
+]

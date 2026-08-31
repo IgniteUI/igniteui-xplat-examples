@@ -1,0 +1,44 @@
+name: Cross-platform code generation
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: codegen-validation-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  emit:
+    name: Emit every sample (${{ matrix.platform }})
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    strategy:
+      fail-fast: false
+      matrix:
+        platform: [Angular, React, WebComponents, Blazor, WPF, WinUI, Uno]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Use Node.js 24.x
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: tooling/package-lock.json
+
+      - name: Install and build the exporter
+        working-directory: tooling
+        run: |
+          npm ci
+          npm run build
+
+      - name: Emit every sample
+        run: node tooling/src/cli.mjs check --platform=${{ matrix.platform }}

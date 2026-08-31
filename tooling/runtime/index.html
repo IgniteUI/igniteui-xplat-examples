@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>sample load check</title>
+    <style>
+      /* A clean plate: white, and nothing of the harness's own drawn over it, so a screenshot that is
+         still entirely white means the sample rendered nothing. */
+      html, body { margin: 0; height: 100%; font-family: sans-serif; background: #ffffff; }
+      #root { background: #ffffff; }
+      /* The containers a sample's descriptions are keyed to. Sized, because a component measuring
+         zero can take a different path through its layout than one on a real page, and this check
+         is about whether the ordinary path works. */
+      #root { display: flex; flex-direction: column; height: 100%; }
+      #content { flex: 1 1 auto; min-height: 400px; }
+      #editor, #legend, #aboveContent, #aboveContentLeft, #aboveContentRight,
+      #belowContent, #leftContent, #rightContent { flex: 0 0 auto; }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <div id="editor"></div>
+      <div id="aboveContent"></div>
+      <div id="aboveContentLeft"></div>
+      <div id="aboveContentRight"></div>
+      <div id="legend"></div>
+      <div id="content"></div>
+      <div id="leftContent"></div>
+      <div id="rightContent"></div>
+      <div id="belowContent"></div>
+    </div>
+    <script type="module" src="./harness.js"></script>
+  </body>
+</html>

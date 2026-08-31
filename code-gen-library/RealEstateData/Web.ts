@@ -1,7 +1,7 @@
 //begin imports
 //end imports
 
-//begin async data
+//begin data
 export class RealEstateData extends Array<RealEstateDataItem> {
 
     public constructor(count?: number) {
@@ -140,4 +140,4 @@ class RealEstateDataGenerator {
         return "https://static.infragistics.com/xplatform/images/flags/" + country + ".png";
     }
 }
-//end async data
+//end data

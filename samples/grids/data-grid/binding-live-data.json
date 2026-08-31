@@ -1,5 +1,6 @@
 {
   "skipAlterDataCasing": true,
+  "runtimeContinuous": true,
   "onViewInit": ["DataGridLiveDataTickerOnViewInit"],
   "descriptions": {
     "editor": {
@@ -103,6 +104,6 @@
   "modules": [
     "withDescriptions",
     "layouts/PropertyEditorPanelModule",
-    "grids/DataGridModule"
+    "data-grids/DataGridModule"
   ]
 }
