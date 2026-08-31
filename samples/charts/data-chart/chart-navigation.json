@@ -1,0 +1,118 @@
+{
+  "descriptions": {
+    "editor": {
+      "type": "PropertyEditorPanel",
+      "componentRendererRef": "renderer",
+      "targetRef": "chart",
+      "descriptionType": "DataChart",
+      "isHorizontal": true,
+      "isWrappingEnabled": true,
+      "properties": [
+        { "type": "PropertyEditorPropertyDescription", "propertyPath": "PanUp", "label": "", "valueType": "Button", "primitiveValue": "Pan Up", "buttonClickedRef": "EditorButtonChartPanUp" },
+        { "type": "PropertyEditorPropertyDescription", "propertyPath": "PanDown", "label": "", "valueType": "Button", "primitiveValue": "Pan Down", "buttonClickedRef": "EditorButtonChartPanDown" },
+        { "type": "PropertyEditorPropertyDescription", "propertyPath": "PanLeft", "label": "", "valueType": "Button", "primitiveValue": "Pan Left", "buttonClickedRef": "EditorButtonChartPanLeft" },
+        { "type": "PropertyEditorPropertyDescription", "propertyPath": "PanRight", "label": "", "valueType": "Button", "primitiveValue": "Pan Right", "buttonClickedRef": "EditorButtonChartPanRight" },
+        { "type": "PropertyEditorPropertyDescription", "propertyPath": "ZoomIn", "label": "", "valueType": "Button", "primitiveValue": "Zoom In", "buttonClickedRef": "EditorButtonChartZoomIn" },
+        { "type": "PropertyEditorPropertyDescription", "propertyPath": "ZoomOut", "label": "", "valueType": "Button", "primitiveValue": "Zoom Out", "buttonClickedRef": "EditorButtonChartZoomOut" },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "PanModifier",
+          "name": "PanModifier",
+          "label": "Pan Modifier",
+          "shouldOverrideDefaultEditor": true,
+          "valueType": "EnumValue",
+          "dropDownNames": [ "Alt", "Control", "Shift", "Windows", "Apple", "None" ],
+          "dropDownValues": [ "Alt", "Control", "Shift", "Windows", "Apple", "None" ],
+          "primitiveValue": "Alt"
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "DragModifier",
+          "name": "DragModifier",
+          "label": "Zoom Modifier",
+          "shouldOverrideDefaultEditor": true,
+          "valueType": "EnumValue",
+          "dropDownNames": [ "Alt", "Control", "Shift", "Windows", "Apple", "None" ],
+          "dropDownValues": [ "Alt", "Control", "Shift", "Windows", "Apple", "None" ],
+          "primitiveValue": "Shift"
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "DefaultInteraction",
+          "name": "DefaultInteraction",
+          "label": "Interaction",
+          "shouldOverrideDefaultEditor": true,
+          "valueType": "EnumValue",
+          "dropDownNames": [ "DragZoom", "DragPan", "None" ],
+          "dropDownValues": [ "DragZoom", "DragPan", "None" ],
+          "primitiveValue": "DragPan"
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "IsHorizontalZoomEnabled",
+          "name": "IsHorizontalZoomEnabled",
+          "label": "Zooming",
+          "shouldOverrideDefaultEditor": true,
+          "valueType": "Boolean",
+          "primitiveValue": true
+        }
+      ]
+    },
+    "content": {
+      "type": "DataChart",
+      "name": "chart",
+      "subtitle": "Stock Prices Series in Candlestick Display Type",
+      "subtitleTopMargin": 10,
+      "isHorizontalZoomEnabled": true,
+      "isVerticalZoomEnabled": true,
+      "panModifier": "Alt",
+      "dragModifier": "Shift",
+      "defaultInteraction": "DragPan",
+      "axes": [
+        {
+          "type": "CategoryXAxis",
+          "name": "xAxis",
+          "dataSourceRef": "StockTesla",
+          "label": "Date"
+        },
+        {
+          "type": "NumericYAxis",
+          "name": "yAxis",
+          "title": "Amount (in USD)",
+          "titleRightMargin": 10,
+          "labelRightMargin": 10,
+          "labelHorizontalAlignment": "Left",
+          "labelLocation": "OutsideRight"
+        }
+      ],
+      "series": [
+        {
+          "type": "FinancialPriceSeries",
+          "name": "priceSeries",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "dataSourceRef": "StockTesla",
+          "displayType": "Candlestick",
+          "openMemberPath": "Open",
+          "closeMemberPath": "Close",
+          "highMemberPath": "High",
+          "lowMemberPath": "Low",
+          "volumeMemberPath": "Volume",
+          "showDefaultTooltip": true,
+          "isTransitionInEnabled": true,
+          "title": "Price"
+        }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
+    "charts/DataChartCoreModule",
+    "charts/DataChartCategoryModule",
+    "charts/DataChartCategoryCoreModule",
+    "charts/DataChartFinancialCoreModule",
+    "charts/DataChartFinancialModule",
+    "charts/DataChartInteractivityModule"
+  ]
+}

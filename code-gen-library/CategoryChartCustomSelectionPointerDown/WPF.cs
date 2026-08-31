@@ -1,5 +1,6 @@
 //begin imports
 using Infragistics.Controls.Charts;
+using System.Collections;
 //end imports
 
 public class CategoryChartCustomSelectionPointerDown
@@ -11,13 +12,13 @@ public class CategoryChartCustomSelectionPointerDown
         var selectedItem = args.Item as SelectableDataItem;
         if (selectedItem == null) return;
 
-        // Toggling the value is the whole of it here. This platform has no NotifySetItem to call --
-        // it follows the item's own change notification instead, which is why the index the other
-        // platforms pass along is not needed.
         if (selectedItem.SelectedValue == selectedItem.DataValue)
             selectedItem.SelectedValue = double.NaN;
         else
             selectedItem.SelectedValue = selectedItem.DataValue;
+
+        // Nothing tells the chart on this platform: the data it was given is observable and its items
+        // raise the change themselves, which is what setting the value above has just done.
     }
     //end eventHandler
 }

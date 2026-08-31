@@ -1,0 +1,15 @@
+<!--begin template-->
+<!--begin content-->
+<DataTemplate x:Key="DataChartAirplaneSeatTooltipTemplate">
+    <!-- A seat is identified by where it is and what it costs. The two things the plan is coloured
+         by, its cabin class and whether it is sold, are named here as well, so the colour under the
+         pointer can be read rather than guessed at from the legend. -->
+    <StackPanel Orientation="Vertical" Margin="5">
+        <TextBlock Text="{Binding Item.Class, StringFormat='Class: {0}'}" />
+        <TextBlock Text="{Binding Item.Seat, StringFormat='Seat: {0}'}" />
+        <TextBlock Text="{Binding Item.Price, StringFormat='Price: ${0}'}" />
+        <TextBlock Text="{Binding Item.Status, StringFormat='Status: {0}'}" />
+    </StackPanel>
+</DataTemplate>
+<!--end content-->
+<!--end template-->

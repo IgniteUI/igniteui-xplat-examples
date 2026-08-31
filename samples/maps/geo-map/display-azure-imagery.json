@@ -1,0 +1,89 @@
+{
+  "descriptions": {
+    "editor": {
+      "type": "PropertyEditorPanel",
+      "componentRendererRef": "renderer",
+      "targetRef": "map",
+      "descriptionType": "GeographicMap",
+      "isHorizontal": true,
+      "isWrappingEnabled": true,
+      "properties": [
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "Series[0 as GeographicTileSeries].TileImagery.ImageryStyle",
+          "name": "ImageryStyle",
+          "label": "Imagery Style",
+          "shouldOverrideDefaultEditor": true,
+          "valueType": "EnumValue",
+          "dropDownNames": [
+            "Road",
+            "Satellite",
+            "DarkGrey",
+            "LabelsRoadOverlay",
+            "LabelsDarkGreyOverlay",
+            "HybridRoadOverlay",
+            "HybridDarkGreyOverlay",
+            "TerraOverlay",
+            "WeatherRadarOverlay",
+            "WeatherInfraredOverlay",
+            "TrafficAbsoluteOverlay",
+            "TrafficRelativeOverlay",
+            "TrafficRelativeDarkOverlay",
+            "TrafficDelayOverlay",
+            "TrafficReducedOverlay"
+          ],
+          "dropDownValues": [
+            "Road",
+            "Satellite",
+            "DarkGrey",
+            "LabelsRoadOverlay",
+            "LabelsDarkGreyOverlay",
+            "HybridRoadOverlay",
+            "HybridDarkGreyOverlay",
+            "TerraOverlay",
+            "WeatherRadarOverlay",
+            "WeatherInfraredOverlay",
+            "TrafficAbsoluteOverlay",
+            "TrafficRelativeOverlay",
+            "TrafficRelativeDarkOverlay",
+            "TrafficDelayOverlay",
+            "TrafficReducedOverlay"
+          ],
+          "primitiveValue": "Satellite"
+        }
+      ]
+    },
+    "content": {
+      "type": "GeographicMap",
+      "name": "map",
+      "zoomable": true,
+      "$setInCode": { "backgroundContent": ["webComponents", "react", "angular", "blazor"] },
+      "backgroundContent": {
+        "type": "AzureMapsImagery",
+        "name": "azureImagery",
+        "apiKey": "REPLACE_WITH_AZURE_KEY",
+        "imageryStyle": "Satellite"
+      },
+      "series": [
+        {
+          "type": "GeographicTileSeries",
+          "name": "imagerySeries",
+          "$setInCode": { "tileImagery": ["webComponents", "react", "angular", "blazor"] },
+          "tileImagery": {
+            "type": "AzureMapsImagery",
+            "name": "azureOverlay",
+            "apiKey": "REPLACE_WITH_AZURE_KEY",
+            "imageryStyle": "Satellite"
+          }
+        }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
+    "charts/DataChartInteractivityModule",
+    "maps/GeographicMapModule",
+    "maps/AzureMapsImageryModule"
+  ]
+}

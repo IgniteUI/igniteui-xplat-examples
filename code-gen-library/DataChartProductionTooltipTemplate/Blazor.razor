@@ -1,0 +1,36 @@
+//begin template
+@using IgniteUI.Blazor.Controls
+
+@code {
+    //begin content
+    public RenderFragment<IgbChartTooltipContext> DataChartProductionTooltipTemplate = (context) => {
+        // Every fuel is listed whichever column is hovered, so the reader sees the country's whole
+        // mix; the one the hovered series draws is tinted with that series' own brush so it can be
+        // picked out of the five.
+        return @<div class="ui-tooltip-content">
+            <div class="tooltipTitle">@context.Item.Country Production</div>
+            <div class="tooltipHorizontal" style="color: @(context.Series.ValueMemberPath == "Coal" ? context.Series.ActualBrush : "black")">
+                <label class="tooltipLbl" style="width: 4rem">Coal:</label>
+                <label class="tooltipVal">@context.Item.Coal</label>
+            </div>
+            <div class="tooltipHorizontal" style="color: @(context.Series.ValueMemberPath == "Hydro" ? context.Series.ActualBrush : "black")">
+                <label class="tooltipLbl" style="width: 4rem">Hydro:</label>
+                <label class="tooltipVal">@context.Item.Hydro</label>
+            </div>
+            <div class="tooltipHorizontal" style="color: @(context.Series.ValueMemberPath == "Nuclear" ? context.Series.ActualBrush : "black")">
+                <label class="tooltipLbl" style="width: 4rem">Nuclear:</label>
+                <label class="tooltipVal">@context.Item.Nuclear</label>
+            </div>
+            <div class="tooltipHorizontal" style="color: @(context.Series.ValueMemberPath == "Gas" ? context.Series.ActualBrush : "black")">
+                <label class="tooltipLbl" style="width: 4rem">Gas:</label>
+                <label class="tooltipVal">@context.Item.Gas</label>
+            </div>
+            <div class="tooltipHorizontal" style="color: @(context.Series.ValueMemberPath == "Oil" ? context.Series.ActualBrush : "black")">
+                <label class="tooltipLbl" style="width: 4rem">Oil:</label>
+                <label class="tooltipVal">@context.Item.Oil</label>
+            </div>
+        </div>;
+    };
+    //end content
+}
+//end template
