@@ -13,7 +13,7 @@ concurrency:
 
 jobs:
   emit:
-    name: Emit every sample (${{ matrix.platform }})
+    name: Emit affected samples (${{ matrix.platform }})
     runs-on: ubuntu-latest
     timeout-minutes: 45
     strategy:
@@ -40,5 +40,7 @@ jobs:
           npm ci
           npm run build
 
-      - name: Emit every sample
-        run: node tooling/src/cli.mjs check --platform=${{ matrix.platform }}
+      - name: Emit affected samples
+        run: >-
+          node tooling/src/cli.mjs check --platform=${{ matrix.platform }}
+          ${{ github.event_name == 'pull_request' && format('--changed-since={0}', github.event.pull_request.base.sha) || '' }}

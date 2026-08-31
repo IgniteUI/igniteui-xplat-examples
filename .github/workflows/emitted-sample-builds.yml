@@ -13,7 +13,7 @@ concurrency:
 
 jobs:
   build:
-    name: Build all ${{ matrix.platform }} samples (shard ${{ matrix.shard }})
+    name: Build affected ${{ matrix.platform }} samples (shard ${{ matrix.shard }})
     runs-on: ubuntu-latest
     timeout-minutes: 90
     strategy:
@@ -46,3 +46,4 @@ jobs:
           --platform=${{ matrix.platform }}
           --shard-index=${{ matrix.shard }}
           --shard-total=12
+          ${{ github.event_name == 'pull_request' && format('--changed-since={0}', github.event.pull_request.base.sha) || '' }}

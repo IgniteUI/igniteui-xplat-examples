@@ -7,6 +7,8 @@ import { CodeGenHelper } from 'igniteui-webcomponents-core';
 
 export class DataGridLoadLayout {
     //begin eventHandler
+    public savedLayout: string = "";
+
     public dataGridLoadLayout(sender: any, args: IgcPropertyEditorPropertyDescriptionButtonClickEventArgs): void {
         if (!this.savedLayout) return;
         const grid = CodeGenHelper.getDescription<IgcDataGridComponent>("content");

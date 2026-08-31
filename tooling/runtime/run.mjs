@@ -464,27 +464,24 @@ function samples() {
         const allOutput = execFileSync('git', ['diff', '--name-only', '--diff-filter=ACMRD',
             `${CHANGED_SINCE}...HEAD`], { cwd: examples, encoding: 'utf8' });
         const allChanges = allOutput.split('\n').filter(Boolean);
+        const affectsEveryRuntimeSample = allChanges.some(name => name === 'config.json' ||
+            name.startsWith('tooling/runtime/') || name.startsWith('tooling/src/') ||
+            name === 'tooling/package.json' || name === 'tooling/package-lock.json');
         const output = execFileSync('git', ['diff', '--name-only', '--diff-filter=ACMR',
             `${CHANGED_SINCE}...HEAD`, '--', 'samples'], { cwd: examples, encoding: 'utf8' });
-        changed = new Set(output.split('\n').filter(name => name.endsWith('.json'))
-            .map(name => name.replace(/^samples\//, '')));
+        changed = affectsEveryRuntimeSample ? null : new Set(output.split('\n')
+            .filter(name => name.endsWith('.json')).map(name => name.replace(/^samples\//, '')));
         const libraryOutput = execFileSync('git', ['diff', '--name-only', '--diff-filter=ACMRD',
             `${CHANGED_SINCE}...HEAD`, '--', 'code-gen-library'], { cwd: examples, encoding: 'utf8' });
         const items = [...new Set(libraryOutput.split('\n').filter(Boolean)
             .map(name => name.split('/')[1]).filter(Boolean))];
-        if (items.length > 0) {
+        if (changed !== null && items.length > 0) {
             for (const file of found) {
                 const text = fs.readFileSync(file, 'utf8');
                 if (items.some(item => text.includes(`"${item}"`))) {
                     changed.add(path.relative(samplesDir, file).split(path.sep).join('/'));
                 }
             }
-        }
-        // A harness or product-adapter PR otherwise selects no samples and passes without opening
-        // Chromium. Keep one data-bound smoke sample in those runs so the changed path is exercised.
-        if (allChanges.some(name => name.startsWith('tooling/runtime/') ||
-            name.startsWith('tooling/src/') || name.startsWith('tooling/library-templates/'))) {
-            changed.add('charts/category-chart/data-aggregations.json');
         }
     }
     const relative = found

@@ -97,6 +97,16 @@ function exportSourcesFrom(opts) {
 
 function buildSourcesFrom(opts) {
     if (!opts['changed-since']) return sourcesFrom(opts);
+    const changes = changedPaths(opts['changed-since']);
+    // Project templates, platform/exclusion configuration, the generator itself, and the product
+    // package suite can change every emitted project even when no sample JSON changed. These are
+    // deliberately full-suite changes; sharding is applied after this impact set is calculated.
+    const affectsEverySample = changes.some(name => name === 'config.json' ||
+        name.startsWith('editor-templates/') || name.startsWith('tooling/src/') ||
+        name === 'tooling/package.json' || name === 'tooling/package-lock.json');
+    if (affectsEverySample) {
+        return walk(path.join(EXAMPLES_ROOT, 'samples'), file => file.endsWith('.json'));
+    }
     const direct = changedSamplePaths(opts['changed-since']).filter(fs.existsSync);
     const items = changedLibraryItems(opts['changed-since']);
     const impacted = items.length === 0 ? []
@@ -104,14 +114,7 @@ function buildSourcesFrom(opts) {
         const text = fs.readFileSync(file, 'utf8');
         return items.some(item => text.includes(`"${item}"`));
     });
-    const changes = changedPaths(opts['changed-since']);
-    const generatorChanged = changes.some(name => name === 'config.json' ||
-        name.startsWith('editor-templates/') || name.startsWith('tooling/src/'));
-    const smoke = generatorChanged ? [
-        path.join(EXAMPLES_ROOT, 'samples/gauges/linear-gauge/needle.json'),
-        path.join(EXAMPLES_ROOT, 'samples/charts/category-chart/data-aggregations.json'),
-    ].filter(fs.existsSync) : [];
-    return [...new Set([...direct, ...impacted, ...smoke])].sort();
+    return [...new Set([...direct, ...impacted])].sort();
 }
 
 function sourcesFrom(opts, includeDeleted = false) {

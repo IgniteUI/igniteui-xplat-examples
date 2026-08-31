@@ -6,9 +6,9 @@ import { IgcDataGridComponent } from 'igniteui-webcomponents-data-grids';
 import { CodeGenHelper } from 'igniteui-webcomponents-core';
 
 export class DataGridSaveLayout {
+    //begin eventHandler
     public savedLayout: string = "";
 
-    //begin eventHandler
     public dataGridSaveLayout(sender: any, args: IgcPropertyEditorPropertyDescriptionButtonClickEventArgs): void {
         const grid = CodeGenHelper.getDescription<IgcDataGridComponent>("content");
         if (!grid) return;

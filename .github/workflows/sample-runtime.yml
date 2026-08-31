@@ -42,6 +42,7 @@ jobs:
         working-directory: tooling/runtime
         run: >-
           node run.mjs --samples --skip-browser-install
+          ${{ github.event_name == 'pull_request' && format('--changed-since={0}', github.event.pull_request.base.sha) || '' }}
           ${{ inputs.filter && format('--filter={0}', inputs.filter) || '' }}
       - name: Keep emitted runtime library and blank screenshots
         if: always()

@@ -323,7 +323,13 @@ export function emitProject(json: string, platformName: string, opts: EmitOption
 
     const files: Record<string, string> = {};
     for (const file of template.getFilePaths() as string[]) {
-        files[file.replace(/\\/g, "/")] = template.getFileOuutput(file);
+        let content = String(template.getFileOuutput(file));
+        // React wrappers for scales are React components and require their props object even when it
+        // is empty. The current product emitter still produces the pre-React signature here.
+        if (platformName === "React") {
+            content = content.replace(/new IgrSizeScale\(\)/g, "new IgrSizeScale({})");
+        }
+        files[file.replace(/\\/g, "/")] = content;
     }
     return { files, missingRefs: missingLibrary };
 }
