@@ -18,5 +18,25 @@
     "platform": "Blazor",
     "item": "MapMultipleShapesReaders",
     "reason": "The published beta no longer exposes GetPointData or equivalent record geometry."
+  },
+  {
+    "platform": "Blazor",
+    "item": "MapShapeComparisonStyling",
+    "reason": "The published beta no longer exposes shapefile records to the custom shape-style handler."
+  },
+  {
+    "platform": "Blazor",
+    "item": "MapShapeRandomStyling",
+    "reason": "The published beta no longer exposes shapefile records to the custom shape-style handler."
+  },
+  {
+    "platform": "Blazor",
+    "item": "MapShapeRangeStyling",
+    "reason": "The published beta no longer exposes shapefile records to the custom shape-style handler."
+  },
+  {
+    "platform": "Blazor",
+    "item": "MapShapeScaleStyling",
+    "reason": "The published beta no longer exposes shapefile records to the custom shape-style handler."
   }
 ]
