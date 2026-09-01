@@ -77,6 +77,13 @@ node src/cli.mjs sample-build --platform=Blazor --source=../samples/gauges/linea
 node src/cli.mjs sample-build --platform=WebComponents --shard-index=0 --shard-total=12
 ```
 
+For local diagnostics, pass `--output` with a fresh scratch directory to preserve existing generated
+projects and failure evidence:
+
+```sh
+node src/cli.mjs sample-build --platform=Angular --source=../samples/charts/data-chart/overview.json --output=/tmp/xplat-angular-overview
+```
+
 Platform exclusion rules control downstream emission. An exclusion may set `"test": true` to keep
 that sample in the platform's validation and compile lanes without exporting it downstream. DataGrid
 uses this opt-in for Angular, React, Web Components, and Blazor. `check` and `sample-build` also accept

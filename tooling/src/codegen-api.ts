@@ -311,13 +311,17 @@ export function emitProject(json: string, platformName: string, opts: EmitOption
     }
     const dataGridCollections = platformName === "Angular" || platformName === "React"
         ? extractAngularDataGridCollections(json) : null;
+    const mapImagery = platformName === "Angular" || platformName === "React"
+        ? extractMapImagery(dataGridCollections?.json ?? json) : null;
+    const shapeData = platformName === "Angular" || platformName === "React"
+        ? extractShapeData(mapImagery?.json ?? dataGridCollections?.json ?? json) : null;
     const renderer: any = new CodeGeneratingComponentRenderer(platform, options);
     registerDescriptions(renderer);
 
     const template: any = new CodeGenerationFolderTemplate();
     template.fileAccess = fileAccess;
     template.loadTemplate(templateDirFor(opts.examplesRoot, platformName));
-    renderer.loadCodeJson(dataGridCollections?.json ?? json);
+    renderer.loadCodeJson(shapeData?.json ?? mapImagery?.json ?? dataGridCollections?.json ?? json);
     const result: any = renderer.emitCode(template);
 
     // The result includes description-local names and generated ComponentRenderer properties in
@@ -345,17 +349,202 @@ export function emitProject(json: string, platformName: string, opts: EmitOption
         if (dataGridCollections && dataGridCollections.grids.some(grid => grid.collections.length > 0)) {
             normalizeAngularDataGridCollections(files, dataGridCollections.grids);
         }
+        if (mapImagery && mapImagery.items.length > 0) {
+            normalizeAngularMapImagery(files, mapImagery.items);
+        }
+        if (shapeData && shapeData.items.length > 0) {
+            normalizeAngularShapeData(files, shapeData.items);
+        }
+        normalizeAngularTemplateColumns(files);
+        normalizeAngularPackageImports(files);
+        normalizeAngularDuplicateMembers(files);
         normalizeAngularEventBindings(files);
         normalizeAngularReferenceCasing(files);
-    } else if (platformName === "React" && dataGridCollections &&
-        dataGridCollections.grids.some(grid => grid.collections.length > 0)) {
-        normalizeReactDataGridCollections(files, dataGridCollections.grids);
+    } else if (platformName === "React") {
+        if (dataGridCollections && dataGridCollections.grids.some(grid => grid.collections.length > 0)) {
+            normalizeReactDataGridCollections(files, dataGridCollections.grids);
+        }
+        if (mapImagery && mapImagery.items.length > 0) normalizeReactMapImagery(files, mapImagery.items);
+        if (shapeData && shapeData.items.length > 0) normalizeReactShapeData(files, shapeData.items);
+        normalizeReactEmptyModelElements(files);
     }
     return { files, missingRefs: missingLibrary };
 }
 
 type AngularGridCollection = { property: string; className: string; itemClass: string; items: any[] };
 type AngularGridCollections = { name: string; collections: AngularGridCollection[] };
+type MapImageryModel = { mapName: string; name: string; className: string; value: Record<string, any> };
+type ShapeDataModel = {
+    seriesName: string;
+    seriesJsonName: string;
+    seriesClassName: string;
+    name: string;
+    value: Record<string, any>;
+};
+
+function extractMapImagery(json: string): { json: string; items: MapImageryModel[] } | null {
+    let parsed: any;
+    try { parsed = JSON.parse(json); } catch { return null; }
+    const items: MapImageryModel[] = [];
+    (function visit(node: any): void {
+        if (Array.isArray(node)) { node.forEach(visit); return; }
+        if (!node || typeof node !== "object") return;
+        const imagery = node.type === "GeographicMap" ? node.backgroundContent : null;
+        if (imagery && typeof imagery === "object" && typeof imagery.type === "string" &&
+            imagery.type.endsWith("Imagery")) {
+            const value = { ...imagery };
+            delete value.type; delete value.name;
+            items.push({
+                mapName: typeof node.name === "string" ? node.name : "",
+                name: typeof imagery.name === "string" ? imagery.name : `codegenBackground${items.length}`,
+                className: `Igx${imagery.type}`,
+                value,
+            });
+            // Angular map imagery is a model assigned to backgroundContent, not an Angular
+            // component with an element selector. Let the adapter materialize it in TypeScript.
+            delete node.backgroundContent;
+        }
+        Object.values(node).forEach(visit);
+    })(parsed.descriptions ?? parsed);
+    return { json: JSON.stringify(parsed), items };
+}
+
+function normalizeAngularMapImagery(files: Record<string, string>, items: MapImageryModel[]): void {
+    const tsName = Object.keys(files).find(name => name.endsWith("app.component.ts"));
+    if (!tsName) throw new Error("Angular template has no app component to receive map imagery");
+    if (items.some(item => !item.mapName)) throw new Error("Angular map imagery needs a named map");
+
+    let source = files[tsName];
+    const missingClasses = [...new Set(items.map(item => item.className))]
+        .filter(className => !new RegExp(`import\\s*\\{[^}]*\\b${className}\\b[^}]*\\}\\s*from\\s*['\"]igniteui-angular-maps['\"]`, "s").test(source));
+    if (missingClasses.length > 0) {
+        source = `import { ${missingClasses.sort().join(", ")} } from 'igniteui-angular-maps';\n` + source;
+    }
+    const declarations = items.map(item =>
+        `private readonly ${item.name} = Object.assign(new ${item.className}(), ${JSON.stringify(item.value)} as any);`);
+    const assignments = items.map(item => `this.${item.mapName}.backgroundContent = this.${item.name};`);
+    files[tsName] = source
+        .replace(/(export class AppComponent[^\{]*\{)/, `$1\n\t${declarations.join("\n\t")}`)
+        .replace(/(ngAfterViewInit\(\): void\s*\{)/, `$1\n\t\t${assignments.join("\n\t\t")}`);
+}
+
+function extractShapeData(json: string): { json: string; items: ShapeDataModel[] } | null {
+    let parsed: any;
+    try { parsed = JSON.parse(json); } catch { return null; }
+    const items: ShapeDataModel[] = [];
+    (function visit(node: any): void {
+        if (Array.isArray(node)) { node.forEach(visit); return; }
+        if (!node || typeof node !== "object") return;
+        const source = node.shapefileDataSource;
+        if (source && typeof source === "object" && source.type === "ShapeDataSource") {
+            const value = { ...source };
+            delete value.type; delete value.name;
+            items.push({
+                seriesName: typeof node.name === "string" ? lowerFirst(node.name) : "",
+                seriesJsonName: typeof node.name === "string" ? node.name : "",
+                seriesClassName: typeof node.type === "string" ? `Igr${node.type}` : "",
+                name: typeof source.name === "string" ? source.name : `codegenShapeData${items.length}`,
+                value,
+            });
+            delete node.shapefileDataSource;
+        }
+        Object.values(node).forEach(visit);
+    })(parsed.descriptions ?? parsed);
+    return { json: JSON.stringify(parsed), items };
+}
+
+function normalizeAngularShapeData(files: Record<string, string>, items: ShapeDataModel[]): void {
+    const tsName = Object.keys(files).find(name => name.endsWith("app.component.ts"));
+    if (!tsName) throw new Error("Angular template has no app component to receive shape data");
+    if (items.some(item => !item.seriesName)) throw new Error("Angular shape data needs a named series");
+    let source = files[tsName];
+    if (!/import\s*\{[^}]*\bIgxShapeDataSource\b[^}]*\}\s*from\s*['"]igniteui-angular-core['"]/s.test(source)) {
+        source = "import { IgxShapeDataSource } from 'igniteui-angular-core';\n" + source;
+    }
+    const declarations = items.map(item =>
+        `private readonly ${item.name} = Object.assign(new IgxShapeDataSource(), ${JSON.stringify(item.value)} as any);`);
+    const assignments = items.flatMap(item => [
+        `this.${item.seriesName}.shapefileDataSource = this.${item.name};`,
+        `this.${item.name}.dataBind();`,
+    ]);
+    files[tsName] = source
+        .replace(/(export class AppComponent[^\{]*\{)/, `$1\n\t${declarations.join("\n\t")}`)
+        .replace(/(ngAfterViewInit\(\): void\s*\{)/, `$1\n\t\t${assignments.join("\n\t\t")}`);
+}
+
+function lowerFirst(value: string): string {
+    return value.length > 0 ? value[0].toLowerCase() + value.slice(1) : value;
+}
+
+function normalizeAngularTemplateColumns(files: Record<string, string>): void {
+    const htmlName = Object.keys(files).find(name => name.endsWith("app.component.html"));
+    const tsName = Object.keys(files).find(name => name.endsWith("app.component.ts"));
+    if (!htmlName || !tsName) return;
+    const refs = new Set<string>();
+    files[htmlName] = files[htmlName].replace(
+        /(<igx-template-column\b(?:(?:"[^"]*")|[^>])*?)\s+\[template\]="([A-Za-z_$][\w$]*)"/gs,
+        (_whole, start, ref) => {
+            refs.add(ref);
+            return `${start}\n          (cellUpdating)="this.${ref}CellUpdating($event.sender, $event.args)"`;
+        });
+    if (refs.size === 0) return;
+
+    let source = files[tsName];
+    if (!/import\s*\{[^}]*\bIgxTemplateCellUpdatingEventArgs\b[^}]*\}\s*from\s*['"]igniteui-angular-data-grids['"]/s.test(source)) {
+        source = "import { IgxTemplateCellUpdatingEventArgs } from 'igniteui-angular-data-grids';\n" + source;
+    }
+    const handlers = [...refs].map(ref => `
+\tpublic ${ref}CellUpdating(sender: any, args: IgxTemplateCellUpdatingEventArgs): void {
+\t\tconst content = args.content;
+\t\tthis.codegenTemplateViews.get(content)?.destroy();
+\t\twhile (content.firstChild) content.removeChild(content.firstChild);
+\t\tconst view = this.${ref}.createEmbeddedView({ $implicit: args.cellInfo });
+\t\tview.detectChanges();
+\t\tfor (const node of view.rootNodes) content.appendChild(node);
+\t\tthis.codegenTemplateViews.set(content, view);
+\t}
+`).join("");
+    files[tsName] = source
+        .replace(/(export class AppComponent[^\{]*\{)/,
+            "$1\n\tprivate readonly codegenTemplateViews = new WeakMap<Element, { destroy(): void }>();")
+        .replace(/\n}\s*$/, `${handlers}\n}\n`);
+}
+
+function normalizeAngularPackageImports(files: Record<string, string>): void {
+    for (const name of Object.keys(files).filter(name => name.endsWith(".ts"))) {
+        // ZoomSlider is part of the charts package. The product renderer currently emits only its
+        // component type import through the former navigation package location.
+        files[name] = files[name].replace(
+            /from\s+(['"])igniteui-angular-navigation\1/g,
+            "from 'igniteui-angular-charts'");
+        files[name] = files[name].replace(
+            /from\s+(['"])igniteui-angular-grids\1/g,
+            "from 'igniteui-angular-data-grids'");
+    }
+}
+
+function normalizeAngularDuplicateMembers(files: Record<string, string>): void {
+    const tsName = Object.keys(files).find(name => name.endsWith("app.component.ts"));
+    if (!tsName) return;
+    files[tsName] = deduplicateSharedHolderState(files[tsName]);
+}
+
+function deduplicateSharedHolderState(source: string): string {
+    const seen = new Set<string>();
+    return source.split("\n").filter(line => {
+        const declaration = line.trim();
+        if (!/^(?:public|private|protected)\s+(?:readonly\s+)?[A-Za-z_$][\w$]*\s*(?::[^;=]+)?(?:=[^;]*)?;$/.test(declaration)) {
+            return true;
+        }
+        // Load and save are separate library holders but their event-handler regions are merged
+        // into one component. Only their intentionally shared state should be coalesced; identical
+        // declarations in distinct supporting classes must remain independent.
+        if (!/^(?:public|private|protected)\s+savedLayout\s*:/.test(declaration)) return true;
+        if (seen.has(declaration)) return false;
+        seen.add(declaration);
+        return true;
+    }).join("\n");
+}
 
 function extractAngularDataGridCollections(json: string): { json: string; grids: AngularGridCollections[] } | null {
     let parsed: any;
@@ -461,6 +650,72 @@ function normalizeReactDataGridCollections(files: Record<string, string>, grids:
     }
     source = `import { ${[...used].sort().join(", ")} } from 'igniteui-react-data-grids';\n` + source;
     files[sourceName] = source;
+}
+
+function normalizeReactMapImagery(files: Record<string, string>, items: MapImageryModel[]): void {
+    const sourceName = Object.keys(files).find(name => name.endsWith("index.tsx"));
+    if (!sourceName) throw new Error("React template has no index.tsx to receive map imagery");
+    if (items.some(item => !item.mapName)) throw new Error("React map imagery needs a named map");
+    let source = files[sourceName];
+    const classes = [...new Set(items.map(item => item.className.replace(/^Igx/, "Igr")))];
+    const missing = classes.filter(className =>
+        !new RegExp(`import\\s*\\{[^}]*\\b${className}\\b[^}]*\\}\\s*from\\s*['\"]igniteui-react-maps['\"]`, "s").test(source));
+    if (missing.length > 0) source = `import { ${missing.sort().join(", ")} } from 'igniteui-react-maps';\n` + source;
+    for (const item of items) {
+        const className = item.className.replace(/^Igx/, "Igr");
+        const declaration = `private ${item.name} = Object.assign(new ${className}(), ${JSON.stringify(item.value)} as any);`;
+        source = source
+            .replace(/(export default class Sample[^\{]*\{)/, `$1\n    ${declaration}`)
+            .replace(`this.${item.mapName} = r;`,
+                `this.${item.mapName} = r;\n        if (r) r.backgroundContent = this.${item.name};`);
+    }
+    files[sourceName] = source;
+}
+
+function normalizeReactShapeData(files: Record<string, string>, items: ShapeDataModel[]): void {
+    const sourceName = Object.keys(files).find(name => name.endsWith("index.tsx"));
+    if (!sourceName) throw new Error("React template has no index.tsx to receive shape data");
+    if (items.some(item => !item.seriesName || !item.seriesJsonName || !item.seriesClassName)) {
+        throw new Error("React shape data needs a named series");
+    }
+    let source = files[sourceName];
+    if (!/import\s*\{[^}]*\bIgrShapeDataSource\b[^}]*\}\s*from\s*['"]igniteui-react-core['"]/s.test(source)) {
+        source = "import { IgrShapeDataSource } from 'igniteui-react-core';\n" + source;
+    }
+    for (const item of items) {
+        const declaration = `private ${item.name} = Object.assign(new IgrShapeDataSource(), ${JSON.stringify(item.value)} as any);`;
+        const refName = `${item.seriesName}Ref`;
+        const method = `
+    private ${refName}(r: ${item.seriesClassName}) {
+        this.${item.seriesName} = r;
+        if (r) {
+            r.shapefileDataSource = this.${item.name};
+            this.${item.name}.dataBind();
+        }
+    }
+`;
+        source = source
+            .replace(/(export default class Sample[^\{]*\{)/, `$1\n    ${declaration}${method}`)
+            .replace(/(super\(props\);)/, `$1\n        this.${refName} = this.${refName}.bind(this);`);
+        const tagPattern = new RegExp(`<${item.seriesClassName}\\b((?:"[^"]*"|[^>])*)>`, "gs");
+        source = source.replace(tagPattern, (tag, attributes) => {
+            if (!attributes.includes(`name="${item.seriesJsonName}"`) || attributes.includes("ref={")) return tag;
+            return `<${item.seriesClassName}${attributes}\n                        ref={this.${refName}}>`;
+        });
+    }
+    files[sourceName] = source;
+}
+
+function normalizeReactEmptyModelElements(files: Record<string, string>): void {
+    for (const name of Object.keys(files).filter(name => name.endsWith(".tsx"))) {
+        files[name] = files[name]
+            .replace(/from\s+(['"])igniteui-react-navigation\1/g, "from 'igniteui-react-charts'")
+            .replace(/from\s+(['"])igniteui-react-grids\1/g, "from 'igniteui-react-data-grids'")
+            .replace(
+                /<IgrRadialGaugeRange\b((?:(?:"[^"]*")|[^>])*)>\s*<\/IgrRadialGaugeRange>/gs,
+                "<IgrRadialGaugeRange$1 />");
+        files[name] = deduplicateSharedHolderState(files[name]);
+    }
 }
 
 function normalizeReactChartSyncProps(content: string): string {

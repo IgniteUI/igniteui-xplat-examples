@@ -462,7 +462,11 @@ async function main() {
             console.log(`[${opts.platform}] no samples in this selection`);
             return;
         }
-        const output = path.join(TOOLING_ROOT, '.generated', 'samples', opts.platform);
+        // A fresh explicit output keeps local diagnostics isolated from prior generated evidence.
+        // CI uses the stable workspace-local default because its checkout is disposable.
+        const output = opts.output
+            ? path.resolve(String(opts.output))
+            : path.join(TOOLING_ROOT, '.generated', 'samples', opts.platform);
         safelyEmpty(output, path.dirname(output));
         const destinations = emitFiles(api, opts.platform, files, output, {
             clean: true,
@@ -539,7 +543,7 @@ async function main() {
         }
         return;
     }
-    console.log('Usage:\n  xplat-codegen export --platform NAME --source PATH --output PATH [--clean] [--changed-since REF]\n  xplat-codegen check [--changed-since REF] [--platform A,B] [--include-excluded]\n  xplat-codegen sample-build --platform NAME [--changed-since REF | --source PATH] [--limit N] [--shard-index N --shard-total N] [--include-excluded] [--include-web-grids]\n  xplat-codegen library --platform NAME --output PATH [--only A,B] [--clean]\n  xplat-codegen library-check --platform NAME [--changed-since REF | --only A,B | --all]\n  xplat-codegen snippets --source PATH --output PATH [--platform A,B]');
+    console.log('Usage:\n  xplat-codegen export --platform NAME --source PATH --output PATH [--clean] [--changed-since REF]\n  xplat-codegen check [--changed-since REF] [--platform A,B] [--include-excluded]\n  xplat-codegen sample-build --platform NAME [--changed-since REF | --source PATH] [--output PATH] [--limit N] [--shard-index N --shard-total N] [--include-excluded] [--include-web-grids]\n  xplat-codegen library --platform NAME --output PATH [--only A,B] [--clean]\n  xplat-codegen library-check --platform NAME [--changed-since REF | --only A,B | --all]\n  xplat-codegen snippets --source PATH --output PATH [--platform A,B]');
 }
 
 main().catch(error => fail(error.stack ?? error.message));
