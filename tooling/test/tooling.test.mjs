@@ -143,6 +143,12 @@ test('emits React map imagery as a model and empty gauge ranges without children
     assert.match(bubble, /IgrSizeScale[^;]+igniteui-react-charts/s);
     assert.doesNotMatch(bubble, /IgrSizeScale[^;]+igniteui-react-maps/s);
 
+    const area = emit('maps/geo-map/type-scatter-area-series.json').files['src/index.tsx'];
+    assert.match(area, /IgrCustomPaletteColorScale[^;]+igniteui-react-charts/s);
+    assert.doesNotMatch(area, /IgrCustomPaletteColorScale[^;]+igniteui-react-maps/s);
+    assert.doesNotMatch(area, /<IgrCustomPaletteColorScale[^>]+\bpalette=/s);
+    assert.match(area, /r\.palette = \["rgba\(32, 146, 252, 0\.5019607843137255\)"/);
+
     const styling = emit('maps/geo-map/shape-styling-random.json').files['src/index.tsx'];
     assert.match(styling, /Style[^;]+igniteui-react-core/s);
     assert.match(styling, /IgrGeographicShapeSeriesBase/);

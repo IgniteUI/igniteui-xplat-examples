@@ -367,6 +367,7 @@ export function emitProject(json: string, platformName: string, opts: EmitOption
         if (mapImagery && mapImagery.items.length > 0) normalizeReactMapImagery(files, mapImagery.items);
         if (shapeData && shapeData.items.length > 0) normalizeReactShapeData(files, shapeData.items);
         normalizeReactEmptyModelElements(files);
+        normalizeReactCustomPaletteColorScales(files);
         normalizeReactPackageImports(files);
     } else if (platformName === "WebComponents") {
         if (mapImagery && mapImagery.items.length > 0) normalizeWebComponentsMapImagery(files, mapImagery.items);
@@ -759,11 +760,27 @@ function normalizeReactEmptyModelElements(files: Record<string, string>): void {
     }
 }
 
+function normalizeReactCustomPaletteColorScales(files: Record<string, string>): void {
+    for (const name of Object.keys(files).filter(name => name.endsWith(".tsx"))) {
+        files[name] = files[name].replace(
+            /<IgrCustomPaletteColorScale\b([^>]*)\bpalette="([^"]+)"([^>]*)>/g,
+            (_whole, before: string, palette: string, after: string) => {
+                const functional = palette.match(/(?:rgba?|hsla?)\([^)]*\)/gi);
+                const colors = functional?.length ? functional : palette.trim().split(/\s+/).filter(Boolean);
+                return `<IgrCustomPaletteColorScale${before}${after}\n` +
+                    `                            ref={(r) => { if (r) r.palette = ${JSON.stringify(colors)}; }}>`;
+            });
+    }
+}
+
 function normalizeReactPackageImports(files: Record<string, string>): void {
     for (const name of Object.keys(files).filter(name => name.endsWith(".tsx") || name.endsWith(".ts"))) {
         let source = files[name];
         source = moveNamedImports(source, "igniteui-react-maps", "igniteui-react-charts",
-            new Set(["IgrSizeScale", "IgrValueBrushScale", "IgrCalloutLayer"]));
+            new Set([
+                "IgrSizeScale", "IgrValueBrushScale", "IgrCustomPaletteColorScale",
+                "IgrLinearContourValueResolver", "IgrCalloutLayer",
+            ]));
         if (/\bnew Style\(\)|:\s*Style\b/.test(source) &&
             !/import\s*\{[^}]*\bStyle\b[^}]*\}\s*from\s*['"]igniteui-react-core['"]/s.test(source)) {
             source = "import { Style } from 'igniteui-react-core';\n" + source;
