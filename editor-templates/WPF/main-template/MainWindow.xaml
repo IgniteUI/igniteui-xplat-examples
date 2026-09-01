@@ -7,43 +7,98 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="500" Width="700"
         xmlns:ig="http://schemas.infragistics.com/xaml">
+    <!-- ifdef templateContents -->
+    <Window.Resources>
+      <!-- insert templateContents -->
+      <!-- end templateContents -->
+    </Window.Resources>
+    <!-- endifdef templateContents -->
     <Grid>
       <Grid.RowDefinitions>
         <RowDefinition Height="Auto" />
-        <RowDefinition Height="Auto" />
-        <RowDefinition Height="Auto" />
-        <RowDefinition Height="Auto" />
         <RowDefinition />
+        <RowDefinition Height="Auto" />
       </Grid.RowDefinitions>
-      <Grid Grid.Row="0">
-        <!-- insert editor -->
-        <!-- end editor-->
-      </Grid>
+      <StackPanel>
+        <!-- ifdef editor -->
+        <Grid>
+          <!-- insert editor -->
+          <!-- end editor-->
+        </Grid>
+        <!-- endifdef editor -->
+        <!-- ifdef legend -->
+        <Grid>
+          <!-- insert legend -->
+          <!-- end legend -->
+        </Grid>
+        <!-- endifdef legend -->
+        <!-- ifdef aboveContent -->
+        <Grid>
+          <!-- insert aboveContent -->
+          <!-- end aboveContent -->
+        </Grid>
+        <!-- endifdef aboveContent -->
+        <!-- ifdef aboveContentLeft, aboveContentRight -->
+        <Grid>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+          </Grid.ColumnDefinitions>
+          <!-- ifdef aboveContentLeft -->
+          <Grid Grid.Column="0" HorizontalAlignment="Left" Margin="10 0 0 0">
+            <!-- insert aboveContentLeft -->
+            <!-- end aboveContentLeft -->
+          </Grid>
+          <!-- endifdef aboveContentLeft -->
+          <!-- ifdef aboveContentRight -->
+          <Grid Grid.Column="1" HorizontalAlignment="Right" Margin="0 0 10 0">
+            <!-- insert aboveContentRight -->
+            <!-- end aboveContentRight -->
+          </Grid>
+          <!-- endifdef aboveContentRight -->
+        </Grid>
+        <!-- endifdef aboveContentLeft, aboveContentRight -->
+      </StackPanel>
       <Grid Grid.Row="1">
-        <!-- insert legend -->
-        <!-- end legend -->
-      </Grid>
-      <Grid Grid.Row="2">
-        <!-- insert aboveContent -->
-        <!-- end aboveContent -->
-      </Grid>
-      <Grid Grid.Row="3">
         <Grid.ColumnDefinitions>
-          <ColumnDefinition Width="*"/>
-          <ColumnDefinition Width="*"/>
+          <ColumnDefinition Width="Auto" />
+          <ColumnDefinition Width="*" />
+          <ColumnDefinition Width="Auto" />
         </Grid.ColumnDefinitions>
-        <Grid Grid.Column="0" HorizontalAlignment="Left" Margin="10 0 0 0">
-          <!-- insert aboveContentLeft -->
-          <!-- end aboveContentLeft -->
+        <!-- ifdef leftContent -->
+        <Grid Grid.Column="0">
+          <!-- insert leftContent -->
+          <!-- end leftContent -->
         </Grid>
-        <Grid Grid.Column="1" HorizontalAlignment="Right" Margin="0 0 10 0">
-          <!-- insert aboveContentRight -->
-          <!-- end aboveContentRight -->
+        <!-- endifdef leftContent -->
+        <Grid Grid.Column="1" x:Name="ContentRoot">
+          <!-- ifdef contentBottom -->
+          <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+          </Grid.RowDefinitions>
+          <!-- endifdef contentBottom -->
+          <!-- insert content -->
+          <!-- end content -->
+          <!-- ifdef contentBottom -->
+          <Grid Grid.Row="1">
+            <!-- insert contentBottom -->
+            <!-- end contentBottom -->
+          </Grid>
+          <!-- endifdef contentBottom -->
         </Grid>
+        <!-- ifdef rightContent -->
+        <Grid Grid.Column="2">
+          <!-- insert rightContent -->
+          <!-- end rightContent -->
+        </Grid>
+        <!-- endifdef rightContent -->
       </Grid>
-      <Grid Grid.Row="4">
-        <!-- insert content -->
-        <!-- end content -->
+      <!-- ifdef belowContent -->
+      <Grid Grid.Row="2">
+        <!-- insert belowContent -->
+        <!-- end belowContent -->
       </Grid>
+      <!-- endifdef belowContent -->
     </Grid>
 </Window>

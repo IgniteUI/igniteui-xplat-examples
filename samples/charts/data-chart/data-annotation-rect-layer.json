@@ -68,7 +68,7 @@
           "endLabelXDisplayMode": "Hidden",
           "startLabelYDisplayMode": "Hidden",
           "endLabelYDisplayMode": "Hidden",
-          "actualAreaFillOpacity": 0.1,
+          "areaFillOpacity": 0.1,
           "brush": "purple",
           "outline": "purple",
           "overlayTextColor": "purple",

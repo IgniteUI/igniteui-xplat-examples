@@ -1,0 +1,81 @@
+{
+  "hasAnimations": true,
+  "descriptions": {
+    "editor": {
+      "type": "PropertyEditorPanel",
+      "componentRendererRef": "renderer",
+      "targetRef": "chart",
+      "descriptionType": "CategoryChart",
+      "isHorizontal": true,
+      "isWrappingEnabled": true,
+      "properties": [
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "CalloutsVisible",
+          "name": "CalloutsVisible",
+          "label": "Callouts",
+          "shouldOverrideDefaultEditor": true,
+          "valueType": "Boolean",
+          "primitiveValue": true
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "CrosshairsAnnotationEnabled",
+          "name": "CrosshairsAnnotationEnabled",
+          "label": "Crosshair Annotations",
+          "shouldOverrideDefaultEditor": true,
+          "valueType": "Boolean",
+          "primitiveValue": true
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "CrosshairsDisplayMode",
+          "name": "CrosshairsDisplayMode",
+          "label": "Crosshairs",
+          "shouldOverrideDefaultEditor": true,
+          "valueType": "EnumValue",
+          "dropDownNames": [ "Both", "Horizontal", "Vertical", "None" ],
+          "dropDownValues": [ "Both", "Horizontal", "Vertical", "None" ],
+          "primitiveValue": "Both"
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "FinalValueAnnotationsVisible",
+          "name": "FinalValueAnnotationsVisible",
+          "label": "Final Values",
+          "shouldOverrideDefaultEditor": true,
+          "valueType": "Boolean",
+          "primitiveValue": true
+        }
+      ]
+    },
+    "content": {
+      "type": "CategoryChart",
+      "name": "chart",
+      "dataSourceRef": "EnergyRenewableGeneration",
+      "includedProperties": [ "Year", "America" ],
+      "chartType": "Line",
+      "subtitle": "Renewable Electricity Generated",
+      "isHorizontalZoomEnabled": false,
+      "isVerticalZoomEnabled": false,
+      "yAxisTitle": "TWh",
+      "yAxisLabelLocation": "OutsideRight",
+      "thickness": 2,
+      "calloutsVisible": true,
+      "calloutsXMemberPath": "Index",
+      "calloutsYMemberPath": "Value",
+      "calloutsLabelMemberPath": "Label",
+      "crosshairsSnapToData": false,
+      "crosshairsDisplayMode": "Both",
+      "crosshairsAnnotationEnabled": true,
+      "finalValueAnnotationsVisible": true,
+      "markerTypes": [ "Circle" ],
+      "computedPlotAreaMarginMode": "Series"
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
+    "charts/CategoryChartModule"
+  ]
+}

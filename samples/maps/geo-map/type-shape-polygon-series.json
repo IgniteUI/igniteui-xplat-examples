@@ -1,0 +1,29 @@
+{
+  "descriptions": {
+    "content": {
+      "type": "GeographicMap",
+      "name": "map",
+      "height": "100%",
+      "width": "100%",
+      "zoomable": true,
+      "series": [
+        {
+          "type": "GeographicShapeSeries",
+          "name": "GeographicShapeSeries1",
+          "shapefileDataSource": {
+            "type": "ShapeDataSource",
+            "shapefileSource": "https://static.infragistics.com/xplatform/shapes/world_countries_all.shp",
+            "databaseSource":  "https://static.infragistics.com/xplatform/shapes/world_countries_all.dbf"
+          },
+          "outline": "black",
+          "thickness": 0.5,
+          "markerCollisionAvoidance": "Omit"
+        }
+      ]
+    }
+  },
+  "modules": [
+    "charts/DataChartInteractivityModule",
+    "maps/GeographicMapModule"
+  ]
+}

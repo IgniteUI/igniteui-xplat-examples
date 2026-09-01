@@ -1,0 +1,102 @@
+{
+  "hasAnimations": true,
+  "strings": {
+    "legendTitle": "Average Monthly Temperatures"
+  },
+  "descriptions": {
+    "editor": {
+      "type": "PropertyEditorPanel",
+      "componentRendererRef": "renderer",
+      "targetRef": "chart",
+      "descriptionType": "CategoryChart",
+      "isHorizontal": true,
+      "isWrappingEnabled": true,
+      "properties": [
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "IsSeriesHighlightingEnabled",
+          "name": "IsSeriesHighlightingEnabled",
+          "label": "Highlight Series",
+          "shouldOverrideDefaultEditor": true,
+          "valueType": "Boolean",
+          "primitiveValue": true
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "IsCategoryHighlightingEnabled",
+          "name": "IsCategoryHighlightingEnabled",
+          "label": "Highlight Category",
+          "shouldOverrideDefaultEditor": true,
+          "valueType": "Boolean",
+          "primitiveValue": false
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "IsItemHighlightingEnabled",
+          "name": "IsItemHighlightingEnabled",
+          "label": "Highlight Item",
+          "shouldOverrideDefaultEditor": true,
+          "valueType": "Boolean",
+          "primitiveValue": false
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "HighlightingMode",
+          "name": "HighlightingMode",
+          "label": "Highlighting Mode",
+          "shouldOverrideDefaultEditor": true,
+          "valueType": "EnumValue",
+          "dropDownNames": [ "Auto", "Brighten", "BrightenSpecific", "FadeOthers", "FadeOthersSpecific", "None" ],
+          "dropDownValues": [ "Auto", "Brighten", "BrightenSpecific", "FadeOthers", "FadeOthersSpecific", "None" ],
+          "primitiveValue": "Auto"
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "HighlightingBehavior",
+          "name": "HighlightingBehavior",
+          "label": "Highlighting Behavior",
+          "shouldOverrideDefaultEditor": true,
+          "valueType": "EnumValue",
+          "dropDownNames": [ "Auto", "DirectlyOver", "NearestItems", "NearestItemsAndSeries", "NearestItemsRetainMainShapes" ],
+          "dropDownValues": [ "Auto", "DirectlyOver", "NearestItems", "NearestItemsAndSeries", "NearestItemsRetainMainShapes" ],
+          "primitiveValue": "Auto"
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "LegendHighlightingMode",
+          "name": "LegendHighlightingMode",
+          "label": "Legend Highlighting",
+          "shouldOverrideDefaultEditor": true,
+          "valueType": "EnumValue",
+          "dropDownNames": [ "Auto", "MatchSeries", "None" ],
+          "dropDownValues": [ "Auto", "MatchSeries", "None" ],
+          "primitiveValue": "Auto"
+        }
+      ]
+    },
+    "legend": {
+      "type": "Legend",
+      "name": "legend",
+      "orientation": "Horizontal"
+    },
+    "content": {
+      "type": "CategoryChart",
+      "name": "chart",
+      "dataSourceRef": "TemperatureRangeData",
+      "includedProperties": [ "Month", "HighNY", "HighLA" ],
+      "legendRef": "legend",
+      "xAxisInterval": 1,
+      "yAxisMinimumValue": 0,
+      "yAxisTitle": "Temperatures in Celsius",
+      "isSeriesHighlightingEnabled": true,
+      "isCategoryHighlightingEnabled": false,
+      "isItemHighlightingEnabled": false
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
+    "charts/LegendModule",
+    "charts/CategoryChartModule"
+  ]
+}

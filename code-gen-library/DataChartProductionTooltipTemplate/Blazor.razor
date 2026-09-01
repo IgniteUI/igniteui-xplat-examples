@@ -1,0 +1,38 @@
+//begin template
+@using IgniteUI.Blazor.Controls
+
+@code {
+    //begin content
+    public RenderFragment<IgbDataContext> DataChartProductionTooltipTemplate = (context) => {
+        dynamic item = context.Item;
+        dynamic series = context.Parent;
+        // Every fuel is listed whichever column is hovered, so the reader sees the country's whole
+        // mix; the one the hovered series draws is tinted with that series' own brush so it can be
+        // picked out of the five.
+        return @<div class="ui-tooltip-content">
+            <div class="tooltipTitle">@item.Country Production</div>
+            <div class="tooltipHorizontal" style="color: @(series.ValueMemberPath == "Coal" ? series.ActualBrush : "black")">
+                <label class="tooltipLbl" style="width: 4rem">Coal:</label>
+                <label class="tooltipVal">@item.Coal</label>
+            </div>
+            <div class="tooltipHorizontal" style="color: @(series.ValueMemberPath == "Hydro" ? series.ActualBrush : "black")">
+                <label class="tooltipLbl" style="width: 4rem">Hydro:</label>
+                <label class="tooltipVal">@item.Hydro</label>
+            </div>
+            <div class="tooltipHorizontal" style="color: @(series.ValueMemberPath == "Nuclear" ? series.ActualBrush : "black")">
+                <label class="tooltipLbl" style="width: 4rem">Nuclear:</label>
+                <label class="tooltipVal">@item.Nuclear</label>
+            </div>
+            <div class="tooltipHorizontal" style="color: @(series.ValueMemberPath == "Gas" ? series.ActualBrush : "black")">
+                <label class="tooltipLbl" style="width: 4rem">Gas:</label>
+                <label class="tooltipVal">@item.Gas</label>
+            </div>
+            <div class="tooltipHorizontal" style="color: @(series.ValueMemberPath == "Oil" ? series.ActualBrush : "black")">
+                <label class="tooltipLbl" style="width: 4rem">Oil:</label>
+                <label class="tooltipVal">@item.Oil</label>
+            </div>
+        </div>;
+    };
+    //end content
+}
+//end template

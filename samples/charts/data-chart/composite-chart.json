@@ -1,0 +1,136 @@
+{
+  "strings": {
+    "legendTitle": "Facebook Statement of Income 2019-2020"
+  },
+  "skipAlterDataCasing": true,
+  "descriptions": {
+    "legend": {
+      "type": "Legend",
+      "name": "legend",
+      "orientation": "Horizontal"
+    },
+    "content": {
+      "type": "DataChart",
+      "name": "chart",
+      "legendRef": "legend",
+      "isHorizontalZoomEnabled": false,
+      "isVerticalZoomEnabled": false,
+      "axes": [
+        {
+          "type": "CategoryXAxis",
+          "name": "xAxis",
+          "dataSourceRef": "CompanyIncomeStatement",
+          "label": "Date",
+          "overlap": 0,
+          "gap": 0.1,
+          "useClusteringMode": true
+        },
+        {
+          "type": "NumericYAxis",
+          "name": "yAxis",
+          "abbreviateLargeNumbers": true,
+          "title": "In Millions of U.S. Dollars",
+          "minimumValue": 0,
+          "maximumValue": 30000000,
+          "titleLeftMargin": 5,
+          "titleRightMargin": 0
+        },
+        {
+          "type": "NumericYAxis",
+          "name": "yAxis2",
+          "abbreviateLargeNumbers": true,
+          "title": "Percentage",
+          "majorStrokeThickness": 0,
+          "minimumValue": 0,
+          "maximumValue": 160,
+          "labelLocation": "OutsideRight",
+          "labelHorizontalAlignment": "Left"
+        }
+      ],
+      "series": [
+        {
+          "type": "ColumnSeries",
+          "name": "series1",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "dataSourceRef": "CompanyIncomeStatement",
+          "valueMemberPath": "Revenue",
+          "title": "Revenue",
+          "markerType": "Hidden"
+        },
+        {
+          "type": "ColumnSeries",
+          "name": "series2",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "dataSourceRef": "CompanyIncomeStatement",
+          "valueMemberPath": "Expenses",
+          "title": "Expenses",
+          "markerType": "Hidden"
+        },
+        {
+          "type": "SplineAreaSeries",
+          "name": "series3",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis2",
+          "dataSourceRef": "CompanyIncomeStatement",
+          "valueMemberPath": "IncomePerRevenue",
+          "title": "Income / Revenue %",
+          "markerType": "Circle"
+        },
+        {
+          "type": "CalloutLayer",
+          "name": "revenueCallouts",
+          "dataSourceRef": "CompanyIncomeStatement",
+          "isAutoCalloutBehaviorEnabled": false,
+          "targetSeriesRef": "series1",
+          "xMemberPath": "RevenueX",
+          "yMemberPath": "Revenue",
+          "labelMemberPath": "FormattedRevenue",
+          "useValueForAutoCalloutLabels": false,
+          "calloutLeaderBrush": "Transparent",
+          "calloutTextColor": "Black",
+          "calloutBackground": "Transparent",
+          "calloutPositionPadding": -5
+        },
+        {
+          "type": "CalloutLayer",
+          "name": "expensesCallouts",
+          "dataSourceRef": "CompanyIncomeStatement",
+          "isAutoCalloutBehaviorEnabled": false,
+          "targetSeriesRef": "series2",
+          "xMemberPath": "ExpensesX",
+          "yMemberPath": "Expenses",
+          "labelMemberPath": "FormattedExpenses",
+          "useValueForAutoCalloutLabels": false,
+          "calloutLeaderBrush": "Transparent",
+          "calloutTextColor": "Black",
+          "calloutBackground": "Transparent",
+          "calloutPositionPadding": -5
+        },
+        {
+          "type": "CalloutLayer",
+          "name": "profitCallouts",
+          "isAutoCalloutBehaviorEnabled": true,
+          "targetSeriesRef": "series3",
+          "useValueForAutoCalloutLabels": true,
+          "calloutLeaderBrush": "Transparent",
+          "calloutTextColor": "Black",
+          "calloutBackground": "LightGray",
+          "autoCalloutLabelPrecision": 1
+        }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "charts/DataChartCoreModule",
+    "charts/DataChartCategoryCoreModule",
+    "charts/DataChartCategoryModule",
+    "charts/DataChartInteractivityModule",
+    "charts/DataChartAnnotationModule",
+    "charts/CalloutLayerModule",
+    "charts/NumberAbbreviatorModule",
+    "charts/LegendModule"
+  ]
+}

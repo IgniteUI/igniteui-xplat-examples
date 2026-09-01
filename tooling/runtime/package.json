@@ -1,0 +1,28 @@
+{
+  "name": "xplat-samples-runtime-check",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "description": "Loads every sample in igniteui-xplat-examples into chromium with the real component renderer and reports anything that errors.",
+  "scripts": {
+    "check": "node run.mjs",
+    "check:local": "node run.mjs --packages=local"
+  },
+  "dependencies": {
+    "igniteui-webcomponents-charts": "7.1.1-beta.12",
+    "igniteui-webcomponents-core": "7.1.1-beta.12",
+    "igniteui-webcomponents-dashboards": "7.1.1-beta.12",
+    "igniteui-webcomponents-data-grids": "7.1.1-beta.12",
+    "igniteui-webcomponents-datasources": "7.1.1-beta.12",
+    "igniteui-webcomponents-excel": "7.1.1-beta.12",
+    "igniteui-webcomponents-gauges": "7.1.1-beta.12",
+    "igniteui-webcomponents-grids": "7.2.0-beta.1",
+    "igniteui-webcomponents-inputs": "7.1.1-beta.12",
+    "igniteui-webcomponents-layouts": "7.1.1-beta.12",
+    "igniteui-webcomponents-maps": "7.1.1-beta.12"
+  },
+  "devDependencies": {
+    "playwright": "^1.49.0",
+    "vite": "^5.4.0"
+  }
+}

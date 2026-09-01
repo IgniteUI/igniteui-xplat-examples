@@ -6,7 +6,7 @@ using Infragistics.Portable.Description;
 public class TestsLinearGaugePrependLabels
 {
     //begin eventHandler
-	//WPF: Infragistics.Controls.Gauges.FormatLinearGraphLabelHandler
+	//GTK: Infragistics.Controls.Gauges.FormatLinearGraphLabelHandler
     public void TestsLinearGaugePrependLabels(object sender, FormatLinearGraphLabelEventArgs args)
     {
 		object o = CodeGenHelper.FindByName<object>("LabelPrependValue");

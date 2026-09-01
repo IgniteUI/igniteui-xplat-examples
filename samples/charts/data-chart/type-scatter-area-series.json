@@ -1,0 +1,80 @@
+{
+  "strings": {
+    "legendTitle": "Distribution of Magnetic Field"
+  },
+  "descriptions": {
+    "content": {
+      "type": "DataChart",
+      "name": "chart",
+      "gridMode": "BeforeSeries",
+      "isHorizontalZoomEnabled": false,
+      "isVerticalZoomEnabled": false,
+      "axes": [
+        {
+          "type": "NumericXAxis",
+          "name": "xAxis1",
+          "labelLocation": "OutsideLeft",
+          "minimumValue": -180,
+          "maximumValue": 180,
+          "interval": 30,
+          "title": "Longitude"
+        },
+        {
+          "type": "NumericYAxis",
+          "name": "yAxis1",
+          "labelLocation": "OutsideBottom",
+          "minimumValue": -90,
+          "maximumValue": 90,
+          "interval": 30,
+          "title": "Latitude"
+        },
+        {
+          "type": "NumericXAxis",
+          "name": "xAxis2",
+          "labelLocation": "OutsideTop",
+          "minimumValue": -180,
+          "maximumValue": 180,
+          "interval": 30
+        },
+        {
+          "type": "NumericYAxis",
+          "name": "yAxis2",
+          "labelLocation": "OutsideRight",
+          "minimumValue": -90,
+          "maximumValue": 90,
+          "interval": 30,
+          "title": "Latitude"
+        }
+      ],
+      "series": [
+        {
+          "type": "ScatterAreaSeries",
+          "name": "series",
+          "xAxisRef": "xAxis1",
+          "yAxisRef": "yAxis1",
+          "dataSourceRef": "ScatterMagneticFieldData",
+          "xMemberPath": "X",
+          "yMemberPath": "Y",
+          "colorMemberPath": "Z",
+          "showDefaultTooltip": true,
+          "$setInCode": { "colorScale": ["webComponents", "react", "angular", "blazor"] },
+          "colorScale": {
+            "type": "CustomPaletteColorScale",
+            "interpolationMode": "InterpolateHSV",
+            "minimumValue": -2,
+            "maximumValue": 2,
+            "palette": [ "#8670CB", "#4AC4FF", "#B5CC2E", "#FC8612", "#ED4840" ]
+          }
+        }
+      ]
+    }
+  },
+  "modules": [
+    "charts/DataChartCoreModule",
+    "charts/DataChartScatterCoreModule",
+    "charts/DataChartScatterModule",
+    "charts/DataChartInteractivityModule",
+    "charts/ScatterAreaSeriesModule",
+    "charts/CustomPaletteColorScaleModule"
+  ]
+}
