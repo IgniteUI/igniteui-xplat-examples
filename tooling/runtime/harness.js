@@ -610,9 +610,16 @@ async function load(sample, options) {
     const animationSettled = animated
         ? new Promise((resolve) => { onAnimationIdle = resolve; })
         : Promise.resolve(false);
+    const named = sample && sample.descriptions && typeof sample.descriptions === 'object'
+        ? Object.keys(sample.descriptions) : ['content'];
     if (animated) {
-        renderer.provideRefValue(containerFor('content'), 'AnimationIdleHandler',
-            (timedOutFlag) => { if (onAnimationIdle) onAnimationIdle(timedOutFlag === true); });
+        // ComponentRenderer asks in the container where each animated description was rendered. A
+        // gauge in aboveContent or a chart beside a legend cannot see a handler provided only to
+        // content, so tell the renderer to wait in every slot this sample actually names.
+        for (const slot of named) {
+            renderer.provideRefValue(containerFor(slot), 'AnimationIdleHandler',
+                (timedOutFlag) => { if (onAnimationIdle) onAnimationIdle(timedOutFlag === true); });
+        }
     }
 
     const json = animated
@@ -643,12 +650,15 @@ async function load(sample, options) {
                 settled = true;
                 resolve(!continuous);
             }, continuous ? Math.min(timeout, 1000) : timeout);
-            renderer.queueForIdle(containerFor('content'), () => {
-                if (settled) return;
-                settled = true;
-                clearTimeout(timer);
-                resolve(false);
-            });
+            let pending = named.length;
+            for (const slot of named) {
+                renderer.queueForIdle(containerFor(slot), () => {
+                    if (settled || --pending > 0) return;
+                    settled = true;
+                    clearTimeout(timer);
+                    resolve(false);
+                });
+            }
         });
 
         if (!timedOut) {

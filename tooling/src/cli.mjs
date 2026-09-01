@@ -417,11 +417,15 @@ async function main() {
     }
     if (command === 'library-check') {
         if (!opts.platform) throw new Error('library-check needs --platform');
-        const only = opts.all === true ? undefined
+        let only = opts.all === true ? undefined
             : opts.only ? String(opts.only).split(',').map(one => one.trim()).filter(Boolean)
             : opts['changed-since'] ? changedLibraryItems(opts['changed-since']) : undefined;
+        const issueFile = path.join(TOOLING_ROOT, 'library-build-known-issues.json');
+        const knownIssues = fs.existsSync(issueFile) ? JSON.parse(fs.readFileSync(issueFile, 'utf8')) : [];
+        const excluded = knownIssues.filter(one => one.platform === opts.platform).map(one => one.item);
+        if (Array.isArray(only)) only = only.filter(item => !excluded.includes(item));
         if (Array.isArray(only) && only.length === 0) {
-            console.log(`[${opts.platform}] no changed library items`);
+            console.log(`[${opts.platform}] no changed non-quarantined library items`);
             return;
         }
         const output = path.join(TOOLING_ROOT, '.generated', 'library', opts.platform);
@@ -430,6 +434,7 @@ async function main() {
             examplesRoot: EXAMPLES_ROOT,
             templatesRoot: path.join(TOOLING_ROOT, 'library-templates'),
             only,
+            exclude: excluded,
         });
         if (emitted.problems.length) throw new Error(emitted.problems.map(one => `${one.item}: ${one.reason}`).join('\n'));
         writeLibrary(emitted, output);

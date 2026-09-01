@@ -367,6 +367,7 @@ export function emitProject(json: string, platformName: string, opts: EmitOption
         if (mapImagery && mapImagery.items.length > 0) normalizeReactMapImagery(files, mapImagery.items);
         if (shapeData && shapeData.items.length > 0) normalizeReactShapeData(files, shapeData.items);
         normalizeReactEmptyModelElements(files);
+        normalizeReactPackageImports(files);
     } else if (platformName === "WebComponents") {
         if (mapImagery && mapImagery.items.length > 0) normalizeWebComponentsMapImagery(files, mapImagery.items);
         normalizeWebComponentsPackageImports(files);
@@ -758,6 +759,37 @@ function normalizeReactEmptyModelElements(files: Record<string, string>): void {
     }
 }
 
+function normalizeReactPackageImports(files: Record<string, string>): void {
+    for (const name of Object.keys(files).filter(name => name.endsWith(".tsx") || name.endsWith(".ts"))) {
+        let source = files[name];
+        source = moveNamedImports(source, "igniteui-react-maps", "igniteui-react-charts",
+            new Set(["IgrSizeScale", "IgrValueBrushScale", "IgrCalloutLayer"]));
+        if (/\bnew Style\(\)|:\s*Style\b/.test(source) &&
+            !/import\s*\{[^}]*\bStyle\b[^}]*\}\s*from\s*['"]igniteui-react-core['"]/s.test(source)) {
+            source = "import { Style } from 'igniteui-react-core';\n" + source;
+        }
+        files[name] = source;
+    }
+}
+
+function moveNamedImports(source: string, fromPackage: string, toPackage: string, names: Set<string>): string {
+    const moved = new Set<string>();
+    const escaped = fromPackage.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    source = source.replace(new RegExp(`import\\s*\\{([^}]*)\\}\\s*from\\s*['"]${escaped}['"];?`, "g"),
+        (whole, list: string) => {
+            const entries = list.split(",").map(one => one.trim()).filter(Boolean);
+            const kept = entries.filter(entry => {
+                const imported = entry.split(/\s+as\s+/)[0].trim();
+                if (!names.has(imported)) return true;
+                moved.add(entry);
+                return false;
+            });
+            return kept.length > 0 ? `import { ${kept.join(", ")} } from '${fromPackage}';` : "";
+        });
+    if (moved.size > 0) source = `import { ${[...moved].sort().join(", ")} } from '${toPackage}';\n` + source;
+    return source;
+}
+
 function normalizeWebComponentsPackageImports(files: Record<string, string>): void {
     for (const name of Object.keys(files).filter(name => name.endsWith(".ts"))) {
         files[name] = files[name].replace(
@@ -765,6 +797,12 @@ function normalizeWebComponentsPackageImports(files: Record<string, string>): vo
             "from 'igniteui-webcomponents-charts'").replace(
             /from\s+(['"])igniteui-webcomponents-grids\1/g,
             "from 'igniteui-webcomponents-data-grids'");
+        files[name] = moveNamedImports(files[name], "igniteui-webcomponents-maps",
+            "igniteui-webcomponents-charts", new Set(["IgcCalloutLayerComponent"]));
+        if (/\bnew Style\(\)|:\s*Style\b/.test(files[name]) &&
+            !/import\s*\{[^}]*\bStyle\b[^}]*\}\s*from\s*['"]igniteui-webcomponents-core['"]/s.test(files[name])) {
+            files[name] = "import { Style } from 'igniteui-webcomponents-core';\n" + files[name];
+        }
         files[name] = deduplicateSharedHolderState(files[name]);
     }
 }
@@ -1001,6 +1039,7 @@ export function emitLibrary(platformName: string, opts: {
     examplesRoot: string;
     templatesRoot?: string;
     only?: string[];
+    exclude?: string[];
     /**
      * Item names whose data keeps the casing it was authored in, or true for all of them.
      *
@@ -1175,11 +1214,14 @@ function emitBlazorLibrary(platform: any, opts: {
     examplesRoot: string;
     templatesRoot?: string;
     only?: string[];
+    exclude?: string[];
     skipAlterDataCasing?: boolean | string[];
 }, library: any): EmittedLibrary {
     const templateDir = path.join(opts.templatesRoot ?? "", "blazor-template");
     if (!fs.existsSync(templateDir)) throw new Error(`no blazor-template found at ${templateDir}`);
-    const names: string[] = opts.only ?? (library.getItemNames?.() ?? library.getKeys());
+    const excluded = new Set(opts.exclude ?? []);
+    const names: string[] = (opts.only ?? (library.getItemNames?.() ?? library.getKeys()))
+        .filter((name: string) => !excluded.has(name));
     const queue = [...names];
     const seen = new Set(names);
     const files: Record<string, string> = {};
@@ -1205,7 +1247,9 @@ function emitBlazorLibrary(platform: any, opts: {
         const item: any = library.getItem(name);
         const requires: string[] | null = item.getRequiresForPlatform(platform);
         for (const required of requires ?? []) {
-            if (!seen.has(required) && library.hasItem(required)) { seen.add(required); queue.push(required); }
+            if (!excluded.has(required) && !seen.has(required) && library.hasItem(required)) {
+                seen.add(required); queue.push(required);
+            }
         }
         const content: any = item.getContentForPlatform(platform);
         if (content === null || content === undefined) continue;

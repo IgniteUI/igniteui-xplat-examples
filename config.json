@@ -51,6 +51,7 @@
       "name": "React",
       "exclusions": [
         { "reason": "data-grid samples target WinUI emission only for now", "path": "grids\\data-grid\\", "test": true },
+        { "reason": "published beta callout codegen targets Chart instead of SeriesViewer", "path": "maps\\geo-map\\geo-symbol-map-with-callouts.json" },
         { "reason": "toolbarTemplate isn't in React product",            "path": "grids\\hierarchical-grid\\toolbar-sample-1.json" },
         { "reason": "toolbarTemplate isn't in React product",            "path": "grids\\hierarchical-grid\\toolbar-sample-2.json" },
         { "reason": "published beta React renderer cannot emit modern grid sorting indicators yet", "path": "grids\\grid\\column-sorting-indicators.json" },
@@ -92,6 +93,9 @@
       "name": "Blazor",
       "exclusions": [
         { "reason": "data-grid samples target WinUI emission only for now", "path": "grids\\data-grid\\", "test": true },
+        { "reason": "published beta no longer exposes shapefile point geometry for the documented record transformation", "path": "maps\\geo-map\\binding-shp-file.json" },
+        { "reason": "published beta no longer exposes shapefile point geometry for the documented record transformation", "path": "maps\\geo-map\\binding-multiple-shapes.json" },
+        { "reason": "Blazor marker-template implementation has not landed in the shared library yet", "path": "charts\\category-chart\\marker-templates.json" },
         { "reason": "toolbarTemplate isn't in Blazor product", "path": "grids\\hierarchical-grid\\toolbar-sample-1.json" },
         { "reason": "toolbarTemplate isn't in Blazor product", "path": "grids\\hierarchical-grid\\toolbar-sample-2.json" },
         { "reason": "summary formatter isn't working for Blazor product", "path": "grids\\tree-grid\\data-summary-formatter.json" },
@@ -116,6 +120,7 @@
       "name": "WebComponents",
       "exclusions": [
         { "reason": "data-grid samples target WinUI emission only for now", "path": "grids\\data-grid\\", "test": true },
+        { "reason": "published beta callout codegen targets Chart instead of SeriesViewer", "path": "maps\\geo-map\\geo-symbol-map-with-callouts.json" },
         { "reason": "published beta renderer cannot emit modern grid sorting indicators yet", "path": "grids\\grid\\column-sorting-indicators.json" },
         { "reason": "published beta renderer cannot emit modern grid sorting options yet", "path": "grids\\grid\\column-sorting-options.json" },
         { "reason": "published beta renderer cannot emit modern grid sorting style yet", "path": "grids\\grid\\column-sorting-style.json" },

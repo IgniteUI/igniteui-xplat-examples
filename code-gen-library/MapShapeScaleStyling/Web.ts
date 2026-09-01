@@ -1,5 +1,5 @@
 //begin imports
-import { IgcGeographicMapComponent, IgcGeographicShapeSeriesComponent } from 'igniteui-webcomponents-maps';
+import { IgcGeographicMapComponent, IgcGeographicShapeSeriesComponent, IgcGeographicShapeSeriesBaseComponent } from 'igniteui-webcomponents-maps';
 import { IgcShapeDataSource, IgcShapefileRecord } from 'igniteui-webcomponents-core';
 import { IgcAssigningShapeStyleEventArgs } from 'igniteui-webcomponents-charts';
 //end imports
@@ -44,7 +44,7 @@ export class MapShapeScaleStyling {
         sds.dataBind();
     }
 
-    public onStylingShape(s: IgcGeographicShapeSeriesComponent, args: IgcAssigningShapeStyleEventArgs): void {
+    public onStylingShape(s: IgcGeographicShapeSeriesBaseComponent, args: IgcAssigningShapeStyleEventArgs): void {
         // the event covers a range of items rather than one, so the record is asked for by index
         var itemRecord = args.getItems(args.startIndex, args.endIndex)[0] as IgcShapefileRecord;
         var shapeStyle = this.shapeScaleStyling.generate(itemRecord);

@@ -1,0 +1,22 @@
+[
+  {
+    "platform": "Blazor",
+    "item": "MapBindingShpFileLoad",
+    "reason": "The published beta no longer exposes the point geometry needed by the teaching-oriented shapefile reader."
+  },
+  {
+    "platform": "Blazor",
+    "item": "MapShpFileReaders",
+    "reason": "The published beta no longer exposes GetPointData or equivalent record geometry."
+  },
+  {
+    "platform": "Blazor",
+    "item": "MapMultipleShapesLoad",
+    "reason": "The published beta no longer exposes the point geometry needed by the teaching-oriented shapefile readers."
+  },
+  {
+    "platform": "Blazor",
+    "item": "MapMultipleShapesReaders",
+    "reason": "The published beta no longer exposes GetPointData or equivalent record geometry."
+  }
+]

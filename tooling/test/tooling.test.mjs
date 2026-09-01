@@ -138,6 +138,14 @@ test('emits React map imagery as a model and empty gauge ranges without children
 
     const chooser = emit('grids/data-grid/column-chooser-picker.json').files['src/index.tsx'];
     assert.match(chooser, /IgrColumnChooser[^;]+igniteui-react-data-grids/s);
+
+    const bubble = emit('maps/geo-map/type-scatter-bubble-series.json').files['src/index.tsx'];
+    assert.match(bubble, /IgrSizeScale[^;]+igniteui-react-charts/s);
+    assert.doesNotMatch(bubble, /IgrSizeScale[^;]+igniteui-react-maps/s);
+
+    const styling = emit('maps/geo-map/shape-styling-random.json').files['src/index.tsx'];
+    assert.match(styling, /Style[^;]+igniteui-react-core/s);
+    assert.match(styling, /IgrGeographicShapeSeriesBase/);
     assert.doesNotMatch(chooser, /igniteui-react-grids/);
 
     const layout = emit('grids/data-grid/load-save-layout.json').files['src/index.tsx'];
@@ -199,6 +207,12 @@ test('uses the current Web Components package for ZoomSlider', () => {
         fs.readFileSync(path.join(examplesRoot, 'samples/grids/data-grid/load-save-layout.json'), 'utf8'),
         'WebComponents', { examplesRoot });
     assert.equal((layout.files['src/index.ts'].match(/\bsavedLayout:/g) ?? []).length, 1);
+
+    const styling = emitProject(
+        fs.readFileSync(path.join(examplesRoot, 'samples/maps/geo-map/shape-styling-random.json'), 'utf8'),
+        'WebComponents', { examplesRoot }).files['src/index.ts'];
+    assert.match(styling, /Style[^;]+igniteui-webcomponents-core/s);
+    assert.match(styling, /IgcGeographicShapeSeriesBaseComponent/);
 });
 
 test('adapts current Blazor collection and tooltip context APIs', () => {
@@ -232,6 +246,26 @@ test('adapts current Blazor collection and tooltip context APIs', () => {
     assert.match(highFrequency.files['App.razor'], /chart\.DataSource = data/);
     assert.doesNotMatch(highFrequency.files['App.razor'], /chart\.ItemsSource/);
 
+    const highVolume = emitProject(
+        fs.readFileSync(path.join(examplesRoot, 'samples/charts/category-chart/high-volume.json'), 'utf8'),
+        'Blazor', { examplesRoot });
+    assert.doesNotMatch(highVolume.files['App.razor'], /chart\.ItemsSource/);
+
+    const dataModel = emitProject(
+        fs.readFileSync(path.join(examplesRoot, 'samples/maps/geo-map/binding-data-model.json'), 'utf8'),
+        'Blazor', { examplesRoot });
+    assert.match(dataModel.files['App.razor'], /class FlightInfo/);
+
+    const sparkline = emitProject(
+        fs.readFileSync(path.join(examplesRoot, 'samples/charts/sparkline/display-types.json'), 'utf8'),
+        'Blazor', { examplesRoot });
+    assert.match(sparkline.files['SparklineWaveData.cs'], /class SparklineWaveData/);
+
+    const airplane = emitProject(
+        fs.readFileSync(path.join(examplesRoot, 'samples/charts/data-chart/type-scatter-polygon-series.json'), 'utf8'),
+        'Blazor', { examplesRoot });
+    assert.match(airplane.files['App.razor'], /AirplaneSeatFillStyling/);
+
     const magnetic = emitProject(
         fs.readFileSync(path.join(examplesRoot, 'samples/charts/data-chart/type-scatter-area-series.json'), 'utf8'),
         'Blazor', { examplesRoot });
@@ -258,10 +292,13 @@ test('adapts current Blazor collection and tooltip context APIs', () => {
     const map = emitProject(
         fs.readFileSync(path.join(examplesRoot, 'samples/maps/geo-map/binding-multiple-shapes.json'), 'utf8'),
         'Blazor', { examplesRoot });
-    assert.match(map.files['App.razor'], /polygonSeries\.ShapefileDataSource = new IgbShapeDataSource/);
-    assert.match(map.files['App.razor'], /symbolSeries\.DataSource = this\.WorldCities/);
+    assert.match(map.files['App.razor'], /sdsPolygons\.ImportCompleted \+= readers\.ReadPolygons/);
+    assert.match(map.files['App.razor'], /sdsLocations\.ImportCompleted \+= readers\.ReadPoints/);
+    assert.match(map.files['App.razor'], /record\.FieldValues\["POPULATION"\]/);
+    assert.match(map.files['App.razor'], /record\.Points\[0\]\[0\]\.Y/);
+    assert.match(map.files['App.razor'], /symbolSeries\.DataSource = geoLocations/);
     assert.match(map.files['WorldCities.cs'], /class WorldCities/);
-    assert.doesNotMatch(map.files['App.razor'], /GetPointData|DataBind|ImportCompleted \+=/);
+    assert.match(map.files['App.razor'], /GetPointData|DataBind/);
 });
 
 test('emits and type-compiles a library item on every hosted web platform', () => {

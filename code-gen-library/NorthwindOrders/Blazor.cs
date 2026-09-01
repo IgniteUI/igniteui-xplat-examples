@@ -9,7 +9,7 @@ namespace Infragistics.Samples
 
     public class NorthwindOrders : List<Dictionary<string, object>>
     {
-        public static async Task<NorthwindOrders> FetchData()
+        public static async Task<NorthwindOrders> Fetch()
         {
             const string url = "https://services.odata.org/V4/Northwind/Northwind.svc/Orders?$format=json";
             using var client = new HttpClient();

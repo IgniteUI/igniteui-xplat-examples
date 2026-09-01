@@ -1,6 +1,5 @@
 //begin imports
 using IgniteUI.Blazor.Controls;
-using System.Collections;
 //end imports
 
 //begin eventHandler
@@ -12,21 +11,30 @@ using System.Collections;
 public void MapMultipleShapesLoad()
 {
     var root = "https://static.infragistics.com/xplatform/shapes/";
-    var map = CodeGenHelper.GetDescription<IgbGeographicMap>("content");
-    var polygonSeries = map.Series[0] as IgbGeographicShapeSeries;
-    var lineSeries = map.Series[1] as IgbGeographicPolylineSeries;
-    var symbolSeries = map.Series[2] as IgbGeographicSymbolSeries;
+    var readers = CodeGenHelper.GetSharedSupporting<MapMultipleShapesReaders>("MapMultipleShapesReaders");
 
-    polygonSeries.ShapefileDataSource = new IgbShapeDataSource()
+    var sdsPolygons = new IgbShapeDataSource()
     {
         ShapefileSource = root + "WorldCountries.shp",
         DatabaseSource = root + "WorldCountries.dbf"
     };
-    lineSeries.ShapefileDataSource = new IgbShapeDataSource()
+    sdsPolygons.ImportCompleted += readers.ReadPolygons;
+    sdsPolygons.DataBind();
+
+    var sdsPolylines = new IgbShapeDataSource()
     {
         ShapefileSource = root + "WorldCableRoutes.shp",
         DatabaseSource = root + "WorldCableRoutes.dbf"
     };
-    symbolSeries.DataSource = CodeGenHelper.FindByName<IList>("WorldCities");
+    sdsPolylines.ImportCompleted += readers.ReadPolylines;
+    sdsPolylines.DataBind();
+
+    var sdsLocations = new IgbShapeDataSource()
+    {
+        ShapefileSource = root + "WorldCities.shp",
+        DatabaseSource = root + "WorldCities.dbf"
+    };
+    sdsLocations.ImportCompleted += readers.ReadPoints;
+    sdsLocations.DataBind();
 }
 //end eventHandler
