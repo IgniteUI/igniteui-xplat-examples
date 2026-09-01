@@ -602,23 +602,29 @@ async function load(sample, options) {
     editorRenderer.clearErrors();
     unresolved.clear();
 
+    // The renderer asks for a reference by this name when a sample says it animates, and calls it once
+    // the animation settles or the time is up. Providing it is how the host waits for animations, and it
+    // is also what stops the renderer reporting that reference as missing.
     const animated = sample && sample.hasAnimations === true;
+    let onAnimationIdle = null;
+    const animationSettled = animated
+        ? new Promise((resolve) => { onAnimationIdle = resolve; })
+        : Promise.resolve(false);
     const named = sample && sample.descriptions && typeof sample.descriptions === 'object'
         ? Object.keys(sample.descriptions) : ['content'];
+    if (animated) {
+        // ComponentRenderer asks in the container where each animated description was rendered. A
+        // gauge in aboveContent or a chart beside a legend cannot see a handler provided only to
+        // content, so tell the renderer to wait in every slot this sample actually names.
+        for (const slot of named) {
+            renderer.provideRefValue(containerFor(slot), 'AnimationIdleHandler',
+                (timedOutFlag) => { if (onAnimationIdle) onAnimationIdle(timedOutFlag === true); });
+        }
+    }
 
-    // ComponentRenderer consumes one animation-idle reference for a whole load. Put the primary
-    // component first for the later animation probe; object key order is the ordering signal loadJson
-    // receives, and the descriptions themselves are unchanged.
-    const descriptions = animated && sample.descriptions && sample.descriptions.content
-        ? { content: sample.descriptions.content,
-            ...Object.fromEntries(Object.entries(sample.descriptions).filter(([slot]) => slot !== 'content')) }
-        : sample.descriptions;
-    // Do not arm the animation callback on the initial load. GlobalAnimationState can report idle after
-    // the first description, before a later description has scheduled its work on a slow host. Render
-    // every description first, then ask ComponentRenderer to reconcile the same tree and wait below.
-    const { hasAnimations: _hasAnimations, animationIdleRef: _animationIdleRef,
-        animationIdleTimeout: _animationIdleTimeout, ...initialSample } = sample;
-    const json = JSON.stringify(animated ? { ...initialSample, descriptions } : sample);
+    const json = animated
+        ? JSON.stringify({ ...sample, animationIdleTimeout: ANIMATION_TIMEOUT })
+        : JSON.stringify(sample);
 
     stage('loadJson');
     const thrown = [];
@@ -661,30 +667,6 @@ async function load(sample, options) {
             await flushAll();
             if (animated) {
                 stage('animation');
-                const animationRef = sample.animationIdleRef || 'AnimationIdleHandler';
-                let onAnimationIdle;
-                const animationSettled = new Promise((resolve) => { onAnimationIdle = resolve; });
-                // The reference lookup is global inside ComponentRenderer, but provide it through each
-                // named container as the host does so the probe remains correct if that implementation
-                // becomes container-scoped.
-                for (const slot of named) {
-                    renderer.provideRefValue(containerFor(slot), animationRef,
-                        (timedOutFlag) => onAnimationIdle(timedOutFlag === true));
-                }
-                // This no-change reconcile arms CR's own global animation waiter after every description
-                // has been scheduled. It does not replay refs, modules, strings, or page initialisers.
-                const probe = {
-                    descriptions,
-                    hasAnimations: true,
-                    animationIdleTimeout: ANIMATION_TIMEOUT,
-                    ...(sample.animationIdleRef ? { animationIdleRef: sample.animationIdleRef } : {}),
-                    ...(sample.skipAlterDataCasing === true ? { skipAlterDataCasing: true } : {}),
-                };
-                try {
-                    renderer.loadJson(JSON.stringify(probe), containerFor);
-                } catch (e) {
-                    duringIdle.push(`arming animation wait: ${e && e.message}`);
-                }
                 animationTimedOut = await Promise.race([
                     animationSettled,
                     new Promise((resolve) => setTimeout(() => resolve('gave up'), ANIMATION_TIMEOUT + 1000)),

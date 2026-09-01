@@ -554,6 +554,17 @@ if (cases.length === 0) {
     console.error(`nothing to load${FILTER ? ` for --filter=${FILTER}` : ''}`);
     process.exit(2);
 }
+
+// A sample that starts an animation without declaring it is not safe to load in a shared host: CR is
+// never told to wait, cleanup happens mid-transition, and every later sample inherits a non-idle global
+// animation counter. Report the producer directly instead of hundreds of misleading downstream timeouts.
+const missingAnimationFlags = cases.filter(one => one.sample.hasAnimations === undefined &&
+    animates(one.sample.descriptions ?? one.sample));
+if (missingAnimationFlags.length > 0) {
+    console.error('[runtime] animated sample(s) must declare "hasAnimations": true:');
+    for (const one of missingAnimationFlags) console.error(`  ${one.name}`);
+    process.exit(1);
+}
 console.log(`[runtime] ${cases.length} ${FROM_SAMPLES || named.length > 0 ? 'sample' : 'definition'}(s) ` +
             `to load`);
 
