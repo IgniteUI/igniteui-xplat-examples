@@ -12,7 +12,40 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  impact:
+    name: Compare base and PR sample output
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: tooling/package-lock.json
+      - name: Install and build the Node emitter
+        working-directory: tooling
+        run: |
+          npm ci
+          npm run build
+      - name: Compare emitted sample folders
+        run: >-
+          node tooling/src/cli.mjs impact
+          --platform=Angular,React,WebComponents,Blazor
+          --changed-since=${{ github.event.pull_request.base.sha }}
+          --output=tooling/.generated/output-impact.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: emitted-output-impact
+          path: tooling/.generated/output-impact.json
+          retention-days: 7
+
   build:
+    needs: impact
+    if: always() && (github.event_name != 'pull_request' || needs.impact.result == 'success')
     name: Build affected ${{ matrix.platform }} samples (shard ${{ matrix.shard }})
     runs-on: ubuntu-latest
     timeout-minutes: 90
@@ -26,24 +59,55 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+      - uses: actions/download-artifact@v4
+        if: github.event_name == 'pull_request'
+        with:
+          name: emitted-output-impact
+          path: tooling/.generated
+      - name: Check whether this shard has output changes
+        id: selected
+        if: github.event_name == 'pull_request'
+        shell: bash
+        run: |
+          count=$(jq --arg platform '${{ matrix.platform }}' \
+            '[.platforms[$platform].testingChanges[] | select(.kind != "removed")] | length' \
+            tooling/.generated/output-impact.json)
+          if (( ${{ matrix.shard }} < count )); then echo 'needed=true' >> "$GITHUB_OUTPUT"; fi
       - uses: actions/setup-node@v4
+        if: github.event_name != 'pull_request' || steps.selected.outputs.needed == 'true'
         with:
           node-version: 24
           cache: npm
           cache-dependency-path: tooling/package-lock.json
       - uses: actions/setup-dotnet@v4
-        if: matrix.platform == 'Blazor'
+        if: (github.event_name != 'pull_request' || steps.selected.outputs.needed == 'true') && matrix.platform == 'Blazor'
         with:
           dotnet-version: '10.0.x'
       - name: Install and build the Node emitter
+        if: github.event_name != 'pull_request' || steps.selected.outputs.needed == 'true'
         working-directory: tooling
         run: |
           npm ci
           npm run build
       - name: Emit and compile sample projects
+        if: github.event_name != 'pull_request' || steps.selected.outputs.needed == 'true'
         run: >-
           node tooling/src/cli.mjs sample-build
           --platform=${{ matrix.platform }}
           --shard-index=${{ matrix.shard }}
           --shard-total=12
-          ${{ github.event_name == 'pull_request' && format('--changed-since={0}', github.event.pull_request.base.sha) || '' }}
+          ${{ github.event_name == 'pull_request' && '--impact-manifest=tooling/.generated/output-impact.json' || '' }}
+
+  required:
+    name: Emitted sample builds passed
+    if: always()
+    needs: [impact, build]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Require the impact comparison and every build shard
+        env:
+          IMPACT_RESULT: ${{ needs.impact.result }}
+          BUILD_RESULT: ${{ needs.build.result }}
+        run: |
+          test "$BUILD_RESULT" = success
+          if [ '${{ github.event_name }}' = pull_request ]; then test "$IMPACT_RESULT" = success; fi

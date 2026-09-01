@@ -7,10 +7,14 @@ import path from 'node:path';
 import { createRequire } from 'node:module';
 import { fileURLToPath } from 'node:url';
 import { CODE_FENCE_LANG, fenceEmitter, libraryItemLookup } from './snippet-emit.mjs';
+import {
+    compareOutputTrees, emittableSampleNames, readImpactManifest,
+} from './output-impact.mjs';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const TOOLING_ROOT = path.resolve(HERE, '..');
-const EXAMPLES_ROOT = path.resolve(TOOLING_ROOT, '..');
+const EXAMPLES_ROOT = process.env.XPLAT_EXAMPLES_ROOT
+    ? path.resolve(process.env.XPLAT_EXAMPLES_ROOT) : path.resolve(TOOLING_ROOT, '..');
 const require = createRequire(import.meta.url);
 
 function fail(message) {
@@ -33,7 +37,9 @@ function argsOf(argv) {
 }
 
 function loadApi() {
-    const built = path.join(TOOLING_ROOT, 'dist', 'codegen-api.cjs');
+    const built = process.env.XPLAT_CODEGEN_ADAPTER
+        ? path.resolve(process.env.XPLAT_CODEGEN_ADAPTER)
+        : path.join(TOOLING_ROOT, 'dist', 'codegen-api.cjs');
     if (!fs.existsSync(built)) throw new Error('the product adapter is not built; run npm run build in tooling');
     require('./dom-shim.cjs');
     return require(built);
@@ -96,6 +102,13 @@ function exportSourcesFrom(opts) {
 }
 
 function buildSourcesFrom(opts) {
+    if (opts['impact-manifest']) {
+        if (!opts.platform) throw new Error('--impact-manifest requires --platform');
+        return readImpactManifest(path.resolve(String(opts['impact-manifest'])), opts.platform, 'testing')
+            .filter(change => change.kind !== 'removed')
+            .map(change => path.join(EXAMPLES_ROOT, 'samples', change.sample))
+            .filter(fs.existsSync);
+    }
     if (!opts['changed-since']) return sourcesFrom(opts);
     const changes = changedPaths(opts['changed-since']);
     // Project templates, platform/exclusion configuration, the generator itself, and the product
@@ -115,6 +128,20 @@ function buildSourcesFrom(opts) {
         return items.some(item => text.includes(`"${item}"`));
     });
     return [...new Set([...direct, ...impacted])].sort();
+}
+
+function exportChangesFrom(opts) {
+    if (!opts['impact-manifest']) return null;
+    if (!opts.platform) throw new Error('--impact-manifest requires --platform');
+    return readImpactManifest(path.resolve(String(opts['impact-manifest'])), opts.platform, 'emission');
+}
+
+function exportSourcesFromImpact(opts) {
+    const changes = exportChangesFrom(opts);
+    if (changes === null) return null;
+    return changes.filter(change => change.kind !== 'removed')
+        .map(change => path.join(EXAMPLES_ROOT, 'samples', change.sample))
+        .filter(fs.existsSync);
 }
 
 /**
@@ -263,7 +290,7 @@ function verifyProject(project, sample, platform) {
 
 function emitFiles(api, platform, files, output, {
     clean = false, sourceOverlay = false, bootstrapFrom, collectErrors = false,
-    testing = false, includeExcluded = false,
+    testing = false, includeExcluded = false, quiet = false,
 } = {}) {
     let emitted = 0, skipped = 0;
     const destinations = [];
@@ -288,7 +315,10 @@ function emitFiles(api, platform, files, output, {
             writeProject(project, destination, { sourceOverlay });
             destinations.push(destination);
             emitted++;
-            console.log(`[${platform}] ${path.relative(EXAMPLES_ROOT, file)} -> ${path.relative(EXAMPLES_ROOT, destination)}`);
+            if (!quiet) {
+                console.log(`[${platform}] ${path.relative(EXAMPLES_ROOT, file)} -> ` +
+                    `${path.relative(EXAMPLES_ROOT, destination)}`);
+            }
         } catch (error) {
             if (!collectErrors) throw error;
             const failure = `${path.relative(EXAMPLES_ROOT, file)}: ${error.message.split('\n')[0]}`;
@@ -302,6 +332,11 @@ function emitFiles(api, platform, files, output, {
 }
 
 function removeChangedOutputs(opts, output) {
+    const impact = exportChangesFrom(opts);
+    if (impact !== null && opts.clean) {
+        for (const change of impact) safelyEmpty(path.join(path.resolve(output), change.folder), output);
+        return;
+    }
     if (!opts['changed-since'] || !opts.clean) return;
     // Existing included samples are cleaned immediately before they are rewritten. Here only an
     // upstream deletion should remove a downstream directory; an existing platform-excluded sample
@@ -366,19 +401,98 @@ function transformMarkdown(content, platform, api) {
     });
 }
 
+function outputImpact(api, opts) {
+    if (!opts['changed-since'] || !opts.output) {
+        throw new Error('impact needs --changed-since and --output');
+    }
+    const platforms = opts.platform ? String(opts.platform).split(',')
+        : readJson(path.join(TOOLING_ROOT, 'xplat-codegen.json')).platforms;
+    const mergeBase = execFileSync('git', ['merge-base', String(opts['changed-since']), 'HEAD'], {
+        cwd: EXAMPLES_ROOT, encoding: 'utf8',
+    }).trim();
+    const headSha = execFileSync('git', ['rev-parse', 'HEAD'], {
+        cwd: EXAMPLES_ROOT, encoding: 'utf8',
+    }).trim();
+    const workspace = fs.mkdtempSync(path.join(os.tmpdir(), 'xplat-output-impact-'));
+    const baseRoot = path.join(workspace, 'base');
+    const cli = fileURLToPath(import.meta.url);
+    const manifest = { version: 1, base: mergeBase, head: headSha, platforms: {} };
+    let completed = false;
+    try {
+        execFileSync('git', ['clone', '--shared', '--no-checkout', EXAMPLES_ROOT, baseRoot], { stdio: 'inherit' });
+        execFileSync('git', ['checkout', '--detach', mergeBase], { cwd: baseRoot, stdio: 'inherit' });
+        execFileSync('npm', ['ci', '--no-audit', '--no-fund'], {
+            cwd: path.join(baseRoot, 'tooling'), stdio: 'inherit',
+        });
+        execFileSync('npm', ['run', 'build'], { cwd: path.join(baseRoot, 'tooling'), stdio: 'inherit' });
+
+        for (const platform of platforms) {
+            const baseOutput = path.join(workspace, 'output', 'base', platform);
+            const headOutput = path.join(workspace, 'output', 'head', platform);
+            emitFiles(api, platform,
+                walk(path.join(EXAMPLES_ROOT, 'samples'), file => file.endsWith('.json')),
+                headOutput, { clean: true, collectErrors: true, testing: true, quiet: true });
+            execFileSync(process.execPath, [cli, 'export', `--platform=${platform}`,
+                `--source=${path.join(baseRoot, 'samples')}`, `--output=${baseOutput}`,
+                '--clean', '--testing', '--quiet'], {
+                cwd: EXAMPLES_ROOT,
+                stdio: 'inherit',
+                env: {
+                    ...process.env,
+                    XPLAT_EXAMPLES_ROOT: baseRoot,
+                    XPLAT_CODEGEN_ADAPTER: path.join(baseRoot, 'tooling', 'dist', 'codegen-api.cjs'),
+                },
+            });
+            const common = {
+                baseOutput, headOutput,
+                baseSamples: path.join(baseRoot, 'samples'),
+                headSamples: path.join(EXAMPLES_ROOT, 'samples'),
+            };
+            const emissionChanges = compareOutputTrees({
+                ...common,
+                baseIncluded: emittableSampleNames(baseRoot, platform),
+                headIncluded: emittableSampleNames(EXAMPLES_ROOT, platform),
+            });
+            const testingChanges = compareOutputTrees({
+                ...common,
+                baseIncluded: emittableSampleNames(baseRoot, platform, { testing: true }),
+                headIncluded: emittableSampleNames(EXAMPLES_ROOT, platform, { testing: true }),
+            });
+            manifest.platforms[platform] = { emissionChanges, testingChanges };
+            console.log(`[${platform}] ${testingChanges.length} build impact(s), ` +
+                `${emissionChanges.length} downstream emission impact(s)`);
+        }
+        const output = path.resolve(String(opts.output));
+        fs.mkdirSync(path.dirname(output), { recursive: true });
+        fs.writeFileSync(output, JSON.stringify(manifest, null, 2) + '\n');
+        console.log(`output impact: ${output}`);
+        completed = true;
+    } finally {
+        if (completed) fs.rmSync(workspace, { recursive: true, force: true });
+        else console.error(`output-impact evidence retained at ${workspace}`);
+    }
+}
+
 async function main() {
     const [command = 'help', ...rest] = process.argv.slice(2);
     const opts = argsOf(rest);
     const config = readJson(path.join(TOOLING_ROOT, 'xplat-codegen.json'));
     const api = command === 'help' ? null : loadApi();
 
+    if (command === 'impact') {
+        outputImpact(api, opts);
+        return;
+    }
+
     if (command === 'export') {
         if (!opts.platform || !opts.output) throw new Error('export needs --platform and --output');
         removeChangedOutputs(opts, opts.output);
-        emitFiles(api, opts.platform, exportSourcesFrom(opts), opts.output, {
+        emitFiles(api, opts.platform, exportSourcesFromImpact(opts) ?? exportSourcesFrom(opts), opts.output, {
             clean: opts.clean === true,
             sourceOverlay: opts['source-overlay'] === true,
             bootstrapFrom: opts['bootstrap-from'],
+            testing: opts.testing === true,
+            quiet: opts.quiet === true,
         });
         return;
     }
@@ -392,6 +506,7 @@ async function main() {
                     collectErrors: true,
                     testing: true,
                     includeExcluded: opts['include-excluded'] === true,
+                    quiet: opts.quiet === true,
                 });
             }
         }
@@ -548,7 +663,7 @@ async function main() {
         }
         return;
     }
-    console.log('Usage:\n  xplat-codegen export --platform NAME --source PATH --output PATH [--clean] [--changed-since REF]\n  xplat-codegen check [--changed-since REF] [--platform A,B] [--include-excluded]\n  xplat-codegen sample-build --platform NAME [--changed-since REF | --source PATH] [--output PATH] [--limit N] [--shard-index N --shard-total N] [--include-excluded] [--include-web-grids]\n  xplat-codegen library --platform NAME --output PATH [--only A,B] [--clean]\n  xplat-codegen library-check --platform NAME [--changed-since REF | --only A,B | --all]\n  xplat-codegen snippets --source PATH --output PATH [--platform A,B]');
+    console.log('Usage:\n  xplat-codegen impact --changed-since REF --output FILE [--platform A,B]\n  xplat-codegen export --platform NAME --source PATH --output PATH [--clean] [--impact-manifest FILE]\n  xplat-codegen check [--platform A,B] [--include-excluded]\n  xplat-codegen sample-build --platform NAME [--impact-manifest FILE | --source PATH] [--output PATH] [--limit N] [--shard-index N --shard-total N] [--include-excluded] [--include-web-grids]\n  xplat-codegen library --platform NAME --output PATH [--only A,B] [--clean]\n  xplat-codegen library-check --platform NAME [--changed-since REF | --only A,B | --all]\n  xplat-codegen snippets --source PATH --output PATH [--platform A,B]');
 }
 
 main().catch(error => fail(error.stack ?? error.message));
