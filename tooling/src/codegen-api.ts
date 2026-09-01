@@ -331,10 +331,13 @@ export function emitProject(json: string, platformName: string, opts: EmitOption
     const files: Record<string, string> = {};
     for (const file of template.getFilePaths() as string[]) {
         let content = String(template.getFileOuutput(file));
-        // React wrappers for scales are React components and require their props object even when it
-        // is empty. The current product emitter still produces the pre-React signature here.
+        // These React wrappers require their props object even when it is empty. The current product
+        // emitter still produces their pre-current constructor signatures here.
         if (platformName === "React") {
-            content = content.replace(/new IgrSizeScale\(\)/g, "new IgrSizeScale({})");
+            content = content.replace(
+                /new (Igr(?:SizeScale|CustomPaletteColorScale|LinearContourValueResolver|ValueBrushScale))\(\)/g,
+                "new $1({})");
+            content = normalizeReactChartSyncProps(content);
         }
         files[file.replace(/\\/g, "/")] = content;
     }
@@ -458,6 +461,21 @@ function normalizeReactDataGridCollections(files: Record<string, string>, grids:
     }
     source = `import { ${[...used].sort().join(", ")} } from 'igniteui-react-data-grids';\n` + source;
     files[sourceName] = source;
+}
+
+function normalizeReactChartSyncProps(content: string): string {
+    return content.replace(/<IgrDataChart\b[^>]*>/gs, tag => {
+        const values: string[] = [];
+        for (const property of ["syncChannel", "synchronizeHorizontally", "synchronizeVertically"]) {
+            const pattern = new RegExp(`\\s+${property}="([^"]*)"`);
+            const match = tag.match(pattern);
+            if (!match) continue;
+            const value = match[1] === "true" || match[1] === "false" ? match[1] : JSON.stringify(match[1]);
+            values.push(`${property}: ${value}`);
+            tag = tag.replace(pattern, "");
+        }
+        return values.length === 0 ? tag : tag.replace(/>$/, `\n                    {...({ ${values.join(", ")} } as any)}>`);
+    });
 }
 
 function declaredProjectRefs(json: string): Set<string> {
