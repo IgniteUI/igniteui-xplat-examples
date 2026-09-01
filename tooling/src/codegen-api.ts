@@ -486,12 +486,30 @@ function normalizeAngularTemplateColumns(files: Record<string, string>): void {
     const tsName = Object.keys(files).find(name => name.endsWith("app.component.ts"));
     if (!htmlName || !tsName) return;
     const refs = new Set<string>();
-    files[htmlName] = files[htmlName].replace(
-        /(<igx-template-column\b(?:(?:"[^"]*")|[^>])*?)\s+\[template\]="([A-Za-z_$][\w$]*)"/gs,
-        (_whole, start, ref) => {
+    const html = files[htmlName];
+    const parts: string[] = [];
+    let copied = 0;
+    for (let start = html.indexOf("<igx-template-column"); start >= 0;
+        start = html.indexOf("<igx-template-column", copied)) {
+        let quote = "";
+        let end = start;
+        for (; end < html.length; end++) {
+            const character = html[end];
+            if (quote) { if (character === quote) quote = ""; }
+            else if (character === '"' || character === "'") quote = character;
+            else if (character === ">") { end++; break; }
+        }
+        if (end <= start || end > html.length) break;
+        let tag = html.slice(start, end);
+        tag = tag.replace(/\s+\[template\]="([A-Za-z_$][\w$]*)"/, (_whole, ref) => {
             refs.add(ref);
-            return `${start}\n          (cellUpdating)="this.${ref}CellUpdating($event.sender, $event.args)"`;
+            return `\n          (cellUpdating)="this.${ref}CellUpdating($event.sender, $event.args)"`;
         });
+        parts.push(html.slice(copied, start), tag);
+        copied = end;
+    }
+    parts.push(html.slice(copied));
+    files[htmlName] = parts.join("");
     if (refs.size === 0) return;
 
     let source = files[tsName];
@@ -589,22 +607,35 @@ function normalizeAngularDataGridCollections(files: Record<string, string>, grid
     const declarations: string[] = [];
     const assignments: string[] = [];
     grids.forEach((grid, suffix) => {
+        if (grid.collections.length === 0) return;
         if (grid.collections.length > 0 && !grid.name) throw new Error("Angular DataGrid collections need a named grid");
+        const gridName = codeIdentifier(grid.name, "Angular DataGrid name");
         for (const collection of grid.collections) {
-            used.add(collection.className); used.add(collection.itemClass);
-            const field = `codegen${collection.property[0].toUpperCase()}${collection.property.slice(1)}${suffix}`;
+            const className = codeIdentifier(collection.className, "Angular DataGrid collection type");
+            const itemClass = codeIdentifier(collection.itemClass, "Angular DataGrid item type");
+            const property = codeIdentifier(collection.property, "Angular DataGrid collection property");
+            used.add(className); used.add(itemClass);
+            const field = codeIdentifier(
+                `codegen${property[0].toUpperCase()}${property.slice(1)}${suffix}`,
+                "generated Angular DataGrid field");
             const items = collection.items.map((item, index) => {
                 const value = { ...item }; delete value.type;
-                return `const item${index} = Object.assign(new ${collection.itemClass}(), ${JSON.stringify(value)} as any); collection.add(item${index});`;
+                const encoded = JSON.stringify(JSON.stringify(value));
+                return `const item${index} = Object.assign(new ${itemClass}(), JSON.parse(${encoded}) as any); collection.add(item${index});`;
             }).join(" ");
-            declarations.push(`public readonly ${field} = (() => { const collection = new ${collection.className}(); ${items} return collection; })();`);
-            assignments.push(`for (const item of this.${field}) this.${grid.name}.${collection.property}.add(item);`);
+            declarations.push(`public readonly ${field} = (() => { const collection = new ${className}(); ${items} return collection; })();`);
+            assignments.push(`for (const item of this.${field}) this.${gridName}.${property}.add(item);`);
         }
     });
     const imports = `import { ${[...used].sort().join(", ")} } from 'igniteui-angular-data-grids';\n`;
     files[tsName] = imports + files[tsName]
         .replace(/(export class AppComponent[^\{]*\{)/, `$1\n\t${declarations.join("\n\t")}`)
         .replace(/(ngAfterViewInit\(\): void\s*\{)/, `$1\n\t\t${assignments.join("\n\t\t")}`);
+}
+
+function codeIdentifier(value: string, description: string): string {
+    if (!/^[A-Za-z_$][\w$]*$/.test(value)) throw new Error(`${description} is not a safe identifier: ${value}`);
+    return value;
 }
 
 function normalizeAngularEventBindings(files: Record<string, string>): void {
@@ -721,7 +752,7 @@ function normalizeReactEmptyModelElements(files: Record<string, string>): void {
             .replace(/from\s+(['"])igniteui-react-navigation\1/g, "from 'igniteui-react-charts'")
             .replace(/from\s+(['"])igniteui-react-grids\1/g, "from 'igniteui-react-data-grids'")
             .replace(
-                /<IgrRadialGaugeRange\b((?:(?:"[^"]*")|[^>])*)>\s*<\/IgrRadialGaugeRange>/gs,
+                /<IgrRadialGaugeRange\b([^>]*)>\s*<\/IgrRadialGaugeRange>/g,
                 "<IgrRadialGaugeRange$1 />");
         files[name] = deduplicateSharedHolderState(files[name]);
     }
