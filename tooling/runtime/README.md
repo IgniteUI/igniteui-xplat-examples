@@ -30,10 +30,10 @@ exactly pinned and registered through `defineAllComponents()`, and their generat
 covered by emission and compile checks. DataGrid and all canonical types without the `Web` prefix are
 part of the required browser baseline.
 
-Samples that intentionally keep producing work declare `"runtimeContinuous": true`. Their initial
-render gets a bounded readiness window rather than being required to reach permanent idle. Timer
-chains are owned by the sample that started them and cancelled during teardown, so a healthy live-data
-ticker neither fails its own check nor contaminates the sample that follows it.
+Samples whose `onViewInit` deliberately starts work that never completes list those exact handler
+names in `"testingSkippedViewInits"`. Runtime testing removes only those named initialisers from the
+JSON before loading it; the rest of the sample still renders and must settle normally. The harness
+does not cancel timers during teardown or otherwise make a sample appear settled.
 
 Use `--skip-browser-install` after Chromium has already been installed. `generated/`,
 `blank-shots/`, and `node_modules/` are disposable and ignored.

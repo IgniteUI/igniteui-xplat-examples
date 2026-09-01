@@ -1,6 +1,6 @@
 {
   "skipAlterDataCasing": true,
-  "runtimeContinuous": true,
+  "testingSkippedViewInits": ["DataGridLiveDataTickerOnViewInit"],
   "onViewInit": ["DataGridLiveDataTickerOnViewInit"],
   "descriptions": {
     "editor": {

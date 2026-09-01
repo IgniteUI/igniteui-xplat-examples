@@ -12,7 +12,7 @@
          zero can take a different path through its layout than one on a real page, and this check
          is about whether the ordinary path works. */
       #root { display: flex; flex-direction: column; height: 100%; }
-      #content { flex: 1 1 auto; min-height: 400px; }
+      #content, #contentBottom { flex: 1 1 auto; min-height: 300px; }
       #editor, #legend, #aboveContent, #aboveContentLeft, #aboveContentRight,
       #belowContent, #leftContent, #rightContent { flex: 0 0 auto; }
     </style>
@@ -25,6 +25,7 @@
       <div id="aboveContentRight"></div>
       <div id="legend"></div>
       <div id="content"></div>
+      <div id="contentBottom"></div>
       <div id="leftContent"></div>
       <div id="rightContent"></div>
       <div id="belowContent"></div>

@@ -1,4 +1,5 @@
 {
+  "hasAnimations": true,
   "skipAlterDataCasing": true,
   "descriptions": {
     "editor": {

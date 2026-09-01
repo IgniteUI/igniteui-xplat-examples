@@ -1,4 +1,5 @@
 {
+  "hasAnimations": true,
   "todo": "Blazor source toggles button enabled state via RowEditStarted/RowEditEnded handlers + a ButtonsDisabled bool. Not yet ported \u2014 buttons stay enabled all the time. The CommitEdits/Undo/Redo functionality still works.",
   "skipAlterDataCasing": true,
   "descriptions": {

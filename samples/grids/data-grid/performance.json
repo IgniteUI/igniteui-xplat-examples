@@ -1,6 +1,6 @@
 {
   "skipAlterDataCasing": true,
-  "runtimeContinuous": true,
+  "testingSkippedViewInits": ["DataGridPerformanceTickerOnViewInit"],
   "onViewInit": ["DataGridPerformanceTickerOnViewInit"],
   "descriptions": {
     "content": {

@@ -15,7 +15,7 @@ export class MapShapeRandomStyling {
     public shapeRandomStyling: ShapeRandomStyling;
 
     // Random styling: each country keeps the color it is first given.
-    public mapShapeRandomStyling(): void {
+    public mapShapeRandomStyling(): Promise<void> {
         this.shapeRandomStyling = new ShapeRandomStyling();
         this.shapeRandomStyling.shapeStrokeColors = ['Black'];
         this.shapeRandomStyling.shapeFillColors = ['#8C23D1', '#0E9759', '#B4D336', '#F2A464', '#D74545', 'DodgerBlue'];
@@ -26,17 +26,20 @@ export class MapShapeRandomStyling {
         var sds = new IgcShapeDataSource();
         sds.shapefileSource = "https://static.infragistics.com/xplatform/shapes/world_countries_all.shp";
         sds.databaseSource = "https://static.infragistics.com/xplatform/shapes/world_countries_all.dbf";
-        sds.importCompleted = (s: IgcShapeDataSource, e: any) => {
-            var geoSeries = new IgcGeographicShapeSeriesComponent();
-            geoSeries.dataSource = s.getPointData();
-            geoSeries.shapeMemberPath = "points";
-            // the series asks for each shape's style as it draws it, which it only does when it is
-            // allowed to take one
-            geoSeries.isCustomShapeStyleAllowed = true;
-            geoSeries.assigningShapeStyle = this.onStylingShape.bind(this);
-            map.series.add(geoSeries);
-        };
-        sds.dataBind();
+        return new Promise((resolve) => {
+            sds.importCompleted = (s: IgcShapeDataSource, e: any) => {
+                var geoSeries = new IgcGeographicShapeSeriesComponent();
+                geoSeries.dataSource = s.getPointData();
+                geoSeries.shapeMemberPath = "points";
+                // the series asks for each shape's style as it draws it, which it only does when it is
+                // allowed to take one
+                geoSeries.isCustomShapeStyleAllowed = true;
+                geoSeries.assigningShapeStyle = this.onStylingShape.bind(this);
+                map.series.add(geoSeries);
+                resolve();
+            };
+            sds.dataBind();
+        });
     }
 
     public onStylingShape(s: IgcGeographicShapeSeriesBaseComponent, args: IgcAssigningShapeStyleEventArgs): void {

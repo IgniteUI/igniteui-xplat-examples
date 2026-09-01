@@ -290,8 +290,8 @@ registerModules();
     }
 })();
 
-const SLOTS = ['content', 'editor', 'legend', 'aboveContent', 'aboveContentLeft', 'aboveContentRight',
-               'belowContent', 'leftContent', 'rightContent'];
+const SLOTS = ['content', 'contentBottom', 'editor', 'legend', 'aboveContent', 'aboveContentLeft',
+               'aboveContentRight', 'belowContent', 'leftContent', 'rightContent'];
 
 /** The container a description slot is keyed to. */
 const containerFor = (key) => document.getElementById(key);
@@ -323,43 +323,6 @@ CodeGenHelper.findByNameLookup = (name) => {
  * that outlived the definition that asked for it would hand the next definition the state of the last.
  */
 let sharedSupporting = new Map();
-
-/** Timers owned by a sample, including descendants recursively scheduled by their callbacks. */
-const nativeSetTimeout = window.setTimeout.bind(window);
-const nativeClearTimeout = window.clearTimeout.bind(window);
-const timersByOwner = new Map();
-let currentTimerOwner = 0;
-let callbackTimerOwner = 0;
-let nextTimerOwner = 0;
-
-window.setTimeout = (callback, delay, ...rest) => {
-    const owner = callbackTimerOwner || currentTimerOwner;
-    let id;
-    const wrapped = typeof callback !== 'function' ? callback : (...args) => {
-        if (owner) timersByOwner.get(owner)?.delete(id);
-        const previous = callbackTimerOwner;
-        callbackTimerOwner = owner;
-        try { return callback(...args); }
-        finally { callbackTimerOwner = previous; }
-    };
-    id = nativeSetTimeout(wrapped, delay, ...rest);
-    if (owner) {
-        if (!timersByOwner.has(owner)) timersByOwner.set(owner, new Set());
-        timersByOwner.get(owner).add(id);
-    }
-    return id;
-};
-window.clearTimeout = (id) => {
-    for (const timers of timersByOwner.values()) timers.delete(id);
-    return nativeClearTimeout(id);
-};
-
-function clearSampleTimers() {
-    for (const timers of timersByOwner.values()) {
-        for (const id of timers) nativeClearTimeout(id);
-    }
-    timersByOwner.clear();
-}
 
 /**
  * The requests this page still has on the wire.
@@ -575,8 +538,16 @@ function stage(what) {
 
 async function load(sample, options) {
     const timeout = (options && options.timeout) || 8000;
-    const continuous = sample && sample.runtimeContinuous === true;
-
+    // Some samples deliberately start work that never completes. Runtime testing omits only the
+    // explicitly named view initialisers while still loading and settling the rest of the sample.
+    const skippedViewInits = new Set(Array.isArray(sample?.testingSkippedViewInits)
+        ? sample.testingSkippedViewInits : []);
+    if (sample && Object.prototype.hasOwnProperty.call(sample, 'testingSkippedViewInits')) {
+        const onViewInit = typeof sample.onViewInit === 'string'
+            ? [sample.onViewInit] : Array.isArray(sample.onViewInit) ? sample.onViewInit : [];
+        sample = { ...sample, onViewInit: onViewInit.filter(name => !skippedViewInits.has(name)) };
+        delete sample.testingSkippedViewInits;
+    }
     // Whether this sample's data was emitted unaltered, which decides whether its paths are altered.
     keepCasingAsWritten = !!(sample && sample.skipAlterDataCasing === true);
 
@@ -593,12 +564,7 @@ async function load(sample, options) {
     externalBytes.nodes = 0;
     announcedAt = 0;
     stage('cleanup');
-    currentTimerOwner = 0;
-    clearSampleTimers();
     cleanupPage();
-    // Timers created from here onward belong to this sample. A timer callback inherits this owner,
-    // so a recursively scheduled live-data ticker remains removable after `load` returns.
-    currentTimerOwner = ++nextTimerOwner;
     // What the renderers objected to while tearing the previous sample down. Collected here rather than
     // left for the next drain, because these belong to whatever was on the page before this sample —
     // a component that cannot be removed cleanly is the finding, and it is not this sample's fault.
@@ -628,9 +594,22 @@ async function load(sample, options) {
         }
     }
 
+    // The real sample layout creates the control before the property editor binds TargetRef to it.
+    // JSON object order often lists the editor first for visual layout, but feeding that order directly
+    // to one synchronous renderer asks the editor to resolve a target that does not exist yet. Keep the
+    // layout slots unchanged while constructing PropertyEditorPanel descriptions last.
+    const descriptions = sample?.descriptions && typeof sample.descriptions === 'object'
+        ? Object.fromEntries(Object.entries(sample.descriptions).sort((left, right) => {
+            const isEditor = ([slot, description]) => slot === 'editor' ||
+                description?.type === 'PropertyEditorPanel';
+            return Number(isEditor(left)) - Number(isEditor(right));
+        }))
+        : sample?.descriptions;
+    const orderedSample = descriptions === sample?.descriptions
+        ? sample : { ...sample, descriptions };
     const json = animated
-        ? JSON.stringify({ ...sample, animationIdleTimeout: ANIMATION_TIMEOUT })
-        : JSON.stringify(sample);
+        ? JSON.stringify({ ...orderedSample, animationIdleTimeout: ANIMATION_TIMEOUT })
+        : JSON.stringify(orderedSample);
 
     const thrown = [];
     const initialisers = [];
@@ -638,7 +617,7 @@ async function load(sample, options) {
     // a page to reach that item, so a handler expecting the rest of it would fail on the omission
     // rather than on anything wrong.
     const shouldRunInitialisers = !options || options.runInitialisers !== false;
-    const runInitialiserList = (list) => {
+    const runInitialiserList = async (list) => {
         const value = sample && sample[list];
         const names = typeof value === 'string' ? [value] : Array.isArray(value) ? value : [];
         if (names.length > 0) stage(list);
@@ -663,7 +642,10 @@ async function load(sample, options) {
                     }
                 }
                 const item = LibraryManager.instance.getInstance(name);
-                if (typeof item === 'function') item();
+                if (typeof item === 'function') {
+                    const pending = item();
+                    if (pending && typeof pending.then === 'function') await pending;
+                }
                 else if (!suppliedStyles) initialisers.push(`${name} is not executable`);
             } catch (e) {
                 initialisers.push(`${name} threw: ${e && e.message}`);
@@ -673,7 +655,7 @@ async function load(sample, options) {
 
     // These are lifecycle hooks, not interchangeable start-up callbacks. onInit is analogous to a
     // constructor/ngOnInit hook and runs before the view is built.
-    if (shouldRunInitialisers) runInitialiserList('onInit');
+    if (shouldRunInitialisers) await runInitialiserList('onInit');
 
     stage('loadJson');
     try {
@@ -686,7 +668,7 @@ async function load(sample, options) {
     // references. onViewInit is analogous to ngAfterViewInit/componentDidMount and must not run before
     // that boundary. It still precedes settlement so its data, network, drawing, and animations are
     // all part of what this sample check validates.
-    if (thrown.length === 0 && shouldRunInitialisers) runInitialiserList('onViewInit');
+    if (thrown.length === 0 && shouldRunInitialisers) await runInitialiserList('onViewInit');
 
     const errors = collectErrors();
     // Anything the renderers object to between the stages, taken as it appears rather than at the end,
@@ -702,8 +684,8 @@ async function load(sample, options) {
             const timer = setTimeout(() => {
                 if (settled) return;
                 settled = true;
-                resolve(!continuous);
-            }, continuous ? Math.min(timeout, 1000) : timeout);
+                resolve(true);
+            }, timeout);
             let pending = named.length;
             for (const slot of named) {
                 renderer.queueForIdle(containerFor(slot), () => {
@@ -762,7 +744,6 @@ async function load(sample, options) {
         externalBytes: { ...externalBytes },
         unresolved: [...unresolved, ...missingRefs.filter(name => !unresolved.has(name))],
     };
-    currentTimerOwner = 0;
     return result;
 }
 
@@ -822,9 +803,6 @@ window.igSampleHarness = {
     unknownTypes,
     registered: () => registered,
     itemCount: () => LibraryManager.instance.itemNames().length,
-    // Read-only product state. If this remains true after CR has invoked AnimationIdleHandler, the
-    // sample that just ran is the producer; continuing would only blame every later animated sample.
-    animationStateActive: () => core.GlobalAnimationState?.d?.g?.() === true,
 };
 
 // Read by the runner to know the page is usable, rather than guessing with a delay.

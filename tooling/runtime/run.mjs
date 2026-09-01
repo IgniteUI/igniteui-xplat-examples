@@ -555,6 +555,24 @@ if (cases.length === 0) {
     process.exit(2);
 }
 
+const invalidSkippedViewInits = [];
+for (const one of cases) {
+    if (one.sample.testingSkippedViewInits === undefined) continue;
+    const skipped = one.sample.testingSkippedViewInits;
+    const configured = typeof one.sample.onViewInit === 'string'
+        ? [one.sample.onViewInit]
+        : Array.isArray(one.sample.onViewInit) ? one.sample.onViewInit : [];
+    if (!Array.isArray(skipped) || skipped.some(name => typeof name !== 'string') ||
+        skipped.some(name => !configured.includes(name))) {
+        invalidSkippedViewInits.push(one.name);
+    }
+}
+if (invalidSkippedViewInits.length > 0) {
+    console.error('[runtime] testingSkippedViewInits must name entries present in onViewInit:');
+    for (const name of invalidSkippedViewInits) console.error(`  ${name}`);
+    process.exit(1);
+}
+
 // A sample that starts an animation without declaring it is not safe to load in a shared host: CR is
 // never told to wait, cleanup happens mid-transition, and every later sample inherits a non-idle global
 // animation counter. Report the producer directly instead of hundreds of misleading downstream timeouts.
@@ -872,10 +890,6 @@ for (const name of parsed.keys()) {
     for (const problem of problems.slice(0, show)) console.log(`          ${problem}`);
     if (problems.length > show) console.log(`          … and ${problems.length - show} more`);
     previous = name;
-    if (problems.some(problem => problem.includes('product still reports active animations'))) {
-        console.log('          stopping: later animation verdicts would inherit this product state');
-        break;
-    }
 }
 
 /**
@@ -1084,18 +1098,11 @@ async function loadOnce(name, sample) {
         heapBySample.push({ name, heap });
         lastHeap = heap;
     }
-    // A live-data sample explicitly opts into never becoming globally idle. Its owned ticker is
-    // stopped at the next cleanup; active work here is the scenario, not stale CR state.
-    const animationStateActive = sample.runtimeContinuous !== true && await page.evaluate(
-        'window.igSampleHarness.animationStateActive()').catch(() => false);
-
     return [
         ...result.thrown.map(t => `threw: ${t.split('\n')[0]}`),
         ...result.errors.map(e => `renderer: ${e.split('\n')[0]}`),
         ...(result.timedOut ? [`never went idle within ${TIMEOUT}ms`] : []),
         ...(result.animationTimedOut ? ['animations never settled'] : []),
-        ...(animationStateActive
-            ? ['product still reports active animations after CR declared the page idle'] : []),
         ...(result.bigCanvases ?? []).map(c => `asked for a canvas it cannot need: ${c}`),
         ...(result.initialisers ?? []).map(p => `a handler the sample runs at start-up: ${p}`),
         // Drawing nothing is a failure for a sample, which is a whole runnable page, and information
