@@ -156,7 +156,7 @@ Repository setup required:
 2. Create the `downstream-sync` GitHub Actions environment and choose protection rules compatible
    with whether every upstream PR update should synchronize automatically.
 3. Require `Code generation passed`, `Emitted sample builds passed`, `Emitted libraries passed`, and
-   the Web Components runtime `load` job in the repository ruleset.
+   `Web Components runtime passed` in the repository ruleset.
 
 Fork pull requests run validation but do not receive the App private key and therefore do not create
 downstream branches.
