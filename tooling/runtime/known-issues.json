@@ -1,5 +1,9 @@
 [
   {
+    "sample": "charts/category-chart/annotations-all.json",
+    "reason": "The published beta reports animation idle but leaves GlobalAnimationState active after this sample is removed."
+  },
+  {
     "sample": "maps/geo-map/geo-symbol-map-with-callouts.json",
     "reason": "The published beta faults while constructing the callout layer."
   }

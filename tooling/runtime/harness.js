@@ -491,29 +491,7 @@ const ANIMATION_TIMEOUT = 10000;
  * does it. What the teardown itself complains about is kept and reported, because a component that
  * cannot be torn down is the next sample's problem and worth naming as this one's.
  */
-async function waitForRendererIdle(each, container, label) {
-    await new Promise((resolve) => {
-        let settled = false;
-        const done = () => {
-            if (settled) return;
-            settled = true;
-            clearTimeout(timer);
-            resolve();
-        };
-        const timer = setTimeout(() => {
-            teardownProblems.push(`${label}: renderer did not become idle after cleanup`);
-            done();
-        }, 3000);
-        try {
-            each.queueForIdle(container, done);
-        } catch (e) {
-            teardownProblems.push(`${label}: waiting for cleanup: ${e && e.message}`);
-            done();
-        }
-    });
-}
-
-async function cleanupPage() {
+function cleanupPage() {
     // First the removal the client sends: every slot that has something in it, described as null.
     //
     // "Slots whose control was removed from the layout are sent as null descriptions, which the renderer
@@ -530,9 +508,6 @@ async function cleanupPage() {
         for (const slot of occupied) descriptions[slot] = null;
         try {
             renderer.loadJson(JSON.stringify({ allowNullForRemove: true, descriptions }), containerFor);
-            for (const slot of occupied) {
-                await waitForRendererIdle(renderer, containerFor(slot), `removing ${slot}`);
-            }
         } catch (e) {
             teardownProblems.push(`removing ${occupied.join(', ')}: ${e && e.message}`);
         }
@@ -545,11 +520,6 @@ async function cleanupPage() {
         for (const each of [renderer, editorRenderer]) {
             try {
                 each.cleanup(container, true);
-                // cleanup() schedules its work through the adapter. ComponentRenderer keeps the
-                // container being cleaned in one internal slot, so issuing cleanup for another
-                // container before this one becomes idle races and can tear down the wrong page.
-                await waitForRendererIdle(each, container,
-                    `${slot} (${each === renderer ? 'page' : 'editor'} renderer)`);
             } catch (e) {
                 teardownProblems.push(`${slot}: ${e && e.message}`);
             }
@@ -619,7 +589,7 @@ async function load(sample, options) {
     stage('cleanup');
     currentTimerOwner = 0;
     clearSampleTimers();
-    await cleanupPage();
+    cleanupPage();
     // Timers created from here onward belong to this sample. A timer callback inherits this owner,
     // so a recursively scheduled live-data ticker remains removable after `load` returns.
     currentTimerOwner = ++nextTimerOwner;
