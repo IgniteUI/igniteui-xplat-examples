@@ -872,6 +872,10 @@ for (const name of parsed.keys()) {
     for (const problem of problems.slice(0, show)) console.log(`          ${problem}`);
     if (problems.length > show) console.log(`          … and ${problems.length - show} more`);
     previous = name;
+    if (problems.some(problem => problem.includes('product still reports active animations'))) {
+        console.log('          stopping: later animation verdicts would inherit this product state');
+        break;
+    }
 }
 
 /**
@@ -1080,12 +1084,16 @@ async function loadOnce(name, sample) {
         heapBySample.push({ name, heap });
         lastHeap = heap;
     }
+    const animationStateActive = await page.evaluate(
+        'window.igSampleHarness.animationStateActive()').catch(() => false);
 
     return [
         ...result.thrown.map(t => `threw: ${t.split('\n')[0]}`),
         ...result.errors.map(e => `renderer: ${e.split('\n')[0]}`),
         ...(result.timedOut ? [`never went idle within ${TIMEOUT}ms`] : []),
         ...(result.animationTimedOut ? ['animations never settled'] : []),
+        ...(animationStateActive
+            ? ['product still reports active animations after CR declared the page idle'] : []),
         ...(result.bigCanvases ?? []).map(c => `asked for a canvas it cannot need: ${c}`),
         ...(result.initialisers ?? []).map(p => `a handler the sample runs at start-up: ${p}`),
         // Drawing nothing is a failure for a sample, which is a whole runnable page, and information

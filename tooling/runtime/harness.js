@@ -794,6 +794,9 @@ window.igSampleHarness = {
     unknownTypes,
     registered: () => registered,
     itemCount: () => LibraryManager.instance.itemNames().length,
+    // Read-only product state. If this remains true after CR has invoked AnimationIdleHandler, the
+    // sample that just ran is the producer; continuing would only blame every later animated sample.
+    animationStateActive: () => core.GlobalAnimationState?.d?.g?.() === true,
 };
 
 // Read by the runner to know the page is usable, rather than guessing with a delay.
