@@ -5,7 +5,7 @@ using IgniteUI.Blazor.Controls;
 public class RadialGaugeToggleOpticalScaling
 {
     //begin eventHandler
-    public void RadialGaugeToggleOpticalScaling(object sender, PropertyEditorPropertyDescriptionChangedEventArgs args)
+    public void RadialGaugeToggleOpticalScaling(IgbPropertyEditorPropertyDescriptionChangedEventArgs args)
     {
         var gauge = CodeGenHelper.GetDescription<IgbRadialGauge>("content");
         if (gauge == null) return;

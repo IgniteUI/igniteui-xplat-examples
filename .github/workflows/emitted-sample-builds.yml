@@ -1,0 +1,49 @@
+name: Emitted sample builds
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: emitted-samples-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Build affected ${{ matrix.platform }} samples (shard ${{ matrix.shard }})
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    strategy:
+      fail-fast: false
+      max-parallel: 12
+      matrix:
+        platform: [Angular, React, WebComponents, Blazor]
+        shard: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: tooling/package-lock.json
+      - uses: actions/setup-dotnet@v4
+        if: matrix.platform == 'Blazor'
+        with:
+          dotnet-version: '10.0.x'
+      - name: Install and build the Node emitter
+        working-directory: tooling
+        run: |
+          npm ci
+          npm run build
+      - name: Emit and compile sample projects
+        run: >-
+          node tooling/src/cli.mjs sample-build
+          --platform=${{ matrix.platform }}
+          --shard-index=${{ matrix.shard }}
+          --shard-total=12
+          ${{ github.event_name == 'pull_request' && format('--changed-since={0}', github.event.pull_request.base.sha) || '' }}

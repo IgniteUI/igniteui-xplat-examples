@@ -47,7 +47,7 @@ public class EditorChangeStackedSeriesType
         // numbers across the bottom; every other type is the other way round. Both pairs of axes
         // are declared on the chart, and the swap is which pair this stack is given.
         var bar = name.IndexOf("Bar") >= 0;
-        var stack = Make(name);
+        dynamic stack = Make(name);
         stack.XAxisName = bar ? "numXAxis" : "catXAxis";
         stack.YAxisName = bar ? "catYAxis" : "numYAxis";
 

@@ -1,4 +1,5 @@
 {
+  "hasAnimations": true,
   "note": "P2, wait until popups expand sideways when in vertical orientation",
   "descriptions": {
     "aboveContent": {

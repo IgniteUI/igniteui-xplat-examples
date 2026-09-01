@@ -134,7 +134,7 @@
   "modules": [
     "withDescriptions",
     "layouts/PropertyEditorPanelModule",
-    "grids/DataGridModule",
-    "grids/DataGridToolbarModule"
+    "data-grids/DataGridModule",
+    "data-grids/DataGridToolbarModule"
   ]
 }

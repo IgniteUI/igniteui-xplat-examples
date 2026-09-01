@@ -1,5 +1,5 @@
 //begin imports
-import { IIgrCellTemplateProps, IgrTemplateCellInfo } from 'igniteui-react-grids';
+import { IIgrCellTemplateProps, IgrTemplateCellInfo } from 'igniteui-react-data-grids';
 import { IgrSparkline } from 'igniteui-react-charts';
 //end imports
 

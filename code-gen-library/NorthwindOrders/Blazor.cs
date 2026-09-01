@@ -1,20 +1,28 @@
 
 namespace Infragistics.Samples
 {
-    //begin data
-    using IgniteUI.Blazor.Controls;
-    using IgniteUI.Blazor.Controls.Datasources;
+    //begin async data
+    using System.Collections.Generic;
+    using System.Net.Http;
+    using System.Text.Json;
+    using System.Threading.Tasks;
 
-    public class NorthwindOrders
+    public class NorthwindOrders : List<Dictionary<string, object>>
     {
-        public static IgbODataVirtualDataSource GetSource()
+        public static async Task<NorthwindOrders> Fetch()
         {
-            var vds = new IgbODataVirtualDataSource();
-            vds.BaseUri = "https://services.odata.org/V4/Northwind/Northwind.svc";
-            vds.EntitySet = "Orders";
-            vds.PageSizeRequested = 200;
-            return vds;
+            const string url = "https://services.odata.org/V4/Northwind/Northwind.svc/Orders?$format=json";
+            using var client = new HttpClient();
+            var json = await client.GetStringAsync(url);
+            using var document = JsonDocument.Parse(json);
+            var orders = new NorthwindOrders();
+            foreach (var element in document.RootElement.GetProperty("value").EnumerateArray())
+            {
+                var order = JsonSerializer.Deserialize<Dictionary<string, object>>(element.GetRawText());
+                if (order != null) orders.Add(order);
+            }
+            return orders;
         }
     }
-    //end data
+    //end async data
 }

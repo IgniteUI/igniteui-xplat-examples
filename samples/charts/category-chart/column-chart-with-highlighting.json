@@ -1,4 +1,5 @@
 {
+  "hasAnimations": true,
   "strings": {
     "legendTitle": "Average Monthly Temperatures"
   },

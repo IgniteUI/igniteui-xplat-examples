@@ -1,4 +1,6 @@
 {
+  "hasAnimations": true,
+  "onViewInit": ["DataGridColumnAnimationOnViewInit"],
   "skipAlterDataCasing": true,
   "descriptions": {
     "editor": {
@@ -99,7 +101,7 @@
       "autoGenerateColumns": false,
       "isColumnOptionsEnabled": true,
       "defaultColumnMinWidth": 100,
-      "columnAddingAnimationMode": "SlideFromLeft",
+      "columnAddingAnimationMode": "None",
       "columnShowingAnimationMode": "SlideFromLeft",
       "columnExchangingAnimationMode": "Crossfade",
       "columnHidingAnimationMode": "FadeOut",
@@ -123,6 +125,6 @@
   "modules": [
     "withDescriptions",
     "layouts/PropertyEditorPanelModule",
-    "grids/DataGridModule"
+    "data-grids/DataGridModule"
   ]
 }

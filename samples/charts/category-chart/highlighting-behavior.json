@@ -1,5 +1,5 @@
 {
-  "hasAnimations": false,
+  "hasAnimations": true,
   "descriptions": {
     "editor": {
       "type": "PropertyEditorPanel",

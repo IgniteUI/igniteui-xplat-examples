@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk.Razor">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <RootNamespace>BlazorLibrary</RootNamespace>
+    <StaticWebAssetBasePath>_content/CodeLibrary</StaticWebAssetBasePath>
+    <DefineConstants>TESTING</DefineConstants>
+    <PackageId>CodeLibrary</PackageId>
+    <Version>1.0.0</Version>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="**/*.js" />
+    <Content Include="**/*.css" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="10.0.1" />
+    <PackageReference Include="IgniteUI.Blazor.Trial" Version="25.2.104" />
+  </ItemGroup>
+</Project>

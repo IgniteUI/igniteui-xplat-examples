@@ -21,7 +21,7 @@ public static class DoughnutChartSelectionReadout
             field.PrimitiveValue = "No Selection";
             return;
         }
-        var item = (EnergyGlobalDemandItem)data[index];
+        dynamic item = data[index];
         field.PrimitiveValue = item.Category + " — " + item.Value + "%";
     }
 }

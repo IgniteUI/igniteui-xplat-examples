@@ -1,14 +1,14 @@
 //begin imports
 import { IgcPropertyEditorPropertyDescriptionButtonClickEventArgs } from 'igniteui-webcomponents-layouts';
-import { IgcDataGridComponent } from 'igniteui-webcomponents-grids';
+import { IgcDataGridComponent } from 'igniteui-webcomponents-data-grids';
 //end imports
 
 import { CodeGenHelper } from 'igniteui-webcomponents-core';
 
 export class DataGridSaveLayout {
+    //begin eventHandler
     public savedLayout: string = "";
 
-    //begin eventHandler
     public dataGridSaveLayout(sender: any, args: IgcPropertyEditorPropertyDescriptionButtonClickEventArgs): void {
         const grid = CodeGenHelper.getDescription<IgcDataGridComponent>("content");
         if (!grid) return;

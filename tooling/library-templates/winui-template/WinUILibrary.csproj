@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>net9.0-windows10.0.19041.0</TargetFramework>
+    <TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
+    <UseWinUI>true</UseWinUI>
+    <Platforms>AnyCPU;x86;x64;arm64</Platforms>
+    <RuntimeIdentifiers>win-x86;win-x64;win-arm64</RuntimeIdentifiers>
+    <WindowsSdkPackageVersion>10.0.19041.38</WindowsSdkPackageVersion>
+    <WindowsPackageType>None</WindowsPackageType>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DefineConstants>$(DefineConstants);TESTING</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.7.250606001" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="SkiaSharp" Version="3.119.2" />
+    <PackageReference Include="SkiaSharp.Views.WinUI" Version="3.119.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Core\Infragistics.Core\Infragistics.Core.csproj" />
+    <ProjectReference Include="..\..\..\..\Core\Platform\Platform.WinUI\Platform.WinUI.csproj" />
+    <ProjectReference Include="..\..\..\..\DataVisualization.Core\DataVisualization\DV.Shared.Core.csproj" />
+    <ProjectReference Include="..\..\..\..\DataVisualization.WinUI\DataVisualization\DV.Shared.WinUI.csproj" />
+    <ProjectReference Include="..\..\..\..\DataChart.Core\DataChart\DataChart.Core.csproj" />
+    <ProjectReference Include="..\..\..\..\DataChart.WinUI\DataChart\DataChart.WinUI.csproj" />
+    <ProjectReference Include="..\..\..\..\Gauges.Core\Gauges\Gauges.Core.csproj" />
+    <ProjectReference Include="..\..\..\..\Gauges.WinUI\Gauges\Gauges.WinUI.csproj" />
+    <ProjectReference Include="..\..\..\..\GeographicMap.Core\GeographicMap\GeographicMap.Core.csproj" />
+    <ProjectReference Include="..\..\..\..\GeographicMap.WinUI\GeographicMap\GeographicMap.WinUI.csproj" />
+    <ProjectReference Include="..\..\..\..\Grid.Core\Grid\Grid.Core.csproj" />
+    <ProjectReference Include="..\..\..\..\Grid.WinUI\Grid\Grid.WinUI.csproj" />
+    <ProjectReference Include="..\..\..\..\Inputs.Core\Inputs\Inputs.Core.csproj" />
+    <ProjectReference Include="..\..\..\..\Inputs.WinUI\Inputs\Inputs.WinUI.csproj" />
+    <ProjectReference Include="..\..\..\..\Layouts.Core\Layouts\Layouts.Core.csproj" />
+    <ProjectReference Include="..\..\..\..\Layouts.WinUI\Layouts\Layouts.WinUI.csproj" />
+    <ProjectReference Include="..\..\..\..\Sparkline.Core\Sparkline\Sparkline.Core.csproj" />
+    <ProjectReference Include="..\..\..\..\Sparkline.WinUI\Sparkline\Sparkline.WinUI.csproj" />
+  </ItemGroup>
+</Project>

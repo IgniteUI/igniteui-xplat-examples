@@ -1,4 +1,5 @@
 {
+  "hasAnimations": true,
   "skipAlterDataCasing": true,
   "descriptions": {
     "editor": {
@@ -71,6 +72,6 @@
   "modules": [
     "withDescriptions",
     "layouts/PropertyEditorPanelModule",
-    "grids/DataGridModule"
+    "data-grids/DataGridModule"
   ]
 }

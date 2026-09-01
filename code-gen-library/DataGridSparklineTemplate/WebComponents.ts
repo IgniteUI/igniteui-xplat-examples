@@ -1,5 +1,5 @@
 //begin imports
-import { IgcTemplateCellInfo } from 'igniteui-webcomponents-grids';
+import { IgcTemplateCellInfo } from 'igniteui-webcomponents-data-grids';
 import { html } from 'lit';
 //end imports
 

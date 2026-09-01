@@ -10,7 +10,7 @@ public class DoughnutChartSelectionSliceClick
         // A click that selects reports which slice; a click that clears the selection reports that.
         DoughnutChartSelectionReadout.Show(
             CodeGenHelper.FindByName<IgbRingSeries>("ringSeries"),
-            CodeGenHelper.FindByName<IgbPropertyEditorPropertyDescription>("SelectedSlice"),
+            CodeGenHelper.FindByName<IgbPropertyEditorPropertyDescription>("selectedSlice"),
             args.IsSelected ? args.Index : -1);
     }
     //end eventHandler

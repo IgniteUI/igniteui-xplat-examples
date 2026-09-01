@@ -1,7 +1,7 @@
 //begin imports
 //end imports
 
-//begin async data
+//begin data
 export class EmployeesSalesData extends Array<EmployeesSalesDataItem> {
 
     public constructor(count?: number, useProductivity?: boolean) {
@@ -193,4 +193,4 @@ class EmployeesSalesDataGenerator {
         return "High";
     }
 }
-//end async data
+//end data

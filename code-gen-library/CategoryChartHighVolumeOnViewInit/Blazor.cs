@@ -8,7 +8,7 @@ public class CategoryChartHighVolumeOnViewInit
     public void CategoryChartHighVolumeOnViewInit()
     {
         var chart = CodeGenHelper.GetDescription<IgbCategoryChart>("content");
-        chart.ItemsSource = CategoryChartVolumeData.Generate(CategoryChartVolumeData.Count);
+        chart.DataSource = CategoryChartVolumeData.Generate(CategoryChartVolumeData.Count);
     }
     //end eventHandler
 }

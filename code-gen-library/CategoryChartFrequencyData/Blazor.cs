@@ -51,7 +51,7 @@ public static class CategoryChartFrequency
             data.Add(item);
         }
         index = data.Count;
-        chart.ItemsSource = data;
+        chart.DataSource = data;
     }
 
     public static void Toggle()

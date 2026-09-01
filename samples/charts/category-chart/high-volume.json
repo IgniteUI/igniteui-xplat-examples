@@ -1,4 +1,5 @@
 {
+  "hasAnimations": true,
   "onViewInit": [ "CategoryChartHighVolumeOnViewInit" ],
   "descriptions": {
     "editor": {
