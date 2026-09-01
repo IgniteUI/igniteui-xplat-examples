@@ -28,6 +28,10 @@
     "reason": "The published beta never invokes CR animation idle for DashboardTile on the hosted runner."
   },
   {
+    "sample": "charts/data-chart/axis-label-rotation.json",
+    "reason": "The published beta never invokes CR animation idle and leaves GlobalAnimationState active."
+  },
+  {
     "sample": "maps/geo-map/geo-symbol-map-with-callouts.json",
     "reason": "The published beta faults while constructing the callout layer."
   }

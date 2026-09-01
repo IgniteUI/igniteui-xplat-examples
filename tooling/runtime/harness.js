@@ -474,6 +474,7 @@ addResolver(renderer);
 addResolver(editorRenderer);
 
 let teardownProblems = [];
+let lifecycleStyles = [];
 
 /** What the test host allows an animation before calling it stuck. */
 // Hosted runners are substantially slower while the compile matrix is active. This is passed to
@@ -492,6 +493,11 @@ const ANIMATION_TIMEOUT = 10000;
  * cannot be torn down is the next sample's problem and worth naming as this one's.
  */
 function cleanupPage() {
+    // Required styles are emitted into a generated sample's stylesheet. This shared-page host adds
+    // only the current sample's lifecycle styles, so remove those exact owned nodes between samples.
+    for (const style of lifecycleStyles) style.remove();
+    lifecycleStyles = [];
+
     // First the removal the client sends: every slot that has something in it, described as null.
     //
     // "Slots whose control was removed from the layout are sent as null descriptions, which the renderer
@@ -626,41 +632,61 @@ async function load(sample, options) {
         ? JSON.stringify({ ...sample, animationIdleTimeout: ANIMATION_TIMEOUT })
         : JSON.stringify(sample);
 
-    stage('loadJson');
     const thrown = [];
+    const initialisers = [];
+    // Not run for a fence that publishes one library item's code: its definition states only enough of
+    // a page to reach that item, so a handler expecting the rest of it would fail on the omission
+    // rather than on anything wrong.
+    const shouldRunInitialisers = !options || options.runInitialisers !== false;
+    const runInitialiserList = (list) => {
+        const value = sample && sample[list];
+        const names = typeof value === 'string' ? [value] : Array.isArray(value) ? value : [];
+        if (names.length > 0) stage(list);
+        for (const name of names) {
+            if (!LibraryManager.instance.hasItem(name)) {
+                initialisers.push(`${name} is not in the library`);
+                continue;
+            }
+            try {
+                let suppliedStyles = false;
+                if (LibraryManager.instance.hasRequiredStyles(name)) {
+                    const holder = LibraryManager.instance.getHolderInstance(name);
+                    if (typeof holder.requiredStyles !== 'string') {
+                        initialisers.push(`${name} declares required styles but did not emit them`);
+                    } else {
+                        const style = document.createElement('style');
+                        style.dataset.libraryItem = name;
+                        style.textContent = holder.requiredStyles;
+                        document.head.appendChild(style);
+                        lifecycleStyles.push(style);
+                        suppliedStyles = true;
+                    }
+                }
+                const item = LibraryManager.instance.getInstance(name);
+                if (typeof item === 'function') item();
+                else if (!suppliedStyles) initialisers.push(`${name} is not executable`);
+            } catch (e) {
+                initialisers.push(`${name} threw: ${e && e.message}`);
+            }
+        }
+    };
+
+    // These are lifecycle hooks, not interchangeable start-up callbacks. onInit is analogous to a
+    // constructor/ngOnInit hook and runs before the view is built.
+    if (shouldRunInitialisers) runInitialiserList('onInit');
+
+    stage('loadJson');
     try {
         renderer.loadJson(json, containerFor);
     } catch (e) {
         thrown.push(String((e && e.stack) || e));
     }
 
-    // A generated host invokes these lifecycle handlers immediately after CR has constructed the
-    // page. Do that before asking CR to report idle: a handler can assign the initial data and start
-    // the animation that hasAnimations is specifically asking us to await.
-    const initialisers = [];
-    // Not run for a fence that publishes one library item's code: its definition states only enough of
-    // a page to reach that item, so a handler expecting the rest of it would fail on the omission
-    // rather than on anything wrong.
-    const shouldRunInitialisers = thrown.length === 0 && (!options || options.runInitialisers !== false);
-    if (shouldRunInitialisers) {
-        stage('initialisers');
-        for (const list of ['onInit', 'onViewInit']) {
-            const value = sample && sample[list];
-            const names = typeof value === 'string' ? [value] : Array.isArray(value) ? value : [];
-            for (const name of names) {
-                if (!LibraryManager.instance.hasItem(name)) {
-                    initialisers.push(`${name} is not in the library`);
-                    continue;
-                }
-                try {
-                    const item = LibraryManager.instance.getInstance(name);
-                    if (typeof item === 'function') item();
-                } catch (e) {
-                    initialisers.push(`${name} threw: ${e && e.message}`);
-                }
-            }
-        }
-    }
+    // loadJson constructs and attaches the descriptions synchronously and populates their named CR
+    // references. onViewInit is analogous to ngAfterViewInit/componentDidMount and must not run before
+    // that boundary. It still precedes settlement so its data, network, drawing, and animations are
+    // all part of what this sample check validates.
+    if (thrown.length === 0 && shouldRunInitialisers) runInitialiserList('onViewInit');
 
     const errors = collectErrors();
     // Anything the renderers object to between the stages, taken as it appears rather than at the end,
