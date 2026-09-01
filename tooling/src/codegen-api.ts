@@ -304,13 +304,20 @@ export function emitProject(json: string, platformName: string, opts: EmitOption
 
     const options: any = new CodeGenerationRendererOptions();
     options.library = libraryFor(opts.examplesRoot);
+    if (platformName === "Angular") {
+        // Angular events expose both sender and args through the EventEmitter payload. Library
+        // handlers use the cross-platform (sender, args) signature, so keep that payload intact.
+        options.skipAngularEventDestructuring = true;
+    }
+    const dataGridCollections = platformName === "Angular" || platformName === "React"
+        ? extractAngularDataGridCollections(json) : null;
     const renderer: any = new CodeGeneratingComponentRenderer(platform, options);
     registerDescriptions(renderer);
 
     const template: any = new CodeGenerationFolderTemplate();
     template.fileAccess = fileAccess;
     template.loadTemplate(templateDirFor(opts.examplesRoot, platformName));
-    renderer.loadCodeJson(json);
+    renderer.loadCodeJson(dataGridCollections?.json ?? json);
     const result: any = renderer.emitCode(template);
 
     // The result includes description-local names and generated ComponentRenderer properties in
@@ -331,7 +338,109 @@ export function emitProject(json: string, platformName: string, opts: EmitOption
         }
         files[file.replace(/\\/g, "/")] = content;
     }
+    if (platformName === "Angular") {
+        if (dataGridCollections && dataGridCollections.grids.some(grid => grid.collections.length > 0)) {
+            normalizeAngularDataGridCollections(files, dataGridCollections.grids);
+        }
+        normalizeAngularEventBindings(files);
+    } else if (platformName === "React" && dataGridCollections &&
+        dataGridCollections.grids.some(grid => grid.collections.length > 0)) {
+        normalizeReactDataGridCollections(files, dataGridCollections.grids);
+    }
     return { files, missingRefs: missingLibrary };
+}
+
+type AngularGridCollection = { property: string; className: string; itemClass: string; items: any[] };
+type AngularGridCollections = { name: string; collections: AngularGridCollection[] };
+
+function extractAngularDataGridCollections(json: string): { json: string; grids: AngularGridCollections[] } | null {
+    let parsed: any;
+    try { parsed = JSON.parse(json); } catch { return null; }
+    const definitions = [
+        ["groupDescriptions", "IgxColumnGroupDescriptionCollection", "IgxColumnGroupDescription"],
+        ["summaryDescriptions", "IgxColumnSummaryDescriptionCollection", "IgxColumnSummaryDescription"],
+        ["sortDescriptions", "IgxColumnSortDescriptionCollection", "IgxColumnSortDescription"],
+    ];
+    const grids: AngularGridCollections[] = [];
+    (function visit(node: any): void {
+        if (Array.isArray(node)) { node.forEach(visit); return; }
+        if (!node || typeof node !== "object") return;
+        if (node.type === "DataGrid") {
+            const collections: AngularGridCollection[] = [];
+            for (const [property, className, itemClass] of definitions) {
+                if (!Array.isArray(node[property])) continue;
+                collections.push({ property, className, itemClass, items: node[property] });
+                delete node[property];
+            }
+            grids.push({ name: typeof node.name === "string" ? node.name : "", collections });
+        }
+        Object.values(node).forEach(visit);
+    })(parsed.descriptions ?? parsed);
+    return { json: JSON.stringify(parsed), grids };
+}
+
+function normalizeAngularDataGridCollections(files: Record<string, string>, grids: AngularGridCollections[]): void {
+    const tsName = Object.keys(files).find(name => name.endsWith("app.component.ts"));
+    if (!tsName) throw new Error("Angular template has no app component to receive DataGrid collections");
+
+    const used = new Set<string>();
+    const declarations: string[] = [];
+    const assignments: string[] = [];
+    grids.forEach((grid, suffix) => {
+        if (grid.collections.length > 0 && !grid.name) throw new Error("Angular DataGrid collections need a named grid");
+        for (const collection of grid.collections) {
+            used.add(collection.className); used.add(collection.itemClass);
+            const field = `codegen${collection.property[0].toUpperCase()}${collection.property.slice(1)}${suffix}`;
+            const items = collection.items.map((item, index) => {
+                const value = { ...item }; delete value.type;
+                return `const item${index} = Object.assign(new ${collection.itemClass}(), ${JSON.stringify(value)} as any); collection.add(item${index});`;
+            }).join(" ");
+            declarations.push(`public readonly ${field} = (() => { const collection = new ${collection.className}(); ${items} return collection; })();`);
+            assignments.push(`for (const item of this.${field}) this.${grid.name}.${collection.property}.add(item);`);
+        }
+    });
+    const imports = `import { ${[...used].sort().join(", ")} } from 'igniteui-angular-data-grids';\n`;
+    files[tsName] = imports + files[tsName]
+        .replace(/(export class AppComponent[^\{]*\{)/, `$1\n\t${declarations.join("\n\t")}`)
+        .replace(/(ngAfterViewInit\(\): void\s*\{)/, `$1\n\t\t${assignments.join("\n\t\t")}`);
+}
+
+function normalizeAngularEventBindings(files: Record<string, string>): void {
+    const htmlName = Object.keys(files).find(name => name.endsWith("app.component.html"));
+    const tsName = Object.keys(files).find(name => name.endsWith("app.component.ts"));
+    if (!htmlName || !tsName) return;
+    const twoArgumentHandlers = new Set<string>();
+    for (const match of files[tsName].matchAll(/(?:public\s+)?([A-Za-z_$][\w$]*)\s*\(([^)]*)\)\s*:/g)) {
+        if (match[2].split(",").length >= 2) twoArgumentHandlers.add(match[1]);
+    }
+    files[htmlName] = files[htmlName].replace(/this\.([A-Za-z_$][\w$]*)\(\$event\)/g,
+        (whole, name) => twoArgumentHandlers.has(name) ? `this.${name}($event.sender, $event.args)` : whole);
+}
+
+function normalizeReactDataGridCollections(files: Record<string, string>, grids: AngularGridCollections[]): void {
+    const sourceName = Object.keys(files).find(name => name.endsWith("index.tsx"));
+    if (!sourceName) throw new Error("React template has no index.tsx to receive DataGrid collections");
+    const used = new Set<string>();
+    let source = files[sourceName];
+    for (const grid of grids) {
+        if (grid.collections.length > 0 && !grid.name) throw new Error("React DataGrid collections need a named grid");
+        const statements: string[] = [];
+        grid.collections.forEach((collection, collectionIndex) => {
+            used.add(collection.itemClass.replace(/^Igx/, "Igr"));
+            const itemClass = collection.itemClass.replace(/^Igx/, "Igr");
+            collection.items.forEach((item, index) => {
+                const value = { ...item }; delete value.type;
+                const variable = `item${collectionIndex}_${index}`;
+                statements.push(`const ${variable} = Object.assign(new ${itemClass}(), ${JSON.stringify(value)} as any); r.${collection.property}.add(${variable});`);
+            });
+        });
+        if (statements.length > 0) {
+            source = source.replace(`this.${grid.name} = r;`,
+                `if (r && this.${grid.name} !== r) { ${statements.join(" ")} }\n        this.${grid.name} = r;`);
+        }
+    }
+    source = `import { ${[...used].sort().join(", ")} } from 'igniteui-react-data-grids';\n` + source;
+    files[sourceName] = source;
 }
 
 function declaredProjectRefs(json: string): Set<string> {

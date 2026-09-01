@@ -335,7 +335,7 @@ let nextTimerOwner = 0;
 window.setTimeout = (callback, delay, ...rest) => {
     const owner = callbackTimerOwner || currentTimerOwner;
     let id;
-    const wrapped = (...args) => {
+    const wrapped = typeof callback !== 'function' ? callback : (...args) => {
         if (owner) timersByOwner.get(owner)?.delete(id);
         const previous = callbackTimerOwner;
         callbackTimerOwner = owner;

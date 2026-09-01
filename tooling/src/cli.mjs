@@ -117,6 +117,24 @@ function buildSourcesFrom(opts) {
     return [...new Set([...direct, ...impacted])].sort();
 }
 
+/**
+ * Whether a sample uses the separately versioned modern Web* component tier.
+ *
+ * DataGrid and the non-web controls deliberately remain in the required baseline: their canonical
+ * names do not start with Web. The tier can still be exercised explicitly with --include-web-grids.
+ */
+function usesWebComponentTier(file) {
+    let found = false;
+    (function visit(node) {
+        if (found) return;
+        if (Array.isArray(node)) { node.forEach(visit); return; }
+        if (!node || typeof node !== 'object') return;
+        if (typeof node.type === 'string' && /^Web[A-Z]/.test(node.type)) { found = true; return; }
+        Object.values(node).forEach(visit);
+    })(readJson(file).descriptions);
+    return found;
+}
+
 function sourcesFrom(opts, includeDeleted = false) {
     if (opts['changed-since']) {
         const paths = changedSamplePaths(opts['changed-since']);
@@ -436,7 +454,9 @@ async function main() {
         if (opts.platform === 'Uno') {
             throw new Error('Uno compilation needs the genuine uno-samples project shell; use the self-hosted Uno workflow');
         }
-        let files = shardSources(buildSourcesFrom(opts), opts);
+        let files = buildSourcesFrom(opts);
+        if (opts['include-web-grids'] !== true) files = files.filter(file => !usesWebComponentTier(file));
+        files = shardSources(files, opts);
         if (opts.limit) files = files.slice(0, Number(opts.limit));
         if (files.length === 0) {
             console.log(`[${opts.platform}] no samples in this selection`);
@@ -519,7 +539,7 @@ async function main() {
         }
         return;
     }
-    console.log('Usage:\n  xplat-codegen export --platform NAME --source PATH --output PATH [--clean] [--changed-since REF]\n  xplat-codegen check [--changed-since REF] [--platform A,B] [--include-excluded]\n  xplat-codegen sample-build --platform NAME [--changed-since REF | --source PATH] [--limit N] [--shard-index N --shard-total N] [--include-excluded]\n  xplat-codegen library --platform NAME --output PATH [--only A,B] [--clean]\n  xplat-codegen library-check --platform NAME [--changed-since REF | --only A,B | --all]\n  xplat-codegen snippets --source PATH --output PATH [--platform A,B]');
+    console.log('Usage:\n  xplat-codegen export --platform NAME --source PATH --output PATH [--clean] [--changed-since REF]\n  xplat-codegen check [--changed-since REF] [--platform A,B] [--include-excluded]\n  xplat-codegen sample-build --platform NAME [--changed-since REF | --source PATH] [--limit N] [--shard-index N --shard-total N] [--include-excluded] [--include-web-grids]\n  xplat-codegen library --platform NAME --output PATH [--only A,B] [--clean]\n  xplat-codegen library-check --platform NAME [--changed-since REF | --only A,B | --all]\n  xplat-codegen snippets --source PATH --output PATH [--platform A,B]');
 }
 
 main().catch(error => fail(error.stack ?? error.message));
