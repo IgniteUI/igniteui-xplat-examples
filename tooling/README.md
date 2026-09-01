@@ -42,11 +42,20 @@ and Uno):
 node src/cli.mjs check --source=../samples/gauges/linear-gauge/needle.json
 ```
 
-On a pull-request checkout, validate only altered samples:
+Create a platform-aware manifest by comparing every emitted sample folder at the merge base and
+the pull-request head:
 
 ```sh
-node src/cli.mjs check --changed-since=origin/main
+node src/cli.mjs impact \
+  --changed-since=origin/main \
+  --platform=Angular,React,WebComponents,Blazor \
+  --output=/tmp/output-impact.json
 ```
+
+The folder mapping is exact: `samples/grids/data-grid/performance.json` owns the emitted
+`grids/data-grid/performance/` folder. The manifest records separate testing and normal-emission
+changes. Testing includes exclusions carrying `"test": true`; downstream synchronization uses the
+normal-emission set so it never removes a platform-excluded, manually maintained folder.
 
 Emit the complete code-generation library, or compile only changed items and their requirements:
 
@@ -72,7 +81,7 @@ Emit and compile sample projects. Shards deterministically divide the complete s
 changing what is covered:
 
 ```sh
-node src/cli.mjs sample-build --platform=Angular --changed-since=origin/main
+node src/cli.mjs sample-build --platform=Angular --impact-manifest=/tmp/output-impact.json
 node src/cli.mjs sample-build --platform=Blazor --source=../samples/gauges/linear-gauge/needle.json
 node src/cli.mjs sample-build --platform=WebComponents --shard-index=0 --shard-total=12
 ```
@@ -119,9 +128,11 @@ documentation work—`id`, `ref`, `channel`, `item`, `include`, `omit`, `exclude
 ## Pull-request automation
 
 `.github/workflows/codegen-validation.yml` makes full-repository product emission an unconditional
-PR check for all seven platforms. `.github/workflows/emitted-sample-builds.yml` divides the full
-sample set into 12 shards and performs real project builds for Angular, React, Web Components, and
-Blazor on every PR (48 build jobs in total).
+PR check for all seven platforms. The browser runtime check also loads the complete supported sample
+set on every PR. `.github/workflows/emitted-sample-builds.yml` compares base and head output, divides
+only changed sample/platform folders into 12 shards, and performs real project builds for Angular,
+React, Web Components, and Blazor. Stable aggregate jobs (`Code generation passed`, `Emitted sample
+builds passed`, and `Emitted libraries passed`) are the checks intended for repository rulesets.
 
 `.github/workflows/sync-downstream-prs.yml` creates or refreshes ten downstream PRs:
 four web repositories, each targeting both `vnext` (staging) and `master` (production), plus
@@ -132,7 +143,8 @@ For an upstream branch named `feature/foo`, the downstream branches are:
 - `feature/foo--master`
 
 The suffixed web branches are necessary because the two downstream bases can contain different
-packages and sample structure. Both are rebuilt from their own base on every upstream update, so
+packages and sample structure. Both receive only folders identified by the upstream base-versus-head
+output manifest, applied to their own base on every upstream update, so
 they can be reviewed and merged independently without leaking `vnext` commits into `master`.
 The native peers use `<upstream-branch>--main`. Uno keeps its native Uno project shell and receives
 only the Uno-targeted XAML/C# emitted by the product renderer.
@@ -143,7 +155,8 @@ Repository setup required:
    key by following the [downstream sync App runbook](../.github/DOWNSTREAM_SYNC_APP.md).
 2. Create the `downstream-sync` GitHub Actions environment and choose protection rules compatible
    with whether every upstream PR update should synchronize automatically.
-3. Add the `Cross-platform code generation` job as a required branch-protection check.
+3. Require `Code generation passed`, `Emitted sample builds passed`, `Emitted libraries passed`, and
+   the Web Components runtime `load` job in the repository ruleset.
 
 Fork pull requests run validation but do not receive the App private key and therefore do not create
 downstream branches.

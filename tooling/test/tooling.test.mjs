@@ -6,12 +6,135 @@ import os from 'node:os';
 import path from 'node:path';
 import test from 'node:test';
 import { fileURLToPath } from 'node:url';
+import {
+    compareOutputTrees, emittableSampleNames, outputFolderForSample,
+} from '../src/output-impact.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const CLI = path.join(ROOT, 'src', 'cli.mjs');
 const require = createRequire(import.meta.url);
 require('../src/dom-shim.cjs');
 const { emitProject } = require('../dist/codegen-api.cjs');
+
+test('maps emitted folder diffs back to added, modified, and removed samples', () => {
+    const workspace = fs.mkdtempSync(path.join(os.tmpdir(), 'xplat-impact-test-'));
+    const write = (relative, content) => {
+        const file = path.join(workspace, relative);
+        fs.mkdirSync(path.dirname(file), { recursive: true });
+        fs.writeFileSync(file, content);
+    };
+    try {
+        for (const sample of ['same.json', 'changed.json', 'removed.json']) {
+            write(`base-samples/group/${sample}`, '{}');
+        }
+        for (const sample of ['same.json', 'changed.json', 'added.json']) {
+            write(`head-samples/group/${sample}`, '{}');
+        }
+        write('base-output/group/same/file.ts', 'same');
+        write('head-output/group/same/file.ts', 'same');
+        write('base-output/group/changed/file.ts', 'before');
+        write('head-output/group/changed/file.ts', 'after');
+        write('base-output/group/removed/file.ts', 'removed');
+        write('head-output/group/added/file.ts', 'added');
+
+        const changes = compareOutputTrees({
+            baseOutput: path.join(workspace, 'base-output'),
+            headOutput: path.join(workspace, 'head-output'),
+            baseSamples: path.join(workspace, 'base-samples'),
+            headSamples: path.join(workspace, 'head-samples'),
+        });
+        assert.deepEqual(changes, [
+            { sample: 'group/added.json', folder: 'group/added', kind: 'added' },
+            { sample: 'group/changed.json', folder: 'group/changed', kind: 'modified' },
+            { sample: 'group/removed.json', folder: 'group/removed', kind: 'removed' },
+        ]);
+        assert.equal(outputFolderForSample('grids/data-grid/performance.json'),
+            'grids/data-grid/performance');
+    } finally {
+        fs.rmSync(workspace, { recursive: true, force: true });
+    }
+});
+
+test('a shared template output change selects every sample folder it changes', () => {
+    const workspace = fs.mkdtempSync(path.join(os.tmpdir(), 'xplat-template-impact-test-'));
+    try {
+        for (const sample of ['one', 'two', 'three']) {
+            const source = path.join(workspace, 'samples', `${sample}.json`);
+            const before = path.join(workspace, 'before', sample, 'template.txt');
+            const after = path.join(workspace, 'after', sample, 'template.txt');
+            for (const file of [source, before, after]) fs.mkdirSync(path.dirname(file), { recursive: true });
+            fs.writeFileSync(source, '{}');
+            fs.writeFileSync(before, 'old shared template');
+            fs.writeFileSync(after, 'new shared template');
+        }
+        const changes = compareOutputTrees({
+            baseOutput: path.join(workspace, 'before'),
+            headOutput: path.join(workspace, 'after'),
+            baseSamples: path.join(workspace, 'samples'),
+            headSamples: path.join(workspace, 'samples'),
+        });
+        assert.deepEqual(changes.map(change => change.sample), ['one.json', 'three.json', 'two.json']);
+    } finally {
+        fs.rmSync(workspace, { recursive: true, force: true });
+    }
+});
+
+test('keeps test-opted exclusions out of the downstream emission impact set', () => {
+    const workspace = fs.mkdtempSync(path.join(os.tmpdir(), 'xplat-impact-config-test-'));
+    const samples = path.join(workspace, 'samples');
+    fs.mkdirSync(path.join(samples, 'group'), { recursive: true });
+    fs.writeFileSync(path.join(samples, 'group/normal.json'), '{}');
+    fs.writeFileSync(path.join(samples, 'group/test-only.json'), '{}');
+    fs.writeFileSync(path.join(workspace, 'config.json'), JSON.stringify({
+        platforms: [{ name: 'WebComponents', exclusions: [
+            { path: 'group/test-only.json', test: true },
+        ] }],
+    }));
+    try {
+        assert.deepEqual(emittableSampleNames(workspace, 'WebComponents'), ['group/normal.json']);
+        assert.deepEqual(emittableSampleNames(workspace, 'WebComponents', { testing: true }),
+            ['group/normal.json', 'group/test-only.json']);
+    } finally {
+        fs.rmSync(workspace, { recursive: true, force: true });
+    }
+});
+
+test('applies an emission impact manifest without touching unrelated downstream folders', () => {
+    const workspace = fs.mkdtempSync(path.join(os.tmpdir(), 'xplat-impact-export-test-'));
+    const output = path.join(workspace, 'samples');
+    const manifest = path.join(workspace, 'impact.json');
+    const stale = path.join(output, 'gauges/linear-gauge/needle/stale.txt');
+    const removed = path.join(output, 'gauges/linear-gauge/removed/stale.txt');
+    const unrelated = path.join(output, 'manually-maintained/keep.txt');
+    for (const file of [stale, removed, unrelated]) {
+        fs.mkdirSync(path.dirname(file), { recursive: true });
+        fs.writeFileSync(file, 'old');
+    }
+    fs.writeFileSync(manifest, JSON.stringify({
+        version: 1,
+        platforms: {
+            WebComponents: {
+                emissionChanges: [
+                    { sample: 'gauges/linear-gauge/needle.json', folder: 'gauges/linear-gauge/needle', kind: 'modified' },
+                    { sample: 'gauges/linear-gauge/removed.json', folder: 'gauges/linear-gauge/removed', kind: 'removed' },
+                ],
+                testingChanges: [],
+            },
+        },
+    }));
+    try {
+        execFileSync(process.execPath, [CLI, 'export', '--platform=WebComponents',
+            `--impact-manifest=${manifest}`, `--output=${output}`, '--clean'],
+        { cwd: ROOT, stdio: 'pipe' });
+        assert.equal(fs.existsSync(stale), false);
+        assert.equal(fs.existsSync(path.join(output,
+            'gauges/linear-gauge/needle/src/index.ts')), true);
+        assert.equal(fs.existsSync(path.dirname(removed)), false);
+        assert.equal(fs.readFileSync(unrelated, 'utf8'), 'old');
+    } finally {
+        fs.rmSync(workspace, { recursive: true, force: true });
+    }
+});
 
 test('emits a complete sample project through the product renderer', () => {
     const output = fs.mkdtempSync(path.join(os.tmpdir(), 'xplat-project-test-'));

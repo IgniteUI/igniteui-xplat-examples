@@ -13,7 +13,7 @@ concurrency:
 
 jobs:
   emit:
-    name: Emit affected samples (${{ matrix.platform }})
+    name: Emit all samples (${{ matrix.platform }})
     runs-on: ubuntu-latest
     timeout-minutes: 45
     strategy:
@@ -40,7 +40,16 @@ jobs:
           npm ci
           npm run build
 
-      - name: Emit affected samples
-        run: >-
-          node tooling/src/cli.mjs check --platform=${{ matrix.platform }}
-          ${{ github.event_name == 'pull_request' && format('--changed-since={0}', github.event.pull_request.base.sha) || '' }}
+      - name: Emit every sample
+        run: node tooling/src/cli.mjs check --platform=${{ matrix.platform }} --quiet
+
+  required:
+    name: Code generation passed
+    if: always()
+    needs: emit
+    runs-on: ubuntu-latest
+    steps:
+      - name: Require every platform emission
+        env:
+          EMIT_RESULT: ${{ needs.emit.result }}
+        run: test "$EMIT_RESULT" = success
