@@ -634,6 +634,34 @@ async function load(sample, options) {
         thrown.push(String((e && e.stack) || e));
     }
 
+    // A generated host invokes these lifecycle handlers immediately after CR has constructed the
+    // page. Do that before asking CR to report idle: a handler can assign the initial data and start
+    // the animation that hasAnimations is specifically asking us to await.
+    const initialisers = [];
+    // Not run for a fence that publishes one library item's code: its definition states only enough of
+    // a page to reach that item, so a handler expecting the rest of it would fail on the omission
+    // rather than on anything wrong.
+    const shouldRunInitialisers = thrown.length === 0 && (!options || options.runInitialisers !== false);
+    if (shouldRunInitialisers) {
+        stage('initialisers');
+        for (const list of ['onInit', 'onViewInit']) {
+            const value = sample && sample[list];
+            const names = typeof value === 'string' ? [value] : Array.isArray(value) ? value : [];
+            for (const name of names) {
+                if (!LibraryManager.instance.hasItem(name)) {
+                    initialisers.push(`${name} is not in the library`);
+                    continue;
+                }
+                try {
+                    const item = LibraryManager.instance.getInstance(name);
+                    if (typeof item === 'function') item();
+                } catch (e) {
+                    initialisers.push(`${name} threw: ${e && e.message}`);
+                }
+            }
+        }
+    }
+
     const errors = collectErrors();
     // Anything the renderers object to between the stages, taken as it appears rather than at the end,
     // so a stage that never finishes does not take the reason with it.
@@ -662,8 +690,18 @@ async function load(sample, options) {
         });
 
         if (!timedOut) {
-            stage('flush');
             duringIdle.push(...collectErrors());
+            // An initializer that went to the network is not settled until the response is back and
+            // its handler has run. Wait before the final flush and animation wait so that work is part
+            // of this sample's settlement, not something started after CR declared it done.
+            if (shouldRunInitialisers && initialisers.length === 0 &&
+                (sample.onInit || sample.onViewInit)) {
+                stage('fetches');
+                if (await drainFetches(timeout)) {
+                    initialisers.push(`still waiting on the network after ${timeout}ms`);
+                }
+            }
+            stage('flush');
             await flushAll();
             if (animated) {
                 stage('animation');
@@ -676,42 +714,6 @@ async function load(sample, options) {
     }
 
     stage('done');
-    // The handlers a sample lists to run once it is up, invoked the way the host invokes them: the
-    // library gives the method, bound to its holder, and a sample whose configuration lives in one of
-    // these renders nothing without it.
-    const initialisers = [];
-    // Not run for a fence that publishes one library item's code: its definition states only enough of
-    // a page to reach that item, so a handler expecting the rest of it would fail on the omission
-    // rather than on anything wrong.
-    if (thrown.length === 0 && (!options || options.runInitialisers !== false)) {
-        for (const list of ['onInit', 'onViewInit']) {
-            const value = sample && sample[list];
-            const names = typeof value === 'string' ? [value] : Array.isArray(value) ? value : [];
-            for (const name of names) {
-                if (!LibraryManager.instance.hasItem(name)) {
-                    initialisers.push(`${name} is not in the library`);
-                    continue;
-                }
-                try {
-                    const item = LibraryManager.instance.getInstance(name);
-                    if (typeof item === 'function') item();
-                } catch (e) {
-                    initialisers.push(`${name} threw: ${e && e.message}`);
-                }
-            }
-        }
-        if (initialisers.length === 0 && (sample.onInit || sample.onViewInit)) {
-            // Something ran, so let it settle before looking at the page. An initializer that went to
-            // the network is not settled until the response is back and its handler has run, so the
-            // requests are waited for and then the work they queued is flushed.
-            stage('fetches');
-            if (await drainFetches(timeout)) {
-                initialisers.push(`still waiting on the network after ${timeout}ms`);
-            }
-            await flushAll();
-        }
-    }
-
     const afterIdle = collectErrors();
 
     // Named references the renderer never got a value for: its own account of what is missing, rather

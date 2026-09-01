@@ -1,5 +1,6 @@
 {
   "hasAnimations": true,
+  "runtimeContinuous": true,
   "onViewInit": [ "CategoryChartHighFrequencyOnViewInit" ],
   "descriptions": {
     "editor": {

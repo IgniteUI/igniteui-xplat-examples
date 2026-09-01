@@ -1084,7 +1084,9 @@ async function loadOnce(name, sample) {
         heapBySample.push({ name, heap });
         lastHeap = heap;
     }
-    const animationStateActive = await page.evaluate(
+    // A live-data sample explicitly opts into never becoming globally idle. Its owned ticker is
+    // stopped at the next cleanup; active work here is the scenario, not stale CR state.
+    const animationStateActive = sample.runtimeContinuous !== true && await page.evaluate(
         'window.igSampleHarness.animationStateActive()').catch(() => false);
 
     return [
