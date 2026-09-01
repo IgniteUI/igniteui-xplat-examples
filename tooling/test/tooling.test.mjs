@@ -268,6 +268,11 @@ test('adapts current Blazor collection and tooltip context APIs', () => {
     assert.match(live.files['App.razor'], /IgniteUI\.Blazor\.Controls\.ListSortDirection\.Descending/);
     assert.match(live.files['App.razor'], /DataGridApplyLiveDataGrouping\(IgbPropertyEditorPropertyDescriptionChangedEventArgs args\)/);
 
+    const layout = emitProject(
+        fs.readFileSync(path.join(examplesRoot, 'samples/grids/data-grid/load-save-layout.json'), 'utf8'),
+        'Blazor', { examplesRoot });
+    assert.equal((layout.files['App.razor'].match(/public string SavedLayout/g) ?? []).length, 1);
+
     const dataModel = emitProject(
         fs.readFileSync(path.join(examplesRoot, 'samples/maps/geo-map/binding-data-model.json'), 'utf8'),
         'Blazor', { examplesRoot });

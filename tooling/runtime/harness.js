@@ -622,8 +622,18 @@ async function load(sample, options) {
         }
     }
 
+    // ComponentRenderer consumes the animation-idle reference for the first description it renders
+    // and deliberately clears it before rendering the remaining slots. Samples commonly author the
+    // property editor before `content`; passing that order through waits for the non-animated editor,
+    // tears the chart down mid-transition, and poisons GlobalAnimationState for every later sample.
+    // Put the page's primary component first when the sample opts into animation waiting. Object key
+    // order is the only ordering signal loadJson receives; the descriptions themselves are unchanged.
+    const descriptions = animated && sample.descriptions && sample.descriptions.content
+        ? { content: sample.descriptions.content,
+            ...Object.fromEntries(Object.entries(sample.descriptions).filter(([slot]) => slot !== 'content')) }
+        : sample.descriptions;
     const json = animated
-        ? JSON.stringify({ ...sample, animationIdleTimeout: ANIMATION_TIMEOUT })
+        ? JSON.stringify({ ...sample, descriptions, animationIdleTimeout: ANIMATION_TIMEOUT })
         : JSON.stringify(sample);
 
     stage('loadJson');

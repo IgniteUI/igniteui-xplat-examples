@@ -871,7 +871,18 @@ function normalizeBlazorProject(files: Record<string, string>): void {
             const declared = refs.get(ref.toLowerCase());
             return declared && declared !== ref ? `this.${declared}` : whole;
         });
-        files[name] = source;
+        // Load and save are emitted as separate library holders, but both handlers deliberately share
+        // this page-level value. When those holders are merged into one Razor component, retain one
+        // declaration just as the Angular, React and Web Components adapters do.
+        let sawSavedLayout = false;
+        files[name] = source.split("\n").filter(line => {
+            if (!/^\s*(?:public|private|protected)\s+(?:static\s+)?(?:readonly\s+)?string\s+SavedLayout\s*(?:=[^;]*)?;\s*$/.test(line)) {
+                return true;
+            }
+            if (sawSavedLayout) return false;
+            sawSavedLayout = true;
+            return true;
+        }).join("\n");
     }
 }
 
