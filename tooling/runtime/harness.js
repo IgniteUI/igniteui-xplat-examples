@@ -479,7 +479,7 @@ let teardownProblems = [];
 // Hosted runners are substantially slower while the compile matrix is active. This is passed to
 // ComponentRenderer only for samples declaring hasAnimations: true; its AnimationIdleHandler still
 // decides when the sample has settled, and the timeout is only the upper safety bound.
-const ANIMATION_TIMEOUT = 10000;
+const ANIMATION_TIMEOUT = 30000;
 
 /**
  * The state one sample leaves behind, cleared before the next — the host's CleanupPage, which is not
