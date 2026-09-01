@@ -1,6 +1,5 @@
 //begin imports
 using IgniteUI.Blazor.Controls;
-using System;
 //end imports
 
 //begin eventHandler
@@ -11,14 +10,13 @@ using System;
 public void MapBindingShpFileLoad()
 {
     var root = "https://static.infragistics.com/xplatform/shapes/";
-    var readers = CodeGenHelper.GetSharedSupporting<MapShpFileReaders>("MapShpFileReaders");
+    var map = CodeGenHelper.GetDescription<IgbGeographicMap>("content");
+    var lineSeries = map.Series[0] as IgbGeographicPolylineSeries;
 
-    var sds = new IgbShapeDataSource()
+    lineSeries.ShapefileDataSource = new IgbShapeDataSource()
     {
         ShapefileSource = root + "WorldCableRoutes.shp",
         DatabaseSource = root + "WorldCableRoutes.dbf"
     };
-    sds.ImportCompleted += readers.ReadRoutes;
-    sds.DataBind();
 }
 //end eventHandler

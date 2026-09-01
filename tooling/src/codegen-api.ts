@@ -525,6 +525,10 @@ function normalizeAngularPackageImports(files: Record<string, string>): void {
         files[name] = files[name].replace(
             /from\s+(['"])igniteui-angular-grids\1/g,
             "from 'igniteui-angular-data-grids'");
+        if (/\bnew Style\(\)|:\s*Style\b/.test(files[name]) &&
+            !/import\s*\{[^}]*\bStyle\b[^}]*\}\s*from\s*['"]igniteui-angular-core['"]/.test(files[name])) {
+            files[name] = "import { Style } from 'igniteui-angular-core';\n" + files[name];
+        }
     }
 }
 

@@ -1,5 +1,3 @@
 {
-    "requires": [
-        "MapShpFileReaders"
-    ]
+    "requires": []
 }

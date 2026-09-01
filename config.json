@@ -81,6 +81,7 @@
       "name": "Angular",
       "exclusions": [
         { "reason": "data-grid samples target WinUI emission only for now", "path": "grids\\data-grid\\", "test": true },
+        { "reason": "published beta maps package does not export the generated callout layer yet", "path": "maps\\geo-map\\geo-symbol-map-with-callouts.json" },
         { "reason": "samples are in LOB angular repo", "path": "grids\\hierarchical-grid\\" },
         { "reason": "samples are in LOB angular repo", "path": "grids\\pivot-grid\\" },
         { "reason": "samples are in LOB angular repo", "path": "grids\\tree-grid\\" },

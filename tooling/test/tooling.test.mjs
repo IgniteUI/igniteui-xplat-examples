@@ -106,6 +106,9 @@ test('emits Angular shape sources as models and keeps map readers explicitly sco
         /readRoutes\([^)]*map: IgxGeographicMapComponent\)/);
     const readerType = loaded.files['src/app.component.ts'].split('@Component')[0];
     assert.doesNotMatch(readerType, /var map = this\.map/);
+
+    const styling = emit('maps/geo-map/shape-styling-random.json').files['src/app.component.ts'];
+    assert.match(styling, /import \{ Style \} from 'igniteui-angular-core'/);
 });
 
 test('emits React map imagery as a model and empty gauge ranges without children', () => {
@@ -251,6 +254,14 @@ test('adapts current Blazor collection and tooltip context APIs', () => {
         'Blazor', { examplesRoot });
     assert.match(doughnut.files['App.razor'], /this\.selectedSlice/);
     assert.doesNotMatch(doughnut.files['App.razor'], /this\.SelectedSlice/);
+
+    const map = emitProject(
+        fs.readFileSync(path.join(examplesRoot, 'samples/maps/geo-map/binding-multiple-shapes.json'), 'utf8'),
+        'Blazor', { examplesRoot });
+    assert.match(map.files['App.razor'], /polygonSeries\.ShapefileDataSource = new IgbShapeDataSource/);
+    assert.match(map.files['App.razor'], /symbolSeries\.DataSource = this\.WorldCities/);
+    assert.match(map.files['WorldCities.cs'], /class WorldCities/);
+    assert.doesNotMatch(map.files['App.razor'], /GetPointData|DataBind|ImportCompleted \+=/);
 });
 
 test('emits and type-compiles a library item on every hosted web platform', () => {

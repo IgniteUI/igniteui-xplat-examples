@@ -4,14 +4,15 @@
 @code {
     //begin content
     public RenderFragment<IgbDataContext> DataChartAirplaneSeatTooltipTemplate = (context) => {
+        dynamic item = context.Item;
         // A seat is identified by where it is and what it costs, and the two things the plan is
         // coloured by -- its cabin class and whether it is sold -- are named here as well, so the
         // colour under the pointer can be read rather than guessed at from the legend.
         return @<div class="ui-tooltip-content">
-            <div>Class: @context.Item.Class</div>
-            <div>Seat: @context.Item.Seat</div>
-            <div>Price: $@context.Item.Price</div>
-            <div>Status: @context.Item.Status</div>
+            <div>Class: @item.Class</div>
+            <div>Seat: @item.Seat</div>
+            <div>Price: $@item.Price</div>
+            <div>Status: @item.Status</div>
         </div>;
     };
     //end content
