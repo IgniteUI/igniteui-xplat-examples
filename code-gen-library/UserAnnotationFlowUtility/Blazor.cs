@@ -13,19 +13,19 @@ using IgniteUI.Blazor.Controls;
 // means anything inside the component's own instance, so the entry points do the asking.
 public class UserAnnotationFlowFields
 {
-    public PropertyEditorPropertyDescription Label { get; set; }
-    public PropertyEditorPropertyDescription Details { get; set; }
-    public PropertyEditorPropertyDescription MainColor { get; set; }
-    public PropertyEditorPropertyDescription BadgeColor { get; set; }
+    public IgbPropertyEditorPropertyDescription Label { get; set; }
+    public IgbPropertyEditorPropertyDescription Details { get; set; }
+    public IgbPropertyEditorPropertyDescription MainColor { get; set; }
+    public IgbPropertyEditorPropertyDescription BadgeColor { get; set; }
 }
 
 public static class UserAnnotationFlow
 {
-    private static UserAnnotationInformation pending;
+    private static IgbUserAnnotationInformation pending;
 
     // Seeds the fields with whatever the annotation already carries, so an edit starts from what is
     // there rather than from the placeholder text.
-    public static void Begin(UserAnnotationInformation info, UserAnnotationFlowFields fields)
+    public static void Begin(IgbUserAnnotationInformation info, UserAnnotationFlowFields fields)
     {
         pending = info;
         fields.Label.PrimitiveValue = info.Label == null ? "" : info.Label;
@@ -34,7 +34,7 @@ public static class UserAnnotationFlow
         fields.BadgeColor.PrimitiveValue = info.BadgeColor == null ? "black" : info.BadgeColor;
     }
 
-    public static void Finish(XamDataChart chart, UserAnnotationFlowFields fields)
+    public static void Finish(IgbDataChart chart, UserAnnotationFlowFields fields)
     {
         if (pending == null)
         {
@@ -48,7 +48,7 @@ public static class UserAnnotationFlow
         pending = null;
     }
 
-    public static void Cancel(XamDataChart chart)
+    public static void Cancel(IgbDataChart chart)
     {
         if (pending != null && pending.AnnotationId != null)
         {

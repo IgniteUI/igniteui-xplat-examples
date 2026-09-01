@@ -14,7 +14,7 @@ public class DoughnutChartSelectionOnViewInit
         var series = CodeGenHelper.FindByName<IgbRingSeries>("ringSeries");
         DoughnutChartSelectionReadout.Show(
             series,
-            CodeGenHelper.FindByName<IgbPropertyEditorPropertyDescription>("SelectedSlice"),
+            CodeGenHelper.FindByName<IgbPropertyEditorPropertyDescription>("selectedSlice"),
             0);
     }
     //end eventHandler

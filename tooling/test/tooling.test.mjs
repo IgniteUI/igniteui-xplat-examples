@@ -166,6 +166,93 @@ test('finds and expands json-snippet fences without an Astro pipeline', () => {
     }
 });
 
+test('uses the current Web Components package for ZoomSlider', () => {
+    const examplesRoot = path.resolve(ROOT, '..');
+    const project = emitProject(
+        fs.readFileSync(path.join(examplesRoot, 'samples/charts/zoomslider/overview.json'), 'utf8'),
+        'WebComponents', { examplesRoot });
+    assert.match(project.files['src/index.ts'], /IgcZoomSliderComponent[^;]+igniteui-webcomponents-charts/s);
+    assert.doesNotMatch(project.files['src/index.ts'], /igniteui-webcomponents-navigation/);
+
+    const map = emitProject(
+        fs.readFileSync(path.join(examplesRoot, 'samples/maps/geo-map/display-osm-imagery.json'), 'utf8'),
+        'WebComponents', { examplesRoot });
+    assert.doesNotMatch(map.files['index.html'], /igc-open-street-map-imagery/);
+    assert.match(map.files['src/index.ts'], /new IgcOpenStreetMapImagery\(\)/);
+    assert.match(map.files['src/index.ts'], /this\.map\.backgroundContent = this\.osmImagery/);
+
+    const bing = emitProject(
+        fs.readFileSync(path.join(examplesRoot, 'samples/maps/geo-map/display-bing-imagery.json'), 'utf8'),
+        'WebComponents', { examplesRoot });
+    assert.doesNotMatch(bing.files['src/index.ts'], /getElementById\([^\n]+Imagery/);
+    assert.match(bing.files['src/index.ts'], /new IgcBingMapsMapImagery\(\)/);
+
+    const chooser = emitProject(
+        fs.readFileSync(path.join(examplesRoot, 'samples/grids/data-grid/column-chooser-picker.json'), 'utf8'),
+        'WebComponents', { examplesRoot });
+    assert.match(chooser.files['src/index.ts'], /IgcColumnChooserModule[^;]+igniteui-webcomponents-data-grids/s);
+
+    const layout = emitProject(
+        fs.readFileSync(path.join(examplesRoot, 'samples/grids/data-grid/load-save-layout.json'), 'utf8'),
+        'WebComponents', { examplesRoot });
+    assert.equal((layout.files['src/index.ts'].match(/\bsavedLayout:/g) ?? []).length, 1);
+});
+
+test('adapts current Blazor collection and tooltip context APIs', () => {
+    const examplesRoot = path.resolve(ROOT, '..');
+    const selection = emitProject(
+        fs.readFileSync(path.join(examplesRoot, 'samples/charts/category-chart/custom-selection.json'), 'utf8'),
+        'Blazor', { examplesRoot });
+    assert.match(selection.files['SelectableData.cs'], /using System\.Collections\.ObjectModel;/);
+
+    const tooltip = emitProject(
+        fs.readFileSync(path.join(examplesRoot, 'samples/charts/data-chart/tooltip-template.json'), 'utf8'),
+        'Blazor', { examplesRoot });
+    assert.match(tooltip.files['App.razor'], /RenderFragment<IgbDataContext>/);
+    assert.doesNotMatch(tooltip.files['App.razor'], /IgbChartTooltipContext/);
+
+    const cellEditing = emitProject(
+        fs.readFileSync(path.join(examplesRoot, 'samples/grids/data-grid/cell-editing.json'), 'utf8'),
+        'Blazor', { examplesRoot });
+    assert.match(cellEditing.files['App.razor'], /Width="@\(new IgbColumnWidth\(1, 150, true\)\)"/);
+    assert.doesNotMatch(cellEditing.files['App.razor'], /Width="\*>/);
+
+    const annotations = emitProject(
+        fs.readFileSync(path.join(examplesRoot, 'samples/charts/category-chart/line-chart-with-annotations.json'), 'utf8'),
+        'Blazor', { examplesRoot });
+    assert.match(annotations.files['App.razor'], /PropertyEditorValueType\.Boolean1/);
+    assert.doesNotMatch(annotations.files['App.razor'], /PropertyEditorValueType\.Boolean\b/);
+
+    const highFrequency = emitProject(
+        fs.readFileSync(path.join(examplesRoot, 'samples/charts/category-chart/high-frequency.json'), 'utf8'),
+        'Blazor', { examplesRoot });
+    assert.match(highFrequency.files['App.razor'], /chart\.DataSource = data/);
+    assert.doesNotMatch(highFrequency.files['App.razor'], /chart\.ItemsSource/);
+
+    const magnetic = emitProject(
+        fs.readFileSync(path.join(examplesRoot, 'samples/charts/data-chart/type-scatter-area-series.json'), 'utf8'),
+        'Blazor', { examplesRoot });
+    assert.match(magnetic.files['ScatterMagneticFieldData.cs'], /class ScatterMagneticFieldData/);
+
+    const dense = emitProject(
+        fs.readFileSync(path.join(examplesRoot, 'samples/charts/data-chart/type-scatter-hd-series.json'), 'utf8'),
+        'Blazor', { examplesRoot });
+    assert.match(dense.files['ScatterHighDensityData.cs'], /class ScatterHighDensityData/);
+
+    const userAnnotation = emitProject(
+        fs.readFileSync(path.join(examplesRoot, 'samples/charts/data-chart/user-annotation-layer.json'), 'utf8'),
+        'Blazor', { examplesRoot });
+    assert.match(userAnnotation.files['App.razor'], /IgbUserAnnotationInformation pending/);
+    assert.match(userAnnotation.files['App.razor'], /fields\.Label = this\.annotationLabel/);
+    assert.doesNotMatch(userAnnotation.files['App.razor'], /this\.AnnotationLabel/);
+
+    const doughnut = emitProject(
+        fs.readFileSync(path.join(examplesRoot, 'samples/charts/doughnut-chart/selection.json'), 'utf8'),
+        'Blazor', { examplesRoot });
+    assert.match(doughnut.files['App.razor'], /this\.selectedSlice/);
+    assert.doesNotMatch(doughnut.files['App.razor'], /this\.SelectedSlice/);
+});
+
 test('emits and type-compiles a library item on every hosted web platform', () => {
     for (const platform of ['Angular', 'React', 'WebComponents']) {
         execFileSync(process.execPath, [

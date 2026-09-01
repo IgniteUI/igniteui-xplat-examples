@@ -311,7 +311,7 @@ export function emitProject(json: string, platformName: string, opts: EmitOption
     }
     const dataGridCollections = platformName === "Angular" || platformName === "React"
         ? extractAngularDataGridCollections(json) : null;
-    const mapImagery = platformName === "Angular" || platformName === "React"
+    const mapImagery = ["Angular", "React", "WebComponents"].includes(platformName)
         ? extractMapImagery(dataGridCollections?.json ?? json) : null;
     const shapeData = platformName === "Angular" || platformName === "React"
         ? extractShapeData(mapImagery?.json ?? dataGridCollections?.json ?? json) : null;
@@ -367,6 +367,11 @@ export function emitProject(json: string, platformName: string, opts: EmitOption
         if (mapImagery && mapImagery.items.length > 0) normalizeReactMapImagery(files, mapImagery.items);
         if (shapeData && shapeData.items.length > 0) normalizeReactShapeData(files, shapeData.items);
         normalizeReactEmptyModelElements(files);
+    } else if (platformName === "WebComponents") {
+        if (mapImagery && mapImagery.items.length > 0) normalizeWebComponentsMapImagery(files, mapImagery.items);
+        normalizeWebComponentsPackageImports(files);
+    } else if (platformName === "Blazor") {
+        normalizeBlazorProject(files);
     }
     return { files, missingRefs: missingLibrary };
 }
@@ -715,6 +720,58 @@ function normalizeReactEmptyModelElements(files: Record<string, string>): void {
                 /<IgrRadialGaugeRange\b((?:(?:"[^"]*")|[^>])*)>\s*<\/IgrRadialGaugeRange>/gs,
                 "<IgrRadialGaugeRange$1 />");
         files[name] = deduplicateSharedHolderState(files[name]);
+    }
+}
+
+function normalizeWebComponentsPackageImports(files: Record<string, string>): void {
+    for (const name of Object.keys(files).filter(name => name.endsWith(".ts"))) {
+        files[name] = files[name].replace(
+            /from\s+(['"])igniteui-webcomponents-navigation\1/g,
+            "from 'igniteui-webcomponents-charts'").replace(
+            /from\s+(['"])igniteui-webcomponents-grids\1/g,
+            "from 'igniteui-webcomponents-data-grids'");
+        files[name] = deduplicateSharedHolderState(files[name]);
+    }
+}
+
+function normalizeWebComponentsMapImagery(files: Record<string, string>, items: MapImageryModel[]): void {
+    const sourceName = Object.keys(files).find(name => name.endsWith("src/index.ts"));
+    if (!sourceName) throw new Error("Web Components template has no index.ts to receive map imagery");
+    if (items.some(item => !item.mapName)) throw new Error("Web Components map imagery needs a named map");
+    let source = files[sourceName];
+    const classes = [...new Set(items.map(item => item.className.replace(/^Igx/, "Igc")))];
+    const missing = classes.filter(className =>
+        !new RegExp(`import\\s*\\{[^}]*\\b${className}\\b[^}]*\\}\\s*from\\s*['\"]igniteui-webcomponents-maps['\"]`, "s").test(source));
+    if (missing.length > 0) {
+        source = `import { ${missing.sort().join(", ")} } from 'igniteui-webcomponents-maps';\n` + source;
+    }
+    const declarations = items.map(item => {
+        const className = item.className.replace(/^Igx/, "Igc");
+        return `private ${item.name} = Object.assign(new ${className}(), ${JSON.stringify(item.value)} as any);`;
+    });
+    source = source.replace(/(export class Sample\s*\{)/, `$1\n\n    ${declarations.join("\n    ")}`);
+    for (const item of items) {
+        const escaped = item.mapName.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+        const mapInitialization = new RegExp(
+            `(var\\s+${escaped}\\s*=\\s*this\\.${escaped}\\s*=\\s*document\\.getElementById\\([^\\n]+;)`);
+        source = source.replace(mapInitialization,
+            `$1\n        this.${item.mapName}.backgroundContent = this.${item.name};`);
+    }
+    files[sourceName] = source;
+}
+
+function normalizeBlazorProject(files: Record<string, string>): void {
+    for (const name of Object.keys(files).filter(name => name.endsWith(".cs"))) {
+        if (files[name].includes("ObservableCollection<") &&
+            !files[name].includes("using System.Collections.ObjectModel;")) {
+            files[name] = "using System.Collections.ObjectModel;\n" + files[name];
+        }
+    }
+    for (const name of Object.keys(files).filter(name => name.endsWith(".razor"))) {
+        files[name] = files[name]
+            .replace(/PropertyEditorValueType\.Boolean\b/g, "PropertyEditorValueType.Boolean1")
+            .replace(/Width="\*>([0-9.]+)"/g,
+                'Width="@(new IgbColumnWidth(1, $1, true))"');
     }
 }
 

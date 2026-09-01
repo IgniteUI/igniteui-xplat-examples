@@ -3,7 +3,7 @@
 
 @code {
     //begin content
-    public RenderFragment<IgbChartTooltipContext> CategoryChartTooltipTemplate = (context) => {
+    public RenderFragment<IgbDataContext> CategoryChartTooltipTemplate = (context) => {
         return @<div class="tooltipVertical">
             <div class="tooltipTitle">Franchise: @context.Item.Franchise</div>
             <div class="tooltipLbl">Revenue of All Movies: @context.Item.TotalRevenue</div>
