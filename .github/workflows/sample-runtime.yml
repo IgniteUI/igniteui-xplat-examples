@@ -19,6 +19,7 @@ concurrency:
 
 jobs:
   load:
+    name: Web Components runtime passed
     runs-on: ubuntu-latest
     timeout-minutes: 90
     steps:
