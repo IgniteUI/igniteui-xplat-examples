@@ -343,6 +343,7 @@ export function emitProject(json: string, platformName: string, opts: EmitOption
             normalizeAngularDataGridCollections(files, dataGridCollections.grids);
         }
         normalizeAngularEventBindings(files);
+        normalizeAngularReferenceCasing(files);
     } else if (platformName === "React" && dataGridCollections &&
         dataGridCollections.grids.some(grid => grid.collections.length > 0)) {
         normalizeReactDataGridCollections(files, dataGridCollections.grids);
@@ -415,6 +416,22 @@ function normalizeAngularEventBindings(files: Record<string, string>): void {
     }
     files[htmlName] = files[htmlName].replace(/this\.([A-Za-z_$][\w$]*)\(\$event\)/g,
         (whole, name) => twoArgumentHandlers.has(name) ? `this.${name}($event.sender, $event.args)` : whole);
+}
+
+function normalizeAngularReferenceCasing(files: Record<string, string>): void {
+    const htmlName = Object.keys(files).find(name => name.endsWith("app.component.html"));
+    const tsName = Object.keys(files).find(name => name.endsWith("app.component.ts"));
+    if (!htmlName || !tsName) return;
+    const names = new Map<string, string>();
+    for (const pattern of [/\b(?:private|public)\s+(?:readonly\s+)?([A-Za-z_$][\w$]*)/g,
+        /\bget\s+([A-Za-z_$][\w$]*)\s*\(/g]) {
+        for (const match of files[tsName].matchAll(pattern)) names.set(match[1].toLowerCase(), match[1]);
+    }
+    files[htmlName] = files[htmlName].replace(/(\[[^\]]+\]="|\([^)]*\)="|\*[^=\s]+=")([^"]+)(")/g,
+        (_whole, prefix, expression, suffix) => prefix + expression.replace(/\b[A-Za-z_$][\w$]*\b/g, token => {
+            const declared = names.get(token.toLowerCase());
+            return declared && declared !== token ? declared : token;
+        }) + suffix);
 }
 
 function normalizeReactDataGridCollections(files: Record<string, string>, grids: AngularGridCollections[]): void {
