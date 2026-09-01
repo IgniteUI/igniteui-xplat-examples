@@ -858,10 +858,20 @@ function normalizeBlazorProject(files: Record<string, string>): void {
         }
     }
     for (const name of Object.keys(files).filter(name => name.endsWith(".razor"))) {
-        files[name] = files[name]
+        let source = files[name]
             .replace(/PropertyEditorValueType\.Boolean\b/g, "PropertyEditorValueType.Boolean1")
+            .replace(/\bListSortDirection\./g, "IgniteUI.Blazor.Controls.ListSortDirection.")
             .replace(/Width="\*>([0-9.]+)"/g,
                 'Width="@(new IgbColumnWidth(1, $1, true))"');
+        const refs = new Map<string, string>();
+        for (const match of source.matchAll(/\bprivate\s+[A-Za-z_$][\w.$<>?, ]*\s+([A-Za-z_$][\w$]*)\s*;/g)) {
+            refs.set(match[1].toLowerCase(), match[1]);
+        }
+        source = source.replace(/\bthis\.([A-Za-z_$][\w$]*)/g, (whole, ref: string) => {
+            const declared = refs.get(ref.toLowerCase());
+            return declared && declared !== ref ? `this.${declared}` : whole;
+        });
+        files[name] = source;
     }
 }
 

@@ -21,6 +21,11 @@
   },
   {
     "platform": "Blazor",
+    "item": "MapDisplayHeatImageryOnViewInit",
+    "reason": "The published beta no longer exposes the city geometry and DBF population records needed to generate heat tiles."
+  },
+  {
+    "platform": "Blazor",
     "item": "MapShapeComparisonStyling",
     "reason": "The published beta no longer exposes shapefile records to the custom shape-style handler."
   },

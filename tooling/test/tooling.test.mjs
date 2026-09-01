@@ -257,6 +257,17 @@ test('adapts current Blazor collection and tooltip context APIs', () => {
         'Blazor', { examplesRoot });
     assert.doesNotMatch(highVolume.files['App.razor'], /chart\.ItemsSource/);
 
+    const performance = emitProject(
+        fs.readFileSync(path.join(examplesRoot, 'samples/grids/data-grid/performance.json'), 'utf8'),
+        'Blazor', { examplesRoot });
+    assert.match(performance.files['SalesPersonsData.cs'], /static Task<SalesPersonsData> Fetch\(\)/);
+
+    const live = emitProject(
+        fs.readFileSync(path.join(examplesRoot, 'samples/grids/data-grid/binding-live-data.json'), 'utf8'),
+        'Blazor', { examplesRoot });
+    assert.match(live.files['App.razor'], /IgniteUI\.Blazor\.Controls\.ListSortDirection\.Descending/);
+    assert.match(live.files['App.razor'], /DataGridApplyLiveDataGrouping\(IgbPropertyEditorPropertyDescriptionChangedEventArgs args\)/);
+
     const dataModel = emitProject(
         fs.readFileSync(path.join(examplesRoot, 'samples/maps/geo-map/binding-data-model.json'), 'utf8'),
         'Blazor', { examplesRoot });
@@ -271,6 +282,17 @@ test('adapts current Blazor collection and tooltip context APIs', () => {
         fs.readFileSync(path.join(examplesRoot, 'samples/charts/data-chart/type-scatter-polygon-series.json'), 'utf8'),
         'Blazor', { examplesRoot });
     assert.match(airplane.files['App.razor'], /AirplaneSeatFillStyling/);
+
+    const airplaneOutline = emitProject(
+        fs.readFileSync(path.join(examplesRoot, 'samples/charts/data-chart/type-scatter-polyline-series.json'), 'utf8'),
+        'Blazor', { examplesRoot });
+    assert.match(airplaneOutline.files['App.razor'], /AirplaneSeatStrokeStyling/);
+
+    const filter = emitProject(
+        fs.readFileSync(path.join(examplesRoot, 'samples/grids/data-grid/column-filter-expressions.json'), 'utf8'),
+        'Blazor', { examplesRoot });
+    assert.match(filter.files['App.razor'], /this\.filterColumnEditor/);
+    assert.doesNotMatch(filter.files['App.razor'], /this\.FilterColumnEditor/);
 
     const magnetic = emitProject(
         fs.readFileSync(path.join(examplesRoot, 'samples/charts/data-chart/type-scatter-area-series.json'), 'utf8'),

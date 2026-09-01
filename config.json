@@ -95,6 +95,7 @@
         { "reason": "data-grid samples target WinUI emission only for now", "path": "grids\\data-grid\\", "test": true },
         { "reason": "published beta no longer exposes shapefile point geometry for the documented record transformation", "path": "maps\\geo-map\\binding-shp-file.json" },
         { "reason": "published beta no longer exposes shapefile point geometry for the documented record transformation", "path": "maps\\geo-map\\binding-multiple-shapes.json" },
+        { "reason": "published beta no longer exposes the city geometry and DBF population records needed to generate heat tiles", "path": "maps\\geo-map\\display-heat-imagery.json" },
         { "reason": "published beta no longer exposes shapefile records to the custom shape-style handler", "path": "maps\\geo-map\\shape-styling-comparison.json" },
         { "reason": "published beta no longer exposes shapefile records to the custom shape-style handler", "path": "maps\\geo-map\\shape-styling-random.json" },
         { "reason": "published beta no longer exposes shapefile records to the custom shape-style handler", "path": "maps\\geo-map\\shape-styling-range.json" },
