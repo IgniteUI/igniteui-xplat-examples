@@ -5,7 +5,7 @@ import UIKit;
 class TestsAlignGaugeLabels {
 
     //begin eventHandler
-    func testsAlignGaugeLabels(sender: Any?, args: IgsAlignRadialGaugeLabelEventArgs?) {
+    func testsAlignGaugeLabels(sender: Any?, args: IgsAlignLinearGraphLabelEventArgs?) {
         
 			args?.offsetX = 15
 			args?.offsetY = 12

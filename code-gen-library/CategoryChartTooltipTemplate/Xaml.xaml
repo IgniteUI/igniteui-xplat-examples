@@ -1,0 +1,11 @@
+<!--begin template-->
+<!--begin content-->
+<DataTemplate x:Key="CategoryChartTooltipTemplate">
+    <StackPanel Orientation="Vertical" Margin="5">
+        <TextBlock Text="{Binding Item.Franchise, StringFormat='Franchise: {0}'}" FontWeight="Bold" />
+        <TextBlock Text="{Binding Item.TotalRevenue, StringFormat='Revenue of All Movies: {0}'}" />
+        <TextBlock Text="{Binding Item.HighestGrossing, StringFormat='Highest Grossing Movie: ${0}'}" />
+    </StackPanel>
+</DataTemplate>
+<!--end content-->
+<!--end template-->

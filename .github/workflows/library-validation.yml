@@ -1,0 +1,62 @@
+name: Emitted library compilation
+
+on:
+  pull_request:
+    paths:
+      - 'code-gen-library/**'
+      - 'tooling/**'
+      - '.github/workflows/library-validation.yml'
+  workflow_dispatch:
+    inputs:
+      full:
+        description: Compile the complete library instead of changed items
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: emitted-library-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  compile:
+    name: Validate emitted ${{ matrix.platform }} library
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    strategy:
+      fail-fast: false
+      matrix:
+        platform: [Angular, React, WebComponents, Blazor, WinUI, Uno]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: tooling/package-lock.json
+      - uses: actions/setup-dotnet@v4
+        if: matrix.platform == 'Blazor'
+        with:
+          dotnet-version: '10.0.x'
+      - name: Install and build the Node emitter
+        working-directory: tooling
+        run: |
+          npm ci
+          npm run build
+      - name: Emit and validate the library
+        run: >-
+          node tooling/src/cli.mjs library-check
+          --platform=${{ matrix.platform }}
+          ${{ inputs.full && '--all' || format('--changed-since={0}', github.event.pull_request.base.sha || 'HEAD^') }}
+      - name: Keep emitted sources
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: emitted-library-${{ matrix.platform }}
+          path: tooling/.generated/library/${{ matrix.platform }}
+          if-no-files-found: ignore
+          retention-days: 7

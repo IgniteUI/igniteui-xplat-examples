@@ -5,7 +5,7 @@
 export class FinancialDataService extends Array<FinancialDataDetails> {
       
     /** gets Google stock OHLC prices from a .JSON file */
-    public static async fetchData(): Promise<FinancialDataDetails[]> {
+    public static async fetch(): Promise<FinancialDataDetails[]> {
       let url = "https://static.infragistics.com/xplatform/data/stocks/FinancialData1000.json";
       let response = await fetch(url);
       let jsonData = await response.json();

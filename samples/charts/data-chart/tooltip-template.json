@@ -1,0 +1,85 @@
+{
+  "descriptions": {
+    "content": {
+      "type": "DataChart",
+      "name": "chart",
+      "isHorizontalZoomEnabled": false,
+      "isVerticalZoomEnabled": false,
+      "axes": [
+        {
+          "type": "CategoryXAxis",
+          "name": "xAxis",
+          "dataSourceRef": "EnergyProductionByCountry",
+          "label": "Country"
+        },
+        {
+          "type": "NumericYAxis",
+          "name": "yAxis"
+        }
+      ],
+      "series": [
+        {
+          "type": "ColumnSeries",
+          "name": "series1",
+          "title": "Coal",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "dataSourceRef": "EnergyProductionByCountry",
+          "valueMemberPath": "Coal",
+          "showDefaultTooltip": false,
+          "tooltipTemplateRef": "DataChartProductionTooltipTemplate"
+        },
+        {
+          "type": "ColumnSeries",
+          "name": "series2",
+          "title": "Hydro",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "dataSourceRef": "EnergyProductionByCountry",
+          "valueMemberPath": "Hydro",
+          "showDefaultTooltip": false,
+          "tooltipTemplateRef": "DataChartProductionTooltipTemplate"
+        },
+        {
+          "type": "ColumnSeries",
+          "name": "series3",
+          "title": "Nuclear",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "dataSourceRef": "EnergyProductionByCountry",
+          "valueMemberPath": "Nuclear",
+          "showDefaultTooltip": false,
+          "tooltipTemplateRef": "DataChartProductionTooltipTemplate"
+        },
+        {
+          "type": "ColumnSeries",
+          "name": "series4",
+          "title": "Gas",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "dataSourceRef": "EnergyProductionByCountry",
+          "valueMemberPath": "Gas",
+          "showDefaultTooltip": false,
+          "tooltipTemplateRef": "DataChartProductionTooltipTemplate"
+        },
+        {
+          "type": "ColumnSeries",
+          "name": "series5",
+          "title": "Oil",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "dataSourceRef": "EnergyProductionByCountry",
+          "valueMemberPath": "Oil",
+          "showDefaultTooltip": false,
+          "tooltipTemplateRef": "DataChartProductionTooltipTemplate"
+        }
+      ]
+    }
+  },
+  "modules": [
+    "charts/DataChartCoreModule",
+    "charts/DataChartCategoryModule",
+    "charts/DataChartCategoryCoreModule",
+    "charts/DataChartInteractivityModule"
+  ]
+}

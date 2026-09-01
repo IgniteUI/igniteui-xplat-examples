@@ -1,0 +1,82 @@
+{
+  "hasAnimations": true,
+  "descriptions": {
+    "editor": {
+      "type": "PropertyEditorPanel",
+      "componentRendererRef": "renderer",
+      "targetRef": "chart",
+      "descriptionType": "CategoryChart",
+      "isHorizontal": true,
+      "isWrappingEnabled": true,
+      "properties": [
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "TransitionInMode",
+          "name": "TransitionInMode",
+          "label": "Transition Type",
+          "shouldOverrideDefaultEditor": true,
+          "valueType": "EnumValue",
+          "dropDownNames": [
+            "Auto", "AccordionFromBottom", "AccordionFromCategoryAxisMaximum",
+            "AccordionFromCategoryAxisMinimum", "AccordionFromLeft", "AccordionFromRight",
+            "AccordionFromTop", "AccordionFromValueAxisMaximum", "AccordionFromValueAxisMinimum",
+            "Expand", "FromZero", "SweepFromBottom", "SweepFromCategoryAxisMaximum",
+            "SweepFromCategoryAxisMinimum", "SweepFromCenter", "SweepFromLeft", "SweepFromRight",
+            "SweepFromTop", "SweepFromValueAxisMaximum", "SweepFromValueAxisMinimum"
+          ],
+          "dropDownValues": [
+            "Auto", "AccordionFromBottom", "AccordionFromCategoryAxisMaximum",
+            "AccordionFromCategoryAxisMinimum", "AccordionFromLeft", "AccordionFromRight",
+            "AccordionFromTop", "AccordionFromValueAxisMaximum", "AccordionFromValueAxisMinimum",
+            "Expand", "FromZero", "SweepFromBottom", "SweepFromCategoryAxisMaximum",
+            "SweepFromCategoryAxisMinimum", "SweepFromCenter", "SweepFromLeft", "SweepFromRight",
+            "SweepFromTop", "SweepFromValueAxisMaximum", "SweepFromValueAxisMinimum"
+          ],
+          "primitiveValue": "Auto",
+          "changedRef": "EditorChangeReplayTransitionInDomain"
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "TransitionInDuration",
+          "name": "TransitionInDuration",
+          "label": "Transition Duration",
+          "shouldOverrideDefaultEditor": true,
+          "valueType": "Slider",
+          "primitiveValue": 1000,
+          "min": 50,
+          "max": 2000,
+          "step": 50,
+          "changedRef": "EditorChangeReplayTransitionInDomain"
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "ReplayTransitionIn",
+          "label": "",
+          "valueType": "Button",
+          "primitiveValue": "Reload Chart",
+          "buttonClickedRef": "EditorButtonReplayTransitionInDomain"
+        }
+      ]
+    },
+    "content": {
+      "type": "CategoryChart",
+      "name": "chart",
+      "dataSourceRef": "EnergyRenewableGeneration",
+      "includedProperties": [ "Year", "Europe", "China", "America" ],
+      "chartType": "Line",
+      "isTransitionInEnabled": true,
+      "isHorizontalZoomEnabled": false,
+      "isVerticalZoomEnabled": false,
+      "yAxisTitle": "TWh",
+      "yAxisTitleLeftMargin": 10,
+      "yAxisTitleRightMargin": 5,
+      "yAxisLabelLeftMargin": 0,
+      "computedPlotAreaMarginMode": "Series"
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
+    "charts/CategoryChartModule"
+  ]
+}

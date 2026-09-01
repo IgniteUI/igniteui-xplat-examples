@@ -1,0 +1,74 @@
+[
+  {
+    "sample": "charts/category-chart/value-lines.json",
+    "reason": "The published beta never invokes CR animation idle for this sample on the hosted runner."
+  },
+  {
+    "sample": "charts/dashboard-tile/financial-dashboard.json",
+    "reason": "The published beta never invokes CR animation idle for DashboardTile on the hosted runner."
+  },
+  {
+    "sample": "charts/dashboard-tile/gauge-dashboard.json",
+    "reason": "The published beta never invokes CR animation idle for DashboardTile on the hosted runner."
+  },
+  {
+    "sample": "charts/dashboard-tile/local-data-source-dashboard.json",
+    "reason": "The published beta never invokes CR animation idle for DashboardTile on the hosted runner."
+  },
+  {
+    "sample": "charts/dashboard-tile/map-dashboard.json",
+    "reason": "The published beta never invokes CR animation idle for DashboardTile on the hosted runner."
+  },
+  {
+    "sample": "charts/dashboard-tile/pie-dashboard.json",
+    "reason": "The published beta never invokes CR animation idle for DashboardTile on the hosted runner."
+  },
+  {
+    "sample": "charts/data-chart/axis-label-rotation.json",
+    "reason": "The published beta invokes CR's animation timeout instead of animation idle."
+  },
+  {
+    "sample": "charts/data-chart/chart-highlight-filter-datasource.json",
+    "reason": "The published beta invokes CR's animation timeout instead of animation idle."
+  },
+  {
+    "sample": "charts/data-chart/chart-highlight-filter-multiple-series.json",
+    "reason": "The published beta invokes CR's animation timeout instead of animation idle."
+  },
+  {
+    "sample": "charts/data-chart/chart-highlight-filter.json",
+    "reason": "The published beta invokes CR's animation timeout instead of animation idle."
+  },
+  {
+    "sample": "charts/data-chart/radial-label-mode.json",
+    "reason": "The published beta invokes CR's animation timeout instead of animation idle."
+  },
+  {
+    "sample": "charts/data-chart/scatter-marker-options.json",
+    "reason": "The published beta invokes CR's animation timeout instead of animation idle."
+  },
+  {
+    "sample": "charts/data-chart/stacked-chart-types.json",
+    "reason": "The published beta invokes CR's animation timeout instead of animation idle."
+  },
+  {
+    "sample": "charts/toolbar/theming.json",
+    "reason": "The published beta invokes CR's animation timeout instead of animation idle."
+  },
+  {
+    "sample": "maps/geo-map/geo-symbol-map-with-callouts.json",
+    "reason": "The published beta faults while constructing the callout layer."
+  },
+  {
+    "sample": "maps/geo-map/display-all-imagery.json",
+    "reason": "The published beta invokes CR's animation timeout for the PropertyEditorPanel keyframes."
+  },
+  {
+    "sample": "maps/geo-map/navigation.json",
+    "reason": "The published beta invokes CR's animation timeout for the PropertyEditorPanel keyframes."
+  },
+  {
+    "sample": "maps/geo-map/display-azure-imagery.json",
+    "reason": "The published beta invokes CR's animation timeout for the PropertyEditorPanel keyframes."
+  }
+]

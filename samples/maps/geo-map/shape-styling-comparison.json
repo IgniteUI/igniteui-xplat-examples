@@ -1,0 +1,16 @@
+{
+  "descriptions": {
+    "content": {
+      "type": "GeographicMap",
+      "name": "geoMap",
+      "zoomable": true
+    }
+  },
+  "onViewInit": [
+    "MapShapeComparisonStyling"
+  ],
+  "modules": [
+    "maps/GeographicMapModule",
+    "charts/DataChartInteractivityModule"
+  ]
+}
