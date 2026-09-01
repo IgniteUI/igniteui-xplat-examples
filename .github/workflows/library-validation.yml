@@ -2,10 +2,6 @@ name: Emitted library compilation
 
 on:
   pull_request:
-    paths:
-      - 'code-gen-library/**'
-      - 'tooling/**'
-      - '.github/workflows/library-validation.yml'
   workflow_dispatch:
     inputs:
       full:
@@ -60,3 +56,14 @@ jobs:
           path: tooling/.generated/library/${{ matrix.platform }}
           if-no-files-found: ignore
           retention-days: 7
+
+  required:
+    name: Emitted libraries passed
+    if: always()
+    needs: compile
+    runs-on: ubuntu-latest
+    steps:
+      - name: Require every platform library validation
+        env:
+          COMPILE_RESULT: ${{ needs.compile.result }}
+        run: test "$COMPILE_RESULT" = success
