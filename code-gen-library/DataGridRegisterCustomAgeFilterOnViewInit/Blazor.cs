@@ -18,22 +18,22 @@ public class DataGridRegisterCustomAgeFilterOnViewInit
             args.FilterFactory.Property("Sales").IsLessThanOrEqualTo(300000);
         grid.ActualColumns[2].FilterOperands.Add(salesFilter);
     }
+
+    public class CustomAgeFilter : IgbFilterOperand
+    {
+        public CustomAgeFilter()
+        {
+            DisplayName = "Filter As Class";
+            IsInputRequired = false;
+            EditorType = EditorType.Numeric;
+            FilterRequested = OnFilter;
+        }
+
+        public IgbFilterExpression OnFilter(IgbGridCustomFilterRequestedEventArgs args)
+        {
+            var prop = args.FilterFactory.Property(args.Column.Field);
+            return prop.IsEqualTo(30);
+        }
+    }
     //end eventHandler
-}
-
-public class CustomAgeFilter : IgbFilterOperand
-{
-    public CustomAgeFilter()
-    {
-        DisplayName = "Filter As Class";
-        IsInputRequired = false;
-        EditorType = EditorType.Numeric;
-        FilterRequested = OnFilter;
-    }
-
-    public IgbFilterExpression OnFilter(IgbGridCustomFilterRequestedEventArgs args)
-    {
-        var prop = args.FilterFactory.Property(args.Column.Field);
-        return prop.IsEqualTo(30);
-    }
 }
