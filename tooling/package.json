@@ -47,7 +47,7 @@
     "react-dom": "^19.2.0"
   },
   "devDependencies": {
-    "esbuild": "^0.23.0",
+    "esbuild": "^0.28.1",
     "igniteui-webcomponents": "^7.1.1",
     "igniteui-webcomponents-charts": "7.1.1-beta.12",
     "igniteui-webcomponents-data-grids": "7.1.1-beta.12",
