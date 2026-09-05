@@ -1,0 +1,62 @@
+{
+  "strings": {
+    "legendTitle": "Airplane Seating Chart (Polygons)"
+  },
+  "descriptions": {
+    "content": {
+      "type": "DataChart",
+      "name": "chart",
+      "isHorizontalZoomEnabled": true,
+      "isVerticalZoomEnabled": true,
+      "axes": [
+        {
+          "type": "NumericXAxis",
+          "name": "xAxis",
+          "minimumValue": -1000,
+          "maximumValue": 1000,
+          "interval": 200
+        },
+        {
+          "type": "NumericYAxis",
+          "name": "yAxis",
+          "minimumValue": -600,
+          "maximumValue": 600,
+          "interval": 200
+        }
+      ],
+      "series": [
+        {
+          "type": "ScatterPolygonSeries",
+          "name": "airplaneShapeSeries",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "dataSourceRef": "AirplaneShape",
+          "shapeMemberPath": "Points",
+          "title": "Airplane Shape",
+          "thickness": 0.5,
+          "brush": "LightGray",
+          "outline": "Black"
+        },
+        {
+          "type": "ScatterPolygonSeries",
+          "name": "airplaneSeatSeries",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "dataSourceRef": "AirplaneSeats",
+          "shapeMemberPath": "Points",
+          "title": "Airplane Seats",
+          "showDefaultTooltip": false,
+          "tooltipTemplateRef": "DataChartAirplaneSeatTooltipTemplate",
+          "assigningShapeStyleRef": "AirplaneSeatFillStyling"
+        }
+      ]
+    }
+  },
+  "modules": [
+    "charts/DataChartCoreModule",
+    "charts/DataChartShapeCoreModule",
+    "charts/DataChartShapeModule",
+    "charts/DataChartInteractivityModule",
+    "charts/ScatterPolygonSeriesModule"
+  ]
+}

@@ -1,0 +1,23 @@
+<!--begin template-->
+<!--begin content-->
+<local:SeriesValueConverter x:Key="SeriesValueConverter" />
+<DataTemplate x:Key="CategoryChartValueMarkerTemplate">
+    <!-- The same marker the web side draws into a canvas, said declaratively: the value this marker
+         stands for above the point, and a white dot with a dark outline on it. One template serves
+         every series, so the value is read from the record and the series together. -->
+    <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+        <TextBlock FontFamily="Verdana" FontSize="11" Foreground="Black"
+                   HorizontalAlignment="Center" Margin="0,0,0,2">
+            <TextBlock.Text>
+                <MultiBinding Converter="{StaticResource SeriesValueConverter}" StringFormat="{}{0}%">
+                    <Binding Path="Item" />
+                    <Binding Path="Series" />
+                </MultiBinding>
+            </TextBlock.Text>
+        </TextBlock>
+        <Ellipse Width="12" Height="12" Fill="White" Stroke="Black" StrokeThickness="1"
+                 HorizontalAlignment="Center" />
+    </StackPanel>
+</DataTemplate>
+<!--end content-->
+<!--end template-->

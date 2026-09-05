@@ -1,0 +1,104 @@
+{
+  "hasAnimations": true,
+  "strings": {
+    "legendTitle": "Energy Production by Country"
+  },
+  "skipAlterDataCasing": true,
+  "descriptions": {
+    "editor": {
+      "type": "PropertyEditorPanel",
+      "componentRendererRef": "renderer",
+      "targetRef": "chart",
+      "descriptionType": "DataChart",
+      "isHorizontal": true,
+      "isWrappingEnabled": true,
+      "properties": [
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "SeriesType",
+          "name": "SeriesType",
+          "label": "Series Type",
+          "shouldOverrideDefaultEditor": true,
+          "valueType": "EnumValue",
+          "dropDownNames": [
+            "Stacked Column Series", "Stacked 100 Column Series",
+            "Stacked Area Series", "Stacked 100 Area Series",
+            "Stacked Line Series", "Stacked 100 Line Series",
+            "Stacked Spline Series", "Stacked 100 Spline Series",
+            "Stacked Bar Series", "Stacked 100 Bar Series"
+          ],
+          "dropDownValues": [
+            "Stacked Column Series", "Stacked 100 Column Series",
+            "Stacked Area Series", "Stacked 100 Area Series",
+            "Stacked Line Series", "Stacked 100 Line Series",
+            "Stacked Spline Series", "Stacked 100 Spline Series",
+            "Stacked Bar Series", "Stacked 100 Bar Series"
+          ],
+          "primitiveValue": "Stacked Column Series",
+          "changedRef": "EditorChangeStackedSeriesType"
+        }
+      ]
+    },
+    "legend": {
+      "type": "Legend",
+      "name": "legend",
+      "orientation": "Horizontal"
+    },
+    "content": {
+      "type": "DataChart",
+      "name": "chart",
+      "legendRef": "legend",
+      "isHorizontalZoomEnabled": true,
+      "isVerticalZoomEnabled": true,
+      "axes": [
+        {
+          "type": "CategoryXAxis",
+          "name": "catXAxis",
+          "dataSourceRef": "EnergyProductionByCountry",
+          "label": "Country"
+        },
+        {
+          "type": "NumericYAxis",
+          "name": "numYAxis"
+        },
+        {
+          "type": "CategoryYAxis",
+          "name": "catYAxis",
+          "dataSourceRef": "EnergyProductionByCountry",
+          "label": "Country"
+        },
+        {
+          "type": "NumericXAxis",
+          "name": "numXAxis"
+        }
+      ],
+      "series": [
+        {
+          "type": "StackedColumnSeries",
+          "name": "stackedSeries",
+          "dataSourceRef": "EnergyProductionByCountry",
+          "xAxisRef": "catXAxis",
+          "yAxisRef": "numYAxis",
+          "series": [
+            { "type": "StackedFragmentSeries", "name": "coal",    "valueMemberPath": "Coal",    "title": "Coal" },
+            { "type": "StackedFragmentSeries", "name": "hydro",   "valueMemberPath": "Hydro",   "title": "Hydro" },
+            { "type": "StackedFragmentSeries", "name": "nuclear", "valueMemberPath": "Nuclear", "title": "Nuclear" },
+            { "type": "StackedFragmentSeries", "name": "gas",     "valueMemberPath": "Gas",     "title": "Gas" },
+            { "type": "StackedFragmentSeries", "name": "oil",     "valueMemberPath": "Oil",     "title": "Oil" }
+          ]
+        }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
+    "charts/DataChartCoreModule",
+    "charts/DataChartCategoryModule",
+    "charts/DataChartCategoryCoreModule",
+    "charts/DataChartStackedModule",
+    "charts/StackedFragmentSeriesModule",
+    "charts/DataChartInteractivityModule",
+    "charts/LegendModule"
+  ]
+}

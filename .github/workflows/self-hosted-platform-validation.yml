@@ -1,0 +1,118 @@
+name: Private platform validation
+
+# This tier is manual until a hardened self-hosted runner and its product build prerequisites are
+# available. It deliberately does not run untrusted pull-request code with the private dev-tools token.
+on:
+  workflow_dispatch:
+    inputs:
+      sample:
+        description: Sample JSON file to emit and compile
+        required: true
+        default: samples/gauges/linear-gauge/needle.json
+      full_library:
+        description: Emit and compile the complete native code-generation library
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+env:
+  SAMPLE_JSON: ${{ inputs.sample }}
+
+jobs:
+  winui:
+    runs-on: [self-hosted, Windows, xplat-codegen]
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+      - name: Checkout private product source
+        uses: actions/checkout@v4
+        with:
+          repository: Infragistics-Developer-Tools/dev-tools
+          token: ${{ secrets.DEV_TOOLS_TOKEN }}
+          path: dev-tools
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '9.0.x'
+      - name: Build WinUI product assemblies
+        shell: pwsh
+        run: dotnet build dev-tools/XPlatform/Main/Source/WinUI/WinUI.sln --configuration Release --nologo
+      - name: Build the Node emitter
+        working-directory: tooling
+        run: |
+          npm ci
+          npm run build
+      - name: Emit and compile the WinUI code-generation library
+        shell: pwsh
+        run: |
+          $output = "dev-tools/XPlatform/Main/Source/LibraryProjectEmitter/LibraryProjectEmitter/output/WinUI"
+          $arguments = @("tooling/src/cli.mjs", "library", "--platform=WinUI", "--output=$output", "--clean")
+          if ('${{ inputs.full_library }}' -ne 'true') {
+            $arguments += "--only=SalesData,PropertyEditorInitAggregationsOnViewInit"
+          }
+          node @arguments
+          dotnet build "$output/WinUILibrary.csproj" --configuration Release --nologo
+      - name: Emit and compile the WinUI sample
+        shell: pwsh
+        env:
+          DEV_TOOLS_ROOT: ${{ github.workspace }}/dev-tools
+        run: node tooling/src/cli.mjs sample-build --platform=WinUI "--source=$env:SAMPLE_JSON"
+
+  uno:
+    runs-on: [self-hosted, Windows, xplat-codegen]
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+      - name: Checkout private product source
+        uses: actions/checkout@v4
+        with:
+          repository: Infragistics-Developer-Tools/dev-tools
+          token: ${{ secrets.DEV_TOOLS_TOKEN }}
+          path: dev-tools
+      - name: Checkout the Uno project shell
+        uses: actions/checkout@v4
+        with:
+          repository: Infragistics/uno-samples
+          path: uno-samples
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '9.0.x'
+      - name: Build Uno product assemblies
+        shell: pwsh
+        run: dotnet build dev-tools/XPlatform/Main/Source/Uno/UNO.sln --configuration Release --nologo
+      - name: Build the Node emitter
+        working-directory: tooling
+        run: |
+          npm ci
+          npm run build
+      - name: Emit and compile the Uno code-generation library
+        shell: pwsh
+        run: |
+          $output = "dev-tools/XPlatform/Main/Source/LibraryProjectEmitter/LibraryProjectEmitter/output/Uno"
+          $arguments = @("tooling/src/cli.mjs", "library", "--platform=Uno", "--output=$output", "--clean")
+          if ('${{ inputs.full_library }}' -ne 'true') {
+            $arguments += "--only=SalesData,PropertyEditorInitAggregationsOnViewInit"
+          }
+          node @arguments
+          dotnet build "$output/UnoLibrary.csproj" --framework net9.0 --configuration Release --nologo
+      - name: Emit into the genuine Uno project shell
+        shell: pwsh
+        run: |
+          $bootstrap = Join-Path $env:RUNNER_TEMP "xplat-uno-bootstrap-$env:GITHUB_RUN_ID-$env:GITHUB_RUN_ATTEMPT"
+          Copy-Item uno-samples/samples/gauges/linear-gauge/needle $bootstrap -Recurse -Force
+          node tooling/src/cli.mjs export --platform=Uno "--source=$env:SAMPLE_JSON" `
+            --output=uno-samples/samples --clean --source-overlay `
+            "--bootstrap-from=$bootstrap"
+      - name: Compile the Uno desktop head
+        shell: pwsh
+        run: |
+          $project = "uno-samples/$env:SAMPLE_JSON" -replace '\.json$', '/Sample.csproj'
+          dotnet build $project --framework net9.0-desktop --configuration Release --nologo `
+            /p:InfragisticsUnoBuild="${{ github.workspace }}/dev-tools/XPlatform/Main/Source/Build/UNO"

@@ -3,6 +3,7 @@
   "strings": {
     "legendTitle": "Global Electricity Demand by Energy Use"
   },
+  "hasAnimations": true,
   "descriptions": {
     "legend": {
       "type": "ItemLegend",

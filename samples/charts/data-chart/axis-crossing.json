@@ -1,0 +1,106 @@
+{
+  "descriptions": {
+    "editor": {
+      "type": "PropertyEditorPanel",
+      "componentRendererRef": "renderer",
+      "targetRef": "chart",
+      "descriptionType": "DataChart",
+      "isHorizontal": true,
+      "isWrappingEnabled": true,
+      "properties": [
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "Axes[1 as NumericYAxis].CrossingValue",
+          "name": "XAxisCrossingValue",
+          "label": "Where the X axis crosses",
+          "shouldOverrideDefaultEditor": true,
+          "valueType": "Slider",
+          "primitiveValue": 0,
+          "min": -1.25,
+          "max": 1.25,
+          "step": 0.125
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "Axes[0 as NumericXAxis].CrossingValue",
+          "name": "YAxisCrossingValue",
+          "label": "Where the Y axis crosses",
+          "shouldOverrideDefaultEditor": true,
+          "valueType": "Slider",
+          "primitiveValue": 0,
+          "min": -360,
+          "max": 360,
+          "step": 10
+        }
+      ]
+    },
+    "content": {
+      "type": "DataChart",
+      "name": "chart",
+      "isHorizontalZoomEnabled": true,
+      "isVerticalZoomEnabled": true,
+      "plotAreaMarginBottom": 60,
+      "plotAreaMarginTop": 60,
+      "plotAreaMarginLeft": 30,
+      "plotAreaMarginRight": 30,
+      "axes": [
+        {
+          "type": "NumericXAxis",
+          "name": "xAxis",
+          "interval": 40,
+          "minimumValue": -360,
+          "maximumValue": 360,
+          "labelLocation": "InsideBottom",
+          "labelTopMargin": 10,
+          "crossingAxisRef": "yAxis",
+          "crossingValue": 0,
+          "strokeThickness": 1,
+          "stroke": "Black"
+        },
+        {
+          "type": "NumericYAxis",
+          "name": "yAxis",
+          "minimumValue": -1.25,
+          "maximumValue": 1.25,
+          "interval": 0.25,
+          "labelLocation": "InsideLeft",
+          "labelRightMargin": 10,
+          "crossingAxisRef": "xAxis",
+          "crossingValue": 0,
+          "strokeThickness": 1,
+          "stroke": "Black"
+        }
+      ],
+      "series": [
+        {
+          "type": "ScatterSplineSeries",
+          "name": "sinSeries",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "dataSourceRef": "ScatterWaveData",
+          "markerType": "Circle",
+          "xMemberPath": "X",
+          "yMemberPath": "SinValue"
+        },
+        {
+          "type": "ScatterSplineSeries",
+          "name": "cosSeries",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "dataSourceRef": "ScatterWaveData",
+          "markerType": "Circle",
+          "xMemberPath": "X",
+          "yMemberPath": "CosValue"
+        }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
+    "charts/DataChartCoreModule",
+    "charts/DataChartScatterCoreModule",
+    "charts/DataChartScatterModule",
+    "charts/DataChartInteractivityModule"
+  ]
+}

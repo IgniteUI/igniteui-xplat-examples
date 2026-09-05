@@ -1,0 +1,104 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net9.0-windows10.0.19041.0</TargetFramework>
+    <TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
+    <RootNamespace>Sample</RootNamespace>
+    <AssemblyName>main-template</AssemblyName>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <Platforms>x86;x64;ARM64</Platforms>
+    <RuntimeIdentifiers>win-x86;win-x64;win-arm64</RuntimeIdentifiers>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <UseWinUI>true</UseWinUI>
+    <WindowsAppSDKSelfContained>true</WindowsAppSDKSelfContained>
+    <WindowsPackageType>None</WindowsPackageType>
+    <WinUISDKReferences>true</WinUISDKReferences>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.26100.7705" />
+    <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.8.260209005" />
+    <PackageReference Include="SkiaSharp" Version="3.119.2" />
+    <PackageReference Include="SkiaSharp.Views.WinUI" Version="3.119.2" />
+  </ItemGroup>
+
+  <!-- Infragistics references — point at the dev-tools Build output. Build
+       dev-tools (WinUI sln) before building this. -->
+  <ItemGroup>
+    <Reference Include="Infragistics.Core">
+      <HintPath>c:\work\dev-tools\XPlatform\Main\Source\Build\Core\netstandard2.0\Infragistics.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics.Core.Charts">
+      <HintPath>c:\work\dev-tools\XPlatform\Main\Source\Build\Core\netstandard2.0\Infragistics.Core.Charts.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics.Core.DataVisualization">
+      <HintPath>c:\work\dev-tools\XPlatform\Main\Source\Build\Core\netstandard2.0\Infragistics.Core.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics.Core.DataGrid">
+      <HintPath>c:\work\dev-tools\XPlatform\Main\Source\Build\Core\netstandard2.0\Infragistics.Core.DataGrid.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics.Core.Maps">
+      <HintPath>c:\work\dev-tools\XPlatform\Main\Source\Build\WinUI\Infragistics.Core.Maps.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics.Core.Platform.WinUI">
+      <HintPath>c:\work\dev-tools\XPlatform\Main\Source\Build\WinUI\Infragistics.Core.Platform.WinUI.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics.WinUI.Charts">
+      <HintPath>c:\work\dev-tools\XPlatform\Main\Source\Build\WinUI\Infragistics.WinUI.Charts.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics.WinUI.Layouts">
+      <HintPath>c:\work\dev-tools\XPlatform\Main\Source\Build\WinUI\Infragistics.WinUI.Layouts.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics.WinUI.Inputs">
+      <HintPath>c:\work\dev-tools\XPlatform\Main\Source\Build\WinUI\Infragistics.WinUI.Inputs.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics.WinUI.DataGrid">
+      <HintPath>c:\work\dev-tools\XPlatform\Main\Source\Build\WinUI\Infragistics.WinUI.DataGrid.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics.WinUI.Gauges">
+      <HintPath>c:\work\dev-tools\XPlatform\Main\Source\Build\WinUI\Infragistics.WinUI.Gauges.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics.WinUI.DataVisualization">
+      <HintPath>c:\work\dev-tools\XPlatform\Main\Source\Build\WinUI\Infragistics.WinUI.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics.WinUI.Maps">
+      <HintPath>c:\work\dev-tools\XPlatform\Main\Source\Build\WinUI\Infragistics.WinUI.Maps.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Sample.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sample.xaml.cs">
+      <DependentUpon>Sample.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SampleViewModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <!--insert vmLibraryProjectFiles-->
+    <!--end vmLibraryProjectFiles-->
+  </ItemGroup>
+
+</Project>

@@ -4,16 +4,72 @@
     {
       "name": "All",
       "exclusions": [
-        { "reason": "TODO test exporting and sample template", "path": "maps\\" },
-        { "reason": "TODO test exporting and sample template", "path": "gauges\\" }
+        
+      ]
+    },
+    {
+      "name": "WinUI",
+      "exclusions": [
+        { "reason": "excluding web grids",            "path": "grids\\hierarchical-grid\\" },
+        { "reason": "excluding web grids",            "path": "grids\\pivot-grid\\" },
+        { "reason": "excluding web grids", "path": "grids\\tree-grid\\" },       
+        { "reason": "excluding web grids", "path": "grids\\grid\\" },
+        { "reason": "excluding web grids", "path": "charts\\financial-chart\\" }
+      ]
+    },
+    {
+      "name": "WPF",
+      "exclusions": [
+        { "reason": "published beta renderer is missing WPF data annotation strip metadata", "path": "charts\\data-chart\\data-annotation-strip-layer.json" },
+        { "reason": "published beta renderer is missing WPF range-series metadata", "path": "charts\\data-chart\\range-area-chart.json" },
+        { "reason": "published beta renderer is missing WPF range-series metadata", "path": "charts\\data-chart\\range-bar-chart.json" },
+        { "reason": "published beta renderer is missing WPF range-series metadata", "path": "charts\\data-chart\\range-column-chart.json" },
+        { "reason": "published beta renderer is missing WPF scatter-bubble metadata", "path": "charts\\data-chart\\scatter-bubble-chart-fill-scale.json" },
+        { "reason": "published beta renderer is missing WPF scatter-bubble metadata", "path": "charts\\data-chart\\scatter-bubble-chart-multiple-sources.json" },
+        { "reason": "published beta renderer is missing WPF scatter-bubble metadata", "path": "charts\\data-chart\\scatter-bubble-chart-single-source.json" },
+        { "reason": "published beta renderer is missing WPF scatter-bubble metadata", "path": "charts\\data-chart\\scatter-bubble-chart-styling.json" },
+        { "reason": "published beta renderer is missing WPF stacked-series metadata", "path": "charts\\data-chart\\stacked-100-area-chart.json" },
+        { "reason": "published beta renderer is missing WPF stacked-series metadata", "path": "charts\\data-chart\\stacked-100-line-chart.json" },
+        { "reason": "published beta renderer is missing WPF stacked-series metadata", "path": "charts\\data-chart\\stacked-100-spline-area-chart.json" },
+        { "reason": "published beta renderer is missing WPF stacked-series metadata", "path": "charts\\data-chart\\stacked-area-chart.json" },
+        { "reason": "published beta renderer is missing WPF stacked-series metadata", "path": "charts\\data-chart\\stacked-column-chart.json" },
+        { "reason": "published beta renderer is missing WPF stacked-series metadata", "path": "charts\\data-chart\\stacked-line-chart.json" },
+        { "reason": "published beta renderer is missing WPF stacked-series metadata", "path": "charts\\data-chart\\stacked-spline-area-chart.json" },
+        { "reason": "published beta renderer is missing WPF stacked-series metadata", "path": "charts\\data-chart\\stacked-spline-chart.json" },
+        { "reason": "published beta renderer is missing WPF transition-event metadata", "path": "charts\\data-chart\\transition-event.json" },
+        { "reason": "published beta renderer is missing WPF waterfall metadata", "path": "charts\\data-chart\\waterfall-chart.json" },
+        { "reason": "published beta renderer is missing WPF data-grid metadata", "path": "grids\\data-grid\\load-save-layout.json" },
+        { "reason": "published beta renderer is missing WPF data-grid metadata", "path": "grids\\data-grid\\overview.json" },
+        { "reason": "published beta renderer is missing WPF data-grid metadata", "path": "grids\\data-grid\\row-paging.json" },
+        { "reason": "published beta renderer is missing WPF geographic-series metadata", "path": "maps\\geo-map\\binding-multiple-shapes.json" },
+        { "reason": "published beta renderer is missing WPF geographic-series metadata", "path": "maps\\geo-map\\binding-multiple-sources.json" },
+        { "reason": "published beta renderer is missing WPF geographic-series metadata", "path": "maps\\geo-map\\binding-shp-file.json" },
+        { "reason": "published beta renderer is missing WPF geographic-series metadata", "path": "maps\\geo-map\\binding-shp-polylines.json" }
       ]
     },
     {
       "name": "React",
       "exclusions": [
+        { "reason": "data-grid samples target WinUI emission only for now", "path": "grids\\data-grid\\", "test": true },
+        { "reason": "published beta callout codegen targets Chart instead of SeriesViewer", "path": "maps\\geo-map\\geo-symbol-map-with-callouts.json" },
         { "reason": "toolbarTemplate isn't in React product",            "path": "grids\\hierarchical-grid\\toolbar-sample-1.json" },
         { "reason": "toolbarTemplate isn't in React product",            "path": "grids\\hierarchical-grid\\toolbar-sample-2.json" },
-        { "reason": "codegen is not working for sample see azure 39558", "path": "charts\\data-chart\\data-annotation-band-layer.json" },       
+        { "reason": "published beta React renderer cannot emit modern grid sorting indicators yet", "path": "grids\\grid\\column-sorting-indicators.json" },
+        { "reason": "published beta React renderer cannot emit modern grid sorting options yet", "path": "grids\\grid\\column-sorting-options.json" },
+        { "reason": "published beta React renderer cannot emit modern grid sorting style yet", "path": "grids\\grid\\column-sorting-style.json" },
+        { "reason": "published beta React renderer cannot emit modern grid Excel export yet", "path": "grids\\grid\\excel-exporting.json" },
+        { "reason": "published beta React renderer cannot emit modern grid grouping expressions yet", "path": "grids\\grid\\groupby-expressions.json" },
+        { "reason": "published beta React renderer cannot emit modern grid grouping paging yet", "path": "grids\\grid\\groupby-paging.json" },
+        { "reason": "published beta React renderer cannot emit modern grid grouping style yet", "path": "grids\\grid\\groupby-styling.json" },
+        { "reason": "published beta React renderer cannot emit modern grid grouping summaries yet", "path": "grids\\grid\\groupby-summary-options.json" },
+        { "reason": "published beta React renderer cannot emit modern grid grouping summary style yet", "path": "grids\\grid\\groupby-summary-styling.json" },
+        { "reason": "published beta React renderer cannot emit modern multi-row layout yet", "path": "grids\\grid\\multi-row-layout-options.json" },
+        { "reason": "published beta React renderer cannot emit hierarchical grid sorting indicators yet", "path": "grids\\hierarchical-grid\\column-sorting-indicators.json" },
+        { "reason": "published beta React renderer cannot emit hierarchical grid sorting options yet", "path": "grids\\hierarchical-grid\\column-sorting-options.json" },
+        { "reason": "published beta React renderer cannot emit hierarchical grid sorting style yet", "path": "grids\\hierarchical-grid\\column-sorting-style.json" },
+        { "reason": "published beta React renderer cannot emit tree grid sorting indicators yet", "path": "grids\\tree-grid\\column-sorting-indicators.json" },
+        { "reason": "published beta React renderer cannot emit tree grid sorting options yet", "path": "grids\\tree-grid\\column-sorting-options.json" },
+        { "reason": "codegen is not working for sample see azure 39558", "path": "charts\\data-chart\\data-annotation-band-layer.json" },
         { "reason": "codegen is not working for sample see azure 39558", "path": "charts\\data-chart\\data-annotation-line-layer.json" },
         { "reason": "codegen is not working for sample see azure 39558", "path": "charts\\data-chart\\data-annotation-multiple-with-overlay-text.json" },
         { "reason": "codegen is not working for sample see azure 39558", "path": "charts\\data-chart\\data-annotation-multiple-with-stocks.json" },
@@ -25,6 +81,8 @@
     {
       "name": "Angular",
       "exclusions": [
+        { "reason": "data-grid samples target WinUI emission only for now", "path": "grids\\data-grid\\", "test": true },
+        { "reason": "published beta maps package does not export the generated callout layer yet", "path": "maps\\geo-map\\geo-symbol-map-with-callouts.json" },
         { "reason": "samples are in LOB angular repo", "path": "grids\\hierarchical-grid\\" },
         { "reason": "samples are in LOB angular repo", "path": "grids\\pivot-grid\\" },
         { "reason": "samples are in LOB angular repo", "path": "grids\\tree-grid\\" },
@@ -34,14 +92,55 @@
     {
       "name": "Blazor",
       "exclusions": [
+        { "reason": "data-grid samples target WinUI emission only for now", "path": "grids\\data-grid\\", "test": true },
+        { "reason": "published beta no longer exposes shapefile point geometry for the documented record transformation", "path": "maps\\geo-map\\binding-shp-file.json" },
+        { "reason": "published beta no longer exposes shapefile point geometry for the documented record transformation", "path": "maps\\geo-map\\binding-multiple-shapes.json" },
+        { "reason": "published beta no longer exposes the city geometry and DBF population records needed to generate heat tiles", "path": "maps\\geo-map\\display-heat-imagery.json" },
+        { "reason": "published beta no longer exposes shapefile records to the custom shape-style handler", "path": "maps\\geo-map\\shape-styling-comparison.json" },
+        { "reason": "published beta no longer exposes shapefile records to the custom shape-style handler", "path": "maps\\geo-map\\shape-styling-random.json" },
+        { "reason": "published beta no longer exposes shapefile records to the custom shape-style handler", "path": "maps\\geo-map\\shape-styling-range.json" },
+        { "reason": "published beta no longer exposes shapefile records to the custom shape-style handler", "path": "maps\\geo-map\\shape-styling-scale.json" },
+        { "reason": "Blazor marker-template implementation has not landed in the shared library yet", "path": "charts\\category-chart\\marker-templates.json" },
         { "reason": "toolbarTemplate isn't in Blazor product", "path": "grids\\hierarchical-grid\\toolbar-sample-1.json" },
         { "reason": "toolbarTemplate isn't in Blazor product", "path": "grids\\hierarchical-grid\\toolbar-sample-2.json" },
-        { "reason": "summary formatter isn't working for Blazor product", "path": "grids\\tree-grid\\data-summary-formatter.json" }
+        { "reason": "summary formatter isn't working for Blazor product", "path": "grids\\tree-grid\\data-summary-formatter.json" },
+        { "reason": "published beta renderer cannot emit modern grid sorting indicators yet", "path": "grids\\grid\\column-sorting-indicators.json" },
+        { "reason": "published beta renderer cannot emit modern grid sorting options yet", "path": "grids\\grid\\column-sorting-options.json" },
+        { "reason": "published beta renderer cannot emit modern grid sorting style yet", "path": "grids\\grid\\column-sorting-style.json" },
+        { "reason": "published beta renderer cannot emit modern grid Excel export yet", "path": "grids\\grid\\excel-exporting.json" },
+        { "reason": "published beta renderer cannot emit modern grid grouping expressions yet", "path": "grids\\grid\\groupby-expressions.json" },
+        { "reason": "published beta renderer cannot emit modern grid grouping paging yet", "path": "grids\\grid\\groupby-paging.json" },
+        { "reason": "published beta renderer cannot emit modern grid grouping style yet", "path": "grids\\grid\\groupby-styling.json" },
+        { "reason": "published beta renderer cannot emit modern grid grouping summaries yet", "path": "grids\\grid\\groupby-summary-options.json" },
+        { "reason": "published beta renderer cannot emit modern grid grouping summary style yet", "path": "grids\\grid\\groupby-summary-styling.json" },
+        { "reason": "published beta renderer cannot emit modern multi-row layout yet", "path": "grids\\grid\\multi-row-layout-options.json" },
+        { "reason": "published beta renderer cannot emit hierarchical grid sorting indicators yet", "path": "grids\\hierarchical-grid\\column-sorting-indicators.json" },
+        { "reason": "published beta renderer cannot emit hierarchical grid sorting options yet", "path": "grids\\hierarchical-grid\\column-sorting-options.json" },
+        { "reason": "published beta renderer cannot emit hierarchical grid sorting style yet", "path": "grids\\hierarchical-grid\\column-sorting-style.json" },
+        { "reason": "published beta renderer cannot emit tree grid sorting indicators yet", "path": "grids\\tree-grid\\column-sorting-indicators.json" },
+        { "reason": "published beta renderer cannot emit tree grid sorting options yet", "path": "grids\\tree-grid\\column-sorting-options.json" }
       ]
     },
     {
       "name": "WebComponents",
       "exclusions": [
+        { "reason": "data-grid samples target WinUI emission only for now", "path": "grids\\data-grid\\", "test": true },
+        { "reason": "published beta callout codegen targets Chart instead of SeriesViewer", "path": "maps\\geo-map\\geo-symbol-map-with-callouts.json" },
+        { "reason": "published beta renderer cannot emit modern grid sorting indicators yet", "path": "grids\\grid\\column-sorting-indicators.json" },
+        { "reason": "published beta renderer cannot emit modern grid sorting options yet", "path": "grids\\grid\\column-sorting-options.json" },
+        { "reason": "published beta renderer cannot emit modern grid sorting style yet", "path": "grids\\grid\\column-sorting-style.json" },
+        { "reason": "published beta renderer cannot emit modern grid Excel export yet", "path": "grids\\grid\\excel-exporting.json" },
+        { "reason": "published beta renderer cannot emit modern grid grouping expressions yet", "path": "grids\\grid\\groupby-expressions.json" },
+        { "reason": "published beta renderer cannot emit modern grid grouping paging yet", "path": "grids\\grid\\groupby-paging.json" },
+        { "reason": "published beta renderer cannot emit modern grid grouping style yet", "path": "grids\\grid\\groupby-styling.json" },
+        { "reason": "published beta renderer cannot emit modern grid grouping summaries yet", "path": "grids\\grid\\groupby-summary-options.json" },
+        { "reason": "published beta renderer cannot emit modern grid grouping summary style yet", "path": "grids\\grid\\groupby-summary-styling.json" },
+        { "reason": "published beta renderer cannot emit modern multi-row layout yet", "path": "grids\\grid\\multi-row-layout-options.json" },
+        { "reason": "published beta renderer cannot emit hierarchical grid sorting indicators yet", "path": "grids\\hierarchical-grid\\column-sorting-indicators.json" },
+        { "reason": "published beta renderer cannot emit hierarchical grid sorting options yet", "path": "grids\\hierarchical-grid\\column-sorting-options.json" },
+        { "reason": "published beta renderer cannot emit hierarchical grid sorting style yet", "path": "grids\\hierarchical-grid\\column-sorting-style.json" },
+        { "reason": "published beta renderer cannot emit tree grid sorting indicators yet", "path": "grids\\tree-grid\\column-sorting-indicators.json" },
+        { "reason": "published beta renderer cannot emit tree grid sorting options yet", "path": "grids\\tree-grid\\column-sorting-options.json" }
       ]
     }
   ]

@@ -1,0 +1,55 @@
+{
+  "descriptions": {
+    "editor": {
+      "type": "PropertyEditorPanel",
+      "name": "PropertyEditor",
+      "componentRendererRef": "renderer",
+      "targetRef": "gauge",
+      "descriptionType": "RadialGauge",
+      "isHorizontal": true,
+      "isWrappingEnabled": true,
+      "properties": [
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "name": "OpticalScalingEditor",
+          "label": "Optical Scaling",
+          "shouldOverrideDefaultEditor": true,
+          "valueType": "Boolean",
+          "primitiveValue": true,
+          "changedRef": "RadialGaugeToggleOpticalScaling"
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "name": "GaugeSizeEditor",
+          "label": "Resize Gauge",
+          "shouldOverrideDefaultEditor": true,
+          "valueType": "Slider",
+          "primitiveValue": 100,
+          "min": 20,
+          "max": 100,
+          "step": 10,
+          "changedRef": "RadialGaugeSetSize"
+        }
+      ]
+    },
+    "content": {
+      "type": "RadialGauge",
+      "name": "gauge",
+      "height": "100%",
+      "width": "100%",
+      "opticalScalingEnabled": true,
+      "opticalScalingSize": 500,
+      "subtitleText": "MPH",
+      "titleDisplaysValue": true,
+      "minimumValue": 0,
+      "maximumValue": 80,
+      "value": 50,
+      "interval": 10
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
+    "gauges/RadialGaugeModule"
+  ]
+}

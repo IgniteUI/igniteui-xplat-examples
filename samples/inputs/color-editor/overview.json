@@ -1,9 +1,11 @@
 {
+  "hasAnimations": true,
   "export": true,
   "descriptions": {
     "content": {
       "type": "ColorEditor",
-      "name": "colorEditor"
+      "name": "colorEditor",
+      "valueChangedRef": "ColorEditorValueChanged"
     }
   },
   "modules": [

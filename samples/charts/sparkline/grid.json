@@ -1,0 +1,72 @@
+{
+  "skipAlterDataCasing": true,
+  "descriptions": {
+    "content": {
+      "type": "DataGrid",
+      "id": "grid",
+      "name": "grid",
+      "dataSourceRef": "ProductsWithHistory",
+      "autoGenerateColumns": false,
+      "rowHeight": 90,
+      "height": "100%",
+      "width": "100%",
+      "columns": [
+        {
+          "type": "TextColumn",
+          "field": "ProductID",
+          "headerText": "ID",
+          "width": {
+            "type": "ColumnWidth",
+            "isStarSized": true,
+            "value": 1,
+            "minimumWidth": 110
+          },
+          "horizontalAlignment": "Center"
+        },
+        {
+          "type": "TextColumn",
+          "field": "ProductName",
+          "headerText": "Product",
+          "width": {
+            "type": "ColumnWidth",
+            "isStarSized": true,
+            "value": 1,
+            "minimumWidth": 140
+          }
+        },
+        {
+          "type": "NumericColumn",
+          "field": "ProductPrice",
+          "headerText": "Price",
+          "width": {
+            "type": "ColumnWidth",
+            "isStarSized": true,
+            "value": 1,
+            "minimumWidth": 110
+          },
+          "positivePrefix": "$",
+          "showGroupingSeparator": true,
+          "minFractionDigits": 2
+        },
+        {
+          "type": "TemplateColumn",
+          "field": "OrderHistory",
+          "headerText": "Order History",
+          "width": {
+            "type": "ColumnWidth",
+            "isStarSized": true,
+            "value": 1,
+            "minimumWidth": 180
+          },
+          "paddingTop": 10,
+          "paddingBottom": 10,
+          "templateRef": "DataGridSparklineTemplate"
+        }
+      ]
+    }
+  },
+  "modules": [
+    "data-grids/DataGridModule",
+    "charts/SparklineModule"
+  ]
+}
