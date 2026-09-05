@@ -5,11 +5,10 @@ import com.infragistics.mobile.controls.IgaCalloutLabelUpdatingEventArgs
 public class TestsUpdateCalloutLabelV
 {
     //begin eventHandler
-    //Kotlin: Any?___String?
-    public fun testsUpdateCalloutLabelV(sender: Any?, item: IgaCalloutLabelUpdatingEventArgs)
+    public fun testsUpdateCalloutLabelV(sender: Any?, args: IgaCalloutLabelUpdatingEventArgs)
     {    
-        var item = args.Item;
-        args.label = item["Label"].ToString() + "-V-" + item["Value"].ToString();
+        var item = args.item as Map<*, *>;
+        args.label = item["Label"].toString() + "-V-" + item["Value"].toString();
     }
     //end eventHandler
 }

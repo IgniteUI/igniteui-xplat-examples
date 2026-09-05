@@ -1,5 +1,5 @@
 //begin imports
-import com.infragistics.mobile.controls.FormatRadialGaugeLabelEventArgs
+import com.infragistics.mobile.controls.IgaFormatRadialGaugeLabelEventArgs
 import kotlin.math.PI
 import kotlin.math.round
 
@@ -8,13 +8,13 @@ import kotlin.math.round
 class TestsRadialGaugeFormatLabelWithAllValues {
 
     //begin eventHandler
-    fun testsRadialGaugeFormatLabelWithAllValues(sender: Any?, args: FormatRadialGaugeLabelEventArgs) {
+    fun testsRadialGaugeFormatLabelWithAllValues(sender: Any?, args: IgaFormatRadialGaugeLabelEventArgs) {
 	
 	
 		val radToDeg = 180.0 / PI
 
 		val angleDeg      = round(args.angle * radToDeg)
-		val startAngleDeg = round(args,startAngle * radToDeg)
+		val startAngleDeg = round(args.startAngle * radToDeg)
 		val endAngleDeg   = round(args.endAngle * radToDeg)
 
 		args.label =

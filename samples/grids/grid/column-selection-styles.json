@@ -8,7 +8,7 @@
       "name": "grid",
       "id": "grid",
       "dataRef": "CustomersData",
-      "columnSelection": "multiple",
+      "columnSelection": "Multiple",
       "columnList": [
         {
           "type": "WebColumn",

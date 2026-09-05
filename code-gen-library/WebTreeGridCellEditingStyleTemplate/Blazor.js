@@ -6,9 +6,9 @@ igRegisterScript("WebTreeGridCellEditingStyleTemplate", (args) => {
 let requiredStyles = `
 <!--begin styles-->
 #treeGrid {
-    --cell-editing-background: #4567bb;
-    --cell-active-border-color: #4567bb;
-    --cell-edited-value-color: #fff;
+    --ig-grid-edit-mode-color: #FFA500;
+    --ig-grid-cell-active-border-color: #AAFF00;
+    --ig-grid-cell-editing-background: #ADD8E6;
 }
 <!--end styles-->
 `;

@@ -35,7 +35,6 @@
           "dataType": "Number",
           "pipeArgs": {
             "type": "WebColumnPipeArgs",
-            "currencyCode": "",
             "digitsInfo": "1.4-4"
           }
         },
@@ -51,8 +50,7 @@
           "dataType": "DateTime",
           "pipeArgs": {
             "type": "WebColumnPipeArgs",
-            "format": "long",
-            "timezone": "UTC+0"
+            "format": "long"
           }
         },
         {
@@ -82,8 +80,7 @@
           "dataType": "Time",
           "pipeArgs": {
             "type": "WebColumnPipeArgs",
-            "format": "shortTime",
-            "timezone": "UTC+0"
+            "format": "shortTime"
           }
         },
         {
@@ -98,7 +95,6 @@
           "dataType": "Currency",
           "pipeArgs": {
             "type": "WebColumnPipeArgs",
-            "currencyCode": "",
             "digitsInfo": "1.4-4"
           }
         },
@@ -114,7 +110,6 @@
           "dataType": "Percent",
           "pipeArgs": {
             "type": "WebColumnPipeArgs",
-            "currencyCode": "",
             "digitsInfo": "1.4-4"
           }
         },

@@ -11,16 +11,28 @@ public class TestsUpdateTitlesInSeriesAddedEvent
     int titleIndex = 0;
     public void TestsUpdateTitlesInSeriesAddedEvent(object sender, ChartSeriesEventArgs args)
     {
-		var parser = new JsonDictionaryParser();
+		List<string> names;
+		bool updateAnnotations;
 		object o = CodeGenHelper.FindByName<object>("SeriesAddedTitles");
-		var obj = (JsonDictionaryObject)parser.Parse((string)((JsonDictionaryValue)o).Value);
-		var updateAnnotations = (bool)(obj["includeAnnotations"] as JsonDictionaryValue).Value;
-      
-	  	var seriesTitles = (JsonDictionaryArray)obj["names"];
-		List<string> names = new List<string>();
-		foreach (var item in seriesTitles.Items) {
-          names.Add(((JsonDictionaryValue)item).Value as String);
-      	}
+		if (o is JsonDictionaryValue)
+		{
+			var parser = new JsonDictionaryParser();
+			var obj = (JsonDictionaryObject)parser.Parse((string)((JsonDictionaryValue)o).Value);
+			updateAnnotations = (bool)(obj["includeAnnotations"] as JsonDictionaryValue).Value;
+		
+			var seriesTitles = (JsonDictionaryArray)obj["names"];
+			names = new List<string>();
+			foreach (var item in seriesTitles.Items) {
+				names.Add(((JsonDictionaryValue)item).Value as String);
+			}
+		}
+		else
+		{
+			JObject obj =  JObject.Parse(o.ToString());
+			updateAnnotations = obj["includeAnnotations"].ToObject<bool>();
+			var seriesTitles = (JArray) obj["names"];
+			names = seriesTitles.ToObject<List<string>>();
+		}
 
 		if (args.Series.IsAnnotationLayer && !updateAnnotations)
 			 return;

@@ -7,7 +7,7 @@ export class TestsAddBulletGraphLabelFormatSpecifier
 {
 
     //begin eventHandler
-    public  testsAddBulletGraphLabelFormatSpecifier(){
+    public testsAddBulletGraphLabelFormatSpecifier(){
         var gauge = CodeGenHelper.getDescription<IgcBulletGraphComponent>("content");
         const jVal = CodeGenHelper.findByName<any>("GaugeLabelFormatSpecifier");
         var numSpec = new IgcNumberFormatSpecifier();

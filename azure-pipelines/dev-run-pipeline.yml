@@ -1,7 +1,7 @@
 trigger:
   branches:
     include:
-    - '25.2'
+    - 'main'
   paths:
     include:
       - 'samples/**/*.json'
@@ -13,7 +13,8 @@ trigger:
       - '24.1.x'
       - '24.2.x'
       - '25.1'
-
+      - '25.2'
+ 
 parameters:
   - name: pathsToParse
     displayName: 'Full paths that contain jsons - coma delimited'
@@ -26,7 +27,7 @@ pr: none
 name: $(BuildDefinitionName)_$(Year:yyyy).$(Month).$(DayOfMonth)$(Rev:.r)
 variables:
   - name: codeExporterAppBranch
-    value: '2025.2'
+    value: 'main'
 
 resources:
   repositories:

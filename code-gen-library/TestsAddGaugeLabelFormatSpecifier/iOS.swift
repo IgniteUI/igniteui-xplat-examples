@@ -6,7 +6,7 @@ public class TestsAddGaugeLabelFormatSpecifier {
     //begin eventHandler
     //Swift: Action
     public func testsAddGaugeLabelFormatSpecifier() {
-        var gauge = CodeGenHelper.getDescription(IgsLinearGuage.self, "content")!;
+        var gauge = CodeGenHelper.getDescription(IgsLinearGauge.self, "content")!;
         var jVal = CodeGenHelper.findByName(Any.self, "GaugeLabelFormatSpecifier")!;
         var parser = JsonDictionaryParser();
         var formatterInfo = parser.parse(json_: ((jVal as! JsonDictionaryValue).value as! String)) as! JsonDictionaryObject;

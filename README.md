@@ -43,21 +43,22 @@ You can use the [Cross Platform Editor](https://infragistics.visualstudio.com/Ne
 
 ## Updating Editor Templates
 
-The [Editor-Templates](editor-templates) folder contains templates for converting XPLAT samples into platform specifc samples. You **must update** those templates in the following order:
+The [Editor-Templates](https://github.com/IgniteUI/igniteui-xplat-examples/tree/25.2/editor-templates) folder contains templates for converting XPLAT samples into platform specific samples. You **must update** those templates in the following order:
 
-1. Create AND merge a pull request with updated packages in `browser` AND `samples` folders of the following repositories:
-- [igniteui-angular-examples](https://github.com/IgniteUI/igniteui-angular-examples)
-- [igniteui-blazor-examples](https://github.com/IgniteUI/igniteui-blazor-examples)
-- [igniteui-react-examples](https://github.com/IgniteUI/igniteui-react-examples)
-- [igniteui-wc-examples](https://github.com/IgniteUI/igniteui-wc-examples)
+1. Follow the `Updating Packages in Samples` instructions in all the following repositories to **create AND merge a pull request** with updated packages:
 
-2. Create AND merge a pull request with updated packages in the [Editor-Templates](editor-templates) folder in this repository.
+- [igniteui-angular-examples](https://github.com/IgniteUI/igniteui-angular-examples/blob/vnext/README.md#updating-packages-in-samples)
+- [igniteui-blazor-examples](https://github.com/IgniteUI/igniteui-blazor-examples/blob/vnext/README.md#updating-packages-in-samples)
+- [igniteui-react-examples](https://github.com/IgniteUI/igniteui-react-examples/blob/vnext/README.md#updating-packages-in-samples)
+- [igniteui-wc-examples](https://github.com/IgniteUI/igniteui-wc-examples/blob/vnext/README.md#updating-packages-in-samples)
 
-Above order of creating and merging pull requests is important to avoid stale samples and prevent building issues in platform specifc sample browsers.
+2. Create AND merge a pull request with updated packages in the [Editor-Templates](https://github.com/IgniteUI/igniteui-xplat-examples/tree/25.2/editor-templates) folder in the [igniteui-xplat-examples](https://github.com/IgniteUI/igniteui-xplat-examples/) repository.
+
+NOTE: Above order of steps is important and PRs made in step #1 must be merged before merging PR in step #2 such that it prevents stale samples and building issues in platform specific sample browsers.
 
 ## Creating Volume Branch in Code Exporter App Repo
 
-- create **new volume branch** (e.g. 2025.1) in [code exporter app](https://infragistics.visualstudio.com/NetAdvantage/_git/code-exporter-app) repo
+- create **new volume branch** (e.g. 2025.1) in [code exporter app](https://infragistics.visualstudio.com/NetAdvantage/_git/code-exporter-app) repo off of the main branch with name of last volume release
 
 - update the included branches in [build-pipeline.yml](https://infragistics.visualstudio.com/NetAdvantage/_git/code-exporter-app?path=/azure-pipelines/build-pipeline.yml)
 
@@ -79,13 +80,11 @@ Above order of creating and merging pull requests is important to avoid stale sa
 
 - complete steps in previous section
 
-- create **new volume branch** (e.g. 25.1) in [xplat-examples](https://github.com/IgniteUI/igniteui-xplat-examples) repo
+- create **new volume branch** (e.g. 2025.1) in [code exporter app](https://infragistics.visualstudio.com/NetAdvantage/_git/code-exporter-app) repo off of the main branch with name of last volume release
 
 - update the included branches in [build-pipeline.yml](https://github.com/IgniteUI/igniteui-xplat-examples/blob/25.2/azure-pipelines/build-pipeline.yml)
 
 - move the old volume branch (e.g. 25.2) to excluded branches in [build-pipeline.yml](https://github.com/IgniteUI/igniteui-xplat-examples/blob/25.2/azure-pipelines/build-pipeline.yml)
-
-- update codeExporterAppBranch to the **new volume branch** (e.g. 2025.1) [build-pipeline.yml](https://github.com/IgniteUI/igniteui-xplat-examples/blob/25.2/azure-pipelines/build-pipeline.yml)
 
 - update the included branches in [dev-run-pipeline.yml](https://github.com/IgniteUI/igniteui-xplat-examples/blob/25.2/azure-pipelines/dev-run-pipeline.yml)
 

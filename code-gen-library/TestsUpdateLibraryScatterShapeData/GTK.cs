@@ -3,9 +3,7 @@ using Infragistics.Controls;
 using Infragistics.Core;
 using System.Collections;
 using System.Collections.ObjectModel;
-using Newtonsoft.Json.Linq;
-using Newtonsoft.Json;
-using Infragistics;
+using Infragistics.Portable.Description;
 using Infragistics.Portable;
 using System.Reflection;
 //end imports
@@ -15,11 +13,12 @@ public class TestsUpdateLibraryScatterShapeData
 {
 
 	//begin eventHandler
-	//WPF: System.Func<IList, JObject, object>
+	//GTK: System.Func<IList, JsonDictionaryObject, object>
 	  FastReflectionHelper helper = new FastReflectionHelper();
-    public object TestsUpdateLibraryScatterShapeData(IList origData, JObject options)
+    JsonDictionaryParser parser = new JsonDictionaryParser();
+    public object TestsUpdateLibraryScatterShapeData(IList origData, JsonDictionaryObject options)
 	{
-		string updateType = options.Value<string>("updateType");
+		string updateType = options.GetString("updateType");
 
 		switch(updateType)
 		{
@@ -34,38 +33,38 @@ public class TestsUpdateLibraryScatterShapeData
 		return null;
 	}
 
-	private object RemoveItems(IList origData, JToken itemsToRemove)
+	private object RemoveItems(IList origData, object itemsToRemove)
 	{
 		var elementType = GetElementType(origData);
-		if (itemsToRemove is JArray jArray)
+		if (itemsToRemove is JsonDictionaryArray jArray)
 		{
-				var indexes = itemsToRemove.ToObject<List<int>>();
-				foreach (var index in indexes)
+				foreach (JsonDictionaryValue item in jArray.Items)
 				{
-						origData.RemoveAt(index);
+						var index = int.Parse(item.Value.ToString());
+						origData.RemoveAt((int) index);
 				}
 		}
-		else if (itemsToRemove is JObject jObject)
+		else if (itemsToRemove is JsonDictionaryValue jItem)
 		{
-				var index = itemsToRemove.ToObject<int>();
-				origData.RemoveAt(index);
+			var index = int.Parse(jItem.Value.ToString());
+			origData.RemoveAt((int)index);
 		}
 		return origData;
 	}
 
-	private object AddItems(IList origData, JToken newData)
+	private object AddItems(IList origData, object newData)
 	{
 		var elementType = GetElementType(origData);
 
-		if (newData is JArray jArray)
+		if (newData is JsonDictionaryArray jArray)
 		{
-				foreach (JObject item in jArray.OfType<JObject>())
+				foreach (JsonDictionaryObject item in jArray.Items)
 				{
 
 						origData.Add(GetTypedObject(item, elementType));
 				}
 		}
-		else if (newData is JObject jObject)
+		else if (newData is JsonDictionaryObject jObject)
 		{
 				origData.Add(GetTypedObject(jObject, elementType));
 		}
@@ -93,25 +92,25 @@ public class TestsUpdateLibraryScatterShapeData
 		return typeof(object);
 	}
 
-	private object GetTypedObject(JObject jObject, Type targetType)
+	private object GetTypedObject(JsonDictionaryObject jObject, Type targetType)
 	{
 		object ret = Activator.CreateInstance(targetType);
-		var keys = jObject.Properties();
+		var keys = jObject.GetKeys();
 
 		foreach (var key in keys)
 		{
-			helper.PropertyName = key.Name;
+			helper.PropertyName = key;
 			if (helper.Invalid)
 				continue;
 
-			if (key.Name == "Points")
+			if (key == "Points")
 			{
 				var points = new ObservableCollection<Point>();
-				var pArr = jObject["Points"] as JArray;
-				foreach (var pItem in pArr)
+				var pArr = jObject["Points"] as JsonDictionaryArray;
+				foreach (var pItem in pArr.Items)
 				{
-					JObject pObj = pItem as JObject;
-					var p = new Point(pObj.Value<double>("X"), pObj.Value<double>("Y"));
+					var pObj = pItem as JsonDictionaryObject;
+					var p = new Point(pObj.GetNumber("X"), pObj.GetNumber("Y"));
 					points.Add(p);
 				}
 				PropertyInfo info = ret.GetType().GetProperty("Points");
@@ -119,8 +118,8 @@ public class TestsUpdateLibraryScatterShapeData
 			}
 			else
 			{
-				PropertyInfo info = ret.GetType().GetProperty(key.Name);
-				info.SetValue(ret, Convert.ChangeType(key.Value.ToString(), info.PropertyType));
+				PropertyInfo info = ret.GetType().GetProperty(key);
+				info.SetValue(ret, jObject.GetNumber(key));
 			}
 
 		}

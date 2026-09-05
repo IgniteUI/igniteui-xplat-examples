@@ -3,13 +3,13 @@ import { IgcChartSeriesEventArgs } from 'igniteui-webcomponents-charts';
 
 //end imports
 
-export class TestsUpdateGrpupsInSeriesAddedEvent
+export class TestsUpdateGroupsInSeriesAddedEvent
 {
     //begin eventHandler
     groupIndex: number = 0;
     updateAnnotations: boolean = false;
     groups: string[] = null;
-    public testsUpdateGroupsInSeriesAddedEvent(sender: any,args: IgrChartSeriesEventArgs): void
+    public testsUpdateGroupsInSeriesAddedEvent(sender: any,args: IgcChartSeriesEventArgs): void
     {  
         if (this.groups == null){       
          const o = CodeGenHelper.findByName<object>("SeriesAddedGroups");

@@ -29,3 +29,26 @@ https://dl.infragistics.com/x/css/samples/shared.v6.css
     align-items: end;
 }
 // endifdef aboveContentLeft, aboveContentRight
+// ifdef leftContent, rightContent
+#contentSplit {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+}
+#leftContentContainer {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: stretch;
+}
+#rightContentContainer {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: stretch;
+}
+// endifdef leftContent, rightContent
+// ifdef belowContent
+.belowContent {
+    display: flex;
+    flex-direction: column;
+}
+// endifdef belowContent

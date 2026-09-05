@@ -27,8 +27,8 @@
           "label": "Marker Type",
           "shouldOverrideDefaultEditor": true,
           "valueType": "EnumValue",
-          "dropDownValues": [ "Circle", "Automatic", "Triangle", "Pyramid", "Square", "Diamond", "Pentagon", "Hexagon", "Tetragram", "Pentagram", "Hexagram", "None" ],
-          "dropDownNames": [ "Circle", "Automatic", "Triangle", "Pyramid", "Square", "Diamond", "Pentagon", "Hexagon", "Tetragram", "Pentagram", "Hexagram", "None" ],
+          "dropDownValues": [ "Circle", "Checkmark", "Automatic", "Triangle", "Pyramid", "Square", "Diamond", "Pentagon", "Hexagon", "Tetragram", "Pentagram", "Hexagram", "None" ],
+          "dropDownNames": [ "Circle", "Checkmark", "Automatic", "Triangle", "Pyramid", "Square", "Diamond", "Pentagon", "Hexagon", "Tetragram", "Pentagram", "Hexagram", "None" ],
           "primitiveValue": "Circle",
           "changedRef": "EditorChangeUpdateMarkerType"
         }

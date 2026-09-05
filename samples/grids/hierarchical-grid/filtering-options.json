@@ -39,14 +39,14 @@
             "type": "WebColumn",
             "field": "GrammyNominations",
             "header": "Grammy Nominations",
-            "dataType": "String",
+            "dataType": "Number",
             "resizable": true
           },
           {
             "type": "WebColumn",
             "field": "GrammyAwards",
             "header": "Grammy Awards",
-            "dataType": "String",
+            "dataType": "Number",
             "resizable": true
           }
         ],

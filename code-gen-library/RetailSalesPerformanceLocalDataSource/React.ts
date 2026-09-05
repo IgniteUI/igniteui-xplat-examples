@@ -1,5 +1,5 @@
 //begin imports
-import { CodeGenHelper } from 'igniteui-webcomponents-core';
+import { CodeGenHelper } from 'igniteui-react-core';
 //end imports
 
 //begin data

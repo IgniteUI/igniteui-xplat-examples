@@ -13,7 +13,7 @@ public hierarchicalGridPinHeaderTemplate = (ctx: IgcColumnTemplateContext) => {
     const column = (ctx as any).column;
     return html`<div style="display:flex;">
                  <span>${column.field}</span>
-                 <span style="margin-left: auto;" @click=${(e: any) => this.toggleColumnPin(column)}>📌</span>
+                 <span style="margin-left: auto; cursor: pointer;" @click=${(e: any) => this.toggleColumnPin(column)}>📌</span>
                </div>`;
 };
 //end content

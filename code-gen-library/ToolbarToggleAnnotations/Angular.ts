@@ -3,7 +3,7 @@ import { IgxToolCommandEventArgs } from 'igniteui-angular-layouts';
 import { IgxDataChartComponent, IgxSeriesComponent, IgxDataToolTipLayerComponent, IgxCrosshairLayerComponent, IgxFinalValueLayerComponent } from 'igniteui-angular-charts';
 //end imports
 
-import { CodeGenHelper } from 'igniteui-webcomponents-core';
+import { CodeGenHelper } from 'igniteui-angular-core';
 
 export class ToolbarToggleAnnotations {
     //begin eventHandler

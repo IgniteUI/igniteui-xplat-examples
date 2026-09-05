@@ -1,0 +1,35 @@
+{
+  "descriptions": {
+    "aboveContent": {
+      "type": "GeographicMap",
+      "name": "aerialMap",
+      "height": "100%",
+      "width": "100%",
+      "zoomable": true,
+      "backgroundContent": {
+        "type": "BingMapsMapImagery",
+        "name": "aerialImagery",
+        "apiKey": "REPLACE_WITH_BING_KEY",
+        "imageryStyle": "AerialWithLabels"
+      }
+    },
+    "content": {
+      "type": "GeographicMap",
+      "name": "roadMap",
+      "height": "100%",
+      "width": "100%",
+      "zoomable": true,
+      "backgroundContent": {
+        "type": "BingMapsMapImagery",
+        "name": "roadImagery",
+        "apiKey": "REPLACE_WITH_BING_KEY",
+        "imageryStyle": "Road"
+      }
+    }
+  },
+  "modules": [
+    "charts/DataChartInteractivityModule",
+    "maps/GeographicMapModule",
+    "maps/BingMapsMapImageryModule"
+  ]
+}

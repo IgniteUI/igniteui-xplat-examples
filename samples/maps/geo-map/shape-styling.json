@@ -1,5 +1,4 @@
 {
-  "export": false,
   "onViewInit": [ "ShapeFileOnViewInit"],
   "descriptions": {
     "content": {
@@ -10,7 +9,8 @@
         {
           "type": "GeographicShapeSeries",
           "name": "GeographicShapeSeries1",
-          "styleShapeRef": "ShapeFileStyling"
+          "isCustomShapeStyleAllowed": true,
+          "assigningShapeStyleRef": "ShapeFileStyling"
         }
       ]
     }

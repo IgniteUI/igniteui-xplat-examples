@@ -32,13 +32,13 @@ public class PropertyEditorInitAggregationsOnViewInit {
     public func editorChangeUpdateInitialSummaries(sender: Any?, args: IgsPropertyEditorPropertyDescriptionChangedEventArgs?) {
 
         var chart = CodeGenHelper.getDescription(IgsCategoryChart.self, "content")
-        var intialSummaryVal = String(describing: args.newValue)
+        var intialSummaryVal = String(describing: args!.newValue)
         chart.initialSummaries = intialSummaryVal
     }
 
     public func editorChangeUpdateGroupSorts(sender: Any?, args: IgsPropertyEditorPropertyDescriptionChangedEventArgs?) {
         var chart = CodeGenHelper.getDescription(IgsCategoryChart.self, "content")
-        var groupSortsVal = String(describing: args.newValue)
+        var groupSortsVal = String(describing: args!.newValue)
         chart.groupSorts = groupSortsVal
     }
     //end eventHandler

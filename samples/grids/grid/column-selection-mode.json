@@ -10,11 +10,13 @@
       "isHorizontal": true,
       "isWrappingEnabled": true,
       "properties": [
-        {          
+        {
           "type": "PropertyEditorPropertyDescription",
           "propertyPath": "ColumnSelection",
-          "name": "columnSelectionEditor",
-          "label": "Column Selection"
+          "name": "ColumnSelectionEditor",
+          "valueType": "EnumValue",
+          "dropDownNames": ["None", "Single", "Multiple", "MultipleCascade"],
+          "dropDownValues": ["None", "Single", "Multiple", "MultipleCascade"]
         }
       ]
     },
