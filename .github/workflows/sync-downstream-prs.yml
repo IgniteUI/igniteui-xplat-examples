@@ -1,0 +1,114 @@
+name: Sync downstream pull requests
+
+# One PR update fans out to the web repositories' two independently mergeable base branches and
+# the native repositories' current main branches.
+# Automatic pull-request synchronization remains disabled until the GitHub App is installed and the
+# DOWNSTREAM_SYNC_APP_ID variable and DOWNSTREAM_SYNC_APP_PRIVATE_KEY secret are configured. Restore
+# the pull_request trigger below after completing .github/DOWNSTREAM_SYNC_APP.md.
+on:
+  # pull_request:
+  #   types: [opened, reopened, synchronize, ready_for_review]
+  #   paths:
+  #     - 'samples/**/*.json'
+  #     - 'code-gen-library/**'
+  #     - 'editor-templates/**'
+  #     - 'config.json'
+  #     - 'tooling/**'
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: Upstream branch to synchronize
+        required: true
+      base_sha:
+        description: Upstream base commit used to find altered samples
+        required: true
+
+permissions:
+  contents: read
+
+concurrency:
+  group: downstream-sync-${{ github.event.pull_request.number || inputs.branch || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  sync:
+    if: github.event_name == 'workflow_dispatch' || github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    environment: downstream-sync
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - platform: Angular
+            owner: IgniteUI
+            repository_name: igniteui-angular-examples
+            repository: IgniteUI/igniteui-angular-examples
+            bases: vnext,master
+          - platform: React
+            owner: IgniteUI
+            repository_name: igniteui-react-examples
+            repository: IgniteUI/igniteui-react-examples
+            bases: vnext,master
+          - platform: WebComponents
+            owner: IgniteUI
+            repository_name: igniteui-wc-examples
+            repository: IgniteUI/igniteui-wc-examples
+            bases: vnext,master
+          - platform: Blazor
+            owner: IgniteUI
+            repository_name: igniteui-blazor-examples
+            repository: IgniteUI/igniteui-blazor-examples
+            bases: vnext,master
+          - platform: WinUI
+            owner: Infragistics
+            repository_name: winui-samples
+            repository: Infragistics/winui-samples
+            bases: main
+          - platform: Uno
+            owner: Infragistics
+            repository_name: uno-samples
+            repository: Infragistics/uno-samples
+            bases: main
+
+    steps:
+      - name: Checkout upstream pull request
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || inputs.branch }}
+          fetch-depth: 0
+
+      - name: Use Node.js 24.x
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: tooling/package-lock.json
+
+      - name: Install and build the exporter
+        working-directory: tooling
+        run: |
+          npm ci
+          npm run build
+
+      - name: Create downstream GitHub App token
+        id: downstream-token
+        uses: actions/create-github-app-token@v3
+        with:
+          app-id: ${{ vars.DOWNSTREAM_SYNC_APP_ID }}
+          private-key: ${{ secrets.DOWNSTREAM_SYNC_APP_PRIVATE_KEY }}
+          owner: ${{ matrix.owner }}
+          repositories: ${{ matrix.repository_name }}
+          permission-contents: write
+          permission-pull-requests: write
+
+      - name: Create or update staging and production peers
+        env:
+          GH_TOKEN: ${{ steps.downstream-token.outputs.token }}
+          UPSTREAM_BRANCH: ${{ github.event.pull_request.head.ref || inputs.branch }}
+          UPSTREAM_BASE_SHA: ${{ github.event.pull_request.base.sha || inputs.base_sha }}
+          UPSTREAM_PR: ${{ github.event.pull_request.number }}
+          DOWNSTREAM_REPOSITORY: ${{ matrix.repository }}
+          PLATFORM: ${{ matrix.platform }}
+          DOWNSTREAM_BASES: ${{ matrix.bases }}
+        run: node tooling/src/sync-downstream.mjs

@@ -1,0 +1,61 @@
+{
+  "descriptions": {
+    "content": {
+      "type": "DataChart",
+      "name": "chart",
+      "isHorizontalZoomEnabled": true,
+      "isVerticalZoomEnabled": true,
+      "axes": [
+        {
+          "type": "CategoryXAxis",
+          "name": "xAxis",
+          "dataSourceRef": "LocalData",
+          "label": "Label"
+        },
+        {
+          "type": "NumericYAxis",
+          "name": "yAxis",
+          "minimumValue": 0,
+          "maximumValue": 10
+        }
+      ],
+      "series": [
+        {
+          "type": "ColumnSeries",
+          "name": "series1",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "dataSourceRef": "LocalData",
+          "valueMemberPath": "Value"
+        },
+        { "type": "ValueOverlay", "name": "overlay1", "axisRef": "yAxis", "value": 2.0, "thickness": 5 },
+        { "type": "ValueOverlay", "name": "overlay2", "axisRef": "yAxis", "value": 3.6, "thickness": 5 },
+        { "type": "ValueOverlay", "name": "overlay3", "axisRef": "yAxis", "value": 5.8, "thickness": 5 },
+        { "type": "ValueOverlay", "name": "overlay4", "axisRef": "yAxis", "value": 1.0, "thickness": 5 },
+        { "type": "ValueOverlay", "name": "overlay5", "axisRef": "yAxis", "value": 8.0, "thickness": 5 },
+        { "type": "ValueOverlay", "name": "overlay6", "axisRef": "yAxis", "value": 7.0, "thickness": 5 },
+        { "type": "ValueOverlay", "name": "overlay7", "axisRef": "yAxis", "value": 5.0, "thickness": 5 }
+      ]
+    }
+  },
+  "refs": {
+    "LocalData": [
+      { "Label": 1, "Value": 1.0 },
+      { "Label": 2, "Value": 2.0 },
+      { "Label": 3, "Value": 6.0 },
+      { "Label": 4, "Value": 8.0 },
+      { "Label": 5, "Value": 2.0 },
+      { "Label": 6, "Value": 6.0 },
+      { "Label": 7, "Value": 4.0 },
+      { "Label": 8, "Value": 2.0 },
+      { "Label": 9, "Value": 1.0 }
+    ]
+  },
+  "modules": [
+    "charts/DataChartCoreModule",
+    "charts/DataChartCategoryCoreModule",
+    "charts/DataChartCategoryModule",
+    "charts/DataChartInteractivityModule",
+    "charts/ValueOverlayModule"
+  ]
+}

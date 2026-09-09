@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ViewChild, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
+﻿import { AfterViewInit, Component, ViewChild, TemplateRef, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
 //insert vmImports
 //end vmImports
 //insert descriptionImports
@@ -7,6 +7,8 @@ import { AfterViewInit, Component, ViewChild, ChangeDetectionStrategy, ChangeDet
 //end vmLibraryImports
 //insert handlersImports
 //end handlersImports
+//insert templateImports
+//end templateImports
 //insert bindingImports
 //end bindingImports
 
@@ -17,6 +19,9 @@ import { defineAllComponents } from 'igniteui-webcomponents';
 //ifdef editor
 defineAllComponents();
 //endifdef editor
+
+//insert supportingTypes
+//end supportingTypes
 
 @Component({
     standalone: false,
@@ -43,14 +48,21 @@ export class AppComponent implements AfterViewInit
 		//end onInit
 	}
 	
-	public ngAfterViewInit(): void 
-	{	
+	public ngAfterViewInit(): void
+	{
+//ifdef contentCode
+		//insert contentCode
+		//end contentCode
+//endifdef contentCode
+
 		//insert onViewInit
 		//end onViewInit
 	}
 	
 	//insert eventHandlers
     //end eventHandlers
+	//insert templateSupportingMethods
+    //end templateSupportingMethods
 
 }
 

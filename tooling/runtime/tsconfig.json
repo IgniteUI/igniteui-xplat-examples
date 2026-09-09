@@ -1,0 +1,11 @@
+{
+  "//": "The harness is served by vite, which looks up the tree for a tsconfig and finds the site's — one that extends astro's, a package this directory does not install. Its own, saying nothing, stops the search here.",
+  "compilerOptions": {
+    "target": "es2022",
+    "module": "es2022",
+    "moduleResolution": "bundler",
+    "allowJs": true,
+    "skipLibCheck": true
+  },
+  "include": ["*.js", "*.mjs", "generated/**/*.ts"]
+}

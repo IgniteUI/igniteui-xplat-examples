@@ -60,7 +60,16 @@
     </div>
 <!-- endifdef aboveContentLeft, aboveContentRight -->
 
-    <div class="container fill">
+<!-- ifdef leftContent, rightContent -->
+    <div class="contentSplit">
+<!-- endifdef leftContent, rightContent -->
+<!-- ifdef leftContent -->
+        <div class="leftContentContainer">
+            <!-- insert leftContent -->
+            <!-- end leftContent -->
+        </div>
+<!-- endifdef leftContent -->
+    <div class="container fill" id="contentRoot">
         <!-- insert content -->
         <igc-data-chart id="chart"
             is-horizontal-zoom-enabled="true"
@@ -78,6 +87,27 @@
         </igc-data-chart>
         <!-- end content -->
     </div>
+<!-- ifdef contentBottom -->
+    <div class="container fill">
+        <!-- insert contentBottom -->
+        <!-- end contentBottom -->
+    </div>
+<!-- endifdef contentBottom -->
+<!-- ifdef rightContent -->
+        <div class="rightContentContainer">
+            <!-- insert rightContent -->
+            <!-- end rightContent -->
+        </div>
+<!-- endifdef rightContent -->
+<!-- ifdef leftContent, rightContent -->
+    </div>
+<!-- endifdef leftContent, rightContent -->
+<!-- ifdef belowContent -->
+    <div class="belowContent">
+        <!-- insert belowContent -->
+        <!-- end belowContent -->
+    </div>
+<!-- endifdef belowContent -->
 </div>
 
     </div>

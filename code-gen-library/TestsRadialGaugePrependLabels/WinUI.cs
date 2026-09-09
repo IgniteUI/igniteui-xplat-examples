@@ -1,19 +1,19 @@
 //begin imports
 using Infragistics.Controls.Gauges;
-using Newtonsoft.Json.Linq;
+using Infragistics.Portable.Description;
 //end imports
 
 public class TestsRadialGaugePrependLabels
 {
     //begin eventHandler
-	//WPF: Infragistics.Controls.Gauges.FormatRadialGaugeLabelHandler
+	//WinUI: Infragistics.Controls.Gauges.FormatRadialGaugeLabelHandler
     public void TestsRadialGaugePrependLabels(object sender, FormatRadialGaugeLabelEventArgs args)
-    {													
+    {
 		object o = CodeGenHelper.FindByName<object>("LabelPrependValue");
-		JObject obj = JObject.Parse(o.ToString());
-		var v = obj.GetValue("Text").ToString();
+		var parser = new JsonDictionaryParser();
+		var obj = (JsonDictionaryObject)parser.Parse((string)((JsonDictionaryValue)o).Value);
+		var v = (string)(obj["Text"] as JsonDictionaryValue).Value;
 		args.Label = v + args.Value;
-			
     }
     //end eventHandler
 }
