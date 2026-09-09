@@ -2,7 +2,6 @@
 using System.Collections;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
-using Infragistics;
 using System.Reflection;
 using System.Collections.ObjectModel
 //end imports
