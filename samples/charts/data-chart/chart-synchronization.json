@@ -1,0 +1,87 @@
+{
+  "descriptions": {
+    "content": {
+      "type": "DataChart",
+      "name": "chart1",
+      "isHorizontalZoomEnabled": true,
+      "isVerticalZoomEnabled": true,
+      "syncChannel": "ChannelA",
+      "synchronizeHorizontally": true,
+      "synchronizeVertically": true,
+      "subtitle": "Google Stock Prices",
+      "axes": [
+        {
+          "type": "CategoryXAxis",
+          "name": "xAxis1",
+          "dataSourceRef": "StockGoogle",
+          "label": "Date"
+        },
+        {
+          "type": "NumericYAxis",
+          "name": "yAxis1"
+        }
+      ],
+      "series": [
+        {
+          "type": "FinancialPriceSeries",
+          "name": "series1",
+          "xAxisRef": "xAxis1",
+          "yAxisRef": "yAxis1",
+          "dataSourceRef": "StockGoogle",
+          "displayType": "OHLC",
+          "highMemberPath": "High",
+          "lowMemberPath": "Low",
+          "closeMemberPath": "Close",
+          "openMemberPath": "Open",
+          "volumeMemberPath": "Volume"
+        }
+      ]
+    },
+    "contentBottom": {
+      "type": "DataChart",
+      "name": "chart2",
+      "isHorizontalZoomEnabled": true,
+      "isVerticalZoomEnabled": true,
+      "syncChannel": "ChannelA",
+      "synchronizeHorizontally": true,
+      "synchronizeVertically": true,
+      "subtitle": "Amazon Stock Prices",
+      "subtitleTopMargin": 10,
+      "axes": [
+        {
+          "type": "CategoryXAxis",
+          "name": "xAxis2",
+          "dataSourceRef": "StockAmazon",
+          "label": "Date"
+        },
+        {
+          "type": "NumericYAxis",
+          "name": "yAxis2"
+        }
+      ],
+      "series": [
+        {
+          "type": "FinancialPriceSeries",
+          "name": "series2",
+          "xAxisRef": "xAxis2",
+          "yAxisRef": "yAxis2",
+          "dataSourceRef": "StockAmazon",
+          "displayType": "OHLC",
+          "highMemberPath": "High",
+          "lowMemberPath": "Low",
+          "closeMemberPath": "Close",
+          "openMemberPath": "Open",
+          "volumeMemberPath": "Volume"
+        }
+      ]
+    }
+  },
+  "modules": [
+    "charts/DataChartCoreModule",
+    "charts/DataChartCategoryCoreModule",
+    "charts/DataChartCategoryModule",
+    "charts/DataChartFinancialCoreModule",
+    "charts/DataChartFinancialModule",
+    "charts/DataChartInteractivityModule"
+  ]
+}

@@ -15,7 +15,7 @@ public class DataGridApplyLiveDataGrouping
     //end emitterOnly
 
     //begin eventHandler
-    public void DataGridApplyLiveDataGrouping(object sender, PropertyEditorPropertyDescriptionChangedEventArgs args)
+    public void DataGridApplyLiveDataGrouping(IgbPropertyEditorPropertyDescriptionChangedEventArgs args)
     {
         this.UseRowGrouping = args.NewValue is bool b && b;
         if (this.UseRowGrouping)

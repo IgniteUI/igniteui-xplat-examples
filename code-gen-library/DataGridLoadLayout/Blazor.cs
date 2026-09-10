@@ -5,6 +5,8 @@ using IgniteUI.Blazor.Controls;
 public class DataGridLoadLayout
 {
     //begin eventHandler
+    public string SavedLayout = "";
+
     public void DataGridLoadLayout(IgbPropertyEditorPropertyDescriptionButtonClickEventArgs args)
     {
         if (string.IsNullOrEmpty(this.SavedLayout)) return;

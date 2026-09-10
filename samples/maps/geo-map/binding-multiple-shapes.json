@@ -25,6 +25,7 @@
         {
           "type": "GeographicSymbolSeries",
           "name": "symbolSeries",
+          "dataSourceRef": "WorldCities",
           "longitudeMemberPath": "longitude",
           "latitudeMemberPath": "latitude",
           "markerType": "Circle",

@@ -1,7 +1,7 @@
 //begin imports
 //end imports
 
-//begin async data
+//begin data
 export class ProductOrders extends Array<ProductOrdersItem> {
 
     public constructor(count?: number) {
@@ -113,4 +113,4 @@ class ProductOrdersGenerator {
         return "https://static.infragistics.com/xplatform/images/flags/" + country + ".png";
     }
 }
-//end async data
+//end data

@@ -34,19 +34,10 @@
           "headerText": "In-line Filter***",
           "width": { "type": "ColumnWidth", "isStarSized": true, "value": 1, "minimumWidth": 120 },
           "positivePrefix": "$",
-          "showGroupingSeparator": true,
-          "filterOperands": [
-            {
-              "type": "FilterOperand",
-              "editorType": "Numeric",
-              "isInputRequired": false,
-              "displayName": "(Custom) In-Line Filter",
-              "filterRequestedRef": "DataGridFilterSalesLessThanOrEqual300k"
-            }
-          ]
+          "showGroupingSeparator": true
         }
       ]
     }
   },
-  "modules": ["grids/DataGridModule"]
+  "modules": ["data-grids/DataGridModule"]
 }

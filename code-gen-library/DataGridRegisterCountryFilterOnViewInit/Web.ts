@@ -11,13 +11,11 @@ export class DataGridRegisterCountryFilterOnViewInit {
         const operand = new IgcFilterOperand();
         operand.editorType = EditorType.Text;
         operand.displayName = "(Custom) In Code Filter";
-        operand.filterRequested = this.onFilter;
+        (operand.i as any)["filterRequested"] = (sender: any, args: any) => {
+            const prop = args.filterFactory.property(args.column.field);
+            args.expression = prop.isEqualTo("France");
+        };
         grid.actualColumns.item(0).filterOperands.add(operand);
-    }
-
-    private onFilter(sender: any, args: IgcGridCustomFilterRequestedEventArgs): void {
-        const prop = args.filterFactory.property(args.column.field);
-        args.expression = prop.isEqualTo("France");
     }
     //end eventHandler
 }

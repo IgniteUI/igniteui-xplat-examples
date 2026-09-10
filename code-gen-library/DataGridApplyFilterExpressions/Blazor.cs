@@ -4,10 +4,10 @@ using IgniteUI.Blazor.Controls;
 
 public class DataGridApplyFilterExpressions
 {
+    //begin eventHandler
     private static FilterFactory _factory = new FilterFactory();
 
-    //begin eventHandler
-    public void DataGridApplyFilterExpressions(object sender, PropertyEditorPropertyDescriptionChangedEventArgs args)
+    public void DataGridApplyFilterExpressions(IgbPropertyEditorPropertyDescriptionChangedEventArgs args)
     {
         var grid = CodeGenHelper.GetDescription<IgbDataGrid>("content");
         var columnEditor = CodeGenHelper.FindByName<IgbPropertyEditorPropertyDescription>("FilterColumnEditor");

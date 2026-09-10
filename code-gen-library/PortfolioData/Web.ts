@@ -1,7 +1,7 @@
 //begin imports
 //end imports
 
-//begin async data
+//begin data
 export class PortfolioData extends Array<PortfolioDataItem> {
 
     public constructor(count?: number) {
@@ -245,4 +245,4 @@ class PortfolioDataRandomizer {
         return result;
     }
 }
-//end async data
+//end data

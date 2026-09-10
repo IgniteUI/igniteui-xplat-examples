@@ -1,5 +1,6 @@
 //begin imports
 import { IgcShapeDataSource } from 'igniteui-webcomponents-core';
+import { IgcGeographicMapComponent } from 'igniteui-webcomponents-maps';
 //end imports
 
 import { CodeGenHelper } from 'igniteui-webcomponents-core';
@@ -18,9 +19,10 @@ export class MapBindingShpFileLoad {
     public mapBindingShpFileLoad(): void {
         var root = "https://static.infragistics.com/xplatform/shapes/";
         var readers = CodeGenHelper.getSharedSupporting<MapShpFileReaders>("MapShpFileReaders");
+        var map = CodeGenHelper.getDescription<IgcGeographicMapComponent>("content");
 
         var sds = new IgcShapeDataSource();
-        sds.importCompleted = (s: IgcShapeDataSource, e: any) => readers.readRoutes(s, e);
+        sds.importCompleted = (s: IgcShapeDataSource, e: any) => readers.readRoutes(s, e, map);
         sds.shapefileSource = root + "WorldCableRoutes.shp";
         sds.databaseSource = root + "WorldCableRoutes.dbf";
         sds.dataBind();

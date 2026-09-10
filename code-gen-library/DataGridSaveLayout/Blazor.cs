@@ -4,9 +4,9 @@ using IgniteUI.Blazor.Controls;
 
 public class DataGridSaveLayout
 {
+    //begin eventHandler
     public string SavedLayout = "";
 
-    //begin eventHandler
     public void DataGridSaveLayout(IgbPropertyEditorPropertyDescriptionButtonClickEventArgs args)
     {
         var grid = CodeGenHelper.GetDescription<IgbDataGrid>("content");

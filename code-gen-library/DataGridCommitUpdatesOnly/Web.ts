@@ -1,5 +1,5 @@
 //begin imports
-import { IgcDataGridComponent } from 'igniteui-webcomponents-grids';
+import { IgcDataGridComponent } from 'igniteui-webcomponents-data-grids';
 import { TransactionType } from 'igniteui-webcomponents-core';
 //end imports
 

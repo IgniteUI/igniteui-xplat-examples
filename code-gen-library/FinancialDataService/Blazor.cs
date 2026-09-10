@@ -13,7 +13,7 @@ namespace Infragistics.Samples
 
     public class FinancialDataService : List<FinancialDataDetails>
     {
-        public async static Task<FinancialDataService> FetchData()
+        public async static Task<FinancialDataService> Fetch()
         {
             var url = "https://static.infragistics.com/xplatform/data/stocks/FinancialData1000.json";
             var client = new HttpClient();

@@ -1,5 +1,5 @@
 //begin imports
-import { IgcGridCustomFilterRequestedEventArgs } from 'igniteui-webcomponents-grids';
+import { IgcGridCustomFilterRequestedEventArgs } from 'igniteui-webcomponents-data-grids';
 //end imports
 
 export class DataGridFilterSalesLessThanOrEqual300k {

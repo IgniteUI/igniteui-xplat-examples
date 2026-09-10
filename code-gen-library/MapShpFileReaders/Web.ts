@@ -3,8 +3,6 @@ import { IgcGeographicMapComponent, IgcGeographicPolylineSeriesComponent } from 
 import { IgcShapeDataSource } from 'igniteui-webcomponents-core';
 //end imports
 
-import { CodeGenHelper } from 'igniteui-webcomponents-core';
-
 //begin supportingTypes
 /**
  * What the shapefile becomes once it has loaded: records turned into routes, bound to the series that
@@ -17,7 +15,7 @@ import { CodeGenHelper } from 'igniteui-webcomponents-core';
 export class MapShpFileReaders {
 
     /** Each record is one cable route, with the fields the shapefile's database holds beside it. */
-    public readRoutes(sds: IgcShapeDataSource, e: any): void {
+    public readRoutes(sds: IgcShapeDataSource, e: any, map: IgcGeographicMapComponent): void {
         var geoRoutes: any[] = [];
         var pointData = sds.getPointData();
         // parsing shapefile data and creating geo-locations
@@ -32,7 +30,6 @@ export class MapShpFileReaders {
             });
         }
 
-        var map = CodeGenHelper.getDescription<IgcGeographicMapComponent>("content");
         var lineSeries = map.series.item(0) as IgcGeographicPolylineSeriesComponent;
         lineSeries.dataSource = geoRoutes;
     }

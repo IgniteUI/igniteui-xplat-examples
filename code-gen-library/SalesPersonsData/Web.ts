@@ -1,7 +1,7 @@
 //begin imports
 //end imports
 
-//begin async data
+//begin data
 export class SalesPersonsData extends Array<SalesPerson> {
 
     public constructor(count?: number) {
@@ -50,4 +50,4 @@ export class SalesPerson {
     public YearToDateSales: number;
     public DateValue: Date;
 }
-//end async data
+//end data

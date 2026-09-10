@@ -1,5 +1,5 @@
 //begin imports
-import { IgcGeographicMapComponent, IgcGeographicShapeSeriesComponent } from 'igniteui-webcomponents-maps';
+import { IgcGeographicMapComponent, IgcGeographicShapeSeriesComponent, IgcGeographicShapeSeriesBaseComponent } from 'igniteui-webcomponents-maps';
 import { IgcShapeDataSource, IgcShapefileRecord } from 'igniteui-webcomponents-core';
 import { IgcAssigningShapeStyleEventArgs } from 'igniteui-webcomponents-charts';
 //end imports
@@ -15,7 +15,7 @@ export class MapShapeComparisonStyling {
     public shapeComparisonStyling: ShapeComparisonStyling;
 
     // Comparison styling: a color per named value.
-    public mapShapeComparisonStyling(): void {
+    public mapShapeComparisonStyling(): Promise<void> {
         this.shapeComparisonStyling = new ShapeComparisonStyling();
         this.shapeComparisonStyling.defaultFill = 'Gray';
         this.shapeComparisonStyling.itemMemberPath = 'Region';
@@ -48,20 +48,23 @@ export class MapShapeComparisonStyling {
         var sds = new IgcShapeDataSource();
         sds.shapefileSource = "https://static.infragistics.com/xplatform/shapes/world_countries_all.shp";
         sds.databaseSource = "https://static.infragistics.com/xplatform/shapes/world_countries_all.dbf";
-        sds.importCompleted = (s: IgcShapeDataSource, e: any) => {
-            var geoSeries = new IgcGeographicShapeSeriesComponent();
-            geoSeries.dataSource = s.getPointData();
-            geoSeries.shapeMemberPath = "points";
-            // the series asks for each shape's style as it draws it, which it only does when it is
-            // allowed to take one
-            geoSeries.isCustomShapeStyleAllowed = true;
-            geoSeries.assigningShapeStyle = this.onStylingShape.bind(this);
-            map.series.add(geoSeries);
-        };
-        sds.dataBind();
+        return new Promise((resolve) => {
+            sds.importCompleted = (s: IgcShapeDataSource, e: any) => {
+                var geoSeries = new IgcGeographicShapeSeriesComponent();
+                geoSeries.dataSource = s.getPointData();
+                geoSeries.shapeMemberPath = "points";
+                // the series asks for each shape's style as it draws it, which it only does when it is
+                // allowed to take one
+                geoSeries.isCustomShapeStyleAllowed = true;
+                geoSeries.assigningShapeStyle = this.onStylingShape.bind(this);
+                map.series.add(geoSeries);
+                resolve();
+            };
+            sds.dataBind();
+        });
     }
 
-    public onStylingShape(s: IgcGeographicShapeSeriesComponent, args: IgcAssigningShapeStyleEventArgs): void {
+    public onStylingShape(s: IgcGeographicShapeSeriesBaseComponent, args: IgcAssigningShapeStyleEventArgs): void {
         // the event covers a range of items rather than one, so the record is asked for by index
         var itemRecord = args.getItems(args.startIndex, args.endIndex)[0] as IgcShapefileRecord;
         var shapeStyle = this.shapeComparisonStyling.generate(itemRecord);

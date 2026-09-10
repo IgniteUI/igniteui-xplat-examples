@@ -6,9 +6,9 @@ using System.Collections.Generic;
 
 public class DataGridReloadSalaryData
 {
+    //begin eventHandler
     private static Random _random = new Random();
 
-    //begin eventHandler
     public void DataGridReloadSalaryData(IgbPropertyEditorPropertyDescriptionButtonClickEventArgs args)
     {
         var grid = CodeGenHelper.GetDescription<IgbDataGrid>("content");

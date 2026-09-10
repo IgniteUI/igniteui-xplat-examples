@@ -129,6 +129,12 @@ export default class Sample extends React.Component<any, any> {
                 //insert content
                 //end content
             </div>
+//ifdef contentBottom
+            <div className="container fill">
+                //insert contentBottom
+                //end contentBottom
+            </div>
+//endifdef contentBottom
 //ifdef rightContent
                 <div className="rightContentContainer">
                     //insert rightContent

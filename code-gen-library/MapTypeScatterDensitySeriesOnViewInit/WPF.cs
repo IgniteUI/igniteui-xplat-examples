@@ -1,5 +1,4 @@
 //begin imports
-using Infragistics.Controls.Charts;
 using Infragistics.Controls.Maps;
 using System;
 using System.Collections.Generic;
@@ -9,47 +8,43 @@ using System.Windows;
 using System.Windows.Media;
 //end imports
 
-public class MapBindingDataCsvOnViewInit
+public class MapTypeScatterDensitySeriesOnViewInit
 {
     //begin eventHandler
-    public class WorldPlaceCsv
+    public class AusPlace
     {
         public string Name { get; set; }
         public double Latitude { get; set; }
         public double Longitude { get; set; }
-        public double Population { get; set; }
     }
 
     //WPF: System.Action
-    public async void MapBindingDataCsvOnViewInit()
+    public async void MapTypeScatterDensitySeriesOnViewInit()
     {
         var map = CodeGenHelper.GetDescription<XamGeographicMap>("content");
-        var url = "https://static.infragistics.com/xplatform/data/UsaCitiesPopulation.csv";
+        var url = "https://static.infragistics.com/xplatform/data/AusPlaces.csv";
         var client = new HttpClient();
         var csv = await client.GetStringAsync(url);
         var csvLines = csv.Split('\n');
-        var geoLocations = new List<WorldPlaceCsv>();
+        var geoLocations = new List<AusPlace>();
         // parsing CSV data and creating geographic locations
         for (int i = 1; i < csvLines.Length; i++)
         {
             var columns = csvLines[i].Split(',');
-            if (columns.Length < 4) continue;
-            geoLocations.Add(new WorldPlaceCsv
+            if (columns.Length < 3) continue;
+            geoLocations.Add(new AusPlace
             {
                 Name = columns[0],
-                Latitude = double.Parse(columns[1]),
-                Longitude = double.Parse(columns[2]),
-                Population = double.Parse(columns[3])
+                Longitude = double.Parse(columns[1]),
+                Latitude = double.Parse(columns[2])
             });
         }
-#if !TESTING
-        // creating the series with the loaded data
+        // creating the high density series with the loaded data
         var series = new GeographicHighDensityScatterSeries
         {
-            Name = "hdSeries",
             ItemsSource = geoLocations,
-            LatitudeMemberPath = "Latitude",
             LongitudeMemberPath = "Longitude",
+            LatitudeMemberPath = "Latitude",
             HeatMaximumColor = Colors.Red,
             HeatMinimumColor = Colors.Black,
             HeatMinimum = 0,
@@ -59,11 +54,9 @@ public class MapBindingDataCsvOnViewInit
         };
         // adding the series to the geographic map
         map.Series.Add(series);
-#endif
 
-        var geoBounds = new Rect(-130, 15, Math.Abs(-130 + 65), Math.Abs(50 - 15));
-        // zooming to the bounds of the lower 48 states
-        map.ZoomToGeographic(geoBounds);
+        var bounds = new Rect(110, -10, 45, -35);
+        map.ZoomToGeographic(bounds);
     }
     //end eventHandler
 }

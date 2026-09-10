@@ -60,8 +60,6 @@ public sealed partial class Sample : UserControl, INotifyPropertyChanged
 
     //insert eventHandlers
     //end eventHandlers
-    //insert templateContents
-    //end templateContents
     //insert templateSupportingMethods
     //end templateSupportingMethods
 

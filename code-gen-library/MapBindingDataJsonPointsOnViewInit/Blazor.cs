@@ -1,6 +1,6 @@
 //begin imports
 using IgniteUI.Blazor.Controls;
-using Newtonsoft.Json.Linq;
+using System.Text.Json;
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
@@ -26,20 +26,22 @@ public class MapBindingDataJsonPointsOnViewInit
         var url = "https://static.infragistics.com/xplatform/data/WorldCities.json";
         var client = new HttpClient();
         var json = await client.GetStringAsync(url);
-        var array = JArray.Parse(json);
         var geoLocations = new List<WorldPlaceJson>();
-        foreach (var item in array)
+        using (var document = JsonDocument.Parse(json))
         {
-            if (item.Value<bool>("cap") == false) continue;
-            geoLocations.Add(new WorldPlaceJson
+            foreach (var item in document.RootElement.EnumerateArray())
             {
-                Name = item.Value<string>("name"),
-                Lat = item.Value<double>("lat"),
-                Lon = item.Value<double>("lon"),
-                Pop = item.Value<double>("pop"),
-                Country = item.Value<string>("country"),
-                Cap = item.Value<bool>("cap")
-            });
+                if (!item.GetProperty("cap").GetBoolean()) continue;
+                geoLocations.Add(new WorldPlaceJson
+                {
+                    Name = item.GetProperty("name").GetString(),
+                    Lat = item.GetProperty("lat").GetDouble(),
+                    Lon = item.GetProperty("lon").GetDouble(),
+                    Pop = item.GetProperty("pop").GetDouble(),
+                    Country = item.GetProperty("country").GetString(),
+                    Cap = item.GetProperty("cap").GetBoolean()
+                });
+            }
         }
         var series = new IgbGeographicSymbolSeries
         {

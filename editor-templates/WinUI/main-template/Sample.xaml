@@ -4,6 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="using:Sample"
     xmlns:ig="using:Infragistics.Controls"
     <!-- ifdef charts -->
     xmlns:igCharts="using:Infragistics.Controls.Charts"
@@ -92,8 +93,20 @@
         </Grid>
         <!-- endifdef leftContent -->
         <Grid Grid.Column="1" x:Name="ContentRoot">
+          <!-- ifdef contentBottom -->
+          <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+          </Grid.RowDefinitions>
+          <!-- endifdef contentBottom -->
           <!-- insert content -->
           <!-- end content -->
+          <!-- ifdef contentBottom -->
+          <Grid Grid.Row="1">
+            <!-- insert contentBottom -->
+            <!-- end contentBottom -->
+          </Grid>
+          <!-- endifdef contentBottom -->
         </Grid>
         <!-- ifdef rightContent -->
         <Grid Grid.Column="2">

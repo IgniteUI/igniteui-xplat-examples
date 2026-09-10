@@ -10,6 +10,15 @@ public class DataGridRegisterCustomAgeFilterOnViewInit
     {
         var grid = CodeGenHelper.GetDescription<XamXGrid>("content");
         grid.ActualColumns[1].FilterOperands.Add(new CustomAgeFilter());
+        var salesFilter = new FilterOperand {
+            EditorType = EditorType.Numeric,
+            IsInputRequired = false,
+            DisplayName = "(Custom) In-Line Filter"
+        };
+        salesFilter.FilterRequested += (sender, args) => {
+            args.Expression = args.FilterFactory.Property("Sales").IsLessThanOrEqualTo(300000);
+        };
+        grid.ActualColumns[2].FilterOperands.Add(salesFilter);
     }
 
     public class CustomAgeFilter : FilterOperand

@@ -12,7 +12,7 @@ public class DataGridToggleHeat
     //end emitterOnly
 
     //begin eventHandler
-    public void DataGridToggleHeat(object sender, PropertyEditorPropertyDescriptionChangedEventArgs args)
+    public void DataGridToggleHeat(IgbPropertyEditorPropertyDescriptionChangedEventArgs args)
     {
         this.UseHeatBackground = args.NewValue is bool b && b;
         var grid = CodeGenHelper.GetDescription<IgbDataGrid>("content");

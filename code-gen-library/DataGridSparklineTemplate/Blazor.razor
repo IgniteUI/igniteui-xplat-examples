@@ -11,7 +11,7 @@
                 Width="100%"
                 Height="100%"
                 DisplayType="@SparklineDisplayType.Line"
-                DataSource="@info.RowItem.OrderHistory"
+                DataSource="@((info.RowItem as ProductWithHistory)?.OrderHistory)"
                 ValueMemberPath="Sold"
                 LabelMemberPath="Week"
                 Brush="rgb(21, 190, 6)" />

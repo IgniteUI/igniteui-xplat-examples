@@ -38,7 +38,6 @@ public class MapTypeScatterDensitySeriesOnViewInit
                 Latitude = double.Parse(columns[2])
             });
         }
-#if !TESTING
         var series = new GeographicHighDensityScatterSeries
         {
             ItemsSource = geoLocations,
@@ -52,7 +51,6 @@ public class MapTypeScatterDensitySeriesOnViewInit
             MouseOverEnabled = true
         };
         map.Series.Add(series);
-#endif
 
         var bounds = new Infragistics.Controls.IGRect(110, -10, 45, -35);
         map.ZoomToGeographic(bounds);

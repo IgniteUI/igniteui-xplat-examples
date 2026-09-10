@@ -5,7 +5,7 @@ using IgniteUI.Blazor.Controls;
 public class RadialGaugeSetSize
 {
     //begin eventHandler
-    public void RadialGaugeSetSize(object sender, PropertyEditorPropertyDescriptionChangedEventArgs args)
+    public void RadialGaugeSetSize(IgbPropertyEditorPropertyDescriptionChangedEventArgs args)
     {
         var gauge = CodeGenHelper.GetDescription<IgbRadialGauge>("content");
         if (gauge == null) return;
