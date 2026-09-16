@@ -42,7 +42,7 @@
     "igniteui-react-grids": "^19.6.2",
     "igniteui-react-layouts": "^19.6.0-beta.2",
     "igniteui-react-maps": "^19.6.0-beta.2",
-    "igniteui-webcomponents-core": "7.1.1-beta.12",
+    "igniteui-webcomponents-core": "7.1.1-beta.14",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
   },
