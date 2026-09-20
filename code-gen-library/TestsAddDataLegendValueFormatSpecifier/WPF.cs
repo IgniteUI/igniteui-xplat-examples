@@ -1,7 +1,6 @@
 //begin imports
 using Infragistics.Controls;
 using Infragistics.Controls.Charts;
-using Newtonsoft.Json.Linq;
 using Infragistics.Controls.Description;
 //end imports
 
