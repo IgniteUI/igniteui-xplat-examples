@@ -7,7 +7,7 @@ export class TestsAccessibilityNodeCancelAuto {
     //begin eventHandler
     public testsAccessibilityNodeCancelAuto(sender: any, args: IgcAccessibilityNodeCreatingEventArgs): void {
         if (args.node != null && args.node.role == AccessibilityRole.Item) {
-            args.node.description = "";
+            args.node.descriptionText = "";
             args.cancelAuto = true;
         }
     }

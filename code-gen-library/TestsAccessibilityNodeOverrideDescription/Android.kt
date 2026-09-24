@@ -8,7 +8,7 @@ public class TestsAccessibilityNodeOverrideDescription {
     public fun testsAccessibilityNodeOverrideDescription(sender: Any?, args: IgaAccessibilityNodeCreatingEventArgs) {
         var node = args.node;
         if (node != null && node.role == IgaAccessibilityRole.ITEM) {
-            node.description = "custom override";
+            node.descriptionText = "custom override";
         }
     }
     //end eventHandler
