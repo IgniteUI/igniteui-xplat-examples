@@ -501,6 +501,20 @@ test('emits a Blazor Razor library with data, handlers, manager, and project', (
     }
 });
 
+test('emits a Blazor data-only library manager without importing Blazor holder namespace', () => {
+    const output = fs.mkdtempSync(path.join(os.tmpdir(), 'xplat-blazor-data-only-library-test-'));
+    try {
+        execFileSync(process.execPath, [
+            CLI, 'library', '--platform=Blazor',
+            '--only=SalesData',
+            `--output=${output}`, '--clean',
+        ], { cwd: ROOT, stdio: 'pipe' });
+        assert.doesNotMatch(fs.readFileSync(path.join(output, 'LibraryManager.cs'), 'utf8'), /using BlazorLibrary;/);
+    } finally {
+        fs.rmSync(output, { recursive: true, force: true });
+    }
+});
+
 test('emits WinUI and Uno libraries through the native product renderers', () => {
     for (const platform of ['WinUI', 'Uno']) {
         const output = fs.mkdtempSync(path.join(os.tmpdir(), `xplat-${platform.toLowerCase()}-library-test-`));

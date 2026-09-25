@@ -1266,6 +1266,7 @@ function emitBlazorLibrary(platform: any, opts: {
     const files: Record<string, string> = {};
     const problems: { item: string; reason: string }[] = [];
     const tracked: { name: string; access?: string; script?: boolean }[] = [];
+    let needsBlazorNamespace = false;
     let dataItems = 0;
     let handlerItems = 0;
     let context: any = null;
@@ -1333,6 +1334,7 @@ function emitBlazorLibrary(platform: any, opts: {
             const source = emitted[`${stem}.razor`];
             if (source === undefined) { problems.push({ item: name, reason: "no Razor source emitted" }); continue; }
             files[`${name}Holder.razor`] = source.split("PlaceholderHolder").join(`${name}Holder`);
+            needsBlazorNamespace = true;
             tracked.push({ name, access: `new Tuple<Func<object>, Func<object>>(() => new ${name}Holder(), () => new ${name}Holder().${name})` });
         }
         const css = emitted[`${stem}.css`];
@@ -1341,7 +1343,14 @@ function emitBlazorLibrary(platform: any, opts: {
     }
 
     files["BlazorLibrary.csproj"] = fs.readFileSync(path.join(templateDir, "BlazorLibrary.csproj"), "utf8");
-    return { files, manager: dotNetManagerFor(tracked, "BlazorLibrary"), managerFile: "LibraryManager.cs", problems, dataItems, handlerItems };
+    return {
+        files,
+        manager: dotNetManagerFor(tracked, needsBlazorNamespace ? "BlazorLibrary" : undefined),
+        managerFile: "LibraryManager.cs",
+        problems,
+        dataItems,
+        handlerItems,
+    };
 }
 
 function emitNativeXamlLibrary(platformName: "WinUI" | "Uno", platform: any, opts: {
