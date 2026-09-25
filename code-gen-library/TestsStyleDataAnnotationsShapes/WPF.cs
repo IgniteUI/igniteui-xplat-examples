@@ -1,6 +1,6 @@
 //begin imports
 using Infragistics.Controls.Charts;
-using Newtonsoft.Json.Linq;
+using Infragistics.Controls.Description;
 //end imports
 
 public class TestsStyleDataAnnotationsShapes
@@ -12,12 +12,13 @@ public class TestsStyleDataAnnotationsShapes
     {         
          object o = CodeGenHelper.FindByName<object>("DataAnnotationShapeStylingOptions");
 		 if (o == null) return;
-         JArray array  =  JArray.Parse(o.ToString());	
+		 var parser = new JsonDictionaryParser();
+		 var array = (JsonDictionaryArray)parser.Parse((string)((JsonDictionaryValue)o).Value);
 		 
-		 for (int i=0;i<array.Count;i++)
+		 for (int i=0;i<array.Items.Length;i++)
 		 {
-			 var item = (JObject) array[i];
-			 var index = item["Index"].Value<int>();
+			 var item = (JsonDictionaryObject)array.Items[i];
+			 var index = item.GetNumber("Index");
 			 if (index == -1)
 			 {
 				 StyleShape(item,args);
@@ -31,17 +32,17 @@ public class TestsStyleDataAnnotationsShapes
 		 }
     }
 
-	private void StyleShape(JObject options, DataAnnotationItem args)
+	private void StyleShape(JsonDictionaryObject options, DataAnnotationItem args)
 	{
-		var brush = options["Brush"].Value<string>();
+		var brush = options.GetString("Brush");
 		if (!string.IsNullOrEmpty(brush))
 				args.ShapeBrush = GetBrush(brush);
-		var OutlineBrush = options["OutlineBrush"].Value<string>();
+		var OutlineBrush = options.GetString("OutlineBrush");
 		if (!string.IsNullOrEmpty(OutlineBrush))
 				args.ShapeOutline = GetBrush(OutlineBrush);
-		var Thickness = options["Thickness"].Value<string>();
+		var Thickness = options.GetString("Thickness");
 		if (Thickness != "NaN")
-				args.ShapeThickness = options["Thickness"].Value<double>();
+				args.ShapeThickness = options.GetNumber("Thickness");
 		
 	}
 	private Brush GetBrush(string color)
