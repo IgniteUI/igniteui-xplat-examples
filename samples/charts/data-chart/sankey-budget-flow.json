@@ -1,0 +1,54 @@
+{
+  "strings": {
+    "title": "Monthly Budget Flow"
+  },
+  "hasAnimations": true,
+  "descriptions": {
+    "content": {
+      "type": "DataChart",
+      "name": "Chart",
+      "isHorizontalZoomEnabled": false,
+      "isVerticalZoomEnabled": false,
+      "axes": [
+        {
+          "type": "CategoryXAxis",
+          "name": "xAxis",
+          "dataSourceRef": "SankeyBudgetStages",
+          "label": "Stage"
+        },
+        {
+          "type": "NumericYAxis",
+          "name": "yAxis"
+        }
+      ],
+      "series": [
+        {
+          "type": "SankeySeries",
+          "name": "sankey",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "dataSourceRef": "SankeyBudgetNodes",
+          "nodeIdMemberPath": "Id",
+          "nodeLabelMemberPath": "Label",
+          "nodeLayerMemberPath": "Layer",
+          "linkSourceRef": "SankeyBudgetLinks",
+          "linkSourceMemberPath": "Source",
+          "linkTargetMemberPath": "Target",
+          "linkValueMemberPath": "Value",
+          "isTransitionInEnabled": true
+        },
+        {
+          "type": "DataToolTipLayer",
+          "name": "Tooltips"
+        }
+      ]
+    }
+  },
+  "modules": [
+    "charts/DataChartCoreModule",
+    "charts/DataChartCategoryCoreModule",
+    "charts/DataChartFlowModule",
+    "charts/DataChartInteractivityModule",
+    "charts/DataChartAnnotationModule"
+  ]
+}
