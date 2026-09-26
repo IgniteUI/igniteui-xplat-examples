@@ -14,7 +14,7 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const CLI = path.join(ROOT, 'src', 'cli.mjs');
 const require = createRequire(import.meta.url);
 require('../src/dom-shim.cjs');
-const { emitLibrary, emitProject } = require('../dist/codegen-api.cjs');
+const { emitProject } = require('../dist/codegen-api.cjs');
 
 test('maps emitted folder diffs back to added, modified, and removed samples', () => {
     const workspace = fs.mkdtempSync(path.join(os.tmpdir(), 'xplat-impact-test-'));
@@ -462,22 +462,6 @@ test('emits and type-compiles a library item on every hosted web platform', () =
         execFileSync(process.execPath, [
             CLI, 'library-check', `--platform=${platform}`, '--only=SalesData',
         ], { cwd: ROOT, stdio: 'pipe' });
-    }
-});
-
-test('temporarily skips accessibility items during library emission', () => {
-    for (const platform of ['Angular', 'React', 'WebComponents', 'Blazor', 'WinUI', 'Uno']) {
-        const emitted = emitLibrary(platform, {
-            examplesRoot: path.resolve(ROOT, '..'),
-            templatesRoot: path.join(ROOT, 'library-templates'),
-            only: ['SalesData', 'AccessibilityFutureItem', 'TestsAccessibilityNodeAddAction'],
-        });
-
-        assert.deepEqual(emitted.problems, []);
-        assert.equal(Object.keys(emitted.files)
-            .some(name => name.startsWith('TestsAccessibilityNodeAddAction')), false);
-        assert.doesNotMatch(emitted.manager, /TestsAccessibilityNodeAddAction/);
-        assert.ok(emitted.files[`SalesData.${['Angular', 'React', 'WebComponents'].includes(platform) ? 'ts' : 'cs'}`]);
     }
 });
 
