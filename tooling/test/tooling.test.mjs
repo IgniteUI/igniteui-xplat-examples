@@ -14,7 +14,7 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const CLI = path.join(ROOT, 'src', 'cli.mjs');
 const require = createRequire(import.meta.url);
 require('../src/dom-shim.cjs');
-const { emitLibrary, emitProject } = require('../dist/codegen-api.cjs');
+const { emitProject } = require('../dist/codegen-api.cjs');
 
 test('maps emitted folder diffs back to added, modified, and removed samples', () => {
     const workspace = fs.mkdtempSync(path.join(os.tmpdir(), 'xplat-impact-test-'));
@@ -465,22 +465,6 @@ test('emits and type-compiles a library item on every hosted web platform', () =
     }
 });
 
-test('temporarily skips accessibility items during library emission', () => {
-    for (const platform of ['Angular', 'React', 'WebComponents', 'Blazor', 'WinUI', 'Uno']) {
-        const emitted = emitLibrary(platform, {
-            examplesRoot: path.resolve(ROOT, '..'),
-            templatesRoot: path.join(ROOT, 'library-templates'),
-            only: ['SalesData', 'AccessibilityFutureItem', 'TestsAccessibilityNodeAddAction'],
-        });
-
-        assert.deepEqual(emitted.problems, []);
-        assert.equal(Object.keys(emitted.files)
-            .some(name => name.startsWith('TestsAccessibilityNodeAddAction')), false);
-        assert.doesNotMatch(emitted.manager, /TestsAccessibilityNodeAddAction/);
-        assert.ok(emitted.files[`SalesData.${['Angular', 'React', 'WebComponents'].includes(platform) ? 'ts' : 'cs'}`]);
-    }
-});
-
 test('emits a Blazor Razor library with data, handlers, manager, and project', () => {
     const output = fs.mkdtempSync(path.join(os.tmpdir(), 'xplat-blazor-library-test-'));
     try {
@@ -496,6 +480,20 @@ test('emits a Blazor Razor library with data, handlers, manager, and project', (
         assert.match(fs.readFileSync(path.join(output, 'LibraryManager.cs'), 'utf8'), /SalesData/);
         assert.match(fs.readFileSync(path.join(output, 'LibraryManager.cs'), 'utf8'),
             /PropertyEditorInitAggregationsOnViewInit/);
+    } finally {
+        fs.rmSync(output, { recursive: true, force: true });
+    }
+});
+
+test('emits a Blazor data-only library manager without importing Blazor holder namespace', () => {
+    const output = fs.mkdtempSync(path.join(os.tmpdir(), 'xplat-blazor-data-only-library-test-'));
+    try {
+        execFileSync(process.execPath, [
+            CLI, 'library', '--platform=Blazor',
+            '--only=SalesData',
+            `--output=${output}`, '--clean',
+        ], { cwd: ROOT, stdio: 'pipe' });
+        assert.doesNotMatch(fs.readFileSync(path.join(output, 'LibraryManager.cs'), 'utf8'), /using BlazorLibrary;/);
     } finally {
         fs.rmSync(output, { recursive: true, force: true });
     }
