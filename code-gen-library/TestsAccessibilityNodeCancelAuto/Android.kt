@@ -8,7 +8,7 @@ public class TestsAccessibilityNodeCancelAuto {
     public fun testsAccessibilityNodeCancelAuto(sender: Any?, args: IgaAccessibilityNodeCreatingEventArgs) {
         var node = args.node;
         if (node != null && node.role == IgaAccessibilityRole.ITEM) {
-            node.description = "";
+            node.descriptionText = "";
             args.cancelAuto = true;
         }
     }
