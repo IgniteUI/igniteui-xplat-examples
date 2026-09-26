@@ -922,16 +922,5 @@ namespace Infragistics.Samples
 				
 		}
     }
-
-        public class RetailSalesPerformanceDataItem
-    {
-        public string Category { get; set; }
-        public string Subcategory { get; set; }
-        public string Product { get; set; }
-        public int Sales { get; set; }
-        public double Revenue { get; set; }
-        public double Profit { get; set; }
-    }
-
     //end data
 }
