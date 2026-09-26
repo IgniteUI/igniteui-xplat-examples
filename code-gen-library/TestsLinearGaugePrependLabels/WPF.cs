@@ -1,6 +1,6 @@
 //begin imports
 using Infragistics.Controls.Gauges;
-using Newtonsoft.Json.Linq;
+using Infragistics.Controls.Description;
 //end imports
 
 public class TestsLinearGaugePrependLabels
@@ -10,8 +10,9 @@ public class TestsLinearGaugePrependLabels
     public void TestsLinearGaugePrependLabels(object sender, FormatLinearGraphLabelEventArgs args)
     {													
 		object o = CodeGenHelper.FindByName<object>("LabelPrependValue");
-		JObject obj = JObject.Parse(o.ToString());
-		var v = obj.GetValue("Text").ToString();
+		var parser = new JsonDictionaryParser();
+		var obj = (JsonDictionaryObject)parser.Parse((string)((JsonDictionaryValue)o).Value);
+		var v = (string)(obj["Text"] as JsonDictionaryValue).Value;
 		args.Label = v + args.Value;
 			
     }

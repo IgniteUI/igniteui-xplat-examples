@@ -1,7 +1,7 @@
 //begin imports
 using Infragistics.Controls;
 using Infragistics.Controls.Gauges;
-using Newtonsoft.Json.Linq;
+using Infragistics.Controls.Description;
 //end imports
 
 public class TestsAddBulletGraphLabelFormatSpecifier
@@ -10,30 +10,31 @@ public class TestsAddBulletGraphLabelFormatSpecifier
     //begin eventHandler
 	//WPF: System.Action
     public  void TestsAddBulletGraphLabelFormatSpecifier(){
+		var parser = new JsonDictionaryParser();
         var gauge = CodeGenHelper.GetDescription<XamBulletGraph>("content");
-		var jVal = CodeGenHelper.FindByName<JValue>("GaugeLabelFormatSpecifier");
-		var formatterInfo = JObject.Parse(jVal.ToString());
+		var jVal = CodeGenHelper.FindByName<JsonDictionaryValue>("GaugeLabelFormatSpecifier");
+		var formatterInfo = (JsonDictionaryObject)parser.Parse((string)jVal.Value);
 		NumberFormatSpecifier numSpec = new NumberFormatSpecifier();
-		foreach (var prop in formatterInfo.Properties())
+		foreach (var prop in formatterInfo.GetKeys())
 		{
-			switch (prop.Name) {
+			switch (prop) {
 				case "MaximumFractionDigits":
-					numSpec.MaximumFractionDigits = (int)prop.Value;
+					numSpec.MaximumFractionDigits = (int)(double)((JsonDictionaryValue)formatterInfo[prop]).Value;
 					break;
 				case "MinimumFractionDigits":
-					numSpec.MinimumFractionDigits = (int)prop.Value;
+					numSpec.MinimumFractionDigits = (int)(double)((JsonDictionaryValue)formatterInfo[prop]).Value;
 					break;
 				case "MinimumIntegerDigits":
-					numSpec.MinimumIntegerDigits = (int)prop.Value;
+					numSpec.MinimumIntegerDigits = (int)(double)((JsonDictionaryValue)formatterInfo[prop]).Value;
 					break;
 				case "Locale":
-					numSpec.Locale = prop.Value.ToString();
+					numSpec.Locale = (string)((JsonDictionaryValue)formatterInfo[prop]).Value;
 					break;
 				case "UseGrouping":
-					numSpec.UseGrouping = (bool)prop.Value;
+					numSpec.UseGrouping = (bool)((JsonDictionaryValue)formatterInfo[prop]).Value;
 					break;
 				case "Style":
-					numSpec.Style = prop.Value.ToString();
+					numSpec.Style = (string)((JsonDictionaryValue)formatterInfo[prop]).Value;
 					break;
         
 			}
