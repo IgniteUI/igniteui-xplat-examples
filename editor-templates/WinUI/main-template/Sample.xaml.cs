@@ -34,6 +34,11 @@ public sealed partial class Sample : UserControl, INotifyPropertyChanged
         DataContext = this;
 
         this.Loaded += (s, e) => {
+//ifdef bindingCode
+            //insert bindingCode
+            //end bindingCode
+//endifdef bindingCode
+
 //ifdef contentCode
             //insert contentCode
             //end contentCode
