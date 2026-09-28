@@ -1,0 +1,14 @@
+[
+{ "Id": "income",     "Label": "Income",         "Layer": 0 },
+{ "Id": "housing",    "Label": "Housing",        "Layer": 1 },
+{ "Id": "food",       "Label": "Food",           "Layer": 1 },
+{ "Id": "transport",  "Label": "Transport",      "Layer": 1 },
+{ "Id": "savings",    "Label": "Savings",        "Layer": 1 },
+{ "Id": "rent",       "Label": "Rent",           "Layer": 2 },
+{ "Id": "utilities",  "Label": "Utilities",      "Layer": 2 },
+{ "Id": "groceries",  "Label": "Groceries",      "Layer": 2 },
+{ "Id": "dining",     "Label": "Dining Out",     "Layer": 2 },
+{ "Id": "car",        "Label": "Car",            "Layer": 2 },
+{ "Id": "retirement", "Label": "Retirement",     "Layer": 2 },
+{ "Id": "emergency",  "Label": "Emergency Fund", "Layer": 2 }
+]
