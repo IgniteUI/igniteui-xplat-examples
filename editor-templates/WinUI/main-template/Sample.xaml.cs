@@ -38,7 +38,6 @@ public sealed partial class Sample : UserControl, INotifyPropertyChanged
             //insert bindingCode
             //end bindingCode
 //endifdef bindingCode
-
 //ifdef contentCode
             //insert contentCode
             //end contentCode

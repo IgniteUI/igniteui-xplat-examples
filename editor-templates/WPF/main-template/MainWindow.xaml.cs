@@ -48,7 +48,6 @@ namespace Sample
 				//insert bindingCode
 				//end bindingCode
 //endifdef bindingCode
-
 //ifdef contentCode
 				//insert contentCode
 				//end contentCode
