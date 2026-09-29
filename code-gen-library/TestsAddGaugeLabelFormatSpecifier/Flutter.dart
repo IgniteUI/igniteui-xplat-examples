@@ -10,6 +10,7 @@ import 'package:igniteui_flutter_library/libraryManager.dart' show CodeGenHelper
 class TestsAddGaugeLabelFormatSpecifier
 {
 //begin eventHandler
+//Flutter: Action
     void testsAddGaugeLabelFormatSpecifier() {
         var gauge = CodeGenHelper.getDescription<IgfLinearGaugeState>("content")!;
         var jVal = CodeGenHelper.findByName<Object>("GaugeLabelFormatSpecifier")!;

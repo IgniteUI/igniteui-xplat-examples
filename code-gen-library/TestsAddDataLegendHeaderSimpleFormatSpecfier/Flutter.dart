@@ -7,6 +7,7 @@ import 'package:igniteui_flutter_library/libraryManager.dart' show CodeGenHelper
 class TestsAddDataLegendHeaderSimpleFormatSpecfier
 {
 //begin eventHandler
+//Flutter: Action
     void testsAddDataLegendHeaderSimpleFormatSpecfier() {
         var legend = CodeGenHelper.getDescription<IgfDataLegendState>("secondary")!;
         var spec = IgfDateTimeFormatSpecifierState();

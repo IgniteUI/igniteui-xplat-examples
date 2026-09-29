@@ -10,6 +10,7 @@ import 'package:igniteui_flutter_library/libraryManager.dart' show CodeGenHelper
 class TestsAddDataLegendValueFormatSpecifier
 {
 //begin eventHandler
+//Flutter: Action
     void testsAddDataLegendValueFormatSpecifier() {
         var legend = CodeGenHelper.getDescription<IgfDataLegendState>("secondary")!;
         var jVal = CodeGenHelper.findByName<Object>("DataLegendValueFormatSpecifier")!;

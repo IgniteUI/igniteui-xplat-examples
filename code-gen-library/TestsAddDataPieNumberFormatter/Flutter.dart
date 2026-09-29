@@ -7,6 +7,7 @@ import 'package:igniteui_flutter_library/libraryManager.dart' show CodeGenHelper
 class TestsAddDataPieNumberFormatter
 {
 //begin eventHandler
+//Flutter: Action
     void testsAddDataPieNumberFormatter() {
         var dataPie = CodeGenHelper.getDescription<IgfDataPieChartState>("content")!;
 

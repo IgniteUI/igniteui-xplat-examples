@@ -4,6 +4,7 @@ import 'package:igniteui_flutter_layouts/src/igf-toolbar.dart' show IgfToolbarSt
 import 'package:igniteui_flutter_library/libraryManager.dart' show CodeGenHelper;
 //end imports
 //begin eventHandler
+//Flutter: Action
 void toolbarCustomIconOnViewInit() {
     // Raw, so the markup's own quotes need no escaping.
     var icon = r'''

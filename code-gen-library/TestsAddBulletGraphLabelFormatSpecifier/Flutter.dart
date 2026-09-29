@@ -10,6 +10,7 @@ import 'package:igniteui_flutter_library/libraryManager.dart' show CodeGenHelper
 class TestsAddBulletGraphLabelFormatSpecifier
 {
 //begin eventHandler
+//Flutter: Action
     void testsAddBulletGraphLabelFormatSpecifier() {
         var gauge = CodeGenHelper.getDescription<IgfBulletGraphState>("content")!;
         var jVal = CodeGenHelper.findByName<Object>("GaugeLabelFormatSpecifier")!;

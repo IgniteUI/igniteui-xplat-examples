@@ -7,6 +7,7 @@ import 'package:igniteui_flutter_library/libraryManager.dart' show CodeGenHelper
 class TestsAddDataLegendHeaderFormatSpecfierLongWeekday
 {
 //begin eventHandler
+//Flutter: Action
     void testsAddDataLegendHeaderFormatSpecfierLongWeekday() {
         // TODO: long weekday cannot currently be set in WPF
         var legend = CodeGenHelper.getDescription<IgfDataLegendState>("secondary")!;
