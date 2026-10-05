@@ -26,7 +26,7 @@ public class SelectionMatcherOnViewInit
 		var chart = CodeGenHelper.GetDescription<CategoryChartView>("content");
 
 		ChartSelection selection = new ChartSelection();
-		selection.Item = ((IList)chart.ItemsSource)[1];
+		selection.Item = ((IList)chart.DataSource)[1];
 		SeriesMatcher matcher = new SeriesMatcher();
 		matcher.MemberPath = "Hydro";
 		matcher.MemberPathType = "ValueMemberPath";
@@ -37,7 +37,7 @@ public class SelectionMatcherOnViewInit
 		SeriesMatcher matcher2 = new SeriesMatcher();
 		ChartSelection selection2 = new ChartSelection();
 		selection2 = new ChartSelection();
-		selection2.Item = ((IList)chart.ItemsSource)[1];
+		selection2.Item = ((IList)chart.DataSource)[1];
 		matcher2.MemberPath = "Wind";
 		matcher2.MemberPathType = "ValueMemberPath";
 
