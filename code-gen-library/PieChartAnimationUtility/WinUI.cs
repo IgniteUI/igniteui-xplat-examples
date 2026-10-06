@@ -1,7 +1,7 @@
 //begin imports
 using Infragistics.Controls.Charts;
 using System;
-using System.Windows.Threading;
+using Microsoft.UI.Xaml;
 //end imports
 
 //begin supportingTypes

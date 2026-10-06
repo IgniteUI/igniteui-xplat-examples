@@ -42,20 +42,20 @@
     "igniteui-react-grids": "^19.6.2",
     "igniteui-react-layouts": "^19.6.0-beta.2",
     "igniteui-react-maps": "^19.6.0-beta.2",
-    "igniteui-webcomponents-core": "7.1.1-beta.12",
+    "igniteui-webcomponents-core": "7.1.1-beta.14",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
   },
   "devDependencies": {
     "esbuild": "^0.23.0",
     "igniteui-webcomponents": "^7.1.1",
-    "igniteui-webcomponents-charts": "7.1.1-beta.12",
-    "igniteui-webcomponents-data-grids": "7.1.1-beta.12",
-    "igniteui-webcomponents-datasources": "7.1.1-beta.12",
-    "igniteui-webcomponents-gauges": "7.1.1-beta.12",
+    "igniteui-webcomponents-charts": "7.1.1-beta.14",
+    "igniteui-webcomponents-data-grids": "7.1.1-beta.14",
+    "igniteui-webcomponents-datasources": "7.1.1-beta.14",
+    "igniteui-webcomponents-gauges": "7.1.1-beta.14",
     "igniteui-webcomponents-grids": "7.2.0-beta.1",
-    "igniteui-webcomponents-layouts": "7.1.1-beta.12",
-    "igniteui-webcomponents-maps": "7.1.1-beta.12",
+    "igniteui-webcomponents-layouts": "7.1.1-beta.14",
+    "igniteui-webcomponents-maps": "7.1.1-beta.14",
     "lit": "^3.3.3",
     "typescript": "^5.9.3"
   }

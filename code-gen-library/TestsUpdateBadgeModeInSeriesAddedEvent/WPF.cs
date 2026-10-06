@@ -1,6 +1,5 @@
 //begin imports
 using Infragistics.Controls.Charts;
-using Newtonsoft.Json.Linq;
 //end imports
 
 public class TestsUpdateBadgeModeInSeriesAddedEvent
