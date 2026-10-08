@@ -1,4 +1,5 @@
 //begin imports
+import 'package:igniteui_flutter_core/src/IDictionary\$2.dart' show IDictionary$2;
 //end imports
 
 class FormatDateLabelAsDate
@@ -18,17 +19,31 @@ class FormatDateLabelAsDate
             return item;
         }
         if (item is Map) {
-            var dateValue = item["Date"];
-            if (dateValue is DateTime) {
-                return dateValue;
-            }
-            if (dateValue is num) {
-                return ticksToDate(dateValue);
-            }
-            return null;
+            return fromValue(item["Date"]);
+        }
+        // What a chart's data row actually is. The axis hands getLabel the item
+        // straight out of its items source, and for data that arrived as a
+        // dictionary that is the product's own DictionaryDataItem, which is an
+        // IDictionary rather than a Dart Map -- so the Map branch above never
+        // matched and this fell through to item.toString(). Base.toString()
+        // returns the empty string, and an empty label is dropped rather than
+        // drawn, so the axis rendered no labels at all. iOS.swift carries the
+        // same case for the same reason.
+        if (item is IDictionary$2<String?, Object?>) {
+            return fromValue(item["Date"]);
         }
         if (item is num) {
             return ticksToDate(item);
+        }
+        return null;
+    }
+
+    DateTime? fromValue(Object? dateValue) {
+        if (dateValue is DateTime) {
+            return dateValue;
+        }
+        if (dateValue is num) {
+            return ticksToDate(dateValue);
         }
         return null;
     }
