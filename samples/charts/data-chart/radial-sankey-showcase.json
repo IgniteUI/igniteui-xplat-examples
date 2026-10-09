@@ -1,22 +1,23 @@
 {
   "strings": {
-    "title": "Radial Budget Flow"
+    "title": "Radial Budget Flow with Node Labels"
   },
   "hasAnimations": true,
   "descriptions": {
     "content": {
       "type": "DataChart",
-      "name": "Chart",
-      "isHorizontalZoomEnabled": false,
-      "isVerticalZoomEnabled": false,
+      "name": "chart",
+      "isHorizontalZoomEnabled": true,
+      "isVerticalZoomEnabled": true,
       "highlightingMode": "FadeOthersSpecific",
       "highlightingBehavior": "DirectlyOver",
       "axes": [
         {
           "type": "CategoryAngleAxis",
           "name": "angleAxis",
-          "dataSourceRef": "SankeyBudgetStages",
+          "dataSourceRef": "SankeyIncomeStages",
           "label": "Stage",
+          "areLabelsVisible": false,
           "tickLength": 0,
           "stroke": "Transparent",
           "majorStroke": "Transparent"
@@ -34,23 +35,34 @@
         {
           "type": "RadialSankeySeries",
           "name": "radialSankey",
-          "title": "Budget",
+          "title": "Budget Flow",
           "angleAxisRef": "angleAxis",
           "radiusAxisRef": "radiusAxis",
-          "dataSourceRef": "SankeyBudgetNodes",
-          "nodeIdMemberPath": "Id",
-          "nodeLabelMemberPath": "Label",
-          "nodeLayerMemberPath": "Layer",
-          "linkSourceRef": "SankeyBudgetLinks",
+          "linkSourceRef": "SankeyIncomeFlow",
           "linkSourceMemberPath": "Source",
           "linkTargetMemberPath": "Target",
           "linkValueMemberPath": "Value",
-          "isTransitionInEnabled": true,
-          "useItemWiseColors": true
+          "useItemWiseColors": true,
+          "thickness": 0,
+          "nodeGap": 250,
+          "areaFillOpacity": 0.7,
+          "isTransitionInEnabled": true
+        },
+        {
+          "type": "CalloutLayer",
+          "name": "nodeLabels",
+          "targetSeriesRef": "radialSankey",
+          "isAutoCalloutBehaviorEnabled": true,
+          "useValueForAutoCalloutLabels": false,
+          "calloutCollisionMode": "RadialOutsideEnd",
+          "useItemColorForOutline": true,
+          "calloutStrokeThickness": 2,
+          "calloutTextColor": "Black",
+          "calloutBackground": "White"
         },
         {
           "type": "DataToolTipLayer",
-          "name": "Tooltips"
+          "name": "tooltips"
         }
       ]
     }
@@ -60,6 +72,7 @@
     "charts/DataChartRadialCoreModule",
     "charts/DataChartFlowModule",
     "charts/DataChartInteractivityModule",
-    "charts/DataChartAnnotationModule"
+    "charts/DataChartAnnotationModule",
+    "charts/AnnotationLayerProxyModule"
   ]
 }

@@ -1,22 +1,24 @@
 {
   "strings": {
-    "title": "Budget Flow with Highlighted Values"
+    "title": "Budget Flow with a Highlighted Overlay"
   },
   "hasAnimations": true,
   "descriptions": {
     "content": {
       "type": "DataChart",
-      "name": "Chart",
+      "name": "chart",
       "isHorizontalZoomEnabled": false,
       "isVerticalZoomEnabled": false,
+      "plotAreaMarginRight": 140,
       "highlightingMode": "FadeOthersSpecific",
       "highlightingBehavior": "DirectlyOver",
       "axes": [
         {
           "type": "CategoryXAxis",
           "name": "xAxis",
-          "dataSourceRef": "SankeyBudgetStages",
+          "dataSourceRef": "SankeyIncomeStages",
           "label": "Stage",
+          "areLabelsVisible": false,
           "tickLength": 0,
           "stroke": "Transparent",
           "majorStroke": "Transparent"
@@ -34,25 +36,35 @@
         {
           "type": "SankeySeries",
           "name": "sankey",
-          "title": "Budget",
+          "title": "Budget Flow",
           "xAxisRef": "xAxis",
           "yAxisRef": "yAxis",
-          "dataSourceRef": "SankeyBudgetNodes",
-          "nodeIdMemberPath": "Id",
-          "nodeLabelMemberPath": "Label",
-          "nodeLayerMemberPath": "Layer",
-          "linkSourceRef": "SankeyBudgetLinks",
+          "linkSourceRef": "SankeyIncomeFlow",
           "linkSourceMemberPath": "Source",
           "linkTargetMemberPath": "Target",
           "linkValueMemberPath": "Value",
           "highlightedLinkValueMemberPath": "Highlighted",
           "highlightedValuesDisplayMode": "Overlay",
-          "isTransitionInEnabled": true,
-          "useItemWiseColors": true
+          "useItemWiseColors": true,
+          "thickness": 0,
+          "nodeGap": 250,
+          "areaFillOpacity": 0.7,
+          "isTransitionInEnabled": true
+        },
+        {
+          "type": "CalloutLayer",
+          "name": "nodeLabels",
+          "targetSeriesRef": "sankey",
+          "isAutoCalloutBehaviorEnabled": true,
+          "useValueForAutoCalloutLabels": false,
+          "useItemColorForOutline": true,
+          "calloutStrokeThickness": 2,
+          "calloutTextColor": "Black",
+          "calloutBackground": "White"
         },
         {
           "type": "DataToolTipLayer",
-          "name": "Tooltips"
+          "name": "tooltips"
         }
       ]
     }
@@ -62,6 +74,7 @@
     "charts/DataChartCategoryCoreModule",
     "charts/DataChartFlowModule",
     "charts/DataChartInteractivityModule",
-    "charts/DataChartAnnotationModule"
+    "charts/DataChartAnnotationModule",
+    "charts/AnnotationLayerProxyModule"
   ]
 }

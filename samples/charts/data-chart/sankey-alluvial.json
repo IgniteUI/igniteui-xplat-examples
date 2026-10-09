@@ -1,0 +1,84 @@
+{
+  "strings": {
+    "title": "Orders by Region, Product, and Channel"
+  },
+  "hasAnimations": true,
+  "skipAlterDataCasing": true,
+  "descriptions": {
+    "content": {
+      "type": "DataChart",
+      "name": "chart",
+      "isHorizontalZoomEnabled": true,
+      "isVerticalZoomEnabled": true,
+      "plotAreaMarginRight": 100,
+      "highlightingMode": "FadeOthersSpecific",
+      "highlightingBehavior": "DirectlyOver",
+      "axes": [
+        {
+          "type": "CategoryXAxis",
+          "name": "xAxis",
+          "dataSourceRef": "SankeyOrderStages",
+          "label": "Stage",
+          "tickLength": 0,
+          "stroke": "Transparent",
+          "majorStroke": "Transparent"
+        },
+        {
+          "type": "NumericYAxis",
+          "name": "yAxis",
+          "areLabelsVisible": false,
+          "tickLength": 0,
+          "stroke": "Transparent",
+          "majorStroke": "Transparent"
+        }
+      ],
+      "series": [
+        {
+          "type": "SankeySeries",
+          "name": "sankey",
+          "title": "Orders",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "layoutAdapter": {
+            "type": "SankeyLayoutAdapter",
+            "linkItemsSourceRef": "SankeyOrderChannels",
+            "dimensionMemberPaths": [
+              "Region",
+              "Product",
+              "Channel"
+            ],
+            "linkValueMemberPath": "Orders"
+          },
+          "useItemWiseColors": true,
+          "thickness": 0,
+          "nodeGap": 60,
+          "areaFillOpacity": 0.7,
+          "isTransitionInEnabled": true
+        },
+        {
+          "type": "CalloutLayer",
+          "name": "nodeLabels",
+          "targetSeriesRef": "sankey",
+          "isAutoCalloutBehaviorEnabled": true,
+          "useValueForAutoCalloutLabels": false,
+          "useItemColorForOutline": true,
+          "calloutStrokeThickness": 2,
+          "calloutTextColor": "Black",
+          "calloutBackground": "White"
+        },
+        {
+          "type": "DataToolTipLayer",
+          "name": "tooltips"
+        }
+      ]
+    }
+  },
+  "modules": [
+    "charts/DataChartCoreModule",
+    "charts/DataChartCategoryCoreModule",
+    "charts/DataChartFlowModule",
+    "charts/DataChartInteractivityModule",
+    "charts/DataChartAnnotationModule",
+    "charts/AnnotationLayerProxyModule"
+  ]
+}

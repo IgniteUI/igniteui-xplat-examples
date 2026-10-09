@@ -1,12 +1,12 @@
 {
   "strings": {
-    "title": "Budget Flow with Highlighted Values"
+    "title": "Styled Sankey Flow"
   },
   "hasAnimations": true,
   "descriptions": {
     "content": {
       "type": "DataChart",
-      "name": "Chart",
+      "name": "chart",
       "isHorizontalZoomEnabled": false,
       "isVerticalZoomEnabled": false,
       "highlightingMode": "FadeOthersSpecific",
@@ -15,8 +15,9 @@
         {
           "type": "CategoryXAxis",
           "name": "xAxis",
-          "dataSourceRef": "SankeyBudgetStages",
+          "dataSourceRef": "SankeyIncomeStages",
           "label": "Stage",
+          "areLabelsVisible": false,
           "tickLength": 0,
           "stroke": "Transparent",
           "majorStroke": "Transparent"
@@ -34,25 +35,53 @@
         {
           "type": "SankeySeries",
           "name": "sankey",
-          "title": "Budget",
+          "title": "Budget Flow",
           "xAxisRef": "xAxis",
           "yAxisRef": "yAxis",
-          "dataSourceRef": "SankeyBudgetNodes",
-          "nodeIdMemberPath": "Id",
-          "nodeLabelMemberPath": "Label",
-          "nodeLayerMemberPath": "Layer",
-          "linkSourceRef": "SankeyBudgetLinks",
+          "linkSourceRef": "SankeyIncomeFlow",
           "linkSourceMemberPath": "Source",
           "linkTargetMemberPath": "Target",
           "linkValueMemberPath": "Value",
-          "highlightedLinkValueMemberPath": "Highlighted",
-          "highlightedValuesDisplayMode": "Overlay",
+          "nodeGap": 250,
+          "thickness": 0,
+          "areaFillOpacity": 0.7,
+          "radiusX": 4,
+          "radiusY": 4,
+          "ribbonShape": "UniformWidth",
+          "highlightScope": "ConnectedFlow",
           "isTransitionInEnabled": true,
+          "styleMappings": [
+            {
+              "type": "FlowStyleMapping",
+              "nodeLabel": "Savings",
+              "fill": "#2E7D32",
+              "outline": "#2E7D32"
+            },
+            {
+              "type": "FlowStyleMapping",
+              "nodeLabel": "Housing",
+              "fill": "#1565C0",
+              "outline": "#1565C0"
+            },
+            {
+              "type": "FlowStyleMapping",
+              "nodeLabel": "Discretionary",
+              "fill": "#EF6C00",
+              "outline": "#EF6C00"
+            },
+            {
+              "type": "FlowStyleMapping",
+              "minimumValue": 9000,
+              "maximumValue": 10000,
+              "fill": "#6A1B9A",
+              "outline": "#6A1B9A"
+            }
+          ],
           "useItemWiseColors": true
         },
         {
           "type": "DataToolTipLayer",
-          "name": "Tooltips"
+          "name": "tooltips"
         }
       ]
     }

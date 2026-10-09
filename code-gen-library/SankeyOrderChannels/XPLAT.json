@@ -1,0 +1,14 @@
+[
+{ "Region": "North", "Product": "Laptops", "Channel": "Online",  "Orders": 412 },
+{ "Region": "North", "Product": "Laptops", "Channel": "Retail",  "Orders": 187 },
+{ "Region": "North", "Product": "Tablets", "Channel": "Online",  "Orders": 233 },
+{ "Region": "North", "Product": "Phones",  "Channel": "Partner", "Orders": 146 },
+{ "Region": "South", "Product": "Laptops", "Channel": "Partner", "Orders": 129 },
+{ "Region": "South", "Product": "Tablets", "Channel": "Retail",  "Orders": 274 },
+{ "Region": "South", "Product": "Phones",  "Channel": "Online",  "Orders": 361 },
+{ "Region": "South", "Product": "Phones",  "Channel": "Retail",  "Orders": 158 },
+{ "Region": "West",  "Product": "Laptops", "Channel": "Online",  "Orders": 297 },
+{ "Region": "West",  "Product": "Tablets", "Channel": "Partner", "Orders": 92  },
+{ "Region": "West",  "Product": "Phones",  "Channel": "Online",  "Orders": 218 },
+{ "Region": "West",  "Product": "Phones",  "Channel": "Retail",  "Orders": 174 }
+]
