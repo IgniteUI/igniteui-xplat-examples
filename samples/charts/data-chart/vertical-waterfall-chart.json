@@ -1,0 +1,64 @@
+{
+  "strings": {
+    "legendTitle": "Operating Profit Bridge"
+  },
+  "hasAnimations": true,
+  "descriptions": {
+    "content": {
+      "type": "DataChart",
+      "name": "chart",
+      "isHorizontalZoomEnabled": false,
+      "isVerticalZoomEnabled": false,
+      "axes": [
+        {
+          "type": "CategoryYAxis",
+          "name": "yAxis",
+          "label": "Step",
+          "dataSourceRef": "ProfitBridge",
+          "interval": 1,
+          "isInverted": true
+        },
+        {
+          "type": "NumericXAxis",
+          "name": "xAxis",
+          "title": "Thousands of Dollars",
+          "minimumValue": 0
+        }
+      ],
+      "series": [
+        {
+          "type": "CategoryHighlightLayer",
+          "name": "CategoryHighlightLayer"
+        },
+        {
+          "type": "VerticalWaterfallSeries",
+          "name": "VerticalWaterfallSeries1",
+          "title": "Running total",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "dataSourceRef": "ProfitBridge",
+          "valueMemberPath": "Total",
+          "brush": "#2E7D32",
+          "outline": "#2E7D32",
+          "negativeBrush": "#C62828",
+          "negativeOutline": "#C62828",
+          "showDefaultTooltip": false,
+          "isTransitionInEnabled": true,
+          "isHighlightingEnabled": true
+        },
+        {
+          "type": "DataToolTipLayer",
+          "name": "Tooltips"
+        }
+      ]
+    }
+  },
+  "modules": [
+    "charts/DataChartCoreModule",
+    "charts/DataChartCategoryCoreModule",
+    "charts/DataChartCategoryModule",
+    "charts/DataChartInteractivityModule",
+    "charts/DataChartVerticalCategoryModule",
+    "charts/DataChartAnnotationModule"
+  ]
+}

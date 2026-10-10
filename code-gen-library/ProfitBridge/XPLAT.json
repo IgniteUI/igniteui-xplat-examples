@@ -1,0 +1,8 @@
+[
+{ "Step": "Revenue",            "Total": 1200 },
+{ "Step": "Cost of sales",      "Total": 720 },
+{ "Step": "Operating expenses", "Total": 410 },
+{ "Step": "Research",           "Total": 260 },
+{ "Step": "Other income",       "Total": 300 },
+{ "Step": "Taxes",              "Total": 230 }
+]

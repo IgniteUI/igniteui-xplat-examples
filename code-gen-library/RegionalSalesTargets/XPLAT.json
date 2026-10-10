@@ -1,0 +1,8 @@
+[
+{ "Region": "North America", "Actual": 4.8, "Target": 4.5 },
+{ "Region": "Europe",        "Actual": 3.6, "Target": 4.0 },
+{ "Region": "Asia Pacific",  "Actual": 4.1, "Target": 3.8 },
+{ "Region": "Latin America", "Actual": 1.7, "Target": 2.0 },
+{ "Region": "Middle East",   "Actual": 1.2, "Target": 1.1 },
+{ "Region": "Africa",        "Actual": 0.8, "Target": 1.0 }
+]

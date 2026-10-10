@@ -1,0 +1,12 @@
+[
+{ "Depth": "0 m",   "Summer": 24.1, "Winter": 12.3 },
+{ "Depth": "10 m",  "Summer": 23.6, "Winter": 12.2 },
+{ "Depth": "20 m",  "Summer": 22.0, "Winter": 12.1 },
+{ "Depth": "30 m",  "Summer": 18.9, "Winter": 12.0 },
+{ "Depth": "50 m",  "Summer": 15.2, "Winter": 11.7 },
+{ "Depth": "75 m",  "Summer": 12.4, "Winter": 11.2 },
+{ "Depth": "100 m", "Summer": 10.8, "Winter": 10.5 },
+{ "Depth": "150 m", "Summer": 9.4,  "Winter": 9.3 },
+{ "Depth": "200 m", "Summer": 8.3,  "Winter": 8.3 },
+{ "Depth": "300 m", "Summer": 7.1,  "Winter": 7.1 }
+]
