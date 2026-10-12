@@ -14,7 +14,7 @@ class TestsRadialGaugePrependLabels {
         var parser = JsonDictionaryParser();
         val obj = parser.parse(((o as JsonDictionaryValue).value as String)) as JsonDictionaryObject;
         val v = (obj["Text"] as JsonDictionaryValue).value as String;
-		args.label = v + args.value;
+		args.label = v + args.label;
     }
     //end eventHandler
 
