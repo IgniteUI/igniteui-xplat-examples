@@ -25,17 +25,17 @@ jobs:
     runs-on: [self-hosted, Windows, xplat-codegen]
     timeout-minutes: 180
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Checkout private product source
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           repository: Infragistics-Developer-Tools/dev-tools
           token: ${{ secrets.DEV_TOOLS_TOKEN }}
           path: dev-tools
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v6
         with:
           node-version: 24
-      - uses: actions/setup-dotnet@v4
+      - uses: actions/setup-dotnet@v6
         with:
           dotnet-version: '9.0.x'
       - name: Build WinUI product assemblies
@@ -66,22 +66,22 @@ jobs:
     runs-on: [self-hosted, Windows, xplat-codegen]
     timeout-minutes: 180
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Checkout private product source
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           repository: Infragistics-Developer-Tools/dev-tools
           token: ${{ secrets.DEV_TOOLS_TOKEN }}
           path: dev-tools
       - name: Checkout the Uno project shell
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           repository: Infragistics/uno-samples
           path: uno-samples
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v6
         with:
           node-version: 24
-      - uses: actions/setup-dotnet@v4
+      - uses: actions/setup-dotnet@v6
         with:
           dotnet-version: '9.0.x'
       - name: Build Uno product assemblies
