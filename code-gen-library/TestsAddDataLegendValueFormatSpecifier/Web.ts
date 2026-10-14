@@ -1,6 +1,6 @@
 //begin imports
 import { IgcDataLegendComponent } from 'igniteui-webcomponents-charts';
-import { IgcNumberFormatSpecifier,JsonDictionaryObject, JsonDictionaryParser,JsonDictionaryItem} from 'igniteui-webcomponents-core';
+import { IgcNumberFormatSpecifier } from 'igniteui-webcomponents-core';
 //end imports
 
 export class TestsAddDataLegendValueFormatSpecifier
@@ -11,12 +11,10 @@ export class TestsAddDataLegendValueFormatSpecifier
         var legend = CodeGenHelper.getDescription<IgcDataLegendComponent>("secondary");
         const jVal = CodeGenHelper.findByName<any>("DataLegendValueFormatSpecifier");
         var numSpec = new IgcNumberFormatSpecifier();
-        var parser = new JsonDictionaryParser();
-        var formatterInfo: JsonDictionaryObject = parser.parse(jVal.value) as JsonDictionaryObject;
-        const keys = formatterInfo.getKeys()
+        const formatterInfo = JSON.parse(jVal.value) as Record<string, any>;
+        const keys = Object.keys(formatterInfo);
         keys.forEach((prop) => {  
-            var item = formatterInfo.item(prop);  
-            let v = item["value"];  
+            let v = formatterInfo[prop];
             if (v != null){     
                 switch (prop) {
                     case "MaximumFractionDigits":
