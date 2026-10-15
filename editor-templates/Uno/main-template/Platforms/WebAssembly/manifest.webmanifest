@@ -1,0 +1,10 @@
+{
+  "background_color": "#ffffff",
+  "description": "UnoChartSample",
+  "display": "standalone",
+  "name": "UnoChartSample",
+  "short_name": "UnoChartSample",
+  "start_url": "/index.html",
+  "theme_color": "#ffffff",
+  "scope": "/"
+}
