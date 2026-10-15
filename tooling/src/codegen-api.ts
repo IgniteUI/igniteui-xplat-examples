@@ -374,6 +374,7 @@ export function emitProject(json: string, platformName: string, opts: EmitOption
         normalizeWebComponentsPackageImports(files);
     } else if (platformName === "Blazor") {
         normalizeBlazorProject(files);
+        includeBlazorProjectDataDependencies(files, opts.examplesRoot);
     }
     return { files, missingRefs: missingLibrary };
 }
@@ -1530,6 +1531,29 @@ function enqueueBlazorDataSiblings(content: string, library: any, seen: Set<stri
             seen.add(name);
             queue.push(name);
         }
+    }
+}
+
+/** Standalone samples need the same referenced data classes as a subset library. */
+function includeBlazorProjectDataDependencies(files: Record<string, string>, examplesRoot: string): void {
+    const library = libraryFor(examplesRoot);
+    const seen = new Set(Object.keys(files).map(file => path.basename(file, path.extname(file))));
+    const queue: string[] = [];
+    for (const [file, content] of Object.entries(files)) {
+        if (!file.endsWith('.cs') && !file.endsWith('.razor')) continue;
+        enqueueBlazorDataSiblings(content, library, seen, queue, new Set());
+    }
+    if (queue.length === 0) return;
+    const dependencies = emitLibrary('Blazor', {
+        examplesRoot,
+        templatesRoot: path.join(examplesRoot, 'tooling', 'library-templates'),
+        only: queue,
+    });
+    if (dependencies.problems.length > 0) {
+        throw new Error(dependencies.problems.map(one => `${one.item}: ${one.reason}`).join('\n'));
+    }
+    for (const [file, content] of Object.entries(dependencies.files)) {
+        if (file.endsWith('.cs') && file !== 'LibraryManager.cs') files[file] = content;
     }
 }
 

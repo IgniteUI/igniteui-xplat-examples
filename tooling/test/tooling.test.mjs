@@ -550,3 +550,13 @@ test('includes the data classes referenced by a selected Blazor library item', (
     assert.match(emitted.files['RetailSalesPerformanceData.cs'], /class RetailSalesPerformanceDataItem/);
     assert.match(emitted.files['PortfolioData.cs'], /class PortfolioDataItem/);
 });
+
+test('includes referenced data classes in a standalone Blazor dashboard sample', () => {
+    const examplesRoot = path.resolve(ROOT, '..');
+    const emitted = emitProject(fs.readFileSync(path.join(examplesRoot,
+        'samples/charts/dashboard-tile/local-data-source-dashboard.json'), 'utf8'),
+    'Blazor', { examplesRoot });
+    assert.match(emitted.files['RetailSalesPerformanceLocalDataSource.cs'], /RetailSalesPerformanceDataItem/);
+    assert.match(emitted.files['RetailSalesPerformanceData.cs'], /class RetailSalesPerformanceDataItem/);
+    assert.equal(emitted.files['LibraryManager.cs'], undefined);
+});
