@@ -2,10 +2,6 @@ name: Emitted library compilation
 
 on:
   pull_request:
-    paths:
-      - 'code-gen-library/**'
-      - 'tooling/**'
-      - '.github/workflows/library-validation.yml'
   workflow_dispatch:
     inputs:
       full:
@@ -30,15 +26,15 @@ jobs:
       matrix:
         platform: [Angular, React, WebComponents, Blazor, WinUI, Uno]
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           fetch-depth: 0
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v6
         with:
           node-version: 24
           cache: npm
           cache-dependency-path: tooling/package-lock.json
-      - uses: actions/setup-dotnet@v4
+      - uses: actions/setup-dotnet@v6
         if: matrix.platform == 'Blazor'
         with:
           dotnet-version: '10.0.x'
@@ -54,9 +50,20 @@ jobs:
           ${{ inputs.full && '--all' || format('--changed-since={0}', github.event.pull_request.base.sha || 'HEAD^') }}
       - name: Keep emitted sources
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: emitted-library-${{ matrix.platform }}
           path: tooling/.generated/library/${{ matrix.platform }}
           if-no-files-found: ignore
           retention-days: 7
+
+  required:
+    name: Emitted libraries passed
+    if: always()
+    needs: compile
+    runs-on: ubuntu-latest
+    steps:
+      - name: Require every platform library validation
+        env:
+          COMPILE_RESULT: ${{ needs.compile.result }}
+        run: test "$COMPILE_RESULT" = success

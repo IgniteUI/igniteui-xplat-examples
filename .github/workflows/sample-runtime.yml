@@ -19,13 +19,14 @@ concurrency:
 
 jobs:
   load:
+    name: Web Components runtime passed
     runs-on: ubuntu-latest
     timeout-minutes: 90
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           fetch-depth: 0
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v6
         with:
           node-version: 24
       - name: Build the product adapter
@@ -42,11 +43,10 @@ jobs:
         working-directory: tooling/runtime
         run: >-
           node run.mjs --samples --skip-browser-install
-          ${{ github.event_name == 'pull_request' && format('--changed-since={0}', github.event.pull_request.base.sha) || '' }}
           ${{ inputs.filter && format('--filter={0}', inputs.filter) || '' }}
       - name: Keep emitted runtime library and blank screenshots
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: sample-runtime-output
           path: |

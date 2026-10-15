@@ -1,0 +1,14 @@
+<!--begin template-->
+<!--begin content-->
+<local:StringFormatConverter x:Key="StringFormatConverter" />
+<DataTemplate x:Key="CategoryChartTooltipTemplate">
+    <!-- The shared Xaml.xaml labels each value with Binding.StringFormat, which WinUI's Binding does
+         not have. The same format strings travel as ConverterParameter here. -->
+    <StackPanel Orientation="Vertical" Margin="5">
+        <TextBlock Text="{Binding Item.Franchise, Converter={StaticResource StringFormatConverter}, ConverterParameter='Franchise: {0}'}" FontWeight="Bold" />
+        <TextBlock Text="{Binding Item.TotalRevenue, Converter={StaticResource StringFormatConverter}, ConverterParameter='Revenue of All Movies: {0}'}" />
+        <TextBlock Text="{Binding Item.HighestGrossing, Converter={StaticResource StringFormatConverter}, ConverterParameter='Highest Grossing Movie: ${0}'}" />
+    </StackPanel>
+</DataTemplate>
+<!--end content-->
+<!--end template-->

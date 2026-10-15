@@ -34,7 +34,7 @@ jobs:
   sync:
     if: github.event_name == 'workflow_dispatch' || github.event.pull_request.head.repo.full_name == github.repository
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 90
     environment: downstream-sync
     strategy:
       fail-fast: false
@@ -73,13 +73,13 @@ jobs:
 
     steps:
       - name: Checkout upstream pull request
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           ref: ${{ github.event.pull_request.head.sha || inputs.branch }}
           fetch-depth: 0
 
       - name: Use Node.js 24.x
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           node-version: 24
           cache: npm

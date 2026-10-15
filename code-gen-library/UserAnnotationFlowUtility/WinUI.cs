@@ -1,6 +1,8 @@
 //begin imports
 using Infragistics.Controls.Layouts;
 using Infragistics.Controls.Charts;
+using Microsoft.UI.Xaml.Media;
+using Microsoft.UI.Xaml.Markup;
 //end imports
 
 //begin supportingTypes
@@ -43,10 +45,23 @@ public static class UserAnnotationFlow
         }
         pending.Label = System.Convert.ToString(fields.Label.PrimitiveValue);
         pending.AnnotationData = System.Convert.ToString(fields.Details.PrimitiveValue);
-        pending.MainColor = System.Convert.ToString(fields.MainColor.PrimitiveValue);
-        pending.BadgeColor = System.Convert.ToString(fields.BadgeColor.PrimitiveValue);
+        pending.MainColor = ToBrush(fields.MainColor.PrimitiveValue);
+        pending.BadgeColor = ToBrush(fields.BadgeColor.PrimitiveValue);
         chart.FinishAnnotationFlow(pending);
         pending = null;
+    }
+
+    /// <summary>The colour the editor holds as text, as the brush an annotation is drawn with.</summary>
+    private static Brush ToBrush(object value)
+    {
+        var text = System.Convert.ToString(value);
+        if (string.IsNullOrEmpty(text))
+        {
+            return null;
+        }
+        // WinUI has no BrushConverter; the XAML type converter is what reads a colour name or hex
+        // string here, the same call ColorEditorToggleSeriesBrush makes.
+        return (Brush)XamlBindingHelper.ConvertValue(typeof(Brush), text);
     }
 
     public static void Cancel(XamDataChart chart)

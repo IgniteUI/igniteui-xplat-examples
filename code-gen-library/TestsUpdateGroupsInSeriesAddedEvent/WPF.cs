@@ -1,7 +1,6 @@
 //begin imports
 using Infragistics.Controls.Charts;
 using Infragistics.Controls.Description;
-using Newtonsoft.Json.Linq;
 //end imports
 
 public class TestsUpdateGrpupsInSeriesAddedEvent
@@ -11,31 +10,20 @@ public class TestsUpdateGrpupsInSeriesAddedEvent
     int groupIndex = 0;
     public void TestsUpdateGroupsInSeriesAddedEvent(object sender, ChartSeriesEventArgs args)
     {         
-        List<string> groups;
+        var parser = new JsonDictionaryParser();
         object o = CodeGenHelper.FindByName<object>("SeriesAddedGroups");
-        if (o is JsonDictionaryValue)
+        var obj = (JsonDictionaryObject)parser.Parse((string)((JsonDictionaryValue)o).Value);
+        var updateAnnotations = (bool)(obj["includeAnnotations"] as JsonDictionaryValue).Value;
+        var seriesGroups = (JsonDictionaryArray)obj["names"];
+        List<string> groups = new List<string>();
+        foreach (var item in seriesGroups.Items)
         {
-            var parser = new JsonDictionaryParser();
-            var obj = (JsonDictionaryObject)parser.Parse((string)((JsonDictionaryValue)o).Value);
-            var updateAnnotations = (bool)(obj["includeAnnotations"] as JsonDictionaryValue).Value;
-            var seriesGroups = (JsonDictionaryArray)obj["names"];
-            groups = new List<string>();
-            foreach (var item in seriesGroups.Items)
-            {
-                groups.Add(((JsonDictionaryValue)item).Value as String);
-            }
-
-            if (args.Series.IsAnnotationLayer && !updateAnnotations)
-            {
-                return;
-            }
+            groups.Add(((JsonDictionaryValue)item).Value as String);
         }
-        else
+
+        if (args.Series.IsAnnotationLayer && !updateAnnotations)
         {
-            JObject obj =  JObject.Parse(o.ToString());
-            bool updateAnnotations = obj["includeAnnotations"].ToObject<bool>();
-            var seriesGroups = (JArray) obj["names"];
-            groups = seriesGroups.ToObject<List<string>>();
+            return;
         }
         	
 		if (groupIndex >= groups.Count)

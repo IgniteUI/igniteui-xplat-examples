@@ -3,7 +3,7 @@ using Infragistics.Controls.Charts;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
-using System.Windows.Threading;
+using Microsoft.UI.Xaml;
 //end imports
 
 //begin supportingTypes

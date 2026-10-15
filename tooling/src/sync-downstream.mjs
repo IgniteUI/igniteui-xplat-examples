@@ -28,8 +28,11 @@ function safeBranchName(value) {
 
 const workspace = fs.mkdtempSync(path.join(os.tmpdir(), 'xplat-downstream-'));
 const clone = path.join(workspace, repository.split('/').pop());
+const impact = path.join(workspace, `output-impact-${platform}.json`);
 
 try {
+    run('node', [path.join(ROOT, 'tooling/src/cli.mjs'), 'impact', `--platform=${platform}`,
+        `--changed-since=${baseSha}`, `--output=${impact}`], ROOT);
     run('gh', ['repo', 'clone', repository, clone, '--', '--filter=blob:none']);
     for (const base of bases) {
         const peerBranch = safeBranchName(`${upstreamBranch}--${base}`);
@@ -37,7 +40,7 @@ try {
         run('git', ['checkout', '-B', peerBranch, `origin/${base}`], clone);
 
         const exportArgs = [path.join(ROOT, 'tooling/src/cli.mjs'), 'export', `--platform=${platform}`,
-            `--changed-since=${baseSha}`, `--output=${path.join(clone, 'samples')}`, '--clean'];
+            `--impact-manifest=${impact}`, `--output=${path.join(clone, 'samples')}`, '--clean'];
         if (platform === 'Uno') {
             // Uno and WinUI share generated XAML/C#, but Uno's independently buildable project shell
             // is materially different. Seed that shell from the downstream repository and overlay
