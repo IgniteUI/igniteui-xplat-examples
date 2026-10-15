@@ -563,7 +563,8 @@ async function main() {
         } else {
             execFileSync(process.execPath, [path.join(TOOLING_ROOT, 'node_modules', 'typescript', 'bin', 'tsc'),
                 '--noEmit', '--skipLibCheck', '--strict', 'false', '--moduleResolution', 'bundler',
-                '--module', 'preserve', '--target', 'es2022', path.join(output, 'libraryManager.ts')],
+                '--module', 'preserve', '--target', 'es2022', '--jsx', 'react-jsx',
+                path.join(output, 'libraryManager.ts')],
                 { cwd: TOOLING_ROOT, stdio: 'inherit' });
         }
         console.log(`[${opts.platform}] compiled ${Object.keys(emitted.files).length} emitted library file(s)`);

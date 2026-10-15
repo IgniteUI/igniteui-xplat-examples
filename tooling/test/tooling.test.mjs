@@ -481,6 +481,23 @@ test('temporarily skips accessibility items during library emission', () => {
     }
 });
 
+test('emits JSX tooltip handlers as TSX and type-compiles their library', () => {
+    const emitted = emitLibrary('React', {
+        examplesRoot: path.resolve(ROOT, '..'),
+        templatesRoot: path.join(ROOT, 'library-templates'),
+        only: ['TestsAddNameTooltip', 'TestsAddStaticTextTooltip'],
+    });
+    assert.deepEqual(emitted.problems, []);
+    for (const item of ['TestsAddNameTooltip', 'TestsAddStaticTextTooltip']) {
+        assert.ok(emitted.files[`${item}.tsx`], item);
+        assert.equal(emitted.files[`${item}.ts`], undefined);
+    }
+    execFileSync(process.execPath, [
+        CLI, 'library-check', '--platform=React',
+        '--only=TestsAddNameTooltip,TestsAddStaticTextTooltip',
+    ], { cwd: ROOT, stdio: 'pipe' });
+});
+
 test('emits a Blazor Razor library with data, handlers, manager, and project', () => {
     const output = fs.mkdtempSync(path.join(os.tmpdir(), 'xplat-blazor-library-test-'));
     try {
@@ -521,4 +538,25 @@ test('emits WinUI and Uno libraries through the native product renderers', () =>
             fs.rmSync(output, { recursive: true, force: true });
         }
     }
+});
+
+test('includes the data classes referenced by a selected Blazor library item', () => {
+    const emitted = emitLibrary('Blazor', {
+        examplesRoot: path.resolve(ROOT, '..'),
+        templatesRoot: path.join(ROOT, 'library-templates'),
+        only: ['RetailSalesPerformanceLocalDataSource', 'DataGridLiveDataTickerOnViewInit'],
+    });
+    assert.deepEqual(emitted.problems, []);
+    assert.match(emitted.files['RetailSalesPerformanceData.cs'], /class RetailSalesPerformanceDataItem/);
+    assert.match(emitted.files['PortfolioData.cs'], /class PortfolioDataItem/);
+});
+
+test('includes referenced data classes in a standalone Blazor dashboard sample', () => {
+    const examplesRoot = path.resolve(ROOT, '..');
+    const emitted = emitProject(fs.readFileSync(path.join(examplesRoot,
+        'samples/charts/dashboard-tile/local-data-source-dashboard.json'), 'utf8'),
+    'Blazor', { examplesRoot });
+    assert.match(emitted.files['RetailSalesPerformanceLocalDataSource.cs'], /RetailSalesPerformanceDataItem/);
+    assert.match(emitted.files['RetailSalesPerformanceData.cs'], /class RetailSalesPerformanceDataItem/);
+    assert.equal(emitted.files['LibraryManager.cs'], undefined);
 });
