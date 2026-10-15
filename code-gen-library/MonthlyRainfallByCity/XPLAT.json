@@ -1,0 +1,14 @@
+[
+{ "Month": "January",   "Seattle": 140, "Madrid": 37 },
+{ "Month": "February",  "Seattle": 100, "Madrid": 35 },
+{ "Month": "March",     "Seattle": 95,  "Madrid": 26 },
+{ "Month": "April",     "Seattle": 70,  "Madrid": 47 },
+{ "Month": "May",       "Seattle": 48,  "Madrid": 52 },
+{ "Month": "June",      "Seattle": 40,  "Madrid": 25 },
+{ "Month": "July",      "Seattle": 15,  "Madrid": 15 },
+{ "Month": "August",    "Seattle": 22,  "Madrid": 10 },
+{ "Month": "September", "Seattle": 40,  "Madrid": 28 },
+{ "Month": "October",   "Seattle": 90,  "Madrid": 49 },
+{ "Month": "November",  "Seattle": 165, "Madrid": 56 },
+{ "Month": "December",  "Seattle": 150, "Madrid": 56 }
+]
