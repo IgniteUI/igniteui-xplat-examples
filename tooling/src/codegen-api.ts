@@ -1224,7 +1224,10 @@ export function emitLibrary(platformName: string, opts: {
             : emitted["template.ts"] !== undefined ? "template.ts" : null;
         if (holderFile !== null) {
             const holder = emitted[holderFile].split("PlaceholderHolder").join(`${name}Holder`);
-            files[`${name}.ts`] = holder;
+            // React library handlers can contain JSX. The product templates call their intermediate
+            // output handler.ts/template.ts, but publishing that content as .ts makes TypeScript
+            // parse JSX as operators and unterminated regular expressions.
+            files[`${name}.${platformName === "React" ? "tsx" : "ts"}`] = holder;
             enqueueSiblings(holder, library, seen, queue);
             tracked.push({
                 name, isData: false, isOwnType: false,
@@ -1311,6 +1314,7 @@ function emitBlazorLibrary(platform: any, opts: {
             files[`${name}.cs`] = "using System;\nusing System.Collections.Generic;\n" +
                 "using System.Collections.ObjectModel;\nusing System.Linq;\n\n" + source;
             enqueueSiblings(source, library, seen, queue);
+            enqueueDotNetSiblings(source, library, seen, queue);
             tracked.push({ name, access: `new Tuple<Func<object>, Func<object>>(() => new ${name}(), () => new ${name}())` });
             dataItems++;
             continue;
@@ -1319,6 +1323,7 @@ function emitBlazorLibrary(platform: any, opts: {
             const source = emitted["supporting.cs"];
             if (source === undefined) { problems.push({ item: name, reason: "no supporting source emitted" }); continue; }
             files[`${name}.cs`] = source.split("PlaceholderHolder").join(`${name}Holder`);
+            enqueueDotNetSiblings(source, library, seen, queue);
             tracked.push({ name, access: `new Tuple<Func<object>, Func<object>>(() => new ${name}Holder(), () => new ${name}Holder())` });
             handlerItems++;
             continue;
@@ -1326,13 +1331,22 @@ function emitBlazorLibrary(platform: any, opts: {
         const stem = item.type === CodeGenerationLibraryItemType.EventHandler ? "handler" : "template";
         if (content.isJSContent === true) {
             const source = emitted[`${stem}.js`];
-            if (source === undefined) { problems.push({ item: name, reason: "no script emitted" }); continue; }
-            files[`${name}.js`] = source;
-            tracked.push({ name, script: true });
+            const css = emitted[`${stem}.css`];
+            if (source === undefined && !css?.trim()) {
+                problems.push({ item: name, reason: "no script or styles emitted" });
+                continue;
+            }
+            // An item whose handler is deliberately marked OMIT HANDLER can still be a real,
+            // useful style-only item. Do not invent a script registration for it; retain its CSS.
+            if (source !== undefined) {
+                files[`${name}.js`] = source;
+                tracked.push({ name, script: true });
+            }
         } else {
             const source = emitted[`${stem}.razor`];
             if (source === undefined) { problems.push({ item: name, reason: "no Razor source emitted" }); continue; }
             files[`${name}Holder.razor`] = source.split("PlaceholderHolder").join(`${name}Holder`);
+            enqueueDotNetSiblings(source, library, seen, queue);
             tracked.push({ name, access: `new Tuple<Func<object>, Func<object>>(() => new ${name}Holder(), () => new ${name}Holder().${name})` });
         }
         const css = emitted[`${stem}.css`];
@@ -1506,6 +1520,21 @@ function enqueueSiblings(content: string, library: any, seen: Set<string>, queue
         const name = match[1];
         if (name === "libraryManager" || isAccessibilityLibraryItem(name) ||
             seen.has(name) || !library.hasItem(name)) continue;
+        seen.add(name);
+        queue.push(name);
+    }
+}
+
+/**
+ * Blazor/C# has no module import carrying the sibling library item's file name. Follow concrete type
+ * references instead: when emitted content names another library item, that item must be part of the
+ * same compilation just as a ./Sibling import makes it part of a web library compilation.
+ */
+function enqueueDotNetSiblings(content: string, library: any, seen: Set<string>, queue: string[]): void {
+    const names: string[] = library.getItemNames?.() ?? library.getKeys();
+    for (const name of names) {
+        if (isAccessibilityLibraryItem(name) || seen.has(name) ||
+            !new RegExp(`\\b${name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\b`).test(content)) continue;
         seen.add(name);
         queue.push(name);
     }
