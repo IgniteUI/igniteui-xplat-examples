@@ -1105,8 +1105,7 @@ export function emitLibrary(platformName: string, opts: {
 
     const templateDir = itemTemplateDirFor(platformName, opts.templatesRoot);
     const library: any = libraryFor(opts.examplesRoot);
-    const names: string[] = (opts.only ?? (library.getItemNames?.() ?? library.getKeys()))
-        .filter((name: string) => !isAccessibilityLibraryItem(name));
+    const names: string[] = opts.only ?? (library.getItemNames?.() ?? library.getKeys());
 
     // A renderer per item, sharing one registered context — which is what the library project
     // emitter does, and not an optimisation. An emitter keeps state across an emission: the set of
@@ -1156,7 +1155,7 @@ export function emitLibrary(platformName: string, opts: {
         const requires: string[] | null = item.getRequiresForPlatform(platform);
         if (requires !== null && requires !== undefined) {
             for (const required of requires) {
-                if (isAccessibilityLibraryItem(required) || seen.has(required) || !library.hasItem(required)) continue;
+                if (seen.has(required) || !library.hasItem(required)) continue;
                 seen.add(required);
                 queue.push(required);
             }
@@ -1260,12 +1259,13 @@ function emitBlazorLibrary(platform: any, opts: {
     if (!fs.existsSync(templateDir)) throw new Error(`no blazor-template found at ${templateDir}`);
     const excluded = new Set(opts.exclude ?? []);
     const names: string[] = (opts.only ?? (library.getItemNames?.() ?? library.getKeys()))
-        .filter((name: string) => !excluded.has(name) && !isAccessibilityLibraryItem(name));
+        .filter((name: string) => !excluded.has(name));
     const queue = [...names];
     const seen = new Set(names);
     const files: Record<string, string> = {};
     const problems: { item: string; reason: string }[] = [];
     const tracked: { name: string; access?: string; script?: boolean }[] = [];
+    let needsBlazorNamespace = false;
     let dataItems = 0;
     let handlerItems = 0;
     let context: any = null;
@@ -1286,8 +1286,7 @@ function emitBlazorLibrary(platform: any, opts: {
         const item: any = library.getItem(name);
         const requires: string[] | null = item.getRequiresForPlatform(platform);
         for (const required of requires ?? []) {
-            if (!excluded.has(required) && !isAccessibilityLibraryItem(required) &&
-                !seen.has(required) && library.hasItem(required)) {
+            if (!excluded.has(required) && !seen.has(required) && library.hasItem(required)) {
                 seen.add(required); queue.push(required);
             }
         }
@@ -1333,6 +1332,7 @@ function emitBlazorLibrary(platform: any, opts: {
             const source = emitted[`${stem}.razor`];
             if (source === undefined) { problems.push({ item: name, reason: "no Razor source emitted" }); continue; }
             files[`${name}Holder.razor`] = source.split("PlaceholderHolder").join(`${name}Holder`);
+            needsBlazorNamespace = true;
             tracked.push({ name, access: `new Tuple<Func<object>, Func<object>>(() => new ${name}Holder(), () => new ${name}Holder().${name})` });
         }
         const css = emitted[`${stem}.css`];
@@ -1341,7 +1341,14 @@ function emitBlazorLibrary(platform: any, opts: {
     }
 
     files["BlazorLibrary.csproj"] = fs.readFileSync(path.join(templateDir, "BlazorLibrary.csproj"), "utf8");
-    return { files, manager: dotNetManagerFor(tracked, "BlazorLibrary"), managerFile: "LibraryManager.cs", problems, dataItems, handlerItems };
+    return {
+        files,
+        manager: dotNetManagerFor(tracked, needsBlazorNamespace ? "BlazorLibrary" : undefined),
+        managerFile: "LibraryManager.cs",
+        problems,
+        dataItems,
+        handlerItems,
+    };
 }
 
 function emitNativeXamlLibrary(platformName: "WinUI" | "Uno", platform: any, opts: {
@@ -1352,8 +1359,7 @@ function emitNativeXamlLibrary(platformName: "WinUI" | "Uno", platform: any, opt
 }, library: any): EmittedLibrary {
     const templateDir = path.join(opts.templatesRoot ?? "", "winui-template");
     if (!fs.existsSync(templateDir)) throw new Error(`no winui-template found at ${templateDir}`);
-    const names: string[] = (opts.only ?? (library.getItemNames?.() ?? library.getKeys()))
-        .filter((name: string) => !isAccessibilityLibraryItem(name));
+    const names: string[] = opts.only ?? (library.getItemNames?.() ?? library.getKeys());
     const queue = [...names];
     const seen = new Set(names);
     const files: Record<string, string> = {};
@@ -1389,9 +1395,7 @@ function emitNativeXamlLibrary(platformName: "WinUI" | "Uno", platform: any, opt
         const item: any = library.getItem(name);
         const requires: string[] | null = item.getRequiresForPlatform(platform);
         for (const required of requires ?? []) {
-            if (!isAccessibilityLibraryItem(required) && !seen.has(required) && library.hasItem(required)) {
-                seen.add(required); queue.push(required);
-            }
+            if (!seen.has(required) && library.hasItem(required)) { seen.add(required); queue.push(required); }
         }
         const content = contentFor(item);
         if (content === null || content === undefined) continue;
@@ -1504,15 +1508,10 @@ function enqueueSiblings(content: string, library: any, seen: Set<string>, queue
     let match: RegExpExecArray | null;
     while ((match = pattern.exec(content)) !== null) {
         const name = match[1];
-        if (name === "libraryManager" || isAccessibilityLibraryItem(name) ||
-            seen.has(name) || !library.hasItem(name)) continue;
+        if (name === "libraryManager" || seen.has(name) || !library.hasItem(name)) continue;
         seen.add(name);
         queue.push(name);
     }
-}
-
-function isAccessibilityLibraryItem(name: string): boolean {
-    return name.startsWith("Accessibility") || name.startsWith("TestsAccessibility");
 }
 
 /** Where the per-item templates live: the library project emitter's own copy of them. */
