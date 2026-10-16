@@ -1,6 +1,6 @@
 //begin imports
 import android.graphics.Color
-import com.infragistics.mobile.controls.DataAnnotationInfo
+import com.infragistics.mobile.controls.IgaDataAnnotationInfo
 import com.infragistics.mobile.controls.IgaBrush
 import com.infragistics.mobile.controls.IgaSolidColorBrush
 import com.infragistics.mobile.controls.JsonDictionaryArray
@@ -14,7 +14,8 @@ import com.infragistics.mobile.controls.CodeGenHelper
 public class TestsStyleDataAxisAnnotationsLabels {
 
     //begin eventHandler
-    public fun testsStyleDataAxisAnnotationsLabels(sender: Any?, args: DataAnnotationInfo) {
+    //Kotlin: IgaDataAnnotationInfo
+    public fun testsStyleDataAxisAnnotationsLabels(sender: Any?, args: IgaDataAnnotationInfo) {
         val value = CodeGenHelper.findByName<Any>("AxisAnnotationStlingOtions") ?: return
         val parser = JsonDictionaryParser()
         val array = parser.parse(((value as JsonDictionaryValue).value as String)) as JsonDictionaryArray
@@ -29,7 +30,7 @@ public class TestsStyleDataAxisAnnotationsLabels {
         }
     }
 
-    private fun styleShape(options: JsonDictionaryObject, args: DataAnnotationInfo) {
+    private fun styleShape(options: JsonDictionaryObject, args: IgaDataAnnotationInfo) {
         val background = stringValue(options["Background"])
         if (!background.isNullOrEmpty()) {
             args.background = getBrush(background)
