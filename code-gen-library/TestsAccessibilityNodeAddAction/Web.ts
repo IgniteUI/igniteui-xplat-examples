@@ -1,5 +1,5 @@
 //begin imports
-import { IgcAccessibilityNodeCreatingEventArgs } from 'igniteui-webcomponents-charts';
+import { IgcAccessibilityNodeCreatingEventArgs } from 'igniteui-webcomponents-core';
 import { IgcAccessibilityAction } from 'igniteui-webcomponents-core';
 import { IgcAccessibilityActionCollection } from 'igniteui-webcomponents-core';
 import { AccessibilityRole } from 'igniteui-webcomponents-core';
