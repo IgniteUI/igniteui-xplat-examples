@@ -20,7 +20,7 @@ class TestsStyleDataAnnotationsShapes {
         for (entry in array.items.orEmpty()) {
             val item = entry as JsonDictionaryObject
             val index = numberValue(item["Index"]) ?: continue
-            if (index == -1.0 || index == args.dataIndex) {
+            if (index == -1.0 || index == args.dataIndex.toDouble()) {
                 stringValue(item["Brush"])?.takeIf { it.isNotEmpty() }?.let {
                     args.shapeBrush = getBrush(it)
                 }
