@@ -1,8 +1,6 @@
 //begin imports
-import android.graphics.Color
 import com.infragistics.mobile.controls.IgaDataAnnotationInfo
 import com.infragistics.mobile.controls.IgaBrush
-import com.infragistics.mobile.controls.IgaSolidColorBrush
 import com.infragistics.mobile.controls.JsonDictionaryArray
 import com.infragistics.mobile.controls.JsonDictionaryObject
 import com.infragistics.mobile.controls.JsonDictionaryValue
@@ -67,13 +65,8 @@ public class TestsStyleDataAxisAnnotationsLabels {
         }
     }
 
-    private fun getBrush(color: String): IgaBrush? {
-        if (color.isEmpty()) {
-            return null
-        }
-
-        return IgaSolidColorBrush(Color.parseColor(color))
-    }
+    // Option colors are CSS names such as Orange, which Color.parseColor does not know.
+    private fun getBrush(color: String): IgaBrush? = IgaBrush.fromString(color)
 
     private fun stringValue(value: Any?): String? {
         return when (value) {
