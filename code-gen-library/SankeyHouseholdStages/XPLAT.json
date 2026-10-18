@@ -1,0 +1,6 @@
+[
+{ "Stage": "Budget" },
+{ "Stage": "Split" },
+{ "Stage": "Bucket" },
+{ "Stage": "Detail" }
+]
