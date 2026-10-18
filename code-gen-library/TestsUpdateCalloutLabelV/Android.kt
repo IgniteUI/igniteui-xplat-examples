@@ -8,8 +8,14 @@ public class TestsUpdateCalloutLabelV
     public fun testsUpdateCalloutLabelV(sender: Any?, args: IgaCalloutLabelUpdatingEventArgs)
     {    
         val item = args.item
-        args.label = valueOf(item, "Label").toString() + "-V-" + valueOf(item, "Value").toString();
+        args.label = valueOf(item, "Label").toString() + "-V-" + format(valueOf(item, "Value"));
     }
+
+    // JSON numbers arrive as Double; write whole numbers as integers, as the other
+    // platforms do, rather than Kotlin's "20.0".
+    private fun format(value: Any?): String =
+        if (value is Double && !value.isInfinite() && value == Math.rint(value)) value.toLong().toString()
+        else value.toString()
 
     // Rows built from JSON test data are DictionaryDataItems, not Maps; they expose an
     // indexed get(String) instead.
