@@ -477,9 +477,7 @@ test('temporarily skips accessibility items during library emission', () => {
         assert.equal(Object.keys(emitted.files)
             .some(name => name.startsWith('TestsAccessibilityNodeAddAction')), false);
         assert.doesNotMatch(emitted.manager, /TestsAccessibilityNodeAddAction/);
-        const extension = platform === 'React' ? 'tsx'
-            : ['Angular', 'WebComponents'].includes(platform) ? 'ts' : 'cs';
-        assert.ok(emitted.files[`SalesData.${extension}`]);
+        assert.ok(emitted.files[`SalesData.${['Angular', 'React', 'WebComponents'].includes(platform) ? 'ts' : 'cs'}`]);
     }
 });
 
