@@ -1133,6 +1133,9 @@ export function emitLibrary(platformName: string, opts: {
     const files: Record<string, string> = {};
     const problems: { item: string; reason: string }[] = [];
     const tracked: LibraryItemInfo[] = [];
+    // React items are written as JSX (React.tsx) — a tooltip handler returns markup — so they are
+    // emitted as .tsx, which is what lets them parse. The manager imports them without an extension.
+    const outputExtension = platformName === "React" ? ".tsx" : ".ts";
 
     // A queue rather than a loop over the names asked for: a library item can import another one —
     // the airports are derived from the flights — and an item whose neighbour was left out does not
@@ -1186,7 +1189,7 @@ export function emitLibrary(platformName: string, opts: {
         const emitted = outputOf(template);
         const dataFile = `${name}.ts`;
         if (emitted[dataFile] !== undefined) {
-            files[dataFile] = emitted[dataFile];
+            files[`${name}${outputExtension}`] = emitted[dataFile];
             enqueueSiblings(emitted[dataFile], library, seen, queue);
             tracked.push({
                 name, isData: true, isOwnType: true, hasRequiredStyle: false,
@@ -1201,7 +1204,7 @@ export function emitLibrary(platformName: string, opts: {
         if (item.type === CodeGenerationLibraryItemType.Supporting) {
             const declarations = emitted["supporting.ts"];
             if (declarations !== undefined) {
-                files[`${name}.ts`] = declarations;
+                files[`${name}${outputExtension}`] = declarations;
                 enqueueSiblings(declarations, library, seen, queue);
                 // Requestable only when the item declares the type its own name states, the way a code
                 // based data item does. An item declaring several types — a family of styling
@@ -1224,7 +1227,7 @@ export function emitLibrary(platformName: string, opts: {
             : emitted["template.ts"] !== undefined ? "template.ts" : null;
         if (holderFile !== null) {
             const holder = emitted[holderFile].split("PlaceholderHolder").join(`${name}Holder`);
-            files[`${name}.ts`] = holder;
+            files[`${name}${outputExtension}`] = holder;
             enqueueSiblings(holder, library, seen, queue);
             tracked.push({
                 name, isData: false, isOwnType: false,
