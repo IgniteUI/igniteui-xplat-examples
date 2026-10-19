@@ -13,6 +13,9 @@ public partial class App : Application
         // also does this, but it can be trimmed on iOS/WASM — so the explicit call is reliable.
         Infragistics.Core.UnoPlatformRegistration.Register();
 
+        //insert modulesRegister
+        //end modulesRegister
+
         this.InitializeComponent();
     }
 
