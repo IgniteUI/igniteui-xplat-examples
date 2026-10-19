@@ -850,6 +850,18 @@ function normalizeWebComponentsMapImagery(files: Record<string, string>, items: 
     files[sourceName] = source;
 }
 
+/**
+ * Blazor API names that differ from what library handler code is written against. Applied to sample
+ * pages and to library holders alike, so a handler that compiles in one compiles in the other.
+ * ListSortDirection is qualified because System.ComponentModel, which handlers import, declares one
+ * too; a name already qualified is left alone.
+ */
+function qualifyBlazorApiNames(source: string): string {
+    return source
+        .replace(/PropertyEditorValueType\.Boolean\b/g, "PropertyEditorValueType.Boolean1")
+        .replace(/(?<![\w.:])ListSortDirection\./g, "IgniteUI.Blazor.Controls.ListSortDirection.");
+}
+
 function normalizeBlazorProject(files: Record<string, string>): void {
     for (const name of Object.keys(files).filter(name => name.endsWith(".cs"))) {
         if (files[name].includes("ObservableCollection<") &&
@@ -858,9 +870,7 @@ function normalizeBlazorProject(files: Record<string, string>): void {
         }
     }
     for (const name of Object.keys(files).filter(name => name.endsWith(".razor"))) {
-        let source = files[name]
-            .replace(/PropertyEditorValueType\.Boolean\b/g, "PropertyEditorValueType.Boolean1")
-            .replace(/\bListSortDirection\./g, "IgniteUI.Blazor.Controls.ListSortDirection.")
+        let source = qualifyBlazorApiNames(files[name])
             .replace(/Width="\*>([0-9.]+)"/g,
                 'Width="@(new IgbColumnWidth(1, $1, true))"');
         const refs = new Map<string, string>();
@@ -1345,7 +1355,8 @@ function emitBlazorLibrary(platform: any, opts: {
         } else {
             const source = emitted[`${stem}.razor`];
             if (source === undefined) { problems.push({ item: name, reason: "no Razor source emitted" }); continue; }
-            files[`${name}Holder.razor`] = source.split("PlaceholderHolder").join(`${name}Holder`);
+            files[`${name}Holder.razor`] = qualifyBlazorApiNames(
+                source.split("PlaceholderHolder").join(`${name}Holder`));
             enqueueDotNetSiblings(source, library, seen, queue);
             tracked.push({ name, access: `new Tuple<Func<object>, Func<object>>(() => new ${name}Holder(), () => new ${name}Holder().${name})` });
         }
@@ -1536,9 +1547,7 @@ function enqueueDotNetSiblings(content: string, library: any, seen: Set<string>,
     const names: string[] = library.getItemNames?.() ?? library.getKeys();
     for (const name of names) {
         if (isAccessibilityLibraryItem(name) || seen.has(name) ||
-            // A JSON data item is referred to by the element class it emits, <name>Item, as often as
-            // by its own name.
-            !new RegExp(`\\b${name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}(?:Item)?\\b`).test(content)) continue;
+            !new RegExp(`\\b${name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\b`).test(content)) continue;
         seen.add(name);
         queue.push(name);
     }
