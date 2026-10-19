@@ -18,10 +18,10 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 45
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           fetch-depth: 0
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v6
         with:
           node-version: 24
           cache: npm
@@ -37,7 +37,7 @@ jobs:
           --platform=Angular,React,WebComponents,Blazor
           --changed-since=${{ github.event.pull_request.base.sha }}
           --output=tooling/.generated/output-impact.json
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v6
         with:
           name: emitted-output-impact
           path: tooling/.generated/output-impact.json
@@ -56,10 +56,10 @@ jobs:
         platform: [Angular, React, WebComponents, Blazor]
         shard: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           fetch-depth: 0
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v7
         if: github.event_name == 'pull_request'
         with:
           name: emitted-output-impact
@@ -73,13 +73,13 @@ jobs:
             '[.platforms[$platform].testingChanges[] | select(.kind != "removed")] | length' \
             tooling/.generated/output-impact.json)
           if (( ${{ matrix.shard }} < count )); then echo 'needed=true' >> "$GITHUB_OUTPUT"; fi
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v6
         if: github.event_name != 'pull_request' || steps.selected.outputs.needed == 'true'
         with:
           node-version: 24
           cache: npm
           cache-dependency-path: tooling/package-lock.json
-      - uses: actions/setup-dotnet@v4
+      - uses: actions/setup-dotnet@v6
         if: (github.event_name != 'pull_request' || steps.selected.outputs.needed == 'true') && matrix.platform == 'Blazor'
         with:
           dotnet-version: '10.0.x'

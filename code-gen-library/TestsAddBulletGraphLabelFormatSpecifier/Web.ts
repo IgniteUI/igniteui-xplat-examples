@@ -1,6 +1,6 @@
 //begin imports
 import { IgcBulletGraphComponent } from 'igniteui-webcomponents-gauges';
-import { IgcNumberFormatSpecifier,JsonDictionaryObject, JsonDictionaryParser,JsonDictionaryItem} from 'igniteui-webcomponents-core';
+import { IgcNumberFormatSpecifier } from 'igniteui-webcomponents-core';
 //end imports
 
 export class TestsAddBulletGraphLabelFormatSpecifier
@@ -11,12 +11,10 @@ export class TestsAddBulletGraphLabelFormatSpecifier
         var gauge = CodeGenHelper.getDescription<IgcBulletGraphComponent>("content");
         const jVal = CodeGenHelper.findByName<any>("GaugeLabelFormatSpecifier");
         var numSpec = new IgcNumberFormatSpecifier();
-        var parser = new JsonDictionaryParser();
-        var formatterInfo: JsonDictionaryObject = parser.parse(jVal.value) as JsonDictionaryObject;
-        const keys = formatterInfo.getKeys()
+        const formatterInfo = JSON.parse(jVal.value) as Record<string, any>;
+        const keys = Object.keys(formatterInfo);
         keys.forEach((prop) => {  
-            var item = formatterInfo.item(prop);  
-            let v = item["value"];  
+            let v = formatterInfo[prop];
             if (v != null){     
                 switch (prop) {
                     case "MaximumFractionDigits":
