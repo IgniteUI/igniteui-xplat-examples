@@ -1465,7 +1465,9 @@ function dotNetManagerFor(items: { name: string; access?: string; script?: boole
         : `            _items.Add("${item.name}", ${item.access});`).join("\n");
     const scripts = items.filter(item => item.script)
         .map(item => `            _isScript.Add("${item.name}");`).join("\n");
-    const platformUsing = extraUsing ? `using ${extraUsing};\n` : "";
+    // The platform namespace is declared by the item files, so a library with no items for this
+    // platform (a change touching only Android handlers) has nothing to import from it.
+    const platformUsing = extraUsing && items.length > 0 ? `using ${extraUsing};\n` : "";
     return `using System;\nusing System.Collections.Generic;\n${platformUsing}\nnamespace CodeLibrary\n{\n` +
 `    public class LibraryManager\n    {\n        private static LibraryManager _instance;\n` +
 `        public static LibraryManager Instance => _instance ??= new LibraryManager();\n` +

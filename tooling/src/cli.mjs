@@ -552,13 +552,6 @@ async function main() {
             exclude: excluded,
         });
         if (emitted.problems.length) throw new Error(emitted.problems.map(one => `${one.item}: ${one.reason}`).join('\n'));
-        // Changed items can all be ones this platform has no implementation of, such as a change
-        // that only touches Android handlers. There is then no library to compile: the manager alone
-        // names a namespace that no item declares.
-        if (emitted.dataItems + emitted.handlerItems === 0) {
-            console.log(`[${opts.platform}] no changed library items have a ${opts.platform} implementation`);
-            return;
-        }
         writeLibrary(emitted, output);
         if (opts.platform === 'WinUI' || opts.platform === 'Uno') {
             console.log(`[${opts.platform}] emitted ${Object.keys(emitted.files).length} library file(s); compilation runs on the private Windows tier`);
