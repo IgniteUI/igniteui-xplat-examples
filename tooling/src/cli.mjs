@@ -619,7 +619,13 @@ async function main() {
         for (const destination of destinations) {
             console.log(`[${opts.platform}] building ${path.relative(output, destination)}`);
             if (['Blazor', 'WPF', 'WinUI', 'Uno'].includes(opts.platform)) {
-                execFileSync('dotnet', ['build', '--configuration', 'Release', '--nologo'], { cwd: destination, stdio: 'inherit' });
+                const buildArguments = ['build', '--configuration', 'Release', '--nologo'];
+                // WinUI samples reference the product packages unless pointed at a dev-tools build.
+                if (opts.platform === 'WinUI' && process.env.DEV_TOOLS_ROOT) {
+                    const winUIBuild = path.join(process.env.DEV_TOOLS_ROOT, 'XPlatform', 'Main', 'Source', 'Build', 'WinUI');
+                    buildArguments.push(`-p:InfragisticsWinUIBuild=${winUIBuild}`);
+                }
+                execFileSync('dotnet', buildArguments, { cwd: destination, stdio: 'inherit' });
             } else {
                 // The shard has one superset install. Each sample still compiles in its own project,
                 // against precisely the package versions its manifest requested.

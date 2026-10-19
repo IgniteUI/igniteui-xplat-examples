@@ -27,10 +27,25 @@
     </UnoFeatures>
   </PropertyGroup>
 
-  <!-- Infragistics Uno control assemblies, resolved per-TargetFramework from the dev-tools
-       UNO build output. $(InfragisticsUnoBuild) is defined in the repo-root Directory.Build.props.
+  <!-- Infragistics Uno packages; the versions are managed centrally. -->
+  <ItemGroup Condition="'$(InfragisticsUnoBuild)' == ''">
+    <PackageReference Include="Infragistics.Uno.Core.Trial" />
+    <PackageReference Include="Infragistics.Uno.Charts.Trial" />
+    <PackageReference Include="Infragistics.Uno.DataVisualization.Trial" />
+    <PackageReference Include="Infragistics.Uno.DataGrid.Trial" />
+    <PackageReference Include="Infragistics.Uno.Layouts.Trial" />
+    <PackageReference Include="Infragistics.Uno.Inputs.Trial" />
+    <PackageReference Include="Infragistics.Uno.Gauges.Trial" />
+    <PackageReference Include="Infragistics.Uno.Dashboards.Trial" />
+    <PackageReference Include="Infragistics.Uno.TreeMap.Trial" />
+    <PackageReference Include="Infragistics.Uno.Sparkline.Trial" />
+    <PackageReference Include="Infragistics.Uno.Maps.Trial" />
+  </ItemGroup>
+
+  <!-- Or the Infragistics Uno control assemblies from a dev-tools UNO build output, when
+       $(InfragisticsUnoBuild) names one (e.g. /p:InfragisticsUnoBuild=c:\work\dev-tools\XPlatform\Main\Source\Build\UNO).
        The build-output subfolder name matches net9.0 for every head we target. -->
-  <ItemGroup>
+  <ItemGroup Condition="'$(InfragisticsUnoBuild)' != ''">
     <Reference Include="Infragistics.Core">
       <HintPath>$(InfragisticsUnoBuild)\net9.0\Infragistics.Core.dll</HintPath>
     </Reference>
