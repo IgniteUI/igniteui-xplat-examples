@@ -15,7 +15,8 @@ class TestsUpdateValueLayerPrecisionInSeriesAddedEvent {
         val o = CodeGenHelper.findByName<Any>("SeriesAddedValueLayerPrecision")
         var parser = JsonDictionaryParser();
         val obj = parser.parse(((o as JsonDictionaryValue).value as String)) as JsonDictionaryObject;
-        val precision = (obj["precision"] as JsonDictionaryValue).value as Int;
+        // The parser reads JSON numbers as Double.
+        val precision = ((obj["precision"] as JsonDictionaryValue).value as Number).toInt();
         if (args.series is IgaValueLayer) {
             val layer = args.series as IgaValueLayer
             layer.yAxisAnnotationInterpolatedValuePrecision = precision
