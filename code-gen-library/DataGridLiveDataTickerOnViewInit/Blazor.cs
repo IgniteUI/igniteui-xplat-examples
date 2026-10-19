@@ -194,17 +194,17 @@ public class DataGridLiveDataTickerOnViewInit
 
         var g = new IgbColumnGroupDescription();
         g.Field = "Category";
-        g.SortDirection = ListSortDirection.Descending;
+        g.SortDirection = IgniteUI.Blazor.Controls.ListSortDirection.Descending;
         grid.GroupDescriptions.Add(g);
 
         g = new IgbColumnGroupDescription();
         g.Field = "Type";
-        g.SortDirection = ListSortDirection.Descending;
+        g.SortDirection = IgniteUI.Blazor.Controls.ListSortDirection.Descending;
         grid.GroupDescriptions.Add(g);
 
         g = new IgbColumnGroupDescription();
         g.Field = "Contract";
-        g.SortDirection = ListSortDirection.Descending;
+        g.SortDirection = IgniteUI.Blazor.Controls.ListSortDirection.Descending;
         grid.GroupDescriptions.Add(g);
     }
     //end eventHandler

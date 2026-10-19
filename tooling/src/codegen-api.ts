@@ -1536,7 +1536,9 @@ function enqueueDotNetSiblings(content: string, library: any, seen: Set<string>,
     const names: string[] = library.getItemNames?.() ?? library.getKeys();
     for (const name of names) {
         if (isAccessibilityLibraryItem(name) || seen.has(name) ||
-            !new RegExp(`\\b${name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\b`).test(content)) continue;
+            // A JSON data item is referred to by the element class it emits, <name>Item, as often as
+            // by its own name.
+            !new RegExp(`\\b${name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}(?:Item)?\\b`).test(content)) continue;
         seen.add(name);
         queue.push(name);
     }
