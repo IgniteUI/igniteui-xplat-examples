@@ -37,18 +37,18 @@
        The XAML compiler loads every type a page names through these, and fails without a
        diagnostic when a dependency (Core.Layouts, say) is missing. -->
   <ItemGroup Condition="'$(InfragisticsWinUIBuild)' == ''">
-    <PackageReference Include="Infragistics.WinUI.Core.Trial" Version="26.1.1000-alpha.23" />
-    <PackageReference Include="Infragistics.WinUI.Charts.Trial" Version="26.1.1000-alpha.23" />
-    <PackageReference Include="Infragistics.WinUI.DataVisualization.Trial" Version="26.1.1000-alpha.23" />
-    <PackageReference Include="Infragistics.WinUI.DataGrid.Trial" Version="26.1.1000-alpha.23" />
-    <PackageReference Include="Infragistics.WinUI.Layouts.Trial" Version="26.1.1000-alpha.23" />
-    <PackageReference Include="Infragistics.WinUI.Inputs.Trial" Version="26.1.1000-alpha.23" />
-    <PackageReference Include="Infragistics.WinUI.Gauges.Trial" Version="26.1.1000-alpha.23" />
-    <PackageReference Include="Infragistics.WinUI.Dashboards.Trial" Version="26.1.1000-alpha.23" />
-    <PackageReference Include="Infragistics.WinUI.TreeMap.Trial" Version="26.1.1000-alpha.23" />
-    <PackageReference Include="Infragistics.WinUI.Sparkline.Trial" Version="26.1.1000-alpha.23" />
-    <PackageReference Include="Infragistics.WinUI.Maps.Trial" Version="26.1.1000-alpha.23" />
-    <PackageReference Include="Infragistics.WinUI.SkiaSharp.Trial" Version="26.1.1000-alpha.23" />
+    <PackageReference Include="Infragistics.WinUI.Core.Trial" Version="26.1.1000-alpha.24" />
+    <PackageReference Include="Infragistics.WinUI.Charts.Trial" Version="26.1.1000-alpha.24" />
+    <PackageReference Include="Infragistics.WinUI.DataVisualization.Trial" Version="26.1.1000-alpha.24" />
+    <PackageReference Include="Infragistics.WinUI.DataGrid.Trial" Version="26.1.1000-alpha.24" />
+    <PackageReference Include="Infragistics.WinUI.Layouts.Trial" Version="26.1.1000-alpha.24" />
+    <PackageReference Include="Infragistics.WinUI.Inputs.Trial" Version="26.1.1000-alpha.24" />
+    <PackageReference Include="Infragistics.WinUI.Gauges.Trial" Version="26.1.1000-alpha.24" />
+    <PackageReference Include="Infragistics.WinUI.Dashboards.Trial" Version="26.1.1000-alpha.24" />
+    <PackageReference Include="Infragistics.WinUI.TreeMap.Trial" Version="26.1.1000-alpha.24" />
+    <PackageReference Include="Infragistics.WinUI.Sparkline.Trial" Version="26.1.1000-alpha.24" />
+    <PackageReference Include="Infragistics.WinUI.Maps.Trial" Version="26.1.1000-alpha.24" />
+    <PackageReference Include="Infragistics.WinUI.SkiaSharp.Trial" Version="26.1.1000-alpha.24" />
   </ItemGroup>
 
   <!-- Or a dev-tools Build output, when $(InfragisticsWinUIBuild) names one
