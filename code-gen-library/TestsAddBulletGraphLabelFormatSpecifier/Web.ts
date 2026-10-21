@@ -11,10 +11,10 @@ export class TestsAddBulletGraphLabelFormatSpecifier
         var gauge = CodeGenHelper.getDescription<IgcBulletGraphComponent>("content");
         const jVal = CodeGenHelper.findByName<any>("GaugeLabelFormatSpecifier");
         var numSpec = new IgcNumberFormatSpecifier();
-        const formatterInfo = JSON.parse(jVal.value);
+        const formatterInfo = JSON.parse(jVal.value) as Record<string, any>;
         const keys = Object.keys(formatterInfo);
         keys.forEach((prop) => {  
-            const v = formatterInfo[prop];
+            let v = formatterInfo[prop];
             if (v != null){     
                 switch (prop) {
                     case "MaximumFractionDigits":

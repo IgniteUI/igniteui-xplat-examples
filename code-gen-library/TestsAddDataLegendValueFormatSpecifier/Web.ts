@@ -11,10 +11,10 @@ export class TestsAddDataLegendValueFormatSpecifier
         var legend = CodeGenHelper.getDescription<IgcDataLegendComponent>("secondary");
         const jVal = CodeGenHelper.findByName<any>("DataLegendValueFormatSpecifier");
         var numSpec = new IgcNumberFormatSpecifier();
-        const formatterInfo = JSON.parse(jVal.value);
+        const formatterInfo = JSON.parse(jVal.value) as Record<string, any>;
         const keys = Object.keys(formatterInfo);
         keys.forEach((prop) => {  
-            const v = formatterInfo[prop];
+            let v = formatterInfo[prop];
             if (v != null){     
                 switch (prop) {
                     case "MaximumFractionDigits":

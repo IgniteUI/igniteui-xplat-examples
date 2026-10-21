@@ -1,57 +1,30 @@
 namespace Infragistics.Samples
 {
     //begin data
-    // NOTE: Modeled on Web.ts (per guidance to defer to the web version when the platform sources
-    // disagree). The WPF/GTK/WinUI/WinForms versions of TestScatterShapeData8 use a DIFFERENT shape:
-    // a bare List<List<Point>> of 4 rectangles (coords 10..90, no Points member). Web.ts instead has a
-    // SINGLE item whose Points property holds 3 shapes (coords -40..40). This Blazor version matches
-    // Web.ts so the JS shape series renders. If the test that consumes TestScatterShapeData8 asserts
-    // against the WPF (4-rectangle) data, revisit this entry.
-    using System;
-	using System.Windows;
-    using System.Collections.Generic;
     using IgniteUI.Blazor.Controls;
+    using System.Collections.Generic;
 
-    public class TestScatterShapeData8 : List<ValuePoint8>
-	{
-		public TestScatterShapeData8() {
+    public class TestScatterShapeData8 : List<List<Point>>
+    {
+        public TestScatterShapeData8()
+        {
+            AddRing(10, 10, 10, 40, 40, 40, 40, 10);
+            AddRing(60, 10, 60, 40, 90, 40, 90, 10);
+            AddRing(10, 60, 10, 90, 40, 90, 40, 60);
+            AddRing(60, 60, 60, 90, 90, 90, 90, 60);
+        }
 
-			var shapes = new List<List<Point>>();
-
-			var l = new List<Point>();
-			l.Add(new Point(-40,20));
-			l.Add(new Point(-40,40));
-			l.Add(new Point(40,40));
-			l.Add(new Point(40,20));
-			l.Add(new Point(-40,20));
-			shapes.Add(l);
-
-			l = new List<Point>();
-			l.Add(new Point(-40,-10));
-			l.Add(new Point(-40,10));
-			l.Add(new Point(40,10));
-			l.Add(new Point(40,-10));
-			l.Add(new Point(-40,-10));
-			shapes.Add(l);
-
-			l = new List<Point>();
-			l.Add(new Point(-40,-20));
-			l.Add(new Point(-40,-40));
-			l.Add(new Point(40,-40));
-			l.Add(new Point(40,-20));
-			l.Add(new Point(-40,-20));
-			shapes.Add(l);
-
-			this.Add(new ValuePoint8(shapes));
-
-		}
-	}
-	public class ValuePoint8{
-		public  List<List<Point>> Points { get;set;}
-		public ValuePoint8(List<List<Point>> shapes)
-		{
-			Points = shapes;
-		}
-	}
+        private void AddRing(double x1, double y1, double x2, double y2,
+            double x3, double y3, double x4, double y4)
+        {
+            Add(new List<Point>
+            {
+                new Point(x1, y1),
+                new Point(x2, y2),
+                new Point(x3, y3),
+                new Point(x4, y4)
+            });
+        }
+    }
     //end data
 }

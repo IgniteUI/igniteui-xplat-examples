@@ -561,10 +561,10 @@ async function main() {
             execFileSync('dotnet', ['build', path.join(output, 'BlazorLibrary.csproj'),
                 '--configuration', 'Release', '--nologo'], { cwd: output, stdio: 'inherit' });
         } else {
+            const jsxArgs = opts.platform === 'React' ? ['--jsx', 'react-jsx'] : [];
             execFileSync(process.execPath, [path.join(TOOLING_ROOT, 'node_modules', 'typescript', 'bin', 'tsc'),
                 '--noEmit', '--skipLibCheck', '--strict', 'false', '--moduleResolution', 'bundler',
-                '--module', 'preserve', '--target', 'es2022', '--jsx', 'react-jsx',
-                path.join(output, 'libraryManager.ts')],
+                '--module', 'preserve', '--target', 'es2022', ...jsxArgs, path.join(output, 'libraryManager.ts')],
                 { cwd: TOOLING_ROOT, stdio: 'inherit' });
         }
         console.log(`[${opts.platform}] compiled ${Object.keys(emitted.files).length} emitted library file(s)`);
