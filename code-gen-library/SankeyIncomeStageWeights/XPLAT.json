@@ -1,0 +1,6 @@
+[
+{ "Stage": "Income", "Weight": 1 },
+{ "Stage": "Budget", "Weight": 4 },
+{ "Stage": "Bucket", "Weight": 2 },
+{ "Stage": "Detail", "Weight": 3 }
+]
