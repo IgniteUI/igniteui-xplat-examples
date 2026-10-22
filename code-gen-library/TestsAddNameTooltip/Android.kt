@@ -24,8 +24,24 @@ public class TestsAddNameTooltip {
                             cv = tv;
                             args!!.currentView = cv;
                         }
-                        val item = args!!.currentData!!.item as Map<String?,Any?>;
-                        (cv as android.widget.TextView).text = item["Name"] as String;
+                        val item = args.currentData?.item
+                        val name = when (item) {
+                            is Map<*, *> -> item["Name"]
+                            null -> null
+                            else -> {
+                                val getter = item.javaClass.methods.firstOrNull {
+                                    it.name == "getName" && it.parameterTypes.isEmpty()
+                                }
+                                if (getter != null) {
+                                    getter.invoke(item)
+                                } else {
+                                    item.javaClass.methods.firstOrNull {
+                                        it.name == "get" && it.parameterTypes.size == 1 && it.parameterTypes[0].isAssignableFrom(String::class.java)
+                                    }?.invoke(item, "Name")
+                                }
+                            }
+                        }
+                        (cv as android.widget.TextView).text = name?.toString().orEmpty()
                     }
                 }
             }
