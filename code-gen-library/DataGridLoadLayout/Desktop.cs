@@ -7,15 +7,14 @@ using Infragistics.Controls.Grids;
 public class DataGridLoadLayout
 {
     //begin eventHandler
-    public string SavedLayout = "";
-
     //WPF: Infragistics.Controls.Layouts.PropertyEditorPropertyDescriptionButtonClickEventHandler
     public void DataGridLoadLayout(object sender, PropertyEditorPropertyDescriptionButtonClickEventArgs args)
     {
-        if (string.IsNullOrEmpty(this.SavedLayout)) return;
+        var state = CodeGenHelper.GetSharedSupporting<DataGridLayoutState>("DataGridLayoutState");
+        if (string.IsNullOrEmpty(state.SavedLayout)) return;
         var grid = CodeGenHelper.GetDescription<XamXGrid>("content");
         if (grid == null) return;
-        grid.LoadLayout(this.SavedLayout);
+        grid.LoadLayout(state.SavedLayout);
     }
     //end eventHandler
 }

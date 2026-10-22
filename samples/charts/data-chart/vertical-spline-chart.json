@@ -1,0 +1,83 @@
+{
+  "strings": {
+    "legendTitle": "Air Temperature by Altitude"
+  },
+  "hasAnimations": true,
+  "descriptions": {
+    "legend": {
+      "type": "Legend",
+      "name": "legend",
+      "orientation": "Horizontal"
+    },
+    "content": {
+      "type": "DataChart",
+      "name": "chart",
+      "legendRef": "legend",
+      "isHorizontalZoomEnabled": false,
+      "isVerticalZoomEnabled": false,
+      "axes": [
+        {
+          "type": "CategoryYAxis",
+          "name": "yAxis",
+          "label": "Altitude",
+          "dataSourceRef": "AtmosphereTemperatureByAltitude",
+          "interval": 1,
+          "isInverted": false
+        },
+        {
+          "type": "NumericXAxis",
+          "name": "xAxis",
+          "title": "Temperature (°C)"
+        }
+      ],
+      "series": [
+        {
+          "type": "CategoryHighlightLayer",
+          "name": "CategoryHighlightLayer"
+        },
+        {
+          "type": "VerticalSplineSeries",
+          "name": "VerticalSplineSeries1",
+          "title": "Standard Atmosphere",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "dataSourceRef": "AtmosphereTemperatureByAltitude",
+          "valueMemberPath": "Standard",
+          "markerType": "Circle",
+          "thickness": 2,
+          "showDefaultTooltip": false,
+          "isTransitionInEnabled": true,
+          "isHighlightingEnabled": true
+        },
+        {
+          "type": "VerticalSplineSeries",
+          "name": "VerticalSplineSeries2",
+          "title": "Tropical",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "dataSourceRef": "AtmosphereTemperatureByAltitude",
+          "valueMemberPath": "Tropical",
+          "markerType": "Circle",
+          "thickness": 2,
+          "showDefaultTooltip": false,
+          "isTransitionInEnabled": true,
+          "isHighlightingEnabled": true
+        },
+        {
+          "type": "DataToolTipLayer",
+          "name": "Tooltips",
+          "summaryType": "None"
+        }
+      ]
+    }
+  },
+  "modules": [
+    "charts/LegendModule",
+    "charts/DataChartCoreModule",
+    "charts/DataChartCategoryCoreModule",
+    "charts/DataChartCategoryModule",
+    "charts/DataChartInteractivityModule",
+    "charts/DataChartVerticalCategoryModule",
+    "charts/DataChartAnnotationModule"
+  ]
+}
