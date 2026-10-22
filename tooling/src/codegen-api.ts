@@ -374,6 +374,7 @@ export function emitProject(json: string, platformName: string, opts: EmitOption
         normalizeWebComponentsPackageImports(files);
     } else if (platformName === "Blazor") {
         normalizeBlazorProject(files);
+        includeBlazorProjectDataDependencies(files, opts.examplesRoot);
     }
     return { files, missingRefs: missingLibrary };
 }
@@ -1324,7 +1325,7 @@ function emitBlazorLibrary(platform: any, opts: {
             files[`${name}.cs`] = "using System;\nusing System.Collections.Generic;\n" +
                 "using System.Collections.ObjectModel;\nusing System.Linq;\n\n" + source;
             enqueueSiblings(source, library, seen, queue);
-            enqueueDotNetSiblings(source, library, seen, queue);
+            enqueueDotNetSiblings(source, library, seen, queue, excluded);
             tracked.push({ name, access: `new Tuple<Func<object>, Func<object>>(() => new ${name}(), () => new ${name}())` });
             dataItems++;
             continue;
@@ -1333,7 +1334,7 @@ function emitBlazorLibrary(platform: any, opts: {
             const source = emitted["supporting.cs"];
             if (source === undefined) { problems.push({ item: name, reason: "no supporting source emitted" }); continue; }
             files[`${name}.cs`] = source.split("PlaceholderHolder").join(`${name}Holder`);
-            enqueueDotNetSiblings(source, library, seen, queue);
+            enqueueDotNetSiblings(source, library, seen, queue, excluded);
             tracked.push({ name, access: `new Tuple<Func<object>, Func<object>>(() => new ${name}Holder(), () => new ${name}Holder())` });
             handlerItems++;
             continue;
@@ -1357,7 +1358,7 @@ function emitBlazorLibrary(platform: any, opts: {
             if (source === undefined) { problems.push({ item: name, reason: "no Razor source emitted" }); continue; }
             files[`${name}Holder.razor`] = qualifyBlazorApiNames(
                 source.split("PlaceholderHolder").join(`${name}Holder`));
-            enqueueDotNetSiblings(source, library, seen, queue);
+            enqueueDotNetSiblings(source, library, seen, queue, excluded);
             tracked.push({ name, access: `new Tuple<Func<object>, Func<object>>(() => new ${name}Holder(), () => new ${name}Holder().${name})` });
         }
         const css = emitted[`${stem}.css`];
@@ -1543,13 +1544,40 @@ function enqueueSiblings(content: string, library: any, seen: Set<string>, queue
  * references instead: when emitted content names another library item, that item must be part of the
  * same compilation just as a ./Sibling import makes it part of a web library compilation.
  */
-function enqueueDotNetSiblings(content: string, library: any, seen: Set<string>, queue: string[]): void {
+function enqueueDotNetSiblings(content: string, library: any, seen: Set<string>, queue: string[],
+    excluded: Set<string>): void {
     const names: string[] = library.getItemNames?.() ?? library.getKeys();
     for (const name of names) {
-        if (isAccessibilityLibraryItem(name) || seen.has(name) ||
+        // `excluded` carries the caller's opts.exclude. A sibling pulled in here is added to the
+        // same compilation as the item that named it, so an excluded item reached this way would
+        // be emitted anyway and defeat the exclusion.
+        if (excluded.has(name) || isAccessibilityLibraryItem(name) || seen.has(name) ||
             !new RegExp(`\\b${name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\b`).test(content)) continue;
         seen.add(name);
         queue.push(name);
+    }
+}
+
+/** Standalone samples need the same referenced data classes as a subset library. */
+function includeBlazorProjectDataDependencies(files: Record<string, string>, examplesRoot: string): void {
+    const library = libraryFor(examplesRoot);
+    const seen = new Set(Object.keys(files).map(file => path.basename(file, path.extname(file))));
+    const queue: string[] = [];
+    for (const [file, content] of Object.entries(files)) {
+        if (!file.endsWith('.cs') && !file.endsWith('.razor')) continue;
+        enqueueDotNetSiblings(content, library, seen, queue, new Set());
+    }
+    if (queue.length === 0) return;
+    const dependencies = emitLibrary('Blazor', {
+        examplesRoot,
+        templatesRoot: path.join(examplesRoot, 'tooling', 'library-templates'),
+        only: queue,
+    });
+    if (dependencies.problems.length > 0) {
+        throw new Error(dependencies.problems.map(one => `${one.item}: ${one.reason}`).join('\n'));
+    }
+    for (const [file, content] of Object.entries(dependencies.files)) {
+        if (file.endsWith('.cs') && file !== 'LibraryManager.cs') files[file] = content;
     }
 }
 
