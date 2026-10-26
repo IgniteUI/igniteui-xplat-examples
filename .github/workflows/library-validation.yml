@@ -29,7 +29,7 @@ jobs:
       - uses: actions/checkout@v7
         with:
           fetch-depth: 0
-      - uses: actions/setup-node@v6
+      - uses: actions/setup-node@v7
         with:
           node-version: 24
           cache: npm
@@ -50,7 +50,7 @@ jobs:
           ${{ inputs.full && '--all' || format('--changed-since={0}', github.event.pull_request.base.sha || 'HEAD^') }}
       - name: Keep emitted sources
         if: always()
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: emitted-library-${{ matrix.platform }}
           path: tooling/.generated/library/${{ matrix.platform }}
