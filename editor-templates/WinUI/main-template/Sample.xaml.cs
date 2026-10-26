@@ -34,6 +34,10 @@ public sealed partial class Sample : UserControl, INotifyPropertyChanged
         DataContext = this;
 
         this.Loaded += (s, e) => {
+//ifdef bindingCode
+            //insert bindingCode
+            //end bindingCode
+//endifdef bindingCode
 //ifdef contentCode
             //insert contentCode
             //end contentCode
@@ -64,7 +68,7 @@ public sealed partial class Sample : UserControl, INotifyPropertyChanged
     //end templateSupportingMethods
 
     public event PropertyChangedEventHandler PropertyChanged;
-    protected void OnPropertyChanged(string propertyName)
+    private void OnPropertyChanged(string propertyName)
     {
         PropertyChangedEventHandler handler = PropertyChanged;
         if (handler != null)

@@ -465,6 +465,80 @@ test('emits and type-compiles a library item on every hosted web platform', () =
     }
 });
 
+test('type-compiles React JSX handlers and Angular JSON format handlers', () => {
+    execFileSync(process.execPath, [
+        CLI, 'library-check', '--platform=React',
+        '--only=TestsAddNameTooltip,TestsAddStaticTextTooltip',
+    ], { cwd: ROOT, stdio: 'pipe' });
+    execFileSync(process.execPath, [
+        CLI, 'library-check', '--platform=Angular',
+        '--only=TestsAddBulletGraphLabelFormatSpecifier,TestsAddDataLegendValueFormatSpecifier,TestsAddGaugeLabelFormatSpecifier',
+    ], { cwd: ROOT, stdio: 'pipe' });
+});
+
+test('emits Blazor CSS when a style-only handler intentionally omits its script', () => {
+    const emitted = emitLibrary('Blazor', {
+        examplesRoot: path.resolve(ROOT, '..'),
+        templatesRoot: path.join(ROOT, 'library-templates'),
+        only: ['ChartStyleTest'],
+    });
+
+    assert.deepEqual(emitted.problems, []);
+    assert.match(emitted.files['ChartStyleTest.css'], /--title-text-color:\s*red/);
+    assert.equal(emitted.files['ChartStyleTest.js'], undefined);
+    assert.doesNotMatch(emitted.manager, /ChartStyleTest/);
+});
+
+test('emits Blazor data types required by changed handlers and shape data items', () => {
+    const emitted = emitLibrary('Blazor', {
+        examplesRoot: path.resolve(ROOT, '..'),
+        templatesRoot: path.join(ROOT, 'library-templates'),
+        only: [
+            'CategoryChartCustomSelectionPointerDown',
+            'TestScatterShapeData1',
+            'TestScatterShapeData8',
+        ],
+    });
+
+    assert.deepEqual(emitted.problems, []);
+    assert.match(emitted.files['SelectableData.cs'], /class SelectableData\b/);
+    assert.match(emitted.files['TestScatterShapeData1.cs'], /class TestScatterShapeData1\b/);
+    assert.match(emitted.files['TestScatterShapeData8.cs'], /class TestScatterShapeData8\b/);
+});
+
+test('temporarily skips accessibility items during library emission', () => {
+    for (const platform of ['Angular', 'React', 'WebComponents', 'Blazor', 'WinUI', 'Uno']) {
+        const emitted = emitLibrary(platform, {
+            examplesRoot: path.resolve(ROOT, '..'),
+            templatesRoot: path.join(ROOT, 'library-templates'),
+            only: ['SalesData', 'AccessibilityFutureItem', 'TestsAccessibilityNodeAddAction'],
+        });
+
+        assert.deepEqual(emitted.problems, []);
+        assert.equal(Object.keys(emitted.files)
+            .some(name => name.startsWith('TestsAccessibilityNodeAddAction')), false);
+        assert.doesNotMatch(emitted.manager, /TestsAccessibilityNodeAddAction/);
+        assert.ok(emitted.files[`SalesData.${['Angular', 'React', 'WebComponents'].includes(platform) ? 'ts' : 'cs'}`]);
+    }
+});
+
+test('emits JSX tooltip handlers as TSX and type-compiles their library', () => {
+    const emitted = emitLibrary('React', {
+        examplesRoot: path.resolve(ROOT, '..'),
+        templatesRoot: path.join(ROOT, 'library-templates'),
+        only: ['TestsAddNameTooltip', 'TestsAddStaticTextTooltip'],
+    });
+    assert.deepEqual(emitted.problems, []);
+    for (const item of ['TestsAddNameTooltip', 'TestsAddStaticTextTooltip']) {
+        assert.ok(emitted.files[`${item}.tsx`], item);
+        assert.equal(emitted.files[`${item}.ts`], undefined);
+    }
+    execFileSync(process.execPath, [
+        CLI, 'library-check', '--platform=React',
+        '--only=TestsAddNameTooltip,TestsAddStaticTextTooltip',
+    ], { cwd: ROOT, stdio: 'pipe' });
+});
+
 test('emits a Blazor Razor library with data, handlers, manager, and project', () => {
     const output = fs.mkdtempSync(path.join(os.tmpdir(), 'xplat-blazor-library-test-'));
     try {
@@ -519,4 +593,25 @@ test('emits WinUI and Uno libraries through the native product renderers', () =>
             fs.rmSync(output, { recursive: true, force: true });
         }
     }
+});
+
+test('includes the data classes referenced by a selected Blazor library item', () => {
+    const emitted = emitLibrary('Blazor', {
+        examplesRoot: path.resolve(ROOT, '..'),
+        templatesRoot: path.join(ROOT, 'library-templates'),
+        only: ['RetailSalesPerformanceLocalDataSource', 'DataGridLiveDataTickerOnViewInit'],
+    });
+    assert.deepEqual(emitted.problems, []);
+    assert.match(emitted.files['RetailSalesPerformanceData.cs'], /class RetailSalesPerformanceDataItem/);
+    assert.match(emitted.files['PortfolioData.cs'], /class PortfolioDataItem/);
+});
+
+test('includes referenced data classes in a standalone Blazor dashboard sample', () => {
+    const examplesRoot = path.resolve(ROOT, '..');
+    const emitted = emitProject(fs.readFileSync(path.join(examplesRoot,
+        'samples/charts/dashboard-tile/local-data-source-dashboard.json'), 'utf8'),
+    'Blazor', { examplesRoot });
+    assert.match(emitted.files['RetailSalesPerformanceLocalDataSource.cs'], /RetailSalesPerformanceDataItem/);
+    assert.match(emitted.files['RetailSalesPerformanceData.cs'], /class RetailSalesPerformanceDataItem/);
+    assert.equal(emitted.files['LibraryManager.cs'], undefined);
 });
