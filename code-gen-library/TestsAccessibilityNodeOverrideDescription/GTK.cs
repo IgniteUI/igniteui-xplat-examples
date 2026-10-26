@@ -7,7 +7,7 @@ public class TestsAccessibilityNodeOverrideDescription
 {
 
     //begin eventHandler
-    //WPF: Infragistics.Controls.Charts.AccessibilityNodeCreatingEventHandler
+    //WPF: Infragistics.Controls.AccessibilityNodeCreatingEventHandler
     public void TestsAccessibilityNodeOverrideDescription(object sender, AccessibilityNodeCreatingEventArgs args)
     {
         if (args.Node != null && args.Node.Role == AccessibilityRole.Item)

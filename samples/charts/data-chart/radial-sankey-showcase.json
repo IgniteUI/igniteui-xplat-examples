@@ -1,0 +1,78 @@
+{
+  "strings": {
+    "title": "Radial Budget Flow with Node Labels"
+  },
+  "hasAnimations": true,
+  "descriptions": {
+    "content": {
+      "type": "DataChart",
+      "name": "chart",
+      "isHorizontalZoomEnabled": true,
+      "isVerticalZoomEnabled": true,
+      "highlightingMode": "FadeOthersSpecific",
+      "highlightingBehavior": "DirectlyOver",
+      "axes": [
+        {
+          "type": "CategoryAngleAxis",
+          "name": "angleAxis",
+          "dataSourceRef": "SankeyIncomeStages",
+          "label": "Stage",
+          "areLabelsVisible": false,
+          "tickLength": 0,
+          "stroke": "Transparent",
+          "majorStroke": "Transparent"
+        },
+        {
+          "type": "NumericRadiusAxis",
+          "name": "radiusAxis",
+          "areLabelsVisible": false,
+          "tickLength": 0,
+          "stroke": "Transparent",
+          "majorStroke": "Transparent"
+        }
+      ],
+      "series": [
+        {
+          "type": "RadialSankeySeries",
+          "name": "radialSankey",
+          "title": "Budget Flow",
+          "angleAxisRef": "angleAxis",
+          "radiusAxisRef": "radiusAxis",
+          "linkSourceRef": "SankeyIncomeFlow",
+          "linkSourceMemberPath": "Source",
+          "linkTargetMemberPath": "Target",
+          "linkValueMemberPath": "Value",
+          "useItemWiseColors": true,
+          "thickness": 0,
+          "nodeGap": 250,
+          "areaFillOpacity": 0.7,
+          "isTransitionInEnabled": true
+        },
+        {
+          "type": "CalloutLayer",
+          "name": "nodeLabels",
+          "targetSeriesRef": "radialSankey",
+          "isAutoCalloutBehaviorEnabled": true,
+          "useValueForAutoCalloutLabels": false,
+          "calloutCollisionMode": "RadialOutsideEnd",
+          "useItemColorForOutline": true,
+          "calloutStrokeThickness": 2,
+          "calloutTextColor": "Black",
+          "calloutBackground": "White"
+        },
+        {
+          "type": "DataToolTipLayer",
+          "name": "tooltips"
+        }
+      ]
+    }
+  },
+  "modules": [
+    "charts/DataChartCoreModule",
+    "charts/DataChartRadialCoreModule",
+    "charts/DataChartFlowModule",
+    "charts/DataChartInteractivityModule",
+    "charts/DataChartAnnotationModule",
+    "charts/AnnotationLayerProxyModule"
+  ]
+}

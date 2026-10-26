@@ -1,0 +1,84 @@
+{
+  "strings": {
+    "legendTitle": "Population by Age Group"
+  },
+  "hasAnimations": true,
+  "descriptions": {
+    "legend": {
+      "type": "Legend",
+      "name": "legend",
+      "orientation": "Horizontal"
+    },
+    "content": {
+      "type": "DataChart",
+      "name": "chart",
+      "legendRef": "legend",
+      "isHorizontalZoomEnabled": false,
+      "isVerticalZoomEnabled": false,
+      "axes": [
+        {
+          "type": "CategoryYAxis",
+          "name": "yAxis",
+          "label": "AgeGroup",
+          "dataSourceRef": "PopulationByAgeGroup",
+          "interval": 1,
+          "isInverted": false
+        },
+        {
+          "type": "NumericXAxis",
+          "name": "xAxis",
+          "title": "Population (millions)",
+          "minimumValue": 0
+        }
+      ],
+      "series": [
+        {
+          "type": "CategoryHighlightLayer",
+          "name": "CategoryHighlightLayer"
+        },
+        {
+          "type": "VerticalAreaSeries",
+          "name": "VerticalAreaSeries1",
+          "title": "1990",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "dataSourceRef": "PopulationByAgeGroup",
+          "valueMemberPath": "Year1990",
+          "areaFillOpacity": 0.5,
+          "thickness": 2,
+          "showDefaultTooltip": false,
+          "isTransitionInEnabled": true,
+          "isHighlightingEnabled": true
+        },
+        {
+          "type": "VerticalAreaSeries",
+          "name": "VerticalAreaSeries2",
+          "title": "2025",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "dataSourceRef": "PopulationByAgeGroup",
+          "valueMemberPath": "Year2025",
+          "areaFillOpacity": 0.5,
+          "thickness": 2,
+          "showDefaultTooltip": false,
+          "isTransitionInEnabled": true,
+          "isHighlightingEnabled": true
+        },
+        {
+          "type": "DataToolTipLayer",
+          "name": "Tooltips",
+          "summaryType": "None"
+        }
+      ]
+    }
+  },
+  "modules": [
+    "charts/LegendModule",
+    "charts/DataChartCoreModule",
+    "charts/DataChartCategoryCoreModule",
+    "charts/DataChartCategoryModule",
+    "charts/DataChartInteractivityModule",
+    "charts/DataChartVerticalCategoryModule",
+    "charts/DataChartAnnotationModule"
+  ]
+}

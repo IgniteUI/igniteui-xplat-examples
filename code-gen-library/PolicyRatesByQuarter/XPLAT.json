@@ -1,0 +1,16 @@
+[
+{ "Quarter": "Q1 2022", "Federal": 0.50, "European": 0.00 },
+{ "Quarter": "Q2 2022", "Federal": 1.75, "European": 0.00 },
+{ "Quarter": "Q3 2022", "Federal": 3.25, "European": 1.25 },
+{ "Quarter": "Q4 2022", "Federal": 4.50, "European": 2.50 },
+{ "Quarter": "Q1 2023", "Federal": 5.00, "European": 3.50 },
+{ "Quarter": "Q2 2023", "Federal": 5.25, "European": 4.00 },
+{ "Quarter": "Q3 2023", "Federal": 5.50, "European": 4.50 },
+{ "Quarter": "Q4 2023", "Federal": 5.50, "European": 4.50 },
+{ "Quarter": "Q1 2024", "Federal": 5.50, "European": 4.50 },
+{ "Quarter": "Q2 2024", "Federal": 5.50, "European": 4.25 },
+{ "Quarter": "Q3 2024", "Federal": 5.00, "European": 3.65 },
+{ "Quarter": "Q4 2024", "Federal": 4.50, "European": 3.15 },
+{ "Quarter": "Q1 2025", "Federal": 4.50, "European": 2.65 },
+{ "Quarter": "Q2 2025", "Federal": 4.50, "European": 2.15 }
+]

@@ -1,0 +1,81 @@
+{
+ "strings": {
+  "title": "Monthly Budget Flow"
+ },
+ "hasAnimations": true,
+ "descriptions": {
+  "content": {
+   "type": "DataChart",
+   "name": "chart",
+   "isHorizontalZoomEnabled": true,
+   "isVerticalZoomEnabled": true,
+   "plotAreaMarginRight": 180,
+   "highlightingMode": "FadeOthersSpecific",
+   "highlightingBehavior": "DirectlyOver",
+   "axes": [
+    {
+     "type": "CategoryXAxis",
+     "name": "xAxis",
+     "dataSourceRef": "SankeyHouseholdStages",
+     "label": "Stage",
+     "areLabelsVisible": false,
+     "tickLength": 0,
+     "stroke": "Transparent",
+     "majorStroke": "Transparent"
+    },
+    {
+     "type": "NumericYAxis",
+     "name": "yAxis",
+     "areLabelsVisible": false,
+     "tickLength": 0,
+     "stroke": "Transparent",
+     "majorStroke": "Transparent"
+    }
+   ],
+   "series": [
+    {
+     "type": "SankeySeries",
+     "name": "sankey",
+     "title": "Monthly Budget",
+     "xAxisRef": "xAxis",
+     "yAxisRef": "yAxis",
+     "dataSourceRef": "SankeyHouseholdNodes",
+     "nodeIdMemberPath": "Id",
+     "nodeLabelMemberPath": "Label",
+     "nodeLayerMemberPath": "Layer",
+     "linkSourceRef": "SankeyHouseholdLinks",
+     "linkSourceMemberPath": "Source",
+     "linkTargetMemberPath": "Target",
+     "linkValueMemberPath": "Value",
+     "useItemWiseColors": true,
+     "thickness": 0,
+     "areaFillOpacity": 0.7,
+     "isTransitionInEnabled": true
+    },
+    {
+     "type": "CalloutLayer",
+     "name": "nodeLabels",
+     "targetSeriesRef": "sankey",
+     "isAutoCalloutBehaviorEnabled": true,
+     "useValueForAutoCalloutLabels": false,
+     "useItemColorForOutline": true,
+     "calloutStrokeThickness": 2,
+     "calloutTextColor": "Black",
+     "calloutBackground": "White"
+    },
+    {
+     "type": "DataToolTipLayer",
+     "name": "tooltips"
+    }
+   ]
+  }
+ },
+ "modules": [
+  "charts/DataChartCoreModule",
+  "charts/DataChartCategoryCoreModule",
+  "charts/DataChartFlowModule",
+  "charts/DataChartInteractivityModule",
+  "charts/DataChartAnnotationModule",
+  "charts/AnnotationLayerProxyModule"
+ ]
+}
