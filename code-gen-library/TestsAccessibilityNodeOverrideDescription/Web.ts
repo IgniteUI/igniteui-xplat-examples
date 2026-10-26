@@ -7,7 +7,7 @@ export class TestsAccessibilityNodeOverrideDescription {
     //begin eventHandler
     public testsAccessibilityNodeOverrideDescription(sender: any, args: IgcAccessibilityNodeCreatingEventArgs): void {
         if (args.node != null && args.node.role == AccessibilityRole.Item) {
-            args.node.description = "custom override";
+            args.node.descriptionText = "custom override";
         }
     }
     //end eventHandler
