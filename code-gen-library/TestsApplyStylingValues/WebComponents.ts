@@ -1,4 +1,5 @@
 //begin imports
+import { toSpinal } from 'igniteui-webcomponents-core';
 //end imports
 
 export class TestsApplyStylingValues
@@ -13,7 +14,8 @@ export class TestsApplyStylingValues
         var jVal = CodeGenHelper.findByName<any>("StylingValues");
         var values = JSON.parse(jVal.value) as Record<string, string>;
         for (const propertyName of Object.keys(values)) {
-            var cssName = "--" + propertyName.replace(/([a-z0-9])([A-Z])/g, "$1-$2").toLowerCase();
+            // The name the component reads the CSS custom property by: its property name, in spinal case.
+            var cssName = "--" + toSpinal(propertyName.charAt(0).toLowerCase() + propertyName.substring(1));
             (target as HTMLElement).style.setProperty(cssName, values[propertyName]);
         }
         target.styleUpdated();
