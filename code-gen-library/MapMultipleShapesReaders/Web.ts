@@ -51,8 +51,6 @@ export class MapMultipleShapesReaders {
                 name: record.fieldValues.Name,
                 capacity: record.fieldValues.CapacityG,
                 distance: record.fieldValues.DistanceKM,
-                isOverLand: record.fieldValues.OverLand === 0,
-                isActive: record.fieldValues.NotLive !== 0,
                 service: record.fieldValues.InService
             });
         }

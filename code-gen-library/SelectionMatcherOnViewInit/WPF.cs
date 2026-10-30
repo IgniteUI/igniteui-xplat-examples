@@ -59,11 +59,11 @@ public class SelectionMatcherOnViewInit
 		SeriesMatcher matcher2 = new SeriesMatcher();
 		ChartSelection selection2 = new ChartSelection();
 		selection2 = new ChartSelection();
-		selection2.Item = ((IList)chart.ItemsSource)[1];
+		selection2.Item = ((IList)chart.ItemsSource)[2];
 		matcher2.MemberPath = "Wind";
 		matcher2.MemberPathType = "ValueMemberPath";
 				
-		selection.Matcher = matcher2;
+		selection2.Matcher = matcher2;
 				
 		chart.SelectedSeriesItems.Add(selection2);
 	}
