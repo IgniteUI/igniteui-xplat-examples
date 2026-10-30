@@ -1,0 +1,53 @@
+/* shared styles are loaded from: */
+/* https://dl.infragistics.com/x/css/samples/shared.v8.css */
+// ifdef templateStyles
+// insert templateStyles
+
+// end templateStyles
+// endifdef templateStyles
+// insert handlersStyles
+
+// end handlersStyles
+// ifdef aboveContentLeft, aboveContentRight
+.aboveContentSplit {
+    display: flex;
+    flex-direction: row;
+}
+.aboveContentLeftContainer {
+    margin-left: 1.25rem;
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+.aboveContentRightContainer {
+    margin-right: 1.25rem;
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+// endifdef aboveContentLeft, aboveContentRight
+// ifdef leftContent, rightContent
+.contentSplit {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+}
+.leftContentContainer {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: stretch;
+}
+.rightContentContainer {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: stretch;
+}
+// endifdef leftContent, rightContent
+// ifdef belowContent
+.belowContent {
+    display: flex;
+    flex-direction: column;
+}
+// endifdef belowContent
