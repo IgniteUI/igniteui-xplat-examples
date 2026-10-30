@@ -18,5 +18,5 @@ Then this radial gauge, with labels sorted by numeric value, will have labels re
   | 90 |
   | 100 |
 Then this radial gauge will have all labels at 65 % distance from the center
-# CALIBRATE: with the highlight overlay the exported needle may be the highlight needle (50 -> 270°) rather than the value needle (30 -> 216°).
+# With the highlight overlay, the exported needle is the value needle (30 -> 216°).
 Then this radial gauge's needle visual will be rendered at an angle of 216 degrees

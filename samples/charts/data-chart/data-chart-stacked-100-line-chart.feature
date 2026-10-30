@@ -3,7 +3,7 @@ Then this legend will have items with text: Asia,Africa,Europe,North America,Sou
 When we are talking about the axis with name xAxis
 Then this axis will have labels visible with these values: 1950, 1960, 1970, 1980, 1990, 2000, 2010, 2020
 When we are talking about the axis with name yAxis
-# CALIBRATE: the stacked-100 value axis is auto-ranged; 0-100 with the configured interval 20 and "{0}%" format is assumed.
+# The stacked-100 value axis is auto-ranged to 0-100, labelled every 20 in the "{0}%" format.
 Then this axis will have labels visible with these values: 100%, 80%, 60%, 40%, 20%, 0%
 # Fragment shapes are read back as the stacked (cumulative) top of each fragment, in fragment order.
 When we are talking about the series with name s1

@@ -9,7 +9,7 @@ Then this series shapes will match the Russia column of sample data named Olympi
 When we are talking about the axis with name xAxis
 Then this axis will have labels visible with these values: 1996, 2000, 2004, 2008, 2012, 2016
 # The data legend shows the last category until the pointer moves over the chart.
-# CALIBRATE: default value formatting and the group Total summary row
+# Values use the default formatting, and the group ends with a Total summary row.
 Then this data legend will have data rows with the following values:
   | BadgeType | Text | ValueText | Units | RowType |
   |  | 2016 |  |  | Header |
@@ -20,7 +20,7 @@ Then this data legend will have data rows with the following values:
   |  | Total | 346 |  | Summary |
 When we are talking about the series with name ColumnSeries1
 When the user hovers slightly below the category point with label 2008
-# CALIBRATE: default value formatting and the group Total summary row
+# Values use the default formatting, and the group ends with a Total summary row.
 Then this data legend will have data rows with the following values:
   | BadgeType | Text | ValueText | Units | RowType |
   |  | 2008 |  |  | Header |

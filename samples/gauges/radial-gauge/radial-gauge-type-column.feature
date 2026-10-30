@@ -20,8 +20,8 @@ Then this radial gauge, with labels sorted by numeric value, will have labels re
   | 330 |
 Then this radial gauge will have all labels at 85 % distance from the center
 Then this radial gauge will have labels with the font 'Verdana'
-# CALIBRATE: font is '15px Verdana'; the exported label FontSize unit (px vs pt) on this platform is unverified.
+# The font is '15px Verdana'; labels export their font size in pixels.
 Then this radial gauge will have abels will have font size 15
 Then this radial gauge's scale is colored #E0DFDF
-# CALIBRATE: needleShape None may export an empty needle path, which the needle analyzer does not expect.
+# needleShape None: the gauge displays no needle.
 Then this radial gauge's needle is not displayed

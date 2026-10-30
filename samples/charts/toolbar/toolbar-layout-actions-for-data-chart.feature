@@ -18,8 +18,8 @@ Then the toolbar action "EnableCrosshairsLabel" will have title "Enable Crosshai
 Then the toolbar action "EnableFinalValuesLabel" will have title "Enable Final Values"
 Then the toolbar action "EnableCrosshairsLabel" will not be checked
 And this domain chart will not have a crosshair layer
-# CALIBRATE: the click path into the sub panel (whether CustomSubPanelTools is a path level), and that the host wires
-# the sample's onCommandRef handler (ToolbarToggleAnnotations), which adds a CrosshairLayer / FinalValueLayer.
+# CustomSubPanelTools is a level of the click path into the sub panel, and the sample's onCommandRef handler
+# (ToolbarToggleAnnotations) adds the CrosshairLayer and the FinalValueLayer.
 When we simulate a click on toolbar action path "MenuForSubPanelTool, CustomSubPanelTools, EnableCrosshairsLabel"
 Then the toolbar action "EnableCrosshairsLabel" will be checked
 And this domain chart will have a crosshair layer

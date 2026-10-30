@@ -3,7 +3,7 @@
 When we are talking about the axis with name xAxis
 Then this axis will cross axis named yAxis at value 0
 Then this axis range will have a minimum value of -360 and a maximum value of 360
-# CALIBRATE: the 0 label may be suppressed where the crossing axes meet
+# The 0 label is shown where the crossing axes meet.
 Then this axis will have labels visible with these values: -360, -320, -280, -240, -200, -160, -120, -80, -40, 0, 40, 80, 120, 160, 200, 240, 280, 320, 360
 Then this axis will have a line with thickness of 1 pixels
 Then this axis will have a line with Black color

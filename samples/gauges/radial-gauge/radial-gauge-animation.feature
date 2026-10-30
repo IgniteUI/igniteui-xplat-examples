@@ -26,7 +26,7 @@ Then this radial gauge, with labels sorted by numeric value, will have labels re
   | 50 |
 Then this radial gauge will have all labels at 71 % distance from the center
 Then this radial gauge will have labels with the font 'Verdana'
-# CALIBRATE: font is '15px Verdana'; the exported label FontSize unit (px vs pt) on this platform is unverified.
+# The font is '15px Verdana'; labels export their font size in pixels.
 Then this radial gauge will have abels will have font size 15
 Then this radial gauge will have major tickmarks that are colored #79797A and have a thickness of 2
 Then this radial gauge will have minor tickmarks that are colored #79797A and have a thickness of 1

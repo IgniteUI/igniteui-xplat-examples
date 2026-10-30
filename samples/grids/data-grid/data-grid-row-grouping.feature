@@ -2,7 +2,7 @@
 Then the visible rows will be in this order: Item, Item, Item
 When the grid groups the column Country in ascending order
 Then the visible rows will be in this order: GroupHeader, Item, Item
-# CALIBRATE: exact group-header text format for the default group header display.
+# Group headers read "<column>: <value>".
 Then the visible rows at the following positions will have this text:
   | Position | Text            |
   | 1        | Country: Canada |

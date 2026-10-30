@@ -11,12 +11,11 @@ Then this axis range will have a minimum value of 0 and a maximum value of 50
 Then this axis will have a line with gray color
 Then this axis will have a line with thickness of 2 pixels
 Then this axis will have tickmarks with length 5
-# CALIBRATE: the enhanced interval over 0..50 (10 expected)
 # With no interval set, enhanced interval management labels 0..50 every 5% at this width.
 Then this axis will have labels visible with these values: 0%, 5%, 10%, 15%, 20%, 25%, 30%, 35%, 40%, 45%, 50%
 Then this legend will have items with text: Sum of Top 3 Choices,Top Choice
 When we are talking about annotation layer CalloutLayer1 targeting series BarSeries1
-# CALIBRATE: neither callout layer names a target series, so each annotates both bar series (10 callouts per layer)
+# Neither callout layer names a target series, so each annotates both bar series (10 callouts per layer).
 Then this callout layer will have annotations with the following properties:
   | Y | X | Label |
   | 0 | 22 | 22 |

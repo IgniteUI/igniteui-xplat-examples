@@ -6,7 +6,7 @@ Then the toolbar will have the following action names:
   | ZoomMenu        |
   | AnalyzeMenu     |
   | CopyMenu        |
-# CALIBRATE: confirm the color editor tool renders its title as a label.
+# The color editor tool renders its title as a label.
 Then the toolbar action "colorEditorTool" will have title "Series Brush"
 # America average 393/12 = 32.75.
 When we simulate a click on toolbar action path "AnalyzeMenu"

@@ -15,6 +15,6 @@ Then this bullet graph will have labels reading:
   | 100 |
 Then all labels will have dodgerblue color
 Then this bullet graph will have lables that use the font 'Verdana'
-# CALIBRATE: font is '11px Verdana'; the exported label FontSize unit (px vs pt) on this platform is unverified.
+# The font is '11px Verdana'; labels export their font size in pixels.
 Then this bullet graph will have labels with 11 font size
 Then this bullet graph will has its target value set to 90

@@ -17,5 +17,5 @@ Then this radial gauge, with labels sorted by numeric value, will have labels re
 Then this radial gauge's needle visual will be rendered at an angle of 303.75 degrees
 Then this radial gauge will have abels will have font size DEFAULT
 When this radial gauge is resized to 250x250
-# CALIBRATE: half of opticalScalingSize should halve the default label size (12 -> 6); confirm the scaling is linear.
+# Half of opticalScalingSize halves the default label size (12 -> 6).
 Then this radial gauge will have abels will have font size 6

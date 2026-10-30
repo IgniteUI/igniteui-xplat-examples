@@ -12,5 +12,6 @@ Then this grid will have data cells with these values in the visible rows:
   | 1001 |
   | 1002 |
   | 1003 |
-# CALIBRATE: visible header prefix assumes the ~780px-wide GTK sampleSurface; star columns at their minimum widths overflow it, so the trailing column set depends on the real viewport.
+# The headers are the columns that fit the sample surface: star columns at their minimum widths overflow it, so the
+# trailing columns depend on the surface width.
 Then this grid will have the header cells with the following text: ID, Property, Country, City, Price, Rooms

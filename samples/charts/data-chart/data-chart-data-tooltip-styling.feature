@@ -11,7 +11,8 @@ Then this series highlight shapes will match category values within small tolera
   | 135 |
   | 146 |
 When the user hovers slightly below the category point with label 2008
-# CALIBRATE: series title '' with highlightedTitleSuffix 'America', default value formatting, summary rows
+# The Total Medals series has an empty title and the highlighted series is titled by its highlightedTitleSuffix,
+# America; values use the default formatting, and a group with a single series has no Total summary row.
 Then the data tooltip named dataToolTipLayer will contain one grouped tooltip with the following values:
   | BadgeType | Text | ValueText | Units | RowType |
   |  | 2008 |  |  | Header |

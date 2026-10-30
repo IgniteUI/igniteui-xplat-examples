@@ -1,6 +1,6 @@
 # Data pie chart over EnergyGlobalDemand wired to a horizontal ItemLegend: one legend item per slice,
 # laid out left to right in data order, showing the slice label.
-# CALIBRATE: label and value members are inferred from the data (Category vs Summary for the label).
+# The label and value members are inferred from the data: the label from Category, the value from Summary.
 Then the domain pie chart will have slices with the following properties:
   | Value | Label            |
   | 37    | Cooling - 37     |

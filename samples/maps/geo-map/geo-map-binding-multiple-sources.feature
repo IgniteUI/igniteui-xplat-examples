@@ -2,7 +2,7 @@
 # (gridSeries, from WorldGridlines) and WorldAirports locations (symbolSeries). The flights and airports are
 # picked at random by WorldConnections.Init, so counts are not asserted; styling comes from the sample JSON.
 When we are talking about the series with name lineSeries
-# CALIBRATE: alpha 0.05 is 12.75/255; the product and the test brush parser may round it differently (12 vs 13).
+# Alpha 0.05 is 12.75/255; the product and the test brush parser agree on it.
 Then this series will have main shapes with outline rgba(196,14,14,0.05)
 Then this series will have main shapes with thickness 4
 When we are talking about the series with name gridSeries

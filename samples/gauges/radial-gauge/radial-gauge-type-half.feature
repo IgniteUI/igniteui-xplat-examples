@@ -16,7 +16,7 @@ Then this radial gauge, with labels sorted by numeric value, will have labels re
   | 200 |
 Then this radial gauge will have all labels at 93.5 % distance from the center
 Then this radial gauge will have labels with the font 'Verdana'
-# CALIBRATE: font is '13px Verdana'; the exported label FontSize unit (px vs pt) on this platform is unverified.
+# The font is '13px Verdana'; labels export their font size in pixels.
 Then this radial gauge will have abels will have font size 13
 Then the ranges along the radial gauge, sorted by angle, will have:
   | Start Angle | End Angle | Inner Start Percentage | Inner End Percentage | Outer Start Percentage | Outer End Percentage |

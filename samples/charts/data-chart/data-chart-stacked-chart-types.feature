@@ -1,5 +1,5 @@
 # Stacked chart types: the editor swaps the stacked series type; initial state is a StackedColumnSeries of Coal/Hydro/Nuclear/Gas/Oil per country.
-# Switching type runs a code handler (EditorChangeStackedSeriesType) with no step to drive it (see report).
+# Switching type runs a code handler (EditorChangeStackedSeriesType) that no step drives, so only the initial type is asserted.
 Then this legend will have items with text: Coal,Hydro,Nuclear,Gas,Oil
 When we are talking about the axis with name catXAxis
 Then this axis will have labels visible with these values: Canada, China, Russia, Australia, United States, France

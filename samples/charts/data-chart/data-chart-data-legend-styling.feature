@@ -11,8 +11,8 @@ Then this series highlight shapes will match category values within small tolera
   | 135 |
   | 146 |
 When the user hovers slightly below the category point with label 2008
-# CALIBRATE: series title '' with highlightedTitleSuffix 'America', default value formatting, and whether a
-# single-series group shows a Total summary row
+# The Total Medals series has an empty title and the highlighted series is titled by its highlightedTitleSuffix,
+# America; values use the default formatting, and a group with a single series has no Total summary row.
 Then this data legend will have data rows with the following values:
   | BadgeType | Text | ValueText | Units | RowType |
   |  | 2008 |  |  | Header |

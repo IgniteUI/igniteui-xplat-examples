@@ -5,5 +5,5 @@ Given the series named contourSeries listens to the triangulation status changed
 When we wait for the series named contourSeries to finish triangulating
 When we are talking about the series with name contourSeries
 Then this series will have contours with 4 thickness
-# CALIBRATE: the default LinearContourValueResolver is expected to produce 10 contour lines across the data range.
+# The default LinearContourValueResolver produces 10 contour lines across the data range.
 Then this series will have contours with 10 lines

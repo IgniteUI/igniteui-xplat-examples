@@ -8,7 +8,7 @@ Then this axis will have labels visible with these values: 2009, 2011, 2013, 201
 When we are talking about the axis with name yAxis
 Then this axis title will display text 'TWh'
 When we are talking about annotation layer CalloutLayer1 targeting series lineSeries1
-# CALIBRATE: auto callout label text uses the product's default value formatting (integers expected unchanged)
+# Auto callout labels use the default value formatting, which leaves integers unchanged.
 # Callout padding is not asserted: the visual data carries the callout's background but not its text's measured size.
 Then this callout layer will have annotations with the following properties:
   | X | Y | Label |

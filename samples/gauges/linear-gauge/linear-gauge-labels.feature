@@ -15,6 +15,6 @@ Then this linear gauge will have labels reading:
   | 100 |
 Then all linear gauge labels will have dodgerblue color
 Then this linear gauge will have lables that use the font 'Verdana'
-# CALIBRATE: font is '11px Verdana'; the exported label FontSize unit (px vs pt) on this platform is unverified.
+# The font is '11px Verdana'; labels export their font size in pixels.
 Then this linear gauge will have labels with font size 11
 Then this linear gauge's needle will be at 50

@@ -11,7 +11,7 @@ Then this series shapes will match these plotted OHLC values in visual order:
   | 2022-07-13 | 223 | 255 | 216.2 | 237 |
   | 2025-01-03 | 435.9 | 465.3 | 373 | 410.4 |
   | 2025-04-28 | 243.5 | 294.9 | 222.8 | 285.9 |
-# CALIBRATE: slice positions are category indexes on xAxisBottom; confirm unscaling on a centered financial axis
+# Slice positions are category indexes on xAxisBottom.
 Then the data annotation slice layer named 'SliceLayerStockSplit' will have vertical lines at the following positions: 61, 126
 Then the annotation layer 'SliceLayerStockSplit' will have shapes with the following styles
   | ShapeOutline |
