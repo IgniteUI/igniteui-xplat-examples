@@ -37,6 +37,35 @@
       ]
     },
     {
+      "name": "Uno",
+      "exclusions": [
+        { "reason": "excluding web grids",            "path": "grids\\hierarchical-grid\\" },
+        { "reason": "excluding web grids",            "path": "grids\\pivot-grid\\" },
+        { "reason": "excluding web grids", "path": "grids\\tree-grid\\" },       
+        { "reason": "excluding web grids", "path": "grids\\grid\\" },
+        { "reason": "excluding web grids", "path": "charts\\financial-chart\\" },
+        { "reason": "WinUI has no DataGridToolbar or ColumnChooser yet", "path": "grids\\data-grid\\column-chooser-picker.json" },
+        { "reason": "WinUI has no DataGridToolbar or ColumnChooser yet", "path": "grids\\data-grid\\column-chooser-toolbar.json" },
+        { "reason": "WinUI has no DataGridToolbar or ColumnChooser yet", "path": "grids\\data-grid\\column-pinning-toolbar.json" },
+        { "reason": "WinUI series have no TooltipTemplate", "path": "charts\\category-chart\\tooltip-template.json" },
+        { "reason": "WinUI series have no TooltipTemplate", "path": "charts\\data-chart\\tooltip-template.json" },
+        { "reason": "WinUI series have no TooltipTemplate", "path": "charts\\data-chart\\type-scatter-polygon-series.json" },
+        { "reason": "WinUI series have no TooltipTemplate", "path": "charts\\data-chart\\type-scatter-polyline-series.json" },
+        { "reason": "WinUI XamDataChart has no PanModifier or DragModifier", "path": "charts\\data-chart\\chart-navigation.json" },
+        { "reason": "WinUI CustomPaletteColorScale has no Palette", "path": "charts\\data-chart\\type-scatter-area-series.json" },
+        { "reason": "WinUI CustomPaletteColorScale has no Palette", "path": "maps\\geo-map\\type-scatter-area-series.json" },
+        { "reason": "WinUI has no HighDensityScatterSeries", "path": "charts\\data-chart\\type-scatter-hd-series.json" },
+        { "reason": "WinUI TemplateColumn has no Template", "path": "charts\\sparkline\\grid.json" },
+        { "reason": "WinUI has no XamZoomSlider", "path": "charts\\zoomslider\\overview.json" },
+        { "reason": "WinUI has no GeographicTileSeries", "path": "maps\\geo-map\\display-azure-imagery.json" },
+        { "reason": "WinUI has no GeographicTileSeries", "path": "maps\\geo-map\\display-heat-imagery.json" },
+        { "reason": "WinUI has no GeographicHighDensityScatterSeries", "path": "maps\\geo-map\\binding-data-csv.json" },
+        { "reason": "WinUI has no GeographicHighDensityScatterSeries", "path": "maps\\geo-map\\type-scatter-density-series.json" },
+        { "reason": "supporting shapefile readers are emitted outside Sample, so their map lookups do not resolve", "path": "maps\\geo-map\\binding-multiple-shapes.json" },
+        { "reason": "supporting shapefile readers are emitted outside Sample, so their map lookups do not resolve", "path": "maps\\geo-map\\binding-shp-file.json" }
+      ]
+    },
+    {
       "name": "WPF",
       "exclusions": [
         { "reason": "published beta renderer is missing WPF data annotation strip metadata", "path": "charts\\data-chart\\data-annotation-strip-layer.json" },
