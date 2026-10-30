@@ -12,6 +12,8 @@
 //end handlersImports
 //insert templateImports
 //end templateImports
+//insert supportingImports
+//end supportingImports
 
 //ifdef webgrids
 import "igniteui-webcomponents-grids/grids/themes/light/bootstrap.css";

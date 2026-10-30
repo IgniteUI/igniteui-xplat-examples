@@ -16,6 +16,8 @@ import './index.css';
 //end handlersImports
 //insert templateImports
 //end templateImports
+//insert supportingImports
+//end supportingImports
 
 //ifdef webgrids
 import 'igniteui-react-grids/grids/themes/light/bootstrap.css';
@@ -50,15 +52,15 @@ export default class Sample extends React.Component<any, any> {
         //insert contentCode
         //end contentCode
 //endifdef contentCode
+    }
+//ifdef onViewInit, bindingCode
+    public componentDidMount() {
         //insert bindingCode
         //end bindingCode
-    }
-//ifdef onViewInit
-    public componentDidMount() {
         //insert onViewInit
         //end onViewInit
     }
-//endifdef onViewInit
+//endifdef onViewInit, bindingCode
 
     public render(): JSX.Element {
         return (

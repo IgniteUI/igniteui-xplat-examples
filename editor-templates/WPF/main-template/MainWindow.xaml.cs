@@ -19,6 +19,8 @@ using System.Windows.Shapes;
 //end handlersImports
 //insert templateImports
 //end templateImports
+//insert supportingImports
+//end supportingImports
 //insert bindingImports
 //end bindingImports
 

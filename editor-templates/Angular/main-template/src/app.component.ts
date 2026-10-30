@@ -9,6 +9,8 @@
 //end handlersImports
 //insert templateImports
 //end templateImports
+//insert supportingImports
+//end supportingImports
 //insert bindingImports
 //end bindingImports
 
@@ -54,6 +56,8 @@ export class AppComponent implements AfterViewInit
 		//insert contentCode
 		//end contentCode
 //endifdef contentCode
+		//insert bindingCode
+		//end bindingCode
 
 		//insert onViewInit
 		//end onViewInit
