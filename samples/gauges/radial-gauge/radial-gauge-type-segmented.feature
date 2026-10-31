@@ -4,6 +4,7 @@
 # The radial gauge analyzer measures angles and extents against a square viewport; the sample sizes
 # the gauge to fill a non-square slot, so pin it to a square before asserting geometry.
 When this radial gauge is resized to 500x500
+# The scale is a full circle, so the maximum (100) is labelled too, on the same angle as 0.
 Then this radial gauge, with labels sorted by numeric value, will have labels reading:
   | labelValues |
   | 0 |
@@ -16,9 +17,10 @@ Then this radial gauge, with labels sorted by numeric value, will have labels re
   | 70 |
   | 80 |
   | 90 |
+  | 100 |
 Then this radial gauge will have all labels at 80 % distance from the center
 Then this radial gauge will have labels with the font 'Verdana'
-# CALIBRATE: font is '15px Verdana'; the exported label FontSize unit (px vs pt) on this platform is unverified.
+# The font is '15px Verdana'; labels export their font size in pixels.
 Then this radial gauge will have abels will have font size 15
 Then this radial gauge's scale is colored #E0DFDF
 Then the ranges along the radial gauge, sorted by angle, will have:
@@ -27,5 +29,5 @@ Then the ranges along the radial gauge, sorted by angle, will have:
 Then the ranges along the radial gauge will have the following colors:
   | Color |
   | #1E90FF |
-# CALIBRATE: needleShape None may export an empty needle path, which the needle analyzer does not expect.
+# With needleShape None the gauge draws no needle.
 Then this radial gauge's needle is not displayed
