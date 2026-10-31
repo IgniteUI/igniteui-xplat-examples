@@ -8,3 +8,12 @@ Then the data tooltip named dataToolTip will contain one grouped tooltip with th
   | Square    | Total Revenue    | 10.32     | Series  |
   | Square    | Highest Grossing | 2.07      | Series  |
   |           | Total            | 12.39     | Summary |
+# Choosing the Individual grouping mode in the editor gives each series its own data tooltip.
+When we choose 'Individual' from the 'Grouping Mode: ' row in the property editor panel
+When the user hovers slightly below the category point with label Star Wars
+Then the data tooltip named dataToolTip will contain multiple tooltips with the following values:
+  | TooltipNumber | BadgeType | C1-Text          | C2-Text | RowType |
+  | 1             |           | Star Wars        | [NULL]  | Header  |
+  | 1             | Square    | Total Revenue    | 10.32   | Series  |
+  | 2             |           | Star Wars        | [NULL]  | Header  |
+  | 2             | Square    | Highest Grossing | 2.07    | Series  |

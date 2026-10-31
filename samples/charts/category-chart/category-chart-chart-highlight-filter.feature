@@ -21,3 +21,20 @@ Then this series shapes will match category values within small tolerance:
   | 90    |
   | 174   |
   | 97    |
+# Switching the editor's highlight display mode to Overlay draws the filtered counts over the full ones: the rows
+# that are not UK, per month (computed from the data).
+When we choose 'Overlay' from the 'Highlight Display Mode: ' row in the property editor panel
+Then this category chart will have ordered columns with the following highlight values:
+  | Label     | Value |
+  | April     | 47    |
+  | August    | 49    |
+  | December  | 126   |
+  | February  | 46    |
+  | January   | 42    |
+  | July      | 44    |
+  | June      | 103   |
+  | March     | 45    |
+  | May       | 44    |
+  | November  | 70    |
+  | October   | 138   |
+  | September | 76    |

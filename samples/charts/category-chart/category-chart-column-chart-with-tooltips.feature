@@ -11,3 +11,8 @@ Then the data tooltip named dataToolTip will contain one grouped tooltip with th
   |           | Total            | 12.39     | Summary |
 When we are talking about the series at index 0
 Then this series will have no default tooltips visible
+# Choosing the Item tooltip type in the editor replaces the data tooltip layer with an item tooltip layer, which gives
+# each series its own tooltip.
+When we choose 'Item' from the 'ToolTip Type: ' row in the property editor panel
+Then this domain chart will have a ItemToolTipLayer annotation layer
+Then this domain chart will not have a DataToolTipLayer annotation layer
