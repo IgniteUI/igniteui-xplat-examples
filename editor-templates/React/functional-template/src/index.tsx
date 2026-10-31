@@ -43,18 +43,30 @@ mods.forEach((m) => m.register());
 //end supportingTypes
 
 export default function Sample() {
+//ifdef vmProperties, descriptionRegister
     //insert vmProperties
     //end vmProperties
     //insert descriptionRegister
     //end descriptionRegister
+
+//endifdef vmProperties, descriptionRegister
+//ifdef eventHandlers
     //insert eventHandlers
     //end eventHandlers
+
+//endifdef eventHandlers
+//ifdef templateContents, templateSupportingMethods
     //insert templateContents
     //end templateContents
     //insert templateSupportingMethods
     //end templateSupportingMethods
+
+//endifdef templateContents, templateSupportingMethods
+//ifdef bindingFields
     //insert bindingFields
     //end bindingFields
+
+//endifdef bindingFields
 //ifdef bindingInit, onInit, contentCode, bindingCode, onViewInit
     useEffect(() => {
         //insert bindingInit
@@ -70,8 +82,8 @@ export default function Sample() {
         //insert onViewInit
         //end onViewInit
     }, []);
-//endifdef bindingInit, onInit, contentCode, bindingCode, onViewInit
 
+//endifdef bindingInit, onInit, contentCode, bindingCode, onViewInit
     return (
 //ifdef webgrids
         <div className="container sample ig-typography">
