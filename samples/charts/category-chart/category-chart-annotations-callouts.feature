@@ -18,3 +18,6 @@ Then this category chart will have yAxis title with 'Degrees Celsius' text
 Then this category chart will have xAxis labels matching the Month column of sample data named TemperatureAnnotatedData
 When we are talking about the series at index 0
 Then this series shapes will match the Temperature column of sample data named TemperatureAnnotatedData within small tolerance
+# Unchecking "Callouts Visible" in the editor removes the callouts.
+When we click the 'Callouts Visible' row in the property editor panel
+Then this domain chart will not have a CalloutLayer annotation layer

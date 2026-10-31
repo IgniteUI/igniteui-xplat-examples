@@ -25,3 +25,10 @@ Then this callout layer will have annotations with the following properties:
   | 9  | 22 | 22    |
   | 10 | 26 | 26    |
   | 11 | 30 | 30    |
+# The editor turns each annotation off: callouts and final values are unchecked, and the crosshairs set to None.
+When we click the 'Callouts: ' row in the property editor panel
+Then this domain chart will not have a CalloutLayer annotation layer
+When we click the 'Final Value: ' row in the property editor panel
+Then this domain chart will not have a FinalValueLayer annotation layer
+When we choose 'None' from the 'Crosshairs: ' row in the property editor panel
+Then this domain chart will not have a CrosshairLayer annotation layer

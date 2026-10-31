@@ -9,3 +9,9 @@ When we are talking about the series at index 0
 Then this series shapes will match the Europe column of sample data named CountryRenewableElectricity within small tolerance
 When we are talking about the series at index 1
 Then this series shapes will match the America column of sample data named CountryRenewableElectricity within small tolerance
+# Choosing Minimum in the editor's value list moves each series' value line to its minimum (America 19, Europe 13).
+When we choose 'Minimum' from the 'Value List' row in the property editor panel
+Then this domain chart will have value lines with the following properties:
+  | Orientation | Value |
+  | horizontal  | 13 |
+  | horizontal  | 19 |

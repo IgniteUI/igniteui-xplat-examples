@@ -9,3 +9,6 @@ When we are talking about the series at index 1
 Then this series shapes will match the China column of sample data named CountryRenewableElectricity within small tolerance
 When we are talking about the series at index 2
 Then this series shapes will match the America column of sample data named CountryRenewableElectricity within small tolerance
+# Sliding the editor's x tick length to 20 lengthens the x tickmarks.
+When we move the 'X Axis Tick Length' slider in the property editor panel to 20
+Then this category chart will have xAxis tickmarks with length 20

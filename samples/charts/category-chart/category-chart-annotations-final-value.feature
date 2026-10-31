@@ -7,3 +7,6 @@ Then the final value layer will have the annotation labels with the following pr
 Then this category chart will have xAxis labels matching the Month column of sample data named TemperatureAnnotatedData
 When we are talking about the series at index 0
 Then this series shapes will match the Temperature column of sample data named TemperatureAnnotatedData within small tolerance
+# Unchecking "Final Value Visible" in the editor removes the final value annotation.
+When we click the 'Final Value Visible' row in the property editor panel
+Then this domain chart will not have a FinalValueLayer annotation layer

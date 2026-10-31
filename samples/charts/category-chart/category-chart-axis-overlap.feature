@@ -8,3 +8,7 @@ When we are talking about the series at index 1
 Then this series shapes will match the HighestGrossing column of sample data named HighestGrossingMovies within small tolerance
 When we are talking about the axis with name xAxis
 Then all series are overlapping each other 100 percent
+# Sliding the editor's overlap to 0.5 overlaps the two series' columns by half.
+When we move the 'X Axis - Overlap' slider in the property editor panel to 0.5
+When we are talking about the axis with name xAxis
+Then all series are overlapping each other 50 percent

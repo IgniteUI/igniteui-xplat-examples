@@ -7,3 +7,6 @@ And we are talking about the axis with name xAxis
 Then the crosshair will have annotation labels with values: Jun
 When we are talking about the axis with name yAxis
 Then the crosshair will have annotation labels with values: 13
+# Setting the editor's crosshairs display mode to None removes the crosshairs.
+When we choose 'None' from the 'Crosshairs Display Mode: ' row in the property editor panel
+Then this domain chart will not have a CrosshairLayer annotation layer

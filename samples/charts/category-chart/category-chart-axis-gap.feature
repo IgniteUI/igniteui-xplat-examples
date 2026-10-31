@@ -11,3 +11,8 @@ When we are talking about the series at index 2
 Then this series shapes will match the America column of sample data named CountryRenewableElectricity within small tolerance
 When we are talking about the axis with name xAxis
 Then this axis will have total gap of 0.5 between categories and series shapes
+# The gap is capped by the maximum gap (0.5), so the editor raises the maximum to 1.5 before sliding the gap to 1.
+When we choose '1.5' from the 'Maximum Gap' row in the property editor panel
+When we move the 'X Axis - Gap' slider in the property editor panel to 1
+When we are talking about the axis with name xAxis
+Then this axis will have total gap of 1 between categories and series shapes
