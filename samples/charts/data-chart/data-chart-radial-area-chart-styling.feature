@@ -17,7 +17,7 @@ Then this series shapes will match these radial values within small tolerance:
   | Team Play  | 7     |
   | Heading    | 9     |
 Then this series will have markers with type Circle
-Then this series will have main shapes with fill #8CE7D9
+Then this series will have fill shapes with fill #8CE7D9
 Then this series will have main shapes with outline #8CE7D9
 Then this series will have markers with fill white and outline #8CE7D9
 Then this series will have main shapes with thickness 3
@@ -33,7 +33,7 @@ Then this series shapes will match these radial values within small tolerance:
   | Team Play  | 9     |
   | Heading    | 6     |
 Then this series will have markers with type Circle
-Then this series will have main shapes with fill #EE5879
+Then this series will have fill shapes with fill #EE5879
 Then this series will have main shapes with outline #EE5879
 Then this series will have markers with fill white and outline #EE5879
 Then this series will have main shapes with thickness 3

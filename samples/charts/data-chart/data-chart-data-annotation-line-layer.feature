@@ -11,18 +11,19 @@ Then this series shapes will match these plotted OHLC values in visual order:
   | 2022-01-10 | 357.8 | 402.7 | 326.7 | 352.7 |
   | 2024-04-24 | 156.7 | 168 | 138.8 | 162.1 |
   | 2025-04-28 | 243.5 | 294.9 | 222.8 | 285.9 |
+# The overlay text is not in the exported visual data, so no step can read it; it is not asserted.
 Then the data annotation line layer named 'LineLayer52WeekRange' will have linear annotations as follows:
-  | Orientation | StartX | StartY | EndX | EndY | OverlayText |
-  | Horizontal | 190 | 138 | 230 | 138 | 52-Week Low |
-  | Horizontal | 190 | 481 | 230 | 481 | 52-Week High |
-# CALIBRATE: DataValue label text format, and whether start and end labels at the same value both render
+  | Orientation | StartX | StartY | EndX | EndY |
+  | Horizontal | 190 | 138 | 230 | 138 |
+  | Horizontal | 190 | 481 | 230 | 481 |
+# Each line labels its start and end with the plain value, both of which render; the labels are read top to bottom.
 Then the axis named 'yAxisRight' will have data annotation labels as follows:
   | Position | Text |
-  | 138 | 138 |
-  | 138 | 138 |
   | 481 | 481 |
   | 481 | 481 |
-# CALIBRATE: sloped lines have no LinePosition, so the step's position ordering of the two lines is unverified
+  | 138 | 138 |
+  | 138 | 138 |
+# Sloped lines have no line position, so they are listed in the layer's data order.
 Then the data annotation line layer named 'LineLayerGrowthAndDecline' will have linear annotations as follows:
   | Orientation | StartX | StartY | EndX | EndY |
   | Sloped | 48 | 25 | 105 | 250 |

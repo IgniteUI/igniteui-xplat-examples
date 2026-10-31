@@ -18,7 +18,7 @@ Then this polar series markers will match these data points:
   | 315   | 65     |
   | 360   | 90     |
 Then this series will have markers with type Circle
-Then this series will have main shapes with fill #8CE7D9
+Then this series will have fill shapes with fill #8CE7D9
 Then this series will have main shapes with outline #8CE7D9
 Then this series will have markers with fill white and outline #8CE7D9
 Then this series will have main shapes with thickness 1
@@ -35,7 +35,7 @@ Then this polar series markers will match these data points:
   | 315   | 35     |
   | 360   | 70     |
 Then this series will have markers with type Circle
-Then this series will have main shapes with fill #EE5879
+Then this series will have fill shapes with fill #EE5879
 Then this series will have main shapes with outline #EE5879
 Then this series will have markers with fill white and outline #EE5879
 Then this series will have main shapes with thickness 1

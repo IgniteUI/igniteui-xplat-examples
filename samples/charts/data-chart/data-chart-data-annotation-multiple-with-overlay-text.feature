@@ -15,6 +15,7 @@ When we are talking about the axis with name yAxis
 # CALIBRATE: axis annotation text of the Average value layer (raw average 186.5026)
 Then this axis will have a value layer with axis annotation values: 186.50
 Then the data annotation slice layer named 'AnnoLayer' will have horizontal lines at the following positions: 50
+# The overlay text is not in the exported visual data, so no step can read it; it is not asserted.
 Then the data annotation slice layer named 'AnnoLayer' will have linear annotations as follows:
-  | Orientation | LinePosition | OverlayText |
-  | Horizontal | 50 | OverlayText on DataAnnotationSliceLayer |
+  | Orientation | LinePosition |
+  | Horizontal | 50 |

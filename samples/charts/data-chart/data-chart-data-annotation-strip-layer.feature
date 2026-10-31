@@ -11,10 +11,11 @@ Then this series shapes will match these plotted OHLC values in visual order:
   | 2021-10-20 | 267 | 292.6 | 265.5 | 288.6 |
   | 2024-04-24 | 156.7 | 168 | 138.8 | 162.1 |
   | 2025-04-28 | 243.5 | 294.9 | 222.8 | 285.9 |
+# The layer fills its shapes with its brush at its default 0.15 area fill opacity (alpha 0x26).
 Then the annotation layer 'StripLayer' will have shapes with the following styles
   | Brush | ShapeOutline |
-  | black | black |
-# CALIBRATE: strip center label positions are the midpoints of Start/End on the category axis
+  | #26000000 | black |
+# Each strip's center label sits at the midpoint of its Start and End on the category axis.
 Then the axis named 'xAxisTop' will have data annotation labels as follows:
   | Position | Text |
   | 42.5 | Covid - Market Crash |
