@@ -42,15 +42,15 @@ public class MapBindingDataModelOnViewInit
         };
 
         // the route first, so that the cities at either end of it draw on top
-        foreach (var flight in flights)
+        for (var i = 0; i < flights.Count; i++)
         {
-            AddFlightRoute(geoMap, flight);
-            AddFlightCities(geoMap, flight);
+            AddFlightRoute(geoMap, flights[i], i);
+            AddFlightCities(geoMap, flights[i], i);
         }
     }
 
     /// <summary>The flight itself, as a great circle path between its two cities.</summary>
-    public void AddFlightRoute(XamGeographicMap geoMap, FlightInfo flight)
+    public void AddFlightRoute(XamGeographicMap geoMap, FlightInfo flight, int index)
     {
         var geoOrigin = new GeoLocation() { Lat = flight.Origin.Lat, Lon = flight.Origin.Lon };
         var geoDest = new GeoLocation() { Lat = flight.Dest.Lat, Lon = flight.Dest.Lon };
@@ -66,6 +66,7 @@ public class MapBindingDataModelOnViewInit
         };
 
         var lineSeries = new GeographicPolylineSeries();
+        lineSeries.Name = "flight" + index + "Route";
         lineSeries.ItemsSource = geoRoutes;
         lineSeries.ShapeMemberPath = "Points";
         lineSeries.ShapeStrokeThickness = 9;
@@ -75,11 +76,12 @@ public class MapBindingDataModelOnViewInit
     }
 
     /// <summary>The cities at either end, in the flight's own colour.</summary>
-    public void AddFlightCities(XamGeographicMap geoMap, FlightInfo flight)
+    public void AddFlightCities(XamGeographicMap geoMap, FlightInfo flight, int index)
     {
         var geoLocations = new List<WorldCity>() { flight.Origin, flight.Dest };
 
         var symbolSeries = new GeographicSymbolSeries();
+        symbolSeries.Name = "flight" + index + "Cities";
         symbolSeries.ItemsSource = geoLocations;
         symbolSeries.MarkerType = Infragistics.Controls.Charts.MarkerType.Circle;
         symbolSeries.LatitudeMemberPath = "Lat";
