@@ -16,6 +16,8 @@ using System.ComponentModel;
 //end handlersImports
 //insert templateImports
 //end templateImports
+//insert supportingImports
+//end supportingImports
 
 namespace Sample;
 

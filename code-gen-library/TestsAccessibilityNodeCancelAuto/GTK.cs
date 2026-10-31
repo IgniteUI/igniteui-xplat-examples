@@ -7,7 +7,7 @@ public class TestsAccessibilityNodeCancelAuto
 {
 
     //begin eventHandler
-    //WPF: Infragistics.Controls.Charts.AccessibilityNodeCreatingEventHandler
+    //WPF: Infragistics.Controls.AccessibilityNodeCreatingEventHandler
     public void TestsAccessibilityNodeCancelAuto(object sender, AccessibilityNodeCreatingEventArgs args)
     {
         if (args.Node != null && args.Node.Role == AccessibilityRole.Item)

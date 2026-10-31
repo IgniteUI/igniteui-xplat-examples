@@ -14,9 +14,11 @@ public class SelectionMatcherOnViewInit
 	//WPF: System.Action
     public void SelectionMatcherOnViewInit()
 	{
+		// The timer fires on a pool thread; the chart can only be touched from the UI thread.
+		var dispatcher = Microsoft.UI.Dispatching.DispatcherQueue.GetForCurrentThread();
 		_timer = new Timer((state) =>
 		{
-			AddSelection();
+			dispatcher.TryEnqueue(() => AddSelection());
 			_timer.Dispose();
 		}, null, 100, Timeout.Infinite);
 	}
@@ -24,9 +26,13 @@ public class SelectionMatcherOnViewInit
 	private void AddSelection()
 	{
 		var chart = CodeGenHelper.GetDescription<XamCategoryChart>("content");
+		// Shared by the category chart and data chart samples; only the category chart has ItemsSource.
+		var data = (IList)((object)chart is XamCategoryChart categoryChart
+			? categoryChart.ItemsSource
+			: ((XamDataChart)(object)chart).Series[0].ItemsSource);
 
 		ChartSelection selection = new ChartSelection();
-		selection.Item = ((IList)chart.ItemsSource)[1];
+		selection.Item = data[1];
 		SeriesMatcher matcher = new SeriesMatcher();
 		matcher.MemberPath = "Hydro";
 		matcher.MemberPathType = "ValueMemberPath";
@@ -37,7 +43,7 @@ public class SelectionMatcherOnViewInit
 		SeriesMatcher matcher2 = new SeriesMatcher();
 		ChartSelection selection2 = new ChartSelection();
 		selection2 = new ChartSelection();
-		selection2.Item = ((IList)chart.ItemsSource)[2];
+		selection2.Item = data[2];
 		matcher2.MemberPath = "Wind";
 		matcher2.MemberPathType = "ValueMemberPath";
 

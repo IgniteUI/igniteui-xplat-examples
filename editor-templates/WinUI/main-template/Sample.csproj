@@ -16,6 +16,10 @@
     <WindowsPackageType>None</WindowsPackageType>
     <WinUISDKReferences>true</WinUISDKReferences>
     <LangVersion>latest</LangVersion>
+    <!-- Sources and pages are listed explicitly below, including generated library files. -->
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <EnableDefaultPageItems>false</EnableDefaultPageItems>
+    <EnableDefaultApplicationDefinition>false</EnableDefaultApplicationDefinition>
   </PropertyGroup>
 
   <ItemGroup>
@@ -23,49 +27,107 @@
     <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.8.260209005" />
     <PackageReference Include="SkiaSharp" Version="3.119.2" />
     <PackageReference Include="SkiaSharp.Views.WinUI" Version="3.119.2" />
+    <!-- Runtime dependency of Infragistics.WinUI.DataVisualization, at the version the product builds against. -->
+    <PackageReference Include="Microsoft.Graphics.Win2D" Version="1.3.2" />
+    <!-- Library data items parse JSON with it. -->
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
   </ItemGroup>
 
-  <!-- Infragistics references — point at the dev-tools Build output. Build
-       dev-tools (WinUI sln) before building this. -->
-  <ItemGroup>
-    <Reference Include="Infragistics.Core">
-      <HintPath>c:\work\dev-tools\XPlatform\Main\Source\Build\Core\netstandard2.0\Infragistics.Core.dll</HintPath>
-    </Reference>
+  <!-- Infragistics references: the whole WinUI product, as the samples browser references it.
+       The XAML compiler loads every type a page names through these, and fails without a
+       diagnostic when a dependency (Core.Layouts, say) is missing. -->
+  <ItemGroup Condition="'$(InfragisticsWinUIBuild)' == ''">
+    <PackageReference Include="Infragistics.WinUI.Core.Trial" Version="26.1.1000-alpha.24" />
+    <PackageReference Include="Infragistics.WinUI.Charts.Trial" Version="26.1.1000-alpha.24" />
+    <PackageReference Include="Infragistics.WinUI.DataVisualization.Trial" Version="26.1.1000-alpha.24" />
+    <PackageReference Include="Infragistics.WinUI.DataGrid.Trial" Version="26.1.1000-alpha.24" />
+    <PackageReference Include="Infragistics.WinUI.Layouts.Trial" Version="26.1.1000-alpha.24" />
+    <PackageReference Include="Infragistics.WinUI.Inputs.Trial" Version="26.1.1000-alpha.24" />
+    <PackageReference Include="Infragistics.WinUI.Gauges.Trial" Version="26.1.1000-alpha.24" />
+    <PackageReference Include="Infragistics.WinUI.Dashboards.Trial" Version="26.1.1000-alpha.24" />
+    <PackageReference Include="Infragistics.WinUI.TreeMap.Trial" Version="26.1.1000-alpha.24" />
+    <PackageReference Include="Infragistics.WinUI.Sparkline.Trial" Version="26.1.1000-alpha.24" />
+    <PackageReference Include="Infragistics.WinUI.Maps.Trial" Version="26.1.1000-alpha.24" />
+    <PackageReference Include="Infragistics.WinUI.SkiaSharp.Trial" Version="26.1.1000-alpha.24" />
+  </ItemGroup>
+
+  <!-- Or a dev-tools Build output, when $(InfragisticsWinUIBuild) names one
+       (e.g. /p:InfragisticsWinUIBuild=c:\work\dev-tools\XPlatform\Main\Source\Build\WinUI). -->
+  <ItemGroup Condition="'$(InfragisticsWinUIBuild)' != ''">
     <Reference Include="Infragistics.Core.Charts">
-      <HintPath>c:\work\dev-tools\XPlatform\Main\Source\Build\Core\netstandard2.0\Infragistics.Core.Charts.dll</HintPath>
+      <HintPath>$(InfragisticsWinUIBuild)\Infragistics.Core.Charts.dll</HintPath>
     </Reference>
-    <Reference Include="Infragistics.Core.DataVisualization">
-      <HintPath>c:\work\dev-tools\XPlatform\Main\Source\Build\Core\netstandard2.0\Infragistics.Core.DataVisualization.dll</HintPath>
+    <Reference Include="Infragistics.Core.Dashboards">
+      <HintPath>$(InfragisticsWinUIBuild)\Infragistics.Core.Dashboards.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics.Core.DataGrid">
-      <HintPath>c:\work\dev-tools\XPlatform\Main\Source\Build\Core\netstandard2.0\Infragistics.Core.DataGrid.dll</HintPath>
+      <HintPath>$(InfragisticsWinUIBuild)\Infragistics.Core.DataGrid.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics.Core.DataVisualization.SkiaSharp">
+      <HintPath>$(InfragisticsWinUIBuild)\Infragistics.Core.DataVisualization.SkiaSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics.Core.DataVisualization">
+      <HintPath>$(InfragisticsWinUIBuild)\Infragistics.Core.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics.Core.Gauges">
+      <HintPath>$(InfragisticsWinUIBuild)\Infragistics.Core.Gauges.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics.Core.Inputs">
+      <HintPath>$(InfragisticsWinUIBuild)\Infragistics.Core.Inputs.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics.Core.Layouts">
+      <HintPath>$(InfragisticsWinUIBuild)\Infragistics.Core.Layouts.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics.Core.Maps">
-      <HintPath>c:\work\dev-tools\XPlatform\Main\Source\Build\WinUI\Infragistics.Core.Maps.dll</HintPath>
+      <HintPath>$(InfragisticsWinUIBuild)\Infragistics.Core.Maps.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics.Core.Platform.WinUI">
-      <HintPath>c:\work\dev-tools\XPlatform\Main\Source\Build\WinUI\Infragistics.Core.Platform.WinUI.dll</HintPath>
+      <HintPath>$(InfragisticsWinUIBuild)\Infragistics.Core.Platform.WinUI.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics.Core.Platform">
+      <HintPath>$(InfragisticsWinUIBuild)\Infragistics.Core.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics.Core.Sparkline">
+      <HintPath>$(InfragisticsWinUIBuild)\Infragistics.Core.Sparkline.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics.Core.TreeMap">
+      <HintPath>$(InfragisticsWinUIBuild)\Infragistics.Core.TreeMap.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics.Core">
+      <HintPath>$(InfragisticsWinUIBuild)\Infragistics.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics.DataVisualization.SkiaSharp.WinUI">
+      <HintPath>$(InfragisticsWinUIBuild)\Infragistics.DataVisualization.SkiaSharp.WinUI.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics.WinUI.Charts">
-      <HintPath>c:\work\dev-tools\XPlatform\Main\Source\Build\WinUI\Infragistics.WinUI.Charts.dll</HintPath>
+      <HintPath>$(InfragisticsWinUIBuild)\Infragistics.WinUI.Charts.dll</HintPath>
     </Reference>
-    <Reference Include="Infragistics.WinUI.Layouts">
-      <HintPath>c:\work\dev-tools\XPlatform\Main\Source\Build\WinUI\Infragistics.WinUI.Layouts.dll</HintPath>
-    </Reference>
-    <Reference Include="Infragistics.WinUI.Inputs">
-      <HintPath>c:\work\dev-tools\XPlatform\Main\Source\Build\WinUI\Infragistics.WinUI.Inputs.dll</HintPath>
+    <Reference Include="Infragistics.WinUI.Dashboards">
+      <HintPath>$(InfragisticsWinUIBuild)\Infragistics.WinUI.Dashboards.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics.WinUI.DataGrid">
-      <HintPath>c:\work\dev-tools\XPlatform\Main\Source\Build\WinUI\Infragistics.WinUI.DataGrid.dll</HintPath>
-    </Reference>
-    <Reference Include="Infragistics.WinUI.Gauges">
-      <HintPath>c:\work\dev-tools\XPlatform\Main\Source\Build\WinUI\Infragistics.WinUI.Gauges.dll</HintPath>
+      <HintPath>$(InfragisticsWinUIBuild)\Infragistics.WinUI.DataGrid.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics.WinUI.DataVisualization">
-      <HintPath>c:\work\dev-tools\XPlatform\Main\Source\Build\WinUI\Infragistics.WinUI.DataVisualization.dll</HintPath>
+      <HintPath>$(InfragisticsWinUIBuild)\Infragistics.WinUI.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics.WinUI.Gauges">
+      <HintPath>$(InfragisticsWinUIBuild)\Infragistics.WinUI.Gauges.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics.WinUI.Inputs">
+      <HintPath>$(InfragisticsWinUIBuild)\Infragistics.WinUI.Inputs.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics.WinUI.Layouts">
+      <HintPath>$(InfragisticsWinUIBuild)\Infragistics.WinUI.Layouts.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics.WinUI.Maps">
-      <HintPath>c:\work\dev-tools\XPlatform\Main\Source\Build\WinUI\Infragistics.WinUI.Maps.dll</HintPath>
+      <HintPath>$(InfragisticsWinUIBuild)\Infragistics.WinUI.Maps.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics.WinUI.Sparkline">
+      <HintPath>$(InfragisticsWinUIBuild)\Infragistics.WinUI.Sparkline.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics.WinUI.TreeMap">
+      <HintPath>$(InfragisticsWinUIBuild)\Infragistics.WinUI.TreeMap.dll</HintPath>
     </Reference>
   </ItemGroup>
 
