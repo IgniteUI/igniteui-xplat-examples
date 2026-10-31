@@ -168,3 +168,11 @@ Then this series shapes will match these scatter values:
   | 340 | 0.9397 |
   | 350 | 0.9848 |
   | 360 | 1 |
+# Each editor slider moves where its axis crosses the other: the x axis up to 0.5 on the y axis, and the y axis
+# right to 90 on the x axis.
+When we move the 'Where the X axis crosses' slider in the property editor panel to 0.5
+When we are talking about the axis with name xAxis
+Then this axis will cross axis named yAxis at value 0.5
+When we move the 'Where the Y axis crosses' slider in the property editor panel to 90
+When we are talking about the axis with name yAxis
+Then this axis will cross axis named xAxis at value 90
