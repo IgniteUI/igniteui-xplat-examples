@@ -12,8 +12,8 @@ Then this series will not have any highlight layer shapes
 When we are talking about the axis with name xAxis
 # With no interval set, a category axis shows at most 10 labels; the 12 years (2018 is listed twice) are labelled every other one.
 Then this axis will have labels visible with these values: 2009, 2011, 2013, 2015, 2017, 2019
+When we choose 'Overlay' from the 'Highlight Display Mode: ' row in the property editor panel
 When we are talking about the series with name ColumnSeries1
-When this series displays highlighted values
 Then this series highlight shapes will match category values within small tolerance:
   | Value |
   | 26 |
@@ -29,7 +29,6 @@ Then this series highlight shapes will match category values within small tolera
   | 18 |
   | 40 |
 When we are talking about the series with name ColumnSeries2
-When this series displays highlighted values
 Then this series highlight shapes will match category values within small tolerance:
   | Value |
   | 14 |
@@ -45,7 +44,6 @@ Then this series highlight shapes will match category values within small tolera
   | 118 |
   | 70 |
 When we are talking about the series with name ColumnSeries3
-When this series displays highlighted values
 Then this series highlight shapes will match category values within small tolerance:
   | Value |
   | 12 |

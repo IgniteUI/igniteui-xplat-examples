@@ -7,8 +7,8 @@ When we are talking about the axis with name xAxis
 Then this axis will have labels visible with these values: 1996, 2000, 2004, 2008, 2012, 2016
 When we are talking about the axis with name yAxis
 Then this axis range will have a minimum value of 0 and a maximum value of 400
+When we choose 'Overlay' from the 'Highlight Display Mode: ' row in the property editor panel
 When we are talking about the series with name ColumnSeries1
-When this series displays highlighted values
 Then this series highlight shapes will match category values within small tolerance:
   | Value |
   | 148 |

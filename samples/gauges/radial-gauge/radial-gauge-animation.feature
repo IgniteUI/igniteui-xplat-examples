@@ -41,3 +41,20 @@ Then the ranges along the radial gauge will have the following colors:
   | #F86232 |
   | #DC3F76 |
   | #7446B9 |
+# "Gauge Animation #2" in the editor animates the gauge into a 100-200 half gauge swept clockwise from 180 to 0 degrees:
+# the needle settles at 125, a quarter of the way round (225 degrees), with labels every 50 and two ranges split at 150.
+When we click the 'Gauge Animation #2' row in the property editor panel
+Then this radial gauge's needle visual will be rendered at an angle of 225 degrees
+Then this radial gauge, with labels sorted by numeric value, will have labels reading:
+  | labelValues |
+  | 100 |
+  | 150 |
+  | 200 |
+Then the ranges along the radial gauge, sorted by angle, will have:
+  | Start Angle | End Angle | Inner Start Percentage | Inner End Percentage | Outer Start Percentage | Outer End Percentage |
+  | 180 | 270 | 30 | 30 | 90 | 90 |
+  | 270 | 0 | 30 | 30 | 90 | 90 |
+Then the ranges along the radial gauge will have the following colors:
+  | Color |
+  | #32F845 |
+  | #BF32F8 |

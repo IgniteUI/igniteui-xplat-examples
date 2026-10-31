@@ -114,3 +114,12 @@ Then this series shapes will match these scatter values:
   | 8.4   | 33.94 |
 Then this series will have markers with type Circle
 Then this series markers will all have bounds width and height within 2 of 10
+# The editor's marker combos resize and reshape both series' markers.
+When we choose '20' from the 'Marker Size' row in the property editor panel
+When we choose 'Triangle' from the 'Marker Type' row in the property editor panel
+When we are talking about the series with name scatterSeries1
+Then this series will have markers with type Triangle
+Then this series markers will all have bounds width and height within 2 of 20
+When we are talking about the series with name scatterSeries2
+Then this series will have markers with type Triangle
+Then this series markers will all have bounds width and height within 2 of 20

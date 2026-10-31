@@ -13,6 +13,14 @@ Then this series shapes will match these plotted OHLC values in visual order:
   | 2020-05-12 | 46.7 | 56.2 | 46.5 | 54 |
   | 2022-03-02 | 278 | 296.6 | 233.3 | 293.3 |
   | 2025-04-28 | 243.5 | 294.9 | 222.8 | 285.9 |
+# The editor's buttons move the window by 5%: each Zoom In takes 2.5% off every side, and Pan Right then shifts the
+# zoomed window right.
+When we click the 'Zoom In' row in the property editor panel
+When we click the 'Zoom In' row in the property editor panel
+When we are talking about the series with name priceSeries
+Then this chart will have a window rect of 0.05,0.05,0.9,0.9
+When we click the 'Pan Right' row in the property editor panel
+Then this chart will have a window rect of 0.1,0.05,0.9,0.9
 When we set the charts window rect to 0,0,0.5,1
 When we are talking about the axis with name xAxis
 Then this axis will contain a labels for 2019-01-10

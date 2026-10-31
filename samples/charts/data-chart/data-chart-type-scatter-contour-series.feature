@@ -11,3 +11,7 @@ Then this axis will have labels visible with these values: 90, 60, 30, 0, -30, -
 When we are talking about the series with name series
 Then this series will have contours with 10 lines
 Then this series will have contours with 3 thickness
+# The editor's thickness slider redraws the contours 6px thick.
+When we move the 'Thickness' slider in the property editor panel to 6
+When we are talking about the series with name series
+Then this series will have contours with 6 thickness
