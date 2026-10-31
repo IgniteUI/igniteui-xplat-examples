@@ -12,3 +12,8 @@ When we are talking about the series at index 1
 Then this series shapes will match the China column of sample data named CountryRenewableElectricity within small tolerance
 When we are talking about the series at index 2
 Then this series shapes will match the America column of sample data named CountryRenewableElectricity within small tolerance
+# The editor's stroke combos restyle the axes through the chart.
+When we choose 'salmon' from the 'Y Axis Major Stroke' row in the property editor panel
+Then this category chart will have yAxis major gridlines with stroke 'salmon'
+When we choose 'cornflowerblue' from the 'X Axis Major Stroke' row in the property editor panel
+Then this category chart will have xAxis major gridlines with stroke 'cornflowerblue'
