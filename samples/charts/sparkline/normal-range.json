@@ -30,7 +30,7 @@
           "valueType": "EnumValue",
           "dropDownNames": ["0", "10", "15", "20", "25", "30"],
           "dropDownValues": ["0", "10", "15", "20", "25", "30"],
-          "primitiveValue": 25
+          "primitiveValue": 15
         },
         {
           "type": "PropertyEditorPropertyDescription",

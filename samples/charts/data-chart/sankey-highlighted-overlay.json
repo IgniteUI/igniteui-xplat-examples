@@ -1,0 +1,80 @@
+{
+  "strings": {
+    "title": "Budget Flow with a Highlighted Overlay"
+  },
+  "hasAnimations": true,
+  "descriptions": {
+    "content": {
+      "type": "DataChart",
+      "name": "chart",
+      "isHorizontalZoomEnabled": false,
+      "isVerticalZoomEnabled": false,
+      "plotAreaMarginRight": 140,
+      "highlightingMode": "FadeOthersSpecific",
+      "highlightingBehavior": "DirectlyOver",
+      "axes": [
+        {
+          "type": "CategoryXAxis",
+          "name": "xAxis",
+          "dataSourceRef": "SankeyIncomeStages",
+          "label": "Stage",
+          "areLabelsVisible": false,
+          "tickLength": 0,
+          "stroke": "Transparent",
+          "majorStroke": "Transparent"
+        },
+        {
+          "type": "NumericYAxis",
+          "name": "yAxis",
+          "areLabelsVisible": false,
+          "tickLength": 0,
+          "stroke": "Transparent",
+          "majorStroke": "Transparent"
+        }
+      ],
+      "series": [
+        {
+          "type": "SankeySeries",
+          "name": "sankey",
+          "title": "Budget Flow",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "linkSourceRef": "SankeyIncomeFlow",
+          "linkSourceMemberPath": "Source",
+          "linkTargetMemberPath": "Target",
+          "linkValueMemberPath": "Value",
+          "highlightedLinkValueMemberPath": "Highlighted",
+          "highlightedValuesDisplayMode": "Overlay",
+          "useItemWiseColors": true,
+          "thickness": 0,
+          "nodeGap": 250,
+          "areaFillOpacity": 0.7,
+          "isTransitionInEnabled": true
+        },
+        {
+          "type": "CalloutLayer",
+          "name": "nodeLabels",
+          "targetSeriesRef": "sankey",
+          "isAutoCalloutBehaviorEnabled": true,
+          "useValueForAutoCalloutLabels": false,
+          "useItemColorForOutline": true,
+          "calloutStrokeThickness": 2,
+          "calloutTextColor": "Black",
+          "calloutBackground": "White"
+        },
+        {
+          "type": "DataToolTipLayer",
+          "name": "tooltips"
+        }
+      ]
+    }
+  },
+  "modules": [
+    "charts/DataChartCoreModule",
+    "charts/DataChartCategoryCoreModule",
+    "charts/DataChartFlowModule",
+    "charts/DataChartInteractivityModule",
+    "charts/DataChartAnnotationModule",
+    "charts/AnnotationLayerProxyModule"
+  ]
+}

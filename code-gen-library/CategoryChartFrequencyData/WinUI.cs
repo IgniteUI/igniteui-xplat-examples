@@ -62,17 +62,36 @@ public static class CategoryChartFrequency
     // Restarted rather than adjusted, because the interval is fixed when the timer is created.
     public static void RestartTimer(XamCategoryChart target)
     {
+        StopTimer();
         chart = target;
-        if (timer != null)
-        {
-            timer.Stop();
-        }
+        // Leaving the sample stops the timer, so it does not keep ticking against a chart that is gone.
+        chart.Unloaded += Chart_Unloaded;
         timer = new DispatcherTimer();
         timer.Interval = TimeSpan.FromMilliseconds(RefreshMilliseconds);
         timer.Tick += (s, e) => Tick();
         timer.Start();
     }
 
+
+    public static void StopTimer()
+    {
+        if (timer != null)
+        {
+            timer.Stop();
+            timer = null;
+        }
+        if (chart != null)
+        {
+            chart.Unloaded -= Chart_Unloaded;
+        }
+    }
+
+    private static void Chart_Unloaded(object sender, RoutedEventArgs e)
+    {
+        StopTimer();
+        Running = false;
+        chart = null;
+    }
 
     private static void Tick()
     {

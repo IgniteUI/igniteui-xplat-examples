@@ -1,0 +1,15 @@
+[
+{ "Altitude": "0 km",  "Standard": 15.0,  "Tropical": 27.0 },
+{ "Altitude": "1 km",  "Standard": 8.5,   "Tropical": 21.5 },
+{ "Altitude": "2 km",  "Standard": 2.0,   "Tropical": 15.5 },
+{ "Altitude": "3 km",  "Standard": -4.5,  "Tropical": 9.5 },
+{ "Altitude": "4 km",  "Standard": -11.0, "Tropical": 3.0 },
+{ "Altitude": "5 km",  "Standard": -17.5, "Tropical": -3.5 },
+{ "Altitude": "6 km",  "Standard": -24.0, "Tropical": -10.0 },
+{ "Altitude": "7 km",  "Standard": -30.5, "Tropical": -17.0 },
+{ "Altitude": "8 km",  "Standard": -37.0, "Tropical": -24.5 },
+{ "Altitude": "9 km",  "Standard": -43.5, "Tropical": -32.5 },
+{ "Altitude": "10 km", "Standard": -50.0, "Tropical": -41.0 },
+{ "Altitude": "11 km", "Standard": -56.5, "Tropical": -50.0 },
+{ "Altitude": "12 km", "Standard": -56.5, "Tropical": -59.0 }
+]
