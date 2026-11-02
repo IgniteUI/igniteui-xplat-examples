@@ -43,7 +43,7 @@ public class SelectionMatcherOnViewInit
 		SeriesMatcher matcher2 = new SeriesMatcher();
 		ChartSelection selection2 = new ChartSelection();
 		selection2 = new ChartSelection();
-		selection2.Item = data[1];
+		selection2.Item = data[2];
 		matcher2.MemberPath = "Wind";
 		matcher2.MemberPathType = "ValueMemberPath";
 
