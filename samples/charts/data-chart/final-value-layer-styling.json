@@ -1,0 +1,47 @@
+{
+  "descriptions": {
+    "content": {
+      "type": "DataChart",
+      "name": "chart",
+      "subtitle": "Renewable Energy Generated",
+      "axes": [
+        {
+          "type": "CategoryXAxis",
+          "name": "xAxis",
+          "dataSourceRef": "EnergyRenewableGeneration",
+          "label": "Year"
+        },
+        {
+          "type": "NumericYAxis",
+          "name": "yAxis",
+          "title": "TWh",
+          "labelLocation": "OutsideRight"
+        }
+      ],
+      "series": [
+        {
+          "type": "LineSeries",
+          "name": "series1",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "dataSourceRef": "EnergyRenewableGeneration",
+          "valueMemberPath": "America"
+        },
+        {
+          "type": "FinalValueLayer",
+          "name": "crosshairLayer",
+          "axisAnnotationBackground": "Orange",
+          "axisAnnotationTextColor": "Black",
+          "axisAnnotationOutline": "Black"
+        }
+      ]
+    }
+  },
+  "modules": [
+    "charts/DataChartCoreModule",
+    "charts/DataChartCategoryModule",
+    "charts/DataChartAnnotationModule",
+    "charts/DataChartInteractivityModule",
+    "charts/AnnotationLayerProxyModule"
+  ]
+}

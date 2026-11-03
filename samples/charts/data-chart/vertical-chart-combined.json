@@ -1,0 +1,82 @@
+{
+  "strings": {
+    "legendTitle": "Sales Against Target by Region"
+  },
+  "hasAnimations": true,
+  "descriptions": {
+    "legend": {
+      "type": "Legend",
+      "name": "legend",
+      "orientation": "Horizontal"
+    },
+    "content": {
+      "type": "DataChart",
+      "name": "chart",
+      "legendRef": "legend",
+      "isHorizontalZoomEnabled": false,
+      "isVerticalZoomEnabled": false,
+      "axes": [
+        {
+          "type": "CategoryYAxis",
+          "name": "yAxis",
+          "label": "Region",
+          "dataSourceRef": "RegionalSalesTargets",
+          "interval": 1,
+          "isInverted": true
+        },
+        {
+          "type": "NumericXAxis",
+          "name": "xAxis",
+          "title": "Sales (millions of dollars)",
+          "minimumValue": 0
+        }
+      ],
+      "series": [
+        {
+          "type": "CategoryHighlightLayer",
+          "name": "CategoryHighlightLayer"
+        },
+        {
+          "type": "BarSeries",
+          "name": "BarSeries1",
+          "title": "Actual",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "dataSourceRef": "RegionalSalesTargets",
+          "valueMemberPath": "Actual",
+          "showDefaultTooltip": false,
+          "isTransitionInEnabled": true,
+          "isHighlightingEnabled": true
+        },
+        {
+          "type": "VerticalLineSeries",
+          "name": "VerticalLineSeries2",
+          "title": "Target",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "dataSourceRef": "RegionalSalesTargets",
+          "valueMemberPath": "Target",
+          "markerType": "Diamond",
+          "thickness": 2,
+          "showDefaultTooltip": false,
+          "isTransitionInEnabled": true,
+          "isHighlightingEnabled": true
+        },
+        {
+          "type": "DataToolTipLayer",
+          "name": "Tooltips",
+          "summaryType": "None"
+        }
+      ]
+    }
+  },
+  "modules": [
+    "charts/LegendModule",
+    "charts/DataChartCoreModule",
+    "charts/DataChartCategoryCoreModule",
+    "charts/DataChartCategoryModule",
+    "charts/DataChartInteractivityModule",
+    "charts/DataChartVerticalCategoryModule",
+    "charts/DataChartAnnotationModule"
+  ]
+}

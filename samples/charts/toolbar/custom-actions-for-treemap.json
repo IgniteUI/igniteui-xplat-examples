@@ -4,6 +4,7 @@
   "strings": {
     "legendTitle": "Toolbar with custom actions for TreeMap"
   },
+  "hasAnimations": true,
   "descriptions": {
     "aboveContent": {
       "type": "Toolbar",

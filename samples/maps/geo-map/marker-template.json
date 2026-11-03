@@ -1,0 +1,27 @@
+{
+  "descriptions": {
+    "content": {
+      "type": "GeographicMap",
+      "name": "map",
+      "height": "100%",
+      "width": "100%",
+      "zoomable": true,
+      "series": [
+        {
+          "type": "GeographicSymbolSeries",
+          "name": "CountriesSeries",
+          "dataSourceRef": "WorldCountries",
+          "markerCollisionAvoidance": "Fade",
+          "latitudeMemberPath": "Y",
+          "longitudeMemberPath": "X",
+          "markerBrush": "White",
+          "markerOutline": "#7D73E6"
+        }
+      ]
+    }
+  },
+  "modules": [
+    "charts/DataChartInteractivityModule",
+    "maps/GeographicMapModule"
+  ]
+}

@@ -9,7 +9,7 @@ export class TestsUpdateGroupsInSeriesAddedEvent
     groupIndex: number = 0;
     updateAnnotations: boolean = false;
     groups: string[] = null;
-    public testsUpdateGroupsInSeriesAddedEvent(sender: any,args: IgrChartSeriesEventArgs): void
+    public testsUpdateGroupsInSeriesAddedEvent(sender: any,args: IgcChartSeriesEventArgs): void
     {  
         if (this.groups == null){       
          const o = CodeGenHelper.findByName<object>("SeriesAddedGroups");

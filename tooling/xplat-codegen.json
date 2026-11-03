@@ -1,0 +1,19 @@
+{
+  "platforms": ["Angular", "React", "WebComponents", "Blazor", "WPF", "WinUI", "Uno"],
+  "downstreams": {
+    "Angular": "IgniteUI/igniteui-angular-examples",
+    "React": "IgniteUI/igniteui-react-examples",
+    "WebComponents": "IgniteUI/igniteui-wc-examples",
+    "Blazor": "IgniteUI/igniteui-blazor-examples",
+    "WinUI": "Infragistics/winui-samples",
+    "Uno": "Infragistics/uno-samples"
+  },
+  "downstreamBaseBranches": {
+    "Angular": ["vnext", "master"],
+    "React": ["vnext", "master"],
+    "WebComponents": ["vnext", "master"],
+    "Blazor": ["vnext", "master"],
+    "WinUI": ["main"],
+    "Uno": ["main"]
+  }
+}

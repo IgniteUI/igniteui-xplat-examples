@@ -6,7 +6,7 @@ import Foundation
 class TestsRadialGaugeFormatLabelWithAllValues {
 
     //begin eventHandler
-    func testsRadialGaugeFormatLabelWithAllValues(sender: Any?, args: IgsAlignRadialGaugeLabelEventArgs?) {
+    func testsRadialGaugeFormatLabelWithAllValues(sender: Any?, args: IgsFormatRadialGaugeLabelEventArgs?) {
         
 		
 		let radToDeg = 180.0 / Double.pi
@@ -16,12 +16,12 @@ class TestsRadialGaugeFormatLabelWithAllValues {
 		let endAngleDeg   = (args!.endAngle * radToDeg).rounded(.toNearestOrEven)
 
 		args!.label =
-		  "Value:\(args!.value)," +
+		  "Value:\(NumberUtil.doubleToMinDecimalsString(value: args!.value) ?? "")," +
 		  "Angle:\(Int(angleDeg))," +
 		  "StartAngle:\(Int(startAngleDeg))," +
 		  "EndAngle:\(Int(endAngleDeg))," +
-		  "ActualMinimumValue:\(args!.actualMinimumValue)," +
-		  "ActualMaximumValue:\(args!.actualMaximumValue)"
+		  "ActualMinimumValue:\(NumberUtil.doubleToMinDecimalsString(value: args!.actualMinimumValue) ?? "")," +
+		  "ActualMaximumValue:\(NumberUtil.doubleToMinDecimalsString(value: args!.actualMaximumValue) ?? "")"
 
 
     }

@@ -20,7 +20,7 @@
         {
           "type": "PropertyEditorPropertyDescription",
           "label": "Toggle Summaries",
-          "valueType": "Boolean1",
+          "valueType": "Boolean",
           "primitiveValue": true,
           "changedRef": "WebTreeGridHasSummariesChange",
           "name": "ToggleSummariesEditor"

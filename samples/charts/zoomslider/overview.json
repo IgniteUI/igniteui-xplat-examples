@@ -1,0 +1,14 @@
+{
+  "descriptions": {
+    "content": {
+      "type": "ZoomSlider",
+      "name": "zoomSlider",
+      "areThumbCalloutsEnabled": true,
+      "height": "100%",
+      "width": "100%"
+    }
+  },
+  "modules": [
+    "charts/ZoomSliderModule"
+  ]
+}

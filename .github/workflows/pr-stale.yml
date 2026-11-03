@@ -13,7 +13,7 @@ jobs:
       issues: write
       pull-requests: write
     steps:
-      - uses: actions/stale@v9 # Use the actions/stale action
+      - uses: actions/stale@v11 # Use the actions/stale action
         with:
           # remove-pr-stale-when-updated: true
           days-before-stale: 30

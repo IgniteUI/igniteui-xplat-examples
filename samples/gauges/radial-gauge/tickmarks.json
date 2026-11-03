@@ -1,0 +1,26 @@
+{
+  "descriptions": {
+    "content": {
+      "type": "RadialGauge",
+      "name": "gauge",
+      "height": "100%",
+      "width": "100%",
+      "tickStartExtent": 0.5,
+      "tickEndExtent": 0.57,
+      "tickStrokeThickness": 2,
+      "tickBrush": "DodgerBlue",
+      "minorTickCount": 4,
+      "minorTickEndExtent": 0.520,
+      "minorTickStartExtent": 0.57,
+      "minorTickStrokeThickness": 1,
+      "minorTickBrush": "DarkViolet",
+      "minimumValue": 0,
+      "maximumValue": 80,
+      "value": 50,
+      "interval": 10
+    }
+  },
+  "modules": [
+    "gauges/RadialGaugeModule"
+  ]
+}

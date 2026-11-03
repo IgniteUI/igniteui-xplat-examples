@@ -1,9 +1,13 @@
 {
+  "hasAnimations": true,
   "export": true,
   "descriptions": {
     "content": {
       "type": "ColorEditor",
-      "name": "colorEditor"
+      "name": "colorEditor",
+      "width": "200px",
+      "height": "40px",
+      "valueChangedRef": "ColorEditorValueChanged"
     }
   },
   "modules": [

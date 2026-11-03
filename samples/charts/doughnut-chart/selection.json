@@ -1,0 +1,59 @@
+{
+  "strings": {
+    "legendTitle": "Global Electricity Demand by Energy Use"
+  },
+  "onViewInit": [ "DoughnutChartSelectionOnViewInit" ],
+  "descriptions": {
+    "editor": {
+      "type": "PropertyEditorPanel",
+      "componentRendererRef": "renderer",
+      "targetRef": "chart",
+      "descriptionType": "DoughnutChart",
+      "isHorizontal": true,
+      "isWrappingEnabled": true,
+      "properties": [
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "SelectedSlice",
+          "name": "SelectedSlice",
+          "label": "Selected Slice",
+          "valueType": "StringValue"
+        }
+      ]
+    },
+    "legend": {
+      "type": "ItemLegend",
+      "name": "legend",
+      "orientation": "Horizontal"
+    },
+    "content": {
+      "type": "DoughnutChart",
+      "name": "chart",
+      "allowSliceSelection": true,
+      "innerExtent": 0.6,
+      "sliceClickRef": "DoughnutChartSelectionSliceClick",
+      "series": [
+        {
+          "type": "RingSeries",
+          "name": "ringSeries",
+          "dataSourceRef": "EnergyGlobalDemand",
+          "legendRef": "legend",
+          "labelMemberPath": "Summary",
+          "labelsPosition": "OutsideEnd",
+          "labelExtent": 30,
+          "valueMemberPath": "Value",
+          "legendLabelMemberPath": "Category",
+          "radiusFactor": 0.7,
+          "startAngle": 30
+        }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
+    "charts/ItemLegendModule",
+    "charts/DoughnutChartModule",
+    "charts/RingSeriesModule"
+  ]
+}

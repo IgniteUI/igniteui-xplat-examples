@@ -1,0 +1,55 @@
+{
+  "hasAnimations": true,
+  "onViewInit": [ "CategoryChartHighVolumeOnViewInit" ],
+  "descriptions": {
+    "editor": {
+      "type": "PropertyEditorPanel",
+      "componentRendererRef": "renderer",
+      "targetRef": "chart",
+      "descriptionType": "CategoryChart",
+      "isHorizontal": true,
+      "isWrappingEnabled": true,
+      "properties": [
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "DataPoints",
+          "name": "DataPoints",
+          "label": "Data Points",
+          "shouldOverrideDefaultEditor": true,
+          "valueType": "Slider",
+          "primitiveValue": 500000,
+          "min": 10000,
+          "max": 1000000,
+          "step": 1000,
+          "changedRef": "EditorChangeHighVolumeDataPoints"
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "GenerateData",
+          "label": "",
+          "valueType": "Button",
+          "primitiveValue": "Generate Data",
+          "buttonClickedRef": "EditorButtonGenerateHighVolumeData"
+        }
+      ]
+    },
+    "content": {
+      "type": "CategoryChart",
+      "name": "chart",
+      "chartType": "Line",
+      "toolTipType": "Default",
+      "yAxisExtent": 60,
+      "xAxisEnhancedIntervalPreferMoreCategoryLabels": false,
+      "shouldConsiderAutoRotationForInitialLabels": false,
+      "shouldAutoExpandMarginForInitialLabels": false,
+      "crosshairsDisplayMode": "None",
+      "autoMarginAndAngleUpdateMode": "None",
+      "markerTypes": [ "None" ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
+    "charts/CategoryChartModule"
+  ]
+}

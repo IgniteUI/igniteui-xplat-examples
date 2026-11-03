@@ -2,7 +2,7 @@
 import { IgrTreeGridComponent, IgrRowDragEndEventArgs } from 'igniteui-react-grids';
 //end imports
 
-import { CodeGenHelper } from 'igniteui-webcomponents-core';
+import { CodeGenHelper } from 'igniteui-react-core';
 
 export class WebTreeGridReorderRowHandler {
     //begin eventHandler

@@ -1,0 +1,38 @@
+<!--begin template-->
+<!--begin content-->
+<DataTemplate x:Key="DataChartProductionTooltipTemplate">
+    <!-- Every fuel is listed whichever column is hovered, so the reader sees the country's whole
+         mix. Which series is hovered is carried by the title, drawn in that series' own brush;
+         tinting the matching row instead would take a converter to compare the row against the
+         series' value member path, and the title says the same thing without one. -->
+    <StackPanel Orientation="Vertical" Margin="5">
+        <TextBlock Text="{Binding Item.Country, StringFormat='{}{0} Production'}"
+                   Foreground="{Binding Series.ActualBrush}"
+                   FontWeight="Bold" Margin="0,0,0,4" />
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="70" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" Grid.Column="0" Text="Coal:" />
+            <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding Item.Coal}" />
+            <TextBlock Grid.Row="1" Grid.Column="0" Text="Hydro:" />
+            <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding Item.Hydro}" />
+            <TextBlock Grid.Row="2" Grid.Column="0" Text="Nuclear:" />
+            <TextBlock Grid.Row="2" Grid.Column="1" Text="{Binding Item.Nuclear}" />
+            <TextBlock Grid.Row="3" Grid.Column="0" Text="Gas:" />
+            <TextBlock Grid.Row="3" Grid.Column="1" Text="{Binding Item.Gas}" />
+            <TextBlock Grid.Row="4" Grid.Column="0" Text="Oil:" />
+            <TextBlock Grid.Row="4" Grid.Column="1" Text="{Binding Item.Oil}" />
+        </Grid>
+    </StackPanel>
+</DataTemplate>
+<!--end content-->
+<!--end template-->

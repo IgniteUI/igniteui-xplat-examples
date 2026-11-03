@@ -1,0 +1,57 @@
+{
+  "strings": {
+    "legendTitle": "Stars Distribution in Milky Way Galaxy"
+  },
+  "descriptions": {
+    "content": {
+      "type": "DataChart",
+      "name": "chart",
+      "isHorizontalZoomEnabled": true,
+      "isVerticalZoomEnabled": true,
+      "axes": [
+        {
+          "type": "NumericXAxis",
+          "name": "xAxis",
+          "abbreviateLargeNumbers": true,
+          "titleBottomMargin": 10,
+          "title": "Plane of Rotation (in Light Years)"
+        },
+        {
+          "type": "NumericYAxis",
+          "name": "yAxis",
+          "abbreviateLargeNumbers": true,
+          "titleBottomMargin": 10,
+          "title": "Plane of Rotation (in Light Years)"
+        }
+      ],
+      "series": [
+        {
+          "type": "HighDensityScatterSeries",
+          "name": "series",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "dataSourceRef": "ScatterHighDensityData",
+          "title": "Distribution",
+          "xMemberPath": "X",
+          "yMemberPath": "Y",
+          "showDefaultTooltip": true,
+          "mouseOverEnabled": true,
+          "progressiveLoad": true,
+          "heatMinimumColor": "Black",
+          "heatMaximumColor": "Yellow",
+          "heatMaximum": 1,
+          "heatMinimum": 5,
+          "resolution": 3
+        }
+      ]
+    }
+  },
+  "modules": [
+    "charts/DataChartCoreModule",
+    "charts/DataChartScatterCoreModule",
+    "charts/DataChartScatterModule",
+    "charts/DataChartInteractivityModule",
+    "charts/NumberAbbreviatorModule",
+    "charts/HighDensityScatterSeriesModule"
+  ]
+}

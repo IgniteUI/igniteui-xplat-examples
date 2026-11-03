@@ -8,12 +8,13 @@ export class SelectionMatcherOnViewInit
 {
 
 	//begin eventHandler
-	private _timer: ReturnType<typeof setInterval>;
+	private _timer: ReturnType<typeof setTimeout>;
 
-    public selectionMatcherOnViewInit(): void {
+    public selectionMatcherOnViewInit(): Promise<void> {
         
 		var chart = CodeGenHelper.getDescription<IgcCategoryChartComponent>("content");
 
+		return new Promise((resolve) => {
 		this._timer = setTimeout(() => {
 			var data = CodeGenHelper.findByName<any[]>("energyRenewableConsumption");
 			let matcher: IgcSeriesMatcher = new IgcSeriesMatcher();
@@ -33,8 +34,9 @@ export class SelectionMatcherOnViewInit
 			selection2.matcher = matcher2;
 
 			chart.selectedSeriesItems.add(selection2);
-
+			resolve();
         }, 100);
+		});
     }
     //end eventHandler
 

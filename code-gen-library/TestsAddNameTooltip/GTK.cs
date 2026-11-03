@@ -21,6 +21,15 @@ public class TestsAddNameTooltip
                     if (cv == null)
                     {
                         var tv = new Gtk.Label();
+                        // Tooltip collision tests must not inherit the desktop's font or DPI size.
+                        using (var font = new Pango.FontDescription())
+                        using (var attributes = new Pango.AttrList())
+                        {
+                            font.Family = "Segoe UI";
+                            font.AbsoluteSize = 16 * Pango.Scale.PangoScale;
+                            attributes.Insert(new Pango.AttrFontDesc(font));
+                            tv.Attributes = attributes;
+                        }
                         cv = tv;
                         args.CurrentView = cv;
                     }

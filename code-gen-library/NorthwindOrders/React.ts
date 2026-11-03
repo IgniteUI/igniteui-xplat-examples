@@ -1,0 +1,15 @@
+//begin imports
+//end imports
+
+//begin async data
+import { ODataVirtualDataSource } from 'igniteui-react-datasources';
+export class NorthwindOrders {
+    public static async fetch(): Promise<ODataVirtualDataSource> {
+        const vds = new ODataVirtualDataSource();
+        vds.baseUri = "https://services.odata.org/V4/Northwind/Northwind.svc";
+        vds.entitySet = "Orders";
+        vds.pageSizeRequested = 200;
+        return vds;
+    }
+}
+//end async data

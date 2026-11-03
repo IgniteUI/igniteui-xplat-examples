@@ -1,0 +1,28 @@
+{
+  "descriptions": {
+    "content": {
+      "type": "RadialGauge",
+      "name": "gauge",
+      "height": "100%",
+      "width": "100%",
+      "backingShape": "Fitted",
+      "backingBrush": "#FCFCFC",
+      "backingOutline": "DodgerBlue",
+      "backingOversweep": 5,
+      "backingCornerRadius": 10,
+      "backingStrokeThickness": 5,
+      "backingOuterExtent": 0.8,
+      "backingInnerExtent": 0.15,
+      "scaleStartAngle": 135,
+      "scaleEndAngle": 45,
+      "scaleBrush": "#DDDDDD",
+      "minimumValue": 0,
+      "maximumValue": 80,
+      "value": 50,
+      "interval": 10
+    }
+  },
+  "modules": [
+    "gauges/RadialGaugeModule"
+  ]
+}

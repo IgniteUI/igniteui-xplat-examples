@@ -1,0 +1,4 @@
+{
+    "observable": true,
+    "notifyPropertyChanged": true
+}

@@ -1,0 +1,131 @@
+{
+  "descriptions": {
+    "editor": {
+      "type": "PropertyEditorPanel",
+      "componentRendererRef": "renderer",
+      "targetRef": "chart",
+      "descriptionType": "DataChart",
+      "isHorizontal": true,
+      "isWrappingEnabled": true,
+      "properties": [
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "AnnotationLabel",
+          "name": "AnnotationLabel",
+          "label": "Label",
+          "valueType": "StringValue",
+          "primitiveValue": "Enter Label"
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "AnnotationDetails",
+          "name": "AnnotationDetails",
+          "label": "Details",
+          "valueType": "StringValue",
+          "primitiveValue": "Enter Details"
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "AnnotationBadgeColor",
+          "name": "AnnotationBadgeColor",
+          "label": "Badge Color",
+          "valueType": "StringValue",
+          "primitiveValue": "black"
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "AnnotationMainColor",
+          "name": "AnnotationMainColor",
+          "label": "Main Color",
+          "valueType": "StringValue",
+          "primitiveValue": "black"
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "FinishAnnotation",
+          "label": "",
+          "valueType": "Button",
+          "primitiveValue": "Done",
+          "buttonClickedRef": "EditorButtonFinishUserAnnotation"
+        },
+        {
+          "type": "PropertyEditorPropertyDescription",
+          "propertyPath": "CancelAnnotation",
+          "label": "",
+          "valueType": "Button",
+          "primitiveValue": "Cancel",
+          "buttonClickedRef": "EditorButtonCancelUserAnnotation"
+        }
+      ]
+    },
+    "aboveContent": {
+      "type": "Toolbar",
+      "name": "toolbar",
+      "targetRef": "chart",
+      "orientation": "Horizontal"
+    },
+    "content": {
+      "type": "DataChart",
+      "name": "chart",
+      "isHorizontalZoomEnabled": true,
+      "isVerticalZoomEnabled": true,
+      "computedPlotAreaMarginMode": "Series",
+      "isUserAnnotationsEnabled": true,
+      "userAnnotationInformationRequestedRef": "DataChartUserAnnotationRequested",
+      "userAnnotationToolTipContentUpdatingRef": "DataChartUserAnnotationTooltip",
+      "axes": [
+        {
+          "type": "CategoryXAxis",
+          "name": "xAxis",
+          "dataSourceRef": "CountryRenewableElectricity",
+          "label": "Year"
+        },
+        {
+          "type": "NumericYAxis",
+          "name": "yAxis",
+          "title": "TWh"
+        }
+      ],
+      "series": [
+        {
+          "type": "LineSeries",
+          "name": "lineSeries1",
+          "title": "America",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "dataSourceRef": "CountryRenewableElectricity",
+          "valueMemberPath": "America"
+        },
+        {
+          "type": "LineSeries",
+          "name": "lineSeries2",
+          "title": "Europe",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "dataSourceRef": "CountryRenewableElectricity",
+          "valueMemberPath": "Europe"
+        },
+        {
+          "type": "LineSeries",
+          "name": "lineSeries3",
+          "title": "China",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "dataSourceRef": "CountryRenewableElectricity",
+          "valueMemberPath": "China"
+        }
+      ]
+    }
+  },
+  "modules": [
+    "withDescriptions",
+    "layouts/PropertyEditorPanelModule",
+    "layouts/ToolbarModule",
+    "charts/DataChartToolbarModule",
+    "charts/DataChartCoreModule",
+    "charts/DataChartCategoryModule",
+    "charts/DataChartAnnotationModule",
+    "charts/DataChartInteractivityModule",
+    "charts/AnnotationLayerProxyModule"
+  ]
+}

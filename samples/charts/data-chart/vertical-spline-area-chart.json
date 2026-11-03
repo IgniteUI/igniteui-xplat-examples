@@ -1,0 +1,83 @@
+{
+  "strings": {
+    "legendTitle": "Website Visits by Hour"
+  },
+  "hasAnimations": true,
+  "descriptions": {
+    "legend": {
+      "type": "Legend",
+      "name": "legend",
+      "orientation": "Horizontal"
+    },
+    "content": {
+      "type": "DataChart",
+      "name": "chart",
+      "legendRef": "legend",
+      "isHorizontalZoomEnabled": false,
+      "isVerticalZoomEnabled": false,
+      "axes": [
+        {
+          "type": "CategoryYAxis",
+          "name": "yAxis",
+          "label": "Hour",
+          "dataSourceRef": "WebsiteVisitsByHour",
+          "interval": 1,
+          "isInverted": true
+        },
+        {
+          "type": "NumericXAxis",
+          "name": "xAxis",
+          "title": "Visits",
+          "minimumValue": 0
+        }
+      ],
+      "series": [
+        {
+          "type": "CategoryHighlightLayer",
+          "name": "CategoryHighlightLayer"
+        },
+        {
+          "type": "VerticalSplineAreaSeries",
+          "name": "VerticalSplineAreaSeries1",
+          "title": "Desktop",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "dataSourceRef": "WebsiteVisitsByHour",
+          "valueMemberPath": "Desktop",
+          "areaFillOpacity": 0.5,
+          "thickness": 2,
+          "showDefaultTooltip": false,
+          "isTransitionInEnabled": true,
+          "isHighlightingEnabled": true
+        },
+        {
+          "type": "VerticalSplineAreaSeries",
+          "name": "VerticalSplineAreaSeries2",
+          "title": "Mobile",
+          "xAxisRef": "xAxis",
+          "yAxisRef": "yAxis",
+          "dataSourceRef": "WebsiteVisitsByHour",
+          "valueMemberPath": "Mobile",
+          "areaFillOpacity": 0.5,
+          "thickness": 2,
+          "showDefaultTooltip": false,
+          "isTransitionInEnabled": true,
+          "isHighlightingEnabled": true
+        },
+        {
+          "type": "DataToolTipLayer",
+          "name": "Tooltips"
+        }
+      ]
+    }
+  },
+  "modules": [
+    "charts/LegendModule",
+    "charts/DataChartCoreModule",
+    "charts/DataChartCategoryCoreModule",
+    "charts/DataChartCategoryModule",
+    "charts/DataChartInteractivityModule",
+    "charts/DataChartVerticalCategoryModule",
+    "charts/DataChartAnnotationModule"
+  ]
+}
