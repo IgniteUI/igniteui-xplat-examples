@@ -2,6 +2,7 @@
 # (abbreviated, no gridlines) and a candlestick price series on the right 'Stock Price ($)' axis.
 When we are talking about the series with name volumeSeries
 Then this series shapes will match the Volume column of sample data named StockTesla within small tolerance
+When we are talking about the axis with name yAxisRight
 When we are talking about the series with name stockSeries
 Then this series shapes will match these plotted OHLC values in visual order:
   | Label | Open | High | Low | Close |
@@ -15,5 +16,5 @@ Then this axis title will display text 'Stock Price ($)'
 When we are talking about the axis with name yAxisLeft
 Then this axis title will display text 'Trade Volume'
 Then this axis will have major gridlines with thickness 0
-# CALIBRATE: the auto interval and abbreviated text of the volume axis (max volume 3,748,903,126)
+# The volume axis picks a 1B interval for its 3,748,903,126 maximum and abbreviates its labels.
 Then this axis will contain a labels for 0, 1B, 2B, 3B
