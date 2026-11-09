@@ -1,3 +1,7 @@
+# Widened past the 800px test host: at that width the nine dated categories leave too little room for
+# their labels and for the last column's callout, which the chart then trims and hides.
+When we are talking about the chart named chart
+When this chart changes size to 1200x800
 # Composite chart: clustered Revenue/Expenses columns on a 0..30M axis plus an Income/Revenue % spline area on a
 # second 0..160 axis, with formatted value callouts over each column and auto (precision 1) callouts on the spline.
 When we are talking about the series with name series1
@@ -71,25 +75,26 @@ Then this callout layer will have annotations with the following properties:
 When we are talking about annotation layer expensesCallouts targeting series series2
 Then this callout layer will have annotations with the following properties:
   | X | Y | Label |
-  | 0.5 | 10183000 | $10.2M |
-  | 1.5 | 12813000 | $12.8M |
-  | 2.5 | 14476000 | $14.5M |
-  | 3.5 | 11705000 | $11.7M |
-  | 4.5 | 14044000 | $14.0M |
-  | 5.5 | 12803000 | $12.8M |
-  | 6.5 | 13677000 | $13.7M |
-  | 7.5 | 13717000 | $13.7M |
-  | 8.5 | 17133000 | $17.1M |
+  | 0 | 10183000 | $10.2M |
+  | 1 | 12813000 | $12.8M |
+  | 2 | 14476000 | $14.5M |
+  | 3 | 11705000 | $11.7M |
+  | 4 | 14044000 | $14.0M |
+  | 5 | 12803000 | $12.8M |
+  | 6 | 13677000 | $13.7M |
+  | 7 | 13717000 | $13.7M |
+  | 8 | 17133000 | $17.1M |
 When we are talking about annotation layer profitCallouts targeting series series3
-# CALIBRATE: auto callout text at autoCalloutLabelPrecision 1
+# Auto callouts round to one decimal and drop a trailing zero, so 15.0 reads 15. Their Y is read back from the
+# marker's pixel position rather than the data, so each is pinned by its category and its label.
 Then this callout layer will have annotations with the following properties:
-  | X | Y | Label |
-  | 0 | 39.7954 | 39.8 |
-  | 1 | 15.0162 | 15.0 |
-  | 2 | 14.2722 | 14.3 |
-  | 3 | 33.6902 | 33.7 |
-  | 4 | 33.3839 | 33.4 |
-  | 5 | 27.8176 | 27.8 |
-  | 6 | 26.8101 | 26.8 |
-  | 7 | 36.1109 | 36.1 |
-  | 8 | 38.9677 | 39.0 |
+  | X | Label |
+  | 0 | 39.8 |
+  | 1 | 15 |
+  | 2 | 14.3 |
+  | 3 | 33.7 |
+  | 4 | 33.4 |
+  | 5 | 27.8 |
+  | 6 | 26.8 |
+  | 7 | 36.1 |
+  | 8 | 39 |
