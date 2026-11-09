@@ -1,4 +1,4 @@
-# Selection: selectionMode Multiple over LocalData (MarketShare); selected slices get opacity 0.85, stroke rgba(0,0,0,0.5) thickness 4.
+# Selection: selectionMode Multiple over EnergyMarketShare (MarketShare); selected slices get opacity 0.85, stroke rgba(0,0,0,0.5) thickness 4.
 Then this legend will have items with text: Cooling,Residential,Heating,Lighting,Other
 Then this legend will be horizontal with these Labels:
   | Label |

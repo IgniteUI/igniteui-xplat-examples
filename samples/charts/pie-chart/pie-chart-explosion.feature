@@ -1,4 +1,4 @@
-# Explosion: LocalData (MarketShare) with explodedSlices [1, 2] (Residential, Heating) at explodedRadius 0.2; Company legend items.
+# Explosion: EnergyMarketShare (MarketShare) with explodedSlices [1, 2] (Residential, Heating) at explodedRadius 0.2; Company legend items.
 Then this legend will have items with text: Cooling,Residential,Heating,Lighting,Other
 Then this legend will be horizontal with these Labels:
   | Label |
