@@ -12,10 +12,10 @@ When we are talking about the series with name valueOverlay
 Then the value overlay will display a line with color green
 Then the value overlay will display a line with thickness 2
 When we are talking about the axis with name yAxis
-# CALIBRATE: axis annotation text of the Average value layer (raw average 186.5026)
-Then this axis will have a value layer with axis annotation values: 186.50
+# The Average value layer's axis annotation shows the average Open, 186.5026, rounded to two decimals with the trailing zero dropped
+Then this axis will have a value layer with axis annotation values: 186.5
 Then the data annotation slice layer named 'AnnoLayer' will have horizontal lines at the following positions: 50
 # The overlay text is not in the exported visual data, so no step can read it; it is not asserted.
 Then the data annotation slice layer named 'AnnoLayer' will have linear annotations as follows:
-  | Orientation | LinePosition |
+  | Orientation | Position |
   | Horizontal | 50 |
