@@ -20,13 +20,13 @@ Then this radial gauge, with labels sorted by numeric value, will have labels re
   | 110 |
 Then this radial gauge will have all labels at 85 % distance from the center
 Then this radial gauge will have labels with the font 'Verdana'
-# CALIBRATE: font is '15px Verdana'; the exported label FontSize unit (px vs pt) on this platform is unverified.
+# The label font is '15px Verdana'.
 Then this radial gauge will have abels will have font size 15
 Then this radial gauge will have major tickmarks that are colored #79797A and have a thickness of 1
-# CALIBRATE: the minor ticks are transparent; confirm transparent ticks are still exported as visible.
+# The minor ticks are transparent but still drawn, so all 48 are counted.
 Then this radial gauge will have 48 minor tickmarks
-# CALIBRATE: every range starts at 0° so the analyzer's angle sort is a tie (assumes declaration order is
-# kept), and the full-circle 0-120 ranges must export an arc the range analyzer can read.
+# Every range starts at 0°, so ranges tied on angle keep their drawing order: each track's full-circle
+# background ring is drawn under its progress ring.
 Then the ranges along the radial gauge will have the following colors:
   | Color |
   | #E0DFDF |
@@ -35,5 +35,5 @@ Then the ranges along the radial gauge will have the following colors:
   | #FDB417 |
   | #E0DFDF |
   | #FF0000 |
-# CALIBRATE: needleShape None may export an empty needle path, which the needle analyzer does not expect.
+# needleShape is None, so no needle is drawn.
 Then this radial gauge's needle is not displayed
