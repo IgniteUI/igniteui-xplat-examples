@@ -4,7 +4,8 @@
 # the gauge to fill a non-square slot, so pin it to a square before asserting geometry.
 When this radial gauge is resized to 500x500
 Then this radial gauge's backing shape will be #FCFCFC with a DodgerBlue outline that is 5 pixels thick
-# CALIBRATE: the backing has a 10px corner radius; the fitted-backing analyzer has only been exercised with radius 0.
+# Each side of the fitted backing is the scale edge pushed out, parallel, to the 5° oversweep; the 10px corner
+# radius rounds off where each side meets the outer arc.
 Then this radial guage will have a fitted backing shape that extends from 15 % from the center of the gauge to 80 % from the center of the gauge assuming 5 degrees overweep and 10 corner radius
 Then this radial gauge's scale is colored #DDDDDD
 Then this radial gauge's needle visual will be rendered at an angle of 303.75 degrees

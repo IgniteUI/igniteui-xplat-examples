@@ -22,10 +22,21 @@ Then this linear gauge will have labels reading:
 Then this linear gauge will have 2 range/ranges
 Then linear gauge range1 will start from -40 and will end in 20
 Then linear gauge range2 will start from -40 and will end in 20
-# CALIBRATE: the brush is CSS linear-gradient(#FF0000, #C70101) (top to bottom); the comma form builds a left-to-right gradient.
-Then linear gauge range1 will be colored with linear gradient named #FF0000,#C70101
-# CALIBRATE: the brush is CSS linear-gradient(#FA8F8F, #FA5151) (top to bottom); the comma form builds a left-to-right gradient.
-Then linear gauge range2 will be colored with linear gradient named #FA8F8F,#FA5151
+# Both range brushes are CSS linear-gradient(a, b), which runs top to bottom.
+When we have a linear gradient named innerBand with these colors:
+  | color | offset |
+  | #FF0000 | 0 |
+  | #C70101 | 1 |
+And the linear gradient has a start point of (0.5, 0)
+And the linear gradient has an end point of (0.5, 1)
+When we have a linear gradient named outerBand with these colors:
+  | color | offset |
+  | #FA8F8F | 0 |
+  | #FA5151 | 1 |
+And the linear gradient has a start point of (0.5, 0)
+And the linear gradient has an end point of (0.5, 1)
+Then linear gauge range1 will be colored with linear gradient named innerBand
+Then linear gauge range2 will be colored with linear gradient named outerBand
 # The tick analyzer separates major from minor ticks by stroke thickness (2 = major, 1 = minor), so when
 # both share a thickness the count below is majors plus minors.
 Then All 71 linear gauge minor ticks will have thickness of 1
