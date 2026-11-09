@@ -9,7 +9,7 @@
         {
           "type": "CategoryXAxis",
           "name": "xAxis",
-          "dataSourceRef": "LocalData",
+          "dataSourceRef": "ValueOverlayData",
           "label": "Label"
         },
         {
@@ -25,7 +25,7 @@
           "name": "series1",
           "xAxisRef": "xAxis",
           "yAxisRef": "yAxis",
-          "dataSourceRef": "LocalData",
+          "dataSourceRef": "ValueOverlayData",
           "valueMemberPath": "Value"
         },
         { "type": "ValueOverlay", "name": "overlay1", "axisRef": "yAxis", "value": 2.0, "thickness": 5 },
@@ -37,19 +37,6 @@
         { "type": "ValueOverlay", "name": "overlay7", "axisRef": "yAxis", "value": 5.0, "thickness": 5 }
       ]
     }
-  },
-  "refs": {
-    "LocalData": [
-      { "Label": 1, "Value": 1.0 },
-      { "Label": 2, "Value": 2.0 },
-      { "Label": 3, "Value": 6.0 },
-      { "Label": 4, "Value": 8.0 },
-      { "Label": 5, "Value": 2.0 },
-      { "Label": 6, "Value": 6.0 },
-      { "Label": 7, "Value": 4.0 },
-      { "Label": 8, "Value": 2.0 },
-      { "Label": 9, "Value": 1.0 }
-    ]
   },
   "modules": [
     "charts/DataChartCoreModule",

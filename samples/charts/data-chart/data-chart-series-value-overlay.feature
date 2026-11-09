@@ -1,4 +1,4 @@
-# Seven ValueOverlays (thickness 5) drawn across the 0-10 y axis at fixed values over a column series of LocalData.
+# Seven ValueOverlays (thickness 5) drawn across the 0-10 y axis at fixed values over a column series of ValueOverlayData.
 When we are talking about the axis with name xAxis
 Then this axis will have labels visible with these values: 1, 2, 3, 4, 5, 6, 7, 8, 9
 When we are talking about the axis with name yAxis
