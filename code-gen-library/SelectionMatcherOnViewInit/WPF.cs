@@ -45,27 +45,40 @@ public class SelectionMatcherOnViewInit
 	
 	private void AddSelection()
 	{
-		var chart = CodeGenHelper.GetDescription<XamCategoryChart>("content");
-        
+		// Shared by the category chart and data chart samples; only the category chart has ItemsSource.
+		var content = CodeGenHelper.GetDescription<object>("content");
+		IList data;
+		ChartSelectedItemCollection selectedItems;
+		if (content is XamCategoryChart categoryChart)
+		{
+			data = (IList)categoryChart.ItemsSource;
+			selectedItems = categoryChart.SelectedSeriesItems;
+		}
+		else
+		{
+			var dataChart = (XamDataChart)content;
+			data = (IList)dataChart.Series[0].ItemsSource;
+			selectedItems = dataChart.SelectedSeriesItems;
+		}
+
 		ChartSelection selection = new ChartSelection();
-		selection.Item = ((IList)chart.ItemsSource)[1];
+		selection.Item = data[1];
 		SeriesMatcher matcher = new SeriesMatcher();
 		matcher.MemberPath = "Hydro";
 		matcher.MemberPathType = "ValueMemberPath";
 		selection.Matcher = matcher;
-				
-		chart.SelectedSeriesItems.Add(selection);
+
+		selectedItems.Add(selection);
 
 		SeriesMatcher matcher2 = new SeriesMatcher();
 		ChartSelection selection2 = new ChartSelection();
-		selection2 = new ChartSelection();
-		selection2.Item = ((IList)chart.ItemsSource)[2];
+		selection2.Item = data[2];
 		matcher2.MemberPath = "Wind";
 		matcher2.MemberPathType = "ValueMemberPath";
-				
+
 		selection2.Matcher = matcher2;
-				
-		chart.SelectedSeriesItems.Add(selection2);
+
+		selectedItems.Add(selection2);
 	}
     //end eventHandler
 }

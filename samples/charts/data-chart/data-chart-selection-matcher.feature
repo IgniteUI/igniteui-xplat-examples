@@ -5,31 +5,31 @@ Then this axis will have labels visible with these values: China, Europe, USA, B
 When we are talking about the axis with name xAxis
 Then this axis title will display text 'TWh'
 # Fragment shapes are read back as the stacked (cumulative) end of each fragment, in fragment order.
-# CALIBRATE: the category Y axis is inverted; the tables list values in data order (China first) - confirm the analyzer reads them in that order.
+# The category Y axis is inverted and shapes are read in axis order, so the tables list the data back to front (Canada first).
 When we are talking about the series with name s1
 Then this series shapes will match category values within small tolerance:
   | Value |
-  | 63.46 |
-  | 43.08 |
-  | 35.64 |
-  | 77.25 |
   | 88.57 |
+  | 77.25 |
+  | 35.64 |
+  | 43.08 |
+  | 63.46 |
 When we are talking about the series with name s2
 Then this series shapes will match category values within small tolerance:
   | Value |
-  | 83.71 |
-  | 74.51 |
-  | 75.51 |
-  | 88.05 |
   | 96.5  |
+  | 88.05 |
+  | 75.51 |
+  | 74.51 |
+  | 83.71 |
 When we are talking about the series with name s3
 Then this series shapes will match category values within small tolerance:
   | Value |
-  | 94.86 |
-  | 84.99 |
-  | 89.7  |
-  | 89.12 |
   | 97.49 |
+  | 89.12 |
+  | 89.7  |
+  | 84.99 |
+  | 94.86 |
 When we are talking about the series with name s4
 Then this series shapes will match category values within small tolerance:
   | Value |
@@ -38,13 +38,14 @@ Then this series shapes will match category values within small tolerance:
   | 100   |
   | 100   |
   | 100   |
-When we wait for chart animations to complete
-# CALIBRATE: the selection is added by SelectionMatcherOnViewInit after a 100 ms timer; confirm it has run by this point.
+# SelectionMatcherOnViewInit adds the two selections after a 100 ms timer.
+# The fragments take the palette in order, so Hydro (s1) is outlined #8bdc5c and Wind (s2) #8961A9; selection fills them orange.
+When we wait for the selected series items collection to have 2 items
 Then the selected series items collection will have the following items:
-  | ValueMemberPath |
-  | Hydro           |
-  | Wind            |
+  | SeriesMemberPath | SeriesMemberPathType | DataItem                                                                 |
+  | Hydro            | ValueMemberPath      | Location=Europe;Year=2019;Hydro=632.54;Solar=154;Wind=461.3;Other=220.3 |
+  | Wind             | ValueMemberPath      | Location=USA;Year=2019;Hydro=271.16;Solar=108;Wind=303.4;Other=78.34    |
 When we are talking about the series with name s1
-Then this series will have main shapes with label Europe filled orange
+Then this series will have labeled shapes with fill orange and outline #8bdc5c at the following labels: Europe
 When we are talking about the series with name s2
-Then this series will have main shapes with label USA filled orange
+Then this series will have labeled shapes with fill orange and outline #8961A9 at the following labels: USA

@@ -3,7 +3,7 @@
   "strings": {
     "legendTitle": "Renewable Energy Consumption"
   },
-  "onViewInit": "SelectionMatcherOnViewInit",
+  "onViewInit": [ "SelectionMatcherOnViewInit" ],
   "descriptions": {
     "legend": {
       "type": "Legend",
