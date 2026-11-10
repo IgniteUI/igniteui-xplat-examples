@@ -1,5 +1,6 @@
 # Column options menu: sorting ID descending from the menu puts the last ProductOrders record (1100) first and marks DESC selected.
 # CALIBRATE: visible header prefix assumes the ~780px-wide GTK sampleSurface; star columns at their minimum widths overflow it, so the trailing column set depends on the real viewport.
+Given this grid has queued work tracking
 Then this grid will have the header cells with the following text: ID, Product, Country, Price, Orders, Order Value, Order Date
 When we are talking about the column named ID
 Then all of the cells in this column appear to be aligned to the center horizontally
