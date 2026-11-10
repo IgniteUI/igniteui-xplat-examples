@@ -6,5 +6,5 @@ Then this grid will have data cells with these values in the visible rows:
   | 1002 |
   | 1003 |
 When we scroll the grid so that column 12 is visible
-# CALIBRATE: the trailing visible set after scrolling depends on the real viewport width (all scrolled columns use defaultColumnMinWidth 120 or their declared minimums).
-Then this grid will have the header cells with the following text: CountryFlag, Street, City, Country, Salary, Sales, Salary
+# The visible set after scrolling depends on the host's viewport width.
+Then this grid will have the header cells with the following text: City, Country, Salary, Sales, Salary
