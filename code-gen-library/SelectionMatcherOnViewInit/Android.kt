@@ -2,6 +2,7 @@
 import android.os.Handler;
 import android.os.Looper;
 import com.infragistics.mobile.controls.IgaCategoryChart;
+import com.infragistics.mobile.controls.IgaDataChart;
 import com.infragistics.mobile.controls.IgaChartSelection;
 import com.infragistics.mobile.controls.IgaSeriesMatcher;
 //end imports
@@ -15,7 +16,9 @@ public class SelectionMatcherOnViewInit
 	//Kotlin: Action
     public fun selectionMatcherOnViewInit() {
         
-		var chart = CodeGenHelper.getDescription<IgaCategoryChart>("content")!!;
+		// Shared by the category chart and data chart samples, which bind the same data.
+		val content = CodeGenHelper.getDescription<Any>("content")!!;
+		val selectedItems = if (content is IgaCategoryChart) content.selectedSeriesItems!! else (content as IgaDataChart).selectedSeriesItems!!;
 		val handler = Handler(Looper.getMainLooper())
 
 		handler.postDelayed({
@@ -27,7 +30,7 @@ public class SelectionMatcherOnViewInit
 			matcher.memberPath = "hydro";
 			matcher.memberPathType = "ValueMemberPath";
 			selection.matcher = matcher;
-			chart.selectedSeriesItems!!.add(selection);
+			selectedItems.add(selection);
 
 			var matcher2: IgaSeriesMatcher = IgaSeriesMatcher();
 			var selection2: IgaChartSelection = IgaChartSelection();
@@ -36,7 +39,7 @@ public class SelectionMatcherOnViewInit
 			matcher2.memberPathType = "ValueMemberPath";
 			selection2.matcher = matcher2;
 
-			chart.selectedSeriesItems!!.add(selection2);
+			selectedItems.add(selection2);
         }, 100);
     }
     //end eventHandler

@@ -10,23 +10,41 @@ public class TestsAddStaticTextTooltip
     //WPF: System.Action
     public void TestsAddStaticTextTooltip()
     {
-        var chart = CodeGenHelper.GetDescription<DataChartView>("content");
+        var content = CodeGenHelper.GetDescription<object>("content");
+        // A category chart makes its own series, so they get the tooltip as it adds them;
+        // any it has already made are reached through its data chart.
+        var categoryChart = content as CategoryChartView;
+        if (categoryChart != null)
+        {
+            categoryChart.SeriesAdded += (sender, args) => AddStaticTextTooltip(args.Series, categoryChart.Context);
+            foreach (var series in categoryChart.DataChart.Series)
+            {
+                AddStaticTextTooltip(series, categoryChart.Context);
+            }
+            return;
+        }
+        var chart = (DataChartView)content;
         foreach (var series in chart.Series)
         {
-            if (!series.IsLayer)
+            AddStaticTextTooltip(series, chart.Context);
+        }
+    }
+
+    private void AddStaticTextTooltip(Series series, Android.Content.Context context)
+    {
+        if (!series.IsLayer)
+        {
+            series.ChartToolTipUpdating += (sender, args) =>
             {
-                series.ChartToolTipUpdating += (sender, args) =>
+                var cv = args.CurrentView;
+                if (cv == null)
                 {
-                    var cv = args.CurrentView;
-                    if (cv == null)
-                    {
-                        var tv = new TextView(chart.Context);
-                        cv = tv;
-                        args.CurrentView = cv;
-                    }
-                    ((TextView)cv).Text = "text";
-                };
-            }
+                    var tv = new TextView(context);
+                    cv = tv;
+                    args.CurrentView = cv;
+                }
+                ((TextView)cv).Text = "text";
+            };
         }
     }
     //end eventHandler

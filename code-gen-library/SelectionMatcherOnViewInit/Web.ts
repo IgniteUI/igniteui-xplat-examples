@@ -1,5 +1,5 @@
 //begin imports
-import { IgcCategoryChartComponent, IgcChartSelection, IgcSeriesMatcher } from 'igniteui-webcomponents-charts';
+import { IgcCategoryChartComponent, IgcDataChartComponent, IgcChartSelection, IgcSeriesMatcher } from 'igniteui-webcomponents-charts';
 //end imports
 
 import { CodeGenHelper } from 'igniteui-webcomponents-core';
@@ -12,7 +12,11 @@ export class SelectionMatcherOnViewInit
 
     public selectionMatcherOnViewInit(): Promise<void> {
         
-		var chart = CodeGenHelper.getDescription<IgcCategoryChartComponent>("content");
+		// Shared by the category chart and data chart samples, which bind the same data.
+		var content = CodeGenHelper.getDescription<any>("content");
+		var selectedItems = content instanceof IgcCategoryChartComponent
+			? content.selectedSeriesItems
+			: (content as IgcDataChartComponent).selectedSeriesItems;
 
 		return new Promise((resolve) => {
 		this._timer = setTimeout(() => {
@@ -24,7 +28,7 @@ export class SelectionMatcherOnViewInit
 			matcher.memberPath = "hydro";
 			matcher.memberPathType = "ValueMemberPath";
 			selection.matcher = matcher;
-			chart.selectedSeriesItems.add(selection);
+			selectedItems.add(selection);
 
 			let matcher2: IgcSeriesMatcher = new IgcSeriesMatcher();
 			let selection2: IgcChartSelection = new IgcChartSelection();
@@ -33,7 +37,7 @@ export class SelectionMatcherOnViewInit
 			matcher2.memberPathType = "ValueMemberPath";
 			selection2.matcher = matcher2;
 
-			chart.selectedSeriesItems.add(selection2);
+			selectedItems.add(selection2);
 			resolve();
         }, 100);
 		});

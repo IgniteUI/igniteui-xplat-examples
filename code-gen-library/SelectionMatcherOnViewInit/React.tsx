@@ -1,5 +1,5 @@
 //begin imports
-import { IgrCategoryChart, IgrChartSelection, IgrSeriesMatcher } from 'igniteui-react-charts';
+import { IgrCategoryChart, IgrDataChart, IgrChartSelection, IgrSeriesMatcher } from 'igniteui-react-charts';
 //end imports
 
 import { CodeGenHelper } from 'igniteui-webcomponents-core';
@@ -12,7 +12,11 @@ export class SelectionMatcherOnViewInit
 
     public selectionMatcherOnViewInit(): void {
         
-		var chart = CodeGenHelper.getDescription<IgrCategoryChart>("content");
+		// Shared by the category chart and data chart samples, which bind the same data.
+		var content = CodeGenHelper.getDescription<any>("content");
+		var selectedItems = content instanceof IgrCategoryChart
+			? content.selectedSeriesItems
+			: (content as IgrDataChart).selectedSeriesItems;
 
 		this._timer = setInterval(() => {
 		var data = CodeGenHelper.findByName<any[]>("energyRenewableConsumption");
@@ -24,7 +28,7 @@ export class SelectionMatcherOnViewInit
 			matcher.memberPath = "hydro";
 			matcher.memberPathType = "ValueMemberPath";
 			selection.matcher = matcher;
-			chart.selectedSeriesItems.add(selection);
+			selectedItems.add(selection);
 
 		var matcher2 = new IgrSeriesMatcher();
 
@@ -34,7 +38,7 @@ export class SelectionMatcherOnViewInit
 			matcher2.memberPathType = "ValueMemberPath";
 			selection2.matcher = matcher2;
 
-			chart.selectedSeriesItems.add(selection2);
+			selectedItems.add(selection2);
 
 		}, 100);
     }
