@@ -1,6 +1,8 @@
 # Filter row (filterUIType FilterRow): an Age value outside the data's 20-40 range filters every row out; clearing it restores the rows.
-# CALIBRATE: visible header prefix assumes the ~780px-wide GTK sampleSurface; star columns at their minimum widths overflow it, so the trailing column set depends on the real viewport.
-Then this grid will have the header cells with the following text: Name, Age, Street, City, Country
+# The grid snaps at a pixel scaling ratio of 1, as in the grid scenarios, whose layout assertions assume it.
+Given the sample's content uses a pixel scaling ratio of 1
+# Star columns at their minimum widths can overflow the sample's width, so the trailing visible columns depend on the host's viewport.
+Then this grid will have the header cells with the following text: Name, Age, Street, City, Country, Sales
 When we enter the following values into the filter row:
   | ColumnName | Value |
   | Age        | 99    |
