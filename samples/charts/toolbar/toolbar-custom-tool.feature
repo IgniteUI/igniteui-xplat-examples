@@ -11,9 +11,11 @@ Then the toolbar will have the following action names:
 Then the toolbar action "CustomIconName" will have title "Custom Icon"
 Then the toolbar action "CustomIconName2" will have title "Custom Icon 2"
 Then the toolbar action "CustomIconName" will appear before "CustomIconName2"
-# CALIBRATE: requires the host to run the sample's onViewInit (ToolbarCustomIconOnViewInit) to register the SVG icons.
+# onViewInit (ToolbarCustomIconOnViewInit) registers CustomIcon from SVG text and CustomIcon2 from a data URL that
+# points at svgrepo.com; the test re-registers CustomIcon2 from an inline PNG data URI so it does not depend on the network.
+When this toolbar registers a custom icon named "CustomIcon2" in collection "CustomCollection2" from data URL "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg=="
 Then the toolbar action "CustomIconName" will have a custom icon
-Then the toolbar action "CustomIconName2" will have a custom icon
+Then the toolbar action "CustomIconName2" will have an icon from data URL "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg=="
 Then this category chart will have xAxis labels matching the Year column of sample data named CountryRenewableElectricity
 When we are talking about the series at index 0
 Then this series shapes will match the Europe column of sample data named CountryRenewableElectricity within small tolerance
