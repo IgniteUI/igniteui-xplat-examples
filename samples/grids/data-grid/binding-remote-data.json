@@ -9,6 +9,7 @@
       "dataSourceRef": "NorthwindOrders",
       "autoGenerateColumns": false,
       "isColumnOptionsEnabled": true,
+      "filterUIType": "None",
       "height": "100%",
       "width": "100%",
       "columns": [

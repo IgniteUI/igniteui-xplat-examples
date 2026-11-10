@@ -18,7 +18,7 @@
 //ifdef webgrids
     "igniteui-dockmanager": "^1.17.0",
 //endifdef webgrids
-    "igniteui-react": "^19.6.2",
+    "igniteui-react": "^19.9.0",
 //ifdef charts, maps, dashboards
     "igniteui-react-charts": "19.6.0-beta.2",
 //endifdef charts, maps, dashboards
@@ -57,7 +57,7 @@
     "igniteui-react-spreadsheet": "19.6.0-beta.2",
     "igniteui-react-spreadsheet-chart-adapter": "19.6.0-beta.2",
 //endifdef spreadsheet
-    "igniteui-webcomponents": "^7.2.1",
+    "igniteui-webcomponents": "^7.4.1",
     "lit-html": "^3.2.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",

@@ -1,10 +1,10 @@
 //begin imports
-using Infragistics.Core;
 using Infragistics.Controls.Charts;
 using Infragistics.Controls.Maps;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Microsoft.UI.Xaml.Media;
 //end imports
 
 public class MapBindingDataModelOnViewInit
@@ -14,7 +14,7 @@ public class MapBindingDataModelOnViewInit
     public void MapBindingDataModelOnViewInit()
     {
         var geoMap = CodeGenHelper.GetDescription<XamGeographicMap>("content");
-        geoMap.UpdateZoomWindow(new Rect(0.2, 0.1, 0.6, 0.6));
+        geoMap.UpdateZoomWindow(new Infragistics.Controls.IGRect(0.2, 0.1, 0.6, 0.6));
 
         var CityDAL = new WorldCity() { Lat = 32.763, Lon = -96.663, Country = "US", Name = "Dallas" };
         var CitySYD = new WorldCity() { Lat = -33.889, Lon = 151.028, Country = "Australia", Name = "Sydney" };
@@ -66,11 +66,11 @@ public class MapBindingDataModelOnViewInit
         };
 
         var lineSeries = new GeographicPolylineSeries();
-        lineSeries.DataSource = geoRoutes;
+        lineSeries.ItemsSource = geoRoutes;
         lineSeries.ShapeMemberPath = "Points";
         lineSeries.ShapeStrokeThickness = 9;
         lineSeries.ShapeOpacity = 0.5;
-        lineSeries.ShapeStroke = flight.Color;
+        lineSeries.ShapeStroke = BrushFromName(flight.Color);
         geoMap.Series.Add(lineSeries);
     }
 
@@ -80,14 +80,20 @@ public class MapBindingDataModelOnViewInit
         var geoLocations = new List<WorldCity>() { flight.Origin, flight.Dest };
 
         var symbolSeries = new GeographicSymbolSeries();
-        symbolSeries.DataSource = geoLocations;
-        symbolSeries.MarkerType = MarkerType.Circle;
+        symbolSeries.ItemsSource = geoLocations;
+        symbolSeries.MarkerType = Infragistics.Controls.Charts.MarkerType.Circle;
         symbolSeries.LatitudeMemberPath = "Lat";
         symbolSeries.LongitudeMemberPath = "Lon";
-        symbolSeries.MarkerBrush = "White";
-        symbolSeries.MarkerOutline = flight.Color;
+        symbolSeries.MarkerBrush = BrushFromName("White");
+        symbolSeries.MarkerOutline = BrushFromName(flight.Color);
         symbolSeries.Thickness = 1;
         geoMap.Series.Add(symbolSeries);
+    }
+    /// <summary>WinUI has no BrushConverter; flight colours are named Microsoft.UI.Colors.</summary>
+    public static SolidColorBrush BrushFromName(string name)
+    {
+        var color = typeof(Microsoft.UI.Colors).GetProperty(name)?.GetValue(null);
+        return new SolidColorBrush(color is Windows.UI.Color c ? c : Microsoft.UI.Colors.Gray);
     }
     //end eventHandler
 }

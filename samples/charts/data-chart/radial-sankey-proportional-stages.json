@@ -1,0 +1,66 @@
+{
+  "strings": {
+    "title": "Radial Budget Flow with Proportional Stages"
+  },
+  "hasAnimations": true,
+  "descriptions": {
+    "content": {
+      "type": "DataChart",
+      "name": "chart",
+      "isHorizontalZoomEnabled": false,
+      "isVerticalZoomEnabled": false,
+      "highlightingMode": "FadeOthersSpecific",
+      "highlightingBehavior": "DirectlyOver",
+      "axes": [
+        {
+          "type": "ProportionalCategoryAngleAxis",
+          "name": "angleAxis",
+          "dataSourceRef": "SankeyIncomeStageWeights",
+          "label": "Stage",
+          "valueMemberPath": "Weight",
+          "tickLength": 0,
+          "stroke": "Transparent",
+          "majorStroke": "Transparent"
+        },
+        {
+          "type": "NumericRadiusAxis",
+          "name": "radiusAxis",
+          "areLabelsVisible": false,
+          "tickLength": 0,
+          "stroke": "Transparent",
+          "majorStroke": "Transparent"
+        }
+      ],
+      "series": [
+        {
+          "type": "RadialSankeySeries",
+          "name": "radialSankey",
+          "title": "Budget Flow",
+          "angleAxisRef": "angleAxis",
+          "radiusAxisRef": "radiusAxis",
+          "linkSourceRef": "SankeyIncomeFlow",
+          "linkSourceMemberPath": "Source",
+          "linkTargetMemberPath": "Target",
+          "linkValueMemberPath": "Value",
+          "useItemWiseColors": true,
+          "thickness": 0,
+          "nodeGap": 250,
+          "areaFillOpacity": 0.7,
+          "isTransitionInEnabled": true
+        },
+        {
+          "type": "DataToolTipLayer",
+          "name": "tooltips"
+        }
+      ]
+    }
+  },
+  "modules": [
+    "charts/DataChartCoreModule",
+    "charts/DataPieChartCoreModule",
+    "charts/DataChartRadialCoreModule",
+    "charts/DataChartFlowModule",
+    "charts/DataChartInteractivityModule",
+    "charts/DataChartAnnotationModule"
+  ]
+}

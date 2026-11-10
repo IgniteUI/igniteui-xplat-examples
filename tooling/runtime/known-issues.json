@@ -44,6 +44,18 @@
     "reason": "The published beta invokes CR's animation timeout instead of animation idle."
   },
   {
+    "sample": "charts/data-chart/radial-sankey-budget-flow.json",
+    "reason": "Temporarily skip Sankey runtime checks until a new alpha is published."
+  },
+  {
+    "sample": "charts/data-chart/sankey-budget-flow.json",
+    "reason": "Temporarily skip Sankey runtime checks until a new alpha is published."
+  },
+  {
+    "sample": "charts/data-chart/sankey-highlighted-values.json",
+    "reason": "Temporarily skip Sankey runtime checks until a new alpha is published."
+  },
+  {
     "sample": "charts/data-chart/scatter-marker-options.json",
     "reason": "The published beta invokes CR's animation timeout instead of animation idle."
   },

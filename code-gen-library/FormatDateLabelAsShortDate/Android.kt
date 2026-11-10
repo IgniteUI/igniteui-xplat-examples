@@ -51,9 +51,15 @@ class FormatDateLabelAsShortDate {
             else -> {
                 try {
                     val clss = item!!.javaClass;
-                    val dateProp = clss.methods.firstOrNull { it.name == "getDate" }
-                    dateProp?.isAccessible = true
-                    val value = dateProp?.invoke(item)
+                    val dateProp = clss.methods.firstOrNull { it.name == "getDate" && it.parameterTypes.isEmpty() }
+                    val itemGetter = clss.methods.firstOrNull { it.name == "get" && it.parameterTypes.size == 1 && it.parameterTypes[0].isAssignableFrom(String::class.java) }
+                    val value = if (dateProp != null) {
+                        dateProp.isAccessible = true
+                        dateProp.invoke(item)
+                    } else {
+                        // Generated test rows expose an indexed getter rather than getDate().
+                        itemGetter?.invoke(item, "Date")
+                    }
                     if (value is Date) {
                         Calendar.getInstance().apply { time = value }
                     } else if (value is Calendar) {

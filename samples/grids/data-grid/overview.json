@@ -1,15 +1,6 @@
 {
   "skipAlterDataCasing": true,
   "descriptions": {
-    "aboveContent": {
-      "type": "DataGridToolbar",
-      "name": "toolbar",
-      "id": "toolbar",
-      "targetGridRef": "grid",
-      "toolbarTitle": "Sales Team",
-      "columnChooser": true,
-      "columnPinning": true
-    },
     "content": {
       "type": "DataGrid",
       "id": "grid",
@@ -124,5 +115,5 @@
       ]
     }
   },
-  "modules": ["data-grids/DataGridModule", "data-grids/DataGridToolbarModule"]
+  "modules": ["data-grids/DataGridModule"]
 }

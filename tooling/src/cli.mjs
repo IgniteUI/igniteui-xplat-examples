@@ -561,9 +561,10 @@ async function main() {
             execFileSync('dotnet', ['build', path.join(output, 'BlazorLibrary.csproj'),
                 '--configuration', 'Release', '--nologo'], { cwd: output, stdio: 'inherit' });
         } else {
+            const jsxArgs = opts.platform === 'React' ? ['--jsx', 'react-jsx'] : [];
             execFileSync(process.execPath, [path.join(TOOLING_ROOT, 'node_modules', 'typescript', 'bin', 'tsc'),
                 '--noEmit', '--skipLibCheck', '--strict', 'false', '--moduleResolution', 'bundler',
-                '--module', 'preserve', '--target', 'es2022', path.join(output, 'libraryManager.ts')],
+                '--module', 'preserve', '--target', 'es2022', ...jsxArgs, path.join(output, 'libraryManager.ts')],
                 { cwd: TOOLING_ROOT, stdio: 'inherit' });
         }
         console.log(`[${opts.platform}] compiled ${Object.keys(emitted.files).length} emitted library file(s)`);
@@ -619,7 +620,13 @@ async function main() {
         for (const destination of destinations) {
             console.log(`[${opts.platform}] building ${path.relative(output, destination)}`);
             if (['Blazor', 'WPF', 'WinUI', 'Uno'].includes(opts.platform)) {
-                execFileSync('dotnet', ['build', '--configuration', 'Release', '--nologo'], { cwd: destination, stdio: 'inherit' });
+                const buildArguments = ['build', '--configuration', 'Release', '--nologo'];
+                // WinUI samples reference the product packages unless pointed at a dev-tools build.
+                if (opts.platform === 'WinUI' && process.env.DEV_TOOLS_ROOT) {
+                    const winUIBuild = path.join(process.env.DEV_TOOLS_ROOT, 'XPlatform', 'Main', 'Source', 'Build', 'WinUI');
+                    buildArguments.push(`-p:InfragisticsWinUIBuild=${winUIBuild}`);
+                }
+                execFileSync('dotnet', buildArguments, { cwd: destination, stdio: 'inherit' });
             } else {
                 // The shard has one superset install. Each sample still compiles in its own project,
                 // against precisely the package versions its manifest requested.

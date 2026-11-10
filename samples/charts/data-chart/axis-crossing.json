@@ -10,7 +10,7 @@
       "properties": [
         {
           "type": "PropertyEditorPropertyDescription",
-          "propertyPath": "Axes[1 as NumericYAxis].CrossingValue",
+          "propertyPath": "Axes[0 as NumericXAxis].CrossingValue",
           "name": "XAxisCrossingValue",
           "label": "Where the X axis crosses",
           "shouldOverrideDefaultEditor": true,
@@ -22,7 +22,7 @@
         },
         {
           "type": "PropertyEditorPropertyDescription",
-          "propertyPath": "Axes[0 as NumericXAxis].CrossingValue",
+          "propertyPath": "Axes[1 as NumericYAxis].CrossingValue",
           "name": "YAxisCrossingValue",
           "label": "Where the Y axis crosses",
           "shouldOverrideDefaultEditor": true,

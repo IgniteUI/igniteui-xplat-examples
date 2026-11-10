@@ -1,5 +1,6 @@
 //begin imports
 using IgniteUI.Blazor.Controls;
+using ListSortDirection = IgniteUI.Blazor.Controls.ListSortDirection;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

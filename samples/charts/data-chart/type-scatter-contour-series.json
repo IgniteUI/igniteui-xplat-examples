@@ -25,7 +25,7 @@
         },
         {
           "type": "PropertyEditorPropertyDescription",
-          "propertyPath": "Series[0 as ScatterContourSeries].ValueResolver.ValueCount",
+          "propertyPath": "Series[0 as ScatterContourSeries].ValueResolver as LinearContourValueResolver.ValueCount",
           "name": "Contours",
           "label": "Contours",
           "shouldOverrideDefaultEditor": true,
