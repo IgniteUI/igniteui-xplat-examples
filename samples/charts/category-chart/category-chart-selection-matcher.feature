@@ -1,7 +1,6 @@
 # Column chart of EnergyRenewableConsumption whose view-init code selects, through series matchers, Hydro at Europe
 # and Wind at USA, in orange. The series are Year, Hydro, Solar, Wind and Other in palette order (Hydro #8961A9, Wind
 # #82E9D9). The selections are made on a timer after the view is ready, so they are waited for.
-When we wait for the selected series items collection to have 2 items
 Then the selected series items collection will have the following items:
   | SeriesMemberPath | SeriesMemberPathType | DataItem                                                                 |
   | Hydro            | ValueMemberPath      | Location=Europe;Year=2019;Hydro=632.54;Solar=154;Wind=461.3;Other=220.3 |

@@ -40,7 +40,6 @@ Then this series shapes will match category values within small tolerance:
   | 100   |
 # SelectionMatcherOnViewInit adds the two selections after a 100 ms timer.
 # The fragments take the palette in order, so Hydro (s1) is outlined #8bdc5c and Wind (s2) #8961A9; selection fills them orange.
-When we wait for the selected series items collection to have 2 items
 Then the selected series items collection will have the following items:
   | SeriesMemberPath | SeriesMemberPathType | DataItem                                                                 |
   | Hydro            | ValueMemberPath      | Location=Europe;Year=2019;Hydro=632.54;Solar=154;Wind=461.3;Other=220.3 |

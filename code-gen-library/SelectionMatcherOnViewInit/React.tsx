@@ -8,7 +8,6 @@ export class SelectionMatcherOnViewInit
 {
 
 	//begin eventHandler
-	private _timer: ReturnType<typeof setInterval>;
 
     public selectionMatcherOnViewInit(): void {
         
@@ -18,7 +17,6 @@ export class SelectionMatcherOnViewInit
 			? content.selectedSeriesItems
 			: (content as IgrDataChart).selectedSeriesItems;
 
-		this._timer = setInterval(() => {
 		var data = CodeGenHelper.findByName<any[]>("energyRenewableConsumption");
 
         var matcher = new IgrSeriesMatcher();
@@ -40,7 +38,6 @@ export class SelectionMatcherOnViewInit
 
 			selectedItems.add(selection2);
 
-		}, 100);
     }
     //end eventHandler
 

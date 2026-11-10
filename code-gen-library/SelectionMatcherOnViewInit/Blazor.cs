@@ -11,15 +11,10 @@ public class SelectionMatcherOnViewInit
 {
     //begin eventHandler
 	
-	private System.Threading.Timer _timer;
 
     public void SelectionMatcherOnViewInit()
 	{
-		_timer = new System.Threading.Timer((_) =>
-		{
-			addSelection();
-		}, null, 1000, 0);
-		_timer = null;
+		addSelection();
 	}
 	
 	private void addSelection()

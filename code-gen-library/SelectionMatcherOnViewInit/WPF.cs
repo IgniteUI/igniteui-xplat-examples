@@ -28,19 +28,11 @@ public class SelectionMatcherOnViewInit
 {
     //begin eventHandler
 	
-	private DispatcherTimer _timer;
 
 	//WPF: System.Action
     public void SelectionMatcherOnViewInit()
 	{
-		 _timer = new DispatcherTimer();
-		_timer.Interval = TimeSpan.FromMilliseconds(100);
-		_timer.Tick += (o, e) =>
-		{
-			AddSelection();
-			_timer.Stop();
-		};
-		_timer.Start();
+		AddSelection();
 	}
 	
 	private void AddSelection()

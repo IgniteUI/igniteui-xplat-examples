@@ -1,4 +1,5 @@
 {
+  "hasQueuedWork": true,
   "descriptions": {
     "content": {
       "type": "GeographicMap",

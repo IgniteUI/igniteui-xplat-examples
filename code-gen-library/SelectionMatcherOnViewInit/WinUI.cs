@@ -9,18 +9,11 @@ public class SelectionMatcherOnViewInit
 {
     //begin eventHandler
 
-	private Timer _timer;
 
 	//WPF: System.Action
     public void SelectionMatcherOnViewInit()
 	{
-		// The timer fires on a pool thread; the chart can only be touched from the UI thread.
-		var dispatcher = Microsoft.UI.Dispatching.DispatcherQueue.GetForCurrentThread();
-		_timer = new Timer((state) =>
-		{
-			dispatcher.TryEnqueue(() => AddSelection());
-			_timer.Dispose();
-		}, null, 100, Timeout.Infinite);
+		AddSelection();
 	}
 
 	private void AddSelection()

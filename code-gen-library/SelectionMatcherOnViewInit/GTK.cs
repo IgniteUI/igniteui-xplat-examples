@@ -9,16 +9,11 @@ public class SelectionMatcherOnViewInit
 {
     //begin eventHandler
 
-	private Timer _timer;
 
 	//WPF: System.Action
     public void SelectionMatcherOnViewInit()
 	{
-		_timer = new Timer((state) =>
-		{
-			AddSelection();
-			_timer.Dispose();
-		}, null, 100, Timeout.Infinite);
+		AddSelection();
 	}
 
 	private void AddSelection()
