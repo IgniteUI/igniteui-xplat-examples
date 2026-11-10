@@ -1,5 +1,5 @@
 # Cell editing with single-click edit mode: a click opens an editor, Escape cancels, a typed value commits on Enter and is undoable.
-# CALIBRATE: visible header prefix assumes the ~780px-wide GTK sampleSurface; star columns at their minimum widths overflow it, so the trailing column set depends on the real viewport.
+# Star columns at their minimum widths can overflow the sample's width, so the trailing visible columns depend on the host's viewport.
 Then this grid will have the header cells with the following text: Name, Street, City, Salary, Photo, Date of Birth
 When the user clicks in the following cells in the relative visible rows:
   | RelativeRowNumber | ColumnKey |
