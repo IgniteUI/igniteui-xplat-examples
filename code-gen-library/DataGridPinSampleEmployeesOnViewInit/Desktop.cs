@@ -1,7 +1,7 @@
 //begin imports
 using System;
 using System.Collections;
-using System.Threading;
+using System.Threading.Tasks;
 using Infragistics.Controls;
 using Infragistics.Controls.Grids;
 //end imports
@@ -9,16 +9,12 @@ using Infragistics.Controls.Grids;
 public class DataGridPinSampleEmployeesOnViewInit
 {
     //begin eventHandler
-    private Timer _timer;
-
     //WPF: System.Action
     public void DataGridPinSampleEmployeesOnViewInit()
     {
-        _timer = new Timer((state) =>
-        {
-            PinRows();
-            _timer.Dispose();
-        }, null, 100, Timeout.Infinite);
+        // Deferred, as on the other platforms, but resumed on the UI thread: the grid can only be
+        // touched there, and a thread pool timer reaches it from elsewhere.
+        Task.Delay(100).ContinueWith((t) => PinRows(), TaskScheduler.FromCurrentSynchronizationContext());
     }
 
     private void PinRows()
