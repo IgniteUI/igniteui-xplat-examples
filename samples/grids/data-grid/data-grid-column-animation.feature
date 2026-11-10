@@ -1,5 +1,4 @@
 # Column animations: hiding a column through the column options menu removes it and the remaining columns shift left.
-Given this grid has queued work tracking
 # Star columns at their minimum widths can overflow the sample's width, so the trailing visible columns depend on the host's viewport.
 Then this grid will have the header cells with the following text: Name, Address, City, Salary, Birthday, Country
 When we open the column options dialog on the Right side of the  column with key Address

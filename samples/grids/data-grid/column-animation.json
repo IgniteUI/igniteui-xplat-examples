@@ -1,4 +1,5 @@
 {
+  "hasQueuedWork": true,
   "hasAnimations": true,
   "onViewInit": ["DataGridColumnAnimationOnViewInit"],
   "skipAlterDataCasing": true,
