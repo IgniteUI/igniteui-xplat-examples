@@ -7,6 +7,7 @@ using Infragistics.Controls.Charts;
 using Infragistics.Portable.Description;
 using Microsoft.UI;
 using Microsoft.UI.Xaml;
+using Microsoft.UI.Xaml.Markup;
 using Microsoft.UI.Xaml.Media;
 //end imports
 
@@ -74,9 +75,16 @@ public class TestsNativeLegendThemePrecedence
             var c = brush.Color;
             recorded.Add("#" + c.A.ToString("X2") + c.R.ToString("X2") + c.G.ToString("X2") + c.B.ToString("X2"));
         };
+        // WinUI resolves a Style's TargetType through XAML type metadata, which these code-only controls do not
+        // have, so the style targets the nearest WinUI base type and sets the legend's own property.
+        var styleType = legend.GetType();
+        while (styleType != null && (styleType.Namespace == null || !styleType.Namespace.StartsWith("Microsoft.UI.Xaml")))
+        {
+            styleType = styleType.BaseType;
+        }
         Func<Style> redStyle = () =>
         {
-            var style = new Style(legend.GetType());
+            var style = new Style(styleType);
             style.Setters.Add(new Setter(LegendBase.TextColorProperty, new SolidColorBrush(Colors.Red)));
             return style;
         };
