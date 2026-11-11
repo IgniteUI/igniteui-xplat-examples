@@ -18,17 +18,21 @@ public class SelectionMatcherOnViewInit
 
 	private void AddSelection()
 	{
-		// Shared by the category chart and data chart samples, which bind the same data.
+		// Shared by the category chart and data chart samples. A selection matches the chart's own data
+		// items, so they are taken from the chart rather than looked up by name.
 		var content = CodeGenHelper.GetDescription<object>("content");
-		var data = CodeGenHelper.FindByName<IList>("EnergyRenewableConsumption");
+		IList data;
 		ChartSelectedItemCollection selectedItems;
 		if (content is XamCategoryChart categoryChart)
 		{
+			data = (IList)categoryChart.DataSource;
 			selectedItems = categoryChart.SelectedSeriesItems;
 		}
 		else
 		{
-			selectedItems = ((XamDataChart)content).SelectedSeriesItems;
+			var dataChart = (XamDataChart)content;
+			data = (IList)dataChart.Series[0].DataSource;
+			selectedItems = dataChart.SelectedSeriesItems;
 		}
 
 		ChartSelection selection = new ChartSelection();
