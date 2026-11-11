@@ -91,10 +91,10 @@ public class MapBindingDataModelOnViewInit
         symbolSeries.Thickness = 1;
         geoMap.Series.Add(symbolSeries);
     }
-    /// <summary>GTK has no BrushConverter; flight colours are named Colors.</summary>
+    /// <summary>GTK has no BrushConverter; flight colours are named by the static Colors fields.</summary>
     public static SolidColorBrush BrushFromName(string name)
     {
-        var color = typeof(Colors).GetProperty(name)?.GetValue(null);
+        var color = typeof(Colors).GetField(name)?.GetValue(null);
         return new SolidColorBrush(color is Color c ? c : Colors.Gray);
     }
     //end eventHandler
