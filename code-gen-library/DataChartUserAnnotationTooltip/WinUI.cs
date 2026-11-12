@@ -1,26 +1,31 @@
 //begin imports
 using Infragistics.Controls.Charts;
-using System.Windows.Controls;
-using System.Windows.Media;
+using Microsoft.UI;
+using Microsoft.UI.Xaml.Controls;
+using Microsoft.UI.Xaml.Media;
 //end imports
 
 public class DataChartUserAnnotationTooltip
 {
     //begin eventHandler
-    //WPF: Infragistics.Controls.Charts.UserAnnotationToolTipContentUpdatingEventHandler
+    //WinUI: Infragistics.Controls.Charts.UserAnnotationToolTipContentUpdatingEventHandler
+    // The layer hands over the tooltip's content panel each time it shows an annotation: the
+    // annotation's details go in a line of text, made the first time and updated after that.
     public void DataChartUserAnnotationTooltip(object sender, UserAnnotationToolTipContentUpdatingEventArgs args)
     {
-        // The layer hands over the tooltip's own content control, so the text replaces whatever it
-        // is presenting rather than being appended to it.
-        var container = args.Content as ContentControl;
-        if (container == null)
+        var container = (StackPanel)args.Content;
+        var tooltipText = args.AnnotationInfo.AnnotationData;
+        if (container.Children.Count == 0)
         {
-            return;
+            var line = new TextBlock();
+            line.Text = tooltipText;
+            line.Foreground = new SolidColorBrush(Colors.White);
+            container.Children.Add(line);
         }
-        var line = new TextBlock();
-        line.Text = args.AnnotationInfo.AnnotationData;
-        line.Foreground = new SolidColorBrush(Colors.White);
-        container.Content = line;
+        else
+        {
+            ((TextBlock)container.Children[0]).Text = tooltipText;
+        }
     }
     //end eventHandler
 }
