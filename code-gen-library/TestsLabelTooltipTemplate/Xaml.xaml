@@ -1,0 +1,9 @@
+<!--begin template-->
+<!--begin content-->
+<DataTemplate x:Key="TestsLabelTooltipTemplate">
+    <!-- The label of the hovered item, from the item's own data: the tests' sample data items are
+         dictionaries, so the label is read through the item's indexer. -->
+    <TextBlock Text="{Binding Item[Label]}" />
+</DataTemplate>
+<!--end content-->
+<!--end template-->
