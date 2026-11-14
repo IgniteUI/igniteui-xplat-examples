@@ -53,11 +53,11 @@ namespace Infragistics.Samples
                 item.Expenses = reported[i][1] * 1000;
                 item.Income = item.Revenue - item.Expenses;
                 item.IncomePerRevenue = (item.Income / item.Revenue) * 100;
-                // Where each callout sits along the category axis. The two column series are
-                // clustered side by side, so the expenses callout is offset half a category from
-                // the revenue one to land over its own column.
+                // Where each callout sits along the category axis: its category. A callout targeting a
+                // series is moved by that series' own offset, which for clustered columns is the centre
+                // of its column within the category, so both callouts take the plain category index.
                 item.RevenueX = i;
-                item.ExpensesX = i + 0.5;
+                item.ExpensesX = i;
                 item.FormattedRevenue = "$" + Abbreviate(item.Revenue);
                 item.FormattedExpenses = "$" + Abbreviate(item.Expenses);
                 item.FormattedIncome = "$" + Abbreviate(item.Income);

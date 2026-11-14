@@ -9,41 +9,50 @@ public class SelectionMatcherOnViewInit
 {
     //begin eventHandler
 
-	private Timer _timer;
 
 	//WPF: System.Action
     public void SelectionMatcherOnViewInit()
 	{
-		_timer = new Timer((state) =>
-		{
-			AddSelection();
-			_timer.Dispose();
-		}, null, 100, Timeout.Infinite);
+		AddSelection();
 	}
 
 	private void AddSelection()
 	{
-		var chart = CodeGenHelper.GetDescription<XamCategoryChart>("content");
+		// Shared by the category chart and data chart samples. A selection matches the chart's own data
+		// items, so they are taken from the chart rather than looked up by name.
+		var content = CodeGenHelper.GetDescription<object>("content");
+		IList data;
+		ChartSelectedItemCollection selectedItems;
+		if (content is XamCategoryChart categoryChart)
+		{
+			data = (IList)categoryChart.DataSource;
+			selectedItems = categoryChart.SelectedSeriesItems;
+		}
+		else
+		{
+			var dataChart = (XamDataChart)content;
+			data = (IList)dataChart.Series[0].DataSource;
+			selectedItems = dataChart.SelectedSeriesItems;
+		}
 
 		ChartSelection selection = new ChartSelection();
-		selection.Item = ((IList)chart.DataSource)[1];
+		selection.Item = data[1];
 		SeriesMatcher matcher = new SeriesMatcher();
 		matcher.MemberPath = "Hydro";
 		matcher.MemberPathType = "ValueMemberPath";
 		selection.Matcher = matcher;
 
-		chart.SelectedSeriesItems.Add(selection);
+		selectedItems.Add(selection);
 
 		SeriesMatcher matcher2 = new SeriesMatcher();
 		ChartSelection selection2 = new ChartSelection();
-		selection2 = new ChartSelection();
-		selection2.Item = ((IList)chart.DataSource)[1];
+		selection2.Item = data[2];
 		matcher2.MemberPath = "Wind";
 		matcher2.MemberPathType = "ValueMemberPath";
 
-		selection.Matcher = matcher2;
+		selection2.Matcher = matcher2;
 
-		chart.SelectedSeriesItems.Add(selection2);
+		selectedItems.Add(selection2);
 	}
     //end eventHandler
 }

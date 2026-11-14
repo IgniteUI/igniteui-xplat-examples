@@ -28,10 +28,10 @@ public class MapShpFileReaders
             // using field/column names from .DBF file
             geoRoutes.Add(new
             {
-                Points = record.Points,
-                Name = record.Fields["Name"],
-                Capacity = record.Fields["CapacityG"],
-                Distance = record.Fields["DistanceKM"]
+                points = record.Points,
+                name = record.Fields["Name"],
+                capacity = record.Fields["CapacityG"],
+                distance = record.Fields["DistanceKM"]
             });
         }
 

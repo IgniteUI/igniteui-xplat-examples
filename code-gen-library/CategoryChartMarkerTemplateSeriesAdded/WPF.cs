@@ -1,6 +1,5 @@
 //begin imports
 using Infragistics.Controls.Charts;
-using System.Windows;
 //end imports
 
 public class CategoryChartMarkerTemplateSeriesAdded
@@ -10,15 +9,13 @@ public class CategoryChartMarkerTemplateSeriesAdded
     public void CategoryChartMarkerTemplateSeriesAdded(object sender, ChartSeriesEventArgs args)
     {
         // A category chart makes a series per column it is given, so there is no series in the
-        // definition to hang a marker template on. The chart says when it has made one, and this is
-        // where each gets the template. It is a keyed DataTemplate on this platform, so it is looked
-        // up from the chart, which finds it wherever it was written -- rather than from the handler,
-        // which is not part of the tree and has no resources of its own.
+        // definition to hang a marker on. The chart says when it has made one, and this is where each
+        // gets its marker: an svg, drawn in place of the built-in shapes. currentColor stands for the
+        // series' own colors -- the fill takes the marker brush and the stroke the marker outline.
         var series = args.Series as MarkerSeries;
-        var chart = sender as FrameworkElement;
-        if (series != null && chart != null)
+        if (series != null)
         {
-            series.MarkerTemplate = (DataTemplate)chart.FindResource("CategoryChartValueMarkerTemplate");
+            series.MarkerTemplateSVG = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\"><path d=\"M12 1.5l3.1 6.3 6.9 1-5 4.9 1.2 6.9-6.2-3.3-6.2 3.3 1.2-6.9-5-4.9 6.9-1z\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linejoin=\"round\"/></svg>";
         }
     }
     //end eventHandler

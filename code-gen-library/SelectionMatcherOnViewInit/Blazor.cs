@@ -11,20 +11,19 @@ public class SelectionMatcherOnViewInit
 {
     //begin eventHandler
 	
-	private System.Threading.Timer _timer;
 
     public void SelectionMatcherOnViewInit()
 	{
-		_timer = new System.Threading.Timer((_) =>
-		{
-			addSelection();
-		}, null, 1000, 0);
-		_timer = null;
+		addSelection();
 	}
 	
 	private void addSelection()
 	{
-		var chart = CodeGenHelper.GetDescription<IgbCategoryChart>("content");
+		// Shared by the category chart and data chart samples, which bind the same data.
+		var content = CodeGenHelper.GetDescription<object>("content");
+		var selectedItems = content is IgbCategoryChart categoryChart
+			? categoryChart.SelectedSeriesItems
+			: ((IgbDataChart)content).SelectedSeriesItems;
 		//var data = (IList)chart.DataSource;	
 		var data = CodeGenHelper.FindByName<IList>("EnergyRenewableConsumption"); 
 		IgbChartSelection selection = new IgbChartSelection();
@@ -34,7 +33,7 @@ public class SelectionMatcherOnViewInit
 		matcher.MemberPathType = "ValueMemberPath";
 		selection.Matcher = matcher;
 
-		chart.SelectedSeriesItems.Add(selection);
+		selectedItems.Add(selection);
 
 		IgbChartSelection selection2 = new IgbChartSelection();
 		selection2 = new IgbChartSelection();
@@ -45,7 +44,7 @@ public class SelectionMatcherOnViewInit
 		matcher2.MemberPathType = "ValueMemberPath";
 		selection2.Matcher = matcher2;
 
-		chart.SelectedSeriesItems.Add(selection2);
+		selectedItems.Add(selection2);
 	}
     //end eventHandler
 }

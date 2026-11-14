@@ -31,9 +31,10 @@ public class MapMultipleShapesReaders
             // using field/column names from .DBF file
             geoPolygons.Add(new
             {
-                Points = record.Points,
-                Name = record.Fields["NAME"],
-                Population = record.Fields["POP_2005"]
+                points = record.Points,
+                name = record.Fields["NAME"],
+                gdp = record.Fields["GDP"],
+                population = record.Fields["POPULATION"]
             });
         }
 
@@ -55,13 +56,12 @@ public class MapMultipleShapesReaders
             // using field/column names from .DBF file
             geoPolylines.Add(new
             {
-                Points = record.Points,
-                Name = record.Fields["Name"],
-                Capacity = record.Fields["CapacityG"],
-                Distance = record.Fields["DistanceKM"],
-                IsOverLand = (double)record.Fields["OverLand"] == 0,
-                IsActive = (double)record.Fields["NotLive"] != 0,
-                Service = record.Fields["InService"]
+                points = record.Points,
+                name = record.Fields["Name"],
+                capacity = record.Fields["CapacityG"],
+                distance = record.Fields["DistanceKM"],
+                // a route whose in-service year is blank has no InService field at all
+                service = record.Fields.ContainsKey("InService") ? record.Fields["InService"] : null
             });
         }
 
@@ -87,10 +87,10 @@ public class MapMultipleShapesReaders
                 // using field/column names from .DBF file
                 geoLocations.Add(new
                 {
-                    Latitude = record.Points[0][0].Y,
-                    Longitude = record.Points[0][0].X,
-                    City = record.Fields["NAME"],
-                    Population = pop
+                    latitude = record.Points[0][0].Y,
+                    longitude = record.Points[0][0].X,
+                    city = record.Fields["NAME"],
+                    population = pop
                 });
             }
         }
