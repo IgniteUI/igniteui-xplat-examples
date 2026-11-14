@@ -1,5 +1,6 @@
 # DataAnnotationStripLayer: black strips over index ranges 40-45, 100-144 and 190-205 marking market events, each
 # labelled at its center on the top axis.
+Given the sample does not alter its data's casing
 Then this chart will have a title with attributes:
   | Text |
   | This Data Chart demonstrates the DataAnnotationStripLayer bound to data that markert events affecting stock prices. |

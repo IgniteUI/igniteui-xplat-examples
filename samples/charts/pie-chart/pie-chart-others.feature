@@ -1,5 +1,6 @@
 # Others category: othersCategoryType Number, threshold 10. Every EnergyGlobalDemand value (37,25,12,11,15) is above 10,
 # so no row is folded into an 'Others' slice and the legend keeps all five Category items and no 'Others' item.
+Given the sample does not alter its data's casing
 Then this legend will have items with text: Cooling,Residential,Heating,Lighting,Other
 Then this legend will be horizontal with these Labels:
   | Label |

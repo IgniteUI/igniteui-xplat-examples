@@ -1,4 +1,5 @@
 # Chart titles: left-aligned gray title and subtitle, plus x and y axis titles.
+Given the sample does not alter its data's casing
 Then this category chart will have title with 'Renewable Electricity Generated' text
 Then this category chart will have subtitle with 'Trillions of Watt-hours by region, 2009 to 2019' text
 Then this category chart will have title with 'gray' foreground

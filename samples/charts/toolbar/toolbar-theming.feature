@@ -1,6 +1,7 @@
 # Toolbar theming: a PropertyEditorPanel edits the toolbar's BaseTheme (initially Default) over a DataChart with one
 # line series (America of CountryRenewableElectricity). The theme has no assertion step (see report); the built-in
 # tools and their effect are asserted.
+Given the sample does not alter its data's casing
 Then the toolbar will have the following action names:
   | Name        |
   | ZoomMenu    |

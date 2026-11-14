@@ -1,6 +1,7 @@
 # Toolbar layout customization on a DataChart: a custom icon menu ("MenuForSubPanelTool") holding a "Visualizations"
 # group header and a sub panel of checkboxes (Enable Tooltips/Crosshairs/Final Values), a "Reset" label placed after
 # ZoomOut, and the built-in ZoomReset, AnalyzeMenu and CopyMenu tools collapsed.
+Given the sample does not alter its data's casing
 Then the toolbar will have the following action names:
   | Name                |
   | MenuForSubPanelTool |

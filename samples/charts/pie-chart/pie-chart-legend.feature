@@ -1,5 +1,6 @@
 # ItemLegend (Horizontal) attached to the PieChart: one item per EnergyGlobalDemand row, text from legendLabelMemberPath=Category,
 # laid out left to right on a single row in data order.
+Given the sample does not alter its data's casing
 Then this legend will have items with text: Cooling,Residential,Heating,Lighting,Other
 Then this legend will be horizontal with these Labels:
   | Label |

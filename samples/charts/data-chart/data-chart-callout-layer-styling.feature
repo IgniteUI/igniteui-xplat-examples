@@ -1,4 +1,5 @@
 # Callout styling: auto callouts on the America line with #8961A9 leader/outline/text, white background, 1px stroke.
+Given the sample does not alter its data's casing
 When we are talking about the series with name lineSeries1
 Then this series shapes will match the America column of sample data named CountryRenewableElectricity within small tolerance
 Then this series will have main shapes with outline #8961A9

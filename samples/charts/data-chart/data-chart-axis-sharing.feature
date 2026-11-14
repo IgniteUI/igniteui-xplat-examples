@@ -1,5 +1,6 @@
 # Axis sharing: one category x axis (StockTesla dates) shared by a Volume column series on the left 'Trade Volume' axis
 # (abbreviated, no gridlines) and a candlestick price series on the right 'Stock Price ($)' axis.
+Given the sample does not alter its data's casing
 When we are talking about the series with name volumeSeries
 Then this series shapes will match the Volume column of sample data named StockTesla within small tolerance
 When we are talking about the axis with name yAxisRight

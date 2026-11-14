@@ -1,5 +1,6 @@
 # DataToolTipLayer grouping with highlighting: one grouped tooltip with 'Olympic Medals' and 'Gold Medals' group
 # header rows for the country counts and their gold-medal highlight values.
+Given the sample does not alter its data's casing
 When we are talking about the series with name ColumnSeries1
 Then this series shapes will match the America column of sample data named OlympicMedalsTopCountriesWithTotals within small tolerance
 Then this series highlight shapes will match category values within small tolerance:

@@ -1,5 +1,6 @@
 # Overlapping bars: two bar series on two category y axes over the same data (gap 0.25 vs gap 1.0) so the narrower
 # 'Top Choice' bar sits on top of the 'Sum of Top 3 Choices' bar, with value callouts to the right of each bar.
+Given the sample does not alter its data's casing
 When we are talking about the series with name BarSeries1
 Then this series shapes will match the TopChoices column of sample data named RoadblocksToSuccess within small tolerance
 When we are talking about the series with name BarSeries2

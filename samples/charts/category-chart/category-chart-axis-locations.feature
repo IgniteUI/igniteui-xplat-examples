@@ -1,4 +1,5 @@
 # Axis locations: y axis labels placed outside right of the plot area.
+Given the sample does not alter its data's casing
 When we are talking about the axis with name yAxis
 Then this axis labels will be on the right side of the chart
 Then this category chart will have yAxis title with 'Labels Location' text

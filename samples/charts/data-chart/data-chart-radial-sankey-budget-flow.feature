@@ -1,4 +1,5 @@
 # RadialSankeySeries: the budget flow wrapped around a category angle axis (Income, Category, Detail stages).
+Given the sample does not alter its data's casing
 When we wait for chart animations to complete
 When we are talking about the axis with name angleAxis
 Then this axis will contain a labels for Income, Category, Detail

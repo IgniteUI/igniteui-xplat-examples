@@ -1,5 +1,6 @@
 # Candlestick FinancialPriceSeries over Stock2Years: one OHLC candle per month, a label for every month (interval 1).
 # Month names repeat across the two years, so each candle is addressed by its label and which occurrence of that label it is.
+Given the sample does not alter its data's casing
 When we are talking about the axis with name xAxis
 Then this axis will have labels visible with these values: 2020, FEB, MAR, APR, MAY, JUN, JUL, AUG, SEP, OCT, NOV, DEC, 2021, FEB, MAR, APR, MAY, JUN, JUL, AUG, SEP, OCT, NOV, DEC
 When we are talking about the series with name series1

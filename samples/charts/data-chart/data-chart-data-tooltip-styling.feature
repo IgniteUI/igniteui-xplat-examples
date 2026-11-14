@@ -1,5 +1,6 @@
 # DataToolTipLayer styling: grouped tooltip whose group headers are purple, Arial 14px, italic, bold (styling not
 # assertable with current steps, see report); content is the Total column with the America highlight.
+Given the sample does not alter its data's casing
 When we are talking about the series with name ColumnSeries1
 Then this series shapes will match the Total column of sample data named OlympicMedalsTopCountriesWithTotals within small tolerance
 Then this series highlight shapes will match category values within small tolerance:

@@ -1,4 +1,5 @@
 # Line chart of CountryRenewableElectricity (Europe, China and America by Year) with the y axis range fixed to 0..150.
+Given the sample does not alter its data's casing
 Then this category chart will have 3 visible series of Line type
 When we are talking about the series at index 0
 Then this series shapes will match the Europe column of sample data named CountryRenewableElectricity within small tolerance

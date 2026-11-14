@@ -1,5 +1,6 @@
 # DataLegend grouping: the three country column series share the data legend group 'Medals by Country', shown as a
 # group header row.
+Given the sample does not alter its data's casing
 When we are talking about the series with name ColumnSeries1
 Then this series shapes will match the America column of sample data named OlympicMedalsTopCountriesWithTotals within small tolerance
 When we are talking about the series with name ColumnSeries2

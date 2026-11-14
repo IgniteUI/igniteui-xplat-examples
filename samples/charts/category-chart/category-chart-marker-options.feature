@@ -1,4 +1,5 @@
 # Marker options: every series renders circle markers on the data points.
+Given the sample does not alter its data's casing
 Then this category chart will have 3 visible series of Line type
 When we are talking about the series at index 0
 Then this series will have markers with type Circle

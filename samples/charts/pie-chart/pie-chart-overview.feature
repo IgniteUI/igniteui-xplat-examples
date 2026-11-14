@@ -1,4 +1,5 @@
 # Pie chart of EnergyGlobalDemand (Value) with Category legend items in a horizontal ItemLegend.
+Given the sample does not alter its data's casing
 Then this legend will have items with text: Cooling,Residential,Heating,Lighting,Other
 Then this legend will be horizontal with these Labels:
   | Label |

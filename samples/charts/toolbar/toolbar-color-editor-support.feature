@@ -1,5 +1,6 @@
 # Toolbar with a custom ToolActionColorEditor ("Series Brush", command ToggleSeriesBrush) alongside the built-in
 # DataChart tools; the chart plots the America column of CountryRenewableElectricity as one line series.
+Given the sample does not alter its data's casing
 Then the toolbar will have the following action names:
   | Name            |
   | colorEditorTool |

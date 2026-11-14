@@ -1,5 +1,6 @@
 # Toolbar targeting a DataChart with three line series (America, Europe, China of CountryRenewableElectricity) exposes
 # the built-in Zoom/Analyze/Copy menus, and its Analyze tools add layers to the chart.
+Given the sample does not alter its data's casing
 Then the toolbar will have the following action names:
   | Name        |
   | ZoomMenu    |

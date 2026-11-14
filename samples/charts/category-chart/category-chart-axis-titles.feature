@@ -1,4 +1,5 @@
 # Axis titles: text, gray color, 10pt Titillium Web, x title unrotated and y title rotated 90.
+Given the sample does not alter its data's casing
 Then this category chart will have xAxis title with 'Year' text
 Then this category chart will have yAxis title with 'Trillions of Watt-hours (Twh)' text
 Then this category chart will have xAxis title with 'gray' foreground

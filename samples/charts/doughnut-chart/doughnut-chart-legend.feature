@@ -1,4 +1,5 @@
 # Doughnut RingSeries over EnergyGlobalDemand with a horizontal ItemLegend fed by legendLabelMemberPath=Category.
+Given the sample does not alter its data's casing
 Then this legend will have items with text: Cooling,Residential,Heating,Lighting,Other
 Then this legend will be horizontal with these Labels:
   | Label |

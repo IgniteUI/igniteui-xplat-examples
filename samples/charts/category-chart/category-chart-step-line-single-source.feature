@@ -1,4 +1,5 @@
 # StepLine chart bound to a single value column (Europe) of CountryRenewableElectricity.
+Given the sample does not alter its data's casing
 Then this category chart will have 1 visible series of StepLine type
 Then this category chart will have xAxis labels matching the Year column of sample data named CountryRenewableElectricity
 When we are talking about the series at index 0

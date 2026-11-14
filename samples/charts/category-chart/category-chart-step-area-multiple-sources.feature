@@ -1,4 +1,5 @@
 # StepArea chart plotting the Europe, China and America columns of CountryRenewableElectricity as separate series.
+Given the sample does not alter its data's casing
 Then this category chart will have 3 visible series of StepArea type
 Then this category chart will have xAxis labels matching the Year column of sample data named CountryRenewableElectricity
 When we are talking about the series at index 0

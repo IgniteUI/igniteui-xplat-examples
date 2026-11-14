@@ -1,5 +1,6 @@
 # DataAnnotationLineLayer: two horizontal purple lines marking the 52-week low (138) and high (481) with their values on
 # the right axis, and two sloped lines marking the growth (48,25)-(105,250) and decline (108,440)-(155,210) patterns.
+Given the sample does not alter its data's casing
 Then this chart will have a title with attributes:
   | Text |
   | The Data Chart demonstrates the DataAnnotationLineLayer bound to data that annotates stock growth and decline patterns. |

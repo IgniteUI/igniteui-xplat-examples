@@ -1,5 +1,6 @@
 # DataAnnotationBandLayer: a purple band from (48, 110) to (105, 335) with breadth 170 marking 'Rapid Growth' on the
 # StockTesla candlesticks, with 'Growth Start' / 'Growth Stop' data labels on the bottom index axis.
+Given the sample does not alter its data's casing
 Then this chart will have a title with attributes:
   | Text |
   | Data Chart with DataAnnotationBandLayer bound to data that annotates stock rapid growth |

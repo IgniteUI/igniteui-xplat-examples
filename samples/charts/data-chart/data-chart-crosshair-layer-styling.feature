@@ -1,4 +1,5 @@
 # Crosshair styling: the crosshair layer draws only its vertical line (horizontal line collapsed) in DodgerBlue.
+Given the sample does not alter its data's casing
 Then this chart will have a subtitle with attributes:
   | Text |
   | Renewable Energy Generated |

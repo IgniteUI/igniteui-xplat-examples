@@ -1,4 +1,5 @@
 # Dashboard tile given EnergyGlobalDemand (5 rows: Category, Value, Summary) infers a pie of the Value column.
+Given the sample does not alter its data's casing
 Then the dashboard tile will be displaying a DataPieChart
 And the dashboard tile will report the Auto visualization
 And the dashboard tile will offer the PieChart visualization

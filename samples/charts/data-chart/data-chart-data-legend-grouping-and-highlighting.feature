@@ -1,5 +1,6 @@
 # DataLegend grouping with highlighting: medal counts per country grouped under 'Olympic Medals' and their gold
 # medal highlight values (overlay) grouped under 'Gold Medals', with group header rows visible.
+Given the sample does not alter its data's casing
 When we are talking about the series with name ColumnSeries1
 Then this series shapes will match the America column of sample data named OlympicMedalsTopCountriesWithTotals within small tolerance
 Then this series highlight shapes will match category values within small tolerance:

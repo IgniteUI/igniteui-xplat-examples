@@ -1,5 +1,6 @@
 # ColumnSeries per energy source with a tooltip of its own instead of the default tooltip: the hovered country's whole
 # production mix, under a title naming the country.
+Given the sample does not alter its data's casing
 When we are talking about the axis with name xAxis
 Then this axis will have labels visible with these values: Canada, China, Russia, Australia, United States, France
 When we are talking about the series with name series1

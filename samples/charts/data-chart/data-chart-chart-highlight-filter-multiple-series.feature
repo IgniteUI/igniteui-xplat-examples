@@ -1,5 +1,6 @@
 # Highlight filter on three column series: each series' highlight values come from CountryRenewableElectricityFiltered.
 # The chart starts with highlightedValuesDisplayMode Hidden; the editor switches it to Overlay.
+Given the sample does not alter its data's casing
 When we are talking about the series with name ColumnSeries1
 Then this series shapes will match the Europe column of sample data named CountryRenewableElectricity within small tolerance
 Then this series will not have any highlight layer shapes

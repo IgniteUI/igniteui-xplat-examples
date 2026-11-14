@@ -1,5 +1,6 @@
 # Final value layer styling: the last America value (38) is annotated on the y axis with an Orange background,
 # Black text and a Black outline.
+Given the sample does not alter its data's casing
 Then this chart will have a subtitle with attributes:
   | Text |
   | Renewable Energy Generated |

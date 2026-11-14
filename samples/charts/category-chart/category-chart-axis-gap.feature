@@ -1,5 +1,6 @@
 # Column chart of CountryRenewableElectricity (Europe, China and America by Year), one label per year, with an x axis
 # gap of 0.5 (maximum 1.5): half of each category is left empty around its columns.
+Given the sample does not alter its data's casing
 Then this category chart will have 3 visible series of Column type
 Then this category chart will have xAxis labels matching the Year column of sample data named CountryRenewableElectricity
 Then this category chart will have yAxis title with 'TWh' text

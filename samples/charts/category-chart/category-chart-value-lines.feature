@@ -1,4 +1,5 @@
 # Value lines: the Auto value line resolves to each series' Maximum (America, Europe columns).
+Given the sample does not alter its data's casing
 Then this category chart will have 2 visible series of Column type
 Then this domain chart will have value lines with the following properties:
   | Orientation | Value |

@@ -1,5 +1,6 @@
 # SankeySeries with a Highlighted link value overlaid on each budget flow (highlightedValuesDisplayMode Overlay).
 # The base flows and layout are asserted below; the overlaid Highlighted amounts have no Then step yet (see report).
+Given the sample does not alter its data's casing
 When we wait for chart animations to complete
 When we are talking about the axis with name xAxis
 Then this axis will have labels visible with these values: Income, Category, Detail

@@ -1,5 +1,6 @@
 # Toolbar targeting a line CategoryChart (CountryRenewableElectricity: Europe, China, America by Year) exposes the
 # built-in Zoom/Analyze/Copy menus, and its Analyze tools act on the chart.
+Given the sample does not alter its data's casing
 Then the toolbar will have the following action names:
   | Name        |
   | ZoomMenu    |

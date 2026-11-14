@@ -1,5 +1,6 @@
 # Highlight filter from a member path: the Total medal column with the America column as its highlighted values.
 # The chart starts with highlightedValuesDisplayMode Hidden; the editor switches it to Overlay.
+Given the sample does not alter its data's casing
 When we are talking about the series with name ColumnSeries1
 Then this series shapes will match the Total column of sample data named OlympicMedalsTopCountriesWithTotals within small tolerance
 Then this series will not have any highlight layer shapes

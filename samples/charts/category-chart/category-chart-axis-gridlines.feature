@@ -1,4 +1,5 @@
 # Axis gridlines: y major interval 20 (darkslategray, 1px) with minor interval 5 (gray), x major stroke #474747.
+Given the sample does not alter its data's casing
 Then this category chart will have yAxis labels with values in: 0, 20, 40, 60, 80, 100, 120, 140, 160, 180, 200
 Then this category chart will have yAxis major gridlines with stroke 'darkslategray'
 Then this category chart will have yAxis major gridlines with thickness 1

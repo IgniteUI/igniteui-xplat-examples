@@ -1,6 +1,7 @@
 # Toolbar with two custom ToolActionLabel tools ("Custom Icon", "Custom Icon 2") whose SVG icons are registered in
 # onViewInit (ToolbarCustomIconOnViewInit), next to the built-in tools of a line CategoryChart
 # (CountryRenewableElectricity: Europe, China, America by Year).
+Given the sample does not alter its data's casing
 Then the toolbar will have the following action names:
   | Name            |
   | CustomIconName  |

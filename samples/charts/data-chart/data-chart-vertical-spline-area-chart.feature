@@ -1,5 +1,6 @@
 # VerticalSplineAreaSeries of WebsiteVisitsByHour: desktop and mobile visits per hour as half-opaque curved areas
 # running down an inverted category y axis of hours, with visits on a numeric x axis starting at 0.
+Given the sample does not alter its data's casing
 When we wait for chart animations to complete
 Then this legend will have items with text: Desktop,Mobile
 When we are talking about the axis with name yAxis

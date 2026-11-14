@@ -1,5 +1,6 @@
 # Single-source bar chart: percent of online shopping searches per shop on an inverted category y axis with
 # '{0}%' value labels on the x axis.
+Given the sample does not alter its data's casing
 When we are talking about the series with name BarSeries1
 Then this series shapes will match the Percent column of sample data named OnlineShoppingSearches within small tolerance in reverse order
 When we are talking about the axis with name yAxis

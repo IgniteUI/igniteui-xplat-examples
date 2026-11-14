@@ -1,4 +1,5 @@
 # SankeySeries budget flow: Income splits into 4 categories, which split into 7 details; band heights and ribbons carry the link values.
+Given the sample does not alter its data's casing
 When we wait for chart animations to complete
 When we are talking about the axis with name xAxis
 Then this axis will have labels visible with these values: Income, Category, Detail

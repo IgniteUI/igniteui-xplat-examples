@@ -1,4 +1,5 @@
 # Axis labels: gray Titillium Web labels at 0 rotation, y labels outside right.
+Given the sample does not alter its data's casing
 Then this category chart will have xAxis labels with 'gray' foreground
 Then this category chart will have yAxis labels with 'gray' foreground
 Then this category chart will have xAxis labels with 0 rotation

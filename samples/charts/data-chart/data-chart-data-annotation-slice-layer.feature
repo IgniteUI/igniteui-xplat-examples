@@ -1,5 +1,6 @@
 # DataAnnotationSliceLayer: vertical slices on the bottom index axis for stock splits (dodgerblue), earnings misses
 # (red) and earnings beats (green), each labelled on the axis in white text.
+Given the sample does not alter its data's casing
 Then this chart will have a title with attributes:
   | Text |
   | This Data Chart demonstrates the DataAnnotationSliceLayer bound to data that annotates stock splits and earnings miss/beat events. |

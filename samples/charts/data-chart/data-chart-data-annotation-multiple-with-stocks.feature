@@ -1,5 +1,6 @@
 # Multiple data annotation layers on StockTesla candlesticks: market-event strips on the top axis, 52-week low/high
 # lines, growth/decline trend lines, and stock split / earnings miss / earnings beat slices on the bottom index axis.
+Given the sample does not alter its data's casing
 Then this chart will have a title with attributes:
   | Text |
   | This Data Chart has multiple Data Annotation Layers bound to data that annotates important events and patterns in stock prices. |

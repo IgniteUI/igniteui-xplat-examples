@@ -1,5 +1,6 @@
 # DataLegend styling: the group header rows ('Total Medals' and the highlighted 'Country' group) are purple, Arial,
 # 20px, italic and bold. The single Total column series overlays its America values as the highlight.
+Given the sample does not alter its data's casing
 When we are talking about the series with name ColumnSeries1
 Then this series shapes will match the Total column of sample data named OlympicMedalsTopCountriesWithTotals within small tolerance
 Then this series highlight shapes will match category values within small tolerance:

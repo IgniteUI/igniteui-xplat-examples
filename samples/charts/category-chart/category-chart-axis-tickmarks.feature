@@ -1,4 +1,5 @@
 # Axis tickmarks: x tickmarks 10px long in gray; y tickmarks disabled (length 0).
+Given the sample does not alter its data's casing
 Then this category chart will have xAxis tickmarks with length 10
 Then this category chart will have xAxis tickmarks with stroke 'gray'
 Then this category chart will have yAxis tickmarks hidden

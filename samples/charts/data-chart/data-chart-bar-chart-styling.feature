@@ -1,5 +1,6 @@
 # Styled bar chart: magenta bars (fill rgb(201,56,207), outline rgb(133,6,138), thickness 2), an x axis fixed at
 # 0..80 by 20 with '{0}%' labels, and transparent value callouts in rgb(133,6,138) placed to the right of each bar.
+Given the sample does not alter its data's casing
 When we are talking about the series with name BarSeries1
 Then this series shapes will match the Percent column of sample data named OnlineShoppingSearches within small tolerance in reverse order
 Then this series will have main shapes with fill #C938CF

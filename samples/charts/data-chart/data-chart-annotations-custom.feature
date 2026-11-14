@@ -1,6 +1,7 @@
 # Custom callouts: CalloutLayer1 is bound to CountryRenewableCallouts and places one callout per row at (Index, Value)
 # labelled with Label (20/10 padding, corner radius 5) over a line of CountryRenewableElectricity.America. A final value
 # layer annotates the last value and a crosshair (precision 0) annotates both axes on hover.
+Given the sample does not alter its data's casing
 When we are talking about the series with name lineSeries1
 Then this series shapes will match the America column of sample data named CountryRenewableElectricity within small tolerance
 When we are talking about the axis with name xAxis

@@ -1,5 +1,6 @@
 # Overlay text on value layers: a green dashed ValueOverlay at 435, a purple dashed ValueLayer at the average Open
 # (186.5026) and a green DataAnnotationSliceLayer at 50, each with its own overlay text, over the StockTesla Open line.
+Given the sample does not alter its data's casing
 Then this chart will have a title with attributes:
   | Text |
   | This sample demonstrates the DataAnnotationSliceLayer with overlay text compared against the value layers in the DataChart. |

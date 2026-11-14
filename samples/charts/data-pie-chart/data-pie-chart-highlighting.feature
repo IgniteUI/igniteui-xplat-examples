@@ -1,6 +1,7 @@
 # Mouse highlighting with highlightingMode BrightenSpecific and highlightingBehavior DirectlyOver over
 # EnergyGlobalDemand: hovering a slice brightens only that slice, the others keep their fill and are not
 # faded.
+Given the sample does not alter its data's casing
 When we simulate a mouse move over the 2nd visible slice
 # CALIBRATE: fills assume the default item-wise palette (#8bdc5c, #8961A9, #6DB1FF, #82E9D9, #EA3C63)
 # and that BrightenSpecific lightens by the same amount the [Brighten] qualifier expects.

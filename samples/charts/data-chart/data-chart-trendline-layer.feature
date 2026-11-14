@@ -1,4 +1,5 @@
 # Two TrendLineLayers (logarithmic and cubic fit, period 10) over the Europe line series, both listed in the DataLegend.
+Given the sample does not alter its data's casing
 When we are talking about the axis with name xAxis
 # With no interval set, a category axis shows at most 10 labels, so the 12 years are labelled every other one.
 Then this axis will have labels visible with these values: 2009, 2011, 2013, 2015, 2017, 2019

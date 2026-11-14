@@ -1,6 +1,7 @@
 # Slice selection with selectionMode Brighten and selectionBehavior PerDataItemSingleSelect (highlighting
 # None) over EnergyGlobalDemand: clicking a slice brightens it, and clicking another moves the selection
 # rather than adding to it.
+Given the sample does not alter its data's casing
 When we click on the 2nd visible slice
 When we hover over the bottom right corner of the page
 # Fills are the default item-wise palette (#8bdc5c, #8961A9, #6DB1FF, #82E9D9, #EA3C63).

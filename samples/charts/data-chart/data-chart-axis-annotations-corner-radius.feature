@@ -1,5 +1,6 @@
 # Axis annotations with rounded corners: auto callouts on every America value, a final value layer (corner radius 10,
 # padding 10) on the y axis and a crosshair whose x/y axis annotations have corner radius 10 and y precision 0.
+Given the sample does not alter its data's casing
 When we are talking about the series with name lineSeries1
 Then this series shapes will match the America column of sample data named CountryRenewableElectricity within small tolerance
 When we are talking about the axis with name xAxis

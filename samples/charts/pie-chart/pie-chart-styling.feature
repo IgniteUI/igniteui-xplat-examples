@@ -1,4 +1,5 @@
 # Styling: slice brushes #f7d262,#a8a8b7,#e051a9,#f8a15f,#735656 applied in data order; the legend badges carry the slice brush.
+Given the sample does not alter its data's casing
 Then this legend will have items as follows:
   | Label | Fill |
   | Cooling | #f7d262 |

@@ -1,5 +1,6 @@
 # Line chart of EnergyRenewableGeneration.America (thickness 2, circle markers). Its final value annotation (38) is not
 # asserted: the chart computes its plot area margin, and the final value steps place annotations by the axis viewport.
+Given the sample does not alter its data's casing
 Then this category chart will have 1 visible series of Line type
 Then this category chart will have xAxis labels matching the Year column of sample data named EnergyRenewableGeneration
 Then this category chart will have yAxis title with 'TWh' text

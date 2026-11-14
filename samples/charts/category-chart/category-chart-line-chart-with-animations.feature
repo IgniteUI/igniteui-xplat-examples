@@ -1,4 +1,5 @@
 # Transition-in animation: once the animation completes the lines sit on the data values.
+Given the sample does not alter its data's casing
 Then this category chart will have 3 visible series of Line type
 Then this category chart will have xAxis labels matching the Year column of sample data named EnergyRenewableGeneration
 When we are talking about the series at index 0

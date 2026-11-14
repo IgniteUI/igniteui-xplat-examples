@@ -1,5 +1,6 @@
 # DataAnnotationRectLayer: two translucent (0.1) purple rectangles marking a head-and-shoulders pattern
 # (85,190)-(140,415) and a price gap (53,75)-(230,80) on the StockTesla candlesticks, all axis labels hidden.
+Given the sample does not alter its data's casing
 Then this chart will have a title with attributes:
   | Text |
   | This Data Chart demonstrates the DataAnnotationRectLayer bound to data that annotates bearish patterns in stock prices. |

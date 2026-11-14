@@ -1,5 +1,6 @@
 # Chart navigation: a zoomable candlestick chart of StockTesla (drag-pan by default, Alt pans, Shift zooms) with
 # buttons that pan and zoom the window. Zooming the window to the first half must drop the later dates off the axis.
+Given the sample does not alter its data's casing
 Then this chart will have a subtitle with attributes:
   | Text |
   | Stock Prices Series in Candlestick Display Type |
