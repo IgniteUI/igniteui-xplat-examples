@@ -58,6 +58,15 @@ export class AppComponent implements AfterViewInit
 		//insert onViewInit
 		//end onViewInit
 	}
+//ifdef onViewDestroy
+
+	// What onViewInit started stops when the component is destroyed.
+	public ngOnDestroy(): void
+	{
+		//insert onViewDestroy
+		//end onViewDestroy
+	}
+//endifdef onViewDestroy
 	
 	//insert eventHandlers
     //end eventHandlers

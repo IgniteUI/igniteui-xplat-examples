@@ -59,6 +59,14 @@ export default class Sample extends React.Component<any, any> {
         //end onViewInit
     }
 //endifdef onViewInit
+//ifdef onViewDestroy
+    // What onViewInit started stops on unmount. React can mount the same component again (StrictMode
+    // does in development), and componentDidMount then starts it again.
+    public componentWillUnmount() {
+        //insert onViewDestroy
+        //end onViewDestroy
+    }
+//endifdef onViewDestroy
 
     public render(): JSX.Element {
         return (

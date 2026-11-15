@@ -7,6 +7,9 @@
 // ifdef eventScript, templateScripts
 @inject IJSRuntime JS
 // endifdef eventScript, templateScripts
+// ifdef onViewDestroy
+@implements IAsyncDisposable
+// endifdef onViewDestroy
 
 <!-- ifdef webgrids -->
 <div class="container vertical ig-typography">
@@ -123,6 +126,15 @@
         }
 //endifdef onViewInit
     }
+//ifdef onViewDestroy
+
+    // What onViewInit started stops when the component is disposed.
+    public async ValueTask DisposeAsync()
+    {
+        //insert onViewDestroy
+        //end onViewDestroy
+    }
+//endifdef onViewDestroy
 
     //insert bindingFields
     //end bindingFields
