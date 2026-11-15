@@ -14,11 +14,11 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
              mix; the one the hovered series draws is tinted with that series' own brush so it can be
              picked out of the five. -->
         <div class="ui-tooltip-content" *ngIf="dataContext.item && dataContext.series">
-            <div class="tooltipTitle">{{dataContext.item.country}} Production</div>
+            <div class="tooltipTitle">{{dataContext.item.Country}} Production</div>
             <div class="tooltipHorizontal" *ngFor="let fuel of fuels"
                  [style.color]="dataContext.series.valueMemberPath === fuel ? dataContext.series.actualBrush : 'black'">
                 <label class="tooltipLbl" style="width: 4rem">{{fuel}}:</label>
-                <label class="tooltipVal">{{dataContext.item[fuel.toLowerCase()]}}</label>
+                <label class="tooltipVal">{{dataContext.item[fuel]}}</label>
             </div>
         </div>
     </ng-template>

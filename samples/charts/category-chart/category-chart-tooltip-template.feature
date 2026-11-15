@@ -1,6 +1,5 @@
 # Column chart of MovieFranchiseRevenue (TotalRevenue, HighestGrossing by Franchise) with no tooltip layer and a
 # tooltip of its own on each series, naming the franchise and both of its revenues.
-Given the sample does not alter its data's casing
 Then this category chart will have 2 visible series of Column type
 Then this category chart will have xAxis labels matching the Franchise column of sample data named MovieFranchiseRevenue
 When we are talking about the series at index 0

@@ -6,8 +6,11 @@ import { html } from 'lit';
 export class DataGridSparklineTemplate {
 //begin template
 //begin content
-    public dataGridSparklineTemplate = (ctx: { dataContext: IgcTemplateCellInfo }) => {
-        const info = ctx.dataContext;
+    public dataGridSparklineTemplate = (info: IgcTemplateCellInfo) => {
+        // The cell content renders once before its cell info arrives, with no context.
+        if (info == null) {
+            return html``;
+        }
         return html`<div style="width: 100%; height: 70px; background: transparent">
     <igc-sparkline
         width="100%"

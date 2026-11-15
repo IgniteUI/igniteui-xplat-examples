@@ -5,8 +5,8 @@ import { html } from 'lit';
 export class DataChartAirplaneSeatTooltipTemplate {
 //begin template
 //begin content
-    public dataChartAirplaneSeatTooltipTemplate = (ctx: { dataContext: any }) => {
-        const item = ctx.dataContext.item;
+    public dataChartAirplaneSeatTooltipTemplate = (context: any) => {
+        const item = context.item;
         if (item == null) {
             return html``;
         }
