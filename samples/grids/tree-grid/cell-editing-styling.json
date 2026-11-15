@@ -12,7 +12,6 @@
       "primaryKey": "ID",
       "autoGenerate": false,
       "allowFiltering": true,
-      "paging": true,
       "foreignKey": "ParentID",
       "paginationComponents": [
         {

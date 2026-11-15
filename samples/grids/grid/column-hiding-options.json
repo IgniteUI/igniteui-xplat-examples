@@ -15,7 +15,6 @@
       "toolbar": [
         {
           "type": "WebGridToolbar",
-          "title": "Employees",
           "tools": [
             {
               "type": "WebGridToolbarTitle"

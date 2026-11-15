@@ -4,7 +4,6 @@
   "descriptions": {
     "content": {
       "type": "DataGrid",
-      "id": "grid",
       "name": "grid",
       "dataSourceRef": "NorthwindOrders",
       "autoGenerateColumns": false,

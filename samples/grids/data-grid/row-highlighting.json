@@ -34,7 +34,6 @@
     },
     "content": {
       "type": "DataGrid",
-      "id": "grid",
       "name": "grid",
       "dataSourceRef": "EmployeesSalesData",
       "autoGenerateColumns": false,

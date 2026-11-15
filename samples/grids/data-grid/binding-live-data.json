@@ -50,7 +50,6 @@
     },
     "content": {
       "type": "DataGrid",
-      "id": "grid",
       "name": "grid",
       "dataSourceRef": "PortfolioData",
       "autoGenerateColumns": false,

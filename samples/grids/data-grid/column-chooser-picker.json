@@ -5,15 +5,11 @@
     "aboveContent": {
       "type": "ColumnChooser",
       "name": "chooser",
-      "id": "chooser",
       "targetGridRef": "grid",
-      "title": "Column Chooser",
-      "height": "100%",
-      "width": "100%"
+      "title": "Column Chooser"
     },
     "content": {
       "type": "DataGrid",
-      "id": "grid",
       "name": "grid",
       "dataSourceRef": "ProductOrders",
       "autoGenerateColumns": false,

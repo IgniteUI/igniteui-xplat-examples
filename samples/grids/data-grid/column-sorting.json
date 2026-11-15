@@ -26,7 +26,6 @@
     },
     "content": {
       "type": "DataGrid",
-      "id": "grid",
       "name": "grid",
       "dataSourceRef": "RealEstateData",
       "autoGenerateColumns": false,

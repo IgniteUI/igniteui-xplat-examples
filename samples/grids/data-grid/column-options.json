@@ -3,7 +3,6 @@
   "descriptions": {
     "content": {
       "type": "DataGrid",
-      "id": "grid",
       "name": "grid",
       "dataSourceRef": "ProductOrders",
       "autoGenerateColumns": false,
