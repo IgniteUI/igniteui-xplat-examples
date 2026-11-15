@@ -1,5 +1,6 @@
 # DataLegend over bubble series: Africa and Europe demographics (death rate x, birth rate y, population radius 10..50)
 # with the data legend restricted to the BirthRate and DeathRate columns and '%' units.
+Given the sample does not alter its data's casing
 When we are talking about the axis with name xAxis
 Then this axis title will display text 'Death Rate'
 Then this axis range will have a minimum value of 4 and a maximum value of 16

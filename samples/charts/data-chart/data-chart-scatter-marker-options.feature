@@ -1,5 +1,6 @@
 # ScatterSeries marker options: circle markers of size 10 (editor picks size/type); Europe vs Africa birth vs death rate.
 # Rows whose DeathRate falls outside the configured 5-15 x range are not plotted and are left out of the tables.
+Given the sample does not alter its data's casing
 Then this legend will have items with text: Europe,Africa
 When we are talking about the axis with name xAxis
 Then this axis title will display text 'Death Rate (per 1,000 people)'

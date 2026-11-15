@@ -1,4 +1,5 @@
 # Selection by SeriesMatcher: on view init Europe/Hydro and USA/Wind are selected and painted with the orange selectionBrush.
+Given the sample does not alter its data's casing
 Then this legend will have items with text: Hydro,Wind,Solar,Other
 When we are talking about the axis with name yAxis
 Then this axis will have labels visible with these values: China, Europe, USA, Brazil, Canada

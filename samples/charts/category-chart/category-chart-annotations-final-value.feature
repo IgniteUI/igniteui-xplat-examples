@@ -1,4 +1,5 @@
 # Final value annotation: the y axis shows the last Temperature value (Dec) with precision 0.
+Given the sample does not alter its data's casing
 When we are talking about the axis with name yAxis
 Then the axis will have 1 annotation label
 Then the final value layer will have the annotation labels with the following properties:

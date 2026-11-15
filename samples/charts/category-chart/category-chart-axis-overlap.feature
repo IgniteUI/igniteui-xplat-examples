@@ -1,5 +1,6 @@
 # Column chart of HighestGrossingMovies (TotalRevenue and HighestGrossing by Franchise), one label per franchise, with an
 # x axis overlap of 1: the two series' columns are drawn fully over one another.
+Given the sample does not alter its data's casing
 Then this category chart will have 2 visible series of Column type
 Then this category chart will have xAxis labels matching the Franchise column of sample data named HighestGrossingMovies
 When we are talking about the series at index 0

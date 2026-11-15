@@ -1,4 +1,5 @@
 # RangeBarSeries: horizontal low-to-high temperature bars per month (category Y axis, first month at the bottom).
+Given the sample does not alter its data's casing
 Then this legend will have items with text: Los Angeles,New York
 When we are talking about the axis with name yAxis
 Then this axis will have labels visible with these values: Dec, Nov, Oct, Sep, Aug, Jul, Jun, May, Apr, Mar, Feb, Jan

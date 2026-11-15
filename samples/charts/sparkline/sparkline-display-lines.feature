@@ -1,5 +1,6 @@
 # Line sparkline over SparklineMixedData (Label A..H, Value 30,-10,40,-20,30,40,-10,30).
 # A single polyline through every value in data order, with no closing segment.
+Given the sample does not alter its data's casing
 Then this sparkline will display lines with the following properties:
   | PointType  | X | Y   |
   | StartPoint | 0 | 30  |

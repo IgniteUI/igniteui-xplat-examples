@@ -1,6 +1,7 @@
 # Win/loss sparkline over SparklineMixedData (Label A..H, Value 30,-10,40,-20,30,40,-10,30).
 # Every win is a full-height bar from 0 to the data maximum (40), every loss a full-height bar from the
 # data minimum (-20) to 0, regardless of magnitude; losses (B, D, G) use the negative brush.
+Given the sample does not alter its data's casing
 Then this sparkline will display rectangles within the following ranges:
   | IndexStart | IndexEnd | Bottom | Top |
   | 0          | 1        | 0      | 40  |

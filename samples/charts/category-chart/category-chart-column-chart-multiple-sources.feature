@@ -1,4 +1,5 @@
 # Column chart comparing TotalRevenue and HighestGrossing per movie franchise.
+Given the sample does not alter its data's casing
 Then this category chart will have 2 visible series of Column type
 Then this category chart will have xAxis labels matching the Franchise column of sample data named HighestGrossingMovies
 When we are talking about the series at index 0

@@ -1,5 +1,6 @@
 # VerticalWaterfallSeries of ProfitBridge: the running operating profit total bridged step by step down an inverted
 # category y axis, increases filled/outlined green (#2E7D32) and decreases red (#C62828).
+Given the sample does not alter its data's casing
 When we wait for chart animations to complete
 When we are talking about the axis with name yAxis
 # The category y axis is inverted, so the steps read top to bottom in data order.

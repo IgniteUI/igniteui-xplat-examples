@@ -1,5 +1,6 @@
 # ScatterPolygonSeries: the airplane outline (LightGray fill, Black 0.5px outline) plus seat polygons filled per class/status by AirplaneSeatFillStyling.
 # Per-seat fills are mixed, and no step asserts fill counts per colour (see report).
+Given the sample does not alter its data's casing
 When we are talking about the axis with name xAxis
 Then this axis will have labels visible with these values: -1000, -800, -600, -400, -200, 0, 200, 400, 600, 800, 1000
 When we are talking about the axis with name yAxis

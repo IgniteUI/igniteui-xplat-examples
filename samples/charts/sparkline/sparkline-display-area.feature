@@ -1,5 +1,6 @@
 # Area sparkline over SparklineMixedData (Label A..H, Value 30,-10,40,-20,30,40,-10,30).
 # The area traces every value in data order and, because the data crosses zero, closes back along 0.
+Given the sample does not alter its data's casing
 Then this sparkline will display lines with the following properties:
   | PointType  | X | Y   |
   | StartPoint | 0 | 30  |

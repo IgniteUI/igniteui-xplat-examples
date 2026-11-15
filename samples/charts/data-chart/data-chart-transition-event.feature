@@ -1,4 +1,5 @@
 # Waterfall chart with transition-in animation (editor button replays it); after the transition the columns settle at the CompanyIncomeData values.
+Given the sample does not alter its data's casing
 When we wait for chart animations to complete
 When we are talking about the axis with name xAxis
 Then this axis will have labels visible with these values: Revenue, Expenses, Research, Marketing, Administration, Total Costs, Net Income

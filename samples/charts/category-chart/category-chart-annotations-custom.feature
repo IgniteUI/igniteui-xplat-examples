@@ -1,4 +1,5 @@
 # Custom callouts: one callout per row of TemperatureAnnotatedData at (Index, Temperature) labelled with TempInfo.
+Given the sample does not alter its data's casing
 When we are talking about the CalloutLayer layer
 Then this callout layer will have annotations with the following properties:
   | X | Y | Label |

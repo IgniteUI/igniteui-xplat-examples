@@ -1,4 +1,5 @@
 # ProportionalCategoryAngleAxis pie of EnergyRenewableConsumption: each location's slice angle is proportional to its Hydro value.
+Given the sample does not alter its data's casing
 Then the series named RadialPieSeries1 will have slices with the following properties:
   | Label  | Value  |
   | China  | 1269.5 |

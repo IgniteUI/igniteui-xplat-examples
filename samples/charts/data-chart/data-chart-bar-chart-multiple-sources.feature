@@ -1,4 +1,5 @@
 # Bar chart with two bar series sharing an inverted category y axis of franchises (gap 0.5, overlap -0.1).
+Given the sample does not alter its data's casing
 When we are talking about the series with name BarSeries1
 Then this series shapes will match the TotalRevenue column of sample data named HighestGrossingMovies within small tolerance in reverse order
 When we are talking about the series with name BarSeries2

@@ -1,6 +1,7 @@
 # Column chart of TemperatureRangeData (HighNY, HighLA by Month) with series highlighting enabled and highlighting mode
 # and behavior Auto: a series with highlighting enabled resolves Auto to BrightenSpecific, so hovering the HighNY Jul
 # column brightens that column only (palette #8BDC5C); HighLA (#8961A9) keeps its fill.
+Given the sample does not alter its data's casing
 Then this category chart will have 2 visible series of Column type
 Then this category chart will have xAxis labels matching the Month column of sample data named TemperatureRangeData
 When we are talking about the series at index 0

@@ -1,4 +1,5 @@
 # RangeColumnSeries: one low-to-high temperature column per month for Los Angeles and New York.
+Given the sample does not alter its data's casing
 Then this legend will have items with text: Los Angeles,New York
 When we are talking about the axis with name xAxis
 Then this axis will have labels visible with these values: Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec

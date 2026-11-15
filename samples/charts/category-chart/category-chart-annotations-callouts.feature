@@ -1,4 +1,5 @@
 # Auto callouts: every data point is called out with its Temperature value.
+Given the sample does not alter its data's casing
 When we are talking about the CalloutLayer layer
 Then this callout layer will have annotations with the following properties:
   | X | Y | Label |

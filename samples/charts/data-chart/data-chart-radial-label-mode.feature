@@ -1,6 +1,7 @@
 # Radial column chart whose CategoryAngleAxis label mode/extent are driven by the editor; initial state is the default (Auto) label mode.
 # Changing LabelMode/LabelExtent needs a When-form of "angle axis has label mode X" (exists as Given only) plus a
 # Then step that asserts label placement; see the sidecar report.
+Given the sample does not alter its data's casing
 Then this legend will have items with text: Ronaldo,Messi
 When we are talking about the axis with name angleAxis
 Then this axis will contain a labels for Dribbling, Passing, Finishing, Free Kicks, Penalties, Physical, Team Play, Heading

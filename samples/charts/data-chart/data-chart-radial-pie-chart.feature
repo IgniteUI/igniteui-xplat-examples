@@ -1,4 +1,5 @@
 # RadialPieSeries of FootballPlayerStats: one pie slice per attribute whose radius is the rating, for Ronaldo and Messi.
+Given the sample does not alter its data's casing
 Then this legend will have items with text: Ronaldo,Messi
 When we are talking about the axis with name angleAxis
 Then this axis will contain a labels for Dribbling, Passing, Finishing, Free Kicks, Penalties, Physical, Team Play, Heading

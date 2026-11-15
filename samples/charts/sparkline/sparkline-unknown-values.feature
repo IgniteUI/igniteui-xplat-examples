@@ -1,6 +1,7 @@
 # Area sparkline over SparklineUnknownData (Label 4,5,2,7,-1,3,-2,5,2,6; Value 4,5,null,7,-1,3,-2,null,2,6)
 # with unknownValuePlotting LinearInterpolate: the area bridges the null items (indices 2 and 7) instead
 # of breaking into separate segments, and closes back along 0 because the data crosses zero.
+Given the sample does not alter its data's casing
 Then this sparkline will display lines with the following properties:
   | PointType  | X | Y  |
   | StartPoint | 0 | 4  |

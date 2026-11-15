@@ -1,6 +1,7 @@
 # Column sparkline over SparklineMixedData (Label A..H, Value 30,-10,40,-20,30,40,-10,30).
 # One column per item from 0 to its value; the negative items (B, D, G) are drawn as negative columns
 # in the default negative brush.
+Given the sample does not alter its data's casing
 Then this sparkline will display rectangles within the following ranges:
   | IndexStart | IndexEnd | Bottom | Top |
   | 0          | 1        | 0      | 30  |

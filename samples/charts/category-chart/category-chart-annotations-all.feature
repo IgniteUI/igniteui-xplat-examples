@@ -2,6 +2,7 @@
 # callouts on every point. Hovering Jun brightens only the Jun column (palette #8BDC5C) and puts the x crosshair on
 # Jun; every month is called out with its Temperature. The final value annotation is not asserted: the chart uses
 # computedPlotAreaMarginMode Series, and the final value steps do not yet account for the effective viewport.
+Given the sample does not alter its data's casing
 Then this category chart will have 1 visible series of Column type
 When the user hovers over category point with label Jun
 When we are talking about the series at index 0

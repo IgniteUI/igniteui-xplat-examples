@@ -1,5 +1,6 @@
 # Area sparkline over SparklineMixedData (Value 30,-10,40,-20,30,40,-10,30) with the normal range
 # visible between 15 and 25.
+Given the sample does not alter its data's casing
 Then the normal range will be visible
 Then the sparkline will have a normal range between 15 and 25
 Then this sparkline will display lines with the following properties:

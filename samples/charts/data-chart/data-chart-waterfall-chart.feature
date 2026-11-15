@@ -1,4 +1,5 @@
 # WaterfallSeries of CompanyIncomeData: costs step down from revenue to total costs; a second purple series shows net income.
+Given the sample does not alter its data's casing
 When we are talking about the axis with name xAxis
 Then this axis will have labels visible with these values: Revenue, Expenses, Research, Marketing, Administration, Total Costs, Net Income
 When we are talking about the axis with name yAxis
