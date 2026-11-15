@@ -2,7 +2,6 @@
 # and Wind at USA, in orange. The series are Year, Hydro, Solar, Wind and Other in palette order (Hydro #8961A9, Wind
 # #82E9D9). The selections are made when the view is ready, through matchers, so they follow the series the chart
 # makes for those columns.
-Given the sample does not alter its data's casing
 Then the selected series items collection will have the following items:
   | SeriesMemberPath | SeriesMemberPathType | DataItem                                                                 |
   | Hydro            | ValueMemberPath      | Location=Europe;Year=2019;Hydro=632.54;Solar=154;Wind=461.3;Other=220.3 |

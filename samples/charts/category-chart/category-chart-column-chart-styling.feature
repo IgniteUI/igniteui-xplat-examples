@@ -1,7 +1,6 @@
 # Column chart of renewable consumption per location, styled with per-series brushes and white outlines. With no
 # includedProperties every numeric column is a series, Year included, so the series are Year, Hydro, Solar, Wind and
 # Other and take the five brushes in that order.
-Given the sample does not alter its data's casing
 Then this category chart will have 5 visible series of Column type
 Then this category chart will have xAxis labels matching the Location column of sample data named EnergyRenewableConsumption
 When we are talking about the series at index 0

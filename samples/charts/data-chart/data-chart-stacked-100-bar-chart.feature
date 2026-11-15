@@ -1,5 +1,4 @@
 # Stacked100BarSeries of EnergyRenewableConsumption: each location bar normalised to 100% across Hydro/Wind/Solar/Other.
-Given the sample does not alter its data's casing
 Then this legend will have items with text: Hydro,Wind,Solar,Other
 When we are talking about the axis with name yAxis
 Then this axis will have labels visible with these values: China, Europe, USA, Brazil, Canada
