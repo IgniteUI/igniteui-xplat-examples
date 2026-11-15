@@ -1,4 +1,5 @@
 {
+  "skipAlterDataCasing": true,
   "strings": {
     "legendTitle": "Stars Distribution in Milky Way Galaxy"
   },
