@@ -15,8 +15,7 @@
 	"labelsPreTerminal": 0,
 	"labelsPostInitial": 0,
 	"highlightValueDisplayMode": "Overlay",
-	"highlightValue": 25, 
-	"isHighlightNeedleDraggingEnabled": true
+	"highlightValue": 25
     }
   },
   "modules": [
