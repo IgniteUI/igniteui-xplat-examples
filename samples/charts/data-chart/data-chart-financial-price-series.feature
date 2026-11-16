@@ -2,6 +2,9 @@
 # Month names repeat across the two years, so each candle is addressed by its label and which occurrence of that label it is.
 Given the sample does not alter its data's casing
 When we are talking about the axis with name xAxis
+# Every month gets a label in a ~30px slot. Windows Forms defaults axis labels to 13px Verdana, the other platforms
+# to 11px, so the font is set to the same everywhere for the labels to fit as they do elsewhere.
+And this axis has label font 'Verdana' with size 11
 Then this axis will have labels visible with these values: 2020, FEB, MAR, APR, MAY, JUN, JUL, AUG, SEP, OCT, NOV, DEC, 2021, FEB, MAR, APR, MAY, JUN, JUL, AUG, SEP, OCT, NOV, DEC
 When we are talking about the series with name series1
 Then this series shapes will match these plotted OHLC values at repeated category labels:
