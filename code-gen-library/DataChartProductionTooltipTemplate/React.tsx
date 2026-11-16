@@ -20,7 +20,8 @@ export class DataChartProductionTooltipTemplate {
                 {fuels.map((fuel) => (
                     <div className="tooltipHorizontal" key={fuel}
                          style={{ color: series.valueMemberPath === fuel ? series.actualBrush : "black" }}>
-                        <label className="tooltipLbl" style={{ width: "4rem" }}>{fuel}:</label>
+                        {/* The space is in the label: JSX drops the line break between elements that reads as one elsewhere. */}
+                        <label className="tooltipLbl" style={{ width: "4rem" }}>{fuel + ": "}</label>
                         <label className="tooltipVal">{item[fuel]}</label>
                     </div>
                 ))}

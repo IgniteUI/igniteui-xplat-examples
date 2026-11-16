@@ -9,18 +9,23 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 @Component({
     template: `
 <!-- begin content -->
-    <ng-template let-dataContext #template>
+    <ng-template let-item="item" let-series="series" #template>
         <!-- Every fuel is listed whichever column is hovered, so the reader sees the country's whole
              mix; the one the hovered series draws is tinted with that series' own brush so it can be
              picked out of the five. -->
-        <div class="ui-tooltip-content" *ngIf="dataContext.item && dataContext.series">
-            <div class="tooltipTitle">{{dataContext.item.Country}} Production</div>
-            <div class="tooltipHorizontal" *ngFor="let fuel of fuels"
-                 [style.color]="dataContext.series.valueMemberPath === fuel ? dataContext.series.actualBrush : 'black'">
-                <label class="tooltipLbl" style="width: 4rem">{{fuel}}:</label>
-                <label class="tooltipVal">{{dataContext.item[fuel]}}</label>
+        @if (item && series) {
+        <div class="ui-tooltip-content">
+            <div class="tooltipTitle">{{item.Country}} Production</div>
+            @for (fuel of ['Coal', 'Hydro', 'Nuclear', 'Gas', 'Oil']; track fuel) {
+            <div class="tooltipHorizontal"
+                 [style.color]="series.valueMemberPath === fuel ? series.actualBrush : 'black'">
+                <!-- The space is in the label: Angular drops the whitespace between elements that reads as one elsewhere. -->
+                <label class="tooltipLbl" style="width: 4rem">{{fuel}}: </label>
+                <label class="tooltipVal">{{item[fuel]}}</label>
             </div>
+            }
         </div>
+        }
     </ng-template>
 <!-- end content -->
     `,
@@ -30,7 +35,6 @@ export class DataChartProductionTooltipTemplateComponent {
     @ViewChild("template", { static: true })
     public template: TemplateRef<any>;
 
-    public fuels: string[] = ["Coal", "Hydro", "Nuclear", "Gas", "Oil"];
 }
 
 @NgModule({
