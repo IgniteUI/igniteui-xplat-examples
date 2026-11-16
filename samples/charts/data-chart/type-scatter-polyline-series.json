@@ -46,7 +46,8 @@
           "shapeMemberPath": "Points",
           "title": "Airplane Seats",
           "showDefaultTooltip": false,
-          "tooltipTemplateRef": "DataChartAirplaneSeatTooltipTemplate",
+          "toolTipTemplateRef": "DataChartAirplaneSeatTooltipTemplate",
+          "isCustomShapeStyleAllowed": true,
           "assigningShapeStyleRef": "AirplaneSeatStrokeStyling"
         }
       ]

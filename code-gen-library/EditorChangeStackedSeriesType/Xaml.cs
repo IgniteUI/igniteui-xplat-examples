@@ -66,6 +66,9 @@ public class EditorChangeStackedSeriesType
             horizontal.YAxis = CodeGenHelper.FindByName<NumericYAxis>("numYAxis");
         }
 
+        var data = CodeGenHelper.FindByName<IList>("EnergyProductionByCountry");       
+        stack.ItemsSource = data;
+
         foreach (var fragment in Fragments())
         {
             stack.Series.Add(fragment);

@@ -1,5 +1,7 @@
 //begin imports
 using Infragistics.Controls.Charts;
+using Microsoft.UI;
+using Microsoft.UI.Xaml.Media;
 //end imports
 
 public class AirplaneSeatFillStyling
