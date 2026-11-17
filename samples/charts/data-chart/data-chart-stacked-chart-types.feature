@@ -1,5 +1,5 @@
-# Stacked chart types: the editor swaps the stacked series type; initial state is a StackedColumnSeries of Coal/Hydro/Nuclear/Gas/Oil per country.
-# Switching type runs a code handler (EditorChangeStackedSeriesType) that no step drives, so only the initial type is asserted.
+# The editor swaps the stacked series type and axis orientation while retaining the five fuels' country data.
+# The initial StackedColumnSeries displays Coal/Hydro/Nuclear/Gas/Oil per country.
 Then this legend will have items with text: Coal,Hydro,Nuclear,Gas,Oil
 When we are talking about the axis with name catXAxis
 Then this axis will have labels visible with these values: Canada, China, Russia, Australia, United States, France
@@ -49,3 +49,9 @@ Then this series shapes will match category values within small tolerance:
   | 1225  |
   | 2850  |
   | 1475  |
+When we choose 'Stacked 100 Column Series' from the 'Series Type' row in the property editor panel
+Then this data chart will have 5 visible fragments in 1 Stacked100Column series
+Then this legend will have items with text: Coal,Hydro,Nuclear,Gas,Oil
+When we choose 'Stacked Bar Series' from the 'Series Type' row in the property editor panel
+Then this data chart will have 5 visible fragments in 1 StackedBar series
+Then this legend will have items with text: Coal,Hydro,Nuclear,Gas,Oil
