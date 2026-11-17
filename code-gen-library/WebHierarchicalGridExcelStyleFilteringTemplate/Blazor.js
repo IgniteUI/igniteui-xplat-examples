@@ -1,7 +1,7 @@
 //begin eventHandler
-igRegisterScript("WebHierarchicalGridExcelStyleFilteringTemplate", (args) => {
+registerScript("WebHierarchicalGridExcelStyleFilteringTemplate", (args) => {
     //OMIT HANDLER
-}, false);
+});
 //end eventHandler
 
 let requiredStyles = `

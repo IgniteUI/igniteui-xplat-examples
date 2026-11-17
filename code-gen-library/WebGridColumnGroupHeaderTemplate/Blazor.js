@@ -14,12 +14,13 @@ function toggleColumnGroup(name) {
     }
     columnGroupStates.set(name, !columnGroupStates.get(name));
 }
-igRegisterScript("WebGridColumnGroupHeaderTemplate", (ctx) => {
-    var html = window.igTemplating.html;
+registerScript("WebGridColumnGroupHeaderTemplate", (ctx) => {
     var iconName = columnGroupStates.get(ctx.column.header) ? '🔽' : '🔼';
     return html`<div>
     <span style="cursor: pointer;" draggable="false" onclick='toggleColumnGroup("${ctx.column.header}")'>${iconName}</span>
     <span>${ctx.column.header}</span>
 </div>`;
-}, false);
+});
+// called by name from the page, so keep it reachable from the module
+window.toggleColumnGroup = toggleColumnGroup;
 //end template

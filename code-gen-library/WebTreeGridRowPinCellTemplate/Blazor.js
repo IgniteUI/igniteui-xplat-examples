@@ -1,6 +1,5 @@
 ﻿//begin template
-igRegisterScript("WebTreeGridRowPinCellTemplate", (ctx) => {
-    var html = window.igTemplating.html;
+registerScript("WebTreeGridRowPinCellTemplate", (ctx) => {
     window.toggleRowPin = function toggleRowPin(index) {
         var treeGrid = document.getElementsByTagName("igc-tree-grid")[0];
         treeGrid.getRowByIndex(index).pinned = !treeGrid.getRowByIndex(index).pinned;
@@ -9,5 +8,5 @@ igRegisterScript("WebTreeGridRowPinCellTemplate", (ctx) => {
     return html`<div>
     <span onpointerdown='toggleRowPin("${index}")'>📌</span>
 </div>`;
-}, false);
+});
 //end template

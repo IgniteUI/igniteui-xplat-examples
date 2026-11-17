@@ -1,7 +1,7 @@
 //begin eventHandler
-igRegisterScript("WebTreeGridMultiColumnHeadersStyling", (args) => {
+registerScript("WebTreeGridMultiColumnHeadersStyling", (args) => {
     //OMIT HANDLER
-}, false);
+});
 //end eventHandler
 
 let requiredStyles = `

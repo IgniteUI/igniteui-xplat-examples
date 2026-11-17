@@ -1,7 +1,7 @@
 //begin eventHandler
-igRegisterScript("WebGridColumnPinningStyleWithCustomCSS", (args) => {
+registerScript("WebGridColumnPinningStyleWithCustomCSS", (args) => {
     //OMIT HANDLER
-}, false);
+});
 //end eventHandler
 
 let requiredStyles = `

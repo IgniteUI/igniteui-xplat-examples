@@ -1,4 +1,4 @@
-igRegisterScript("TestsStyleDataAxisAnnotationsLabels", (sender, args) => {
+registerScript("TestsStyleDataAxisAnnotationsLabels", (sender, args) => {
     let o = CodeGenHelper.findByName("AxisAnnotationStlingOtions");
     if (o === undefined)
         return;
@@ -19,7 +19,7 @@ igRegisterScript("TestsStyleDataAxisAnnotationsLabels", (sender, args) => {
             return;
         }
     }
-}, false);
+});
 
 // Hoisted from the Web.ts private StyleShape method (registered scripts have no instance).
 function StyleShape(options, args)

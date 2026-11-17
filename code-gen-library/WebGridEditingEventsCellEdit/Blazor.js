@@ -1,5 +1,5 @@
 //begin eventHandler
-igRegisterScript("WebGridEditingEventsCellEdit", (ev) => {
+registerScript("WebGridEditingEventsCellEdit", (ev) => {
     var d = ev.detail;
 
     if (d.column != null && d.column.field == "UnitsOnOrder") {
@@ -8,5 +8,5 @@ igRegisterScript("WebGridEditingEventsCellEdit", (ev) => {
             alert("You cannot order more than the units in stock!")
         }
     }
-}, false);
+});
 //end eventHandler

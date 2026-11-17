@@ -1,7 +1,7 @@
 //begin eventHandler
-igRegisterScript("WebGridSizeMediumTemplate", (args) => {
+registerScript("WebGridSizeMediumTemplate", (args) => {
     //OMIT HANDLER
-}, false);
+});
 //end eventHandler
 
 let requiredStyles = `

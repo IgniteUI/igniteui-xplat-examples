@@ -1,5 +1,5 @@
 //begin eventHandler
-igRegisterScript("WebTreeGridRowStylesHandler", () => {
+registerScript("WebTreeGridRowStylesHandler", () => {
     return {
         'background': (row) => row.data['Title'] === 'CEO' ? '#6c757d' : row.data['Title'].includes('President') ? '#adb5bd' :
                 row.data['Title'].includes('Director') ? '#ced4da' : row.data['Title'].includes('Manager') ? '#dee2e6' :

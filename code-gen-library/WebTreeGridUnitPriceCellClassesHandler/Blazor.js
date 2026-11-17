@@ -1,5 +1,5 @@
 //begin eventHandler
-igRegisterScript("WebTreeGridUnitPriceCellClassesHandler", () => {
+registerScript("WebTreeGridUnitPriceCellClassesHandler", () => {
     return {
         downPrice: (rowData, columnKey) => rowData[columnKey] <= 5,
         upPrice: (rowData, columnKey) => rowData[columnKey] > 5,

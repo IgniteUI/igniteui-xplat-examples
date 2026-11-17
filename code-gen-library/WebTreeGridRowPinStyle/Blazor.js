@@ -1,7 +1,7 @@
 //begin eventHandler
-igRegisterScript("WebTreeGridRowPinStyle", (args) => {
+registerScript("WebTreeGridRowPinStyle", (args) => {
     //OMIT HANDLER
-}, false);
+});
 //end eventHandler
 
 let requiredStyles = `

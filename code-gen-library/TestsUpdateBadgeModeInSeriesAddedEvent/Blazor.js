@@ -1,3 +1,3 @@
-igRegisterScript("TestsUpdateBadgeModeInSeriesAddedEvent", (sender, args) => {
+registerScript("TestsUpdateBadgeModeInSeriesAddedEvent", (sender, args) => {
           args.series.legendItemBadgeMode = LegendItemBadgeMode.MatchSeries;
-}, false);
+});

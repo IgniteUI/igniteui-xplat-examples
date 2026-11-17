@@ -1,4 +1,4 @@
-igRegisterScript("TestsDataLegendStyleSummaryRowsByGroup2", (sender, args) => {
+registerScript("TestsDataLegendStyleSummaryRowsByGroup2", (sender, args) => {
 		 switch (args.groupName)
 		 {
 			 case "Group1":
@@ -10,4 +10,4 @@ igRegisterScript("TestsDataLegendStyleSummaryRowsByGroup2", (sender, args) => {
 				 args.titleTextColor = "red";
 				 break;
 		 }
-}, false);
+});

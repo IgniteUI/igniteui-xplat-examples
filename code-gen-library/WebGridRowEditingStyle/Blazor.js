@@ -1,7 +1,7 @@
 //begin eventHandler
-igRegisterScript("WebGridRowEditingStyle", (args) => {
+registerScript("WebGridRowEditingStyle", (args) => {
     //OMIT HANDLER
-}, false);
+});
 //end eventHandler
 
 let requiredStyles = `

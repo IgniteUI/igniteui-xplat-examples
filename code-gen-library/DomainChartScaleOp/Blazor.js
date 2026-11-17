@@ -14,7 +14,7 @@
 //   op "unscale"       -> type-switched unscale                  (name = axis name)
 //   op "unscaleRadius" -> bubble radiusScale interpolation       (name = series name)
 // returns: a number (NaN maps to JSON null on the way back, which the C# side reads as NaN).
-igRegisterScript("DomainChartScaleOp", (container, op, name, value) => {
+registerScript("DomainChartScaleOp", (container, op, name, value) => {
 
     var getInternalTypeName = (control) => {
         var n = (control.$type && !control._implementation) ? control.$type.name : control.i.$type.name;
@@ -128,5 +128,5 @@ igRegisterScript("DomainChartScaleOp", (container, op, name, value) => {
         return minimumDataValue + p * (maximumDataValue - minimumDataValue);
     }
     return NaN;
-}, false);
+});
 //end eventHandler

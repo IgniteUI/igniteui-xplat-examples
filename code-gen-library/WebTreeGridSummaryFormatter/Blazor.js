@@ -1,5 +1,5 @@
 //begin eventHandler
-igRegisterScript("WebTreeGridSummaryFormatter", (summary) => {
+registerScript("WebTreeGridSummaryFormatter", (summary) => {
     const result = summary.summaryResult;
     if (summaryOperand instanceof IgcDateSummaryOperand && summary.key !== "count" && result !== null && result !== undefined) {
         const format = new Intl.DateTimeFormat("en", { year: "numeric" });

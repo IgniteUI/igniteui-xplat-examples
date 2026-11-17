@@ -1,4 +1,4 @@
-igRegisterScript("CategoryStyleTurnLowValuesRed", (sender, args) => {
+registerScript("CategoryStyleTurnLowValuesRed", (sender, args) => {
         var series = sender;
         var items = args.getItems(args.startIndex, args.endIndex);
         for (var i = 0; i < items.length; i++)
@@ -9,4 +9,4 @@ igRegisterScript("CategoryStyleTurnLowValuesRed", (sender, args) => {
                 args.fill = "red";
             }
         }
-}, false);
+});

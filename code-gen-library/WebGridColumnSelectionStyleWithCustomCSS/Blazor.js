@@ -1,7 +1,7 @@
 //begin eventHandler
-igRegisterScript("WebGridColumnSelectionStyleWithCustomCSS", (args) => {
+registerScript("WebGridColumnSelectionStyleWithCustomCSS", (args) => {
     //OMIT HANDLER
-}, false);
+});
 //end eventHandler
 
 let requiredStyles = `

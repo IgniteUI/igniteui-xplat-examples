@@ -1,7 +1,7 @@
 //begin eventHandler
-igRegisterScript("WebTreeGridColumnPinningStyleTemplate", (args) => {
+registerScript("WebTreeGridColumnPinningStyleTemplate", (args) => {
     //OMIT HANDLER
-}, false);
+});
 //end eventHandler
 let requiredStyles = `
 <!--begin styles-->

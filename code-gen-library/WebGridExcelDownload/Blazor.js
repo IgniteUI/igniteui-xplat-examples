@@ -1,5 +1,5 @@
 //begin eventHandler
-igRegisterScript("WebGridExcelDownload", (event) => {
+registerScript("WebGridExcelDownload", (event) => {
     console.log("TODO WebGridExcelDownload");
-}, false);
+});
 //end eventHandler

@@ -1,4 +1,4 @@
-igRegisterScript("TestsUpdateValueLayerPrecisionInSeriesAddedEvent", (sender, args) => {
+registerScript("TestsUpdateValueLayerPrecisionInSeriesAddedEvent", (sender, args) => {
         const o = CodeGenHelper.findByName("SeriesAddedValueLayerPrecision");
         const obj = JSON.parse(o.value.toString());
         const precision = obj.precision;
@@ -6,4 +6,4 @@ igRegisterScript("TestsUpdateValueLayerPrecisionInSeriesAddedEvent", (sender, ar
         if (valueLayer) {
             valueLayer.yAxisAnnotationInterpolatedValuePrecision = precision;
         }
-}, false);
+});

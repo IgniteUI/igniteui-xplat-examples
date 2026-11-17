@@ -1,8 +1,8 @@
 //begin eventHandler
-igRegisterScript("WebGridWithComboRendered", (event) => {
+registerScript("WebGridWithComboRendered", (event) => {
         const grid = document.getElementsByTagName("igc-grid")[0];
         var worldCitiesAbove500K = grid.data;
-        countries = worldCitiesAbove500K.filter(x => this.countryNames.indexOf(x.Country) !== -1).filter((value, index, array) => array.findIndex(x => x.Country === value.Country) === index);
+        countries = worldCitiesAbove500K.filter(x => countryNames.indexOf(x.Country) !== -1).filter((value, index, array) => array.findIndex(x => x.Country === value.Country) === index);
         regions = worldCitiesAbove500K.filter((value, index, array) => array.findIndex(x => x.Region === value.Region) === index);
         cities = worldCitiesAbove500K.filter((value, index, array) => array.findIndex(x => x.Name === value.Name) === index);
         grid.data = [
@@ -29,13 +29,13 @@ igRegisterScript("WebGridWithComboRendered", (event) => {
         setTimeout(() => {
                 for (let index = 0; index < grid.data.length; index++) {
                         const rowId = grid.data[index].ID;
-                        this.bindEventsCountryCombo(rowId, grid.getCellByKey(rowId, "Country"));
-                        this.bindEventsRegionCombo(rowId, grid.getCellByKey(rowId, "Region"));
-                        this.bindEventsCityCombo(rowId, grid.getCellByKey(rowId, "City"));
+                        bindEventsCountryCombo(rowId, grid.getCellByKey(rowId, "Country"));
+                        bindEventsRegionCombo(rowId, grid.getCellByKey(rowId, "Region"));
+                        bindEventsCityCombo(rowId, grid.getCellByKey(rowId, "City"));
                 }
         }, 100);
 
-}, false);
+});
 var countryNames = [
         'United States',
         'Japan',

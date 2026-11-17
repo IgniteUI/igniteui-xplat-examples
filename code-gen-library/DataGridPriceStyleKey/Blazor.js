@@ -1,5 +1,5 @@
 //begin eventHandler
-igRegisterScript("DataGridPriceStyleKey", (column, args) => {
+registerScript("DataGridPriceStyleKey", (column, args) => {
     const data = column.i.grid.actualDataSource.dataSource;
     let row = null;
     if (column.i.grid) {
@@ -12,5 +12,5 @@ igRegisterScript("DataGridPriceStyleKey", (column, args) => {
     } else {
         args.styleKey = "priceShiftDown";
     }
-}, false);
+});
 //end eventHandler

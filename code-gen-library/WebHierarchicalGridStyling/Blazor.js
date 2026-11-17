@@ -1,7 +1,7 @@
 //begin eventHandler
-igRegisterScript("WebHierarchicalGridStyling", (args) => {
+registerScript("WebHierarchicalGridStyling", (args) => {
     //OMIT HANDLER
-}, false);
+});
 //end eventHandler
 
 let requiredStyles = `

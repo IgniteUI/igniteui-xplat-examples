@@ -1,5 +1,5 @@
 //begin eventHandler
-igRegisterScript("WebTreeGridCellEdit", (event) => {
+registerScript("WebTreeGridCellEdit", (event) => {
 	const column = event.detail.column;
 	if (column.field === 'Age') {
 		if (event.detail.newValue < 18) {
@@ -12,5 +12,5 @@ igRegisterScript("WebTreeGridCellEdit", (event) => {
 			alert('The employee hire date must be in the past!');
 		}
 	}
-}, false);
+});
 //end eventHandler

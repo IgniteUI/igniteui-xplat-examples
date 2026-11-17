@@ -1,6 +1,5 @@
 //begin template
-igRegisterScript("WebGridCompositeAddressCellTemplate", (ctx) => {
-    var html = window.igTemplating.html;
+registerScript("WebGridCompositeAddressCellTemplate", (ctx) => {
     return html`<div class="address-container">
     <div class="country-city">
         <span><strong>Country:</strong> ${ctx.cell.row.data.Country}</span>
@@ -14,5 +13,5 @@ igRegisterScript("WebGridCompositeAddressCellTemplate", (ctx) => {
     </div>
     <br />
 </div>`;
-}, false);
+});
 //end template

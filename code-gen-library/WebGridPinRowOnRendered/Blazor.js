@@ -1,7 +1,7 @@
 //begin eventHandler
-igRegisterScript("WebGridPinRowOnRendered", (event) => {
+registerScript("WebGridPinRowOnRendered", (event) => {
         var grid = document.getElementById("grid");
         grid.pinRow("ALFKI");
         grid.pinRow("AROUT");
-}, false);
+});
 //end eventHandler

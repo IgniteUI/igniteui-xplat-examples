@@ -1,4 +1,4 @@
-igRegisterScript("TestsDataLegendStyleSummaryColumns3", (sender, args) => {
+registerScript("TestsDataLegendStyleSummaryColumns3", (sender, args) => {
 		switch(args.valueMemberPath)
 		{
 			case "Open":
@@ -18,4 +18,4 @@ igRegisterScript("TestsDataLegendStyleSummaryColumns3", (sender, args) => {
 				args.valueTextColor = "red";
 				break;
 		}
-}, false);
+});

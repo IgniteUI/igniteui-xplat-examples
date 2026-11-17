@@ -1,7 +1,7 @@
 //begin eventHandler
-igRegisterScript("WebHGridAdvancedFilteringStyle", (args) => {
+registerScript("WebHGridAdvancedFilteringStyle", (args) => {
     //OMIT HANDLER
-}, false);
+});
 //end eventHandler
 
 let requiredStyles = `

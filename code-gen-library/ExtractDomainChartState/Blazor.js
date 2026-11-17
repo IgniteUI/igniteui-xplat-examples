@@ -6,7 +6,7 @@
 // internal MainDataChart / its series+axes / their live data sources exist only in the JS runtime,
 // so the extraction runs here and returns the same {axes,series} JSON the C# state objects produce.
 // Invoked by name through the CR's generic library-item ref-invoke.
-igRegisterScript("ExtractDomainChartState", (container) => {
+registerScript("ExtractDomainChartState", (container) => {
 
     // --- manager shims (exact WC PlatformManager behaviour) ---
     var getInternalTypeName = (control) => {
@@ -192,5 +192,5 @@ igRegisterScript("ExtractDomainChartState", (container) => {
         result.series.push(getSeriesState(intSeries._inner[s].externalObject, s));
     }
     return result;
-}, false);
+});
 //end eventHandler

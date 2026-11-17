@@ -1,5 +1,5 @@
 //begin eventHandler
-igRegisterScript("PivotDataFlatAggregateSumSale", (members, data) => {
+registerScript("PivotDataFlatAggregateSumSale", (members, data) => {
     return data.reduce((accumulator, value) => accumulator + value.ProductUnitPrice * value.NumberOfUnits, 0);
-}, false);
+});
 //end eventHandler

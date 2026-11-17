@@ -1,5 +1,5 @@
-igRegisterScript("TestsAssignSankeyNodeStyle", (sender, args) => {
+registerScript("TestsAssignSankeyNodeStyle", (sender, args) => {
     if (args.startIndex === 0) {
         args.fill = "purple";
     }
-}, false);
+});

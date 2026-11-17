@@ -1,5 +1,5 @@
 //begin eventHandler
-igRegisterScript("WebGridPasteOptions", (event) => {
+registerScript("WebGridPasteOptions", (event) => {
     console.log("TODO WebGridPasteOptions");
-}, false);
+});
 //end eventHandler

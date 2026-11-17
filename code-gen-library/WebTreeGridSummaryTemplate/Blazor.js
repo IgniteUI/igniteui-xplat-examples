@@ -1,5 +1,5 @@
 //begin template
-igRegisterScript("WebTreeGridSummaryTemplate", (ctx) => {
+registerScript("WebTreeGridSummaryTemplate", (ctx) => {
     const style = document.createElement('style');
     style.innerHTML = `
         .summary-temp {
@@ -44,7 +44,6 @@ igRegisterScript("WebTreeGridSummaryTemplate", (ctx) => {
         }
     `;
     document.head.appendChild(style);
-    var html = window.igTemplating.html;
     var summaryResults = ctx.implicit;
     return html`<div class="summary-temp">
         <span><strong>${summaryResults[0].label}</strong><span>${summaryResults[0].summaryResult}</span></span>
@@ -52,5 +51,5 @@ igRegisterScript("WebTreeGridSummaryTemplate", (ctx) => {
         <span><strong>${summaryResults[2].label}</strong><span>${summaryResults[2].summaryResult}</span></span>
         <span><strong>${summaryResults[3].label}</strong><span>${summaryResults[3].summaryResult}</span></span>
     </div>`;
-}, false);
+});
 //end template

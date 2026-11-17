@@ -1,7 +1,7 @@
 //begin eventHandler
-igRegisterScript("WebGridResizeStyleWithCustomCSS", (args) => {
+registerScript("WebGridResizeStyleWithCustomCSS", (args) => {
     //OMIT HANDLER
-}, false);
+});
 //end eventHandler
 
 let requiredStyles = `

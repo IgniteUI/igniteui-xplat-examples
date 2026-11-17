@@ -1,6 +1,5 @@
 //begin template
-igRegisterScript("WebGridNumericColEditCellTemplate", (ctx) => {
-    var html = window.igTemplating.html;
+registerScript("WebGridNumericColEditCellTemplate", (ctx) => {
     const cell = ctx.cell;
     const columnName = cell.column.field;
     const cellValue = cell.row.data[columnName];
@@ -19,5 +18,5 @@ igRegisterScript("WebGridNumericColEditCellTemplate", (ctx) => {
                 cell.editValue = e.detail;
             }}>
         </igc-input>`
-}, false);
+});
 //end template

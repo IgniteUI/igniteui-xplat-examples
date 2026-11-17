@@ -1,6 +1,5 @@
 //begin template
-igRegisterScript("WebGridCompositeContactEditCellTemplate", (ctx) => {
-    var html = window.igTemplating.html;
+registerScript("WebGridCompositeContactEditCellTemplate", (ctx) => {
     window.keyUpHandler = function () {
         ctx.cell.row.data[window.event.target.id] = window.event.target.value;
     }
@@ -10,5 +9,5 @@ igRegisterScript("WebGridCompositeContactEditCellTemplate", (ctx) => {
                     <igc-input id="Company" label='Company' type="text" name="name" value="${ctx.cell.row.data.Company}" onkeyup='keyUpHandler()'></igc-input>
                 </div>
    `;
-}, false);
+});
 //end template

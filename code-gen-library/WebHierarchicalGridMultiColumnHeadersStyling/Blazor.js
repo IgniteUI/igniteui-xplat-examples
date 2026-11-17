@@ -1,7 +1,7 @@
 //begin eventHandler
-igRegisterScript("WebHierarchicalGridMultiColumnHeadersStyling", (args) => {
+registerScript("WebHierarchicalGridMultiColumnHeadersStyling", (args) => {
     //OMIT HANDLER
-}, false);
+});
 //end eventHandler
 
 let requiredStyles = `

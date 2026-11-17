@@ -1,5 +1,5 @@
 //begin eventHandler
-igRegisterScript("DataGridDeleteRowButtonTemplate", (s, args) => {
+registerScript("DataGridDeleteRowButtonTemplate", (s, args) => {
     const content = args.content;
     if (content.childElementCount === 0) {
         const button = document.createElement("button");
@@ -17,5 +17,5 @@ igRegisterScript("DataGridDeleteRowButtonTemplate", (s, args) => {
     const button = content.children[0];
     button.disabled = args.cellInfo.isDeleted;
     button.id = args.cellInfo.dataRow.toString();
-}, false);
+});
 //end eventHandler
