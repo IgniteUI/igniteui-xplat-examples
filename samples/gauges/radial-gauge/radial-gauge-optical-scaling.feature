@@ -20,3 +20,7 @@ When this radial gauge is resized to 240x240
 # 240 of the 500px opticalScalingSize scales the default label size to 12 * 0.48. Not 250: half a device pixel
 # at 125% (312.5), which a head that rounds layout to device pixels snaps to 249.
 Then this radial gauge will have abels will have font size 5.76
+When we click the 'Optical Scaling' row in the property editor panel
+Then this radial gauge will have abels will have font size DEFAULT
+When we click the 'Optical Scaling' row in the property editor panel
+Then this radial gauge will have abels will have font size 5.76
