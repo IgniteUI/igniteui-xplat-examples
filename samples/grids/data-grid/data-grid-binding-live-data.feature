@@ -1,4 +1,4 @@
-# Live-data portfolio grid (ticker onViewInit is skipped under testing): ID column hidden, custom Close/Change headers, row hover disabled, multi-row selection.
+# Live-data portfolio grid: view-init configures grouping; the price buttons start updates. ID column hidden, custom Close/Change headers, row hover disabled, multi-row selection.
 # The Grouping editor starts on, grouping by Category, Type and Contract. PortfolioData is random, so the group layout changes
 # from run to run; known data in one group keeps the rows a group header followed by items.
 Given we have sample data named liveTestData with these values:
