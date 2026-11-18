@@ -32,7 +32,7 @@ jobs:
           repository: Infragistics-Developer-Tools/dev-tools
           token: ${{ secrets.DEV_TOOLS_TOKEN }}
           path: dev-tools
-      - uses: actions/setup-node@v6
+      - uses: actions/setup-node@v7
         with:
           node-version: 24
       - uses: actions/setup-dotnet@v6
@@ -78,7 +78,7 @@ jobs:
         with:
           repository: Infragistics/uno-samples
           path: uno-samples
-      - uses: actions/setup-node@v6
+      - uses: actions/setup-node@v7
         with:
           node-version: 24
       - uses: actions/setup-dotnet@v6
