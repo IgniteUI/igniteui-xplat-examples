@@ -1,19 +1,31 @@
 //begin imports
 import 'package:igniteui_flutter_core/src/ArrayList.dart' show ArrayList;
 import 'package:igniteui_flutter_core/src/LocalDataSource_combined.dart' show LocalDataSource;
-import 'package:igniteui_flutter_core/src/reflection.dart' show IReflectable, IReflectableSet;
+import 'package:igniteui_flutter_core/src/reflection.dart' show IReflectableData;
+import 'package:igniteui_flutter_core/src/type.dart' show Double_$type, Int_$type, String_$type, TypeInfo;
 //end imports
 
 // The keys stay as the C# and TypeScript spell them: a data item defined in
 // code keeps its own casing across platforms, and these are the names the
 // member paths in the descriptions ask for.
-class RetailSalesPerformanceDataLDSItem implements IReflectable, IReflectableSet {
+class RetailSalesPerformanceDataLDSItem implements IReflectableData {
     String? category = null;
     String? subcategory = null;
     String? product = null;
     int sales = 0;
     double revenue = 0;
     double profit = 0;
+
+
+    static final Map<String, TypeInfo?> _propertyTypes = {
+        "Category": String_$type,
+        "Subcategory": String_$type,
+        "Product": String_$type,
+        "Sales": Int_$type,
+        "Revenue": Double_$type,
+        "Profit": Double_$type,
+    };
+    Map<String, TypeInfo?> get propertyTypes => _propertyTypes;
 
     Object? getValue(String? propertyName) {
         switch (propertyName) {
