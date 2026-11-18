@@ -1,4 +1,7 @@
-# Percent-based highlighting: CountryTopUrbanPopData; each country node overlays UrbanPopulation on Population
-# (China 941865672/1425178792, India 530387142/1428627663, United States 284698234/341814420, Mexico 114397383/129388467).
-# NOT COVERED: no existing step can assert this control. This sidecar deliberately has no Then line until the steps below are approved.
-# Wanted: Then this treemap node with label <Name> will have a highlighted overlay covering <ratio> of its area
+# Documentation: components/charts/types/treemap-chart.mdx — percent-based highlighting.
+# CountryTopUrbanPopData: overlay area represents UrbanPopulation / Population.
+Then this treemap will have rendered nodes with labels: Asia, North America, China, India, United States, Mexico
+And the highlighted area of treemap node 'China' will occupy 0.660875 within 0.02 of its area
+And the highlighted area of treemap node 'India' will occupy 0.371257 within 0.02 of its area
+And the highlighted area of treemap node 'United States' will occupy 0.832903 within 0.02 of its area
+And treemap node 'Mexico' will be contained in node 'North America'

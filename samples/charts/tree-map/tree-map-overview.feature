@@ -1,6 +1,7 @@
-# Overview: CountyHierarchicalData (8 continent parents, 214 countries) sized by Population, value fill scale #4e62cf..#8a58d6 (0..1.5e9, log),
-# overlay headers, root title 'Countries', black outline thickness 1.
-# NOT COVERED: no existing step can assert this control. This sidecar deliberately has no Then line until the steps below are approved.
-# Wanted: Then this treemap will have parent nodes with labels: Africa,Asia,Europe,Middle East,North America,Central America,South America,Oceania
-# Wanted: Then this treemap node with label <Name> will have an area proportional to <Population>  (e.g. China 1344130000, India 1241491960)
-# Wanted: Then this treemap node with label <Name> will have fill <brush>
+# Docs: igniteui-documentation/docs/xplat/src/content/en/components/charts/types/treemap-chart.mdx
+# Nested rectangles express the hierarchy and relative population, independently of the logarithmic fill scale.
+# CountyHierarchicalData populations: India 1241491960, China 1344130000; compare siblings within the same parent.
+Then this treemap will have rendered nodes with labels: Africa, Asia, Europe, Middle East, North America, Central America, South America, Oceania, China, India
+Then treemap node 'China' will be contained in node 'Asia'
+Then treemap node 'India' will be contained in node 'Asia'
+Then the area of treemap node 'India' relative to 'China' will be 0.92363980 within 0.03
