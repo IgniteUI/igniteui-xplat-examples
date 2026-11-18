@@ -1,8 +1,8 @@
-# NO ASSERTION YET - needs a new step (see sidecar report). This file has no Then on purpose: the generator
-# rejects it until a step is approved or the sample JSON opts out of sampleTesting.
-# Demonstrates: three maps, each with ArcGISOnlineMapImagery from a different Esri map server:
-#   streetMap (leftContent)       .../ArcGIS/rest/services/World_Street_Map/MapServer
-#   oceansMap (content)           .../arcgis/rest/services/Ocean/World_Ocean_Base/MapServer
-#   topographicMap (rightContent) .../ArcGIS/rest/services/World_Topo_Map/MapServer
-# Requested step: Then the map named <name> will have background imagery of type ArcGISOnlineMapImagery with map
-#   server uri <uri>
+# Docs: igniteui-documentation/docs/xplat/src/content/en/components/geo-map-display-esri-imagery.mdx
+# The three live maps must keep their distinct imagery services rather than sharing one default server.
+Then the map named streetMap will have background imagery of type ArcGISOnlineMapImagery
+Then the map named streetMap will use background map server https://services.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer
+Then the map named oceansMap will have background imagery of type ArcGISOnlineMapImagery
+Then the map named oceansMap will use background map server https://services.arcgisonline.com/arcgis/rest/services/Ocean/World_Ocean_Base/MapServer
+Then the map named topographicMap will have background imagery of type ArcGISOnlineMapImagery
+Then the map named topographicMap will use background map server https://services.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer
