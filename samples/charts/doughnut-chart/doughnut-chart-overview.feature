@@ -1,6 +1,6 @@
 # Documentation: components/charts/types/donut-chart.mdx.
 # Company market shares must produce labelled slices in proportion to their values.
-Then doughnut chart named chart will have 1 rendered ring series
+Then the doughnut chart should have 1 series
 And doughnut chart named chart will have the following rendered slices in ring series series:
   | Label         | Angle |
   | Google 30%    | 108   |

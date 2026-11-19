@@ -1,6 +1,6 @@
 # Documentation: components/charts/types/donut-chart.mdx.
 # The inner seasonal ring divides the year into quarters; the outer ring has twelve equal months.
-Then doughnut chart named chart will have 2 rendered ring series
+Then the doughnut chart should have 2 series
 And doughnut chart named chart will have the following rendered slices in ring series series1:
   | Label  | Angle |
   | Winter | 90    |
