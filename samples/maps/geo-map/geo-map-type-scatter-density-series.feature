@@ -1,7 +1,10 @@
-# NO ASSERTION YET - needs a new step (see sidecar report). This file has no Then on purpose: the generator
-# rejects it until a step is approved or the sample JSON opts out of sampleTesting.
-# Demonstrates: Australian places parsed from AusPlaces.csv (network) into a GeographicHighDensityScatterSeries
-# (heat Black..Red over 0..5, point extent 1), map zoomed to Australia (110, -10, 45, -35). The existing
-# pixel-color steps scale through series x/y axes, which a map lacks.
-# Requested step: Then this series will have heat pixels between Black and Red at geographic location
-#   <lon> longitude and <lat> latitude
+# Documentation: components/geo-map-type-scatter-density-series.mdx.
+# AusPlaces.csv: Zuytdorp Point, Mount Zion and Mount Zeil. The southeast ocean
+# control is more than four degrees from the nearest input point.
+Then the map named map will fit geographic region 110, -45, 45, 35
+And geographic density series named hdSeries in map map will render heat at these locations:
+  | Longitude | Latitude  | Heat    |
+  | 113.3     | -26.4     | Present |
+  | 138.20853 | -33.19381 | Present |
+  | 132.3958  | -23.4018  | Present |
+  | 154       | -44       | Empty   |

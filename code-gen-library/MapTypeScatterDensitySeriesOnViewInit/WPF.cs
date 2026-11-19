@@ -1,7 +1,9 @@
 //begin imports
 using Infragistics.Controls.Maps;
+using Infragistics.Controls.Charts;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Windows;
@@ -23,40 +25,68 @@ public class MapTypeScatterDensitySeriesOnViewInit
     {
         var map = CodeGenHelper.GetDescription<XamGeographicMap>("content");
         var url = "https://static.infragistics.com/xplatform/data/AusPlaces.csv";
-        var client = new HttpClient();
-        var csv = await client.GetStringAsync(url);
-        var csvLines = csv.Split('\n');
-        var geoLocations = new List<AusPlace>();
-        // parsing CSV data and creating geographic locations
-        for (int i = 1; i < csvLines.Length; i++)
+        var work = Infragistics.GlobalQueuedWorkState.Instance;
+        const string workChannel = "Sample.MapTypeScatterDensitySeriesOnViewInit.Load";
+        work.NotifyWorkQueued(workChannel);
+        try
         {
-            var columns = csvLines[i].Split(',');
-            if (columns.Length < 3) continue;
-            geoLocations.Add(new AusPlace
+            using (var client = new HttpClient())
             {
-                Name = columns[0],
-                Longitude = double.Parse(columns[1]),
-                Latitude = double.Parse(columns[2])
-            });
-        }
-        // creating the high density series with the loaded data
-        var series = new GeographicHighDensityScatterSeries
-        {
-            ItemsSource = geoLocations,
-            LongitudeMemberPath = "Longitude",
-            LatitudeMemberPath = "Latitude",
-            HeatMaximumColor = Colors.Red,
-            HeatMinimumColor = Colors.Black,
-            HeatMinimum = 0,
-            HeatMaximum = 5,
-            PointExtent = 1,
-            MouseOverEnabled = true
-        };
-        // adding the series to the geographic map
-        map.Series.Add(series);
+                var csv = await client.GetStringAsync(url);
+                var csvLines = csv.Split('\n');
+                var geoLocations = new List<AusPlace>();
+                // parsing CSV data and creating geographic locations
+                for (int i = 1; i < csvLines.Length; i++)
+                {
+                    var columns = csvLines[i].Split(',');
+                    if (columns.Length < 3) continue;
+                    geoLocations.Add(new AusPlace
+                    {
+                        Name = columns[0],
+                        Longitude = double.Parse(columns[1], CultureInfo.InvariantCulture),
+                        Latitude = double.Parse(columns[2], CultureInfo.InvariantCulture)
+                    });
+                }
+                // creating the high density series with the loaded data
+                var series = new GeographicHighDensityScatterSeries
+                {
+                    Name = "hdSeries",
+                    ItemsSource = geoLocations,
+                    LongitudeMemberPath = "Longitude",
+                    LatitudeMemberPath = "Latitude",
+                    HeatMaximumColor = Colors.Red,
+                    HeatMinimumColor = Colors.Black,
+                    HeatMinimum = 0,
+                    HeatMaximum = 5,
+                    PointExtent = 1,
+                    MouseOverEnabled = true
+                };
+                if (geoLocations.Count == 0) throw new InvalidOperationException("The CSV contained no geographic locations.");
+                var rendered = new TaskCompletionSource<bool>();
+                EventHandler<ProgressiveLoadStatusEventArgs> onProgress = (sender, args) =>
+                {
+                    if (args.CurrentStatus == 100) rendered.TrySetResult(true);
+                };
+                series.ProgressiveLoadStatusChanged += onProgress;
+                try
+                {
+                    // adding the series to the geographic map
+                    map.Series.Add(series);
 
-        var bounds = new Rect(110, -10, 45, -35);
-        map.ZoomToGeographic(bounds);
+                    var bounds = new Rect(110, -45, 45, 35);
+                    map.ZoomToGeographic(bounds);
+                    await rendered.Task;
+                }
+                finally
+                {
+                    series.ProgressiveLoadStatusChanged -= onProgress;
+                }
+            }
+        }
+        finally
+        {
+            work.NotifyWorkCompleted(workChannel);
+        }
     }
     //end eventHandler
 }
