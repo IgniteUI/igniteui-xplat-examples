@@ -1,0 +1,19 @@
+[
+{ "Source": "budget",    "Target": "needs",     "Value": 3100 },
+{ "Source": "budget",    "Target": "wants",     "Value": 1240 },
+{ "Source": "budget",    "Target": "savings",   "Value": 1860 },
+{ "Source": "needs",     "Target": "housing",   "Value": 1800 },
+{ "Source": "needs",     "Target": "living",    "Value": 1300 },
+{ "Source": "wants",     "Target": "lifestyle", "Value": 1240 },
+{ "Source": "savings",   "Target": "investing", "Value": 1100 },
+{ "Source": "savings",   "Target": "emergency", "Value": 760  },
+{ "Source": "housing",   "Target": "mortgage",  "Value": 1500 },
+{ "Source": "housing",   "Target": "hoa",       "Value": 300  },
+{ "Source": "living",    "Target": "groceries", "Value": 650  },
+{ "Source": "living",    "Target": "utilities", "Value": 350  },
+{ "Source": "living",    "Target": "transport", "Value": 300  },
+{ "Source": "lifestyle", "Target": "dining",    "Value": 480  },
+{ "Source": "lifestyle", "Target": "travel",    "Value": 760  },
+{ "Source": "investing", "Target": "retire",    "Value": 700  },
+{ "Source": "investing", "Target": "roth",      "Value": 400  }
+]

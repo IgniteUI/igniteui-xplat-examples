@@ -1,0 +1,20 @@
+[
+{ "Id": "budget",    "Label": "Monthly Budget $6,200", "Layer": 0 },
+{ "Id": "needs",     "Label": "Needs $3,100",          "Layer": 1 },
+{ "Id": "wants",     "Label": "Wants $1,240",          "Layer": 1 },
+{ "Id": "savings",   "Label": "Savings $1,860",        "Layer": 1 },
+{ "Id": "housing",   "Label": "Housing $1,800",        "Layer": 2 },
+{ "Id": "living",    "Label": "Living $1,300",         "Layer": 2 },
+{ "Id": "lifestyle", "Label": "Lifestyle $1,240",      "Layer": 2 },
+{ "Id": "investing", "Label": "Investing $1,100",      "Layer": 2 },
+{ "Id": "emergency", "Label": "Emergency Fund $760",   "Layer": 2 },
+{ "Id": "mortgage",  "Label": "Mortgage $1,500",       "Layer": 3 },
+{ "Id": "hoa",       "Label": "HOA $300",              "Layer": 3 },
+{ "Id": "groceries", "Label": "Groceries $650",        "Layer": 3 },
+{ "Id": "utilities", "Label": "Utilities $350",        "Layer": 3 },
+{ "Id": "transport", "Label": "Transport $300",        "Layer": 3 },
+{ "Id": "dining",    "Label": "Dining $480",           "Layer": 3 },
+{ "Id": "travel",    "Label": "Travel $760",           "Layer": 3 },
+{ "Id": "retire",    "Label": "401k $700",             "Layer": 3 },
+{ "Id": "roth",      "Label": "Roth IRA $400",         "Layer": 3 }
+]

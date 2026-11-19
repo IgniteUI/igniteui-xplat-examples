@@ -1,0 +1,6 @@
+[
+{ "Stage": "Income" },
+{ "Stage": "Budget" },
+{ "Stage": "Bucket" },
+{ "Stage": "Detail" }
+]

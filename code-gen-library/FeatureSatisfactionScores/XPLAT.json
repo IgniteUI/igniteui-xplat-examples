@@ -1,0 +1,10 @@
+[
+{ "Feature": "Search and filtering",         "Year2024": 7.1, "Year2025": 8.3 },
+{ "Feature": "Dashboard customization",      "Year2024": 6.4, "Year2025": 7.9 },
+{ "Feature": "Mobile app",                   "Year2024": 5.8, "Year2025": 7.2 },
+{ "Feature": "Reporting and exports",        "Year2024": 7.6, "Year2025": 7.8 },
+{ "Feature": "Notifications",                "Year2024": 6.9, "Year2025": 6.5 },
+{ "Feature": "Integrations with other tools","Year2024": 5.2, "Year2025": 6.8 },
+{ "Feature": "Onboarding and help",          "Year2024": 6.1, "Year2025": 7.4 },
+{ "Feature": "Performance",                  "Year2024": 7.9, "Year2025": 8.6 }
+]

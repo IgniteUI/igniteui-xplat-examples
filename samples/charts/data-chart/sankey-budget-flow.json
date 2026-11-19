@@ -9,22 +9,32 @@
       "name": "Chart",
       "isHorizontalZoomEnabled": false,
       "isVerticalZoomEnabled": false,
+      "highlightingMode": "FadeOthersSpecific",
+      "highlightingBehavior": "DirectlyOver",
       "axes": [
         {
           "type": "CategoryXAxis",
           "name": "xAxis",
           "dataSourceRef": "SankeyBudgetStages",
-          "label": "Stage"
+          "label": "Stage",
+          "tickLength": 0,
+          "stroke": "Transparent",
+          "majorStroke": "Transparent"
         },
         {
           "type": "NumericYAxis",
-          "name": "yAxis"
+          "name": "yAxis",
+          "areLabelsVisible": false,
+          "tickLength": 0,
+          "stroke": "Transparent",
+          "majorStroke": "Transparent"
         }
       ],
       "series": [
         {
           "type": "SankeySeries",
           "name": "sankey",
+          "title": "Budget",
           "xAxisRef": "xAxis",
           "yAxisRef": "yAxis",
           "dataSourceRef": "SankeyBudgetNodes",
@@ -35,7 +45,8 @@
           "linkSourceMemberPath": "Source",
           "linkTargetMemberPath": "Target",
           "linkValueMemberPath": "Value",
-          "isTransitionInEnabled": true
+          "isTransitionInEnabled": true,
+          "useItemWiseColors": true
         },
         {
           "type": "DataToolTipLayer",

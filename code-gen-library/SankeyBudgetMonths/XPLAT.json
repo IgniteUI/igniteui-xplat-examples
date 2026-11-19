@@ -1,0 +1,13 @@
+[
+{ "Id": "income-housing",   "Source": "income",    "Target": "housing",    "July": 2137, "August": 2151, "September": 2129 },
+{ "Id": "income-food",      "Source": "income",    "Target": "food",       "July": 812,  "August": 1036, "September": 774  },
+{ "Id": "income-transport", "Source": "income",    "Target": "transport",  "July": 468,  "August": 735,  "September": 391  },
+{ "Id": "income-savings",   "Source": "income",    "Target": "savings",    "July": 1243, "August": 806,  "September": 1597 },
+{ "Id": "housing-rent",     "Source": "housing",   "Target": "rent",       "July": 1592, "August": 1592, "September": 1592 },
+{ "Id": "housing-utilities","Source": "housing",   "Target": "utilities",  "July": 545,  "August": 559,  "September": 537  },
+{ "Id": "food-groceries",   "Source": "food",      "Target": "groceries",  "July": 517,  "August": 548,  "September": 532  },
+{ "Id": "food-dining",      "Source": "food",      "Target": "dining",     "July": 295,  "August": 488,  "September": 242  },
+{ "Id": "transport-car",    "Source": "transport", "Target": "car",        "July": 468,  "August": 735,  "September": 391  },
+{ "Id": "savings-retirement","Source": "savings",  "Target": "retirement", "July": 831,  "August": 612,  "September": 978  },
+{ "Id": "savings-emergency","Source": "savings",   "Target": "emergency",  "July": 412,  "August": 194,  "September": 619  }
+]

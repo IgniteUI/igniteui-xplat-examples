@@ -8,6 +8,9 @@ public partial class App : Application
 
     public App()
     {
+        //insert modulesRegister
+        //end modulesRegister
+
         this.InitializeComponent();
     }
 

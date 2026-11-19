@@ -1,0 +1,124 @@
+<Project Sdk="Uno.Sdk">
+  <PropertyGroup>
+    <!-- net9.0-* to match the Infragistics.Uno.* control libraries. Desktop (Skia)
+         replaces the old windows head; iOS/maccatalyst require a Mac to build. -->
+    <TargetFrameworks>net9.0-android;net9.0-ios;net9.0-maccatalyst;net9.0-browserwasm;net9.0-desktop</TargetFrameworks>
+
+    <OutputType>Exe</OutputType>
+    <UnoSingleProject>true</UnoSingleProject>
+    <RootNamespace>Sample</RootNamespace>
+    <AssemblyName>Sample</AssemblyName>
+
+    <!-- The controls expose `public dynamic Implementation`; Uno's BindableTypeProviders
+         source generator emits typeof() on it -> CS1962. Samples bind via XAML {Binding}
+         (reflection) so the compiled bindable metadata isn't needed here. -->
+    <UnoDisableBindableTypeProvidersGeneration>true</UnoDisableBindableTypeProvidersGeneration>
+
+    <ApplicationTitle>Sample</ApplicationTitle>
+    <ApplicationId>com.infragistics.unosample</ApplicationId>
+    <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
+    <ApplicationVersion>1</ApplicationVersion>
+    <ApplicationPublisher>Infragistics</ApplicationPublisher>
+    <Description>Infragistics Uno sample.</Description>
+
+    <UnoFeatures>
+      SkiaRenderer;
+      Skia;
+    </UnoFeatures>
+  </PropertyGroup>
+
+  <!-- Infragistics Uno packages; the versions are managed centrally. -->
+  <ItemGroup Condition="'$(InfragisticsUnoBuild)' == ''">
+    <PackageReference Include="Infragistics.Uno.Core.Trial" />
+    <PackageReference Include="Infragistics.Uno.Charts.Trial" />
+    <PackageReference Include="Infragistics.Uno.DataVisualization.Trial" />
+    <PackageReference Include="Infragistics.Uno.DataGrid.Trial" />
+    <PackageReference Include="Infragistics.Uno.Layouts.Trial" />
+    <PackageReference Include="Infragistics.Uno.Inputs.Trial" />
+    <PackageReference Include="Infragistics.Uno.Gauges.Trial" />
+    <PackageReference Include="Infragistics.Uno.Dashboards.Trial" />
+    <PackageReference Include="Infragistics.Uno.TreeMap.Trial" />
+    <PackageReference Include="Infragistics.Uno.Sparkline.Trial" />
+    <PackageReference Include="Infragistics.Uno.Maps.Trial" />
+  </ItemGroup>
+
+  <!-- Or the Infragistics Uno control assemblies from a dev-tools UNO build output, when
+       $(InfragisticsUnoBuild) names one (e.g. /p:InfragisticsUnoBuild=c:\work\dev-tools\XPlatform\Main\Source\Build\UNO).
+       The build-output subfolder name matches net9.0 for every head we target. -->
+  <ItemGroup Condition="'$(InfragisticsUnoBuild)' != ''">
+    <Reference Include="Infragistics.Core">
+      <HintPath>$(InfragisticsUnoBuild)\net9.0\Infragistics.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics.Core.Charts">
+      <HintPath>$(InfragisticsUnoBuild)\net9.0\Infragistics.Core.Charts.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics.Core.DataVisualization">
+      <HintPath>$(InfragisticsUnoBuild)\net9.0\Infragistics.Core.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics.Core.DataVisualization.SkiaSharp">
+      <HintPath>$(InfragisticsUnoBuild)\net9.0\Infragistics.Core.DataVisualization.SkiaSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics.Core.DataGrid">
+      <HintPath>$(InfragisticsUnoBuild)\net9.0\Infragistics.Core.DataGrid.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics.Core.Layouts">
+      <HintPath>$(InfragisticsUnoBuild)\net9.0\Infragistics.Core.Layouts.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics.Core.Inputs">
+      <HintPath>$(InfragisticsUnoBuild)\net9.0\Infragistics.Core.Inputs.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics.Core.Gauges">
+      <HintPath>$(InfragisticsUnoBuild)\net9.0\Infragistics.Core.Gauges.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics.Core.Dashboards">
+      <HintPath>$(InfragisticsUnoBuild)\net9.0\Infragistics.Core.Dashboards.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics.Core.TreeMap">
+      <HintPath>$(InfragisticsUnoBuild)\net9.0\Infragistics.Core.TreeMap.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics.Core.Sparkline">
+      <HintPath>$(InfragisticsUnoBuild)\net9.0\Infragistics.Core.Sparkline.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics.Core.Maps">
+      <HintPath>$(InfragisticsUnoBuild)\net9.0\Infragistics.Core.Maps.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics.Core.Platform">
+      <HintPath>$(InfragisticsUnoBuild)\net9.0\Infragistics.Core.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics.Uno.Charts">
+      <HintPath>$(InfragisticsUnoBuild)\net9.0\Infragistics.Uno.Charts.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics.Uno.Layouts">
+      <HintPath>$(InfragisticsUnoBuild)\net9.0\Infragistics.Uno.Layouts.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics.Uno.Inputs">
+      <HintPath>$(InfragisticsUnoBuild)\net9.0\Infragistics.Uno.Inputs.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics.Uno.DataGrid">
+      <HintPath>$(InfragisticsUnoBuild)\net9.0\Infragistics.Uno.DataGrid.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics.Uno.Gauges">
+      <HintPath>$(InfragisticsUnoBuild)\net9.0\Infragistics.Uno.Gauges.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics.Uno.DataVisualization">
+      <HintPath>$(InfragisticsUnoBuild)\net9.0\Infragistics.Uno.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics.Uno.Dashboards">
+      <HintPath>$(InfragisticsUnoBuild)\net9.0\Infragistics.Uno.Dashboards.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics.Uno.TreeMap">
+      <HintPath>$(InfragisticsUnoBuild)\net9.0\Infragistics.Uno.TreeMap.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics.Uno.Sparkline">
+      <HintPath>$(InfragisticsUnoBuild)\net9.0\Infragistics.Uno.Sparkline.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics.Uno.Maps">
+      <HintPath>$(InfragisticsUnoBuild)\net9.0\Infragistics.Uno.Maps.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Library data items parse JSON with it; the version is managed centrally. -->
+    <PackageReference Include="Newtonsoft.Json" />
+  </ItemGroup>
+</Project>

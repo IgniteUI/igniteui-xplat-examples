@@ -28,15 +28,6 @@
         }
       ]
     },
-    "aboveContent": {
-      "type": "DataGridToolbar",
-      "name": "toolbar",
-      "id": "toolbar",
-      "targetGridRef": "grid",
-      "toolbarTitle": "Sales Team",
-      "columnChooser": true,
-      "columnPinning": true
-    },
     "content": {
       "type": "DataGrid",
       "id": "grid",
@@ -134,7 +125,6 @@
   "modules": [
     "withDescriptions",
     "layouts/PropertyEditorPanelModule",
-    "data-grids/DataGridModule",
-    "data-grids/DataGridToolbarModule"
+    "data-grids/DataGridModule"
   ]
 }
