@@ -1,4 +1,9 @@
-# Overview: standalone ZoomSlider with thumb callouts enabled (areThumbCalloutsEnabled).
-# NOT COVERED: no existing step can assert this control. This sidecar deliberately has no Then line until the steps below are approved.
-# Wanted: When the user drags the zoom slider <left|right> thumb to <x>
-# Wanted: Then this zoom slider will have window <start>,<end> and display thumb callouts
+# The overview configures thumb callouts and a resizable zoom-range window.
+Then zoom slider named zoomSlider will have thumb callouts enabled
+And zoom slider named zoomSlider will have window 0, 0, 1, 1
+When we set zoom slider named zoomSlider window to 0.2, 0, 0.5, 1
+Then zoom slider named zoomSlider will have window 0.2, 0, 0.5, 1
+And zoom slider named zoomSlider will have thumb callouts enabled
+When we set zoom slider named zoomSlider window to 0.6, 0, 0.25, 1
+Then zoom slider named zoomSlider will have window 0.6, 0, 0.25, 1
+And zoom slider named zoomSlider will have thumb callouts enabled
