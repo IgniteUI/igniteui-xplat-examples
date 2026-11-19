@@ -8,6 +8,9 @@ Then this legend will be horizontal with these Labels:
   | Heating |
   | Lighting |
   | Other |
-# Gap: no step reads PieChart/DoughnutChart slices (WidgetManager.GetAnalyzers has no PieChart/DoughnutChart case).
-# Wanted: When the user clicks on the doughnut chart slice with label <Label>
-# Wanted: Then this doughnut chart will have selected slices: <Labels>
+# The donut-chart documentation teaches click selection. Slice 2 starts unselected
+# on every head, including web heads that initially select slice 1 in view init.
+When we click slice 2 from ringSeries
+Then slice 2 from ringSeries in doughnut chart chart will be selected
+When we click slice 2 from ringSeries
+Then slice 2 from ringSeries in doughnut chart chart will be unselected

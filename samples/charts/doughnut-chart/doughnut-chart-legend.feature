@@ -8,5 +8,11 @@ Then this legend will be horizontal with these Labels:
   | Heating |
   | Lighting |
   | Other |
-# Gap: no step reads PieChart/DoughnutChart slices (WidgetManager.GetAnalyzers has no PieChart/DoughnutChart case).
-# Wanted: Then this doughnut chart ring series named series will have slices with the following properties: | Label | Value | (startAngle 30)
+Then doughnut chart named chart will have 1 rendered ring series
+And doughnut chart named chart will have the following rendered slices in ring series series:
+  | Label           | Angle |
+  | Cooling 37%     | 133.2 |
+  | Residential 25% | 90    |
+  | Heating 12%     | 43.2  |
+  | Lighting 11%    | 39.6  |
+  | Other 15%       | 54    |
