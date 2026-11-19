@@ -1,5 +1,5 @@
 //begin imports
-import { IgcGridComponent, IgcGridKeydownEventArgs, GridKeydownTargetType } from 'igniteui-webcomponents-grids/grids';
+import { IgcGridComponent, IgcGridKeydownEventArgs } from 'igniteui-webcomponents-grids/grids';
 //end imports
 
 import { CodeGenHelper } from 'igniteui-webcomponents-core';
