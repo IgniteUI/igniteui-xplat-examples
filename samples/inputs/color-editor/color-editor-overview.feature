@@ -1,4 +1,10 @@
-# Overview: standalone ColorEditor raising valueChanged (ColorEditorValueChanged) when a colour is picked.
-# NOT COVERED: no existing step can assert this control. This sidecar deliberately has no Then line until the steps below are approved.
-# Wanted: When the user picks color <color> in this color editor
-# Wanted: Then this color editor will have value <color>
+# The editor's value is a brush, including alpha. Read the host after each update.
+Then color editor colorEditor will have live color Blue
+When color editor colorEditor is assigned color #336699
+Then color editor colorEditor will have live color #336699
+When color editor colorEditor is assigned color #80336699
+Then color editor colorEditor will have live color #80336699
+When color editor colorEditor is labelled Selected color
+Then color editor colorEditor will have live color #80336699
+When color editor colorEditor is assigned color #FF6600
+Then color editor colorEditor will have live color #FF6600
