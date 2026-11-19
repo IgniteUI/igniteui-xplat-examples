@@ -1,5 +1,10 @@
-# NO ASSERTION YET - needs a new step (see sidecar report). This file has no Then on purpose: the generator
-# rejects it until a step is approved or the sample JSON opts out of sampleTesting.
-# Demonstrates: a single zoomable GeographicMap with no series and default background imagery; the JSON declares
-# nothing to synchronize with, so only the map's imagery is observable.
-# Requested step: Then this map will have background imagery of type OpenStreetMapImagery
+# Both maps use the SeriesViewer synchronization described in
+# components/charts/features/chart-synchronization.mdx.
+Then the map named map will have window rect 0,0,1,1
+And the map named secondMap will have window rect 0,0,1,1
+When we set the map named map window rect to 0.25,0.2,0.5,0.5
+Then the map named map will have window rect 0.25,0.2,0.5,0.5
+And the map named secondMap will have window rect 0.25,0.2,0.5,0.5
+When we set the map named secondMap window rect to 0.1,0.3,0.6,0.6
+Then the map named secondMap will have window rect 0.1,0.3,0.6,0.6
+And the map named map will have window rect 0.1,0.3,0.6,0.6

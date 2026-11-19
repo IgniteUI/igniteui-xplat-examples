@@ -1,10 +1,9 @@
-# NO ASSERTION YET - needs a new step (see sidecar report). This file has no Then on purpose: the generator
-# rejects it until a step is approved or the sample JSON opts out of sampleTesting.
-# Demonstrates: AzureMapsImagery (style Satellite) as background content plus a GeographicTileSeries
-# (imagerySeries) whose TileImagery is a second AzureMapsImagery overlay; the editor switches the overlay's
-# ImageryStyle. The API key is a placeholder (REPLACE_WITH_AZURE_KEY), so no tiles can load; only the imagery
-# configuration is assertable.
-# Requested steps:
-#   Then this map will have background imagery of type AzureMapsImagery with imagery style Satellite
-#   Then the tile series named imagerySeries will have tile imagery of type AzureMapsImagery with imagery style
-#     Satellite
+# Documentation: components/geo-map-display-azure-imagery.mdx.
+# The sample ships a placeholder key; assert the provider configuration and
+# independent overlay style changes without claiming remote tiles have loaded.
+Then the map named map will have background imagery of type AzureMapsImagery
+And the map named map will have background imagery style Satellite
+And the tile series named imagerySeries will have imagery style Satellite
+When we choose 'Road' from the 'Imagery Style' row in the property editor panel
+Then the tile series named imagerySeries will have imagery style Road
+And the map named map will have background imagery style Satellite
