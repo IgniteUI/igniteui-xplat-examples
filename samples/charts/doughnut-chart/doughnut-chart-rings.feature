@@ -1,5 +1,24 @@
-# Multiple rings: series1 = CalendarSeasons (Winter, Spring, Summer, Fall, 4 each) inside series2 = CalendarMonths (December..November, 1 each);
-# season brushes #3cbdc9,#9fb328,#f96232,#8a58d6 and each month repeats its season's brush; Center labels.
-# NOT COVERED: no existing step can assert this control. This sidecar deliberately has no Then line until the steps below are approved.
-# Wanted: Then the ring series named <name> will have slices with the following properties: | Label | Value | Fill |
-# Wanted: Then the ring series named series2 will be outside the ring series named series1
+# Documentation: components/charts/types/donut-chart.mdx.
+# The inner seasonal ring divides the year into quarters; the outer ring has twelve equal months.
+Then doughnut chart named chart will have 2 rendered ring series
+And doughnut chart named chart will have the following rendered slices in ring series series1:
+  | Label  | Angle |
+  | Winter | 90    |
+  | Spring | 90    |
+  | Summer | 90    |
+  | Fall   | 90    |
+And doughnut chart named chart will have the following rendered slices in ring series series2:
+  | Label     | Angle |
+  | December  | 30    |
+  | January   | 30    |
+  | February  | 30    |
+  | March     | 30    |
+  | April     | 30    |
+  | May       | 30    |
+  | June      | 30    |
+  | July      | 30    |
+  | August    | 30    |
+  | September | 30    |
+  | October   | 30    |
+  | November  | 30    |
+And ring series series2 will render outside ring series series1 in doughnut chart chart

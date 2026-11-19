@@ -2,6 +2,7 @@
 using Infragistics.Controls.Charts;
 using System;
 using Infragistics.Core.Graphics;
+using Infragistics.Portable;
 //end imports
 
 //begin supportingTypes
@@ -19,6 +20,7 @@ public static class PieChartAnimation
     private static XamPieChart chart;
     // The GLib timeout driving the ticks; 0 while none is scheduled.
     private static uint timer;
+    private static GlobalAnimationState animationState;
 
     public static bool Running
     {
@@ -45,6 +47,8 @@ public static class PieChartAnimation
         chart.Destroyed += Chart_Destroyed;
         chart.StartAngle = 0;
         chart.RadiusFactor = 0.1;
+        animationState = GlobalAnimationState.Instance;
+        animationState.NotifyAnimationStart();
         timer = GLib.Timeout.Add((uint)15, () =>
         {
             Tick();
@@ -59,6 +63,8 @@ public static class PieChartAnimation
         {
             GLib.Source.Remove(timer);
             timer = 0;
+            animationState.NotifyAnimationEnd();
+            animationState = null;
         }
         if (chart != null)
         {

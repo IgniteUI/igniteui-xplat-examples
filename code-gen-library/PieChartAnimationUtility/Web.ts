@@ -1,5 +1,6 @@
 //begin imports
 import { IgcPieChartComponent } from 'igniteui-webcomponents-charts';
+import { GlobalAnimationState } from 'igniteui-webcomponents-core';
 //end imports
 
 //begin supportingTypes
@@ -34,6 +35,7 @@ export class PieChartAnimation {
         PieChartAnimation.chart = chart;
         chart.startAngle = 0;
         chart.radiusFactor = 0.1;
+        GlobalAnimationState.instance.notifyAnimationStart();
         PieChartAnimation.timer = setInterval(() => PieChartAnimation.tick(), 15);
     }
 
@@ -41,6 +43,7 @@ export class PieChartAnimation {
         if (PieChartAnimation.timer !== null) {
             clearInterval(PieChartAnimation.timer);
             PieChartAnimation.timer = null;
+            GlobalAnimationState.instance.notifyAnimationEnd();
         }
     }
 

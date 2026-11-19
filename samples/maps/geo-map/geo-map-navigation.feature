@@ -1,7 +1,8 @@
-# NO ASSERTION YET - needs a new step (see sidecar report). This file has no Then on purpose: the generator
-# rejects it until a step is approved or the sample JSON opts out of sampleTesting.
-# Demonstrates: navigating map content. MapNavigationOnViewInit calls ZoomToGeographic(-134.5, 16, 70, 37) - the
-# contiguous United States - matching the property editor's initial MapRegion value UnitedStates.
-# Requested step: Then this map will show the geographic region -134.5, 16, 70, 37 within small tolerance
-#   (the map's actual window rect converted to geographic coordinates; the map widens one dimension to keep its
-#   aspect ratio, so the step should assert the region is contained and fills the window in one dimension)
+# Documentation: components/geo-map-navigation.mdx — navigation through the region selector.
+# Choose regions after layout, then verify their zoom windows and visible geographic bounds.
+When we choose 'Japan' from the 'Map Region' row in the property editor panel
+Then the map named map will fit geographic region 122.7, 29.4, 27.5, 17
+When we choose 'Hawaii' from the 'Map Region' row in the property editor panel
+Then the map named map will fit geographic region -161.2, 18.5, 6.6, 4.8
+When we choose 'UnitedStates' from the 'Map Region' row in the property editor panel
+Then the map named map will fit geographic region -134.5, 16, 70, 37

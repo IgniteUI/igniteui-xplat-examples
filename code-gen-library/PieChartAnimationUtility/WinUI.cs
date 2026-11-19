@@ -2,6 +2,7 @@
 using Infragistics.Controls.Charts;
 using System;
 using Microsoft.UI.Xaml;
+using Infragistics.Portable;
 //end imports
 
 //begin supportingTypes
@@ -18,6 +19,7 @@ public static class PieChartAnimation
 {
     private static XamPieChart chart;
     private static DispatcherTimer timer;
+    private static GlobalAnimationState animationState;
 
     public static bool Running
     {
@@ -47,6 +49,8 @@ public static class PieChartAnimation
         timer = new DispatcherTimer();
         timer.Interval = TimeSpan.FromMilliseconds(15);
         timer.Tick += (s, e) => Tick();
+        animationState = GlobalAnimationState.Instance;
+        animationState.NotifyAnimationStart();
         timer.Start();
     }
 
@@ -56,6 +60,8 @@ public static class PieChartAnimation
         {
             timer.Stop();
             timer = null;
+            animationState.NotifyAnimationEnd();
+            animationState = null;
         }
         if (chart != null)
         {

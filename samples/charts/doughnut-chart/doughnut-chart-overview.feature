@@ -1,3 +1,10 @@
-# Overview: single RingSeries over CompanyMarketShares (Google 30, Apple 25, Microsoft 20, Samsung 15, Other 10), Summary labels.
-# NOT COVERED: no existing step can assert this control. This sidecar deliberately has no Then line until the steps below are approved.
-# Wanted: Then the ring series named series will have slices with the following properties: | Label | Value |
+# Documentation: components/charts/types/donut-chart.mdx.
+# Company market shares must produce labelled slices in proportion to their values.
+Then doughnut chart named chart will have 1 rendered ring series
+And doughnut chart named chart will have the following rendered slices in ring series series:
+  | Label         | Angle |
+  | Google 30%    | 108   |
+  | Apple 25%     | 90    |
+  | Microsoft 20% | 72    |
+  | Samsung 15%   | 54    |
+  | Other 10%     | 36    |
