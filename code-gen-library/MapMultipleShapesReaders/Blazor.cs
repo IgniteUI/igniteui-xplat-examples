@@ -90,8 +90,16 @@ public class MapMultipleShapesReaders
         }
 
         var map = CodeGenHelper.GetDescription<IgbGeographicMap>("content");
-        var symbolSeries = map.Series[2] as IgbGeographicSymbolSeries;
-        symbolSeries.DataSource = geoLocations;
+        for (var i = 0; i < map.Series.Count; i++)
+        {
+            var symbolSeries = map.Series[i] as IgbGeographicSymbolSeries;
+            if (symbolSeries != null && symbolSeries.Name == "symbolSeries")
+            {
+                symbolSeries.DataSource = geoLocations;
+                return;
+            }
+        }
+        throw new InvalidOperationException("No geographic symbol series named symbolSeries.");
     }
     //end readPoints
 }

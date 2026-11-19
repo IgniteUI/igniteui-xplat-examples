@@ -1,13 +1,28 @@
 {
+  "hasQueuedWork": true,
   "descriptions": {
     "content": {
       "type": "GeographicMap",
       "name": "map",
       "height": "100%",
       "width": "100%",
-      "zoomable": true
+      "zoomable": true,
+      "series": [
+        {
+          "type": "GeographicSymbolSeries",
+          "name": "symbolSeries",
+          "latitudeMemberPath": "latitude",
+          "longitudeMemberPath": "longitude",
+          "markerType": "Circle",
+          "markerBrush": "White",
+          "markerOutline": "rgb(2,102,196)",
+          "markerCollisionAvoidance": "None",
+          "maximumMarkers": 1000
+        }
+      ]
     }
   },
+  "onViewInit": ["MapBindingShpPointsLoad"],
   "modules": [
     "charts/DataChartInteractivityModule",
     "maps/GeographicMapModule"

@@ -81,8 +81,14 @@ export class MapMultipleShapesReaders {
             }
         }
 
-        var symbolSeries = map.series.item(2) as IgcGeographicSymbolSeriesComponent;
-        symbolSeries.dataSource = geoLocations;
+        for (var i = 0; i < map.series.count; i++) {
+            var symbolSeries = map.series.item(i) as IgcGeographicSymbolSeriesComponent;
+            if (symbolSeries instanceof IgcGeographicSymbolSeriesComponent && symbolSeries.name === "symbolSeries") {
+                symbolSeries.dataSource = geoLocations;
+                return;
+            }
+        }
+        throw new Error("No geographic symbol series named symbolSeries.");
     }
     //end readPoints
 }

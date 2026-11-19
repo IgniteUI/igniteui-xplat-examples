@@ -96,8 +96,16 @@ public class MapMultipleShapesReaders
         }
 
         var map = CodeGenHelper.GetDescription<XamGeographicMap>("content");
-        var symbolSeries = map.Series[2] as GeographicSymbolSeries;
-        symbolSeries.ItemsSource = geoLocations;
+        for (var i = 0; i < map.Series.Count; i++)
+        {
+            var symbolSeries = map.Series[i] as GeographicSymbolSeries;
+            if (symbolSeries != null && symbolSeries.Name == "symbolSeries")
+            {
+                symbolSeries.ItemsSource = geoLocations;
+                return;
+            }
+        }
+        throw new InvalidOperationException("No geographic symbol series named symbolSeries.");
     }
     //end readPoints
 }

@@ -1,5 +1,10 @@
-# NO ASSERTION YET - needs a new step (see sidecar report). This file has no Then on purpose: the generator
-# rejects it until a step is approved or the sample JSON opts out of sampleTesting.
-# Demonstrates (by name): binding shapefile points. The JSON declares only a bare zoomable GeographicMap - no
-# series, no shapefile, no onViewInit - so there is no bound data to assert; only the default imagery is observable.
-# Requested step: Then this map will have background imagery of type OpenStreetMapImagery
+# WorldCities point records are imported from .shp/.dbf and bound by longitude/latitude.
+# ImportCompleted releases queued work after binding; no delay or render polling is needed.
+When we are talking about the series with name symbolSeries
+Then this series will have markers with type Circle
+Then this series will have markers with fill White and outline rgb(2,102,196)
+Then geographic symbol series named symbolSeries in map map will render markers at these locations within 1 pixels:
+    | City      | Longitude          | Latitude           |
+    | Tokyo     | 139.80918884277344 | 35.68305587768555  |
+    | New York  | -74.0999984741211  | 40.75             |
+    | Sao Paulo | -46.62289810180664 | -23.5813045501709 |
