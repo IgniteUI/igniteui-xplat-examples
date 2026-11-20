@@ -37,7 +37,7 @@ public class MapDisplayHeatImageryOnViewInit
                     }
                 }
                 // using field/column names from .DBF file
-                var value = (double)record.FieldValues["POP_2010"];
+                var value = (double)record.FieldValues["POP2010"];
                 populations.Add(value >= 0 ? value : 0);
             }
 

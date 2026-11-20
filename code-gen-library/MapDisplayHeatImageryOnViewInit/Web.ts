@@ -31,7 +31,7 @@ export class MapDisplayHeatImageryOnViewInit {
                     }
                 }
                 // using field/column names from .DBF file
-                var value = record.fieldValues["POP_2010"];
+                var value = record.fieldValues["POP2010"];
                 populations.push(value >= 0 ? value : 0);
             }
 
