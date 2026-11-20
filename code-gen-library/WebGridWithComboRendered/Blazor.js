@@ -62,7 +62,7 @@ function bindEventsCountryCombo(rowId, cell) {
                         setTimeout(() => {
                                 nextProgress.style.display = "none";
                                 nextCombo.disabled = false;
-                                nextCombo.data = this.regions.filter(x => x.Country === value);
+                                nextCombo.data = regions.filter(x => x.Country === value);
                         }, 2000);
 
                 }
@@ -92,7 +92,7 @@ function bindEventsRegionCombo(rowId, cell) {
                         setTimeout(() => {
                                 nextProgress.style.display = "none";
                                 nextCombo.disabled = false;
-                                nextCombo.data = this.cities.filter(x => x.Region === value);
+                                nextCombo.data = cities.filter(x => x.Region === value);
                         }, 2000);
                 }
         });
