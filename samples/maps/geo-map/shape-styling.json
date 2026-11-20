@@ -1,4 +1,5 @@
 {
+  "hasQueuedWork": true,
   "onViewInit": [ "ShapeFileOnViewInit"],
   "descriptions": {
     "content": {

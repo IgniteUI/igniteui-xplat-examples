@@ -4,5 +4,5 @@
 # Per-continent fills cannot be targeted by an existing step (see report); the handler's stroke applies to all shapes.
 When we are talking about the series with name GeographicShapeSeries1
 # Its shapes arrive once the shapefile has been imported.
-When we wait for this series to be drawn
+Then this series will have some visible shapes
 Then this series will have main shapes with outline black
