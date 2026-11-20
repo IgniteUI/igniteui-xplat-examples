@@ -5,7 +5,7 @@ import 'dart:io';
 import 'package:igniteui_flutter_core/src/ArrayList.dart' show ArrayList;
 import "package:igniteui_flutter_core/src/ObservableCollection\$1.dart" show ObservableCollection$1;
 import 'package:igniteui_flutter_core/src/reflection.dart' show IReflectableData;
-import 'package:igniteui_flutter_core/src/type.dart' show Date_$type, Double_$type, TypeInfo;
+import 'package:igniteui_flutter_core/src/type.dart' show Date_$type, Double_$type, String_$type, TypeInfo;
 import 'package:igniteui_flutter_core/src/type.dart' show TypeInfo, markType;
 
 // The keys stay as the C# and TypeScript spell them for the member paths the
@@ -77,10 +77,30 @@ class MultipleStocksItem implements IReflectableData {
 
 /// Observable, as the C# has it: the collection is what a chart binds to and
 /// the samples add to it after the fact.
-class TitledStockData extends ObservableCollection$1<MultipleStocksItem?> {
+class TitledStockData extends ObservableCollection$1<MultipleStocksItem?> implements IReflectableData {
     TitledStockData() : super(MultipleStocksItem.$t);
 
     String? title = null;
+
+    Map<String, TypeInfo?> get propertyTypes => {'Title': String_$type};
+
+    Object? getValue(String? propertyName) {
+        switch (propertyName) {
+            case 'Title':
+            case 'title':
+                return title;
+        }
+        return null;
+    }
+
+    void setValue(String? propertyName, Object? value) {
+        switch (propertyName) {
+            case 'Title':
+            case 'title':
+                title = value as String?;
+                break;
+        }
+    }
 }
 
 class MultipleStocks extends ArrayList<TitledStockData?> {
