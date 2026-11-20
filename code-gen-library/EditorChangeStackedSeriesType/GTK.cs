@@ -40,7 +40,7 @@ public class EditorChangeStackedSeriesType
         return new StackedColumnSeries();
     }
 
-    //WPF: Infragistics.Controls.Layouts.PropertyEditorPropertyDescriptionChangedEventHandler
+    //GTK: Infragistics.Controls.Layouts.PropertyEditorPropertyDescriptionChangedEventHandler
     public void EditorChangeStackedSeriesType(object sender, PropertyEditorPropertyDescriptionChangedEventArgs args)
     {
         var chart = CodeGenHelper.GetDescription<XamDataChart>("content");
@@ -51,7 +51,7 @@ public class EditorChangeStackedSeriesType
         // are declared on the chart, and the swap is which pair this stack is given.
         var bar = name.IndexOf("Bar") >= 0;
         var stack = Make(name);
-        stack.ItemsSource = chart.Series[0].ItemsSource;
+        stack.DataSource = chart.Series[0].DataSource;
         // Which axis is the category one separates the two stacked bases, so each is reached through
         // the base that declares the pair it has rather than through the one they share.
         if (bar)

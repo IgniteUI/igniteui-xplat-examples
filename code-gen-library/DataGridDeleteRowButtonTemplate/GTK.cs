@@ -1,12 +1,12 @@
+//begin template
 //begin imports
 using Infragistics.Controls.Grids;
 //end imports
 
 public class DataGridDeleteRowButtonTemplate
 {
-    //begin eventHandler
-    //WPF: Infragistics.Controls.Grids.TemplateCellUpdatingEventHandler
-    public void DataGridDeleteRowButtonTemplate(object sender, TemplateCellUpdatingEventArgs args)
+    //begin content
+    public TemplateCellUpdatingEventHandler DataGridDeleteRowButtonTemplate = (sender, args) =>
     {
         var content = args.Content;
         Gtk.Button button;
@@ -19,7 +19,7 @@ public class DataGridDeleteRowButtonTemplate
             button = new Gtk.Button("Delete");
             button.Clicked += (s, e) =>
             {
-                var grid = CodeGenHelper.GetDescription<XamDataGrid>("content");
+                var grid = CodeGenHelper.GetDescription<IggDataGrid>("content");
                 var btn = (Gtk.Button)s;
                 var rowItem = btn.Data["RowItem"];
                 if (rowItem != null)
@@ -34,6 +34,7 @@ public class DataGridDeleteRowButtonTemplate
         button.Sensitive = !args.CellInfo.IsDeleted;
         // The row the button deletes, as the XAML template keeps it in the button's Tag.
         button.Data["RowItem"] = args.CellInfo.RowItem;
-    }
-    //end eventHandler
+    };
+    //end content
 }
+//end template
