@@ -32,8 +32,11 @@ public class MapBindingDataJsonPointsOnViewInit
         {
             var map = CodeGenHelper.GetDescription<XamGeographicMap>("content");
             var url = "https://static.infragistics.com/xplatform/data/WorldCities.json";
-            using var client = new HttpClient();
-            var json = await client.GetStringAsync(url);
+            string json;
+            using (var client = new HttpClient())
+            {
+                json = await client.GetStringAsync(url);
+            }
             var array = JArray.Parse(json);
             var geoLocations = new List<WorldPlaceJson>();
             foreach (var item in array)
