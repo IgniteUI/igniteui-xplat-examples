@@ -46,7 +46,7 @@ export class EditorChangeStackedSeriesType {
         // are declared on the chart, and the swap is which pair this stack is given.
         var bar = name.indexOf("Bar") >= 0;
         var stack = this.make(name);
-        stack.dataSource = chart.series[0].dataSource;
+        stack.dataSource = chart.series.item(0).dataSource;
         // Which axis is the category one is what separates the two stacked bases, so each is reached
         // through the base that declares the pair it has rather than through the one they share.
         if (bar) {
