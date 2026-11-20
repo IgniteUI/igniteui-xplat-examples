@@ -1,5 +1,5 @@
 //begin eventHandler
-igRegisterScript("WebTreeGridAllergensCellClassesHandler", () => {
+registerScript("WebTreeGridAllergensCellClassesHandler", () => {
     let allergenItems = ['Frozen Shrimps', 'Wild Salmon Fillets', 'Fresh Cheese', 'Skimmed Milk 1L', 'Butter'];
 
     return {

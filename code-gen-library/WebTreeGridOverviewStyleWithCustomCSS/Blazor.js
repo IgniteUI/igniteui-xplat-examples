@@ -1,7 +1,7 @@
 //begin eventHandler
-igRegisterScript("WebTreeGridOverviewStyleWithCustomCSS", (args) => {
+registerScript("WebTreeGridOverviewStyleWithCustomCSS", (args) => {
     //OMIT HANDLER
-}, false);
+});
 //end eventHandler
 
 let requiredStyles = `

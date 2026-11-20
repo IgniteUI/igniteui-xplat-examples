@@ -1,5 +1,5 @@
 //begin eventHandler
-igRegisterScript("DataGridPerformanceChangeCellUpdating", (grid, args) => {
+registerScript("DataGridPerformanceChangeCellUpdating", (grid, args) => {
     const goodBorder = "4px solid #4EB862";
     const badBorder = "4px solid #FF134A";
 
@@ -25,5 +25,5 @@ igRegisterScript("DataGridPerformanceChangeCellUpdating", (grid, args) => {
         sp.style.paddingRight = "5px";
         sp.style.borderRight = priceShiftUp ? goodBorder : badBorder;
     }
-}, false);
+});
 //end eventHandler

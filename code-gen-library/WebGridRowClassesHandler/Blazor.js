@@ -1,5 +1,5 @@
 //begin eventHandler
-igRegisterScript("WebGridRowClassesHandler", () => {
+registerScript("WebGridRowClassesHandler", () => {
     return {
         activeRow: (row) => row.index % 2 === 0
     };

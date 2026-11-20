@@ -1,4 +1,4 @@
-igRegisterScript("TestsDataLegendStyleSummaryRows3", (sender, args) => {
+registerScript("TestsDataLegendStyleSummaryRows3", (sender, args) => {
 		 args.titleText = "TOTAL";
 		 args.titleTextColor = "blue";
-}, false);
+});

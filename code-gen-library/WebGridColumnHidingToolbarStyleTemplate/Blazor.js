@@ -1,7 +1,7 @@
 //begin eventHandler
-igRegisterScript("WebGridColumnHidingToolbarStyleTemplate", (args) => {
+registerScript("WebGridColumnHidingToolbarStyleTemplate", (args) => {
     //OMIT HANDLER
-}, false);
+});
 //end eventHandler
 let requiredStyles = `
 <!--begin styles-->

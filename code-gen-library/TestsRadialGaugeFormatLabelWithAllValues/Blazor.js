@@ -1,4 +1,4 @@
-igRegisterScript("TestsRadialGaugeFormatLabelWithAllValues", (sender, args) => {
+registerScript("TestsRadialGaugeFormatLabelWithAllValues", (sender, args) => {
     const radToDeg = 180 / Math.PI
     const angleDeg      = roundToEven(args.angle * radToDeg);
     const startAngleDeg = roundToEven(args.startAngle * radToDeg);
@@ -11,7 +11,7 @@ igRegisterScript("TestsRadialGaugeFormatLabelWithAllValues", (sender, args) => {
       `EndAngle:${endAngleDeg},` +
       `ActualMinimumValue:${args.actualMinimumValue},` +
       `ActualMaximumValue:${args.actualMaximumValue}`;
-}, false);
+});
 
 // Web.ts kept roundToEven as a private method; a registered script has no instance, so it is hoisted
 // to a top-level function and called directly.

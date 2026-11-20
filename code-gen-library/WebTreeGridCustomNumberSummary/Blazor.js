@@ -22,9 +22,9 @@ class WebTreeGridCustomNumberSummary {
     }
 }
 
-igRegisterScript("WebTreeGridCustomNumberSummary", (event) => {
+registerScript("WebTreeGridCustomNumberSummary", (event) => {
     if (event.detail.field === "Age") {
         event.detail.summaries = WebTreeGridCustomNumberSummary;
     }
-}, false);
+});
 //end eventHandler

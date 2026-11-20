@@ -1,5 +1,5 @@
 //begin eventHandler
-igRegisterScript("WebGridEditingExcelStyle", (ev) => {
+registerScript("WebGridEditingExcelStyle", (ev) => {
     var key = ev.detail.event.keyCode;
     var grid = ev.detail.target.grid;
     var activeElem = grid.navigation.activeNode;
@@ -19,14 +19,14 @@ igRegisterScript("WebGridEditingExcelStyle", (ev) => {
         var column = activeElem.column;
         var rowInfo = grid.dataView;
 
-        var nextRow = this.getNextEditableRowIndex(thisRow, rowInfo, ev.detail.event.shiftKey);
+        var nextRow = getNextEditableRowIndex(thisRow, rowInfo, ev.detail.event.shiftKey);
 
         grid.navigateTo(nextRow, column, (obj) => {
             obj.target.activate();
             grid.clearCellSelection();
         });
     }
-}, false);
+});
 
 function getNextEditableRowIndex(currentRowIndex, dataView, previous) {
     if (currentRowIndex < 0 || (currentRowIndex === 0 && previous) || (currentRowIndex >= dataView.length - 1 && !previous)) {

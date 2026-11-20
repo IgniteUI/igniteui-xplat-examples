@@ -1,5 +1,5 @@
 //begin eventHandler
-igRegisterScript("WebGridColumnResized", (event) => {
+registerScript("WebGridColumnResized", (event) => {
     console.log("TODO WebGridColumnResized");
-}, false);
+});
 //end eventHandler

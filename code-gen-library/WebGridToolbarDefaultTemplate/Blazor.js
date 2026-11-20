@@ -1,5 +1,5 @@
 //begin template
-igRegisterScript("WebGridToolbarDefaultTemplate", (ctx) => {
+registerScript("WebGridToolbarDefaultTemplate", (ctx) => {
     return html`
         <igc-grid-toolbar>
         <igc-grid-toolbar-title>My new toolbar</igc-grid-toolbar-title>
@@ -14,5 +14,5 @@ igRegisterScript("WebGridToolbarDefaultTemplate", (ctx) => {
             <igc-grid-toolbar-exporter></igc-grid-toolbar-exporter>
         </igc-grid-toolbar-actions>
     </igc-grid-toolbar>`
-}, false);
+});
 //end template

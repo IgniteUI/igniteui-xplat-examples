@@ -1,5 +1,5 @@
 //begin eventHandler
-igRegisterScript("WebGridCommit", (event) => {
+registerScript("WebGridCommit", (event) => {
     console.log("TODO WebGridCommit");
-}, false);
+});
 //end eventHandler

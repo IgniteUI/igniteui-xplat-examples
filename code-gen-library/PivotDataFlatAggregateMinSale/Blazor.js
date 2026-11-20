@@ -1,5 +1,5 @@
 //begin eventHandler
-igRegisterScript("PivotDataFlatAggregateMinSale", (members, data) => {
+registerScript("PivotDataFlatAggregateMinSale", (members, data) => {
     let min = 0;
     if (data.length === 1) {
         min = data[0].ProductUnitPrice * data[0].NumberOfUnits;
@@ -8,5 +8,5 @@ igRegisterScript("PivotDataFlatAggregateMinSale", (members, data) => {
         min = mappedData.reduce((a, b) => Math.min(a, b));
     }
     return min;
-}, false);
+});
 //end eventHandler

@@ -1,8 +1,8 @@
 //begin eventHandler
-igRegisterScript("WebGridPasteFromExcel", (evtArgs) => {
+registerScript("WebGridPasteFromExcel", (evtArgs) => {
     const grid = document.getElementById("grid");
     grid.addEventListener("keydown", onWebGridPasteFromExcelKeyDown);
-}, false);
+});
 
 function onWebGridPasteFromExcelKeyDown(eventArgs) {
     const ctrl = eventArgs.ctrlKey;

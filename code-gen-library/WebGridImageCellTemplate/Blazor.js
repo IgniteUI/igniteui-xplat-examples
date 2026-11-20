@@ -1,6 +1,5 @@
 ﻿//begin template
-igRegisterScript("WebGridImageCellTemplate", (ctx) => {
-    var html = window.igTemplating.html;
+registerScript("WebGridImageCellTemplate", (ctx) => {
     return html`<div>
     <img src="${ctx.cell.value}"
     style="border: 1px solid black;
@@ -8,5 +7,5 @@ igRegisterScript("WebGridImageCellTemplate", (ctx) => {
     height: 2rem;
     width: 3rem;"/>
  </div>`;
-}, false);
+});
 //end template

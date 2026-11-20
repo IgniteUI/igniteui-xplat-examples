@@ -1,7 +1,7 @@
 //begin eventHandler
-igRegisterScript("WebGridRowPinStyleOnInitEvent", (args) => {
+registerScript("WebGridRowPinStyleOnInitEvent", (args) => {
     //OMIT HANDLER
-}, false);
+});
 //end eventHandler
 
 let requiredStyles = `

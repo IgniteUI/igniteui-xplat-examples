@@ -1,7 +1,7 @@
 //begin eventHandler
-igRegisterScript("WebGridMultiColumnHeadersStyling", (args) => {
+registerScript("WebGridMultiColumnHeadersStyling", (args) => {
     //OMIT HANDLER
-}, false);
+});
 //end eventHandler
 
 let requiredStyles = `

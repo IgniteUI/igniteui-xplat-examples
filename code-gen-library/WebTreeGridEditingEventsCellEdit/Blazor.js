@@ -1,5 +1,5 @@
 //begin eventHandler
-igRegisterScript("WebTreeGridEditingEventsCellEdit", (ev) => {
+registerScript("WebTreeGridEditingEventsCellEdit", (ev) => {
     var d = ev.detail;
 
     if (d.column != null && d.column.field == "Name") {
@@ -8,5 +8,5 @@ igRegisterScript("WebTreeGridEditingEventsCellEdit", (ev) => {
             alert("You cannot change the 'Name' field for this record!")
         }
     }
-}, false);
+});
 //end eventHandler

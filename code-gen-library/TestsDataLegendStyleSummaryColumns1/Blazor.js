@@ -1,3 +1,3 @@
-igRegisterScript("TestsDataLegendStyleSummaryColumns1", (sender, args) => {
+registerScript("TestsDataLegendStyleSummaryColumns1", (sender, args) => {
         args.valueTextColor = "red";
-}, false);
+});

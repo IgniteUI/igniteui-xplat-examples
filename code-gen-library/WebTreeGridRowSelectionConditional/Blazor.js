@@ -1,5 +1,5 @@
 //begin eventHandler
-igRegisterScript("WebTreeGridRowSelectionConditional", (event) => {
+registerScript("WebTreeGridRowSelectionConditional", (event) => {
     const eventArgs = event.detail;
     if (!eventArgs.added.length && eventArgs.removed.length) {
         // ignore deselect
@@ -17,5 +17,5 @@ igRegisterScript("WebTreeGridRowSelectionConditional", (event) => {
             // all selected from header, deselect instead
             eventArgs.newSelection = [];
     }
-}, false);
+});
 //end eventHandler

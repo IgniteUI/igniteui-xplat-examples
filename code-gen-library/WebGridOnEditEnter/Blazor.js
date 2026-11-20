@@ -1,5 +1,5 @@
 //begin eventHandler
-igRegisterScript("WebGridOnEditEnter", (evtArgs) => {
+registerScript("WebGridOnEditEnter", (evtArgs) => {
     const column = evtArgs.detail.column;
     if(column.field === 'ReorderLevel') {      
         setTimeout(() => {
@@ -10,5 +10,5 @@ igRegisterScript("WebGridOnEditEnter", (evtArgs) => {
             element?.focus();
         });
     }
-}, false);
+});
 //end eventHandler

@@ -1,7 +1,7 @@
 //begin eventHandler
-igRegisterScript("WebTreeGridColumnHidingStyle", (args) => {
+registerScript("WebTreeGridColumnHidingStyle", (args) => {
     //OMIT HANDLER
-}, false);
+});
 //end eventHandler
 let requiredStyles = `
 <!--begin styles-->

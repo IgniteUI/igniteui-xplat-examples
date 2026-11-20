@@ -1,4 +1,4 @@
-igRegisterScript("TestsDataLegendHideRowOnSeriesTwo", (sender, args) => {
+registerScript("TestsDataLegendHideRowOnSeriesTwo", (sender, args) => {
     if (args.seriesTitle == "Two")
 		args.isRowVisible = false;
-},false);
+});

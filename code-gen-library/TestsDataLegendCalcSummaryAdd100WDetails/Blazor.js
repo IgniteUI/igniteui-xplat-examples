@@ -1,4 +1,4 @@
-igRegisterScript("TestsDataLegendCalcSummaryAdd100WDetails", (sender, args) => {
+registerScript("TestsDataLegendCalcSummaryAdd100WDetails", (sender, args) => {
         let total = 100;
 
         for (const val of args.columnValues) {
@@ -8,5 +8,5 @@ igRegisterScript("TestsDataLegendCalcSummaryAdd100WDetails", (sender, args) => {
 		args.summaryValue = total;		
         args.summaryLabel = "A:";
         args.summaryUnits = "S+100";
-},false);
+});
 

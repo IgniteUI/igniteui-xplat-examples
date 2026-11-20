@@ -1,5 +1,5 @@
 //begin eventHandler
-igRegisterScript("WebGridTopSpeedCellClassesHandler", () => {
+registerScript("WebGridTopSpeedCellClassesHandler", () => {
     return {
         topSpeed: (rowData, columnKey) => rowData[columnKey] < 5
     };

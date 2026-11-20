@@ -8,7 +8,7 @@
 // {axes,series} JSON the C# ChartStateData produces. Invoked by name through the CR's generic
 // library-item ref-invoke. Sibling of ExtractDomainChartState (which handles the domain charts whose
 // series/axes live on an internal MainDataChart instead of directly on the element).
-igRegisterScript("ExtractDataChartState", (container) => {
+registerScript("ExtractDataChartState", (container) => {
 
     // DIAGNOSTIC marker: bump this string on each edit so you can confirm the browser loaded the
     // latest emitted copy (vs a cached one). If you don't see this log, the deployed JS is stale.
@@ -315,5 +315,5 @@ igRegisterScript("ExtractDataChartState", (container) => {
         console.error("ExtractDataChartState: extraction failed", e);
     }
     return result;
-}, false);
+});
 //end eventHandler

@@ -1,7 +1,7 @@
 //begin eventHandler
-igRegisterScript("WebGridColumnMovingStyle", (args) => {
+registerScript("WebGridColumnMovingStyle", (args) => {
     //OMIT HANDLER
-}, false);
+});
 //end eventHandler
 
 let requiredStyles = `

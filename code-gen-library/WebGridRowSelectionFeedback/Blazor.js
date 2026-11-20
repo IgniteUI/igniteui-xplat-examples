@@ -1,5 +1,5 @@
 //begin eventHandler
-igRegisterScript("WebGridRowSelectionFeedback", (event) => {
+registerScript("WebGridRowSelectionFeedback", (event) => {
     console.log("TODO WebGridRowSelectionFeedback");
-}, false);
+});
 //end eventHandler

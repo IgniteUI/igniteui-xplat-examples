@@ -2,7 +2,7 @@
 // (TestAppSurface.GetInitHandlers routes a *script* init item through MainCR.InvokeLibraryItemJsonSync).
 // Sets each non-layer series' tooltipTemplate to a fixed-text tooltip. The tooltipTemplate is a JS
 // function that builds the tooltip DOM, so it can only be assigned from JS.
-igRegisterScript("TestsAddStaticTextTooltip", function (container) {
+registerScript("TestsAddStaticTextTooltip", function (container) {
     var chart = CodeGenHelper.getDescription("content");
     if (chart == null || chart.series == null) {
         return null;
@@ -19,4 +19,4 @@ igRegisterScript("TestsAddStaticTextTooltip", function (container) {
         }
     }
     return null;
-}, false);
+});

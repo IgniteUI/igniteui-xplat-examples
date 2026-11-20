@@ -1,5 +1,5 @@
 //begin eventHandler
-igRegisterScript("DataGridPerformanceAvgSaleDataBound", (sender, args) => {
+registerScript("DataGridPerformanceAvgSaleDataBound", (sender, args) => {
     const item = args.cellInfo.rowItem;
     if (item == null) return;
 
@@ -20,5 +20,5 @@ igRegisterScript("DataGridPerformanceAvgSaleDataBound", (sender, args) => {
     } else {
         args.cellInfo.background = "white";
     }
-}, false);
+});
 //end eventHandler

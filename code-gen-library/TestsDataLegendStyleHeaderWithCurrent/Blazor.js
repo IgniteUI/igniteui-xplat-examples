@@ -1,4 +1,4 @@
-igRegisterScript("TestsDataLegendStyleHeaderWithCurrent", (sender, args) => {
+registerScript("TestsDataLegendStyleHeaderWithCurrent", (sender, args) => {
      args.titleText = "Current:" + args.titleText;
-},false);
+});
 

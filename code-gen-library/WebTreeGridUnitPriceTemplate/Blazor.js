@@ -1,6 +1,5 @@
 ﻿//begin template
-igRegisterScript("WebTreeGridUnitPriceTemplate", (ctx) => {
-    var html = window.igTemplating.html;
+registerScript("WebTreeGridUnitPriceTemplate", (ctx) => {
 
     var value = ctx.cell.value;
 
@@ -10,5 +9,5 @@ igRegisterScript("WebTreeGridUnitPriceTemplate", (ctx) => {
     else {
         return html`<span style="color: red">${value}</span>`;
     }
-}, false);
+});
 //end template

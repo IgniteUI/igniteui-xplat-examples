@@ -1,5 +1,5 @@
 //begin eventHandler
-igRegisterScript("HGridEditingEvents", (ev) => {
+registerScript("HGridEditingEvents", (ev) => {
     var d = ev.detail;
 
     if (d.column != null && d.column.field == "Debut") {
@@ -8,5 +8,5 @@ igRegisterScript("HGridEditingEvents", (ev) => {
             alert("The debut year must be in the past!")
         }
     }
-}, false);
+});
 //end eventHandler

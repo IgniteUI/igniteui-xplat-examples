@@ -1,5 +1,5 @@
 //begin eventHandler
-igRegisterScript("WebGridEditedRowClassesHandler", () => {
+registerScript("WebGridEditedRowClassesHandler", () => {
     return {
         edited: (row) => updatedRecsPK.indexOf(row.data[row.grid.primaryKey]) !== -1
     };

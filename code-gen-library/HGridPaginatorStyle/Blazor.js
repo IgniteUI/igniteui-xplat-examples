@@ -1,7 +1,7 @@
 //begin eventHandler
-igRegisterScript("HGridPaginatorStyle", (args) => {
+registerScript("HGridPaginatorStyle", (args) => {
     //OMIT HANDLER
-}, false);
+});
 //end eventHandler
 
 let requiredStyles = `

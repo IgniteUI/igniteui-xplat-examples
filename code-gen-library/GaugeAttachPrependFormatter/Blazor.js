@@ -1,5 +1,5 @@
 //begin eventHandler
-igRegisterScript("GaugeAttachPrependFormatter", (args) => {
+registerScript("GaugeAttachPrependFormatter", (args) => {
     args.label = "$" + args.label;
-}, false);
+});
 //end eventHandler

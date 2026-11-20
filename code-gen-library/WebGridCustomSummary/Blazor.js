@@ -26,9 +26,9 @@ class WebGridDiscontinuedSummary {
         return result;
     }
 }
-igRegisterScript("WebGridCustomSummary", (event) => {
+registerScript("WebGridCustomSummary", (event) => {
     if (event.detail.field === "UnitsInStock") {
         event.detail.summaries = WebGridDiscontinuedSummary;
     }
-}, false);
+});
 //end eventHandler

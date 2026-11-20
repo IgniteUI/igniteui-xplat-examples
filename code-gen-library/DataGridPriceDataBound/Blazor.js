@@ -1,5 +1,5 @@
 //begin eventHandler
-igRegisterScript("DataGridPriceDataBound", (grid, args) => {
+registerScript("DataGridPriceDataBound", (grid, args) => {
     const item = args.cellInfo.rowItem;
     if (item === null) { return; }
 
@@ -38,5 +38,5 @@ igRegisterScript("DataGridPriceDataBound", (grid, args) => {
     } else {
         args.cellInfo.background = "white";
     }
-}, false);
+});
 //end eventHandler

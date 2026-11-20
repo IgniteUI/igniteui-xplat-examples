@@ -1,7 +1,7 @@
 //begin eventHandler
-igRegisterScript("ChartStyleTest", (args) => {
+registerScript("ChartStyleTest", (args) => {
     //OMIT HANDLER
-}, false);
+});
 //end eventHandler
 
 let requiredStyles = `

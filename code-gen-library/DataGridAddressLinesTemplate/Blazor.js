@@ -1,5 +1,5 @@
 //begin eventHandler
-igRegisterScript("DataGridAddressLinesTemplate", (s, args) => {
+registerScript("DataGridAddressLinesTemplate", (s, args) => {
     const content = args.content;
     const item = args.cellInfo.rowItem;
     let span1 = null;
@@ -27,5 +27,5 @@ igRegisterScript("DataGridAddressLinesTemplate", (s, args) => {
 
     span1.textContent = item.Street;
     span2.textContent = item.City + ", " + item.Country;
-}, false);
+});
 //end eventHandler

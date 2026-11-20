@@ -1,4 +1,4 @@
-igRegisterScript("TestsDataLegendStyleSeriesColumns2", (sender, args) => {
+registerScript("TestsDataLegendStyleSeriesColumns2", (sender, args) => {
         switch (args.seriesTitle)
         {
  		 case "Financial1":
@@ -64,4 +64,4 @@ igRegisterScript("TestsDataLegendStyleSeriesColumns2", (sender, args) => {
                }
        break;
 }
-}, false);
+});

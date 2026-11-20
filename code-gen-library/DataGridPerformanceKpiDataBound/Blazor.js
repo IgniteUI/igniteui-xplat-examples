@@ -1,5 +1,5 @@
 //begin eventHandler
-igRegisterScript("DataGridPerformanceKpiDataBound", (sender, args) => {
+registerScript("DataGridPerformanceKpiDataBound", (sender, args) => {
     const value = args.resolvedValue;
     if (value < 20.0) {
         if (args.cellInfo.background !== "red") {
@@ -11,5 +11,5 @@ igRegisterScript("DataGridPerformanceKpiDataBound", (sender, args) => {
             args.cellInfo.background = "#4EB862";
         }
     }
-}, false);
+});
 //end eventHandler

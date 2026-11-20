@@ -1,6 +1,5 @@
 ﻿//begin template
-igRegisterScript("WebTreeGridProductNameTemplate", (ctx) => {
-    var html = window.igTemplating.html;
+registerScript("WebTreeGridProductNameTemplate", (ctx) => {
 
     var value = ctx.cell.value;
 
@@ -10,5 +9,5 @@ igRegisterScript("WebTreeGridProductNameTemplate", (ctx) => {
     else {
         return html`<span>${value}</span>`;
     }
-}, false);
+});
 //end template

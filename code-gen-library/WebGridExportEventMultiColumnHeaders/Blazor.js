@@ -1,5 +1,5 @@
 //begin eventHandler
-igRegisterScript("WebGridExportEventMultiColumnHeaders", (ev) => {
+registerScript("WebGridExportEventMultiColumnHeaders", (ev) => {
     ev.detail.options.ignoreMultiColumnHeaders = false;
-}, false);
+});
 //end eventHandler

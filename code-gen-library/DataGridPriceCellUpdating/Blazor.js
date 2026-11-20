@@ -1,5 +1,5 @@
 //begin eventHandler
-igRegisterScript("DataGridPriceCellUpdating", (grid, args) => {
+registerScript("DataGridPriceCellUpdating", (grid, args) => {
     const valuesIncreasedColor = "#4EB862";
     const valuesDecreasedColor = "#FF134A";
 
@@ -90,5 +90,5 @@ igRegisterScript("DataGridPriceCellUpdating", (grid, args) => {
             sp.style.color = "#FF134A";
         }
     }
-}, false);
+});
 //end eventHandler

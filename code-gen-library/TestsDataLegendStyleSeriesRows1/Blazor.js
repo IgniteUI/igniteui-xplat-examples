@@ -1,4 +1,4 @@
-igRegisterScript("TestsDataLegendStyleSeriesRows1", (sender, args) => {
+registerScript("TestsDataLegendStyleSeriesRows1", (sender, args) => {
 		 switch (args.seriesTitle)
 		 {
 			 case "One":
@@ -14,4 +14,4 @@ igRegisterScript("TestsDataLegendStyleSeriesRows1", (sender, args) => {
 				 args.titleTextColor = "green";
 				 break;
 		 }
-}, false);
+});
