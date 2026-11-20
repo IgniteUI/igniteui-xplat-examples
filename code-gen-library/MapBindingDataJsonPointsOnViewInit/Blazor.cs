@@ -22,38 +22,45 @@ public class MapBindingDataJsonPointsOnViewInit
 
     public async void MapBindingDataJsonPointsOnViewInit()
     {
-        var map = CodeGenHelper.GetDescription<IgbGeographicMap>("content");
-        var url = "https://static.infragistics.com/xplatform/data/WorldCities.json";
-        var client = new HttpClient();
-        var json = await client.GetStringAsync(url);
-        var geoLocations = new List<WorldPlaceJson>();
-        using (var document = JsonDocument.Parse(json))
+        var work = GlobalQueuedWorkState.Instance;
+        const string channel = "Sample.MapBindingDataJsonPointsOnViewInit.Load";
+        work.NotifyWorkQueued(channel);
+        try
         {
-            foreach (var item in document.RootElement.EnumerateArray())
+            var map = CodeGenHelper.GetDescription<IgbGeographicMap>("content");
+            var url = "https://static.infragistics.com/xplatform/data/WorldCities.json";
+            using var client = new HttpClient();
+            var json = await client.GetStringAsync(url);
+            var geoLocations = new List<WorldPlaceJson>();
+            using (var document = JsonDocument.Parse(json))
             {
-                if (!item.GetProperty("cap").GetBoolean()) continue;
-                geoLocations.Add(new WorldPlaceJson
+                foreach (var item in document.RootElement.EnumerateArray())
                 {
-                    Name = item.GetProperty("name").GetString(),
-                    Lat = item.GetProperty("lat").GetDouble(),
-                    Lon = item.GetProperty("lon").GetDouble(),
-                    Pop = item.GetProperty("pop").GetDouble(),
-                    Country = item.GetProperty("country").GetString(),
-                    Cap = item.GetProperty("cap").GetBoolean()
-                });
+                    if (!item.GetProperty("cap").GetBoolean()) continue;
+                    geoLocations.Add(new WorldPlaceJson
+                    {
+                        Name = item.GetProperty("name").GetString(),
+                        Lat = item.GetProperty("lat").GetDouble(),
+                        Lon = item.GetProperty("lon").GetDouble(),
+                        Pop = item.GetProperty("pop").GetDouble(),
+                        Country = item.GetProperty("country").GetString(),
+                        Cap = item.GetProperty("cap").GetBoolean()
+                    });
+                }
             }
+            var series = new IgbGeographicSymbolSeries
+            {
+                DataSource = geoLocations,
+                LatitudeMemberPath = "Lat",
+                LongitudeMemberPath = "Lon",
+                MarkerBrush = "rgba(255, 255, 255, 1.0)",
+                MarkerOutline = "rgba(135, 5, 255, 1.0)",
+                MarkerThickness = 1,
+                MarkerType = MarkerType.Circle
+            };
+            map.Series.Add(series);
         }
-        var series = new IgbGeographicSymbolSeries
-        {
-            DataSource = geoLocations,
-            LatitudeMemberPath = "Lat",
-            LongitudeMemberPath = "Lon",
-            MarkerBrush = "rgba(255, 255, 255, 1.0)",
-            MarkerOutline = "rgba(135, 5, 255, 1.0)",
-            MarkerThickness = 1,
-            MarkerType = MarkerType.Circle
-        };
-        map.Series.Add(series);
+        finally { work.NotifyWorkCompleted(channel); }
     }
     //end eventHandler
 }

@@ -3,7 +3,8 @@
 # from ShapeStrokeColors [Black] with ShapeThickness 0.5. The series is unnamed, so select it by index.
 # Fills are random, so only the deterministic stroke and thickness are asserted.
 # The series is added once the shapefile has been imported.
-When we wait for the chart to have 1 series
+Then this chart will have 1 series
 When we are talking about the series at index 0
+Then this series will have some visible shapes
 Then this series will have main shapes with outline Black
 Then this series will have main shapes with thickness 0.5
