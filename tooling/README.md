@@ -2,7 +2,7 @@
 
 This directory is the Node replacement for the `code-exporter-app` / `code-exporter-dev`
 generation path. It uses the code-generating renderer shipped by
-`igniteui-webcomponents-core@7.1.1-beta.12`; it does not reproduce product generation rules.
+`igniteui-webcomponents-core@7.1.1-beta.19`; it does not reproduce product generation rules.
 
 The package has two framework-neutral jobs:
 
