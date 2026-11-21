@@ -9,10 +9,12 @@ Then the toolbar will have the following action names:
 When we simulate a click on toolbar action path "AnalyzeMenu"
 Then the toolbar action "ShowCrosshairs" will not be checked
 And this domain chart will not have a crosshair layer
+When we simulate scrolling toolbar action path "AnalyzeMenu" to "ShowCrosshairs"
 When we simulate a click on toolbar action path "AnalyzeMenu, ShowCrosshairs"
 Then the toolbar action "ShowCrosshairs" will be checked
 And this domain chart will have a crosshair layer
 # Series averages of CountryRenewableElectricity: America 393/12 = 32.75, Europe 639/12 = 53.25, China 837/12 = 69.75.
+When we simulate scrolling toolbar action path "AnalyzeMenu" to "SeriesAvg"
 When we simulate a click on toolbar action path "AnalyzeMenu, SeriesAvg"
 Then this domain chart will have value overlays with the following properties:
   | Orientation | Value |
