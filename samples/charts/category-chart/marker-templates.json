@@ -3,7 +3,6 @@
   "strings": {
     "legendTitle": "Percentage Change in Energy Generation in 2019"
   },
-  "requiredItems": [ "CategoryChartValueMarkerTemplate" ],
   "descriptions": {
     "legend": {
       "type": "Legend",

@@ -18,6 +18,9 @@ public static class PieChartAnimation
 {
     private static XamPieChart chart;
     private static Timer timer;
+    //begin testing
+    private static GlobalAnimationState animationState;
+    //end testing
 
     public static bool Running
     {
@@ -45,6 +48,10 @@ public static class PieChartAnimation
         timer = new Timer(15);
         timer.Elapsed += (s, e) => Tick();
         timer.AutoReset = true;
+        //begin testing
+        animationState = GlobalAnimationState.Instance;
+        animationState.NotifyAnimationStart();
+        //end testing
         timer.Start();
     }
 
@@ -54,6 +61,10 @@ public static class PieChartAnimation
         {
             timer.Stop();
             timer = null;
+            //begin testing
+            animationState.NotifyAnimationEnd();
+            animationState = null;
+            //end testing
         }
     }
 

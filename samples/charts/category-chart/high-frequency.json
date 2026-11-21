@@ -1,6 +1,5 @@
 {
   "hasAnimations": true,
-  "testingSkippedViewInits": [ "CategoryChartHighFrequencyOnViewInit" ],
   "onViewInit": [ "CategoryChartHighFrequencyOnViewInit" ],
   "descriptions": {
     "editor": {

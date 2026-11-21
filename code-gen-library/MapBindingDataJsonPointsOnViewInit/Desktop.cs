@@ -25,10 +25,22 @@ public class MapBindingDataJsonPointsOnViewInit
     //WPF: System.Action
     public async void MapBindingDataJsonPointsOnViewInit()
     {
+        //begin testing
+        var work = Infragistics.GlobalQueuedWorkState.Instance;
+        const string channel = "Sample.MapBindingDataJsonPointsOnViewInit.Load";
+        work.NotifyWorkQueued(channel);
+        //end testing
+        //begin testing
+        try
+        {
+        //end testing
         var map = CodeGenHelper.GetDescription<XamGeographicMap>("content");
         var url = "https://static.infragistics.com/xplatform/data/WorldCities.json";
-        var client = new HttpClient();
-        var json = await client.GetStringAsync(url);
+        string json;
+        using (var client = new HttpClient())
+        {
+            json = await client.GetStringAsync(url);
+        }
         var array = JArray.Parse(json);
         var geoLocations = new List<WorldPlaceJson>();
         foreach (var item in array)
@@ -55,6 +67,10 @@ public class MapBindingDataJsonPointsOnViewInit
             MarkerType = MarkerType.Circle
         };
         map.Series.Add(series);
+        //begin testing
+        }
+        finally { work.NotifyWorkCompleted(channel); }
+        //end testing
     }
     //end eventHandler
 }

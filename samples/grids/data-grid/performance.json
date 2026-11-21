@@ -2,6 +2,7 @@
   "skipAlterDataCasing": true,
   "testingSkippedViewInits": ["DataGridPerformanceTickerOnViewInit"],
   "onViewInit": ["DataGridPerformanceTickerOnViewInit"],
+  "onViewDestroy": ["DataGridPerformanceTickerOnViewDestroy"],
   "descriptions": {
     "content": {
       "type": "DataGrid",

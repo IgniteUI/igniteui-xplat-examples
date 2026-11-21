@@ -1,0 +1,44 @@
+//begin imports
+using Infragistics.Controls;
+using Infragistics.Controls.Maps;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Windows;
+//end imports
+
+//begin supportingTypes
+/// <summary>
+/// What the shapefile becomes once it has loaded: records turned into routes, bound to the series
+/// that draws them.
+///
+/// A handler for the shapefile converter's ImportCompleted, and the converter is created in code by
+/// the item that requires this one — so there is nothing in a description to bind it to, and it is
+/// not an initializer either.
+/// </summary>
+public class MapShpFileReaders
+{
+    /// <summary>Each record is one cable route, with the fields the database holds beside it.</summary>
+    public void ReadRoutes(object sender, AsyncCompletedEventArgs e)
+    {
+        var sds = sender as ShapeDataSource;
+        var geoRoutes = new List<object>();
+        // parsing shapefile data and creating geo-locations
+        foreach (var record in sds)
+        {
+            // using field/column names from .DBF file
+            geoRoutes.Add(new
+            {
+                points = record.Points,
+                name = record.Fields["Name"],
+                capacity = record.Fields["CapacityG"],
+                distance = record.Fields["DistanceKM"]
+            });
+        }
+
+        var map = CodeGenHelper.GetDescription<XamGeographicMap>("content");
+        var lineSeries = map.Series[0] as GeographicPolylineSeries;
+        lineSeries.DataSource = geoRoutes;
+    }
+}
+//end supportingTypes

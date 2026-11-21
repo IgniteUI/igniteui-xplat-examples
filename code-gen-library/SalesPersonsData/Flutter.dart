@@ -1,12 +1,13 @@
-//begin async data
+//begin data
 import 'dart:math' as math;
 import 'package:igniteui_flutter_core/src/ArrayList.dart' show ArrayList;
-import 'package:igniteui_flutter_core/src/reflection.dart' show IReflectable, IReflectableSet;
+import 'package:igniteui_flutter_core/src/reflection.dart' show IReflectableData;
+import 'package:igniteui_flutter_core/src/type.dart' show Date_$type, Double_$type, Int_$type, String_$type, TypeInfo;
 
 // The keys stay as the C# and TypeScript spell them: a data item defined in
 // code keeps its own casing across platforms, and these are the names the
 // member paths in the descriptions ask for.
-class SalesPerson implements IReflectable, IReflectableSet {
+class SalesPerson implements IReflectableData {
     int index = 0;
     String? firstName = null;
     String? lastName = null;
@@ -62,6 +63,66 @@ class SalesPerson implements IReflectable, IReflectableSet {
     double kpi40 = 0;
     double kpi41 = 0;
     double kpi42 = 0;
+
+
+    static final Map<String, TypeInfo?> _propertyTypes = {
+        "Index": Int_$type,
+        "FirstName": String_$type,
+        "LastName": String_$type,
+        "Name": String_$type,
+        "ImageName": String_$type,
+        "Territory": String_$type,
+        "AvgSale": Double_$type,
+        "AvgSaleHeat": Double_$type,
+        "Change": Double_$type,
+        "PercentChange": Double_$type,
+        "YearToDateSales": Double_$type,
+        "DateValue": Date_$type,
+        "KPI_0": Double_$type,
+        "KPI_1": Double_$type,
+        "KPI_2": Double_$type,
+        "KPI_3": Double_$type,
+        "KPI_4": Double_$type,
+        "KPI_5": Double_$type,
+        "KPI_6": Double_$type,
+        "KPI_7": Double_$type,
+        "KPI_8": Double_$type,
+        "KPI_9": Double_$type,
+        "KPI_10": Double_$type,
+        "KPI_11": Double_$type,
+        "KPI_12": Double_$type,
+        "KPI_13": Double_$type,
+        "KPI_14": Double_$type,
+        "KPI_15": Double_$type,
+        "KPI_16": Double_$type,
+        "KPI_17": Double_$type,
+        "KPI_18": Double_$type,
+        "KPI_19": Double_$type,
+        "KPI_20": Double_$type,
+        "KPI_21": Double_$type,
+        "KPI_22": Double_$type,
+        "KPI_23": Double_$type,
+        "KPI_24": Double_$type,
+        "KPI_25": Double_$type,
+        "KPI_26": Double_$type,
+        "KPI_27": Double_$type,
+        "KPI_28": Double_$type,
+        "KPI_29": Double_$type,
+        "KPI_30": Double_$type,
+        "KPI_31": Double_$type,
+        "KPI_32": Double_$type,
+        "KPI_33": Double_$type,
+        "KPI_34": Double_$type,
+        "KPI_35": Double_$type,
+        "KPI_36": Double_$type,
+        "KPI_37": Double_$type,
+        "KPI_38": Double_$type,
+        "KPI_39": Double_$type,
+        "KPI_40": Double_$type,
+        "KPI_41": Double_$type,
+        "KPI_42": Double_$type,
+    };
+    Map<String, TypeInfo?> get propertyTypes => _propertyTypes;
 
     Object? getValue(String? propertyName) {
         switch (propertyName) {
@@ -422,4 +483,4 @@ class SalesPersonsData extends ArrayList<SalesPerson?> {
         item.kpi42 = (rand.nextDouble() * 100.0).roundToDouble();
     }
 }
-//end async data
+//end data

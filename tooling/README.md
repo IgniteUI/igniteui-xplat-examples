@@ -2,7 +2,7 @@
 
 This directory is the Node replacement for the `code-exporter-app` / `code-exporter-dev`
 generation path. It uses the code-generating renderer shipped by
-`igniteui-webcomponents-core@7.1.1-beta.12`; it does not reproduce product generation rules.
+`igniteui-webcomponents-core@7.1.1-beta.19`; it does not reproduce product generation rules.
 
 The package has two framework-neutral jobs:
 
@@ -173,3 +173,25 @@ project shell. Its default native-library smoke includes data and an event handl
 `full_library` dispatch option audits every available item. GTK builds remain gated by a suitable
 runner and product prerequisites; they are not reported as passing merely because related code can
 be emitted.
+
+## Testing sections in shared code items
+
+Use the same comment markers in C#, TypeScript, JavaScript, Dart, Swift, and Kotlin:
+
+```text
+//begin testing
+// Internal animation/work tracking used by XSharpTesting.
+//end testing
+//begin notTesting
+// Optional alternative for the public sample.
+//end notTesting
+```
+
+Sections may surround imports or code and may be nested. Public sample and snippet
+emission keeps `notTesting`; test-host library emission keeps `testing`. Both remove
+the markers and the other branch, without modifying the shared source. Keep common
+sample behavior outside the sections. Mismatched or unclosed sections are errors.
+The shared renderer uses `CodeGenerationRendererOptions.IsTesting` (false by default);
+LibraryProjectEmitter sets it for its existing testing flavor. The Node file adapter
+also resolves public sections before loading code items so published renderer versions
+can consume them before the new renderer is released.

@@ -83,7 +83,7 @@
       "dataSourceRef": "EmployeesSalesData",
       "autoGenerateColumns": false,
       "defaultColumnMinWidth": 120,
-      "editMode": "Cell",
+      "editMode": "CellBatch",
       "editModeClickAction": "SingleClick",
       "activationMode": "Cell",
       "selectionMode": "SingleRow",

@@ -1,11 +1,12 @@
 //begin data
 import 'package:igniteui_flutter_core/src/ArrayList.dart' show ArrayList;
-import 'package:igniteui_flutter_core/src/reflection.dart' show IReflectable, IReflectableSet;
+import 'package:igniteui_flutter_core/src/reflection.dart' show IReflectableData;
+import 'package:igniteui_flutter_core/src/type.dart' show Date_$type, Double_$type, Int_$type, String_$type, TypeInfo;
 
 // The keys stay as the C# and TypeScript spell them: a data item defined in
 // code keeps its own casing across platforms, and these are the names the
 // member paths in the descriptions ask for.
-class MyTimelineInfo implements IReflectable, IReflectableSet {
+class MyTimelineInfo implements IReflectableData {
     int index = 0;
     double value = 0;
     String? label = null;
@@ -14,6 +15,16 @@ class MyTimelineInfo implements IReflectable, IReflectableSet {
     // date in the local zone; DateTime.parse does the same for an ISO date with
     // no zone on it.
     DateTime? date = null;
+
+
+    static final Map<String, TypeInfo?> _propertyTypes = {
+        "Index": Int_$type,
+        "Value": Double_$type,
+        "Label": String_$type,
+        "Details": String_$type,
+        "Date": Date_$type,
+    };
+    Map<String, TypeInfo?> get propertyTypes => _propertyTypes;
 
     Object? getValue(String? propertyName) {
         switch (propertyName) {

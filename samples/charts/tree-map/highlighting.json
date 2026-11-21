@@ -26,6 +26,7 @@
     "content": {
       "type": "Treemap",
       "name": "treemap",
+      "highlightingMode": "Brighten",
       "dataSourceRef": "CountyHierarchicalData",
       "parentIdMemberPath": "Parent",
       "idMemberPath": "Name",

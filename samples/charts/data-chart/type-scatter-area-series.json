@@ -1,4 +1,6 @@
 {
+  "skipAlterDataCasing": true,
+  "hasQueuedWork": true,
   "strings": {
     "legendTitle": "Distribution of Magnetic Field"
   },

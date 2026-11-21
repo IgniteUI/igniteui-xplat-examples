@@ -9,12 +9,14 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 @Component({
     template: `
 <!-- begin content -->
-    <ng-template let-dataContext #template>
-        <div class="tooltipVertical" *ngIf="dataContext.item">
-            <div class="tooltipTitle">Franchise: {{dataContext.item.franchise}}</div>
-            <div class="tooltipLbl">Revenue of All Movies: {{dataContext.item.totalRevenue}}</div>
-            <div class="tooltipLbl">Highest Grossing Movie: {{'$' + dataContext.item.highestGrossing}}</div>
+    <ng-template let-item="item" #template>
+        @if (item) {
+        <div class="tooltipVertical">
+            <div class="tooltipTitle">Franchise: {{item.franchise}}</div>
+            <div class="tooltipLbl">Revenue of All Movies: {{item.totalRevenue}}</div>
+            <div class="tooltipLbl">Highest Grossing Movie: {{'$' + item.highestGrossing}}</div>
         </div>
+        }
     </ng-template>
 <!-- end content -->
     `,

@@ -16,12 +16,13 @@ export class DataChartProductionTooltipTemplate {
         const fuels = ["Coal", "Hydro", "Nuclear", "Gas", "Oil"];
         return (
             <div className="ui-tooltip-content">
-                <div className="tooltipTitle">{item.country} Production</div>
+                <div className="tooltipTitle">{item.Country} Production</div>
                 {fuels.map((fuel) => (
                     <div className="tooltipHorizontal" key={fuel}
                          style={{ color: series.valueMemberPath === fuel ? series.actualBrush : "black" }}>
-                        <label className="tooltipLbl" style={{ width: "4rem" }}>{fuel}:</label>
-                        <label className="tooltipVal">{item[fuel.toLowerCase()]}</label>
+                        {/* The space is in the label: JSX drops the line break between elements that reads as one elsewhere. */}
+                        <label className="tooltipLbl" style={{ width: "4rem" }}>{fuel + ": "}</label>
+                        <label className="tooltipVal">{item[fuel]}</label>
                     </div>
                 ))}
             </div>

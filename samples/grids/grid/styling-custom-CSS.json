@@ -6,7 +6,7 @@
   "descriptions": {
     "content": {
       "type": "WebGrid",
-      "dataRef": "LocalData",
+      "dataRef": "EnergyGlobalDemand",
       "id": "grid",
       "name": "grid",
       "cellSelection": "Multiple",
@@ -21,7 +21,7 @@
         },
         {
           "type": "WebColumn",
-          "field": "MarketShare",
+          "field": "Value",
           "header": "Market Share",
           "selectable": true
         },
@@ -33,15 +33,6 @@
         }
       ]
     }
-  },
-  "refs": {
-    "LocalData": [
-      { "MarketShare": 37, "Category": "Cooling", "Summary": "Cooling 37%" },
-      { "MarketShare": 25, "Category": "Residential", "Summary": "Residential 25%" },
-      { "MarketShare": 12, "Category": "Heating", "Summary": "Heating 12%" },
-      { "MarketShare": 11, "Category": "Lighting", "Summary": "Lighting 11%" },
-      { "MarketShare": 15, "Category": "Other", "Summary": "Other 15%" }
-    ]
   },
   "modules": [
     "grids/WebGridModule"

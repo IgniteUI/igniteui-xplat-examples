@@ -5,16 +5,20 @@ import { IgcUserAnnotationToolTipContentUpdatingEventArgs } from 'igniteui-webco
 export class DataChartUserAnnotationTooltip {
 
     //begin eventHandler
+    // The layer hands over the tooltip's content container each time it shows an annotation: the
+    // annotation's details go in a line of text, made the first time and updated after that.
     public dataChartUserAnnotationTooltip(sender: any, args: IgcUserAnnotationToolTipContentUpdatingEventArgs): void {
-        // The layer hands over an empty container the first time it shows a given annotation, and
-        // the same one after that, so the text is only put in once.
-        if (args.content.children.length > 0) {
-            return;
+        var tooltipText = args.annotationInfo.annotationData;
+        if (args.content.children.length == 0) {
+            var element = document.createElement("div");
+            element.textContent = tooltipText;
+            element.style.color = "white";
+            args.content.appendChild(element);
         }
-        var line = document.createElement("div");
-        line.textContent = args.annotationInfo.annotationData;
-        line.style.color = "white";
-        args.content.appendChild(line);
+        else {
+            var existing = args.content.children[0] as HTMLElement;
+            existing.textContent = tooltipText;
+        }
     }
     //end eventHandler
 }

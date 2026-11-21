@@ -10,6 +10,9 @@ public class DoughnutChartSelectionSliceClick
     //WPF: Infragistics.Controls.Charts.SliceClickEventHandler
     public void DoughnutChartSelectionSliceClick(object sender, SliceClickEventArgs e)
     {
+        // WPF's Arc style uses Manual selection. Apply the toggle while the
+        // event is executing in the host, before reporting the new selection.
+        e.IsSelected = !e.IsSelected;
         // A click that selects reports which slice; a click that clears the selection reports that.
         DoughnutChartSelectionReadout.Show(
             CodeGenHelper.FindByName<RingSeries>("ringSeries"),

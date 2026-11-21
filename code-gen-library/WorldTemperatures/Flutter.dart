@@ -1,22 +1,32 @@
 //begin data
 import 'package:igniteui_flutter_core/src/ArrayList.dart' show ArrayList;
-import 'package:igniteui_flutter_core/src/reflection.dart' show IReflectable, IReflectableSet;
+import 'package:igniteui_flutter_core/src/reflection.dart' show IReflectableData;
+import 'package:igniteui_flutter_core/src/type.dart' show TypeInfo, Double_$type;
 
 // The keys stay as the C# and TypeScript spell them: a data item defined in
 // code keeps its own casing across platforms, and these are the names the
 // member paths in the descriptions ask for.
-class WorldLocation implements IReflectable, IReflectableSet {
+class WorldLocation implements IReflectableData {
     double lon = 0;
     double lat = 0;
     double value = 0;
 
+    Map<String, TypeInfo?> get propertyTypes => {
+        'Lon': Double_$type,
+        'Lat': Double_$type,
+        'Value': Double_$type,
+    };
+
     Object? getValue(String? propertyName) {
         switch (propertyName) {
             case "Lon":
+            case "lon":
                 return this.lon;
             case "Lat":
+            case "lat":
                 return this.lat;
             case "Value":
+            case "value":
                 return this.value;
         }
         return null;
@@ -25,12 +35,15 @@ class WorldLocation implements IReflectable, IReflectableSet {
     void setValue(String? propertyName, Object? value) {
         switch (propertyName) {
             case "Lon":
+            case "lon":
                 this.lon = (value as num).toDouble();
                 break;
             case "Lat":
+            case "lat":
                 this.lat = (value as num).toDouble();
                 break;
             case "Value":
+            case "value":
                 this.value = (value as num).toDouble();
                 break;
         }

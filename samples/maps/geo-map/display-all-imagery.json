@@ -31,15 +31,15 @@
           ],
           "dropDownValues": [
             "OpenStreetMaps",
-            "WorldStreetMap",
-            "WorldTopographicMap",
-            "WorldImageryMap",
-            "WorldOceansMap",
-            "WorldNationalGeoMap",
-            "WorldTerrainMap",
-            "WorldLightGrayMap",
-            "WorldShadedReliefMap",
-            "WorldPhysicalMap"
+            "https://services.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer",
+            "https://services.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer",
+            "https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer",
+            "https://services.arcgisonline.com/ArcGIS/rest/services/Ocean_Basemap/MapServer",
+            "https://services.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer",
+            "https://services.arcgisonline.com/ArcGIS/rest/services/World_Terrain_Base/MapServer",
+            "https://services.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer",
+            "https://services.arcgisonline.com/ArcGIS/rest/services/World_Shaded_Relief/MapServer",
+            "https://services.arcgisonline.com/ArcGIS/rest/services/World_Physical_Map/MapServer"
           ],
           "primitiveValue": "OpenStreetMaps",
           "changedRef": "EditorChangeImagerySource"

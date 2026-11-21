@@ -1,4 +1,6 @@
 {
+  "hasAnimations": true,
+  "hasQueuedWork": true,
   "skipAlterDataCasing": true,
   "descriptions": {
     "content": {

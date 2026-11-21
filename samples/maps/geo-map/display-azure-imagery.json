@@ -11,7 +11,7 @@
       "properties": [
         {
           "type": "PropertyEditorPropertyDescription",
-          "propertyPath": "Series[0 as GeographicTileSeries].TileImagery.ImageryStyle",
+          "propertyPath": "Series[0 as GeographicTileSeries].TileImagery as AzureMapsImagery.ImageryStyle",
           "name": "ImageryStyle",
           "label": "Imagery Style",
           "shouldOverrideDefaultEditor": true,

@@ -54,6 +54,14 @@ public sealed partial class Sample : UserControl, INotifyPropertyChanged
             //end onViewInit
 //endifdef onViewInit
         };
+//ifdef onViewDestroy
+
+        // What onViewInit started stops when the sample leaves the visual tree.
+        this.Unloaded += (s, e) => {
+            //insert onViewDestroy
+            //end onViewDestroy
+        };
+//endifdef onViewDestroy
     }
 
     //insert vmProperties
