@@ -133,6 +133,10 @@ igRegisterScript("ExtractDataChartState", (container) => {
                 data.highPath = series.highMemberPath;
                 if (series.xAxis != null) { data.xAxis = getName(series.xAxis); }
                 if (series.yAxis != null) { data.yAxis = getName(series.yAxis); }
+                if (data.yAxis != null && data.xAxis != null) {
+                    data.categoryWidth = fromPixelUnits(series.getCategoryWidth());
+                    data.offset = fromPixelUnits(series.getOffsetValue());
+                }
             } else if (series.isScatter) {
                 if (series.xAxis != null) { data.xAxis = getName(series.xAxis); }
                 if (series.yAxis != null) { data.yAxis = getName(series.yAxis); }
