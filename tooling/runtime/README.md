@@ -30,6 +30,11 @@ exactly pinned and registered through `defineAllComponents()`, and their generat
 covered by emission and compile checks. DataGrid and all canonical types without the `Web` prefix are
 part of the required browser baseline.
 
+Sankey samples are quarantined until the pinned charts package exports their series. In particular,
+the monthly-flow editor imports `IgcSankeySeriesComponent`; emitting that handler against the current
+beta prevents the shared harness from starting, before any sample can run. Startup browser errors
+are always logged, including module import errors, without requiring `--verbose`.
+
 Samples whose `onViewInit` deliberately starts work that never completes list those exact handler
 names in `"testingSkippedViewInits"`. Runtime testing removes only those named initialisers from the
 JSON before loading it; the rest of the sample still renders and must settle normally. The harness

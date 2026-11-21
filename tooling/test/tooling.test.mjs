@@ -99,6 +99,26 @@ test('keeps test-opted exclusions out of the downstream emission impact set', ()
     }
 });
 
+test('quarantines unpublished Sankey descriptions before the shared runtime library is emitted', () => {
+    const examplesRoot = path.resolve(ROOT, '..');
+    const knownIssues = JSON.parse(fs.readFileSync(
+        path.join(ROOT, 'runtime/known-issues.json'), 'utf8'));
+    const quarantined = new Set(knownIssues.map(issue => issue.sample));
+    const unpublished = new Set(['SankeySeries', 'RadialSankeySeries']);
+    const required = emittableSampleNames(examplesRoot, 'WebComponents', { testing: true })
+        .filter(name => !quarantined.has(name));
+
+    for (const name of required) {
+        JSON.parse(fs.readFileSync(path.join(examplesRoot, 'samples', name), 'utf8'), (key, value) => {
+            if (key === 'type') {
+                assert.ok(!unpublished.has(value),
+                    `${name} requires unpublished ${value}; quarantine it before emitting its handlers`);
+            }
+            return value;
+        });
+    }
+});
+
 test('applies an emission impact manifest without touching unrelated downstream folders', () => {
     const workspace = fs.mkdtempSync(path.join(os.tmpdir(), 'xplat-impact-export-test-'));
     const output = path.join(workspace, 'samples');

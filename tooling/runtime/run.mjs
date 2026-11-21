@@ -749,7 +749,10 @@ async function openPage() {
         // The first frame as well as the message: "cannot read properties of null" says nothing about
         // where, and where is the whole question when a component throws during load.
         const frame = String(error.stack ?? '').split('\n').find(line => line.trim().startsWith('at '));
-        if (current === null && VERBOSE) console.error(`[runtime] harness startup error: ${error.stack ?? error}`);
+        if (current === null) {
+            const detail = error.stack || `${error.name}: ${error.message}`;
+            console.error(`[runtime] harness startup error: ${detail}`);
+        }
         noteProblem(current, `uncaught: ${error.message}${frame ? `\n            ${frame.trim()}` : ''}`);
     });
     page.on('console', (message) => {
@@ -788,7 +791,7 @@ async function openPage() {
         chatter.push(`${message.type()}: ${text}`);
         if (chatter.length > 40) chatter.shift();
         if (message.type() !== 'error') return;
-        if (current === null && VERBOSE) console.error(`[runtime] harness startup console: ${text}`);
+        if (current === null) console.error(`[runtime] harness startup console: ${text}`);
         // A sample binding to a remote service is not what this check is about, and a network failure in
         // CI would report as a component error.
         if (/net::ERR_|Failed to load resource|ERR_NAME_NOT_RESOLVED/.test(text)) return;
