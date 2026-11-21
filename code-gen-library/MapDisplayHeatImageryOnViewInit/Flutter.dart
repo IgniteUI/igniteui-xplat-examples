@@ -2,11 +2,15 @@
 import 'dart:ui' as ui;
 import 'package:igniteui_flutter_core/src/ArrayList.dart' show ArrayList;
 import 'package:igniteui_flutter_core/src/Color.dart' show Color;
+//begin testing
 import 'package:igniteui_flutter_core/src/DownloadingMultiScaleImageEventHandler.dart' show DownloadingMultiScaleImageEventHandler;
 import 'package:igniteui_flutter_core/src/GlobalQueuedWorkState.dart' show GlobalQueuedWorkState;
+//end testing
 import 'package:igniteui_flutter_core/src/HeatTileGenerator.dart' show HeatTileGenerator;
 import 'package:igniteui_flutter_core/src/igf-shape-data-source.dart' show IgfShapeDataSourceState;
+//begin testing
 import 'package:igniteui_flutter_core/src/type.dart' show Delegate, EventArgs, EventHandler$1;
+//end testing
 import 'package:igniteui_flutter_maps/src/GeographicTileSeries.dart' show GeographicTileSeries;
 import 'package:igniteui_flutter_maps/src/TileGeneratorMapImagery.dart' show TileGeneratorMapImagery;
 import 'package:igniteui_flutter_maps/src/igf-geographic-map.dart' show IgfGeographicMapState;
@@ -20,11 +24,15 @@ class MapDisplayHeatImageryOnViewInit {
         final map = CodeGenHelper.getDescription<IgfGeographicMapState>('content')!;
         map.zoomToGeographic(const ui.Rect.fromLTWH(-134.5, 16, 70, 37));
         final source = IgfShapeDataSourceState();
+        //begin testing
         final work = GlobalQueuedWorkState.instance!;
         const channel = 'Sample.MapDisplayHeatImageryOnViewInit';
         work.notifyWorkQueued(channel);
+        //end testing
         source.importCompleted = (IgfShapeDataSourceState loaded) {
+            //begin testing
             try {
+            //end testing
                 final latitudes = <double>[];
                 final longitudes = <double>[];
                 final populations = <double>[];
@@ -61,12 +69,15 @@ class MapDisplayHeatImageryOnViewInit {
                         Color.fromArgb(200, 255, 0, 0)
                     ]);
                 final imagery = TileGeneratorMapImagery()..tileGenerator = generator;
+                //begin testing
                 var requestedTiles = false;
                 imagery.downloadingImage = Delegate.delegateCombine(imagery.downloadingImage,
                     DownloadingMultiScaleImageEventHandler((sender, args) {
                         requestedTiles = true;
                     }));
+                //end testing
                 final series = map.i_IgfGeographicMap.series![0] as GeographicTileSeries;
+                //begin testing
                 var completed = false;
                 series.imageTilesReady = EventHandler$1<EventArgs?>((sender, args) {
                     // An empty imagery layer can report ready before its first request.
@@ -75,11 +86,14 @@ class MapDisplayHeatImageryOnViewInit {
                         work.notifyWorkCompleted(channel);
                     }
                 });
+                //end testing
                 series.tileImagery = imagery;
+            //begin testing
             } catch (_) {
                 work.notifyWorkCompleted(channel);
                 rethrow;
             }
+            //end testing
         };
         const root = 'https://static.infragistics.com/xplatform/shapes/';
         source.shapefileSource = root + 'AmericanCities.shp';

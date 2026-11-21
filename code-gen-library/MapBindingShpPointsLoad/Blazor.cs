@@ -18,13 +18,22 @@ public void MapBindingShpPointsLoad()
         ShapefileSource = root + "WorldCities.shp",
         DatabaseSource = root + "WorldCities.dbf"
     };
+    //begin testing
     var work = GlobalQueuedWorkState.Instance;
     const string channel = "Sample.MapBindingShpPointsLoad.Import";
     work.NotifyWorkQueued(channel);
+    //end testing
     sds.ImportCompleted += (sender, args) =>
     {
+        //begin testing
         try { readers.ReadPoints(sender, args); }
+        //end testing
+        //begin notTesting
+        readers.ReadPoints(sender, args);
+        //end notTesting
+        //begin testing
         finally { work.NotifyWorkCompleted(channel); }
+        //end testing
     };
     sds.DataBind();
 }

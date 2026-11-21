@@ -20,7 +20,9 @@ public static class PieChartAnimation
     private static XamPieChart chart;
     // The GLib timeout driving the ticks; 0 while none is scheduled.
     private static uint timer;
+    //begin testing
     private static GlobalAnimationState animationState;
+    //end testing
 
     public static bool Running
     {
@@ -47,8 +49,10 @@ public static class PieChartAnimation
         chart.Destroyed += Chart_Destroyed;
         chart.StartAngle = 0;
         chart.RadiusFactor = 0.1;
+        //begin testing
         animationState = GlobalAnimationState.Instance;
         animationState.NotifyAnimationStart();
+        //end testing
         timer = GLib.Timeout.Add((uint)15, () =>
         {
             Tick();
@@ -63,8 +67,10 @@ public static class PieChartAnimation
         {
             GLib.Source.Remove(timer);
             timer = 0;
+            //begin testing
             animationState.NotifyAnimationEnd();
             animationState = null;
+            //end testing
         }
         if (chart != null)
         {

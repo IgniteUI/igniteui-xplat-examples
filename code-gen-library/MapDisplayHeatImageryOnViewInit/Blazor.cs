@@ -14,6 +14,7 @@ public class MapDisplayHeatImageryOnViewInit
 
         var root = "https://static.infragistics.com/xplatform/shapes/";
 
+        //begin testing
         var work = GlobalQueuedWorkState.Instance;
         const string channel = "Sample.MapDisplayHeatImageryOnViewInit";
         work.NotifyWorkQueued(channel);
@@ -25,6 +26,7 @@ public class MapDisplayHeatImageryOnViewInit
             completed = true;
             work.NotifyWorkCompleted(channel);
         };
+        //end testing
         var sds = new IgbShapeDataSource()
         {
             ShapefileSource = root + "AmericanCities.shp",
@@ -32,8 +34,10 @@ public class MapDisplayHeatImageryOnViewInit
         };
         sds.ImportCompleted += (object s, EventArgs e) =>
         {
+            //begin testing
             try
             {
+            //end testing
                 var latitudes = new List<double>();
                 var longitudes = new List<double>();
                 var populations = new List<double>();
@@ -86,18 +90,22 @@ public class MapDisplayHeatImageryOnViewInit
 
                 var tileImagery = new IgbTileGeneratorMapImagery();
                 tileImagery.TileGenerator = gen;
+                //begin testing
                 tileImagery.DownloadingImage += (sender, args) => requestedTiles = true;
                 tileImagery.ImageTilesReady += (sender, args) => { if (requestedTiles) complete(); };
+                //end testing
 
                 // generating heat map series
                 var series = (IgbGeographicTileSeries)map.Series[0];
                 series.TileImagery = tileImagery;
+            //begin testing
             }
             catch
             {
                 complete();
                 throw;
             }
+            //end testing
 
         };
         sds.DataBind();

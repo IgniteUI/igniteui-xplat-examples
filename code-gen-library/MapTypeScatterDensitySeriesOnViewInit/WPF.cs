@@ -25,11 +25,13 @@ public class MapTypeScatterDensitySeriesOnViewInit
     {
         var map = CodeGenHelper.GetDescription<XamGeographicMap>("content");
         var url = "https://static.infragistics.com/xplatform/data/AusPlaces.csv";
+        //begin testing
         var work = Infragistics.GlobalQueuedWorkState.Instance;
         const string workChannel = "Sample.MapTypeScatterDensitySeriesOnViewInit.Load";
         work.NotifyWorkQueued(workChannel);
         try
         {
+        //end testing
             using (var client = new HttpClient())
             {
                 var csv = await client.GetStringAsync(url);
@@ -82,11 +84,13 @@ public class MapTypeScatterDensitySeriesOnViewInit
                     series.ProgressiveLoadStatusChanged -= onProgress;
                 }
             }
+        //begin testing
         }
         finally
         {
             work.NotifyWorkCompleted(workChannel);
         }
+        //end testing
     }
     //end eventHandler
 }

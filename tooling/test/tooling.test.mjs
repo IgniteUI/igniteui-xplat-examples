@@ -435,9 +435,10 @@ test('adapts current Blazor collection and tooltip context APIs', () => {
     const userAnnotation = emitProject(
         fs.readFileSync(path.join(examplesRoot, 'samples/charts/data-chart/user-annotation-layer.json'), 'utf8'),
         'Blazor', { examplesRoot });
-    assert.match(userAnnotation.files['App.razor'], /IgbUserAnnotationInformation pending/);
-    assert.match(userAnnotation.files['App.razor'], /fields\.Label = this\.annotationLabel/);
-    assert.doesNotMatch(userAnnotation.files['App.razor'], /this\.AnnotationLabel/);
+    assert.match(userAnnotation.files['App.razor'], /UserAnnotationInformationRequestedScript="DataChartUserAnnotationRequested"/);
+    assert.match(userAnnotation.files['wwwroot/events.js'], /igRegisterScript\("DataChartUserAnnotationRequested"/);
+    assert.match(userAnnotation.files['wwwroot/events.js'], /info\.label = labelInput\.value/);
+    assert.match(userAnnotation.files['wwwroot/events.js'], /chart\.finishAnnotationFlow\(info\)/);
 
     const doughnut = emitProject(
         fs.readFileSync(path.join(examplesRoot, 'samples/charts/doughnut-chart/selection.json'), 'utf8'),
@@ -581,14 +582,15 @@ test('emits WinUI and Uno libraries through the native product renderers', () =>
     }
 });
 
-test('includes the data classes referenced by a selected Blazor library item', () => {
+test('retains declared data types and dependencies of selected Blazor library items', () => {
     const emitted = emitLibrary('Blazor', {
         examplesRoot: path.resolve(ROOT, '..'),
         templatesRoot: path.join(ROOT, 'library-templates'),
         only: ['RetailSalesPerformanceLocalDataSource', 'DataGridLiveDataTickerOnViewInit'],
     });
     assert.deepEqual(emitted.problems, []);
-    assert.match(emitted.files['RetailSalesPerformanceData.cs'], /class RetailSalesPerformanceDataItem/);
+    assert.match(emitted.files['RetailSalesPerformanceLocalDataSource.cs'], /class RetailSalesPerformanceDataLDSItem/);
+    assert.match(emitted.files['RetailSalesPerformanceLocalDataSource.cs'], /List<RetailSalesPerformanceDataLDSItem>/);
     assert.match(emitted.files['PortfolioData.cs'], /class PortfolioDataItem/);
 });
 
@@ -597,7 +599,7 @@ test('includes referenced data classes in a standalone Blazor dashboard sample',
     const emitted = emitProject(fs.readFileSync(path.join(examplesRoot,
         'samples/charts/dashboard-tile/local-data-source-dashboard.json'), 'utf8'),
     'Blazor', { examplesRoot });
-    assert.match(emitted.files['RetailSalesPerformanceLocalDataSource.cs'], /RetailSalesPerformanceDataItem/);
-    assert.match(emitted.files['RetailSalesPerformanceData.cs'], /class RetailSalesPerformanceDataItem/);
+    assert.match(emitted.files['RetailSalesPerformanceLocalDataSource.cs'], /List<RetailSalesPerformanceDataLDSItem>/);
+    assert.match(emitted.files['RetailSalesPerformanceLocalDataSource.cs'], /class RetailSalesPerformanceDataLDSItem/);
     assert.equal(emitted.files['LibraryManager.cs'], undefined);
 });

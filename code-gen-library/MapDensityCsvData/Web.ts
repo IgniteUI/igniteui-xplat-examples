@@ -1,6 +1,8 @@
 //begin imports
 import { IgcGeographicMapComponent, IgcGeographicHighDensityScatterSeriesComponent } from 'igniteui-webcomponents-maps';
+//begin testing
 import { GlobalQueuedWorkState } from 'igniteui-webcomponents-core';
+//end testing
 //end imports
 
 //begin supportingTypes
@@ -9,9 +11,11 @@ export class MapDensityCsvData {
         latitudeColumn: number, longitudeColumn: number,
         bounds: { left: number; top: number; width: number; height: number },
         workChannel: string, populationColumn?: number): Promise<void> {
+        //begin testing
         const work = GlobalQueuedWorkState.instance;
         work.notifyWorkQueued(workChannel);
         try {
+        //end testing
             const response = await fetch(url);
             if (!response.ok) throw new Error('CSV request failed: ' + response.status);
             const csv = await response.text();
@@ -57,9 +61,11 @@ export class MapDensityCsvData {
             } finally {
                 series.progressiveLoadStatusChanged = null;
             }
+        //begin testing
         } finally {
             work.notifyWorkCompleted(workChannel);
         }
+        //end testing
     }
 }
 //end supportingTypes

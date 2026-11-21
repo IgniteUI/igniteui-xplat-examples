@@ -15,17 +15,23 @@ public void MapBindingShpPointsLoad()
     var readers = CodeGenHelper.GetSharedSupporting<MapMultipleShapesReaders>("MapMultipleShapesReaders");
 
     var sds = new ShapefileConverter();
+    //begin testing
     var work = Infragistics.Portable.GlobalQueuedWorkState.Instance;
     const string channel = "Sample.MapBindingShpPointsLoad.Import";
     work.NotifyWorkQueued(channel);
+    //end testing
     sds.ImportCompleted += (sender, args) =>
     {
+        //begin testing
         try
         {
+        //end testing
             if (args.Error != null) throw args.Error;
             readers.ReadPoints(sender, args);
+        //begin testing
         }
         finally { work.NotifyWorkCompleted(channel); }
+        //end testing
     };
     sds.ShapefileSource = new Uri(root + "WorldCities.shp");
     sds.DatabaseSource = new Uri(root + "WorldCities.dbf");

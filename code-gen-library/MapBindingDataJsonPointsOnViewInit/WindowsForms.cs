@@ -25,46 +25,52 @@ public class MapBindingDataJsonPointsOnViewInit
     //WindowsForms: System.Action
     public async void MapBindingDataJsonPointsOnViewInit()
     {
+        //begin testing
         var work = Infragistics.Portable.GlobalQueuedWorkState.Instance;
         const string channel = "Sample.MapBindingDataJsonPointsOnViewInit.Load";
         work.NotifyWorkQueued(channel);
+        //end testing
+        //begin testing
         try
         {
-            var map = CodeGenHelper.GetDescription<XamGeographicMap>("content");
-            var url = "https://static.infragistics.com/xplatform/data/WorldCities.json";
-            string json;
-            using (var client = new HttpClient())
+        //end testing
+        var map = CodeGenHelper.GetDescription<XamGeographicMap>("content");
+        var url = "https://static.infragistics.com/xplatform/data/WorldCities.json";
+        string json;
+        using (var client = new HttpClient())
+        {
+            json = await client.GetStringAsync(url);
+        }
+        var array = JArray.Parse(json);
+        var geoLocations = new List<WorldPlaceJson>();
+        foreach (var item in array)
+        {
+            if (item.Value<bool>("cap") == false) continue;
+            geoLocations.Add(new WorldPlaceJson
             {
-                json = await client.GetStringAsync(url);
-            }
-            var array = JArray.Parse(json);
-            var geoLocations = new List<WorldPlaceJson>();
-            foreach (var item in array)
-            {
-                if (item.Value<bool>("cap") == false) continue;
-                geoLocations.Add(new WorldPlaceJson
-                {
-                    Name = item.Value<string>("name"),
-                    Lat = item.Value<double>("lat"),
-                    Lon = item.Value<double>("lon"),
-                    Pop = item.Value<double>("pop"),
-                    Country = item.Value<string>("country"),
-                    Cap = item.Value<bool>("cap")
-                });
-            }
-            var series = new GeographicSymbolSeries
-            {
-                ItemsSource = geoLocations,
-                LatitudeMemberPath = "Lat",
-                LongitudeMemberPath = "Lon",
-                MarkerBrush = new SolidColorBrush(Color.FromArgb(255, 255, 255, 255)),
-                MarkerOutline = new SolidColorBrush(Color.FromArgb(255, 135, 5, 255)),
-                Thickness = 1,
-                MarkerType = MarkerType.Circle
-            };
-            map.Series.Add(series);
+                Name = item.Value<string>("name"),
+                Lat = item.Value<double>("lat"),
+                Lon = item.Value<double>("lon"),
+                Pop = item.Value<double>("pop"),
+                Country = item.Value<string>("country"),
+                Cap = item.Value<bool>("cap")
+            });
+        }
+        var series = new GeographicSymbolSeries
+        {
+            ItemsSource = geoLocations,
+            LatitudeMemberPath = "Lat",
+            LongitudeMemberPath = "Lon",
+            MarkerBrush = new SolidColorBrush(Color.FromArgb(255, 255, 255, 255)),
+            MarkerOutline = new SolidColorBrush(Color.FromArgb(255, 135, 5, 255)),
+            Thickness = 1,
+            MarkerType = MarkerType.Circle
+        };
+        map.Series.Add(series);
+        //begin testing
         }
         finally { work.NotifyWorkCompleted(channel); }
+        //end testing
     }
     //end eventHandler
 }

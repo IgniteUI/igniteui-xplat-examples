@@ -26,11 +26,13 @@ public class MapBindingDataCsvOnViewInit
     {
         var map = CodeGenHelper.GetDescription<XamGeographicMap>("content");
         var url = "https://static.infragistics.com/xplatform/data/UsaCitiesPopulation.csv";
+        //begin testing
         var work = Infragistics.GlobalQueuedWorkState.Instance;
         const string workChannel = "Sample.MapBindingDataCsvOnViewInit.Load";
         work.NotifyWorkQueued(workChannel);
         try
         {
+        //end testing
             using (var client = new HttpClient())
             {
                 var csv = await client.GetStringAsync(url);
@@ -85,11 +87,13 @@ public class MapBindingDataCsvOnViewInit
                     series.ProgressiveLoadStatusChanged -= onProgress;
                 }
             }
+        //begin testing
         }
         finally
         {
             work.NotifyWorkCompleted(workChannel);
         }
+        //end testing
     }
     //end eventHandler
 }

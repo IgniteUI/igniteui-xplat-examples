@@ -6,7 +6,9 @@ import 'package:igniteui_flutter_core/src/IgfBrush.dart' show IgfSolidColorBrush
 import 'package:igniteui_flutter_maps/src/igf-geographic-map.dart' show IgfGeographicMapState;
 import 'package:igniteui_flutter_maps/src/igf-geographic-symbol-series.dart' show IgfGeographicSymbolSeriesState;
 import 'package:igniteui_flutter_library/libraryManager.dart' show CodeGenHelper;
+//begin testing
 import 'package:igniteui_flutter_core/src/GlobalQueuedWorkState.dart' show GlobalQueuedWorkState;
+//end testing
 //end imports
 
 class MapBindingDataJsonPointsOnViewInit
@@ -18,9 +20,11 @@ class MapBindingDataJsonPointsOnViewInit
         var url = "https://static.infragistics.com/xplatform/data/WorldCities.json";
         // HttpClient out of dart:io rather than a package: the emitted library depends on the
         // product packages and intl, and nothing else.
+        //begin testing
         final work = GlobalQueuedWorkState.instance!;
         const channel = 'Sample.MapBindingDataJsonPointsOnViewInit.Load';
         work.notifyWorkQueued(channel);
+        //end testing
         _fetch(url).then((text) {
             var data = jsonDecode(text) as List<dynamic>;
             var geoLocations = <Map<String, Object?>>[];
@@ -47,7 +51,11 @@ class MapBindingDataJsonPointsOnViewInit
             series.markerThickness = 1;
             series.markerType = MarkerType.circle;
             map.series!.add(series);
-        }).whenComplete(() => work.notifyWorkCompleted(channel));
+        })
+        //begin testing
+        .whenComplete(() => work.notifyWorkCompleted(channel))
+        //end testing
+        ;
     }
 
     static Future<String> _fetch(String url) async {

@@ -1,6 +1,9 @@
 //begin imports
-import { IgcShapeDataSource, GlobalQueuedWorkState } from 'igniteui-webcomponents-core';
+import { IgcShapeDataSource } from 'igniteui-webcomponents-core';
 import { IgcGeographicMapComponent } from 'igniteui-webcomponents-maps';
+//begin testing
+import { GlobalQueuedWorkState } from 'igniteui-webcomponents-core';
+//end testing
 //end imports
 
 import { CodeGenHelper } from 'igniteui-webcomponents-core';
@@ -22,12 +25,21 @@ export class MapBindingShpPointsLoad {
         var map = CodeGenHelper.getDescription<IgcGeographicMapComponent>("content");
 
         var sds = new IgcShapeDataSource();
+        //begin testing
         const work = GlobalQueuedWorkState.instance;
         const channel = "Sample.MapBindingShpPointsLoad.Import";
         work.notifyWorkQueued(channel);
+        //end testing
         sds.importCompleted = (s: IgcShapeDataSource, e: any) => {
+            //begin testing
             try { readers.readPoints(s, e, map); }
+            //end testing
+            //begin notTesting
+            readers.readPoints(s, e, map);
+            //end notTesting
+            //begin testing
             finally { work.notifyWorkCompleted(channel); }
+            //end testing
         };
         sds.shapefileSource = root + "WorldCities.shp";
         sds.databaseSource = root + "WorldCities.dbf";

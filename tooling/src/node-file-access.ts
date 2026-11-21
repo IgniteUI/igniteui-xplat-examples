@@ -14,6 +14,7 @@ import * as fs from "node:fs";
 import * as path from "node:path";
 
 import { ICodeGenerationLibraryFileAccess } from "igniteui-webcomponents-core";
+import { resolveTestingSectionsInFile } from "./testing-sections";
 
 export class NodeCodeGenerationLibraryFileAccess implements ICodeGenerationLibraryFileAccess {
     fileExists(p: string): boolean {
@@ -36,7 +37,8 @@ export class NodeCodeGenerationLibraryFileAccess implements ICodeGenerationLibra
         // The .NET side reads UTF-8 and strips any BOM; match that so region markers at
         // the very start of a file still match.
         const text = fs.readFileSync(p, "utf8");
-        return text.charCodeAt(0) === 0xfeff ? text.slice(1) : text;
+        const source = text.charCodeAt(0) === 0xfeff ? text.slice(1) : text;
+        return resolveTestingSectionsInFile(source, p);
     }
 
     getFiles(p: string): string[] {

@@ -3,7 +3,9 @@ import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
 import 'dart:ui' as ui;
+//begin testing
 import 'package:igniteui_flutter_core/src/GlobalQueuedWorkState.dart' show GlobalQueuedWorkState;
+//end testing
 import 'package:igniteui_flutter_core/src/type.dart' show EventHandler$1, Delegate;
 import 'package:igniteui_flutter_charts/src/ProgressiveLoadStatusEventArgs.dart' show ProgressiveLoadStatusEventArgs;
 import 'package:igniteui_flutter_maps/src/igf-geographic-map.dart' show IgfGeographicMapState;
@@ -19,8 +21,10 @@ class MapDensityCsvData {
         required ui.Rect geographicBounds,
         required String workChannel,
     }) async {
+        //begin testing
         final work = GlobalQueuedWorkState.instance!;
         work.notifyWorkQueued(workChannel);
+        //end testing
         final client = HttpClient();
         try {
             final uri = Uri.parse(url);
@@ -77,7 +81,9 @@ class MapDensityCsvData {
             }
         } finally {
             client.close(force: true);
+            //begin testing
             work.notifyWorkCompleted(workChannel);
+            //end testing
         }
     }
 }

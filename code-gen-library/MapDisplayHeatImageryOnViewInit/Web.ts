@@ -1,6 +1,9 @@
 //begin imports
 import { IgcGeographicMapComponent, IgcGeographicTileSeriesComponent, IgcTileGeneratorMapImagery } from 'igniteui-webcomponents-maps';
-import { GlobalQueuedWorkState, IgcHeatTileGenerator, IgcShapeDataSource } from 'igniteui-webcomponents-core';
+import { IgcHeatTileGenerator, IgcShapeDataSource } from 'igniteui-webcomponents-core';
+//begin testing
+import { GlobalQueuedWorkState } from 'igniteui-webcomponents-core';
+//end testing
 //end imports
 
 import { CodeGenHelper } from 'igniteui-webcomponents-core';
@@ -14,6 +17,7 @@ export class MapDisplayHeatImageryOnViewInit {
 
         var root = "https://static.infragistics.com/xplatform/shapes/";
 
+        //begin testing
         const work = GlobalQueuedWorkState.instance;
         const channel = 'Sample.MapDisplayHeatImageryOnViewInit';
         work.notifyWorkQueued(channel);
@@ -24,9 +28,12 @@ export class MapDisplayHeatImageryOnViewInit {
             completed = true;
             work.notifyWorkCompleted(channel);
         };
+        //end testing
         var sds = new IgcShapeDataSource();
         sds.importCompleted = () => {
+            //begin testing
             try {
+            //end testing
                 var latitudes: number[] = [];
                 var longitudes: number[] = [];
                 var populations: number[] = [];
@@ -77,16 +84,20 @@ export class MapDisplayHeatImageryOnViewInit {
 
                 var tileImagery = new IgcTileGeneratorMapImagery();
                 tileImagery.tileGenerator = gen;
+                //begin testing
                 tileImagery.downloadingImage = () => { requestedTiles = true; };
                 tileImagery.imageTilesReady = () => { if (requestedTiles) complete(); };
+                //end testing
 
                 // generating heat map series
                 var series = map.series.item(0) as IgcGeographicTileSeriesComponent;
                 series.tileImagery = tileImagery;
+            //begin testing
             } catch (error) {
                 complete();
                 throw error;
             }
+            //end testing
 
         };
         sds.shapefileSource = root + "AmericanCities.shp";

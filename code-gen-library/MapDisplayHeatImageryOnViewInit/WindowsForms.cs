@@ -17,6 +17,7 @@ public class MapDisplayHeatImageryOnViewInit
         var root = "https://static.infragistics.com/xplatform/shapes/";
 
         var sds = new ShapefileConverter();
+        //begin testing
         var work = Infragistics.Portable.GlobalQueuedWorkState.Instance;
         const string channel = "Sample.MapDisplayHeatImageryOnViewInit";
         work.NotifyWorkQueued(channel);
@@ -28,10 +29,13 @@ public class MapDisplayHeatImageryOnViewInit
             completed = true;
             work.NotifyWorkCompleted(channel);
         };
+        //end testing
         sds.ImportCompleted += (s, e) =>
         {
+            //begin testing
             try
             {
+            //end testing
                 if (e.Error != null) throw e.Error;
                 var latitudes = new List<double>();
                 var longitudes = new List<double>();
@@ -76,21 +80,27 @@ public class MapDisplayHeatImageryOnViewInit
 
                 var tileImagery = new TileGeneratorMapImagery();
                 tileImagery.TileGenerator = gen;
+                //begin testing
                 tileImagery.DownloadingImage += (sender, args) => requestedTiles = true;
+                //end testing
 
                 // Bind the imagery to the series declared in the sample JSON.
                 var series = (GeographicTileSeries)map.Series[0];
+                //begin testing
                 series.ImageTilesReady += (sender, args) =>
                 {
                     if (requestedTiles) complete();
                 };
+                //end testing
                 series.TileImagery = tileImagery;
+            //begin testing
             }
             catch
             {
                 complete();
                 throw;
             }
+            //end testing
         };
         sds.ShapefileSource = new Uri(root + "AmericanCities.shp");
         sds.DatabaseSource = new Uri(root + "AmericanCities.dbf");
