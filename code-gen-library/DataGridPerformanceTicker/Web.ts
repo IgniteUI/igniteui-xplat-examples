@@ -2,8 +2,6 @@
 import { IgcDataGridComponent } from 'igniteui-webcomponents-data-grids';
 //end imports
 
-import { CodeGenHelper } from 'igniteui-webcomponents-core';
-
 //begin supportingTypes
 /**
  * Keeps the performance grid's sales figures changing: every tick it picks rows to change, at most as
@@ -17,13 +15,17 @@ export class DataGridPerformanceTicker {
     public isTimerTicking: boolean = false;
     public toChangePerInterval: number = 200;
 
-    public start(): void {
+    private grid: IgcDataGridComponent | null = null;
+
+    public start(grid: IgcDataGridComponent): void {
+        this.grid = grid;
         this.startTicking();
     }
 
     public stop(): void {
         this.isTimerTicking = false;
         this.generation++;
+        this.grid = null;
     }
 
     private generation: number = 0;
@@ -49,7 +51,7 @@ export class DataGridPerformanceTicker {
     public onTimerTick(): void {
         if (!this.isTimerTicking) return;
 
-        const grid = CodeGenHelper.getDescription<IgcDataGridComponent>("content");
+        const grid = this.grid;
         if (!grid) {
             this.scheduleTick();
             return;

@@ -1,4 +1,5 @@
 //begin imports
+import { IgcDataGridComponent } from 'igniteui-webcomponents-data-grids';
 //end imports
 
 import { CodeGenHelper } from 'igniteui-webcomponents-core';
@@ -11,7 +12,8 @@ export class DataGridPerformanceTickerOnViewInit {
     //begin eventHandler
     /** Starts the sample's ticker once its grid is in place. */
     public dataGridPerformanceTickerOnViewInit(): void {
-        CodeGenHelper.getSharedSupporting<DataGridPerformanceTicker>("DataGridPerformanceTicker").start();
+        const grid = CodeGenHelper.getDescription<IgcDataGridComponent>("content");
+        CodeGenHelper.getSharedSupporting<DataGridPerformanceTicker>("DataGridPerformanceTicker").start(grid);
     }
     //end eventHandler
 }
