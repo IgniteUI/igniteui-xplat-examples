@@ -5,3 +5,9 @@ Then the map named aerialMap will have background imagery of type BingMapsMapIma
 Then the map named aerialMap will have background imagery style AerialWithLabels
 Then the map named roadMap will have background imagery of type BingMapsMapImagery
 Then the map named roadMap will have background imagery style Road
+When we remove background imagery from the map named roadMap
+Then the map named roadMap will have background imagery of type None
+And the map named aerialMap will have background imagery style AerialWithLabels
+When we restore background imagery on the map named roadMap
+Then the map named roadMap will have background imagery of type BingMapsMapImagery
+And the map named roadMap will have background imagery style Road
