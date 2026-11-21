@@ -1105,11 +1105,30 @@ export function emitLibrary(platformName: string, opts: {
     if (platform === undefined) {
         throw new Error(`unknown platform: ${platformName}`);
     }
+    const library: any = libraryFor(opts.examplesRoot);
+    // A caller's excluded dependency cannot be supplied to its requiring item.
+    // Match LibraryProjectEmitter's closure rather than emitting a broken holder.
+    const excluded = new Set(opts.exclude ?? []);
+    const allNames: string[] = library.getItemNames?.() ?? library.getKeys();
+    let expanded: boolean;
+    do {
+        expanded = false;
+        for (const name of allNames) {
+            if (excluded.has(name)) continue;
+            const required: string[] = library.getItem(name).getRequiresForPlatform(platform) ?? [];
+            const missing = required.find(dependency => excluded.has(dependency));
+            if (missing === undefined) continue;
+            excluded.add(name);
+            expanded = true;
+            console.warn(`[${platformName}] excluding library item '${name}' (requires excluded '${missing}')`);
+        }
+    } while (expanded);
+    opts = { ...opts, exclude: [...excluded], only: (opts.only ?? allNames).filter(name => !excluded.has(name)) };
     if (platformName === "Blazor") {
-        return emitBlazorLibrary(platform, opts, libraryFor(opts.examplesRoot));
+        return emitBlazorLibrary(platform, opts, library);
     }
     if (platformName === "WinUI" || platformName === "Uno") {
-        return emitNativeXamlLibrary(platformName, platform, opts, libraryFor(opts.examplesRoot));
+        return emitNativeXamlLibrary(platformName, platform, opts, library);
     }
     if (platformName !== "WebComponents" && platformName !== "React" && platformName !== "Angular") {
         // The item templates and the shape of the lookup are per platform.
@@ -1117,7 +1136,6 @@ export function emitLibrary(platformName: string, opts: {
     }
 
     const templateDir = itemTemplateDirFor(platformName, opts.templatesRoot);
-    const library: any = libraryFor(opts.examplesRoot);
     const names: string[] = (opts.only ?? (library.getItemNames?.() ?? library.getKeys()))
         .filter((name: string) => !isAccessibilityLibraryItem(name));
 
@@ -1157,6 +1175,7 @@ export function emitLibrary(platformName: string, opts: {
 
     while (queue.length > 0) {
         const name = queue.shift() as string;
+        if (excluded.has(name)) continue;
         if (!library.hasItem(name)) {
             problems.push({ item: name, reason: "no such library item" });
             continue;

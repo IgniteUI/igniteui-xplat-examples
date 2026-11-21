@@ -594,6 +594,22 @@ test('retains declared data types and dependencies of selected Blazor library it
     assert.match(emitted.files['PortfolioData.cs'], /class PortfolioDataItem/);
 });
 
+test('excludes holders whose required item was excluded by the caller', () => {
+    const opts = {
+        examplesRoot: path.resolve(ROOT, '..'),
+        templatesRoot: path.join(ROOT, 'library-templates'),
+        only: ['MapBindingShpPointsLoad', 'SalesData'],
+        exclude: ['MapMultipleShapesReaders'],
+    };
+    const emitted = emitLibrary('Blazor', opts);
+    assert.deepEqual(emitted.problems, []);
+    assert.ok(emitted.files['SalesData.cs']);
+    assert.doesNotMatch(emitted.manager, /MapBindingShpPointsLoad|MapMultipleShapesReaders/);
+    assert.equal(Object.keys(emitted.files).some(file => /MapBindingShpPointsLoad/.test(file)), false);
+    assert.deepEqual(opts.only, ['MapBindingShpPointsLoad', 'SalesData']);
+    assert.deepEqual(opts.exclude, ['MapMultipleShapesReaders']);
+});
+
 test('includes referenced data classes in a standalone Blazor dashboard sample', () => {
     const examplesRoot = path.resolve(ROOT, '..');
     const emitted = emitProject(fs.readFileSync(path.join(examplesRoot,
