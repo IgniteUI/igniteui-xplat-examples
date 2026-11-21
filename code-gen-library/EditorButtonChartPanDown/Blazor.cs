@@ -8,7 +8,8 @@ public class EditorButtonChartPanDown
     public void EditorButtonChartPanDown(IgbPropertyEditorPropertyDescriptionButtonClickEventArgs args)
     {
         var chart = CodeGenHelper.GetDescription<IgbDataChart>("content");
-        chart.ActualWindowPositionVertical += 0.05;
+        var window = chart.GetCurrentActualWindowRect()!;
+        chart.WindowRect = new Rect(window.Left, window.Top + 0.05, window.Width, window.Height);
     }
     //end eventHandler
 }

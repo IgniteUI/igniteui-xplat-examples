@@ -9,7 +9,8 @@ export class EditorButtonChartPanLeft {
     //begin eventHandler
     public editorButtonChartPanLeft(sender: any, args: IgcPropertyEditorPropertyDescriptionButtonClickEventArgs): void {
         var chart = CodeGenHelper.getDescription<IgcDataChartComponent>("content");
-        chart.actualWindowPositionHorizontal -= 0.05;
+        const window = chart.actualWindowRect;
+        chart.windowRect = { left: window.left - 0.05, top: window.top, width: window.width, height: window.height };
     }
     //end eventHandler
 }

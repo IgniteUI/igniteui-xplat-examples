@@ -22,6 +22,16 @@ When we are talking about the series with name priceSeries
 Then this chart will have a window rect of 0.05,0.05,0.9,0.9
 When we click the 'Pan Right' row in the property editor panel
 Then this chart will have a window rect of 0.1,0.05,0.9,0.9
+When we click the 'Pan Left' row in the property editor panel
+Then this chart will have a window rect of 0.05,0.05,0.9,0.9
+When we click the 'Pan Down' row in the property editor panel
+Then this chart will have a window rect of 0.05,0.1,0.9,0.9
+When we click the 'Pan Up' row in the property editor panel
+Then this chart will have a window rect of 0.05,0.05,0.9,0.9
+When we click the 'Zoom Out' row in the property editor panel
+Then this chart will have a window rect of 0.025,0.025,0.95,0.95
+When we click the 'Zoom Out' row in the property editor panel
+Then this chart will have a window rect of 0,0,1,1
 When we set the charts window rect to 0,0,0.5,1
 When we are talking about the axis with name xAxis
 Then this axis will contain a labels for 2019-01-10

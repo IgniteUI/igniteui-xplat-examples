@@ -9,7 +9,8 @@ export class EditorButtonChartPanDown {
     //begin eventHandler
     public editorButtonChartPanDown(sender: any, args: IgcPropertyEditorPropertyDescriptionButtonClickEventArgs): void {
         var chart = CodeGenHelper.getDescription<IgcDataChartComponent>("content");
-        chart.actualWindowPositionVertical += 0.05;
+        const window = chart.actualWindowRect;
+        chart.windowRect = { left: window.left, top: window.top + 0.05, width: window.width, height: window.height };
     }
     //end eventHandler
 }
