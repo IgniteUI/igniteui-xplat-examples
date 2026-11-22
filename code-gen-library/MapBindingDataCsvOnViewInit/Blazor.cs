@@ -66,7 +66,7 @@ public class MapBindingDataCsvOnViewInit
                 if (geoLocations.Count == 0) throw new InvalidOperationException("The CSV contained no geographic locations.");
                 var rendered = new TaskCompletionSource<bool>();
                 series.ProgressiveLoadStatusChanged = EventCallback.Factory.Create<IgbProgressiveLoadStatusEventArgs>(
-                    series, (IgbProgressiveLoadStatusEventArgs args) =>
+                    rendered, (IgbProgressiveLoadStatusEventArgs args) =>
                     {
                         if (args.CurrentStatus == 100) rendered.TrySetResult(true);
                     });
