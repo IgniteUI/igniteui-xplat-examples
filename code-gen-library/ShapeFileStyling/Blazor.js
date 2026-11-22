@@ -1,20 +1,21 @@
 ﻿//begin eventHandler
 igRegisterScript("ShapeFileStyling", (o, e) => {
-    // applying conditional styling based on Contient field loaded from DBF file
-    var c = e.item.getFieldValue("Continent")
+    // The event describes an item range; read its record through the current event API.
+    var record = e.getItems(e.startIndex, e.endIndex)[0];
+    var c = record.getFieldValue("Continent");
     if (c == "Africa") {
-        e.shapeFill = "#ECB912"; 
+        e.fill = "#ECB912";
     } else if (c == "Asia") {
-        e.shapeFill = "#E11D1D";
+        e.fill = "#E11D1D";
     } else if (c == "Europe") {
-        e.shapeFill = "#2894EC";
+        e.fill = "#2894EC";
     } else if (c == "South America" || c == "North America") {
-        e.shapeFill = "#0CC308";
+        e.fill = "#0CC308";
     } else if (c == "Australia") {
-        e.shapeFill = "#B42AE9";
+        e.fill = "#B42AE9";
     } else {
-        e.shapeFill = "gray";
+        e.fill = "gray";
     }
-    e.shapeOutline = "black";
+    e.stroke = "black";
 }, false);
 //end eventHandler
