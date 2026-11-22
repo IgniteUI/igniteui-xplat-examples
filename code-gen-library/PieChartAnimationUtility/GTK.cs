@@ -1,6 +1,7 @@
 //begin imports
 using Infragistics.Controls.Charts;
 using System;
+using System.Diagnostics;
 using Infragistics.Core.Graphics;
 using Infragistics.Portable;
 //end imports
@@ -17,6 +18,8 @@ using Infragistics.Portable;
 // inside the component's own instance, so the entry points do the asking and pass the answer on.
 public static class PieChartAnimation
 {
+    // The original 360 updates at 15ms describe a 5.4-second animation.
+    private const double DurationMilliseconds = 5400;
     private static XamPieChart chart;
     // The GLib timeout driving the ticks; 0 while none is scheduled.
     private static uint timer;
@@ -49,13 +52,14 @@ public static class PieChartAnimation
         chart.Destroyed += Chart_Destroyed;
         chart.StartAngle = 0;
         chart.RadiusFactor = 0.1;
+        var started = Stopwatch.StartNew();
         //begin testing
         animationState = GlobalAnimationState.Instance;
         animationState.NotifyAnimationStart();
         //end testing
         timer = GLib.Timeout.Add((uint)15, () =>
         {
-            Tick();
+            Tick(started.Elapsed.TotalMilliseconds);
             // Tick may have stopped the timer, which has removed this source already.
             return timer != 0;
         });
@@ -84,22 +88,17 @@ public static class PieChartAnimation
         chart = null;
     }
 
-    private static void Tick()
+    private static void Tick(double elapsedMilliseconds)
     {
         if (chart == null)
         {
             return;
         }
-        if (chart.RadiusFactor < 1.0)
-        {
-            chart.RadiusFactor += 0.0025;
-        }
-        if (chart.StartAngle < 360)
-        {
-            chart.StartAngle++;
-        }
-        // Both have arrived, so there is nothing left to step.
-        if (chart.RadiusFactor >= 1.0 && chart.StartAngle >= 360)
+        // Timer callbacks can arrive less often than requested under rendering load.
+        var progress = Math.Min(1.0, elapsedMilliseconds / DurationMilliseconds);
+        chart.RadiusFactor = 0.1 + 0.9 * progress;
+        chart.StartAngle = 360 * progress;
+        if (progress >= 1.0)
         {
             Stop();
         }

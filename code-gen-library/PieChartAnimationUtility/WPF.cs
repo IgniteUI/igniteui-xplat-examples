@@ -1,6 +1,7 @@
 //begin imports
 using Infragistics.Controls.Charts;
 using System;
+using System.Diagnostics;
 using System.Windows.Threading;
 using Infragistics;
 //end imports
@@ -17,6 +18,8 @@ using Infragistics;
 // inside the component's own instance, so the entry points do the asking and pass the answer on.
 public static class PieChartAnimation
 {
+    // The original 360 updates at 15ms describe a 5.4-second animation.
+    private const double DurationMilliseconds = 5400;
     private static XamPieChart chart;
     private static DispatcherTimer timer;
     //begin testing
@@ -46,9 +49,10 @@ public static class PieChartAnimation
         chart = target;
         chart.StartAngle = 0;
         chart.RadiusFactor = 0.1;
+        var started = Stopwatch.StartNew();
         timer = new DispatcherTimer();
         timer.Interval = TimeSpan.FromMilliseconds(15);
-        timer.Tick += (s, e) => Tick();
+        timer.Tick += (s, e) => Tick(started.Elapsed.TotalMilliseconds);
         //begin testing
         animationState = GlobalAnimationState.Instance;
         animationState.NotifyAnimationStart();
@@ -69,22 +73,17 @@ public static class PieChartAnimation
         }
     }
 
-    private static void Tick()
+    private static void Tick(double elapsedMilliseconds)
     {
         if (chart == null)
         {
             return;
         }
-        if (chart.RadiusFactor < 1.0)
-        {
-            chart.RadiusFactor += 0.0025;
-        }
-        if (chart.StartAngle < 360)
-        {
-            chart.StartAngle++;
-        }
-        // Both have arrived, so there is nothing left to step.
-        if (chart.RadiusFactor >= 1.0 && chart.StartAngle >= 360)
+        // Timer callbacks can arrive less often than requested under rendering load.
+        var progress = Math.Min(1.0, elapsedMilliseconds / DurationMilliseconds);
+        chart.RadiusFactor = 0.1 + 0.9 * progress;
+        chart.StartAngle = 360 * progress;
+        if (progress >= 1.0)
         {
             Stop();
         }

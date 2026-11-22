@@ -26,16 +26,17 @@ class PieChartAnimation {
         stop();
         chart.startAngle = 0;
         chart.radiusFactor = 0.1;
+        final started = Stopwatch()..start();
         //begin testing
         _animationState = GlobalAnimationState.instance!;
         _animationState!.notifyAnimationStart();
         //end testing
         _timer = Timer.periodic(const Duration(milliseconds: 15), (_) {
-            if (chart.radiusFactor < 1) {
-                chart.radiusFactor = (chart.radiusFactor + 0.0025).clamp(0.1, 1.0).toDouble();
-            }
-            if (chart.startAngle < 360) chart.startAngle++;
-            if (chart.radiusFactor >= 1 && chart.startAngle >= 360) stop();
+            // Preserve the original 360 x 15ms duration even when callbacks run late.
+            final progress = (started.elapsedMicroseconds / 5400000).clamp(0.0, 1.0).toDouble();
+            chart.radiusFactor = 0.1 + 0.9 * progress;
+            chart.startAngle = 360 * progress;
+            if (progress >= 1) stop();
         });
     }
 

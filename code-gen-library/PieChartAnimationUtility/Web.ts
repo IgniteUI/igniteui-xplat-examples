@@ -37,10 +37,11 @@ export class PieChartAnimation {
         PieChartAnimation.chart = chart;
         chart.startAngle = 0;
         chart.radiusFactor = 0.1;
+        const started = performance.now();
         //begin testing
         GlobalAnimationState.instance.notifyAnimationStart();
         //end testing
-        PieChartAnimation.timer = setInterval(() => PieChartAnimation.tick(), 15);
+        PieChartAnimation.timer = setInterval(() => PieChartAnimation.tick(performance.now() - started), 15);
     }
 
     public static stop(): void {
@@ -53,19 +54,16 @@ export class PieChartAnimation {
         }
     }
 
-    private static tick(): void {
+    private static tick(elapsedMilliseconds: number): void {
         var chart = PieChartAnimation.chart;
         if (chart == null) {
             return;
         }
-        if (chart.radiusFactor < 1.0) {
-            chart.radiusFactor += 0.0025;
-        }
-        if (chart.startAngle < 360) {
-            chart.startAngle++;
-        }
-        // Both have arrived, so there is nothing left to step.
-        if (chart.radiusFactor >= 1.0 && chart.startAngle >= 360) {
+        // Preserve the original 360 x 15ms duration even when callbacks run late.
+        const progress = Math.min(1, elapsedMilliseconds / 5400);
+        chart.radiusFactor = 0.1 + 0.9 * progress;
+        chart.startAngle = 360 * progress;
+        if (progress >= 1) {
             PieChartAnimation.stop();
         }
     }
