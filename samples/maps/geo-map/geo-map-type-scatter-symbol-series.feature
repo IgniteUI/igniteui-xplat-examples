@@ -1,5 +1,6 @@
 # Two GeographicSymbolSeries of circle markers: WorldCities (606 cities) white with a Gray outline and
 # WorldCapitals (164 capitals) white with an rgb(32,146,252) outline.
+Given the sample uses offline imagery responses from MapOfflineImageryResponse
 When we are talking about the series with name CitiesSeries
 Then this series will have markers with type Circle
 Then this series will have markers with fill White and outline Gray

@@ -6,6 +6,7 @@
 # Atlanta-Johannesburg Black, New York-Doha Purple, Los Angeles-Sydney Gray.
 # The map is zoomed to world window (0.2, 0.1, 0.6, 0.6) = roughly lon -108..108, lat -58..81; marker counts are
 # asserted only for flights whose two cities both fall inside that window.
+Given the sample uses offline imagery responses from MapOfflineImageryResponse
 When we are talking about the series with name flight0Route
 Then this series will have main shapes with outline Green
 Then this series will have main shapes with thickness 9

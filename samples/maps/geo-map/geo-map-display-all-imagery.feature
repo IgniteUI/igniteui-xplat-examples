@@ -1,4 +1,6 @@
 # Documentation: components/geo-map-resources-esri.mdx — selecting imagery providers.
+Given the sample uses offline imagery responses from MapOfflineImageryResponse
+Given the sample replaces event handler EditorChangeImagerySource with MapOfflineImagerySourceChanged
 Then the map named map will have background imagery of type OpenStreetMapImagery
 When we choose 'WorldStreetMap (ESRI)' from the 'Imagery Source' row in the property editor panel
 Then the map named map will have background imagery of type ArcGISOnlineMapImagery

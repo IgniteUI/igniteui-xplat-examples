@@ -1,5 +1,6 @@
 # Both maps use the SeriesViewer synchronization described in
 # components/charts/features/chart-synchronization.mdx.
+Given the sample uses offline imagery responses from MapOfflineImageryResponse
 Then the map named map will have window rect 0,0,1,1
 And the map named secondMap will have window rect 0,0,1,1
 When we set the map named map window rect to 0.25,0.2,0.5,0.5

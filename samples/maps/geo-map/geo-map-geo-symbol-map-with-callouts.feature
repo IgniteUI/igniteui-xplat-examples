@@ -2,6 +2,7 @@
 # GeographicSymbolSeries, each labelled with its Name by a CalloutLayer (simulated-annealing collision avoidance,
 # white callouts with black text, #1E90FF outline and leader, stroke thickness 2). A horizontal legend shows the
 # series title.
+Given the sample uses offline imagery responses from MapOfflineImageryResponse
 When we are talking about the series with name GeographicSymbolSeries1
 Then this series will have 41 markers
 Then this series will have markers with type Circle

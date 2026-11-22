@@ -1,5 +1,6 @@
 # WorldCities point records are imported from .shp/.dbf and bound by longitude/latitude.
 # ImportCompleted releases queued work after binding; no delay or render polling is needed.
+Given the sample uses offline imagery responses from MapOfflineImageryResponse
 When we are talking about the series with name symbolSeries
 Then this series will have markers with type Circle
 Then this series will have markers with fill White and outline rgb(2,102,196)

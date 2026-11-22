@@ -1,6 +1,7 @@
 # Documentation: components/geo-map-type-scatter-area-series.mdx.
 # WorldTemperatures has these 0/10/20/30 C isotherm vertices. Pixel centers can
 # interpolate slightly away from a vertex; allow eight premultiplied channel levels.
+Given the sample uses offline imagery responses from MapOfflineImageryResponse
 Then geographic area series named areaSeries in map geoMap will render these isotherm colors within 8 per channel:
   | Longitude | Latitude | Color                  |
   | 2         | -54.8    | rgba(32,146,252,0.5)    |

@@ -1,5 +1,6 @@
 # Documentation: components/geo-map-display-heat-imagery.mdx.
 # AmericanCities supplies one reading per city. Its DBF population field is POP2010.
+Given the sample uses offline imagery responses from MapOfflineImageryResponse
 Then the map named map will fit geographic region -134.5, 16, 70, 37
 And the tile series named heatSeries will generate logarithmic heat for 27047 locations with these populations:
   | Longitude           | Latitude           | Population |

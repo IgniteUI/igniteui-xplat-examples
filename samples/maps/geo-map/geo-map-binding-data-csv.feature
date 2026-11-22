@@ -1,6 +1,7 @@
 # Documentation: components/geo-map-binding-data-csv.mdx.
 # Coordinates from the CSV: New York, Los Angeles and Chicago. The Gulf control
 # is more than five degrees from the nearest input point and must stay empty.
+Given the sample uses offline imagery responses from MapOfflineImageryResponse
 Then the map named map will fit geographic region -130, 15, 65, 35
 And geographic density series named hdSeries in map map will render heat at these locations:
   | Longitude | Latitude | Heat    |

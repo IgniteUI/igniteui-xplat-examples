@@ -1,5 +1,6 @@
 # WorldCountries.shp bound declaratively through a ShapeDataSource to a GeographicShapeSeries:
 # translucent gray fill rgba(146,146,146,0.3), black outline, thickness 1.
+Given the sample uses offline imagery responses from MapOfflineImageryResponse
 When we are talking about the series with name GeographicShapeSeries1
 Then this series will have some visible shapes
 Then this series will have main shapes with fill rgba(146,146,146,0.3)

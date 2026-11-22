@@ -1,5 +1,6 @@
 # WorldCableRoutes.shp loaded through a ShapefileConverter (MapBindingShpFileLoad + MapShpFileReaders) and bound
 # to lineSeries: semi-transparent gray routes, stroke thickness 3, shape filter resolution 0 (no route dropped).
+Given the sample uses offline imagery responses from MapOfflineImageryResponse
 When we are talking about the series with name lineSeries
 Then this series will have some visible shapes
 # The JSON stroke "rgb(82, 82, 82, 0.4)" is a 4-component rgb(); the product reads its 0.4 alpha.

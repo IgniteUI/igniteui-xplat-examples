@@ -1,6 +1,7 @@
 # Three series over three in-code data sources: WorldFlights routes (lineSeries), 30-degree meridians/parallels
 # (gridSeries, from WorldGridlines) and WorldAirports locations (symbolSeries). The flights and airports are
 # picked at random by WorldConnections.Init, so counts are not asserted; styling comes from the sample JSON.
+Given the sample uses offline imagery responses from MapOfflineImageryResponse
 When we are talking about the series with name lineSeries
 # Alpha 0.05 is 12.75/255; the product and the test brush parser agree on it.
 Then this series will have main shapes with outline rgba(196,14,14,0.05)

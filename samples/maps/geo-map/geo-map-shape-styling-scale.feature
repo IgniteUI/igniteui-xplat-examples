@@ -3,6 +3,7 @@
 # ShapeStrokeColors [Black] with ShapeThickness 0.5. The series is unnamed, so select it by index.
 # Per-country scale fills cannot be targeted by an existing step (see report).
 # The series is added once the shapefile has been imported.
+Given the sample uses offline imagery responses from MapOfflineImageryResponse
 Then this chart will have 1 series
 When we are talking about the series at index 0
 Then this series will have some visible shapes

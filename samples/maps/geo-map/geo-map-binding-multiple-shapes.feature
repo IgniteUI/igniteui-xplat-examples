@@ -2,6 +2,7 @@
 # polygonSeries, WorldCableRoutes polylines into lineSeries, WorldCities points into symbolSeries.
 # Styling comes from the sample JSON.
 # Each series is filled once its own shapefile has been imported.
+Given the sample uses offline imagery responses from MapOfflineImageryResponse
 When we are talking about the series with name polygonSeries
 Then this series will have some visible shapes
 Then this series will have main shapes with fill rgb(150,150,150)
