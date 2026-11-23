@@ -12,7 +12,7 @@ public class TestsAccessibilityNodeCancelAuto
     {
         if (args.Node != null && args.Node.Role == AccessibilityRole.Item)
         {
-            args.Node.Description = "";
+            args.Node.DescriptionText = "";
             args.CancelAuto = true;
         }
     }

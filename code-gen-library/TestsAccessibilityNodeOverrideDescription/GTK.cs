@@ -12,7 +12,7 @@ public class TestsAccessibilityNodeOverrideDescription
     {
         if (args.Node != null && args.Node.Role == AccessibilityRole.Item)
         {
-            args.Node.Description = "custom override";
+            args.Node.DescriptionText = "custom override";
         }
     }
     //end eventHandler

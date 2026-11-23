@@ -14,7 +14,7 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const CLI = path.join(ROOT, 'src', 'cli.mjs');
 const require = createRequire(import.meta.url);
 require('../src/dom-shim.cjs');
-const { emitLibrary, emitProject } = require('../dist/codegen-api.cjs');
+const { emitProject } = require('../dist/codegen-api.cjs');
 
 test('maps emitted folder diffs back to added, modified, and removed samples', () => {
     const workspace = fs.mkdtempSync(path.join(os.tmpdir(), 'xplat-impact-test-'));
@@ -554,6 +554,20 @@ test('emits a Blazor Razor library with data, handlers, manager, and project', (
         assert.match(fs.readFileSync(path.join(output, 'LibraryManager.cs'), 'utf8'), /SalesData/);
         assert.match(fs.readFileSync(path.join(output, 'LibraryManager.cs'), 'utf8'),
             /PropertyEditorInitAggregationsOnViewInit/);
+    } finally {
+        fs.rmSync(output, { recursive: true, force: true });
+    }
+});
+
+test('emits a Blazor data-only library manager without importing Blazor holder namespace', () => {
+    const output = fs.mkdtempSync(path.join(os.tmpdir(), 'xplat-blazor-data-only-library-test-'));
+    try {
+        execFileSync(process.execPath, [
+            CLI, 'library', '--platform=Blazor',
+            '--only=SalesData',
+            `--output=${output}`, '--clean',
+        ], { cwd: ROOT, stdio: 'pipe' });
+        assert.doesNotMatch(fs.readFileSync(path.join(output, 'LibraryManager.cs'), 'utf8'), /using BlazorLibrary;/);
     } finally {
         fs.rmSync(output, { recursive: true, force: true });
     }
