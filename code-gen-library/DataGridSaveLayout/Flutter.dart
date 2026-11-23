@@ -8,7 +8,7 @@ import 'package:igniteui_flutter_library/libraryManager.dart' show CodeGenHelper
 class DataGridSaveLayout {
     //begin eventHandler
     void dataGridSaveLayout(Object? sender, IgfPropertyEditorPropertyDescriptionButtonClickEventArgsState args) {
-        final grid = CodeGenHelper.getDescription<IgfDataGridState>('content')!.i_IgfDataGrid;
+        final grid = CodeGenHelper.getDescription<IgfDataGridState>('content')!;
         final state = CodeGenHelper.getSharedSupporting<DataGridLayoutState>('DataGridLayoutState')!;
         state.savedLayout = grid.saveLayout();
     }

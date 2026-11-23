@@ -7,7 +7,7 @@ import 'package:igniteui_flutter_library/libraryManager.dart' show CodeGenHelper
 class DataGridSelectAllRows {
     //begin eventHandler
     void dataGridSelectAllRows(Object? sender, IgfPropertyEditorPropertyDescriptionButtonClickEventArgsState args) {
-        final grid = CodeGenHelper.getDescription<IgfDataGridState>('content')!.i_IgfDataGrid;
+        final grid = CodeGenHelper.getDescription<IgfDataGridState>('content')!;
         grid.selectAllRows();
     }
     //end eventHandler

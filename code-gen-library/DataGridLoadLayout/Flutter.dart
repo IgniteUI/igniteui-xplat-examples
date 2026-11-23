@@ -11,7 +11,7 @@ class DataGridLoadLayout {
         final state = CodeGenHelper.getSharedSupporting<DataGridLayoutState>('DataGridLayoutState')!;
         final layout = state.savedLayout;
         if (layout != null && layout.isNotEmpty) {
-            CodeGenHelper.getDescription<IgfDataGridState>('content')!.i_IgfDataGrid.loadLayout(layout);
+            CodeGenHelper.getDescription<IgfDataGridState>('content')!.loadLayout(layout);
         }
     }
     //end eventHandler

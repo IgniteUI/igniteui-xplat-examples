@@ -8,9 +8,9 @@ import 'package:igniteui_flutter_library/libraryManager.dart' show CodeGenHelper
 class DataGridPinIdAndNameColumnsLeft {
     //begin eventHandler
     void dataGridPinIdAndNameColumnsLeft(Object? sender, IgfPropertyEditorPropertyDescriptionButtonClickEventArgsState args) {
-        final grid = CodeGenHelper.getDescription<IgfDataGridState>('content')!.i_IgfDataGrid;
+        final grid = CodeGenHelper.getDescription<IgfDataGridState>('content')!;
         for (var index = 0; index < 3; index++) {
-            grid.pinColumn(grid.actualColumns![index], PinnedPositions.left);
+            grid.columns![index]!.pinned = PinnedPositions.left;
         }
     }
     //end eventHandler

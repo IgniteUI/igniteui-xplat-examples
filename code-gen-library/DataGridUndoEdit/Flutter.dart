@@ -7,7 +7,7 @@ import 'package:igniteui_flutter_library/libraryManager.dart' show CodeGenHelper
 class DataGridUndoEdit {
     //begin eventHandler
     void dataGridUndoEdit(Object? sender, IgfPropertyEditorPropertyDescriptionButtonClickEventArgsState args) {
-        CodeGenHelper.getDescription<IgfDataGridState>('content')!.i_IgfDataGrid.undo();
+        CodeGenHelper.getDescription<IgfDataGridState>('content')!.undo();
     }
     //end eventHandler
 }

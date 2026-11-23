@@ -10,8 +10,8 @@ class DataGridPinSampleEmployeesOnViewInit {
     void dataGridPinSampleEmployeesOnViewInit() {
         final grid = CodeGenHelper.getDescription<IgfDataGridState>('content')!;
         final data = CodeGenHelper.findByName<ArrayList<Object?>>('EmployeesSalesData')!;
-        grid.i_IgfDataGrid.pinnedItems!.add(data[2]);
-        grid.i_IgfDataGrid.pinnedItems!.add(data[4]);
+        grid.pinnedItems!.addCollectionItem(data[2]);
+        grid.pinnedItems!.addCollectionItem(data[4]);
     }
     //end eventHandler
 }

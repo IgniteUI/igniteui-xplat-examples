@@ -8,9 +8,9 @@ import 'package:igniteui_flutter_grid/src/PinnedPositions.dart' show PinnedPosit
 class DataGridUnpinNameAndAddressColumns {
     //begin eventHandler
     void dataGridUnpinNameAndAddressColumns(Object? sender, IgfPropertyEditorPropertyDescriptionButtonClickEventArgsState args) {
-        final grid = CodeGenHelper.getDescription<IgfDataGridState>('content')!.i_IgfDataGrid;
+        final grid = CodeGenHelper.getDescription<IgfDataGridState>('content')!;
         for (final index in [0, 1, 2, 6, 7, 8]) {
-            grid.pinColumn(grid.actualColumns![index], PinnedPositions.none);
+            grid.columns![index]!.pinned = PinnedPositions.none;
         }
     }
     //end eventHandler

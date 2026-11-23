@@ -1,18 +1,17 @@
 //begin imports
 import 'dart:ui' as ui;
-import 'package:igniteui_flutter_core/src/ArrayList.dart' show ArrayList;
 import 'package:igniteui_flutter_core/src/Color.dart' show Color;
 //begin testing
 import 'package:igniteui_flutter_core/src/DownloadingMultiScaleImageEventHandler.dart' show DownloadingMultiScaleImageEventHandler;
 import 'package:igniteui_flutter_core/src/GlobalQueuedWorkState.dart' show GlobalQueuedWorkState;
 //end testing
-import 'package:igniteui_flutter_core/src/HeatTileGenerator.dart' show HeatTileGenerator;
+import 'package:igniteui_flutter_core/src/igf-heat-tile-generator.dart' show IgfHeatTileGeneratorState;
 import 'package:igniteui_flutter_core/src/igf-shape-data-source.dart' show IgfShapeDataSourceState;
 //begin testing
 import 'package:igniteui_flutter_core/src/type.dart' show Delegate, EventArgs, EventHandler$1;
 //end testing
-import 'package:igniteui_flutter_maps/src/GeographicTileSeries.dart' show GeographicTileSeries;
-import 'package:igniteui_flutter_maps/src/TileGeneratorMapImagery.dart' show TileGeneratorMapImagery;
+import 'package:igniteui_flutter_maps/src/igf-geographic-tile-series.dart' show IgfGeographicTileSeriesState;
+import 'package:igniteui_flutter_maps/src/igf-tile-generator-map-imagery.dart' show IgfTileGeneratorMapImageryState;
 import 'package:igniteui_flutter_maps/src/igf-geographic-map.dart' show IgfGeographicMapState;
 import 'package:igniteui_flutter_library/libraryManager.dart' show CodeGenHelper;
 //end imports
@@ -49,37 +48,39 @@ class MapDisplayHeatImageryOnViewInit {
                         }
                     }
                 }
-                final generator = HeatTileGenerator()
-                    ..xValues = ArrayList<double>(longitudes)
-                    ..yValues = ArrayList<double>(latitudes)
-                    ..values = ArrayList<double>(populations)
+                final generator = IgfHeatTileGeneratorState()
+                    ..xValues = longitudes
+                    ..yValues = latitudes
+                    ..values = populations
                     ..blurRadius = 6
                     ..maxBlurRadius = 20
                     ..useBlurRadiusAdjustedForZoom = true
-                    ..minimumColor = Color.fromArgb(128, 100, 255, 0)
-                    ..maximumColor = Color.fromArgb(128, 255, 255, 0)
+                    ..minimumColor = const ui.Color.fromARGB(128, 100, 255, 0)
+                    ..maximumColor = const ui.Color.fromARGB(128, 255, 255, 0)
                     ..useGlobalMinMax = true
                     ..useGlobalMinMaxAdjustedForZoom = true
                     ..useLogarithmicScale = true
-                    ..scaleColors = ArrayList<Color>([
+                    ..scaleColors = [
                         Color.fromArgb(64, 0, 0, 255),
                         Color.fromArgb(96, 0, 255, 255),
                         Color.fromArgb(68, 50, 205, 50),
                         Color.fromArgb(180, 255, 255, 0),
                         Color.fromArgb(200, 255, 0, 0)
-                    ]);
-                final imagery = TileGeneratorMapImagery()..tileGenerator = generator;
+                    ];
+                final imagery = IgfTileGeneratorMapImageryState()
+                    ..tileGenerator = generator.i_IgfHeatTileGenerator;
                 //begin testing
                 var requestedTiles = false;
-                imagery.downloadingImage = Delegate.delegateCombine(imagery.downloadingImage,
+                final nativeImagery = imagery.i_IgfTileGeneratorMapImagery;
+                nativeImagery.downloadingImage = Delegate.delegateCombine(nativeImagery.downloadingImage,
                     DownloadingMultiScaleImageEventHandler((sender, args) {
                         requestedTiles = true;
                     }));
                 //end testing
-                final series = map.i_IgfGeographicMap.series![0] as GeographicTileSeries;
+                final series = map.series![0] as IgfGeographicTileSeriesState;
                 //begin testing
                 var completed = false;
-                series.imageTilesReady = EventHandler$1<EventArgs?>((sender, args) {
+                series.i_IgfGeographicTileSeries.imageTilesReady = EventHandler$1<EventArgs?>((sender, args) {
                     // An empty imagery layer can report ready before its first request.
                     if (requestedTiles && !completed) {
                         completed = true;

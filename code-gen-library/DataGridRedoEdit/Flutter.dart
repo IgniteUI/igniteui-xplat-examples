@@ -7,7 +7,7 @@ import 'package:igniteui_flutter_library/libraryManager.dart' show CodeGenHelper
 class DataGridRedoEdit {
     //begin eventHandler
     void dataGridRedoEdit(Object? sender, IgfPropertyEditorPropertyDescriptionButtonClickEventArgsState args) {
-        CodeGenHelper.getDescription<IgfDataGridState>('content')!.i_IgfDataGrid.redo();
+        CodeGenHelper.getDescription<IgfDataGridState>('content')!.redo();
     }
     //end eventHandler
 }

@@ -14,7 +14,7 @@ class DataGridDeleteRowButtonTemplate {
         final row = cell.rowItem;
         args.content = TextButton(
             onPressed: cell.isDeleted ? null : () {
-                CodeGenHelper.getDescription<IgfDataGridState>('content')!.i_IgfDataGrid.removeItem(row);
+                CodeGenHelper.getDescription<IgfDataGridState>('content')!.removeItem(row);
             },
             child: const Text('Delete'));
     }

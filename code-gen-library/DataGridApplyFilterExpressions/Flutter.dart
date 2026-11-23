@@ -10,7 +10,7 @@ class DataGridApplyFilterExpressions {
   //begin eventHandler
   void dataGridApplyFilterExpressions(Object? sender,
       IgfPropertyEditorPropertyDescriptionChangedEventArgsState args) {
-    final grid = CodeGenHelper.getDescription<IgfDataGridState>('content')!.i_IgfDataGrid;
+    final grid = CodeGenHelper.getDescription<IgfDataGridState>('content')!;
     Object? value(String name) => CodeGenHelper
         .findByName<IgfPropertyEditorPropertyDescriptionState>(name)!.primitiveValue;
     final text = value('FilterTextEditor')?.toString() ?? '';

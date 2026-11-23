@@ -7,7 +7,7 @@ import 'package:igniteui_flutter_library/libraryManager.dart' show CodeGenHelper
 class DataGridCommitEdits {
     //begin eventHandler
     void dataGridCommitEdits(Object? sender, IgfPropertyEditorPropertyDescriptionButtonClickEventArgsState args) {
-        CodeGenHelper.getDescription<IgfDataGridState>('content')!.i_IgfDataGrid.commitEdits();
+        CodeGenHelper.getDescription<IgfDataGridState>('content')!.commitEdits();
     }
     //end eventHandler
 }

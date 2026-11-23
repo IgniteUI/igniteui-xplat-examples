@@ -9,7 +9,7 @@ class DataGridRegisterCustomAgeFilterOnViewInit {
   //begin eventHandler
   //Flutter: Action
   void dataGridRegisterCustomAgeFilterOnViewInit() {
-    final grid = CodeGenHelper.getDescription<IgfDataGridState>('content')!.i_IgfDataGrid;
+    final grid = CodeGenHelper.getDescription<IgfDataGridState>('content')!;
     final age = IgfFilterOperandState()
       ..displayName = 'Filter As Class'
       ..isInputRequired = false
@@ -17,7 +17,7 @@ class DataGridRegisterCustomAgeFilterOnViewInit {
     age.filterRequested = (_, args) {
       args.expression = args.filterFactory!.property(args.column!.field)!.isEqualTo1(30);
     };
-    grid.actualColumns![1]!.filterOperands!.add(age.i_IgfFilterOperand);
+    grid.columns![1]!.filterOperands!.add(age);
     final sales = IgfFilterOperandState()
       ..displayName = '(Custom) In-Line Filter'
       ..isInputRequired = false
@@ -25,7 +25,7 @@ class DataGridRegisterCustomAgeFilterOnViewInit {
     sales.filterRequested = (_, args) {
       args.expression = args.filterFactory!.property('Sales')!.isLessThanOrEqualTo1(300000);
     };
-    grid.actualColumns![2]!.filterOperands!.add(sales.i_IgfFilterOperand);
+    grid.columns![2]!.filterOperands!.add(sales);
   }
   //end eventHandler
 }

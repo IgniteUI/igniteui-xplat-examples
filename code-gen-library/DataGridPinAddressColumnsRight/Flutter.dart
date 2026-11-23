@@ -8,9 +8,9 @@ import 'package:igniteui_flutter_grid/src/PinnedPositions.dart' show PinnedPosit
 class DataGridPinAddressColumnsRight {
     //begin eventHandler
     void dataGridPinAddressColumnsRight(Object? sender, IgfPropertyEditorPropertyDescriptionButtonClickEventArgsState args) {
-        final grid = CodeGenHelper.getDescription<IgfDataGridState>('content')!.i_IgfDataGrid;
+        final grid = CodeGenHelper.getDescription<IgfDataGridState>('content')!;
         for (final index in [6, 7, 8]) {
-            grid.pinColumn(grid.actualColumns![index], PinnedPositions.right);
+            grid.columns![index]!.pinned = PinnedPositions.right;
         }
     }
     //end eventHandler

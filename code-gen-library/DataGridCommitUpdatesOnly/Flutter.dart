@@ -8,7 +8,7 @@ import 'package:igniteui_flutter_library/libraryManager.dart' show CodeGenHelper
 class DataGridCommitUpdatesOnly {
     //begin eventHandler
     void dataGridCommitUpdatesOnly(Object? sender, IgfGridDataCommittingEventArgsState args) {
-        final grid = CodeGenHelper.getDescription<IgfDataGridState>('content')!.i_IgfDataGrid;
+        final grid = CodeGenHelper.getDescription<IgfDataGridState>('content')!;
         if (args.changes![0]!.transactionType == TransactionType.update) {
             grid.acceptCommit(args.commitID);
         } else {

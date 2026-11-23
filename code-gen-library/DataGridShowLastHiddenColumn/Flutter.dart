@@ -7,8 +7,8 @@ import 'package:igniteui_flutter_library/libraryManager.dart' show CodeGenHelper
 class DataGridShowLastHiddenColumn {
     //begin eventHandler
     void dataGridShowLastHiddenColumn(Object? sender, IgfPropertyEditorPropertyDescriptionButtonClickEventArgsState args) {
-        final grid = CodeGenHelper.getDescription<IgfDataGridState>('content')!.i_IgfDataGrid;
-        final columns = grid.actualColumns!;
+        final grid = CodeGenHelper.getDescription<IgfDataGridState>('content')!;
+        final columns = grid.columns!;
         for (var index = columns.count - 1; index >= 0; index--) {
             final column = columns[index]!;
             if (column.isHidden) {

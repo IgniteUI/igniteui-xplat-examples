@@ -3,6 +3,8 @@ import 'dart:async';
 import 'dart:math' as math;
 import 'package:igniteui_flutter_core/src/ArrayList.dart';
 import 'package:igniteui_flutter_grid/src/igf-data-grid.dart';
+import 'package:igniteui_flutter_grid/src/ColumnSortDescription.dart' show ColumnSortDescription;
+import 'package:igniteui_flutter_grid/src/igf-column-sort-description.dart' show IgfColumnSortDescriptionState;
 import 'package:igniteui_flutter_library/libraryManager.dart' show CodeGenHelper;
 import 'package:igniteui_flutter_library/DataGridSampleCells.dart';
 //end imports
@@ -52,10 +54,13 @@ class DataGridPerformanceTicker {
       final selected = <int>{};
       final count = update ? math.min(toChangePerInterval, rows.length) : 0;
       while (selected.length < count) selected.add(_random.nextInt(rows.length));
-      final sorts = target.i_IgfDataGrid.sortDescriptions!;
+      final sorts = target.sortDescriptions!;
       var sortingValues = false;
-      for (var i = 0; i < sorts.count; i++) {
-        final field = sorts[i]!.field ?? '';
+      for (var i = 0; i < sorts.getCollectionCount(); i++) {
+        final item = sorts.getCollectionItem(i) as ColumnSortDescription;
+        final description = item.externalObject as IgfColumnSortDescriptionState? ??
+            (IgfColumnSortDescriptionState()..i_provideImplementation(item));
+        final field = description.field ?? '';
         sortingValues = sortingValues || field == 'AvgSale' || field.contains('Change');
       }
       for (var i = 0; i < rows.length; i++) {

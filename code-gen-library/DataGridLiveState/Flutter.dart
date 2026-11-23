@@ -4,7 +4,9 @@ import 'dart:math' as math;
 import 'package:igniteui_flutter_core/src/ArrayList.dart';
 import 'package:igniteui_flutter_core/src/ListSortDirection.dart';
 import 'package:igniteui_flutter_grid/src/igf-data-grid.dart';
-import 'package:igniteui_flutter_grid/src/ColumnGroupDescription.dart';
+import 'package:igniteui_flutter_grid/src/ColumnSortDescription.dart' show ColumnSortDescription;
+import 'package:igniteui_flutter_grid/src/igf-column-sort-description.dart' show IgfColumnSortDescriptionState;
+import 'package:igniteui_flutter_grid/src/igf-column-group-description.dart';
 import 'package:igniteui_flutter_layouts/src/igf-property-editor-property-description.dart';
 import 'package:igniteui_flutter_library/libraryManager.dart' show CodeGenHelper;
 import 'package:igniteui_flutter_library/PortfolioData.dart';
@@ -33,13 +35,14 @@ class DataGridLiveSettings {
 
   void group(bool enabled) {
     useRowGrouping = enabled;
-    final groups = grid.i_IgfDataGrid.groupDescriptions!;
-    groups.clear();
+    final groups = grid.groupDescriptions!;
+    groups.clearCollection();
     if (enabled) {
       for (final field in const ['Category', 'Type', 'Contract']) {
-        groups.add(ColumnGroupDescription()
+        final description = IgfColumnGroupDescriptionState()
           ..field = field
-          ..sortDirection = ListSortDirection.descending);
+          ..sortDirection = ListSortDirection.descending;
+        groups.addCollectionItem(description.i_IgfColumnGroupDescription);
       }
     }
   }
@@ -102,10 +105,13 @@ class DataGridLiveSettings {
       final count = rows.length < 3 ? rows.length : 2 + _random.nextInt(rows.length - 2);
       while (selected.length < count) selected.add(_random.nextInt(rows.length));
     }
-    final sorts = grid.i_IgfDataGrid.sortDescriptions!;
+    final sorts = grid.sortDescriptions!;
     var sortingPrices = false;
-    for (var i = 0; i < sorts.count; i++) {
-      final field = sorts[i]!.field ?? '';
+    for (var i = 0; i < sorts.getCollectionCount(); i++) {
+      final item = sorts.getCollectionItem(i) as ColumnSortDescription;
+        final description = item.externalObject as IgfColumnSortDescriptionState? ??
+            (IgfColumnSortDescriptionState()..i_provideImplementation(item));
+        final field = description.field ?? '';
       sortingPrices = sortingPrices || field == 'Price' || field.contains('Change');
     }
     for (var i = 0; i < rows.length; i++) {

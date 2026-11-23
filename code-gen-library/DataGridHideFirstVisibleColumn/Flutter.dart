@@ -7,8 +7,8 @@ import 'package:igniteui_flutter_library/libraryManager.dart' show CodeGenHelper
 class DataGridHideFirstVisibleColumn {
     //begin eventHandler
     void dataGridHideFirstVisibleColumn(Object? sender, IgfPropertyEditorPropertyDescriptionButtonClickEventArgsState args) {
-        final grid = CodeGenHelper.getDescription<IgfDataGridState>('content')!.i_IgfDataGrid;
-        final columns = grid.actualColumns!;
+        final grid = CodeGenHelper.getDescription<IgfDataGridState>('content')!;
+        final columns = grid.columns!;
         for (var index = 0; index < columns.count; index++) {
             final column = columns[index]!;
             if (!column.isHidden) {

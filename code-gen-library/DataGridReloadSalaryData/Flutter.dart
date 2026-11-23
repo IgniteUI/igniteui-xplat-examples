@@ -11,7 +11,7 @@ class DataGridReloadSalaryData {
     final math.Random _random = math.Random();
 
     void dataGridReloadSalaryData(Object? sender, IgfPropertyEditorPropertyDescriptionButtonClickEventArgsState args) {
-        final grid = CodeGenHelper.getDescription<IgfDataGridState>('content')!.i_IgfDataGrid;
+        final grid = CodeGenHelper.getDescription<IgfDataGridState>('content')!;
         final data = CodeGenHelper.findByName<EmployeesSalesData>('EmployeesSalesData')!;
         for (var index = 0; index < data.count; index++) {
             final item = data[index]!;
