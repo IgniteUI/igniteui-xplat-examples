@@ -18,12 +18,12 @@ public class SelectionMatcherOnViewInit
 		val content = CodeGenHelper.getDescription<Any>("content")!!;
 		val selectedItems = if (content is IgaCategoryChart) content.selectedSeriesItems!! else (content as IgaDataChart).selectedSeriesItems!!;
 
-		var data = CodeGenHelper.findByName<Array<Any?>>("energyRenewableConsumption")!!;
+		var data = CodeGenHelper.findByName<List<*>>("energyRenewableConsumption")!!;
 		var matcher: IgaSeriesMatcher = IgaSeriesMatcher();
 
 		var selection: IgaChartSelection = IgaChartSelection();
 		selection.item = data[1];
-		matcher.memberPath = "hydro";
+		matcher.memberPath = "Hydro";
 		matcher.memberPathType = "ValueMemberPath";
 		selection.matcher = matcher;
 		selectedItems.add(selection);
@@ -31,7 +31,7 @@ public class SelectionMatcherOnViewInit
 		var matcher2: IgaSeriesMatcher = IgaSeriesMatcher();
 		var selection2: IgaChartSelection = IgaChartSelection();
 		selection2.item = data[2];
-		matcher2.memberPath = "wind";
+		matcher2.memberPath = "Wind";
 		matcher2.memberPathType = "ValueMemberPath";
 		selection2.matcher = matcher2;
 
