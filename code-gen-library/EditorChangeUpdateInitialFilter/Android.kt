@@ -8,7 +8,7 @@ import com.infragistics.mobile.controls.CodeGenHelper;
 public class EditorChangeUpdateInitialFilter {
     //begin eventHandler
     public fun editorChangeUpdateInitialFilter(sender: Any?, args: IgaPropertyEditorPropertyDescriptionChangedEventArgs) {
-        var chart = CodeGenHelper.getDescription<IgcCategoryChart>("content")!!;
+        var chart = CodeGenHelper.getDescription<IgaCategoryChart>("content")!!;
         var intialFilterVal = args.newValue!!.toString();
         chart.initialFilter = intialFilterVal;   
     }

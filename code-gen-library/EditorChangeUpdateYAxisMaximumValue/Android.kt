@@ -1,16 +1,13 @@
 //begin imports
-import { IgcPropertyEditorPropertyDescriptionChangedEventArgs, IgcPropertyEditorPropertyDescriptionComponent } from 'igniteui-webcomponents-layouts';
-import { IgcCategoryChartComponent, MarkerType, MarkerType_$type } from 'igniteui-webcomponents-charts';
-import { EnumUtil } from 'igniteui-webcomponents-core';
+import com.infragistics.mobile.controls.IgaPropertyEditorPropertyDescriptionChangedEventArgs;
+import com.infragistics.mobile.controls.IgaCategoryChart;
 //end imports
-
-import com.infragistics.mobile.controls.CodeGenHelper;
 
 public class EditorChangeUpdateYAxisMaximumValue {
     //begin eventHandler
-    public editorChangeUpdateYAxisMaximumValue(sender: Any?, args: IgaPropertyEditorPropertyDescriptionChangedEventArgs) {
-        var yAxisMaximumVal = args.newValue!! as String;
-        CodeGenHelper.getDescription<IgaCategoryChart>("content").yAxisMaximumValue = parseInt(yAxisMaximumVal);   
+    public fun editorChangeUpdateYAxisMaximumValue(sender: Any?, args: IgaPropertyEditorPropertyDescriptionChangedEventArgs) {
+        val maximum = args.newValue.toString().toDoubleOrNull() ?: Double.NaN;
+        CodeGenHelper.getDescription<IgaCategoryChart>("content")!!.yAxisMaximumValue = maximum;
     }
     //end eventHandler
 }

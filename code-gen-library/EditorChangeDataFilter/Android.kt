@@ -7,7 +7,7 @@ import com.infragistics.mobile.controls.CodeGenHelper;
 
 public class EditorChangeDataFilter {
     //begin eventHandler
-    public fun editorChangeDataFilter(sender: Any?, args: IgaPropertyEditorPropertyDescriptionChangedEventArgs): void {
+    public fun editorChangeDataFilter(sender: Any?, args: IgaPropertyEditorPropertyDescriptionChangedEventArgs) {
         var chart = CodeGenHelper.getDescription<IgaCategoryChart>("content")!!;
         var filter = args.newValue.toString();
         chart.initialFilter = "(contains(Year," + "'" + filter + "'" + "))";

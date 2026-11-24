@@ -2,6 +2,8 @@
 import com.infragistics.mobile.controls.IgaPropertyEditorPropertyDescriptionChangedEventArgs;
 import com.infragistics.mobile.controls.IgaPropertyEditorPropertyDescription;
 import com.infragistics.mobile.controls.IgaCategoryChart;
+import com.infragistics.mobile.controls.IgaValueModeCollection;
+import com.infragistics.mobile.controls.IgaValueLayerValueMode;
 //end imports
 
 import com.infragistics.mobile.controls.CodeGenHelper;
@@ -12,8 +14,10 @@ public class EditorChangeUpdateValueLines {
         var item = sender as IgaPropertyEditorPropertyDescription;
         var chart = CodeGenHelper.getDescription<IgaCategoryChart>("content")!!;
         
-        var valueLineType = item.primitiveValue!!;
-        chart.valueLines = valueLineType;   
+        val valueLineType = IgaValueLayerValueMode.values().first { it.name.replace("_", "").equals(item.primitiveValue.toString(), ignoreCase = true) };
+        val lines = IgaValueModeCollection();
+        lines.add(valueLineType);
+        chart.valueLines = lines;
     }
     //end eventHandler
 }
