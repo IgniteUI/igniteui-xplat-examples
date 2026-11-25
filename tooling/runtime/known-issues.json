@@ -44,54 +44,6 @@
     "reason": "The published beta invokes CR's animation timeout instead of animation idle."
   },
   {
-    "sample": "charts/data-chart/radial-sankey-budget-flow.json",
-    "reason": "Temporarily skip Sankey runtime checks until a new alpha is published."
-  },
-  {
-    "sample": "charts/data-chart/radial-sankey-highlighted-overlay.json",
-    "reason": "The pinned charts beta does not export Sankey series; re-audit when a supporting package is published."
-  },
-  {
-    "sample": "charts/data-chart/radial-sankey-proportional-stages.json",
-    "reason": "The pinned charts beta does not export Sankey series; re-audit when a supporting package is published."
-  },
-  {
-    "sample": "charts/data-chart/radial-sankey-showcase.json",
-    "reason": "The pinned charts beta does not export Sankey series; re-audit when a supporting package is published."
-  },
-  {
-    "sample": "charts/data-chart/sankey-alluvial.json",
-    "reason": "The pinned charts beta does not export Sankey series; re-audit when a supporting package is published."
-  },
-  {
-    "sample": "charts/data-chart/sankey-budget-flow.json",
-    "reason": "Temporarily skip Sankey runtime checks until a new alpha is published."
-  },
-  {
-    "sample": "charts/data-chart/sankey-budget-showcase.json",
-    "reason": "The pinned charts beta does not export Sankey series; re-audit when a supporting package is published."
-  },
-  {
-    "sample": "charts/data-chart/sankey-edge-list.json",
-    "reason": "The pinned charts beta does not export Sankey series; re-audit when a supporting package is published."
-  },
-  {
-    "sample": "charts/data-chart/sankey-highlighted-overlay.json",
-    "reason": "The pinned charts beta does not export Sankey series; re-audit when a supporting package is published."
-  },
-  {
-    "sample": "charts/data-chart/sankey-highlighted-values.json",
-    "reason": "Temporarily skip Sankey runtime checks until a new alpha is published."
-  },
-  {
-    "sample": "charts/data-chart/sankey-monthly-flow.json",
-    "reason": "The pinned charts beta does not export Sankey series; its editor handler imports the unavailable IgcSankeySeriesComponent and prevents the entire harness from starting."
-  },
-  {
-    "sample": "charts/data-chart/sankey-styling.json",
-    "reason": "The pinned charts beta does not export Sankey series; re-audit when a supporting package is published."
-  },
-  {
     "sample": "charts/data-chart/scatter-marker-options.json",
     "reason": "The published beta invokes CR's animation timeout instead of animation idle."
   },
