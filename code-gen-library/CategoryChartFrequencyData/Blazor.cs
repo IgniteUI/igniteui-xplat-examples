@@ -75,6 +75,19 @@ public static class CategoryChartFrequency
     }
 
 
+    public static void Stop()
+    {
+        Running = false;
+        if (timer != null)
+        {
+            timer.Stop();
+            timer.Dispose();
+            timer = null;
+        }
+        chart = null;
+        data = new List<CategoryChartFrequencyItem>();
+    }
+
     private static void Tick()
     {
         if (!Running)

@@ -96,6 +96,14 @@ public static class CategoryChartFrequency
         chart = null;
     }
 
+    public static void Stop()
+    {
+        Running = false;
+        StopTimer();
+        chart = null;
+        data = new List<CategoryChartFrequencyItem>();
+    }
+
     private static void Tick()
     {
         if (!Running)

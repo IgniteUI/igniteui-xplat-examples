@@ -1,6 +1,7 @@
 {
   "hasAnimations": true,
   "onViewInit": [ "CategoryChartHighFrequencyOnViewInit" ],
+  "onViewDestroy": [ "CategoryChartHighFrequencyOnViewDestroy" ],
   "descriptions": {
     "editor": {
       "type": "PropertyEditorPanel",

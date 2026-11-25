@@ -89,6 +89,13 @@ abstract class CategoryChartFrequency {
         });
     }
 
+    static void stop() {
+        running = false;
+        stopTimer();
+        _chart = null;
+        _data = [];
+    }
+
     static void stopTimer() {
         _timer?.cancel();
         _timer = null;
