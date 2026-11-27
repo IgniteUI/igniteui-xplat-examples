@@ -1,0 +1,30 @@
+<!--begin template-->
+<!--begin imports-->
+using Avalonia;
+using Avalonia.Controls;
+using Avalonia.Controls.Templates;
+using Avalonia.Media;
+using Infragistics.Controls.Charts;
+using Infragistics.Controls.Grids;
+<!--end imports-->
+<!--begin content-->
+<local:OrderHistorySparklineTemplate x:Key="DataGridSparklineTemplate" />
+<!--end content-->
+<!--begin supportingTypes-->
+// The grid recreates this native template when cell data changes, as on WinUI.
+public sealed class OrderHistorySparklineTemplate : FuncDataTemplate<TemplateCellInfo>
+{
+    public OrderHistorySparklineTemplate() : base((cell, _) =>
+    {
+        var sparkline = new XamSparkline
+        {
+            DisplayType = SparklineDisplayType.Line,
+            ItemsSource = cell?.RowItem?.GetType().GetProperty("OrderHistory")?.GetValue(cell.RowItem) as System.Collections.IEnumerable,
+            ValueMemberPath = "Sold", LabelMemberPath = "Week",
+            Brush = new SolidColorBrush(Color.Parse("#FF15BE06"))
+        };
+        return new Border { Height = 70, Background = Brushes.Transparent, Child = sparkline };
+    }) { }
+}
+<!--end supportingTypes-->
+<!--end template-->
