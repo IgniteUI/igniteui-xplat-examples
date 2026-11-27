@@ -147,8 +147,11 @@ public class InvoicesDataExtendedDates: ArrayList<Invoice?> {
     }
 }
 
-public class Invoice: ISampleDataItem {
-    public init() {}
+@objcMembers
+public class Invoice: NSObject, ISampleDataItem {
+    public override init() {
+        super.init()
+    }
 
     public var ProductID: Int = 0
     public var ProductName: String? = nil

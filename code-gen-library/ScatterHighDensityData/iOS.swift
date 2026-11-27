@@ -2,7 +2,8 @@
 //end imports
 
 //begin data
-public class ScatterHighDensityItem {
+@objcMembers
+public class ScatterHighDensityItem: NSObject {
     public var x: Double = 0.0
     public var y: Double = 0.0
 }

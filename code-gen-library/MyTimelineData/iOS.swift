@@ -36,8 +36,11 @@ public class MyTimelineData: ArrayList<MyTimelineInfo> {
     }
 }
 
-public class MyTimelineInfo: ISampleDataItem {
-    public init() {}
+@objcMembers
+public class MyTimelineInfo: NSObject, ISampleDataItem {
+    public override init() {
+        super.init()
+    }
 
     public var Index: Int = 0
     public var Value: Double = 0.0

@@ -4,21 +4,25 @@
 //begin async data
 import Foundation
 
-public class StockItem: ISampleDataItem {
-    public var open: Double?
-    public var close: Double?
-    public var high: Double?
-    public var low: Double?
-    public var volume: Double?
+// Members are read through the Objective-C runtime, which cannot see optional numbers, so a
+// missing number is NaN, as the charts treat an absent value.
+@objcMembers
+public class StockItem: NSObject, ISampleDataItem {
+    public var open: Double
+    public var close: Double
+    public var high: Double
+    public var low: Double
+    public var volume: Double
     public var date: Date?
 
     public init(open: Double? = nil, close: Double? = nil, high: Double? = nil, low: Double? = nil, volume: Double? = nil, date: Date? = nil) {
-        self.open = open
-        self.close = close
-        self.high = high
-        self.low = low
-        self.volume = volume
+        self.open = open ?? .nan
+        self.close = close ?? .nan
+        self.high = high ?? .nan
+        self.low = low ?? .nan
+        self.volume = volume ?? .nan
         self.date = date
+        super.init()
     }
 }
 
