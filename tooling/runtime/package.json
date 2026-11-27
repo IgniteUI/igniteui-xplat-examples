@@ -9,17 +9,17 @@
     "check:local": "node run.mjs --packages=local"
   },
   "dependencies": {
-    "igniteui-webcomponents-charts": "7.1.1-beta.12",
-    "igniteui-webcomponents-core": "7.1.1-beta.12",
-    "igniteui-webcomponents-dashboards": "7.1.1-beta.12",
-    "igniteui-webcomponents-data-grids": "7.1.1-beta.12",
-    "igniteui-webcomponents-datasources": "7.1.1-beta.12",
-    "igniteui-webcomponents-excel": "7.1.1-beta.12",
-    "igniteui-webcomponents-gauges": "7.1.1-beta.12",
+    "igniteui-webcomponents-charts": "7.1.1-beta.19",
+    "igniteui-webcomponents-core": "7.1.1-beta.19",
+    "igniteui-webcomponents-dashboards": "7.1.1-beta.19",
+    "igniteui-webcomponents-data-grids": "7.1.1-beta.19",
+    "igniteui-webcomponents-datasources": "7.1.1-beta.19",
+    "igniteui-webcomponents-excel": "7.1.1-beta.19",
+    "igniteui-webcomponents-gauges": "7.1.1-beta.19",
     "igniteui-webcomponents-grids": "7.2.0-beta.1",
-    "igniteui-webcomponents-inputs": "7.1.1-beta.12",
-    "igniteui-webcomponents-layouts": "7.1.1-beta.12",
-    "igniteui-webcomponents-maps": "7.1.1-beta.12"
+    "igniteui-webcomponents-inputs": "7.1.1-beta.19",
+    "igniteui-webcomponents-layouts": "7.1.1-beta.19",
+    "igniteui-webcomponents-maps": "7.1.1-beta.19"
   },
   "devDependencies": {
     "playwright": "^1.49.0",
