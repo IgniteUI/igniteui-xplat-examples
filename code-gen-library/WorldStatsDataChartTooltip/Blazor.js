@@ -1,11 +1,11 @@
 //begin eventHandler
-igRegisterScript("WorldStatsDataChartTooltip", (o, e) => {
+registerScript("WorldStatsDataChartTooltip", (o, e) => {
     if (e.series.tooltipTemplate === null ||
         e.series.tooltipTemplate === undefined) {
         e.series.tooltipTemplate = worldStatsDataChartTooltipOnCreate;
         console.log("WorldStatsDataChartTooltip");
     }
-}, false);
+});
 
 function worldStatsDataChartTooltipOnCreate(context) {
     if (!context) return null;

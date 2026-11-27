@@ -1,7 +1,7 @@
 //begin eventHandler
-igRegisterScript("WebTreeGridCellSelectionStyleTemplate", (args) => {
+registerScript("WebTreeGridCellSelectionStyleTemplate", (args) => {
     //OMIT HANDLER
-}, false);
+});
 //end eventHandler
 let requiredStyles = `
 <!--begin styles-->

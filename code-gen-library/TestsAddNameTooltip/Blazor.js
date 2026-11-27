@@ -2,7 +2,7 @@
 // (TestAppSurface.GetInitHandlers routes a *script* init item through MainCR.InvokeLibraryItemJsonSync).
 // The series' tooltipTemplate is a JS function that builds the tooltip DOM, so it can only be assigned
 // from JS -- hence this runs entirely here rather than in a C# init Action.
-igRegisterScript("TestsAddNameTooltip", function (container) {
+registerScript("TestsAddNameTooltip", function (container) {
     // CodeGenHelper.getDescription(name) returns the control in the named slot (any control, not just
     // charts) -- the Blazor host's reusable analog of the WC CodeGenHelper. "content" is the slot's
     // wrapper <div id='content'>; the shim walks it to the actual control web component.
@@ -25,4 +25,4 @@ igRegisterScript("TestsAddNameTooltip", function (container) {
         }
     }
     return null;
-}, false);
+});

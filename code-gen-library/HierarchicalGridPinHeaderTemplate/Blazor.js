@@ -1,6 +1,5 @@
 //begin template
-igRegisterScript("HierarchicalGridPinHeaderTemplate", (ctx) => {
-    var html = window.igTemplating.html;
+registerScript("HierarchicalGridPinHeaderTemplate", (ctx) => {
     window.toggleColumnPin = function toggleColumnPin(column) {
             column.pinned = !column.pinned;
     }
@@ -8,5 +7,5 @@ igRegisterScript("HierarchicalGridPinHeaderTemplate", (ctx) => {
     <span>${ctx.column.field}</span>
     <span style="margin-left: auto; cursor: pointer;" @click=${() => toggleColumnPin(ctx.column)}>📌</span>
 </div>`;
-}, false);
+});
 //end template

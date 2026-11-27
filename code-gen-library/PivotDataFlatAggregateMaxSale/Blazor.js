@@ -1,5 +1,5 @@
 //begin eventHandler
-igRegisterScript("PivotDataFlatAggregateMaxSale", (members, data) => {
+registerScript("PivotDataFlatAggregateMaxSale", (members, data) => {
     let max = 0;
     if (data.length === 1) {
         max = data[0].ProductUnitPrice * data[0].NumberOfUnits;
@@ -8,5 +8,5 @@ igRegisterScript("PivotDataFlatAggregateMaxSale", (members, data) => {
         max = mappedData.reduce((a, b) => Math.max(a, b));
     }
     return max;
-}, false);
+});
 //end eventHandler

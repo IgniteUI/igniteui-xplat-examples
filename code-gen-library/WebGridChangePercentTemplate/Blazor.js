@@ -1,6 +1,5 @@
 ﻿//begin template
-igRegisterScript("WebGridChangePercentTemplate", (ctx) => {
-    var html = window.igTemplating.html;
+registerScript("WebGridChangePercentTemplate", (ctx) => {
     if (ctx.cell.value > 0) {
         return html`<div>
         <span style="color:green;">${ctx.cell.value}%</span>
@@ -10,5 +9,5 @@ igRegisterScript("WebGridChangePercentTemplate", (ctx) => {
         <span style="color:red;">${ctx.cell.value}%</span>
         </div>`;
     }
-}, false);
+});
 //end template

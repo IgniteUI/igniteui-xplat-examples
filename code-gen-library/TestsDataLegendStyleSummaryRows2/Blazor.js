@@ -1,3 +1,3 @@
-igRegisterScript("TestsDataLegendStyleSummaryRows2", (sender, args) => {
+registerScript("TestsDataLegendStyleSummaryRows2", (sender, args) => {
 		 args.titleText = "MySummary";
-}, false);
+});

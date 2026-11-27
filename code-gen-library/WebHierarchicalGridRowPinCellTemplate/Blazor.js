@@ -1,6 +1,5 @@
 //begin template
-igRegisterScript("WebHierarchicalGridRowPinCellTemplate", (ctx) => {
-    var html = window.igTemplating.html;
+registerScript("WebHierarchicalGridRowPinCellTemplate", (ctx) => {
     window.toggleRowPin = function toggleRowPin(row) {
         row.pinned = !row.pinned;
     }
@@ -8,5 +7,5 @@ igRegisterScript("WebHierarchicalGridRowPinCellTemplate", (ctx) => {
     return html`<div>
     <span @pointerdown=${() => toggleRowPin(row)}>📌</span>
 </div>`;
-}, false);
+});
 //end template

@@ -1,6 +1,5 @@
 //begin template
-igRegisterScript("WebGridCompositeContactCellTemplate", (ctx) => {
-    var html = window.igTemplating.html;
+registerScript("WebGridCompositeContactCellTemplate", (ctx) => {
     return html` <div class="contact-container">
     <span><strong>Name:</strong> ${ctx.cell.row.data.ContactName}</span>
     <br />
@@ -9,5 +8,5 @@ igRegisterScript("WebGridCompositeContactCellTemplate", (ctx) => {
     <span><strong>Company:</strong> ${ctx.cell.row.data.Company}</span>
     <br />
 </div>`;
-}, false);
+});
 //end template

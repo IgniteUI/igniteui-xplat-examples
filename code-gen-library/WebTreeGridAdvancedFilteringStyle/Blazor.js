@@ -1,7 +1,7 @@
 //begin eventHandler
-igRegisterScript("WebTreeGridAdvancedFilteringStyle", (args) => {
+registerScript("WebTreeGridAdvancedFilteringStyle", (args) => {
     //OMIT HANDLER
-}, false);
+});
 //end eventHandler
 
 let requiredStyles = `

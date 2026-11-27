@@ -1,5 +1,5 @@
 //begin eventHandler
-igRegisterScript("WebHierarchicalGridRendered", (event) => {
+registerScript("WebHierarchicalGridRendered", (event) => {
         const hierarchicalGrid = document.getElementById("hierarchicalGrid");
         hierarchicalGrid.parentElement.style.display = "flex";
         const container = document.createElement("div");
@@ -11,5 +11,5 @@ igRegisterScript("WebHierarchicalGridRendered", (event) => {
         const title = document.createElement("span");
         title.textContent = "Events execution sequence:";
         container.appendChild(title);
-}, false);
+});
 //end eventHandler

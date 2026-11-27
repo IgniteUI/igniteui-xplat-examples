@@ -1,3 +1,3 @@
-igRegisterScript("TestsDataLegendStyleHideSeriesRows", (sender, args) => {
+registerScript("TestsDataLegendStyleHideSeriesRows", (sender, args) => {
       args.isRowVisible = false;
-},false);
+});

@@ -1,5 +1,5 @@
 //begin eventHandler
-igRegisterScript("DataGridPhoneLinkTemplate", (s, args) => {
+registerScript("DataGridPhoneLinkTemplate", (s, args) => {
     const content = args.content;
     const item = args.cellInfo.rowItem;
     let link = null;
@@ -21,5 +21,5 @@ igRegisterScript("DataGridPhoneLinkTemplate", (s, args) => {
 
     link.href = "tel:" + item.Phone;
     link.textContent = item.Phone;
-}, false);
+});
 //end eventHandler

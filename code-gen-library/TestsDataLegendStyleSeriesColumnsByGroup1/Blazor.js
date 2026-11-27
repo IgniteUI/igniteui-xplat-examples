@@ -1,4 +1,4 @@
-igRegisterScript("TestsDataLegendStyleSeriesColumnsByGroup1", (sender, args) => {
+registerScript("TestsDataLegendStyleSeriesColumnsByGroup1", (sender, args) => {
      switch (args.groupName)
 		{
 			case "Group1":			  
@@ -13,5 +13,5 @@ igRegisterScript("TestsDataLegendStyleSeriesColumnsByGroup1", (sender, args) => 
 			   break;
 				 
 		}
-},false);
+});
 

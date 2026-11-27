@@ -5,7 +5,7 @@
 // module-level variable.
 let chartAxisCurrencyFormat_formatter = null;
 
-igRegisterScript("ChartAxisCurrencyFormat", (item) => {
+registerScript("ChartAxisCurrencyFormat", (item) => {
     if (chartAxisCurrencyFormat_formatter == null) {
         chartAxisCurrencyFormat_formatter = new Intl.NumberFormat('en-US', {
             style: 'currency',
@@ -16,4 +16,4 @@ igRegisterScript("ChartAxisCurrencyFormat", (item) => {
         return null;
     }
     return chartAxisCurrencyFormat_formatter.format(item);
-}, false);
+});

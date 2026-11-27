@@ -1,7 +1,7 @@
 //begin eventHandler
-igRegisterScript("WebGridToolbarStyleWithCustomCSS", (args) => {
+registerScript("WebGridToolbarStyleWithCustomCSS", (args) => {
     //OMIT HANDLER
-}, false);
+});
 //end eventHandler
 
 let requiredStyles = `

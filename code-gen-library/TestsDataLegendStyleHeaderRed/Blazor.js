@@ -1,5 +1,5 @@
-igRegisterScript("TestsDataLegendStyleHeaderRed", (sender, args) => {
+registerScript("TestsDataLegendStyleHeaderRed", (sender, args) => {
     
         args.titleTextColor = "red";
-},false);
+});
 

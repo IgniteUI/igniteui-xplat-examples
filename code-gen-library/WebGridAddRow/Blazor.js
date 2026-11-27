@@ -1,5 +1,5 @@
 //begin eventHandler
-igRegisterScript("WebGridAddRow", (event) => {
+registerScript("WebGridAddRow", (event) => {
     console.log("TODO WebGridAddRow");
-}, false);
+});
 //end eventHandler

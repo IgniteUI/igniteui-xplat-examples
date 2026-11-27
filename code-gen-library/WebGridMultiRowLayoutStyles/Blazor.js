@@ -1,7 +1,7 @@
 //begin eventHandler
-igRegisterScript("WebGridMultiRowLayoutStyles", (args) => {
+registerScript("WebGridMultiRowLayoutStyles", (args) => {
     //OMIT HANDLER
-}, false);
+});
 //end eventHandler
 
 let requiredStyles = `

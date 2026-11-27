@@ -1,6 +1,5 @@
 //begin template
-igRegisterScript("WebGridCompositeAddressEditCellTemplate", (ctx) => {
-    var html = window.igTemplating.html;
+registerScript("WebGridCompositeAddressEditCellTemplate", (ctx) => {
     window.keyUpHandler = function () {
         ctx.cell.row.data[window.event.target.id] = window.event.target.value;
     }
@@ -12,5 +11,5 @@ igRegisterScript("WebGridCompositeAddressEditCellTemplate", (ctx) => {
                     <igc-input id="PostalCode" label='PostalCode' type="text" name="postalcode" value="${ctx.cell.row.data.PostalCode}" onkeyup='keyUpHandler()'></igc-input>
                     <igc-input id="Phone" label='Phone' type="text" name="phone" value="${ctx.cell.row.data.Phone}" onkeyup='keyUpHandler()'></igc-input>
                 </div>`;
-}, false);
+});
 //end template

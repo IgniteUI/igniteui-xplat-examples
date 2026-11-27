@@ -1,7 +1,7 @@
 //begin eventHandler
 // Blazor JS handler for the domain chart's SeriesAdded event. On Blazor the event fires in the JS
 // chart and its args (args.series.dataLegendGroup) cannot be mutated from the C# side, so this must
-// run as a JS handler (registered via igRegisterScript). Ported from Web.ts. The registered name must
+// run as a JS handler (registered via registerScript). Ported from Web.ts. The registered name must
 // match DomainChartSeriesBasicSteps: chart.SeriesAddedScript = "TestsUpdateGroupsInSeriesAddedEvent".
 //
 // State: Web.ts keeps groupIndex/groups as per-instance state (fresh per test, since each test builds a
@@ -16,7 +16,7 @@
 // rather than throwing inside SeriesAdded (which would abort the chart render).
 const tugisae_indexBySender = new WeakMap();
 
-igRegisterScript("TestsUpdateGroupsInSeriesAddedEvent", (sender, args) => {
+registerScript("TestsUpdateGroupsInSeriesAddedEvent", (sender, args) => {
     if (typeof CodeGenHelper === "undefined" || !CodeGenHelper || !CodeGenHelper.findByName) {
         return;
     }
@@ -44,5 +44,5 @@ igRegisterScript("TestsUpdateGroupsInSeriesAddedEvent", (sender, args) => {
     }
     args.series.dataLegendGroup = groups[groupIndex];
     tugisae_indexBySender.set(key, groupIndex + 1);
-}, false);
+});
 //end eventHandler

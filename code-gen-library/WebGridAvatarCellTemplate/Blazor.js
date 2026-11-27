@@ -1,9 +1,8 @@
 ﻿//begin template
-igRegisterScript("WebGridAvatarCellTemplate", (ctx) => {
-    var html = window.igTemplating.html;
+registerScript("WebGridAvatarCellTemplate", (ctx) => {
     return html`<div>
     <igc-avatar shape="circle" src="${ctx.cell.value}">
     </igc-avatar>
 </div>`;
-}, false);
+});
 //end template

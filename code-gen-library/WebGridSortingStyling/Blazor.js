@@ -1,7 +1,7 @@
 //begin eventHandler
-igRegisterScript("WebGridSortingStyling", (args) => {
+registerScript("WebGridSortingStyling", (args) => {
     //OMIT HANDLER
-}, false);
+});
 //end eventHandler
 
 let requiredStyles = `

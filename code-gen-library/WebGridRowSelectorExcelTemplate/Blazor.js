@@ -1,6 +1,5 @@
 ﻿//begin template
-igRegisterScript("WebGridRowSelectorExcelTemplate", (ctx) => {
-    var html = window.igTemplating.html;
+registerScript("WebGridRowSelectorExcelTemplate", (ctx) => {
     return html`<span style='display: block;width:30px;'> ${ctx.implicit.index}</span>`;
-}, false);
+});
 //end template

@@ -1,6 +1,5 @@
 ﻿//begin template
-igRegisterScript("WebGridPinHeaderTemplate", (ctx) => {
-    var html = window.igTemplating.html;
+registerScript("WebGridPinHeaderTemplate", (ctx) => {
     window.toggleColumnPin = function toggleColumnPin(field) {
         var grid = document.getElementsByTagName("igc-grid")[0];
         var col = grid.getColumnByName(field);
@@ -11,5 +10,5 @@ igRegisterScript("WebGridPinHeaderTemplate", (ctx) => {
     <span>${ctx.column.field}</span>
     <span style="margin-left: auto; cursor: pointer;" onpointerdown='toggleColumnPin("${ctx.column.field}")'>📌</span>
 </div>`;
-}, false);
+});
 //end template

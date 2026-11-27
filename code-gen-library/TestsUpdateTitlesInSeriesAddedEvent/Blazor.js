@@ -6,7 +6,7 @@
 // shim; guarded so a missing shim/config degrades to a no-op instead of throwing during SeriesAdded.
 const tutisae_indexBySender = new WeakMap();
 
-igRegisterScript("TestsUpdateTitlesInSeriesAddedEvent", (sender, args) => {
+registerScript("TestsUpdateTitlesInSeriesAddedEvent", (sender, args) => {
     if (typeof CodeGenHelper === "undefined" || !CodeGenHelper || !CodeGenHelper.findByName) {
         return;
     }
@@ -34,4 +34,4 @@ igRegisterScript("TestsUpdateTitlesInSeriesAddedEvent", (sender, args) => {
     }
     args.series.title = names[titleIndex];
     tutisae_indexBySender.set(key, titleIndex + 1);
-}, false);
+});

@@ -1,7 +1,7 @@
 ﻿//begin eventHandler
-igRegisterScript("WebGridRowPinCellTemplateStyles", (args) => {
+registerScript("WebGridRowPinCellTemplateStyles", (args) => {
     //OMIT HANDLER
-}, false);
+});
 //end eventHandler
 
 let requiredStyles = `

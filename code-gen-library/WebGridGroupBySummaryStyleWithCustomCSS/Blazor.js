@@ -1,7 +1,7 @@
 //begin eventHandler
-igRegisterScript("WebGridGroupBySummaryStyleWithCustomCSS", (args) => {
+registerScript("WebGridGroupBySummaryStyleWithCustomCSS", (args) => {
     //OMIT HANDLER
-}, false);
+});
 //end eventHandler
 
 let requiredStyles = `

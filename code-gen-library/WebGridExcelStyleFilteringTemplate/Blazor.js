@@ -1,7 +1,7 @@
 //begin eventHandler
-igRegisterScript("WebGridExcelStyleFilteringTemplate", (args) => {
+registerScript("WebGridExcelStyleFilteringTemplate", (args) => {
     //OMIT HANDLER
-}, false);
+});
 //end eventHandler
 
 let requiredStyles = `

@@ -1,4 +1,4 @@
-igRegisterScript("TestsStyleDataAnnotationsShapes", (sender, args) => {
+registerScript("TestsStyleDataAnnotationsShapes", (sender, args) => {
     const o = CodeGenHelper.findByName("DataAnnotationShapeStylingOptions");
     if (o === undefined) return;
     const array = JSON.parse(o.value.toString());
@@ -15,7 +15,7 @@ igRegisterScript("TestsStyleDataAnnotationsShapes", (sender, args) => {
             return;
         }
     }
-}, false);
+});
 
 // Hoisted from the Web.ts private styleShape method (registered scripts have no instance).
 function styleShape(options, args) {

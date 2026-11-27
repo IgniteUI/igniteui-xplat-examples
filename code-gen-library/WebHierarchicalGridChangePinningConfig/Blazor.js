@@ -1,5 +1,5 @@
 //begin eventHandler
-igRegisterScript("WebHierarchicalGridChangePinningConfig", (sender, evtArgs) => {
+registerScript("WebHierarchicalGridChangePinningConfig", (sender, evtArgs) => {
     var newPinningPosition = evtArgs.newValue === "Top" ? 0 : 1;
     var hierarchicalGrid = document.getElementById("grid");
     hierarchicalGrid.pinning.rows = newPinningPosition;
@@ -13,5 +13,5 @@ igRegisterScript("WebHierarchicalGridChangePinningConfig", (sender, evtArgs) => 
     if (rowIsland3) {
         rowIsland3.pinning.rows = newPinningPosition;
     }
-}, false);
+});
 //end eventHandler

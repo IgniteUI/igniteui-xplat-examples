@@ -1,5 +1,5 @@
 //begin eventHandler
-igRegisterScript("WebGridRendered", (event) => {
+registerScript("WebGridRendered", (event) => {
         const grid = document.getElementsByTagName("igc-grid")[0];
         grid.parentElement.style.display = "flex";
         const container = document.createElement("div");
@@ -11,5 +11,5 @@ igRegisterScript("WebGridRendered", (event) => {
         const title = document.createElement("span");
         title.textContent = "Events execution sequence";
         container.appendChild(title);
-}, false);
+});
 //end eventHandler

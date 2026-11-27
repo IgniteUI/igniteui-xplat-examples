@@ -1,8 +1,8 @@
 //begin eventHandler
-igRegisterScript("PivotSalesDataAggregateMaxSales", (members, data) => {
+registerScript("PivotSalesDataAggregateMaxSales", (members, data) => {
     if (!data) {
         return [];
     }
     return data.map(x => x.Sales).reduce((a, b) => Math.max(a, b));
-}, false);
+});
 //end eventHandler

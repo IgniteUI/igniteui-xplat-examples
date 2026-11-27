@@ -1,7 +1,7 @@
 //begin eventHandler
-igRegisterScript("WebTreeGridSizeSmallTemplate", (args) => {
+registerScript("WebTreeGridSizeSmallTemplate", (args) => {
     //OMIT HANDLER
-}, false);
+});
 //end eventHandler
 
 let requiredStyles = `

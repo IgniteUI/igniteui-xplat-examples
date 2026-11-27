@@ -1,7 +1,7 @@
 // Axis format-label callback: receives a data item and RETURNS the formatted label string (does not
 // mutate event args). The chart invokes this in JS and uses the return value, so it must be a registered
 // JS script (no Blazor.cs handler exists). Ported from Web.ts (types stripped).
-igRegisterScript("FormatDateLabelAsShortDate", (item) => {
+registerScript("FormatDateLabelAsShortDate", (item) => {
     let d;
 
     if (item instanceof Date) {
@@ -28,4 +28,4 @@ igRegisterScript("FormatDateLabelAsShortDate", (item) => {
     const year = String(d.getFullYear()).slice(-2); // Get last two digits
 
     return `${month}/${day}/${year}`;
-}, false);
+});

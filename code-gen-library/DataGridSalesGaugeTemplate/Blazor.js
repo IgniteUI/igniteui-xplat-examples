@@ -1,5 +1,5 @@
 //begin eventHandler
-igRegisterScript("DataGridSalesGaugeTemplate", (s, args) => {
+registerScript("DataGridSalesGaugeTemplate", (s, args) => {
     const content = args.content;
     const info = args.cellInfo;
     const sales = info.rowItem.Sales;
@@ -67,5 +67,5 @@ igRegisterScript("DataGridSalesGaugeTemplate", (s, args) => {
     gaugeBar.style.width = gaugeWidth + "%";
 
     gaugeValue.textContent = "$" + sales / 1000 + ",000";
-}, false);
+});
 //end eventHandler
