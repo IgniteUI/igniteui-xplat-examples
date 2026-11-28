@@ -9,7 +9,7 @@ import java.lang.Double
 public class EditorChangeUpdateYAxisMinimumValue {
     //begin eventHandler
     public fun editorChangeUpdateYAxisMinimumValue(sender: Any?, args: IgaPropertyEditorPropertyDescriptionChangedEventArgs) {
-        var yAxisMinimumVal = args.newValue!! as String;;
+        var yAxisMinimumVal = args.newValue!! as String;
         CodeGenHelper.getDescription<IgaCategoryChart>("content")!!.yAxisMinimumValue = yAxisMinimumVal.toDoubleOrNull() ?: Double.NaN;      		
     }
     //end eventHandler

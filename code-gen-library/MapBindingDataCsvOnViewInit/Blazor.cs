@@ -1,7 +1,9 @@
 //begin imports
 using IgniteUI.Blazor.Controls;
+using Microsoft.AspNetCore.Components;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Net.Http;
 using System.Threading.Tasks;
 //end imports
@@ -17,46 +19,80 @@ public class MapBindingDataCsvOnViewInit
         public double Population { get; set; }
     }
 
+    //WPF: System.Action
     public async void MapBindingDataCsvOnViewInit()
     {
         var map = CodeGenHelper.GetDescription<IgbGeographicMap>("content");
         var url = "https://static.infragistics.com/xplatform/data/UsaCitiesPopulation.csv";
-        var client = new HttpClient();
-        var csv = await client.GetStringAsync(url);
-        var csvLines = csv.Split('\n');
-        var geoLocations = new List<WorldPlaceCsv>();
-        // parsing CSV data and creating geographic locations
-        for (int i = 1; i < csvLines.Length; i++)
+        //begin testing
+        var work = GlobalQueuedWorkState.Instance;
+        const string workChannel = "Sample.MapBindingDataCsvOnViewInit.Load";
+        work.NotifyWorkQueued(workChannel);
+        try
         {
-            var columns = csvLines[i].Split(',');
-            if (columns.Length < 4) continue;
-            geoLocations.Add(new WorldPlaceCsv
+        //end testing
+            using (var client = new HttpClient())
             {
-                Name = columns[0],
-                Latitude = double.Parse(columns[1]),
-                Longitude = double.Parse(columns[2]),
-                Population = double.Parse(columns[3])
-            });
-        }
-        // creating the series with the loaded data
-        var series = new IgbGeographicHighDensityScatterSeries
-        {
-            Name = "hdSeries",
-            DataSource = geoLocations,
-            LatitudeMemberPath = "Latitude",
-            LongitudeMemberPath = "Longitude",
-            HeatMaximumColor = "Red",
-            HeatMinimumColor = "Black",
-            HeatMinimum = 0,
-            HeatMaximum = 5,
-            PointExtent = 1,
-            MouseOverEnabled = true
-        };
-        map.Series.Add(series);
+                var csv = await client.GetStringAsync(url);
+                var csvLines = csv.Split('\n');
+                var geoLocations = new List<WorldPlaceCsv>();
+                // parsing CSV data and creating geographic locations
+                for (int i = 1; i < csvLines.Length; i++)
+                {
+                    var columns = csvLines[i].Split(',');
+                    if (columns.Length < 4) continue;
+                    geoLocations.Add(new WorldPlaceCsv
+                    {
+                        Name = columns[0],
+                        Latitude = double.Parse(columns[1], CultureInfo.InvariantCulture),
+                        Longitude = double.Parse(columns[2], CultureInfo.InvariantCulture),
+                        Population = double.Parse(columns[3], CultureInfo.InvariantCulture)
+                    });
+                }
+                // creating the series with the loaded data
+                var series = new IgbGeographicHighDensityScatterSeries
+                {
+                    Name = "hdSeries",
+                    DataSource = geoLocations,
+                    LatitudeMemberPath = "Latitude",
+                    LongitudeMemberPath = "Longitude",
+                    HeatMaximumColor = "Red",
+                    HeatMinimumColor = "Black",
+                    HeatMinimum = 0,
+                    HeatMaximum = 5,
+                    PointExtent = 1,
+                    MouseOverEnabled = true
+                };
+                if (geoLocations.Count == 0) throw new InvalidOperationException("The CSV contained no geographic locations.");
+                var rendered = new TaskCompletionSource<bool>();
+                series.ProgressiveLoadStatusChanged = EventCallback.Factory.Create<IgbProgressiveLoadStatusEventArgs>(
+                    rendered, (IgbProgressiveLoadStatusEventArgs args) =>
+                    {
+                        if (args.CurrentStatus == 100) rendered.TrySetResult(true);
+                    });
+                try
+                {
+                    // adding the series to the geographic map
+                    map.Series.Add(series);
 
-        var geoBounds = new Rect() { Left = -130, Top = 15, Width = Math.Abs(-130 + 65), Height = Math.Abs(50 - 15) };
-        // zooming to the bounds of the lower 48 states
-        map.ZoomToGeographic(geoBounds);
+                    var geoBounds = new Rect { Left = -130, Top = 15, Width = 65, Height = 35 };
+                    // zooming to the bounds of the lower 48 states
+                    await map.EnsureReady();
+                    await map.ZoomToGeographicAsync(geoBounds);
+                    await rendered.Task;
+                }
+                finally
+                {
+                    series.ProgressiveLoadStatusChanged = EventCallback<IgbProgressiveLoadStatusEventArgs>.Empty;
+                }
+            }
+        //begin testing
+        }
+        finally
+        {
+            work.NotifyWorkCompleted(workChannel);
+        }
+        //end testing
     }
     //end eventHandler
 }

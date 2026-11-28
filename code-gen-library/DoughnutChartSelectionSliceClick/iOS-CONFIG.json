@@ -1,0 +1,6 @@
+{
+    "excludeFlavors": ["testing"],
+    "requires": [
+        "DoughnutChartSelectionUtility"
+    ]
+}

@@ -12,7 +12,7 @@ public class MapBindingDataModelOnViewInit
     public void MapBindingDataModelOnViewInit()
     {
         var geoMap = CodeGenHelper.GetDescription<IgbGeographicMap>("content");
-        geoMap.UpdateZoomWindow(new Rect() { Left = 0.2, Top = 0.1, Width = 0.6, Height = 0.6 });
+        geoMap.WindowRect = new Rect() { Left = 0.2, Top = 0.1, Width = 0.6, Height = 0.6 };
 
         var CityDAL = new WorldCity() { Lat = 32.763, Lon = -96.663, Country = "US", Name = "Dallas" };
         var CitySYD = new WorldCity() { Lat = -33.889, Lon = 151.028, Country = "Australia", Name = "Sydney" };
@@ -40,15 +40,15 @@ public class MapBindingDataModelOnViewInit
         };
 
         // the route first, so that the cities at either end of it draw on top
-        foreach (var flight in flights)
+        for (var i = 0; i < flights.Count; i++)
         {
-            AddFlightRoute(geoMap, flight);
-            AddFlightCities(geoMap, flight);
+            AddFlightRoute(geoMap, flights[i], i);
+            AddFlightCities(geoMap, flights[i], i);
         }
     }
 
     /// <summary>The flight itself, as a great circle path between its two cities.</summary>
-    public void AddFlightRoute(IgbGeographicMap geoMap, FlightInfo flight)
+    public void AddFlightRoute(IgbGeographicMap geoMap, FlightInfo flight, int index)
     {
         var geoOrigin = new GeoLocation() { Lat = flight.Origin.Lat, Lon = flight.Origin.Lon };
         var geoDest = new GeoLocation() { Lat = flight.Dest.Lat, Lon = flight.Dest.Lon };
@@ -64,6 +64,7 @@ public class MapBindingDataModelOnViewInit
         };
 
         var lineSeries = new IgbGeographicPolylineSeries();
+        lineSeries.Name = "flight" + index + "Route";
         lineSeries.DataSource = geoRoutes;
         lineSeries.ShapeMemberPath = "Points";
         lineSeries.ShapeStrokeThickness = 9;
@@ -73,11 +74,12 @@ public class MapBindingDataModelOnViewInit
     }
 
     /// <summary>The cities at either end, in the flight's own colour.</summary>
-    public void AddFlightCities(IgbGeographicMap geoMap, FlightInfo flight)
+    public void AddFlightCities(IgbGeographicMap geoMap, FlightInfo flight, int index)
     {
         var geoLocations = new List<WorldCity>() { flight.Origin, flight.Dest };
 
         var symbolSeries = new IgbGeographicSymbolSeries();
+        symbolSeries.Name = "flight" + index + "Cities";
         symbolSeries.DataSource = geoLocations;
         symbolSeries.MarkerType = MarkerType.Circle;
         symbolSeries.LatitudeMemberPath = "Lat";

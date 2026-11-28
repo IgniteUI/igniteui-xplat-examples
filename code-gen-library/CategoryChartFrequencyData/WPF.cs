@@ -78,6 +78,18 @@ public static class CategoryChartFrequency
     }
 
 
+    public static void Stop()
+    {
+        Running = false;
+        if (timer != null)
+        {
+            timer.Stop();
+            timer = null;
+        }
+        chart = null;
+        data = new ObservableCollection<CategoryChartFrequencyItem>();
+    }
+
     private static void Tick()
     {
         if (!Running)

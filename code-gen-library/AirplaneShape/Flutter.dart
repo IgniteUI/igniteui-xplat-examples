@@ -4,7 +4,8 @@ import 'dart:convert';
 import 'dart:io';
 import 'package:igniteui_flutter_core/src/ArrayList.dart' show ArrayList;
 import 'package:igniteui_flutter_core/src/Point.dart' show Point;
-import 'package:igniteui_flutter_core/src/reflection.dart' show IReflectable, IReflectableSet;
+import 'package:igniteui_flutter_core/src/reflection.dart' show IReflectableData;
+import 'package:igniteui_flutter_core/src/type.dart' show Base, TypeInfo;
 
 // The outline of the aircraft, as one polygon: a list of rings, each a list of points, which is
 // what a shape series reads through its shape member path.
@@ -16,8 +17,14 @@ import 'package:igniteui_flutter_core/src/reflection.dart' show IReflectable, IR
 //
 // The keys stay as the C# and TypeScript spell them: a data item defined in code keeps its own
 // casing across platforms, and these are the names the member paths in the descriptions ask for.
-class AirplaneShapeItem implements IReflectable, IReflectableSet {
+class AirplaneShapeItem implements IReflectableData {
     ArrayList<ArrayList<Point?>?>? points = null;
+
+
+    static final Map<String, TypeInfo?> _propertyTypes = {
+        "Points": Base.$t,
+    };
+    Map<String, TypeInfo?> get propertyTypes => _propertyTypes;
 
     Object? getValue(String? propertyName) {
         switch (propertyName) {

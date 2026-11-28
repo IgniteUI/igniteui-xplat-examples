@@ -1,5 +1,6 @@
 //begin imports
 import com.infragistics.mobile.controls.IgaPropertyEditorPanel;
+import com.infragistics.mobile.controls.IEventHandler;
 import com.infragistics.mobile.controls.IgaPropertyEditorPropertyDescription;
 import com.infragistics.mobile.controls.IgaPropertyEditorPropertyDescriptionChangedEventArgs;
 import com.infragistics.mobile.controls.IgaCategoryChart;
@@ -11,40 +12,49 @@ import com.infragistics.mobile.controls.CodeGenHelper;
 public class PropertyEditorInitAggregationsOnViewInit {
 
     //begin eventHandler
+    //Kotlin: Action
     public fun propertyEditorInitAggregationsOnViewInit() {
 
-        var editor = CodeGenHelper.getDescription<IgaPropertyEditorPanel>("editor");
+        var editor = CodeGenHelper.getDescription<IgaPropertyEditorPanel>("editor")!!;
         var initialSummariesDropdown = IgaPropertyEditorPropertyDescription();
         var sortGroupsDropdown = IgaPropertyEditorPropertyDescription();
 
         initialSummariesDropdown.label = "Initial Summaries";
-        initialSummariesDropdown.valueType = PropertyEditorValueType.EnumValue;
+        initialSummariesDropdown.valueType = IgaPropertyEditorValueType.ENUM_VALUE;
         initialSummariesDropdown.shouldOverrideDefaultEditor = true;
         initialSummariesDropdown.dropDownNames = arrayOf("Sum(Sales) as Sales", "Avg(Sales) as Sales", "Min(Sales) as Sales", "Max(Sales) as Sales", "Count(Sales) as Sales" );
         initialSummariesDropdown.dropDownValues = arrayOf("Sum(Sales) as Sales", "Avg(Sales) as Sales", "Min(Sales) as Sales", "Max(Sales) as Sales", "Count(Sales) as Sales" );
 
         sortGroupsDropdown.label = "Sort Groups"
-        sortGroupsDropdown.valueType = IgaPropertyEditorValueType.EnumValue;
+        sortGroupsDropdown.valueType = IgaPropertyEditorValueType.ENUM_VALUE;
         sortGroupsDropdown.shouldOverrideDefaultEditor = true;
         sortGroupsDropdown.dropDownNames = arrayOf("Sales Asc", "Sales Desc");
         sortGroupsDropdown.dropDownValues = arrayOf("Sales Asc","Sales Desc");
 
-        editor.properties.add(initialSummariesDropdown);
-        editor.properties.add(sortGroupsDropdown);
+        editor.properties!!.add(initialSummariesDropdown);
+        editor.properties!!.add(sortGroupsDropdown);
 
-        initialSummariesDropdown.changed = this.editorChangeUpdateInitialSummaries;
-        sortGroupsDropdown.changed = this.editorChangeUpdateGroupSorts;
+        initialSummariesDropdown.changed = object: IEventHandler<IgaPropertyEditorPropertyDescriptionChangedEventArgs> {
+            override fun invoke(sender: Any?, args: IgaPropertyEditorPropertyDescriptionChangedEventArgs) {
+                editorChangeUpdateInitialSummaries(sender, args);
+            }
+        };
+        sortGroupsDropdown.changed = object: IEventHandler<IgaPropertyEditorPropertyDescriptionChangedEventArgs> {
+            override fun invoke(sender: Any?, args: IgaPropertyEditorPropertyDescriptionChangedEventArgs) {
+                editorChangeUpdateGroupSorts(sender, args);
+            }
+        };
     }
 
 	public fun editorChangeUpdateInitialSummaries(sender: Any?, args: IgaPropertyEditorPropertyDescriptionChangedEventArgs) {
 
-        var chart = CodeGenHelper.getDescription<IgaCategoryChart>("content");
+        var chart = CodeGenHelper.getDescription<IgaCategoryChart>("content")!!;
         var intialSummaryVal = args.newValue.toString();
         chart.initialSummaries = intialSummaryVal;
     }
 
     public fun editorChangeUpdateGroupSorts(sender: Any?, args: IgaPropertyEditorPropertyDescriptionChangedEventArgs) {
-        var chart = CodeGenHelper.getDescription<IgaCategoryChart>("content");
+        var chart = CodeGenHelper.getDescription<IgaCategoryChart>("content")!!;
         var groupSortsVal = args.newValue.toString();
         chart.groupSorts = groupSortsVal;
     }	

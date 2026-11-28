@@ -12,7 +12,7 @@ export class DataGridRegisterCustomAgeFilterOnViewInit {
         customAgeFilter.displayName = "Filter As Class";
         customAgeFilter.isInputRequired = false;
         customAgeFilter.editorType = EditorType.Numeric;
-        (customAgeFilter.i as any)["filterRequested"] = (sender: any, args: any) => {
+        customAgeFilter.filterRequested = (sender: any, args: IgcGridCustomFilterRequestedEventArgs) => {
             const prop = args.filterFactory.property(args.column.field);
             args.expression = prop.isEqualTo(30);
         };
@@ -22,7 +22,7 @@ export class DataGridRegisterCustomAgeFilterOnViewInit {
         salesFilter.editorType = EditorType.Numeric;
         salesFilter.isInputRequired = false;
         salesFilter.displayName = "(Custom) In-Line Filter";
-        (salesFilter.i as any)["filterRequested"] = (sender: any, args: any) => {
+        salesFilter.filterRequested = (sender: any, args: IgcGridCustomFilterRequestedEventArgs) => {
             args.expression = args.filterFactory.property("Sales").isLessThanOrEqualTo(300000);
         };
         grid.actualColumns.item(2).filterOperands.add(salesFilter);

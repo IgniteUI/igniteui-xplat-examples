@@ -60,6 +60,16 @@ export class CategoryChartFrequency {
             () => CategoryChartFrequency.tick(), CategoryChartFrequency.refreshMilliseconds);
     }
 
+    public static stop(): void {
+        CategoryChartFrequency.running = false;
+        if (CategoryChartFrequency.timer !== null) {
+            clearInterval(CategoryChartFrequency.timer);
+            CategoryChartFrequency.timer = null;
+        }
+        CategoryChartFrequency.chart = null;
+        CategoryChartFrequency.data = [];
+    }
+
     private static tick(): void {
         if (!CategoryChartFrequency.running) {
             return;

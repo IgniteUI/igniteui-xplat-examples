@@ -5,8 +5,8 @@ import { html } from 'lit';
 export class CategoryChartTooltipTemplate {
 //begin template
 //begin content
-    public categoryChartTooltipTemplate = (ctx: { dataContext: any }) => {
-        const item = ctx.dataContext.item;
+    public categoryChartTooltipTemplate = (context: any) => {
+        const item = context.item;
         if (item == null) {
             return html``;
         }

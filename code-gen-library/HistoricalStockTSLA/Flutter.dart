@@ -1,11 +1,12 @@
 //begin data
 import 'package:igniteui_flutter_core/src/ArrayList.dart' show ArrayList;
-import 'package:igniteui_flutter_core/src/reflection.dart' show IReflectable, IReflectableSet;
+import 'package:igniteui_flutter_core/src/reflection.dart' show IReflectableData;
+import 'package:igniteui_flutter_core/src/type.dart' show Date_$type, Double_$type, Int_$type, String_$type, TypeInfo;
 
 // The keys stay as the C# and TypeScript spell them: a data item defined in
 // code keeps its own casing across platforms, and these are the names the
 // member paths in the descriptions ask for.
-class HistoricalStockInfo implements IReflectable, IReflectableSet {
+class HistoricalStockInfo implements IReflectableData {
     String? details = null;
     double high = 0;
     double low = 0;
@@ -15,6 +16,20 @@ class HistoricalStockInfo implements IReflectable, IReflectableSet {
     DateTime? date = null;
     String? label = null;
     int index = 0;
+
+
+    static final Map<String, TypeInfo?> _propertyTypes = {
+        "Details": String_$type,
+        "High": Double_$type,
+        "Low": Double_$type,
+        "Close": Double_$type,
+        "Open": Double_$type,
+        "Volume": Double_$type,
+        "Date": Date_$type,
+        "Label": String_$type,
+        "Index": Int_$type,
+    };
+    Map<String, TypeInfo?> get propertyTypes => _propertyTypes;
 
     Object? getValue(String? propertyName) {
         switch (propertyName) {

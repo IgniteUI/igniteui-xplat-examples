@@ -12,7 +12,8 @@ public class EditorButtonReplayTransitionInDomain {
         var chart = CodeGenHelper.getDescription<Any?>("content");
 
         if (chart is IgaDataChart) {
-            chart.replayTransitionIn();
+            val series = chart.series!!;
+            for (i in 0 until series.count) series[i]!!.replayTransitionIn();
         }
         if (chart is IgaCategoryChart) {
             chart.replayTransitionIn();

@@ -22,9 +22,18 @@ public class MapBindingDataJsonPointsOnViewInit
 
     public async void MapBindingDataJsonPointsOnViewInit()
     {
+        //begin testing
+        var work = GlobalQueuedWorkState.Instance;
+        const string channel = "Sample.MapBindingDataJsonPointsOnViewInit.Load";
+        work.NotifyWorkQueued(channel);
+        //end testing
+        //begin testing
+        try
+        {
+        //end testing
         var map = CodeGenHelper.GetDescription<IgbGeographicMap>("content");
         var url = "https://static.infragistics.com/xplatform/data/WorldCities.json";
-        var client = new HttpClient();
+        using var client = new HttpClient();
         var json = await client.GetStringAsync(url);
         var geoLocations = new List<WorldPlaceJson>();
         using (var document = JsonDocument.Parse(json))
@@ -54,6 +63,10 @@ public class MapBindingDataJsonPointsOnViewInit
             MarkerType = MarkerType.Circle
         };
         map.Series.Add(series);
+        //begin testing
+        }
+        finally { work.NotifyWorkCompleted(channel); }
+        //end testing
     }
     //end eventHandler
 }

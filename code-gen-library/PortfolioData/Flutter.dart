@@ -1,7 +1,8 @@
 //begin data
 import 'dart:math' as math;
 import 'package:igniteui_flutter_core/src/ArrayList.dart' show ArrayList;
-import 'package:igniteui_flutter_core/src/reflection.dart' show IReflectable, IReflectableSet;
+import 'package:igniteui_flutter_core/src/reflection.dart' show IReflectableData;
+import 'package:igniteui_flutter_core/src/type.dart' show Date_$type, Double_$type, Int_$type, String_$type, TypeInfo;
 
 // The keys stay as the C# and TypeScript spell them: a data item defined in
 // code keeps its own casing across platforms, and these are the names the
@@ -18,7 +19,7 @@ class PortfolioDataPriceChange {
     double percentage = 0;
 }
 
-class PortfolioDataItem implements IReflectable, IReflectableSet {
+class PortfolioDataItem implements IReflectableData {
     double priceHeat = 0;
     String? indGroup = null;
     String? indSector = null;
@@ -103,6 +104,50 @@ class PortfolioDataItem implements IReflectable, IReflectableSet {
         c.changeOnYear = this.changeOnYear;
         return c;
     }
+
+
+    static final Map<String, TypeInfo?> _propertyTypes = {
+        "PriceHeat": Double_$type,
+        "IndGroup": String_$type,
+        "IndSector": String_$type,
+        "IndCategory": String_$type,
+        "Fitch": String_$type,
+        "Collateral": String_$type,
+        "Transactions": String_$type,
+        "CPN": Double_$type,
+        "Spread": Double_$type,
+        "KRD_3YR": Double_$type,
+        "KRD_5YR": Double_$type,
+        "KRD_1YR": Double_$type,
+        "Maturity": Date_$type,
+        "ID": Int_$type,
+        "Settlement": String_$type,
+        "Category": String_$type,
+        "Contract": String_$type,
+        "Country": String_$type,
+        "Currency": String_$type,
+        "Type": String_$type,
+        "Open": Double_$type,
+        "Price": Double_$type,
+        "Buy": Double_$type,
+        "Rating": String_$type,
+        "Region": String_$type,
+        "Risk": String_$type,
+        "Sell": Double_$type,
+        "Sector": String_$type,
+        "Security": String_$type,
+        "Issuer": String_$type,
+        "Change": Double_$type,
+        "ChangePercent": Double_$type,
+        "Volume": Double_$type,
+        "DailyHigh": Double_$type,
+        "DailyLow": Double_$type,
+        "YearlyHigh": Double_$type,
+        "YearlyLow": Double_$type,
+        "YearlyStart": Double_$type,
+        "ChangeOnYear": Double_$type,
+    };
+    Map<String, TypeInfo?> get propertyTypes => _propertyTypes;
 
     Object? getValue(String? propertyName) {
         switch (propertyName) {

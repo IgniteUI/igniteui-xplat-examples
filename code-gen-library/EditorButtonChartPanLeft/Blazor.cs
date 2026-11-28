@@ -8,7 +8,8 @@ public class EditorButtonChartPanLeft
     public void EditorButtonChartPanLeft(IgbPropertyEditorPropertyDescriptionButtonClickEventArgs args)
     {
         var chart = CodeGenHelper.GetDescription<IgbDataChart>("content");
-        chart.ActualWindowPositionHorizontal -= 0.05;
+        var window = chart.GetCurrentActualWindowRect()!;
+        chart.WindowRect = new Rect(window.Left - 0.05, window.Top, window.Width, window.Height);
     }
     //end eventHandler
 }

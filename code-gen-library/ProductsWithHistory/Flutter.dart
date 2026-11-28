@@ -1,16 +1,22 @@
 //begin data
 import 'dart:math' as math;
 import 'package:igniteui_flutter_core/src/ArrayList.dart' show ArrayList;
-import 'package:igniteui_flutter_core/src/reflection.dart' show IReflectable, IReflectableSet;
+import 'package:igniteui_flutter_core/src/reflection.dart' show IReflectableData;
+import 'package:igniteui_flutter_core/src/type.dart'
+    show TypeInfo, Double_$type, String_$type, Date_$type, Base;
 
 // The keys stay as the C# and TypeScript spell them: a data item defined in
 // code keeps its own casing across platforms, and these are the names the
 // member paths in the descriptions ask for.
 
 /// One week of the order history a sparkline draws.
-class ProductWeeklySale implements IReflectable, IReflectableSet {
+class ProductWeeklySale implements IReflectableData {
     double sold = 0;
     double week = 0;
+
+    Map<String, TypeInfo?> get propertyTypes => {
+        'Sold': Double_$type, 'Week': Double_$type,
+    };
 
     Object? getValue(String? propertyName) {
         switch (propertyName) {
@@ -35,9 +41,13 @@ class ProductWeeklySale implements IReflectable, IReflectableSet {
 }
 
 /// One week of the return rate, which runs either side of zero.
-class ProductWeeklyBalance implements IReflectable, IReflectableSet {
+class ProductWeeklyBalance implements IReflectableData {
     double balance = 0;
     double week = 0;
+
+    Map<String, TypeInfo?> get propertyTypes => {
+        'Balance': Double_$type, 'Week': Double_$type,
+    };
 
     Object? getValue(String? propertyName) {
         switch (propertyName) {
@@ -61,7 +71,7 @@ class ProductWeeklyBalance implements IReflectable, IReflectableSet {
     }
 }
 
-class ProductWithHistory implements IReflectable, IReflectableSet {
+class ProductWithHistory implements IReflectableData {
     String? countryFlag = null;
     String? countryName = null;
     double margin = 0;
@@ -76,6 +86,16 @@ class ProductWithHistory implements IReflectable, IReflectableSet {
     double profit = 0;
     ArrayList<ProductWeeklyBalance?>? returnRate = null;
     String? status = null;
+
+    Map<String, TypeInfo?> get propertyTypes => {
+        'CountryFlag': String_$type, 'CountryName': String_$type,
+        'Margin': Double_$type, 'OrderCount': Double_$type,
+        'OrderHistory': Base.$t, 'OrderShipped': Double_$type,
+        'OrderValue': Double_$type, 'OrderDate': Date_$type,
+        'ProductID': String_$type, 'ProductName': String_$type,
+        'ProductPrice': Double_$type, 'Profit': Double_$type,
+        'ReturnRate': Base.$t, 'Status': String_$type,
+    };
 
     Object? getValue(String? propertyName) {
         switch (propertyName) {

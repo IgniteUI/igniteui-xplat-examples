@@ -69,6 +69,14 @@ export class Sample {
 		
         //insert onViewInit
         //end onViewInit
+//ifdef onViewDestroy
+
+        // The page going away is this sample's teardown: what onViewInit started stops here.
+        window.addEventListener('pagehide', () => {
+            //insert onViewDestroy
+            //end onViewDestroy
+        });
+//endifdef onViewDestroy
     }
 
     //insert vmProperties

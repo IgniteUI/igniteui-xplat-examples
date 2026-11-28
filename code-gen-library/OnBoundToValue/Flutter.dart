@@ -6,7 +6,7 @@ import 'package:igniteui_flutter_core/src/string.dart' show StringUtil;
 class OnBoundToValue {
     //begin eventHandler
     void onBoundToValue(Object? sender, IgfDataBindingEventArgsState args) {
-        final cell = args.i_IgfDataBindingEventArgs.cellInfo!;
+        final cell = args.cellInfo!;
         cell.renderValue = cell.originalValue == null ? "" : StringUtil.objToString(cell.originalValue);
     }
     //end eventHandler

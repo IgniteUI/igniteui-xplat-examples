@@ -2,6 +2,8 @@
 import com.infragistics.mobile.controls.IgaPropertyEditorPropertyDescription;
 import com.infragistics.mobile.controls.IgaPropertyEditorPropertyDescriptionChangedEventArgs;
 import com.infragistics.mobile.controls.IgaCategoryChart;
+import com.infragistics.mobile.controls.IgaMarkerType;
+import com.infragistics.mobile.controls.IgaMarkerTypeCollection;
 //end imports
 
 import com.infragistics.mobile.controls.CodeGenHelper
@@ -12,8 +14,10 @@ public class EditorChangeUpdateMarkerType {
         var item = sender as IgaPropertyEditorPropertyDescription;
         var chart = CodeGenHelper.getDescription<IgaCategoryChart>("content")!!;
         
-        var markerVal = item.primitiveValue!!;
-        chart.markerTypes = markerVal;   
+        val markerVal = IgaMarkerType.valueOf(item.primitiveValue.toString().uppercase());
+        val markers = IgaMarkerTypeCollection();
+        markers.add(markerVal);
+        chart.markerTypes = markers;
     }
     //end eventHandler
 }

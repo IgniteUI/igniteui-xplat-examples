@@ -35,27 +35,27 @@ public class FinancialDataService {
                 item.indSector = json["IndSector"] as? String
                 item.indCategory = json["IndCategory"] as? String
                 item.cpn = json["Cpn"] as? String
-                item.spread = json["Spread"] as? Double
-                item.open = json["Open"] as? Double
-                item.price = json["Price"] as? Double
-                item.buy = json["Buy"] as? Double
-                item.sell = json["Sell"] as? Double
-                item.change = json["Change"] as? Double
-                item.changePercent = json["ChangePercent"] as? Double
-                item.high = json["High"] as? Double
-                item.low = json["Low"] as? Double
-                item.yearlyHigh = json["YearlyHigh"] as? Double
-                item.yearlyLow = json["YearlyLow"] as? Double
-                item.yearlyStart = json["YearlyStart"] as? Double
-                item.yearlyChange = json["YearlyChange"] as? Double
-                item.zvSpread = json["ZV_SPREAD"] as? Double
-                item.krd3Yr = json["KRD_3YR"] as? Double
-                item.krd5Yr = json["KRD_5YR"] as? Double
-                item.krd1Yr = json["KRD_1YR"] as? Double
-                item.id = json["ID"] as? Int
+                item.spread = json["Spread"] as? Double ?? .nan
+                item.open = json["Open"] as? Double ?? .nan
+                item.price = json["Price"] as? Double ?? .nan
+                item.buy = json["Buy"] as? Double ?? .nan
+                item.sell = json["Sell"] as? Double ?? .nan
+                item.change = json["Change"] as? Double ?? .nan
+                item.changePercent = json["ChangePercent"] as? Double ?? .nan
+                item.high = json["High"] as? Double ?? .nan
+                item.low = json["Low"] as? Double ?? .nan
+                item.yearlyHigh = json["YearlyHigh"] as? Double ?? .nan
+                item.yearlyLow = json["YearlyLow"] as? Double ?? .nan
+                item.yearlyStart = json["YearlyStart"] as? Double ?? .nan
+                item.yearlyChange = json["YearlyChange"] as? Double ?? .nan
+                item.zvSpread = json["ZV_SPREAD"] as? Double ?? .nan
+                item.krd3Yr = json["KRD_3YR"] as? Double ?? .nan
+                item.krd5Yr = json["KRD_5YR"] as? Double ?? .nan
+                item.krd1Yr = json["KRD_1YR"] as? Double ?? .nan
+                item.id = json["ID"] as? Int ?? 0
                 item.currency = json["Currency"] as? String
                 item.security = json["Security"] as? String
-                item.volume = json["Volume"] as? Double
+                item.volume = json["Volume"] as? Double ?? .nan
                 return item
             }
 
@@ -66,23 +66,26 @@ public class FinancialDataService {
     }
 }
 
-public class FinancialDataDetails: ISampleDataItem {
+// Members are read through the Objective-C runtime, which cannot see optional numbers, so a
+// missing number is NaN, as the charts treat an absent value.
+@objcMembers
+public class FinancialDataDetails: NSObject, ISampleDataItem {
     public var category: String? = nil
     public var type: String? = nil
-    public var spread: Double? = nil
-    public var open: Double? = nil
-    public var price: Double? = nil
-    public var buy: Double? = nil
-    public var sell: Double? = nil
-    public var change: Double? = nil
-    public var changePercent: Double? = nil
-    public var volume: Double? = nil
-    public var high: Double? = nil
-    public var low: Double? = nil
-    public var yearlyHigh: Double? = nil
-    public var yearlyLow: Double? = nil
-    public var yearlyStart: Double? = nil
-    public var yearlyChange: Double? = nil
+    public var spread: Double = .nan
+    public var open: Double = .nan
+    public var price: Double = .nan
+    public var buy: Double = .nan
+    public var sell: Double = .nan
+    public var change: Double = .nan
+    public var changePercent: Double = .nan
+    public var volume: Double = .nan
+    public var high: Double = .nan
+    public var low: Double = .nan
+    public var yearlyHigh: Double = .nan
+    public var yearlyLow: Double = .nan
+    public var yearlyStart: Double = .nan
+    public var yearlyChange: Double = .nan
     public var settlement: String? = nil
     public var contract: String? = nil
     public var region: String? = nil
@@ -97,10 +100,10 @@ public class FinancialDataDetails: ISampleDataItem {
     public var indSector: String? = nil
     public var indCategory: String? = nil
     public var cpn: String? = nil
-    public var krd3Yr: Double? = nil
-    public var zvSpread: Double? = nil
-    public var krd5Yr: Double? = nil
-    public var krd1Yr: Double? = nil
-    public var id: Int? = nil
+    public var krd3Yr: Double = .nan
+    public var zvSpread: Double = .nan
+    public var krd5Yr: Double = .nan
+    public var krd1Yr: Double = .nan
+    public var id: Int = 0
 }
 //end async data

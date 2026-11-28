@@ -1,0 +1,6 @@
+{
+  "requires": [
+    "DataGridSampleCells",
+    "DataGridLiveState"
+  ]
+}

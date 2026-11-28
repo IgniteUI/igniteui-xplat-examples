@@ -1,3 +1,4 @@
+//begin template
 //begin imports
 using System.Windows.Controls;
 using Infragistics.Controls.Grids;
@@ -5,9 +6,8 @@ using Infragistics.Controls.Grids;
 
 public class DataGridDeleteRowButtonTemplate
 {
-    //begin eventHandler
-    //WPF: Infragistics.Controls.Grids.TemplateCellUpdatingEventHandler
-    public void DataGridDeleteRowButtonTemplate(object sender, TemplateCellUpdatingEventArgs args)
+    //begin content
+    public TemplateCellUpdatingEventHandler DataGridDeleteRowButtonTemplate = (sender, args) =>
     {
         var content = args.Content;
         Button button;
@@ -32,6 +32,7 @@ public class DataGridDeleteRowButtonTemplate
 
         button.IsEnabled = !args.CellInfo.IsDeleted;
         button.Tag = args.CellInfo.RowItem;
-    }
-    //end eventHandler
+    };
+    //end content
 }
+//end template

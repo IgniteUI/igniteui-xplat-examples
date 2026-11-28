@@ -4,13 +4,14 @@ import 'dart:convert';
 import 'dart:io';
 import 'package:igniteui_flutter_core/src/ArrayList.dart' show ArrayList;
 import "package:igniteui_flutter_core/src/ObservableCollection\$1.dart" show ObservableCollection$1;
-import 'package:igniteui_flutter_core/src/reflection.dart' show IReflectable, IReflectableSet;
+import 'package:igniteui_flutter_core/src/reflection.dart' show IReflectableData;
+import 'package:igniteui_flutter_core/src/type.dart' show Date_$type, Double_$type, String_$type, TypeInfo;
 import 'package:igniteui_flutter_core/src/type.dart' show TypeInfo, markType;
 
 // The keys stay as the C# and TypeScript spell them for the member paths the
 // descriptions ask for. The JSON this fetches spells its own keys in lower
 // case, and those are read separately below.
-class MultipleStocksItem implements IReflectable, IReflectableSet {
+class MultipleStocksItem implements IReflectableData {
     // ObservableCollection needs the element's TypeInfo, so this one is marked.
     static final TypeInfo? $t = markType<MultipleStocksItem>("MultipleStocksItem", () => null, () => MultipleStocksItem());
 
@@ -20,6 +21,17 @@ class MultipleStocksItem implements IReflectable, IReflectableSet {
     double low = 0;
     double close = 0;
     double volume = 0;
+
+
+    static final Map<String, TypeInfo?> _propertyTypes = {
+        "Date": Date_$type,
+        "Open": Double_$type,
+        "High": Double_$type,
+        "Low": Double_$type,
+        "Close": Double_$type,
+        "Volume": Double_$type,
+    };
+    Map<String, TypeInfo?> get propertyTypes => _propertyTypes;
 
     Object? getValue(String? propertyName) {
         switch (propertyName) {
@@ -65,14 +77,34 @@ class MultipleStocksItem implements IReflectable, IReflectableSet {
 
 /// Observable, as the C# has it: the collection is what a chart binds to and
 /// the samples add to it after the fact.
-class TitledStockData extends ObservableCollection$1<MultipleStocksItem?> {
+class TitledStockData extends ObservableCollection$1<MultipleStocksItem?> implements IReflectableData {
     TitledStockData() : super(MultipleStocksItem.$t);
 
     String? title = null;
+
+    Map<String, TypeInfo?> get propertyTypes => {'Title': String_$type};
+
+    Object? getValue(String? propertyName) {
+        switch (propertyName) {
+            case 'Title':
+            case 'title':
+                return title;
+        }
+        return null;
+    }
+
+    void setValue(String? propertyName, Object? value) {
+        switch (propertyName) {
+            case 'Title':
+            case 'title':
+                title = value as String?;
+                break;
+        }
+    }
 }
 
 class MultipleStocks extends ArrayList<TitledStockData?> {
-    static Future<MultipleStocks> fetchAll() async {
+    static Future<MultipleStocks> fetch() async {
         var google = await MultipleStocks.getGoogleStock();
         var amazon = await MultipleStocks.getAmazonStock();
         var val = MultipleStocks();

@@ -5,19 +5,18 @@ using Infragistics.Controls.Charts;
 public class CategoryChartMarkerTemplateSeriesAdded
 {
     //begin eventHandler
-    //WPF: Infragistics.Controls.Charts.ChartSeriesEventHandler
+    //WinUI: Infragistics.Controls.Charts.ChartSeriesEventHandler
     public void CategoryChartMarkerTemplateSeriesAdded(object sender, ChartSeriesEventArgs args)
     {
-        // Nothing to hand the series yet on WinUI.
-        //
-        // WPF looks a keyed DataTemplate up from the chart and hangs it on each series the category
-        // chart makes. WinUI draws its markers immediate mode, so there is no template to hang: a
-        // custom marker here is going to be a render callback or path data in the SVG sense, not a
-        // XAML template, and MarkerTemplate is typed for the portable shape rather than the XAML one
-        // to leave room for it.
-        //
-        // The handler stays wired so the sample keeps the same shape it has everywhere else, and
-        // does nothing until there is something for it to do.
+        // A category chart makes a series per column it is given, so there is no series in the
+        // definition to hang a marker on. The chart says when it has made one, and this is where each
+        // gets its marker: an svg, drawn in place of the built-in shapes. currentColor stands for the
+        // series' own colors -- the fill takes the marker brush and the stroke the marker outline.
+        var series = args.Series as MarkerSeries;
+        if (series != null)
+        {
+            series.MarkerTemplateSVG = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\"><path d=\"M12 1.5l3.1 6.3 6.9 1-5 4.9 1.2 6.9-6.2-3.3-6.2 3.3 1.2-6.9-5-4.9 6.9-1z\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linejoin=\"round\"/></svg>";
+        }
     }
     //end eventHandler
 }

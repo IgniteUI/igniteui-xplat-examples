@@ -2,14 +2,22 @@
 import 'dart:math' as math;
 import 'package:igniteui_flutter_core/src/ArrayList.dart' show ArrayList;
 import 'package:igniteui_flutter_core/src/MathUtilCore.dart' show MathUtilCore;
-import 'package:igniteui_flutter_core/src/reflection.dart' show IReflectable, IReflectableSet;
+import 'package:igniteui_flutter_core/src/reflection.dart' show IReflectableData;
+import 'package:igniteui_flutter_core/src/type.dart' show Base, Date_$type, Double_$type, Int_$type, String_$type, TypeInfo;
 
 // The keys stay as the C# and TypeScript spell them: a data item defined in
 // code keeps its own casing across platforms, and these are the names the
 // member paths in the descriptions ask for.
-class ProductivityItem implements IReflectable, IReflectableSet {
+class ProductivityItem implements IReflectableData {
     double value = 0;
     int week = 0;
+
+
+    static final Map<String, TypeInfo?> _propertyTypes = {
+        "Value": Double_$type,
+        "Week": Int_$type,
+    };
+    Map<String, TypeInfo?> get propertyTypes => _propertyTypes;
 
     Object? getValue(String? propertyName) {
         switch (propertyName) {
@@ -33,7 +41,7 @@ class ProductivityItem implements IReflectable, IReflectableSet {
     }
 }
 
-class EmployeesSalesDataItem implements IReflectable, IReflectableSet {
+class EmployeesSalesDataItem implements IReflectableData {
     String? id = null;
     String? address = null;
     double age = 0;
@@ -67,6 +75,31 @@ class EmployeesSalesDataItem implements IReflectable, IReflectableSet {
             city = EmployeesSalesDataGenerator.getCity(value);
         }
     }
+
+
+    static final Map<String, TypeInfo?> _propertyTypes = {
+        "ID": String_$type,
+        "Address": String_$type,
+        "Age": Double_$type,
+        "Gender": String_$type,
+        "FirstName": String_$type,
+        "LastName": String_$type,
+        "Name": String_$type,
+        "Street": String_$type,
+        "City": String_$type,
+        "Email": String_$type,
+        "Phone": String_$type,
+        "Photo": String_$type,
+        "Salary": Double_$type,
+        "Sales": Double_$type,
+        "Income": String_$type,
+        "Index": Int_$type,
+        "Birthday": Date_$type,
+        "Productivity": Base.$t,
+        "Country": String_$type,
+        "CountryFlag": String_$type,
+    };
+    Map<String, TypeInfo?> get propertyTypes => _propertyTypes;
 
     Object? getValue(String? propertyName) {
         switch (propertyName) {

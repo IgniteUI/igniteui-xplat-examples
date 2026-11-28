@@ -4,7 +4,8 @@ import 'dart:convert';
 import 'dart:io';
 import 'package:igniteui_flutter_core/src/ArrayList.dart' show ArrayList;
 import 'package:igniteui_flutter_core/src/Point.dart' show Point;
-import 'package:igniteui_flutter_core/src/reflection.dart' show IReflectable, IReflectableSet;
+import 'package:igniteui_flutter_core/src/reflection.dart' show IReflectableData;
+import 'package:igniteui_flutter_core/src/type.dart' show Base, String_$type, TypeInfo;
 
 // Every seat on the aircraft: its polygon, and what the sample colours it by -- which cabin class
 // it belongs to and whether it is sold.
@@ -15,7 +16,7 @@ import 'package:igniteui_flutter_core/src/reflection.dart' show IReflectable, IR
 //
 // The keys stay as the C# and TypeScript spell them: a data item defined in code keeps its own
 // casing across platforms, and these are the names the member paths in the descriptions ask for.
-class AirplaneSeatsItem implements IReflectable, IReflectableSet {
+class AirplaneSeatsItem implements IReflectableData {
     String? seat = null;
     String? price = null;
     String? seatClass = null;
@@ -23,6 +24,18 @@ class AirplaneSeatsItem implements IReflectable, IReflectableSet {
     String? row = null;
     String? column = null;
     ArrayList<ArrayList<Point?>?>? points = null;
+
+
+    static final Map<String, TypeInfo?> _propertyTypes = {
+        "Seat": String_$type,
+        "Price": String_$type,
+        "Class": String_$type,
+        "Status": String_$type,
+        "Row": String_$type,
+        "Column": String_$type,
+        "Points": Base.$t,
+    };
+    Map<String, TypeInfo?> get propertyTypes => _propertyTypes;
 
     Object? getValue(String? propertyName) {
         switch (propertyName) {

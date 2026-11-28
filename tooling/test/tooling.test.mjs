@@ -286,7 +286,7 @@ test('emits React map imagery as a model and empty gauge ranges without children
     assert.match(area, /IgrCustomPaletteColorScale[^;]+igniteui-react-charts/s);
     assert.doesNotMatch(area, /IgrCustomPaletteColorScale[^;]+igniteui-react-maps/s);
     assert.doesNotMatch(area, /<IgrCustomPaletteColorScale[^>]+\bpalette=/s);
-    assert.match(area, /r\.palette = \["rgba\(32, 146, 252, 0\.5019607843137255\)"/);
+    assert.match(area, /r\.palette = \["rgba\(32, 146, 252, 0\.5\)"/);
 
     const styling = emit('maps/geo-map/shape-styling-random.json').files['src/index.tsx'];
     assert.match(styling, /Style[^;]+igniteui-react-core/s);
@@ -451,9 +451,10 @@ test('adapts current Blazor collection and tooltip context APIs', () => {
     const userAnnotation = emitProject(
         fs.readFileSync(path.join(examplesRoot, 'samples/charts/data-chart/user-annotation-layer.json'), 'utf8'),
         'Blazor', { examplesRoot });
-    assert.match(userAnnotation.files['App.razor'], /IgbUserAnnotationInformation pending/);
-    assert.match(userAnnotation.files['App.razor'], /fields\.Label = this\.annotationLabel/);
-    assert.doesNotMatch(userAnnotation.files['App.razor'], /this\.AnnotationLabel/);
+    assert.match(userAnnotation.files['App.razor'], /UserAnnotationInformationRequestedScript="DataChartUserAnnotationRequested"/);
+    assert.match(userAnnotation.files['wwwroot/events.js'], /igRegisterScript\("DataChartUserAnnotationRequested"/);
+    assert.match(userAnnotation.files['wwwroot/events.js'], /info\.label = labelInput\.value/);
+    assert.match(userAnnotation.files['wwwroot/events.js'], /chart\.finishAnnotationFlow\(info\)/);
 
     const doughnut = emitProject(
         fs.readFileSync(path.join(examplesRoot, 'samples/charts/doughnut-chart/selection.json'), 'utf8'),
@@ -597,15 +598,32 @@ test('emits WinUI and Uno libraries through the native product renderers', () =>
     }
 });
 
-test('includes the data classes referenced by a selected Blazor library item', () => {
+test('retains declared data types and dependencies of selected Blazor library items', () => {
     const emitted = emitLibrary('Blazor', {
         examplesRoot: path.resolve(ROOT, '..'),
         templatesRoot: path.join(ROOT, 'library-templates'),
         only: ['RetailSalesPerformanceLocalDataSource', 'DataGridLiveDataTickerOnViewInit'],
     });
     assert.deepEqual(emitted.problems, []);
-    assert.match(emitted.files['RetailSalesPerformanceData.cs'], /class RetailSalesPerformanceDataItem/);
+    assert.match(emitted.files['RetailSalesPerformanceLocalDataSource.cs'], /class RetailSalesPerformanceDataLDSItem/);
+    assert.match(emitted.files['RetailSalesPerformanceLocalDataSource.cs'], /List<RetailSalesPerformanceDataLDSItem>/);
     assert.match(emitted.files['PortfolioData.cs'], /class PortfolioDataItem/);
+});
+
+test('excludes holders whose required item was excluded by the caller', () => {
+    const opts = {
+        examplesRoot: path.resolve(ROOT, '..'),
+        templatesRoot: path.join(ROOT, 'library-templates'),
+        only: ['MapBindingShpPointsLoad', 'SalesData'],
+        exclude: ['MapMultipleShapesReaders'],
+    };
+    const emitted = emitLibrary('Blazor', opts);
+    assert.deepEqual(emitted.problems, []);
+    assert.ok(emitted.files['SalesData.cs']);
+    assert.doesNotMatch(emitted.manager, /MapBindingShpPointsLoad|MapMultipleShapesReaders/);
+    assert.equal(Object.keys(emitted.files).some(file => /MapBindingShpPointsLoad/.test(file)), false);
+    assert.deepEqual(opts.only, ['MapBindingShpPointsLoad', 'SalesData']);
+    assert.deepEqual(opts.exclude, ['MapMultipleShapesReaders']);
 });
 
 test('includes referenced data classes in a standalone Blazor dashboard sample', () => {
@@ -613,7 +631,7 @@ test('includes referenced data classes in a standalone Blazor dashboard sample',
     const emitted = emitProject(fs.readFileSync(path.join(examplesRoot,
         'samples/charts/dashboard-tile/local-data-source-dashboard.json'), 'utf8'),
     'Blazor', { examplesRoot });
-    assert.match(emitted.files['RetailSalesPerformanceLocalDataSource.cs'], /RetailSalesPerformanceDataItem/);
-    assert.match(emitted.files['RetailSalesPerformanceData.cs'], /class RetailSalesPerformanceDataItem/);
+    assert.match(emitted.files['RetailSalesPerformanceLocalDataSource.cs'], /List<RetailSalesPerformanceDataLDSItem>/);
+    assert.match(emitted.files['RetailSalesPerformanceLocalDataSource.cs'], /class RetailSalesPerformanceDataLDSItem/);
     assert.equal(emitted.files['LibraryManager.cs'], undefined);
 });

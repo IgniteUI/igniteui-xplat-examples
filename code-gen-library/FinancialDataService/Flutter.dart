@@ -3,13 +3,14 @@ import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
 import 'package:igniteui_flutter_core/src/ArrayList.dart' show ArrayList;
-import 'package:igniteui_flutter_core/src/reflection.dart' show IReflectable, IReflectableSet;
+import 'package:igniteui_flutter_core/src/reflection.dart' show IReflectableData;
+import 'package:igniteui_flutter_core/src/type.dart' show Double_$type, String_$type, TypeInfo;
 
 // The keys stay as the C# and TypeScript spell them: a data item defined in
 // code keeps its own casing across platforms, and these are the names the
 // member paths in the descriptions ask for. Here they are also the keys the
 // fetched JSON carries, so the two line up.
-class FinancialDataDetails implements IReflectable, IReflectableSet {
+class FinancialDataDetails implements IReflectableData {
     String? category = null;
     String? type = null;
     double spread = 0;
@@ -46,6 +47,47 @@ class FinancialDataDetails implements IReflectable, IReflectableSet {
     double krd1YR = 0;
     double zvSpread = 0;
     double id = 0;
+
+
+    static final Map<String, TypeInfo?> _propertyTypes = {
+        "Category": String_$type,
+        "Type": String_$type,
+        "Spread": Double_$type,
+        "Open": Double_$type,
+        "Price": Double_$type,
+        "Buy": Double_$type,
+        "Sell": Double_$type,
+        "Change": Double_$type,
+        "ChangePercent": Double_$type,
+        "Volume": Double_$type,
+        "High": Double_$type,
+        "Low": Double_$type,
+        "YearlyHigh": Double_$type,
+        "YearlyLow": Double_$type,
+        "YearlyStart": Double_$type,
+        "YearlyChange": Double_$type,
+        "Settlement": String_$type,
+        "Contract": String_$type,
+        "Region": String_$type,
+        "Country": String_$type,
+        "Risk": String_$type,
+        "Sector": String_$type,
+        "Currency": String_$type,
+        "Security": String_$type,
+        "Issuer": String_$type,
+        "Maturity": String_$type,
+        "IndGroup": String_$type,
+        "IndSector": String_$type,
+        "IndCategory": String_$type,
+        "CpnTyp": String_$type,
+        "Cpn": String_$type,
+        "KRD_3YR": Double_$type,
+        "KRD_5YR": Double_$type,
+        "KRD_1YR": Double_$type,
+        "ZV_SPREAD": Double_$type,
+        "ID": Double_$type,
+    };
+    Map<String, TypeInfo?> get propertyTypes => _propertyTypes;
 
     Object? getValue(String? propertyName) {
         switch (propertyName) {
@@ -243,12 +285,15 @@ class FinancialDataService extends ArrayList<FinancialDataDetails?> {
     // HttpClient out of dart:io rather than a package: the emitted library
     // depends on the product packages and intl, and nothing else, and the
     // Flutter host this serves is a desktop app.
-    static Future<FinancialDataService> fetchData() async {
+    static Future<FinancialDataService> fetch() async {
         var url = "https://static.infragistics.com/xplatform/data/stocks/FinancialData1000.json";
         var client = HttpClient();
         try {
             var request = await client.getUrl(Uri.parse(url));
             var response = await request.close();
+            if (response.statusCode != HttpStatus.ok) {
+                throw HttpException('Financial data request failed: ${response.statusCode}', uri: Uri.parse(url));
+            }
             var str = await response.transform(utf8.decoder).join();
             var json = jsonDecode(str) as List<dynamic>;
             return convertData(json);

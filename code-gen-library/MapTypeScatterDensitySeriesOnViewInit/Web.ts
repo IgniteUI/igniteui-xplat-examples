@@ -1,46 +1,19 @@
 //begin imports
-import { IgcGeographicMapComponent, IgcGeographicHighDensityScatterSeriesComponent } from 'igniteui-webcomponents-maps';
+import { IgcGeographicMapComponent } from 'igniteui-webcomponents-maps';
 //end imports
 
 import { CodeGenHelper } from 'igniteui-webcomponents-core';
+import { MapDensityCsvData } from '../MapDensityCsvData/Web';
 
 export class MapTypeScatterDensitySeriesOnViewInit {
 
     //begin eventHandler
     public mapTypeScatterDensitySeriesOnViewInit(): void {
-        var map = CodeGenHelper.getDescription<IgcGeographicMapComponent>("content");
-        var url = "https://static.infragistics.com/xplatform/data/AusPlaces.csv";
-        fetch(url)
-            .then((response) => response.text())
-            .then((csvData: string) => {
-                var csvLines = csvData.split("\n");
-                var geoLocations: any[] = [];
-                // parsing CSV data and creating geographic locations
-                for (var i = 1; i < csvLines.length; i++) {
-                    var columns = csvLines[i].split(",");
-                    if (columns.length < 3) continue;
-                    geoLocations.push({
-                        name: columns[0],
-                        longitude: Number(columns[1]),
-                        latitude: Number(columns[2])
-                    });
-                }
-                // creating the high density series with the loaded data
-                var series = new IgcGeographicHighDensityScatterSeriesComponent();
-                series.dataSource = geoLocations;
-                series.longitudeMemberPath = "longitude";
-                series.latitudeMemberPath = "latitude";
-                series.heatMaximumColor = "Red";
-                series.heatMinimumColor = "Black";
-                series.heatMinimum = 0;
-                series.heatMaximum = 5;
-                series.pointExtent = 1;
-                series.mouseOverEnabled = true;
-                // adding the series to the geographic map
-                map.series.add(series);
-
-                map.zoomToGeographic({ left: 110, top: -10, width: 45, height: -35 });
-            });
+        const map = CodeGenHelper.getDescription<IgcGeographicMapComponent>('content');
+        const loader = CodeGenHelper.getSharedSupporting<MapDensityCsvData>('MapDensityCsvData');
+        loader.load(map, 'https://static.infragistics.com/xplatform/data/AusPlaces.csv',
+            2, 1, { left: 110, top: -45, width: 45, height: 35 },
+            'Sample.MapTypeScatterDensitySeriesOnViewInit.Load');
     }
     //end eventHandler
 }

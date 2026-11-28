@@ -1,6 +1,9 @@
 //begin imports
 import { IgcGeographicMapComponent, IgcGeographicSymbolSeriesComponent } from 'igniteui-webcomponents-maps';
 import { MarkerType } from 'igniteui-webcomponents-charts';
+//begin testing
+import { GlobalQueuedWorkState } from 'igniteui-webcomponents-core';
+//end testing
 //end imports
 
 import { CodeGenHelper } from 'igniteui-webcomponents-core';
@@ -11,8 +14,16 @@ export class MapBindingDataJsonPointsOnViewInit {
     public mapBindingDataJsonPointsOnViewInit(): void {
         var map = CodeGenHelper.getDescription<IgcGeographicMapComponent>("content");
         var url = "https://static.infragistics.com/xplatform/data/WorldCities.json";
+        //begin testing
+        const work = GlobalQueuedWorkState.instance;
+        const channel = 'Sample.MapBindingDataJsonPointsOnViewInit.Load';
+        work.notifyWorkQueued(channel);
+        //end testing
         fetch(url)
-            .then((response) => response.json())
+            .then((response) => {
+                if (!response.ok) throw new Error(`WorldCities download failed with status ${response.status}`);
+                return response.json();
+            })
             .then((data: any[]) => {
                 var geoLocations: any[] = [];
                 // parsing JSON data and using only cities that are capitals
@@ -37,7 +48,11 @@ export class MapBindingDataJsonPointsOnViewInit {
                 series.markerThickness = 1;
                 series.markerType = MarkerType.Circle;
                 map.series.add(series);
-            });
+            })
+            //begin testing
+            .finally(() => work.notifyWorkCompleted(channel))
+            //end testing
+            ;
     }
     //end eventHandler
 }

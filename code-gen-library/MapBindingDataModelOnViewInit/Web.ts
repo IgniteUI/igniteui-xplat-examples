@@ -42,13 +42,13 @@ export class MapBindingDataModelOnViewInit {
 
         // the route first, so that the cities at either end of it draw on top
         for (var i = 0; i < flights.length; i++) {
-            this.addFlightRoute(geoMap, flights[i]);
-            this.addFlightCities(geoMap, flights[i]);
+            this.addFlightRoute(geoMap, flights[i], i);
+            this.addFlightCities(geoMap, flights[i], i);
         }
     }
 
     /** the flight itself, as a great circle path between its two cities */
-    public addFlightRoute(geoMap: any, flight: any): void {
+    public addFlightRoute(geoMap: any, flight: any, index: number): void {
         var geodesics = CodeGenHelper.getSharedSupporting<MapGeodesics>("MapGeodesics");
         var geoPath = geodesics.calcPaths(flight.origin, flight.dest);
         var geoDistance = geodesics.calcDistance(flight.origin, flight.dest);
@@ -61,6 +61,7 @@ export class MapBindingDataModelOnViewInit {
         }];
 
         var lineSeries = new IgcGeographicPolylineSeriesComponent();
+        lineSeries.name = "flight" + index + "Route";
         lineSeries.dataSource = geoRoutes;
         lineSeries.shapeMemberPath = "points";
         lineSeries.shapeStrokeThickness = 9;
@@ -70,10 +71,11 @@ export class MapBindingDataModelOnViewInit {
     }
 
     /** the cities at either end, in the flight's own colour */
-    public addFlightCities(geoMap: any, flight: any): void {
+    public addFlightCities(geoMap: any, flight: any, index: number): void {
         var geoLocations = [flight.origin, flight.dest];
 
         var symbolSeries = new IgcGeographicSymbolSeriesComponent();
+        symbolSeries.name = "flight" + index + "Cities";
         symbolSeries.dataSource = geoLocations;
         symbolSeries.markerType = MarkerType.Circle;
         symbolSeries.latitudeMemberPath = "lat";

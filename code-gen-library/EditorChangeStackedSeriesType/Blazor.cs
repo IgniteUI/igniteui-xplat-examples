@@ -48,6 +48,7 @@ public class EditorChangeStackedSeriesType
         // are declared on the chart, and the swap is which pair this stack is given.
         var bar = name.IndexOf("Bar") >= 0;
         dynamic stack = Make(name);
+        stack.DataSource = chart.Series[0].DataSource;
         stack.XAxisName = bar ? "numXAxis" : "catXAxis";
         stack.YAxisName = bar ? "catYAxis" : "numYAxis";
 

@@ -5,7 +5,8 @@ import { IgcDataGridComponent } from 'igniteui-webcomponents-data-grids';
 import { CodeGenHelper } from 'igniteui-webcomponents-core';
 
 export class DataGridDeleteRowButtonTemplate {
-    //begin eventHandler
+    //begin template
+    //begin content
     public dataGridDeleteRowButtonTemplate(s: any, args: any): void {
         const content = args.content as HTMLDivElement;
         if (content.childElementCount === 0) {
@@ -25,5 +26,6 @@ export class DataGridDeleteRowButtonTemplate {
         button.disabled = args.cellInfo.isDeleted;
         button.id = args.cellInfo.dataRow.toString();
     }
-    //end eventHandler
+    //end content
+    //end template
 }

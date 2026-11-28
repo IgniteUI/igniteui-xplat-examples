@@ -1,10 +1,17 @@
 //begin data
 import 'package:igniteui_flutter_core/src/ArrayList.dart' show ArrayList;
-import 'package:igniteui_flutter_core/src/reflection.dart' show IReflectable, IReflectableSet;
+import 'package:igniteui_flutter_core/src/reflection.dart' show IReflectableData;
+import 'package:igniteui_flutter_core/src/type.dart' show String_$type, TypeInfo;
 
 // The keys stay as the C# and TypeScript spell them -- see TestCodeShapedData.
-class TestRegionedDataItem implements IReflectable, IReflectableSet {
+class TestRegionedDataItem implements IReflectableData {
     String? name = null;
+
+
+    static final Map<String, TypeInfo?> _propertyTypes = {
+        "Name": String_$type,
+    };
+    Map<String, TypeInfo?> get propertyTypes => _propertyTypes;
 
     Object? getValue(String? propertyName) {
         switch (propertyName) {

@@ -5,9 +5,9 @@ import { html } from 'lit';
 export class DataChartProductionTooltipTemplate {
 //begin template
 //begin content
-    public dataChartProductionTooltipTemplate = (ctx: { dataContext: any }) => {
-        const item = ctx.dataContext.item;
-        const series = ctx.dataContext.series;
+    public dataChartProductionTooltipTemplate = (context: any) => {
+        const item = context.item;
+        const series = context.series;
         if (item == null || series == null) {
             return html``;
         }
@@ -16,12 +16,12 @@ export class DataChartProductionTooltipTemplate {
         // picked out of the five.
         const fuels = ["Coal", "Hydro", "Nuclear", "Gas", "Oil"];
         return html`<div class="ui-tooltip-content">
-    <div class="tooltipTitle">${item.country} Production</div>
+    <div class="tooltipTitle">${item.Country} Production</div>
     ${fuels.map((fuel) => html`
     <div class="tooltipHorizontal"
          style="color: ${series.valueMemberPath === fuel ? series.actualBrush : 'black'}">
         <label class="tooltipLbl" style="width: 4rem">${fuel}:</label>
-        <label class="tooltipVal">${item[fuel.toLowerCase()]}</label>
+        <label class="tooltipVal">${item[fuel]}</label>
     </div>`)}
 </div>`;
     }

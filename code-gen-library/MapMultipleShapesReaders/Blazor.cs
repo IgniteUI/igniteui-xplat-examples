@@ -28,7 +28,8 @@ public class MapMultipleShapesReaders
             {
                 points = record.Points,
                 name = record.FieldValues["NAME"],
-                population = record.FieldValues["POP_2005"]
+                gdp = record.FieldValues["GDP"],
+                population = record.FieldValues["POPULATION"]
             });
         }
 
@@ -54,8 +55,6 @@ public class MapMultipleShapesReaders
                 name = record.FieldValues["Name"],
                 capacity = record.FieldValues["CapacityG"],
                 distance = record.FieldValues["DistanceKM"],
-                isOverLand = (double)record.FieldValues["OverLand"] == 0,
-                isActive = (double)record.FieldValues["NotLive"] != 0,
                 service = record.FieldValues["InService"]
             });
         }
@@ -91,8 +90,16 @@ public class MapMultipleShapesReaders
         }
 
         var map = CodeGenHelper.GetDescription<IgbGeographicMap>("content");
-        var symbolSeries = map.Series[2] as IgbGeographicSymbolSeries;
-        symbolSeries.DataSource = geoLocations;
+        for (var i = 0; i < map.Series.Count; i++)
+        {
+            var symbolSeries = map.Series[i] as IgbGeographicSymbolSeries;
+            if (symbolSeries != null && symbolSeries.Name == "symbolSeries")
+            {
+                symbolSeries.DataSource = geoLocations;
+                return;
+            }
+        }
+        throw new InvalidOperationException("No geographic symbol series named symbolSeries.");
     }
     //end readPoints
 }

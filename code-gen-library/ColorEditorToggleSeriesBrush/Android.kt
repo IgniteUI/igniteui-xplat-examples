@@ -16,9 +16,8 @@ public class ColorEditorToggleSeriesBrush {
 		when (args.command!!.commandId!!)
 		{
             "ToggleSeriesBrush" -> {
-                var series = target.series[0] as IgaSeries;
+                var series = target.series!![0] as IgaSeries;
                 series.brush = color as IgaBrush?;
-                break;
             }
         }
         

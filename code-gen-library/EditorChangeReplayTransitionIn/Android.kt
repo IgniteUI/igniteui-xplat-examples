@@ -8,8 +8,8 @@ import com.infragistics.mobile.controls.CodeGenHelper;
 public class EditorChangeReplayTransitionIn {
     //begin eventHandler
     public fun editorChangeReplayTransitionIn(sender: Any?, args: IgaPropertyEditorPropertyDescriptionChangedEventArgs?) {
-        var series = CodeGenHelper.getDescription<IgaDataChart>("content").series!!;
-        for (i in 0..< series.length) {
+        var series = CodeGenHelper.getDescription<IgaDataChart>("content")!!.series!!;
+        for (i in 0 until series.count) {
             series[i]!!.replayTransitionIn();
         }
     }

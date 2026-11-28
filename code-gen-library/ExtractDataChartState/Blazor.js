@@ -10,10 +10,6 @@
 // series/axes live on an internal MainDataChart instead of directly on the element).
 igRegisterScript("ExtractDataChartState", (container) => {
 
-    // DIAGNOSTIC marker: bump this string on each edit so you can confirm the browser loaded the
-    // latest emitted copy (vs a cached one). If you don't see this log, the deployed JS is stale.
-    console.log("ExtractDataChartState: invoked (diag v5 - dates as round-trip strings)", container && container.tagName);
-
     // --- manager shims (exact WC PlatformManager behaviour) ---
     var getInternalTypeName = (control) => {
         if (control == null) { console.warn("ExtractDataChartState: null control in getInternalTypeName"); return ""; }
@@ -137,6 +133,10 @@ igRegisterScript("ExtractDataChartState", (container) => {
                 data.highPath = series.highMemberPath;
                 if (series.xAxis != null) { data.xAxis = getName(series.xAxis); }
                 if (series.yAxis != null) { data.yAxis = getName(series.yAxis); }
+                if (data.yAxis != null && data.xAxis != null) {
+                    data.categoryWidth = fromPixelUnits(series.getCategoryWidth());
+                    data.offset = fromPixelUnits(series.getOffsetValue());
+                }
             } else if (series.isScatter) {
                 if (series.xAxis != null) { data.xAxis = getName(series.xAxis); }
                 if (series.yAxis != null) { data.yAxis = getName(series.yAxis); }
@@ -247,43 +247,18 @@ igRegisterScript("ExtractDataChartState", (container) => {
         for (var k = 0; k < kids.length; k++) {
             var r = findChart(kids[k], depth + 1);
             if (r) {
-                console.log("DataChart found to get state");
                 return r;
             }
         }
         return null;
     };
 
-    // DIAGNOSTIC: log a collection's shape so we can see how axes/series are actually exposed.
-    var dumpColl = (label, coll) => {
-        if (coll == null) { console.log("ExtractDataChartState:", label, "= null/undefined"); return; }
-        var first0 = null;
-        try { first0 = (coll._inner && coll._inner[0]) || (typeof coll.toArray === "function" && coll.toArray()[0]) || null; } catch (e) {}
-        console.log("ExtractDataChartState:", label, {
-            hasCount: typeof coll.count, count: coll.count,
-            hasInner: !!coll._inner, innerLen: coll._inner ? coll._inner.length : undefined,
-            hasToArray: typeof coll.toArray, hasItem: typeof coll.item,
-            firstInner: coll._inner ? coll._inner[0] : undefined,
-            firstInnerExternal: (coll._inner && coll._inner[0]) ? coll._inner[0].externalObject : undefined,
-            first: first0
-        });
-    };
-
     var result = { axes: [], series: [] };
     try {
         var chart = findChart(container, 0);
-        console.log("ExtractDataChartState: chart found?", !!chart, chart && chart.tagName,
-            "hasI:", chart ? !!chart.i : undefined);
         if (!chart) { console.warn("ExtractDataChartState: no DataChart element under container", container); return result; }
 
-        // Dump both the element's own and the internal (.i) collections so we can see which carries
-        // real external axis/series objects on Blazor.
-        dumpColl("chart.axes (element)", chart.axes);
-        dumpColl("chart.series (element)", chart.series);
-        if (chart.i) { dumpColl("chart.i.axes (internal)", chart.i.axes); dumpColl("chart.i.series (internal)", chart.i.series); }
-
         var axes = collectionsFor(chart, "axes");
-        console.log("ExtractDataChartState: resolved axes count", axes.length, axes);
         for (var ai = 0; ai < axes.length; ai++) {
             try { result.axes.push(getAxisState(axes[ai])); }
             catch (e) { console.error("ExtractDataChartState: getAxisState failed for axis", ai, axes[ai], e); }
@@ -291,7 +266,6 @@ igRegisterScript("ExtractDataChartState", (container) => {
 
         var idx = 0;
         var series = collectionsFor(chart, "series");
-        console.log("ExtractDataChartState: resolved series count", series.length, series);
         for (var si = 0; si < series.length; si++) {
             var ser = series[si];
             try {

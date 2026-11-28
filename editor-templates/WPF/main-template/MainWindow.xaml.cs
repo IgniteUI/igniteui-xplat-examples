@@ -64,6 +64,14 @@ namespace Sample
 				//end onViewInit
 //endifdef onViewInit
 			};
+//ifdef onViewDestroy
+
+			// The window closing is this sample's teardown: what onViewInit started stops here.
+			this.Closed += (s,e) => {
+				//insert onViewDestroy
+				//end onViewDestroy
+			};
+//endifdef onViewDestroy
 
         }
 		
